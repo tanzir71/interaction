@@ -18,18 +18,17 @@ Then open http://localhost:3000 (or :8000).
 
 ## Deploy to GitHub Pages
 
-1. Create a repo and push this folder:
+The repository includes a GitHub Actions workflow that deploys the static site whenever `main` is pushed.
+
+1. Create an empty GitHub repository, then connect and push this checkout:
 
 ```bash
-git init
-git add .
-git commit -m "INTRX interaction library"
 git remote add origin https://github.com/<you>/<repo>.git
 git push -u origin main
 ```
 
-2. In the repo: **Settings → Pages → Source: Deploy from a branch → Branch: `main` / `/ (root)` → Save**.
-3. Your library is live at `https://<you>.github.io/<repo>/`.
+2. If GitHub does not enable Pages automatically on the first run, select **Settings → Pages → Source: GitHub Actions** once, then re-run the `Deploy to GitHub Pages` workflow.
+3. The site will be available at `https://<you>.github.io/<repo>/`. Every later push to `main` redeploys it automatically.
 
 ## Using a pattern
 
