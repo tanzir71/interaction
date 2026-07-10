@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INTRX — The Interaction Library</title>
+<meta name="description" content="An exhaustive, copy-paste library of the web interactions used by award-winning design agencies. Live demos, source code, and LLM prompts for every pattern.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23c8ff2e' stroke-width='2'/></svg>">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-mark"></span>
+    <span class="brand-name">INTRX</span>
+    <span class="brand-sub">/ interaction library</span>
+  </a>
+  <div class="topbar-right">
+    <div class="search-wrap">
+      <span class="search-key">⌘K</span>
+      <input id="search" type="text" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
+    </div>
+    <span class="count-pill" id="count-pill">00</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <nav id="nav"><!-- built by app.js --></nav>
+    <div class="sidebar-foot">
+      <p>Every demo ships with source code and an LLM prompt. Copy either — build anywhere.</p>
+      <p class="mono dim">MIT · no tracking · static</p>
+    </div>
+  </aside>
+
+  <main class="main" id="top">
+
+    <section class="hero">
+      <p class="hero-eyebrow mono">— an exhaustive reference</p>
+      <h1 class="hero-title">The interactions behind<br>award-winning websites.<span class="caret"></span></h1>
+      <p class="hero-sub">Smooth scroll, WebGL distortion, fragment dissolves, mac-style window
+      physics, kinetic type — the patterns used by top design agencies, rebuilt as
+      minimal vanilla-JS demos. Copy the code, or copy an LLM prompt and have your
+      model build it into any stack.</p>
+      <div class="hero-meta mono">
+        <span id="hero-count">…</span>
+        <span>vanilla js + gsap/lenis via cdn</span>
+        <span>github-pages ready</span>
+      </div>
+    </section>
+
+    <div id="cards"><!-- demo cards injected by app.js --></div>
+
+    <footer class="footer">
+      <p class="mono dim">INTRX — built as a public reference. Host it, fork it, extend it.</p>
+    </footer>
+
+  </main>
+</div>
+
+<!-- CDN libraries used by some demos -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<!-- demo registries -->
+<script src="js/demos.scroll.js"></script>
+<script src="js/demos.cursor.js"></script>
+<script src="js/demos.text.js"></script>
+<script src="js/demos.image.js"></script>
+<script src="js/demos.ui.js"></script>
+<script src="js/demos.backlog.js"></script>
+
+<!-- app -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
