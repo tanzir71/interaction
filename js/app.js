@@ -15,6 +15,25 @@
   const cardsEl = document.getElementById('cards');
   const pad = n => String(n).padStart(3, '0');
 
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    } catch (_) {}
+    const fallback = document.createElement('textarea');
+    fallback.value = text;
+    fallback.setAttribute('readonly', '');
+    fallback.style.position = 'fixed';
+    fallback.style.opacity = '0';
+    document.body.appendChild(fallback);
+    fallback.select();
+    const copied = document.execCommand('copy');
+    fallback.remove();
+    return copied;
+  }
+
   /* ---------- build the copyable code block for a demo ---------- */
   function buildCode(d) {
     let out = '';
@@ -119,7 +138,8 @@
       copyBtn.addEventListener('click', () => {
         const active = card.querySelector('.tab.active').dataset.pane;
         const text = active === 'prompt' ? d.prompt.trim() : buildCode(d);
-        navigator.clipboard.writeText(text).then(() => {
+        copyText(text).then(copied => {
+          if (!copied) return;
           copyBtn.textContent = 'Copied ✓';
           copyBtn.classList.add('copied');
           setTimeout(() => { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('copied'); }, 1400);
@@ -224,4 +244,18 @@
     }
     if (e.key === 'Escape' && document.activeElement === search) search.blur();
   });
+
+  const agentCopy = document.getElementById('agent-copy');
+  if (agentCopy) {
+    agentCopy.addEventListener('click', async () => {
+      const prompt = document.getElementById('agent-prompt');
+      if (!prompt || !(await copyText(prompt.textContent.trim()))) return;
+      agentCopy.textContent = 'Copied ✓';
+      agentCopy.classList.add('copied');
+      setTimeout(() => {
+        agentCopy.textContent = 'Copy agent prompt';
+        agentCopy.classList.remove('copied');
+      }, 1400);
+    });
+  }
 })();

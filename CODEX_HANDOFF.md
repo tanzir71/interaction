@@ -52,7 +52,7 @@ INTRX.register({
 - All demo class names prefixed with `rootClass` — CSS is injected globally, collisions are catastrophic.
 - The demo runs inside a `~320px`-tall stage, not the viewport. Scroll-driven demos must use their own inner scroll container (`height: 320px; overflow-y: auto`) — see `demos.scroll.js` for the pattern.
 - Fixed positioning is forbidden in demos (cards are in-page); use `position: absolute` within the root.
-- Match the site palette: bg `#0a0a0b` / `#101012` / `#161619`, lines `#232327` / `#2e2e34`, text `#ececef` / `#9b9ba3` / `#5c5c66`, accent `#c8ff2e`, mono font `"JetBrains Mono", monospace`.
+- Match the site palette: bg `#0a0a0b` / `#101012` / `#161619`, lines `#232327` / `#2e2e34`, text `#ececef` / `#9b9ba3` / `#5c5c66`, accent `#a78bfa`, mono font `"JetBrains Mono", monospace`.
 - Keep it performant: transforms/opacity only where possible, `will-change` on animated nodes, one rAF loop per demo, passive listeners.
 - No new CDN dependencies without need. Prefer vanilla. If an effect truly needs three.js, add its CDN tag to `index.html` AND teach `buildCode()` in `app.js` to emit the tag for `libs: ['three']`.
 - Audio demos: WebAudio synthesis only (no files), start only after a user gesture, always provide a visible mute.

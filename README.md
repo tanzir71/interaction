@@ -5,6 +5,7 @@ A curated, copy-paste reference of the web interactions used by award-winning de
 ## Website & demo
 
 - 🌐 Site (the library IS the demo): <https://tanzir71.github.io/interaction/>
+- ▲ Vercel mirror: <https://intrx.vercel.app/>
 - 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
 
 **Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (20) · Raster & Glitch (18) · Skeuomorph (16) · SVG & Line (10) · 3D & Perspective (10) · Physics (10) · Liquid & Organic (8) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (14) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
