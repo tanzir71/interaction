@@ -1,0 +1,66 @@
+# INTRX — The Interaction Library
+
+> A curated, copy-paste library of the web interactions used by award-winning
+> design agencies. 271 hand-built patterns live today. The roadmap is complete.
+> Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
+> snippet, and an LLM prompt that specifies the interaction precisely enough
+> to rebuild it in any framework.
+
+Site: https://tanzir71.github.io/interaction/
+Repo: https://github.com/tanzir71/interaction
+License: MIT. Free for commercial use. No tracking, fully static.
+
+## What an agent can do with this library
+
+1. REUSE A PATTERN AS-IS: every card's "Code" tab is a self-contained snippet —
+   HTML + scoped CSS + JS that receives `root` (the pattern's root element).
+   Dependencies, when any, are GSAP / ScrollTrigger / Lenis via CDN, declared
+   per pattern.
+2. REBUILD IN ANY STACK: every card's "LLM Prompt" tab is a full spec —
+   easings, timings, math, accessibility notes. Paste it into a model with
+   "implement this as a React component" (or Vue/Svelte/etc.).
+3. ADD A NEW PATTERN: register one object in a `js/demos.*.js` file:
+   { id, title, cat, rootClass, tags, libs, desc, seen, hint, html, css, js, prompt }
+   Root class must be a unique `d-*` prefix; JS receives (root, stage); demos
+   must be self-contained, 320px tall, and respect prefers-reduced-motion.
+
+## Live categories (271 patterns)
+
+Scroll (22): lenis-smooth-scroll, scroll-reveal-stagger, parallax-layers,
+horizontal-scroll, sticky-stack, scroll-progress, velocity-skew, scroll-zoom, scroll-text-highlight, scroll-image-sequence, scroll-svg-draw, scroll-rotate-gallery, scroll-split-screen, scroll-marquee-direction, scroll-counter-rotate, scroll-depth-tunnel, scroll-letter-scatter, scroll-color-theme, scroll-clip-morph, scroll-table-of-contents, scroll-inertia-grid, scroll-video-scrubber
+Cursor (25): cursor-gooey-blob, cursor-particle-emitter, cursor-elastic-line, cursor-inverted-lens, cursor-text-repel, cursor-grid-ripple, cursor-hover-preview, cursor-drag-ghost, cursor-eyes-follow, cursor-liquid-metaball, cursor-rope-trail, cursor-velocity-stretch, cursor-snap-targets, cursor-flashlight-noise, cursor-emoji-rain, cursor-magnetic-grid-lines, cursor-heat-shimmer, cursor-crosshair-hud, cursor-pull-distort, cursor-shadow-parallax, custom-cursor, magnetic-button, image-trail, spotlight-mask, tilt-card
+Text & Type (23): split-text-reveal, text-scramble, kinetic-marquee,
+line-mask-reveal, letter-roll, proximity-type, stat-counter, text-wave-hover, text-clip-image, text-typewriter-caret, text-falling-letters, text-blur-focus, text-strike-reveal, text-anagram-shuffle, text-outline-fill-scroll, text-ransom-note, text-glitch-layers, text-circular-spin, text-accordion-squeeze, text-underline-magic, text-numbers-slot, text-highlighter-swipe, text-broken-grid
+Image & WebGL (20): webgl-distortion, particle-dissolve, clip-reveal,
+hover-zoom-card, pixelate-reveal, grayscale-grid, webgl-ripple-click, webgl-pixel-river, webgl-fisheye-hover, webgl-static-tv, webgl-kaleidoscope, webgl-vertex-wave, image-slice-hover, image-infinite-zoom, comparison-slider, kenburns-crossfade, image-duotone-swap, image-shatter-click, image-blinds-reveal, image-magnetic-tiles
+SVG & Line (10): svg-path-draw-hover, svg-blob-morph, svg-squiggle-underline, svg-line-graph-live, svg-marching-ants, svg-signature-write, svg-gooey-menu, svg-topographic-drift, svg-circuit-pulse, svg-lissajous-loader
+3D & Perspective (10): css3d-cube-nav, css3d-card-flip-grid, css3d-book-page, css3d-carousel-cylinder, css3d-parallax-room, css3d-isometric-hover, css3d-folding-map, webgl-point-globe, webgl-wobbly-sphere, css3d-depth-hero
+Physics (10): spring-cursor-follower, pendulum-tags, chain-links, gravity-drop-icons, collision-bubbles, soft-body-blob, cloth-flag, wrecking-ball-text, inertia-window-drag, magnet-snap-grid
+Liquid & Organic (8): liquid-blob-buttons, ferrofluid-dots, water-ripple-2d, lava-lamp, ink-bleed-reveal, melt-drip-text, smoke-wisps, bubble-float-pop
+Galleries & Sliders (12): slider-elastic-edges, slider-progress-fraction, slider-clip-transition, slider-stack-deck, slider-fullbleed-parallax, gallery-filmstrip-scrub, gallery-expanding-columns, gallery-honeycomb, gallery-random-stack, gallery-dual-row-drift, lightbox-flip-zoom, slider-wheel-3d
+Navigation & Menus (12): menu-fullscreen-overlay, menu-split-reveal, menu-circular-expand, nav-blur-elevate, nav-hide-reveal, nav-active-pill, menu-letter-cascade, menu-image-peek, breadcrumb-collapse, tab-morph-content, sidebar-rail-expand, burger-morph-x
+Buttons & Micro (14): btn-border-beam, btn-shimmer-sweep, btn-text-slide-swap, btn-icon-hop, btn-success-morph, btn-confetti-burst, btn-ripple-material, btn-jelly-press, like-heart-particles, checkbox-draw-check, toggle-day-night, copy-inline-feedback, hover-tooltip-spring, badge-notification-pop
+Forms & Inputs (10): input-float-label, input-underline-grow, input-shake-error, input-char-counter-arc, otp-code-boxes, password-strength-bar, select-morph-dropdown, range-elastic-thumb, textarea-auto-grow, form-multistep-progress
+Loaders & Progress (10): preloader-percentage, preloader-word-cycle, loader-dots-wave, loader-morph-shapes, loader-typing-code, skeleton-shimmer, progress-blob-fill, loader-orbit-dots, upload-progress-morph, page-load-counter-slide
+Data & Numbers (6): chart-bars-race, chart-donut-sweep, sparkline-hover-scrub, heatmap-fade-in, ticker-tape-prices, radar-sweep-blips
+Ambient (10): particles-constellation, gradient-mesh-drift, flow-field, starfield-warp, conway-life-fade, audio-reactive-bars, matrix-rain, fireflies-night, aurora-curtains, rain-window
+Sound & Haptics (6): ui-sound-kit, typing-mechanical, theremin-pad, notification-chime-stack, drum-grid-sequencer, scroll-pitch-drone
+Play & Easter Eggs (8): dvd-screensaver, konami-unlock, click-fireworks, drag-to-break, pet-the-blob, gravity-flip-page, wobbly-window-drag, snake-in-grid
+Raster & Glitch (18): dither-bayer, dither-floyd-steinberg, dither-blue-noise, halftone-dots, halftone-lines, ascii-render, ascii-webcam-style-wave, glitch-rgb-slices, glitch-datamosh-blocks, scanline-crt, vhs-tracking, pixel-sort, noise-grain-overlay, threshold-mosaic-transition, bitmap-font-marquee, interlace-flicker, posterize-hover, chromatic-type
+Skeuomorph (16): neumorphic-buttons, mechanical-switch, rotary-knob, brushed-metal-slider, paper-stack-cards, glass-refraction-card, led-segment-display, flip-clock, embossed-press, analog-gauge, punch-card-keyboard, cassette-reels, slot-machine-reel, zippo-flame, torn-paper-edge, wax-seal-stamp
+Layout & UI (21): mac-window, dock-magnify, flip-expand, smooth-accordion,
+spring-modal, drag-carousel, hover-fill-button, page-transition, logo-marquee, bottom-sheet, radial-menu, elastic-tabs, masonry-filter, command-palette, toast-stack, number-input-drag, context-menu-custom, resizable-split-pane, card-hover-border-gradient, list-reorder-drag, zoom-ui-inception
+
+## Roadmap
+
+0 further patterns remain. The handoff roadmap is complete.
+specified in CODEX_HANDOFF.md in the repo. They are listed on the site as a
+roadmap — only hand-built, working demos are published as cards.
+
+## House style for contributed demos
+
+Colors: #0a0a0b bg, #161619 raised, #2e2e34 lines, #ececef text, #c8ff2e accent.
+Fonts: Inter (UI), JetBrains Mono (labels/code). Transitions: cubic-bezier(0.22,1,0.36,1).
+Keep one rAF loop, passive listeners, transform/opacity animation only,
+visible keyboard focus, and a static representative state under
+prefers-reduced-motion.

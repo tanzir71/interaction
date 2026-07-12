@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INTRX — The Interaction Library</title>
-<meta name="description" content="An exhaustive, copy-paste library of the web interactions used by award-winning design agencies. Live demos, source code, and LLM prompts for every pattern.">
+<title>INTRX — The Interaction Library. Live demos, code & LLM prompts.</title>
+<meta name="description" content="A curated, copy-paste library of the web interactions used by award-winning design agencies. 271 hand-built patterns — each with a live demo, a single-file code snippet, and an LLM prompt to rebuild it in any stack.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tanzir71.github.io/interaction/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tanzir71.github.io/interaction/">
+<meta property="og:title" content="INTRX — The Interaction Library">
+<meta property="og:description" content="The interactions behind award-winning websites — live demos, single-file code, and LLM prompts. Free, static, MIT.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="INTRX — The Interaction Library">
+<meta name="twitter:description" content="Award-site interactions with live demos, copyable code, and LLM prompts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,25 +22,33 @@
 </head>
 <body>
 
+<a class="skip-link" href="#top">Skip to content</a>
+
 <header class="topbar">
-  <a class="brand" href="#top">
-    <span class="brand-mark"></span>
-    <span class="brand-name">INTRX</span>
-    <span class="brand-sub">/ interaction library</span>
-  </a>
+  <div class="topbar-left">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="brand" href="#top">
+      <span class="brand-mark"></span>
+      <span class="brand-name">INTRX</span>
+      <span class="brand-sub">/ interaction library</span>
+    </a>
+  </div>
   <div class="topbar-right">
     <div class="search-wrap">
       <span class="search-key">⌘K</span>
       <input id="search" type="text" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
     </div>
     <span class="count-pill" id="count-pill">00</span>
+    <a class="gh-link mono" href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">GitHub</a>
   </div>
 </header>
 
 <div class="layout">
 
   <aside class="sidebar" id="sidebar">
-    <nav id="nav"><!-- built by app.js --></nav>
+    <nav id="nav" aria-label="Pattern navigation"><!-- built by app.js --></nav>
     <div class="sidebar-foot">
       <p>Every demo ships with source code and an LLM prompt. Copy either — build anywhere.</p>
       <p class="mono dim">MIT · no tracking · static</p>
@@ -41,23 +58,44 @@
   <main class="main" id="top">
 
     <section class="hero">
-      <p class="hero-eyebrow mono">— an exhaustive reference</p>
+      <p class="hero-eyebrow mono">— a curated reference</p>
       <h1 class="hero-title">The interactions behind<br>award-winning websites.<span class="caret"></span></h1>
-      <p class="hero-sub">Smooth scroll, WebGL distortion, fragment dissolves, mac-style window
-      physics, kinetic type — the patterns used by top design agencies, rebuilt as
+      <p class="hero-sub">Smooth scroll, WebGL distortion, kinetic type, mac-style window
+      physics, magnetic buttons — the patterns used by top design agencies, rebuilt as
       minimal vanilla-JS demos. Copy the code, or copy an LLM prompt and have your
       model build it into any stack.</p>
       <div class="hero-meta mono">
         <span id="hero-count">…</span>
-        <span>vanilla js + gsap/lenis via cdn</span>
-        <span>github-pages ready</span>
+        <span>every demo hand-built &amp; runnable</span>
+        <span>vanilla js · gsap/lenis via cdn</span>
+        <span>mit · $0 · no tracking</span>
+      </div>
+    </section>
+
+    <section class="agent-strip">
+      <div class="agent-strip-inner">
+        <p class="mono accent">works with your ai agent</p>
+        <p>Every pattern's <strong>LLM Prompt</strong> tab is a precise spec — easings, timings, math,
+        accessibility notes. Paste it into Claude or any model to rebuild the interaction in React,
+        Vue, Svelte, or your own stack. Agent-readable index at
+        <a href="llms.txt">/llms.txt</a>.</p>
       </div>
     </section>
 
     <div id="cards"><!-- demo cards injected by app.js --></div>
 
+    <section class="roadmap" id="roadmap">
+      <div class="cat-divider roadmap-divider">
+        <h2>Roadmap</h2>
+        <span class="mono">0 patterns queued</span>
+        <span class="rule"></span>
+      </div>
+      <p class="roadmap-note">Roadmap complete. Every pattern from the project handoff is now published as an individual, hand-built demo with source code and a reconstruction prompt. No placeholders remain.</p>
+    </section>
+
     <footer class="footer">
       <p class="mono dim">INTRX — built as a public reference. Host it, fork it, extend it.</p>
+      <p class="mono dim">built by <a href="https://tanziro.com" target="_blank" rel="noopener">tanziro.com</a> · <a href="https://buymeacoffee.com/tanzir" target="_blank" rel="noopener">buy me a coffee</a> · <a href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">github</a></p>
     </footer>
 
   </main>
@@ -70,11 +108,225 @@
 
 <!-- demo registries -->
 <script src="js/demos.scroll.js"></script>
+<script src="js/demos.scroll.highlight.js"></script>
+<script src="js/demos.scroll.image-sequence.js"></script>
+<script src="js/demos.scroll.svg-draw.js"></script>
+<script src="js/demos.scroll.rotate-gallery.js"></script>
+<script src="js/demos.scroll.split-screen.js"></script>
+<script src="js/demos.scroll.marquee-direction.js"></script>
+<script src="js/demos.scroll.counter-rotate.js"></script>
+<script src="js/demos.scroll.depth-tunnel.js"></script>
+<script src="js/demos.scroll.letter-scatter.js"></script>
+<script src="js/demos.scroll.color-theme.js"></script>
+<script src="js/demos.scroll.clip-morph.js"></script>
+<script src="js/demos.scroll.table-of-contents.js"></script>
+<script src="js/demos.scroll.inertia-grid.js"></script>
+<script src="js/demos.scroll.video-scrubber.js"></script>
 <script src="js/demos.cursor.js"></script>
 <script src="js/demos.text.js"></script>
+<script src="js/demos.text.wave-hover.js"></script>
+<script src="js/demos.text.clip-image.js"></script>
+<script src="js/demos.text.typewriter-caret.js"></script>
+<script src="js/demos.text.falling-letters.js"></script>
+<script src="js/demos.text.blur-focus.js"></script>
+<script src="js/demos.text.strike-reveal.js"></script>
+<script src="js/demos.text.anagram-shuffle.js"></script>
+<script src="js/demos.text.outline-fill-scroll.js"></script>
+<script src="js/demos.text.ransom-note.js"></script>
+<script src="js/demos.text.glitch-layers.js"></script>
+<script src="js/demos.text.circular-spin.js"></script>
+<script src="js/demos.text.accordion-squeeze.js"></script>
+<script src="js/demos.text.underline-magic.js"></script>
+<script src="js/demos.text.numbers-slot.js"></script>
+<script src="js/demos.text.highlighter-swipe.js"></script>
+<script src="js/demos.text.broken-grid.js"></script>
 <script src="js/demos.image.js"></script>
+<script src="js/demos.image.webgl-ripple-click.js"></script>
+<script src="js/demos.image.webgl-pixel-river.js"></script>
+<script src="js/demos.image.webgl-fisheye-hover.js"></script>
+<script src="js/demos.image.webgl-static-tv.js"></script>
+<script src="js/demos.image.webgl-kaleidoscope.js"></script>
+<script src="js/demos.image.webgl-vertex-wave.js"></script>
+<script src="js/demos.image.slice-hover.js"></script>
+<script src="js/demos.image.infinite-zoom.js"></script>
+<script src="js/demos.image.comparison-slider.js"></script>
+<script src="js/demos.image.kenburns-crossfade.js"></script>
+<script src="js/demos.image.duotone-swap.js"></script>
+<script src="js/demos.image.shatter-click.js"></script>
+<script src="js/demos.image.blinds-reveal.js"></script>
+<script src="js/demos.image.magnetic-tiles.js"></script>
+<script src="js/demos.svg.path-draw-hover.js"></script>
+<script src="js/demos.svg.blob-morph.js"></script>
+<script src="js/demos.svg.squiggle-underline.js"></script>
+<script src="js/demos.svg.line-graph-live.js"></script>
+<script src="js/demos.svg.marching-ants.js"></script>
+<script src="js/demos.svg.signature-write.js"></script>
+<script src="js/demos.svg.gooey-menu.js"></script>
+<script src="js/demos.svg.topographic-drift.js"></script>
+<script src="js/demos.svg.circuit-pulse.js"></script>
+<script src="js/demos.svg.lissajous-loader.js"></script>
+<script src="js/demos.three.cube-nav.js"></script>
+<script src="js/demos.three.card-flip-grid.js"></script>
+<script src="js/demos.three.book-page.js"></script>
+<script src="js/demos.three.carousel-cylinder.js"></script>
+<script src="js/demos.three.parallax-room.js"></script>
+<script src="js/demos.three.isometric-hover.js"></script>
+<script src="js/demos.three.folding-map.js"></script>
+<script src="js/demos.three.point-globe.js"></script>
+<script src="js/demos.three.wobbly-sphere.js"></script>
+<script src="js/demos.three.depth-hero.js"></script>
+<script src="js/demos.physics.spring-follower.js"></script>
+<script src="js/demos.physics.pendulum-tags.js"></script>
+<script src="js/demos.physics.chain-links.js"></script>
+<script src="js/demos.physics.gravity-drop-icons.js"></script>
+<script src="js/demos.physics.collision-bubbles.js"></script>
+<script src="js/demos.physics.soft-body-blob.js"></script>
+<script src="js/demos.physics.cloth-flag.js"></script>
+<script src="js/demos.physics.wrecking-ball-text.js"></script>
+<script src="js/demos.physics.inertia-window-drag.js"></script>
+<script src="js/demos.physics.magnet-snap-grid.js"></script>
+<script src="js/demos.liquid.blob-buttons.js"></script>
+<script src="js/demos.liquid.ferrofluid-dots.js"></script>
+<script src="js/demos.liquid.water-ripple-2d.js"></script>
+<script src="js/demos.liquid.lava-lamp.js"></script>
+<script src="js/demos.liquid.ink-bleed-reveal.js"></script>
+<script src="js/demos.liquid.melt-drip-text.js"></script>
+<script src="js/demos.liquid.smoke-wisps.js"></script>
+<script src="js/demos.liquid.bubble-float-pop.js"></script>
+<script src="js/demos.gallery.slider-elastic-edges.js"></script>
+<script src="js/demos.gallery.slider-progress-fraction.js"></script>
+<script src="js/demos.gallery.slider-clip-transition.js"></script>
+<script src="js/demos.gallery.slider-stack-deck.js"></script>
+<script src="js/demos.gallery.slider-fullbleed-parallax.js"></script>
+<script src="js/demos.gallery.filmstrip-scrub.js"></script>
+<script src="js/demos.gallery.expanding-columns.js"></script>
+<script src="js/demos.gallery.honeycomb.js"></script>
+<script src="js/demos.gallery.random-stack.js"></script>
+<script src="js/demos.gallery.dual-row-drift.js"></script>
+<script src="js/demos.gallery.lightbox-flip-zoom.js"></script>
+<script src="js/demos.gallery.slider-wheel-3d.js"></script>
+<script src="js/demos.nav.menu-fullscreen-overlay.js"></script>
+<script src="js/demos.nav.menu-split-reveal.js"></script>
+<script src="js/demos.nav.menu-circular-expand.js"></script>
+<script src="js/demos.nav.nav-blur-elevate.js"></script>
+<script src="js/demos.nav.nav-hide-reveal.js"></script>
+<script src="js/demos.nav.nav-active-pill.js"></script>
+<script src="js/demos.nav.menu-letter-cascade.js"></script>
+<script src="js/demos.nav.menu-image-peek.js"></script>
+<script src="js/demos.nav.breadcrumb-collapse.js"></script>
+<script src="js/demos.nav.tab-morph-content.js"></script>
+<script src="js/demos.nav.sidebar-rail-expand.js"></script>
+<script src="js/demos.nav.burger-morph-x.js"></script>
+<script src="js/demos.micro.btn-border-beam.js"></script>
+<script src="js/demos.micro.btn-shimmer-sweep.js"></script>
+<script src="js/demos.micro.btn-text-slide-swap.js"></script>
+<script src="js/demos.micro.btn-icon-hop.js"></script>
+<script src="js/demos.micro.btn-success-morph.js"></script>
+<script src="js/demos.micro.btn-confetti-burst.js"></script>
+<script src="js/demos.micro.btn-ripple-material.js"></script>
+<script src="js/demos.micro.btn-jelly-press.js"></script>
+<script src="js/demos.micro.like-heart-particles.js"></script>
+<script src="js/demos.micro.checkbox-draw-check.js"></script>
+<script src="js/demos.micro.toggle-day-night.js"></script>
+<script src="js/demos.micro.copy-inline-feedback.js"></script>
+<script src="js/demos.micro.hover-tooltip-spring.js"></script>
+<script src="js/demos.micro.badge-notification-pop.js"></script>
+<script src="js/demos.forms.input-float-label.js"></script>
+<script src="js/demos.forms.input-underline-grow.js"></script>
+<script src="js/demos.forms.input-shake-error.js"></script>
+<script src="js/demos.forms.input-char-counter-arc.js"></script>
+<script src="js/demos.forms.otp-code-boxes.js"></script>
+<script src="js/demos.forms.password-strength-bar.js"></script>
+<script src="js/demos.forms.select-morph-dropdown.js"></script>
+<script src="js/demos.forms.range-elastic-thumb.js"></script>
+<script src="js/demos.forms.textarea-auto-grow.js"></script>
+<script src="js/demos.forms.form-multistep-progress.js"></script>
+<script src="js/demos.loaders.preloader-percentage.js"></script>
+<script src="js/demos.loaders.preloader-word-cycle.js"></script>
+<script src="js/demos.loaders.loader-dots-wave.js"></script>
+<script src="js/demos.loaders.loader-morph-shapes.js"></script>
+<script src="js/demos.loaders.loader-typing-code.js"></script>
+<script src="js/demos.loaders.skeleton-shimmer.js"></script>
+<script src="js/demos.loaders.progress-blob-fill.js"></script>
+<script src="js/demos.loaders.loader-orbit-dots.js"></script>
+<script src="js/demos.loaders.upload-progress-morph.js"></script>
+<script src="js/demos.loaders.page-load-counter-slide.js"></script>
+<script src="js/demos.data.chart-bars-race.js"></script>
+<script src="js/demos.data.chart-donut-sweep.js"></script>
+<script src="js/demos.data.sparkline-hover-scrub.js"></script>
+<script src="js/demos.data.heatmap-fade-in.js"></script>
+<script src="js/demos.data.ticker-tape-prices.js"></script>
+<script src="js/demos.data.radar-sweep-blips.js"></script>
+<script src="js/demos.ambient.particles-constellation.js"></script>
+<script src="js/demos.ambient.gradient-mesh-drift.js"></script>
+<script src="js/demos.ambient.flow-field.js"></script>
+<script src="js/demos.ambient.starfield-warp.js"></script>
+<script src="js/demos.ambient.conway-life-fade.js"></script>
+<script src="js/demos.ambient.audio-reactive-bars.js"></script>
+<script src="js/demos.ambient.matrix-rain.js"></script>
+<script src="js/demos.ambient.fireflies-night.js"></script>
+<script src="js/demos.ambient.aurora-curtains.js"></script>
+<script src="js/demos.ambient.rain-window.js"></script>
+<script src="js/demos.sound.ui-sound-kit.js"></script>
+<script src="js/demos.sound.typing-mechanical.js"></script>
+<script src="js/demos.sound.theremin-pad.js"></script>
+<script src="js/demos.sound.notification-chime-stack.js"></script>
+<script src="js/demos.sound.drum-grid-sequencer.js"></script>
+<script src="js/demos.sound.scroll-pitch-drone.js"></script>
+<script src="js/demos.play.dvd-screensaver.js"></script>
+<script src="js/demos.play.konami-unlock.js"></script>
+<script src="js/demos.play.click-fireworks.js"></script>
+<script src="js/demos.play.drag-to-break.js"></script>
+<script src="js/demos.play.pet-the-blob.js"></script>
+<script src="js/demos.play.gravity-flip-page.js"></script>
+<script src="js/demos.play.wobbly-window-drag.js"></script>
+<script src="js/demos.play.snake-in-grid.js"></script>
+<script src="js/demos.layout.bottom-sheet.js"></script>
+<script src="js/demos.layout.radial-menu.js"></script>
+<script src="js/demos.layout.elastic-tabs.js"></script>
+<script src="js/demos.layout.masonry-filter.js"></script>
+<script src="js/demos.layout.command-palette.js"></script>
+<script src="js/demos.layout.toast-stack.js"></script>
+<script src="js/demos.layout.number-input-drag.js"></script>
+<script src="js/demos.layout.context-menu-custom.js"></script>
+<script src="js/demos.layout.resizable-split-pane.js"></script>
+<script src="js/demos.layout.card-hover-border-gradient.js"></script>
+<script src="js/demos.layout.list-reorder-drag.js"></script>
+<script src="js/demos.layout.zoom-ui-inception.js"></script>
+<script src="js/demos.raster.live.js"></script>
+<script src="js/demos.raster.blue.js"></script>
+<script src="js/demos.raster.halftone.js"></script>
+<script src="js/demos.raster.lines.js"></script>
+<script src="js/demos.raster.ascii.js"></script>
+<script src="js/demos.raster.ascii-wave.js"></script>
+<script src="js/demos.raster.rgb-glitch.js"></script>
+<script src="js/demos.raster.datamosh.js"></script>
+<script src="js/demos.raster.crt.js"></script>
+<script src="js/demos.raster.vhs.js"></script>
+<script src="js/demos.raster.pixel-sort.js"></script>
+<script src="js/demos.raster.grain.js"></script>
+<script src="js/demos.raster.mosaic.js"></script>
+<script src="js/demos.raster.bitmap-marquee.js"></script>
+<script src="js/demos.raster.interlace.js"></script>
+<script src="js/demos.raster.posterize.js"></script>
+<script src="js/demos.raster.chromatic-type.js"></script>
+<script src="js/demos.skeuo.neumorphic.js"></script>
+<script src="js/demos.skeuo.mechanical-switch.js"></script>
+<script src="js/demos.skeuo.rotary-knob.js"></script>
+<script src="js/demos.skeuo.brushed-slider.js"></script>
+<script src="js/demos.skeuo.paper-stack.js"></script>
+<script src="js/demos.skeuo.glass-card.js"></script>
+<script src="js/demos.skeuo.led-display.js"></script>
+<script src="js/demos.skeuo.flip-clock.js"></script>
+<script src="js/demos.skeuo.embossed-press.js"></script>
+<script src="js/demos.skeuo.analog-gauge.js"></script>
+<script src="js/demos.skeuo.punch-keyboard.js"></script>
+<script src="js/demos.skeuo.cassette.js"></script>
+<script src="js/demos.skeuo.slot-reel.js"></script>
+<script src="js/demos.skeuo.zippo.js"></script>
+<script src="js/demos.skeuo.torn-paper.js"></script>
+<script src="js/demos.skeuo.wax-seal.js"></script>
 <script src="js/demos.ui.js"></script>
-<script src="js/demos.backlog.js"></script>
 
 <!-- app -->
 <script src="js/app.js"></script>

@@ -162,12 +162,34 @@
   }, { rootMargin: '200px 0px' });
   R.demos.forEach(d => io.observe(d._card));
 
+  /* ---------- mobile nav toggle ---------- */
+  const navToggle = document.getElementById('nav-toggle');
+  if (navToggle) {
+    const setOpen = open => {
+      document.body.classList.toggle('nav-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    };
+    navToggle.addEventListener('click', () => setOpen(!document.body.classList.contains('nav-open')));
+    /* close the drawer when a nav link is tapped or Escape is pressed */
+    nav.addEventListener('click', e => { if (e.target.closest('.nav-item')) setOpen(false); });
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+  }
+
   /* ---------- nav active state ---------- */
+  const sidebar = document.getElementById('sidebar');
   const navItems = [...document.querySelectorAll('.nav-item')];
   const spy = new IntersectionObserver(entries => {
     entries.forEach(en => {
       if (en.isIntersecting) {
         navItems.forEach(n => n.classList.toggle('active', n.dataset.id === en.target.id));
+        /* keep the active item visible inside the sidebar (desktop only —
+           never auto-scroll the drawer while it's closed on mobile) */
+        const active = navItems.find(n => n.dataset.id === en.target.id);
+        const isDesktop = !navToggle || getComputedStyle(navToggle).display === 'none';
+        if (active && sidebar && isDesktop) {
+          const top = active.offsetTop - sidebar.clientHeight / 2;
+          sidebar.scrollTo({ top, behavior: 'smooth' });
+        }
       }
     });
   }, { rootMargin: '-30% 0px -60% 0px' });

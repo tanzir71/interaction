@@ -1,8 +1,34 @@
 # INTRX — The Interaction Library
 
-An exhaustive, copy-paste reference of the web interactions used by award-winning design agencies. **271 patterns**, each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt.
+A curated, copy-paste reference of the web interactions used by award-winning design agencies. **271 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. The original roadmap is complete.
 
-**Categories:** Scroll · Cursor · Text & Type · Image & WebGL · Raster & Glitch · Skeuomorph · SVG & Line · 3D & Perspective · Physics · Liquid & Organic · Galleries & Sliders · Navigation & Menus · Buttons & Micro · Forms & Inputs · Loaders & Progress · Layout & UI · Data & Numbers · Ambient · Sound & Haptics · Play & Easter Eggs.
+## Website & demo
+
+- 🌐 Site (the library IS the demo): <https://tanzir71.github.io/interaction/>
+- 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
+
+**Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (20) · Raster & Glitch (18) · Skeuomorph (16) · SVG & Line (10) · 3D & Perspective (10) · Physics (10) · Liquid & Organic (8) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (14) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
+**Roadmap:** Complete. All 236 handoff items are now published as working, hand-built cards.
+
+## Architecture
+
+INTRX is a **zero-build static site** — no framework, no bundler, no dependencies to install. Three layers:
+
+```
+index.html            the shell (nav, search, card grid)
+css/style.css         design system (tokens, cards, tabs)
+js/app.js             the renderer:
+                        • builds category nav + cards from the registry
+                        • lazy-boots each demo only when scrolled into view
+                        • tabs (Demo / Code / LLM Prompt), copy buttons, ⌘K search
+js/demos.*.js         the content: one registry file per category,
+                      each pattern registered as a plain JS object
+                      { id, title, cat, html, css, js, prompt, … }
+```
+
+Key design decision: every pattern is **self-contained data** (its own HTML/CSS/JS strings with a unique class prefix), so demos can't leak styles into each other, the whole library is greppable, and adding a pattern means appending one object — no build step, ever. GSAP/Lenis are pulled from CDN only inside snippets that need them.
+
+Because it's pure static files, hosting is trivial: any static server locally, GitHub Pages in production.
 
 ## Run locally
 
