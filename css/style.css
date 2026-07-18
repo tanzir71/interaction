@@ -137,8 +137,10 @@ body {
 
 /* ---------- grid strip ---------- */
 
-.grid-strip { border-bottom: 1px solid var(--line); padding: 12px 20px; color: var(--text-3); }
+.grid-strip { display: flex; align-items: baseline; gap: 8px; border-bottom: 1px solid var(--line); padding: 12px 20px; color: var(--text-3); }
 .grid-strip #hero-count { color: var(--accent); }
+.strip-close { margin-left: auto; background: none; border: none; color: var(--text-3); font: 10px var(--mono); cursor: pointer; padding: 0 2px; }
+.strip-close:hover { color: var(--text); }
 
 /* ---------- category divider ---------- */
 
@@ -228,8 +230,9 @@ body {
 }
 .demo-hint {
   position: absolute; bottom: 10px; right: 14px;
-  font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
   color: var(--text-3);
+  opacity: .6;
   pointer-events: none; z-index: 5;
 }
 
@@ -449,9 +452,9 @@ body {
 
 /* ---------- footer ---------- */
 
-.footer { padding: 48px 56px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
-.footer a { color: var(--text-2); }
-.footer a:hover { color: var(--accent); }
+.footer { padding: 48px 56px; border-top: 1px solid var(--line); }
+.footer a { color: var(--text-3); }
+.footer a:hover { color: var(--text); }
 
 /* ---------- responsive ---------- */
 
@@ -474,7 +477,6 @@ body {
   .entry-card { border-right: 0; border-bottom: 1px solid var(--line); }
   .entry-card:last-child { border-bottom: 0; }
   .scope-faq { grid-template-columns: 1fr; }
-  .card { margin: 20px 16px; }
   .cat-divider { padding: 40px 16px 4px; }
   .roadmap-note { padding: 8px 16px 12px; }
   .roadmap-group { padding: 10px 16px; }

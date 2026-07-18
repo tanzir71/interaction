@@ -251,6 +251,10 @@
   const deep = R.demos.find(d => d.id === location.hash.slice(1));
   if (deep) openModal(deep);
 
+  /* dismissable grid strip */
+  const stripClose = document.getElementById('strip-close');
+  if (stripClose) stripClose.addEventListener('click', () => stripClose.parentElement.remove());
+
   /* ---------- mobile nav toggle ---------- */
   const navToggle = document.getElementById('nav-toggle');
   if (navToggle) {
