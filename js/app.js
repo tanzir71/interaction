@@ -56,10 +56,11 @@
   let total = 0;
   cats.forEach(cat => {
     const items = R.demos.filter(d => d.cat === cat);
+    const slug = 'cat-' + cat.toLowerCase().replace(/[^a-z]+/g, '-');
     const group = document.createElement('div');
     group.className = 'nav-group';
     group.innerHTML =
-      '<div class="nav-group-label"><span>' + cat + '</span><span class="n">' + pad(items.length) + '</span></div>';
+      '<div class="nav-group-label"><a href="#' + slug + '">' + cat + '</a><span class="n">' + pad(items.length) + '</span></div>';
     items.forEach(d => {
       total++;
       const a = document.createElement('a');
@@ -73,9 +74,9 @@
   });
 
   document.getElementById('count-pill').textContent = pad(R.demos.length);
-  document.getElementById('hero-count').textContent = pad(R.demos.length) + ' interactions';
+  document.getElementById('hero-count').textContent = pad(R.demos.length);
 
-  /* ---------- cards ---------- */
+  /* ---------- tiles ---------- */
   let idx = 0;
   cats.forEach(cat => {
     const divider = document.createElement('div');
@@ -90,61 +91,20 @@
       idx++;
       d._num = pad(idx);
       const card = document.createElement('article');
-      card.className = 'card';
+      card.className = 'tile';
       card.id = d.id;
       card.dataset.search = (d.title + ' ' + d.cat + ' ' + (d.tags || []).join(' ') + ' ' + d.desc).toLowerCase();
 
-      const tags = (d.tags || []).map(t => '<span class="tag">' + t + '</span>').join('');
-      const libs = (d.libs || []).map(l => '<span class="tag lib">' + l + '</span>').join('');
-
       card.innerHTML =
-        '<div class="card-head">' +
-          '<div class="card-title-wrap"><span class="card-id">' + d._num + '</span>' +
-          '<h3 class="card-title">' + d.title + '</h3></div>' +
-          '<div class="card-tags">' + libs + tags + '</div>' +
+        '<div class="demo-stage"></div>' +
+        '<div class="tile-frame">' +
+          '<svg class="c-tl" viewBox="0 0 8 8"><path d="M0.5 7.5 V0.5 H7.5"/></svg>' +
+          '<svg class="c-tr" viewBox="0 0 8 8"><path d="M0.5 0.5 H7.5 M7.5 0.5 V7.5"/></svg>' +
+          '<svg class="c-bl" viewBox="0 0 8 8"><path d="M0.5 7.5 H7.5 M0.5 7.5 V0.5"/></svg>' +
+          '<svg class="c-br" viewBox="0 0 8 8"><path d="M7.5 0.5 V7.5 H0.5"/></svg>' +
         '</div>' +
-        '<div class="card-desc">' + d.desc +
-          (d.seen ? '<span class="seen">' + d.seen + '</span>' : '') +
-        '</div>' +
-        '<div class="tabs">' +
-          '<button class="tab active" data-pane="demo">Demo</button>' +
-          '<button class="tab" data-pane="code">Code</button>' +
-          '<button class="tab" data-pane="prompt">LLM Prompt</button>' +
-          '<span class="spacer"></span>' +
-          '<button class="copy-btn">Copy</button>' +
-        '</div>' +
-        '<div class="pane pane-demo active"><div class="demo-stage"></div>' +
-          (d.hint ? '<div class="demo-hint">' + d.hint + '</div>' : '') +
-        '</div>' +
-        '<div class="pane pane-code"><span class="code-label">single-file snippet · html + css + js</span><pre></pre></div>' +
-        '<div class="pane pane-prompt"><span class="code-label">paste into claude / any llm</span><pre></pre></div>';
-
-      card.querySelector('.pane-code pre').textContent = buildCode(d);
-      card.querySelector('.pane-prompt pre').textContent = d.prompt.trim();
-
-      /* tabs */
-      const panes = { demo: card.querySelector('.pane-demo'), code: card.querySelector('.pane-code'), prompt: card.querySelector('.pane-prompt') };
-      card.querySelectorAll('.tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-          card.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          Object.values(panes).forEach(p => p.classList.remove('active'));
-          panes[tab.dataset.pane].classList.add('active');
-        });
-      });
-
-      /* copy */
-      const copyBtn = card.querySelector('.copy-btn');
-      copyBtn.addEventListener('click', () => {
-        const active = card.querySelector('.tab.active').dataset.pane;
-        const text = active === 'prompt' ? d.prompt.trim() : buildCode(d);
-        copyText(text).then(copied => {
-          if (!copied) return;
-          copyBtn.textContent = 'Copied ✓';
-          copyBtn.classList.add('copied');
-          setTimeout(() => { copyBtn.textContent = 'Copy'; copyBtn.classList.remove('copied'); }, 1400);
-        });
-      });
+        '<span class="tile-label">' + d._num + ' · ' + d.title + '</span>' +
+        (d.hint ? '<div class="demo-hint">' + d.hint + '</div>' : '');
 
       cardsEl.appendChild(card);
       d._card = card;
@@ -220,6 +180,7 @@
   search.addEventListener('input', () => {
     const q = search.value.trim().toLowerCase();
     let visible = 0;
+    nav.classList.toggle('searching', !!q);
     R.demos.forEach(d => {
       const hit = !q || d._card.dataset.search.includes(q);
       d._card.classList.toggle('hidden', !hit);

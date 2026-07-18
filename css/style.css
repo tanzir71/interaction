@@ -110,7 +110,12 @@ body {
   padding: 0 20px 8px;
   display: flex; justify-content: space-between;
 }
+.nav-group-label a { color: inherit; text-decoration: none; }
+.nav-group-label a:hover { color: var(--text); }
 .nav-group-label .n { color: var(--accent); }
+/* Originkit sidebar: categories only — items surface while searching */
+.nav-group .nav-item { display: none; }
+#nav.searching .nav-item:not(.hidden) { display: block; }
 
 .nav-item {
   display: block;
@@ -130,31 +135,10 @@ body {
 
 .main { flex: 1; min-width: 0; }
 
-/* ---------- hero ---------- */
+/* ---------- grid strip ---------- */
 
-.hero {
-  padding: 96px 56px 72px;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-}
-
-.hero-eyebrow { color: var(--accent); margin-bottom: 18px; }
-.hero-title {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 600; line-height: 1.1; letter-spacing: -.02em;
-  margin-bottom: 22px;
-}
-.caret {
-  display: inline-block; width: .5em; height: .9em;
-  background: var(--accent); margin-left: 8px;
-  animation: blink 1.1s steps(1) infinite;
-  vertical-align: baseline; transform: translateY(.12em);
-}
-@keyframes blink { 50% { opacity: 0; } }
-
-.hero-sub { max-width: 620px; color: var(--text-2); font-size: 13px; margin-bottom: 28px; }
-.hero-meta { display: flex; gap: 24px; color: var(--text-3); flex-wrap: wrap; }
-.hero-meta span::before { content: "▪ "; color: var(--accent); }
+.grid-strip { border-bottom: 1px solid var(--line); padding: 12px 20px; color: var(--text-3); }
+.grid-strip #hero-count { color: var(--accent); }
 
 /* ---------- category divider ---------- */
 
@@ -461,7 +445,6 @@ body {
   }
   body.nav-open .sidebar { transform: translateX(0); }
   body.nav-open { overflow: hidden; }
-  .hero { padding: 72px 24px 48px; }
   .agent-strip-inner { padding: 18px 24px; }
   .entry-guide { padding: 40px 24px; }
   .entry-head { grid-template-columns: 1fr; gap: 8px; }

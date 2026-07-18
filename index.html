@@ -57,20 +57,9 @@
 
   <main class="main" id="top">
 
-    <section class="hero">
-      <p class="hero-eyebrow mono">— 271 patterns · one searchable registry</p>
-      <h1 class="hero-title">271 award-site interactions.<br>Live demo, code, and an LLM prompt for each.<span class="caret"></span></h1>
-      <p class="hero-sub">Smooth scroll, WebGL distortion, kinetic type, mac-style window
-      physics, magnetic buttons — the patterns used by top design agencies, rebuilt as
-      minimal vanilla-JS demos. Copy the code, or copy an LLM prompt and have your
-      model build it into any stack.</p>
-      <div class="hero-meta mono">
-        <span id="hero-count">…</span>
-        <span>every demo hand-built &amp; runnable</span>
-        <span>vanilla js · gsap/lenis via cdn</span>
-        <span>mit · $0 · no tracking</span>
-      </div>
-    </section>
+    <div class="grid-strip mono">INTRX — <span id="hero-count">…</span> live interaction patterns. Click any tile for code + LLM prompt.</div>
+
+    <div id="cards" class="tile-grid"><!-- demo tiles injected by app.js --></div>
 
     <section class="agent-strip">
       <div class="agent-strip-inner">
@@ -120,8 +109,6 @@
         <article class="faq-panel"><h3>FAQ</h3><details><summary>What is the license?</summary><p>MIT. Use, modify, and redistribute the code under the repository license.</p></details><details><summary>Can I use a pattern commercially?</summary><p>Yes. The MIT license permits commercial use. Review any external library license declared by the pattern too.</p></details><details><summary>How do I add a pattern?</summary><p>Register one object in the matching <code>js/demos.*.js</code> file with a unique ID, prefixed root class, demo strings, and a detailed prompt, then run the roadmap and browser verifiers.</p></details><details><summary>Are the prompts framework ports?</summary><p>No. They describe structure, math, timing, easing, performance, and accessibility so your agent can produce a native implementation in your stack.</p></details></article>
       </div>
     </section>
-
-    <div id="cards"><!-- demo cards injected by app.js --></div>
 
     <section class="roadmap" id="roadmap">
       <div class="cat-divider roadmap-divider">
