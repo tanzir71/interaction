@@ -576,6 +576,163 @@ async function render(data, stageWidth, mode) {
       final: { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, frames: Number(root.dataset.frames), flickers: Number(root.dataset.flickers), resets: Number(root.dataset.resets), ignored: Number(root.dataset.ignored), running: root.dataset.running }
     };
   }
+  let hexDump = null;
+  if (root.classList.contains('d-fui-hex')) {
+    const hexReduced = mode === 'reduce';
+    const hexViewport = root.querySelector('.d-fui-hex-viewport');
+    const hexRows = [...root.querySelectorAll('.d-fui-hex-row')];
+    const firstHexRow = hexRows[1];
+    const firstHexBytes = [...firstHexRow.querySelectorAll('.d-fui-hex-byte')];
+    const firstAscii = [...firstHexRow.querySelectorAll('.d-fui-hex-char')];
+    const hexLink = root.querySelector('.d-fui-hex-link');
+    const hexAnnouncement = root.querySelector('.d-fui-hex-announcement');
+    const modularDelta = function(after, before){return (after-before+65536)%65536};
+    const initialRowRect = firstHexRow.getBoundingClientRect();
+    const initialOffsetRect = firstHexRow.querySelector('.d-fui-hex-offset').getBoundingClientRect();
+    const initialBytesRect = firstHexRow.querySelector('.d-fui-hex-bytes').getBoundingClientRect();
+    const initialAsciiRect = firstHexRow.querySelector('.d-fui-hex-ascii').getBoundingClientRect();
+    const initialGeometry = { rowHeight:initialRowRect.height, rowWidth:initialRowRect.width, offsetWidth:initialOffsetRect.width, bytesWidth:initialBytesRect.width, asciiWidth:initialAsciiRect.width, zonesOrdered:initialOffsetRect.right<initialBytesRect.left&&initialBytesRect.right<initialAsciiRect.left, byteFont:getComputedStyle(firstHexBytes[0]).fontSize, offsetFont:getComputedStyle(firstHexRow.querySelector('.d-fui-hex-offset')).fontSize, asciiCorrect:firstHexBytes.every(function(cell,index){const value=parseInt(cell.textContent,16);return firstAscii[index].textContent===(value>=32&&value<=126?String.fromCharCode(value):'.')}) };
+    const selectionSnapshot = function(){
+      const cell = root.querySelector('.d-fui-hex-byte.d-fui-hex-is-selected');
+      const address = cell ? Number(cell.dataset.address) : -1;
+      const twin = address >= 0 ? root.querySelector('.d-fui-hex-char[data-address="'+address+'"]') : null;
+      const cellRect = cell ? cell.getBoundingClientRect() : null;
+      const twinRect = twin ? twin.getBoundingClientRect() : null;
+      const lineRect = hexLink.getBoundingClientRect();
+      const neighbors = [...root.querySelectorAll('.d-fui-hex-byte[data-influence]')].map(function(node){return { address:Number(node.dataset.address), influence:Number(node.dataset.influence), color:getComputedStyle(node).color }}).sort(function(a,b){return modularDelta(a.address,address)-modularDelta(b.address,address)});
+      return {
+        address,
+        addressHex: root.dataset.selectedAddress,
+        value: root.dataset.selectedByte,
+        ascii: root.dataset.selectedAscii,
+        byteSelected: root.querySelectorAll('.d-fui-hex-byte.d-fui-hex-is-selected').length,
+        twinSelected: root.querySelectorAll('.d-fui-hex-char.d-fui-hex-is-selected').length,
+        byteColor: cell ? getComputedStyle(cell).color : '',
+        byteBackground: cell ? getComputedStyle(cell).backgroundColor : '',
+        twinColor: twin ? getComputedStyle(twin).color : '',
+        twinBackground: twin ? getComputedStyle(twin).backgroundColor : '',
+        ariaSelected: cell ? cell.getAttribute('aria-selected') : '',
+        activeId: hexViewport.getAttribute('aria-activedescendant') || '',
+        nearCount: Number(root.dataset.nearCount),
+        neighbors,
+        link: { active:hexLink.classList.contains('d-fui-hex-is-active'), height:lineRect.height, color:getComputedStyle(hexLink).backgroundColor, opacity:Number(getComputedStyle(hexLink).opacity), duration:getComputedStyle(hexLink).animationDuration, left:lineRect.left, right:lineRect.right, cellRight:cellRect ? cellRect.right : 0, twinLeft:twinRect ? twinRect.left : 0 },
+        links: Number(root.dataset.links),
+        source: root.dataset.inspectionSource,
+        announcement: hexAnnouncement.textContent
+      };
+    };
+    const patternSnapshot = function(){
+      const box = root.querySelector('.d-fui-hex-pattern.d-fui-hex-is-match');
+      const address = root.dataset.patternAddress ? parseInt(root.dataset.patternAddress,16) : -1;
+      const first = address >= 0 ? root.querySelector('.d-fui-hex-byte[data-address="'+address+'"]') : null;
+      const last = address >= 0 ? root.querySelector('.d-fui-hex-byte[data-address="'+(address+3)+'"]') : null;
+      const boxRect = box ? box.getBoundingClientRect() : null;
+      const firstRect = first ? first.getBoundingClientRect() : null;
+      return {
+        active: root.dataset.matchActive,
+        matches: Number(root.dataset.matches),
+        opacity: Number(root.dataset.matchOpacity),
+        simulationTime: Number(root.dataset.simulationTime),
+        address,
+        values: root.dataset.patternValues,
+        domValues: address >= 0 ? [0,1,2,3].map(function(offset){const node=root.querySelector('.d-fui-hex-byte[data-address="'+(address+offset)+'"]');return node ? node.textContent : ''}).join('') : '',
+        boxes: root.querySelectorAll('.d-fui-hex-pattern.d-fui-hex-is-match').length,
+        borderColor: box ? getComputedStyle(box).borderTopColor : '',
+        borderWidth: box ? getComputedStyle(box).borderTopWidth : '',
+        boxOpacity: box ? Number(getComputedStyle(box).opacity) : 0,
+        widthInCells: boxRect&&firstRect ? boxRect.width/firstRect.width : 0,
+        sameRow: Boolean(first&&last&&first.closest('.d-fui-hex-row')===last.closest('.d-fui-hex-row')),
+        state: root.querySelector('.d-fui-hex-state').textContent
+      };
+    };
+    const rowOffsets = hexRows.slice(0,6).map(function(row){return { row:Number(row.dataset.row), offset:row.querySelector('.d-fui-hex-offset').textContent, bytes:row.querySelectorAll('.d-fui-hex-byte').length, ascii:row.querySelectorAll('.d-fui-hex-char').length }});
+    const initial = { frames:Number(root.dataset.frames), distance:Number(root.dataset.distance), simulationTime:Number(root.dataset.simulationTime), baseRow:Number(root.dataset.baseRow), matches:Number(root.dataset.matches), signature:root.dataset.initialSignature, stableCheck:root.dataset.stableCheck, running:root.dataset.running, source:root.dataset.source };
+    const motionBefore = { distance:Number(root.dataset.distance), simulationTime:Number(root.dataset.simulationTime), frames:Number(root.dataset.frames), baseRow:Number(root.dataset.baseRow) };
+    let motionAfter = motionBefore;
+    let pointer = null;
+    let keyboard = null;
+    let pattern = null;
+    let reducedStable = null;
+    if (!hexReduced) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      motionAfter = { distance:Number(root.dataset.distance), simulationTime:Number(root.dataset.simulationTime), frames:Number(root.dataset.frames), baseRow:Number(root.dataset.baseRow) };
+      const stableAddress = ((Number(root.dataset.baseRow)+6)%4096)*16+8;
+      const stableCell = root.querySelector('.d-fui-hex-byte[data-address="'+stableAddress+'"]');
+      const stableTwin = root.querySelector('.d-fui-hex-char[data-address="'+stableAddress+'"]');
+      const stableRect = stableCell.getBoundingClientRect();
+      const point = { x:stableRect.left+stableRect.width/2, y:stableRect.top+stableRect.height/2 };
+      const stableBefore = { address:stableAddress, value:stableCell.textContent, ascii:stableTwin.textContent, baseRow:Number(root.dataset.baseRow), nodeId:stableCell.id };
+      hexViewport.dispatchEvent(new PointerEvent('pointerenter',{clientX:point.x,clientY:point.y}));
+      hexViewport.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,clientX:point.x,clientY:point.y}));
+      await new Promise(resolve => setTimeout(resolve, 90));
+      const inspected = selectionSnapshot();
+      await new Promise(resolve => setTimeout(resolve, 1200));
+      const stableCellAfter = root.querySelector('.d-fui-hex-byte[data-address="'+stableAddress+'"]');
+      const stableTwinAfter = root.querySelector('.d-fui-hex-char[data-address="'+stableAddress+'"]');
+      const stationary = selectionSnapshot();
+      const stableAfter = { address:stableAddress, value:stableCellAfter&&stableCellAfter.textContent, ascii:stableTwinAfter&&stableTwinAfter.textContent, baseRow:Number(root.dataset.baseRow), nodeId:stableCellAfter&&stableCellAfter.id, replaced:stableCellAfter!==stableCell };
+      pointer = { point, inspected, stationary, stationaryDelta:modularDelta(stationary.address,inspected.address), stableBefore, stableAfter };
+      hexViewport.dispatchEvent(new PointerEvent('pointerleave',{clientX:point.x,clientY:point.y}));
+      await new Promise(resolve => setTimeout(resolve, 20));
+      pointer.released = selectionSnapshot();
+      hexViewport.focus();
+      await new Promise(resolve => setTimeout(resolve, 20));
+      const focus = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+      const right = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true}));
+      const down = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'Home',bubbles:true}));
+      const home = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'End',bubbles:true}));
+      const end = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+      await new Promise(resolve => setTimeout(resolve, 20));
+      keyboard = { focus, right, down, home, end, afterEscape:selectionSnapshot(), focusedAfterEscape:document.activeElement===hexViewport };
+      for (let index=0;index<180&&root.dataset.matchActive!=='true';index++) await new Promise(resolve => setTimeout(resolve,20));
+      const started = patternSnapshot();
+      await new Promise(resolve => setTimeout(resolve,650));
+      const decayed = patternSnapshot();
+      await new Promise(resolve => setTimeout(resolve,450));
+      const cleared = patternSnapshot();
+      pattern = { started, decayed, cleared };
+    } else {
+      const target = firstHexBytes[8];
+      const targetRect = target.getBoundingClientRect();
+      const point = { x:targetRect.left+targetRect.width/2, y:targetRect.top+targetRect.height/2 };
+      hexViewport.dispatchEvent(new PointerEvent('pointerenter',{clientX:point.x,clientY:point.y}));
+      hexViewport.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,clientX:point.x,clientY:point.y}));
+      await new Promise(resolve => setTimeout(resolve,20));
+      pointer = { point, inspected:selectionSnapshot() };
+      hexViewport.dispatchEvent(new PointerEvent('pointerleave',{clientX:point.x,clientY:point.y}));
+      await new Promise(resolve => setTimeout(resolve,20));
+      pointer.released = selectionSnapshot();
+      hexViewport.focus();
+      await new Promise(resolve => setTimeout(resolve,20));
+      const focus = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+      const right = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true}));
+      const down = selectionSnapshot();
+      hexViewport.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+      await new Promise(resolve => setTimeout(resolve,20));
+      keyboard = { focus, right, down, afterEscape:selectionSnapshot(), focusedAfterEscape:document.activeElement===hexViewport };
+      await new Promise(resolve => setTimeout(resolve,5200));
+      reducedStable = { frames:Number(root.dataset.frames), distance:Number(root.dataset.distance), simulationTime:Number(root.dataset.simulationTime), baseRow:Number(root.dataset.baseRow), matches:Number(root.dataset.matches), matchActive:root.dataset.matchActive, signature:root.dataset.initialSignature, running:root.dataset.running, liveAnimation:getComputedStyle(root.querySelector('.d-fui-hex-live-dot')).animationDuration, scanAnimation:getComputedStyle(root.querySelector('.d-fui-hex-scanline')).animationDuration };
+    }
+    hexDump = {
+      metadata: { scrollSpeed:root.dataset.scrollSpeed, rowHeight:root.dataset.rowHeight, bytesPerRow:root.dataset.bytesPerRow, totalRows:root.dataset.totalRows, renderedRows:root.dataset.renderedRows, neighborCount:root.dataset.neighborCount, matchInterval:root.dataset.matchInterval, matchLength:root.dataset.matchLength, matchDecay:root.dataset.matchDecay, seed:root.dataset.seed },
+      structure: { rows:hexRows.length, rowOffsets, rowHeight:initialGeometry.rowHeight, rowWidth:initialGeometry.rowWidth, offsetWidth:initialGeometry.offsetWidth, bytesWidth:initialGeometry.bytesWidth, asciiWidth:initialGeometry.asciiWidth, zonesOrdered:initialGeometry.zonesOrdered, bytes:firstHexBytes.length, ascii:firstAscii.length, byteFont:initialGeometry.byteFont, offsetFont:initialGeometry.offsetFont, topbarFont:getComputedStyle(root.querySelector('.d-fui-hex-topbar')).fontSize, panelHeadFont:getComputedStyle(root.querySelector('.d-fui-hex-panel-head')).fontSize, footerFont:getComputedStyle(root.querySelector('.d-fui-hex-footer')).fontSize, corners:root.querySelectorAll('.d-fui-hex-corner').length, liveColor:getComputedStyle(root.querySelector('.d-fui-hex-live-dot')).backgroundColor, focusables:root.querySelectorAll('[tabindex]').length, gridRole:hexViewport.getAttribute('role'), rowCount:hexViewport.getAttribute('aria-rowcount'), columnCount:hexViewport.getAttribute('aria-colcount'), asciiHidden:firstHexRow.querySelector('.d-fui-hex-ascii').getAttribute('aria-hidden'), livePolite:hexAnnouncement.getAttribute('aria-live'), asciiCorrect:initialGeometry.asciiCorrect },
+      initial,
+      motion: { before:motionBefore, after:motionAfter, rate:(motionAfter.distance-motionBefore.distance)/Math.max(1,motionAfter.simulationTime-motionBefore.simulationTime)*1000 },
+      pointer,
+      keyboard,
+      pattern,
+      reducedStable,
+      reduced:root.dataset.reduced,
+      final: { frames:Number(root.dataset.frames), distance:Number(root.dataset.distance), baseRow:Number(root.dataset.baseRow), matches:Number(root.dataset.matches), matchActive:root.dataset.matchActive, running:root.dataset.running, selectedAddress:root.dataset.selectedAddress, linkActive:hexLink.classList.contains('d-fui-hex-is-active') }
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -596,6 +753,7 @@ async function render(data, stageWidth, mode) {
     scanner,
     stream,
     auth,
+    hexDump,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -751,7 +909,50 @@ async function main() {
       || auth.normal.denied.maxShake < 5.5 || Math.abs(auth.normal.denied.shakeAfter) > .1 || auth.normal.denied.flickers !== 3 || auth.normal.denied.frames <= 0 || !auth.normal.denied.focused
       || auth.final.phase !== 'result' || auth.final.run !== 4 || auth.final.outcome !== 'denied' || auth.final.ignored !== 1 || auth.final.running !== 'true';
   const authFailed = demoId === 'fui-access-granted' && (authCommonFailed || authMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed) process.exitCode = 1;
+  const hex = result.hexDump;
+  const invalidHexSelection = function(selection,duration){
+    if(!selection)return true;
+    const value=parseInt(selection.value,16);
+    const expectedAscii=value>=32&&value<=126?String.fromCharCode(value):'.';
+    const influences=selection.neighbors.map(item=>item.influence).sort((a,b)=>a-b).join(',');
+    const colors=[...new Set(selection.neighbors.map(item=>item.color))].sort().join('|');
+    return selection.address<0 || !/^[0-9A-F]{4}$/.test(selection.addressHex) || !/^[0-9A-F]{2}$/.test(selection.value) || selection.ascii!==expectedAscii
+      || selection.byteSelected!==1 || selection.twinSelected!==1 || selection.byteColor!=='rgb(167, 139, 250)' || selection.twinColor!=='rgb(167, 139, 250)'
+      || selection.byteBackground!=='rgb(22, 22, 25)' || selection.twinBackground!=='rgb(22, 22, 25)' || selection.ariaSelected!=='true' || selection.activeId!=='d-fui-hex-byte-'+selection.addressHex
+      || selection.nearCount!==8 || selection.neighbors.length!==8 || influences!=='0.04,0.04,0.16,0.16,0.36,0.36,0.64,0.64'
+      || colors!=='rgb(158, 158, 166)|rgb(168, 168, 175)|rgb(184, 184, 190)|rgb(207, 207, 212)'
+      || !selection.link.active || selection.link.height!==1 || selection.link.color!=='rgb(167, 139, 250)' || selection.link.duration!==duration || selection.link.opacity<.9
+      || Math.abs(selection.link.left-selection.link.cellRight)>.5 || Math.abs(selection.link.right-selection.link.twinLeft)>.5 || selection.source!=='pointer';
+  };
+  const hexCommonFailed = !hex
+    || hex.metadata.scrollSpeed!=='14' || hex.metadata.rowHeight!=='16' || hex.metadata.bytesPerRow!=='16' || hex.metadata.totalRows!=='4096' || hex.metadata.renderedRows!=='19' || hex.metadata.neighborCount!=='8'
+    || hex.metadata.matchInterval!=='5000' || hex.metadata.matchLength!=='4' || hex.metadata.matchDecay!=='1000' || hex.metadata.seed!=='0xC0DE42'
+    || hex.structure.rows!==19 || hex.structure.rowOffsets.length!==6 || hex.structure.rowOffsets.some(row=>row.bytes!==16||row.ascii!==16) || hex.structure.rowOffsets.map(row=>row.offset).join(',')!=='FFF0,0000,0010,0020,0030,0040'
+    || Math.abs(hex.structure.rowHeight-16)>.01 || hex.structure.rowWidth<result.width-45 || hex.structure.offsetWidth<=0 || hex.structure.bytesWidth<result.width-185 || hex.structure.asciiWidth<80 || !hex.structure.zonesOrdered
+    || hex.structure.bytes!==16 || hex.structure.ascii!==16 || hex.structure.byteFont!==(result.width<=360?'7.5px':'9px') || hex.structure.offsetFont!==(result.width<=360?'8px':'9px') || hex.structure.topbarFont!=='10px' || hex.structure.panelHeadFont!=='10px' || hex.structure.footerFont!=='10px'
+    || hex.structure.corners!==4 || hex.structure.liveColor!=='rgb(167, 139, 250)' || hex.structure.focusables!==1 || hex.structure.gridRole!=='grid' || hex.structure.rowCount!=='4096' || hex.structure.columnCount!=='16' || hex.structure.asciiHidden!=='true' || hex.structure.livePolite!=='polite' || !hex.structure.asciiCorrect
+    || hex.initial.signature!=='D5F670CFCA7E75262EBC0A99C47DFA53692E46D9713FBA57C9C7D7E6A94B0A09' || hex.initial.stableCheck!=='true' || hex.initial.matches!==0
+    || invalidHexSelection(hex.pointer&&hex.pointer.inspected,reducedMotion?'0s':'0.36s')
+    || !hex.pointer.released || hex.pointer.released.address!==-1 || hex.pointer.released.byteSelected!==0 || hex.pointer.released.twinSelected!==0 || hex.pointer.released.nearCount!==0 || hex.pointer.released.activeId!=='' || hex.pointer.released.link.active
+    || !hex.keyboard || hex.keyboard.focus.address<0 || hex.keyboard.focus.byteSelected!==1 || hex.keyboard.focus.twinSelected!==1 || hex.keyboard.focus.nearCount!==8 || hex.keyboard.focus.source!=='focus' || !hex.keyboard.focus.announcement.startsWith('Address ')
+    || modularHexDelta(hex.keyboard.right.address,hex.keyboard.focus.address)!==1 || modularHexDelta(hex.keyboard.down.address,hex.keyboard.right.address)!==16 || hex.keyboard.right.source!=='keyboard' || hex.keyboard.down.source!=='keyboard'
+    || hex.keyboard.right.activeId!=='d-fui-hex-byte-'+hex.keyboard.right.addressHex || !hex.keyboard.right.announcement.startsWith('Address ') || hex.keyboard.afterEscape.address!==-1 || hex.keyboard.afterEscape.byteSelected!==0 || hex.keyboard.afterEscape.link.active || hex.keyboard.focusedAfterEscape;
+  function modularHexDelta(after,before){return (after-before+65536)%65536}
+  const hexMotionFailed = reducedMotion
+    ? !hex || hex.reduced!=='true' || hex.initial.frames!==0 || hex.initial.distance!==0 || hex.initial.simulationTime!==0 || hex.initial.baseRow!==0 || hex.initial.running!=='false'
+      || !hex.reducedStable || hex.reducedStable.frames!==0 || hex.reducedStable.distance!==0 || hex.reducedStable.simulationTime!==0 || hex.reducedStable.baseRow!==0 || hex.reducedStable.matches!==0 || hex.reducedStable.matchActive!=='false' || hex.reducedStable.signature!==hex.initial.signature || hex.reducedStable.running!=='false' || hex.reducedStable.liveAnimation!=='0s' || hex.reducedStable.scanAnimation!=='0s'
+      || hex.motion.before.distance!==hex.motion.after.distance || hex.motion.before.frames!==hex.motion.after.frames || hex.pattern!==null || hex.final.frames!==0 || hex.final.distance!==0 || hex.final.matches!==0 || hex.final.matchActive!=='false' || hex.final.running!=='false'
+    : !hex || hex.reduced!=='false' || hex.initial.frames<=0 || hex.initial.distance<=0 || hex.initial.running!=='true' || hex.motion.after.frames<=hex.motion.before.frames || hex.motion.after.distance<=hex.motion.before.distance || Math.abs(hex.motion.rate-14)>.12
+      || !hex.pointer.stableBefore || !hex.pointer.stableAfter || !hex.pointer.stableAfter.replaced || hex.pointer.stableAfter.baseRow!==hex.pointer.stableBefore.baseRow+1 || hex.pointer.stableAfter.address!==hex.pointer.stableBefore.address || hex.pointer.stableAfter.value!==hex.pointer.stableBefore.value || hex.pointer.stableAfter.ascii!==hex.pointer.stableBefore.ascii || hex.pointer.stableAfter.nodeId!==hex.pointer.stableBefore.nodeId
+      || hex.pointer.stationaryDelta!==16 || hex.pointer.stationary.address!==hex.pointer.inspected.address+16 || hex.pointer.stationary.links<=hex.pointer.inspected.links || hex.pointer.stationary.source!=='pointer'
+      || hex.keyboard.home.address%16!==0 || hex.keyboard.end.address%16!==15 || Math.floor(hex.keyboard.home.address/16)!==Math.floor(hex.keyboard.end.address/16)
+      || !hex.pattern || hex.pattern.started.active!=='true' || hex.pattern.started.matches!==1 || hex.pattern.started.opacity<.9 || hex.pattern.started.opacity>1 || hex.pattern.started.simulationTime<5000 || hex.pattern.started.simulationTime>5100
+      || !/^[0-9A-F]{8}$/.test(hex.pattern.started.values) || hex.pattern.started.values!==hex.pattern.started.domValues || hex.pattern.started.boxes!==1 || hex.pattern.started.borderColor!=='rgb(251, 191, 36)' || hex.pattern.started.borderWidth!=='1px' || Math.abs(hex.pattern.started.widthInCells-4)>.05 || !hex.pattern.started.sameRow || hex.pattern.started.state!=='PATTERN MATCH'
+      || hex.pattern.decayed.active!=='true' || hex.pattern.decayed.matches!==1 || hex.pattern.decayed.opacity<=.15 || hex.pattern.decayed.opacity>=.5 || hex.pattern.decayed.opacity>=hex.pattern.started.opacity || hex.pattern.decayed.boxes!==1 || hex.pattern.decayed.boxOpacity!==hex.pattern.decayed.opacity
+      || hex.pattern.cleared.active!=='false' || hex.pattern.cleared.matches!==1 || hex.pattern.cleared.opacity!==0 || hex.pattern.cleared.boxes!==0 || hex.pattern.cleared.state!=='SCANNING'
+      || hex.final.frames<=hex.initial.frames || hex.final.distance<=hex.initial.distance || hex.final.matches!==1 || hex.final.matchActive!=='false' || hex.final.running!=='true' || hex.final.selectedAddress!=='' || hex.final.linkActive;
+  const hexFailed = demoId === 'fui-hex-dump' && (hexCommonFailed || hexMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
