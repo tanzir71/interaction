@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 272; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 273; /* keep in sync with the published registries */
 const targets = [
+  'fui-target-lock',
   'fui-status-dashboard',
   'scroll-text-highlight', 'scroll-image-sequence', 'scroll-svg-draw', 'scroll-rotate-gallery', 'scroll-split-screen', 'scroll-marquee-direction', 'scroll-counter-rotate', 'scroll-depth-tunnel', 'scroll-letter-scatter', 'scroll-color-theme', 'scroll-clip-morph', 'scroll-table-of-contents', 'scroll-inertia-grid', 'scroll-video-scrubber',
   'lenis-smooth-scroll', 'cursor-gooey-blob', 'cursor-particle-emitter', 'cursor-elastic-line', 'cursor-inverted-lens', 'cursor-text-repel', 'cursor-grid-ripple', 'cursor-hover-preview', 'cursor-drag-ghost', 'cursor-eyes-follow', 'cursor-liquid-metaball', 'cursor-rope-trail', 'cursor-velocity-stretch', 'cursor-snap-targets', 'cursor-flashlight-noise', 'cursor-emoji-rain', 'cursor-magnetic-grid-lines', 'cursor-heat-shimmer', 'cursor-crosshair-hud', 'cursor-pull-distort', 'cursor-shadow-parallax', 'dither-bayer', 'dither-floyd-steinberg', 'dither-blue-noise', 'halftone-dots', 'halftone-lines', 'ascii-render', 'ascii-webcam-style-wave', 'glitch-rgb-slices', 'glitch-datamosh-blocks', 'scanline-crt', 'vhs-tracking', 'pixel-sort', 'noise-grain-overlay', 'threshold-mosaic-transition', 'bitmap-font-marquee', 'interlace-flicker', 'posterize-hover', 'chromatic-type', 'neumorphic-buttons', 'mechanical-switch', 'rotary-knob', 'brushed-metal-slider', 'paper-stack-cards', 'glass-refraction-card', 'led-segment-display', 'flip-clock', 'embossed-press', 'analog-gauge', 'punch-card-keyboard', 'cassette-reels', 'slot-machine-reel', 'zippo-flame', 'torn-paper-edge', 'wax-seal-stamp', 'split-text-reveal',
