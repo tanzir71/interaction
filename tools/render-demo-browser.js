@@ -1132,6 +1132,126 @@ async function render(data, stageWidth, mode) {
       final:{snapshot:snapshot(),sceneInside:inside(finalSceneRect,rectOf(root)),readoutInside:inside(rectOf(orbitReadout),finalSceneRect),headsInside:orbitHeads.every(function(head){return inside(rectOf(head),finalSceneRect)}),scrollWidth:root.scrollWidth,clientWidth:root.clientWidth}
     };
   }
+  let donut = null;
+  if (root.classList.contains('d-ascii-donut')) {
+    const donutReduced=root.dataset.reduced==='true';
+    const donutScene=root.querySelector('.d-ascii-donut-scene');
+    const donutCanvas=root.querySelector('.d-ascii-donut-canvas');
+    const donutStatus=root.querySelector('.d-ascii-donut-status');
+    const wait=function(ms){return new Promise(function(resolve){setTimeout(resolve,ms)})};
+    const poll=async function(test,timeout){const started=performance.now();while(performance.now()-started<(timeout||1200)){if(test())return true;await wait(16)}return test()};
+    const rectOf=function(node){const box=node.getBoundingClientRect();return {left:box.left,top:box.top,right:box.right,bottom:box.bottom,width:box.width,height:box.height}};
+    const inside=function(inner,outer){return inner.left>=outer.left-.5&&inner.right<=outer.right+.5&&inner.top>=outer.top-.5&&inner.bottom<=outer.bottom+.5};
+    const snapshot=function(){return {
+      angleA:Number(root.dataset.angleA),angleB:Number(root.dataset.angleB),velocityA:Number(root.dataset.velocityA),velocityB:Number(root.dataset.velocityB),
+      renderFrames:Number(root.dataset.renderFrames),manualRenders:Number(root.dataset.manualRenders),rafFrames:Number(root.dataset.rafFrames),simulationTime:Number(root.dataset.simulationTime),
+      lastRenderAt:Number(root.dataset.lastRenderAt),renderGap:Number(root.dataset.renderGap),occupiedCells:Number(root.dataset.occupiedCells),silhouetteCells:Number(root.dataset.silhouetteCells),accentCells:Number(root.dataset.accentCells),
+      glyphChecksum:root.dataset.glyphChecksum,initialChecksum:root.dataset.initialChecksum,glyphsUsed:root.dataset.glyphsUsed,silhouetteBounds:root.dataset.silhouetteBounds,
+      dragging:root.dataset.dragging,dragPointer:Number(root.dataset.dragPointer),dragMoves:Number(root.dataset.dragMoves),dragDistance:Number(root.dataset.dragDistance),paused:root.dataset.paused,running:root.dataset.running,reduced:root.dataset.reduced,source:root.dataset.source
+    }};
+    const freezeKey=function(state){return [state.angleA,state.angleB,state.velocityA,state.velocityB,state.renderFrames,state.rafFrames,state.simulationTime,state.glyphChecksum].join('|')};
+    const pixels=(function(){
+      const data=donutCanvas.getContext('2d').getImageData(0,0,donutCanvas.width,donutCanvas.height).data;
+      let nonBackground=0,accent=0,bright=0,minInk=765,maxInk=0;
+      for(let index=0;index<data.length;index+=4){
+        const red=data[index],green=data[index+1],blue=data[index+2];
+        const distance=Math.abs(red-10)+Math.abs(green-10)+Math.abs(blue-11);
+        if(distance>18){nonBackground++;minInk=Math.min(minInk,red+green+blue);maxInk=Math.max(maxInk,red+green+blue)}
+        if(blue-green>10&&red-green>3&&blue>45)accent++;
+        if(red>140&&green>140&&blue>140)bright++;
+      }
+      return {nonBackground,accent,bright,minInk,maxInk,total:data.length/4};
+    })();
+    const rootRect=rectOf(root);
+    const sceneRect=rectOf(donutScene);
+    const canvasRect=rectOf(donutCanvas);
+    const focusSelector='button,input,select,textarea,a[href],[tabindex]';
+    const structure={
+      sceneTag:donutScene.tagName,canvasCount:root.querySelectorAll('.d-ascii-donut-canvas').length,canvasRole:donutCanvas.getAttribute('role'),canvasLabel:donutCanvas.getAttribute('aria-label'),
+      rootTabIndex:root.getAttribute('tabindex'),rootLabel:root.getAttribute('aria-label'),shortcuts:root.getAttribute('aria-keyshortcuts'),focusables:(root.matches(focusSelector)?1:0)+root.querySelectorAll(focusSelector).length,
+      statusLive:donutStatus.getAttribute('aria-live'),statusAtomic:donutStatus.getAttribute('aria-atomic'),topbars:root.querySelectorAll('.d-ascii-donut-topbar').length,footers:root.querySelectorAll('.d-ascii-donut-footer').length,corners:root.querySelectorAll('.d-ascii-donut-corner').length,
+      sceneRadius:getComputedStyle(donutScene).borderRadius,sceneBorder:getComputedStyle(donutScene).borderWidth,sceneBackground:getComputedStyle(donutScene).backgroundColor,rootBackground:getComputedStyle(root).backgroundColor,rootColor:getComputedStyle(root).color,touchAction:getComputedStyle(root).touchAction,overlayBackground:getComputedStyle(root,'::before').backgroundImage,labelFont:getComputedStyle(root.querySelector('.d-ascii-donut-angles')).fontSize,dataFont:getComputedStyle(root.querySelector('.d-ascii-donut-angles b')).fontSize,
+      sceneInside:inside(sceneRect,rootRect),canvasInside:inside(canvasRect,sceneRect),sceneWidth:sceneRect.width,sceneHeight:sceneRect.height,canvasClientWidth:donutCanvas.clientWidth,canvasClientHeight:donutCanvas.clientHeight,
+      canvasWidth:donutCanvas.width,canvasHeight:donutCanvas.height,dpr:Number(root.dataset.dpr),canvasSized:donutCanvas.width===Math.round(donutCanvas.clientWidth*Number(root.dataset.dpr))&&donutCanvas.height===Math.round(donutCanvas.clientHeight*Number(root.dataset.dpr)),fontSize:Number(root.dataset.fontSize),maxGlyphAdvance:Number(root.dataset.maxGlyphAdvance),cellWidth:donutCanvas.clientWidth/48,colorBuckets:Number(root.dataset.colorBuckets),
+      rampText:root.querySelector('.d-ascii-donut-ramp b').textContent,gridText:root.querySelector('.d-ascii-donut-grid b').textContent,pixels
+    };
+    const initial=snapshot();
+    let motion=null;
+    let visibility=null;
+    let reducedStable=null;
+    let pointer=null;
+    let keyboard=null;
+    if(!donutReduced){
+      await poll(function(){return Number(root.dataset.renderFrames)>=initial.renderFrames+4},1000);
+      const motionAfter=snapshot();
+      const motionFrames=motionAfter.renderFrames-initial.renderFrames;
+      motion={before:initial,after:motionAfter,frameDelta:motionFrames,simulationDelta:motionAfter.simulationTime-initial.simulationTime,angleADelta:motionAfter.angleA-initial.angleA,angleBDelta:motionAfter.angleB-initial.angleB,averageInterval:motionFrames?(motionAfter.simulationTime-initial.simulationTime)/motionFrames:0};
+      const box=donutScene.getBoundingClientRect();
+      const startX=box.left+box.width*.5,startY=box.top+box.height*.5;
+      donutScene.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:31,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX,clientY:startY}));
+      donutScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:31,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX+25,clientY:startY-15}));
+      const dragActive=snapshot();
+      donutScene.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerId:31,pointerType:'mouse',isPrimary:true,button:0,buttons:0,clientX:startX+25,clientY:startY-15}));
+      const released=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>=released.renderFrames+4},1000);
+      const inertia=snapshot();
+      const inertiaFrames=inertia.renderFrames-released.renderFrames;
+      pointer={active:dragActive,released,inertia,inertiaFrames,expectedVelocityA:.04+(-.12-.04)*Math.pow(.95,inertiaFrames),expectedVelocityB:.02+(.2-.02)*Math.pow(.95,inertiaFrames),focused:document.activeElement===root,status:donutStatus.textContent};
+      root.style.transform='translateY(1000px)';
+      await poll(function(){return root.dataset.running==='false'},1000);
+      const hidden=snapshot();
+      await wait(350);
+      const stable=snapshot();
+      root.style.transform='';
+      await poll(function(){return root.dataset.running==='true'},1000);
+      const resumed=snapshot();
+      visibility={hidden:{state:hidden,key:freezeKey(hidden)},stable:{state:stable,key:freezeKey(stable)},resumed:{state:resumed,key:freezeKey(resumed)}};
+      donutScene.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:32,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX,clientY:startY}));
+      donutScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:32,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX-10,clientY:startY+10}));
+      donutScene.dispatchEvent(new PointerEvent('pointercancel',{bubbles:true,pointerId:32,pointerType:'mouse',isPrimary:true,button:0,buttons:0,clientX:startX-10,clientY:startY+10}));
+      pointer.cancelled=snapshot();
+      root.focus({preventScroll:true});
+      const keyBefore=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));
+      const arrow=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowDown',shiftKey:true}));
+      const shifted=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Home'}));
+      const home=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:' '}));
+      const paused=snapshot();
+      await wait(150);
+      const pausedStable=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:' '}));
+      const resumedKeyboard=snapshot();
+      keyboard={before:keyBefore,arrow,shifted,home,paused,pausedStable,resumed:resumedKeyboard,focused:document.activeElement===root,status:donutStatus.textContent};
+    }else{
+      await wait(550);
+      reducedStable=snapshot();
+      const box=donutScene.getBoundingClientRect();
+      const startX=box.left+box.width*.5,startY=box.top+box.height*.5;
+      donutScene.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:41,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX,clientY:startY}));
+      donutScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:41,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:startX+25,clientY:startY-15}));
+      const dragActive=snapshot();
+      donutScene.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerId:41,pointerType:'mouse',isPrimary:true,button:0,buttons:0,clientX:startX+25,clientY:startY-15}));
+      const released=snapshot();
+      pointer={active:dragActive,released,inertia:null,inertiaFrames:0,focused:document.activeElement===root,status:donutStatus.textContent};
+      const keyBefore=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));
+      const arrow=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:' '}));
+      const stepped=snapshot();
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Home'}));
+      const home=snapshot();
+      await wait(220);
+      const finalStable=snapshot();
+      keyboard={before:keyBefore,arrow,stepped,home,finalStable,focused:document.activeElement===root,status:donutStatus.textContent};
+    }
+    donut={
+      metadata:{r1:root.dataset.r1,r2:root.dataset.r2,gridColumns:root.dataset.gridColumns,gridRows:root.dataset.gridRows,thetaSteps:root.dataset.thetaSteps,phiSteps:root.dataset.phiSteps,pointCount:root.dataset.pointCount,glyphRamp:root.dataset.glyphRamp,targetFps:root.dataset.targetFps,frameInterval:root.dataset.frameInterval,autoA:root.dataset.autoA,autoB:root.dataset.autoB,friction:root.dataset.friction,edgeRadius:root.dataset.edgeRadius,accentMix:root.dataset.accentMix,cameraDistance:root.dataset.cameraDistance,projection:root.dataset.projection,initialAngles:root.dataset.initialAngles,dragGain:root.dataset.dragGain,dragClamp:root.dataset.dragClamp,lightDirection:root.dataset.lightDirection},
+      structure,initial,motion,visibility,reducedStable,pointer,keyboard,reduced:root.dataset.reduced,final:{snapshot:snapshot(),scrollWidth:root.scrollWidth,clientWidth:root.clientWidth,scrollHeight:root.scrollHeight,clientHeight:root.clientHeight,sceneInside:inside(rectOf(donutScene),rectOf(root)),canvasInside:inside(rectOf(donutCanvas),rectOf(donutScene))}
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -1155,6 +1275,7 @@ async function render(data, stageWidth, mode) {
     hexDump,
     trading,
     orbital,
+    donut,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -1165,7 +1286,7 @@ async function render(data, stageWidth, mode) {
 
 async function main() {
   const pages = await (await fetch('http://127.0.0.1:' + port + '/json/list')).json();
-  const page = pages.find(item => item.type === 'page');
+  const page = pages.find(item => item.type === 'page' && /^https?:\/\//.test(item.url));
   if (!page) throw new Error('No Chromium page target found');
   const ws = new WebSocket(page.webSocketDebuggerUrl);
   await new Promise((resolve, reject) => {
@@ -1446,7 +1567,46 @@ async function main() {
       || orbit.pointer.end.frames<=orbit.pointer.start.frames || orbit.keyboard.start.cameraAngle!==-34 || orbit.keyboard.start.cameraTarget!==28 || orbit.keyboard.start.rotationProgress!==0 || orbit.keyboard.start.rotationAnimating!=='true' || orbit.keyboard.start.typedChars!==0 || orbit.keyboard.start.typing!=='true'
       || orbit.keyboard.end.frames<=orbit.keyboard.start.frames || orbit.final.snapshot.frames<=orbit.initial.frames || orbit.final.snapshot.simulationTime<=orbit.initial.simulationTime || orbit.final.snapshot.running!=='true';
   const orbitFailed=demoId==='fui-orbital-tracker'&&(orbitCommonFailed||orbitMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed || orbitFailed) process.exitCode = 1;
+  const donut=result.donut;
+  const donutBounds=donut?donut.initial.silhouetteBounds.split(',').map(Number):[];
+  const donutCommonFailed=!donut
+    || donut.metadata.r1!=='1' || donut.metadata.r2!=='2' || donut.metadata.gridColumns!=='48' || donut.metadata.gridRows!=='24' || donut.metadata.thetaSteps!=='90' || donut.metadata.phiSteps!=='24' || donut.metadata.pointCount!=='2160'
+    || donut.metadata.glyphRamp!=='.,-~:;=!*#$@' || donut.metadata.targetFps!=='30' || donut.metadata.frameInterval!=='33.333' || donut.metadata.autoA!=='0.04' || donut.metadata.autoB!=='0.02' || donut.metadata.friction!=='0.95'
+    || donut.metadata.edgeRadius!=='6' || donut.metadata.accentMix!=='0.3' || donut.metadata.cameraDistance!=='5' || donut.metadata.projection!=='15,8' || donut.metadata.initialAngles!=='0.6,0.2' || donut.metadata.dragGain!=='0.008' || donut.metadata.dragClamp!=='0.22' || donut.metadata.lightDirection!=='0.22,0.66,-0.718'
+    || donut.structure.sceneTag!=='DIV' || donut.structure.canvasCount!==1 || donut.structure.canvasRole!=='img' || !donut.structure.canvasLabel.startsWith('ASCII torus using ') || !donut.structure.canvasLabel.includes(String(donut.initial.occupiedCells))
+    || donut.structure.rootTabIndex!=='0' || !donut.structure.rootLabel.includes('Interactive ASCII torus') || donut.structure.shortcuts!=='ArrowLeft ArrowRight ArrowUp ArrowDown Home Space' || donut.structure.focusables!==1
+    || donut.structure.statusLive!=='polite' || donut.structure.statusAtomic!=='true' || donut.structure.topbars!==1 || donut.structure.footers!==1 || donut.structure.corners!==0
+    || donut.structure.sceneRadius!=='10px' || donut.structure.sceneBorder!=='1px' || donut.structure.sceneBackground!=='rgb(16, 16, 18)' || donut.structure.rootBackground!=='rgb(10, 10, 11)' || donut.structure.rootColor!=='rgb(236, 236, 239)' || donut.structure.touchAction!=='none'
+    || !donut.structure.overlayBackground.includes('radial-gradient') || donut.structure.overlayBackground.includes('repeating-linear-gradient') || donut.structure.labelFont!=='10px' || donut.structure.dataFont!=='12px'
+    || !donut.structure.sceneInside || !donut.structure.canvasInside || Math.abs(donut.structure.sceneWidth-(result.width-20))>.1 || Math.abs(donut.structure.sceneHeight-264)>.1 || donut.structure.canvasClientWidth!==donut.structure.sceneWidth-2 || donut.structure.canvasClientHeight!==262
+    || !donut.structure.canvasSized || donut.structure.dpr<1 || donut.structure.dpr>2 || donut.structure.fontSize<=0 || donut.structure.fontSize>11 || donut.structure.maxGlyphAdvance>donut.structure.cellWidth+.01 || donut.structure.colorBuckets<2 || donut.structure.colorBuckets>=donut.initial.occupiedCells
+    || donut.structure.rampText!==donut.metadata.glyphRamp || donut.structure.gridText!=='048x024' || donut.structure.pixels.nonBackground<2500 || donut.structure.pixels.accent<250 || donut.structure.pixels.bright<500 || donut.structure.pixels.minInk>=donut.structure.pixels.maxInk || donut.structure.pixels.maxInk<600 || donut.structure.pixels.total!==donut.structure.canvasWidth*donut.structure.canvasHeight
+    || donut.initial.initialChecksum!=='6989CBDF' || !/^[0-9A-F]{8}$/.test(donut.initial.glyphChecksum) || donut.initial.occupiedCells<100 || donut.initial.occupiedCells>220 || donut.initial.silhouetteCells<30 || donut.initial.silhouetteCells>90 || donut.initial.accentCells<donut.initial.silhouetteCells || donut.initial.accentCells>donut.initial.occupiedCells
+    || donut.initial.glyphsUsed.length<8 || [...donut.initial.glyphsUsed].some(function(glyph){return !donut.metadata.glyphRamp.includes(glyph)}) || donutBounds.length!==4 || donutBounds.some(function(value){return !Number.isInteger(value)}) || donutBounds[0]<0 || donutBounds[1]<0 || donutBounds[2]>=48 || donutBounds[3]>=24 || donutBounds[0]>=donutBounds[2] || donutBounds[1]>=donutBounds[3]
+    || !donut.pointer || !donut.keyboard || donut.final.scrollWidth!==donut.final.clientWidth || donut.final.scrollHeight!==donut.final.clientHeight || !donut.final.sceneInside || !donut.final.canvasInside;
+  const donutMotionFailed=reducedMotion
+    ? !donut || donut.reduced!=='true' || donut.initial.reduced!=='true' || donut.initial.angleA!==.6 || donut.initial.angleB!==.2 || donut.initial.velocityA!==.04 || donut.initial.velocityB!==.02 || donut.initial.renderFrames!==0 || donut.initial.manualRenders!==0 || donut.initial.rafFrames!==0 || donut.initial.simulationTime!==0 || donut.initial.running!=='false' || donut.initial.glyphChecksum!==donut.initial.initialChecksum
+      || donut.motion!==null || donut.visibility!==null || !donut.reducedStable || donut.reducedStable.angleA!==donut.initial.angleA || donut.reducedStable.angleB!==donut.initial.angleB || donut.reducedStable.renderFrames!==0 || donut.reducedStable.manualRenders!==0 || donut.reducedStable.rafFrames!==0 || donut.reducedStable.simulationTime!==0 || donut.reducedStable.glyphChecksum!==donut.initial.glyphChecksum || donut.reducedStable.running!=='false'
+      || donut.pointer.active.dragging!=='true' || donut.pointer.active.dragPointer!==41 || donut.pointer.active.dragMoves!==1 || Math.abs(donut.pointer.active.dragDistance-29.15)>.02 || donut.pointer.active.angleA!==.48 || donut.pointer.active.angleB!==.4 || donut.pointer.active.velocityA!==-.12 || donut.pointer.active.velocityB!==.2 || donut.pointer.active.manualRenders!==1 || donut.pointer.active.renderFrames!==0 || donut.pointer.active.rafFrames!==0 || donut.pointer.active.simulationTime!==0 || donut.pointer.active.glyphChecksum===donut.initial.glyphChecksum || !donut.pointer.focused
+      || donut.pointer.released.dragging!=='false' || donut.pointer.released.dragPointer!==-1 || donut.pointer.released.running!=='false' || donut.pointer.released.source!=='pointer release' || donut.pointer.status!=='Static torus orientation updated' || donut.pointer.inertia!==null || donut.pointer.inertiaFrames!==0
+      || donut.keyboard.arrow.angleA!==donut.keyboard.before.angleA || Math.abs(donut.keyboard.arrow.angleB-donut.keyboard.before.angleB-.12)>.0001 || donut.keyboard.arrow.velocityA!==.04 || donut.keyboard.arrow.velocityB!==.02 || donut.keyboard.arrow.manualRenders!==2 || donut.keyboard.arrow.renderFrames!==0 || donut.keyboard.arrow.source!=='keyboard' || donut.keyboard.arrow.glyphChecksum===donut.keyboard.before.glyphChecksum
+      || Math.abs(donut.keyboard.stepped.angleA-donut.keyboard.arrow.angleA-.04)>.0001 || Math.abs(donut.keyboard.stepped.angleB-donut.keyboard.arrow.angleB-.02)>.0001 || donut.keyboard.stepped.manualRenders!==3 || donut.keyboard.stepped.renderFrames!==0 || donut.keyboard.stepped.rafFrames!==0 || donut.keyboard.stepped.simulationTime!==0 || donut.keyboard.stepped.running!=='false' || donut.keyboard.stepped.source!=='keyboard step'
+      || donut.keyboard.home.angleA!==.6 || donut.keyboard.home.angleB!==.2 || donut.keyboard.home.velocityA!==.04 || donut.keyboard.home.velocityB!==.02 || donut.keyboard.home.manualRenders!==4 || donut.keyboard.home.glyphChecksum!==donut.initial.initialChecksum || !donut.keyboard.focused
+      || donut.keyboard.finalStable.angleA!==donut.keyboard.home.angleA || donut.keyboard.finalStable.angleB!==donut.keyboard.home.angleB || donut.keyboard.finalStable.renderFrames!==0 || donut.keyboard.finalStable.manualRenders!==4 || donut.keyboard.finalStable.rafFrames!==0 || donut.keyboard.finalStable.simulationTime!==0 || donut.keyboard.finalStable.glyphChecksum!==donut.keyboard.home.glyphChecksum || donut.keyboard.finalStable.running!=='false'
+      || donut.final.snapshot.renderFrames!==0 || donut.final.snapshot.manualRenders!==4 || donut.final.snapshot.rafFrames!==0 || donut.final.snapshot.simulationTime!==0 || donut.final.snapshot.running!=='false'
+    : !donut || donut.reduced!=='false' || donut.initial.reduced!=='false' || donut.initial.renderFrames<=0 || donut.initial.rafFrames<=0 || donut.initial.simulationTime<=0 || donut.initial.running!=='true' || donut.initial.velocityA!==.04 || donut.initial.velocityB!==.02
+      || !donut.motion || donut.motion.frameDelta<4 || donut.motion.after.renderFrames<=donut.motion.before.renderFrames || donut.motion.after.simulationTime<=donut.motion.before.simulationTime || donut.motion.after.glyphChecksum===donut.motion.before.glyphChecksum || donut.motion.averageInterval<32 || donut.motion.averageInterval>75 || Math.abs(donut.motion.angleADelta-donut.motion.frameDelta*.04)>.0003 || Math.abs(donut.motion.angleBDelta-donut.motion.frameDelta*.02)>.0003 || donut.motion.after.velocityA!==.04 || donut.motion.after.velocityB!==.02
+      || donut.pointer.active.dragging!=='true' || donut.pointer.active.dragPointer!==31 || donut.pointer.active.dragMoves!==1 || Math.abs(donut.pointer.active.dragDistance-29.15)>.02 || donut.pointer.active.velocityA!==-.12 || donut.pointer.active.velocityB!==.2 || !donut.pointer.focused
+      || donut.pointer.released.dragging!=='false' || donut.pointer.released.dragPointer!==-1 || donut.pointer.released.source!=='pointer release' || !donut.pointer.status.startsWith('Inertial rotation') || donut.pointer.inertiaFrames<4 || donut.pointer.inertia.renderFrames<=donut.pointer.released.renderFrames || donut.pointer.inertia.glyphChecksum===donut.pointer.released.glyphChecksum || Math.abs(donut.pointer.inertia.velocityA-donut.pointer.expectedVelocityA)>.00003 || Math.abs(donut.pointer.inertia.velocityB-donut.pointer.expectedVelocityB)>.00003
+      || !donut.visibility || donut.visibility.hidden.state.running!=='false' || donut.visibility.stable.state.running!=='false' || donut.visibility.hidden.key!==donut.visibility.stable.key || donut.visibility.resumed.state.running!=='true' || donut.visibility.resumed.state.simulationTime<donut.visibility.stable.state.simulationTime || donut.visibility.resumed.state.simulationTime-donut.visibility.stable.state.simulationTime>50.1 || donut.visibility.resumed.state.renderFrames<donut.visibility.stable.state.renderFrames || donut.visibility.resumed.state.renderFrames-donut.visibility.stable.state.renderFrames>1
+      || donut.pointer.cancelled.dragging!=='false' || donut.pointer.cancelled.dragPointer!==-1 || donut.pointer.cancelled.source!=='pointer cancel' || donut.pointer.cancelled.velocityA!==.08 || donut.pointer.cancelled.velocityB!==-.08
+      || donut.keyboard.arrow.angleA!==donut.keyboard.before.angleA || Math.abs(donut.keyboard.arrow.angleB-donut.keyboard.before.angleB-.12)>.0001 || donut.keyboard.arrow.velocityA!==.04 || donut.keyboard.arrow.velocityB!==.02 || donut.keyboard.arrow.manualRenders!==donut.keyboard.before.manualRenders+1 || donut.keyboard.arrow.renderFrames!==donut.keyboard.before.renderFrames || donut.keyboard.arrow.source!=='keyboard' || donut.keyboard.arrow.glyphChecksum===donut.keyboard.before.glyphChecksum
+      || Math.abs(donut.keyboard.shifted.angleA-donut.keyboard.arrow.angleA-.24)>.0001 || donut.keyboard.shifted.angleB!==donut.keyboard.arrow.angleB || donut.keyboard.shifted.velocityA!==.04 || donut.keyboard.shifted.velocityB!==.02 || donut.keyboard.shifted.manualRenders!==donut.keyboard.arrow.manualRenders+1 || donut.keyboard.shifted.renderFrames!==donut.keyboard.arrow.renderFrames
+      || donut.keyboard.home.angleA!==.6 || donut.keyboard.home.angleB!==.2 || donut.keyboard.home.velocityA!==.04 || donut.keyboard.home.velocityB!==.02 || donut.keyboard.home.glyphChecksum!==donut.initial.initialChecksum || donut.keyboard.home.manualRenders!==donut.keyboard.shifted.manualRenders+1
+      || donut.keyboard.paused.paused!=='true' || donut.keyboard.paused.running!=='false' || donut.keyboard.paused.source!=='keyboard pause' || donut.keyboard.pausedStable.angleA!==donut.keyboard.paused.angleA || donut.keyboard.pausedStable.angleB!==donut.keyboard.paused.angleB || donut.keyboard.pausedStable.velocityA!==donut.keyboard.paused.velocityA || donut.keyboard.pausedStable.velocityB!==donut.keyboard.paused.velocityB || donut.keyboard.pausedStable.renderFrames!==donut.keyboard.paused.renderFrames || donut.keyboard.pausedStable.rafFrames!==donut.keyboard.paused.rafFrames || donut.keyboard.pausedStable.simulationTime!==donut.keyboard.paused.simulationTime || donut.keyboard.pausedStable.glyphChecksum!==donut.keyboard.paused.glyphChecksum || donut.keyboard.pausedStable.running!=='false'
+      || donut.keyboard.resumed.paused!=='false' || donut.keyboard.resumed.running!=='true' || donut.keyboard.resumed.source!=='keyboard pause' || !donut.keyboard.focused || donut.keyboard.status!=='Torus resumed' || donut.final.snapshot.angleA!==.6 || donut.final.snapshot.angleB!==.2 || donut.final.snapshot.running!=='true';
+  const donutFailed=demoId==='ascii-donut-3d'&&(donutCommonFailed||donutMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed || orbitFailed || donutFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
