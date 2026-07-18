@@ -1,6 +1,6 @@
 # INTRX — The Interaction Library
 
-A curated, copy-paste reference of the web interactions used by award-winning design agencies. **293 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. The original roadmap is complete and the likes-driven expansion is underway.
+A curated, copy-paste reference of the web interactions used by award-winning design agencies. **294 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. The original roadmap is complete and the likes-driven expansion is underway.
 
 ## Website & demo
 
@@ -9,8 +9,8 @@ A curated, copy-paste reference of the web interactions used by award-winning de
 - 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
 
 **Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (20) · Raster & Glitch (29) · Skeuomorph (16) · SVG & Line (10) · 3D & Perspective (10) · Physics (10) · Liquid & Organic (8) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (14) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
-**Expansion categories live:** Maps & Geo (1) · FUI & Terminal (10). Agent & AI UI is wired and will appear when its first demo ships.
-**Roadmap:** All 236 original handoff items are published; 22 of 56 likes-driven expansion items are live, with 34 queued.
+**Expansion categories live:** Maps & Geo (2) · FUI & Terminal (10). Agent & AI UI is wired and will appear when its first demo ships.
+**Roadmap:** All 236 original handoff items are published; 23 of 56 likes-driven expansion items are live, with 33 queued.
 
 ## Architecture
 
