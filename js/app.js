@@ -265,7 +265,7 @@
      initial anchor jump, so scroll manually once the grid exists */
   if (!deep && location.hash.length > 1) {
     const anchorTarget = document.getElementById(location.hash.slice(1));
-    if (anchorTarget) anchorTarget.scrollIntoView();
+    if (anchorTarget) anchorTarget.scrollIntoView({ behavior: 'instant', block: 'start' });
   }
 
   /* dismissable grid strip */
