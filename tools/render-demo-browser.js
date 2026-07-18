@@ -1252,6 +1252,201 @@ async function render(data, stageWidth, mode) {
       structure,initial,motion,visibility,reducedStable,pointer,keyboard,reduced:root.dataset.reduced,final:{snapshot:snapshot(),scrollWidth:root.scrollWidth,clientWidth:root.clientWidth,scrollHeight:root.scrollHeight,clientHeight:root.clientHeight,sceneInside:inside(rectOf(donutScene),rectOf(root)),canvasInside:inside(rectOf(donutCanvas),rectOf(donutScene))}
     };
   }
+  let fire = null;
+  if (root.classList.contains('d-ascii-fire')) {
+    const fireReduced=root.dataset.reduced==='true';
+    const fireScene=root.querySelector('.d-ascii-fire-scene');
+    const fireCanvas=root.querySelector('.d-ascii-fire-canvas');
+    const fireStatus=root.querySelector('.d-ascii-fire-status');
+    const wait=function(ms){return new Promise(function(resolve){setTimeout(resolve,ms)})};
+    const poll=async function(test,timeout){const started=performance.now();while(performance.now()-started<(timeout||1200)){if(test())return true;await wait(12)}return test()};
+    const clamp=function(value,min,max){return Math.max(min,Math.min(max,value))};
+    const rectOf=function(node){const box=node.getBoundingClientRect();return {left:box.left,top:box.top,right:box.right,bottom:box.bottom,width:box.width,height:box.height}};
+    const inside=function(inner,outer){return inner.left>=outer.left-.5&&inner.right<=outer.right+.5&&inner.top>=outer.top-.5&&inner.bottom<=outer.bottom+.5};
+    const inspect=function(){return typeof root.__asciiFireInspect==='function'?root.__asciiFireInspect():null};
+    const snapshot=function(){return {
+      renderFrames:Number(root.dataset.renderFrames),manualFrames:Number(root.dataset.manualFrames),rafFrames:Number(root.dataset.rafFrames),simulationTime:Number(root.dataset.simulationTime),lastRenderAt:Number(root.dataset.lastRenderAt),renderGap:Number(root.dataset.renderGap),
+      rngState:Number(root.dataset.rngState),rngCalls:Number(root.dataset.rngCalls),warmedSeedState:Number(root.dataset.warmedSeedState),averageHeat:Number(root.dataset.averageHeat),minimumHeat:Number(root.dataset.minimumHeat),maximumHeat:Number(root.dataset.maximumHeat),
+      coolCells:Number(root.dataset.coolCells),warmCells:Number(root.dataset.warmCells),hotCells:Number(root.dataset.hotCells),coreCells:Number(root.dataset.coreCells),occupiedGlyphs:Number(root.dataset.occupiedGlyphs),glyphsUsed:root.dataset.glyphsUsed,glyphChecksum:root.dataset.glyphChecksum,heatChecksum:root.dataset.heatChecksum,initialChecksum:root.dataset.initialChecksum,initialHeatChecksum:root.dataset.initialHeatChecksum,
+      bottomMin:Number(root.dataset.bottomMin),bottomMax:Number(root.dataset.bottomMax),bottomAverage:Number(root.dataset.bottomAverage),decayMin:Number(root.dataset.decayMin),decayMax:Number(root.dataset.decayMax),offsetMin:Number(root.dataset.offsetMin),offsetMax:Number(root.dataset.offsetMax),affectedCells:Number(root.dataset.affectedCells),
+      pointerX:Number(root.dataset.pointerX),pointerInside:root.dataset.pointerInside,pointerMoves:Number(root.dataset.pointerMoves),windStrength:Number(root.dataset.windStrength),windSource:root.dataset.windSource,
+      surges:Number(root.dataset.surges),surgeStartedAt:Number(root.dataset.surgeStartedAt),surgeUntil:Number(root.dataset.surgeUntil),surgeRemaining:Number(root.dataset.surgeRemaining),surgeActive:root.dataset.surgeActive,fuelFrames:Number(root.dataset.fuelFrames),lastFuelMode:root.dataset.lastFuelMode,
+      fontSize:Number(root.dataset.fontSize),maxGlyphAdvance:Number(root.dataset.maxGlyphAdvance),colorBuckets:Number(root.dataset.colorBuckets),running:root.dataset.running,reduced:root.dataset.reduced,source:root.dataset.source,status:fireStatus.textContent
+    }};
+    const freezeKey=function(state){return [state.renderFrames,state.manualFrames,state.rafFrames,state.simulationTime,state.rngState,state.rngCalls,state.heatChecksum,state.glyphChecksum,state.surgeRemaining].join('|')};
+    const validate=function(raw,checkCurrentWind){
+      if(!raw||!raw.data)return {ok:false,lengths:false};
+      const data=raw.data;
+      const columns=64,rows=28,count=columns*rows,propagationCount=(rows-1)*columns;
+      const lengths=raw.heat.length===count&&raw.sourceHeat.length===count&&raw.decays.length===propagationCount&&raw.offsets.length===propagationCount&&raw.glyphIndices.length===count&&raw.buckets.length===count;
+      if(!lengths)return {ok:false,lengths:false};
+      let rangeErrors=0,propagationErrors=0,glyphErrors=0,bucketErrors=0,sourceBottomErrors=0,decayRangeErrors=0,offsetRangeErrors=0,windFormulaErrors=0;
+      let total=0,minimum=101,maximum=0,occupied=0,actualDecayMin=5,actualDecayMax=0,actualOffsetMin=3,actualOffsetMax=-3,actualAffected=0,expectedAffected=0;
+      const bandCounts=[0,0,0,0],used=new Set(),drawBuckets=new Set();
+      for(let index=0;index<count;index++){
+        const value=raw.heat[index];
+        const glyphIndex=clamp(Math.round(value/100*6),0,6);
+        const bucket=value<30?0:value<60?1:value<=85?2:3;
+        if(!Number.isInteger(value)||value<0||value>100)rangeErrors++;
+        if(raw.glyphIndices[index]!==glyphIndex)glyphErrors++;
+        if(raw.buckets[index]!==bucket)bucketErrors++;
+        total+=value;minimum=Math.min(minimum,value);maximum=Math.max(maximum,value);bandCounts[bucket]++;used.add(' .:*#%@'[glyphIndex]);
+        if(glyphIndex){occupied++;drawBuckets.add(bucket)}
+      }
+      for(let y=0;y<rows-1;y++)for(let x=0;x<columns;x++){
+        const index=y*columns+x;
+        const offset=raw.offsets[index];
+        const sampleX=x-offset;
+        const left=clamp(sampleX-1,0,columns-1),center=clamp(sampleX,0,columns-1),right=clamp(sampleX+1,0,columns-1),below=(y+1)*columns;
+        const expected=clamp(Math.floor((raw.sourceHeat[below+left]+raw.sourceHeat[below+center]+raw.sourceHeat[below+right])/3)-raw.decays[index],0,100);
+        if(raw.heat[index]!==expected)propagationErrors++;
+        if(raw.decays[index]<1||raw.decays[index]>4)decayRangeErrors++;
+        if(offset< -2||offset>2)offsetRangeErrors++;
+        actualDecayMin=Math.min(actualDecayMin,raw.decays[index]);actualDecayMax=Math.max(actualDecayMax,raw.decays[index]);
+        actualOffsetMin=Math.min(actualOffsetMin,offset);actualOffsetMax=Math.max(actualOffsetMax,offset);if(offset!==0)actualAffected++;
+        if(checkCurrentWind){
+          const pixelX=(x+.5)*Number(data.canvasClientWidth)/columns;
+          const influence=data.pointerInside==='true'?Math.max(0,1-Math.abs(pixelX-Number(data.pointerX))/120):0;
+          const expectedOffset=Math.round(Number(data.windStrength)*influence*influence);
+          if(offset!==expectedOffset)windFormulaErrors++;
+          if(expectedOffset!==0)expectedAffected++;
+        }
+      }
+      const bottom=raw.heat.slice(-columns);
+      for(let x=0;x<columns;x++)if(raw.sourceHeat[(rows-1)*columns+x]!==bottom[x])sourceBottomErrors++;
+      const checksum=function(values,scale){let hash=2166136261;for(let index=0;index<values.length;index++){hash^=Math.round(values[index]*scale)+index;hash=Math.imul(hash,16777619)}return(hash>>>0).toString(16).toUpperCase().padStart(8,'0')};
+      const logicalSteps=Number(data.warmupSteps)+Number(data.renderFrames)+Number(data.manualFrames);
+      const expectedCalls=logicalSteps*count;
+      let expectedState=Number(data.initialSeed)>>>0;
+      for(let call=0;call<(logicalSteps-1)*count;call++)expectedState=(Math.imul(expectedState,1664525)+1013904223)>>>0;
+      let seedErrors=0;
+      const forced=data.lastFuelMode==='surge'||data.lastFuelMode==='reduced pulse';
+      for(let x=0;x<columns;x++){
+        expectedState=(Math.imul(expectedState,1664525)+1013904223)>>>0;
+        const expected=forced?100:70+expectedState%31;
+        if(bottom[x]!==expected)seedErrors++;
+      }
+      let decaySequenceErrors=0;
+      for(let index=0;index<propagationCount;index++){
+        expectedState=(Math.imul(expectedState,1664525)+1013904223)>>>0;
+        if(raw.decays[index]!==1+expectedState%4)decaySequenceErrors++;
+      }
+      const glyphsUsed=[...' .:*#%@'].filter(function(glyph){return used.has(glyph)}).join('');
+      const bottomTotal=bottom.reduce(function(sum,value){return sum+value},0);
+      const telemetryOk=Math.abs(Number(data.averageHeat)-total/count)<=.0006&&Number(data.minimumHeat)===minimum&&Number(data.maximumHeat)===maximum
+        &&Number(data.coolCells)===bandCounts[0]&&Number(data.warmCells)===bandCounts[1]&&Number(data.hotCells)===bandCounts[2]&&Number(data.coreCells)===bandCounts[3]
+        &&Number(data.occupiedGlyphs)===occupied&&data.glyphsUsed===glyphsUsed&&Number(data.colorBuckets)===drawBuckets.size
+        &&Number(data.bottomMin)===Math.min(...bottom)&&Number(data.bottomMax)===Math.max(...bottom)&&Math.abs(Number(data.bottomAverage)-bottomTotal/columns)<=.0006
+        &&Number(data.decayMin)===actualDecayMin&&Number(data.decayMax)===actualDecayMax&&Number(data.offsetMin)===actualOffsetMin&&Number(data.offsetMax)===actualOffsetMax&&Number(data.affectedCells)===actualAffected
+        &&(!checkCurrentWind||actualAffected===expectedAffected);
+      const checksumOk=checksum(raw.heat,10)===data.heatChecksum&&checksum(raw.glyphIndices,1)===data.glyphChecksum;
+      const rngOk=Number(data.rngCalls)===expectedCalls&&Number(data.rngState)===(expectedState>>>0);
+      const ok=lengths&&!rangeErrors&&!propagationErrors&&!glyphErrors&&!bucketErrors&&!sourceBottomErrors&&!decayRangeErrors&&!offsetRangeErrors&&!windFormulaErrors&&!seedErrors&&!decaySequenceErrors&&telemetryOk&&checksumOk&&rngOk;
+      return {ok,lengths,rangeErrors,propagationErrors,glyphErrors,bucketErrors,sourceBottomErrors,decayRangeErrors,offsetRangeErrors,windFormulaErrors,seedErrors,decaySequenceErrors,telemetryOk,checksumOk,rngOk,bottomMin:Math.min(...bottom),bottomMax:Math.max(...bottom),bottomDistinct:new Set(bottom).size,bottomHundreds:bottom.filter(function(value){return value===100}).length,offsetMin:actualOffsetMin,offsetMax:actualOffsetMax,affectedCells:actualAffected,bandCounts,occupied,glyphsUsed};
+    };
+    const pixels=(function(){
+      const values=fireCanvas.getContext('2d').getImageData(0,0,fireCanvas.width,fireCanvas.height).data;
+      let nonBackground=0,cool=0,error=0,warning=0,core=0,minInk=765,maxInk=0;
+      for(let index=0;index<values.length;index+=4){
+        const red=values[index],green=values[index+1],blue=values[index+2],distance=Math.abs(red-10)+Math.abs(green-10)+Math.abs(blue-11);
+        if(distance>18){nonBackground++;minInk=Math.min(minInk,red+green+blue);maxInk=Math.max(maxInk,red+green+blue)}
+        if(red>25&&red<140&&Math.abs(red-green)<12&&blue>=red-5)cool++;
+        if(red>70&&red>green*1.35&&red>blue*1.35&&Math.abs(green-blue)<24)error++;
+        if(red>100&&green>70&&red>green*1.12&&green>blue*1.5)warning++;
+        if(red>180&&green>180&&blue>180)core++;
+      }
+      return {nonBackground,cool,error,warning,core,minInk,maxInk,total:values.length/4};
+    })();
+    const rootRect=rectOf(root),sceneRect=rectOf(fireScene),canvasRect=rectOf(fireCanvas),fuelRect=rectOf(root.querySelector('.d-ascii-fire-fuel>i'));
+    const focusSelector='button,input,select,textarea,a[href],[tabindex]';
+    const structure={
+      canvasCount:root.querySelectorAll('.d-ascii-fire-canvas').length,canvasRole:fireCanvas.getAttribute('role'),canvasLabel:fireCanvas.getAttribute('aria-label'),rootTabIndex:root.getAttribute('tabindex'),rootLabel:root.getAttribute('aria-label'),shortcuts:root.getAttribute('aria-keyshortcuts'),focusables:(root.matches(focusSelector)?1:0)+root.querySelectorAll(focusSelector).length,
+      statusLive:fireStatus.getAttribute('aria-live'),statusAtomic:fireStatus.getAttribute('aria-atomic'),topbars:root.querySelectorAll('.d-ascii-fire-topbar').length,footers:root.querySelectorAll('.d-ascii-fire-footer').length,
+      rootBackground:getComputedStyle(root).backgroundColor,rootColor:getComputedStyle(root).color,sceneBackground:getComputedStyle(fireScene).backgroundColor,sceneBorder:getComputedStyle(fireScene).borderWidth,sceneRadius:getComputedStyle(fireScene).borderRadius,touchAction:getComputedStyle(root).touchAction,overlayBackground:getComputedStyle(root,'::before').backgroundImage,
+      labelFont:getComputedStyle(root.querySelector('.d-ascii-fire-wind')).fontSize,dataFont:getComputedStyle(root.querySelector('.d-ascii-fire-wind b')).fontSize,fuelWidth:fuelRect.width,fuelHeight:fuelRect.height,
+      sceneInside:inside(sceneRect,rootRect),canvasInside:inside(canvasRect,sceneRect),sceneWidth:sceneRect.width,sceneHeight:sceneRect.height,canvasClientWidth:fireCanvas.clientWidth,canvasClientHeight:fireCanvas.clientHeight,canvasWidth:fireCanvas.width,canvasHeight:fireCanvas.height,dpr:Number(root.dataset.dpr),canvasSized:fireCanvas.width===Math.round(fireCanvas.clientWidth*Number(root.dataset.dpr))&&fireCanvas.height===Math.round(fireCanvas.clientHeight*Number(root.dataset.dpr)),cellWidth:fireCanvas.clientWidth/64,cellHeight:fireCanvas.clientHeight/28,fontSize:Number(root.dataset.fontSize),maxGlyphAdvance:Number(root.dataset.maxGlyphAdvance),colorBuckets:Number(root.dataset.colorBuckets),gridText:root.querySelector('.d-ascii-fire-grid b').textContent,rampText:root.querySelector('.d-ascii-fire-ramp b').textContent,pixels
+    };
+    const initial=snapshot();
+    const initialValidation=validate(inspect(),true);
+    let motion=null,visibility=null,reducedStable=null,pointer=null,keyboard=null,surge=null;
+    if(!fireReduced){
+      await poll(function(){return Number(root.dataset.renderFrames)>=initial.renderFrames+5},1600);
+      const motionAfter=snapshot();
+      const motionValidation=validate(inspect(),true);
+      const motionFrames=motionAfter.renderFrames-initial.renderFrames;
+      motion={before:initial,after:motionAfter,validation:motionValidation,frameDelta:motionFrames,simulationDelta:motionAfter.simulationTime-initial.simulationTime,averageInterval:motionFrames?(motionAfter.simulationTime-initial.simulationTime)/motionFrames:0};
+      const box=fireScene.getBoundingClientRect(),rightX=box.left+fireScene.clientLeft+fireScene.clientWidth*.96,leftX=box.left+fireScene.clientLeft+fireScene.clientWidth*.04,pointerY=box.top+box.height*.55;
+      fireScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:51,pointerType:'mouse',isPrimary:true,clientX:rightX,clientY:pointerY}));
+      const rightSet=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>rightSet.renderFrames},1000);
+      const right=snapshot(),rightValidation=validate(inspect(),true);
+      fireScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:51,pointerType:'mouse',isPrimary:true,clientX:leftX,clientY:pointerY}));
+      const leftSet=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>leftSet.renderFrames},1000);
+      const left=snapshot(),leftValidation=validate(inspect(),true);
+      fireScene.dispatchEvent(new PointerEvent('pointerleave',{bubbles:true,pointerId:51,pointerType:'mouse',isPrimary:true,clientX:leftX,clientY:pointerY}));
+      const calmSet=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>calmSet.renderFrames},1000);
+      const calm=snapshot(),calmValidation=validate(inspect(),true);
+      pointer={rightSet,right,rightValidation,leftSet,left,leftValidation,calmSet,calm,calmValidation};
+      root.focus({preventScroll:true});
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));
+      const arrow=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>arrow.renderFrames},1000);
+      const arrowFrame=snapshot(),arrowValidation=validate(inspect(),true);
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Home'}));
+      const home=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>home.renderFrames},1000);
+      const homeFrame=snapshot(),homeValidation=validate(inspect(),true);
+      keyboard={arrow,arrowFrame,arrowValidation,home,homeFrame,homeValidation,focused:document.activeElement===root};
+      const centerX=box.left+box.width*.5,centerY=box.top+box.height*.5;
+      fireScene.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:52,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:centerX,clientY:centerY}));
+      fireScene.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerId:52,pointerType:'mouse',isPrimary:true,button:0,buttons:0,clientX:centerX,clientY:centerY}));
+      fireScene.dispatchEvent(new MouseEvent('click',{bubbles:true,button:0,clientX:centerX,clientY:centerY}));
+      const surgeStart=snapshot();
+      await poll(function(){return Number(root.dataset.renderFrames)>surgeStart.renderFrames&&root.dataset.lastFuelMode==='surge'},1000);
+      const surgeEarly=snapshot(),surgeEarlyValidation=validate(inspect(),true);
+      root.style.transform='translateY(1000px)';
+      await poll(function(){return root.dataset.running==='false'},1000);
+      const hidden=snapshot(),hiddenKey=freezeKey(hidden);
+      await wait(350);
+      const stable=snapshot(),stableKey=freezeKey(stable);
+      root.style.transform='';
+      await poll(function(){return root.dataset.running==='true'},1000);
+      const resumed=snapshot();
+      visibility={hidden,hiddenKey,stable,stableKey,resumed};
+      await poll(function(){return root.dataset.surgeActive==='false'&&root.dataset.lastFuelMode==='base'},3300);
+      const surgeEnd=snapshot(),surgeEndValidation=validate(inspect(),true);
+      surge={start:surgeStart,early:surgeEarly,earlyValidation:surgeEarlyValidation,end:surgeEnd,endValidation:surgeEndValidation,focused:document.activeElement===root,status:fireStatus.textContent};
+    }else{
+      await wait(550);
+      reducedStable=snapshot();
+      const box=fireScene.getBoundingClientRect(),rightX=box.left+fireScene.clientLeft+fireScene.clientWidth*.96,pointerY=box.top+box.height*.55;
+      fireScene.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:61,pointerType:'mouse',isPrimary:true,clientX:rightX,clientY:pointerY}));
+      const moved=snapshot(),movedValidation=validate(inspect(),false);
+      pointer={moved,movedValidation};
+      root.focus({preventScroll:true});
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));
+      const arrow=snapshot(),arrowValidation=validate(inspect(),true);
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Home'}));
+      const home=snapshot(),homeValidation=validate(inspect(),false);
+      const centerX=box.left+box.width*.5,centerY=box.top+box.height*.5;
+      fireScene.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:62,pointerType:'mouse',isPrimary:true,button:0,buttons:1,clientX:centerX,clientY:centerY}));
+      fireScene.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerId:62,pointerType:'mouse',isPrimary:true,button:0,buttons:0,clientX:centerX,clientY:centerY}));
+      fireScene.dispatchEvent(new MouseEvent('click',{bubbles:true,button:0,clientX:centerX,clientY:centerY}));
+      const pointerFuel=snapshot(),pointerFuelValidation=validate(inspect(),true);
+      root.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:' '}));
+      const space=snapshot(),spaceValidation=validate(inspect(),true);
+      keyboard={arrow,arrowValidation,home,homeValidation,space,spaceValidation,focused:document.activeElement===root};
+      surge={pointerFuel,pointerFuelValidation,focused:document.activeElement===root,status:fireStatus.textContent};
+      await wait(550);
+    }
+    fire={
+      metadata:{gridColumns:root.dataset.gridColumns,gridRows:root.dataset.gridRows,cellCount:root.dataset.cellCount,glyphRamp:root.dataset.glyphRamp,targetFps:root.dataset.targetFps,frameInterval:root.dataset.frameInterval,initialSeed:root.dataset.initialSeed,bottomRange:root.dataset.bottomRange,decayRange:root.dataset.decayRange,windMax:root.dataset.windMax,windRadius:root.dataset.windRadius,windFalloff:root.dataset.windFalloff,surgeDuration:root.dataset.surgeDuration,warmupSteps:root.dataset.warmupSteps,colors:root.dataset.colors,boundaryMode:root.dataset.boundaryMode},
+      structure,initial,initialValidation,motion,visibility,reducedStable,pointer,keyboard,surge,reduced:root.dataset.reduced,
+      final:{snapshot:snapshot(),validation:validate(inspect(),fireReduced?root.dataset.source!=='keyboard calm':true),scrollWidth:root.scrollWidth,clientWidth:root.clientWidth,scrollHeight:root.scrollHeight,clientHeight:root.clientHeight,sceneInside:inside(rectOf(fireScene),rectOf(root)),canvasInside:inside(rectOf(fireCanvas),rectOf(fireScene))}
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -1276,6 +1471,7 @@ async function render(data, stageWidth, mode) {
     trading,
     orbital,
     donut,
+    fire,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -1606,7 +1802,44 @@ async function main() {
       || donut.keyboard.paused.paused!=='true' || donut.keyboard.paused.running!=='false' || donut.keyboard.paused.source!=='keyboard pause' || donut.keyboard.pausedStable.angleA!==donut.keyboard.paused.angleA || donut.keyboard.pausedStable.angleB!==donut.keyboard.paused.angleB || donut.keyboard.pausedStable.velocityA!==donut.keyboard.paused.velocityA || donut.keyboard.pausedStable.velocityB!==donut.keyboard.paused.velocityB || donut.keyboard.pausedStable.renderFrames!==donut.keyboard.paused.renderFrames || donut.keyboard.pausedStable.rafFrames!==donut.keyboard.paused.rafFrames || donut.keyboard.pausedStable.simulationTime!==donut.keyboard.paused.simulationTime || donut.keyboard.pausedStable.glyphChecksum!==donut.keyboard.paused.glyphChecksum || donut.keyboard.pausedStable.running!=='false'
       || donut.keyboard.resumed.paused!=='false' || donut.keyboard.resumed.running!=='true' || donut.keyboard.resumed.source!=='keyboard pause' || !donut.keyboard.focused || donut.keyboard.status!=='Torus resumed' || donut.final.snapshot.angleA!==.6 || donut.final.snapshot.angleB!==.2 || donut.final.snapshot.running!=='true';
   const donutFailed=demoId==='ascii-donut-3d'&&(donutCommonFailed||donutMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed || orbitFailed || donutFailed) process.exitCode = 1;
+  const fire=result.fire;
+  const fireCommonFailed=!fire
+    || fire.metadata.gridColumns!=='64' || fire.metadata.gridRows!=='28' || fire.metadata.cellCount!=='1792' || fire.metadata.glyphRamp!==' .:*#%@' || fire.metadata.targetFps!=='24' || fire.metadata.frameInterval!=='41.667'
+    || fire.metadata.initialSeed!=='12648430' || fire.metadata.bottomRange!=='70,100' || fire.metadata.decayRange!=='1,4' || fire.metadata.windMax!=='2' || fire.metadata.windRadius!=='120' || fire.metadata.windFalloff!=='squared'
+    || fire.metadata.surgeDuration!=='2000' || fire.metadata.warmupSteps!=='56' || fire.metadata.colors!=='#5c5c66,rgba(248 113 113 / 0.7),#fbbf24,#ffffff' || fire.metadata.boundaryMode!=='clamp'
+    || fire.structure.canvasCount!==1 || fire.structure.canvasRole!=='img' || !fire.structure.canvasLabel.startsWith('ASCII fire averaging ') || !fire.structure.rootLabel.startsWith('Interactive ASCII fire.')
+    || fire.structure.rootTabIndex!=='0' || fire.structure.shortcuts!=='ArrowLeft ArrowRight Home Space Enter' || fire.structure.focusables!==1 || fire.structure.statusLive!=='polite' || fire.structure.statusAtomic!=='true' || fire.structure.topbars!==1 || fire.structure.footers!==1
+    || fire.structure.rootBackground!=='rgb(10, 10, 11)' || fire.structure.rootColor!=='rgb(236, 236, 239)' || fire.structure.sceneBackground!=='rgb(16, 16, 18)' || fire.structure.sceneBorder!=='1px' || fire.structure.sceneRadius!=='10px' || fire.structure.touchAction!=='pan-y' || !fire.structure.overlayBackground.includes('radial-gradient')
+    || fire.structure.labelFont!=='10px' || fire.structure.dataFont!=='12px' || Math.abs(fire.structure.fuelWidth-52)>.1 || Math.abs(fire.structure.fuelHeight-3)>.1 || !fire.structure.sceneInside || !fire.structure.canvasInside || Math.abs(fire.structure.sceneWidth-(result.width-20))>.1 || fire.structure.sceneHeight<250
+    || !fire.structure.canvasSized || fire.structure.dpr<1 || fire.structure.dpr>2 || fire.structure.canvasClientWidth<=0 || fire.structure.canvasClientHeight<=0 || fire.structure.cellWidth<=0 || fire.structure.cellHeight<=0 || fire.structure.fontSize<=0 || fire.structure.fontSize>11 || fire.structure.maxGlyphAdvance>fire.structure.cellWidth+.01 || fire.structure.colorBuckets!==4
+    || fire.structure.gridText!=='064x028' || fire.structure.rampText!==' .:*#%@' || fire.structure.pixels.total!==fire.structure.canvasWidth*fire.structure.canvasHeight || fire.structure.pixels.nonBackground<fire.structure.pixels.total*.004 || fire.structure.pixels.cool<50 || fire.structure.pixels.error<20 || fire.structure.pixels.warning<20 || fire.structure.pixels.core<10 || fire.structure.pixels.minInk>=fire.structure.pixels.maxInk || fire.structure.pixels.maxInk<600
+    || fire.initial.initialChecksum!=='230BCD5F' || fire.initial.initialHeatChecksum!=='62CF78D3' || fire.initial.warmedSeedState!==485713902 || !fire.initialValidation.ok || fire.initialValidation.bottomMin<70 || fire.initialValidation.bottomMax>100 || fire.initialValidation.bottomDistinct<20 || fire.initialValidation.bandCounts.some(function(count){return count<=0}) || fire.initialValidation.occupied<1500
+    || !fire.pointer || !fire.keyboard || !fire.surge || !fire.final.validation.ok || fire.final.scrollWidth!==fire.final.clientWidth || fire.final.scrollHeight!==fire.final.clientHeight || !fire.final.sceneInside || !fire.final.canvasInside;
+  const fireMotionFailed=reducedMotion
+    ? !fire || fire.reduced!=='true' || fire.motion!==null || fire.visibility!==null || !fire.reducedStable
+      || fire.initial.renderFrames!==0 || fire.initial.manualFrames!==0 || fire.initial.rafFrames!==0 || fire.initial.simulationTime!==0 || fire.initial.running!=='false' || fire.initial.reduced!=='true' || fire.initial.rngCalls!==100352 || fire.initial.rngState!==485713902
+      || fire.initial.glyphChecksum!==fire.initial.initialChecksum || fire.initial.heatChecksum!==fire.initial.initialHeatChecksum || fire.initial.averageHeat!==45.641 || fire.initial.minimumHeat!==0 || fire.initial.maximumHeat!==100 || fire.initial.coolCells!==536 || fire.initial.warmCells!==670 || fire.initial.hotCells!==519 || fire.initial.coreCells!==67 || fire.initial.occupiedGlyphs!==1669 || fire.initial.glyphsUsed!==' .:*#%@' || fire.initialValidation.bottomDistinct!==29
+      || fire.reducedStable.renderFrames!==0 || fire.reducedStable.manualFrames!==0 || fire.reducedStable.rafFrames!==0 || fire.reducedStable.simulationTime!==0 || fire.reducedStable.rngCalls!==fire.initial.rngCalls || fire.reducedStable.rngState!==fire.initial.rngState || fire.reducedStable.heatChecksum!==fire.initial.heatChecksum || fire.reducedStable.glyphChecksum!==fire.initial.glyphChecksum || fire.reducedStable.running!=='false'
+      || !fire.pointer.movedValidation.ok || fire.pointer.moved.renderFrames!==0 || fire.pointer.moved.manualFrames!==0 || fire.pointer.moved.rafFrames!==0 || fire.pointer.moved.simulationTime!==0 || fire.pointer.moved.pointerInside!=='true' || Math.abs(fire.pointer.moved.windStrength-1.84)>.01 || fire.pointer.moved.windSource!=='pointer' || fire.pointer.moved.source!=='pointer' || fire.pointer.moved.heatChecksum!==fire.initial.heatChecksum || fire.pointer.moved.rngCalls!==fire.initial.rngCalls
+      || !fire.keyboard.arrowValidation.ok || fire.keyboard.arrow.renderFrames!==0 || fire.keyboard.arrow.manualFrames!==1 || fire.keyboard.arrow.rafFrames!==0 || fire.keyboard.arrow.simulationTime!==0 || fire.keyboard.arrow.windStrength!==2 || fire.keyboard.arrow.windSource!=='keyboard' || fire.keyboard.arrow.source!=='keyboard wind' || fire.keyboard.arrowValidation.offsetMin!==0 || fire.keyboard.arrowValidation.offsetMax!==2 || fire.keyboard.arrowValidation.affectedCells<=0
+      || !fire.keyboard.homeValidation.ok || fire.keyboard.home.renderFrames!==0 || fire.keyboard.home.manualFrames!==fire.keyboard.arrow.manualFrames || fire.keyboard.home.rafFrames!==0 || fire.keyboard.home.simulationTime!==0 || fire.keyboard.home.pointerInside!=='false' || fire.keyboard.home.windStrength!==0 || fire.keyboard.home.windSource!=='keyboard calm' || fire.keyboard.home.source!=='keyboard calm' || fire.keyboard.home.status!=='Wind calmed' || fire.keyboard.home.heatChecksum!==fire.keyboard.arrow.heatChecksum || fire.keyboard.home.rngCalls!==fire.keyboard.arrow.rngCalls
+      || !fire.surge.pointerFuelValidation.ok || fire.surge.pointerFuel.renderFrames!==0 || fire.surge.pointerFuel.manualFrames!==fire.keyboard.arrow.manualFrames+1 || fire.surge.pointerFuel.rafFrames!==0 || fire.surge.pointerFuel.simulationTime!==0 || fire.surge.pointerFuel.surges!==1 || fire.surge.pointerFuel.fuelFrames!==1 || fire.surge.pointerFuel.lastFuelMode!=='reduced pulse' || fire.surge.pointerFuel.surgeActive!=='false' || fire.surge.pointerFuel.surgeStartedAt!==0 || fire.surge.pointerFuel.surgeUntil!==0 || fire.surge.pointerFuel.surgeRemaining!==0 || fire.surge.pointerFuel.source!=='pointer fuel' || fire.surge.pointerFuelValidation.bottomHundreds!==64 || !fire.surge.focused
+      || !fire.keyboard.spaceValidation.ok || fire.keyboard.space.renderFrames!==0 || fire.keyboard.space.manualFrames!==fire.surge.pointerFuel.manualFrames+1 || fire.keyboard.space.rafFrames!==0 || fire.keyboard.space.simulationTime!==0 || fire.keyboard.space.surges!==2 || fire.keyboard.space.fuelFrames!==2 || fire.keyboard.space.lastFuelMode!=='reduced pulse' || fire.keyboard.space.surgeActive!=='false' || fire.keyboard.space.source!=='keyboard fuel' || fire.keyboard.space.status!=='Static fire advanced with full fuel' || fire.keyboard.spaceValidation.bottomHundreds!==64 || !fire.keyboard.focused
+      || fire.final.snapshot.renderFrames!==0 || fire.final.snapshot.manualFrames!==fire.keyboard.space.manualFrames || fire.final.snapshot.rafFrames!==0 || fire.final.snapshot.simulationTime!==0 || fire.final.snapshot.running!=='false' || fire.final.snapshot.rngCalls!==fire.keyboard.space.rngCalls || fire.final.snapshot.rngState!==fire.keyboard.space.rngState || fire.final.snapshot.heatChecksum!==fire.keyboard.space.heatChecksum || fire.final.snapshot.glyphChecksum!==fire.keyboard.space.glyphChecksum
+    : !fire || fire.reduced!=='false' || !fire.motion || !fire.visibility
+      || fire.initial.renderFrames<=0 || fire.initial.manualFrames!==0 || fire.initial.rafFrames<=fire.initial.renderFrames || fire.initial.simulationTime<=0 || fire.initial.running!=='true' || fire.initial.reduced!=='false'
+      || !fire.motion.validation.ok || fire.motion.frameDelta<5 || fire.motion.after.renderFrames<=fire.motion.before.renderFrames || fire.motion.after.rafFrames<=fire.motion.before.rafFrames || fire.motion.after.simulationTime<=fire.motion.before.simulationTime || fire.motion.after.heatChecksum===fire.motion.before.heatChecksum || fire.motion.after.glyphChecksum===fire.motion.before.glyphChecksum || fire.motion.averageInterval<32 || fire.motion.averageInterval>52 || fire.motion.after.rngCalls-fire.motion.before.rngCalls!==fire.motion.frameDelta*1792
+      || fire.pointer.rightSet.pointerInside!=='true' || Math.abs(fire.pointer.rightSet.windStrength-1.84)>.01 || fire.pointer.rightSet.windSource!=='pointer' || fire.pointer.rightSet.source!=='pointer' || !fire.pointer.rightValidation.ok || fire.pointer.rightValidation.offsetMin!==0 || fire.pointer.rightValidation.offsetMax!==2 || fire.pointer.rightValidation.affectedCells<=0 || fire.pointer.right.heatChecksum===fire.pointer.rightSet.heatChecksum
+      || fire.pointer.leftSet.pointerInside!=='true' || Math.abs(fire.pointer.leftSet.windStrength+1.84)>.01 || fire.pointer.leftSet.windSource!=='pointer' || !fire.pointer.leftValidation.ok || fire.pointer.leftValidation.offsetMin!==-2 || fire.pointer.leftValidation.offsetMax!==0 || fire.pointer.leftValidation.affectedCells<=0 || fire.pointer.left.heatChecksum===fire.pointer.leftSet.heatChecksum
+      || fire.pointer.calmSet.pointerInside!=='false' || fire.pointer.calmSet.windStrength!==0 || fire.pointer.calmSet.windSource!=='leave' || fire.pointer.calmSet.source!=='pointer leave' || !fire.pointer.calmValidation.ok || fire.pointer.calmValidation.offsetMin!==0 || fire.pointer.calmValidation.offsetMax!==0 || fire.pointer.calmValidation.affectedCells!==0
+      || fire.keyboard.arrow.windStrength!==2 || fire.keyboard.arrow.windSource!=='keyboard' || fire.keyboard.arrow.source!=='keyboard wind' || !fire.keyboard.arrowValidation.ok || fire.keyboard.arrowValidation.offsetMin!==0 || fire.keyboard.arrowValidation.offsetMax!==2 || fire.keyboard.arrowValidation.affectedCells<=0 || fire.keyboard.arrowFrame.renderFrames<=fire.keyboard.arrow.renderFrames
+      || fire.keyboard.home.pointerInside!=='false' || fire.keyboard.home.windStrength!==0 || fire.keyboard.home.windSource!=='keyboard calm' || fire.keyboard.home.source!=='keyboard calm' || fire.keyboard.home.status!=='Wind calmed' || !fire.keyboard.homeValidation.ok || fire.keyboard.homeValidation.offsetMin!==0 || fire.keyboard.homeValidation.offsetMax!==0 || fire.keyboard.homeValidation.affectedCells!==0 || !fire.keyboard.focused
+      || fire.surge.start.surges!==1 || fire.surge.start.surgeActive!=='true' || fire.surge.start.surgeUntil-fire.surge.start.surgeStartedAt!==2000 || fire.surge.start.surgeRemaining!==2000 || fire.surge.start.source!=='pointer fuel'
+      || !fire.surge.earlyValidation.ok || fire.surge.early.renderFrames<=fire.surge.start.renderFrames || fire.surge.early.lastFuelMode!=='surge' || fire.surge.earlyValidation.bottomMin!==100 || fire.surge.earlyValidation.bottomMax!==100 || fire.surge.earlyValidation.bottomHundreds!==64 || fire.surge.early.fuelFrames<=fire.surge.start.fuelFrames || !fire.surge.focused
+      || fire.visibility.hidden.running!=='false' || fire.visibility.stable.running!=='false' || fire.visibility.hiddenKey!==fire.visibility.stableKey || fire.visibility.resumed.running!=='true' || fire.visibility.resumed.renderFrames<fire.visibility.stable.renderFrames || fire.visibility.resumed.renderFrames-fire.visibility.stable.renderFrames>1 || fire.visibility.resumed.simulationTime<fire.visibility.stable.simulationTime || fire.visibility.resumed.simulationTime-fire.visibility.stable.simulationTime>50.1 || fire.visibility.resumed.surgeRemaining>fire.visibility.stable.surgeRemaining || fire.visibility.stable.surgeRemaining-fire.visibility.resumed.surgeRemaining>50.1
+      || !fire.surge.endValidation.ok || fire.surge.end.surgeActive!=='false' || fire.surge.end.lastFuelMode!=='base' || fire.surge.end.simulationTime<fire.surge.end.surgeUntil || fire.surge.end.simulationTime-fire.surge.end.surgeUntil>50.1 || fire.surge.endValidation.bottomMin<70 || fire.surge.endValidation.bottomMax>100 || fire.surge.endValidation.bottomHundreds>=64 || fire.surge.endValidation.bottomDistinct<20 || fire.surge.status!=='Two second fuel surge started' || fire.final.snapshot.running!=='true';
+  const fireFailed=demoId==='ascii-fire'&&(fireCommonFailed||fireMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed || orbitFailed || donutFailed || fireFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
