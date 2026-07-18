@@ -46,10 +46,13 @@ demos.forEach(demo => {
 });
 
 const ids = demos.map(demo => demo.id);
+const handoff2Published = ids.filter(id => h2Ids.has(id)).length;
 if (new Set(ids).size !== ids.length) errors.push('DUPLICATE DEMO IDS');
-if (demos.length !== 288) errors.push('DEMO COUNT ' + demos.length + ', expected 288');
+if (demos.length !== 289) errors.push('DEMO COUNT ' + demos.length + ', expected 289');
+if (files.length !== 240) errors.push('REGISTRY FILE COUNT ' + files.length + ', expected 240');
+if (handoff2Published !== 18) errors.push('HANDOFF 2 PUBLISHED ' + handoff2Published + ', expected 18');
 
-console.log(JSON.stringify({ demos: demos.length, files: files.length, handoff2Published: ids.filter(id => h2Ids.has(id)).length }, null, 2));
+console.log(JSON.stringify({ demos: demos.length, files: files.length, handoff2Published }, null, 2));
 if (errors.length) {
   errors.forEach(error => console.error('ERROR:', error));
   process.exitCode = 1;
