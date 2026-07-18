@@ -8,7 +8,7 @@
   const R = window.INTRX;
   if (!R || !R.demos.length) return;
 
-  const CAT_ORDER = ['Scroll', 'Cursor', 'Text & Type', 'Image & WebGL', 'Raster & Glitch', 'Skeuomorph', 'SVG & Line', '3D & Perspective', 'Physics', 'Liquid & Organic', 'Galleries & Sliders', 'Navigation & Menus', 'Buttons & Micro', 'Forms & Inputs', 'Loaders & Progress', 'Layout & UI', 'Data & Numbers', 'Ambient', 'Sound & Haptics', 'Play & Easter Eggs'];
+  const CAT_ORDER = ['Scroll', 'Cursor', 'Text & Type', 'Image & WebGL', 'Raster & Glitch', 'Skeuomorph', 'SVG & Line', '3D & Perspective', 'Physics', 'Liquid & Organic', 'Galleries & Sliders', 'Navigation & Menus', 'Buttons & Micro', 'Forms & Inputs', 'Loaders & Progress', 'Layout & UI', 'Data & Numbers', 'Maps & Geo', 'FUI & Terminal', 'Agent & AI UI', 'Ambient', 'Sound & Haptics', 'Play & Easter Eggs'];
   const cats = CAT_ORDER.filter(c => R.demos.some(d => d.cat === c));
 
   const nav = document.getElementById('nav');
@@ -133,11 +133,13 @@
     }
     /* most demos were authored for ~500-570px card stages; scale oversized
        roots into the fixed tile (320px) / modal (380px) height via zoom,
-       which keeps layout + pointer coordinates consistent */
+       which keeps layout + pointer coordinates consistent.
+       Use clientHeight (the root's layout box), NOT scrollHeight — scroll-driven
+       demos have inner scroll containers whose scrollHeight is huge by design. */
     const el = stage.firstElementChild;
-    if (el && !el.closest('.pane-code, .pane-prompt')) {
+    if (el) {
       const targetH = stage.closest('.modal-preview') ? 380 : 320;
-      const h = el.scrollHeight;
+      const h = el.clientHeight;
       if (h > targetH + 8) el.style.zoom = (targetH / h).toFixed(3);
     }
   }
