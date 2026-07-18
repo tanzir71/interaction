@@ -75,7 +75,7 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-reveal">
-  <div class="d-reveal-spacer">scroll ↓</div>
+  <div class="d-reveal-spacer d-reveal-spacer-top">scroll ↓</div>
   <div class="d-reveal-grid">
     <div class="d-reveal-item">Design</div>
     <div class="d-reveal-item">Motion</div>
@@ -93,15 +93,19 @@ INTRX.register({
   color: #5c5c66; font-family: "JetBrains Mono", monospace; font-size: 11px;
   text-transform: uppercase; letter-spacing: 0.1em;
 }
+.d-reveal-spacer-top { height: 170px; animation: d-reveal-bob 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+@keyframes d-reveal-bob { 50% { transform: translateY(5px); } }
 .d-reveal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 24px 48px; }
 .d-reveal-item {
   border: 1px solid #232327; background: #101012; color: #ececef;
   padding: 28px 20px; font-weight: 600;
   opacity: 0; transform: translateY(40px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.15s;
   transition-delay: var(--d, 0s);
 }
+.d-reveal-item:hover { border-color: #3d3d46; }
 .d-reveal-grid.d-reveal-in .d-reveal-item { opacity: 1; transform: none; }`,
   js: `
 const grid = root.querySelector('.d-reveal-grid');
