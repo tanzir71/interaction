@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 295; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 296; /* keep in sync with the published registries */
 const targets = [
+  'map-route-draw',
   'map-dot-globe-arcs',
   'map-city-tiles',
   'map-topo-extrude',
