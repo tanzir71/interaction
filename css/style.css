@@ -321,6 +321,28 @@ body {
   font: 12px var(--mono); padding: 8px 14px; cursor: pointer;
 }
 .modal-close:hover { color: var(--text); border-color: var(--line-2); }
+.modal-head { display: flex; align-items: baseline; gap: 14px; padding: 18px 22px 14px; flex-wrap: wrap; }
+.modal-num { font: 11px var(--mono); color: var(--accent); }
+.modal-title { font-size: 18px; font-weight: 600; }
+.modal-tags { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; padding-right: 70px; }
+.modal-preview { position: relative; margin: 0 22px; border: 1px solid var(--line); }
+.modal-preview .demo-stage { min-height: 380px; }
+.modal-reset {
+  position: absolute; top: 8px; right: 8px; z-index: 6;
+  background: var(--bg-2); border: 1px solid var(--line); color: var(--text-2);
+  font: 13px/1 var(--mono); width: 30px; height: 30px; cursor: pointer;
+}
+.modal-reset:hover { color: var(--text); border-color: var(--line-2); }
+.modal-actions { padding: 14px 22px; }
+.modal-copy {
+  background: #ececef; color: #0a0a0b; border: 1px solid #ececef;
+  font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase;
+  padding: 10px 22px; cursor: pointer;
+}
+.modal-copy:hover { background: #ffffff; }
+.modal .tabs { border-top: 1px solid var(--line); }
+.modal-desc { padding: 12px 20px 22px; color: var(--text-2); font-size: 13px; }
+.modal-desc .seen { color: var(--text-3); font-size: 12px; display: block; margin-top: 6px; }
 @media (max-width: 700px) { .modal { inset: 0; } }
 
 /* ---------- skip link ---------- */

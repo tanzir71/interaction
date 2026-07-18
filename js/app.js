@@ -108,19 +108,21 @@
 
       cardsEl.appendChild(card);
       d._card = card;
+      card.addEventListener('click', () => openModal(d));
     });
   });
 
   /* ---------- lazy demo boot ---------- */
   const booted = new Set();
-  function boot(d) {
-    if (booted.has(d.id)) return;
-    booted.add(d.id);
-    const stage = d._card.querySelector('.demo-stage');
-    /* scoped style */
+  function ensureCss(d) {
+    if (d._styled) return;
+    d._styled = true;
     const style = document.createElement('style');
     style.textContent = d.css;
     document.head.appendChild(style);
+  }
+  function runDemo(d, stage) {
+    ensureCss(d);
     stage.innerHTML = d.html;
     const rootEl = stage.querySelector('.' + d.rootClass) || stage.firstElementChild;
     try {
@@ -129,6 +131,11 @@
       console.error('[INTRX] demo "' + d.id + '" failed:', e);
       stage.innerHTML = '<p class="mono dim" style="padding:24px">demo failed to boot — see console</p>';
     }
+  }
+  function boot(d) {
+    if (booted.has(d.id)) return;
+    booted.add(d.id);
+    runDemo(d, d._card.querySelector('.demo-stage'));
   }
 
   const io = new IntersectionObserver(entries => {
@@ -141,6 +148,108 @@
     });
   }, { rootMargin: '200px 0px' });
   R.demos.forEach(d => io.observe(d._card));
+
+  /* ---------- detail modal ---------- */
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  const modal = document.createElement('div');
+  modal.className = 'modal';
+  modal.innerHTML =
+    '<button class="modal-close" type="button">✕</button>' +
+    '<div class="modal-head">' +
+      '<span class="modal-num"></span>' +
+      '<h3 class="modal-title"></h3>' +
+      '<div class="modal-tags"></div>' +
+    '</div>' +
+    '<div class="modal-preview"><div class="demo-stage"></div>' +
+      '<button class="modal-reset" type="button" title="Reset demo">⟳</button>' +
+    '</div>' +
+    '<div class="modal-actions"><button class="modal-copy" type="button">Copy</button></div>' +
+    '<div class="tabs">' +
+      '<button class="tab active" data-pane="notes">Demo notes</button>' +
+      '<button class="tab" data-pane="code">Code</button>' +
+      '<button class="tab" data-pane="prompt">LLM Prompt</button>' +
+    '</div>' +
+    '<div class="pane pane-notes active"><span class="code-label">Key features</span><div class="modal-desc"></div></div>' +
+    '<div class="pane pane-code"><span class="code-label">single-file snippet · html + css + js</span><pre></pre></div>' +
+    '<div class="pane pane-prompt"><span class="code-label">paste into claude / any llm</span><pre></pre></div>';
+  document.body.appendChild(backdrop);
+  document.body.appendChild(modal);
+
+  const mStage = modal.querySelector('.modal-preview .demo-stage');
+  const mPanes = {
+    notes: modal.querySelector('.pane-notes'),
+    code: modal.querySelector('.pane-code'),
+    prompt: modal.querySelector('.pane-prompt')
+  };
+  let modalDemo = null;
+
+  function openModal(d) {
+    modalDemo = d;
+    modal.querySelector('.modal-num').textContent = d._num;
+    modal.querySelector('.modal-title').textContent = d.title;
+    modal.querySelector('.modal-tags').innerHTML =
+      (d.libs || []).map(l => '<span class="tag lib">' + l + '</span>').join('') +
+      (d.tags || []).map(t => '<span class="tag">' + t + '</span>').join('');
+    modal.querySelector('.modal-desc').innerHTML =
+      d.desc + (d.seen ? '<span class="seen">' + d.seen + '</span>' : '');
+    mPanes.code.querySelector('pre').textContent = buildCode(d);
+    mPanes.prompt.querySelector('pre').textContent = d.prompt.trim();
+    modal.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.pane === 'notes'));
+    Object.values(mPanes).forEach(p => p.classList.remove('active'));
+    mPanes.notes.classList.add('active');
+    runDemo(d, mStage);
+    backdrop.classList.add('open');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+    history.replaceState(null, '', '#' + d.id);
+  }
+
+  function closeModal() {
+    if (!modalDemo) return;
+    modalDemo = null;
+    backdrop.classList.remove('open');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    mStage.innerHTML = '';
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+
+  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+  backdrop.addEventListener('click', closeModal);
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  modal.querySelector('.modal-reset').addEventListener('click', () => {
+    if (!modalDemo) return;
+    mStage.innerHTML = '';
+    runDemo(modalDemo, mStage);
+  });
+
+  modal.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      modal.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      Object.values(mPanes).forEach(p => p.classList.remove('active'));
+      mPanes[tab.dataset.pane].classList.add('active');
+    });
+  });
+
+  const mCopy = modal.querySelector('.modal-copy');
+  mCopy.addEventListener('click', () => {
+    if (!modalDemo) return;
+    const active = modal.querySelector('.tab.active').dataset.pane;
+    const text = active === 'prompt' ? modalDemo.prompt.trim() : buildCode(modalDemo);
+    copyText(text).then(copied => {
+      if (!copied) return;
+      mCopy.textContent = 'Copied ✓';
+      setTimeout(() => { mCopy.textContent = 'Copy'; }, 1400);
+    });
+  });
+
+  /* deep link: #demo-id opens its modal */
+  const deep = R.demos.find(d => d.id === location.hash.slice(1));
+  if (deep) openModal(deep);
 
   /* ---------- mobile nav toggle ---------- */
   const navToggle = document.getElementById('nav-toggle');
