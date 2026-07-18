@@ -6,6 +6,8 @@ const port = process.argv[2] || '9224';
 const demoId = process.argv[3];
 const screenshot = process.argv[4];
 const width = Number(process.argv[5] || 380);
+const verificationMode = process.argv[6] || 'normal';
+const reducedMotion = verificationMode === 'reduce';
 if (!demoId || !screenshot) throw new Error('Usage: node tools/render-demo-browser.js <port> <demo-id> <screenshot> [width]');
 
 const index = fs.readFileSync('index.html', 'utf8');
@@ -20,7 +22,7 @@ for (const file of files) {
 const demo = context.INTRX.demos.find(item => item.id === demoId);
 if (!demo) throw new Error('Unknown demo: ' + demoId);
 
-async function render(data, stageWidth) {
+async function render(data, stageWidth, mode) {
   document.head.innerHTML = '<meta charset="utf-8"><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0a0a0b}body{display:grid;place-items:center}.preview-stage{position:relative;width:'+stageWidth+'px;height:320px;overflow:hidden}</style>';
   document.body.innerHTML = '<main class="preview-stage"></main>';
   const stage = document.querySelector('.preview-stage');
@@ -84,6 +86,79 @@ async function render(data, stageWidth) {
     await new Promise(resolve => setTimeout(resolve, 760));
     lockInteraction.visualState = { locked: root.dataset.locked, readout: readout.textContent };
   }
+  let boot = null;
+  if (root.classList.contains('d-fui-boot')) {
+    const waitStarted = performance.now();
+    for (let index = 0; index < 120 && root.dataset.phase !== 'ready'; index++) await new Promise(resolve => setTimeout(resolve, 50));
+    const rows = [...root.querySelectorAll('.d-fui-boot-line:not(.d-fui-boot-ready)')];
+    const row = rows[0];
+    const rowStyle = row ? getComputedStyle(row) : null;
+    const progressNode = root.querySelector('.d-fui-boot-progress');
+    const cursorNode = root.querySelector('.d-fui-boot-cursor');
+    const readyNode = root.querySelector('.d-fui-boot-ready');
+    const screenNode = root.querySelector('.d-fui-boot-screen');
+    const emissionDelays = (root.dataset.emissionDelays || '').split(',').filter(Boolean).map(Number);
+    const resolutionDelays = (root.dataset.resolutionDelays || '').split(',').filter(Boolean).map(Number);
+    boot = {
+      phase: root.dataset.phase,
+      emitted: Number(root.dataset.emitted),
+      resolved: Number(root.dataset.resolved),
+      rows: rows.length,
+      ok: root.querySelectorAll('.d-fui-boot-ok').length,
+      warnings: root.querySelectorAll('.d-fui-boot-warn').length,
+      pending: rows.filter(item => item.textContent.includes('..')).length,
+      progress: Number(root.dataset.progress),
+      progressText: progressNode.textContent,
+      readyText: readyNode ? readyNode.textContent : '',
+      readyColor: readyNode ? getComputedStyle(readyNode).color : '',
+      rowHeight: row ? row.getBoundingClientRect().height : 0,
+      lineHeight: rowStyle ? rowStyle.lineHeight : '',
+      fontSize: rowStyle ? rowStyle.fontSize : '',
+      fontFamily: rowStyle ? rowStyle.fontFamily : '',
+      cursor: cursorNode.textContent,
+      cursorDuration: getComputedStyle(cursorNode).animationDuration,
+      emissionDelays,
+      resolutionDelays,
+      jitters: Number(root.dataset.jitters),
+      cycles: Number(root.dataset.cycles),
+      readyHold: root.dataset.readyHold,
+      wipeDuration: root.dataset.wipeDuration,
+      cursorBlink: root.dataset.cursorBlink,
+      reduced: root.dataset.reduced,
+      source: root.dataset.source,
+      screenTransform: getComputedStyle(screenNode).transform,
+      screenScrollHeight: screenNode.scrollHeight,
+      screenClientHeight: screenNode.clientHeight,
+      waited: performance.now() - waitStarted
+    };
+    if (mode === 'cycle' && root.dataset.reduced === 'false') {
+      const readyCycle = Number(root.dataset.cycles);
+      await new Promise(resolve => setTimeout(resolve, 2200));
+      const held = root.dataset.phase === 'ready' && Number(root.dataset.cycles) === readyCycle;
+      for (let index = 0; index < 40 && root.dataset.phase !== 'wiping'; index++) await new Promise(resolve => setTimeout(resolve, 20));
+      const inner = root.querySelector('.d-fui-boot-screen-inner');
+      const wiping = root.dataset.phase === 'wiping';
+      const wipeStyle = getComputedStyle(inner);
+      const animationName = wipeStyle.animationName;
+      const animationDuration = wipeStyle.animationDuration;
+      for (let index = 0; index < 40 && Number(root.dataset.cycles) === readyCycle; index++) await new Promise(resolve => setTimeout(resolve, 20));
+      boot.cycleCheck = {
+        held,
+        wiping,
+        animationName,
+        animationDuration,
+        nextCycle: Number(root.dataset.cycles),
+        nextPhase: root.dataset.phase,
+        nextRows: root.querySelectorAll('.d-fui-boot-line:not(.d-fui-boot-ready)').length
+      };
+    }
+    if (root.dataset.reduced === 'true') {
+      const before = [root.dataset.phase, root.dataset.cycles, root.dataset.progress, root.querySelector('.d-fui-boot-lines').textContent];
+      await new Promise(resolve => setTimeout(resolve, 3100));
+      const after = [root.dataset.phase, root.dataset.cycles, root.dataset.progress, root.querySelector('.d-fui-boot-lines').textContent];
+      boot.stable = before.every((value, index) => value === after[index]);
+    }
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -99,6 +174,7 @@ async function render(data, stageWidth) {
       brackets: root.querySelectorAll('.d-fui-lock-bracket').length,
       interaction: lockInteraction
     },
+    boot,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -137,7 +213,8 @@ async function main() {
   await send('Runtime.enable');
   await send('Page.enable');
   await send('Emulation.setDeviceMetricsOverride', { width: Math.max(480, width + 80), height: 420, deviceScaleFactor: 1, mobile: false });
-  const expression = '(' + render.toString() + ')(' + JSON.stringify(demo) + ',' + width + ')';
+  await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: reducedMotion ? 'reduce' : 'no-preference' }] });
+  const expression = '(' + render.toString() + ')(' + JSON.stringify(demo) + ',' + width + ',' + JSON.stringify(verificationMode) + ')';
   const evaluated = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true });
   if (evaluated.exceptionDetails) throw new Error(evaluated.exceptionDetails.text);
   const result = evaluated.result.value;
@@ -148,7 +225,12 @@ async function main() {
   const fuiFailed = demoId === 'fui-status-dashboard' && (result.panels !== 4 || result.segments !== 12 || result.diagnostics !== 5 || result.focusables !== 4 || !result.interaction || result.interaction.metricBefore !== '12px' || result.interaction.metricAfter !== '14px' || result.interaction.cornerColor !== 'rgb(167, 139, 250)' || !result.interaction.focused);
   const lock = result.lock && result.lock.interaction;
   const lockFailed = demoId === 'fui-target-lock' && (!lock || result.lock.chips !== 4 || result.focusables !== 4 || result.lock.brackets !== 4 || Math.abs(lock.chip.width - 128) > .1 || Math.abs(lock.chip.height - 44) > .1 || lock.bracketRects.some(item => item.width !== 10 || item.height !== 10 || item.opacity !== '1') || lock.bracketStroke !== '2px' || lock.circleSize !== '20px' || lock.gridSize !== '24px 24px' || !/^W:128 H:44 X:\d+ Y:\d+$/.test(lock.readout) || lock.dataReadout !== lock.readout || lock.locked !== 'true' || lock.source !== 'keyboard' || lock.animationDuration !== '1.6s' || !lock.focused || Math.hypot(lock.reticleAfter.x - lock.pointerTarget.x, lock.reticleAfter.y - lock.pointerTarget.y) >= Math.hypot(lock.reticleBefore.x - lock.pointerTarget.x, lock.reticleBefore.y - lock.pointerTarget.y) || Math.hypot(lock.reticleAfter.x - lock.pointerTarget.x, lock.reticleAfter.y - lock.pointerTarget.y) < 10 || lock.afterBlur.locked !== 'false' || lock.afterBlur.active !== '' || lock.afterBlur.readout !== '' || lock.afterBlur.bracketOpacities.some(value => value !== '0') || lock.visualState.locked !== 'true' || lock.visualState.readout !== lock.readout);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed) process.exitCode = 1;
+  const boot = result.boot;
+  const bootCommonFailed = !boot || boot.phase !== 'ready' || boot.emitted !== 14 || boot.resolved !== 14 || boot.rows !== 14 || boot.ok !== 13 || boot.warnings !== 1 || boot.pending !== 0 || boot.progress !== 24 || boot.progressText !== '████████████████████████' || boot.readyText !== 'READY.' || boot.readyColor !== 'rgb(167, 139, 250)' || boot.rowHeight !== 15 || boot.lineHeight !== '15px' || boot.fontSize !== '12px' || !boot.fontFamily.includes('JetBrains Mono') || boot.cursor !== '▮' || boot.emissionDelays.length !== 14 || boot.emissionDelays.some(value => value < 90 || value > 200) || boot.resolutionDelays.length !== 14 || boot.resolutionDelays.some(value => value < 300 || value > 900) || boot.readyHold !== '2500' || boot.wipeDuration !== '250' || boot.cursorBlink !== '530' || boot.screenScrollHeight > boot.screenClientHeight || boot.waited > 6000;
+  const bootMotionFailed = reducedMotion ? !boot || boot.reduced !== 'true' || boot.cursorDuration !== '0s' || boot.jitters !== 0 || boot.cycles !== 0 || boot.source !== 'reduced' || boot.stable !== true : !boot || boot.reduced !== 'false' || boot.cursorDuration !== '0.53s' || boot.jitters !== 1 || boot.cycles !== 1;
+  const bootCycleFailed = verificationMode === 'cycle' && (!boot || !boot.cycleCheck || boot.cycleCheck.held !== true || boot.cycleCheck.wiping !== true || boot.cycleCheck.animationName !== 'd-fui-boot-wipe' || boot.cycleCheck.animationDuration !== '0.25s' || boot.cycleCheck.nextCycle !== 2 || boot.cycleCheck.nextPhase !== 'booting' || boot.cycleCheck.nextRows > 1);
+  const bootFailed = demoId === 'fui-terminal-boot' && (bootCommonFailed || bootMotionFailed || bootCycleFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });

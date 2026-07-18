@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 273; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 274; /* keep in sync with the published registries */
 const targets = [
+  'fui-terminal-boot',
   'fui-target-lock',
   'fui-status-dashboard',
   'scroll-text-highlight', 'scroll-image-sequence', 'scroll-svg-draw', 'scroll-rotate-gallery', 'scroll-split-screen', 'scroll-marquee-direction', 'scroll-counter-rotate', 'scroll-depth-tunnel', 'scroll-letter-scatter', 'scroll-color-theme', 'scroll-clip-morph', 'scroll-table-of-contents', 'scroll-inertia-grid', 'scroll-video-scrubber',
