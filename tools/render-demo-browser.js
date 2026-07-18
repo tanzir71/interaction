@@ -733,6 +733,237 @@ async function render(data, stageWidth, mode) {
       final: { frames:Number(root.dataset.frames), distance:Number(root.dataset.distance), baseRow:Number(root.dataset.baseRow), matches:Number(root.dataset.matches), matchActive:root.dataset.matchActive, running:root.dataset.running, selectedAddress:root.dataset.selectedAddress, linkActive:hexLink.classList.contains('d-fui-hex-is-active') }
     };
   }
+  let trading = null;
+  if (root.classList.contains('d-fui-trade')) {
+    const tradeReduced = root.dataset.reduced === 'true';
+    const tradePanels = [...root.querySelectorAll('.d-fui-trade-panel')];
+    const tradeHandles = [...root.querySelectorAll('.d-fui-trade-handle')];
+    const tradeCanvas = root.querySelector('.d-fui-trade-canvas');
+    const tradeChip = root.querySelector('.d-fui-trade-price-chip');
+    const tradeBookBars = [...root.querySelectorAll('.d-fui-trade-book-side i')];
+    const tradeStatus = root.querySelector('.d-fui-trade-status');
+    const wait = function(ms){return new Promise(function(resolve){setTimeout(resolve,ms)})};
+    const rectOf = function(node){const box=node.getBoundingClientRect();return {left:box.left,top:box.top,right:box.right,bottom:box.bottom,width:box.width,height:box.height}};
+    const panelRect = function(id){return rectOf(root.querySelector('.d-fui-trade-panel[data-panel="'+id+'"]'))};
+    const animationInfo = function(node){
+      return node.getAnimations().map(function(animation){
+        const timing=animation.effect.getTiming();
+        const frames=animation.effect.getKeyframes();
+        return {duration:Number(timing.duration),easing:timing.easing,playState:animation.playState,frames:frames.map(function(frame){return {offset:frame.offset,opacity:frame.opacity||'',transform:frame.transform||'',backgroundColor:frame.backgroundColor||''}})};
+      });
+    };
+    const marketAnimationStates = function(){
+      const animations=[];
+      [tradeChip,...tradeBookBars,...root.querySelectorAll('.d-fui-trade-tape-row')].forEach(function(node){
+        node.getAnimations().forEach(function(animation){if(!animations.includes(animation))animations.push(animation)});
+      });
+      return animations.map(function(animation){return animation.playState});
+    };
+    const marketSnapshot = function(){
+      const newest=root.querySelector('.d-fui-trade-tape-row:last-child');
+      return {
+        ticks:Number(root.dataset.ticks),
+        frames:Number(root.dataset.frames),
+        simulationTime:Number(root.dataset.simulationTime),
+        lastTickAt:Number(root.dataset.lastTickAt),
+        tickGap:Number(root.dataset.tickGap),
+        price:Number(root.dataset.price),
+        direction:root.dataset.priceDirection,
+        checksum:root.dataset.priceChecksum,
+        points:Number(root.dataset.pointCount),
+        shifting:root.dataset.shifting,
+        shiftProgress:Number(root.dataset.shiftProgress),
+        flashActive:root.dataset.flashActive,
+        chipColor:getComputedStyle(tradeChip).color,
+        chipBackground:getComputedStyle(tradeChip).backgroundColor,
+        book:root.dataset.bookValues,
+        bookWidths:tradeBookBars.map(function(bar){return parseFloat(getComputedStyle(bar).width)}),
+        tape:root.dataset.tapeSequence,
+        tapeRows:root.querySelectorAll('.d-fui-trade-tape-row').length,
+        tapeEntering:root.dataset.tapeEntering,
+        newestTransform:newest?getComputedStyle(newest).transform:'',
+        newestOpacity:newest?getComputedStyle(newest).opacity:''
+      };
+    };
+    const rootRect=rectOf(root);
+    const initialRects={price:panelRect('price'),book:panelRect('book'),tape:panelRect('tape')};
+    const separated=function(a,b){return a.right<=b.left+.1||b.right<=a.left+.1||a.bottom<=b.top+.1||b.bottom<=a.top+.1};
+    const inside=function(box){return box.left>=rootRect.left-.1&&box.right<=rootRect.right+.1&&box.top>=rootRect.top-.1&&box.bottom<=rootRect.bottom+.1};
+    const image=tradeCanvas.getContext('2d').getImageData(0,0,tradeCanvas.width,tradeCanvas.height).data;
+    let accentPixels=0;
+    let translucentPixels=0;
+    for(let index=0;index<image.length;index+=16){
+      const red=image[index],green=image[index+1],blue=image[index+2],alpha=image[index+3];
+      if(red>105&&red<215&&green>70&&green<185&&blue>175&&alpha>50)accentPixels++;
+      if(alpha>0&&alpha<230&&blue>red)translucentPixels++;
+    }
+    const firstCorner=root.querySelector('.d-fui-trade-corner-tl');
+    const firstPanel=root.querySelector('.d-fui-trade-panel');
+    const firstBar=tradeBookBars[0];
+    const firstAsk=tradeBookBars[1];
+    const initial=marketSnapshot();
+    const structure={
+      panels:tradePanels.length,
+      handles:tradeHandles.length,
+      handleTags:tradeHandles.map(function(handle){return handle.tagName}).join(','),
+      handleLabels:tradeHandles.map(function(handle){return handle.getAttribute('aria-label')||''}),
+      workspaceRole:root.querySelector('.d-fui-trade-workspace').getAttribute('role'),
+      panelRoles:tradePanels.map(function(panel){return panel.getAttribute('role')}).join(','),
+      controlsValid:tradeHandles.every(function(handle){const panel=handle.closest('.d-fui-trade-panel');const body=document.getElementById(handle.getAttribute('aria-controls'));return Boolean(body)&&handle.getAttribute('aria-expanded')==='true'&&!handle.hasAttribute('aria-posinset')&&!handle.hasAttribute('aria-setsize')&&panel.getAttribute('aria-posinset')&&panel.getAttribute('aria-setsize')==='3'}),
+      handlesFit:tradeHandles.every(function(handle){return handle.scrollWidth<=handle.clientWidth&&handle.scrollHeight<=handle.clientHeight}),
+      order:root.dataset.order,
+      slots:tradePanels.map(function(panel){return panel.dataset.panel+':'+panel.dataset.slot}).sort().join(','),
+      corners:root.querySelectorAll('.d-fui-trade-corner').length,
+      cornerWidth:getComputedStyle(firstCorner).width,
+      cornerBorder:getComputedStyle(firstCorner).borderLeftWidth,
+      panelRadius:getComputedStyle(firstPanel.querySelector('.d-fui-trade-shell')).borderRadius,
+      panelBorder:getComputedStyle(firstPanel.querySelector('.d-fui-trade-shell')).borderLeftWidth,
+      labelFont:getComputedStyle(tradeHandles[0]).fontSize,
+      priceFont:getComputedStyle(root.querySelector('.d-fui-trade-price-value')).fontSize,
+      bookFont:getComputedStyle(root.querySelector('.d-fui-trade-book-price')).fontSize,
+      tapeFont:getComputedStyle(root.querySelector('.d-fui-trade-tape-row span')).fontSize,
+      pointCount:Number(root.dataset.pointCount),
+      canvas:{width:tradeCanvas.width,height:tradeCanvas.height,clientWidth:tradeCanvas.clientWidth,clientHeight:tradeCanvas.clientHeight,accentPixels,translucentPixels},
+      bookRows:root.querySelectorAll('.d-fui-trade-book-row').length,
+      bids:root.querySelectorAll('.d-fui-trade-bid').length,
+      asks:root.querySelectorAll('.d-fui-trade-ask').length,
+      bidColor:getComputedStyle(firstBar).backgroundColor,
+      askColor:getComputedStyle(firstAsk).backgroundColor,
+      bidRight:getComputedStyle(firstBar).right,
+      askLeft:getComputedStyle(firstAsk).left,
+      bookTransition:getComputedStyle(firstBar).transitionDuration,
+      tapeRows:root.querySelectorAll('.d-fui-trade-tape-row').length,
+      marketLiveNodes:root.querySelectorAll('.d-fui-trade-price-body [aria-live],.d-fui-trade-book-body [aria-live],.d-fui-trade-tape-body [aria-live]').length,
+      statusLive:tradeStatus.getAttribute('aria-live'),
+      liveColor:getComputedStyle(root.querySelector('.d-fui-trade-live-dot')).backgroundColor,
+      liveAnimation:getComputedStyle(root.querySelector('.d-fui-trade-live-dot')).animationDuration,
+      scanAnimation:getComputedStyle(root.querySelector('.d-fui-trade-scanline')).animationDuration,
+      initialRects,
+      panelsSeparated:separated(initialRects.price,initialRects.book)&&separated(initialRects.price,initialRects.tape)&&separated(initialRects.book,initialRects.tape),
+      panelsInside:[initialRects.price,initialRects.book,initialRects.tape].every(inside)
+    };
+    let market=null;
+    let reducedStable=null;
+    if (!tradeReduced) {
+      const initialTicks=initial.ticks;
+      for(let index=0;index<150&&Number(root.dataset.ticks)===initialTicks;index++)await wait(5);
+      const started=marketSnapshot();
+      const startAnimations={
+        chip:animationInfo(tradeChip),
+        book:tradeBookBars.flatMap(animationInfo).map(function(animation){return {duration:animation.duration,easing:animation.easing,playState:animation.playState}}),
+        tape:animationInfo(root.querySelector('.d-fui-trade-tape-row:last-child'))
+      };
+      await wait(105);
+      const mid=marketSnapshot();
+      await wait(110);
+      const tapeSettled=marketSnapshot();
+      await wait(120);
+      const settled=marketSnapshot();
+      const firstTick=started.ticks;
+      for(let index=0;index<160&&Number(root.dataset.ticks)===firstTick;index++)await wait(5);
+      const second=marketSnapshot();
+      root.style.transform='translateY(1200px)';
+      for(let index=0;index<80&&root.dataset.running!=='false';index++)await wait(10);
+      await wait(40);
+      const visibilityPaused={running:root.dataset.running,marketPaused:root.dataset.marketPaused,snapshot:marketSnapshot(),animations:marketAnimationStates()};
+      await wait(350);
+      const visibilityStable={running:root.dataset.running,marketPaused:root.dataset.marketPaused,snapshot:marketSnapshot(),animations:marketAnimationStates()};
+      root.style.transform='';
+      for(let index=0;index<80&&root.dataset.running!=='true';index++)await wait(10);
+      const visibilityResumed={running:root.dataset.running,marketPaused:root.dataset.marketPaused,snapshot:marketSnapshot(),animations:marketAnimationStates()};
+      await wait(330);
+      market={started,mid,tapeSettled,settled,second,startAnimations,visibility:{paused:visibilityPaused,stable:visibilityStable,resumed:visibilityResumed}};
+    } else {
+      await wait(1100);
+      reducedStable=marketSnapshot();
+    }
+    const priceHandle=root.querySelector('.d-fui-trade-panel[data-panel="price"] .d-fui-trade-handle');
+    const tapePanel=root.querySelector('.d-fui-trade-panel[data-panel="tape"]');
+    const priceHandleRect=priceHandle.getBoundingClientRect();
+    const tapeTarget=tapePanel.getBoundingClientRect();
+    const pointerId=73;
+    priceHandle.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,pointerId:pointerId,button:0,buttons:1,clientX:priceHandleRect.left+priceHandleRect.width/2,clientY:priceHandleRect.top+priceHandleRect.height/2}));
+    priceHandle.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerId:pointerId,button:0,buttons:1,clientX:tapeTarget.left+tapeTarget.width/2,clientY:tapeTarget.top+tapeTarget.height/2}));
+    const dragActive={dragging:root.dataset.dragging,target:root.dataset.dragTarget,moves:Number(root.dataset.dragMoves),shellTransform:getComputedStyle(root.querySelector('.d-fui-trade-panel[data-panel="price"] .d-fui-trade-shell')).transform};
+    priceHandle.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,pointerId:pointerId,button:0,buttons:0,clientX:tapeTarget.left+tapeTarget.width/2,clientY:tapeTarget.top+tapeTarget.height/2}));
+    const pointerSwap={
+      order:root.dataset.order,
+      source:root.dataset.actionSource,
+      reorders:Number(root.dataset.reorders),
+      animations:Number(root.dataset.layoutAnimations),
+      focused:document.activeElement===priceHandle,
+      announcement:tradeStatus.textContent,
+      panelAnimations:tradePanels.flatMap(animationInfo)
+    };
+    if(!tradeReduced){for(let index=0;index<40&&tradePanels.some(function(panel){return panel.getAnimations().length});index++)await wait(20)}else await wait(10);
+    pointerSwap.settledRects={price:panelRect('price'),book:panelRect('book'),tape:panelRect('tape')};
+    pointerSwap.residual=tradePanels.reduce(function(total,panel){return total+panel.getAnimations().length},0);
+    pointerSwap.handlesFit=tradeHandles.every(function(handle){return handle.scrollWidth<=handle.clientWidth&&handle.scrollHeight<=handle.clientHeight});
+    const keyboardBefore=root.dataset.order;
+    priceHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowLeft'}));
+    const keyboard={
+      before:keyboardBefore,
+      order:root.dataset.order,
+      source:root.dataset.actionSource,
+      reorders:Number(root.dataset.reorders),
+      focused:document.activeElement===priceHandle,
+      animations:tradePanels.flatMap(animationInfo).map(function(animation){return {duration:animation.duration,easing:animation.easing}})
+    };
+    if(!tradeReduced){for(let index=0;index<40&&tradePanels.some(function(panel){return panel.getAnimations().length});index++)await wait(20)}else await wait(10);
+    if(tradeReduced)await wait(360);
+    const bookHandle=root.querySelector('.d-fui-trade-panel[data-panel="book"] .d-fui-trade-handle');
+    const bookPanel=root.querySelector('.d-fui-trade-panel[data-panel="book"]');
+    const bookBody=bookPanel.querySelector('.d-fui-trade-body');
+    const fullHeight=bookPanel.getBoundingClientRect().height;
+    bookHandle.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,detail:2}));
+    const collapseStart={collapsed:root.dataset.collapsed,expanded:bookHandle.getAttribute('aria-expanded'),hidden:bookBody.getAttribute('aria-hidden'),label:bookHandle.getAttribute('aria-label'),animations:animationInfo(bookPanel),height:bookPanel.getBoundingClientRect().height,announcement:tradeStatus.textContent};
+    await wait(tradeReduced?10:90);
+    const collapseMid=bookPanel.getBoundingClientRect().height;
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const collapseEnd={height:bookPanel.getBoundingClientRect().height,animating:root.dataset.collapseAnimating,animations:bookPanel.getAnimations().length};
+    bookHandle.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,detail:2}));
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const expanded={height:bookPanel.getBoundingClientRect().height,expanded:bookHandle.getAttribute('aria-expanded'),hidden:bookBody.getAttribute('aria-hidden'),label:bookHandle.getAttribute('aria-label')};
+    bookHandle.focus();
+    bookHandle.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,detail:2}));
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowLeft'}));
+    const overlapStart={collapsed:root.dataset.collapsed,order:root.dataset.order,animating:root.dataset.collapseAnimating,label:bookHandle.getAttribute('aria-label'),animations:tradePanels.flatMap(animationInfo)};
+    if(!tradeReduced){for(let index=0;index<50&&(root.dataset.collapseAnimating==='true'||tradePanels.some(function(panel){return panel.getAnimations().length}));index++)await wait(20)}else await wait(10);
+    const overlapEnd={collapsed:root.dataset.collapsed,order:root.dataset.order,animating:root.dataset.collapseAnimating,label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height,animations:tradePanels.reduce(function(total,panel){return total+panel.getAnimations().length},0)};
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'ArrowRight'}));
+    if(!tradeReduced){for(let index=0;index<40&&tradePanels.some(function(panel){return panel.getAnimations().length});index++)await wait(20)}else await wait(10);
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Enter'}));
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const overlapRestored={collapsed:root.dataset.collapsed,order:root.dataset.order,expanded:bookHandle.getAttribute('aria-expanded'),label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height};
+    bookHandle.dispatchEvent(new MouseEvent('dblclick',{bubbles:true,detail:2}));
+    if(!tradeReduced)await wait(60);
+    const rapidBefore={collapsed:root.dataset.collapsed,animating:root.dataset.collapseAnimating,label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height};
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Enter'}));
+    const rapidRestart={collapsed:root.dataset.collapsed,animating:root.dataset.collapseAnimating,label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height,animations:animationInfo(bookPanel)};
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const rapidEnd={collapsed:root.dataset.collapsed,animating:root.dataset.collapseAnimating,label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height,animations:bookPanel.getAnimations().length};
+    bookHandle.focus();
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Enter'}));
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const keyboardCollapsed={collapsed:root.dataset.collapsed,expanded:bookHandle.getAttribute('aria-expanded'),label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height,source:root.dataset.actionSource,focused:document.activeElement===bookHandle};
+    bookHandle.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,key:'Enter'}));
+    if(!tradeReduced){for(let index=0;index<40&&root.dataset.collapseAnimating==='true';index++)await wait(20)}else await wait(10);
+    const keyboardExpanded={collapsed:root.dataset.collapsed,expanded:bookHandle.getAttribute('aria-expanded'),label:bookHandle.getAttribute('aria-label'),height:bookPanel.getBoundingClientRect().height,source:root.dataset.actionSource,focused:document.activeElement===bookHandle};
+    trading={
+      metadata:{tickInterval:root.dataset.tickInterval,chartDuration:root.dataset.chartDuration,chartStroke:root.dataset.chartStroke,chartArea:root.dataset.chartArea,flashDuration:root.dataset.flashDuration,bookDuration:root.dataset.bookDuration,bookAlpha:root.dataset.bookAlpha,tapeDuration:root.dataset.tapeDuration,tapeOffset:root.dataset.tapeOffset,tapeLimit:root.dataset.tapeLimit,flipDuration:root.dataset.flipDuration,flipEasing:root.dataset.flipEasing,collapseDuration:root.dataset.collapseDuration},
+      structure,
+      initial,
+      signatures:{price:root.dataset.initialPriceChecksum,book:root.dataset.initialBookSignature,tape:root.dataset.initialTapeSignature},
+      market,
+      reducedStable,
+      dragActive,
+      pointerSwap,
+      keyboard,
+      collapse:{fullHeight,start:collapseStart,midHeight:collapseMid,end:collapseEnd,expanded,overlap:{start:overlapStart,end:overlapEnd,restored:overlapRestored},rapid:{before:rapidBefore,restart:rapidRestart,end:rapidEnd},keyboardCollapsed,keyboardExpanded},
+      reduced:root.dataset.reduced,
+      final:{ticks:Number(root.dataset.ticks),frames:Number(root.dataset.frames),running:root.dataset.running,order:root.dataset.order,collapsed:root.dataset.collapsed,scrollWidth:root.scrollWidth,clientWidth:root.clientWidth}
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -754,6 +985,7 @@ async function render(data, stageWidth, mode) {
     stream,
     auth,
     hexDump,
+    trading,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -952,7 +1184,67 @@ async function main() {
       || hex.pattern.cleared.active!=='false' || hex.pattern.cleared.matches!==1 || hex.pattern.cleared.opacity!==0 || hex.pattern.cleared.boxes!==0 || hex.pattern.cleared.state!=='SCANNING'
       || hex.final.frames<=hex.initial.frames || hex.final.distance<=hex.initial.distance || hex.final.matches!==1 || hex.final.matchActive!=='false' || hex.final.running!=='true' || hex.final.selectedAddress!=='' || hex.final.linkActive;
   const hexFailed = demoId === 'fui-hex-dump' && (hexCommonFailed || hexMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed) process.exitCode = 1;
+  const trade = result.trading;
+  const tradeCommonFailed = !trade
+    || trade.metadata.tickInterval!=='800' || trade.metadata.chartDuration!=='300' || trade.metadata.chartStroke!=='1.5' || trade.metadata.chartArea!=='accent-transparent' || trade.metadata.flashDuration!=='250'
+    || trade.metadata.bookDuration!=='300' || trade.metadata.bookAlpha!=='0.25' || trade.metadata.tapeDuration!=='200' || trade.metadata.tapeOffset!=='8' || trade.metadata.tapeLimit!=='4'
+    || trade.metadata.flipDuration!=='260' || trade.metadata.flipEasing!=='cubic-bezier(0.65, 0, 0.35, 1)' || trade.metadata.collapseDuration!=='200'
+    || trade.structure.panels!==3 || trade.structure.handles!==3 || trade.structure.handleTags!=='BUTTON,BUTTON,BUTTON' || trade.structure.handleLabels.some(function(label){return !label.includes('Press Enter to collapse.')}) || trade.structure.workspaceRole!=='list' || trade.structure.panelRoles!=='listitem,listitem,listitem' || !trade.structure.controlsValid || !trade.structure.handlesFit
+    || trade.structure.order!=='price,book,tape' || trade.structure.slots!=='book:1,price:0,tape:2' || trade.structure.corners!==12 || trade.structure.cornerWidth!=='8px' || trade.structure.cornerBorder!=='2px'
+    || trade.structure.panelRadius!=='4px' || trade.structure.panelBorder!=='1px' || trade.structure.labelFont!=='10px' || trade.structure.priceFont!=='12px' || trade.structure.bookFont!=='12px' || trade.structure.tapeFont!=='12px'
+    || trade.structure.pointCount!==60 || trade.structure.canvas.width!==trade.structure.canvas.clientWidth || trade.structure.canvas.height!==trade.structure.canvas.clientHeight || trade.structure.canvas.accentPixels<20 || trade.structure.canvas.translucentPixels<100
+    || trade.structure.bookRows!==6 || trade.structure.bids!==6 || trade.structure.asks!==6 || trade.structure.bidColor!=='rgba(74, 222, 128, 0.25)' || trade.structure.askColor!=='rgba(248, 113, 113, 0.25)'
+    || trade.structure.bidRight!=='0px' || trade.structure.askLeft!=='0px' || trade.structure.tapeRows!==4 || trade.structure.marketLiveNodes!==0 || trade.structure.statusLive!=='polite'
+    || trade.structure.liveColor!=='rgb(167, 139, 250)' || !trade.structure.panelsSeparated || !trade.structure.panelsInside
+    || trade.initial.ticks!==0 || trade.initial.points!==60 || trade.initial.tapeRows!==4 || trade.initial.checksum!==trade.signatures.price || trade.initial.book!==trade.signatures.book || trade.initial.tape!==trade.signatures.tape
+    || trade.signatures.price!=='4EA094E2' || trade.signatures.book!=='69.5/82.9,63.2/30.3,36.6/70.9,52.8/64.4,42.6/70.5,67.4/40.4' || trade.signatures.tape!=='1:127.40:540:up|2:127.45:826:up|3:127.36:887:up|4:127.53:823:up'
+    || trade.dragActive.dragging!=='true' || trade.dragActive.target!=='tape' || trade.dragActive.moves<1
+    || trade.pointerSwap.order!=='tape,book,price' || trade.pointerSwap.source!=='pointer' || trade.pointerSwap.reorders!==1 || !trade.pointerSwap.focused || !trade.pointerSwap.handlesFit || !trade.pointerSwap.announcement.includes('PRICE moved to slot 3')
+    || Math.abs(trade.pointerSwap.settledRects.book.left-trade.structure.initialRects.book.left)>.6 || Math.abs(trade.pointerSwap.settledRects.book.top-trade.structure.initialRects.book.top)>.6
+    || Math.abs(trade.pointerSwap.settledRects.price.width-trade.structure.initialRects.tape.width)>.6 || Math.abs(trade.pointerSwap.settledRects.price.height-trade.structure.initialRects.tape.height)>.6
+    || Math.abs(trade.pointerSwap.settledRects.tape.width-trade.structure.initialRects.price.width)>.6 || Math.abs(trade.pointerSwap.settledRects.tape.height-trade.structure.initialRects.price.height)>.6 || trade.pointerSwap.residual!==0
+    || trade.keyboard.before!=='tape,book,price' || trade.keyboard.order!=='tape,price,book' || trade.keyboard.source!=='keyboard reorder' || trade.keyboard.reorders!==2 || !trade.keyboard.focused
+    || trade.collapse.fullHeight<=27 || trade.collapse.start.collapsed!=='book' || trade.collapse.start.expanded!=='false' || trade.collapse.start.hidden!=='true' || !trade.collapse.start.label.includes('Press Enter to expand.') || !trade.collapse.start.announcement.startsWith('BOOK collapsed')
+    || Math.abs(trade.collapse.end.height-27)>.1 || trade.collapse.end.animating!=='false' || trade.collapse.end.animations!==0
+    || Math.abs(trade.collapse.expanded.height-trade.collapse.fullHeight)>.1 || trade.collapse.expanded.expanded!=='true' || trade.collapse.expanded.hidden!=='false' || !trade.collapse.expanded.label.includes('Press Enter to collapse.')
+    || trade.collapse.overlap.start.collapsed!=='book' || trade.collapse.overlap.start.order!=='tape,book,price' || !trade.collapse.overlap.start.label.includes('Press Enter to expand.')
+    || trade.collapse.overlap.end.collapsed!=='book' || trade.collapse.overlap.end.order!=='tape,book,price' || trade.collapse.overlap.end.animating!=='false' || !trade.collapse.overlap.end.label.includes('Press Enter to expand.') || Math.abs(trade.collapse.overlap.end.height-27)>.1 || trade.collapse.overlap.end.animations!==0
+    || trade.collapse.overlap.restored.collapsed!=='' || trade.collapse.overlap.restored.order!=='tape,price,book' || trade.collapse.overlap.restored.expanded!=='true' || !trade.collapse.overlap.restored.label.includes('Press Enter to collapse.') || Math.abs(trade.collapse.overlap.restored.height-trade.collapse.fullHeight)>.1
+    || trade.collapse.rapid.before.collapsed!=='book' || !trade.collapse.rapid.before.label.includes('Press Enter to expand.') || trade.collapse.rapid.restart.collapsed!=='' || !trade.collapse.rapid.restart.label.includes('Press Enter to collapse.')
+    || trade.collapse.rapid.end.collapsed!=='' || trade.collapse.rapid.end.animating!=='false' || !trade.collapse.rapid.end.label.includes('Press Enter to collapse.') || Math.abs(trade.collapse.rapid.end.height-trade.collapse.fullHeight)>.1 || trade.collapse.rapid.end.animations!==0
+    || trade.collapse.keyboardCollapsed.collapsed!=='book' || trade.collapse.keyboardCollapsed.expanded!=='false' || !trade.collapse.keyboardCollapsed.label.includes('Press Enter to expand.') || Math.abs(trade.collapse.keyboardCollapsed.height-27)>.1 || trade.collapse.keyboardCollapsed.source!=='keyboard collapse' || !trade.collapse.keyboardCollapsed.focused
+    || trade.collapse.keyboardExpanded.collapsed!=='' || trade.collapse.keyboardExpanded.expanded!=='true' || !trade.collapse.keyboardExpanded.label.includes('Press Enter to collapse.') || Math.abs(trade.collapse.keyboardExpanded.height-trade.collapse.fullHeight)>.1 || trade.collapse.keyboardExpanded.source!=='keyboard collapse' || !trade.collapse.keyboardExpanded.focused
+    || trade.final.order!=='tape,price,book' || trade.final.collapsed!=='' || trade.final.scrollWidth!==trade.final.clientWidth;
+  const tradeMotionFailed = reducedMotion
+    ? !trade || trade.reduced!=='true' || trade.initial.frames!==0 || trade.initial.simulationTime!==0 || trade.initial.shifting!=='false' || trade.initial.flashActive!=='false' || trade.initial.tapeEntering!=='false'
+      || trade.structure.bookTransition!=='0s' || trade.structure.liveAnimation!=='0s' || trade.structure.scanAnimation!=='0s' || trade.market!==null || !trade.reducedStable
+      || trade.reducedStable.ticks!==0 || trade.reducedStable.frames!==0 || trade.reducedStable.simulationTime!==0 || trade.reducedStable.checksum!==trade.initial.checksum || trade.reducedStable.book!==trade.initial.book || trade.reducedStable.tape!==trade.initial.tape
+      || trade.dragActive.shellTransform!=='none' || trade.pointerSwap.animations!==0 || trade.pointerSwap.panelAnimations.length!==0 || trade.keyboard.animations.length!==0 || trade.collapse.start.animations.length!==0 || trade.collapse.overlap.start.animating!=='false' || trade.collapse.overlap.start.animations.length!==0 || trade.collapse.rapid.before.animating!=='false' || Math.abs(trade.collapse.rapid.before.height-27)>.1 || trade.collapse.rapid.restart.animating!=='false' || trade.collapse.rapid.restart.animations.length!==0 || Math.abs(trade.collapse.rapid.restart.height-trade.collapse.fullHeight)>.1 || Math.abs(trade.collapse.midHeight-27)>.1
+      || trade.final.ticks!==0 || trade.final.frames!==0 || trade.final.running!=='false'
+    : !trade || trade.reduced!=='false' || trade.structure.bookTransition!=='0.3s' || trade.structure.liveAnimation!=='1.6s' || trade.structure.scanAnimation!=='5.4s' || !trade.market || trade.reducedStable!==null
+      || trade.initial.frames<=0 || trade.initial.simulationTime<=0 || trade.initial.shifting!=='false' || trade.initial.flashActive!=='false' || trade.initial.tapeEntering!=='false'
+      || trade.market.started.ticks!==1 || trade.market.started.simulationTime<795 || trade.market.started.simulationTime>830 || trade.market.started.lastTickAt!==trade.market.started.simulationTime
+      || trade.market.started.price===trade.initial.price || !['up','down'].includes(trade.market.started.direction) || trade.market.started.points!==60 || trade.market.started.shifting!=='true' || trade.market.started.shiftProgress>.12 || trade.market.started.flashActive!=='true'
+      || trade.market.started.checksum!==trade.initial.checksum || trade.market.started.book===trade.initial.book || trade.market.started.tape===trade.initial.tape || trade.market.started.tapeRows!==4 || trade.market.started.tapeEntering!=='true' || trade.market.started.newestTransform==='none' || Number(trade.market.started.newestOpacity)>.25
+      || (trade.market.started.direction==='up'&&trade.market.started.chipColor!=='rgb(74, 222, 128)') || (trade.market.started.direction==='down'&&trade.market.started.chipColor!=='rgb(248, 113, 113)')
+      || trade.market.startAnimations.chip.length!==1 || trade.market.startAnimations.chip[0].duration!==250 || trade.market.startAnimations.chip[0].easing!=='linear'
+      || trade.market.startAnimations.book.length!==12 || trade.market.startAnimations.book.some(function(animation){return animation.duration!==300||animation.easing!=='cubic-bezier(0.65, 0, 0.35, 1)'})
+      || trade.market.startAnimations.tape.length!==1 || trade.market.startAnimations.tape[0].duration!==200 || trade.market.startAnimations.tape[0].frames[0].transform!=='translateY(8px)' || trade.market.startAnimations.tape[0].frames[0].opacity!=='0'
+      || trade.market.mid.shifting!=='true' || trade.market.mid.shiftProgress<.2 || trade.market.mid.shiftProgress>.65 || trade.market.mid.flashActive!=='true' || trade.market.mid.checksum!==trade.initial.checksum
+      || trade.market.tapeSettled.shifting!=='true' || trade.market.tapeSettled.shiftProgress<.6 || trade.market.tapeSettled.shiftProgress>.95 || trade.market.tapeSettled.tapeEntering!=='false' || trade.market.tapeSettled.newestTransform!=='none' || trade.market.tapeSettled.newestOpacity!=='1'
+      || trade.market.settled.points!==60 || trade.market.settled.shifting!=='false' || trade.market.settled.shiftProgress!==0 || trade.market.settled.flashActive!=='false' || trade.market.settled.tapeEntering!=='false' || trade.market.settled.checksum===trade.initial.checksum
+      || trade.market.second.ticks!==2 || Math.abs(trade.market.second.tickGap-800)>20 || trade.market.second.shifting!=='true' || trade.market.second.flashActive!=='true' || trade.market.second.book===trade.market.started.book || trade.market.second.tape===trade.market.started.tape
+      || trade.market.visibility.paused.running!=='false' || trade.market.visibility.paused.marketPaused!=='true' || trade.market.visibility.paused.animations.length<13 || trade.market.visibility.paused.animations.some(function(state){return state!=='paused'})
+      || trade.market.visibility.stable.running!=='false' || trade.market.visibility.stable.marketPaused!=='true' || JSON.stringify(trade.market.visibility.stable.snapshot)!==JSON.stringify(trade.market.visibility.paused.snapshot) || trade.market.visibility.stable.animations.length!==trade.market.visibility.paused.animations.length || trade.market.visibility.stable.animations.some(function(state){return state!=='paused'})
+      || trade.market.visibility.resumed.running!=='true' || trade.market.visibility.resumed.marketPaused!=='false' || trade.market.visibility.resumed.animations.length!==trade.market.visibility.paused.animations.length || trade.market.visibility.resumed.animations.some(function(state){return state!=='running'})
+      || trade.dragActive.shellTransform==='none' || trade.pointerSwap.animations!==2 || trade.pointerSwap.panelAnimations.length!==2 || trade.pointerSwap.panelAnimations.some(function(animation){return animation.duration!==260||animation.easing!=='cubic-bezier(0.65, 0, 0.35, 1)'||!animation.frames[0].transform.includes('translate(')})
+      || trade.keyboard.animations.length!==2 || trade.keyboard.animations.some(function(animation){return animation.duration!==260||animation.easing!=='cubic-bezier(0.65, 0, 0.35, 1)'})
+      || trade.collapse.start.animations.length!==1 || trade.collapse.start.animations[0].duration!==200 || trade.collapse.midHeight<=27 || trade.collapse.midHeight>=trade.collapse.fullHeight
+      || trade.collapse.overlap.start.animating!=='true' || trade.collapse.overlap.start.animations.length!==3 || trade.collapse.overlap.start.animations.filter(function(animation){return animation.duration===200}).length!==1 || trade.collapse.overlap.start.animations.filter(function(animation){return animation.duration===260}).length!==2
+      || trade.collapse.rapid.before.animating!=='true' || trade.collapse.rapid.before.height<=27 || trade.collapse.rapid.before.height>=trade.collapse.fullHeight || trade.collapse.rapid.restart.animating!=='true' || trade.collapse.rapid.restart.animations.length!==1 || trade.collapse.rapid.restart.animations[0].duration!==200
+      || trade.final.frames<=trade.initial.frames || trade.final.ticks<2 || trade.final.running!=='true';
+  const tradeFailed = demoId === 'fui-trading-terminal' && (tradeCommonFailed || tradeMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });

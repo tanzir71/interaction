@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 279; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 280; /* keep in sync with the published registries */
 const targets = [
+  'fui-trading-terminal',
   'fui-hex-dump',
   'fui-access-granted',
   'fui-data-stream',
