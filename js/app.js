@@ -134,12 +134,30 @@
     /* most demos were authored for ~500-570px card stages; scale oversized
        roots into the fixed tile (320px) / modal (380px) height via zoom,
        which keeps layout + pointer coordinates consistent.
-       Use clientHeight (the root's layout box), NOT scrollHeight — scroll-driven
-       demos have inner scroll containers whose scrollHeight is huge by design. */
+       Two refinements:
+       - roots containing an inner scroll container: fit by root clientHeight
+         (their scroll content is tall by design);
+       - widget demos (small centered content in a tall padded root): fit by
+         the union of LEAF-element boxes, so the widget keeps its native
+         size and the tile just crops padding. */
     const el = stage.firstElementChild;
     if (el) {
       const targetH = stage.closest('.modal-preview') ? 380 : 320;
-      const h = el.clientHeight;
+      let scroller = /(auto|scroll)/.test(getComputedStyle(el).overflowY) ? el : null;
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_ELEMENT);
+      let node, guard = 0, top = Infinity, bottom = -Infinity;
+      while ((node = walker.nextNode()) && guard++ < 600) {
+        if (!scroller && /(auto|scroll)/.test(getComputedStyle(node).overflowY)) { scroller = node; break; }
+        if (node.children.length === 0 || /^(CANVAS|SVG|IMG|VIDEO)$/.test(node.tagName)) {
+          const r = node.getBoundingClientRect();
+          if (r.height > 0) { if (r.top < top) top = r.top; if (r.bottom > bottom) bottom = r.bottom; }
+        }
+      }
+      let h = el.clientHeight;
+      if (!scroller && bottom > -Infinity) {
+        const leafH = Math.ceil(bottom - top);
+        if (leafH > 0 && leafH < h) h = leafH;
+      }
       if (h > targetH + 8) el.style.zoom = (targetH / h).toFixed(3);
     }
   }
