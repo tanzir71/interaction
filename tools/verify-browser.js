@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 289; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 290; /* keep in sync with the published registries */
 const targets = [
+  'halftone-globe-canvas',
   'dot-matrix-shapes',
   'terminal-window',
   'ascii-type-explode',
