@@ -131,6 +131,15 @@
       console.error('[INTRX] demo "' + d.id + '" failed:', e);
       stage.innerHTML = '<p class="mono dim" style="padding:24px">demo failed to boot — see console</p>';
     }
+    /* most demos were authored for ~500-570px card stages; scale oversized
+       roots into the fixed tile (320px) / modal (380px) height via zoom,
+       which keeps layout + pointer coordinates consistent */
+    const el = stage.firstElementChild;
+    if (el && !el.closest('.pane-code, .pane-prompt')) {
+      const targetH = stage.closest('.modal-preview') ? 380 : 320;
+      const h = el.scrollHeight;
+      if (h > targetH + 8) el.style.zoom = (targetH / h).toFixed(3);
+    }
   }
   function boot(d) {
     if (booted.has(d.id)) return;
@@ -198,14 +207,14 @@
     modal.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.pane === 'notes'));
     Object.values(mPanes).forEach(p => p.classList.remove('active'));
     mPanes.notes.classList.add('active');
-    runDemo(d, mStage);
     backdrop.classList.add('open');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
     modal.scrollTop = 0;
+    /* boot after .open so the stage is rendered and measurable for zoom-fit */
+    runDemo(d, mStage);
     history.replaceState(null, '', '#' + d.id);
   }
-
   function closeModal() {
     if (!modalDemo) return;
     modalDemo = null;

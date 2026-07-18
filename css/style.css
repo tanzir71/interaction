@@ -328,7 +328,7 @@ body {
 .modal-num { font: 11px var(--mono); color: var(--accent); }
 .modal-title { font-size: 18px; font-weight: 600; }
 .modal-tags { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; padding-right: 70px; }
-.modal-preview { position: relative; margin: 0 22px; border: 1px solid var(--line); }
+.modal-preview { position: relative; margin: 0 22px; border: 1px solid var(--line); overflow: hidden; }
 .modal-preview .demo-stage { min-height: 380px; }
 .modal-reset {
   position: absolute; top: 8px; right: 8px; z-index: 6;
