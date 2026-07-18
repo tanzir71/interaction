@@ -9,6 +9,7 @@ A curated, copy-paste reference of the web interactions used by award-winning de
 - 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
 
 **Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (20) · Raster & Glitch (18) · Skeuomorph (16) · SVG & Line (10) · 3D & Perspective (10) · Physics (10) · Liquid & Organic (8) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (14) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
+**Expansion categories live:** FUI & Terminal (1). Maps & Geo and Agent & AI UI are wired and will appear when their first demos ship.
 **Roadmap:** All 236 original handoff items are published; 1 of 56 likes-driven expansion items is live, with 55 queued.
 
 ## Architecture

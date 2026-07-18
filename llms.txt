@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 271 hand-built patterns live today. The roadmap is complete.
+> design agencies. 272 hand-built patterns live today. The original roadmap is complete; 55 likes-driven expansion patterns are queued.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -25,7 +25,7 @@ License: MIT. Free for commercial use. No tracking, fully static.
    Root class must be a unique `d-*` prefix; JS receives (root, stage); demos
    must be self-contained, 320px tall, and respect prefers-reduced-motion.
 
-## Live categories (271 patterns)
+## Live categories (272 patterns)
 
 Scroll (22): lenis-smooth-scroll, scroll-reveal-stagger, parallax-layers,
 horizontal-scroll, sticky-stack, scroll-progress, velocity-skew, scroll-zoom, scroll-text-highlight, scroll-image-sequence, scroll-svg-draw, scroll-rotate-gallery, scroll-split-screen, scroll-marquee-direction, scroll-counter-rotate, scroll-depth-tunnel, scroll-letter-scatter, scroll-color-theme, scroll-clip-morph, scroll-table-of-contents, scroll-inertia-grid, scroll-video-scrubber
@@ -44,6 +44,7 @@ Buttons & Micro (14): btn-border-beam, btn-shimmer-sweep, btn-text-slide-swap, b
 Forms & Inputs (10): input-float-label, input-underline-grow, input-shake-error, input-char-counter-arc, otp-code-boxes, password-strength-bar, select-morph-dropdown, range-elastic-thumb, textarea-auto-grow, form-multistep-progress
 Loaders & Progress (10): preloader-percentage, preloader-word-cycle, loader-dots-wave, loader-morph-shapes, loader-typing-code, skeleton-shimmer, progress-blob-fill, loader-orbit-dots, upload-progress-morph, page-load-counter-slide
 Data & Numbers (6): chart-bars-race, chart-donut-sweep, sparkline-hover-scrub, heatmap-fade-in, ticker-tape-prices, radar-sweep-blips
+FUI & Terminal (1): fui-status-dashboard
 Ambient (10): particles-constellation, gradient-mesh-drift, flow-field, starfield-warp, conway-life-fade, audio-reactive-bars, matrix-rain, fireflies-night, aurora-curtains, rain-window
 Sound & Haptics (6): ui-sound-kit, typing-mechanical, theremin-pad, notification-chime-stack, drum-grid-sequencer, scroll-pitch-drone
 Play & Easter Eggs (8): dvd-screensaver, konami-unlock, click-fireworks, drag-to-break, pet-the-blob, gravity-flip-page, wobbly-window-drag, snake-in-grid
@@ -54,14 +55,14 @@ spring-modal, drag-carousel, hover-fill-button, page-transition, logo-marquee, b
 
 ## Roadmap
 
-0 further patterns remain. The handoff roadmap is complete.
-specified in CODEX_HANDOFF.md in the repo. They are listed on the site as a
-roadmap — only hand-built, working demos are published as cards.
+55 expansion patterns remain. The original CODEX_HANDOFF.md roadmap is complete;
+the active likes-driven batch is specified in CODEX_HANDOFF_2.md. Unpublished
+items are listed on the site as a roadmap — only hand-built, working demos are cards.
 
 ## House style for contributed demos
 
-Colors: #0a0a0b bg, #161619 raised, #2e2e34 lines, #ececef text, #c8ff2e accent.
-Fonts: Inter (UI), JetBrains Mono (labels/code). Transitions: cubic-bezier(0.22,1,0.36,1).
+Colors: #0a0a0b bg, #161619 raised, #2e2e34 lines, #ececef text, #a78bfa accent.
+Fonts: JetBrains Mono throughout. Transitions: cubic-bezier(0.22,1,0.36,1).
 Keep one rAF loop, passive listeners, transform/opacity animation only,
 visible keyboard focus, and a static representative state under
 prefers-reduced-motion.
