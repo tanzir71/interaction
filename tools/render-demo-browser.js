@@ -466,6 +466,116 @@ async function render(data, stageWidth, mode) {
       reduced: root.dataset.reduced
     };
   }
+  let auth = null;
+  if (root.classList.contains('d-fui-auth')) {
+    const authReduced = mode === 'reduce';
+    const authPanel = root.querySelector('.d-fui-auth-panel');
+    const authGlyph = root.querySelector('.d-fui-auth-glyph');
+    const authArcs = [...root.querySelectorAll('.d-fui-auth-arc')];
+    const authLabel = root.querySelector('.d-fui-auth-label');
+    const authHash = root.querySelector('.d-fui-auth-hash');
+    const authStamp = root.querySelector('.d-fui-auth-stamp');
+    const authSweep = root.querySelector('.d-fui-auth-sweep');
+    const authAnnouncement = root.parentElement.querySelector('.d-fui-auth-announcement');
+    const waitPhase = async function(target, attempts, delay) { for (let index = 0; index < attempts && root.dataset.phase !== target; index++) await new Promise(resolve => setTimeout(resolve, delay)); return root.dataset.phase === target; };
+    authPanel.focus();
+    const focusStyle = getComputedStyle(authPanel);
+    const initialBlinkDuration = getComputedStyle(authLabel).animationDuration;
+    const initialLiveDuration = getComputedStyle(root.querySelector('.d-fui-auth-live-dot')).animationDuration;
+    const authInitial = {
+      phase: root.dataset.phase,
+      run: Number(root.dataset.run),
+      outcome: root.dataset.outcome,
+      hash: authHash.textContent,
+      stamp: authStamp.textContent,
+      label: authLabel.textContent,
+      frames: Number(root.dataset.frames),
+      flickers: Number(root.dataset.flickers),
+      busy: root.getAttribute('aria-busy'),
+      disabled: authPanel.getAttribute('aria-disabled'),
+      focused: document.activeElement === authPanel,
+      focusShadow: focusStyle.boxShadow,
+      announcement: authAnnouncement.textContent
+    };
+    const splitEvents = [];
+    const splitObserver = new MutationObserver(function(){if(authStamp.classList.contains('d-fui-auth-is-split'))splitEvents.push(performance.now())});
+    splitObserver.observe(authStamp,{attributes:true,attributeFilter:['class']});
+    let normalFlow = null;
+    let reducedFlow = null;
+    if (!authReduced) {
+      authPanel.click();
+      const started = { phase: root.dataset.phase, run: Number(root.dataset.run), busy: root.getAttribute('aria-busy'), disabled: authPanel.getAttribute('aria-disabled'), announcement: authAnnouncement.textContent, elapsed: Number(root.dataset.elapsed) };
+      authPanel.click();
+      const ignored = { run: Number(root.dataset.run), ignored: Number(root.dataset.ignored), elapsed: Number(root.dataset.elapsed) };
+      await new Promise(resolve => setTimeout(resolve, 120));
+      const partial = { phase: root.dataset.phase, length: Number(root.dataset.hashLength), hash: authHash.textContent, rotation: Number(root.dataset.rotation), arcColor: getComputedStyle(authArcs[0]).stroke, sweepOpacity: getComputedStyle(authSweep).opacity, scanPass: Number(root.dataset.scanPass) };
+      await new Promise(resolve => setTimeout(resolve, 200));
+      for (let index = 0; index < 20 && Number(root.dataset.hashLength) < 16; index++) await new Promise(resolve => setTimeout(resolve, 5));
+      const typed = { phase: root.dataset.phase, length: Number(root.dataset.hashLength), hash: authHash.textContent, elapsed: Number(root.dataset.elapsed) };
+      await new Promise(resolve => setTimeout(resolve, 330));
+      const spun = { phase: root.dataset.phase, rotation: Number(root.dataset.rotation), scanPass: Number(root.dataset.scanPass), scansCompleted: Number(root.dataset.scansCompleted), sweepOpacity: getComputedStyle(authSweep).opacity };
+      await waitPhase('result', 30, 10);
+      const firstResult = { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, hash: authHash.textContent, text: authStamp.textContent, color: getComputedStyle(authStamp).color, fontSize: getComputedStyle(authStamp).fontSize, fontWeight: getComputedStyle(authStamp).fontWeight, scale: Number(root.dataset.stampScale), busy: root.getAttribute('aria-busy'), disabled: authPanel.getAttribute('aria-disabled'), announcement: authAnnouncement.textContent, scansCompleted: Number(root.dataset.scansCompleted) };
+      await waitPhase('result', 1, 1);
+      for (let index = 0; index < 60 && Number(root.dataset.flickers) < 1; index++) await new Promise(resolve => setTimeout(resolve, 10));
+      const landing = { scale: Number(root.dataset.stampScale), flickers: Number(root.dataset.flickers), splitEvents: splitEvents.length, borderAlpha: Number(root.dataset.borderAlpha), borderColor: getComputedStyle(authPanel).borderColor };
+      await new Promise(resolve => setTimeout(resolve, 400));
+      const decay = { phase: root.dataset.phase, borderAlpha: Number(root.dataset.borderAlpha), flickers: Number(root.dataset.flickers) };
+      await new Promise(resolve => setTimeout(resolve, 2100));
+      const held = { phase: root.dataset.phase, outcome: root.dataset.outcome, text: authStamp.textContent };
+      await waitPhase('idle', 50, 20);
+      const firstReset = { phase: root.dataset.phase, resets: Number(root.dataset.resets), hash: authHash.textContent, stamp: authStamp.textContent, busy: root.getAttribute('aria-busy'), disabled: authPanel.getAttribute('aria-disabled'), focused: document.activeElement === authPanel };
+      const outcomes = [firstResult.outcome];
+      const hashes = [firstResult.hash];
+      for (let runIndex = 2; runIndex <= 3; runIndex++) {
+        authPanel.click();
+        await waitPhase('result', 80, 15);
+        outcomes.push(root.dataset.outcome);
+        hashes.push(authHash.textContent);
+        await waitPhase('idle', 230, 15);
+      }
+      authPanel.click();
+      await waitPhase('result', 80, 15);
+      outcomes.push(root.dataset.outcome);
+      hashes.push(authHash.textContent);
+      let maxShake = 0;
+      for (let index = 0; index < 32; index++){maxShake=Math.max(maxShake,Math.abs(Number(root.dataset.shakeX)));await new Promise(resolve => setTimeout(resolve, 10))}
+      const denied = { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, text: authStamp.textContent, color: getComputedStyle(authStamp).color, maxShake, shakeAfter: Number(root.dataset.shakeX), flickers: Number(root.dataset.flickers), frames: Number(root.dataset.frames), focused: document.activeElement === authPanel };
+      normalFlow = { started, ignored, partial, typed, spun, firstResult, landing, decay, held, firstReset, outcomes, hashes, denied };
+    } else {
+      authPanel.click();
+      const firstResult = { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, hash: authHash.textContent, text: authStamp.textContent, color: getComputedStyle(authStamp).color, rotation: Number(root.dataset.rotation), frames: Number(root.dataset.frames), flickers: Number(root.dataset.flickers), busy: root.getAttribute('aria-busy'), disabled: authPanel.getAttribute('aria-disabled'), announcement: authAnnouncement.textContent };
+      authPanel.click();
+      const ignored = { run: Number(root.dataset.run), ignored: Number(root.dataset.ignored) };
+      await new Promise(resolve => setTimeout(resolve, 2800));
+      const stable = { phase: root.dataset.phase, hash: authHash.textContent, text: authStamp.textContent, frames: Number(root.dataset.frames), flickers: Number(root.dataset.flickers) };
+      await waitPhase('idle', 30, 20);
+      const firstReset = { phase: root.dataset.phase, resets: Number(root.dataset.resets), focused: document.activeElement === authPanel };
+      const outcomes = [firstResult.outcome];
+      const hashes = [firstResult.hash];
+      for (let runIndex = 2; runIndex <= 3; runIndex++) {
+        authPanel.click();
+        outcomes.push(root.dataset.outcome);
+        hashes.push(authHash.textContent);
+        await waitPhase('idle', 170, 20);
+      }
+      authPanel.click();
+      outcomes.push(root.dataset.outcome);
+      hashes.push(authHash.textContent);
+      const denied = { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, text: authStamp.textContent, color: getComputedStyle(authStamp).color, shake: Number(root.dataset.shakeX), frames: Number(root.dataset.frames), flickers: Number(root.dataset.flickers), borderAlpha: Number(root.dataset.borderAlpha), focused: document.activeElement === authPanel };
+      reducedFlow = { firstResult, ignored, stable, firstReset, outcomes, hashes, denied };
+    }
+    splitObserver.disconnect();
+    auth = {
+      metadata: { spinDuration: root.dataset.spinDuration, spinEasing: root.dataset.spinEasing, scanDuration: root.dataset.scanDuration, scanPasses: root.dataset.scanPasses, hashDelay: root.dataset.hashDelay, stampDuration: root.dataset.stampDuration, stampEasing: root.dataset.stampEasing, borderDuration: root.dataset.borderDuration, shakeDistance: root.dataset.shakeDistance, shakeCycles: root.dataset.shakeCycles, shakeDuration: root.dataset.shakeDuration, resetDelay: root.dataset.resetDelay, denyEvery: root.dataset.denyEvery },
+      structure: { button: authPanel.tagName, hashTag: authHash.tagName, stampTag: authStamp.tagName, announcerOutsideBusy: !root.contains(authAnnouncement), announcerLive: authAnnouncement.getAttribute('aria-live'), arcs: authArcs.length, dashedArcs: authArcs.filter(arc => getComputedStyle(arc).strokeDasharray !== 'none').length, corners: root.querySelectorAll('.d-fui-auth-corner').length, sweepHeight: authSweep.getBoundingClientRect().height, liveColor: getComputedStyle(root.querySelector('.d-fui-auth-live-dot')).backgroundColor, labelFont: getComputedStyle(authLabel).fontSize, hashFont: getComputedStyle(authHash).fontSize, stampFont: getComputedStyle(authStamp).fontSize, topbarFont: getComputedStyle(root.querySelector('.d-fui-auth-topbar')).fontSize, footerFont: getComputedStyle(root.querySelector('.d-fui-auth-footer')).fontSize, footerPolicy: root.querySelector('.d-fui-auth-footer span:nth-child(3)').textContent, blinkDuration: initialBlinkDuration, liveDuration: initialLiveDuration },
+      initial: authInitial,
+      normal: normalFlow,
+      reducedFlow,
+      reduced: root.dataset.reduced,
+      final: { phase: root.dataset.phase, run: Number(root.dataset.run), outcome: root.dataset.outcome, frames: Number(root.dataset.frames), flickers: Number(root.dataset.flickers), resets: Number(root.dataset.resets), ignored: Number(root.dataset.ignored), running: root.dataset.running }
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -485,6 +595,7 @@ async function render(data, stageWidth, mode) {
     scope,
     scanner,
     stream,
+    auth,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -599,7 +710,48 @@ async function main() {
       || !stream.flash || stream.flash.started.active !== 'true' || stream.flash.started.count !== 1 || stream.flash.started.column < 0 || stream.flash.started.column > 3 || stream.flash.started.background !== 'rgba(167, 139, 250, 0.1)' || stream.flash.started.opacity !== '1' || stream.flash.started.rows !== 1
       || stream.flash.beforeEnd.active !== 'true' || stream.flash.beforeEnd.progress < .65 || stream.flash.beforeEnd.progress > .9 || stream.flash.cleared.active !== 'false' || stream.flash.cleared.rows !== 0;
   const streamFailed = demoId === 'fui-data-stream' && (streamCommonFailed || streamMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed) process.exitCode = 1;
+  const auth = result.auth;
+  const authCommonFailed = !auth
+    || auth.metadata.spinDuration !== '600' || auth.metadata.spinEasing !== 'cubic-bezier(0.65,0,0.35,1)' || auth.metadata.scanDuration !== '400' || auth.metadata.scanPasses !== '2' || auth.metadata.hashDelay !== '18'
+    || auth.metadata.stampDuration !== '220' || auth.metadata.stampEasing !== 'cubic-bezier(0.22,1,0.36,1)' || auth.metadata.borderDuration !== '800'
+    || auth.metadata.shakeDistance !== '6' || auth.metadata.shakeCycles !== '3' || auth.metadata.shakeDuration !== '300' || auth.metadata.resetDelay !== '3000' || auth.metadata.denyEvery !== '4'
+    || auth.structure.button !== 'BUTTON' || auth.structure.hashTag !== 'SPAN' || auth.structure.stampTag !== 'SPAN' || !auth.structure.announcerOutsideBusy || auth.structure.announcerLive !== 'polite'
+    || auth.structure.arcs !== 5 || auth.structure.dashedArcs !== 5 || auth.structure.corners !== 4 || auth.structure.sweepHeight !== 1 || auth.structure.liveColor !== 'rgb(167, 139, 250)'
+    || auth.structure.labelFont !== '10px' || auth.structure.hashFont !== '12px' || auth.structure.stampFont !== '26px' || auth.structure.topbarFont !== '10px' || auth.structure.footerFont !== '10px' || auth.structure.footerPolicy !== '1 IN 4 DENIED'
+    || auth.initial.phase !== 'idle' || auth.initial.run !== 0 || auth.initial.outcome !== '' || auth.initial.hash !== '' || auth.initial.stamp !== '' || auth.initial.label !== 'AWAITING AUTH'
+    || auth.initial.frames !== 0 || auth.initial.flickers !== 0 || auth.initial.busy !== 'false' || auth.initial.disabled !== 'false' || !auth.initial.focused || auth.initial.focusShadow === 'none' || auth.initial.announcement !== 'Awaiting authorization.';
+  const authMotionFailed = reducedMotion
+    ? !auth || auth.reduced !== 'true' || auth.structure.blinkDuration !== '0s' || auth.structure.liveDuration !== '0s' || !auth.reducedFlow
+      || auth.reducedFlow.firstResult.phase !== 'result' || auth.reducedFlow.firstResult.run !== 1 || auth.reducedFlow.firstResult.outcome !== 'granted' || !/^[0-9A-F]{16}$/.test(auth.reducedFlow.firstResult.hash)
+      || auth.reducedFlow.firstResult.text !== 'ACCESS GRANTED' || auth.reducedFlow.firstResult.color !== 'rgb(74, 222, 128)' || auth.reducedFlow.firstResult.rotation !== 360
+      || auth.reducedFlow.firstResult.frames !== 0 || auth.reducedFlow.firstResult.flickers !== 0 || auth.reducedFlow.firstResult.busy !== 'false' || auth.reducedFlow.firstResult.disabled !== 'true' || auth.reducedFlow.firstResult.announcement !== 'Access granted.'
+      || auth.reducedFlow.ignored.run !== 1 || auth.reducedFlow.ignored.ignored !== 1
+      || auth.reducedFlow.stable.phase !== 'result' || auth.reducedFlow.stable.hash !== auth.reducedFlow.firstResult.hash || auth.reducedFlow.stable.text !== 'ACCESS GRANTED' || auth.reducedFlow.stable.frames !== 0 || auth.reducedFlow.stable.flickers !== 0
+      || auth.reducedFlow.firstReset.phase !== 'idle' || auth.reducedFlow.firstReset.resets !== 1 || !auth.reducedFlow.firstReset.focused
+      || auth.reducedFlow.outcomes.join(',') !== 'granted,granted,granted,denied' || new Set(auth.reducedFlow.hashes).size !== 4 || auth.reducedFlow.hashes.some(hash => !/^[0-9A-F]{16}$/.test(hash))
+      || auth.reducedFlow.denied.phase !== 'result' || auth.reducedFlow.denied.run !== 4 || auth.reducedFlow.denied.outcome !== 'denied' || auth.reducedFlow.denied.text !== 'ACCESS DENIED' || auth.reducedFlow.denied.color !== 'rgb(248, 113, 113)'
+      || auth.reducedFlow.denied.shake !== 0 || auth.reducedFlow.denied.frames !== 0 || auth.reducedFlow.denied.flickers !== 0 || auth.reducedFlow.denied.borderAlpha !== 0 || !auth.reducedFlow.denied.focused
+      || auth.final.phase !== 'result' || auth.final.run !== 4 || auth.final.outcome !== 'denied' || auth.final.frames !== 0 || auth.final.flickers !== 0 || auth.final.ignored !== 1 || auth.final.running !== 'false'
+    : !auth || auth.reduced !== 'false' || auth.structure.blinkDuration !== '1.4s' || auth.structure.liveDuration !== '1.6s' || !auth.normal
+      || auth.normal.started.phase !== 'authenticating' || auth.normal.started.run !== 1 || auth.normal.started.busy !== 'true' || auth.normal.started.disabled !== 'true' || auth.normal.started.announcement !== 'Authorization scan started.'
+      || auth.normal.ignored.run !== 1 || auth.normal.ignored.ignored !== 1 || Math.abs(auth.normal.ignored.elapsed - auth.normal.started.elapsed) > 1
+      || auth.normal.partial.phase !== 'authenticating' || auth.normal.partial.length < 1 || auth.normal.partial.length > 15 || !/^[0-9A-F]{1,15}$/.test(auth.normal.partial.hash)
+      || auth.normal.partial.rotation <= 0 || auth.normal.partial.rotation >= 360 || auth.normal.partial.arcColor !== 'rgb(167, 139, 250)' || auth.normal.partial.sweepOpacity !== '1' || auth.normal.partial.scanPass !== 1
+      || auth.normal.typed.phase !== 'authenticating' || auth.normal.typed.length !== 16 || !/^[0-9A-F]{16}$/.test(auth.normal.typed.hash) || auth.normal.typed.elapsed < 280 || auth.normal.typed.elapsed > 380
+      || auth.normal.spun.phase !== 'authenticating' || auth.normal.spun.rotation < 359 || auth.normal.spun.rotation > 360.01 || auth.normal.spun.scanPass !== 2 || auth.normal.spun.scansCompleted !== 1 || auth.normal.spun.sweepOpacity !== '1'
+      || auth.normal.firstResult.phase !== 'result' || auth.normal.firstResult.run !== 1 || auth.normal.firstResult.outcome !== 'granted' || !/^[0-9A-F]{16}$/.test(auth.normal.firstResult.hash)
+      || auth.normal.firstResult.text !== 'ACCESS GRANTED' || auth.normal.firstResult.color !== 'rgb(74, 222, 128)' || auth.normal.firstResult.fontSize !== '26px' || auth.normal.firstResult.fontWeight !== '500'
+      || auth.normal.firstResult.scale <= 1 || auth.normal.firstResult.scale > 1.6 || auth.normal.firstResult.busy !== 'false' || auth.normal.firstResult.disabled !== 'true' || auth.normal.firstResult.announcement !== 'Access granted.' || auth.normal.firstResult.scansCompleted !== 2
+      || Math.abs(auth.normal.landing.scale - 1) > .01 || auth.normal.landing.flickers !== 1 || auth.normal.landing.splitEvents < 1 || auth.normal.landing.borderAlpha < .36 || auth.normal.landing.borderAlpha > .4 || !auth.normal.landing.borderColor.startsWith('rgba(74, 222, 128,')
+      || auth.normal.decay.phase !== 'result' || auth.normal.decay.borderAlpha <= 0 || auth.normal.decay.borderAlpha >= auth.normal.landing.borderAlpha || auth.normal.decay.flickers !== 1
+      || auth.normal.held.phase !== 'result' || auth.normal.held.outcome !== 'granted' || auth.normal.held.text !== 'ACCESS GRANTED'
+      || auth.normal.firstReset.phase !== 'idle' || auth.normal.firstReset.resets !== 1 || auth.normal.firstReset.hash !== '' || auth.normal.firstReset.stamp !== '' || auth.normal.firstReset.busy !== 'false' || auth.normal.firstReset.disabled !== 'false' || !auth.normal.firstReset.focused
+      || auth.normal.outcomes.join(',') !== 'granted,granted,granted,denied' || new Set(auth.normal.hashes).size !== 4 || auth.normal.hashes.some(hash => !/^[0-9A-F]{16}$/.test(hash))
+      || auth.normal.denied.phase !== 'result' || auth.normal.denied.run !== 4 || auth.normal.denied.outcome !== 'denied' || auth.normal.denied.text !== 'ACCESS DENIED' || auth.normal.denied.color !== 'rgb(248, 113, 113)'
+      || auth.normal.denied.maxShake < 5.5 || Math.abs(auth.normal.denied.shakeAfter) > .1 || auth.normal.denied.flickers !== 3 || auth.normal.denied.frames <= 0 || !auth.normal.denied.focused
+      || auth.final.phase !== 'result' || auth.final.run !== 4 || auth.final.outcome !== 'denied' || auth.final.ignored !== 1 || auth.final.running !== 'true';
+  const authFailed = demoId === 'fui-access-granted' && (authCommonFailed || authMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
