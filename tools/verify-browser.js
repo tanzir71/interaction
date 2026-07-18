@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 292; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 293; /* keep in sync with the published registries */
 const targets = [
+  'map-topo-extrude',
   'pixel-lissajous-lab',
   'engraving-lines-warp',
   'halftone-globe-canvas',
