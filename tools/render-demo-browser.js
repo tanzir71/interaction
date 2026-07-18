@@ -351,6 +351,121 @@ async function render(data, stageWidth, mode) {
       liveAnimation: getComputedStyle(root.querySelector('.d-fui-scan-live-dot')).animationDuration
     };
   }
+  let stream = null;
+  if (root.classList.contains('d-fui-stream')) {
+    const streamReduced = mode === 'reduce';
+    const streamPanel = root.querySelector('.d-fui-stream-panel');
+    const streamColumns = [...root.querySelectorAll('.d-fui-stream-column')];
+    const streamRows = [...root.querySelectorAll('.d-fui-stream-row')];
+    const streamMasks = [...root.querySelectorAll('.d-fui-stream-mask')];
+    const streamDecoder = root.querySelector('.d-fui-stream-decoder');
+    const streamAnnouncement = root.querySelector('.d-fui-stream-announcement');
+    const numbers = value => (value || '').split(',').filter(Boolean).map(Number);
+    const probe = document.createElement('div');
+    probe.style.cssText = 'position:absolute;left:-2000px;top:-2000px;width:'+stageWidth+'px;height:320px';
+    probe.innerHTML = data.html;
+    document.body.appendChild(probe);
+    const probeRoot = probe.querySelector('.' + data.rootClass);
+    new Function('root', 'stage', data.js)(probeRoot, probe);
+    const probeInitialRows = probeRoot.dataset.initialRows;
+    probe.remove();
+    const valueRows = streamColumns.map(column => column.querySelectorAll('.d-fui-stream-row')[5]);
+    const streamInitial = {
+      values: valueRows.map(row => row.textContent),
+      initialRows: root.dataset.initialRows,
+      deterministic: root.dataset.initialRows === probeInitialRows,
+      distances: numbers(root.dataset.distances),
+      sequences: numbers(root.dataset.sequences),
+      frames: Number(root.dataset.frames),
+      flashes: Number(root.dataset.flashes),
+      nextFlashDelay: Number(root.dataset.nextFlashDelay),
+      decoderHidden: streamDecoder.hidden,
+      decoderAriaHidden: streamDecoder.getAttribute('aria-hidden'),
+      clippedRows: streamRows.filter(row => row.scrollWidth > row.clientWidth + 1).length
+    };
+    const motionBefore = { distances: numbers(root.dataset.distances), sequences: numbers(root.dataset.sequences), frames: Number(root.dataset.frames), flashes: Number(root.dataset.flashes) };
+    await new Promise(resolve => setTimeout(resolve, streamReduced ? 3400 : 500));
+    const motionAfter = { distances: numbers(root.dataset.distances), sequences: numbers(root.dataset.sequences), frames: Number(root.dataset.frames), flashes: Number(root.dataset.flashes) };
+    const inspectColumn = streamColumns[1];
+    const inspectRow = inspectColumn.querySelectorAll('.d-fui-stream-row')[7];
+    inspectColumn.dispatchEvent(new PointerEvent('pointerenter', { bubbles: false }));
+    inspectRow.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: inspectRow.getBoundingClientRect().left + 4, clientY: inspectRow.getBoundingClientRect().top + 8 }));
+    await new Promise(resolve => setTimeout(resolve, 30));
+    const inspectStyle = getComputedStyle(inspectRow);
+    const decoderRect = streamDecoder.getBoundingClientRect();
+    const panelRect = streamPanel.getBoundingClientRect();
+    const inspection = {
+      paused: root.dataset.paused,
+      pausedCount: Number(root.dataset.pausedCount),
+      inspectedColumn: Number(root.dataset.inspectedColumn),
+      packet: root.dataset.inspectedPacket,
+      source: root.dataset.inspectionSource,
+      background: inspectStyle.backgroundColor,
+      borderLeft: inspectStyle.borderLeftWidth,
+      borderColor: inspectStyle.borderLeftColor,
+      ariaSelected: inspectRow.getAttribute('aria-selected'),
+      decoderHidden: streamDecoder.hidden,
+      decoderVisible: root.dataset.decoderVisible,
+      decoderText: streamDecoder.textContent,
+      decoderColor: getComputedStyle(streamDecoder).color,
+      decoderWithinPanel: decoderRect.left >= panelRect.left && decoderRect.right <= panelRect.right && decoderRect.top >= panelRect.top && decoderRect.bottom <= panelRect.bottom,
+      announcement: streamAnnouncement.textContent
+    };
+    const fadedRow = inspectColumn.querySelectorAll('.d-fui-stream-row')[2];
+    fadedRow.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: fadedRow.getBoundingClientRect().left + 4, clientY: fadedRow.getBoundingClientRect().top + 8 }));
+    await new Promise(resolve => setTimeout(resolve, 30));
+    const fadedDecoderRect = streamDecoder.getBoundingClientRect();
+    const fadedInspection = { selected: fadedRow.getAttribute('aria-selected'), packet: root.dataset.inspectedPacket, decoderVisible: root.dataset.decoderVisible, decoderWithinPanel: fadedDecoderRect.left >= panelRect.left && fadedDecoderRect.right <= panelRect.right && fadedDecoderRect.top >= panelRect.top && fadedDecoderRect.bottom <= panelRect.bottom };
+    const hoverBefore = { distances: numbers(root.dataset.distances), sequences: numbers(root.dataset.sequences) };
+    await new Promise(resolve => setTimeout(resolve, streamReduced ? 400 : 700));
+    const hoverAfter = { distances: numbers(root.dataset.distances), sequences: numbers(root.dataset.sequences) };
+    inspectColumn.dispatchEvent(new PointerEvent('pointerleave', { bubbles: false }));
+    const releaseStart = numbers(root.dataset.distances);
+    await new Promise(resolve => setTimeout(resolve, 250));
+    const release = { distances: numbers(root.dataset.distances), decoderHidden: streamDecoder.hidden, inspected: root.dataset.inspectedColumn, highlighted: root.querySelectorAll('.d-fui-stream-is-inspected').length, pausedCount: Number(root.dataset.pausedCount) };
+    const keyboardColumn = streamColumns[0];
+    keyboardColumn.focus();
+    keyboardColumn.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowDown', bubbles: true, cancelable: true }));
+    const activeId = keyboardColumn.getAttribute('aria-activedescendant');
+    const activeRow = activeId ? document.getElementById(activeId) : null;
+    const activeRect = activeRow ? activeRow.getBoundingClientRect() : null;
+    const activeViewportRect = keyboardColumn.querySelector('.d-fui-stream-viewport').getBoundingClientRect();
+    const keyboard = {
+      focused: document.activeElement === keyboardColumn,
+      pausedCount: Number(root.dataset.pausedCount),
+      source: root.dataset.inspectionSource,
+      activeId,
+      ariaSelected: activeRow ? activeRow.getAttribute('aria-selected') : '',
+      visible: activeRect ? activeRect.top + activeRect.height / 2 >= activeViewportRect.top + 32 && activeRect.top + activeRect.height / 2 <= activeViewportRect.bottom - 32 : false
+    };
+    keyboardColumn.blur();
+    let flash = null;
+    if (!streamReduced) {
+      for (let attempt = 0; attempt < 120 && root.dataset.flashActive !== 'true'; attempt++) await new Promise(resolve => setTimeout(resolve, 20));
+      const flashRow = root.querySelector('.d-fui-stream-is-flash');
+      const flashStyle = flashRow ? getComputedStyle(flashRow, '::after') : null;
+      const started = { active: root.dataset.flashActive, count: Number(root.dataset.flashes), column: Number(root.dataset.flashColumn), background: flashStyle ? flashStyle.backgroundColor : '', opacity: flashStyle ? flashStyle.opacity : '', rows: root.querySelectorAll('.d-fui-stream-is-flash').length };
+      await new Promise(resolve => setTimeout(resolve, 300));
+      const beforeEnd = { active: root.dataset.flashActive, progress: Number(root.dataset.flashProgress) };
+      await new Promise(resolve => setTimeout(resolve, 150));
+      const cleared = { active: root.dataset.flashActive, rows: root.querySelectorAll('.d-fui-stream-is-flash').length };
+      flash = { started, beforeEnd, cleared };
+    }
+    stream = {
+      metadata: { columns: root.dataset.columnCount, speeds: root.dataset.speeds, rowHeight: root.dataset.rowHeight, rowFont: root.dataset.rowFont, fadeHeight: root.dataset.fadeHeight, flashMin: root.dataset.flashMin, flashMax: root.dataset.flashMax, flashDuration: root.dataset.flashDuration },
+      structure: { columns: streamColumns.length, rows: streamRows.length, headings: streamColumns.map(column => column.querySelector('header span').textContent), rowHeight: streamRows[0].getBoundingClientRect().height, rowFont: getComputedStyle(streamRows[0]).fontSize, rowFamily: getComputedStyle(streamRows[0]).fontFamily, masks: streamMasks.map(mask => ({ height: mask.getBoundingClientRect().height, pointerEvents: getComputedStyle(mask).pointerEvents })), topbarFont: getComputedStyle(root.querySelector('.d-fui-stream-topbar')).fontSize, panelHeadFont: getComputedStyle(root.querySelector('.d-fui-stream-panel-head')).fontSize, columnHeadFont: getComputedStyle(streamColumns[0].querySelector('header')).fontSize, decoderFont: getComputedStyle(streamDecoder).fontSize, footerFont: getComputedStyle(root.querySelector('.d-fui-stream-footer')).fontSize },
+      initial: streamInitial,
+      motion: { before: motionBefore, after: motionAfter },
+      inspection,
+      fadedInspection,
+      hover: { before: hoverBefore, after: hoverAfter },
+      release: { start: releaseStart, end: release },
+      keyboard,
+      flash,
+      final: { frames: Number(root.dataset.frames), flashes: Number(root.dataset.flashes), distances: numbers(root.dataset.distances), pausedCount: Number(root.dataset.pausedCount), decoderHidden: streamDecoder.hidden, running: root.dataset.running, liveAnimation: getComputedStyle(root.querySelector('.d-fui-stream-live-dot')).animationDuration },
+      reduced: root.dataset.reduced
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -369,6 +484,7 @@ async function render(data, stageWidth, mode) {
     boot,
     scope,
     scanner,
+    stream,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -456,7 +572,34 @@ async function main() {
       || !scanner.contactFading || scanner.contactFading.active !== 'true' || scanner.contactFading.opacity <= 0 || scanner.contactFading.opacity >= scanner.contact.blipOpacity || scanner.contactFading.progress < .7 || scanner.contactFading.progress > .95
       || !scanner.contactCleared || scanner.contactCleared.active !== 'false' || scanner.contactCleared.index !== -1 || scanner.contactCleared.opacity !== 0 || scanner.contactCleared.status !== 'CLEAR';
   const scannerFailed = demoId === 'fui-signal-scanner' && (scannerCommonFailed || scannerMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed) process.exitCode = 1;
+  const stream = result.stream;
+  const streamCommonFailed = !stream
+    || stream.metadata.columns !== '4' || stream.metadata.speeds !== '18,24,30,22' || stream.metadata.rowHeight !== '16' || stream.metadata.rowFont !== '10' || stream.metadata.fadeHeight !== '32'
+    || stream.metadata.flashMin !== '2700' || stream.metadata.flashMax !== '3300' || stream.metadata.flashDuration !== '400'
+    || stream.structure.columns !== 4 || stream.structure.rows !== 72 || stream.structure.headings.join(',') !== 'HEX,COORD,TIME,STATUS' || stream.structure.rowHeight !== 16 || stream.structure.rowFont !== '10px' || !stream.structure.rowFamily.includes('JetBrains Mono')
+    || stream.structure.masks.length !== 2 || stream.structure.masks.some(mask => mask.height !== 32 || mask.pointerEvents !== 'none')
+    || stream.structure.topbarFont !== '10px' || stream.structure.panelHeadFont !== '10px' || stream.structure.columnHeadFont !== '10px' || stream.structure.decoderFont !== '10px' || stream.structure.footerFont !== '10px'
+    || !stream.initial.deterministic || stream.initial.decoderHidden !== true || stream.initial.decoderAriaHidden !== 'true' || stream.initial.clippedRows !== 0
+    || !/^0x[0-9A-F]{4}$/.test(stream.initial.values[0]) || !/^-?\d{1,2}\.\d{2},-?\d{1,3}\.\d$/.test(stream.initial.values[1]) || !/^\d{2}:\d{2}:\d{2}\.\d{3}$/.test(stream.initial.values[2]) || !/^(VALID|SYNC|NOMINAL|QUEUED|RETRY)$/.test(stream.initial.values[3])
+    || stream.inspection.paused !== '0,1,0,0' || stream.inspection.pausedCount !== 1 || stream.inspection.inspectedColumn !== 1 || stream.inspection.source !== 'pointer'
+    || stream.inspection.background !== 'rgb(22, 22, 25)' || stream.inspection.borderLeft !== '2px' || stream.inspection.borderColor !== 'rgb(46, 46, 52)' || stream.inspection.ariaSelected !== 'true'
+    || stream.inspection.decoderHidden !== false || stream.inspection.decoderVisible !== 'true' || stream.inspection.decoderText !== '→ PACKET VALID' || stream.inspection.decoderColor !== 'rgb(74, 222, 128)' || !stream.inspection.decoderWithinPanel || !stream.inspection.announcement.startsWith('Packet valid, ')
+    || stream.fadedInspection.selected !== 'true' || !stream.fadedInspection.packet || stream.fadedInspection.decoderVisible !== 'true' || !stream.fadedInspection.decoderWithinPanel
+    || stream.hover.after.sequences[1] !== stream.hover.before.sequences[1] || Math.abs(stream.hover.after.distances[1] - stream.hover.before.distances[1]) > .05
+    || stream.release.end.decoderHidden !== true || stream.release.end.inspected !== '-1' || stream.release.end.highlighted !== 0 || stream.release.end.pausedCount !== 0
+    || !stream.keyboard.focused || stream.keyboard.pausedCount !== 1 || stream.keyboard.source !== 'keyboard' || !stream.keyboard.activeId || stream.keyboard.ariaSelected !== 'true' || !stream.keyboard.visible
+    || stream.final.pausedCount !== 0 || stream.final.decoderHidden !== true;
+  const streamMotionFailed = reducedMotion
+    ? !stream || stream.reduced !== 'true' || stream.initial.frames !== 0 || stream.motion.before.frames !== 0 || stream.motion.after.frames !== 0 || stream.motion.after.flashes !== 0 || stream.final.frames !== 0 || stream.final.flashes !== 0 || stream.final.running !== 'false' || stream.final.liveAnimation !== '0s'
+      || stream.motion.after.distances.some((value, index) => Math.abs(value - stream.motion.before.distances[index]) > .01) || stream.motion.after.sequences.some((value, index) => value !== stream.motion.before.sequences[index]) || stream.flash !== null
+    : !stream || stream.reduced !== 'false' || stream.initial.frames <= 0 || stream.initial.nextFlashDelay < 2700 || stream.initial.nextFlashDelay > 3300
+      || [9,12,15,11].some((expected, index) => Math.abs((stream.motion.after.distances[index] - stream.motion.before.distances[index]) - expected) > 2)
+      || [12.6,0,21,15.4].some((expected, index) => Math.abs((stream.hover.after.distances[index] - stream.hover.before.distances[index]) - expected) > 2.5)
+      || [0,2,3].some(index => stream.hover.after.sequences[index] <= stream.hover.before.sequences[index]) || Math.abs((stream.release.end.distances[1] - stream.release.start[1]) - 6) > 2
+      || !stream.flash || stream.flash.started.active !== 'true' || stream.flash.started.count !== 1 || stream.flash.started.column < 0 || stream.flash.started.column > 3 || stream.flash.started.background !== 'rgba(167, 139, 250, 0.1)' || stream.flash.started.opacity !== '1' || stream.flash.started.rows !== 1
+      || stream.flash.beforeEnd.active !== 'true' || stream.flash.beforeEnd.progress < .65 || stream.flash.beforeEnd.progress > .9 || stream.flash.cleared.active !== 'false' || stream.flash.cleared.rows !== 0;
+  const streamFailed = demoId === 'fui-data-stream' && (streamCommonFailed || streamMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
