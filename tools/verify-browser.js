@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 296; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 297; /* keep in sync with the published registries */
 const targets = [
+  'map-radar-pings',
   'map-route-draw',
   'map-dot-globe-arcs',
   'map-city-tiles',
@@ -5372,6 +5373,14 @@ async function main() {
   const dwell = process.argv[3] === 'fast' ? 90 : 700;
   const expression = '(' + browserCheck.toString() + ')(' + JSON.stringify(targets) + ',' + EXPECTED_CARDS + ',' + dwell + ')';
   const evaluated = await send('Runtime.evaluate', { expression, awaitPromise: true, returnByValue: true });
+  if (evaluated.exceptionDetails) {
+    const details = evaluated.exceptionDetails;
+    const description = details.exception && details.exception.description
+      ? details.exception.description
+      : details.text;
+    ws.close();
+    throw new Error(description + ' @ ' + (details.url || 'evaluation') + ':' + (details.lineNumber + 1));
+  }
   const result = evaluated.result.value;
   console.log(JSON.stringify({ page: result, errors }, null, 2));
   ws.close();
