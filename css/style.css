@@ -228,6 +228,11 @@ body {
   display: flex; align-items: center; justify-content: center;
   position: relative;
 }
+/* demos with inner scroll panels: keep their scrollbars thin, dark, quiet */
+.demo-stage * { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+.demo-stage *::-webkit-scrollbar { width: 8px; height: 8px; }
+.demo-stage *::-webkit-scrollbar-thumb { background: var(--line-2); }
+.demo-stage *::-webkit-scrollbar-track { background: transparent; }
 .demo-hint {
   position: absolute; bottom: 10px; right: 14px;
   font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;

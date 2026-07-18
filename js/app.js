@@ -261,6 +261,12 @@
   /* deep link: #demo-id opens its modal */
   const deep = R.demos.find(d => d.id === location.hash.slice(1));
   if (deep) openModal(deep);
+  /* category deep link (#cat-xxx): tiles are built after the browser's
+     initial anchor jump, so scroll manually once the grid exists */
+  if (!deep && location.hash.length > 1) {
+    const anchorTarget = document.getElementById(location.hash.slice(1));
+    if (anchorTarget) anchorTarget.scrollIntoView();
+  }
 
   /* dismissable grid strip */
   const stripClose = document.getElementById('strip-close');
