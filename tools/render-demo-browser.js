@@ -209,6 +209,114 @@ async function render(data, stageWidth, mode) {
       finalReadout: scopeReadout.textContent
     };
   }
+  let scanner = null;
+  if (root.classList.contains('d-fui-scan')) {
+    const scannerReduced = mode === 'reduce';
+    const scannerPanel = root.querySelector('.d-fui-scan-panel');
+    const scannerPlot = root.querySelector('.d-fui-scan-plot');
+    const scannerSweep = root.querySelector('.d-fui-scan-sweep');
+    const scannerReadout = root.querySelector('.d-fui-scan-frequency');
+    const scannerBracket = root.querySelector('.d-fui-scan-bracket');
+    const scannerStatus = root.querySelector('.d-fui-scan-status');
+    const scannerBars = [...root.querySelectorAll('.d-fui-scan-bar')];
+    const scannerTips = [...root.querySelectorAll('.d-fui-scan-tip')];
+    const scannerPlotRect = scannerPlot.getBoundingClientRect();
+    const scannerBarRects = scannerBars.map(item => item.getBoundingClientRect());
+    const scannerTipRect = scannerTips[0].getBoundingClientRect();
+    const scannerSweepStyle = getComputedStyle(scannerSweep);
+    const scannerInitial = {
+      readout: scannerReadout.textContent,
+      frequency: root.dataset.frequency,
+      selectedStart: root.dataset.selectedStart,
+      selectedCount: Number(root.dataset.selectedCount),
+      selectedColor: getComputedStyle(scannerBars[29]).backgroundColor,
+      bodyColor: getComputedStyle(scannerBars[63]).backgroundColor,
+      tipColor: getComputedStyle(scannerTips[63]).backgroundColor,
+      frames: Number(root.dataset.frames),
+      sweepX: Number(root.dataset.sweepX),
+      contacts: Number(root.dataset.contacts),
+      firstContactDelay: Number(root.dataset.nextContactDelay)
+    };
+    let pulseScale = 1;
+    let pulseColor = '';
+    let pulseBar = null;
+    if (!scannerReduced) {
+      for (let attempt = 0; attempt < 120 && pulseScale < 1.1; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, 16));
+        for (const bar of scannerBars) {
+          if (!bar.classList.contains('d-fui-scan-is-swept') || bar.classList.contains('d-fui-scan-is-selected')) continue;
+          const barStyle = getComputedStyle(bar);
+          const transform = barStyle.transform === 'none' ? 1 : new DOMMatrix(barStyle.transform).d;
+          pulseScale = Math.max(pulseScale, transform);
+          if (transform === pulseScale) pulseBar = bar;
+        }
+      }
+      if (pulseBar) {
+        await new Promise(resolve => setTimeout(resolve, 180));
+        pulseColor = getComputedStyle(pulseBar).backgroundColor;
+      }
+    }
+    scannerPanel.dispatchEvent(new PointerEvent('pointermove', { bubbles: true, clientX: scannerPlotRect.left + scannerPlotRect.width * .72, clientY: scannerPlotRect.top + scannerPlotRect.height * .55 }));
+    await new Promise(resolve => setTimeout(resolve, 210));
+    const scannerPointer = {
+      selectedStart: Number(root.dataset.selectedStart),
+      selectedCount: Number(root.dataset.selectedCount),
+      frequency: root.dataset.frequency,
+      readout: scannerReadout.textContent,
+      source: root.dataset.selectionSource,
+      colors: scannerBars.filter(item => item.classList.contains('d-fui-scan-is-selected')).map(item => getComputedStyle(item).backgroundColor),
+      bracket: scannerBracket.getBoundingClientRect()
+    };
+    let scannerPause = null;
+    if (!scannerReduced) {
+      for (let attempt = 0; attempt < 240 && root.dataset.paused !== 'true'; attempt++) await new Promise(resolve => setTimeout(resolve, 20));
+      const pausedAt = Number(root.dataset.sweepX);
+      const pauseFound = root.dataset.paused === 'true';
+      await new Promise(resolve => setTimeout(resolve, 350));
+      const stableAt = Number(root.dataset.sweepX);
+      await new Promise(resolve => setTimeout(resolve, 600));
+      const resumedAt = Number(root.dataset.sweepX);
+      scannerPause = { found: pauseFound, pausedAt, stableAt, resumedAt, pauses: Number(root.dataset.pauses) };
+    }
+    const stableBefore = { frames: Number(root.dataset.frames), sweepX: root.dataset.sweepX, contacts: Number(root.dataset.contacts) };
+    if (scannerReduced) await new Promise(resolve => setTimeout(resolve, 750));
+    const stableAfter = { frames: Number(root.dataset.frames), sweepX: root.dataset.sweepX, contacts: Number(root.dataset.contacts) };
+    if (!scannerReduced) {
+      for (let attempt = 0; attempt < 550 && root.dataset.contactActive !== 'true'; attempt++) await new Promise(resolve => setTimeout(resolve, 20));
+    }
+    const scannerContactBar = Number(root.dataset.contactIndex) >= 0 ? scannerBars[Number(root.dataset.contactIndex)] : null;
+    const scannerBlip = scannerContactBar && scannerContactBar.querySelector('.d-fui-scan-blip');
+    const scannerContactStyle = scannerContactBar ? getComputedStyle(scannerContactBar) : null;
+    const scannerContact = {
+      active: root.dataset.contactActive,
+      index: Number(root.dataset.contactIndex),
+      contacts: Number(root.dataset.contacts),
+      scale: scannerContactStyle && scannerContactStyle.transform !== 'none' ? new DOMMatrix(scannerContactStyle.transform).d : 0,
+      blipColor: scannerBlip ? getComputedStyle(scannerBlip).backgroundColor : '',
+      blipOpacity: scannerBlip ? Number(getComputedStyle(scannerBlip).opacity) : 0,
+      status: scannerStatus.textContent,
+      statusColor: getComputedStyle(scannerStatus).color
+    };
+    scannerPanel.focus();
+    scannerPanel.dispatchEvent(new KeyboardEvent('keydown', { key: 'Home', bubbles: true, cancelable: true }));
+    scannerPanel.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true, cancelable: true }));
+    const scannerKeyboard = { selectedStart: Number(root.dataset.selectedStart), selectedCount: Number(root.dataset.selectedCount), source: root.dataset.selectionSource, focused: document.activeElement === scannerPanel };
+    scanner = {
+      metadata: { barCount: root.dataset.barCount, barWidth: root.dataset.barWidth, barGap: root.dataset.barGap, tipHeight: root.dataset.tipHeight, sweepDuration: root.dataset.sweepDuration, influence: root.dataset.influence, boost: root.dataset.boost, response: root.dataset.scanResponse, pauseDuration: root.dataset.pauseDuration, contactMin: root.dataset.contactMin, contactMax: root.dataset.contactMax, contactScale: root.dataset.contactScale, contactFade: root.dataset.contactFade },
+      geometry: { plotWidth: scannerPlotRect.width, barWidth: scannerBarRects[0].width, barGap: scannerBarRects[1].left - scannerBarRects[0].right, tipHeight: scannerTipRect.height, sweepWidth: Number.parseFloat(scannerSweepStyle.width), sweepColor: scannerSweepStyle.backgroundColor, bracketWidth: scannerBracket.getBoundingClientRect().width },
+      initial: scannerInitial,
+      pulse: { scale: pulseScale, color: pulseColor },
+      pointer: scannerPointer,
+      pause: scannerPause,
+      stable: { before: stableBefore, after: stableAfter },
+      contact: scannerContact,
+      keyboard: scannerKeyboard,
+      reduced: root.dataset.reduced,
+      running: root.dataset.running,
+      scannedCount: Number(root.dataset.scannedCount),
+      liveAnimation: getComputedStyle(root.querySelector('.d-fui-scan-live-dot')).animationDuration
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -226,6 +334,7 @@ async function render(data, stageWidth, mode) {
     },
     boot,
     scope,
+    scanner,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -286,7 +395,11 @@ async function main() {
   const scopeCommonFailed = !scope || scope.canvas.width !== Math.round(scope.canvas.clientWidth * scope.canvas.dpr) || scope.canvas.height !== Math.round(scope.canvas.clientHeight * scope.canvas.dpr) || scope.metadata.gridColumns !== '8' || scope.metadata.gridRows !== '6' || scope.metadata.trailDecay !== '0.88' || scope.metadata.fadeAlpha !== '0.12' || scope.metadata.coreStroke !== '2' || scope.metadata.glowStroke !== '7' || scope.metadata.gridStroke !== '#232327' || scope.metadata.axisStroke !== '#2e2e34' || scope.metadata.buffer !== 'offscreen' || scope.metadata.lerp !== '0.08' || scope.metadata.holdDuration !== '1500' || scope.initial.readout !== 'FREQ 2.40kHz / AMP 62%' || scope.pointer.targetFrequency !== 6.125 || scope.pointer.targetAmplitude !== .7 || scope.holdStart.holding !== 'true' || scope.holdStart.ariaPressed !== 'true' || scope.frozen.holding !== 'true' || scope.frozen.color !== 'rgb(251, 191, 36)' || scope.frozen.opacity !== '1' || scope.frozen.ariaPressed !== 'true' || scope.frozen.phase !== scope.holdStart.phase || scope.frozen.frequency !== scope.holdStart.frequency || scope.frozen.amplitude !== scope.holdStart.amplitude || scope.frozen.targetFrequency !== scope.pointer.targetFrequency.toFixed(3) || scope.frozen.targetAmplitude !== scope.pointer.targetAmplitude.toFixed(3) || scope.frozen.draws !== scope.holdStart.draws || scope.frozen.checksum !== scope.holdStart.checksum || scope.released.holding !== 'false' || scope.released.ariaPressed !== 'false' || scope.keyboard.holding !== 'true' || scope.keyboard.source !== 'keyboard' || scope.keyboard.ariaPressed !== 'true' || !scope.keyboard.focused || scope.keyboard.color !== 'rgb(251, 191, 36)' || scope.keyboard.opacity !== '1';
   const scopeMotionFailed = reducedMotion ? !scope || scope.reduced !== 'true' || scope.initial.frames !== 0 || scope.idle.frames !== 0 || scope.idle.draws !== scope.initial.draws || scope.idle.checksum !== scope.initial.checksum || scope.pointer.frequency !== 6.125 || scope.pointer.amplitude !== .7 || scope.pointer.readout !== 'FREQ 6.13kHz / AMP 70%' || scope.pointer.draws !== scope.initial.draws + 1 || scope.pointer.checksum === scope.initial.checksum || scope.pointerStable.frames !== 0 || scope.pointerStable.draws !== scope.pointer.draws || scope.pointerStable.checksum !== scope.pointer.checksum || scope.released.draws !== scope.frozen.draws : !scope || scope.reduced !== 'false' || scope.idle.frames <= scope.initial.frames || scope.idle.draws <= scope.initial.draws || scope.idle.phase <= scope.initial.phase || scope.idle.checksum === scope.initial.checksum || scope.pointer.frequency <= scope.pointerBefore.frequency || scope.pointer.frequency >= scope.pointer.targetFrequency || scope.pointer.amplitude <= scope.pointerBefore.amplitude || scope.pointer.amplitude >= scope.pointer.targetAmplitude || scope.released.draws <= scope.frozen.draws || scope.released.phase <= Number(scope.frozen.phase) || scope.released.checksum === scope.frozen.checksum;
   const scopeFailed = demoId === 'fui-waveform-scope' && (scopeCommonFailed || scopeMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed) process.exitCode = 1;
+  const scanner = result.scanner;
+  const scannerCommonFailed = !scanner || scanner.metadata.barCount !== '64' || scanner.metadata.barWidth !== '2' || scanner.metadata.barGap !== '1' || scanner.metadata.tipHeight !== '2' || scanner.metadata.sweepDuration !== '3200' || scanner.metadata.influence !== '20' || scanner.metadata.boost !== '1.15' || scanner.metadata.response !== '200' || scanner.metadata.pauseDuration !== '800' || scanner.metadata.contactMin !== '6000' || scanner.metadata.contactMax !== '10000' || scanner.metadata.contactScale !== '2' || scanner.metadata.contactFade !== '1200' || scanner.geometry.plotWidth !== 191 || scanner.geometry.barWidth !== 2 || scanner.geometry.barGap !== 1 || scanner.geometry.tipHeight !== 2 || scanner.geometry.sweepWidth !== 1 || scanner.geometry.sweepColor !== 'rgb(167, 139, 250)' || scanner.initial.readout !== '128.4MHz' || scanner.initial.frequency !== '128.4' || scanner.initial.selectedStart !== '29' || scanner.initial.selectedCount !== 6 || scanner.initial.selectedColor !== 'rgb(103, 232, 249)' || scanner.initial.bodyColor !== 'rgb(92, 92, 102)' || scanner.initial.tipColor !== 'rgb(167, 139, 250)' || scanner.pointer.selectedCount !== 6 || scanner.pointer.source !== 'pointer' || !/^\d{3}\.\dMHz$/.test(scanner.pointer.readout) || scanner.pointer.colors.some(color => color !== 'rgb(103, 232, 249)') || scanner.keyboard.selectedStart !== 1 || scanner.keyboard.selectedCount !== 6 || scanner.keyboard.source !== 'keyboard' || !scanner.keyboard.focused || scanner.contact.active !== 'true' || scanner.contact.index < 0 || scanner.contact.index > 63 || scanner.contact.scale !== 2 || scanner.contact.blipColor !== 'rgb(248, 113, 113)' || scanner.contact.blipOpacity <= 0 || scanner.contact.status !== 'CONTACT' || scanner.contact.statusColor !== 'rgb(248, 113, 113)' || scanner.scannedCount < 1 || scanner.scannedCount > 14;
+  const scannerMotionFailed = reducedMotion ? !scanner || scanner.reduced !== 'true' || scanner.initial.frames !== 0 || scanner.stable.before.frames !== 0 || scanner.stable.after.frames !== 0 || scanner.stable.before.sweepX !== scanner.stable.after.sweepX || scanner.stable.before.contacts !== scanner.stable.after.contacts || scanner.contact.index !== 47 || scanner.running !== 'false' || scanner.liveAnimation !== '0s' : !scanner || scanner.reduced !== 'false' || scanner.initial.frames <= 0 || scanner.initial.firstContactDelay < 6000 || scanner.initial.firstContactDelay > 10000 || scanner.pulse.scale <= 1.1 || scanner.pulse.scale > 1.151 || scanner.pulse.color !== 'rgb(236, 236, 239)' || !scanner.pause || !scanner.pause.found || Math.abs(scanner.pause.pausedAt - scanner.pause.stableAt) > .01 || Math.abs(scanner.pause.resumedAt - scanner.pause.pausedAt) < 1 || scanner.pause.pauses < 1;
+  const scannerFailed = demoId === 'fui-signal-scanner' && (scannerCommonFailed || scannerMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
