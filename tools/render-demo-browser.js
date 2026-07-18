@@ -32,7 +32,14 @@ async function render(data, stageWidth, mode) {
   stage.innerHTML = data.html;
   const root = stage.querySelector('.' + data.rootClass);
   new Function('root', 'stage', data.js)(root, stage);
-  await new Promise(resolve => setTimeout(resolve, 350));
+  let orbitalBoot=null;
+  if(root.classList.contains('d-fui-orbit')){
+    await new Promise(resolve => setTimeout(resolve,150));
+    const bootStation=root.querySelector('.d-fui-orbit-station');
+    const bootPulse=root.querySelector('.d-fui-orbit-station-pulse');
+    orbitalBoot={simulationTime:Number(root.dataset.simulationTime),blips:Number(root.dataset.blips),stationBlip:root.dataset.stationBlip,stationClass:bootStation.classList.contains('d-fui-orbit-is-blip'),stationFill:getComputedStyle(bootStation).fill,pulseOpacity:Number(bootPulse.getAttribute('opacity'))};
+    await new Promise(resolve => setTimeout(resolve,200));
+  }else await new Promise(resolve => setTimeout(resolve,350));
   const rect = root.getBoundingClientRect();
   const diagnostics = root.querySelectorAll('.d-fui-status-diag-list > div').length;
   const panel = root.querySelector('.d-fui-status-panel');
@@ -964,6 +971,167 @@ async function render(data, stageWidth, mode) {
       final:{ticks:Number(root.dataset.ticks),frames:Number(root.dataset.frames),running:root.dataset.running,order:root.dataset.order,collapsed:root.dataset.collapsed,scrollWidth:root.scrollWidth,clientWidth:root.clientWidth}
     };
   }
+  let orbital = null;
+  if (root.classList.contains('d-fui-orbit')) {
+    const orbitReduced=root.dataset.reduced==='true';
+    const orbitScene=root.querySelector('.d-fui-orbit-scene');
+    const orbitSvg=root.querySelector('.d-fui-orbit-svg');
+    const orbitReadout=root.querySelector('.d-fui-orbit-readout');
+    const orbitReadoutText=root.querySelector('.d-fui-orbit-readout-text');
+    const orbitStatus=root.querySelector('.d-fui-orbit-status');
+    const orbitStation=root.querySelector('.d-fui-orbit-station');
+    const orbitPulse=root.querySelector('.d-fui-orbit-station-pulse');
+    const orbitLeader=root.querySelector('.d-fui-orbit-leader');
+    const orbitHeads=[...root.querySelectorAll('.d-fui-orbit-head')];
+    const orbitTrails=[...root.querySelectorAll('.d-fui-orbit-trail')];
+    const wait=function(ms){return new Promise(function(resolve){setTimeout(resolve,ms)})};
+    const rectOf=function(node){const box=node.getBoundingClientRect();return {left:box.left,top:box.top,right:box.right,bottom:box.bottom,width:box.width,height:box.height}};
+    const inside=function(inner,outer){return inner.left>=outer.left-.5&&inner.right<=outer.right+.5&&inner.top>=outer.top-.5&&inner.bottom<=outer.bottom+.5};
+    const points=function(value){return (value||'').trim().split(/\s+/).map(function(pair){return pair.split(',').map(Number)})};
+    const snapshot=function(){
+      const selectedHead=root.querySelector('.d-fui-orbit-head[data-selected="true"]');
+      return {
+        frames:Number(root.dataset.frames),
+        simulationTime:Number(root.dataset.simulationTime),
+        selected:Number(root.dataset.selected),
+        selectedId:root.dataset.selectedId,
+        phases:root.dataset.phases,
+        positions:root.dataset.positions,
+        cameraAngle:Number(root.dataset.cameraAngle),
+        cameraTarget:Number(root.dataset.cameraTarget),
+        rotationProgress:Number(root.dataset.rotationProgress),
+        rotationEase:Number(root.dataset.rotationEase),
+        rotationAnimating:root.dataset.rotationAnimating,
+        readoutTarget:root.dataset.readoutTarget,
+        readoutText:root.dataset.readoutText,
+        actualReadout:orbitReadoutText.textContent,
+        typing:root.dataset.typing,
+        typedChars:Number(root.dataset.typedChars),
+        blips:Number(root.dataset.blips),
+        stationBlip:root.dataset.stationBlip,
+        blipProgress:Number(root.dataset.blipProgress),
+        stationClass:orbitStation.classList.contains('d-fui-orbit-is-blip'),
+        stationFill:getComputedStyle(orbitStation).fill,
+        pulseOpacity:Number(orbitPulse.getAttribute('opacity')),
+        dashOffset:Number(root.dataset.dashOffset),
+        selections:Number(root.dataset.selections),
+        running:root.dataset.running,
+        source:root.dataset.source,
+        buttonLabel:orbitScene.getAttribute('aria-label'),
+        announcement:orbitStatus.textContent,
+        focused:document.activeElement===orbitScene,
+        selectedFill:selectedHead?getComputedStyle(selectedHead).fill:'',
+        selectedPoint:root.dataset.selectedPoint,
+        leaderPoints:root.dataset.leaderPoints
+      };
+    };
+    const freezeKey=function(value){return JSON.stringify([value.frames,value.simulationTime,value.phases,value.positions,value.cameraAngle,value.rotationProgress,value.rotationEase,value.readoutText,value.typedChars,value.typing,value.dashOffset,value.blips,value.stationBlip,value.blipProgress])};
+    const sceneRect=rectOf(orbitScene);
+    const rootBox=rectOf(root);
+    const readoutRect=rectOf(orbitReadout);
+    const leaderPoints=points(orbitLeader.getAttribute('points'));
+    const selectedHead=root.querySelector('.d-fui-orbit-head[data-selected="true"]');
+    const structure={
+      sceneTag:orbitScene.tagName,
+      svg:root.querySelectorAll('.d-fui-orbit-svg').length,
+      planetRadius:root.querySelector('.d-fui-orbit-globe').getAttribute('r'),
+      latitudes:root.querySelectorAll('.d-fui-orbit-latitude').length,
+      latitudeRadii:[...root.querySelectorAll('.d-fui-orbit-latitude')].map(function(node){return node.getAttribute('rx')+'x'+node.getAttribute('ry')}).join(','),
+      latitudeDash:getComputedStyle(root.querySelector('.d-fui-orbit-latitude')).strokeDasharray,
+      backPaths:root.querySelectorAll('.d-fui-orbit-back path').length,
+      frontPaths:root.querySelectorAll('.d-fui-orbit-front path').length,
+      pathsDrawn:[...root.querySelectorAll('.d-fui-orbit-back path,.d-fui-orbit-front path')].every(function(path){return /^M/.test(path.getAttribute('d')||'')}),
+      backOpacity:getComputedStyle(root.querySelector('.d-fui-orbit-back')).opacity,
+      trails:orbitTrails.length,
+      trailsBySat:['SAT-01','SAT-02','SAT-03'].map(function(id){return id+':'+root.querySelectorAll('.d-fui-orbit-trail[data-sat="'+id+'"]').length}).join(','),
+      trailOpacityMin:Math.min(...orbitTrails.map(function(node){return Number(node.getAttribute('opacity'))})),
+      trailOpacityMax:Math.max(...orbitTrails.map(function(node){return Number(node.getAttribute('opacity'))})),
+      heads:orbitHeads.length,
+      headRadii:orbitHeads.map(function(node){return node.getAttribute('r')}).join(','),
+      selectedHeads:root.querySelectorAll('.d-fui-orbit-head[data-selected="true"]').length,
+      selectedFill:getComputedStyle(selectedHead).fill,
+      selectedFilter:getComputedStyle(selectedHead).filter,
+      station:root.querySelectorAll('.d-fui-orbit-station').length,
+      leader:root.querySelectorAll('.d-fui-orbit-leader').length,
+      leaderSegments:leaderPoints.length,
+      leaderAnchored:leaderPoints.length===3&&Math.abs(leaderPoints[2][0]-orbitReadout.offsetLeft)<.2&&Math.abs(leaderPoints[2][1]-(orbitReadout.offsetTop+orbitReadout.offsetHeight/2))<.2,
+      readoutTag:orbitReadout.tagName,
+      readoutHidden:orbitReadout.getAttribute('aria-hidden'),
+      statusLive:orbitStatus.getAttribute('aria-live'),
+      corners:root.querySelectorAll('.d-fui-orbit-corner').length,
+      sceneRadius:getComputedStyle(orbitScene).borderRadius,
+      sceneInside:inside(sceneRect,rootBox),
+      readoutInside:inside(readoutRect,sceneRect),
+      headsInside:orbitHeads.every(function(head){return inside(rectOf(head),sceneRect)}),
+      width:Number(root.dataset.width),
+      height:Number(root.dataset.height),
+      focusables:root.querySelectorAll('button,input,select,textarea,[tabindex]').length
+    };
+    const initial=snapshot();
+    let initialFull=null;
+    let motion=null;
+    let visibility=null;
+    let reducedStable=null;
+    let pointerStart=null;
+    let pointerEarly=null;
+    let pointerEnd=null;
+    let keyboardStart=null;
+    let keyboardEnd=null;
+    if(!orbitReduced){
+      for(let index=0;index<40&&root.dataset.typing==='true';index++)await wait(20);
+      initialFull=snapshot();
+      const before=snapshot();
+      await wait(120);
+      const after=snapshot();
+      motion={before,after,dashRate:(after.dashOffset-before.dashOffset)/Math.max(1,after.simulationTime-before.simulationTime)};
+      orbitScene.dispatchEvent(new MouseEvent('click',{bubbles:true,detail:1}));
+      pointerStart=snapshot();
+      await wait(120);
+      pointerEarly=snapshot();
+      root.style.transform='translateY(1200px)';
+      for(let index=0;index<80&&root.dataset.running!=='false';index++)await wait(10);
+      const paused=snapshot();
+      await wait(350);
+      const stable=snapshot();
+      root.style.transform='';
+      for(let index=0;index<80&&root.dataset.running!=='true';index++)await wait(10);
+      const resumed=snapshot();
+      visibility={paused:{state:paused,key:freezeKey(paused)},stable:{state:stable,key:freezeKey(stable)},resumed:{state:resumed,key:freezeKey(resumed)}};
+      for(let index=0;index<70&&(root.dataset.rotationAnimating==='true'||root.dataset.typing==='true');index++)await wait(20);
+      pointerEnd=snapshot();
+      orbitScene.focus();
+      orbitScene.dispatchEvent(new MouseEvent('click',{bubbles:true,detail:0}));
+      keyboardStart=snapshot();
+      for(let index=0;index<70&&(root.dataset.rotationAnimating==='true'||root.dataset.typing==='true');index++)await wait(20);
+      keyboardEnd=snapshot();
+    }else{
+      await wait(1100);
+      reducedStable=snapshot();
+      orbitScene.dispatchEvent(new MouseEvent('click',{bubbles:true,detail:1}));
+      pointerStart=snapshot();
+      pointerEarly=pointerStart;
+      pointerEnd=pointerStart;
+      orbitScene.focus();
+      orbitScene.dispatchEvent(new MouseEvent('click',{bubbles:true,detail:0}));
+      keyboardStart=snapshot();
+      keyboardEnd=keyboardStart;
+    }
+    const finalSceneRect=rectOf(orbitScene);
+    orbital={
+      metadata:{planetRadius:root.dataset.planetRadius,latitudeCount:root.dataset.latitudeCount,dashPeriod:root.dataset.dashPeriod,orbitPeriods:root.dataset.orbitPeriods,orbitRadii:root.dataset.orbitRadii,orbitTilts:root.dataset.orbitTilts,trailCount:root.dataset.trailCount,trailTotal:root.dataset.trailTotal,trailLag:root.dataset.trailLag,orbitBackAlpha:root.dataset.orbitBackAlpha,headDiameter:root.dataset.headDiameter,rotationDuration:root.dataset.rotationDuration,rotationEasing:root.dataset.rotationEasing,typeDelay:root.dataset.typeDelay,blipDuration:root.dataset.blipDuration,configSignature:root.dataset.configSignature,initialPositions:root.dataset.initialPositions,stationPhase:root.dataset.stationPhase},
+      boot:orbitalBoot,
+      structure,
+      initial,
+      initialFull,
+      motion,
+      visibility,
+      reducedStable,
+      pointer:{start:pointerStart,early:pointerEarly,end:pointerEnd},
+      keyboard:{start:keyboardStart,end:keyboardEnd},
+      reduced:root.dataset.reduced,
+      final:{snapshot:snapshot(),sceneInside:inside(finalSceneRect,rectOf(root)),readoutInside:inside(rectOf(orbitReadout),finalSceneRect),headsInside:orbitHeads.every(function(head){return inside(rectOf(head),finalSceneRect)}),scrollWidth:root.scrollWidth,clientWidth:root.clientWidth}
+    };
+  }
   return {
     root: Boolean(root),
     rootClass: root.className,
@@ -986,6 +1154,7 @@ async function render(data, stageWidth, mode) {
     auth,
     hexDump,
     trading,
+    orbital,
     scrollWidth: root.scrollWidth,
     scrollHeight: root.scrollHeight,
     clientWidth: root.clientWidth,
@@ -1244,7 +1413,40 @@ async function main() {
       || trade.collapse.rapid.before.animating!=='true' || trade.collapse.rapid.before.height<=27 || trade.collapse.rapid.before.height>=trade.collapse.fullHeight || trade.collapse.rapid.restart.animating!=='true' || trade.collapse.rapid.restart.animations.length!==1 || trade.collapse.rapid.restart.animations[0].duration!==200
       || trade.final.frames<=trade.initial.frames || trade.final.ticks<2 || trade.final.running!=='true';
   const tradeFailed = demoId === 'fui-trading-terminal' && (tradeCommonFailed || tradeMotionFailed);
-  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed) process.exitCode = 1;
+  const orbit=result.orbital;
+  const orbitCommonFailed=!orbit
+    || orbit.metadata.planetRadius!=='24' || orbit.metadata.latitudeCount!=='3' || orbit.metadata.dashPeriod!=='20000' || orbit.metadata.orbitPeriods!=='6000,9000,13000' || orbit.metadata.orbitRadii!=='78x27,104x40,132x54' || orbit.metadata.orbitTilts!=='-28,8,34'
+    || orbit.metadata.trailCount!=='12' || orbit.metadata.trailTotal!=='36' || orbit.metadata.trailLag!=='0.055' || orbit.metadata.orbitBackAlpha!=='0.25' || orbit.metadata.headDiameter!=='3'
+    || orbit.metadata.rotationDuration!=='350' || orbit.metadata.rotationEasing!=='cubic-bezier(0.65, 0, 0.35, 1)' || orbit.metadata.typeDelay!=='22' || orbit.metadata.blipDuration!=='600' || orbit.metadata.stationPhase!=='4.7124'
+    || orbit.metadata.configSignature!=='808BAB9E' || orbit.metadata.initialPositions!=='SAT-01:64.72,-35.58,B|SAT-02:-14.92,-39.59,F|SAT-03:-103.47,-9.89,B'
+    || orbit.structure.sceneTag!=='BUTTON' || orbit.structure.svg!==1 || orbit.structure.planetRadius!=='24' || orbit.structure.latitudes!==3 || orbit.structure.latitudeRadii!=='21x4,23x6,21x4' || orbit.structure.latitudeDash!=='3px, 3px'
+    || orbit.structure.backPaths!==3 || orbit.structure.frontPaths!==3 || !orbit.structure.pathsDrawn || orbit.structure.backOpacity!=='0.25' || orbit.structure.trails!==36 || orbit.structure.trailsBySat!=='SAT-01:12,SAT-02:12,SAT-03:12'
+    || Math.abs(orbit.structure.trailOpacityMin-.052)>.001 || Math.abs(orbit.structure.trailOpacityMax-.62)>.001 || orbit.structure.heads!==3 || orbit.structure.headRadii!=='1.5,1.5,1.5' || orbit.structure.selectedHeads!==1 || orbit.structure.selectedFill!=='rgb(167, 139, 250)' || !orbit.structure.selectedFilter.includes('drop-shadow')
+    || orbit.structure.station!==1 || orbit.structure.leader!==1 || orbit.structure.leaderSegments!==3 || !orbit.structure.leaderAnchored || orbit.structure.readoutTag!=='OUTPUT' || orbit.structure.readoutHidden!=='true' || orbit.structure.statusLive!=='polite'
+    || orbit.structure.corners!==4 || orbit.structure.sceneRadius!=='4px' || !orbit.structure.sceneInside || !orbit.structure.readoutInside || !orbit.structure.headsInside || orbit.structure.focusables!==1 || Math.abs(orbit.structure.width-(result.width-20))>.1 || Math.abs(orbit.structure.height-264)>.1
+    || orbit.initial.selected!==1 || orbit.initial.selectedId!=='SAT-02' || orbit.initial.readoutTarget!=='SAT-02 / ALT 412KM / VEL 7.6' || orbit.initial.cameraAngle!==-8 || orbit.initial.cameraTarget!==-8 || orbit.initial.rotationAnimating!=='false' || orbit.initial.selectedFill!=='rgb(167, 139, 250)' || !orbit.initial.buttonLabel.startsWith('SAT-02 selected')
+    || orbit.pointer.start.selected!==2 || orbit.pointer.start.selectedId!=='SAT-03' || orbit.pointer.start.selections!==1 || orbit.pointer.start.source!=='pointer' || orbit.pointer.start.readoutTarget!=='SAT-03 / ALT 536KM / VEL 7.3' || !orbit.pointer.start.buttonLabel.startsWith('SAT-03 selected') || !orbit.pointer.start.announcement.startsWith('SAT-03 selected.') || !orbit.pointer.start.focused
+    || orbit.pointer.end.selectedId!=='SAT-03' || orbit.pointer.end.cameraAngle!==-34 || orbit.pointer.end.cameraTarget!==-34 || orbit.pointer.end.rotationProgress!==1 || orbit.pointer.end.rotationEase!==1 || orbit.pointer.end.rotationAnimating!=='false' || orbit.pointer.end.readoutText!=='SAT-03 / ALT 536KM / VEL 7.3' || orbit.pointer.end.actualReadout!==orbit.pointer.end.readoutTarget || orbit.pointer.end.typing!=='false' || orbit.pointer.end.typedChars!==28
+    || orbit.keyboard.start.selected!==0 || orbit.keyboard.start.selectedId!=='SAT-01' || orbit.keyboard.start.selections!==2 || orbit.keyboard.start.source!=='keyboard' || orbit.keyboard.start.readoutTarget!=='SAT-01 / ALT 357KM / VEL 7.8' || !orbit.keyboard.start.buttonLabel.startsWith('SAT-01 selected') || !orbit.keyboard.start.announcement.startsWith('SAT-01 selected.') || !orbit.keyboard.start.focused
+    || orbit.keyboard.end.selectedId!=='SAT-01' || orbit.keyboard.end.cameraAngle!==28 || orbit.keyboard.end.cameraTarget!==28 || orbit.keyboard.end.rotationProgress!==1 || orbit.keyboard.end.rotationAnimating!=='false' || orbit.keyboard.end.readoutText!=='SAT-01 / ALT 357KM / VEL 7.8' || orbit.keyboard.end.actualReadout!==orbit.keyboard.end.readoutTarget || orbit.keyboard.end.typing!=='false' || orbit.keyboard.end.typedChars!==28
+    || !orbit.final.sceneInside || !orbit.final.readoutInside || !orbit.final.headsInside || orbit.final.scrollWidth!==orbit.final.clientWidth || orbit.final.snapshot.selectedId!=='SAT-01';
+  const orbitMotionFailed=reducedMotion
+    ? !orbit || orbit.reduced!=='true' || orbit.initial.frames!==0 || orbit.initial.simulationTime!==0 || orbit.initial.running!=='false' || orbit.initial.positions!==orbit.metadata.initialPositions || orbit.initial.phases!=='0.3500,4.5684,2.4000' || orbit.initial.dashOffset!==0 || orbit.initial.blips!==0 || orbit.initial.stationBlip!=='false' || orbit.initial.typing!=='false' || orbit.initial.readoutText!==orbit.initial.readoutTarget || orbit.initial.typedChars!==28
+      || orbit.initialFull!==null || orbit.motion!==null || orbit.visibility!==null || !orbit.reducedStable || orbit.reducedStable.frames!==0 || orbit.reducedStable.simulationTime!==0 || orbit.reducedStable.positions!==orbit.initial.positions || orbit.reducedStable.phases!==orbit.initial.phases || orbit.reducedStable.dashOffset!==0 || orbit.reducedStable.blips!==0 || orbit.reducedStable.running!=='false'
+      || orbit.pointer.start.frames!==0 || orbit.pointer.start.simulationTime!==0 || orbit.pointer.start.cameraAngle!==-34 || orbit.pointer.start.rotationAnimating!=='false' || orbit.pointer.start.rotationProgress!==1 || orbit.pointer.start.typing!=='false' || orbit.pointer.start.readoutText!==orbit.pointer.start.readoutTarget || orbit.pointer.start.blips!==0 || orbit.pointer.start.running!=='false'
+      || orbit.keyboard.start.frames!==0 || orbit.keyboard.start.simulationTime!==0 || orbit.keyboard.start.cameraAngle!==28 || orbit.keyboard.start.rotationAnimating!=='false' || orbit.keyboard.start.rotationProgress!==1 || orbit.keyboard.start.typing!=='false' || orbit.keyboard.start.readoutText!==orbit.keyboard.start.readoutTarget || orbit.keyboard.start.blips!==0 || orbit.keyboard.start.running!=='false'
+      || orbit.final.snapshot.frames!==0 || orbit.final.snapshot.simulationTime!==0 || orbit.final.snapshot.running!=='false'
+    : !orbit || orbit.reduced!=='false' || !orbit.boot || orbit.boot.simulationTime<=0 || orbit.boot.blips<1 || orbit.boot.stationBlip!=='true' || !orbit.boot.stationClass || orbit.boot.stationFill!=='rgb(74, 222, 128)' || orbit.boot.pulseOpacity<=0 || orbit.initial.frames<=0 || orbit.initial.simulationTime<=0 || orbit.initial.running!=='true'
+      || !orbit.initialFull || orbit.initialFull.readoutText!==orbit.initialFull.readoutTarget || orbit.initialFull.typing!=='false' || orbit.initialFull.typedChars!==28
+      || !orbit.motion || orbit.motion.after.frames<=orbit.motion.before.frames || orbit.motion.after.simulationTime<=orbit.motion.before.simulationTime || orbit.motion.after.phases===orbit.motion.before.phases || orbit.motion.after.positions===orbit.motion.before.positions || Math.abs(orbit.motion.dashRate+.0006)>.00002
+      || Math.abs((Number(orbit.motion.after.phases.split(',')[1])-Number(orbit.motion.before.phases.split(',')[1]))-((orbit.motion.after.simulationTime-orbit.motion.before.simulationTime)*Math.PI*2/9000))>.003
+      || orbit.pointer.start.cameraAngle!==-8 || orbit.pointer.start.cameraTarget!==-34 || orbit.pointer.start.rotationProgress!==0 || orbit.pointer.start.rotationEase!==0 || orbit.pointer.start.rotationAnimating!=='true' || orbit.pointer.start.typedChars!==0 || orbit.pointer.start.typing!=='true' || orbit.pointer.start.readoutText!==''
+      || orbit.pointer.early.rotationProgress<.25 || orbit.pointer.early.rotationProgress>.5 || orbit.pointer.early.cameraAngle>=-8 || orbit.pointer.early.cameraAngle<=-34 || orbit.pointer.early.typedChars!==Math.floor((orbit.pointer.early.simulationTime-orbit.pointer.start.simulationTime)/22)
+      || !orbit.visibility || orbit.visibility.paused.state.running!=='false' || orbit.visibility.stable.state.running!=='false' || orbit.visibility.paused.key!==orbit.visibility.stable.key || orbit.visibility.resumed.state.running!=='true' || orbit.visibility.resumed.state.simulationTime<orbit.visibility.stable.state.simulationTime || orbit.visibility.resumed.state.simulationTime-orbit.visibility.stable.state.simulationTime>50.1 || orbit.visibility.resumed.state.frames<orbit.visibility.stable.state.frames || orbit.visibility.resumed.state.frames-orbit.visibility.stable.state.frames>1
+      || orbit.pointer.end.frames<=orbit.pointer.start.frames || orbit.keyboard.start.cameraAngle!==-34 || orbit.keyboard.start.cameraTarget!==28 || orbit.keyboard.start.rotationProgress!==0 || orbit.keyboard.start.rotationAnimating!=='true' || orbit.keyboard.start.typedChars!==0 || orbit.keyboard.start.typing!=='true'
+      || orbit.keyboard.end.frames<=orbit.keyboard.start.frames || orbit.final.snapshot.frames<=orbit.initial.frames || orbit.final.snapshot.simulationTime<=orbit.initial.simulationTime || orbit.final.snapshot.running!=='true';
+  const orbitFailed=demoId==='fui-orbital-tracker'&&(orbitCommonFailed||orbitMotionFailed);
+  if (!result.root || result.height !== 320 || result.scrollHeight !== result.clientHeight || result.scrollWidth !== result.clientWidth || errors.length || fuiFailed || lockFailed || bootFailed || scopeFailed || scannerFailed || streamFailed || authFailed || hexFailed || tradeFailed || orbitFailed) process.exitCode = 1;
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });
