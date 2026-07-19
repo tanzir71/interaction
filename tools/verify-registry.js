@@ -48,9 +48,9 @@ demos.forEach(demo => {
 const ids = demos.map(demo => demo.id);
 const handoff2Published = ids.filter(id => h2Ids.has(id)).length;
 if (new Set(ids).size !== ids.length) errors.push('DUPLICATE DEMO IDS');
-if (demos.length !== 317) errors.push('DEMO COUNT ' + demos.length + ', expected 317');
-if (files.length !== 268) errors.push('REGISTRY FILE COUNT ' + files.length + ', expected 268');
-if (handoff2Published !== 46) errors.push('HANDOFF 2 PUBLISHED ' + handoff2Published + ', expected 46');
+if (demos.length !== 318) errors.push('DEMO COUNT ' + demos.length + ', expected 318');
+if (files.length !== 269) errors.push('REGISTRY FILE COUNT ' + files.length + ', expected 269');
+if (handoff2Published !== 47) errors.push('HANDOFF 2 PUBLISHED ' + handoff2Published + ', expected 47');
 
 console.log(JSON.stringify({ demos: demos.length, files: files.length, handoff2Published }, null, 2));
 if (errors.length) {

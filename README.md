@@ -1,6 +1,6 @@
 # INTRX — The Interaction Library
 
-A curated, copy-paste reference of the web interactions used by award-winning design agencies. **317 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. The original roadmap is complete and the likes-driven expansion is underway.
+A curated, copy-paste reference of the web interactions used by award-winning design agencies. **318 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. The original roadmap is complete and the likes-driven expansion is underway.
 
 ## Website & demo
 
@@ -8,9 +8,9 @@ A curated, copy-paste reference of the web interactions used by award-winning de
 - ▲ Vercel mirror: <https://intrx.vercel.app/>
 - 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
 
-**Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (23) · Raster & Glitch (29) · Skeuomorph (20) · SVG & Line (10) · 3D & Perspective (12) · Physics (10) · Liquid & Organic (10) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (14) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
+**Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (23) · Raster & Glitch (29) · Skeuomorph (20) · SVG & Line (10) · 3D & Perspective (12) · Physics (10) · Liquid & Organic (10) · Galleries & Sliders (12) · Navigation & Menus (12) · Buttons & Micro (15) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (21).
 **Expansion categories live:** Maps & Geo (6) · FUI & Terminal (10) · Agent & AI UI (8).
-**Roadmap:** All 236 original handoff items are published; 46 of 56 likes-driven expansion items are live, with 10 queued.
+**Roadmap:** All 236 original handoff items are published; 47 of 56 likes-driven expansion items are live, with 9 queued.
 
 ## Architecture
 
