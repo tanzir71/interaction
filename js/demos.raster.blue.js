@@ -116,7 +116,7 @@ function drawSource(ctx, variant) {
   ctx.fillStyle = gradient; ctx.fillRect(0, 0, columns, rows);
   ctx.strokeStyle = variant === 'A' ? 'rgba(190,255,255,.82)' : 'rgba(67,15,52,.72)'; ctx.lineWidth = Math.max(1, rows * .018);
   for (let ring = 1; ring <= 5; ring++) { ctx.beginPath(); ctx.arc(columns * (variant === 'A' ? .68 : .31), rows * .44, rows * ring * .105, 0, Math.PI * 2); ctx.stroke(); }
-  ctx.fillStyle = variant === 'A' ? '#d8ffff' : '#3a102d'; ctx.font = '800 ' + Math.round(rows * .31) + 'px Inter, sans-serif'; ctx.textBaseline = 'middle';
+  ctx.fillStyle = variant === 'A' ? '#d8ffff' : '#3a102d'; ctx.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, sans-serif'; ctx.textBaseline = 'middle';
   ctx.fillText(variant === 'A' ? 'NIGHT' : 'SIGNAL', columns * .06, rows * .73);
   ctx.fillStyle = variant === 'A' ? 'rgba(7,15,32,.72)' : 'rgba(255,247,190,.66)';
   for (let i = 0; i < 8; i++) ctx.fillRect(columns * (i / 8), 0, Math.max(1, columns * .018), rows);

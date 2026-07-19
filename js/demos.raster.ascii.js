@@ -86,7 +86,7 @@ function drawSource() {
   source.fillStyle = '#10151f'; source.beginPath(); source.arc(width * .72, height * .34, height * .11, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(8,12,18,.72)'; source.beginPath(); source.moveTo(0, height * .72); source.lineTo(width * .47, height * .38);
   source.lineTo(width * .64, height); source.lineTo(0, height); source.closePath(); source.fill();
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('ASCII', width * .04, height * .95);
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('ASCII', width * .04, height * .95);
   sourcePixels = source.getImageData(0, 0, width, height).data;
 }
 function buildCells() {

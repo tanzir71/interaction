@@ -98,7 +98,7 @@ function drawSource(ctx, variant) {
   ctx.fillStyle = variant === 'A' ? '#e9ffdd' : '#86eaff'; ctx.beginPath(); ctx.arc(width * (variant === 'A' ? .72 : .3), height * .33, height * .23, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = '#0b1018'; ctx.beginPath(); ctx.arc(width * (variant === 'A' ? .72 : .3), height * .33, height * .1, 0, Math.PI * 2); ctx.fill();
   ctx.fillStyle = 'rgba(5,7,12,.68)'; ctx.fillRect(0, height * .68, width, height * .32);
-  ctx.fillStyle = '#fff'; ctx.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; ctx.textBaseline = 'bottom';
+  ctx.fillStyle = '#fff'; ctx.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; ctx.textBaseline = 'bottom';
   ctx.fillText(variant === 'A' ? 'STILL' : 'SIGNAL', width * .04, height * .95);
 }
 function averageTile(pixels, x, y, tileWidth, tileHeight) {

@@ -25,7 +25,7 @@ INTRX.register({
 .d-raster-halftone-globe-canvas-head span:first-child{color:#9b9ba3}
 .d-raster-halftone-globe-canvas-stage{position:absolute;inset:36px 8px 34px;display:grid;place-items:center;box-sizing:border-box;overflow:hidden;border:1px solid #232327;border-radius:10px;background:radial-gradient(circle at 50% 48%,#101012 0,#0a0a0b 68%);outline:none;cursor:crosshair;touch-action:none}
 .d-raster-halftone-globe-canvas-stage::before,.d-raster-halftone-globe-canvas-stage::after{content:'';position:absolute;z-index:1;pointer-events:none}.d-raster-halftone-globe-canvas-stage::before{left:50%;top:10px;bottom:10px;width:1px;background:linear-gradient(transparent,#232327,transparent);opacity:.45}.d-raster-halftone-globe-canvas-stage::after{left:10px;right:10px;top:50%;height:1px;background:linear-gradient(90deg,transparent,#232327,transparent);opacity:.32}
-.d-raster-halftone-globe-canvas-stage:focus-visible{box-shadow:inset 0 0 0 1px #a78bfa}
+.d-raster-halftone-globe-canvas-stage:focus-visible{box-shadow:inset 0 0 0 1px #fa7319}
 .d-raster-halftone-globe-canvas-canvas{position:relative;z-index:2;display:block;width:min(100%,360px);height:auto;aspect-ratio:90/61}
 .d-raster-halftone-globe-canvas-axis{position:absolute;z-index:3;right:9px;bottom:8px;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.06em;pointer-events:none}
 .d-raster-halftone-globe-canvas-foot{position:absolute;left:16px;right:16px;bottom:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.05em;white-space:nowrap}
@@ -37,7 +37,7 @@ INTRX.register({
 if(!context)throw new Error('Halftone globe canvas unavailable');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
 const rings=24,pointsPerRing=48,pointCount=rings*pointsPerRing,logicalWidth=360,logicalHeight=244,centerX=180,centerY=122,sphereRadius=110,minimumRadius=.5,maximumRadius=3.5,oceanRadiusScale=.58,rotationPeriod=12000,angularVelocity=Math.PI*2/rotationPeriod,initialRotation=.35,tiltLimit=18*Math.PI/180,tiltLerp=.06,keyboardStep=3*Math.PI/180,noiseSeed=24681357,noiseThreshold=.55,noiseOctaves=2,maxDelta=50;
-const colors={background:'#0a0a0b',line0:'#232327',txt0:'#ececef',txt2:'#5c5c66',acc:'#a78bfa'},rawLight=[-.55,.68,.48],lightLength=Math.hypot(rawLight[0],rawLight[1],rawLight[2]),light=rawLight.map(function(value){return value/lightLength});
+const colors={background:'#0a0a0b',line0:'#232327',txt0:'#ececef',txt2:'#5c5c66',acc:'#fa7319'},rawLight=[-.55,.68,.48],lightLength=Math.hypot(rawLight[0],rawLight[1],rawLight[2]),light=rawLight.map(function(value){return value/lightLength});
 let activeTime=0,rotation=initialRotation,tiltX=0,tiltZ=0,targetTiltX=0,targetTiltZ=0,tiltBeforeX=0,tiltBeforeZ=0,tiltAfterX=0,tiltAfterZ=0,tiltStepSource='initial',pointerInside=false,pointerX=0,pointerY=0,source='initial';
 let schedulerFrames=0,renderFrames=0,projectionBuilds=0,pointerMoves=0,pointerEnters=0,pointerLeaves=0,ignoredPointers=0,keyboardMoves=0,resizeEvents=0,visibilityChanges=0,intersectionChanges=0,schedulerStarts=0,schedulerStops=0,resets=0;
 let visible=true,documentVisible=document.visibilityState!=='hidden',running=false,cleaned=false,frameId=0,lastWall=0,resizeObserver=null,intersectionObserver=null,connectionObserver=null,dpr=1,cssWidth=0,cssHeight=0,lastProjection=null;

@@ -41,63 +41,63 @@ INTRX.register({
 </div>`,
   css: `
 .d-rotary {
-  --angle: 0deg; --level: .5; --metal: #b9bcc0; --accent: #ef6a43;
+  --angle: 0deg; --level: .5; --metal: #202024; --accent: #fa7319;
   width: 100%; min-height: 450px; position: relative; overflow: hidden; box-sizing: border-box;
-  padding: 22px clamp(16px,5vw,44px) 18px; color: #25282b; background: #a9adb1;
-  font-family: Inter, system-ui, sans-serif;
+  padding: 22px clamp(16px,5vw,44px) 18px; color: #ececef; background: #0a0a0b;
+  font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;
 }
 .d-rotary::before {
   content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .34;
-  background: repeating-linear-gradient(92deg, rgba(255,255,255,.12) 0 1px, rgba(60,65,69,.06) 1px 2px, transparent 2px 6px), radial-gradient(circle at 26% 3%, #e0e2e3, transparent 45%);
+  background: repeating-linear-gradient(92deg,rgba(255,255,255,.025) 0 1px,rgba(0,0,0,.16) 1px 2px,transparent 2px 6px);
 }
-.d-rotary-head { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 14px; color: #62676b; font: 700 9px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing: .14em; }
+.d-rotary-head { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 14px; color: #9b9ba3; font: 700 9px/1.2 'Roboto Mono','JetBrains Mono',ui-monospace,monospace; letter-spacing: .14em; }
 .d-rotary-console {
   position: relative; z-index: 2; width: min(650px,100%); min-height: 330px; margin: 20px auto 0; box-sizing: border-box;
-  border: 1px solid #cdd0d2; border-radius: 10px; background: linear-gradient(142deg,#c6c9cb,#aeb2b5 52%,#c2c5c7);
-  box-shadow: inset 1px 1px rgba(255,255,255,.72), inset -1px -1px rgba(73,78,82,.34), 0 16px 31px rgba(53,57,60,.25);
+  border: 1px solid #2e2e34; border-radius: 10px; background: repeating-linear-gradient(92deg,rgba(255,255,255,.02) 0 1px,rgba(0,0,0,.10) 1px 2px,transparent 2px 5px),#161619;
+  box-shadow: inset 1px 1px rgba(255,255,255,.05),inset -1px -1px rgba(0,0,0,.55),0 16px 31px rgba(0,0,0,.34);
 }
-.d-rotary-screw { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(145deg,#e4e6e7,#74797c); box-shadow: 1px 1px 2px rgba(44,47,49,.45); }
-.d-rotary-screw::after { content: ''; position: absolute; left: 2px; right: 2px; top: 5px; height: 1px; background: #5a5f62; transform: rotate(31deg); }
+.d-rotary-screw { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: linear-gradient(145deg,#5c5c66,#232327); box-shadow: 1px 1px 2px rgba(0,0,0,.55); }
+.d-rotary-screw::after { content: ''; position: absolute; left: 2px; right: 2px; top: 5px; height: 1px; background: #0a0a0b; transform: rotate(31deg); }
 .d-rotary-screw-a { left: 13px; top: 13px; }.d-rotary-screw-b { right: 13px; bottom: 13px; }
 .d-rotary-readout {
   position: absolute; left: 28px; top: 27px; width: 91px; height: 55px; display: grid; grid-template-columns: 1fr auto; align-items: end;
-  padding: 9px 12px; box-sizing: border-box; border-radius: 5px; color: #929b95; background: #28312c;
-  box-shadow: inset 2px 3px 7px #101511, 0 1px rgba(255,255,255,.5); font-family: ui-monospace,SFMono-Regular,Consolas,monospace;
+  padding: 9px 12px; box-sizing: border-box; border:1px solid #232327; border-radius: 5px; color: #9b9ba3; background: #0a0a0b;
+  box-shadow: inset 2px 3px 7px rgba(0,0,0,.72),0 1px rgba(255,255,255,.05); font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;
 }
 .d-rotary-readout span { grid-column: 1 / 3; align-self: start; font-size: 7px; letter-spacing: .15em; }
-.d-rotary-readout strong { color: #c8f0cf; font-size: 22px; line-height: 1; letter-spacing: .05em; text-shadow: 0 0 8px rgba(157,239,177,.25); }
-.d-rotary-readout b { padding-bottom: 2px; color: #77817b; font-size: 8px; }
+.d-rotary-readout strong { color: #ececef; font-size: 22px; line-height: 1; letter-spacing: .05em; text-shadow: none; }
+.d-rotary-readout b { padding-bottom: 2px; color: #5c5c66; font-size: 8px; }
 .d-rotary-dial { position: relative; width: 252px; height: 252px; margin: 36px auto 0; }
 .d-rotary-ticks { position: absolute; inset: 0; pointer-events: none; }
 .d-rotary-ticks i {
   position: absolute; left: calc(50% - 1px); top: 19px; width: 2px; height: 12px; border-radius: 2px;
-  background: #7d8285; transform-origin: 1px 107px; transform: rotate(var(--tick-angle)); transition: background .1s ease, height .1s ease;
+  background: #5c5c66; transform-origin: 1px 107px; transform: rotate(var(--tick-angle)); transition: background .1s ease, height .1s ease;
 }
 .d-rotary-ticks i:nth-child(5n + 1) { width: 3px; height: 16px; }
-.d-rotary-ticks i.is-active { background: var(--accent); box-shadow: 0 0 4px rgba(239,106,67,.25); }
-.d-rotary-limit { position: absolute; bottom: 28px; color: #72777a; font: 700 8px/1 ui-monospace,SFMono-Regular,Consolas,monospace; }
+.d-rotary-ticks i.is-active { background: var(--accent); box-shadow: 0 0 4px rgba(250,115,25,.25); }
+.d-rotary-limit { position: absolute; bottom: 28px; color: #9b9ba3; font: 700 8px/1 'Roboto Mono','JetBrains Mono',ui-monospace,monospace; }
 .d-rotary-min { left: 21px; }.d-rotary-max { right: 13px; }
 .d-rotary-knob {
   position: absolute; left: 38px; top: 38px; width: 176px; height: 176px; z-index: 3; border-radius: 50%; cursor: grab; touch-action: none; outline: none;
 }
-.d-rotary-knob:active { cursor: grabbing; }.d-rotary-knob:focus-visible { box-shadow: 0 0 0 3px #b8bbbd, 0 0 0 5px #444a4d; }
+.d-rotary-knob:active { cursor: grabbing; }.d-rotary-knob:focus-visible { box-shadow:0 0 0 2px #0a0a0b,0 0 0 4px #fa7319; }
 .d-rotary-grip {
-  position: absolute; inset: 0; border: 1px solid #5b6063; border-radius: 50%; transform: rotate(var(--angle));
-  background: radial-gradient(circle at 38% 32%, #d6d8d9 0 8%, #9ca1a4 34%, #686e71 69%, #474c4f 70%, #92979a 74%, #606568 100%);
-  box-shadow: inset 4px 4px 8px rgba(255,255,255,.34), inset -6px -7px 12px rgba(40,44,47,.42), 4px 7px 12px rgba(53,57,60,.42);
+  position: absolute; inset: 0; border: 1px solid #3f3f46; border-radius: 50%; transform: rotate(var(--angle));
+  background: radial-gradient(circle at 38% 32%,#4a4a50 0 8%,#303035 34%,#1b1b1e 69%,#0f0f11 70%,#29292d 74%,#161619 100%);
+  box-shadow: inset 4px 4px 8px rgba(255,255,255,.10),inset -6px -7px 12px rgba(0,0,0,.55),4px 7px 12px rgba(0,0,0,.48);
   transition: transform 70ms linear; will-change: transform;
 }
-.d-rotary-grip > span { position: absolute; left: 85px; top: 13px; width: 5px; height: 25px; border-radius: 3px; background: rgba(63,68,71,.34); transform-origin: 3px 75px; }
+.d-rotary-grip > span { position: absolute; left: 85px; top: 13px; width: 5px; height: 25px; border-radius: 3px; background: rgba(0,0,0,.34); transform-origin: 3px 75px; }
 .d-rotary-grip > span:nth-of-type(1) { transform: rotate(-48deg); }.d-rotary-grip > span:nth-of-type(2) { transform: rotate(-24deg); }.d-rotary-grip > span:nth-of-type(3) { transform: rotate(24deg); }.d-rotary-grip > span:nth-of-type(4) { transform: rotate(48deg); }.d-rotary-grip > span:nth-of-type(5) { transform: rotate(180deg); }
-.d-rotary-pointer { position: absolute; left: 84px; top: 13px; width: 8px; height: 36px; border-radius: 4px; background: var(--accent); box-shadow: inset 1px 0 rgba(255,255,255,.35), 0 1px 3px rgba(78,46,36,.45); }
-.d-rotary-axis { position: absolute; left: 119px; top: 119px; width: 14px; height: 14px; z-index: 5; border-radius: 50%; pointer-events: none; background: #707679; box-shadow: inset 1px 1px #c9cccd, 1px 1px 3px rgba(40,44,46,.5); }
-.d-rotary-axis i { position: absolute; left: 6px; top: 2px; width: 2px; height: 10px; background: #555a5d; transform: rotate(var(--angle)); }
-.d-rotary-meta { position: absolute; right: 25px; top: 31px; display: grid; justify-items: end; gap: 5px; color: #747a7d; font: 650 8px/1 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing: .11em; }
-.d-rotary.is-dragging .d-rotary-console { box-shadow: inset 1px 1px rgba(255,255,255,.72), inset -1px -1px rgba(73,78,82,.34), 0 16px 31px rgba(53,57,60,.25), 0 0 0 1px rgba(239,106,67,.34); }
+.d-rotary-pointer { position: absolute; left: 84px; top: 13px; width: 8px; height: 36px; border-radius: 4px; background: var(--accent); box-shadow: inset 1px 0 rgba(255,255,255,.24),0 1px 3px rgba(250,115,25,.28); }
+.d-rotary-axis { position: absolute; left: 119px; top: 119px; width: 14px; height: 14px; z-index: 5; border-radius: 50%; pointer-events: none; background: #303035; box-shadow: inset 1px 1px #5c5c66,1px 1px 3px rgba(0,0,0,.55); }
+.d-rotary-axis i { position: absolute; left: 6px; top: 2px; width: 2px; height: 10px; background: #0a0a0b; transform: rotate(var(--angle)); }
+.d-rotary-meta { position: absolute; right: 25px; top: 31px; display: grid; justify-items: end; gap: 5px; color: #9b9ba3; font: 650 8px/1 'Roboto Mono','JetBrains Mono',ui-monospace,monospace; letter-spacing: .11em; }
+.d-rotary.is-dragging .d-rotary-console { box-shadow:inset 1px 1px rgba(255,255,255,.05),inset -1px -1px rgba(0,0,0,.55),0 16px 31px rgba(0,0,0,.34),0 0 0 1px rgba(250,115,25,.34); }
 .d-rotary-foot { position: relative; z-index: 2; width: min(650px,100%); margin: 14px auto 0; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
-.d-rotary-status { margin: 0; color: #656b6e; font: 650 9px/1.3 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing: .06em; }
-.d-rotary-reset { min-height: 31px; padding: 7px 12px; border: 1px solid #8a8f92; border-radius: 4px; color: #555b5e; background: #b8bcbe; box-shadow: inset 1px 1px rgba(255,255,255,.5); font: 700 9px/1 ui-monospace,SFMono-Regular,Consolas,monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
-.d-rotary-reset:hover,.d-rotary-reset:focus-visible { color: #24282a; border-color: #565c5f; outline: none; }
+.d-rotary-status { margin: 0; color: #9b9ba3; font: 650 9px/1.3 'Roboto Mono','JetBrains Mono',ui-monospace,monospace; letter-spacing: .06em; }
+.d-rotary-reset { min-height: 31px; padding: 7px 12px; border: 1px solid #3f3f46; border-radius: 4px; color: #9b9ba3; background: #161619; box-shadow: inset 1px 1px rgba(255,255,255,.04); font: 700 9px/1 'Roboto Mono','JetBrains Mono',ui-monospace,monospace; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+.d-rotary-reset:hover,.d-rotary-reset:focus-visible { color: #ececef; border-color: #fa7319; outline: none; }
 @media (max-width: 500px) {
   .d-rotary { min-height: 470px; padding-inline: 11px; }.d-rotary-console { min-height: 350px; }
   .d-rotary-readout { left: 19px; top: 18px; }.d-rotary-meta { right: 18px; top: 23px; }
@@ -181,5 +181,5 @@ On pointerdown prevent default, capture pointerId, mark dragging, and immediatel
 
 Release dragging on pointerup, pointercancel, or lostpointercapture, release capture when still held, and announce the locked detent. Double-click and a semantic Center button return to detent 10. ArrowRight/ArrowUp increment one detent; ArrowLeft/ArrowDown decrement one; PageUp/PageDown move four; Home and End choose exact limits. Clamp every input and prevent default only for handled slider keys.
 
-Render a machined face, fixed tick ring, rotating grip and pointer, recessed 000–100 display, limit labels, detent specifications, visible focus, and at least a practical 176px drag target. Under prefers-reduced-motion remove transform/tick transitions while preserving atan2 geometry, pointer capture and cancellation, exact snapping, tick activation, readout and ARIA synchronization, mouse/touch/pen dragging, keyboard control, and reset.`
+Render a machined face, fixed tick ring, rotating grip and pointer, recessed 000–100 display, limit labels, detent specifications, visible focus, and at least a practical 176px drag target. Render the root as #0a0a0b and the console and grip as one dark matte-steel material, keep every micro-label uppercase in Roboto Mono with JetBrains Mono fallback, and use grayscale plus #fa7319 only for active ticks, pointer, drag, and focus state. Under prefers-reduced-motion remove transform/tick transitions while preserving atan2 geometry, pointer capture and cancellation, exact snapping, tick activation, readout and ARIA synchronization, mouse/touch/pen dragging, keyboard control, and reset.`
 });

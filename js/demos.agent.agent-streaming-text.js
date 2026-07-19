@@ -26,28 +26,28 @@ INTRX.register({
   <span class="d-agent-agent-streaming-text-status">Response ready to stream</span>
 </div>`,
   css:`
-.d-agent-agent-streaming-text{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
+.d-agent-agent-streaming-text{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;isolation:isolate}
 .d-agent-agent-streaming-text *{box-sizing:border-box}
 .d-agent-agent-streaming-text-head{position:absolute;top:12px;right:16px;left:16px;height:20px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-agent-agent-streaming-text-head>div{display:flex;align-items:center;gap:8px}
-.d-agent-agent-streaming-text-mode{color:#a78bfa}
-.d-agent-agent-streaming-text-replay,.d-agent-agent-streaming-text-copy-chip{appearance:none;border:1px solid #2e2e34;border-radius:5px;background:#161619;color:#9b9ba3;font:600 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;cursor:pointer;outline:none}
+.d-agent-agent-streaming-text-mode{color:#fa7319}
+.d-agent-agent-streaming-text-replay,.d-agent-agent-streaming-text-copy-chip{appearance:none;border:1px solid #2e2e34;border-radius:5px;background:#161619;color:#9b9ba3;font:600 9px/1 'Roboto Mono','JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em;cursor:pointer;outline:none}
 .d-agent-agent-streaming-text-replay{height:20px;padding:0 7px}
-.d-agent-agent-streaming-text-replay:hover,.d-agent-agent-streaming-text-copy-chip:hover{border-color:#a78bfa;color:#ececef}
-.d-agent-agent-streaming-text-replay:focus-visible,.d-agent-agent-streaming-text-copy-chip:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px #a78bfa}
+.d-agent-agent-streaming-text-replay:hover,.d-agent-agent-streaming-text-copy-chip:hover{border-color:#fa7319;color:#ececef}
+.d-agent-agent-streaming-text-replay:focus-visible,.d-agent-agent-streaming-text-copy-chip:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px #fa7319}
 .d-agent-agent-streaming-text-stage{position:absolute;top:39px;right:12px;bottom:24px;left:12px;display:grid;grid-template-rows:minmax(0,1fr) 64px 18px;gap:6px;min-width:0;padding:12px;border:1px solid #232327;border-radius:10px;overflow:hidden;background:#101012}
-.d-agent-agent-streaming-text-message{position:relative;min-height:0;margin:0;padding:10px 11px;border:1px solid #232327;border-radius:8px;overflow:hidden;background:#161619;color:#c7c7ce;font:400 10.5px/1.38 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.d-agent-agent-streaming-text-message{position:relative;min-height:0;margin:0;padding:10px 11px;border:1px solid #232327;border-radius:8px;overflow:hidden;background:#161619;color:#c7c7ce;font:400 10.5px/1.38 'Roboto Mono','JetBrains Mono',ui-monospace,monospace}
 .d-agent-agent-streaming-text-copy p{margin:0 0 5px}
 .d-agent-agent-streaming-text-copy p:last-child{margin-bottom:0}
 .d-agent-agent-streaming-text-copy strong{color:#ececef;font-weight:600}
-.d-agent-agent-streaming-text-copy code{display:inline;padding:1px 4px;border:1px solid #2e2e34;border-radius:4px;background:#101012;color:#c4b5fd;font:500 9.5px/1.3 'JetBrains Mono',ui-monospace,monospace}
+.d-agent-agent-streaming-text-copy code{display:inline;padding:1px 4px;border:1px solid #2e2e34;border-radius:4px;background:#101012;color:#b8b8b8;font:500 9.5px/1.3 'Roboto Mono','JetBrains Mono',ui-monospace,monospace}
 .d-agent-agent-streaming-text-copy ul{margin:3px 0 5px;padding:0 0 0 16px;color:#b2b2bb}
 .d-agent-agent-streaming-text-copy li{margin:1px 0;padding-left:1px}
-.d-agent-agent-streaming-text-copy li::marker{color:#a78bfa}
-.d-agent-agent-streaming-text-caret{display:inline-block;width:2px;height:14px;margin-left:3px;background:#a78bfa;vertical-align:-3px;box-shadow:0 0 7px rgba(167,139,250,.35)}
+.d-agent-agent-streaming-text-copy li::marker{color:#fa7319}
+.d-agent-agent-streaming-text-caret{display:inline-block;width:2px;height:14px;margin-left:3px;background:#fa7319;vertical-align:-3px;box-shadow:0 0 7px rgba(250,115,25,.35)}
 .d-agent-agent-streaming-text-stall{display:inline-flex;align-items:center;gap:3px;margin:2px 0 0 3px;vertical-align:middle}
 .d-agent-agent-streaming-text-stall[hidden]{display:none}
-.d-agent-agent-streaming-text-stall i{width:3px;height:3px;border-radius:50%;background:#a78bfa;animation:d-agent-agent-streaming-text-dot .8s ease-in-out infinite}
+.d-agent-agent-streaming-text-stall i{width:3px;height:3px;border-radius:50%;background:#fa7319;animation:d-agent-agent-streaming-text-dot .8s ease-in-out infinite}
 .d-agent-agent-streaming-text-stall i:nth-child(2){animation-delay:.12s}.d-agent-agent-streaming-text-stall i:nth-child(3){animation-delay:.24s}
 .d-agent-agent-streaming-text-code{position:relative;height:64px;padding:16px 10px 6px;border:1px solid #232327;border-radius:8px;overflow:hidden;background:#0d0d0f}
 .d-agent-agent-streaming-text-code[hidden]{visibility:hidden}
@@ -55,7 +55,7 @@ INTRX.register({
 .d-agent-agent-streaming-text-skeleton i{height:5px;border-radius:3px;background:linear-gradient(90deg,#1b1b1f 0%,#303038 45%,#1b1b1f 80%);background-size:220% 100%;animation:d-agent-agent-streaming-text-shimmer 1.2s linear infinite}
 .d-agent-agent-streaming-text-skeleton i:nth-child(1){width:88%}.d-agent-agent-streaming-text-skeleton i:nth-child(2){width:66%}.d-agent-agent-streaming-text-skeleton i:nth-child(3){width:78%}
 .d-agent-agent-streaming-text-code.d-agent-agent-streaming-text-is-resolved .d-agent-agent-streaming-text-skeleton{display:none}
-.d-agent-agent-streaming-text-lines{position:relative;margin:0;color:#c7c7ce;font:500 9px/13px 'JetBrains Mono',ui-monospace,monospace;white-space:pre-wrap}
+.d-agent-agent-streaming-text-lines{position:relative;margin:0;color:#c7c7ce;font:500 9px/13px 'Roboto Mono','JetBrains Mono',ui-monospace,monospace;white-space:pre-wrap}
 .d-agent-agent-streaming-text-line{display:block;opacity:0;transform:translateY(4px);transition:opacity .18s ease,transform .18s ease}
 .d-agent-agent-streaming-text-line.d-agent-agent-streaming-text-is-visible{opacity:1;transform:none}
 .d-agent-agent-streaming-text-copy-chip{position:absolute;top:5px;right:6px;height:17px;padding:0 5px;opacity:0;transition:opacity .18s ease}
@@ -89,5 +89,5 @@ function cleanup(){if(cleaned)return;cleaned=true;if(frameId){cancelAnimationFra
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 render();requestFrame();
 `,
-  prompt:`Build one self-contained responsive 320px Agent and AI UI response card with no dependencies or external assets. Stream a deterministic roughly sixty-word assistant answer in realistic bursts of one to four tokens separated by irregular 30 to 90 millisecond gaps. Insert one 400 millisecond mid-answer stall with a three-dot shimmer. Resolve closed bold and inline-code markdown immediately, form a three-item list live, and keep a two-by-fourteen-pixel accent caret at the stream edge. After the prose, show a three-bar shimmering code skeleton, replace it after 600 milliseconds with three mono lines using an 80 millisecond line stagger, then reveal a keyboard-accessible copy chip. Count the footer to 2.4k tokens and 3.1 seconds, provide Replay, pause work while hidden, clean up detached instances, and render the complete stable state for reduced motion.`
+  prompt:`Build one self-contained responsive 320px Agent and AI UI response card with no dependencies or external assets. Stream a deterministic roughly sixty-word assistant answer in realistic bursts of one to four tokens separated by irregular 30 to 90 millisecond gaps. Insert one 400 millisecond mid-answer stall with a three-dot shimmer. Resolve closed bold and inline-code markdown immediately, form a three-item list live, and keep a two-by-fourteen-pixel accent caret at the stream edge. After the prose, show a three-bar shimmering code skeleton, replace it after 600 milliseconds with three mono lines using an 80 millisecond line stagger, then reveal a keyboard-accessible copy chip. Count the footer to 2.4k tokens and 3.1 seconds, provide Replay, pause work while hidden, clean up detached instances, and render the complete stable state for reduced motion. Keep chrome grayscale on #0a0a0b, use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for streaming or focused state, and render inline code in neutral gray.`
 });

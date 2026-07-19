@@ -25,37 +25,37 @@ INTRX.register({
   <p class="d-lines-status" aria-live="polite">Twelve-degree engraving screen</p>
 </div>`,
   css: `
-.d-lines { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #dbe7df; color: #152c27; touch-action: none; }
-.d-lines:focus-visible { box-shadow: inset 0 0 0 2px #e9482f; }
+.d-lines { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0a0a0b; color: #ececef; touch-action: none; }
+.d-lines:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-lines::before { content: ''; position: absolute; inset: 0; opacity: .2; pointer-events: none;
-  background-image: linear-gradient(rgba(21,44,39,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(21,44,39,.18) 1px, transparent 1px); background-size: 28px 28px; }
+  background-image: linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px); background-size: 28px 28px; }
 .d-lines-stage { position: absolute; left: 50%; top: 50%; width: min(68%, 452px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(21,44,39,.44); background: #edf2e9; box-shadow: 9px 9px 0 rgba(21,44,39,.12); }
+  overflow: hidden; border: 1px solid rgba(255,255,255,.44); background: #101012; box-shadow: 9px 9px 0 rgba(255,255,255,.12); }
 .d-lines-canvas { display: block; width: 100%; height: 100%; }
 .d-lines-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .1;
-  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(21,44,39,.14) 4px 5px); mix-blend-mode: multiply; }
+  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(255,255,255,.14) 4px 5px); mix-blend-mode: multiply; }
 .d-lines-axis { position: absolute; left: 12px; top: 12px; width: 54px; height: 54px; border: 1px solid rgba(233,72,47,.64);
-  border-radius: 50%; color: #e9482f; pointer-events: none; }
+  border-radius: 50%; color: #fa7319; pointer-events: none; }
 .d-lines-axis::before, .d-lines-axis::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
 .d-lines-axis::before { width: 6px; height: 1px; }.d-lines-axis::after { width: 1px; height: 6px; }
 .d-lines-axis i { position: absolute; left: 50%; top: 50%; width: 22px; height: 1px; background: currentColor; transform-origin: 0 50%; transform: rotate(12deg); will-change: transform; }
 .d-lines-axis b { position: absolute; left: 8px; bottom: 5px; font: 7px "JetBrains Mono", monospace; letter-spacing: .04em; }
 .d-lines-mark { position: absolute; right: 9px; bottom: 4px; color: rgba(233,72,47,.72); font: 700 25px "JetBrains Mono", monospace; letter-spacing: -.2em; }
-.d-lines-kicker { position: absolute; left: 17px; top: 18px; color: rgba(21,44,39,.58); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
+.d-lines-kicker { position: absolute; left: 17px; top: 18px; color: rgba(255,255,255,.58); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
 .d-lines-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(21,44,39,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-lines-meter strong { min-width: 34px; color: #152c27; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
+  color: rgba(255,255,255,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
+.d-lines-meter strong { min-width: 34px; color: #ececef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
 .d-lines-meter b { font-weight: 400; }
-.d-lines-weight { position: absolute; left: 17px; top: 44px; display: flex; align-items: center; gap: 4px; color: rgba(21,44,39,.48); font: 6px "JetBrains Mono", monospace; letter-spacing: .07em; }
-.d-lines-weight i { display: block; width: 13px; background: #152c27; }.d-lines-weight i:nth-of-type(1) { height: 1px; }
+.d-lines-weight { position: absolute; left: 17px; top: 44px; display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,.48); font: 6px "JetBrains Mono", monospace; letter-spacing: .07em; }
+.d-lines-weight i { display: block; width: 13px; background: #ececef; }.d-lines-weight i:nth-of-type(1) { height: 1px; }
 .d-lines-weight i:nth-of-type(2) { height: 2px; }.d-lines-weight i:nth-of-type(3) { height: 4px; }.d-lines-weight i:nth-of-type(4) { height: 6px; }
-.d-lines-lock { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(21,44,39,.4);
-  border-radius: 999px; background: rgba(219,231,223,.82); color: #152c27; font: 10px "JetBrains Mono", monospace; cursor: pointer;
+.d-lines-lock { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px; background: rgba(22,22,25,.88); color: #b8b8b8; font: 10px "JetBrains Mono", monospace; cursor: pointer;
   transition: background .18s, color .18s, transform .18s; }
-.d-lines-lock:hover, .d-lines-lock[aria-pressed="true"] { background: #152c27; color: #edf2e9; transform: translateY(-2px); }
-.d-lines-lock:focus-visible { outline: 2px solid #e9482f; outline-offset: 3px; }
+.d-lines-lock:hover, .d-lines-lock[aria-pressed="true"] { background: #fa7319; color: #ffffff; transform: translateY(-2px); }
+.d-lines-lock:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-lines-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(21,44,39,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
+  color: rgba(255,255,255,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
 @media (max-width: 620px) { .d-lines-stage { width: 74%; height: 190px; }.d-lines-weight { display: none; } }
 @media (prefers-reduced-motion: reduce) { .d-lines-axis i { will-change: auto; }.d-lines-lock { transition: none; } }
 `,
@@ -83,7 +83,7 @@ function drawSource() {
   source.fillStyle = '#ddd'; source.beginPath(); source.arc(width * .7, height * .34, height * .13, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#414141'; source.beginPath(); source.moveTo(0, height * .73); source.lineTo(width * .48, height * .34);
   source.lineTo(width * .67, height); source.lineTo(0, height); source.closePath(); source.fill();
-  source.fillStyle = '#f5f5f5'; source.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('LINE', width * .04, height * .94);
+  source.fillStyle = '#f5f5f5'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, monospace'; source.textBaseline = 'bottom'; source.fillText('LINE', width * .04, height * .94);
   const pixels = source.getImageData(0, 0, width, height).data; sourceLuma = new Uint8Array(width * height);
   for (let i = 0; i < sourceLuma.length; i++) {
     const p = i * 4; sourceLuma[i] = Math.round(pixels[p] * .2126 + pixels[p + 1] * .7152 + pixels[p + 2] * .0722);
@@ -141,7 +141,7 @@ function drawRibbon(samples, nx, ny) {
   context.closePath(); context.fill();
 }
 function render() {
-  context.fillStyle = '#edf2e9'; context.fillRect(0, 0, width, height); context.fillStyle = '#152c27';
+  context.fillStyle = '#0a0a0b'; context.fillRect(0, 0, width, height); context.fillStyle = '#b8b8b8';
   const radians = angle * Math.PI / 180, tx = Math.cos(radians), ty = Math.sin(radians), nx = -ty, ny = tx;
   const cx = width * .5, cy = height * .5, reach = Math.hypot(width, height) * .72 + SPACING * 2;
   for (let v = -reach; v <= reach; v += SPACING) {

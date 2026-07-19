@@ -17,7 +17,7 @@ INTRX.register({
       <button class="d-agent-agent-thinking-drawer-trigger" type="button" aria-expanded="false">
         <span class="d-agent-agent-thinking-drawer-indicator" aria-hidden="true">
           <span class="d-agent-agent-thinking-drawer-orbit"><i></i><i></i><i></i></span>
-          <span class="d-agent-agent-thinking-drawer-check">✓</span>
+          <span class="d-agent-agent-thinking-drawer-check"></span>
         </span>
         <span class="d-agent-agent-thinking-drawer-label-wrap">
           <span class="d-agent-agent-thinking-drawer-label d-agent-agent-thinking-drawer-label-active">reasoning…</span>
@@ -51,24 +51,25 @@ INTRX.register({
   <span class="d-agent-agent-thinking-drawer-status" aria-live="polite" aria-atomic="true">Agent reasoning in progress</span>
 </div>`,
   css:`
-.d-agent-agent-thinking-drawer{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
+.d-agent-agent-thinking-drawer{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;isolation:isolate}
 .d-agent-agent-thinking-drawer *{box-sizing:border-box}
 .d-agent-agent-thinking-drawer-head{position:absolute;top:16px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
-.d-agent-agent-thinking-drawer-stage{position:absolute;top:42px;right:12px;bottom:25px;left:12px;border:1px solid #1f1f23;border-radius:10px;overflow:hidden;background:radial-gradient(circle at 50% 12%,rgba(167,139,250,.07),transparent 46%),#101012}
+.d-agent-agent-thinking-drawer-stage{position:absolute;top:42px;right:12px;bottom:25px;left:12px;border:1px solid #1f1f23;border-radius:10px;overflow:hidden;background:radial-gradient(circle at 50% 12%,rgba(250,115,25,.07),transparent 46%),#101012}
 .d-agent-agent-thinking-drawer-stage::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px);background-size:100% 24px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 90%)}
 .d-agent-agent-thinking-drawer-shell{position:absolute;z-index:1;top:20px;left:50%;width:190px;overflow:hidden;border:1px solid #2e2e34;border-radius:999px;background:#161619;box-shadow:0 10px 28px rgba(0,0,0,.22);transform:translateX(-50%);transition:width .3s ease-in-out,border-radius .3s ease-in-out,border-color .2s ease}
 .d-agent-agent-thinking-drawer-shell:hover{border-color:#3b3b43}
 .d-agent-agent-thinking-drawer-shell.d-agent-agent-thinking-drawer-open{width:calc(100% - 24px);border-radius:10px}
-.d-agent-agent-thinking-drawer-trigger{position:relative;width:100%;height:40px;padding:0 11px;display:grid;grid-template-columns:18px minmax(0,1fr) 0 12px;align-items:center;gap:8px;border:0;background:transparent;color:#c7c7ce;font:500 11px/1 'JetBrains Mono',ui-monospace,monospace;text-align:left;cursor:pointer;outline:none}
-.d-agent-agent-thinking-drawer-trigger:focus-visible{box-shadow:inset 0 0 0 1px #a78bfa}
+.d-agent-agent-thinking-drawer-trigger{position:relative;width:100%;height:40px;padding:0 11px;display:grid;grid-template-columns:18px minmax(0,1fr) 0 12px;align-items:center;gap:8px;border:0;background:transparent;color:#c7c7ce;font:500 11px/1 'Roboto Mono','JetBrains Mono',ui-monospace,monospace;text-align:left;cursor:pointer;outline:none}
+.d-agent-agent-thinking-drawer-trigger:focus-visible{box-shadow:inset 0 0 0 1px #fa7319}
 .d-agent-agent-thinking-drawer-shell.d-agent-agent-thinking-drawer-open .d-agent-agent-thinking-drawer-trigger{grid-template-columns:18px minmax(0,1fr) 42px 12px}
 .d-agent-agent-thinking-drawer-indicator{position:relative;width:18px;height:18px}
-.d-agent-agent-thinking-drawer-orbit{position:absolute;inset:0;border:1px solid rgba(167,139,250,.18);border-radius:50%;animation:d-agent-agent-thinking-drawer-orbit 1.1s linear infinite;transition:opacity .18s ease,transform .18s ease}
-.d-agent-agent-thinking-drawer-orbit i{position:absolute;width:3px;height:3px;border-radius:50%;background:#a78bfa;box-shadow:0 0 5px rgba(167,139,250,.45)}
+.d-agent-agent-thinking-drawer-orbit{position:absolute;inset:0;border:1px solid rgba(250,115,25,.18);border-radius:50%;animation:d-agent-agent-thinking-drawer-orbit 1.1s linear infinite;transition:opacity .18s ease,transform .18s ease}
+.d-agent-agent-thinking-drawer-orbit i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fa7319;box-shadow:0 0 5px rgba(250,115,25,.45)}
 .d-agent-agent-thinking-drawer-orbit i:nth-child(1){top:-2px;left:7px}
 .d-agent-agent-thinking-drawer-orbit i:nth-child(2){right:0;bottom:1px;opacity:.72}
 .d-agent-agent-thinking-drawer-orbit i:nth-child(3){bottom:1px;left:0;opacity:.4}
-.d-agent-agent-thinking-drawer-check{position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:rgba(74,222,128,.12);color:#4ade80;font:700 12px/1 system-ui;opacity:0;transform:scale(.35);transition:opacity .18s ease,transform .28s cubic-bezier(.2,1.7,.4,1)}
+.d-agent-agent-thinking-drawer-check{position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:#161619;color:#b8b8b8;opacity:0;transform:scale(.35);transition:opacity .18s ease,transform .28s cubic-bezier(.2,1.7,.4,1)}
+.d-agent-agent-thinking-drawer-check::before{content:'';width:8px;height:4px;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-1px) rotate(-45deg)}
 .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-orbit{opacity:0;transform:scale(.5)}
 .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-check{opacity:1;transform:scale(1)}
 .d-agent-agent-thinking-drawer-label-wrap{position:relative;height:16px;min-width:0;overflow:hidden}
@@ -86,11 +87,11 @@ INTRX.register({
 .d-agent-agent-thinking-drawer-clip{min-height:0;overflow:hidden}
 .d-agent-agent-thinking-drawer-body{padding:8px 12px 7px}
 .d-agent-agent-thinking-drawer-lines{margin:0;padding:0;list-style:none}
-.d-agent-agent-thinking-drawer-line{position:relative;height:16px;padding-left:13px;overflow:hidden;color:#72727c;font:400 10.5px/16px system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;text-overflow:ellipsis;opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease,color .18s ease}
+.d-agent-agent-thinking-drawer-line{position:relative;height:16px;padding-left:13px;overflow:hidden;color:#72727c;font:400 10.5px/16px 'Roboto Mono','JetBrains Mono',ui-monospace,monospace;white-space:nowrap;text-overflow:ellipsis;opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease,color .18s ease}
 .d-agent-agent-thinking-drawer-line::before{content:'';position:absolute;top:7px;left:1px;width:3px;height:3px;border-radius:50%;background:#4b4b55}
 .d-agent-agent-thinking-drawer-line.d-agent-agent-thinking-drawer-line-visible{opacity:1;transform:none}
 .d-agent-agent-thinking-drawer-line.d-agent-agent-thinking-drawer-line-latest{color:#c7c7ce}
-.d-agent-agent-thinking-drawer-line.d-agent-agent-thinking-drawer-line-latest::before{background:#a78bfa;box-shadow:0 0 5px rgba(167,139,250,.45)}
+.d-agent-agent-thinking-drawer-line.d-agent-agent-thinking-drawer-line-latest::before{background:#fa7319;box-shadow:0 0 5px rgba(250,115,25,.45)}
 .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-line{color:#85858f}
 .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-line-latest{color:#c7c7ce}
 .d-agent-agent-thinking-drawer-foot{height:22px;margin-top:4px;padding-top:5px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #232327;color:#5c5c66;font-size:8px;line-height:1;letter-spacing:.06em;font-variant-numeric:tabular-nums}
@@ -127,5 +128,5 @@ trigger.addEventListener('click',onActivate,listener);shell.addEventListener('po
 const observer=new MutationObserver(function(){if(!root.isConnected)cleanup()});observer.observe(document.documentElement,{childList:true,subtree:true});
 if(reduced){elapsed=duration;render(performance.now())}else{render(0);start()}
 `,
-  prompt:`Build a self-contained 320px product-UI reasoning disclosure. Start with a soft pill status chip containing three orbiting accent dots and a shimmer label that crossfades through “reasoning…”, “searching files…”, and “synthesizing…” every two seconds. Activating the single accessible control expands the chip to full width over 300ms, rounds it to a 10px drawer header, and unfolds an auto-height panel over 350ms. Reveal eight concise reasoning lines in sequence at 11px with a 6px fade-and-rise; keep the newest line brighter. At six seconds, replace the spinner with a softly popping success check, settle the exact visible label to “Thought for 6s”, and collapse the open drawer after 800ms unless it is hovered. Activating the completed chip reopens the finished trace. Keep aria-expanded and aria-hidden truthful, use a polite atomic status for major events, preserve keyboard operation through a native button, scope every class to the component, avoid external dependencies, clean up listeners and animation work when detached, pause without catch-up while the document is hidden, and render the finished state immediately with all CSS motion disabled when reduced motion is requested.`
+  prompt:`Build a self-contained 320px product-UI reasoning disclosure. Start with a soft pill status chip containing three orbiting accent dots and a shimmer label that crossfades through “reasoning…”, “searching files…”, and “synthesizing…” every two seconds. Activating the single accessible control expands the chip to full width over 300ms, rounds it to a 10px drawer header, and unfolds an auto-height panel over 350ms. Reveal eight concise reasoning lines in sequence at 11px with a 6px fade-and-rise; keep the newest line brighter. At six seconds, replace the spinner with a softly popping CSS-drawn check, settle the exact visible label to “Thought for 6s”, and collapse the open drawer after 800ms unless it is hovered. Activating the completed chip reopens the finished trace. Keep aria-expanded and aria-hidden truthful, use a polite atomic status for major events, preserve keyboard operation through a native button, scope every class to the component, avoid external dependencies, clean up listeners and animation work when detached, pause without catch-up while the document is hidden, and render the finished state immediately with all CSS motion disabled when reduced motion is requested. Keep chrome grayscale on #0a0a0b, use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for live reasoning, focus, and the newest trace line, and communicate completion with neutral linework rather than a colored dingbat.`
 });

@@ -42,22 +42,22 @@ INTRX.register({
   <span class="d-agent-agent-token-meter-status" aria-live="polite" aria-atomic="true">Context usage 41.2k of 200k; session cost $0.412</span>
 </div>`,
   css:`
-.d-agent-agent-token-meter{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
+.d-agent-agent-token-meter{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;isolation:isolate;touch-action:pan-y}
 .d-agent-agent-token-meter *{box-sizing:border-box}
 .d-agent-agent-token-meter-head{position:absolute;z-index:2;top:15px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-agent-agent-token-meter-live{display:flex;align-items:center;gap:5px;color:#9b9ba3}
-.d-agent-agent-token-meter-live i{width:5px;height:5px;border-radius:50%;background:#a78bfa;box-shadow:0 0 7px rgba(167,139,250,.35)}
+.d-agent-agent-token-meter-live i{width:5px;height:5px;border-radius:50%;background:#fa7319;box-shadow:0 0 7px rgba(250,115,25,.35)}
 .d-agent-agent-token-meter-stage{position:absolute;top:39px;right:12px;bottom:25px;left:12px;min-width:0;padding:16px;border:1px solid #232327;border-radius:10px;overflow:hidden;background:#101012;outline:none;cursor:pointer;touch-action:pan-y}
-.d-agent-agent-token-meter-stage:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px #a78bfa}
+.d-agent-agent-token-meter-stage:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px #fa7319}
 .d-agent-agent-token-meter-stage-head{height:20px;display:flex;align-items:flex-start;justify-content:space-between;gap:8px;color:#9b9ba3;font-size:10px;line-height:1;letter-spacing:.08em;white-space:nowrap}
-.d-agent-agent-token-meter-tone{color:#a78bfa}
+.d-agent-agent-token-meter-tone{color:#fa7319}
 .d-agent-agent-token-meter-body{height:176px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:center}
 .d-agent-agent-token-meter-gauge{position:relative;width:120px;height:120px;flex:none}
 .d-agent-agent-token-meter-gauge svg{display:block;width:120px;height:120px;overflow:visible}
 .d-agent-agent-token-meter-track,.d-agent-agent-token-meter-glow,.d-agent-agent-token-meter-ring{fill:none;stroke-linecap:round;vector-effect:non-scaling-stroke}
 .d-agent-agent-token-meter-track{stroke:#232327;stroke-width:8}
-.d-agent-agent-token-meter-glow{stroke:#f87171;stroke-width:13;stroke-dasharray:100;stroke-dashoffset:79.4;opacity:0;filter:drop-shadow(0 0 7px #f87171)}
-.d-agent-agent-token-meter-ring{stroke:#a78bfa;stroke-width:8;stroke-dasharray:100;stroke-dashoffset:79.4}
+.d-agent-agent-token-meter-glow{stroke:#ececef;stroke-width:13;stroke-dasharray:100;stroke-dashoffset:79.4;opacity:0;filter:drop-shadow(0 0 7px rgba(236,236,239,.42))}
+.d-agent-agent-token-meter-ring{stroke:#fa7319;stroke-width:8;stroke-dasharray:100;stroke-dashoffset:79.4}
 .d-agent-agent-token-meter-gauge-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
 .d-agent-agent-token-meter-gauge-copy strong{color:#ececef;font-size:26px;line-height:1;font-weight:500;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
 .d-agent-agent-token-meter-gauge-copy span{margin-top:6px;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.05em}
@@ -66,7 +66,7 @@ INTRX.register({
 .d-agent-agent-token-meter-spark-head b{overflow:hidden;color:#9b9ba3;font-size:10px;font-weight:500;letter-spacing:-.04em;text-overflow:clip;font-variant-numeric:tabular-nums}
 .d-agent-agent-token-meter-spark{display:block;width:100%;height:64px;margin-top:7px;overflow:hidden;border-radius:5px;background:#161619}
 .d-agent-agent-token-meter-spark-base{fill:none;stroke:#232327;stroke-width:1;vector-effect:non-scaling-stroke}
-.d-agent-agent-token-meter-spark-path{fill:none;stroke:#67e8f9;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.d-agent-agent-token-meter-spark-path{fill:none;stroke:#b8b8b8;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .d-agent-agent-token-meter-cost-row{position:relative;margin-top:13px;padding-top:10px;border-top:1px solid #232327}
 .d-agent-agent-token-meter-cost-label{display:block;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-agent-agent-token-meter-cost-value{display:flex;align-items:baseline;height:16px;margin-top:6px;color:#ececef;font-size:13px;line-height:1;font-variant-numeric:tabular-nums}
@@ -77,19 +77,19 @@ INTRX.register({
 .d-agent-agent-token-meter-slot b{display:block;height:1em;font-weight:500;line-height:1}
 .d-agent-agent-token-meter-dot{width:.35em}
 .d-agent-agent-token-meter-cost-output,.d-agent-agent-token-meter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
-.d-agent-agent-token-meter-chip{position:absolute;left:16px;bottom:11px;display:none;align-items:center;height:22px;padding:0 8px;border:1px solid rgba(248,113,113,.42);border-radius:11px;color:#f87171;background:rgba(248,113,113,.08);font-size:10px;line-height:1;letter-spacing:.08em}
+.d-agent-agent-token-meter-chip{position:absolute;left:16px;bottom:11px;display:none;align-items:center;height:22px;padding:0 8px;border:1px dashed #ececef;border-radius:11px;color:#ececef;background:#161619;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-agent-agent-token-meter[data-phase="compacting"] .d-agent-agent-token-meter-chip{display:flex}
-.d-agent-agent-token-meter[data-tone="warn"] .d-agent-agent-token-meter-ring{stroke:#fbbf24}
-.d-agent-agent-token-meter[data-tone="warn"] .d-agent-agent-token-meter-tone{color:#fbbf24}
-.d-agent-agent-token-meter[data-tone="err"] .d-agent-agent-token-meter-ring{stroke:#f87171}
-.d-agent-agent-token-meter[data-tone="err"] .d-agent-agent-token-meter-tone{color:#f87171}
+.d-agent-agent-token-meter[data-tone="warn"] .d-agent-agent-token-meter-ring{stroke:#b8b8b8}
+.d-agent-agent-token-meter[data-tone="warn"] .d-agent-agent-token-meter-tone{color:#b8b8b8}
+.d-agent-agent-token-meter[data-tone="err"] .d-agent-agent-token-meter-ring{stroke:#ececef}
+.d-agent-agent-token-meter[data-tone="err"] .d-agent-agent-token-meter-tone{color:#ececef}
 .d-agent-agent-token-meter-foot{position:absolute;left:16px;right:16px;bottom:9px;display:flex;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 @container(max-width:340px){.d-agent-agent-token-meter-stage{right:10px;left:10px}.d-agent-agent-token-meter-body{gap:10px}.d-agent-agent-token-meter-spark-head,.d-agent-agent-token-meter-spark-head b{font-size:9px}.d-agent-agent-token-meter-foot{left:12px;right:12px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.d-agent-agent-token-meter *,.d-agent-agent-token-meter *::before,.d-agent-agent-token-meter *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 `,
   js:`const meterStage=root.querySelector('.d-agent-agent-token-meter-stage'),gaugeMeter=root.querySelector('.d-agent-agent-token-meter-gauge'),gaugeSvg=root.querySelector('.d-agent-agent-token-meter-gauge svg'),ringElement=root.querySelector('.d-agent-agent-token-meter-ring'),glowElement=root.querySelector('.d-agent-agent-token-meter-glow'),usageElement=root.querySelector('.d-agent-agent-token-meter-gauge-copy strong'),toneElement=root.querySelector('.d-agent-agent-token-meter-tone'),sparkSvg=root.querySelector('.d-agent-agent-token-meter-spark'),sparkPathElement=root.querySelector('.d-agent-agent-token-meter-spark-path'),throughputElement=root.querySelector('.d-agent-agent-token-meter-spark-head b'),costValue=root.querySelector('.d-agent-agent-token-meter-cost-value'),costOutput=root.querySelector('.d-agent-agent-token-meter-cost-output'),chip=root.querySelector('.d-agent-agent-token-meter-chip'),status=root.querySelector('.d-agent-agent-token-meter-status');let costSlots=[...root.querySelectorAll('.d-agent-agent-token-meter-slot')];
 const seed=42,eventCount=64,randomDraws=128,initialContext=41200,capacity=200000,costPerToken=.00001,warningRatio=.7,errorRatio=.9,compactedContext=70000,historyLength=30,intervalMinimum=1500,intervalMaximum=3000,amountMinimum=800,amountMaximum=4000,ringDuration=600,sparkDuration=300,costDuration=250,compactionDuration=1200,pulseDuration=1000,queueLimit=8,maxDelta=50,sparkWidth=150,sparkHeight=58,sparkPadding=5,sparkMinimum=250,sparkMaximum=2700;
-const colors={background:'#0a0a0b',panel:'#101012',bg2:'#161619',line0:'#232327',line1:'#2e2e34',txt0:'#ececef',txt1:'#9b9ba3',txt2:'#5c5c66',acc:'#a78bfa',info:'#67e8f9',ok:'#4ade80',warn:'#fbbf24',err:'#f87171'};
+const colors={background:'#0a0a0b',panel:'#101012',bg2:'#161619',line0:'#232327',line1:'#2e2e34',txt0:'#ececef',txt1:'#9b9ba3',txt2:'#5c5c66',acc:'#fa7319',info:'#b8b8b8',ok:'#b8b8b8',warn:'#b8b8b8',err:'#ececef'};
 const expectedChecksums={events:'d2cf77a2',history:'4ed62efc',schedule:'60b9c652',path:'2890b005',fixture:'454b1993',threshold:'9843a1af',precritical:'343662bd',postcritical:'2e609ecc',thresholdFixture:'872d4feb',ease:'9031d41e',extendedOracle:'6954195a'};
 function clamp(value,minimum,maximum){return Math.max(minimum,Math.min(maximum,value))}
 function lerp(first,second,amount){return first+(second-first)*amount}
@@ -168,9 +168,9 @@ if('ResizeObserver'in window){resizeObserver=new ResizeObserver(function(){if(cl
 if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserver(function(entries){if(!entries.length||cleaned)return;visible=entries[0].isIntersecting;counters.intersectionChanges++;if(visible)startScheduler('intersection visible');else stopScheduler('intersection hidden')},{threshold:.05});intersectionObserver.observe(root)}
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 root.__agentTokenMeterInspect=Object.freeze(inspect);root.__agentTokenMeterReset=Object.freeze(resetDemo);render(reduced?'reduced initial':'initial');if(!reduced)startScheduler('initial scheduler');`,
-  prompt:`Build one self-contained responsive 320px Agent & AI UI product card with no dependencies, assets, network, persistence, timers, Math.random, Web Animations API or CSS keyframes. Use bg0 #0a0a0b, bg1 #101012, bg2 #161619, line0 #232327, line1 #2e2e34, txt0 #ececef, txt1 #9b9ba3, txt2 #5c5c66, accent #a78bfa, info #67e8f9, success #4ade80, warning #fbbf24 and error #f87171. Use a bg1 product panel with exactly 10px radius and 16px padding. Use 10px uppercase labels at .08em tracking and 13px ordinary data text. The sole focusable element is a role application stage. It must fit without overflow at 380px and 320px and keep the gauge at exactly 120px. Expose the gauge itself as a non-focusable role meter with value minimum zero, maximum 200000, live numeric now and matching value text.
+  prompt:`Build one self-contained responsive 320px Agent & AI UI product card with no dependencies, assets, network, persistence, timers, Math.random, Web Animations API or CSS keyframes. Use bg0 #0a0a0b, bg1 #101012, bg2 #161619, line0 #232327, line1 #2e2e34, txt0 #ececef, txt1 #9b9ba3, txt2 #5c5c66, accent #fa7319 and neutral state colors #b8b8b8 and #ececef. Use a bg1 product panel with exactly 10px radius and 16px padding. Use 10px uppercase labels at .08em tracking and 13px ordinary data text. The sole focusable element is a role application stage. It must fit without overflow at 380px and 320px and keep the gauge at exactly 120px. Expose the gauge itself as a non-focusable role meter with value minimum zero, maximum 200000, live numeric now and matching value text. Use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for live or active state, and express warning and critical state with explicit labels, neutral line weight, and the dashed COMPACTING chip rather than additional hues.
 
-Place a 120px SVG ring on the left, centered at 60,60 with radius 52, stroke width 8, round caps, pathLength 100 and a minus-90-degree rotation. Center exact 41.2k in txt0 at 26px weight 500 over exact /200k in txt2 at 10px. Put a last-30 throughput sparkline on the right in viewBox 0 0 150 58 using a fixed 250 to 2700 TOK/S domain, five-pixel vertical padding, an info stroke exactly 1.5px, and a cumulative SESSION COST row starting at $0.412 in 13px data text. Begin with five rolling digit windows for hidden tens, ones and three decimals. Grow additional leading whole-number slot windows dynamically whenever cumulative cost needs them; never slice, wrap, clamp, modulo or saturate the cost. Hide only the contiguous leading-zero prefix while always retaining the ones place, never interior zeros. The exact long-horizon billed value 10000279 must render and expose as $100.003 with digits 100003 and six slots; $0.412, $1.010 and $10.000 must retain their exact layouts.
+Place a 120px SVG ring on the left, centered at 60,60 with radius 52, stroke width 8, round caps, pathLength 100 and a minus-90-degree rotation. Center exact 41.2k in txt0 at 26px weight 500 over exact /200k in txt2 at 10px. Put a last-30 throughput sparkline on the right in viewBox 0 0 150 58 using a fixed 250 to 2700 TOK/S domain, five-pixel vertical padding, a neutral secondary stroke exactly 1.5px, and a cumulative SESSION COST row starting at $0.412 in 13px data text. Begin with five rolling digit windows for hidden tens, ones and three decimals. Grow additional leading whole-number slot windows dynamically whenever cumulative cost needs them; never slice, wrap, clamp, modulo or saturate the cost. Hide only the contiguous leading-zero prefix while always retaining the ones place, never interior zeros. The exact long-horizon billed value 10000279 must render and expose as $100.003 with digits 100003 and six slots; $0.412, $1.010 and $10.000 must retain their exact layouts.
 
 Generate exactly 64 canonical burst pairs from standard mulberry32 seed 42, exactly 128 draws. For every event consume the interval draw first as 1500 + floor(random times 1501), then the amount draw as 800 + floor(random times 3201). Throughput is amount times 1000 divided by interval. The runtime cursor starts at event zero and wraps modulo 64. Initialize the spark history from event throughput values 34 through 63. Serialize spark x as index times 150 divided by 29 and y as 53 minus clamp((value - 250) / 2450, 0, 1) times 48, each to three decimals.
 

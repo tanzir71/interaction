@@ -73,7 +73,12 @@
     nav.appendChild(group);
   });
 
-  document.getElementById('count-pill').textContent = pad(R.demos.length);
+  const setCount = v => {
+    document.getElementById('count-pill').textContent = pad(v);
+    const m = document.getElementById('count-pill-mobile');
+    if (m) m.textContent = pad(v);
+  };
+  setCount(R.demos.length);
   document.getElementById('hero-count').textContent = pad(R.demos.length);
 
   /* ---------- tiles ---------- */
@@ -93,6 +98,9 @@
       const card = document.createElement('article');
       card.className = 'tile';
       card.id = d.id;
+      card.tabIndex = 0;
+      card.setAttribute('role', 'button');
+      card.setAttribute('aria-label', d._num + ' ' + d.title + ' — open details');
       card.dataset.search = (d.title + ' ' + d.cat + ' ' + (d.tags || []).join(' ') + ' ' + d.desc).toLowerCase();
 
       card.innerHTML =
@@ -109,6 +117,11 @@
       cardsEl.appendChild(card);
       d._card = card;
       card.addEventListener('click', () => openModal(d));
+      card.addEventListener('keydown', e => {
+        if (e.target !== card || (e.key !== 'Enter' && e.key !== ' ')) return;
+        if (e.key === ' ') e.preventDefault();
+        openModal(d);
+      });
     });
   });
 
@@ -212,9 +225,12 @@
     prompt: modal.querySelector('.pane-prompt')
   };
   let modalDemo = null;
+  let modalOrigin = null;
+  const modalClose = modal.querySelector('.modal-close');
 
   function openModal(d) {
     modalDemo = d;
+    modalOrigin = d._card;
     modal.querySelector('.modal-num').textContent = d._num;
     modal.querySelector('.modal-title').textContent = d.title;
     modal.querySelector('.modal-tags').innerHTML =
@@ -233,19 +249,23 @@
     modal.scrollTop = 0;
     /* boot after .open so the stage is rendered and measurable for zoom-fit */
     runDemo(d, mStage);
+    modalClose.focus();
     history.replaceState(null, '', '#' + d.id);
   }
   function closeModal() {
     if (!modalDemo) return;
+    const origin = modalOrigin;
     modalDemo = null;
+    modalOrigin = null;
     backdrop.classList.remove('open');
     modal.classList.remove('open');
     document.body.style.overflow = '';
     mStage.innerHTML = '';
     history.replaceState(null, '', location.pathname + location.search);
+    if (origin && origin.isConnected) origin.focus();
   }
 
-  modal.querySelector('.modal-close').addEventListener('click', closeModal);
+  modalClose.addEventListener('click', closeModal);
   backdrop.addEventListener('click', closeModal);
   window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
@@ -336,7 +356,7 @@
       if (navItem) navItem.classList.toggle('hidden', !hit);
       if (hit) visible++;
     });
-    document.getElementById('count-pill').textContent = pad(visible);
+    setCount(visible);
     /* hide empty category dividers */
     cats.forEach(cat => {
       const anyVisible = R.demos.some(d => d.cat === cat && !d._card.classList.contains('hidden'));

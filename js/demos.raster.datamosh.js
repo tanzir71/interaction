@@ -82,7 +82,7 @@ function drawSource(time) {
   source.fillStyle = '#d9ff63'; source.beginPath(); source.arc(width * .72 + drift, height * .32, height * .23, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#101015'; source.beginPath(); source.arc(width * .72 + drift, height * .32, height * .1, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(7,7,10,.68)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom';
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom';
   source.fillText('MOTION', width * .04 + drift * .35, height * .95);
   source.strokeStyle = 'rgba(255,255,255,.34)'; source.lineWidth = 1;
   for (let y = 14; y < height; y += 18) { source.beginPath(); source.moveTo(0, y); source.lineTo(width, y + drift * .08); source.stroke(); }

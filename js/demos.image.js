@@ -32,17 +32,31 @@ const gl = canvas.getContext('webgl');
 const tex = document.createElement('canvas');
 tex.width = 512; tex.height = 288;
 const t = tex.getContext('2d');
+// duotone editorial texture: charcoal field, fine contour lines, one warm glow
 const g = t.createLinearGradient(0, 0, 512, 288);
-g.addColorStop(0, '#1b2a10'); g.addColorStop(0.55, '#3c5a18'); g.addColorStop(1, '#0b141f');
+g.addColorStop(0, '#141416'); g.addColorStop(0.6, '#1c1c1f'); g.addColorStop(1, '#0a0a0b');
 t.fillStyle = g; t.fillRect(0, 0, 512, 288);
-for (let i = 0; i < 70; i++) {
-  t.fillStyle = 'hsla(' + (70 + Math.random() * 60) + ', 70%, ' + (30 + Math.random() * 40) + '%, 0.25)';
-  t.beginPath();
-  t.arc(Math.random() * 512, Math.random() * 288, Math.random() * 40 + 4, 0, 7);
-  t.fill();
+// contour line field; the accent is drawn INTO the lines (gradient stroke),
+// never as an airbrushed glow blob
+function contourLines(style) {
+  t.strokeStyle = style; t.lineWidth = 1;
+  for (let y = 0; y < 288; y += 9) {
+    t.beginPath();
+    for (let x = 0; x <= 512; x += 8) {
+      const off = Math.sin(x * 0.014 + y * 0.05) * 6 + Math.sin(x * 0.05) * 2;
+      x === 0 ? t.moveTo(x, y + off) : t.lineTo(x, y + off);
+    }
+    t.stroke();
+  }
 }
-t.fillStyle = '#c8ff2e'; t.font = '700 44px sans-serif';
-t.fillText('HOVER', 30, 250);
+contourLines('rgba(255,255,255,0.07)');
+const focal = t.createRadialGradient(400, 96, 4, 400, 96, 150);
+focal.addColorStop(0, 'rgba(250,115,25,0.95)'); focal.addColorStop(0.55, 'rgba(250,115,25,0.35)'); focal.addColorStop(1, 'rgba(250,115,25,0)');
+contourLines(focal);
+t.fillStyle = '#ececef'; t.font = '700 40px Roboto Mono, monospace';
+t.fillText('HOVER', 28, 248);
+t.fillStyle = 'rgba(236,236,239,0.5)'; t.font = '10px Roboto Mono, monospace';
+t.fillText('GLSL / UV DISPLACEMENT', 30, 34);
 
 // --- shaders ---
 const vsSrc = [
@@ -368,22 +382,41 @@ INTRX.register({
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s;
 }
 .d-hz-card:hover .d-hz-meta { transform: none; opacity: 1; }
-.d-hz-meta em { display: block; font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 10px; color: #c8ff2e; letter-spacing: 0.14em; }
+.d-hz-meta em { display: block; font-style: normal; font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 10px; color: #fa7319; letter-spacing: 0.14em; }
 .d-hz-meta strong { color: #fff; font-size: 18px; }
 .d-hz-arrow {
   position: absolute; top: 12px; right: 12px;
   width: 32px; height: 32px; display: grid; place-items: center;
-  background: #c8ff2e; color: #000; font-size: 15px;
+  background: #fa7319; color: #000; font-size: 15px;
   transform: translate(8px, -8px); opacity: 0;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s;
 }
-.d-hz-card:hover .d-hz-arrow { transform: none; opacity: 1; }`,
+.d-hz-card:hover .d-hz-arrow { transform: none; opacity: 1; }
+.d-hz.d-hz-idle .d-hz-a { animation: d-hz-idle-a 6s ease-in-out infinite alternate; }
+.d-hz.d-hz-idle .d-hz-b { animation: d-hz-idle-b 6.8s ease-in-out infinite alternate; }
+@keyframes d-hz-idle-a { to { transform: scale(1.055) translate(-4px, -3px); } }
+@keyframes d-hz-idle-b { to { transform: scale(1.05) translate(4px, 3px); } }
+@media (prefers-reduced-motion: reduce) { .d-hz.d-hz-idle .d-hz-img { animation: none; } }`,
   js: `
-// Pure CSS — no JS required.
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let idle = !reduced;
+function stopIdle() {
+  if (!idle) return;
+  idle = false;
+  root.classList.remove('d-hz-idle');
+}
+if (!reduced) {
+  root.classList.add('d-hz-idle');
+  root.addEventListener('pointerover', stopIdle, { once: true });
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
+
 // Optional: parallax the image toward the cursor while hovered:
 root.querySelectorAll('.d-hz-card').forEach(function (card) {
   const img = card.querySelector('.d-hz-img');
-  card.addEventListener('mousemove', function (e) {
+  card.addEventListener('pointermove', function (e) {
+    stopIdle();
     const b = card.getBoundingClientRect();
     const px = (e.clientX - b.left) / b.width - 0.5;
     const py = (e.clientY - b.top) / b.height - 0.5;
@@ -399,8 +432,9 @@ Requirements:
 - A bottom gradient scrim (rgba black to transparent at 55%) fades in over 0.4s.
 - Caption (category eyebrow + title) slides up 14px and fades in with the same spring-like ease.
 - An arrow chip in the top-right corner translates in diagonally from (8px, -8px).
+- Before interaction, give both images a subtle Ken Burns drift; stop it permanently on first hover, pointer, or keyboard interaction.
 - Optional JS enhancement: while hovered, translate the image a few px opposite to the cursor for micro-parallax; reset on leave.
-- All transforms only — no width/height/box-shadow animation.`,
+- All transforms only — no width/height/box-shadow animation. Disable autonomous drift under prefers-reduced-motion.`,
 });
 
 /* ------------------------------------------------------------
@@ -521,10 +555,30 @@ INTRX.register({
 /* when the grid contains a hovered tile, mute everything… */
 .d-gray-grid:has(.d-gray-tile:hover) .d-gray-tile { filter: grayscale(1) brightness(0.45); opacity: 0.6; }
 /* …except the hovered one */
-.d-gray-grid .d-gray-tile:hover { filter: none; opacity: 1; transform: translateY(-8px); }`,
+.d-gray-grid .d-gray-tile:hover { filter: none; opacity: 1; transform: translateY(-8px); }
+.d-gray.d-gray-idle .d-gray-tile { animation: d-gray-idle 5s ease-in-out infinite; }
+.d-gray.d-gray-idle .d-gray-tile:nth-child(2) { animation-delay: .42s; }
+.d-gray.d-gray-idle .d-gray-tile:nth-child(3) { animation-delay: .84s; }
+.d-gray.d-gray-idle .d-gray-tile:nth-child(4) { animation-delay: 1.26s; }
+.d-gray.d-gray-idle .d-gray-tile:nth-child(5) { animation-delay: 1.68s; }
+@keyframes d-gray-idle { 0%, 14%, 100% { transform: none; opacity: 1; } 7% { transform: translateY(-5px) scale(1.015); opacity: .82; } }
+@media (prefers-reduced-motion: reduce) { .d-gray.d-gray-idle .d-gray-tile { animation: none; } }`,
   js: `
-// Zero JS — the :has() selector handles sibling dimming.
-// Fallback for older browsers:
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let idle = !reduced;
+function stopIdle() {
+  if (!idle) return;
+  idle = false;
+  root.classList.remove('d-gray-idle');
+}
+if (!reduced) {
+  root.classList.add('d-gray-idle');
+  root.addEventListener('pointerover', stopIdle, { once: true });
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
+
+// The :has() selector handles sibling dimming. Fallback for older browsers:
 if (!CSS.supports('selector(:has(*))')) {
   const tiles = root.querySelectorAll('.d-gray-tile');
   tiles.forEach(function (tile) {
@@ -544,6 +598,7 @@ Build a "focus grid" hover — hovering one item dims all siblings. CSS-first.
 Requirements:
 - Grid of image tiles. When any tile is hovered, all tiles get filter: grayscale(1) brightness(0.45) and opacity 0.6, except the hovered tile, which stays full color and lifts translateY(-8px).
 - Implement with pure CSS :has(): .grid:has(.tile:hover) .tile { …muted… } and .tile:hover { filter: none; }.
+- Before interaction, pulse one cell at a time using transform and opacity only; stop permanently on first hover, pointer, or keyboard interaction.
 - Transitions ~0.45s; the lift uses cubic-bezier(0.22,1,0.36,1).
-- Provide a small JS fallback (mouseenter/mouseleave toggling inline filters) gated behind CSS.supports('selector(:has(*))').`,
+- Provide a small JS fallback (mouseenter/mouseleave toggling inline filters) gated behind CSS.supports('selector(:has(*))'). Disable the idle pulse under prefers-reduced-motion.`,
 });

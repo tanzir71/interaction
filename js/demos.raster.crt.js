@@ -88,7 +88,7 @@ function renderSource(time) {
   source.fillStyle = channel === 1 ? '#eafce1' : '#95e7ff'; source.beginPath(); source.arc(width * .7 + drift, height * .34, height * .23, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#071011'; source.beginPath(); source.arc(width * .7 + drift, height * .34, height * .1, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(3,5,7,.66)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom';
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom';
   source.fillText(channel === 1 ? 'TUBE' : 'LATE', width * .05 - drift * .3, height * .94);
   source.strokeStyle = 'rgba(255,255,255,.35)'; source.lineWidth = 1;
   for (let x = 0; x < width; x += 24) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + drift * .12, height); source.stroke(); }

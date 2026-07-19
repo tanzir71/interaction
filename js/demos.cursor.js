@@ -168,7 +168,7 @@ INTRX.register({
 </div>`,
   css: `
 .d-emitter { position: relative; width: 100%; height: 320px; overflow: hidden; isolation: isolate;
-  background: radial-gradient(circle at 50% 48%, #161619 0, #0a0a0b 58%); touch-action: none; }
+  background: #0a0a0b; touch-action: none; }
 .d-emitter-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .d-emitter-reticle { position: absolute; left: 50%; top: 48%; width: 38px; height: 38px;
   transform: translate(-50%, -50%); border: 1px solid #2e2e34; border-radius: 50%; pointer-events: none;
@@ -461,7 +461,7 @@ INTRX.register({
   rootClass: 'd-lens',
   tags: ['clip-path', 'duplicate-layer', 'magnification'],
   libs: [],
-  desc: 'A circular optical lens follows the pointer over a graphic poster. Inside it, a duplicated scene stays registered to the original while magnifying, inverting, and splitting color like a physical loupe.',
+  desc: 'A circular optical lens follows the pointer over a graphic poster. Inside it, a duplicated scene stays registered while magnifying and tonally inverting the dark grayscale composition.',
   seen: 'Seen on: Active Theory experiences, Lusion product stories, experimental art-direction portfolios',
   hint: 'move the lens, click zoom, or use arrow keys',
   html: `
@@ -481,39 +481,39 @@ INTRX.register({
 </div>`,
   css: `
 .d-lens { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #d8e0d2; color: #0a0a0b; cursor: crosshair; touch-action: none; }
-.d-lens:focus-visible { box-shadow: inset 0 0 0 2px #0a0a0b; }
-.d-lens-scene, .d-lens-copy { position: absolute; inset: 0; overflow: hidden; background: #d8e0d2; }
+  background: #0a0a0b; color: #ececef; cursor: crosshair; touch-action: none; }
+.d-lens:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
+.d-lens-scene, .d-lens-copy { position: absolute; inset: 0; overflow: hidden; background: #0a0a0b; }
 .d-lens-grid { position: absolute; inset: -1px; opacity: .42;
-  background-image: linear-gradient(#6a716a 1px, transparent 1px), linear-gradient(90deg, #6a716a 1px, transparent 1px);
+  background-image: linear-gradient(#232327 1px, transparent 1px), linear-gradient(90deg, #232327 1px, transparent 1px);
   background-size: 32px 32px; }
-.d-lens-kicker { position: absolute; top: 18px; left: 20px; font: 10px "JetBrains Mono", monospace;
+.d-lens-kicker { position: absolute; top: 18px; left: 20px; font: 10px "Roboto Mono", monospace;
   letter-spacing: .13em; }
 .d-lens-title { position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%);
-  font: 700 clamp(48px, 8.5vw, 82px)/.78 "Inter", sans-serif; letter-spacing: -.075em; white-space: nowrap; }
+  font: 700 clamp(48px, 8.5vw, 82px)/.78 "Roboto", sans-serif; letter-spacing: -.075em; white-space: nowrap; }
 .d-lens-orb { position: absolute; display: block; border-radius: 50%; mix-blend-mode: multiply; }
-.d-lens-orb-one { width: 126px; height: 126px; left: 11%; top: 33%; background: #c8ff2e; }
-.d-lens-orb-two { width: 92px; height: 92px; right: 10%; top: 23%; background: #ff5d3b; }
-.d-lens-coordinate { position: absolute; right: 20px; top: 18px; font: 10px "JetBrains Mono", monospace; }
+.d-lens-orb-one { width: 126px; height: 126px; left: 11%; top: 33%; background: #fa7319; }
+.d-lens-orb-two { width: 92px; height: 92px; right: 10%; top: 23%; background: #5c5c66; }
+.d-lens-coordinate { position: absolute; right: 20px; top: 18px; font: 10px "Roboto Mono", monospace; }
 .d-lens-window { position: absolute; inset: 0; pointer-events: none; will-change: clip-path;
-  clip-path: circle(72px at 50% 50%); filter: invert(1) hue-rotate(155deg) saturate(1.35); }
+  clip-path: circle(72px at 50% 50%); filter: invert(.94) grayscale(1) contrast(1.08); }
 .d-lens-copy { transform-origin: 0 0; will-change: transform; }
 .d-lens-rim { position: absolute; left: 0; top: 0; width: 144px; height: 144px; border-radius: 50%;
-  border: 1px solid rgba(10,10,11,.62); box-shadow: inset 0 0 0 7px rgba(236,236,239,.14),
+  border: 1px solid rgba(236,236,239,.62); box-shadow: inset 0 0 0 7px rgba(236,236,239,.14),
   0 12px 34px rgba(10,10,11,.22); pointer-events: none; will-change: transform; }
 .d-lens-rim::before, .d-lens-rim::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
 .d-lens-rim::before { inset: 9px; border: 1px solid rgba(236,236,239,.42); }
 .d-lens-rim::after { width: 32px; height: 12px; left: 22px; top: 18px; background: rgba(255,255,255,.46);
   filter: blur(5px); transform: rotate(-34deg); }
 .d-lens-rim i { position: absolute; right: -31px; bottom: -31px; width: 58px; height: 15px;
-  border-radius: 999px; background: #0a0a0b; transform: rotate(45deg); transform-origin: left center; }
-.d-lens-zoom { position: absolute; left: 20px; bottom: 18px; z-index: 3; border: 1px solid rgba(10,10,11,.38);
-  border-radius: 999px; background: rgba(216,224,210,.82); color: #0a0a0b; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; backdrop-filter: blur(8px); }
-.d-lens-zoom:hover { background: #0a0a0b; color: #c8ff2e; }
-.d-lens-zoom:focus-visible { outline: 2px solid #0a0a0b; outline-offset: 3px; }
+  border-radius: 999px; background: #ececef; transform: rotate(45deg); transform-origin: left center; }
+.d-lens-zoom { position: absolute; left: 20px; bottom: 18px; z-index: 3; border: 1px solid #2e2e34;
+  border-radius: 999px; background: rgba(16,16,18,.86); color: #ececef; padding: 9px 14px;
+  font: 10px "Roboto Mono", monospace; cursor: pointer; backdrop-filter: blur(8px); }
+.d-lens-zoom:hover { background: #161619; color: #fa7319; border-color: #fa7319; }
+.d-lens-zoom:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-lens-status { position: absolute; right: 20px; bottom: 20px; z-index: 3; margin: 0;
-  color: #0a0a0b; font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  color: #7a7a7f; font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .d-lens-window, .d-lens-copy, .d-lens-rim { will-change: auto; } }`,
   js: `
 const scene = root.querySelector('.d-lens-scene');
@@ -577,6 +577,7 @@ root.addEventListener('keydown', function (event) {
 zoomButton.addEventListener('click', function () { toggleZoom('Button zoom'); root.focus(); });
 
 function frame() {
+  if (!root.isConnected) return;
   if (reduced) { x = tx; y = ty; }
   else { x += (tx - x) * 0.16; y += (ty - y) * 0.16; }
   const clip = 'circle(72px at ' + x.toFixed(2) + 'px ' + y.toFixed(2) + 'px)';
@@ -588,7 +589,7 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained inverted magnifying lens over a graphic poster inside a 320px position-relative root. Create one base scene from DOM/CSS only—grid, typography, and colored shapes—then create a full-size lens window containing a cloned copy of that exact scene. Clip the lens window with clip-path circle(72px at x y) and apply invert(1), hue-rotate(155deg), and saturate(1.35). Add a separate 144px circular rim with inset highlights, shadow, and a short rotated handle so the optical boundary stays crisp and uninverted.
+Build a self-contained inverted magnifying lens over a graphic poster inside a 320px position-relative root. Keep the exposed stage near-black with grayscale type and geometry plus one #fa7319 artifact. Create one base scene from DOM/CSS only—grid, typography, and grayscale shapes with one orange artifact—then create a full-size lens window containing a cloned copy of that exact scene. Clip the lens window with clip-path circle(72px at x y) and apply a restrained grayscale tonal inversion with mild contrast and no hue rotation. Add a separate 144px circular rim with inset highlights, shadow, and a short rotated handle so the optical boundary stays crisp and uninverted.
 
 Track target pointer coordinates relative to the root, clamped by the 72px lens radius. In one requestAnimationFrame loop, ease rendered coordinates with current += (target - current) * 0.16. Keep the magnified duplicate registered beneath the cursor by transforming it from origin 0 0 with translate(x * (1 - zoom), y * (1 - zoom)) scale(zoom). This invariant ensures the source pixel at the lens center does not slide when zoom changes. Update the outer clip path, duplicate transform, rim translation, and a normalized coordinate label once per frame. Do not read layout in the animation loop.
 
@@ -624,7 +625,7 @@ INTRX.register({
 .d-repel:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
 .d-repel-word { position: absolute; left: 50%; top: 48%; display: flex; align-items: center;
   transform: translate(-50%, -50%); white-space: nowrap; }
-.d-repel-word span { display: inline-block; color: #ececef; font: 700 clamp(42px, 8vw, 76px)/1 "Inter", sans-serif;
+.d-repel-word span { display: inline-block; color: #ececef; font: 700 clamp(42px, 8vw, 76px)/1 "Roboto Mono", sans-serif;
   letter-spacing: -.075em; will-change: transform; }
 .d-repel-word span:nth-of-type(3n) { color: #c8ff2e; }
 .d-repel-gap { display: block; flex: 0 0 clamp(18px, 3.8vw, 38px); }
@@ -986,17 +987,17 @@ INTRX.register({
   align-items: center; min-height: 54px; border-bottom: 1px solid #232327; color: #ececef;
   text-decoration: none; transition: color .2s, padding-left .25s cubic-bezier(.22,1,.36,1); }
 .d-preview-link:first-child { border-top: 1px solid #232327; }
-.d-preview-link span, .d-preview-link em { color: #5c5c66; font: 9px "JetBrains Mono", monospace;
+.d-preview-link span, .d-preview-link em { color: #5c5c66; font: 9px "Roboto Mono", monospace;
   letter-spacing: .1em; font-style: normal; text-transform: uppercase; }
 .d-preview-link strong { font-size: clamp(17px, 3vw, 25px); font-weight: 500; letter-spacing: -.03em; }
-.d-preview-link:hover, .d-preview-link:focus-visible { color: #c8ff2e; padding-left: 10px; outline: none; }
-.d-preview-link:focus-visible::after { content: ''; position: absolute; inset: 5px -6px; border: 1px solid #c8ff2e; pointer-events: none; }
+.d-preview-link:hover, .d-preview-link:focus-visible { color: #fa7319; padding-left: 10px; outline: none; }
+.d-preview-link:focus-visible::after { content: ''; position: absolute; inset: 5px -6px; border: 1px solid #fa7319; pointer-events: none; }
 .d-preview-card { position: absolute; left: 0; top: 0; z-index: 4; width: 178px; height: 128px;
   overflow: hidden; border: 1px solid rgba(236,236,239,.32); border-radius: 3px; background: #161619;
   box-shadow: 0 18px 42px rgba(0,0,0,.42); opacity: 0; pointer-events: none;
   transform-origin: center; will-change: transform, opacity; }
 .d-preview-art { position: relative; height: 99px; overflow: hidden;
-  background: linear-gradient(135deg, var(--d-preview-a, #c8ff2e), var(--d-preview-b, #304bff)); }
+  background: linear-gradient(135deg, var(--d-preview-a, #fa7319), var(--d-preview-b, #2e2e34)); }
 .d-preview-art::before { content: ''; position: absolute; inset: 0; opacity: .34;
   background-image: linear-gradient(rgba(10,10,11,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,11,.45) 1px, transparent 1px);
   background-size: 14px 14px; transform: rotate(var(--d-preview-grid, 0deg)) scale(1.25); }
@@ -1008,11 +1009,11 @@ INTRX.register({
 .d-preview-art b { position: absolute; right: 12px; bottom: 10px; width: 42px; height: 42px;
   background: rgba(10,10,11,.68); border-radius: 50%; mix-blend-mode: multiply; }
 .d-preview-caption { height: 29px; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 9px; background: #101012; color: #9b9ba3; font: 7px "JetBrains Mono", monospace;
+  padding: 0 9px; background: #101012; color: #9b9ba3; font: 7px "Roboto Mono", monospace;
   letter-spacing: .08em; }
-.d-preview-caption em { color: #c8ff2e; font-style: normal; }
+.d-preview-caption em { color: #fa7319; font-style: normal; }
 .d-preview-status { position: absolute; right: 20px; bottom: 16px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-preview-link { transition: none; }
   .d-preview-card { will-change: auto; }
@@ -1025,10 +1026,10 @@ const caption = root.querySelector('.d-preview-caption span');
 const status = root.querySelector('.d-preview-status');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const themes = [
-  { a: '#c8ff2e', b: '#304bff', x: '64%', y: '42%', radius: '50%', turn: '0deg', grid: '-8deg' },
-  { a: '#ff784f', b: '#6d35ff', x: '38%', y: '58%', radius: '8px', turn: '24deg', grid: '12deg' },
-  { a: '#1a2040', b: '#ff315f', x: '70%', y: '60%', radius: '50%', turn: '-18deg', grid: '0deg' },
-  { a: '#e8dfc8', b: '#3f8067', x: '44%', y: '38%', radius: '18px', turn: '42deg', grid: '-16deg' }
+  { a: '#fa7319', b: '#161619', x: '64%', y: '42%', radius: '50%', turn: '0deg', grid: '-8deg' },
+  { a: '#ececef', b: '#fa7319', x: '38%', y: '58%', radius: '8px', turn: '24deg', grid: '12deg' },
+  { a: '#232327', b: '#fa7319', x: '70%', y: '60%', radius: '50%', turn: '-18deg', grid: '0deg' },
+  { a: '#fa7319', b: '#5c5c66', x: '44%', y: '38%', radius: '18px', turn: '42deg', grid: '-16deg' }
 ];
 let width = Math.max(1, root.clientWidth), height = Math.max(1, root.clientHeight);
 let x = width * 0.5, y = height * 0.5, tx = x, ty = y;
@@ -1089,6 +1090,7 @@ links.forEach(function (link) {
 });
 
 function frame() {
+  if (!root.isConnected) return;
   if (reduced) {
     x = tx; y = ty; rotation = 0; scale = visible ? 1 : 0.92; opacity = visible ? 1 : 0;
   } else {
@@ -1103,7 +1105,7 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained project list whose links reveal a floating media preview inside a 320px position-relative root. Use real focusable links and one reusable 178x128px preview card. Each link selects a distinct procedural artwork theme made from CSS gradients, grids, geometric pseudo-elements, and caption text—no network images. Keep the preview pointer-events none and above the list.
+Build a self-contained project list whose links reveal a floating media preview inside a bare, near-black 320px position-relative root. Use real focusable links and one reusable 178x128px preview card. Each link selects a distinct composition made from the same grayscale and #fa7319 CSS-gradient system, grids, geometric pseudo-elements, and caption text—no network images. Keep the preview pointer-events none and above the list.
 
 Track pointer coordinates relative to the root. Place the preview 24px to the pointer's right and vertically centered; if it would cross the right edge, flip it to the left. Clamp the final top-left to 10px stage margins. Derive horizontal frame velocity from deltaX / max(8ms, elapsed) * 16.667 and map it to target rotation clamp(velocity * 0.42, -11, 11) degrees.
 
@@ -1152,7 +1154,7 @@ INTRX.register({
   border: 18px solid rgba(10,10,11,.18); border-radius: 50%; }
 .d-ghost-index { position: absolute; left: 9px; top: 8px; font: 7px "JetBrains Mono", monospace;
   letter-spacing: .1em; }
-.d-ghost-card strong { position: absolute; left: 9px; bottom: 8px; font: 700 19px/.84 "Inter", sans-serif;
+.d-ghost-card strong { position: absolute; left: 9px; bottom: 8px; font: 700 19px/.84 "Roboto Mono", sans-serif;
   letter-spacing: -.06em; }
 .d-ghost-card i { position: absolute; right: 9px; bottom: 9px; width: 17px; height: 17px;
   border: 1px solid #0a0a0b; border-radius: 50%; }
@@ -1309,67 +1311,52 @@ INTRX.register({
   rootClass: 'd-eyes',
   tags: ['atan2', 'character', 'micro-interaction'],
   libs: [],
-  desc: 'A graphic character watches the pointer with two independently eased pupils constrained to elliptical sockets. The head leans subtly into the gaze, and clicks trigger a tactile synchronized blink.',
-  seen: 'Seen on: playful agency about pages, character-led product onboarding, interactive children’s editorial sites',
+  desc: 'Two oversized editorial eyes track the pointer with independently eased pupils constrained to elliptical sockets. The pair leans subtly into the gaze, and clicks trigger a tactile synchronized blink.',
+  seen: 'Seen on: agency about pages, 404 pages, character-led hero sections done with graphic restraint',
   hint: 'move to be watched, click or press Space to blink',
   html: `
-<div class="d-eyes" tabindex="0" aria-label="Character whose eyes follow the pointer. Arrow keys move its gaze and Space blinks.">
+<div class="d-eyes" tabindex="0" aria-label="Two eyes follow the pointer. Arrow keys move the gaze and Space blinks.">
   <div class="d-eyes-head" aria-hidden="true">
-    <i class="d-eyes-ear d-eyes-ear-left"></i><i class="d-eyes-ear d-eyes-ear-right"></i>
-    <div class="d-eyes-brow d-eyes-brow-left"></div><div class="d-eyes-brow d-eyes-brow-right"></div>
     <div class="d-eyes-eye d-eyes-eye-left">
       <span class="d-eyes-pupil"><i></i></span><b class="d-eyes-lid"></b>
     </div>
     <div class="d-eyes-eye d-eyes-eye-right">
       <span class="d-eyes-pupil"><i></i></span><b class="d-eyes-lid"></b>
     </div>
-    <div class="d-eyes-nose"></div><div class="d-eyes-mouth"></div>
   </div>
   <div class="d-eyes-readout" aria-hidden="true"><span>GAZE</span><strong>0°</strong></div>
-  <button class="d-eyes-blink" type="button">Blink now</button>
+  <button class="d-eyes-blink" type="button">Blink</button>
   <p class="d-eyes-status" aria-live="polite">Gaze centered</p>
 </div>`,
   css: `
 .d-eyes { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #e4dac7; color: #0a0a0b; touch-action: none; }
+  background: #0a0a0b; color: #b8b8b8; touch-action: none; }
 .d-eyes::before { content: 'LOOK / 09'; position: absolute; left: 20px; top: 18px;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; }
-.d-eyes:focus-visible { box-shadow: inset 0 0 0 2px #0a0a0b; }
-.d-eyes-head { position: absolute; left: 50%; top: 47%; width: 250px; height: 178px;
-  transform: translate(-50%, -50%); border: 2px solid #0a0a0b; border-radius: 48% 48% 43% 43%;
-  background: #c8ff2e; box-shadow: 9px 10px 0 #0a0a0b; will-change: transform; }
-.d-eyes-ear { position: absolute; top: 66px; width: 27px; height: 45px; border: 2px solid #0a0a0b;
-  background: #ff784f; z-index: -1; }
-.d-eyes-ear-left { left: -22px; border-radius: 20px 0 0 20px; }
-.d-eyes-ear-right { right: -22px; border-radius: 0 20px 20px 0; }
-.d-eyes-eye { position: absolute; top: 58px; width: 72px; height: 52px; overflow: hidden;
-  border: 2px solid #0a0a0b; border-radius: 50%; background: #ececef; }
-.d-eyes-eye-left { left: 41px; }
-.d-eyes-eye-right { right: 41px; }
-.d-eyes-pupil { position: absolute; left: 50%; top: 50%; width: 25px; height: 25px;
-  margin: -12.5px 0 0 -12.5px; border-radius: 50%; background: #0a0a0b; will-change: transform; }
-.d-eyes-pupil i { position: absolute; width: 7px; height: 7px; left: 5px; top: 4px; border-radius: 50%; background: #ececef; }
-.d-eyes-lid { position: absolute; inset: -2px; display: block; background: #c8ff2e;
-  border-bottom: 2px solid #0a0a0b; transform: translateY(-105%); }
+  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .12em; color: #7a7a7f; }
+.d-eyes:focus-visible { box-shadow: inset 0 0 0 1px #fa7319; }
+.d-eyes-head { position: absolute; left: 50%; top: 47%; width: 250px; height: 130px;
+  transform: translate(-50%, -50%); display: flex; gap: 26px; align-items: center;
+  justify-content: center; will-change: transform; }
+.d-eyes-eye { position: relative; width: 104px; height: 124px; overflow: hidden;
+  border-radius: 50%; background: #ececef; flex: 0 0 auto; }
+.d-eyes-pupil { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px;
+  margin: -19px 0 0 -19px; border-radius: 50%; background: #0a0a0b; will-change: transform; }
+.d-eyes-pupil i { position: absolute; width: 9px; height: 9px; left: 7px; top: 6px; border-radius: 50%; background: #ececef; }
+.d-eyes-lid { position: absolute; inset: -2px; display: block; background: #0a0a0b;
+  transform: translateY(-103%); }
 .d-eyes.d-eyes-blinking .d-eyes-lid { animation: d-eyes-blink .28s cubic-bezier(.4,0,.2,1); }
-.d-eyes-brow { position: absolute; top: 39px; width: 55px; height: 8px; border-top: 3px solid #0a0a0b; }
-.d-eyes-brow-left { left: 49px; transform: rotate(-5deg); }
-.d-eyes-brow-right { right: 49px; transform: rotate(5deg); }
-.d-eyes-nose { position: absolute; left: 50%; top: 96px; width: 13px; height: 22px;
-  border: 2px solid #0a0a0b; border-top: 0; transform: translateX(-50%) skewX(-8deg); }
-.d-eyes-mouth { position: absolute; left: 50%; bottom: 22px; width: 54px; height: 18px;
-  border-bottom: 3px solid #0a0a0b; border-radius: 0 0 50% 50%; transform: translateX(-50%); }
 .d-eyes-readout { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; }
-.d-eyes-readout strong { font-size: 20px; font-weight: 500; letter-spacing: 0; }
-.d-eyes-blink { position: absolute; left: 20px; bottom: 18px; border: 1px solid rgba(10,10,11,.46);
-  border-radius: 999px; background: rgba(228,218,199,.82); color: #0a0a0b; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; }
-.d-eyes-blink:hover { background: #0a0a0b; color: #c8ff2e; }
-.d-eyes-blink:focus-visible { outline: 2px solid #0a0a0b; outline-offset: 3px; }
-.d-eyes-status { position: absolute; right: 20px; bottom: 20px; margin: 0;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-@keyframes d-eyes-blink { 0%, 100% { transform: translateY(-105%); } 43%, 58% { transform: translateY(0); } }
+  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .12em; color: #7a7a7f; }
+.d-eyes-readout strong { font-size: 20px; font-weight: 500; letter-spacing: 0; color: #fa7319; }
+.d-eyes-blink { position: absolute; left: 20px; bottom: 18px; border: 1px solid #333;
+  background: transparent; color: #b8b8b8; padding: 8px 14px; text-transform: uppercase;
+  letter-spacing: .08em; font: 10px Roboto Mono,JetBrains Mono,monospace; cursor: pointer;
+  transition: color .12s, border-color .12s; }
+.d-eyes-blink:hover { border-color: #fa7319; color: #fa7319; }
+.d-eyes-blink:focus-visible { outline: 1px solid #fa7319; outline-offset: 3px; }
+.d-eyes-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #7a7a7f;
+  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .08em; text-transform: uppercase; }
+@keyframes d-eyes-blink { 0%, 100% { transform: translateY(-103%); } 43%, 58% { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) {
   .d-eyes-head, .d-eyes-pupil { will-change: auto; }
   .d-eyes.d-eyes-blinking .d-eyes-lid { animation-duration: .08s; }
@@ -1475,7 +1462,7 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained two-eye character inside a 320px position-relative root. Create a graphic head, two elliptical white eye sockets, and one circular pupil per eye. Add eyelid elements above the pupils and a semantic “Blink now” button. After layout, measure each eye center relative to the root once and remeasure on resize; do not read layout in the animation loop.
+Build a self-contained two-eye graphic inside a 320px position-relative root with a near-black (#0a0a0b) background. Create two oversized elliptical off-white (#ececef) eyes (roughly 104x124px, 26px apart, centered) and one circular dark pupil per eye — no face, ears, mouth, or other character features; the restraint is the aesthetic. Add eyelid elements (same color as the background so a blink reads as the eye closing) above the pupils and a semantic “Blink” button styled as a quiet mono-font outline chip. After layout, measure each eye center relative to the root once and remeasure on resize; do not read layout in the animation loop.
 
 For each eye, compute dx/dy from its center to the target and angle = atan2(dy, dx). Set reach = min(14, hypot(dx,dy) * 0.085), desiredX = cos(angle) * reach, and desiredY = sin(angle) * reach * 0.68 so pupils remain inside elliptical sockets. Ease the left pupil by 0.18 and right pupil by 0.145 per frame for subtle organic asymmetry. Apply each result as a translate transform. Lean the head by up to 5px x, 3px y, and 2.2 degrees from normalized target position, and show the mean gaze angle.
 
@@ -2059,36 +2046,36 @@ INTRX.register({
   <p class="d-snap-status" aria-live="polite">Move into the stage</p>
 </div>`,
   css: `
-.d-snap { position: relative; width: 100%; height: 320px; overflow: hidden; background: #ded9cd;
-  color: #0a0a0b; cursor: none; }
+.d-snap { position: relative; width: 100%; height: 320px; overflow: hidden; background: #0a0a0b;
+  color: #ececef; cursor: none; }
 .d-snap-layout { position: absolute; inset: 46px 8% 44px; display: grid;
   grid-template-columns: 1.25fr .72fr 1fr; align-items: center; gap: clamp(14px, 4vw, 42px); }
-.d-snap-target { position: relative; border: 1px solid rgba(10,10,11,.34); background: transparent;
-  color: #0a0a0b; font-family: inherit; cursor: none; transition: background .22s, color .22s; }
+.d-snap-target { position: relative; border: 1px solid #2e2e34; background: transparent;
+  color: #ececef; font-family: inherit; cursor: none; transition: background .22s, color .22s; }
 .d-snap-target span, .d-snap-target i { display: block; pointer-events: none; }
 .d-snap-target span { font-size: 15px; font-weight: 600; letter-spacing: -.03em; }
-.d-snap-target i { margin-top: 7px; color: #68655f; font: 8px "JetBrains Mono", monospace;
+.d-snap-target i { margin-top: 7px; color: #7a7a7f; font: 8px "Roboto Mono", monospace;
   letter-spacing: .08em; text-transform: uppercase; font-style: normal; }
-.d-snap-target:hover, .d-snap-target:focus-visible { background: #0a0a0b; color: #c8ff2e; outline: none; }
+.d-snap-target:hover, .d-snap-target:focus-visible { background: #161619; color: #fa7319; outline: none; }
 .d-snap-target:hover i, .d-snap-target:focus-visible i { color: #9b9ba3; }
 .d-snap-pill { height: 58px; border-radius: 28px; text-align: left; padding: 0 22px; }
 .d-snap-disc { width: 112px; height: 112px; justify-self: center; border-radius: 50%; }
 .d-snap-card { height: 126px; border-radius: 5px; text-align: left; padding: 18px; align-self: end; }
 .d-snap-frame { position: absolute; left: 0; top: 0; z-index: 4; width: 24px; height: 24px;
-  box-sizing: border-box; border: 1px solid #0a0a0b; border-radius: 50%; opacity: 0;
+  box-sizing: border-box; border: 1px solid #ececef; border-radius: 50%; opacity: 0;
   pointer-events: none; will-change: transform, width, height; }
 .d-snap-frame::before, .d-snap-frame::after { content: ''; position: absolute; width: 7px; height: 7px; }
-.d-snap-frame::before { left: -1px; top: -1px; border-left: 2px solid #c8ff2e; border-top: 2px solid #c8ff2e; }
-.d-snap-frame::after { right: -1px; bottom: -1px; border-right: 2px solid #c8ff2e; border-bottom: 2px solid #c8ff2e; }
+.d-snap-frame::before { left: -1px; top: -1px; border-left: 2px solid #fa7319; border-top: 2px solid #fa7319; }
+.d-snap-frame::after { right: -1px; bottom: -1px; border-right: 2px solid #fa7319; border-bottom: 2px solid #fa7319; }
 .d-snap-frame i, .d-snap-frame b { position: absolute; display: block; width: 4px; height: 4px;
-  border-radius: 50%; background: #0a0a0b; opacity: 0; }
+  border-radius: 50%; background: #ececef; opacity: 0; }
 .d-snap-frame i { left: -2px; top: 50%; }.d-snap-frame b { right: -2px; top: 50%; }
 .d-snap.d-snap-locked .d-snap-frame i, .d-snap.d-snap-locked .d-snap-frame b { opacity: 1; }
 .d-snap-dot { position: absolute; left: 0; top: 0; z-index: 5; width: 5px; height: 5px;
-  margin: -2.5px 0 0 -2.5px; border-radius: 50%; background: #c8ff2e; opacity: 0;
-  pointer-events: none; will-change: transform, opacity; box-shadow: 0 0 0 1px rgba(10,10,11,.5); }
-.d-snap-status { position: absolute; right: 20px; bottom: 16px; margin: 0;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  margin: -2.5px 0 0 -2.5px; border-radius: 50%; background: #fa7319; opacity: 0;
+  pointer-events: none; will-change: transform, opacity; box-shadow: 0 0 0 1px rgba(236,236,239,.26); }
+.d-snap-status { position: absolute; right: 20px; bottom: 16px; margin: 0; color: #7a7a7f;
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 620px) {
   .d-snap-layout { inset-inline: 4%; gap: 10px; grid-template-columns: 1.1fr .7fr 1fr; }
   .d-snap-disc { width: 86px; height: 86px; }.d-snap-card { padding: 12px; }
@@ -2174,6 +2161,7 @@ function spring(key, stiffness, damping) {
 }
 
 function frameLoop() {
+  if (!root.isConnected) return;
   spring('x', 0.14, 0.68); spring('y', 0.14, 0.68);
   spring('w', 0.16, 0.7); spring('h', 0.16, 0.7); spring('r', 0.16, 0.7);
   if (reduced) { dotX = pointer.x; dotY = pointer.y; }
@@ -2186,7 +2174,7 @@ function frameLoop() {
 }
 requestAnimationFrame(frameLoop);`,
   prompt: `
-Build a self-contained sticky cursor that morphs between a free 24px circle and the measured outline of hovered or keyboard-focused controls inside a 320px root. Use three real buttons with clearly different dimensions and radii, one absolute outline frame, and one separate 5px pointer dot. Hide the native cursor only inside the demo.
+Build a self-contained sticky cursor that morphs between a free 24px circle and the measured outline of hovered or keyboard-focused controls inside a bare near-black 320px root. Use grayscale controls and #fa7319 only for active cursor details. Use three real buttons with clearly different dimensions and radii, one absolute outline frame, and one separate 5px pointer dot. Hide the native cursor only inside the demo.
 
 Track pointer coordinates relative to the root. In free mode set goal x/y to pointer minus 12, width/height to 24, and radius to 12. On target pointerenter or focus, read its bounding box once, convert it to root coordinates, and set goals to its rectangle expanded by 6px on every side; use target radius + 6px. Keep the inner dot tracking the actual pointer while the shell is locked. On pointerleave/blur, prefer any still-focused/hovered target, otherwise release to free mode. If the stage is exited without keyboard focus, hide both cursor elements; focused targets remain outlined.
 
@@ -2235,7 +2223,7 @@ INTRX.register({
 .d-flash-kicker { position: absolute; left: 20px; top: 18px; font: 8px "JetBrains Mono", monospace;
   letter-spacing: .12em; }
 .d-flash-title { position: absolute; left: 8%; top: 51%; transform: translateY(-50%);
-  font: 700 clamp(36px, 6vw, 60px)/.8 "Inter", sans-serif; letter-spacing: -.07em; }
+  font: 700 clamp(36px, 6vw, 60px)/.8 "Roboto Mono", sans-serif; letter-spacing: -.07em; }
 .d-flash-panel { position: absolute; width: 118px; height: 132px; border: 1px solid #0a0a0b; padding: 10px;
   font: 7px "JetBrains Mono", monospace; box-sizing: border-box; }
 .d-flash-panel i { display: block; height: 88px; margin-bottom: 10px; background: #0a0a0b; }
@@ -2380,7 +2368,7 @@ Arrow keys move 26px, Shift+Arrow 44px, Home centers, and Space or a semantic ar
 ------------------------------------------------------------ */
 INTRX.register({
   id: 'cursor-emoji-rain',
-  title: 'Cursor Emoji Rain',
+  title: 'Cursor Glyph Rain',
   cat: 'Cursor',
   rootClass: 'd-rain',
   tags: ['particle-physics', 'glyphs', 'collisions'],
@@ -2394,7 +2382,7 @@ INTRX.register({
   <div class="d-rain-reticle" aria-hidden="true"><i></i></div>
   <span class="d-rain-label">GLYPH WEATHER / LIVE</span>
   <div class="d-rain-meter" aria-hidden="true"><span>ACTIVE</span><strong>000</strong></div>
-  <button class="d-rain-launch" type="button">Celebrate center</button>
+  <button class="d-rain-launch" type="button">Launch glyphs</button>
   <p class="d-rain-status" aria-live="polite">Launcher ready</p>
 </div>`,
   css: `
@@ -2402,26 +2390,26 @@ INTRX.register({
   background: #0a0a0b; touch-action: none; }
 .d-rain::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .38;
   background-image: linear-gradient(90deg, transparent 0 24%, #19191d 25%, transparent 25% 49%, #19191d 50%, transparent 50% 74%, #19191d 75%, transparent 75%); }
-.d-rain:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-rain:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-rain-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .d-rain-reticle { position: absolute; left: 0; top: 0; width: 34px; height: 34px; margin: -17px 0 0 -17px;
-  border: 1px solid rgba(200,255,46,.35); border-radius: 50%; pointer-events: none; will-change: transform; }
+  border: 1px solid rgba(250,115,25,.35); border-radius: 50%; pointer-events: none; will-change: transform; }
 .d-rain-reticle::before, .d-rain-reticle::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(200,255,46,.62); transform: translate(-50%, -50%); }
+  background: rgba(250,115,25,.62); transform: translate(-50%, -50%); }
 .d-rain-reticle::before { width: 9px; height: 1px; }.d-rain-reticle::after { width: 1px; height: 9px; }
-.d-rain-reticle i { position: absolute; inset: 6px; border: 1px dashed rgba(200,255,46,.2); border-radius: 50%; }
+.d-rain-reticle i { position: absolute; inset: 6px; border: 1px dashed rgba(250,115,25,.2); border-radius: 50%; }
 .d-rain-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .13em; }
 .d-rain-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-rain-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+.d-rain-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-rain-launch { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-rain-launch:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-rain-launch:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+.d-rain-launch:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-rain-launch:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-rain-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-rain-reticle { will-change: auto; }.d-rain-launch { transition: none; }
 }`,
@@ -2433,8 +2421,8 @@ const meter = root.querySelector('.d-rain-meter strong');
 const launchButton = root.querySelector('.d-rain-launch');
 const status = root.querySelector('.d-rain-status');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const glyphs = ['✦', '●', '▲', '♥', '☺', '✷', '↗', '★', '◆', '+'];
-const colors = ['#c8ff2e', '#ff5d3b', '#ececef', '#7b61ff', '#38d9ff'];
+const glyphs = ['A', 'K', '0', '7', '+', '/', '*', '>', '<', '='];
+const colors = ['#fa7319', '#ececef', '#b8b8b8', '#7a7a7f', '#5c5c66'];
 let width = 1, height = 1, dpr = 1, particles = [], rings = [];
 let launcher = { x: 0, y: 0 }, lastFrame = performance.now();
 
@@ -2513,13 +2501,14 @@ launchButton.addEventListener('click', function () {
 });
 
 function frame(now) {
+  if (!root.isConnected) return;
   const dt = Math.min(0.032, (now - lastFrame) / 1000); lastFrame = now;
   ctx.clearRect(0, 0, width, height);
   for (let i = rings.length - 1; i >= 0; i--) {
     const ring = rings[i];
     if (!reduced) { ring.radius += 210 * dt; ring.life -= 1.9 * dt; }
     if (ring.life <= 0) { rings.splice(i, 1); continue; }
-    ctx.globalAlpha = ring.life * 0.55; ctx.strokeStyle = '#c8ff2e'; ctx.lineWidth = 1;
+    ctx.globalAlpha = ring.life * 0.55; ctx.strokeStyle = '#fa7319'; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.arc(ring.x, ring.y, ring.radius, 0, Math.PI * 2); ctx.stroke();
   }
   for (let i = particles.length - 1; i >= 0; i--) {
@@ -2546,7 +2535,7 @@ function frame(now) {
     ctx.beginPath(); ctx.moveTo(particle.oldX, particle.oldY); ctx.lineTo(particle.x - particle.vx * 0.018, particle.y - particle.vy * 0.018); ctx.stroke();
     ctx.globalAlpha = alpha; ctx.fillStyle = particle.color;
     ctx.save(); ctx.translate(particle.x, particle.y); ctx.rotate(particle.rotation);
-    ctx.font = '700 ' + particle.size.toFixed(1) + 'px Arial, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = '700 ' + particle.size.toFixed(1) + 'px "Roboto Mono", monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText(particle.glyph, 0, 0); ctx.restore();
   }
   ctx.globalAlpha = 1;
@@ -2556,7 +2545,7 @@ function frame(now) {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained click-origin glyph confetti system in a 320px canvas stage. Use a visible launcher reticle, semantic center-launch button, active count, and a palette of ten glyphs plus five colors. Resize the canvas to the root, cap devicePixelRatio at 2, keep coordinates in CSS pixels, and clamp live particles on resize.
+Build a self-contained click-origin typographic glyph-rain system in a bare near-black 320px canvas stage. Use a visible launcher reticle, semantic center-launch button, active count, and a palette of ten letterform and punctuation glyphs in grayscale plus #fa7319. Resize the canvas to the root, cap devicePixelRatio at 2, keep coordinates in CSS pixels, and clamp live particles on resize.
 
 Each normal burst creates 28 particles at the exact pointer/launcher position. Choose a random full-circle angle, speed 85–275px/s, vx=cos(angle)*speed, and vy=sin(angle)*speed*0.55 - 175 - random(0,75). Give each particle independent rotation, spin in -4–4rad/s, size 15–30px, and life 1.65–2.5s. Cap the pool at 160. Add one expanding ring at the origin.
 
@@ -2761,7 +2750,7 @@ INTRX.register({
   rootClass: 'd-heat',
   tags: ['additive-blend', 'thermal-map', 'canvas'],
   libs: [],
-  desc: 'Pointer velocity deposits luminous heat that rises, spreads, and cools from white-yellow through orange into violet-blue. Additive radial fields overlap into a living thermal trace before fading completely.',
+  desc: 'Pointer velocity deposits luminous heat that rises, spreads, and cools through an off-white, orange, and charcoal thermal ramp. Additive radial fields overlap before fading completely.',
   seen: 'Seen on: experimental music visuals, technical fashion campaigns, generative energy and climate interfaces',
   hint: 'draw heat, click to flare, or ignite the center',
   html: `
@@ -2779,39 +2768,39 @@ INTRX.register({
 </div>`,
   css: `
 .d-heat { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #07070a; touch-action: none; }
-.d-heat:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+  background: #0a0a0b; touch-action: none; }
+.d-heat:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-heat-scene { position: absolute; inset: 0; overflow: hidden; color: #24242b;
   background-image: linear-gradient(#151519 1px, transparent 1px), linear-gradient(90deg, #151519 1px, transparent 1px);
   background-size: 28px 28px; }
 .d-heat-scene strong { position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
-  font: 700 clamp(48px, 9vw, 82px)/.78 "Inter", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
+  font: 700 clamp(48px, 9vw, 82px)/.78 "Roboto", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
 .d-heat-scene span { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 8px "JetBrains Mono", monospace; letter-spacing: .12em; }
+  font: 8px "Roboto Mono", monospace; letter-spacing: .12em; }
 .d-heat-scene i { position: absolute; display: block; width: 8px; height: 8px; border: 1px solid #2e2e34; border-radius: 50%; }
 .d-heat-scene i:nth-of-type(1) { left: 18%; top: 34%; }.d-heat-scene i:nth-of-type(2) { right: 19%; top: 27%; }
 .d-heat-scene i:nth-of-type(3) { right: 31%; bottom: 23%; }
 .d-heat-canvas { position: absolute; inset: 0; width: 100%; height: 100%; mix-blend-mode: screen; }
 .d-heat-reticle { position: absolute; left: 0; top: 0; width: 32px; height: 32px; margin: -16px 0 0 -16px;
-  border: 1px solid rgba(255,159,40,.52); border-radius: 50%; pointer-events: none; will-change: transform; }
+  border: 1px solid rgba(250,115,25,.52); border-radius: 50%; pointer-events: none; will-change: transform; }
 .d-heat-reticle::before, .d-heat-reticle::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(255,220,120,.72); transform: translate(-50%, -50%); }
+  background: rgba(236,236,239,.72); transform: translate(-50%, -50%); }
 .d-heat-reticle::before { width: 8px; height: 1px; }.d-heat-reticle::after { width: 1px; height: 8px; }
-.d-heat-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(255,159,40,.25); border-radius: 50%; }
+.d-heat-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.25); border-radius: 50%; }
 .d-heat-scale { position: absolute; left: 20px; bottom: 64px; display: flex; align-items: center; gap: 7px;
-  color: #5c5c66; font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
+  color: #5c5c66; font: 7px "Roboto Mono", monospace; letter-spacing: .08em; }
 .d-heat-scale i { display: block; width: 76px; height: 3px;
-  background: linear-gradient(90deg, #493bff, #d72eff, #ff542e, #ffd52e, #fff); }
+  background: linear-gradient(90deg, #2e2e34, #7a7a7f, #fa7319, #ececef); }
 .d-heat-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-heat-meter strong { color: #ffb52e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+.d-heat-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-heat-ignite { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-heat-ignite:hover { color: #ffb52e; border-color: #ffb52e; transform: translateY(-2px); }
-.d-heat-ignite:focus-visible { outline: 2px solid #ffb52e; outline-offset: 3px; }
+  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+.d-heat-ignite:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-heat-ignite:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-heat-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-heat-reticle { will-change: auto; }.d-heat-ignite { transition: none; }
 }`,
@@ -2909,18 +2898,18 @@ igniteButton.addEventListener('click', function () {
 
 function drawPoint(point, now) {
   const shimmer = reduced ? 0 : Math.sin(now * 0.006 + point.phase) * (1 - point.temperature) * 5;
-  const hue = 225 - point.temperature * 188;
   const alpha = reduced ? 0.72 : Math.min(0.78, point.temperature * 0.88);
   const radius = point.radius * (1.25 - point.temperature * 0.25);
   const gradient = ctx.createRadialGradient(point.x + shimmer, point.y, 0, point.x + shimmer, point.y, radius);
-  gradient.addColorStop(0, 'rgba(255,255,255,' + (alpha * 0.82) + ')');
-  gradient.addColorStop(0.2, 'hsla(' + hue.toFixed(1) + ',100%,62%,' + alpha + ')');
-  gradient.addColorStop(0.58, 'hsla(' + (hue + 24).toFixed(1) + ',100%,45%,' + (alpha * 0.54) + ')');
+  gradient.addColorStop(0, 'rgba(236,236,239,' + (alpha * 0.82) + ')');
+  gradient.addColorStop(0.2, 'rgba(250,115,25,' + alpha + ')');
+  gradient.addColorStop(0.58, 'rgba(122,122,127,' + (alpha * 0.54) + ')');
   gradient.addColorStop(1, 'rgba(0,0,0,0)');
   ctx.fillStyle = gradient; ctx.beginPath(); ctx.arc(point.x + shimmer, point.y, radius, 0, Math.PI * 2); ctx.fill();
 }
 
 function frame(now) {
+  if (!root.isConnected) return;
   const dt = Math.min(0.032, (now - lastFrame) / 1000); lastFrame = now;
   ctx.clearRect(0, 0, width, height); ctx.globalCompositeOperation = 'lighter';
   let peak = 0;
@@ -2941,11 +2930,11 @@ function frame(now) {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained additive thermal cursor trail in a 320px canvas stage. Put the canvas over a dark technical grid/title scene and use screen blending. Each heat point stores x/y, velocity, radius, phase, and normalized temperature. Resize the backing canvas to the root, cap devicePixelRatio at 2, keep coordinates in CSS pixels, and clamp points on resize.
+Build a self-contained additive thermal cursor trail in a bare near-black 320px canvas stage. Keep every visible heat field within grayscale and #fa7319. Put the canvas over a dark technical grid/title scene and use screen blending. Each heat point stores x/y, velocity, radius, phase, and normalized temperature. Resize the backing canvas to the root, cap devicePixelRatio at 2, keep coordinates in CSS pixels, and clamp points on resize.
 
 Emit trail points every ~8px along interpolated pointer segments, capped at 14 per event so fast movement has no gaps. Derive pointer velocity from distance/max(8ms,elapsed) and temperature=min(1,0.52+velocity/1450). Give points small lateral jitter, upward velocity -7 to -19px/s, and radius 20–30px. Click, Space, or a semantic center button creates 22–26 radial heat points. Cap the pool at 140 and seed an initial 12-point field so the demo is alive on first view.
 
-In one requestAnimationFrame loop with dt capped at 32ms, use globalCompositeOperation='lighter'. Move points, damp vx by pow(0.985,dt*60), vy by pow(0.992,dt*60), grow radius 17px/s, and cool temperature by 0.4/s. Draw each as a radial gradient whose hue runs from about 37° hot to 225° cool, with a white core, saturated mid-band, transparent edge, and alpha based on temperature. Add horizontal shimmer sin(now*0.006+phase)*(1-temperature)*5 so cooler air wavers more. Remove points at zero temperature and restore source-over blending afterward.
+In one requestAnimationFrame loop with dt capped at 32ms, use globalCompositeOperation='lighter'. Move points, damp vx by pow(0.985,dt*60), vy by pow(0.992,dt*60), grow radius 17px/s, and cool temperature by 0.4/s. Draw each as a radial gradient that runs from an off-white core through a #fa7319 mid-band into neutral gray and a transparent edge, with alpha based on temperature. Add horizontal shimmer sin(now*0.006+phase)*(1-temperature)*5 so cooler air wavers more. Remove points at zero temperature and restore source-over blending afterward.
 
 Arrow keys move the launcher 26px, Shift+Arrow 44px, Home centers, and Space flares. Ignore control pointerdown in the stage handler, keep pointer/resize passive, expose temperature and polite state feedback, and retain focus styling. Under prefers-reduced-motion, replace the prior field with 14 static points on three radial bands, disable drift/cooling/shimmer, and preserve pointer, keyboard, and button placement.`
 });
@@ -2982,55 +2971,55 @@ INTRX.register({
 </div>`,
   css: `
 .d-hud { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #0a0a0b; color: #c8ff2e; touch-action: none; cursor: crosshair; }
-.d-hud:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+  background: #0a0a0b; color: #fa7319; touch-action: none; cursor: crosshair; }
+.d-hud:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-hud-scene { position: absolute; inset: 0; overflow: hidden; color: #202026;
   background-image: linear-gradient(#16161a 1px, transparent 1px), linear-gradient(90deg, #16161a 1px, transparent 1px);
   background-size: 32px 32px; }
 .d-hud-scene span { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 8px "Roboto Mono", monospace; letter-spacing: .13em; }
 .d-hud-scene strong { position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%);
-  font: 700 clamp(50px, 10vw, 92px)/.78 "Inter", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
+  font: 700 clamp(50px, 10vw, 92px)/.78 "Roboto", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
 .d-hud-scene i { position: absolute; width: 38px; height: 38px; border: 1px solid #2a2a30; }
 .d-hud-scene i:nth-of-type(1) { left: 9%; top: 25%; border-right: 0; border-bottom: 0; }
 .d-hud-scene i:nth-of-type(2) { right: 9%; top: 25%; border-left: 0; border-bottom: 0; }
 .d-hud-scene i:nth-of-type(3) { left: 9%; bottom: 20%; border-right: 0; border-top: 0; }
 .d-hud-scene i:nth-of-type(4) { right: 9%; bottom: 20%; border-left: 0; border-top: 0; }
 .d-hud-tether { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.d-hud-tether path { fill: none; stroke: rgba(200,255,46,.42); stroke-width: 1;
+.d-hud-tether path { fill: none; stroke: rgba(250,115,25,.42); stroke-width: 1;
   stroke-dasharray: 3 5; vector-effect: non-scaling-stroke; }
 .d-hud-vline, .d-hud-hline { position: absolute; left: 0; top: 0; pointer-events: none; will-change: transform; }
-.d-hud-vline { width: 1px; height: 100%; background: rgba(200,255,46,.48); }
-.d-hud-hline { width: 100%; height: 1px; background: rgba(200,255,46,.48); }
+.d-hud-vline { width: 1px; height: 100%; background: rgba(250,115,25,.48); }
+.d-hud-hline { width: 100%; height: 1px; background: rgba(250,115,25,.48); }
 .d-hud-vline::before, .d-hud-hline::before { content: ''; position: absolute; opacity: .36; }
 .d-hud-vline::before { left: -4px; width: 9px; height: 100%;
-  background: repeating-linear-gradient(to bottom, transparent 0 15px, #c8ff2e 16px 17px); }
+  background: repeating-linear-gradient(to bottom, transparent 0 15px, #fa7319 16px 17px); }
 .d-hud-hline::before { top: -4px; height: 9px; width: 100%;
-  background: repeating-linear-gradient(to right, transparent 0 15px, #c8ff2e 16px 17px); }
+  background: repeating-linear-gradient(to right, transparent 0 15px, #fa7319 16px 17px); }
 .d-hud-vline i, .d-hud-hline i { position: absolute; display: block; background: #ececef; }
 .d-hud-vline i { left: -2px; top: 18px; width: 5px; height: 1px; }.d-hud-hline i { top: -2px; right: 18px; width: 1px; height: 5px; }
 .d-hud-cross { position: absolute; left: 0; top: 0; width: 44px; height: 44px; margin: -22px 0 0 -22px;
-  border: 1px solid rgba(200,255,46,.7); border-radius: 50%; pointer-events: none; will-change: transform; }
+  border: 1px solid rgba(250,115,25,.7); border-radius: 50%; pointer-events: none; will-change: transform; }
 .d-hud-cross::before, .d-hud-cross::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: #c8ff2e; transform: translate(-50%, -50%); }
+  background: #fa7319; transform: translate(-50%, -50%); }
 .d-hud-cross::before { width: 58px; height: 1px; }.d-hud-cross::after { width: 1px; height: 58px; }
 .d-hud-cross i { position: absolute; inset: 8px; border: 1px dashed rgba(236,236,239,.28); border-radius: 50%; }
 .d-hud-cross b { position: absolute; left: 50%; top: 50%; width: 5px; height: 5px;
   transform: translate(-50%, -50%); border-radius: 50%; background: #ececef; }
 .d-hud-lead { position: absolute; left: 0; top: 0; width: 6px; height: 6px; margin: -3px 0 0 -3px;
-  border-radius: 50%; background: #ff5d3b; box-shadow: 0 0 0 5px rgba(255,93,59,.12);
+  border-radius: 50%; background: #ececef; box-shadow: 0 0 0 5px rgba(236,236,239,.12);
   pointer-events: none; will-change: transform; }
 .d-hud-readout { position: absolute; left: 0; top: 0; width: 126px; display: grid; grid-template-columns: 1fr 1fr;
-  gap: 3px 10px; padding: 8px 9px; border: 1px solid rgba(200,255,46,.32); background: rgba(10,10,11,.82);
-  color: #5c5c66; font: 8px "JetBrains Mono", monospace; pointer-events: none; will-change: transform; }
+  gap: 3px 10px; padding: 8px 9px; border: 1px solid rgba(250,115,25,.32); background: rgba(10,10,11,.82);
+  color: #5c5c66; font: 8px "Roboto Mono", monospace; pointer-events: none; will-change: transform; }
 .d-hud-readout b { color: #ececef; font-weight: 500; }
 .d-hud-freeze { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-hud-freeze:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-hud-freeze:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+.d-hud-freeze:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-hud-freeze:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-hud-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-hud-vline, .d-hud-hline, .d-hud-cross, .d-hud-lead, .d-hud-readout { will-change: auto; }
   .d-hud-freeze { transition: none; }
@@ -3116,6 +3105,7 @@ root.addEventListener('keydown', function (event) {
 freezeButton.addEventListener('click', function () { toggleFreeze('Button lock changed'); root.focus(); });
 
 function frameLoop() {
+  if (!root.isConnected) return;
   if (reduced) { x = target.x; y = target.y; vx = 0; vy = 0; }
   else {
     vx = (vx + (target.x - x) * 0.105) * 0.72;
@@ -3140,7 +3130,7 @@ function frameLoop() {
 }
 requestAnimationFrame(frameLoop);`,
   prompt: `
-Build a self-contained full-stage crosshair HUD inside a 320px position-relative root. Use separate absolute vertical and horizontal axis lines with repeating tick marks, a circular tracked intersection, a distinct 6px live-pointer lead, an SVG tether between them, and a compact coordinate/velocity/bearing readout that flips to the opposite side near stage edges.
+Build a self-contained full-stage crosshair HUD inside a bare near-black 320px position-relative root. Use grayscale telemetry and #fa7319 targeting marks only. Use separate absolute vertical and horizontal axis lines with repeating tick marks, a circular tracked intersection, a distinct 6px live-pointer lead, an SVG tether between them, and a compact coordinate/velocity/bearing readout that flips to the opposite side near stage edges.
 
 Track raw pointer coordinates exactly. Derive raw speed in px/s from distance/max(8ms,elapsed), capped at 999, and bearing=(atan2(dy,dx)*180/pi+360)%360. Unless frozen, copy raw into the tracked target. Animate the X axis with vx=(vx+(targetX-x)*0.105)*0.72 and the Y axis with vy=(vy+(targetY-y)*0.14)*0.68, then position+=velocity. This asymmetric spring makes the axes lag independently. Update axis transforms, intersection, exact lead, and tether path once per frame; tether opacity=min(1,distance/34).
 
@@ -3185,48 +3175,48 @@ INTRX.register({
   css: `
 .d-pull { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-pull:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-pull:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-pull-stage { position: absolute; left: 50%; top: 49%; width: min(62%, 430px); height: 194px;
   transform: translate(-50%, -50%); }
-.d-pull-card { position: absolute; inset: 0; overflow: hidden; background: #dcd6c8; will-change: clip-path; }
-.d-pull-art { position: absolute; inset: -8px; overflow: hidden; background: #dcd6c8; color: #0a0a0b;
+.d-pull-card { position: absolute; inset: 0; overflow: hidden; background: #161619; will-change: clip-path; }
+.d-pull-art { position: absolute; inset: -8px; overflow: hidden; background: #161619; color: #ececef;
   will-change: transform; }
 .d-pull-art::before { content: ''; position: absolute; inset: 0; opacity: .42;
-  background-image: linear-gradient(rgba(10,10,11,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,11,.22) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(236,236,239,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(236,236,239,.12) 1px, transparent 1px);
   background-size: 24px 24px; }
-.d-pull-art span { position: absolute; left: 16px; top: 14px; font: 8px/1.2 "JetBrains Mono", monospace;
+.d-pull-art span { position: absolute; left: 16px; top: 14px; font: 8px/1.2 "Roboto Mono", monospace;
   letter-spacing: .1em; }
 .d-pull-art strong { position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
-  font: 700 clamp(34px, 5vw, 55px)/.75 "Inter", sans-serif; letter-spacing: -.07em; white-space: nowrap; }
+  font: 700 clamp(34px, 5vw, 55px)/.75 "Roboto", sans-serif; letter-spacing: -.07em; white-space: nowrap; }
 .d-pull-art i { position: absolute; right: 26px; top: 20px; width: 82px; height: 82px;
-  border: 16px solid #ff5d3b; border-radius: 50%; mix-blend-mode: multiply; }
+  border: 16px solid #fa7319; border-radius: 50%; mix-blend-mode: normal; }
 .d-pull-art b { position: absolute; right: 18px; bottom: 16px; width: 48px; height: 48px;
-  background: #c8ff2e; transform: rotate(18deg); mix-blend-mode: multiply; }
+  background: #5c5c66; transform: rotate(18deg); mix-blend-mode: normal; }
 .d-pull-wire { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px);
   overflow: visible; pointer-events: none; opacity: .22; transition: opacity .2s; }
-.d-pull-wire polygon { fill: none; stroke: #c8ff2e; stroke-width: 1; stroke-dasharray: 4 5;
+.d-pull-wire polygon { fill: none; stroke: #fa7319; stroke-width: 1; stroke-dasharray: 4 5;
   vector-effect: non-scaling-stroke; }
-.d-pull-wire circle { fill: #0a0a0b; stroke: #c8ff2e; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.d-pull-wire circle { fill: #0a0a0b; stroke: #fa7319; stroke-width: 1; vector-effect: non-scaling-stroke; }
 .d-pull.d-pull-active .d-pull-wire { opacity: .92; }
 .d-pull-reticle { position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px;
-  border: 1px solid rgba(200,255,46,.5); border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; }
+  border: 1px solid rgba(250,115,25,.5); border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; }
 .d-pull-reticle::before, .d-pull-reticle::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: #c8ff2e; transform: translate(-50%, -50%); }
+  background: #fa7319; transform: translate(-50%, -50%); }
 .d-pull-reticle::before { width: 8px; height: 1px; }.d-pull-reticle::after { width: 1px; height: 8px; }
-.d-pull-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(200,255,46,.24); border-radius: 50%; }
+.d-pull-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.24); border-radius: 50%; }
 .d-pull.d-pull-active .d-pull-reticle { opacity: 1; }
 .d-pull-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .13em; }
 .d-pull-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-pull-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+.d-pull-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-pull-tug { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-pull-tug:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-pull-tug:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+.d-pull-tug:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-pull-tug:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-pull-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 620px) { .d-pull-stage { width: 76%; height: 176px; } }
 @media (prefers-reduced-motion: reduce) {
   .d-pull-card, .d-pull-art, .d-pull-reticle { will-change: auto; }.d-pull-tug { transition: none; }
@@ -3302,6 +3292,7 @@ tugButton.addEventListener('click', function () {
 });
 
 function frameLoop() {
+  if (!root.isConnected) return;
   if (!reduced) boost += (1 - boost) * 0.075;
   const radius = Math.hypot(width, height) * 0.92;
   let peak = 0;
@@ -3336,7 +3327,7 @@ function frameLoop() {
 }
 requestAnimationFrame(frameLoop);`,
   prompt: `
-Build a self-contained flexible poster whose silhouette bows toward the pointer through an eight-point CSS clip-path polygon. Use alternating nodes at four corners and four edge midpoints. Mirror the exact geometry in an SVG polygon with eight handle circles so the deformation is inspectable. Keep the card layout rectangle fixed; only its visible polygon changes.
+Build a self-contained flexible poster whose silhouette bows toward the pointer through an eight-point CSS clip-path polygon. Keep the bare stage near-black and the poster grayscale with one #fa7319 artifact. Use alternating nodes at four corners and four edge midpoints. Mirror the exact geometry in an SVG polygon with eight handle circles so the deformation is inspectable. Keep the card layout rectangle fixed; only its visible polygon changes.
 
 Measure the card once and on resize. For each node calculate its pixel base, vector to the local pointer, radius=hypot(width,height)*0.92, and influence=max(0,1-distance/radius)². Corners use weight 0.18 and edge midpoints 0.11. Compute the weighted displacement toward the pointer, multiply by a temporary tug boost, and cap its magnitude at 24px. Animate x/y offsets with velocity=(velocity+(target-current)*0.13)*0.7, then current+=velocity. Rebuild clip-path polygon in pixels, SVG points, and handle cx/cy once per frame.
 
@@ -3375,51 +3366,51 @@ INTRX.register({
 </div>`,
   css: `
 .d-shadow { --d-shadow-hx: 24%; --d-shadow-hy: 20%; position: relative; width: 100%; height: 320px;
-  overflow: hidden; outline: none; background: #e7e2d7; color: #171718; touch-action: none; }
-.d-shadow:focus-visible { box-shadow: inset 0 0 0 2px #ff583d; }
+  overflow: hidden; outline: none; background: #0a0a0b; color: #ececef; touch-action: none; }
+.d-shadow:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-shadow::before { content: ''; position: absolute; inset: 0; opacity: .28; pointer-events: none;
-  background-image: linear-gradient(rgba(23,23,24,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(23,23,24,.13) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(236,236,239,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(236,236,239,.13) 1px, transparent 1px);
   background-size: 32px 32px; }
 .d-shadow-stage { position: absolute; left: 50%; top: 50%; width: 220px; height: 148px;
   transform: translate(-50%, -48%); perspective: 700px; }
-.d-shadow-cast { position: absolute; inset: 9px 8px 4px; border-radius: 17px; background: #221d21;
+.d-shadow-cast { position: absolute; inset: 9px 8px 4px; border-radius: 17px; background: #050506;
   transform-origin: 50% 70%; will-change: transform, filter, opacity; pointer-events: none; }
 .d-shadow-contact { position: absolute; left: 13%; right: 13%; bottom: -15px; height: 24px; border-radius: 50%;
-  background: #282126; filter: blur(8px); transform-origin: 50% 50%; will-change: transform, filter, opacity; }
-.d-shadow-object { position: absolute; inset: 0; border-radius: 15px; background: #f9f7ef; border: 1px solid rgba(23,23,24,.16);
+  background: #000000; filter: blur(8px); transform-origin: 50% 50%; will-change: transform, filter, opacity; }
+.d-shadow-object { position: absolute; inset: 0; border-radius: 15px; background: #161619; border: 1px solid rgba(236,236,239,.16);
   overflow: hidden; box-shadow: inset 0 1px rgba(255,255,255,.85); transform-style: preserve-3d; will-change: transform; }
 .d-shadow-art { position: absolute; inset: 0; overflow: hidden; background:
   radial-gradient(circle at var(--d-shadow-hx) var(--d-shadow-hy), rgba(255,255,255,.92) 0, rgba(255,255,255,.28) 18%, transparent 43%),
-  linear-gradient(135deg, #fa765e 0 48%, #d7ff47 48% 100%); }
+  linear-gradient(135deg, #fa7319 0 48%, #2e2e34 48% 100%); }
 .d-shadow-art::before { content: ''; position: absolute; inset: 0; opacity: .32;
-  background: repeating-linear-gradient(90deg, transparent 0 13px, rgba(23,23,24,.16) 13px 14px); }
-.d-shadow-art span { position: absolute; left: 15px; top: 14px; font: 9px "JetBrains Mono", monospace;
+  background: repeating-linear-gradient(90deg, transparent 0 13px, rgba(236,236,239,.16) 13px 14px); }
+.d-shadow-art span { position: absolute; left: 15px; top: 14px; font: 9px "Roboto Mono", monospace;
   letter-spacing: .16em; }
-.d-shadow-art strong { position: absolute; right: 10px; bottom: -13px; font: 800 78px/.9 "Inter", sans-serif;
-  letter-spacing: -.09em; color: #171718; }
+.d-shadow-art strong { position: absolute; right: 10px; bottom: -13px; font: 800 78px/.9 "Roboto", sans-serif;
+  letter-spacing: -.09em; color: #ececef; }
 .d-shadow-art i { position: absolute; left: 28px; bottom: 22px; width: 44px; height: 44px;
-  border: 11px solid #171718; border-radius: 50%; mix-blend-mode: multiply; }
+  border: 11px solid #ececef; border-radius: 50%; mix-blend-mode: normal; }
 .d-shadow-light { position: absolute; left: 0; top: 0; width: 42px; height: 42px; margin: -21px 0 0 -21px;
-  border: 1px solid rgba(23,23,24,.5); border-radius: 50%; pointer-events: none; will-change: transform; }
+  border: 1px solid rgba(236,236,239,.5); border-radius: 50%; pointer-events: none; will-change: transform; }
 .d-shadow-light::before, .d-shadow-light::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(23,23,24,.42); transform: translate(-50%, -50%); }
+  background: rgba(236,236,239,.42); transform: translate(-50%, -50%); }
 .d-shadow-light::before { width: 58px; height: 1px; }.d-shadow-light::after { width: 1px; height: 58px; }
-.d-shadow-light i { position: absolute; inset: 8px; border-radius: 50%; background: #fff8b5;
-  border: 1px solid rgba(23,23,24,.34); box-shadow: 0 0 0 5px rgba(255,248,181,.28), 0 0 25px rgba(255,102,62,.42); }
-.d-shadow-kicker { position: absolute; left: 18px; top: 17px; font: 9px "JetBrains Mono", monospace;
-  letter-spacing: .14em; color: rgba(23,23,24,.58); }
+.d-shadow-light i { position: absolute; inset: 8px; border-radius: 50%; background: #fa7319;
+  border: 1px solid rgba(236,236,239,.34); box-shadow: 0 0 0 5px rgba(250,115,25,.22), 0 0 25px rgba(250,115,25,.3); }
+.d-shadow-kicker { position: absolute; left: 18px; top: 17px; font: 9px "Roboto Mono", monospace;
+  letter-spacing: .14em; color: rgba(236,236,239,.58); }
 .d-shadow-meter { position: absolute; right: 18px; top: 15px; display: flex; align-items: baseline; gap: 4px;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .11em; color: rgba(23,23,24,.55); }
-.d-shadow-meter strong { min-width: 26px; font-size: 19px; font-weight: 500; color: #171718; letter-spacing: 0; text-align: right; }
+  font: 9px "Roboto Mono", monospace; letter-spacing: .11em; color: rgba(236,236,239,.55); }
+.d-shadow-meter strong { min-width: 26px; font-size: 19px; font-weight: 500; color: #ececef; letter-spacing: 0; text-align: right; }
 .d-shadow-meter b { font-weight: 400; letter-spacing: .06em; }
-.d-shadow-mode { position: absolute; left: 18px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(23,23,24,.36);
-  border-radius: 999px; background: rgba(249,247,239,.72); color: #171718; font: 10px "JetBrains Mono", monospace;
+.d-shadow-mode { position: absolute; left: 18px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(236,236,239,.36);
+  border-radius: 999px; background: rgba(16,16,18,.82); color: #ececef; font: 10px "Roboto Mono", monospace;
   cursor: pointer; transition: background .18s, color .18s, transform .18s; }
-.d-shadow-mode:hover { background: #171718; color: #f9f7ef; transform: translateY(-2px); }
-.d-shadow-mode:focus-visible { outline: 2px solid #ff583d; outline-offset: 3px; }
+.d-shadow-mode:hover { background: #161619; color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-shadow-mode:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-shadow-status { position: absolute; right: 18px; bottom: 19px; max-width: 48%; margin: 0; text-align: right;
-  color: rgba(23,23,24,.58); font: 9px "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
-.d-shadow.d-shadow-hard .d-shadow-light i { background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.38), 0 0 13px rgba(255,88,61,.42); }
+  color: rgba(236,236,239,.58); font: 9px "Roboto Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+.d-shadow.d-shadow-hard .d-shadow-light i { background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.38), 0 0 13px rgba(250,115,25,.34); }
 @media (max-width: 620px) { .d-shadow-stage { width: 190px; height: 128px; }.d-shadow-status { max-width: 42%; } }
 @media (prefers-reduced-motion: reduce) {
   .d-shadow-cast, .d-shadow-contact, .d-shadow-object, .d-shadow-light { will-change: auto; }
@@ -3491,6 +3482,7 @@ root.addEventListener('keydown', function (event) {
 });
 
 function frameLoop() {
+  if (!root.isConnected) return;
   if (reduced) { current.x = target.x; current.y = target.y; }
   else { current.x += (target.x - current.x) * 0.14; current.y += (target.y - current.y) * 0.14; }
   const fromLightX = center.x - current.x, fromLightY = center.y - current.y;
@@ -3515,7 +3507,7 @@ function frameLoop() {
 }
 requestAnimationFrame(frameLoop);`,
   prompt: `
-Build a self-contained cast-shadow study around a fixed 220 by 148 pixel object and an independently moving light marker. Measure the root and the untransformed stage on startup and resize. Convert pointer coordinates into the root's local space and clamp the light 24px from horizontal edges and above the bottom controls. Pointerleave returns it to a northwest home position; Arrow keys move it 18px, Shift+Arrow 34px, Home resets it, and Space or a semantic aria-pressed button toggles soft and hard light.
+Build a self-contained cast-shadow study around a fixed 220 by 148 pixel object and an independently moving light marker. Place it on a bare near-black root, using grayscale material and one #fa7319 graphic plane. Measure the root and the untransformed stage on startup and resize. Convert pointer coordinates into the root's local space and clamp the light 24px from horizontal edges and above the bottom controls. Pointerleave returns it to a northwest home position; Arrow keys move it 18px, Shift+Arrow 34px, Home resets it, and Space or a semantic aria-pressed button toggles soft and hard light.
 
 Derive the shadow from the vector pointing away from the light: fromLight=center-light, distance=hypot(dx,dy), reach=min(55,base+distance*rate), shadowX=dx/distance*reach, and shadowY=dy/distance*reach plus a small downward bias. Soft mode uses base 13, rate .085, 13-24px distance-dependent blur and lower opacity. Hard mode uses base 16, rate .11, 3-9px blur and stronger opacity. Apply the cast shadow as translate plus restrained inverse-axis scale, and render a separate ground contact shadow with smaller translation, compressed Y scale, dedicated blur, and opacity.
 
@@ -3836,18 +3828,36 @@ INTRX.register({
 }
 .d-tilt-glare {
   position: absolute; inset: -60%;
-  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(200,255,46,0.16) 0%, transparent 45%);
+  background: radial-gradient(circle at var(--gx, 50%) var(--gy, 50%), rgba(250,115,25,0.16) 0%, transparent 45%);
   pointer-events: none;
 }
 .d-tilt-content { position: relative; padding: 24px; transform: translateZ(40px); }
-.d-tilt-tag { font-family: "JetBrains Mono", monospace; font-size: 10px; color: #c8ff2e; letter-spacing: 0.2em; }
+.d-tilt-tag { font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 10px; color: #fa7319; letter-spacing: 0.2em; }
 .d-tilt-content h3 { color: #ececef; font-size: 24px; line-height: 1.15; margin: 10px 0 8px; }
-.d-tilt-content p { color: #5c5c66; font-family: "JetBrains Mono", monospace; font-size: 11px; }`,
+.d-tilt-content p { color: #5c5c66; font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 11px; }
+.d-tilt.d-tilt-idle .d-tilt-card { animation: d-tilt-idle 4.8s ease-in-out infinite; }
+@keyframes d-tilt-idle { 0%, 100% { transform: rotateX(-1.5deg) rotateY(-2.5deg); } 50% { transform: rotateX(2deg) rotateY(3deg); } }
+@media (prefers-reduced-motion: reduce) { .d-tilt.d-tilt-idle .d-tilt-card { animation: none; } }`,
   js: `
 const card = root.querySelector('.d-tilt-card');
 const MAX = 10; // degrees
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(pointer: coarse)').matches;
+let idle = !reduced;
 
-card.addEventListener('mousemove', function (e) {
+function stopIdle() {
+  if (!idle) return;
+  idle = false;
+  root.classList.remove('d-tilt-idle');
+}
+
+if (!reduced) {
+  root.classList.add('d-tilt-idle');
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
+
+card.addEventListener('pointermove', function (e) {
+  stopIdle();
   const b = card.getBoundingClientRect();
   const px = (e.clientX - b.left) / b.width;    // 0 .. 1
   const py = (e.clientY - b.top) / b.height;
@@ -3869,6 +3879,7 @@ Requirements:
 - On mousemove, normalize the cursor position over the card (0..1) and map to rotateX/rotateY, max ±10deg, so the card tilts toward the cursor.
 - A glare layer (radial-gradient, pointer-events: none) follows the cursor via --gx/--gy custom properties.
 - Inner content sits at translateZ(40px) so it visually floats above the card surface.
+- Before the first interaction, run a slow autonomous tilt sway; stop it permanently on pointer movement, pointerdown, or keydown.
 - transition: transform 0.15s ease-out on the card smooths the motion; on mouseleave everything resets to 0.
-- Disable on touch devices.`,
+- Disable the idle sway on touch devices and under prefers-reduced-motion.`,
 });

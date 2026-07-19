@@ -38,39 +38,39 @@ INTRX.register({
 .d-skeuo-vinyl-player-card *{box-sizing:border-box}
 .d-skeuo-vinyl-player-card-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-skeuo-vinyl-player-card-state{display:flex;align-items:center;gap:5px;color:#9b9ba3}
-.d-skeuo-vinyl-player-card-state i{width:5px;height:5px;border-radius:50%;background:#a78bfa;box-shadow:0 0 7px rgba(167,139,250,.45)}
+.d-skeuo-vinyl-player-card-state i{width:5px;height:5px;border-radius:50%;background:#fa7319;box-shadow:0 0 7px rgba(250,115,25,.45)}
 .d-skeuo-vinyl-player-card-player{position:absolute;top:38px;right:12px;bottom:25px;left:12px;display:grid;grid-template-columns:3fr 2fr;overflow:hidden;border:1px solid #232327;border-radius:10px;background:linear-gradient(135deg,rgba(255,255,255,.018),transparent 35%),#101012;box-shadow:inset 0 1px rgba(255,255,255,.025)}
-.d-skeuo-vinyl-player-card-deck{position:relative;min-width:0;overflow:hidden;border-right:1px solid #232327;background:radial-gradient(circle at 46% 53%,rgba(167,139,250,.055),transparent 46%)}
+.d-skeuo-vinyl-player-card-deck{position:relative;min-width:0;overflow:hidden;border-right:1px solid #232327;background:radial-gradient(circle at 46% 53%,rgba(250,115,25,.055),transparent 46%)}
 .d-skeuo-vinyl-player-card-platter{position:absolute;top:50%;left:49%;width:160px;height:160px;transform:translate(-50%,-50%)}
 .d-skeuo-vinyl-player-card-platter::before{position:absolute;inset:3px;border:1px solid #232327;border-radius:50%;background:#0d0d0f;box-shadow:0 7px 12px rgba(0,0,0,.35),inset 0 0 0 3px #151518;content:''}
 .d-skeuo-vinyl-player-card-record{position:absolute;top:5px;left:5px;width:150px;height:150px;border:1px solid #202024;border-radius:50%;outline:none;background:radial-gradient(circle at 42% 38%,#19191c,#0b0b0d 58%,#070708 100%);box-shadow:inset 0 0 11px #000,0 2px 6px rgba(0,0,0,.55);cursor:grab;touch-action:none;transform:rotate(var(--d-skeuo-vinyl-player-card-record-angle));will-change:transform}
 .d-skeuo-vinyl-player-card-record::before{position:absolute;inset:3px;border-radius:50%;background:repeating-radial-gradient(circle,rgba(255,255,255,.034) 0 1px,transparent 1px 4px,rgba(0,0,0,.42) 4px 5px,transparent 5px 8px);filter:blur(var(--d-skeuo-vinyl-player-card-groove-blur));content:''}
 .d-skeuo-vinyl-player-card-record::after{position:absolute;top:16px;left:30px;width:50px;height:9px;border-radius:50%;background:rgba(255,255,255,.035);filter:blur(5px);transform:rotate(-28deg);content:''}
 .d-skeuo-vinyl-player-card-record:active{cursor:grabbing}
-.d-skeuo-vinyl-player-card-record:focus-visible{box-shadow:0 0 0 2px #101012,0 0 0 4px #a78bfa,inset 0 0 11px #000}
-.d-skeuo-vinyl-player-card-label{position:absolute;z-index:2;top:50%;left:50%;width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;color:#141416;background:#a78bfa;box-shadow:0 0 0 1px #c4a7ff;transform:translate(-50%,-50%) rotate(var(--d-skeuo-vinyl-player-card-counter-angle));pointer-events:none;will-change:transform}
+.d-skeuo-vinyl-player-card-record:focus-visible{box-shadow:0 0 0 2px #101012,0 0 0 4px #fa7319,inset 0 0 11px #000}
+.d-skeuo-vinyl-player-card-label{position:absolute;z-index:2;top:50%;left:50%;width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;color:#141416;background:#fa7319;box-shadow:0 0 0 1px #c4a7ff;transform:translate(-50%,-50%) rotate(var(--d-skeuo-vinyl-player-card-counter-angle));pointer-events:none;will-change:transform}
 .d-skeuo-vinyl-player-card-label span{font-size:7px;font-weight:800;line-height:1;letter-spacing:.08em}
 .d-skeuo-vinyl-player-card-label b{margin-top:4px;font-size:5px;line-height:1;letter-spacing:.05em}
 .d-skeuo-vinyl-player-card-label i{position:absolute;top:50%;left:50%;width:2px;height:2px;margin:-1px;border-radius:50%;background:#ececef;box-shadow:0 0 0 1px rgba(0,0,0,.3)}
 .d-skeuo-vinyl-player-card-progress{position:absolute;z-index:3;inset:0;width:160px;height:160px;overflow:visible;pointer-events:none;transform:rotate(-90deg)}
-.d-skeuo-vinyl-player-card-progress circle{fill:none;stroke:#a78bfa;stroke-width:1.25;stroke-linecap:round;stroke-dasharray:471.24;stroke-dashoffset:386.42;opacity:.32}
+.d-skeuo-vinyl-player-card-progress circle{fill:none;stroke:#fa7319;stroke-width:1.25;stroke-linecap:round;stroke-dasharray:471.24;stroke-dashoffset:386.42;opacity:.32}
 .d-skeuo-vinyl-player-card-tonearm{position:absolute;z-index:4;top:28px;left:calc(49% + 54px);width:16px;height:84px;transform:rotate(var(--d-skeuo-vinyl-player-card-tonearm-angle));transform-origin:8px 8px;will-change:transform;pointer-events:none}
 .d-skeuo-vinyl-player-card-tonearm i{position:absolute;top:0;left:0;width:16px;height:13px;border:1px solid #33333a;border-radius:5px;background:#19191c;box-shadow:0 2px 3px rgba(0,0,0,.35)}
 .d-skeuo-vinyl-player-card-tonearm span{position:absolute;top:8px;left:7px;width:2px;height:70px;border-radius:2px;background:linear-gradient(90deg,#707078,#c6c6cc 55%,#55555c);box-shadow:1px 1px 2px rgba(0,0,0,.25)}
-.d-skeuo-vinyl-player-card-tonearm b{position:absolute;top:72px;left:4px;width:8px;height:12px;border-radius:2px;background:#a78bfa;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.d-skeuo-vinyl-player-card-tonearm b{position:absolute;top:72px;left:4px;width:8px;height:12px;border-radius:2px;background:#fa7319;box-shadow:0 1px 2px rgba(0,0,0,.4)}
 .d-skeuo-vinyl-player-card-info{min-width:0;padding:24px 13px 15px;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(255,255,255,.018),transparent)}
-.d-skeuo-vinyl-player-card-kicker{color:#a78bfa;font-size:7px;line-height:1;letter-spacing:.1em}
-.d-skeuo-vinyl-player-card-info h3{margin:12px 0 0;color:#ececef;font-family:Inter,system-ui,sans-serif;font-size:clamp(15px,5cqw,21px);font-weight:650;line-height:.9;letter-spacing:-.04em}
+.d-skeuo-vinyl-player-card-kicker{color:#fa7319;font-size:7px;line-height:1;letter-spacing:.1em}
+.d-skeuo-vinyl-player-card-info h3{margin:12px 0 0;color:#ececef;font-family:Roboto Mono,JetBrains Mono,monospace;font-size:clamp(15px,5cqw,21px);font-weight:650;line-height:.9;letter-spacing:-.04em}
 .d-skeuo-vinyl-player-card-info p{margin:8px 0 0;color:#5c5c66;font-size:7px;line-height:1.3}
 .d-skeuo-vinyl-player-card-time{display:flex;align-items:baseline;gap:4px;margin-top:auto;font-variant-numeric:tabular-nums}
 .d-skeuo-vinyl-player-card-time strong{color:#ececef;font-size:13px;line-height:1}
 .d-skeuo-vinyl-player-card-time span{color:#5c5c66;font-size:7px}
 .d-skeuo-vinyl-player-card-controls{display:flex;gap:6px;margin-top:11px}
 .d-skeuo-vinyl-player-card-controls button{height:32px;border:1px solid #33333a;border-radius:5px;outline:none;color:#9b9ba3;background:#161619;font-family:inherit;font-size:7px;font-weight:700;letter-spacing:.06em;cursor:pointer}
-.d-skeuo-vinyl-player-card-controls button:hover,.d-skeuo-vinyl-player-card-controls button:focus-visible{border-color:#a78bfa;color:#ececef}
+.d-skeuo-vinyl-player-card-controls button:hover,.d-skeuo-vinyl-player-card-controls button:focus-visible{border-color:#fa7319;color:#ececef}
 .d-skeuo-vinyl-player-card-play{min-width:55px;display:flex;align-items:center;justify-content:center;gap:5px}
-.d-skeuo-vinyl-player-card-play i{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid #a78bfa}
-.d-skeuo-vinyl-player-card-play[aria-pressed="true"] i{width:6px;height:8px;border:0;border-right:2px solid #a78bfa;border-left:2px solid #a78bfa}
+.d-skeuo-vinyl-player-card-play i{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid #fa7319}
+.d-skeuo-vinyl-player-card-play[aria-pressed="true"] i{width:6px;height:8px;border:0;border-right:2px solid #fa7319;border-left:2px solid #fa7319}
 .d-skeuo-vinyl-player-card-rewind{width:35px}
 .d-skeuo-vinyl-player-card-foot{position:absolute;right:16px;bottom:9px;left:16px;display:flex;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.08em}
 .d-skeuo-vinyl-player-card-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}

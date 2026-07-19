@@ -37,13 +37,13 @@ INTRX.register({
 .d-layout-table-image-idle *{box-sizing:border-box}
 .d-layout-table-image-idle-head,.d-layout-table-image-idle-foot{position:absolute;right:14px;left:14px;z-index:4;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.08em;pointer-events:none}
 .d-layout-table-image-idle-head{top:15px}.d-layout-table-image-idle-foot{bottom:10px;font-size:8px}
-.d-layout-table-image-idle-stage{position:absolute;top:38px;right:12px;bottom:27px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:radial-gradient(circle at 82% 18%,rgba(167,139,250,.05),transparent 42%),#0e0e10}
+.d-layout-table-image-idle-stage{position:absolute;top:38px;right:12px;bottom:27px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:radial-gradient(circle at 82% 18%,rgba(250,115,25,.05),transparent 42%),#0e0e10}
 .d-layout-table-image-idle-table{position:absolute;top:25px;right:10px;left:10px;width:calc(100% - 20px);border-spacing:0;border-collapse:separate;color:#c7c7ce;table-layout:fixed}
 .d-layout-table-image-idle-row{position:relative;height:38px;background:#101012;outline:none;transition:background-color .18s ease,transform .18s ease;cursor:default}
 .d-layout-table-image-idle-row td{height:38px;padding:0;border-bottom:1px solid #232327;vertical-align:middle}
 .d-layout-table-image-idle-row:first-child td:first-child{border-top-left-radius:8px}.d-layout-table-image-idle-row:first-child td:last-child{border-top-right-radius:8px}.d-layout-table-image-idle-row:last-child td:first-child{border-bottom-left-radius:8px}.d-layout-table-image-idle-row:last-child td:last-child{border-bottom-right-radius:8px}
 .d-layout-table-image-idle-row:hover,.d-layout-table-image-idle-row:focus,.d-layout-table-image-idle-row.d-layout-table-image-idle-row-active{z-index:2;background:#161619;transform:translateY(-1px)}
-.d-layout-table-image-idle-row:focus-visible{box-shadow:inset 0 0 0 1px rgba(167,139,250,.55)}
+.d-layout-table-image-idle-row:focus-visible{box-shadow:inset 0 0 0 1px rgba(250,115,25,.55)}
 .d-layout-table-image-idle-index{width:29px;padding-left:9px!important;color:#5c5c66;font:500 8px/1 'JetBrains Mono',ui-monospace,monospace}
 .d-layout-table-image-idle-name{overflow:hidden;color:#c7c7ce;font:550 10px/1 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-overflow:ellipsis;white-space:nowrap}
 .d-layout-table-image-idle-tag{display:inline-flex;align-items:center;justify-content:center;min-width:39px;padding:4px 5px;border:1px solid #2e2e34;border-radius:999px;color:#72727c;font:600 6px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.06em}
@@ -54,7 +54,7 @@ INTRX.register({
 .d-layout-table-image-idle-preview-visible .d-layout-table-image-idle-preview-frame{transform:scale(var(--preview-breath,1))}
 .d-layout-table-image-idle-scene{position:absolute;inset:0;overflow:hidden;background:linear-gradient(165deg,var(--sky-a,#34314a),var(--sky-b,#161a23));opacity:0;transition:opacity .2s ease}
 .d-layout-table-image-idle-scene.d-layout-table-image-idle-scene-active{opacity:1}
-.d-layout-table-image-idle-sun{position:absolute;top:14px;left:var(--sun-x,56%);width:19px;height:19px;border-radius:50%;background:radial-gradient(circle,#ececef 0 16%,var(--sun,#a78bfa) 22% 46%,transparent 70%);transform:translateX(-50%);opacity:.86}
+.d-layout-table-image-idle-sun{position:absolute;top:14px;left:var(--sun-x,56%);width:19px;height:19px;border-radius:50%;background:radial-gradient(circle,#ececef 0 16%,var(--sun,#fa7319) 22% 46%,transparent 70%);transform:translateX(-50%);opacity:.86}
 .d-layout-table-image-idle-clouds{position:absolute;top:26px;left:var(--cloud-x,-24px);width:76px;height:12px;opacity:.28;filter:blur(1px)}
 .d-layout-table-image-idle-clouds i{position:absolute;height:4px;border-radius:999px;background:rgba(236,236,239,.72)}.d-layout-table-image-idle-clouds i:nth-child(1){top:1px;left:0;width:32px}.d-layout-table-image-idle-clouds i:nth-child(2){top:5px;left:19px;width:42px}.d-layout-table-image-idle-clouds i:nth-child(3){top:0;left:50px;width:22px}
 .d-layout-table-image-idle-land-far,.d-layout-table-image-idle-land-near{position:absolute;right:-8px;bottom:0;left:-8px;display:block}

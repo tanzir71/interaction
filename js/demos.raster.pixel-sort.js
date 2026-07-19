@@ -79,7 +79,7 @@ function drawSource() {
   source.fillStyle = '#111522'; source.beginPath(); source.arc(columns * .72, rows * .32, rows * .1, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(7,8,14,.7)'; source.beginPath(); source.moveTo(0, rows * .74); source.lineTo(columns * .45, rows * .36);
   source.lineTo(columns * .62, rows); source.lineTo(0, rows); source.closePath(); source.fill();
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('SORT', columns * .04, rows * .95);
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('SORT', columns * .04, rows * .95);
   sourcePixels = source.getImageData(0, 0, columns, rows).data;
 }
 function buildSortMap() {

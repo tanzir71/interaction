@@ -51,7 +51,7 @@ INTRX.register({
   height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 10px;
   background: #101012; border-bottom: 1px solid #232327;
 }
-.d-mac-titlebar em { font-style: normal; font-family: "JetBrains Mono", monospace; font-size: 10px; color: #5c5c66; margin-left: 8px; }
+.d-mac-titlebar em { font-style: normal; font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 10px; color: #5c5c66; margin-left: 8px; }
 .d-mac-dot { width: 11px; height: 11px; border-radius: 50%; cursor: pointer; }
 .d-mac-dot.d-mac-red { background: #ff5f57; }
 .d-mac-dot.d-mac-yellow { background: #febc2e; }
@@ -72,19 +72,38 @@ INTRX.register({
 .d-mac-target { position: relative; cursor: pointer; }
 .d-mac-target::after {
   content: ""; position: absolute; inset: 8px;
-  border: 2px solid #c8ff2e; border-radius: 4px;
+  border: 2px solid #fa7319; border-radius: 4px;
   opacity: 0.35; transition: opacity 0.2s;
 }
 .d-mac-target.d-mac-occupied::after { opacity: 1; }
-.d-mac-target.d-mac-occupied { box-shadow: 0 0 18px rgba(200,255,46,0.25); }`,
+.d-mac-target.d-mac-occupied { box-shadow: 0 0 18px rgba(250,115,25,0.25); }
+.d-mac.d-mac-idle .d-mac-dot { animation: d-mac-idle 3.6s ease-in-out infinite; }
+.d-mac.d-mac-idle .d-mac-yellow { animation-delay: .18s; }
+.d-mac.d-mac-idle .d-mac-green { animation-delay: .36s; }
+@keyframes d-mac-idle { 0%, 18%, 100% { transform: scale(1); opacity: .72; } 9% { transform: scale(1.22); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .d-mac.d-mac-idle .d-mac-dot { animation: none; } }`,
   js: `
 const win = root.querySelector('.d-mac-window');
 const target = root.querySelector('.d-mac-target');
 const yellow = root.querySelector('.d-mac-dot.d-mac-yellow');
 let minimized = false;
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let idle = !reduced;
+
+function stopIdle() {
+  if (!idle) return;
+  idle = false;
+  root.classList.remove('d-mac-idle');
+}
+if (!reduced) {
+  root.classList.add('d-mac-idle');
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 // FLIP: measure both boxes, transform the window into the dock item
 function toDock() {
+  stopIdle();
   const w = win.getBoundingClientRect();
   const t = target.getBoundingClientRect();
   const dx = (t.left + t.width / 2) - (w.left + w.width / 2);
@@ -98,6 +117,7 @@ function toDock() {
 }
 
 function fromDock() {
+  stopIdle();
   win.classList.add('d-mac-animating');
   win.classList.remove('d-mac-min');
   win.style.transform = 'translate(0, 0) scale(1)';
@@ -120,6 +140,8 @@ Requirements:
 - Maximize: reset transform to translate(0,0) scale(1) and opacity 1 with the same curve.
 - transform-origin: center; the window keeps pointer-events: none while minimized; the dock item shows an "occupied" indicator.
 - Because positions are measured at click time, it must work responsively at any layout.
+- Before interaction, let the semantic traffic lights breathe subtly; stop that teaser permanently on first pointer or keyboard interaction and disable it for reduced motion.
+- Keep the window chrome grayscale, retaining red/amber/green only for the semantic traffic lights and the site accent for the active dock target.
 - Bonus: for a genie-style bend, note that it requires rendering the window to a canvas/WebGL mesh and warping vertices — offer scale as the practical default.`,
 });
 

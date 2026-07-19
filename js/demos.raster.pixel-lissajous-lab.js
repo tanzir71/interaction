@@ -28,7 +28,7 @@ INTRX.register({
 .d-raster-pixel-lissajous-lab-head{position:absolute;z-index:2;top:13px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em;white-space:nowrap}
 .d-raster-pixel-lissajous-lab-head span:first-child{color:#9b9ba3}
 .d-raster-pixel-lissajous-lab-stage{position:absolute;inset:32px 8px 91px;display:grid;place-items:center;box-sizing:border-box;overflow:hidden;border:1px solid #232327;border-radius:8px;background:#0a0a0b;outline:none;cursor:default}
-.d-raster-pixel-lissajous-lab-stage:focus-visible{box-shadow:inset 0 0 0 1px #a78bfa}
+.d-raster-pixel-lissajous-lab-stage:focus-visible{box-shadow:inset 0 0 0 1px #fa7319}
 .d-raster-pixel-lissajous-lab-stage::before,.d-raster-pixel-lissajous-lab-stage::after{content:'';position:absolute;z-index:0;pointer-events:none;background:#232327;opacity:.34}
 .d-raster-pixel-lissajous-lab-stage::before{left:50%;top:0;bottom:0;width:1px}
 .d-raster-pixel-lissajous-lab-stage::after{left:0;right:0;top:50%;height:1px}
@@ -37,12 +37,12 @@ INTRX.register({
 .d-raster-pixel-lissajous-lab-control{display:grid;grid-template-columns:10px minmax(0,1fr);align-items:center;gap:7px;min-width:0;color:#9b9ba3;font-size:10px;line-height:1}
 .d-raster-pixel-lissajous-lab-slider{width:100%;height:16px;margin:0;padding:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;touch-action:pan-y}
 .d-raster-pixel-lissajous-lab-slider:focus{outline:none}
-.d-raster-pixel-lissajous-lab-slider:focus-visible{filter:drop-shadow(0 0 3px rgba(167,139,250,.65))}
+.d-raster-pixel-lissajous-lab-slider:focus-visible{filter:drop-shadow(0 0 3px rgba(250,115,25,.65))}
 .d-raster-pixel-lissajous-lab-slider::-webkit-slider-runnable-track{height:1px;background:#232327;border:0}
-.d-raster-pixel-lissajous-lab-slider::-webkit-slider-thumb{width:12px;height:12px;margin-top:-5.5px;border:0;border-radius:0;background:#a78bfa;appearance:none;-webkit-appearance:none}
+.d-raster-pixel-lissajous-lab-slider::-webkit-slider-thumb{width:12px;height:12px;margin-top:-5.5px;border:0;border-radius:0;background:#fa7319;appearance:none;-webkit-appearance:none}
 .d-raster-pixel-lissajous-lab-slider::-moz-range-track{height:1px;background:#232327;border:0}
 .d-raster-pixel-lissajous-lab-slider::-moz-range-progress{height:1px;background:#232327}
-.d-raster-pixel-lissajous-lab-slider::-moz-range-thumb{width:12px;height:12px;border:0;border-radius:0;background:#a78bfa}
+.d-raster-pixel-lissajous-lab-slider::-moz-range-thumb{width:12px;height:12px;border:0;border-radius:0;background:#fa7319}
 .d-raster-pixel-lissajous-lab-readout{min-width:108px;color:#5c5c66;font:10px/1 'JetBrains Mono',monospace;text-align:right;white-space:nowrap}
 .d-raster-pixel-lissajous-lab-foot{position:absolute;left:16px;right:16px;bottom:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.035em;white-space:nowrap}
 .d-raster-pixel-lissajous-lab-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -53,7 +53,7 @@ INTRX.register({
 if(!context)throw new Error('Pixel Lissajous canvas unavailable');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
 const logicalWidth=360,logicalHeight=196,gridSize=4,gridColumns=logicalWidth/gridSize,gridRows=logicalHeight/gridSize,sampleCount=600,headIndex=599,recentStart=499,recentCount=100,txt1Start=350,txt1Count=149,txt2Start=200,txt2Count=150,goneCount=200,initialPhi=1.72,phiStep=.008,tweenDuration=800,tweenBezier=[.65,0,.35,1],persistenceFactor=.96,fadeAlpha=.04,defaultA=3,defaultB=4,frequencyMin=1,frequencyMax=9,frequencyStep=1,centerX=180,centerY=98,xAmplitude=152,yAmplitude=76,maxDelta=50;
-const colors={background:'#0a0a0b',line0:'#232327',txt1:'#9b9ba3',txt2:'#5c5c66',acc:'#a78bfa',head:'#ffffff'};
+const colors={background:'#0a0a0b',line0:'#232327',txt1:'#9b9ba3',txt2:'#5c5c66',acc:'#fa7319',head:'#ffffff'};
 const parameters=Array.from({length:sampleCount},function(_,index){return{index:index,t:index/headIndex*Math.PI*2,age:headIndex-index,tone:index<headIndex?(index<txt2Start?'gone':index<txt1Start?'txt2':index<recentStart?'txt1':'recent'):'head'}});
 function checksumText(value){let hash=2166136261;for(const character of String(value))hash=Math.imul(hash^character.charCodeAt(0),16777619)>>>0;return hash.toString(16).padStart(8,'0')}
 const fixtureChecksum=checksumText(parameters.map(function(item){return[item.index,item.t.toFixed(9),item.age,item.tone].join(',')}).join('|'));
@@ -94,11 +94,11 @@ sizeCanvas('initial',false);if(reduced){visible=true;status.textContent='Static 
   prompt:`
 Build a self-contained chunky pixel Lissajous laboratory in a 320px-tall responsive card. Use a fixed 360×196 logical canvas with a DPR backing capped at 2, image smoothing disabled, and a strict 4px grid. Every visible curve mark must be an actual axis-aligned fillRect(x, y, 4, 4) whose x and y origins are integer multiples of 4; do not stroke paths, draw circles, or rely on anti-aliasing.
 
-Reconstruct exactly 600 samples indexed 0–599 with t = index / 599 × 2π. For each sample use x = sin(currentA × t + phi) and y = sin(currentB × t), logicalX = 180 + 152x, logicalY = 98 + 76y, pixelX = clamp(round((logicalX − 2) / 4) × 4, 0, 356), and pixelY = clamp(round((logicalY − 2) / 4) × 4, 0, 192). Draw ascending by index so newer marks win at collisions. Make the age partition explicit and invariant: samples 0–199 are gone and calculated but not drawn; 200–349 are 150 txt2 pixels in #5c5c66; 350–498 are 149 txt1 pixels in #9b9ba3; 499–598 are exactly 100 recent acc pixels in #a78bfa; and sample 599 is the single head pixel in #ffffff. Thus all 600 samples remain reconstructable and exactly 400 are drawn per frame.
+Reconstruct exactly 600 samples indexed 0–599 with t = index / 599 × 2π. For each sample use x = sin(currentA × t + phi) and y = sin(currentB × t), logicalX = 180 + 152x, logicalY = 98 + 76y, pixelX = clamp(round((logicalX − 2) / 4) × 4, 0, 356), and pixelY = clamp(round((logicalY − 2) / 4) × 4, 0, 192). Draw ascending by index so newer marks win at collisions. Make the age partition explicit and invariant: samples 0–199 are gone and calculated but not drawn; 200–349 are 150 txt2 pixels in #5c5c66; 350–498 are 149 txt1 pixels in #9b9ba3; 499–598 are exactly 100 recent acc pixels in #fa7319; and sample 599 is the single head pixel in #ffffff. Thus all 600 samples remain reconstructable and exactly 400 are drawn per frame.
 
 Keep the canvas persistent. Before every active animation draw, fill the whole canvas with bg0 #0a0a0b at global alpha 0.04, multiplying the retained signal by exactly 0.96 toward bg0, then draw the current 400 visible 4×4 marks. Use an opaque bg0 full clear only for initial sizing, resize reconstruction, deterministic reset, and reduced-motion state changes. Start phi at exactly 1.72 so the initial readout is exactly a:3 b:4 φ:1.72; on every active requestAnimationFrame increment an integer frameCount once and set the unbounded phase to phi = 1.72 + frameCount × 0.008. Hidden or offscreen time must not advance phi.
 
-Add two real range inputs a and b, each min 1, max 9, step 1, initially 3 and 4. Style each track as a 1px line0 #232327 line and each thumb as a square 12px acc #a78bfa block. Preserve native pointer and keyboard range semantics including arrows, Page Up/Down, Home, and End. Show the target integers and live phase in a 10px txt2 #5c5c66 output with the exact format a:3 b:4 φ:1.72. R on the stage or either slider performs deterministic reset.
+Add two real range inputs a and b, each min 1, max 9, step 1, initially 3 and 4. Style each track as a 1px line0 #232327 line and each thumb as a square 12px acc #fa7319 block. Preserve native pointer and keyboard range semantics including arrows, Page Up/Down, Home, and End. Show the target integers and live phase in a 10px txt2 #5c5c66 output with the exact format a:3 b:4 φ:1.72. R on the stage or either slider performs deterministic reset.
 
 In normal motion, a slider change must never jump the curve. Capture the current interpolated a and b floats as tweenStartA and tweenStartB, set the new integer targets, and interpolate both over exactly 800ms using cubic-bezier(0.65, 0, 0.35, 1). Solve the bezier x coordinate for linear elapsed progress before evaluating y; retargeting an in-flight morph must begin at the current floats with zero discontinuity. Cap scheduler delta at 50ms. Under prefers-reduced-motion, create no animation loop, keep a true static 600-sample curve, and apply integer slider state instantly with an opaque reconstruction.
 

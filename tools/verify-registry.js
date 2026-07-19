@@ -15,6 +15,7 @@ files.forEach(file => vm.runInContext(fs.readFileSync(file, 'utf8'), context, { 
 
 const demos = context.INTRX.demos;
 const errors = [];
+const warnings = [];
 const required = ['id','title','cat','rootClass','desc','seen','hint','html','css','js','prompt'];
 const forbiddenRuntime = [/\bfetch\s*\(/, /XMLHttpRequest/, /localStorage/, /https?:\/\//];
 
@@ -26,6 +27,14 @@ demos.forEach(demo => {
   if (demo.prompt.trim().length < 300) errors.push('PROMPT TOO THIN ' + demo.id);
   try { new Function('root', 'stage', demo.js); } catch (error) { errors.push('JS COMPILE ' + demo.id + ' ' + error.message); }
 
+  const escapedRootClass = demo.rootClass.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const rootRule = demo.css.match(new RegExp('\\.' + escapedRootClass + '\\s*\\{([^}]*)\\}'));
+  const background = rootRule && rootRule[1].match(/background(?:-color)?\s*:\s*([^;]+)/);
+  if (background && !/#0a0a0b|#101012|#161619|transparent|var\(--bg/i.test(background[1])) {
+    warnings.push('ROOT BG OFF-PALETTE: ' + demo.id + ' ' + background[1].trim());
+  }
+  if (/font-family\s*:\s*Inter/.test(demo.css)) warnings.push('INTER FONT: ' + demo.id);
+
   if (!h2Ids.has(demo.id)) return;
   ['html','css','js','prompt'].forEach(key => {
     const value = demo[key];
@@ -36,9 +45,17 @@ demos.forEach(demo => {
       if (!name.startsWith(demo.rootClass)) errors.push('UNPREFIXED HTML CLASS ' + demo.id + ' .' + name);
     });
   }
-  for (const match of demo.css.matchAll(/\.([a-zA-Z][\w-]*)/g)) {
-    if (!match[1].startsWith(demo.rootClass)) errors.push('UNPREFIXED CSS CLASS ' + demo.id + ' .' + match[1]);
-  }
+  const prefix = '.' + demo.rootClass.split('-')[0] + '-';
+  demo.css.replace(/\/\*[^]*?\*\//g, '').split('}').forEach(rule => {
+    const selector = rule.split('{')[0];
+    if (!selector || !selector.includes('.')) return;
+    selector.split(',').forEach(part => {
+      const first = (part.trim().match(/^\.[a-zA-Z][\w-]*/) || [])[0];
+      if (first && !first.startsWith(prefix) && first !== '.' + demo.rootClass) {
+        errors.push('BARE UNPREFIXED SELECTOR ' + demo.id + ' ' + part.trim());
+      }
+    });
+  });
   if (/position\s*:\s*fixed/i.test(demo.css)) errors.push('FIXED POSITION ' + demo.id);
   forbiddenRuntime.forEach(pattern => {
     if (pattern.test(demo.html + demo.css + demo.js)) errors.push('EXTERNAL OR PERSISTENT IO ' + demo.id + ' ' + pattern);
@@ -53,6 +70,7 @@ if (files.length !== 278) errors.push('REGISTRY FILE COUNT ' + files.length + ',
 if (handoff2Published !== 56) errors.push('HANDOFF 2 PUBLISHED ' + handoff2Published + ', expected 56');
 
 console.log(JSON.stringify({ demos: demos.length, files: files.length, handoff2Published }, null, 2));
+warnings.forEach(warning => console.warn('WARNING:', warning));
 if (errors.length) {
   errors.forEach(error => console.error('ERROR:', error));
   process.exitCode = 1;

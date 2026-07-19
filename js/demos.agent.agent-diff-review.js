@@ -35,34 +35,34 @@ INTRX.register({
   <span class="d-agent-agent-diff-review-status" aria-live="polite" aria-atomic="true">Edit proposal streaming</span>
 </div>`,
   css:`
-.d-agent-agent-diff-review{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
+.d-agent-agent-diff-review{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;isolation:isolate}
 .d-agent-agent-diff-review *{box-sizing:border-box}
 .d-agent-agent-diff-review-kicker{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
-.d-agent-agent-diff-review-mode{color:#a78bfa}
+.d-agent-agent-diff-review-mode{color:#fa7319}
 .d-agent-agent-diff-review-card{position:absolute;top:38px;right:12px;bottom:14px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:#101012;transition:border-color .2s ease,box-shadow .2s ease}
 .d-agent-agent-diff-review-header{height:43px;padding:0 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #232327;background:#161619}
 .d-agent-agent-diff-review-file{min-width:0;display:flex;align-items:center;gap:8px}
-.d-agent-agent-diff-review-file i{display:grid;width:22px;height:22px;place-items:center;border-radius:5px;background:rgba(167,139,250,.12);color:#a78bfa;font-family:inherit;font-size:8px;font-style:normal;font-weight:700;line-height:1;letter-spacing:.04em}
+.d-agent-agent-diff-review-file i{display:grid;width:22px;height:22px;place-items:center;border-radius:5px;background:rgba(250,115,25,.12);color:#fa7319;font-family:inherit;font-size:8px;font-style:normal;font-weight:700;line-height:1;letter-spacing:.04em}
 .d-agent-agent-diff-review-file strong{overflow:hidden;color:#c7c7ce;font-size:11px;font-weight:600;line-height:1;white-space:nowrap;text-overflow:ellipsis}
 .d-agent-agent-diff-review-chips{display:flex;gap:5px;transition:opacity .2s ease}
 .d-agent-agent-diff-review-chips span{height:19px;padding:0 6px;display:flex;align-items:center;border-radius:10px;font-size:9px;font-weight:700;line-height:1}
-.d-agent-agent-diff-review-chips span:first-child{color:#4ade80;background:rgba(74,222,128,.15)}
-.d-agent-agent-diff-review-chips span:last-child{color:#f87171;background:rgba(248,113,113,.15)}
+.d-agent-agent-diff-review-chips span:first-child{color:#fa7319;background:rgba(250,115,25,.12)}
+.d-agent-agent-diff-review-chips span:last-child{color:#9b9ba3;background:#232327}
 .d-agent-agent-diff-review-body{height:183px;padding:7px 0;overflow:hidden;background:#0d0d0f}
 .d-agent-agent-diff-review-line{height:21px;padding:0 9px;display:grid;grid-template-columns:20px 10px minmax(0,1fr);align-items:center;overflow:hidden;opacity:0;color:#5c5c66;font-size:9px;line-height:21px;transition:height .3s ease,opacity .2s ease,transform .22s ease,background-color .5s ease,color .5s ease,text-decoration-color .3s ease;transition-delay:0ms}
 .d-agent-agent-diff-review-line code{overflow:hidden;color:inherit;font-family:inherit;font-size:9px;font-weight:500;line-height:21px;white-space:pre;text-overflow:clip}
 .d-agent-agent-diff-review-gutter{color:#3f3f46;text-align:right;font-variant-numeric:tabular-nums;transition:opacity .3s ease}
 .d-agent-agent-diff-review-marker{font-weight:700;text-align:center;transition:opacity .3s ease}
 .d-agent-agent-diff-review-context{transform:translateY(3px)}
-.d-agent-agent-diff-review-removed{color:#f87171;background:rgba(248,113,113,.08);text-decoration-line:line-through;text-decoration-color:rgba(248,113,113,.7);transform:translateY(3px)}
-.d-agent-agent-diff-review-added{color:#4ade80;background:rgba(74,222,128,.08);transform:translateX(-12px)}
+.d-agent-agent-diff-review-removed{color:#9b9ba3;background:#161619;text-decoration-line:line-through;text-decoration-color:#5c5c66;transform:translateY(3px)}
+.d-agent-agent-diff-review-added{color:#fa7319;background:rgba(250,115,25,.06);transform:translateX(-12px)}
 .d-agent-agent-diff-review-line.d-agent-agent-diff-review-line-visible{opacity:1;transform:none}
 .d-agent-agent-diff-review-actions{height:40px;padding:7px 10px;display:flex;justify-content:flex-end;gap:7px;border-top:1px solid #232327;background:#101012}
 .d-agent-agent-diff-review-actions button{height:26px;padding:0 11px;border-radius:6px;font-family:inherit;font-size:9px;font-weight:700;line-height:1;letter-spacing:.06em;cursor:pointer;outline:none;transition:opacity .2s ease,border-color .2s ease,background-color .2s ease}
-.d-agent-agent-diff-review-accept{border:1px solid rgba(74,222,128,.45);color:#bbf7d0;background:rgba(74,222,128,.15)}
+.d-agent-agent-diff-review-accept{border:1px solid rgba(250,115,25,.45);color:#fa7319;background:rgba(250,115,25,.10)}
 .d-agent-agent-diff-review-reject{border:1px solid #2e2e34;color:#9b9ba3;background:transparent}
-.d-agent-agent-diff-review-actions button:hover:not(:disabled){border-color:#a78bfa;color:#ececef}
-.d-agent-agent-diff-review-actions button:focus-visible{box-shadow:0 0 0 2px #0a0a0b,0 0 0 3px #a78bfa}
+.d-agent-agent-diff-review-actions button:hover:not(:disabled){border-color:#fa7319;color:#ececef}
+.d-agent-agent-diff-review-actions button:focus-visible{box-shadow:0 0 0 2px #0a0a0b,0 0 0 3px #fa7319}
 .d-agent-agent-diff-review-actions button:disabled{opacity:.36;cursor:default}
 .d-agent-agent-diff-review-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 .d-agent-agent-diff-review.d-agent-agent-diff-review-accepted .d-agent-agent-diff-review-removed,.d-agent-agent-diff-review.d-agent-agent-diff-review-rejected .d-agent-agent-diff-review-added{height:0;opacity:0;transition-delay:calc(var(--decision-order) * 55ms)}
@@ -70,8 +70,8 @@ INTRX.register({
 .d-agent-agent-diff-review.d-agent-agent-diff-review-rejected .d-agent-agent-diff-review-removed{text-decoration-line:none}
 .d-agent-agent-diff-review.d-agent-agent-diff-review-accepted .d-agent-agent-diff-review-marker,.d-agent-agent-diff-review.d-agent-agent-diff-review-rejected .d-agent-agent-diff-review-marker{opacity:0}
 .d-agent-agent-diff-review.d-agent-agent-diff-review-accepted .d-agent-agent-diff-review-chips,.d-agent-agent-diff-review.d-agent-agent-diff-review-rejected .d-agent-agent-diff-review-chips{opacity:.35}
-.d-agent-agent-diff-review.d-agent-agent-diff-review-accepted .d-agent-agent-diff-review-card{border-color:#4ade80;animation:d-agent-agent-diff-review-border-pulse .65s ease-out 1}
-@keyframes d-agent-agent-diff-review-border-pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.45)}100%{box-shadow:0 0 0 7px rgba(74,222,128,0)}}
+.d-agent-agent-diff-review.d-agent-agent-diff-review-accepted .d-agent-agent-diff-review-card{border-color:#fa7319;animation:d-agent-agent-diff-review-border-pulse .65s ease-out 1}
+@keyframes d-agent-agent-diff-review-border-pulse{0%{box-shadow:0 0 0 0 rgba(250,115,25,.35)}100%{box-shadow:0 0 0 7px rgba(250,115,25,0)}}
 @container(max-width:340px){.d-agent-agent-diff-review-card{right:10px;left:10px}.d-agent-agent-diff-review-line{padding-right:7px;padding-left:7px;grid-template-columns:18px 9px minmax(0,1fr)}.d-agent-agent-diff-review-header{padding:0 10px}}
 @media(prefers-reduced-motion:reduce){.d-agent-agent-diff-review *,.d-agent-agent-diff-review *::before,.d-agent-agent-diff-review *::after{animation:none!important;transition:none!important}}
 `,
@@ -94,5 +94,5 @@ function cleanup(){if(cleaned)return;cleaned=true;if(frameId){cancelAnimationFra
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 if(reduced)setReady();else{setLineVisibility(0);renderStream();requestFrame()}
 `,
-  prompt:`Build one self-contained responsive 320px Agent and AI UI card for reviewing an edit to utils/format.ts. Show +4 and minus 2 tinted chips, then stream context, removed, and added lines; removed lines use red eight-percent tint and strike-through, while four green-tinted additions slide from the left with an 80 millisecond stagger. Provide keyboard-accessible Accept and Reject controls. Accept collapses deletions, drains addition tints and markers, changes the header to Applied, and pulses a one-pixel success border. Reject collapses additions, restores deletions as clean code, and changes the header to Reverted. Hold either outcome for two seconds, then reset and re-stream. Respect reduced motion and clean up detached instances.`
+  prompt:`Build one self-contained responsive 320px Agent and AI UI card for reviewing an edit to utils/format.ts. Show +4 and minus 2 chips, then stream context, removed, and added lines; removed lines use a grayscale fill and strike-through, while four accent additions slide from the left with an 80 millisecond stagger. Provide keyboard-accessible Accept and Reject controls. Accept collapses deletions, drains addition tints and markers, changes the header to Applied, and pulses a one-pixel accent border. Reject collapses additions, restores deletions as clean code, and changes the header to Reverted. Hold either outcome for two seconds, then reset and re-stream. Respect reduced motion and clean up detached instances. Keep chrome grayscale on #0a0a0b, use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for live, active, and focused proposal state, and distinguish additions and removals with plus or minus markers and strike-through rather than opposing hues.`
 });

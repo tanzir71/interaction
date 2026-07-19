@@ -51,7 +51,7 @@ INTRX.register({
 .d-bayer-probe::before { width: 14px; height: 1px; }.d-bayer-probe::after { width: 1px; height: 14px; }
 .d-bayer-probe i { position: absolute; inset: 11px; border: 1px dashed rgba(255,89,64,.32); border-radius: 50%; }
 .d-bayer-index { position: absolute; right: 8px; bottom: -12px; color: rgba(255,89,64,.82);
-  font: 800 76px/.9 "Inter", sans-serif; letter-spacing: -.08em; pointer-events: none; mix-blend-mode: difference; }
+  font: 800 76px/.9 "Roboto Mono", sans-serif; letter-spacing: -.08em; pointer-events: none; mix-blend-mode: difference; }
 .d-bayer-matrix { position: absolute; left: 17px; top: 17px; display: grid; grid-template-columns: repeat(4, 17px);
   border: 1px solid rgba(237,255,102,.3); font: 7px/17px "JetBrains Mono", monospace; text-align: center; }
 .d-bayer-matrix span { width: 17px; height: 17px; border-right: 1px solid rgba(237,255,102,.18);
@@ -104,7 +104,7 @@ function drawSource() {
   source.fillStyle = '#b8b8b8'; source.beginPath(); source.moveTo(0, rows * .83);
   for (let x = 0; x <= columns; x += 2) source.lineTo(x, rows * (.72 + Math.sin(x * .047 + 1.8) * .045));
   source.lineTo(columns, rows); source.lineTo(0, rows); source.closePath(); source.fill();
-  source.fillStyle = '#101010'; source.font = '800 ' + Math.round(rows * .34) + 'px Inter, sans-serif';
+  source.fillStyle = '#101010'; source.font = '800 ' + Math.round(rows * .34) + 'px Roboto Mono, monospace';
   source.textBaseline = 'bottom'; source.fillText('04', columns * .05, rows * .98);
   const pixels = source.getImageData(0, 0, columns, rows).data;
   sourceLuma = new Uint8Array(columns * rows);
@@ -223,12 +223,12 @@ INTRX.register({
 </div>`,
   css: `
 .d-fs { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #d7d5cd; color: #111114; touch-action: none; }
-.d-fs:focus-visible { box-shadow: inset 0 0 0 2px #6549ff; }
+  background: #0a0a0b; color: #ececef; touch-action: none; }
+.d-fs:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-fs::before { content: ''; position: absolute; inset: 0; opacity: .24; pointer-events: none;
   background-image: radial-gradient(rgba(17,17,20,.35) .65px, transparent .65px); background-size: 5px 5px; }
 .d-fs-stage { position: absolute; left: 50%; top: 50%; width: min(67%, 448px); height: 220px;
-  transform: translate(-50%, -50%); overflow: hidden; background: #111114; border: 1px solid rgba(17,17,20,.46);
+  transform: translate(-50%, -50%); overflow: hidden; background: #101012; border: 1px solid rgba(17,17,20,.46);
   box-shadow: 9px 9px 0 rgba(17,17,20,.15); }
 .d-fs-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
 .d-fs-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .16;
@@ -244,20 +244,20 @@ INTRX.register({
 .d-fs.d-fs-active .d-fs-lens { opacity: 1; }
 .d-fs.d-fs-locked .d-fs-lens { border-style: dashed; }
 .d-fs-corner { position: absolute; right: 9px; bottom: 7px; color: rgba(255,255,255,.78);
-  font: 700 25px/.77 "Inter", sans-serif; letter-spacing: -.06em; text-align: right; mix-blend-mode: difference; }
+  font: 700 25px/.77 "Roboto Mono", sans-serif; letter-spacing: -.06em; text-align: right; mix-blend-mode: difference; }
 .d-fs-kicker { position: absolute; left: 17px; top: 18px; color: rgba(17,17,20,.6);
   font: 8px "JetBrains Mono", monospace; letter-spacing: .14em; }
 .d-fs-weights { position: absolute; left: 17px; top: 42px; display: grid; grid-template-columns: auto auto; gap: 3px 10px;
   color: rgba(17,17,20,.48); font: 7px "JetBrains Mono", monospace; letter-spacing: .05em; }
 .d-fs-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
   color: rgba(17,17,20,.52); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-fs-meter strong { min-width: 27px; color: #111114; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
+.d-fs-meter strong { min-width: 27px; color: #ececef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
 .d-fs-meter b { font-weight: 400; }
 .d-fs-lock { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(17,17,20,.42);
-  border-radius: 999px; background: rgba(215,213,205,.78); color: #111114; font: 10px "JetBrains Mono", monospace;
+  border-radius: 999px; background: rgba(22,22,25,.88); color: #b8b8b8; font: 10px "JetBrains Mono", monospace;
   cursor: pointer; transition: color .18s, background .18s, transform .18s; }
-.d-fs-lock:hover, .d-fs-lock[aria-pressed="true"] { color: #fff; background: #6549ff; transform: translateY(-2px); }
-.d-fs-lock:focus-visible { outline: 2px solid #6549ff; outline-offset: 3px; }
+.d-fs-lock:hover, .d-fs-lock[aria-pressed="true"] { color: #fff; background: #fa7319; transform: translateY(-2px); }
+.d-fs-lock:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-fs-status { position: absolute; right: 18px; bottom: 20px; margin: 0; max-width: 45%; text-align: right;
   color: rgba(17,17,20,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
 @media (max-width: 620px) { .d-fs-stage { width: 73%; height: 190px; }.d-fs-weights { display: none; }.d-fs-lens { width: 106px; height: 106px; margin: -53px 0 0 -53px; } }
@@ -274,7 +274,7 @@ const context = canvas.getContext('2d', { alpha: false });
 const sourceCanvas = document.createElement('canvas');
 const source = sourceCanvas.getContext('2d', { willReadFrequently: true });
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const PAPER = [238, 237, 227], INK = [15, 15, 18];
+const PAPER = [38, 38, 38], INK = [10, 10, 11];
 let columns = 1, rows = 1, sourcePixels = new Uint8ClampedArray(4), ditherBits = new Uint8Array(1), output = null;
 let target = { x: .58, y: .44 }, current = { x: target.x, y: target.y };
 let targetAmount = 0, amount = 0, hovering = false, locked = false, dirty = true, lastDraw = 0;
@@ -287,7 +287,7 @@ function drawSource() {
   source.fillStyle = 'rgba(15,15,18,.88)'; source.fillRect(columns * .08, rows * .12, columns * .24, rows * .76);
   source.strokeStyle = 'rgba(255,255,255,.72)'; source.lineWidth = Math.max(1, rows * .015);
   for (let i = -2; i < 7; i++) { source.beginPath(); source.moveTo(columns * (i * .16), rows); source.lineTo(columns * (i * .16 + .38), 0); source.stroke(); }
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Inter, sans-serif'; source.textBaseline = 'middle';
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, monospace'; source.textBaseline = 'middle';
   source.save(); source.translate(columns * .13, rows * .82); source.rotate(-Math.PI / 2); source.fillText('ERROR', 0, 0); source.restore();
   source.fillStyle = '#101012'; source.font = '700 ' + Math.round(rows * .14) + 'px JetBrains Mono, monospace'; source.fillText('7/16', columns * .55, rows * .76);
   sourcePixels = source.getImageData(0, 0, columns, rows).data;

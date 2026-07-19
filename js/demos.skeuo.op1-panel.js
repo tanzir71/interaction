@@ -39,11 +39,11 @@ INTRX.register({
 .d-skeuo-op1-panel-mute{display:flex;align-items:center;gap:5px;padding:0;border:0;background:transparent;color:#626269;font-family:inherit;font-size:8px;font-weight:700;line-height:1;letter-spacing:.08em;cursor:pointer;outline:none}
 .d-skeuo-op1-panel-mute i{position:relative;width:27px;height:13px;border:1px solid #9d9da4;border-radius:7px;background:#bfc0c5;box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}
 .d-skeuo-op1-panel-mute i::after{position:absolute;top:2px;left:2px;width:7px;height:7px;border-radius:50%;background:#f4f4f6;box-shadow:0 1px 1px rgba(0,0,0,.3);content:'';transition:transform .15s ease,background-color .15s ease}
-.d-skeuo-op1-panel-mute[aria-checked="true"] i::after{transform:translateX(14px);background:#a78bfa}
+.d-skeuo-op1-panel-mute[aria-checked="true"] i::after{transform:translateX(14px);background:#fa7319}
 .d-skeuo-op1-panel-mute:focus-visible{box-shadow:0 0 0 2px #d8d8dc,0 0 0 3px #2a2a2e}
 .d-skeuo-op1-panel-keys{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .d-skeuo-op1-panel-keys button{position:relative;height:43px;padding:0;border:1px solid #c4c4ca;border-bottom:2px solid #aaaab2;border-radius:5px;background:#efeff2;color:#313137;box-shadow:inset 0 1px 0 #fff,0 2px 3px rgba(70,70,78,.16);font-family:inherit;font-size:12px;font-weight:700;line-height:1;cursor:pointer;outline:none;transform:translateY(0)}
-.d-skeuo-op1-panel-keys button::before{position:absolute;top:7px;left:7px;width:4px;height:4px;border-radius:50%;background:#a78bfa;opacity:.55;content:''}
+.d-skeuo-op1-panel-keys button::before{position:absolute;top:7px;left:7px;width:4px;height:4px;border-radius:50%;background:#fa7319;opacity:.55;content:''}
 .d-skeuo-op1-panel-keys button:focus-visible{box-shadow:0 0 0 2px #d8d8dc,0 0 0 3px #2a2a2e}
 .d-skeuo-op1-panel-keys button:active,.d-skeuo-op1-panel-keys button.d-skeuo-op1-panel-key-pressed{border-bottom-width:0;transform:translateY(2px);box-shadow:inset 0 1px 2px rgba(60,60,68,.14)}
 .d-skeuo-op1-panel-encoder-row{display:flex;align-items:center;gap:13px;min-width:0}
@@ -51,7 +51,7 @@ INTRX.register({
 .d-skeuo-op1-panel-knob{position:relative;width:44px;height:44px;border:1px solid #18181b;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3a3a40,#2a2a2e 58%,#202024);box-shadow:inset 1px 1px 1px rgba(255,255,255,.1),0 2px 3px rgba(0,0,0,.28);outline:none;cursor:grab;touch-action:none;transform:rotate(var(--knob-angle,-3deg))}
 .d-skeuo-op1-panel-knob:active{cursor:grabbing}
 .d-skeuo-op1-panel-knob:focus-visible{box-shadow:0 0 0 2px #d8d8dc,0 0 0 3px #2a2a2e,inset 1px 1px 1px rgba(255,255,255,.1)}
-.d-skeuo-op1-panel-knob i{position:absolute;top:5px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#a78bfa;box-shadow:0 0 4px rgba(167,139,250,.55)}
+.d-skeuo-op1-panel-knob i{position:absolute;top:5px;left:50%;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:#fa7319;box-shadow:0 0 4px rgba(250,115,25,.55)}
 .d-skeuo-op1-panel-encoder-copy{min-width:0;display:flex;flex-direction:column;gap:4px}
 .d-skeuo-op1-panel-encoder-copy span{color:#66666d;font-size:8px;line-height:1;letter-spacing:.1em}
 .d-skeuo-op1-panel-encoder-copy strong{color:#29292f;font-size:13px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}

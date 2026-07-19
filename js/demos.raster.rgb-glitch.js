@@ -80,7 +80,7 @@ function drawSource() {
   source.fillStyle = '#e8f7ff'; source.beginPath(); source.arc(width * .73, height * .34, height * .24, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#10131c'; source.beginPath(); source.arc(width * .73, height * .34, height * .11, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(5,7,12,.7)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .32) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('SIGNAL', width * .04, height * .95);
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .32) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('SIGNAL', width * .04, height * .95);
   source.strokeStyle = 'rgba(255,255,255,.4)'; source.lineWidth = 1;
   for (let x = 0; x < width; x += 22) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + 42, height); source.stroke(); }
 }

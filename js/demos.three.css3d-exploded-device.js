@@ -33,12 +33,12 @@ INTRX.register({
 .d-three-css3d-exploded-device{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-three-css3d-exploded-device *{box-sizing:border-box}
 .d-three-css3d-exploded-device-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
-.d-three-css3d-exploded-device-mode{color:#a78bfa}
-.d-three-css3d-exploded-device-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;outline:none;background:radial-gradient(ellipse at 42% 52%,rgba(167,139,250,.085),transparent 46%),linear-gradient(180deg,#101012,#0d0d0f);perspective:1000px;cursor:pointer;touch-action:pan-y}
+.d-three-css3d-exploded-device-mode{color:#fa7319}
+.d-three-css3d-exploded-device-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;outline:none;background:radial-gradient(ellipse at 42% 52%,rgba(250,115,25,.085),transparent 46%),linear-gradient(180deg,#101012,#0d0d0f);perspective:1000px;cursor:pointer;touch-action:pan-y}
 .d-three-css3d-exploded-device-stage::before,.d-three-css3d-exploded-device-stage::after{position:absolute;z-index:5;width:14px;height:14px;content:'';pointer-events:none}
-.d-three-css3d-exploded-device-stage::before{top:9px;left:9px;border-top:1px solid rgba(167,139,250,.3);border-left:1px solid rgba(167,139,250,.3)}
-.d-three-css3d-exploded-device-stage::after{right:9px;bottom:9px;border-right:1px solid rgba(167,139,250,.3);border-bottom:1px solid rgba(167,139,250,.3)}
-.d-three-css3d-exploded-device-stage:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px #a78bfa}
+.d-three-css3d-exploded-device-stage::before{top:9px;left:9px;border-top:1px solid rgba(250,115,25,.3);border-left:1px solid rgba(250,115,25,.3)}
+.d-three-css3d-exploded-device-stage::after{right:9px;bottom:9px;border-right:1px solid rgba(250,115,25,.3);border-bottom:1px solid rgba(250,115,25,.3)}
+.d-three-css3d-exploded-device-stage:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px #fa7319}
 .d-three-css3d-exploded-device-scene{--d-three-css3d-exploded-device-sway:0deg;position:absolute;z-index:2;top:51%;left:42%;width:132px;height:174px;transform:translate(-50%,-50%) rotateX(28deg) rotateY(calc(-18deg + var(--d-three-css3d-exploded-device-sway)));transform-style:preserve-3d;will-change:transform}
 .d-three-css3d-exploded-device-layer{position:absolute;transform-style:preserve-3d;backface-visibility:hidden;transition:transform 500ms ease-in-out,box-shadow 80ms ease;will-change:transform}
 .d-three-css3d-exploded-device-body{inset:0;border:1px solid #33333a;border-radius:14px;background:#19191c;box-shadow:0 7px 0 #0a0a0b,0 14px 24px rgba(0,0,0,.38);transform:translateZ(0);transition-delay:120ms}
@@ -48,20 +48,20 @@ INTRX.register({
 .d-three-css3d-exploded-device-board::before,.d-three-css3d-exploded-device-board::after{position:absolute;content:'';background:linear-gradient(90deg,#33333a 0 18px,transparent 18px 26px,#33333a 26px 46px,transparent 46px);height:1px;opacity:.8}
 .d-three-css3d-exploded-device-board::before{top:28px;left:8px;width:72px}
 .d-three-css3d-exploded-device-board::after{right:8px;bottom:34px;width:65px;transform:rotate(180deg)}
-.d-three-css3d-exploded-device-board span{position:absolute;width:25px;height:18px;border:1px solid rgba(236,236,239,.18);border-radius:3px;background:#a78bfa;box-shadow:0 0 10px rgba(167,139,250,.14)}
+.d-three-css3d-exploded-device-board span{position:absolute;width:25px;height:18px;border:1px solid rgba(236,236,239,.18);border-radius:3px;background:#fa7319;box-shadow:0 0 10px rgba(250,115,25,.14)}
 .d-three-css3d-exploded-device-board span:first-child{top:47px;left:22px}
 .d-three-css3d-exploded-device-board span:last-child{right:20px;bottom:31px;width:19px;height:24px}
-.d-three-css3d-exploded-device-screen{inset:11px;padding:23px 13px;border:1px solid #232327;border-radius:8px;background:radial-gradient(circle at 72% 22%,rgba(167,139,250,.1),transparent 24%),#0a0a0b;transform:translateZ(16px);transition-delay:40ms}
+.d-three-css3d-exploded-device-screen{inset:11px;padding:23px 13px;border:1px solid #232327;border-radius:8px;background:radial-gradient(circle at 72% 22%,rgba(250,115,25,.1),transparent 24%),#0a0a0b;transform:translateZ(16px);transition-delay:40ms}
 .d-three-css3d-exploded-device-screen span{display:block;height:5px;margin-bottom:8px;border-radius:3px;background:#5c5c66}
 .d-three-css3d-exploded-device-screen span:first-child{width:72%}
 .d-three-css3d-exploded-device-screen span:nth-child(2){width:48%;opacity:.68}
-.d-three-css3d-exploded-device-screen b{position:absolute;right:13px;bottom:15px;padding:6px 8px;border-radius:4px;color:#0a0a0b;background:#a78bfa;font-size:7px;line-height:1;letter-spacing:.07em}
+.d-three-css3d-exploded-device-screen b{position:absolute;right:13px;bottom:15px;padding:6px 8px;border-radius:4px;color:#0a0a0b;background:#fa7319;font-size:7px;line-height:1;letter-spacing:.07em}
 .d-three-css3d-exploded-device-glass{inset:10px;border:1px solid #33333a;border-radius:9px;background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 42%,rgba(255,255,255,.08));box-shadow:inset 0 0 16px rgba(255,255,255,.025);backdrop-filter:blur(1px);transform:translateZ(24px);transition-delay:0ms}
 .d-three-css3d-exploded-device.d-three-css3d-exploded-device-expanded .d-three-css3d-exploded-device-body{transform:translateZ(0);transition-delay:0ms}
 .d-three-css3d-exploded-device.d-three-css3d-exploded-device-expanded .d-three-css3d-exploded-device-board{transform:translateZ(50px);transition-delay:40ms}
 .d-three-css3d-exploded-device.d-three-css3d-exploded-device-expanded .d-three-css3d-exploded-device-screen{transform:translateZ(100px);transition-delay:80ms}
 .d-three-css3d-exploded-device.d-three-css3d-exploded-device-expanded .d-three-css3d-exploded-device-glass{transform:translateZ(150px);transition-delay:120ms}
-.d-three-css3d-exploded-device.d-three-css3d-exploded-device-contact .d-three-css3d-exploded-device-body{box-shadow:0 7px 0 #0a0a0b,0 0 24px rgba(167,139,250,.32)}
+.d-three-css3d-exploded-device.d-three-css3d-exploded-device-contact .d-three-css3d-exploded-device-body{box-shadow:0 7px 0 #0a0a0b,0 0 24px rgba(250,115,25,.32)}
 .d-three-css3d-exploded-device-labels{position:absolute;z-index:3;inset:0;pointer-events:none}
 .d-three-css3d-exploded-device-label{position:absolute;right:9px;display:flex;align-items:center;justify-content:flex-end;width:45%;color:#9b9ba3;font-size:10px;line-height:1;letter-spacing:.08em;opacity:0;transform:translateX(-6px);transition:opacity 200ms ease,transform 200ms ease}
 .d-three-css3d-exploded-device-label i{width:0;height:1px;margin-right:7px;background:#33333a;transform-origin:right;transition:width 200ms ease}

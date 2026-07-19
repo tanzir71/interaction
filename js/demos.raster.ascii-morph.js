@@ -20,12 +20,12 @@ INTRX.register({
   css:`
 .d-ascii-morph{position:relative;width:100%;height:320px;box-sizing:border-box;container-type:inline-size;display:grid;grid-template-rows:18px minmax(0,1fr) 14px;gap:4px;overflow:hidden;padding:8px 10px;outline:none;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',monospace;isolation:isolate;touch-action:pan-y}
 .d-ascii-morph:before{content:'';position:absolute;inset:0;z-index:10;pointer-events:none;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.3) 100%)}
-.d-ascii-morph:focus-visible{box-shadow:inset 0 0 0 2px rgba(167,139,250,.72)}
+.d-ascii-morph:focus-visible{box-shadow:inset 0 0 0 2px rgba(250,115,25,.72)}
 .d-ascii-morph-topbar,.d-ascii-morph-footer{position:relative;z-index:12;display:flex;align-items:center;justify-content:space-between;min-width:0;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.07em;text-transform:uppercase}
 .d-ascii-morph-scene{position:relative;z-index:2;min-width:0;min-height:0;overflow:hidden;border:1px solid #232327;border-radius:10px;background:#0a0a0b;cursor:crosshair;user-select:none}
 .d-ascii-morph:focus-visible .d-ascii-morph-scene,.d-ascii-morph-scene:hover{border-color:#2e2e34}
 .d-ascii-morph-canvas{display:block;width:100%;height:100%}
-.d-ascii-morph-footer{border-top:1px solid #232327;font-variant-numeric:tabular-nums}.d-ascii-morph-mode{color:#9b9ba3}.d-ascii-morph-figure{color:#ececef}.d-ascii-morph[data-flash-cells]:not([data-flash-cells="0"]) .d-ascii-morph-figure{color:#a78bfa}
+.d-ascii-morph-footer{border-top:1px solid #232327;font-variant-numeric:tabular-nums}.d-ascii-morph-mode{color:#9b9ba3}.d-ascii-morph-figure{color:#ececef}.d-ascii-morph[data-flash-cells]:not([data-flash-cells="0"]) .d-ascii-morph-figure{color:#fa7319}
 .d-ascii-morph-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @container(max-width:340px){.d-ascii-morph-topbar,.d-ascii-morph-footer{font-size:9px;letter-spacing:.035em}.d-ascii-morph-topbar span,.d-ascii-morph-footer span{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.d-ascii-morph *{animation:none!important;transition:none!important}}
@@ -283,7 +283,7 @@ function renderMorph(){
     const glyphIndex=currentGlyphIndices[index];
     if(glyphIndex===0&&!flashFlags[index])continue;
     const drawnGlyphIndex=flashFlags[index]?Math.max(1,glyphIndex):glyphIndex;
-    context.fillStyle=flashFlags[index]?'#a78bfa':'#9b9ba3';
+    context.fillStyle=flashFlags[index]?'#fa7319':'#9b9ba3';
     context.fillText(glyphRamp[drawnGlyphIndex],fieldOffsetX+(x+.5)*cellWidth,fieldOffsetY+(y+.5)*cellHeight+.5);
   }
   refreshStats();
@@ -450,7 +450,7 @@ expose(reduced?'reduced':'initial');
 if(!reduced)startScheduler('initial')`,
   prompt:`Build a self-contained, responsive 320px-tall canvas interaction that morphs between two exact hand-authored 30 by 16 ASCII figures: a skull and a diamond. Use the ten-character ramp space, dot, colon, hyphen, equals, plus, asterisk, hash, percent, at. Store the figures as exact string arrays and translate every character to its ramp index. The field uses fixed 7 by 12 CSS-pixel cells, an 11px JetBrains Mono font, and is centered inside a DPR-aware canvas.
 
-For each cell center at ((column+0.5)*7,(row+0.5)*12), store delay as Float32(hypot(cellCenter-origin)*8). On every active frame, progress is clamp((activeTime-morphStart-delay)/400,0,1). Store current value as Float32(fromValue+(targetIndex-fromValue)*progress) and render the rounded ramp index. A blank-to-filled or filled-to-blank cell flashes the current non-space glyph in #a78bfa from delay+125ms inclusive through delay+275ms exclusive; otherwise every non-space glyph is #9b9ba3 on #0a0a0b.
+For each cell center at ((column+0.5)*7,(row+0.5)*12), store delay as Float32(hypot(cellCenter-origin)*8). On every active frame, progress is clamp((activeTime-morphStart-delay)/400,0,1). Store current value as Float32(fromValue+(targetIndex-fromValue)*progress) and render the rounded ramp index. A blank-to-filled or filled-to-blank cell flashes the current non-space glyph in #fa7319 from delay+125ms inclusive through delay+275ms exclusive; otherwise every non-space glyph is #9b9ba3 on #0a0a0b.
 
 Start on the stable skull with a centered field-space origin of 105,96. Auto-alternate from the center every 4000ms of visible active time. Primary-left pointerdown focuses the one role-group root and immediately swaps toward the opposite figure with the radial origin clamped from the clicked field coordinate. A trigger during a morph must first sample all current Float32 values, copy them exactly into the next from-values array, and reverse the destination without a glyph jump. Manual triggers reschedule auto for 4000ms later. Ignore and count secondary, non-primary, and repeated trigger input; hover alone does nothing.
 

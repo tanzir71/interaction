@@ -23,15 +23,15 @@ INTRX.register({
 .d-three-voxel-assemble{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-three-voxel-assemble *{box-sizing:border-box}
 .d-three-voxel-assemble-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
-.d-three-voxel-assemble-mode{color:#a78bfa}
-.d-three-voxel-assemble-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;outline:none;background:radial-gradient(ellipse at 50% 76%,rgba(167,139,250,.07),transparent 48%),linear-gradient(180deg,#101012,#0d0d0f);cursor:crosshair;touch-action:pan-y}
+.d-three-voxel-assemble-mode{color:#fa7319}
+.d-three-voxel-assemble-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;outline:none;background:radial-gradient(ellipse at 50% 76%,rgba(250,115,25,.07),transparent 48%),linear-gradient(180deg,#101012,#0d0d0f);cursor:crosshair;touch-action:pan-y}
 .d-three-voxel-assemble-stage::before,.d-three-voxel-assemble-stage::after{position:absolute;z-index:2;width:14px;height:14px;content:'';pointer-events:none}
-.d-three-voxel-assemble-stage::before{top:9px;left:9px;border-top:1px solid rgba(167,139,250,.3);border-left:1px solid rgba(167,139,250,.3)}
-.d-three-voxel-assemble-stage::after{right:9px;bottom:9px;border-right:1px solid rgba(167,139,250,.3);border-bottom:1px solid rgba(167,139,250,.3)}
-.d-three-voxel-assemble-stage:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px #a78bfa}
+.d-three-voxel-assemble-stage::before{top:9px;left:9px;border-top:1px solid rgba(250,115,25,.3);border-left:1px solid rgba(250,115,25,.3)}
+.d-three-voxel-assemble-stage::after{right:9px;bottom:9px;border-right:1px solid rgba(250,115,25,.3);border-bottom:1px solid rgba(250,115,25,.3)}
+.d-three-voxel-assemble-stage:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px #fa7319}
 .d-three-voxel-assemble-canvas{display:block;width:100%;height:100%}
-.d-three-voxel-assemble-reticle{position:absolute;z-index:3;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;border:1px solid rgba(167,139,250,.22);border-radius:50%;opacity:0;transform:scale(.9);pointer-events:none;transition:opacity .15s ease,transform .15s ease}
-.d-three-voxel-assemble-reticle::before,.d-three-voxel-assemble-reticle::after{position:absolute;top:50%;left:50%;content:'';background:rgba(167,139,250,.5)}
+.d-three-voxel-assemble-reticle{position:absolute;z-index:3;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;border:1px solid rgba(250,115,25,.22);border-radius:50%;opacity:0;transform:scale(.9);pointer-events:none;transition:opacity .15s ease,transform .15s ease}
+.d-three-voxel-assemble-reticle::before,.d-three-voxel-assemble-reticle::after{position:absolute;top:50%;left:50%;content:'';background:rgba(250,115,25,.5)}
 .d-three-voxel-assemble-reticle::before{width:8px;height:1px;margin-left:-4px}
 .d-three-voxel-assemble-reticle::after{width:1px;height:8px;margin-top:-4px}
 .d-three-voxel-assemble-reticle.d-three-voxel-assemble-reticle-visible{opacity:1;transform:none}
@@ -45,7 +45,7 @@ const field=root.querySelector('.d-three-voxel-assemble-stage'),canvas=root.quer
 const cube=14,halfWidth=14,halfHeight=7,vertical=14,assemblyDuration=400,assemblyStagger=6,collapseDuration=700,collapsedHold=600,excavateRadius=40,excavateSpring=.15,excavateDamping=.72,accentKeys=new Set(['-5,-2,0','5,2,0','-4,0,1','4,0,1','-5,1,4','5,-1,5','-2,0,8','3,0,9']),voxels=[];
 for(let x=-6;x<=6;x++)for(let y=-2;y<=2;y++)voxels.push({x:x,y:y,z:0});for(let x=-5;x<=5;x++)for(let y=-1;y<=1;y++)voxels.push({x:x,y:y,z:1});for(let z=2;z<=8;z++)for(let x=-5;x<=5;x++)if(z>=6||Math.abs(x)>=4)voxels.push({x:x,y:0,z:z});for(let z=2;z<=7;z++)for(const x of[-5,5])for(const y of[-1,1])voxels.push({x:x,y:y,z:z});for(let x=-4;x<=4;x++)voxels.push({x:x,y:0,z:9});voxels.sort(function(a,b){return a.x+a.y-(b.x+b.y)||a.z-b.z||a.x-b.x});
 function fract(value){return value-Math.floor(value)}voxels.forEach(function(voxel,index){voxel.index=index;voxel.accent=accentKeys.has(voxel.x+','+voxel.y+','+voxel.z);voxel.pop=0;voxel.popVelocity=0;voxel.target=0;voxel.scatter=(fract(Math.sin((index+1)*12.9898)*43758.5453)*2-1)*74});
-const assemblyTotal=(voxels.length-1)*assemblyStagger+assemblyDuration+18,palettes={base:{top:'#19191c',left:'#161619',right:'#131316'},accent:{top:'#b996ff',left:'#a78bfa',right:'#937add'}},edge='#232327';
+const assemblyTotal=(voxels.length-1)*assemblyStagger+assemblyDuration+18,palettes={base:{top:'#19191c',left:'#161619',right:'#131316'},accent:{top:'#b996ff',left:'#fa7319',right:'#937add'}},edge='#232327';
 let width=1,height=1,dpr=1,originX=0,originY=0,pointerX=0,pointerY=0,pointerActive=false,phase=reduced?'assembled':'assembling',phaseTime=reduced?assemblyTotal:0,lastWall=0,frameId=0,popMotion=false,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,resizeObserver=null,intersectionObserver=null,connectionObserver=null;
 function project(voxel){return{x:originX+(voxel.x-voxel.y)*cube,y:originY+(voxel.x+voxel.y)*cube/2-voxel.z*cube}}
 function transformedY(value,bottom,squash){return bottom+(value-bottom)*squash}

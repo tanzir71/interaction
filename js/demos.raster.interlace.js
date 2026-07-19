@@ -78,7 +78,7 @@ function renderField(field, time, phase) {
   field.fillStyle = phase === 0 ? '#dcfff5' : '#ffe5ec'; field.beginPath(); field.arc(width * .7 + drift, height * .33, height * .23, 0, Math.PI * 2); field.fill();
   field.fillStyle = '#071014'; field.beginPath(); field.arc(width * .7 + drift, height * .33, height * .1, 0, Math.PI * 2); field.fill();
   field.fillStyle = 'rgba(4,7,9,.68)'; field.fillRect(0, height * .68, width, height * .32);
-  field.fillStyle = '#fff'; field.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; field.textBaseline = 'bottom'; field.fillText('FIELD', width * .05 - drift * .25, height * .95);
+  field.fillStyle = '#fff'; field.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; field.textBaseline = 'bottom'; field.fillText('FIELD', width * .05 - drift * .25, height * .95);
 }
 function measure() {
   const box = stageEl.getBoundingClientRect(); width = Math.max(1, Math.round(box.width)); height = Math.max(1, Math.round(box.height));

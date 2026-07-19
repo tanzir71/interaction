@@ -27,7 +27,7 @@ INTRX.register({
 .d-image-painterly-smear-head{top:15px}.d-image-painterly-smear-foot{bottom:10px;font-size:8px}
 .d-image-painterly-smear-stage{position:absolute;top:38px;right:12px;bottom:27px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:#101012;outline:none;cursor:crosshair;touch-action:none}
 .d-image-painterly-smear-stage:hover{border-color:#34343a}
-.d-image-painterly-smear-stage:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px rgba(167,139,250,.5)}
+.d-image-painterly-smear-stage:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px rgba(250,115,25,.5)}
 .d-image-painterly-smear-canvas{display:block;width:100%;height:100%;image-rendering:auto}
 .d-image-painterly-smear-stage::after{content:'';position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 32px rgba(10,10,11,.28)}
 .d-image-painterly-smear-brush{position:absolute;left:var(--brush-x,50%);top:var(--brush-y,50%);width:28px;height:28px;border:1px solid rgba(236,236,239,.52);border-radius:50%;opacity:var(--brush-show,0);transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:screen}

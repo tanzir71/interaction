@@ -26,43 +26,43 @@ INTRX.register({
   <span class="d-gallery-scrollsnap-carousel-status" aria-live="polite" aria-atomic="true">Slide 1 of 5 centered. Mandatory snapping enabled.</span>
 </div>`,
   css:`
-.d-gallery-scrollsnap-carousel{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
+.d-gallery-scrollsnap-carousel{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'Roboto Mono','JetBrains Mono',ui-monospace,monospace;isolation:isolate}
 .d-gallery-scrollsnap-carousel *{box-sizing:border-box}
-.d-gallery-scrollsnap-carousel-head{position:absolute;z-index:2;top:9px;right:14px;left:14px;height:27px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:8px;line-height:1;letter-spacing:.09em}
-.d-gallery-scrollsnap-carousel-toggle{height:27px;padding:0 8px 0 6px;display:flex;align-items:center;gap:5px;border:1px solid #2e2e34;border-radius:14px;outline:none;background:#101012;color:#73737d;font:600 6px/1 inherit;letter-spacing:.07em;cursor:pointer}
-.d-gallery-scrollsnap-carousel-toggle i{position:relative;width:22px;height:12px;flex:0 0 auto;border-radius:7px;background:#2e2e34}
-.d-gallery-scrollsnap-carousel-toggle i b{position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;background:#a78bfa;transition:transform 250ms ease-in-out}
-.d-gallery-scrollsnap-carousel-toggle em{color:#4c4c55;font-style:normal}
-.d-gallery-scrollsnap-carousel-toggle span:first-of-type{color:#c7c7ce}
+.d-gallery-scrollsnap-carousel-head{position:absolute;z-index:2;top:9px;right:14px;left:14px;height:27px;display:flex;align-items:center;justify-content:space-between;color:#7a7a7f;font-size:8px;line-height:1;letter-spacing:.09em}
+.d-gallery-scrollsnap-carousel-toggle{height:27px;padding:0 8px 0 6px;display:flex;align-items:center;gap:5px;border:1px solid #333333;border-radius:0;outline:none;background:#101012;color:#7a7a7f;font:600 6px/1 inherit;letter-spacing:.07em;cursor:pointer}
+.d-gallery-scrollsnap-carousel-toggle i{position:relative;width:22px;height:12px;flex:0 0 auto;border-radius:7px;background:#333333}
+.d-gallery-scrollsnap-carousel-toggle i b{position:absolute;top:2px;left:2px;width:8px;height:8px;border-radius:50%;background:#fa7319;transition:transform 250ms ease-in-out}
+.d-gallery-scrollsnap-carousel-toggle em{color:#7a7a7f;font-style:normal}
+.d-gallery-scrollsnap-carousel-toggle span:first-of-type{color:#b8b8b8}
 .d-gallery-scrollsnap-carousel-toggle[aria-checked="false"] i b{transform:translateX(10px)}
-.d-gallery-scrollsnap-carousel-toggle[aria-checked="false"] span:first-of-type{color:#73737d}
-.d-gallery-scrollsnap-carousel-toggle[aria-checked="false"] span:last-of-type{color:#c7c7ce}
-.d-gallery-scrollsnap-carousel-toggle:hover,.d-gallery-scrollsnap-carousel-toggle:focus-visible{border-color:#a78bfa;box-shadow:0 0 0 1px rgba(167,139,250,.18)}
-.d-gallery-scrollsnap-carousel-stage{position:absolute;top:43px;right:8px;bottom:50px;left:8px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:#0d0d0f}
+.d-gallery-scrollsnap-carousel-toggle[aria-checked="false"] span:first-of-type{color:#7a7a7f}
+.d-gallery-scrollsnap-carousel-toggle[aria-checked="false"] span:last-of-type{color:#b8b8b8}
+.d-gallery-scrollsnap-carousel-toggle:hover,.d-gallery-scrollsnap-carousel-toggle:focus-visible{border-color:#fa7319;box-shadow:0 0 0 1px rgba(250,115,25,.18)}
+.d-gallery-scrollsnap-carousel-stage{position:absolute;top:43px;right:8px;bottom:50px;left:8px;overflow:hidden;border:1px solid #333333;border-radius:0;background:#101012}
 .d-gallery-scrollsnap-carousel-track{width:70%;height:100%;padding-inline:15%;display:flex;align-items:stretch;gap:16px;box-sizing:content-box;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:15%;overscroll-behavior-x:contain;outline:none;scrollbar-width:none;-ms-overflow-style:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent 100%)}
 .d-gallery-scrollsnap-carousel-track::-webkit-scrollbar{display:none;width:0;height:0}
-.d-gallery-scrollsnap-carousel-track:focus-visible{box-shadow:inset 0 0 0 2px #a78bfa}
-.d-gallery-scrollsnap-carousel-track article{position:relative;min-width:0;height:100%;flex:0 0 100%;overflow:hidden;border:1px solid #2e2e34;border-radius:9px;scroll-snap-align:center;background:linear-gradient(145deg,#1a1820,#111114);opacity:.7;transform:scale(.94);transform-origin:center;will-change:transform,opacity}
-.d-gallery-scrollsnap-carousel-track article::after{position:absolute;right:-46px;bottom:-55px;width:150px;height:150px;border:24px solid rgba(167,139,250,.12);border-radius:50%;content:''}
-.d-gallery-scrollsnap-carousel-track article:nth-child(2){background:linear-gradient(145deg,#17201b,#101413)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(2)::after{border-color:rgba(74,222,128,.11)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(3){background:linear-gradient(145deg,#151d27,#0e1218)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(3)::after{border-color:rgba(103,232,249,.11)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(4){background:linear-gradient(145deg,#211a1d,#141012)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(4)::after{border-color:rgba(251,191,36,.11)}
-.d-gallery-scrollsnap-carousel-track article:nth-child(5){background:linear-gradient(145deg,#1d1824,#111015)}
+.d-gallery-scrollsnap-carousel-track:focus-visible{box-shadow:inset 0 0 0 2px #fa7319}
+.d-gallery-scrollsnap-carousel-track article{position:relative;min-width:0;height:100%;flex:0 0 100%;overflow:hidden;border:1px solid #333333;border-radius:0;scroll-snap-align:center;background:#1a1a1b;opacity:.7;transform:scale(.94);transform-origin:center;will-change:transform,opacity}
+.d-gallery-scrollsnap-carousel-track article::after{position:absolute;right:-46px;bottom:-55px;width:150px;height:150px;border:24px solid rgba(250,115,25,.12);border-radius:50%;content:''}
+.d-gallery-scrollsnap-carousel-track article:nth-child(2){background:#1a1a1b}
+.d-gallery-scrollsnap-carousel-track article:nth-child(2)::after{border-color:rgba(250,115,25,.11)}
+.d-gallery-scrollsnap-carousel-track article:nth-child(3){background:#1a1a1b}
+.d-gallery-scrollsnap-carousel-track article:nth-child(3)::after{border-color:rgba(250,115,25,.11)}
+.d-gallery-scrollsnap-carousel-track article:nth-child(4){background:#1a1a1b}
+.d-gallery-scrollsnap-carousel-track article:nth-child(4)::after{border-color:rgba(250,115,25,.11)}
+.d-gallery-scrollsnap-carousel-track article:nth-child(5){background:#1a1a1b}
 .d-gallery-scrollsnap-carousel-track article>div{position:absolute;top:15px;right:15px;width:58px;height:58px}
-.d-gallery-scrollsnap-carousel-track article>div i{position:absolute;display:block;border:1px solid #3b3547;transform:rotate(45deg)}
-.d-gallery-scrollsnap-carousel-track article>div i:nth-child(1){inset:0}.d-gallery-scrollsnap-carousel-track article>div i:nth-child(2){inset:10px}.d-gallery-scrollsnap-carousel-track article>div i:nth-child(3){inset:20px;background:#a78bfa;border-color:#a78bfa}
-.d-gallery-scrollsnap-carousel-track article:nth-child(2)>div i:nth-child(3){background:#4ade80;border-color:#4ade80}.d-gallery-scrollsnap-carousel-track article:nth-child(3)>div i:nth-child(3){background:#67e8f9;border-color:#67e8f9}.d-gallery-scrollsnap-carousel-track article:nth-child(4)>div i:nth-child(3){background:#fbbf24;border-color:#fbbf24}.d-gallery-scrollsnap-carousel-track article:nth-child(5)>div i:nth-child(3){background:#e879f9;border-color:#e879f9}
-.d-gallery-scrollsnap-carousel-track article>span{position:absolute;top:17px;left:16px;color:#777780;font-size:7px;line-height:1;letter-spacing:.09em}
-.d-gallery-scrollsnap-carousel-track article h3{position:absolute;right:15px;bottom:39px;left:15px;margin:0;color:#dedee3;font-family:Inter,system-ui,sans-serif;font-size:25px;line-height:.86;font-weight:550;letter-spacing:-.055em}
-.d-gallery-scrollsnap-carousel-track article p{position:absolute;right:15px;bottom:15px;left:15px;margin:0;color:#5c5c66;font-size:6px;line-height:1;letter-spacing:.09em}
+.d-gallery-scrollsnap-carousel-track article>div i{position:absolute;display:block;border:1px solid #333333;transform:rotate(45deg)}
+.d-gallery-scrollsnap-carousel-track article>div i:nth-child(1){inset:0}.d-gallery-scrollsnap-carousel-track article>div i:nth-child(2){inset:10px}.d-gallery-scrollsnap-carousel-track article>div i:nth-child(3){inset:20px;background:#fa7319;border-color:#fa7319}
+.d-gallery-scrollsnap-carousel-track article:nth-child(2)>div i:nth-child(3){background:#fa7319;border-color:#fa7319}.d-gallery-scrollsnap-carousel-track article:nth-child(3)>div i:nth-child(3){background:#fa7319;border-color:#fa7319}.d-gallery-scrollsnap-carousel-track article:nth-child(4)>div i:nth-child(3){background:#fa7319;border-color:#fa7319}.d-gallery-scrollsnap-carousel-track article:nth-child(5)>div i:nth-child(3){background:#fa7319;border-color:#fa7319}
+.d-gallery-scrollsnap-carousel-track article>span{position:absolute;top:15px;left:16px;color:#fa7319;font-size:10px;line-height:1;letter-spacing:.09em}
+.d-gallery-scrollsnap-carousel-track article h3{position:absolute;right:15px;bottom:39px;left:15px;margin:0;color:#ececef;font-family:Roboto Mono,JetBrains Mono,monospace;font-size:25px;line-height:.86;font-weight:550;letter-spacing:-.055em}
+.d-gallery-scrollsnap-carousel-track article p{position:absolute;right:15px;bottom:15px;left:15px;margin:0;color:#7a7a7f;font-size:6px;line-height:1;letter-spacing:.09em}
 .d-gallery-scrollsnap-carousel-progress{position:absolute;right:0;bottom:29px;left:0;height:8px;display:flex;align-items:center;justify-content:center;gap:5px}
-.d-gallery-scrollsnap-carousel-progress i{display:block;width:6px;height:6px;border-radius:4px;background:#2e2e34;transition:width 250ms ease-in-out,background-color 250ms ease-in-out}
-.d-gallery-scrollsnap-carousel-progress i.d-gallery-scrollsnap-carousel-active{width:16px;background:#a78bfa}
-.d-gallery-scrollsnap-carousel-foot{position:absolute;right:14px;bottom:9px;left:14px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:7px;line-height:1;letter-spacing:.09em}
-.d-gallery-scrollsnap-carousel-readout{color:#8f8f98}
+.d-gallery-scrollsnap-carousel-progress i{display:block;width:6px;height:6px;border-radius:0;background:#333333;transition:width 250ms ease-in-out,background-color 250ms ease-in-out}
+.d-gallery-scrollsnap-carousel-progress i.d-gallery-scrollsnap-carousel-active{width:16px;background:#fa7319}
+.d-gallery-scrollsnap-carousel-foot{position:absolute;right:14px;bottom:9px;left:14px;display:flex;align-items:center;justify-content:space-between;color:#7a7a7f;font-size:7px;line-height:1;letter-spacing:.09em}
+.d-gallery-scrollsnap-carousel-readout{color:#b8b8b8}
 .d-gallery-scrollsnap-carousel-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container(max-width:340px){.d-gallery-scrollsnap-carousel-head,.d-gallery-scrollsnap-carousel-foot{right:11px;left:11px}.d-gallery-scrollsnap-carousel-head>span{font-size:7px}.d-gallery-scrollsnap-carousel-toggle{padding-right:6px;gap:4px}.d-gallery-scrollsnap-carousel-stage{right:6px;left:6px}}
 @media(prefers-reduced-motion:reduce){.d-gallery-scrollsnap-carousel *,.d-gallery-scrollsnap-carousel *::before,.d-gallery-scrollsnap-carousel *::after{animation:none!important;transition:none!important}.d-gallery-scrollsnap-carousel-track article{will-change:auto}}
@@ -81,5 +81,5 @@ if('ResizeObserver'in window){resizeObserver=new ResizeObserver(queueRender);res
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 setMode(true,false);queueRender();
 `,
-  prompt:`Build one self-contained responsive 320-pixel Galleries and Sliders scene around a native horizontal scroll container. Hide its scrollbar, set overflow-x auto and scroll-snap-type x mandatory, and place five cards at exactly seventy percent of the stage width with sixteen-pixel gaps and scroll-snap-align center. Pad the scrollable content so the first and last cards can center. Fade the outer forty pixels on both sides with a linear mask. On each passive scroll event, request at most one animation frame; in that frame measure every card's distance from the viewport center and map the nearest card to scale one and full opacity while cards one step away reach scale .94 and opacity .7. Use the same nearest-card calculation to stretch one of five progress dots into a sixteen-pixel accent pill with a 250-millisecond ease-in-out transition. Add a switch chip that swaps the live scroll-snap type between x mandatory and x proximity. Make the focused scroller use smooth scrollBy calls for left and right arrow keys, with Home and End support. Preserve native touch momentum, expose the active index and snap mode, announce changes accessibly, remove motion transitions and use immediate keyboard scrolling under reduced motion, observe resize, and clean up detached instances without dependencies.`
+  prompt:`Build one self-contained responsive 320-pixel Galleries and Sliders scene around a native horizontal scroll container. Hide its scrollbar, set overflow-x auto and scroll-snap-type x mandatory, and place five cards at exactly seventy percent of the stage width with sixteen-pixel gaps and scroll-snap-align center. Pad the scrollable content so the first and last cards can center. Fade the outer forty pixels on both sides with a linear mask. On each passive scroll event, request at most one animation frame; in that frame measure every card's distance from the viewport center and map the nearest card to scale one and full opacity while cards one step away reach scale .94 and opacity .7. Use the same nearest-card calculation to stretch one of five progress dots into a sixteen-pixel accent pill with a 250-millisecond ease-in-out transition. Add a switch chip that swaps the live scroll-snap type between x mandatory and x proximity. Make the focused scroller use smooth scrollBy calls for left and right arrow keys, with Home and End support. Preserve native touch momentum, expose the active index and snap mode, announce changes accessibly, remove motion transitions and use immediate keyboard scrolling under reduced motion, observe resize, and clean up detached instances without dependencies. Use a #0a0a0b root, flat grayscale slide surfaces, hard-edged linework, and oversized mono numerals; reserve #fa7319 for indices, focus, counters, and progress. Do not use per-slide hues or soft radial glow blobs.`
 });

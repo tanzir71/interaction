@@ -50,7 +50,7 @@ INTRX.register({
   --steel: #23272a; --steel-hi: #353a3e; --ink: #e2e0d7; --muted: #858a89; --signal: #ef5b3f;
   width: 100%; min-height: 430px; position: relative; overflow: hidden; box-sizing: border-box;
   padding: 23px clamp(17px, 5vw, 46px) 20px; color: var(--ink); background: #151719; outline: none;
-  font-family: Inter, system-ui, sans-serif;
+  font-family:Roboto Mono,JetBrains Mono,monospace;
 }
 .d-mech::before {
   content: ''; position: absolute; inset: 0; opacity: .32; pointer-events: none;

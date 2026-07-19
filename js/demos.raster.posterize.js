@@ -88,7 +88,7 @@ function drawSource() {
   source.fillStyle = '#74f2c2'; source.beginPath(); source.arc(columns * .72, rows * .32, rows * .24, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#10131c'; source.beginPath(); source.arc(columns * .72, rows * .32, rows * .1, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(6,7,12,.68)'; source.fillRect(0, rows * .68, columns, rows * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('DEPTH', columns * .04, rows * .95);
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('DEPTH', columns * .04, rows * .95);
   sourcePixels = source.getImageData(0, 0, columns, rows).data;
 }
 function measure() {

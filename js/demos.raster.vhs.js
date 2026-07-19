@@ -81,7 +81,7 @@ function drawSource() {
   source.fillStyle = '#d9fae8'; source.beginPath(); source.arc(width * .72, height * .33, height * .23, 0, Math.PI * 2); source.fill();
   source.fillStyle = '#11131b'; source.beginPath(); source.arc(width * .72, height * .33, height * .1, 0, Math.PI * 2); source.fill();
   source.fillStyle = 'rgba(6,7,12,.68)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Inter, sans-serif'; source.textBaseline = 'bottom'; source.fillText('TAPE', width * .05, height * .95);
+  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('TAPE', width * .05, height * .95);
   source.strokeStyle = 'rgba(255,255,255,.32)'; source.lineWidth = 1;
   for (let x = 0; x < width; x += 23) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + 34, height); source.stroke(); }
 }

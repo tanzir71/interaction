@@ -42,29 +42,29 @@ INTRX.register({
 .d-layout-caption-pull-hover *{box-sizing:border-box}
 .d-layout-caption-pull-hover-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
 .d-layout-caption-pull-hover-mode{display:flex;align-items:center;gap:5px;color:#9b9ba3}
-.d-layout-caption-pull-hover-mode i{width:5px;height:5px;border-radius:50%;background:#a78bfa;box-shadow:0 0 8px rgba(167,139,250,.45)}
-.d-layout-caption-pull-hover-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;padding:11px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:radial-gradient(circle at 50% 35%,rgba(167,139,250,.055),transparent 58%),#0d0d0f}
+.d-layout-caption-pull-hover-mode i{width:5px;height:5px;border-radius:50%;background:#fa7319;box-shadow:0 0 8px rgba(250,115,25,.45)}
+.d-layout-caption-pull-hover-stage{position:absolute;top:38px;right:12px;bottom:25px;left:12px;padding:11px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:radial-gradient(circle at 50% 35%,rgba(250,115,25,.055),transparent 58%),#0d0d0f}
 .d-layout-caption-pull-hover-card{position:relative;min-width:0;border-radius:9px;outline:none;cursor:pointer}
-.d-layout-caption-pull-hover-card:focus-visible{box-shadow:0 0 0 1px #0d0d0f,0 0 0 3px #a78bfa}
+.d-layout-caption-pull-hover-card:focus-visible{box-shadow:0 0 0 1px #0d0d0f,0 0 0 3px #fa7319}
 .d-layout-caption-pull-hover-frame{position:absolute;inset:0;overflow:hidden;border:1px solid #232327;border-radius:9px;background:#101012}
 .d-layout-caption-pull-hover-scene{position:absolute;inset:-1px;overflow:hidden;transform:translateY(0) scale(1);transform-origin:center;transition:transform 350ms cubic-bezier(.22,1,.36,1);will-change:transform}
 .d-layout-caption-pull-hover-scene-one{background:linear-gradient(110deg,#322746 0 51%,#163039 51% 100%)}
 .d-layout-caption-pull-hover-scene-two{background:linear-gradient(145deg,#3b2d20 0 46%,#242844 46% 100%)}
 .d-layout-caption-pull-hover-scene::before{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.045),transparent 42%,rgba(0,0,0,.28));content:''}
-.d-layout-caption-pull-hover-scene strong{position:absolute;right:-4px;bottom:63px;color:#ececef;font-family:Inter,system-ui,sans-serif;font-size:82px;font-weight:700;line-height:.8;letter-spacing:-.09em;opacity:.15}
+.d-layout-caption-pull-hover-scene strong{position:absolute;right:-4px;bottom:63px;color:#ececef;font-family:Roboto Mono,JetBrains Mono,monospace;font-size:82px;font-weight:700;line-height:.8;letter-spacing:-.09em;opacity:.15}
 .d-layout-caption-pull-hover-scene>i{position:absolute;display:block}
-.d-layout-caption-pull-hover-scene>i:first-of-type{top:31px;left:15px;width:55px;height:55px;border:1px solid rgba(236,236,239,.23);border-radius:50%;box-shadow:inset 0 0 0 12px rgba(167,139,250,.08)}
+.d-layout-caption-pull-hover-scene>i:first-of-type{top:31px;left:15px;width:55px;height:55px;border:1px solid rgba(236,236,239,.23);border-radius:50%;box-shadow:inset 0 0 0 12px rgba(250,115,25,.08)}
 .d-layout-caption-pull-hover-scene>i:nth-of-type(2){top:76px;right:13px;width:48px;height:66px;background:rgba(236,236,239,.075);clip-path:polygon(50% 0,100% 100%,0 100%)}
 .d-layout-caption-pull-hover-scene-two>i:first-of-type{border-radius:3px;transform:rotate(18deg)}
-.d-layout-caption-pull-hover-scene-two>i:nth-of-type(2){background:rgba(167,139,250,.13);clip-path:polygon(0 22%,78% 0,100% 78%,20% 100%)}
+.d-layout-caption-pull-hover-scene-two>i:nth-of-type(2){background:rgba(250,115,25,.13);clip-path:polygon(0 22%,78% 0,100% 78%,20% 100%)}
 .d-layout-caption-pull-hover-scene>span{position:absolute;top:14px;right:12px;color:rgba(236,236,239,.62);font-size:7px;font-weight:700;line-height:1.25;letter-spacing:.09em;text-align:right}
 .d-layout-caption-pull-hover-caption{position:absolute;z-index:2;right:0;bottom:0;left:0;height:86px;padding:14px 11px 10px;border-top:1px solid #232327;background:rgba(16,16,18,.96);transform:translateY(100%);transition:transform 280ms cubic-bezier(.22,1,.36,1);will-change:transform}
-.d-layout-caption-pull-hover-rule{position:absolute;top:-1px;right:11px;left:11px;height:1px;background:#a78bfa;transform:scaleX(0);transform-origin:left;transition:transform 245ms ease;display:block}
-.d-layout-caption-pull-hover-caption p{display:flex;flex-wrap:wrap;gap:3px 4px;margin:0;padding-right:15px;font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:600;line-height:1;letter-spacing:-.03em}
+.d-layout-caption-pull-hover-rule{position:absolute;top:-1px;right:11px;left:11px;height:1px;background:#fa7319;transform:scaleX(0);transform-origin:left;transition:transform 245ms ease;display:block}
+.d-layout-caption-pull-hover-caption p{display:flex;flex-wrap:wrap;gap:3px 4px;margin:0;padding-right:15px;font-family:Roboto Mono,JetBrains Mono,monospace;font-size:14px;font-weight:600;line-height:1;letter-spacing:-.03em}
 .d-layout-caption-pull-hover-caption p>span{display:inline-block;overflow:hidden;padding-bottom:2px}
 .d-layout-caption-pull-hover-caption p>span>i{display:block;font-style:normal;transform:translateY(100%);transition:transform 280ms cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--d-layout-caption-pull-hover-r)*21ms)}
 .d-layout-caption-pull-hover-caption small{position:absolute;left:11px;bottom:9px;color:#5c5c66;font-size:6px;line-height:1;letter-spacing:.07em;opacity:0;transform:translateY(4px);transition:opacity 175ms ease,transform 175ms ease}
-.d-layout-caption-pull-hover-caption>b{position:absolute;right:11px;bottom:8px;color:#a78bfa;font-size:15px;font-weight:400;line-height:1;opacity:0;transform:translateX(-6px);transition:opacity 140ms ease,transform 140ms ease}
+.d-layout-caption-pull-hover-caption>b{position:absolute;right:11px;bottom:8px;color:#fa7319;font-size:15px;font-weight:400;line-height:1;opacity:0;transform:translateX(-6px);transition:opacity 140ms ease,transform 140ms ease}
 .d-layout-caption-pull-hover-card.d-layout-caption-pull-hover-card-active .d-layout-caption-pull-hover-scene{transform:translateY(-12px) scale(1.03);transition-duration:500ms}
 .d-layout-caption-pull-hover-card.d-layout-caption-pull-hover-card-active .d-layout-caption-pull-hover-caption{transform:translateY(0);transition-duration:400ms}
 .d-layout-caption-pull-hover-card.d-layout-caption-pull-hover-card-active .d-layout-caption-pull-hover-rule{transform:scaleX(1);transition-duration:350ms;transition-delay:100ms}

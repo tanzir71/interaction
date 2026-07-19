@@ -335,9 +335,10 @@ INTRX.register({
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
   transition-delay: var(--d);
 }
-.d-roll a:hover .d-roll-stack { transform: translateY(-50%); }
+.d-roll a:hover .d-roll-stack, .d-roll.d-roll-auto .d-roll-stack { transform: translateY(-50%); }
 .d-roll .d-roll-stack b { font-weight: inherit; line-height: 1.15; }
-.d-roll .d-roll-stack b:last-child { color: #c8ff2e; }`,
+.d-roll .d-roll-stack b:last-child { color: #fa7319; }
+@media (prefers-reduced-motion: reduce) { .d-roll .d-roll-stack { transition: none; } }`,
   js: `
 root.querySelectorAll('a').forEach(function (link) {
   const text = link.dataset.text;
@@ -349,7 +350,30 @@ root.querySelectorAll('a').forEach(function (link) {
     mask.innerHTML = '<span class="d-roll-stack" style="--d:' + (i * 0.025) + 's"><b>' + glyph + '</b><b>' + glyph + '</b></span>';
     link.appendChild(mask);
   });
-});`,
+});
+
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let idle = !reduced, idleTimer = 0;
+function stopIdle() {
+  if (!idle) return;
+  idle = false;
+  clearTimeout(idleTimer);
+  root.classList.remove('d-roll-auto');
+}
+if (!reduced) {
+  root.addEventListener('pointerover', stopIdle, { once: true });
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+  requestAnimationFrame(function () {
+    if (!root.isConnected || !idle) return;
+    root.classList.add('d-roll-auto');
+    idleTimer = setTimeout(function () {
+      if (!root.isConnected) return;
+      idle = false;
+      root.classList.remove('d-roll-auto');
+    }, 900);
+  });
+}`,
   prompt: `
 Build the "letter roll" nav-link hover, vanilla JS + CSS.
 
@@ -359,6 +383,8 @@ Requirements:
 - Stagger characters left-to-right by ~25ms each via a --d custom property on transition-delay.
 - The incoming (second) copy can be a different color for an accent flash.
 - On mouse leave it rolls back automatically (same transition).
+- Auto-roll once on boot as a teaser, then return to hover-only behavior; cancel the teaser permanently on first pointer or keyboard interaction.
+- Respect prefers-reduced-motion by skipping the boot teaser and transitions.
 - Preserve accessibility: keep the original label as aria-label.`,
 });
 

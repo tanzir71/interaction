@@ -55,7 +55,7 @@ INTRX.register({
   --light: rgba(255,255,255,.88); --shade: rgba(118,130,146,.46);
   width: 100%; min-height: 430px; box-sizing: border-box; position: relative; overflow: hidden;
   padding: 24px clamp(18px, 5vw, 48px) 20px; color: var(--ink); background: var(--surface);
-  font-family: Inter, system-ui, sans-serif; outline: none;
+  font-family:Roboto Mono,JetBrains Mono,monospace; outline: none;
 }
 .d-neumo::after {
   content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .25;

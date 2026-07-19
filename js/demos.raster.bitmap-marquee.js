@@ -71,11 +71,11 @@ let width = 1, height = 1, dpr = 1, bitmap = [], bitmapColumns = 1, bitmapRows =
 let offset = 0, targetSpeed = 42, speed = 42, paused = false, lastTime = null, dirty = true, lastDraw = 0;
 
 function buildBitmap() {
-  textContext.font = '800 42px Inter, sans-serif';
+  textContext.font = '800 42px Roboto Mono, sans-serif';
   const measured = Math.ceil(textContext.measureText(PHRASE).width);
   textCanvas.width = measured + 24; textCanvas.height = TEXT_HEIGHT;
   textContext.clearRect(0, 0, textCanvas.width, textCanvas.height);
-  textContext.font = '800 42px Inter, sans-serif'; textContext.textBaseline = 'middle'; textContext.fillStyle = '#fff';
+  textContext.font = '800 42px Roboto Mono, sans-serif'; textContext.textBaseline = 'middle'; textContext.fillStyle = '#fff';
   textContext.fillText(PHRASE, 12, TEXT_HEIGHT * .52);
   const pixels = textContext.getImageData(0, 0, textCanvas.width, textCanvas.height).data;
   bitmapColumns = Math.ceil(textCanvas.width / SAMPLE); bitmapRows = Math.ceil(textCanvas.height / SAMPLE); bitmap = [];

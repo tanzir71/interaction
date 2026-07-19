@@ -26,7 +26,7 @@ INTRX.register({
   css: `
 .d-lenis { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-lenis::-webkit-scrollbar { width: 3px; }
-.d-lenis::-webkit-scrollbar-thumb { background: #c8ff2e; }
+.d-lenis::-webkit-scrollbar-thumb { background: #fa7319; }
 .d-lenis-content section {
   height: 260px; display: flex; align-items: center; padding: 0 48px;
   border-bottom: 1px solid #232327;
@@ -150,6 +150,7 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-parallax">
+  <span class="d-parallax-idle" aria-hidden="true">SCROLL DOWN</span>
   <div class="d-parallax-track">
     <div class="d-parallax-scene">
       <div class="d-parallax-layer" data-speed="0.2"><span class="d-parallax-bg">BACK</span></div>
@@ -159,15 +160,27 @@ INTRX.register({
   </div>
 </div>`,
   css: `
-.d-parallax { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
+.d-parallax { position: relative; height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-parallax-track { height: 900px; position: relative; }
 .d-parallax-scene { position: sticky; top: 0; height: 320px; overflow: hidden; }
 .d-parallax-layer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; will-change: transform; }
 .d-parallax-bg  { font-size: 120px; font-weight: 700; color: #161619; letter-spacing: 0.05em; }
 .d-parallax-mid { font-size: 64px;  font-weight: 700; color: #2e2e34; margin-left: 180px; }
-.d-parallax-fg  { font-size: 32px;  font-weight: 700; color: #c8ff2e; margin-left: -200px; margin-top: 60px; }`,
+.d-parallax-fg  { font-size: 32px;  font-weight: 700; color: #fa7319; margin-left: -200px; margin-top: 60px; }
+.d-parallax-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-parallax-idle 1.8s ease-in-out infinite; }
+.d-parallax.d-parallax-idle-stop .d-parallax-idle { opacity: 0; animation: none; }
+@keyframes d-parallax-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .d-parallax-idle { animation: none; opacity: 0; } }`,
   js: `
 const layers = root.querySelectorAll('.d-parallax-layer');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopIdle() { root.classList.add('d-parallax-idle-stop'); }
+if (reduced) stopIdle();
+else {
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 function update() {
   const y = root.scrollTop;               // window.scrollY for full page
@@ -189,6 +202,7 @@ Requirements:
 - On scroll, translateY each layer by scrollY * (1 - speed) * 0.5 so layers separate with depth.
 - Use a passive scroll listener and transform only (no top/margin changes) so it stays on the compositor.
 - Add will-change: transform to the layers.
+- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Respect prefers-reduced-motion by disabling the effect.`,
 });
 
@@ -207,6 +221,7 @@ INTRX.register({
   hint: 'scroll vertically',
   html: `
 <div class="d-hscroll">
+  <span class="d-hscroll-idle" aria-hidden="true">SCROLL DOWN</span>
   <div class="d-hscroll-track">
     <div class="d-hscroll-pin">
       <div class="d-hscroll-row">
@@ -219,7 +234,7 @@ INTRX.register({
   </div>
 </div>`,
   css: `
-.d-hscroll { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
+.d-hscroll { position: relative; height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-hscroll-track { height: 1200px; position: relative; }
 .d-hscroll-pin { position: sticky; top: 0; height: 320px; overflow: hidden; display: flex; align-items: center; }
 .d-hscroll-row { display: flex; gap: 20px; padding: 0 40px; will-change: transform; }
@@ -229,10 +244,22 @@ INTRX.register({
   color: #ececef; font-size: 44px; font-weight: 700;
   padding: 20px 24px; display: flex; flex-direction: column; justify-content: space-between;
 }
-.d-hscroll-panel em { font-style: normal; font-size: 14px; color: #c8ff2e; font-weight: 500; }`,
+.d-hscroll-panel em { font-style: normal; font-size: 14px; color: #fa7319; font-weight: 500; }
+.d-hscroll-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-hscroll-idle 1.8s ease-in-out infinite; }
+.d-hscroll.d-hscroll-idle-stop .d-hscroll-idle { opacity: 0; animation: none; }
+@keyframes d-hscroll-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .d-hscroll-idle { animation: none; opacity: 0; } }`,
   js: `
 const row = root.querySelector('.d-hscroll-row');
 const track = root.querySelector('.d-hscroll-track');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopIdle() { root.classList.add('d-hscroll-idle-stop'); }
+if (reduced) stopIdle();
+else {
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 function update() {
   const max = track.offsetHeight - root.clientHeight;     // scrollable distance
@@ -251,6 +278,7 @@ Requirements:
 - Inside it, a position:sticky full-viewport wrapper containing a horizontal flex row of panels.
 - Map vertical scroll progress through the section (0 to 1) to translateX from 0 to -(rowWidth - viewportWidth).
 - Use transform only, passive scroll listener, will-change: transform.
+- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Optionally note how the same effect is done with GSAP ScrollTrigger (pin: true, scrub: 1, x: -shift) as an alternative.
 - Fall back to a native horizontally-scrollable row when prefers-reduced-motion is set.`,
 });
@@ -270,6 +298,7 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-stack">
+  <span class="d-stack-idle" aria-hidden="true">SCROLL DOWN</span>
   <div class="d-stack-list">
     <div class="d-stack-card" style="--i:0"><h3>Strategy</h3><p>Cards pin at the same offset.</p></div>
     <div class="d-stack-card" style="--i:1"><h3>Design</h3><p>Each one covers the last.</p></div>
@@ -278,7 +307,7 @@ INTRX.register({
   </div>
 </div>`,
   css: `
-.d-stack { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
+.d-stack { position: relative; height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-stack-list { padding: 16px 48px 200px; }
 .d-stack-card {
   position: sticky; top: 16px;
@@ -289,9 +318,21 @@ INTRX.register({
   transition: transform 0.2s linear, filter 0.2s linear;
 }
 .d-stack-card h3 { font-size: 24px; margin-bottom: 8px; }
-.d-stack-card p { color: #9b9ba3; font-size: 14px; }`,
+.d-stack-card p { color: #9b9ba3; font-size: 14px; }
+.d-stack-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-stack-idle 1.8s ease-in-out infinite; }
+.d-stack.d-stack-idle-stop .d-stack-idle { opacity: 0; animation: none; }
+@keyframes d-stack-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .d-stack-idle { animation: none; opacity: 0; } }`,
   js: `
 const cards = [].slice.call(root.querySelectorAll('.d-stack-card'));
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopIdle() { root.classList.add('d-stack-idle-stop'); }
+if (reduced) stopIdle();
+else {
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 function update() {
   cards.forEach(function (card, i) {
@@ -316,6 +357,7 @@ Requirements:
 - As the next card slides over the current one, scale the covered card down to ~0.94 and darken it slightly (brightness), proportional to overlap progress computed from getBoundingClientRect.
 - transform-origin: center top so cards shrink "into" the stack.
 - Passive scroll listener; transforms only.
+- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - The last card never scales.
 - Respect prefers-reduced-motion (skip the scaling, keep the sticky stacking).`,
 });
@@ -335,6 +377,7 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-progress">
+  <span class="d-progress-idle" aria-hidden="true">SCROLL DOWN</span>
   <div class="d-progress-bar"><span></span></div>
   <div class="d-progress-pct">0%</div>
   <div class="d-progress-body">
@@ -352,21 +395,33 @@ INTRX.register({
   height: 2px; background: #232327;
 }
 .d-progress-bar span {
-  display: block; height: 100%; background: #c8ff2e;
+  display: block; height: 100%; background: #fa7319;
   transform: scaleX(0); transform-origin: left center;
 }
 .d-progress-pct {
   position: sticky; top: 12px; z-index: 2;
   margin-left: auto; margin-right: 16px; width: max-content;
-  font-family: "JetBrains Mono", monospace; font-size: 11px; color: #c8ff2e;
+  font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 11px; color: #fa7319;
 }
 .d-progress-body { padding: 24px 48px 40px; }
 .d-progress-body p {
   margin: 0 0 120px; color: #9b9ba3; font-size: 15px; max-width: 420px;
-}`,
+}
+.d-progress-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-progress-idle 1.8s ease-in-out infinite; }
+.d-progress.d-progress-idle-stop .d-progress-idle { opacity: 0; animation: none; }
+@keyframes d-progress-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .d-progress-idle { animation: none; opacity: 0; } }`,
   js: `
 const fill = root.querySelector('.d-progress-bar span');
 const pct = root.querySelector('.d-progress-pct');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopIdle() { root.classList.add('d-progress-idle-stop'); }
+if (reduced) stopIdle();
+else {
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 function update() {
   const max = root.scrollHeight - root.clientHeight;
@@ -385,6 +440,7 @@ Requirements:
 - Fill using transform: scaleX(progress) with transform-origin: left — never animate width.
 - Also render a small monospace percentage readout.
 - progress = scrollY / (document height - viewport height), clamped 0..1.
+- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Passive scroll listener, and update once on load.`,
 });
 
@@ -457,6 +513,7 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-zoom">
+  <span class="d-zoom-idle" aria-hidden="true">SCROLL DOWN</span>
   <div class="d-zoom-track">
     <div class="d-zoom-pin">
       <div class="d-zoom-media">
@@ -467,7 +524,7 @@ INTRX.register({
   </div>
 </div>`,
   css: `
-.d-zoom { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
+.d-zoom { position: relative; height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-zoom-track { height: 1000px; }
 .d-zoom-pin {
   position: sticky; top: 0; height: 320px;
@@ -481,18 +538,30 @@ INTRX.register({
 .d-zoom-art {
   position: absolute; inset: 0;
   background:
-    radial-gradient(circle at 30% 40%, #c8ff2e22 0%, transparent 45%),
+    radial-gradient(circle at 30% 40%, rgba(250,115,25,.13) 0%, transparent 45%),
     radial-gradient(circle at 70% 60%, #8bd0ff18 0%, transparent 45%),
     linear-gradient(160deg, #161619, #0f1a08);
   border: 1px solid #2e2e34;
 }
 .d-zoom-label {
-  position: relative; font-family: "JetBrains Mono", monospace;
-  font-size: 12px; letter-spacing: 0.3em; color: #c8ff2e;
-}`,
+  position: relative; font-family: "Roboto Mono", "JetBrains Mono", monospace;
+  font-size: 12px; letter-spacing: 0.3em; color: #fa7319;
+}
+.d-zoom-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-zoom-idle 1.8s ease-in-out infinite; }
+.d-zoom.d-zoom-idle-stop .d-zoom-idle { opacity: 0; animation: none; }
+@keyframes d-zoom-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
+@media (prefers-reduced-motion: reduce) { .d-zoom-idle { animation: none; opacity: 0; } }`,
   js: `
 const media = root.querySelector('.d-zoom-media');
 const track = root.querySelector('.d-zoom-track');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function stopIdle() { root.classList.add('d-zoom-idle-stop'); }
+if (reduced) stopIdle();
+else {
+  root.addEventListener('pointerdown', stopIdle, { once: true });
+  root.addEventListener('keydown', stopIdle, { once: true });
+}
 
 function update() {
   const max = track.offsetHeight - root.clientHeight;
@@ -511,6 +580,7 @@ Requirements:
 - A tall section (~250vh) with a position:sticky full-viewport child.
 - Inside, a media element that starts at transform: scale(0.35) and reaches scale(1) as the user scrolls through the section.
 - Apply a cubic ease-out to the scroll progress (1 - (1-p)^3) so the zoom decelerates.
+- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Transform only; passive scroll listener; will-change: transform.
 - Mention the GSAP ScrollTrigger equivalent (pin + scrub) as an alternative implementation.`,
 });

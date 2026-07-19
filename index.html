@@ -16,9 +16,9 @@
 <meta name="twitter:description" content="Award-site interactions with live demos, copyable code, and LLM prompts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23a78bfa' stroke-width='2'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23fa7319' stroke-width='2'/></svg>">
 </head>
 <body>
 
@@ -32,26 +32,33 @@
     <a class="brand" href="#top">
       <span class="brand-mark"></span>
       <span class="brand-name">INTRX</span>
-      <span class="brand-sub">/ interaction library</span>
     </a>
   </div>
   <div class="topbar-right">
-    <div class="search-wrap">
-      <span class="search-key">⌘K</span>
-      <input id="search" type="text" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
-    </div>
-    <span class="count-pill" id="count-pill">00</span>
-    <a class="gh-link mono" href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">GitHub</a>
+    <span class="count-pill" id="count-pill-mobile">00</span>
   </div>
 </header>
 
 <div class="layout">
 
   <aside class="sidebar" id="sidebar">
-    <nav id="nav" aria-label="Pattern navigation"><!-- built by app.js --></nav>
+    <div>
+      <div class="side-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark"></span>
+          <span class="brand-name">INTRX</span>
+        </a>
+        <span class="count-pill" id="count-pill">00</span>
+      </div>
+      <div class="search-wrap">
+        <span class="search-key">Ctrl K</span>
+        <input id="search" type="text" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
+      </div>
+      <nav id="nav" aria-label="Pattern navigation"><!-- built by app.js --></nav>
+    </div>
     <div class="sidebar-foot">
       <p>Every demo ships with source code and an LLM prompt. Copy either — build anywhere.</p>
-      <p class="mono dim">MIT · no tracking · static</p>
+      <p class="mono dim">MIT · no tracking · static · <a href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">github</a></p>
     </div>
   </aside>
 
@@ -113,25 +120,10 @@
     <section class="roadmap" id="roadmap">
       <div class="cat-divider roadmap-divider">
         <h2>Roadmap</h2>
-        <span class="mono">28 patterns queued</span>
+        <span class="mono">0 patterns queued</span>
         <span class="rule"></span>
       </div>
-      <p class="roadmap-note">The original roadmap is complete. This second, likes-driven batch focuses on terminal aesthetics, geo interfaces, agent UI, procedural image work, and premium interaction polish.</p>
-      <div class="roadmap-group"><div class="roadmap-cat"><span>AGENT &amp; AI UI</span><span class="n">06</span></div><div class="roadmap-chips">
-        <span class="chip">Agent Context Compaction</span><span class="chip">Agent Node Graph</span><span class="chip">Agent Streaming Text</span><span class="chip">Agent Thinking Drawer</span><span class="chip">Agent Diff Review</span><span class="chip">Agent Knowledge Orbit</span>
-      </div></div>
-      <div class="roadmap-group"><div class="roadmap-cat"><span>LIQUID &amp; ORGANIC</span><span class="n">02</span></div><div class="roadmap-chips">
-        <span class="chip">Liquid Image Ripple</span><span class="chip">Liquid Mask Reveal</span>
-      </div></div>
-      <div class="roadmap-group"><div class="roadmap-cat"><span>IMAGE, WEBGL &amp; 3D</span><span class="n">05</span></div><div class="roadmap-chips">
-        <span class="chip">WebGL Hologram Particles</span><span class="chip">WebGL Neural Signals</span><span class="chip">Voxel Assemble</span><span class="chip">Painterly Smear</span><span class="chip">CSS 3D Exploded Device</span>
-      </div></div>
-      <div class="roadmap-group"><div class="roadmap-cat"><span>SKEUOMORPH</span><span class="n">04</span></div><div class="roadmap-chips">
-        <span class="chip">OP-1 Panel</span><span class="chip">Dynamic Notch</span><span class="chip">Vinyl Player Card</span><span class="chip">Foil Trading Card</span>
-      </div></div>
-      <div class="roadmap-group"><div class="roadmap-cat"><span>BUTTONS, LAYOUT &amp; MICRO</span><span class="n">10</span></div><div class="roadmap-chips">
-        <span class="chip">Button Polish Stages</span><span class="chip">Bento Spotlight</span><span class="chip">Swap Widget</span><span class="chip">Drag Collapse Panel</span><span class="chip">Popover Anchor Morph</span><span class="chip">Mega Menu Preview</span><span class="chip">Scroll Snap Carousel</span><span class="chip">Table Image Idle</span><span class="chip">Caption Pull Hover</span><span class="chip">Hero Spotlight Reveal</span>
-      </div></div>
+      <p class="roadmap-note">Both published roadmaps are complete. New patterns will be added only when they clear the same interaction, accessibility, and visual-quality bar.</p>
     </section>
 
     <footer class="footer">
