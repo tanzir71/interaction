@@ -288,7 +288,7 @@ function frame(now){
   expose(phase);
   requestAnimationFrame(frame);
 }
-panel.addEventListener('click',function(){begin('pointer')});
+panel.addEventListener('click',function(event){event.stopPropagation();begin(event.detail===0?'keyboard':'pointer')});
 if('IntersectionObserver'in window){observer=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start()},{threshold:.05});observer.observe(root)}
 reset('initial')`,
   prompt:`Build a self-contained 320px-tall fictional authorization terminal using JetBrains Mono and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, warning #fbbf24, and error #f87171. Use a 4px-radius hard-tech panel, four 8px corner ticks, FUI scanlines, a persistent accent readiness dot, 10px uppercase labels with 0.08em tracking, 12px tabular hash data, and one exact 26px weight-500 result stamp.

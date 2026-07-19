@@ -372,7 +372,7 @@ function selectNext(nextSource){
   render();
   expose(nextSource);
 }
-scene.addEventListener('click',function(event){selectNext(event.detail===0?'keyboard':'pointer')});
+scene.addEventListener('click',function(event){event.stopPropagation();selectNext(event.detail===0?'keyboard':'pointer')});
 function canRun(){return !reduced&&visible&&documentVisible&&root.isConnected}
 function stop(){
   if(frameId)cancelAnimationFrame(frameId);

@@ -43,7 +43,7 @@ INTRX.register({
 .d-gooey-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .d-gooey-field { position: absolute; inset: 0; filter: url(#d-gooey-filter); pointer-events: none; }
 .d-gooey-blob, .d-gooey-mass { position: absolute; display: block; border-radius: 999px;
-  background: #c8ff2e; will-change: transform; }
+  background: #fa7319; will-change: transform; }
 .d-gooey-blob { left: 0; top: 0; width: 54px; height: 54px;
   animation: d-gooey-breathe 2.8s ease-in-out infinite; }
 .d-gooey-mass { top: 50%; width: 132px; height: 52px; margin: -26px 0 0 -66px; }
@@ -179,12 +179,12 @@ INTRX.register({
 .d-emitter.d-emitter-active .d-emitter-reticle { opacity: 0; }
 .d-emitter-readout { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-emitter-readout strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-emitter-readout strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-emitter-burst { position: absolute; left: 20px; bottom: 18px; z-index: 2; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: border-color .2s, color .2s, transform .2s; }
-.d-emitter-burst:hover { border-color: #c8ff2e; color: #c8ff2e; transform: translateY(-2px); }
-.d-emitter-burst:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-emitter-burst:hover { border-color: #fa7319; color: #fa7319; transform: translateY(-2px); }
+.d-emitter-burst:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-emitter-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
@@ -284,10 +284,10 @@ function frame(now) {
     if (p.life <= 0 || p.y > height + 18) { particles.splice(i, 1); continue; }
     const alpha = reduced ? 0.82 : Math.max(0, p.life / p.maxLife);
     ctx.globalAlpha = alpha;
-    ctx.strokeStyle = p.bright ? '#ececef' : '#c8ff2e';
+    ctx.strokeStyle = p.bright ? '#ececef' : '#fa7319';
     ctx.lineWidth = p.size;
     ctx.beginPath(); ctx.moveTo(p.px, p.py); ctx.lineTo(p.x - p.vx * 0.018, p.y - p.vy * 0.018); ctx.stroke();
-    ctx.fillStyle = p.bright ? '#ececef' : '#c8ff2e';
+    ctx.fillStyle = p.bright ? '#ececef' : '#fa7319';
     ctx.beginPath(); ctx.arc(p.x, p.y, p.size * 0.62, 0, Math.PI * 2); ctx.fill();
   }
   ctx.globalAlpha = 1;
@@ -324,7 +324,7 @@ INTRX.register({
     <defs>
       <linearGradient id="d-elastic-gradient" x1="0" x2="1">
         <stop offset="0" stop-color="#5c5c66" />
-        <stop offset=".5" stop-color="#c8ff2e" />
+        <stop offset=".5" stop-color="#fa7319" />
         <stop offset="1" stop-color="#5c5c66" />
       </linearGradient>
     </defs>
@@ -343,22 +343,22 @@ INTRX.register({
   background: #0a0a0b; touch-action: none; }
 .d-elastic::before { content: ''; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent 49.9%, #161619 50%, transparent 50.1%); }
-.d-elastic:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-elastic:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-elastic-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .d-elastic-shadow, .d-elastic-path { fill: none; vector-effect: non-scaling-stroke; }
-.d-elastic-shadow { stroke: #c8ff2e; stroke-width: 13; opacity: .08; filter: blur(7px); }
+.d-elastic-shadow { stroke: #fa7319; stroke-width: 13; opacity: .08; filter: blur(7px); }
 .d-elastic-path { stroke: url(#d-elastic-gradient); stroke-width: 2; stroke-linecap: round;
   stroke-dasharray: 3 7; animation: d-elastic-flow 1.3s linear infinite; }
 .d-elastic-anchor { fill: #0a0a0b; stroke: #9b9ba3; stroke-width: 2; vector-effect: non-scaling-stroke; }
-.d-elastic-node { fill: #c8ff2e; opacity: .75; vector-effect: non-scaling-stroke; }
+.d-elastic-node { fill: #fa7319; opacity: .75; vector-effect: non-scaling-stroke; }
 .d-elastic-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-elastic-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-elastic-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-elastic-reset { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-elastic-reset:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-elastic-reset:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-elastic-reset:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-elastic-reset:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-elastic-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
 @keyframes d-elastic-flow { to { stroke-dashoffset: -10; } }
@@ -622,29 +622,29 @@ INTRX.register({
   css: `
 .d-repel { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-repel:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-repel:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-repel-word { position: absolute; left: 50%; top: 48%; display: flex; align-items: center;
   transform: translate(-50%, -50%); white-space: nowrap; }
 .d-repel-word span { display: inline-block; color: #ececef; font: 700 clamp(42px, 8vw, 76px)/1 "Roboto Mono", sans-serif;
   letter-spacing: -.075em; will-change: transform; }
-.d-repel-word span:nth-of-type(3n) { color: #c8ff2e; }
+.d-repel-word span:nth-of-type(3n) { color: #fa7319; }
 .d-repel-gap { display: block; flex: 0 0 clamp(18px, 3.8vw, 38px); }
 .d-repel-field { position: absolute; left: 0; top: 0; width: 220px; height: 220px; border-radius: 50%;
-  border: 1px solid rgba(200,255,46,.18); pointer-events: none; opacity: 0; will-change: transform, opacity; }
+  border: 1px solid rgba(250,115,25,.18); pointer-events: none; opacity: 0; will-change: transform, opacity; }
 .d-repel-field::before, .d-repel-field::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(200,255,46,.42); transform: translate(-50%, -50%); }
+  background: rgba(250,115,25,.42); transform: translate(-50%, -50%); }
 .d-repel-field::before { width: 16px; height: 1px; }
 .d-repel-field::after { width: 1px; height: 16px; }
-.d-repel-field i { position: absolute; inset: 26px; border: 1px dashed rgba(200,255,46,.16); border-radius: 50%; }
+.d-repel-field i { position: absolute; inset: 26px; border: 1px dashed rgba(250,115,25,.16); border-radius: 50%; }
 .d-repel.d-repel-active .d-repel-field { opacity: 1; }
 .d-repel-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-repel-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-repel-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-repel-pulse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-repel-pulse:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-repel-pulse:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-repel-pulse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-repel-pulse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-repel-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
@@ -788,24 +788,24 @@ INTRX.register({
   css: `
 .d-ripple { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-ripple:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-ripple:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-ripple-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.d-ripple-cursor { position: absolute; left: 0; top: 0; width: 34px; height: 34px; border: 1px solid rgba(200,255,46,.32);
+.d-ripple-cursor { position: absolute; left: 0; top: 0; width: 34px; height: 34px; border: 1px solid rgba(250,115,25,.32);
   border-radius: 50%; opacity: 0; pointer-events: none; will-change: transform, opacity; }
 .d-ripple-cursor::before, .d-ripple-cursor::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(200,255,46,.55); transform: translate(-50%, -50%); }
+  background: rgba(250,115,25,.55); transform: translate(-50%, -50%); }
 .d-ripple-cursor::before { width: 8px; height: 1px; }
 .d-ripple-cursor::after { width: 1px; height: 8px; }
-.d-ripple-cursor i { position: absolute; inset: 5px; border: 1px dashed rgba(200,255,46,.2); border-radius: 50%; }
+.d-ripple-cursor i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.2); border-radius: 50%; }
 .d-ripple.d-ripple-active .d-ripple-cursor { opacity: 1; }
 .d-ripple-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-ripple-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-ripple-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-ripple-launch { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-ripple-launch:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-ripple-launch:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-ripple-launch:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-ripple-launch:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-ripple-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
@@ -935,7 +935,7 @@ function frame(now) {
     }
     peak = Math.max(peak, dot.energy);
     const px = dot.x + dot.ox, py = dot.y + dot.oy;
-    ctx.fillStyle = dot.energy > 0.035 ? 'rgba(200,255,46,' + Math.min(1, 0.34 + dot.energy * 0.8) + ')' : '#2e2e34';
+    ctx.fillStyle = dot.energy > 0.035 ? 'rgba(250,115,25,' + Math.min(1, 0.34 + dot.energy * 0.8) + ')' : '#2e2e34';
     ctx.beginPath(); ctx.arc(px, py, 1.25 + dot.energy * 3.1, 0, Math.PI * 2); ctx.fill();
   });
   cursor.style.transform = 'translate(' + (pointer.x - 17) + 'px,' + (pointer.y - 17) + 'px)';
@@ -948,7 +948,7 @@ Build a self-contained canvas dot-grid ripple inside a 320px position-relative r
 
 Represent each wave as {x, y, radius, life, power}. Pointer movement emits when travel exceeds 34px or 80ms has elapsed; derive velocity from distance / max(8ms, elapsed), then power = min(1.2, 0.55 + velocity / 1000). Pointerdown, Space, and a semantic center-launch button emit stronger 1.4–1.65 waves. Cap active waves at 7. Each frame clamp dt to 32ms, expand radius by (210 + power * 90)px/s, and reduce life by 0.55/s.
 
-For every dot and wave, calculate distance and a Gaussian ring band: exp(-((distance - radius) / thickness)²) * life * power, where thickness = 18 + power * 10. Add normalized radial displacement * band * 17 and take the maximum band as target brightness. Ease offsets toward target by 0.24 per frame. Preserve a trailing afterimage with energy = max(targetEnergy, energy * pow(0.91, dt * 60)). Draw base dots at 1.25px in #2e2e34; affected dots grow by energy * 3.1px and brighten toward #c8ff2e. Use one rAF loop, cache state, remove dead/offstage waves, and keep pointer listeners passive.
+For every dot and wave, calculate distance and a Gaussian ring band: exp(-((distance - radius) / thickness)²) * life * power, where thickness = 18 + power * 10. Add normalized radial displacement * band * 17 and take the maximum band as target brightness. Ease offsets toward target by 0.24 per frame. Preserve a trailing afterimage with energy = max(targetEnergy, energy * pow(0.91, dt * 60)). Draw base dots at 1.25px in #2e2e34; affected dots grow by energy * 3.1px and brighten toward #fa7319. Use one rAF loop, cache state, remove dead/offstage waves, and keep pointer listeners passive.
 
 Provide a visible emitter reticle, 00–99 amplitude readout, focus ring, arrow-key positioning (22px, or 40px with Shift), Home centering, Space launch, and polite status announcements. Prevent default only for handled keys and keep the launch button semantic. Under prefers-reduced-motion, keep one static wave at radius 68, do not expand or decay it, and assign displacement/energy directly without temporal easing; new interactions replace the previous static wave.`
 });
@@ -1145,7 +1145,7 @@ INTRX.register({
   background-size: 40px 40px; }
 .d-ghost-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .d-ghost-card { position: absolute; left: 0; top: 0; width: 126px; height: 88px; overflow: hidden;
-  border: 1px solid #c8ff2e; border-radius: 3px; background: #c8ff2e; color: #0a0a0b;
+  border: 1px solid #fa7319; border-radius: 3px; background: #fa7319; color: #0a0a0b;
   text-align: left; cursor: grab; touch-action: none; user-select: none; will-change: transform;
   box-shadow: 0 14px 34px rgba(0,0,0,.28); }
 .d-ghost-card:active { cursor: grabbing; }
@@ -1162,7 +1162,7 @@ INTRX.register({
   background: #0a0a0b; transform: translate(-50%, -50%); }
 .d-ghost-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-ghost-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-ghost-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-ghost-status { position: absolute; right: 20px; bottom: 18px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .d-ghost-card { will-change: auto; } }`,
@@ -1261,7 +1261,7 @@ function drawGhost(ghost) {
   ctx.translate(ghost.x + cardWidth * 0.5, ghost.y + cardHeight * 0.5);
   ctx.rotate(ghost.angle * Math.PI / 180);
   ctx.scale(1 + ghost.strength * 0.13, 1 - ghost.strength * 0.045);
-  ctx.globalAlpha = alpha; ctx.fillStyle = '#c8ff2e';
+  ctx.globalAlpha = alpha; ctx.fillStyle = '#fa7319';
   ctx.fillRect(-cardWidth * 0.5, -cardHeight * 0.5, cardWidth, cardHeight);
   ctx.globalAlpha = alpha * 1.4; ctx.fillStyle = '#0a0a0b';
   ctx.fillRect(-cardWidth * 0.5 + 9, cardHeight * 0.5 - 30, 48, 4);
@@ -1296,7 +1296,7 @@ Build a self-contained draggable artifact with motion-blur ghost copies inside a
 
 On pointerdown, store the grab offset and reset velocity. During pointermove, clamp the card to 8px stage margins, derive velocity in px/s from position delta / max(8ms, elapsed), move directly with the pointer, and rotate by clamp(vx * 0.018, -11, 11) degrees. Stamp a ghost whenever travel since the last stamp reaches 11px. Each snapshot stores x, y, angle, life=1, and strength=max(min(speed/900,1), minimumForce). Cap the trail at 20 snapshots.
 
-After release, integrate velocity with dt capped at 32ms, damp each component by pow(0.91, dt*60), and bounce at boundaries with restitution 0.34. Keep stamping every 10px while speed exceeds 55px/s. Ease angle toward clamp(vx*0.015,-9,9) by 0.12. Fade ghosts by 1.7 life units/s. Draw each copy translated and rotated like the card, stretched horizontally by 1 + strength*0.13 and compressed vertically by strength*0.045, using low-alpha #c8ff2e plus a couple of dark graphic bars. Use one rAF and clear/redraw the trail each frame.
+After release, integrate velocity with dt capped at 32ms, damp each component by pow(0.91, dt*60), and bounce at boundaries with restitution 0.34. Keep stamping every 10px while speed exceeds 55px/s. Ease angle toward clamp(vx*0.015,-9,9) by 0.12. Fade ghosts by 1.7 life units/s. Draw each copy translated and rotated like the card, stretched horizontally by 1 + strength*0.13 and compressed vertically by strength*0.045, using low-alpha #fa7319 plus a couple of dark graphic bars. Use one rAF and clear/redraw the trail each frame.
 
 Arrow keys move by 24px, Shift+Arrow by 46px, Home centers, and Space applies a 360px/s horizontal and -150px/s vertical throw. Prevent default only for handled keys, retain a strong focus ring, expose a live velocity readout, and announce drag/release/keyboard states. Under prefers-reduced-motion, move directly without rotation, inertia, or ghost creation; pointer and keyboard placement must remain functional.`
 });
@@ -1500,11 +1500,11 @@ INTRX.register({
   css: `
 .d-metaball { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-metaball:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-metaball:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-metaball-field { position: absolute; inset: -16px; overflow: hidden; background: #0a0a0b;
   filter: blur(11px) contrast(20); }
 .d-metaball-cursor, .d-metaball-orb { position: absolute; left: 0; top: 0; display: block;
-  border-radius: 50%; background: #c8ff2e; will-change: transform; }
+  border-radius: 50%; background: #fa7319; will-change: transform; }
 .d-metaball-cursor { z-index: 2; }
 .d-metaball-contours { position: absolute; left: 50%; top: 48%; width: 230px; height: 230px;
   transform: translate(-50%, -50%); pointer-events: none; opacity: .22; }
@@ -1516,12 +1516,12 @@ INTRX.register({
   font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
 .d-metaball-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-metaball-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-metaball-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-metaball-pulse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-metaball-pulse:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-metaball-pulse:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-metaball-pulse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-metaball-pulse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-metaball-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
@@ -1665,18 +1665,18 @@ INTRX.register({
   background: #0a0a0b; touch-action: none; }
 .d-rope::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .35;
   background: radial-gradient(circle at 50% 42%, #1d2018 0, #0a0a0b 58%); }
-.d-rope:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-rope:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-rope-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .d-rope-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
 .d-rope-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-rope-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-rope-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-rope-shake { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-rope-shake:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-rope-shake:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-rope-shake:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-rope-shake:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-rope-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) { .d-rope-shake { transition: none; } }`,
@@ -1805,14 +1805,14 @@ function solveReduced() {
 function drawRope() {
   ctx.clearRect(0, 0, width, height);
   ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-  ctx.strokeStyle = 'rgba(200,255,46,.13)'; ctx.lineWidth = 10;
+  ctx.strokeStyle = 'rgba(250,115,25,.13)'; ctx.lineWidth = 10;
   ctx.beginPath(); ctx.moveTo(points[0].x, points[0].y);
   for (let i = 1; i < points.length - 1; i++) {
     const midX = (points[i].x + points[i + 1].x) * 0.5, midY = (points[i].y + points[i + 1].y) * 0.5;
     ctx.quadraticCurveTo(points[i].x, points[i].y, midX, midY);
   }
   ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y); ctx.stroke();
-  ctx.strokeStyle = '#c8ff2e'; ctx.lineWidth = 2;
+  ctx.strokeStyle = '#fa7319'; ctx.lineWidth = 2;
   ctx.beginPath(); ctx.moveTo(points[0].x, points[0].y);
   for (let i = 1; i < points.length - 1; i++) {
     const midX = (points[i].x + points[i + 1].x) * 0.5, midY = (points[i].y + points[i + 1].y) * 0.5;
@@ -1822,7 +1822,7 @@ function drawRope() {
   points.forEach(function (point, index) {
     if (index % 3 && index !== points.length - 1) return;
     ctx.fillStyle = index === 0 ? '#ececef' : '#0a0a0b';
-    ctx.strokeStyle = '#c8ff2e'; ctx.lineWidth = 1.5;
+    ctx.strokeStyle = '#fa7319'; ctx.lineWidth = 1.5;
     ctx.beginPath(); ctx.arc(point.x, point.y, index === 0 ? 5 : 3, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
   });
 }
@@ -1845,7 +1845,7 @@ Build a self-contained 22-point Verlet rope trailing from a pointer-controlled a
 
 Each frame normalize step = min(2, elapsedMs/16.667). Pin point 0 to the target. For points 1–21, infer velocity = (current-old)*pow(0.985,step), copy current into old, then add velocity plus 0.34*step gravity. Run five constraint iterations. For each adjacent pair, correction = (distance-11)/distance; move both points by half the correction except the point-0 pair, where only point 1 moves. Repin point 0 every iteration and clamp non-anchor points to 4px stage margins. When idle, drift the target around center with slow independent sine/cosine motion.
 
-Render two smoothed paths through the points using quadraticCurveTo via adjacent midpoints: a 10px low-alpha glow and a crisp 2px #c8ff2e rope. Draw the anchor and every third link as small outlined nodes. Clicking, Space, or a semantic shake button injects sway by subtracting sin(index*1.73)*(6+index*0.22) from oldX and adding cos(index*1.17)*3.5 to oldY. Arrow keys move the target 24px, Shift+Arrow 42px, and Home centers it. Prevent default only for handled keys, use passive pointer/resize listeners, expose a sway readout, focus ring, and polite state messages.
+Render two smoothed paths through the points using quadraticCurveTo via adjacent midpoints: a 10px low-alpha glow and a crisp 2px #fa7319 rope. Draw the anchor and every third link as small outlined nodes. Clicking, Space, or a semantic shake button injects sway by subtracting sin(index*1.73)*(6+index*0.22) from oldX and adding cos(index*1.17)*3.5 to oldY. Arrow keys move the target 24px, Shift+Arrow 42px, and Home centers it. Prevent default only for handled keys, use passive pointer/resize listeners, expose a sway readout, focus ring, and polite state messages.
 
 Use one rAF loop. Under prefers-reduced-motion, skip Verlet integration and idle drift. Place points directly along a deterministic hanging curve: x = targetX + sin(t*pi)*28*bendDirection and y = targetY + t*availableLength. Space/button flips bendDirection, giving an interactive static alternate without continuous motion.`
 });
@@ -1876,7 +1876,7 @@ INTRX.register({
   css: `
 .d-stretch { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-stretch:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-stretch:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-stretch-axis { position: absolute; left: 50%; top: 50%; width: 76%; height: 54%;
   transform: translate(-50%, -50%); border: 1px solid #1d1d21; border-radius: 50%; pointer-events: none; }
 .d-stretch-axis::before, .d-stretch-axis::after { content: ''; position: absolute; background: #1d1d21; }
@@ -1887,7 +1887,7 @@ INTRX.register({
 .d-stretch-axis i:last-child { right: 0; transform: translate(50%, -50%); }
 .d-stretch-blob, .d-stretch-echo { position: absolute; left: 0; top: 0; width: 54px; height: 54px;
   margin: -27px 0 0 -27px; border-radius: 50%; pointer-events: none; transform-origin: center; }
-.d-stretch-blob { z-index: 3; background: #c8ff2e; box-shadow: 0 0 28px rgba(200,255,46,.22);
+.d-stretch-blob { z-index: 3; background: #fa7319; box-shadow: 0 0 28px rgba(250,115,25,.22);
   will-change: transform; }
 .d-stretch-blob::before { content: ''; position: absolute; inset: 7px; border: 1px solid rgba(10,10,11,.36); border-radius: 50%; }
 .d-stretch-blob i { position: absolute; left: 50%; top: 50%; width: 20px; height: 2px;
@@ -1896,17 +1896,17 @@ INTRX.register({
   border-top: 2px solid #0a0a0b; border-right: 2px solid #0a0a0b; transform: rotate(45deg); }
 .d-stretch-blob b { position: absolute; left: 13px; top: 11px; width: 8px; height: 8px;
   border-radius: 50%; background: rgba(236,236,239,.7); }
-.d-stretch-echo { border: 1px solid #c8ff2e; opacity: 0; will-change: transform, opacity; }
+.d-stretch-echo { border: 1px solid #fa7319; opacity: 0; will-change: transform, opacity; }
 .d-stretch-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
 .d-stretch-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-stretch-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-stretch-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-stretch-sweep { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-stretch-sweep:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-stretch-sweep:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-stretch-sweep:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-stretch-sweep:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-stretch-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
@@ -2215,7 +2215,7 @@ INTRX.register({
   css: `
 .d-flash { --d-flash-x: 50%; --d-flash-y: 50%; --d-flash-radius: 106px; position: relative;
   width: 100%; height: 320px; overflow: hidden; outline: none; background: #0a0a0b; touch-action: none; }
-.d-flash:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-flash:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-flash-scene { position: absolute; inset: 0; overflow: hidden; background: #d8cfc0; color: #0a0a0b; }
 .d-flash-scene::before { content: ''; position: absolute; inset: 0; opacity: .42;
   background-image: linear-gradient(rgba(10,10,11,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,11,.2) 1px, transparent 1px);
@@ -2230,7 +2230,7 @@ INTRX.register({
 .d-flash-panel-one { right: 22%; top: 44px; transform: rotate(5deg); }
 .d-flash-panel-one i { background: linear-gradient(135deg, #ff5d3b 0 48%, #0a0a0b 49%); }
 .d-flash-panel-two { right: 6%; bottom: 35px; transform: rotate(-7deg); }
-.d-flash-panel-two i { background: radial-gradient(circle at 65% 38%, #c8ff2e 0 28%, #0a0a0b 29%); }
+.d-flash-panel-two i { background: radial-gradient(circle at 65% 38%, #fa7319 0 28%, #0a0a0b 29%); }
 .d-flash-orbit { position: absolute; left: 52%; bottom: 22px; width: 90px; height: 90px;
   border: 1px solid rgba(10,10,11,.5); border-radius: 50%; }
 .d-flash-orbit i { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #0a0a0b; }
@@ -2252,8 +2252,8 @@ INTRX.register({
 .d-flash-toggle { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-flash-toggle:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-flash-toggle:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-flash-toggle:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-flash-toggle:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-flash-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #9b9ba3;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
@@ -2586,30 +2586,30 @@ INTRX.register({
   css: `
 .d-gridline { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; touch-action: none; }
-.d-gridline:focus-visible { box-shadow: inset 0 0 0 2px #c8ff2e; }
+.d-gridline:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-gridline-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .d-gridline-v, .d-gridline-h { fill: none; stroke: #2e2e34; stroke-width: 1;
   vector-effect: non-scaling-stroke; opacity: .45; }
 .d-gridline-vertical .d-gridline-v:nth-child(6), .d-gridline-horizontal .d-gridline-h:nth-child(4) {
   stroke: #5c5c66; stroke-dasharray: 3 5; }
 .d-gridline-field { position: absolute; left: 0; top: 0; width: 290px; height: 290px; margin: -145px 0 0 -145px;
-  border: 1px solid rgba(200,255,46,.13); border-radius: 50%; pointer-events: none; opacity: 0;
+  border: 1px solid rgba(250,115,25,.13); border-radius: 50%; pointer-events: none; opacity: 0;
   will-change: transform, opacity; }
 .d-gridline-field::before, .d-gridline-field::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: rgba(200,255,46,.48); transform: translate(-50%, -50%); }
+  background: rgba(250,115,25,.48); transform: translate(-50%, -50%); }
 .d-gridline-field::before { width: 13px; height: 1px; }.d-gridline-field::after { width: 1px; height: 13px; }
-.d-gridline-field i { position: absolute; inset: 35px; border: 1px dashed rgba(200,255,46,.11); border-radius: 50%; }
+.d-gridline-field i { position: absolute; inset: 35px; border: 1px dashed rgba(250,115,25,.11); border-radius: 50%; }
 .d-gridline.d-gridline-active .d-gridline-field { opacity: 1; }
 .d-gridline-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
 .d-gridline-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
   color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
-.d-gridline-meter strong { color: #c8ff2e; font-size: 21px; font-weight: 500; letter-spacing: 0; }
+.d-gridline-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-gridline-reverse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
   font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
-.d-gridline-reverse:hover { color: #c8ff2e; border-color: #c8ff2e; transform: translateY(-2px); }
-.d-gridline-reverse:focus-visible { outline: 2px solid #c8ff2e; outline-offset: 3px; }
+.d-gridline-reverse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
+.d-gridline-reverse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-gridline-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
   font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
@@ -2710,7 +2710,7 @@ function warpLine(path, isVertical) {
     });
   }
   path.setAttribute('d', smoothPath(points));
-  path.style.stroke = peak > 0.025 ? '#c8ff2e' : '#2e2e34';
+  path.style.stroke = peak > 0.025 ? '#fa7319' : '#2e2e34';
   path.style.opacity = (0.42 + Math.min(1, peak) * 0.58).toFixed(3);
   path.style.strokeWidth = (1 + Math.min(1, peak) * 1.15).toFixed(2);
   return peak;
@@ -2733,7 +2733,7 @@ requestAnimationFrame(frameLoop);`,
   prompt: `
 Build a self-contained SVG grid whose lines bow toward a cursor-controlled magnetic field inside a 320px root. Use 11 vertical and 7 horizontal path elements with normalized base-position data attributes. Set the SVG viewBox to the root’s current pixel dimensions on resize so the path math remains isotropic at every aspect ratio.
 
-For each vertical path sample 13 points; for each horizontal path sample 19. For a point at its straight-grid base position, calculate dx/dy to the rendered field, radius=clamp(width*0.24,110,190), and influence=max(0,1-distance/radius)²*fieldStrength. Vertical lines displace x by dx*influence*0.48 and y by dy*influence*0.06; horizontal lines swap those weights. Multiply displacement by polarity 1 or -1. Convert samples into a smooth SVG path using quadratic curves through adjacent midpoints and track peak influence per line. Brighten affected lines to #c8ff2e, raise opacity from 0.42 toward 1, and width from 1 toward 2.15.
+For each vertical path sample 13 points; for each horizontal path sample 19. For a point at its straight-grid base position, calculate dx/dy to the rendered field, radius=clamp(width*0.24,110,190), and influence=max(0,1-distance/radius)²*fieldStrength. Vertical lines displace x by dx*influence*0.48 and y by dy*influence*0.06; horizontal lines swap those weights. Multiply displacement by polarity 1 or -1. Convert samples into a smooth SVG path using quadratic curves through adjacent midpoints and track peak influence per line. Brighten affected lines to #fa7319, raise opacity from 0.42 toward 1, and width from 1 toward 2.15.
 
 Ease field position by 0.18 and strength toward active by 0.16 or toward zero by 0.1. Pointerleave must decay the warp back to perfectly straight. Click, Space, or an aria-pressed semantic button reverses polarity; arrows move the field 28px, Shift+Arrow 46px, and Home centers/deactivates. Prevent default only for handled keys, ignore button pointerdown in the stage handler, use passive pointer/resize listeners, cache nodes, expose force and polite state feedback, and use one rAF.
 
@@ -3544,9 +3544,9 @@ INTRX.register({
   position: absolute; top: 0; left: 0; pointer-events: none;
   border-radius: 50%; z-index: 10; opacity: 0;
 }
-.d-cursor-dot  { width: 6px; height: 6px; background: #c8ff2e; }
+.d-cursor-dot  { width: 6px; height: 6px; background: #fa7319; }
 .d-cursor-ring {
-  width: 36px; height: 36px; border: 1px solid #c8ff2e;
+  width: 36px; height: 36px; border: 1px solid #fa7319;
   transition: width 0.25s, height 0.25s;
   mix-blend-mode: difference;
 }
@@ -3623,7 +3623,7 @@ INTRX.register({
   font-size: 15px; font-weight: 500; font-family: inherit; cursor: pointer;
   transition: border-color 0.3s, background-color 0.3s;
 }
-.d-magnet-btn:hover { border-color: #c8ff2e; background: rgba(200,255,46,0.06); }
+.d-magnet-btn:hover { border-color: #fa7319; background: rgba(250,115,25,0.06); }
 .d-magnet-btn span { display: inline-block; pointer-events: none; }`,
   js: `
 root.querySelectorAll('.d-magnet-btn').forEach(function (btn) {
@@ -3754,7 +3754,7 @@ INTRX.register({
 }
 .d-spot-base h2 { font-size: 56px; font-weight: 700; color: #232327; letter-spacing: -0.02em; }
 .d-spot-hidden {
-  background: #c8ff2e;
+  background: #fa7319;
   -webkit-mask-image: radial-gradient(circle 110px at var(--x, -200px) var(--y, -200px), #000 98%, transparent 100%);
           mask-image: radial-gradient(circle 110px at var(--x, -200px) var(--y, -200px), #000 98%, transparent 100%);
 }

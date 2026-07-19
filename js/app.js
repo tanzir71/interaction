@@ -110,13 +110,15 @@
           '<svg class="c-tr" viewBox="0 0 8 8"><path d="M0.5 0.5 H7.5 M7.5 0.5 V7.5"/></svg>' +
           '<svg class="c-bl" viewBox="0 0 8 8"><path d="M0.5 7.5 H7.5 M0.5 7.5 V0.5"/></svg>' +
           '<svg class="c-br" viewBox="0 0 8 8"><path d="M7.5 0.5 V7.5 H0.5"/></svg>' +
-        '</div>' +
-        '<span class="tile-label">' + d._num + ' · ' + d.title + '</span>' +
-        (d.hint ? '<div class="demo-hint">' + d.hint + '</div>' : '');
+        '</div>';
 
       cardsEl.appendChild(card);
       d._card = card;
-      card.addEventListener('click', () => openModal(d));
+      card.addEventListener('click', event => {
+        const control = event.target.closest('button, a[href], input, select, textarea, [role="button"], [tabindex]');
+        if (control && control !== card) return;
+        openModal(d);
+      });
       card.addEventListener('keydown', e => {
         if (e.target !== card || (e.key !== 'Enter' && e.key !== ' ')) return;
         if (e.key === ' ') e.preventDefault();

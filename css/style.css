@@ -243,14 +243,6 @@ body {
 .demo-stage *::-webkit-scrollbar { width: 8px; height: 8px; }
 .demo-stage *::-webkit-scrollbar-thumb { background: var(--line-2); }
 .demo-stage *::-webkit-scrollbar-track { background: transparent; }
-.demo-hint {
-  position: absolute; bottom: 10px; right: 14px;
-  font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--text-3);
-  opacity: .6;
-  pointer-events: none; z-index: 5;
-}
-
 .pane-code pre, .pane-prompt pre {
   margin: 0; padding: 20px;
   font-family: var(--mono); font-size: 12.5px; line-height: 1.65;
@@ -307,15 +299,13 @@ body {
 .tile-frame .c-tr { top: -1px; right: -1px; }
 .tile-frame .c-bl { bottom: -1px; left: -1px; }
 .tile-frame .c-br { bottom: -1px; right: -1px; }
-.tile-label {
-  position: absolute; left: 10px; bottom: 8px; z-index: 11;
-  font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase;
-  color: var(--text-3);
-  opacity: 0; transform: translateY(4px);
-  transition: opacity .18s, transform .18s;
-  pointer-events: none;
+.tile .demo-stage > :first-child > footer,
+.tile .demo-stage > :first-child > [class*="-actions"],
+.tile .demo-stage > :first-child > [class*="-controls"],
+.tile .demo-stage > :first-child > [class*="-lock"],
+.tile .demo-stage > :first-child > [aria-live] {
+  display: none !important;
 }
-.tile:hover .tile-label { opacity: 1; transform: none; }
 .tile .demo-stage { min-height: 320px; }
 .tile-grid .cat-divider { grid-column: 1 / -1; padding: 40px 6px 2px; }
 
