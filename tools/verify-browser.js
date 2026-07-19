@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 302; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 303; /* keep in sync with the published registries */
 const targets = [
+  'agent-streaming-text',
   'agent-node-graph',
   'agent-context-compaction',
   'agent-deploy-pipeline',
