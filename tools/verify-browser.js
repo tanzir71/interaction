@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 315; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 316; /* keep in sync with the published registries */
 const targets = [
+  'vinyl-player-card',
   'dynamic-notch',
   'op1-panel',
   'css3d-exploded-device',
