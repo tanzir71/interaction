@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 322; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 323; /* keep in sync with the published registries */
 const targets = [
+  'mega-menu-preview',
   'popover-anchor-morph',
   'drag-collapse-panel',
   'swap-widget',
