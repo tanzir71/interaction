@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 320; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 321; /* keep in sync with the published registries */
 const targets = [
+  'drag-collapse-panel',
   'swap-widget',
   'bento-spotlight',
   'btn-polish-stages',
