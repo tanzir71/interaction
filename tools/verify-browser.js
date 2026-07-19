@@ -3,8 +3,9 @@
    Checks: every registered demo card exists, boots without the failure
    message, and no console errors occur. */
 const port = process.argv[2] || '9223';
-const EXPECTED_CARDS = 311; /* keep in sync with the published registries */
+const EXPECTED_CARDS = 312; /* keep in sync with the published registries */
 const targets = [
+  'painterly-smear',
   'voxel-assemble',
   'webgl-neural-signals',
   'webgl-hologram-particles',
