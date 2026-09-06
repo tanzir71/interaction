@@ -24,46 +24,9 @@ INTRX.register({
   <button class="d-blue-toggle" type="button" aria-pressed="false">Dissolve to B</button>
   <p class="d-blue-status" aria-live="polite">Image A · mask idle</p>
 </div>`,
-  css: `
-.d-blue { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0a1020; color: #b6f3ff; touch-action: none; }
-.d-blue:focus-visible { box-shadow: inset 0 0 0 2px #34e1ff; }
-.d-blue::before { content: ''; position: absolute; inset: 0; opacity: .2; pointer-events: none;
-  background-image: linear-gradient(rgba(52,225,255,.17) 1px, transparent 1px), linear-gradient(90deg, rgba(52,225,255,.17) 1px, transparent 1px); background-size: 24px 24px; }
-.d-blue-stage { position: absolute; left: 50%; top: 50%; width: min(68%, 452px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(182,243,255,.44); background: #07101e; box-shadow: 9px 9px 0 rgba(52,225,255,.11); cursor: crosshair; }
-.d-blue-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
-.d-blue-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .15;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.14) 3px 4px); mix-blend-mode: overlay; }
-.d-blue-origin { position: absolute; left: 0; top: 0; width: 42px; height: 42px; margin: -21px 0 0 -21px;
-  border: 1px solid rgba(255,255,255,.78); border-radius: 50%; color: #fff; mix-blend-mode: difference; pointer-events: none; will-change: transform; }
-.d-blue-origin::before, .d-blue-origin::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-blue-origin::before { width: 58px; height: 1px; }.d-blue-origin::after { width: 1px; height: 58px; }
-.d-blue-origin i { position: absolute; inset: 7px; border: 1px dashed currentColor; border-radius: 50%; opacity: .6; }
-.d-blue-labels { position: absolute; left: 9px; right: 9px; bottom: 7px; display: flex; justify-content: space-between;
-  color: rgba(255,255,255,.78); font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; mix-blend-mode: difference; }
-.d-blue-kicker { position: absolute; left: 17px; top: 18px; color: rgba(182,243,255,.58); font: 8px "JetBrains Mono", monospace; letter-spacing: .14em; }
-.d-blue-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(182,243,255,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-blue-meter strong { min-width: 34px; color: #b6f3ff; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-blue-meter b { font-weight: 400; }
-.d-blue-spectrum { position: absolute; left: 17px; top: 42px; display: flex; gap: 3px; align-items: flex-end; height: 18px; }
-.d-blue-spectrum i { display: block; width: 3px; background: #34e1ff; opacity: .42; }
-.d-blue-spectrum i:nth-child(1), .d-blue-spectrum i:nth-child(8) { height: 2px; }
-.d-blue-spectrum i:nth-child(2), .d-blue-spectrum i:nth-child(7) { height: 5px; }
-.d-blue-spectrum i:nth-child(3), .d-blue-spectrum i:nth-child(6) { height: 10px; }
-.d-blue-spectrum i:nth-child(4), .d-blue-spectrum i:nth-child(5) { height: 17px; opacity: .85; }
-.d-blue-toggle { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(182,243,255,.4);
-  border-radius: 999px; background: rgba(10,16,32,.82); color: #b6f3ff; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-blue-toggle:hover, .d-blue-toggle[aria-pressed="true"] { background: #34e1ff; color: #07101e; transform: translateY(-2px); }
-.d-blue-toggle:focus-visible { outline: 2px solid #34e1ff; outline-offset: 3px; }
-.d-blue-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(182,243,255,.52); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-.d-blue.d-blue-to-b { background: #251025; color: #ffd6b6; }.d-blue.d-blue-to-b .d-blue-meter strong { color: #ffd6b6; }
-@media (max-width: 620px) { .d-blue-stage { width: 74%; height: 190px; }.d-blue-spectrum { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-blue-origin { will-change: auto; }.d-blue-toggle { transition: none; } }
-`,
-  js: `
+  css: `.d-blue{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-blue>span,.d-blue>[class$="-meter"],.d-blue>[class$="-weights"],.d-blue>[class$="-spectrum"],.d-blue>[class$="-scale"],.d-blue>[class$="-ramp"],.d-blue>[class$="-weight"],.d-blue>[class$="-waves"]{display:none}.d-blue>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-blue canvas{width:100%;height:100%;display:block}.d-blue>[class$="-stage"]>*:not(canvas){display:none}.d-blue [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-blue button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-blue button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-blue button:focus-visible,.d-blue:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-blue [class$="-actions"]{display:flex;gap:8px}`,
+  js: `const photograph=new Image();const photographB=new Image();
+
 const canvas = root.querySelector('.d-blue-canvas');
 const stageEl = root.querySelector('.d-blue-stage');
 const originMark = root.querySelector('.d-blue-origin');
@@ -109,21 +72,10 @@ function buildBlueNoiseRanks() {
 }
 maskRanks = buildBlueNoiseRanks();
 
-function drawSource(ctx, variant) {
-  const gradient = ctx.createLinearGradient(0, 0, columns, rows);
-  if (variant === 'A') { gradient.addColorStop(0, '#071a38'); gradient.addColorStop(.52, '#136a82'); gradient.addColorStop(1, '#62ecdc'); }
-  else { gradient.addColorStop(0, '#ff445f'); gradient.addColorStop(.5, '#ff8c35'); gradient.addColorStop(1, '#ffe968'); }
-  ctx.fillStyle = gradient; ctx.fillRect(0, 0, columns, rows);
-  ctx.strokeStyle = variant === 'A' ? 'rgba(190,255,255,.82)' : 'rgba(67,15,52,.72)'; ctx.lineWidth = Math.max(1, rows * .018);
-  for (let ring = 1; ring <= 5; ring++) { ctx.beginPath(); ctx.arc(columns * (variant === 'A' ? .68 : .31), rows * .44, rows * ring * .105, 0, Math.PI * 2); ctx.stroke(); }
-  ctx.fillStyle = variant === 'A' ? '#d8ffff' : '#3a102d'; ctx.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, sans-serif'; ctx.textBaseline = 'middle';
-  ctx.fillText(variant === 'A' ? 'NIGHT' : 'SIGNAL', columns * .06, rows * .73);
-  ctx.fillStyle = variant === 'A' ? 'rgba(7,15,32,.72)' : 'rgba(255,247,190,.66)';
-  for (let i = 0; i < 8; i++) ctx.fillRect(columns * (i / 8), 0, Math.max(1, columns * .018), rows);
-}
+function drawSource(ctx,variant){const picture=variant==='A'?photograph:photographB;ctx.fillStyle='#dfe3d8';ctx.fillRect(0,0,columns,rows);if(picture.naturalWidth){const s=Math.max(columns/picture.naturalWidth,rows/picture.naturalHeight);ctx.drawImage(picture,(columns-picture.naturalWidth*s)/2,(rows-picture.naturalHeight*s)/2,picture.naturalWidth*s,picture.naturalHeight*s)}}
 function measure() {
   const box = stageEl.getBoundingClientRect();
-  columns = Math.max(112, Math.round(box.width / 2)); rows = Math.max(56, Math.round(box.height / 2));
+  columns = Math.max(112, Math.round(box.width)); rows = Math.max(56, Math.round(box.height));
   canvas.width = sourceACanvas.width = sourceBCanvas.width = columns; canvas.height = sourceACanvas.height = sourceBCanvas.height = rows;
   context.imageSmoothingEnabled = false; drawSource(sourceAContext, 'A'); drawSource(sourceBContext, 'B');
   pixelsA = sourceAContext.getImageData(0, 0, columns, rows).data; pixelsB = sourceBContext.getImageData(0, 0, columns, rows).data;
@@ -189,13 +141,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained image dissolve driven by a deterministic ranked blue-noise threshold mask, not independent Math.random samples and not an opacity cross-fade. Create a 32×32 toroidal rank map once. Begin from one selected cell; after every selection, update each unused cell's squared distance to its nearest selected cell using wrapped X/Y distances. Choose the unused cell with the greatest nearest distance for the next rank, using only a tiny deterministic integer-hash value to break equal-distance ties. The result must contain every rank 0–1023 exactly once.
-
-Render two distinct full-color procedural source images into separate offscreen canvases at approximately one logical pixel per two CSS pixels and cache both RGBA arrays. During the transition, tile the mask over the output. For pixel x/y compute threshold=(rank[(y mod 32)*32+(x mod 32)]+0.5)/1024 and copy all RGB channels from source B only when localProgress is at least that threshold; otherwise copy source A. Never interpolate source colors, so every output pixel always belongs completely to one image.
-
-Clicking the image toggles the target endpoint and stores the normalized click position as a transition origin. Bias local progress by max(0,1-distance/0.55)*0.18 in the current transition direction, with aspect correction in normalized Y. Endpoint progress 0 and 1 must explicitly bypass this bias so final frames are exact source A or source B. Ease progress toward the target by 0.075, rebuild pixels near 30fps, and stop once settled.
-
-Add a semantic aria-pressed toggle, polite state announcements, a visible origin reticle and percentage readout. Pointermove updates the origin passively; pointerdown toggles. Arrow keys move the origin by 0.055, Shift+Arrow by 0.12, Home centers it, and Space or Enter toggles, without intercepting button keys. Resize rebuilds only the sources and output; the rank mask stays stable. Under prefers-reduced-motion, snap progress directly to the target and render an exact endpoint while preserving click, keyboard, resize, source selection, mask generation, and status behavior.`
+requestAnimationFrame(frameLoop);
+photograph.onload=measure;photograph.src='{{asset:limestone-pavilion}}';photographB.onload=measure;photographB.src='{{asset:atlantic-shore}}';`,
+  prompt: `Build Blue-Noise Image Dissolve as a native300×320px component. Use the supplied limestone-pavilion photograph and atlantic-shore as the alternate source. Draw it with cover cropping after image load and recompute the algorithm's source luminance, pixel caches or samples. Retain the actual dither-blue-noise pixel/glyph algorithm, pointer and keyboard behavior. Put the full image above a slim quiet control row, with readable regular Inter11px controls, normal tracking, pale surfaces and fine borders. Avoid synthetic gradient posters and headline overlays.  Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });

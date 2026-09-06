@@ -24,41 +24,9 @@ INTRX.register({
   <button class="d-mosaic-toggle" type="button" aria-pressed="false">Switch to B</button>
   <p class="d-mosaic-status" aria-live="polite">Image A · threshold idle</p>
 </div>`,
-  css: `
-.d-mosaic { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0d1016; color: #e2e7ef; touch-action: none; }
-.d-mosaic:focus-visible { box-shadow: inset 0 0 0 2px #71d9ff; }
-.d-mosaic::before { content: ''; position: absolute; inset: 0; opacity: .18; pointer-events: none;
-  background-image: linear-gradient(rgba(226,231,239,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(226,231,239,.13) 1px, transparent 1px); background-size: 24px 24px; }
-.d-mosaic-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(226,231,239,.4); background: #05070a; box-shadow: 9px 9px 0 rgba(113,217,255,.09); cursor: crosshair; }
-.d-mosaic-canvas { display: block; width: 100%; height: 100%; }
-.d-mosaic-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .1;
-  background: repeating-linear-gradient(0deg, transparent 0 5px, rgba(255,255,255,.12) 5px 6px); mix-blend-mode: screen; }
-.d-mosaic-origin { position: absolute; left: 0; top: 0; width: 56px; height: 56px; margin: -28px 0 0 -28px;
-  border: 1px solid rgba(255,255,255,.75); border-radius: 50%; color: #fff; mix-blend-mode: difference; pointer-events: none; will-change: transform; }
-.d-mosaic-origin::before, .d-mosaic-origin::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-mosaic-origin::before { width: 72px; height: 1px; }.d-mosaic-origin::after { width: 1px; height: 72px; }
-.d-mosaic-origin i { position: absolute; inset: 8px; border: 1px dashed currentColor; border-radius: 50%; opacity: .55; }
-.d-mosaic-labels { position: absolute; left: 8px; right: 8px; bottom: 6px; display: flex; justify-content: space-between;
-  color: rgba(255,255,255,.75); font: 7px "JetBrains Mono", monospace; letter-spacing: .09em; mix-blend-mode: difference; }
-.d-mosaic-kicker { position: absolute; left: 17px; top: 18px; color: rgba(226,231,239,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-mosaic-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(226,231,239,.47); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-mosaic-meter strong { min-width: 34px; color: #e2e7ef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }.d-mosaic-meter b { font-weight: 400; }
-.d-mosaic-matrix { position: absolute; left: 17px; top: 42px; display: grid; grid-template-columns: repeat(2, 9px) auto; gap: 2px; align-items: center; }
-.d-mosaic-matrix i { width: 9px; height: 9px; background: #71d9ff; }.d-mosaic-matrix i:nth-child(2), .d-mosaic-matrix i:nth-child(3) { opacity: .28; }
-.d-mosaic-matrix span { grid-row: 1 / 3; grid-column: 3; margin-left: 4px; color: rgba(226,231,239,.47); font: 7px "JetBrains Mono", monospace; }
-.d-mosaic-toggle { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(226,231,239,.37);
-  border-radius: 999px; background: rgba(13,16,22,.84); color: #e2e7ef; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-mosaic-toggle:hover, .d-mosaic-toggle[aria-pressed="true"] { background: #e2e7ef; color: #0d1016; transform: translateY(-2px); }
-.d-mosaic-toggle:focus-visible { outline: 2px solid #71d9ff; outline-offset: 3px; }
-.d-mosaic-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(226,231,239,.49); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-mosaic-stage { width: 75%; height: 190px; }.d-mosaic-matrix { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-mosaic-origin { will-change: auto; }.d-mosaic-toggle { transition: none; } }
-`,
-  js: `
+  css: `.d-mosaic{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-mosaic::before,.d-mosaic::after{display:none}.d-mosaic>span,.d-mosaic>[class$="-meter"],.d-mosaic>[class$="-channels"],.d-mosaic>[class$="-vector"],.d-mosaic>[class$="-order"],.d-mosaic>[class$="-phosphor"],.d-mosaic>[class$="-fields"],.d-mosaic>[class$="-matrix"],.d-mosaic>[class$="-sample"]{display:none}.d-mosaic [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-mosaic [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-mosaic canvas{display:block;width:100%;height:100%;object-fit:cover}.d-mosaic [class$="-stage"]>span,.d-mosaic [class$="-stage"]>[class$="-origin"],.d-mosaic [class$="-labels"],.d-mosaic [class$="-scan"]{display:none}.d-mosaic button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-mosaic button:hover{background:#dde5d3}.d-mosaic button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-mosaic button:focus-visible,.d-mosaic input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-mosaic [class$="-actions"]{display:flex;gap:8px}.d-mosaic:focus-visible{outline:2px solid #829969;outline-offset:-2px}`,
+  js: `const photograph=new Image();const photographB=new Image();
+
 const canvas = root.querySelector('.d-mosaic-canvas');
 const stageEl = root.querySelector('.d-mosaic-stage');
 const originMark = root.querySelector('.d-mosaic-origin');
@@ -91,15 +59,9 @@ function buildBayer8() {
 bayer = buildBayer8();
 
 function drawSource(ctx, variant) {
-  const gradient = ctx.createLinearGradient(0, 0, width, height);
-  if (variant === 'A') { gradient.addColorStop(0, '#152d5e'); gradient.addColorStop(.5, '#2c8d8d'); gradient.addColorStop(1, '#d3ed70'); }
-  else { gradient.addColorStop(0, '#6e214b'); gradient.addColorStop(.5, '#e45e4f'); gradient.addColorStop(1, '#ffc85d'); }
-  ctx.fillStyle = gradient; ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = variant === 'A' ? '#e9ffdd' : '#86eaff'; ctx.beginPath(); ctx.arc(width * (variant === 'A' ? .72 : .3), height * .33, height * .23, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = '#0b1018'; ctx.beginPath(); ctx.arc(width * (variant === 'A' ? .72 : .3), height * .33, height * .1, 0, Math.PI * 2); ctx.fill();
-  ctx.fillStyle = 'rgba(5,7,12,.68)'; ctx.fillRect(0, height * .68, width, height * .32);
-  ctx.fillStyle = '#fff'; ctx.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; ctx.textBaseline = 'bottom';
-  ctx.fillText(variant === 'A' ? 'STILL' : 'SIGNAL', width * .04, height * .95);
+  const picture=variant==='A'?photograph:photographB; ctx.fillStyle='#d9ddd4'; ctx.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight),pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;ctx.drawImage(picture,(width-pw)/2,(height-ph)/2,pw,ph)}
+
 }
 function averageTile(pixels, x, y, tileWidth, tileHeight) {
   let red = 0, green = 0, blue = 0, count = 0;
@@ -184,13 +146,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained image-to-image mosaic transition using a true generated 8×8 Bayer threshold matrix. Start with [0]. Repeatedly double the matrix using quadrants 4v+0, 4v+2, 4v+3, 4v+1 until size 8, yielding each integer 0–63 exactly once. Never use random noise.
-
-Render two distinct full-color procedural images into separate CSS-resolution offscreen canvases. Divide them into 6px mosaic cells, including clipped edge cells, and average every covered R/G/B pixel independently for source A and B. Cache each tile's geometry, row/column, both complete colors, and threshold=(bayer[(row mod 8)*8+(column mod 8)]+0.5)/64. Rebuild only on resize.
-
-During transition, each tile must choose all RGB channels from A or B according to localProgress>=threshold—never interpolate colors. Add a click-origin lead wave max(0,1-distance/0.72)*0.15 in transition direction with normalized aspect correction. Explicitly force local progress 0 and 1 at global endpoints so final images are exact. Near a threshold, shrink the tile by at most 28% using activity=max(0,1-abs(local-threshold)*10); endpoints always use full tile size.
-
-Clicking the canvas or a semantic aria-pressed button toggles direction. Pointermove updates the prospective origin passively. Arrows move it by 0.06, Shift by 0.12, Home centers, Space/Enter toggles, and Escape restores A, without intercepting button keys. Ease progress by 0.085, draw near 30fps only while dirty, cap DPR at 2, and rebuild responsively. Under prefers-reduced-motion, snap directly between exact A/B mosaics while retaining threshold generation, controls, origin, and endpoint integrity.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:limestone-pavilion}}';photographB.onload=()=>measure();photographB.src='{{asset:atlantic-shore}}';`,
+  prompt: `Create the Threshold Mosaic Switch interaction with a native300×320px composition. Use actual supplied limestone-pavilion photography and atlantic-shore for the alternate state as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

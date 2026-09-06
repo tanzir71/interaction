@@ -1,36 +1,36 @@
 /* INTRX registry - bento spotlight hover field */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'bento-spotlight',
-  title:'Bento Spotlight',
-  cat:'Layout & UI',
-  rootClass:'d-layout-bento-spotlight',
-  tags:['bento','spotlight border','hover field'],
-  libs:[],
-  desc:'Five procedural bento cells share one cursor-positioned border light, handing the glow across gaps while each miniature graphic responds in its own way.',
-  seen:"Seen on: SaaS bento layouts and alimdesigner_'s bento post",
-  hint:'move across the cells to hand off the spotlight, or Tab through them for keyboard previews',
-  html:`<div class="d-layout-bento-spotlight" role="region" aria-label="Interactive bento spotlight grid">
+  id: "bento-spotlight",
+  title: "Bento Spotlight",
+  cat: "Layout & UI",
+  rootClass: "d-layout-bento-spotlight",
+  tags: ["bento","spotlight border","hover field"],
+  libs: [],
+  desc: "Five procedural bento cells share one cursor-positioned border light, handing the glow across gaps while each miniature graphic responds in its own way.",
+  seen: "Seen on: SaaS bento layouts and alimdesigner_'s bento post",
+  hint: "move across the cells to hand off the spotlight, or Tab through them for keyboard previews",
+  html: `<div class="d-layout-bento-spotlight" role="region" aria-label="Interactive bento spotlight grid">
   <div class="d-layout-bento-spotlight-head" aria-hidden="true"><span>BENTO / SIGNALS</span><span class="d-layout-bento-spotlight-mode"><i></i> FIELD READY</span></div>
   <div class="d-layout-bento-spotlight-stage" role="group" aria-label="Five-cell bento grid. Hover a cell or focus it with Tab to animate its procedural graphic and reveal a shared spotlight border.">
     <div class="d-layout-bento-spotlight-grid">
       <article class="d-layout-bento-spotlight-cell d-layout-bento-spotlight-spark" tabindex="0" aria-label="Momentum sparkline, 18 percent increase">
-        <span class="d-layout-bento-spotlight-label">MOMENTUM / 18%</span>
+        <span class="d-layout-bento-spotlight-label">Momentum</span>
         <svg class="d-layout-bento-spotlight-sparkline" viewBox="0 0 120 52" aria-hidden="true"><path d="M4 44H116"></path><polyline points="4,40 20,34 34,37 49,22 65,29 82,13 96,19 116,6"></polyline><circle cx="116" cy="6" r="2.5"></circle></svg>
       </article>
       <article class="d-layout-bento-spotlight-cell d-layout-bento-spotlight-dots" tabindex="0" aria-label="Fifteen-node activity field">
-        <span class="d-layout-bento-spotlight-label">NODES / 15</span>
+        <span class="d-layout-bento-spotlight-label">Activity</span>
         <div class="d-layout-bento-spotlight-dotgrid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       </article>
       <article class="d-layout-bento-spotlight-cell d-layout-bento-spotlight-number" tabindex="0" aria-label="Reliability score 72">
-        <span class="d-layout-bento-spotlight-label">SCORE</span><strong aria-hidden="true">72</strong><small aria-hidden="true">+04</small>
+        <span class="d-layout-bento-spotlight-label">Score</span><strong aria-hidden="true">72</strong><small aria-hidden="true">+04</small>
       </article>
       <article class="d-layout-bento-spotlight-cell d-layout-bento-spotlight-toggles" tabindex="0" aria-label="Three automation routes">
-        <span class="d-layout-bento-spotlight-label">AUTOMATION / ROUTES</span>
+        <span class="d-layout-bento-spotlight-label">Automations</span>
         <div class="d-layout-bento-spotlight-toggle-row" aria-hidden="true"><b><i></i></b><b><i></i></b><b><i></i></b></div>
       </article>
       <article class="d-layout-bento-spotlight-cell d-layout-bento-spotlight-gauge" tabindex="0" aria-label="Capacity gauge 68 percent">
-        <span class="d-layout-bento-spotlight-label">LOAD</span>
+        <span class="d-layout-bento-spotlight-label">Capacity</span>
         <svg class="d-layout-bento-spotlight-arc" viewBox="0 0 54 42" aria-hidden="true"><path d="M8 34A20 20 0 1 1 46 34"></path><path d="M8 34A20 20 0 1 1 46 34"></path></svg><b aria-hidden="true">68</b>
       </article>
     </div>
@@ -38,7 +38,7 @@ INTRX.register({
   <div class="d-layout-bento-spotlight-foot" aria-hidden="true"><span>5 CELLS / 200PX</span><span>SHARED COORDS</span></div>
   <span class="d-layout-bento-spotlight-status" aria-live="polite" aria-atomic="true">Bento spotlight field ready</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-bento-spotlight{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-layout-bento-spotlight *{box-sizing:border-box}
 .d-layout-bento-spotlight-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
@@ -91,8 +91,22 @@ INTRX.register({
 .d-layout-bento-spotlight-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container(max-width:340px){.d-layout-bento-spotlight-stage{right:10px;left:10px}.d-layout-bento-spotlight-head,.d-layout-bento-spotlight-foot{right:13px;left:13px}.d-layout-bento-spotlight-grid{padding:7px;gap:6px}.d-layout-bento-spotlight-cell{padding:8px}.d-layout-bento-spotlight-label{font-size:6px}.d-layout-bento-spotlight-number strong{font-size:27px}.d-layout-bento-spotlight-toggle-row{right:8px;left:8px;gap:4px}.d-layout-bento-spotlight-toggle-row b{width:29px}.d-layout-bento-spotlight-cell-active .d-layout-bento-spotlight-toggle-row i{transform:translateX(13px)}}
 @media(prefers-reduced-motion:reduce){.d-layout-bento-spotlight *,.d-layout-bento-spotlight *::before,.d-layout-bento-spotlight *::after{animation:none!important;transition:none!important}.d-layout-bento-spotlight-sparkline polyline{stroke-dashoffset:0}}
-`,
-  js:`
+
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-bento-spotlight{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-bento-spotlight,.d-layout-bento-spotlight-number strong{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-bento-spotlight p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-bento-spotlight>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+.d-layout-bento-spotlight-stage{background:radial-gradient(ellipse at 50% 35%,rgba(255,255,255,.025),transparent 78%),#0d0d0f}.d-layout-bento-spotlight-cell::before{background:radial-gradient(200px circle at var(--d-layout-bento-spotlight-x,50%) var(--d-layout-bento-spotlight-y,50%),rgba(250,115,25,.85) 0%,rgba(250,115,25,.35) 35%,rgba(250,115,25,.09) 60%,transparent 85%)}
+/* Current control composition. */
+.d-layout-bento-spotlight{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-bento-spotlight *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-bento-spotlight button,.d-layout-bento-spotlight input,.d-layout-bento-spotlight textarea{font-weight:400}.d-layout-bento-spotlight>header{display:none}.d-layout-bento-spotlight>[class$="-head"][aria-hidden="true"],.d-layout-bento-spotlight>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-bento-spotlight>[class$="-stage"],.d-layout-bento-spotlight>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-bento-spotlight>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-bento-spotlight>footer>span{display:none}.d-layout-bento-spotlight>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-bento-spotlight-label{font-size:10px}.d-layout-bento-spotlight-number>strong{font-size:35px;font-weight:400}.d-layout-bento-spotlight-number>small{font-size:11px;font-weight:400}.d-layout-bento-spotlight-gauge>b{font-size:17px;font-weight:400}.d-layout-bento-spotlight-cell{border-radius:9px}
+/* Current control composition. */
+.d-layout-bento-spotlight *{text-transform:none!important;letter-spacing:0!important}.d-layout-bento-spotlight button{font-size:12px!important;font-weight:400!important}.d-layout-bento-spotlight>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-bento-spotlight>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-bento-spotlight>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-bento-spotlight>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-bento-spotlight>footer{gap:6px!important}
+/* Current control composition. */
+.d-layout-bento-spotlight-label{font-size:10px!important}.d-layout-bento-spotlight-number>small{font-weight:400!important}`,
+  js: `
 const field=root.querySelector('.d-layout-bento-spotlight-stage'),cells=Array.from(root.querySelectorAll('.d-layout-bento-spotlight-cell')),status=root.querySelector('.d-layout-bento-spotlight-status'),controller=new AbortController(),listener={signal:controller.signal},passiveListener={signal:controller.signal,passive:true},fieldClass='d-layout-bento-spotlight-field-active',activeClass='d-layout-bento-spotlight-cell-active';
 let activeCell=null,cleaned=false,connectionObserver=null;
 function positionGlow(stageX,stageY){const fieldBounds=field.getBoundingClientRect();for(const cell of cells){const bounds=cell.getBoundingClientRect();cell.style.setProperty('--d-layout-bento-spotlight-x',(stageX-(bounds.left-fieldBounds.left)).toFixed(1)+'px');cell.style.setProperty('--d-layout-bento-spotlight-y',(stageY-(bounds.top-fieldBounds.top)).toFixed(1)+'px')}}
@@ -104,5 +118,5 @@ for(const cell of cells){cell.addEventListener('focus',function(){const fieldBou
 function cleanup(){if(cleaned)return;cleaned=true;controller.abort();if(connectionObserver)connectionObserver.disconnect()}
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 `,
-  prompt:`Build one self-contained responsive 320px Layout and UI card containing exactly five background-one bento cells with ten-pixel corners and one-pixel line-zero borders: two cells span two columns, one cell spans both rows, and two cells are small. Give them labels and five distinct procedural graphics: a sparkline, dot grid, large numeral, toggle row, and arc gauge. Track the pointer continuously in stage coordinates and project that one shared point into every cell. The active cell must reveal a 200px radial accent spotlight that is solid through twenty-five percent and fades to transparent, masked to only its one-pixel border ring. Lift it two pixels over 200 milliseconds. Dim siblings to sixty-percent opacity with slight desaturation over 250 milliseconds. Moving through a gap must retain the shared light coordinates so the next cell receives the glow without a position jump; leaving the stage restores all cells over 400 milliseconds. Animate each active mini graphic with an appropriate response, including sparkline redraw, delayed dot ripple, numeral lift, toggle travel, and gauge fill. Add equivalent keyboard-focus previews, Escape release, scoped styles, cleanup for detached instances, responsive compact layout, and immediate states without transitions for reduced motion.`
+  prompt: ` Give them labels and five distinct procedural graphics: a sparkline, dot grid, large numeral, toggle row, and arc gauge. Track the pointer continuously in stage coordinates and project that one shared point into every cell. The active cell must reveal a 200px radial accent spotlight with a smooth .85/.35/.09/0 alpha falloff at 0/35/60/85 percent, masked to only its one-pixel border ring. Lift it two pixels over 200 milliseconds. Dim siblings to sixty-percent opacity with slight desaturation over 250 milliseconds. Moving through a gap must retain the shared light coordinates so the next cell receives the glow without a position jump; leaving the stage restores all cells over 400 milliseconds. Animate each active mini graphic with an appropriate response, including sparkline redraw, delayed dot ripple, numeral lift, toggle travel, and gauge fill. Add equivalent keyboard-focus previews, Escape release, scoped styles, cleanup for detached instances, responsive compact layout, and immediate states without transitions for reduced motion. Final composition: Removed outer geometry chrome and normalized the score, change, and gauge typography within the interactive grid. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

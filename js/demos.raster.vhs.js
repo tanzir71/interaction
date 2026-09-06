@@ -24,40 +24,9 @@ INTRX.register({
   <button class="d-vhs-error" type="button" aria-pressed="false">Lose tracking</button>
   <p class="d-vhs-status" aria-live="polite">Tracking locked</p>
 </div>`,
-  css: `
-.d-vhs { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #16121b; color: #d9d1e1; touch-action: none; }
-.d-vhs:focus-visible { box-shadow: inset 0 0 0 2px #ff9e55; }
-.d-vhs::before { content: ''; position: absolute; inset: 0; opacity: .2; pointer-events: none;
-  background-image: linear-gradient(rgba(217,209,225,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(217,209,225,.13) 1px, transparent 1px); background-size: 25px 25px; }
-.d-vhs-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(217,209,225,.38); background: #050407; box-shadow: 9px 9px 0 rgba(255,158,85,.09); }
-.d-vhs-canvas { display: block; width: 100%; height: 100%; }
-.d-vhs-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .16;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.13) 3px 4px); mix-blend-mode: screen; }
-.d-vhs-head { position: absolute; left: 0; right: 0; top: 50%; height: 1px; color: #ff9e55; background: currentColor; opacity: .35; pointer-events: none; will-change: transform, opacity; }
-.d-vhs-head::before, .d-vhs-head::after { content: ''; position: absolute; top: -3px; width: 7px; height: 7px; border: 1px solid currentColor; transform: rotate(45deg); }
-.d-vhs-head::before { left: 4px; }.d-vhs-head::after { right: 4px; }
-.d-vhs-head i { position: absolute; left: 50%; top: -5px; width: 10px; height: 10px; border: 1px dashed currentColor; transform: translateX(-50%) rotate(45deg); }
-.d-vhs.d-vhs-active .d-vhs-head { opacity: 1; }
-.d-vhs-osd { position: absolute; left: 8px; top: 7px; color: rgba(255,255,255,.74); text-shadow: 1px 0 #ff3d63, -1px 0 #39e9ff;
-  font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-vhs-kicker { position: absolute; left: 17px; top: 18px; color: rgba(217,209,225,.53); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-vhs-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 5px;
-  color: rgba(217,209,225,.46); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-vhs-meter strong { min-width: 24px; color: #d9d1e1; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-vhs-chroma { position: absolute; left: 17px; top: 43px; display: flex; align-items: center; gap: 5px; color: rgba(217,209,225,.48); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-vhs-chroma i { display: block; width: 20px; height: 3px; }.d-vhs-chroma i:first-child { background: #ff3d63; }.d-vhs-chroma i:last-child { background: #39e9ff; }
-.d-vhs-error { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(217,209,225,.36);
-  border-radius: 999px; background: rgba(22,18,27,.84); color: #d9d1e1; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-vhs-error:hover, .d-vhs-error[aria-pressed="true"] { background: #d9d1e1; color: #16121b; transform: translateY(-2px); }
-.d-vhs-error:focus-visible { outline: 2px solid #ff9e55; outline-offset: 3px; }
-.d-vhs-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(217,209,225,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-vhs-stage { width: 75%; height: 190px; }.d-vhs-chroma { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-vhs-head { will-change: auto; }.d-vhs-error { transition: none; } }
-`,
-  js: `
+  css: `.d-vhs{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-vhs::before,.d-vhs::after{display:none}.d-vhs>span,.d-vhs>[class$="-meter"],.d-vhs>[class$="-channels"],.d-vhs>[class$="-vector"],.d-vhs>[class$="-order"],.d-vhs>[class$="-phosphor"],.d-vhs>[class$="-fields"],.d-vhs>[class$="-matrix"],.d-vhs>[class$="-sample"]{display:none}.d-vhs [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-vhs [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-vhs canvas{display:block;width:100%;height:100%;object-fit:cover}.d-vhs [class$="-stage"]>span,.d-vhs [class$="-stage"]>[class$="-origin"],.d-vhs [class$="-labels"],.d-vhs [class$="-scan"]{display:none}.d-vhs button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-vhs button:hover{background:#dde5d3}.d-vhs button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-vhs button:focus-visible,.d-vhs input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-vhs [class$="-actions"]{display:flex;gap:8px}.d-vhs:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-vhs .d-vhs-timecode{display:block;position:absolute;left:15px;top:14px;color:#fff8;font:400 10px "Inter",system-ui,sans-serif}.d-vhs-chroma{display:none}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-vhs-canvas');
 const stageEl = root.querySelector('.d-vhs-stage');
 const head = root.querySelector('.d-vhs-head');
@@ -75,15 +44,9 @@ let bands = [], trackingActive = false, staticPinned = false, batchId = 0, track
 let clock = 0, nextTracking = 3600, dirty = true, lastDraw = 0;
 
 function drawSource() {
-  const gradient = source.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, '#162c59'); gradient.addColorStop(.5, '#8d315d'); gradient.addColorStop(1, '#f0a354');
-  source.fillStyle = gradient; source.fillRect(0, 0, width, height);
-  source.fillStyle = '#d9fae8'; source.beginPath(); source.arc(width * .72, height * .33, height * .23, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#11131b'; source.beginPath(); source.arc(width * .72, height * .33, height * .1, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(6,7,12,.68)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('TAPE', width * .05, height * .95);
-  source.strokeStyle = 'rgba(255,255,255,.32)'; source.lineWidth = 1;
-  for (let x = 0; x < width; x += 23) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + 34, height); source.stroke(); }
+  const picture=photograph; source.fillStyle='#d9ddd4'; source.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight),pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;source.drawImage(picture,(width-pw)/2,(height-ph)/2,pw,ph)}
+
 }
 function buildChroma() {
   const pixels = source.getImageData(0, 0, width, height).data;
@@ -212,13 +175,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(envelope); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained VHS tracking-error canvas treatment with one full-color source and cached red-only and cyan-only channel canvases. The red buffer keeps R with G/B zero; cyan keeps G/B with R zero; both are opaque black elsewhere. Rebuild them only on resize.
-
-Use exactly four deterministic tracking bands from a seeded xorshift generator: two centered near a normalized tracking-head Y and two global. Each stores y, 16–61px height, 7–23px amplitude scaled by pointer-X intensity, frequency 0.045–0.13, speed 0.006–0.014, and phase. For every 2px row inside a band, multiply sin(y*frequency+time*speed+phase) by amplitude, sin(local*pi) feather, and a burst envelope. Sum overlapping shifts and retain maximum strength.
-
-Draw each source row at its signed shift and draw a second wrapped copy at shift-width or shift+width so frame edges never open. Only on disturbed rows, screen-composite red at shift+bleed and cyan at shift-bleed, where bleed=2+strength*6 and alpha=0.16+strength*0.2. Add eighteen seeded one-pixel head-switching noise dashes near the bottom and a subtle 4px scanline overlay. Never use Math.random.
-
-Normal tracking windows last roughly 1180ms with sin(progress*pi)^0.65 envelope and trigger on hover, a semantic button, Space/Enter, keyboard focus movement, and occasional frame-clock intervals. Pointermove stays passive. Arrows move focus by 0.06, Shift by 0.12, Home centers, and Escape restores. Cap DPR at 2. Under prefers-reduced-motion, render one stable 0.76-envelope frame with no interval or redraw loop; pointerleave clears unless pinned and another activation restores the intact source.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:coastal-stack}}';`,
+  prompt: `Create the VHS Tracking Deck interaction with a native300×320px composition. Use actual supplied coastal-stack photography as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

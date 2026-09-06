@@ -10,7 +10,7 @@ INTRX.register({
   seen:'Seen in FUI dashboards and NASA mission interfaces',
   hint:'click the tracker to cycle satellites',
   html:`<div class="d-fui-orbit" role="region" aria-label="Interactive fictional orbital tracker">
-  <header class="d-fui-orbit-topbar"><span>INTRX / ORBITAL ARRAY</span><span class="d-fui-orbit-live"><i></i>TRACK <b class="d-fui-orbit-track-index">02/03</b></span></header>
+  <header class="d-fui-orbit-topbar"><span>Satellite tracking</span><span class="d-fui-orbit-live"><i></i>Track <b class="d-fui-orbit-track-index">02/03</b></span></header>
   <button class="d-fui-orbit-scene" type="button" aria-label="SAT-02 selected. Activate to select the next satellite.">
     <svg class="d-fui-orbit-svg" aria-hidden="true" focusable="false">
       <g class="d-fui-orbit-back"></g>
@@ -29,11 +29,11 @@ INTRX.register({
       <circle class="d-fui-orbit-station-pulse" r="2"></circle>
       <polyline class="d-fui-orbit-leader"></polyline>
     </svg>
-    <output class="d-fui-orbit-readout" aria-hidden="true"><span>TARGET LINK</span><b class="d-fui-orbit-readout-text"></b></output>
-    <span class="d-fui-orbit-legend" aria-hidden="true"><i></i>FRONT VECTOR <i></i>OCCLUDED 25%</span>
+    <output class="d-fui-orbit-readout" aria-hidden="true"><span>Target link</span><b class="d-fui-orbit-readout-text"></b></output>
+    <span class="d-fui-orbit-legend" aria-hidden="true"><i></i>Front vector <i></i>Occluded 25%</span>
     <i class="d-fui-orbit-corner d-fui-orbit-corner-tl"></i><i class="d-fui-orbit-corner d-fui-orbit-corner-tr"></i><i class="d-fui-orbit-corner d-fui-orbit-corner-bl"></i><i class="d-fui-orbit-corner d-fui-orbit-corner-br"></i>
   </button>
-  <footer class="d-fui-orbit-footer"><span class="d-fui-orbit-target">SAT-02 / LOCKED</span><span class="d-fui-orbit-station-state">GS NOMINAL</span><span class="d-fui-orbit-clock">T+000.0</span></footer>
+  <footer class="d-fui-orbit-footer"><span class="d-fui-orbit-target">Sat-02 / locked</span><span class="d-fui-orbit-station-state">Gs nominal</span><span class="d-fui-orbit-clock">T+000.0</span></footer>
   <span class="d-fui-orbit-status" aria-live="polite" aria-atomic="true"></span>
 </div>`,
   css:`
@@ -57,7 +57,14 @@ INTRX.register({
 .d-fui-orbit-footer{border-top:1px solid #232327}.d-fui-orbit-target{color:#fa7319}.d-fui-orbit-station-state{color:#9b9ba3}.d-fui-orbit[data-station-blip="true"] .d-fui-orbit-station-state{color:#4ade80}.d-fui-orbit-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @container(max-width:340px){.d-fui-orbit-readout{right:7px;width:122px;padding-left:7px;font-size:9px}.d-fui-orbit-legend{font-size:8px;gap:4px}.d-fui-orbit-footer .d-fui-orbit-clock{display:none}}
 @media(prefers-reduced-motion:reduce){.d-fui-orbit *{animation:none!important;transition:none!important}}
-`,
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-orbit{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-orbit :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-orbit :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-orbit footer button,.d-fui-orbit>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-orbit footer button:hover,.d-fui-orbit>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-orbit footer button:focus-visible,.d-fui-orbit>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-orbit button[class*="-inspect"]{display:none!important}.d-fui-orbit :where(input){accent-color:#9bb7c8}.d-fui-orbit :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-orbit:before,.d-fui-orbit-corner,.d-fui-orbit-legend{display:none}.d-fui-orbit-topbar{height:25px;font-size:14px;color:#c0d0da}.d-fui-orbit-scene{border:0;border-radius:12px;background:radial-gradient(ellipse,#20303a,#131b21)}.d-fui-orbit-readout{padding:9px 11px;border:0;border-left:2px solid #91afc1;border-radius:3px;background:#202e37dd;font-size:11px;color:#a9c1d0}.d-fui-orbit-readout>span{font-size:10px;color:#6e8b9e}.d-fui-orbit-readout-text{font-size:13px;font-weight:450;color:#c4d9e5}.d-fui-orbit-footer{font-size:11px;color:#819dab}
+.d-fui-orbit{background:#121b22}.d-fui-orbit>[class$="-topbar"]{text-transform:none}.d-fui-orbit>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-orbit [class*="-corner"]{display:none}
+
+/* Verified native-width corrections. */
+.d-fui-orbit-readout{max-width:126px;width:126px}.d-fui-orbit-readout-text{font-size:11px;line-height:1.45}.d-fui-orbit-readout>span{font-size:10px}`,
   js:`const scene=root.querySelector('.d-fui-orbit-scene');
 const svg=root.querySelector('.d-fui-orbit-svg');
 const orbitBack=root.querySelector('.d-fui-orbit-back');
@@ -419,7 +426,7 @@ updateTyping();
 render();
 expose(reduced?'reduced':'initial');
 if(!reduced)start()`,
-  prompt:`Build a self-contained 320px-tall fictional orbital tracker in JetBrains Mono using only the site dark palette, #fa7319 accent, and #4ade80 success. The entire scene is one native button with a visible focus ring and a polite live region that announces only deliberate target changes. Its SVG must contain an exact 24px-radius wireframe planet, exactly three dashed latitude ellipses, three deterministic inclined elliptical orbits split into full-opacity front and exactly 25%-opacity occluded halves, three exact 3px satellite heads, and exactly twelve fading trail dots per satellite.
+  prompt:`Use a native 300 by 320 composition. Clarify the tracked satellite readout and simplify the orbital scene by removing corner/legend clutter. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional orbital tracker in Inter using only the site dark palette, #fa7319 accent, and #4ade80 success. The entire scene is one native button with a visible focus ring and a polite live region that announces only deliberate target changes. Its SVG must contain an exact 24px-radius wireframe planet, exactly three dashed latitude ellipses, three deterministic inclined elliptical orbits split into full-opacity front and exactly 25%-opacity occluded halves, three exact 3px satellite heads, and exactly twelve fading trail dots per satellite.
 
 Use fixed tracks SAT-01 (6000ms, 78x27, -28 degrees), SAT-02 (9000ms, 104x40, 8 degrees), and SAT-03 (13000ms, 132x54, 34 degrees). Drift the planet dash texture on an exact 20000ms active-time loop. Start on SAT-02. Its selected head is accent with a glow and a leader reaches an HTML corner readout in the exact form SAT-02 / ALT 412KM / VEL 7.6. Type at 22ms per character and restart on selection without putting the typer in a live region.
 

@@ -24,40 +24,9 @@ INTRX.register({
   <button class="d-rgb-inject" type="button" aria-pressed="false">Inject burst</button>
   <p class="d-rgb-status" aria-live="polite">Transmission stable</p>
 </div>`,
-  css: `
-.d-rgb { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #080a0f; color: #d8dde9; touch-action: none; }
-.d-rgb:focus-visible { box-shadow: inset 0 0 0 2px #f24d66; }
-.d-rgb::before { content: ''; position: absolute; inset: 0; opacity: .2; pointer-events: none;
-  background-image: linear-gradient(rgba(216,221,233,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(216,221,233,.13) 1px, transparent 1px); background-size: 26px 26px; }
-.d-rgb-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(216,221,233,.38); background: #040509; box-shadow: 9px 9px 0 rgba(242,77,102,.1); }
-.d-rgb-canvas { display: block; width: 100%; height: 100%; }
-.d-rgb-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .18;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.15) 3px 4px); mix-blend-mode: screen; }
-.d-rgb-scan { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(255,255,255,.55); pointer-events: none; opacity: .35; will-change: transform, opacity; }
-.d-rgb-scan::before, .d-rgb-scan::after { content: ''; position: absolute; top: -2px; width: 28px; height: 5px; }
-.d-rgb-scan::before { left: 0; background: #ff3159; }.d-rgb-scan::after { right: 0; background: #35dfff; }
-.d-rgb-scan i { position: absolute; left: 50%; top: -5px; width: 10px; height: 10px; border: 1px solid #fff; transform: translateX(-50%) rotate(45deg); }
-.d-rgb.d-rgb-active .d-rgb-scan { opacity: 1; }
-.d-rgb-timecode { position: absolute; right: 8px; bottom: 6px; color: rgba(255,255,255,.74); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; mix-blend-mode: difference; }
-.d-rgb-kicker { position: absolute; left: 17px; top: 18px; color: rgba(216,221,233,.55); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-rgb-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 5px;
-  color: rgba(216,221,233,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-rgb-meter strong { min-width: 24px; color: #fff; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-rgb-channels { position: absolute; left: 17px; top: 43px; display: flex; gap: 4px; }
-.d-rgb-channels i { display: grid; width: 17px; height: 17px; place-items: center; border: 1px solid currentColor; font: 7px "JetBrains Mono", monospace; font-style: normal; }
-.d-rgb-channels i:nth-child(1) { color: #ff3159; }.d-rgb-channels i:nth-child(2) { color: #5dff79; }.d-rgb-channels i:nth-child(3) { color: #35dfff; }
-.d-rgb-inject { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(216,221,233,.38);
-  border-radius: 999px; background: rgba(8,10,15,.84); color: #d8dde9; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-rgb-inject:hover, .d-rgb-inject[aria-pressed="true"] { background: #fff; color: #080a0f; transform: translateY(-2px); }
-.d-rgb-inject:focus-visible { outline: 2px solid #f24d66; outline-offset: 3px; }
-.d-rgb-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(216,221,233,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-rgb-stage { width: 75%; height: 190px; }.d-rgb-channels { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-rgb-scan { will-change: auto; }.d-rgb-inject { transition: none; } }
-`,
-  js: `
+  css: `.d-rgb{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-rgb::before,.d-rgb::after{display:none}.d-rgb>span,.d-rgb>[class$="-meter"],.d-rgb>[class$="-channels"],.d-rgb>[class$="-vector"],.d-rgb>[class$="-order"],.d-rgb>[class$="-phosphor"],.d-rgb>[class$="-fields"],.d-rgb>[class$="-matrix"],.d-rgb>[class$="-sample"]{display:none}.d-rgb [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-rgb [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-rgb canvas{display:block;width:100%;height:100%;object-fit:cover}.d-rgb [class$="-stage"]>span,.d-rgb [class$="-stage"]>[class$="-origin"],.d-rgb [class$="-labels"],.d-rgb [class$="-scan"]{display:none}.d-rgb button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-rgb button:hover{background:#dde5d3}.d-rgb button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-rgb button:focus-visible,.d-rgb input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-rgb [class$="-actions"]{display:flex;gap:8px}.d-rgb:focus-visible{outline:2px solid #829969;outline-offset:-2px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-rgb-canvas');
 const stageEl = root.querySelector('.d-rgb-stage');
 const scan = root.querySelector('.d-rgb-scan');
@@ -74,15 +43,9 @@ let width = 1, height = 1, dpr = 1, focusY = .5, bands = [], burstId = 0;
 let burstActive = false, burstStart = 0, burstDuration = 860, staticPinned = false, clock = 0, nextAuto = 3200, dirty = true, lastDraw = 0;
 
 function drawSource() {
-  const gradient = source.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, '#172454'); gradient.addColorStop(.5, '#7d235f'); gradient.addColorStop(1, '#f0a23d');
-  source.fillStyle = gradient; source.fillRect(0, 0, width, height);
-  source.fillStyle = '#e8f7ff'; source.beginPath(); source.arc(width * .73, height * .34, height * .24, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#10131c'; source.beginPath(); source.arc(width * .73, height * .34, height * .11, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(5,7,12,.7)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .32) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('SIGNAL', width * .04, height * .95);
-  source.strokeStyle = 'rgba(255,255,255,.4)'; source.lineWidth = 1;
-  for (let x = 0; x < width; x += 22) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + 42, height); source.stroke(); }
+  const picture=photograph; source.fillStyle='#d9ddd4'; source.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight),pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;source.drawImage(picture,(width-pw)/2,(height-ph)/2,pw,ph)}
+
 }
 function buildChannels() {
   const pixels = source.getImageData(0, 0, width, height).data;
@@ -184,13 +147,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(envelope); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained horizontal RGB slice glitch using canvas channel reconstruction, not duplicated DOM text. Draw a full-color poster into one offscreen canvas at CSS resolution. Read its pixels once and create three equally sized opaque-black ImageData buffers: the red buffer retains only R, green only G, and blue only B. Cache those canvases until resize.
-
-For each burst, use a seeded xorshift generator—never Math.random—to create exactly ten horizontal bands. Concentrate six around a normalized hover/keyboard scan Y and distribute four across the frame. Give each band a 3–20px height, signed displacement up to 22px, channel split 3–11px, and phase. Sort by Y. Each frame draws the intact source first. For every band, clip and clear its rectangle, then draw the red crop at displacement+split with source-over, green at displacement with screen compositing, and blue at displacement-split with screen. This reconstructs actual color channels while shifting the whole horizontal slice.
-
-Animate a normal burst for about 860ms with envelope=sin(progress*pi) and a small phase-based displacement jitter. Trigger on hover, through a semantic button, Space/Enter, and occasional requestAnimationFrame-clock auto bursts. Pointermove updates scan Y passively; Up/Down move it by 0.08, Home centers, and Escape clears. Expose slice count, scan line, focus styles, aria-pressed burst state, and polite status.
-
-On resize, rebuild source and all three channel buffers and draw through a DPR transform capped at 2. Under prefers-reduced-motion, never animate the envelope or auto-trigger: hover shows a stable 0.78 split frame, pointerleave clears it unless the button or keyboard pins it, and a second activation clears the static frame. Preserve exact channel separation, scan positioning, resize, keyboard control, and the fully inspectable displaced result.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:limestone-pavilion}}';`,
+  prompt: `Create the RGB Slice Transmission interaction with a native300×320px composition. Use actual supplied limestone-pavilion photography as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

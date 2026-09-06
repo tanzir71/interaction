@@ -10,10 +10,10 @@ INTRX.register({
   seen:'Seen in movie FUI authorization sequences and hacker-terminal interface tropes',
   hint:'click to authenticate',
   html:`<div class="d-fui-auth" role="region" aria-label="Interactive authorization terminal" aria-busy="false">
-  <header class="d-fui-auth-topbar"><span>INTRX / IDENTITY GATE</span><span class="d-fui-auth-live"><i class="d-fui-auth-live-dot"></i>SECURE LINK</span></header>
+  <header class="d-fui-auth-topbar"><span>Verify your identity</span><span class="d-fui-auth-live"><i class="d-fui-auth-live-dot"></i>Secure link</span></header>
   <button class="d-fui-auth-panel" type="button" aria-label="Begin authorization scan" aria-disabled="false">
     <i class="d-fui-auth-corner d-fui-auth-corner-tl"></i><i class="d-fui-auth-corner d-fui-auth-corner-tr"></i><i class="d-fui-auth-corner d-fui-auth-corner-bl"></i><i class="d-fui-auth-corner d-fui-auth-corner-br"></i>
-    <span class="d-fui-auth-panel-head"><span>BIOMETRIC / NODE 07</span><span class="d-fui-auth-mode">STANDBY</span></span>
+    <span class="d-fui-auth-panel-head"><span>Biometric / node 07</span><span class="d-fui-auth-mode">Standby</span></span>
     <span class="d-fui-auth-core">
       <svg class="d-fui-auth-glyph" viewBox="0 0 160 160" aria-hidden="true">
         <circle class="d-fui-auth-arc d-fui-auth-arc-1" cx="80" cy="80" r="20"></circle>
@@ -23,13 +23,13 @@ INTRX.register({
         <circle class="d-fui-auth-arc d-fui-auth-arc-5" cx="80" cy="80" r="64"></circle>
         <circle class="d-fui-auth-center" cx="80" cy="80" r="4"></circle>
       </svg>
-      <span class="d-fui-auth-label">AWAITING AUTH</span>
+      <span class="d-fui-auth-label">Touch to verify</span>
     </span>
-    <span class="d-fui-auth-hash-wrap"><span>HASH / </span><span class="d-fui-auth-hash"></span></span>
+    <span class="d-fui-auth-hash-wrap"><span>Hash / </span><span class="d-fui-auth-hash"></span></span>
     <span class="d-fui-auth-stamp"></span>
     <i class="d-fui-auth-sweep" aria-hidden="true"></i>
   </button>
-  <footer class="d-fui-auth-footer"><span>AES-256</span><span>16 CHAR TOKEN</span><span>1 IN 4 DENIED</span><span class="d-fui-auth-state">READY</span></footer>
+  <footer class="d-fui-auth-footer"><span>Aes-256</span><span>16 Char token</span><span>1 In 4 denied</span><span class="d-fui-auth-state">Ready</span></footer>
   <i class="d-fui-auth-stage-line" aria-hidden="true"></i>
 </div><span class="d-fui-auth-announcement" aria-live="polite" aria-atomic="true"></span>`,
   css:`
@@ -45,7 +45,14 @@ INTRX.register({
 @keyframes d-fui-auth-live-pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes d-fui-auth-await{0%,100%{opacity:.32}50%{opacity:1}}@keyframes d-fui-auth-stage-drift{from{transform:translateY(0)}to{transform:translateY(256px)}}
 @media(max-width:520px){.d-fui-auth{padding-inline:8px}.d-fui-auth-footer span:nth-child(2){display:none}.d-fui-auth-stamp{font-size:26px}}
 @media(prefers-reduced-motion:reduce){.d-fui-auth *{animation:none!important;transition:none!important}.d-fui-auth-live-dot,.d-fui-auth-label{opacity:1}.d-fui-auth-stage-line{top:160px}}
-`,
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-auth{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-auth :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-auth :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-auth footer button,.d-fui-auth>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-auth footer button:hover,.d-fui-auth>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-auth footer button:focus-visible,.d-fui-auth>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-auth button[class*="-inspect"]{display:none!important}.d-fui-auth :where(input){accent-color:#9bb7c8}.d-fui-auth :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-auth:before,.d-fui-auth-corner,.d-fui-auth-stage-line,.d-fui-auth-sweep{display:none}.d-fui-auth-topbar{height:26px;font-size:14px;color:#c3d0d9}.d-fui-auth-panel{border:0;border-radius:12px;background:#1b252d}.d-fui-auth-panel-head{font-size:11px;color:#90a6b4}.d-fui-auth-panel-head>span:first-child{display:none}.d-fui-auth-core{top:46%;width:150px}.d-fui-auth-label{font-size:14px;color:#bfd1dc;text-transform:none}.d-fui-auth-arc{border-color:#79939f!important}.d-fui-auth-center{background:#a9c2c8!important;box-shadow:none!important}.d-fui-auth-hash-wrap{font-size:10px;color:#6d8593}.d-fui-auth-footer{font-size:11px;color:#8ba295}
+.d-fui-auth{background:#121b22}.d-fui-auth>[class$="-topbar"]{text-transform:none}.d-fui-auth>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-auth [class*="-corner"]{display:none}
+
+/* Verified native-width corrections. */
+.d-fui-auth-core{top:50%;transform:translate(-50%,-58%)}.d-fui-auth-label{margin-top:8px;line-height:1.3}.d-fui-auth-hash-wrap{bottom:18px}.d-fui-auth-arc{stroke:#87a4b3!important;stroke-width:1.6}.d-fui-auth-center{fill:#a6c2ce!important}.d-fui-auth-footer>span:first-child{display:none}`,
   js:`const panel=root.querySelector('.d-fui-auth-panel');
 const glyph=root.querySelector('.d-fui-auth-glyph');
 const arcs=[...root.querySelectorAll('.d-fui-auth-arc')];
@@ -169,7 +176,7 @@ function reset(source){
   flickerFrame=-1;
   running=false;
   clearFeedback();
-  label.textContent='AWAITING AUTH';
+  label.textContent='Touch to verify';
   modeLabel.textContent='STANDBY';
   stateLabel.textContent='READY';
   panel.setAttribute('aria-label','Begin authorization scan');
@@ -291,7 +298,7 @@ function frame(now){
 panel.addEventListener('click',function(event){event.stopPropagation();begin(event.detail===0?'keyboard':'pointer')});
 if('IntersectionObserver'in window){observer=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start()},{threshold:.05});observer.observe(root)}
 reset('initial')`,
-  prompt:`Build a self-contained 320px-tall fictional authorization terminal using JetBrains Mono and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, warning #fbbf24, and error #f87171. Use a 4px-radius hard-tech panel, four 8px corner ticks, FUI scanlines, a persistent accent readiness dot, 10px uppercase labels with 0.08em tracking, 12px tabular hash data, and one exact 26px weight-500 result stamp.
+  prompt:`Use a native 300 by 320 composition. Make authentication a clear primary action with a calmer biometric mark and readable state. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional authorization terminal using Inter and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, warning #fbbf24, and error #f87171. Use a 4px-radius hard-tech panel, four 8px corner ticks, FUI scanlines, a persistent accent readiness dot, 10px uppercase labels with 0.08em tracking, 12px tabular hash data, and one exact 26px weight-500 result stamp.
 
 The authorization target must be a native button. Idle shows at least five concentric broken SVG arcs in #5c5c66 around an accent center and AWAITING AUTH blinking on an exact 1.4-second cycle. On activation, ignore further activations until reset, set aria-busy true, turn arcs accent, and rotate the glyph 0→360 degrees over exactly 600ms using cubic-bezier(0.65,0,0.35,1). At the same time, move one exact 1px accent scanline across the panel twice at exactly 400ms per pass and type a deterministic uppercase 16-character hexadecimal hash at exactly 18ms per character. Reveal the result at 800ms.
 

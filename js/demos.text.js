@@ -16,9 +16,9 @@ INTRX.register({
   hint: 'click replay',
   html: `
 <div class="d-split">
-  <h2 class="d-split-line">Design is thinking</h2>
-  <h2 class="d-split-line d-split-accent">made visible.</h2>
-  <button class="d-split-replay">↻ replay</button>
+  <h2 class="d-split-line">A thought.</h2>
+  <h2 class="d-split-line d-split-accent">Made visible.</h2>
+  <button class="d-split-replay"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 1.5 7M4 4v6h6"/></svg><span>Replay</span></button>
 </div>`,
   css: `
 .d-split {
@@ -26,16 +26,24 @@ INTRX.register({
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
   position: relative;
 }
-.d-split-line { font-size: clamp(28px, 5vw, 52px); font-weight: 700; color: #ececef; letter-spacing: -0.02em; margin: 0; }
+.d-split-line { font-size: clamp(28px, 5vw, 52px); font-weight:500; color: #ececef; letter-spacing: -0.02em; margin: 0; }
 .d-split-line.d-split-accent { color: #c8ff2e; }
 .d-split-line .d-split-ch-mask { display: inline-block; overflow: hidden; vertical-align: bottom; }
 .d-split-line .d-split-ch { display: inline-block; will-change: transform; }
 .d-split-replay {
   position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
   background: none; border: 1px solid #2e2e34; color: #9b9ba3;
-  font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 6px 14px; cursor: pointer;
+  font-family: "Inter",system-ui,sans-serif; font-size: 11px; padding: 6px 14px; cursor: pointer;
 }
-.d-split-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }`,
+.d-split-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }
+/* Composition at the native preview size. */
+.d-split{padding:24px;box-sizing:border-box;container-type:inline-size;align-items:flex-start}.d-split-line{font:500 clamp(26px,10cqw,43px)/1.15 "Inter",system-ui,sans-serif;letter-spacing:-0.025em;white-space:nowrap}.d-split-line.d-split-accent,.d-split-replay:hover{color:#fa7319}
+/* Composition at the native preview size. */
+.d-split button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-split-line{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-split{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-split :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-split button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-split h2{font-family:"Inter",system-ui,sans-serif;font-weight:450;letter-spacing:-.02em;line-height:1.18}.d-split button{font:400 11px "Inter",system-ui,sans-serif;border-radius:5px;padding:8px 12px}.d-split{padding:25px}
+.d-split-replay{display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1.25}.d-split-replay svg{display:block;flex:none}`,
   js: `
 // minimal SplitText: wrap each character in a masked span
 function split(el) {
@@ -67,15 +75,20 @@ function play() {
 
 root.querySelector('.d-split-replay').addEventListener('click', play);
 play();`,
-  prompt: `
-Build a split-text character reveal with GSAP (or vanilla).
+  prompt: `Build a split-text character reveal with GSAP (or vanilla).
 
 Requirements:
 - Split each headline into individual characters. Wrap every character in an outer span with overflow: hidden (the mask) and an inner span that animates. Preserve spaces as &nbsp;.
 - Animate the inner spans from yPercent: 110 and rotate: 6deg to 0 with power4.out, duration ~0.9s, stagger 0.025s per character.
 - Trigger on page load and again when the element scrolls into view (IntersectionObserver or ScrollTrigger).
 - Keep accessibility: set aria-label with the original text on the heading and aria-hidden on the spans.
-- Under prefers-reduced-motion, skip splitting entirely.`,
+- Under prefers-reduced-motion, skip splitting entirely.
+
+Set the two lines “A thought.” and “Made visible.” in compact medium-weight role-appropriate type, with the second line orange. Use 24px padding and container-relative sizes so both lines fit a 300–320px-wide preview.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -93,25 +106,29 @@ INTRX.register({
   hint: 'click the panel to cycle',
   html: `
 <div class="d-scramble">
-  <p class="d-scramble-label">// status</p>
-  <h2 class="d-scramble-text">INITIALIZING</h2>
+  <p class="d-scramble-label">A studio in motion</p>
+  <h2 class="d-scramble-text">Ideas into form</h2>
 </div>`,
   css: `
 .d-scramble {
   width: 100%; height: 320px; background: #0a0a0b; cursor: pointer;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
 }
-.d-scramble-label { font-family: "JetBrains Mono", monospace; font-size: 11px; color: #5c5c66; letter-spacing: 0.2em; }
+.d-scramble-label { font-family: "Inter",system-ui,sans-serif; font-size: 11px; color: #5c5c66; letter-spacing: 0.2em; }
 .d-scramble-text {
-  font-family: "JetBrains Mono", monospace; font-size: clamp(24px, 4.5vw, 44px);
-  font-weight: 700; color: #c8ff2e; letter-spacing: 0.06em; margin: 0;
+  font-family: "Inter",system-ui,sans-serif; font-size: clamp(24px, 4.5vw, 44px);
+  font-weight:500; color: #c8ff2e; letter-spacing: 0.06em; margin: 0;
   min-height: 1.2em;
 }
-.d-scramble-text .d-scramble-junk { color: #3c3c44; }`,
+.d-scramble-text .d-scramble-junk { color: #3c3c44; }
+/* Composition at the native preview size. */
+.d-scramble{padding:24px;box-sizing:border-box;container-type:inline-size;align-items:flex-start}.d-scramble-label{color:#999;font-size:10px;letter-spacing:0.06em}.d-scramble-text{font:500 clamp(19px,6.5cqw,33px)/1.25 "Inter",system-ui,sans-serif;color:#eee;letter-spacing:-0.025em}.d-scramble-junk{color:#fa7319}
+/* Refined type, spacing and quiet interaction controls. */
+.d-scramble{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-scramble :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-scramble button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-scramble-text{font:450 clamp(27px,10cqw,37px)/1.2 "Inter",system-ui,sans-serif;letter-spacing:-.02em;min-height:2.4em;max-width:240px}.d-scramble-label{font:400 11px "Inter",system-ui,sans-serif;color:#89958c;letter-spacing:0}.d-scramble-junk{color:#859c8d}.d-scramble{padding:27px}`,
   js: `
 const el = root.querySelector('.d-scramble-text');
 const GLYPHS = '!<>-_\\\\/[]{}—=+*^?#________';
-const PHRASES = ['INITIALIZING', 'DECRYPTING DATA', 'ACCESS GRANTED', 'SYSTEM ONLINE'];
+const PHRASES = ['Ideas into form', 'Make it matter', 'Move with purpose', 'Keep exploring'];
 let idx = 0, frame = 0, queue = [], rafId = null;
 
 function setText(next) {
@@ -146,16 +163,19 @@ root.addEventListener('click', function () {
   setText(PHRASES[idx]);
 });
 setText(PHRASES[0]);`,
-  prompt: `
-Build a text scramble / decode effect in vanilla JS (the classic "hacker text").
+  prompt: `Build a text scramble / decode effect in vanilla JS (the classic "hacker text").
 
 Requirements:
 - A setText(next) function that transitions the current string to the next one.
 - For each character position, pick a random start frame (0-30) and end frame (start + 0-30). Before start, show the old character; between start and end, show a random glyph from a set like !<>-_\\/[]{}—=+*^?#, re-randomized with ~28% probability per frame so it flickers; after end, lock in the new character.
 - Run on requestAnimationFrame until all characters resolve.
-- Render in-progress glyphs in a dimmer color (wrap in a span).
+- Render in-progress glyphs in #fa7319 (wrap in a span).
 - Use a monospace font so the line does not jitter horizontally.
-- Cycle through an array of phrases on click or on an interval, and expose setText for reuse.`,
+- Cycle through an array of phrases on click or on an interval, and expose setText for reuse.
+
+Use a restrained mono heading in light gray on graphite, with decoding glyphs in #fa7319. Keep native 24px padding and container-relative type so the complete phrases fit narrow previews.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -188,11 +208,18 @@ INTRX.register({
 .d-marquee-band { white-space: nowrap; border-top: 1px solid #232327; border-bottom: 1px solid #232327; padding: 8px 0; }
 .d-marquee-track { display: inline-block; will-change: transform; }
 .d-marquee-track span {
-  font-size: 44px; font-weight: 700; letter-spacing: -0.02em;
+  font-size: 44px; font-weight:500; letter-spacing: -0.02em;
   color: #ececef; padding-right: 24px;
 }
 .d-marquee-track span i { font-style: normal; color: #c8ff2e; }
-.d-marquee-band.d-marquee-alt .d-marquee-track span { color: transparent; -webkit-text-stroke: 1px #5c5c66; }`,
+.d-marquee-band.d-marquee-alt .d-marquee-track span { color: transparent; -webkit-text-stroke: 1px #5c5c66; }
+/* Composition at the native preview size. */
+.d-marquee-track span{font-family:"Inter",system-ui,sans-serif;font-weight:500}.d-marquee-track span i{color:#fa7319}
+/* Composition at the native preview size. */
+.d-marquee button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-marquee-track span{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-marquee{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-marquee :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-marquee button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-marquee-track{font-weight:450;letter-spacing:-.025em}.d-marquee{background:#0c0e0d}`,
   js: `
 const CHUNK = '<span>DESIGN <i>◆</i> MOTION <i>◆</i> CODE <i>◆</i> </span>';
 
@@ -215,8 +242,7 @@ root.querySelectorAll('.d-marquee-track').forEach(function (track, i) {
     requestAnimationFrame(tick);
   })();
 });`,
-  prompt: `
-Build an infinite kinetic marquee in vanilla JS.
+  prompt: `Build an infinite kinetic marquee in vanilla JS.
 
 Requirements:
 - A nowrap track whose content chunk is repeated ~6x so it always overflows.
@@ -224,7 +250,13 @@ Requirements:
 - Listen to wheel/scroll and add the delta to a velocity value that boosts the marquee speed, with friction (*= 0.94 per frame) so it settles back to base speed.
 - Two bands moving in opposite directions, the second with outlined (text-stroke) type.
 - transform only, will-change: transform.
-- Under prefers-reduced-motion, keep it static.`,
+- Under prefers-reduced-motion, keep it static.
+
+Use medium-weight Inter, with #fa7319 punctuation accents and a gray outline second row.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -243,12 +275,12 @@ INTRX.register({
   html: `
 <div class="d-lines">
   <div class="d-lines-copy">
-    <span>We believe interfaces should feel</span>
-    <span>like physical material — with weight,</span>
-    <span>friction, and consequence.</span>
-    <span class="d-lines-accent">Motion is not decoration.</span>
+    <span>Every small detail.</span>
+    <span>A little more weight.</span>
+    <span>A little less friction.</span>
+    <span class="d-lines-accent">A better feeling.</span>
   </div>
-  <button class="d-lines-replay">↻ replay</button>
+  <button class="d-lines-replay"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 1.5 7M4 4v6h6"/></svg><span>Replay</span></button>
 </div>`,
   css: `
 .d-lines {
@@ -258,7 +290,7 @@ INTRX.register({
 .d-lines-copy { display: flex; flex-direction: column; gap: 2px; }
 .d-lines-copy span {
   display: block; overflow: hidden;
-  font-size: clamp(18px, 3vw, 28px); font-weight: 600; color: #ececef; line-height: 1.35;
+  font-size: clamp(18px, 3vw, 28px); font-weight:500; color: #ececef; line-height: 1.35;
 }
 .d-lines-copy span.d-lines-accent { color: #c8ff2e; }
 .d-lines-copy span em {
@@ -271,9 +303,19 @@ INTRX.register({
 .d-lines-replay {
   position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
   background: none; border: 1px solid #2e2e34; color: #9b9ba3;
-  font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 6px 14px; cursor: pointer;
+  font-family: "Inter",system-ui,sans-serif; font-size: 11px; padding: 6px 14px; cursor: pointer;
 }
-.d-lines-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }`,
+.d-lines-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }
+/* Composition at the native preview size. */
+.d-lines{padding:24px;box-sizing:border-box;container-type:inline-size;justify-content:flex-start}.d-lines-copy span{font:500 clamp(18px,7cqw,30px)/1.45 "Inter",system-ui,sans-serif;white-space:nowrap;letter-spacing:-0.025em}.d-lines-copy span.d-lines-accent{color:#fa7319}
+/* Composition at the native preview size. */
+.d-lines button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-lines-copy span{font-family:"Newsreader",Georgia,serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-lines-copy span{font-size:clamp(23px,8.5cqw,37px);font-weight:400;line-height:1.3;letter-spacing:-0.02em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-lines{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-lines :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-lines button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-lines-copy{font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.4}.d-lines button{font:400 11px "Inter",system-ui,sans-serif;border-radius:5px;padding:8px 12px}
+.d-lines-replay{display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1.25}.d-lines-replay svg{display:block;flex:none}`,
   js: `
 const copy = root.querySelector('.d-lines-copy');
 
@@ -291,8 +333,7 @@ function play() {
 
 root.querySelector('.d-lines-replay').addEventListener('click', play);
 requestAnimationFrame(play);`,
-  prompt: `
-Build a line-by-line mask text reveal, vanilla JS + CSS.
+  prompt: `Build a line-by-line mask text reveal, vanilla JS + CSS.
 
 Requirements:
 - Each visual line of text is a block element with overflow: hidden; inside it an inner element starts at transform: translateY(110%).
@@ -301,7 +342,13 @@ Requirements:
 - To replay, remove the class, force a reflow (void el.offsetWidth), and re-add it.
 - Trigger on scroll into view with IntersectionObserver.
 - Note: for real multi-line paragraphs, split lines at runtime (e.g. SplitType or GSAP SplitText 'lines' mode) instead of hand-authored spans.
-- Under prefers-reduced-motion, show text immediately.`,
+- Under prefers-reduced-motion, show text immediately.
+
+Use the four short lines “Every small detail.”, “A little more weight.”, “A little less friction.”, and “A better feeling.” in compact role-appropriate type with 24px padding and one orange accent line. Size each complete line to fit narrow previews.
+
+Final typography: Use Newsreader at normal weight for the main editorial text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -328,7 +375,7 @@ INTRX.register({
   width: 100%; height: 320px; background: #0a0a0b;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
 }
-.d-roll a { text-decoration: none; font-size: 42px; font-weight: 700; color: #ececef; letter-spacing: -0.02em; }
+.d-roll a { text-decoration: none; font-size: 42px; font-weight:500; color: #ececef; letter-spacing: -0.02em; }
 .d-roll .d-roll-mask { display: inline-block; overflow: hidden; vertical-align: bottom; height: 1.15em; }
 .d-roll .d-roll-stack {
   display: inline-flex; flex-direction: column;
@@ -338,7 +385,14 @@ INTRX.register({
 .d-roll a:hover .d-roll-stack, .d-roll.d-roll-auto .d-roll-stack { transform: translateY(-50%); }
 .d-roll .d-roll-stack b { font-weight: inherit; line-height: 1.15; }
 .d-roll .d-roll-stack b:last-child { color: #fa7319; }
-@media (prefers-reduced-motion: reduce) { .d-roll .d-roll-stack { transition: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-roll .d-roll-stack { transition: none; } }
+/* Composition at the native preview size. */
+.d-roll a{font:500 34px/1.15 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-roll a:focus-visible .d-roll-stack{transform:translateY(-50%)}
+/* Composition at the native preview size. */
+.d-roll button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-roll a{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-roll{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-roll :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-roll button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-roll-link{font:450 34px/1.2 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-roll{gap:12px}.d-roll-char{height:1.2em}.d-roll-char>span{line-height:1.2em}`,
   js: `
 root.querySelectorAll('a').forEach(function (link) {
   const text = link.dataset.text;
@@ -374,8 +428,7 @@ if (!reduced) {
     }, 900);
   });
 }`,
-  prompt: `
-Build the "letter roll" nav-link hover, vanilla JS + CSS.
+  prompt: `Build the "letter roll" nav-link hover, vanilla JS + CSS.
 
 Requirements:
 - For each link, split the label into characters. Each character becomes an overflow-hidden mask (height: 1.15em) containing a vertical stack of two copies of the same character.
@@ -385,7 +438,13 @@ Requirements:
 - On mouse leave it rolls back automatically (same transition).
 - Auto-roll once on boot as a teaser, then return to hover-only behavior; cancel the teaser permanently on first pointer or keyboard interaction.
 - Respect prefers-reduced-motion by skipping the boot teaser and transitions.
-- Preserve accessibility: keep the original label as aria-label.`,
+- Preserve accessibility: keep the original label as aria-label.
+
+Set the links in medium-weight 34px role-appropriate type. Apply the same rolling stack transform on keyboard focus-visible as on hover.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -410,8 +469,15 @@ INTRX.register({
   width: 100%; height: 320px; background: #0a0a0b;
   display: flex; align-items: center; justify-content: center;
 }
-.d-prox-word { font-size: clamp(40px, 9vw, 96px); font-weight: 700; color: #ececef; letter-spacing: 0.01em; margin: 0; }
-.d-prox-word span { display: inline-block; will-change: transform; }`,
+.d-prox-word { font-size: clamp(40px, 9vw, 96px); font-weight:500; color: #ececef; letter-spacing: 0.01em; margin: 0; }
+.d-prox-word span { display: inline-block; will-change: transform; }
+/* Composition at the native preview size. */
+.d-prox{padding:24px;box-sizing:border-box;container-type:inline-size}.d-prox-word{font:500 clamp(28px,12cqw,60px)/1 "Inter",system-ui,sans-serif;white-space:nowrap;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-prox button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-prox-word{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-prox{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-prox :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-prox button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-prox-word{font-family:"Inter",system-ui,sans-serif;font-weight:450;letter-spacing:-.015em}`,
   js: `
 const word = root.querySelector('.d-prox-word');
 word.innerHTML = word.textContent.split('').map(function (c) {
@@ -435,12 +501,11 @@ root.addEventListener('mouseleave', function () { mx = -9999; my = -9999; });
     const t = Math.max(0, 1 - dist / RADIUS);
     const ease = t * t * (3 - 2 * t);        // smoothstep
     el.style.transform = 'translateY(' + (-ease * 22) + 'px) scale(' + (1 + ease * 0.35) + ')';
-    el.style.color = ease > 0.35 ? '#c8ff2e' : '';
+    el.style.color = ease > 0.35 ? '#fa7319' : '';
   });
   requestAnimationFrame(tick);
 })();`,
-  prompt: `
-Build a proximity-reactive headline (mac-dock effect for letters), vanilla JS.
+  prompt: `Build a proximity-reactive headline (mac-dock effect for letters), vanilla JS.
 
 Requirements:
 - Split the headline into per-character spans (display: inline-block).
@@ -449,7 +514,13 @@ Requirements:
 - Apply transform: translateY(-22px * ease) scale(1 + 0.35 * ease), and tint letters above ~0.35 influence with an accent color.
 - Park the cursor at -9999 on mouseleave so letters settle back.
 - Optional upgrade: with a variable font, also map ease to font-variation-settings wght.
-- Disable on touch devices and under prefers-reduced-motion.`,
+- Disable on touch devices and under prefers-reduced-motion.
+
+Use a medium-weight sans-serif headline, native 24px padding, and container-relative sizing. Tint influenced letters #fa7319 while the remaining letters stay light gray.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -465,62 +536,8 @@ INTRX.register({
   desc: 'Numbers count up with a hard ease-out when scrolled into view, odometer style. tabular-nums keeps digits from jittering the layout.',
   seen: 'Seen on: agency about-pages, annual reports, SaaS landing metrics',
   hint: 'click replay',
-  html: `
-<div class="d-count">
-  <div class="d-count-grid">
-    <div class="d-count-stat"><b data-target="128" data-suffix="">0</b><span>projects shipped</span></div>
-    <div class="d-count-stat"><b data-target="14" data-suffix="">0</b><span>awwwards</span></div>
-    <div class="d-count-stat"><b data-target="99" data-suffix="%">0</b><span>lighthouse</span></div>
-  </div>
-  <button class="d-count-replay">↻ replay</button>
-</div>`,
-  css: `
-.d-count {
-  width: 100%; height: 320px; background: #0a0a0b; position: relative;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-count-grid { display: flex; gap: 56px; }
-.d-count-stat { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.d-count-stat b {
-  font-size: 56px; font-weight: 700; color: #c8ff2e;
-  font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
-}
-.d-count-stat span { font-family: "JetBrains Mono", monospace; font-size: 11px; color: #5c5c66; text-transform: uppercase; letter-spacing: 0.14em; }
-.d-count-replay {
-  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
-  background: none; border: 1px solid #2e2e34; color: #9b9ba3;
-  font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 6px 14px; cursor: pointer;
-}
-.d-count-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }`,
-  js: `
-const stats = root.querySelectorAll('.d-count-stat b');
-
-function count(el) {
-  const target = parseInt(el.dataset.target, 10);
-  const suffix = el.dataset.suffix || '';
-  const dur = 1600;
-  const start = performance.now();
-  function step(now) {
-    const p = Math.min(1, (now - start) / dur);
-    const eased = 1 - Math.pow(1 - p, 4);      // quart out
-    el.textContent = Math.round(eased * target) + suffix;
-    if (p < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-
-function playAll() { stats.forEach(count); }
-
-root.querySelector('.d-count-replay').addEventListener('click', playAll);
-playAll();`,
-  prompt: `
-Build scroll-triggered animated stat counters, vanilla JS.
-
-Requirements:
-- Elements like <b data-target="128" data-suffix="%">0</b>.
-- When scrolled into view (IntersectionObserver, once), count from 0 to target over ~1.6s using requestAnimationFrame and a quart ease-out (1 - (1-p)^4).
-- Support an optional suffix (%, +, k).
-- Use font-variant-numeric: tabular-nums so the layout doesn't shift while counting.
-- Round to integers; for decimal targets support a data-decimals attribute.
-- Under prefers-reduced-motion, set the final value immediately.`,
+  html: `<div class="d-count"><div class="d-count-heading">Studio at a glance</div><div class="d-count-grid"><div class="d-count-stat"><b data-target="128" data-suffix="">0</b><span>Projects delivered</span></div><div class="d-count-stat"><b data-target="14" data-suffix="">0</b><span>Design awards</span></div><div class="d-count-stat"><b data-target="99" data-suffix="%">0</b><span>Client satisfaction</span></div></div><button class="d-count-replay" type="button">Replay numbers <span aria-hidden="true">↻</span></button><p class="d-count-status" aria-live="polite"></p></div>`,
+  css: `.d-count{width:100%;height:320px;box-sizing:border-box;padding:24px;background:#0a0a0b;color:#f3f3f3;font-family:"Inter",system-ui,sans-serif;position:relative}.d-count-heading{color:#a4a7ac;font-size:13px;line-height:20px;font-weight:400}.d-count-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:18px;row-gap:20px;margin-top:18px}.d-count-stat{min-width:0;display:flex;flex-direction:column;gap:6px}.d-count-stat:first-child{grid-column:1/-1;padding-bottom:20px;border-bottom:1px solid #26282c}.d-count-stat b{font:450 32px/1.05 "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#eee}.d-count-stat:first-child b{font-size:50px;font-weight:400}.d-count-stat span{font:400 11px/1.4 "Inter",system-ui,sans-serif;color:#9da1a7;letter-spacing:0}.d-count-stat:first-child span{font-size:13px;color:#b7bac0}.d-count-replay{display:flex;align-items:center;justify-content:space-between;margin-top:21px;width:100%;height:34px;border:1px solid #303237;border-radius:7px;background:#17181a;color:#d0d2d5;font:400 11px "Inter",system-ui,sans-serif;padding:0 12px;cursor:pointer}.d-count-replay:hover{background:#222428}.d-count-replay:focus-visible{outline:2px solid #fa7319;outline-offset:3px}.d-count-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}`,
+  js: `const stats=[...root.querySelectorAll(".d-count-stat b")],status=root.querySelector(".d-count-status");let raf=0;const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;function play(){cancelAnimationFrame(raf);const start=performance.now();root.dataset.phase="counting";function frame(now){const p=reduce?1:Math.min(1,(now-start)/1300),e=1-Math.pow(1-p,4);stats.forEach(el=>{const decimals=Number(el.dataset.decimals||0),target=Number(el.dataset.target);el.textContent=(target*e).toLocaleString("en-US",{minimumFractionDigits:decimals,maximumFractionDigits:decimals})+(el.dataset.suffix||"")});if(p<1)raf=requestAnimationFrame(frame);else{root.dataset.phase="complete";status.textContent="128 projects delivered, 14 design awards, 99 percent client satisfaction"}}raf=requestAnimationFrame(frame)}root.querySelector(".d-count-replay").addEventListener("click",play);const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){play();observer.disconnect()}},{threshold:.3});observer.observe(root);return function(){cancelAnimationFrame(raf);observer.disconnect()};`,
+  prompt: `Build a native 300 by 320px studio statistics card. Use a muted Studio at a glance label, one featured 128 Projects delivered metric, a fine divider, and two smaller statistics: 14 Design awards and 99% Client satisfaction. Set every number in locally bundled Inter at weight400–450, tabular numerals, zero letter spacing and normal character proportions. The featured number is50px; the two supporting values are32px. Give labels11–13px readable Inter and a clear Replay numbers button. Animate all three values from zero in one requestAnimationFrame loop with quartic ease-out over1.3seconds. Format decimals through data-decimals and preserve each data-target/data-suffix. Trigger once when visible; Replay restarts fromzero. Reduced motion shows final values immediately. Announce completion only and cancel the animation/observer on cleanup. Keep subdued charcoal surfaces and visible keyboard focus; no telemetry header or decorative rulers.`,
 });

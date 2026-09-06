@@ -1,16 +1,16 @@
 /* INTRX registry - table with living image previews */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'table-image-idle',
-  title:'Table Image Idle',
-  cat:'Layout & UI',
-  rootClass:'d-layout-table-image-idle',
-  tags:['table','preview','hover'],
-  libs:[],
-  desc:'A compact project table carries one persistent living landscape preview between rows, trailing the cursor with subtle velocity and idle motion.',
-  seen:'Seen on: Interactive Table with Image Hover Idle Animation by Filip Zrnzevic on CodePen',
-  hint:'hover or focus rows to carry the living preview',
-  html:`<div class="d-layout-table-image-idle" role="region" aria-label="Project table with living image previews">
+  id: "table-image-idle",
+  title: "Table Image Idle",
+  cat: "Layout & UI",
+  rootClass: "d-layout-table-image-idle",
+  tags: ["table","preview","hover"],
+  libs: [],
+  desc: "A compact project table carries one persistent living landscape preview between rows, trailing the cursor with subtle velocity and idle motion.",
+  seen: "Seen on: Interactive Table with Image Hover Idle Animation by Filip Zrnzevic on CodePen",
+  hint: "hover or focus rows to carry the living preview",
+  html: `<div class="d-layout-table-image-idle" role="region" aria-label="Project table with living image previews">
   <div class="d-layout-table-image-idle-head" aria-hidden="true"><span>LAYOUT / LIVING TABLE</span><span>05 PROJECTS</span></div>
   <div class="d-layout-table-image-idle-stage">
     <table class="d-layout-table-image-idle-table" aria-label="Project index">
@@ -32,7 +32,7 @@ INTRX.register({
   <div class="d-layout-table-image-idle-foot" aria-hidden="true"><span>FOLLOW .12 / ROTATE ±2°</span><span>6S CLOUD / 4S BREATH</span></div>
   <span class="d-layout-table-image-idle-status" aria-live="polite" aria-atomic="true">Project table ready</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-table-image-idle{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
 .d-layout-table-image-idle *{box-sizing:border-box}
 .d-layout-table-image-idle-head,.d-layout-table-image-idle-foot{position:absolute;right:14px;left:14px;z-index:4;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.08em;pointer-events:none}
@@ -64,13 +64,27 @@ INTRX.register({
 .d-layout-table-image-idle-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container (max-width:340px){.d-layout-table-image-idle-head,.d-layout-table-image-idle-foot{right:10px;left:10px;font-size:7px}.d-layout-table-image-idle-stage{right:9px;left:9px}.d-layout-table-image-idle-table{right:7px;left:7px;width:calc(100% - 14px)}.d-layout-table-image-idle-tag{min-width:34px;padding-inline:4px}}
 @media (prefers-reduced-motion:reduce){.d-layout-table-image-idle-row,.d-layout-table-image-idle-preview,.d-layout-table-image-idle-preview-frame,.d-layout-table-image-idle-scene{transition:none}}
-`,
-  js:`
+
+.d-layout-table-image-idle-preview-frame{border-radius:3px}.d-layout-table-image-idle-scene{background:#141416}.d-layout-table-image-idle-sun{width:8px;height:8px;background:#fa7319;opacity:1}.d-layout-table-image-idle-clouds{filter:none;opacity:.16}.d-layout-table-image-idle-land-far{background:#363638}.d-layout-table-image-idle-land-near{background:#222224}
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-table-image-idle{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-table-image-idle,.d-layout-table-image-idle-scene-label{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-table-image-idle p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-table-image-idle>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+/* Current control composition. */
+.d-layout-table-image-idle{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-table-image-idle *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-table-image-idle button,.d-layout-table-image-idle input,.d-layout-table-image-idle textarea{font-weight:400}.d-layout-table-image-idle>header{display:none}.d-layout-table-image-idle>[class$="-head"][aria-hidden="true"],.d-layout-table-image-idle>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-table-image-idle>[class$="-stage"],.d-layout-table-image-idle>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-table-image-idle>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-table-image-idle>footer>span{display:none}.d-layout-table-image-idle>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-table-image-idle-row{height:44px}.d-layout-table-image-idle-name{font-size:12px}.d-layout-table-image-idle-index,.d-layout-table-image-idle-value{font-size:12px;font-weight:400}.d-layout-table-image-idle-tag{font-size:8px}.d-layout-table-image-idle-scene-label{font-size:10px}
+/* Current control composition. */
+.d-layout-table-image-idle *{text-transform:none!important;letter-spacing:0!important}.d-layout-table-image-idle button{font-size:12px!important;font-weight:400!important}.d-layout-table-image-idle>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-table-image-idle>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-table-image-idle>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-table-image-idle>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-table-image-idle>footer{gap:6px!important}
+/* Current control composition. */
+.d-layout-table-image-idle-scene{background-size:cover;background-position:center}.d-layout-table-image-idle-scene>i,.d-layout-table-image-idle-scene>span,.d-layout-table-image-idle-scene>b{display:none}.d-layout-table-image-idle-scene-label{display:none}.d-layout-table-image-idle-preview-frame{border-radius:8px;border-color:#424b57}.d-layout-table-image-idle-scene[data-photo="0"],.d-layout-table-image-idle-scene[data-photo="3"]{background-image:url("{{asset:coastal-stack}}");background-position:40% 50%}.d-layout-table-image-idle-scene[data-photo="1"]{background-image:url("{{asset:limestone-pavilion}}")}.d-layout-table-image-idle-scene[data-photo="2"],.d-layout-table-image-idle-scene[data-photo="4"]{background-image:url("{{asset:atlantic-shore}}")}`,
+  js: `
 const stageElement=root.querySelector('.d-layout-table-image-idle-stage'),table=root.querySelector('.d-layout-table-image-idle-table'),rows=Array.from(root.querySelectorAll('.d-layout-table-image-idle-row')),preview=root.querySelector('.d-layout-table-image-idle-preview'),frameElement=root.querySelector('.d-layout-table-image-idle-preview-frame'),scenes=Array.from(root.querySelectorAll('.d-layout-table-image-idle-scene')),status=root.querySelector('.d-layout-table-image-idle-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal},passiveListener={signal:controller.signal,passive:true};
 const variants=[['#40395a','#151923','#c4b5fd','#615980','#272738','AURORA RIDGE'],['#28364c','#10141b','#67e8f9','#304a55','#18242c','NIGHT ORCHARD'],['#51405f','#211828','#f0abfc','#765172','#33283b','VIOLET DUNE'],['#46515a','#1b242a','#fbbf24','#657078','#2b353b','SALT HORIZON'],['#28434c','#101b20','#67e8f9','#35616a','#18343a','QUIET CURRENT']];
 let currentIndex=-1,currentScene=0,previewVisible=false,leaving=false,leaveElapsed=0,x=0,y=0,targetX=0,targetY=0,rotation=0,targetRotation=0,lastClientX=null,activeTime=0,lastWall=0,frameId=0,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,resizeObserver=null,intersectionObserver=null,connectionObserver=null;
 function clamp(value,minimum,maximum){return Math.max(minimum,Math.min(maximum,value))}
-function paintScene(scene,index){const variant=variants[index];scene.style.setProperty('--sky-a',variant[0]);scene.style.setProperty('--sky-b',variant[1]);scene.style.setProperty('--sun',variant[2]);scene.style.setProperty('--land-far',variant[3]);scene.style.setProperty('--land-near',variant[4]);scene.querySelector('.d-layout-table-image-idle-scene-label').textContent=variant[5]}
+function paintScene(scene,index){const variant=variants[index];scene.dataset.photo=String(index);scene.style.setProperty('--sky-a',variant[0]);scene.style.setProperty('--sky-b',variant[1]);scene.style.setProperty('--sun',variant[2]);scene.style.setProperty('--land-far',variant[3]);scene.style.setProperty('--land-near',variant[4]);scene.querySelector('.d-layout-table-image-idle-scene-label').textContent=variant[5]}
 function setTarget(clientX,clientY){const bounds=stageElement.getBoundingClientRect(),cursorX=clientX-bounds.left,cursorY=clientY-bounds.top;targetX=clamp(cursorX+18,6,Math.max(6,bounds.width-126));targetY=clamp(cursorY-40,6,Math.max(6,bounds.height-86));if(reduced){x=targetX;y=targetY;rotation=0;renderPosition()}}
 function focusTarget(row){const stageBounds=stageElement.getBoundingClientRect(),rowBounds=row.getBoundingClientRect();targetX=Math.max(6,stageBounds.width-130);targetY=clamp(rowBounds.top-stageBounds.top+rowBounds.height*.5-40,6,Math.max(6,stageBounds.height-86));if(reduced){x=targetX;y=targetY;rotation=0;renderPosition()}}
 function activate(index,event){rows.forEach(function(row,rowIndex){row.classList.toggle('d-layout-table-image-idle-row-active',rowIndex===index)});if(!previewVisible){currentScene=0;paintScene(scenes[currentScene],index);scenes[currentScene].classList.add('d-layout-table-image-idle-scene-active');scenes[1-currentScene].classList.remove('d-layout-table-image-idle-scene-active');previewVisible=true;leaving=false;preview.classList.add('d-layout-table-image-idle-preview-visible');if(event){setTarget(event.clientX,event.clientY);x=targetX;y=targetY}else focusTarget(rows[index])}else if(index!==currentIndex){const nextScene=1-currentScene;paintScene(scenes[nextScene],index);void scenes[nextScene].offsetWidth;scenes[nextScene].classList.add('d-layout-table-image-idle-scene-active');scenes[currentScene].classList.remove('d-layout-table-image-idle-scene-active');currentScene=nextScene}currentIndex=index;status.textContent=variants[index][5].toLowerCase()+' preview shown';renderPosition();requestFrame()}
@@ -89,5 +103,5 @@ rows.forEach(function(row,index){row.addEventListener('pointerenter',function(ev
 if('ResizeObserver'in window){resizeObserver=new ResizeObserver(function(){if(currentIndex>=0){focusTarget(rows[currentIndex]);renderPosition()}});resizeObserver.observe(stageElement)}if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserver(function(entries){visible=!!entries.length&&entries[0].isIntersecting;lastWall=0;if(visible)requestFrame();else if(frameId){cancelAnimationFrame(frameId);frameId=0}},{threshold:.04});intersectionObserver.observe(root)}if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 paintScene(scenes[0],0);renderPosition();
 `,
-  prompt:`Build a self-contained responsive 320px Layout and UI card containing a five-row project table. Give bg1 rows one-pixel line0 separators and columns for a monospaced index, project name, compact tag chip, and value. Make each row keyboard focusable as well as hoverable. Hover or focus lifts the row into bg2 and reveals one persistent 120 by 80 preview card with an 8px radius and line1 border. Position it to the right of the cursor where space allows, clamp it inside the stage, and on each active frame lerp x and y toward the target by 0.12 while deriving a rotation capped at plus or minus two degrees from horizontal cursor velocity. Build each of five registered landscape variants from CSS gradients, a sun, looping cloud band, and two clipped land layers. Fade and scale the preview from 0.96 to 1 over 150ms. When rows change, retain that exact card and crossfade between two internal scene layers over 200ms rather than re-popping it. While visible, drift the sun and loop clouds every six seconds, and breathe the frame scale from 1 to 1.015 on a four-second sine. On table leave, scale and fade out over 150ms. Use one capped requestAnimationFrame only while the preview is active or leaving, pause without hidden or offscreen catch-up, rebuild clamped placement on resize, clean up detached instances, and announce major preview changes politely. Under reduced motion, request no frames and make hover, focus, row changes, and placement snap to stable static states.`
+  prompt: `Build a compact project table inside a native 300 by 320px preview, with five 44px rows, fine dividers, 12px Inter project names and tabular counts, and small category chips. Hover or keyboard focus opens one persistent 120 by 80px photographic preview with 8px corners and a soft contact shadow. Use the bundled coastal-stack, limestone-pavilion and atlantic-shore assets; alternate crops for the five rows. Crossfade two internal image layers for 200ms as the active row changes. Keep photographs free of overlays and duplicate labels. Clamp the floating preview inside the stage; lerp pointer position by .12 and derive rotation capped at plus or minus two degrees from horizontal pointer velocity. Apply a very subtle four-second scale breath while active. Fade and scale in over 150ms; close on table leave unless a row retains keyboard focus. Maintain one capped animation loop only while active or leaving, pause when hidden or offscreen, recalculate bounds on resize, disconnect observers/listeners on unmount and announce row changes politely. Reduced motion uses stable immediate placement. Use Inter400–500 for readable UI and values, normal tracking and tabular numerals.`
 });

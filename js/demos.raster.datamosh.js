@@ -24,41 +24,9 @@ INTRX.register({
   <button class="d-mosh-inject" type="button" aria-pressed="false">Corrupt frame</button>
   <p class="d-mosh-status" aria-live="polite">Reference frame stable</p>
 </div>`,
-  css: `
-.d-mosh { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #101015; color: #d9ff63; touch-action: none; }
-.d-mosh:focus-visible { box-shadow: inset 0 0 0 2px #d9ff63; }
-.d-mosh::before { content: ''; position: absolute; inset: 0; opacity: .18; pointer-events: none;
-  background-image: linear-gradient(rgba(217,255,99,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(217,255,99,.14) 1px, transparent 1px); background-size: 24px 24px; }
-.d-mosh-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(217,255,99,.4); background: #07070a; box-shadow: 9px 9px 0 rgba(217,255,99,.09); }
-.d-mosh-canvas { display: block; width: 100%; height: 100%; }
-.d-mosh-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .13;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.13) 3px 4px); mix-blend-mode: screen; }
-.d-mosh-focus { position: absolute; left: 0; top: 0; width: 88px; height: 88px; margin: -44px 0 0 -44px;
-  border: 1px solid rgba(255,91,92,.76); color: #ff5b5c; pointer-events: none; opacity: .32; will-change: transform, opacity; }
-.d-mosh-focus::before, .d-mosh-focus::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-mosh-focus::before { width: 15px; height: 1px; }.d-mosh-focus::after { width: 1px; height: 15px; }
-.d-mosh-focus i { position: absolute; inset: 8px; border: 1px dashed rgba(255,91,92,.48); }
-.d-mosh.d-mosh-active .d-mosh-focus { opacity: 1; }
-.d-mosh-code { position: absolute; right: 8px; bottom: 7px; color: rgba(255,255,255,.72); font: 7px "JetBrains Mono", monospace; letter-spacing: .09em; mix-blend-mode: difference; }
-.d-mosh-kicker { position: absolute; left: 17px; top: 18px; color: rgba(217,255,99,.55); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-mosh-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 5px;
-  color: rgba(217,255,99,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-mosh-meter strong { min-width: 25px; color: #d9ff63; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-mosh-vector { position: absolute; left: 17px; top: 43px; display: flex; align-items: center; gap: 8px; color: rgba(217,255,99,.48); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-mosh-vector i { position: relative; width: 36px; height: 1px; background: #d9ff63; }
-.d-mosh-vector i::after { content: ''; position: absolute; right: 0; top: -3px; width: 6px; height: 6px; border-top: 1px solid #d9ff63; border-right: 1px solid #d9ff63; transform: rotate(45deg); }
-.d-mosh-inject { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(217,255,99,.38);
-  border-radius: 999px; background: rgba(16,16,21,.84); color: #d9ff63; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-mosh-inject:hover, .d-mosh-inject[aria-pressed="true"] { background: #d9ff63; color: #101015; transform: translateY(-2px); }
-.d-mosh-inject:focus-visible { outline: 2px solid #ff5b5c; outline-offset: 3px; }
-.d-mosh-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(217,255,99,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-mosh-stage { width: 75%; height: 190px; }.d-mosh-vector { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-mosh-focus { will-change: auto; }.d-mosh-inject { transition: none; } }
-`,
-  js: `
+  css: `.d-mosh{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-mosh::before,.d-mosh::after{display:none}.d-mosh>span,.d-mosh>[class$="-meter"],.d-mosh>[class$="-channels"],.d-mosh>[class$="-vector"],.d-mosh>[class$="-order"],.d-mosh>[class$="-phosphor"],.d-mosh>[class$="-fields"],.d-mosh>[class$="-matrix"],.d-mosh>[class$="-sample"]{display:none}.d-mosh [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-mosh [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-mosh canvas{display:block;width:100%;height:100%;object-fit:cover}.d-mosh [class$="-stage"]>span,.d-mosh [class$="-stage"]>[class$="-origin"],.d-mosh [class$="-labels"],.d-mosh [class$="-scan"]{display:none}.d-mosh button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-mosh button:hover{background:#dde5d3}.d-mosh button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-mosh button:focus-visible,.d-mosh input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-mosh [class$="-actions"]{display:flex;gap:8px}.d-mosh:focus-visible{outline:2px solid #829969;outline-offset:-2px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-mosh-canvas');
 const stageEl = root.querySelector('.d-mosh-stage');
 const focusMark = root.querySelector('.d-mosh-focus');
@@ -75,17 +43,9 @@ let burstActive = false, staticPinned = false, burstId = 0, corruptionStep = 0, 
 let clock = 0, nextAuto = 2900, dirty = true, lastDraw = 0;
 
 function drawSource(time) {
-  const gradient = source.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, '#182354'); gradient.addColorStop(.48, '#6d2c8f'); gradient.addColorStop(1, '#ee713f');
-  source.fillStyle = gradient; source.fillRect(0, 0, width, height);
-  const drift = reduced ? 0 : Math.sin(time * .0014) * width * .055;
-  source.fillStyle = '#d9ff63'; source.beginPath(); source.arc(width * .72 + drift, height * .32, height * .23, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#101015'; source.beginPath(); source.arc(width * .72 + drift, height * .32, height * .1, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(7,7,10,.68)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom';
-  source.fillText('MOTION', width * .04 + drift * .35, height * .95);
-  source.strokeStyle = 'rgba(255,255,255,.34)'; source.lineWidth = 1;
-  for (let y = 14; y < height; y += 18) { source.beginPath(); source.moveTo(0, y); source.lineTo(width, y + drift * .08); source.stroke(); }
+  const picture=photograph; source.fillStyle='#d9ddd4'; source.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight)*1.07,pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;source.drawImage(picture,(width-pw)/2+Math.sin(time*.0007)*4,(height-ph)/2,pw,ph)}
+
 }
 function seedWorking() {
   drawSource(clock); working.globalAlpha = 1; working.globalCompositeOperation = 'source-over'; working.clearRect(0, 0, width, height); working.drawImage(sourceCanvas, 0, 0, width, height);
@@ -196,13 +156,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { renderOutput(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained macroblock datamosh simulation with three CSS-resolution offscreen canvases: a freshly rendered animated source, a persistent working frame, and a scratch snapshot. Use 8px macroblock alignment. During a burst, blend each new source frame into the working buffer at low 0.16 alpha to emulate inter-frame prediction, then corrupt on a 70ms interval.
-
-For every corruption step, copy the whole working frame into scratch first. Use a seeded xorshift generator keyed by burst ID and step—never Math.random—to create exactly twelve blocks. Align source x/y, width, height, dx, and dy to 8px; sizes span 1–6 blocks wide and 1–5 high, clipped to valid block bounds. Concentrate seven blocks around a normalized pointer/keyboard focus and place five globally. Prevent a zero motion vector.
-
-For each block, draw the same scratch crop back into working three times along its vector at factors 1, 2/3, and 1/3, ordered far-to-near, with global alpha 0.16, 0.29, and 0.42. This repeated snapshot copying is the motion smear; do not replace it with colored rectangles or CSS transforms. Reset alpha afterward. Normal bursts last about 1050ms, trigger on hover, a semantic button, Space/Enter, keyboard focus changes, and occasional frame-clock intervals.
-
-Pointermove stays passive. Arrow keys move focus by 0.06, Shift by 0.12, Home centers, and Escape restores the reference frame. Include focus, block count, vector telemetry, aria-pressed state, visible focus, and polite status. Rebuild all buffers on resize and render through a DPR transform capped at 2. Under prefers-reduced-motion, render exactly one deterministic corruption step with no source animation, feedback interval, or auto bursts; pointerleave clears unless pinned, and another activation restores the source.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:atlantic-shore}}';`,
+  prompt: `Create the Macroblock Motion Smear interaction with a native300×320px composition. Use actual supplied atlantic-shore photography as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

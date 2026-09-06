@@ -1,26 +1,26 @@
 /* INTRX registry - five-stage button polish walkthrough */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'btn-polish-stages',
-  title:'Button Polish Stages',
-  cat:'Buttons & Micro',
-  rootClass:'d-micro-btn-polish-stages',
-  tags:['button','walkthrough','polish'],
-  libs:[],
-  desc:'One button progresses from a flat rectangle to a detailed production control, making each layer of polish visible on the same element.',
-  seen:"Seen on: Tran Mau Tri Tam's how I polish a button walkthrough",
-  hint:'click anywhere to add the next layer of polish',
-  html:`<div class="d-micro-btn-polish-stages d-micro-btn-polish-stages-s1" role="region" aria-label="Five-stage button polish walkthrough">
+  id: "btn-polish-stages",
+  title: "Button Polish Stages",
+  cat: "Buttons & Micro",
+  rootClass: "d-micro-btn-polish-stages",
+  tags: ["button","walkthrough","polish"],
+  libs: [],
+  desc: "One button progresses from a flat rectangle to a detailed production control, making each layer of polish visible on the same element.",
+  seen: "Seen on: Tran Mau Tri Tam's how I polish a button walkthrough",
+  hint: "click anywhere to add the next layer of polish",
+  html: `<div class="d-micro-btn-polish-stages d-micro-btn-polish-stages-s1" role="region" aria-label="Five-stage button polish walkthrough">
   <div class="d-micro-btn-polish-stages-head" aria-hidden="true"><span>BUTTONS / POLISH</span><span>LIVE WALKTHROUGH</span></div>
   <div class="d-micro-btn-polish-stages-stage">
     <span class="d-micro-btn-polish-stages-guide" aria-hidden="true"><i></i><i></i></span>
     <button class="d-micro-btn-polish-stages-button" type="button" aria-label="Get started. Polish stage 1 of 5. Activate anywhere to advance."><span>Get started</span><i aria-hidden="true">→</i></button>
     <div class="d-micro-btn-polish-stages-caption" aria-hidden="true">
-      <span class="d-micro-btn-polish-stages-caption-item d-micro-btn-polish-stages-caption-active">flat foundation</span>
-      <span class="d-micro-btn-polish-stages-caption-item">+ radius &amp; padding</span>
-      <span class="d-micro-btn-polish-stages-caption-item">+ elevation</span>
-      <span class="d-micro-btn-polish-stages-caption-item">+ motion &amp; focus</span>
-      <span class="d-micro-btn-polish-stages-caption-item">+ arrow &amp; pulse</span>
+      <span class="d-micro-btn-polish-stages-caption-item d-micro-btn-polish-stages-caption-active">Simple</span>
+      <span class="d-micro-btn-polish-stages-caption-item">Rounded</span>
+      <span class="d-micro-btn-polish-stages-caption-item">Raised</span>
+      <span class="d-micro-btn-polish-stages-caption-item">Responsive</span>
+      <span class="d-micro-btn-polish-stages-caption-item">Complete</span>
     </div>
     <span class="d-micro-btn-polish-stages-chip" aria-hidden="true">1 / 5</span>
     <span class="d-micro-btn-polish-stages-ghost" aria-hidden="true"><i></i><small>AUTO</small></span>
@@ -28,7 +28,7 @@ INTRX.register({
   <div class="d-micro-btn-polish-stages-foot" aria-hidden="true"><span>CLICK ANYWHERE / WRAPS</span><span class="d-micro-btn-polish-stages-mode">01 FLAT</span></div>
   <span class="d-micro-btn-polish-stages-status" aria-live="polite" aria-atomic="true">Stage 1 of 5, flat foundation</span>
 </div>`,
-  css:`
+  css: `
 .d-micro-btn-polish-stages{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
 .d-micro-btn-polish-stages *{box-sizing:border-box}
 .d-micro-btn-polish-stages-head,.d-micro-btn-polish-stages-foot{position:absolute;right:14px;left:14px;z-index:3;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.08em;pointer-events:none}
@@ -62,8 +62,21 @@ INTRX.register({
 @keyframes d-micro-btn-polish-stages-pulse{0%{opacity:.85;transform:scale(1)}100%{opacity:0;transform:scale(1.12)}}
 @container (max-width:340px){.d-micro-btn-polish-stages-head,.d-micro-btn-polish-stages-foot{right:10px;left:10px;font-size:7px}.d-micro-btn-polish-stages-stage{right:9px;left:9px}.d-micro-btn-polish-stages-guide{width:78%}}
 @media (prefers-reduced-motion:reduce){.d-micro-btn-polish-stages-button,.d-micro-btn-polish-stages-button>i,.d-micro-btn-polish-stages-caption-item{animation:none;transition:none}.d-micro-btn-polish-stages-ghost{display:none}}
-`,
-  js:`
+
+.d-micro-btn-polish-stages-stage{background:#0a0a0b;border:0;border-radius:0}.d-micro-btn-polish-stages-guide{display:none}.d-micro-btn-polish-stages-button{font-family:Roboto Mono,monospace}.d-micro-btn-polish-stages-caption{font-size:10px}
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-micro-btn-polish-stages{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-micro-btn-polish-stages,.d-micro-btn-polish-stages-button,.d-micro-btn-polish-stages-caption-item{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-micro-btn-polish-stages p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-micro-btn-polish-stages>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+.d-micro-btn-polish-stages-stage{background:radial-gradient(ellipse at 50% 42%,rgba(255,255,255,.025),transparent 72%),#101012}
+
+/* Composition at the native preview size. */
+.d-micro-btn-polish-stages{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-micro-btn-polish-stages *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-micro-btn-polish-stages button,.d-micro-btn-polish-stages input,.d-micro-btn-polish-stages textarea{font-weight:400}.d-micro-btn-polish-stages>header{display:none}.d-micro-btn-polish-stages>[class$="-head"][aria-hidden="true"],.d-micro-btn-polish-stages>[class$="-foot"][aria-hidden="true"]{display:none}.d-micro-btn-polish-stages>[class$="-stage"],.d-micro-btn-polish-stages>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-micro-btn-polish-stages>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-micro-btn-polish-stages>footer>span{display:none}.d-micro-btn-polish-stages>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-micro-btn-polish-stages-button{font-size:13px;font-weight:450}.d-micro-btn-polish-stages-caption{font-size:11px}.d-micro-btn-polish-stages-chip{font-size:11px;font-weight:400}.d-micro-btn-polish-stages-guide,.d-micro-btn-polish-stages-ghost{display:none}
+/* Current control composition. */
+.d-micro-btn-polish-stages *{text-transform:none!important;letter-spacing:0!important}.d-micro-btn-polish-stages button{font-size:12px!important;font-weight:400!important}.d-micro-btn-polish-stages>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-micro-btn-polish-stages>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-micro-btn-polish-stages>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-micro-btn-polish-stages>footer button{font-size:11px!important;padding:6px 8px!important}.d-micro-btn-polish-stages>footer{gap:6px!important}`,
+  js: `
 const stageElement=root.querySelector('.d-micro-btn-polish-stages-stage'),button=root.querySelector('.d-micro-btn-polish-stages-button'),captions=Array.from(root.querySelectorAll('.d-micro-btn-polish-stages-caption-item')),chip=root.querySelector('.d-micro-btn-polish-stages-chip'),ghost=root.querySelector('.d-micro-btn-polish-stages-ghost'),mode=root.querySelector('.d-micro-btn-polish-stages-mode'),status=root.querySelector('.d-micro-btn-polish-stages-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
 const stageClasses=['d-micro-btn-polish-stages-s1','d-micro-btn-polish-stages-s2','d-micro-btn-polish-stages-s3','d-micro-btn-polish-stages-s4','d-micro-btn-polish-stages-s5'],names=['flat foundation','radius and padding','elevation','motion and focus','arrow and pulse'],modeNames=['01 FLAT','02 SHAPE','03 DEPTH','04 MOTION','05 DETAIL'];
 let current=0,autoRunning=false,autoElapsed=0,lastWall=0,frameId=0,pulseFired=false,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,intersectionObserver=null,connectionObserver=null;
@@ -85,5 +98,5 @@ root.addEventListener('click',advance,listener);button.addEventListener('pointer
 if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserver(function(entries){visible=!!entries.length&&entries[0].isIntersecting;lastWall=0;if(visible)requestFrame();else if(frameId){cancelAnimationFrame(frameId);frameId=0}},{threshold:.04});intersectionObserver.observe(root)}if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 setStage(0,false);
 `,
-  prompt:`Build a self-contained responsive 320px Buttons and Micro walkthrough around one persistent centered native button labeled Get started. The whole card advances and wraps on click while the same button gains one production layer at a time. Stage 1 is a flat bg2 rectangle with zero radius and no decorative states. Stage 2 morphs over 150ms ease-in-out to 8px radius and 12px by 20px padding. Stage 3 adds a line1 border, a one-pixel lighter inset top edge, depth shadow, and a hover fill of #1b1b1f. Stage 4 adds a 150ms one-pixel hover lift, scale 0.97 on press with a 200ms elastic return, and a two-pixel accent focus ring at forty-percent opacity. Stage 5 changes label tracking to 0.01em, slides an arrow from zero width and margin to a six-pixel gap on hover, and emits a one-pixel accent border pulse on press. Stack five captions below the button and crossfade the active text over 200ms: flat foundation, + radius and padding, + elevation, + motion and focus, and + arrow and pulse. Keep a truthful 1 / 5 chip. On entering stage 5, animate a noninteractive ghost cursor for 1.5 seconds through approach, hover, press, release, and exit, then wrap to stage 1. Use one capped requestAnimationFrame only for that auto-demo, pause without catch-up while hidden or offscreen, clean up detached instances, retain native keyboard activation and polite status. Under reduced motion, request no frames and let deliberate activation advance through all five stable stages and wrap manually.`
+  prompt: ` Build a self-contained responsive 320px Buttons and Micro walkthrough around one persistent centered native button labeled Get started. The whole card advances and wraps on click while the same button gains one production layer at a time. Stage 1 is a flat bg2 rectangle with zero radius and no decorative states. Stage 2 morphs over 150ms ease-in-out to 8px radius and 12px by 20px padding. Stage 3 adds a line1 border, a one-pixel lighter inset top edge, depth shadow, and a hover fill of #1b1b1f. Stage 4 adds a 150ms one-pixel hover lift, scale 0.97 on press with a 200ms elastic return, and a two-pixel accent focus ring at forty-percent opacity. Stage 5 changes label tracking to 0.01em, slides an arrow from zero width and margin to a six-pixel gap on hover, and emits a one-pixel accent border pulse on press. Stack five captions below the button and crossfade the active text over 200ms: flat foundation, + radius and padding, + elevation, + motion and focus, and + arrow and pulse. Keep a truthful 1 / 5 chip. On entering stage 5, animate a noninteractive ghost cursor for 1.5 seconds through approach, hover, press, release, and exit, then wrap to stage 1. Use one capped requestAnimationFrame only for that auto-demo, pause without catch-up while hidden or offscreen, clean up detached instances, retain native keyboard activation and polite status. Under reduced motion, request no frames and let deliberate activation advance through all five stable stages and wrap manually. Final composition: Kept the five-stage progression but removed guide marks and enlarged the stage caption and count. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

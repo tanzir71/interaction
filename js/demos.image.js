@@ -18,46 +18,12 @@ INTRX.register({
 <div class="d-glsl">
   <canvas class="d-glsl-canvas" width="480" height="270"></canvas>
 </div>`,
-  css: `
-.d-glsl {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-glsl-canvas { width: 480px; max-width: 90%; border: 1px solid #2e2e34; cursor: crosshair; }`,
+  css: `.d-glsl{height:320px;width:100%;background:#d9dfd2;display:block;overflow:hidden}.d-glsl-canvas{display:block;width:100%;height:320px;object-fit:cover;border:0;cursor:crosshair}.d-glsl-canvas:focus-visible{outline:2px solid #dbeac9;outline-offset:-4px}.d-glsl [class$="-label"],.d-glsl [class$="-side"],.d-glsl [class$="-spec"],.d-glsl [class$="-measure"]{display:none}`,
   js: `
 const canvas = root.querySelector('.d-glsl-canvas');
 const gl = canvas.getContext('webgl');
 
-// --- procedural texture (swap for a real image via new Image() + crossOrigin) ---
-const tex = document.createElement('canvas');
-tex.width = 512; tex.height = 288;
-const t = tex.getContext('2d');
-// duotone editorial texture: charcoal field, fine contour lines, one warm glow
-const g = t.createLinearGradient(0, 0, 512, 288);
-g.addColorStop(0, '#141416'); g.addColorStop(0.6, '#1c1c1f'); g.addColorStop(1, '#0a0a0b');
-t.fillStyle = g; t.fillRect(0, 0, 512, 288);
-// contour line field; the accent is drawn INTO the lines (gradient stroke),
-// never as an airbrushed glow blob
-function contourLines(style) {
-  t.strokeStyle = style; t.lineWidth = 1;
-  for (let y = 0; y < 288; y += 9) {
-    t.beginPath();
-    for (let x = 0; x <= 512; x += 8) {
-      const off = Math.sin(x * 0.014 + y * 0.05) * 6 + Math.sin(x * 0.05) * 2;
-      x === 0 ? t.moveTo(x, y + off) : t.lineTo(x, y + off);
-    }
-    t.stroke();
-  }
-}
-contourLines('rgba(255,255,255,0.07)');
-const focal = t.createRadialGradient(400, 96, 4, 400, 96, 150);
-focal.addColorStop(0, 'rgba(250,115,25,0.95)'); focal.addColorStop(0.55, 'rgba(250,115,25,0.35)'); focal.addColorStop(1, 'rgba(250,115,25,0)');
-contourLines(focal);
-t.fillStyle = '#ececef'; t.font = '700 40px Roboto Mono, monospace';
-t.fillText('HOVER', 28, 248);
-t.fillStyle = 'rgba(236,236,239,0.5)'; t.font = '10px Roboto Mono, monospace';
-t.fillText('GLSL / UV DISPLACEMENT', 30, 34);
-
+const tex=document.createElement('canvas');tex.width=512;tex.height=512;const t=tex.getContext('2d');t.fillStyle='#d3dbcb';t.fillRect(0,0,512,512);
 // --- shaders ---
 const vsSrc = [
   'attribute vec2 aPos;',
@@ -109,6 +75,7 @@ gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
 // texture upload
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
+gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, tex);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
@@ -133,18 +100,9 @@ canvas.addEventListener('mousemove', function (e) {
   gl.uniform2f(uMouse, mouse[0], mouse[1]);
   gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
   requestAnimationFrame(tick);
-})(0);`,
-  prompt: `
-Build a WebGL hover-distortion image effect in raw WebGL (no three.js).
-
-Requirements:
-- Replace an <img> with a <canvas>; draw the image as a texture on a fullscreen triangle-strip quad.
-- Fragment shader uniforms: uTime, uMouse (normalized, y flipped), uHover (0..1).
-- Distortion: compute distance d from uv to uMouse; ripple = sin(d * 28 - uTime * 4); displace uv radially away from the mouse by uHover * 0.045 * ripple * smoothstep(0.55, 0.0, d); add a horizontal sine wobble uv.x += sin(uv.y * 12 + uTime * 2) * 0.012 * uHover.
-- Chromatic aberration: sample the R and B channels with ±0.008 uv offsets scaled by uHover.
-- Ease uHover toward 1 on mouseenter and 0 on mouseleave with lerp factor ~0.06 in the render loop, so the warp blooms and relaxes smoothly.
-- Set texture CLAMP_TO_EDGE (non-power-of-two safe) and handle image loading with crossOrigin = 'anonymous'.
-- Fall back to the plain <img> if WebGL is unavailable.`,
+})(0);
+const photograph=new Image();photograph.onload=()=>{const scale=Math.max(512/photograph.naturalWidth,512/photograph.naturalHeight);t.drawImage(photograph,(512-photograph.naturalWidth*scale)/2,(512-photograph.naturalHeight*scale)/2,photograph.naturalWidth*scale,photograph.naturalHeight*scale);gl.bindTexture(gl.TEXTURE_2D,texture);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,tex)};photograph.src='{{asset:limestone-pavilion}}';canvas.tabIndex=0;canvas.setAttribute('aria-label','Photographic WebGL distortion. Focus or hover to distort, arrows move the field.');canvas.addEventListener('focus',()=>hoverTarget=1);canvas.addEventListener('blur',()=>hoverTarget=0);canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key)){e.preventDefault();mouse[0]=Math.max(0,Math.min(1,mouse[0]+(e.key==='ArrowRight'?.1:e.key==='ArrowLeft'?-.1:0)));mouse[1]=Math.max(0,Math.min(1,mouse[1]+(e.key==='ArrowUp'?.1:e.key==='ArrowDown'?-.1:0)));hoverTarget=1}});`,
+  prompt: `Build the WebGL Hover Distortion in native300×320px geometry, preserving its actual effect, state machine, timing, pointer capture and keyboard behavior. Use the supplied limestone-pavilion photograph in the actual WebGL distortion texture, with pointer/focus intensity and keyboard movement. Remove external instrument headers, formulas and telemetry. Use a calm pale surface or dark effect field as appropriate, with a quiet small control beneath. Set visible UI in regular Inter400, normal tracking; headlines may be24–28px, captions10–11px. Preserve the exact meaningful color of the demonstrated effect, semantic states, polite feedback, reset, reduced motion and resource cleanup. Do not replace an effect with a static illustration.`,
 });
 
 /* ------------------------------------------------------------
@@ -174,7 +132,7 @@ INTRX.register({
 .d-frag-state {
   position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
   font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.2em; color: #5c5c66;
-}`,
+}.d-frag{background:#e6eae0;color:#748468;font-family:"Inter",system-ui,sans-serif}.d-frag-state{font:400 10px "Inter",system-ui,sans-serif;letter-spacing:0;color:#7d906c;bottom:28px}.d-frag [class$="-label"],.d-frag [class$="-side"],.d-frag [class$="-spec"],.d-frag [class$="-measure"]{display:none}`,
   js: `
 const canvas = root.querySelector('.d-frag-canvas');
 const ctx = canvas.getContext('2d');
@@ -185,10 +143,10 @@ const W = canvas.width, H = canvas.height;
 const src = document.createElement('canvas');
 src.width = W; src.height = H;
 const s = src.getContext('2d');
-s.fillStyle = '#c8ff2e';
+s.fillStyle = '#6c7f57';
 s.font = '700 110px sans-serif';
 s.textAlign = 'center'; s.textBaseline = 'middle';
-s.fillText('MAGIC', W / 2, H / 2);
+s.fillText('FORM', W / 2, H / 2);
 
 const GAP = 3;                       // sample every 3rd pixel
 const data = s.getImageData(0, 0, W, H).data;
@@ -220,7 +178,7 @@ root.addEventListener('click', function () {
 (function tick() {
   clock += 1 / 60;
   ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = '#c8ff2e';
+  ctx.fillStyle = '#6c7f57';
   particles.forEach(function (p) {
     const active = clock > p.delay;
     if (mode === 1 && active) {
@@ -242,16 +200,7 @@ root.addEventListener('click', function () {
   ctx.globalAlpha = 1;
   requestAnimationFrame(tick);
 })();`,
-  prompt: `
-Build a fragment-disintegration (magic dissolve/reform) effect with Canvas 2D, vanilla JS.
-
-Requirements:
-- Render the source (text, logo, or an image) to an offscreen canvas, then getImageData and sample every 3rd pixel with alpha > 128 into a particle: {homeX, homeY, x, y, vx, vy, seed, delay}.
-- delay = (x / width) * 0.6 + random * 0.2 so the dissolve sweeps across the element rather than popping at once.
-- Dissolve mode: after its delay each particle accelerates with a base drift plus sine/cos turbulence keyed off its seed and a global clock; alpha fades proportionally to distance from home (fully gone by ~160px).
-- Reform mode: particles spring back (accel = (home - pos) * 0.06, velocity damped * 0.82) and alpha returns as they approach home.
-- Draw particles as 2x2 rects; single rAF loop; toggle modes on click.
-- For an image source, keep each particle's sampled RGBA color instead of a flat fill.`,
+  prompt: `Build the Fragment Disintegration in native300×320px geometry, preserving its actual effect, state machine, timing, pointer capture and keyboard behavior. Keep the supplied photographs or literal fragment effect as the visual focus. Remove external instrument headers, formulas and telemetry. Use a calm pale surface or dark effect field as appropriate, with a quiet small control beneath. Set visible UI in regular Inter400, normal tracking; headlines may be24–28px, captions10–11px. Preserve the exact meaningful color of the demonstrated effect, semantic states, polite feedback, reset, reduced motion and resource cleanup. Do not replace an effect with a static illustration.`,
 });
 
 /* ------------------------------------------------------------
@@ -274,7 +223,7 @@ INTRX.register({
     <figure class="d-clip-fig" style="--d:0.15s"><div class="d-clip-img d-clip-i2"></div></figure>
     <figure class="d-clip-fig" style="--d:0.3s"><div class="d-clip-img d-clip-i3"></div></figure>
   </div>
-  <button class="d-clip-replay">↻ replay</button>
+  <button class="d-clip-replay"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.4 10a7.5 7.5 0 1 1-2-4M17 2v5h-5"/></svg><span>replay</span></button>
 </div>`,
   css: `
 .d-clip {
@@ -304,7 +253,11 @@ INTRX.register({
   background: none; border: 1px solid #2e2e34; color: #9b9ba3;
   font-family: "JetBrains Mono", monospace; font-size: 11px; padding: 6px 14px; cursor: pointer;
 }
-.d-clip-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }`,
+.d-clip-replay:hover { color: #c8ff2e; border-color: #c8ff2e; }
+.d-clip-row{width:88%;gap:9px}.d-clip-fig{flex:1;min-width:0;width:auto;height:180px;border:1px solid #343438}.d-clip-img{position:relative;background:#171719!important}.d-clip-img:before{content:'';position:absolute;left:18%;right:18%;top:18%;height:54%;border:1px solid #84848c;background:repeating-linear-gradient(0deg,transparent 0 9px,#55555c 9px 10px);transform:skewY(-18deg)}.d-clip-i2:before{transform:rotate(45deg);top:25%;height:38%;border-color:#fa7319;background:none}.d-clip-i3:before{border-radius:50%;background:repeating-linear-gradient(90deg,transparent 0 7px,#55555c 7px 8px);transform:none}.d-clip-img:after{position:absolute;left:12px;bottom:12px;color:#b8b8be;font:12px monospace;content:'01'}.d-clip-i2:after{content:'02'}.d-clip-i3:after{content:'03'}.d-clip-replay:hover{color:#fa7319;border-color:#fa7319}@media(prefers-reduced-motion:reduce){.d-clip-fig,.d-clip-img{transition:none}}
+/* Photographic field studies, with restrained readable captions. */
+.d-clip-img:before{display:none}.d-clip-img.d-clip-i1{background:center/cover url("{{asset:coastal-stack}}")!important}.d-clip-img.d-clip-i2{background:60% center/cover url("{{asset:limestone-pavilion}}")!important}.d-clip-img.d-clip-i3{background:center/cover url("{{asset:atlantic-shore}}")!important}.d-clip-img:after{font:500 10px "Inter","Segoe UI",Arial,sans-serif;color:#fff;text-shadow:0 1px 5px #0009}.d-clip-fig{border-color:#ffffff0d;border-radius:3px}.d-clip-replay{font:500 11px "Inter","Segoe UI",Arial,sans-serif;border-radius:5px;background:linear-gradient(#292b2e,#212326)}.d-clip{background:#e8ebe4;padding:20px 15px}.d-clip-row{gap:10px}.d-clip-fig{border-radius:2px}.d-clip-replay{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;background:none;border:1px solid #a2b58d4f;border-radius:15px;color:#849674;padding:6px 14px}.d-clip-img:after{font:400 10px "Inter",system-ui,sans-serif;color:#f0f3e8}.d-clip [class$="-label"],.d-clip [class$="-side"],.d-clip [class$="-spec"],.d-clip [class$="-measure"]{display:none}
+.d-clip-replay{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:28px;line-height:1}.d-clip-replay svg{display:block;flex:none;pointer-events:none}`,
   js: `
 function play() {
   root.classList.remove('d-clip-in');
@@ -313,16 +266,7 @@ function play() {
 }
 root.querySelector('.d-clip-replay').addEventListener('click', play);
 requestAnimationFrame(play);`,
-  prompt: `
-Build clip-path image reveals, CSS-driven with a JS trigger.
-
-Requirements:
-- Each figure starts at clip-path: inset(100% 0 0 0) (fully clipped from the bottom) and transitions to inset(0 0 0 0) over 1s with cubic-bezier(0.77, 0, 0.175, 1).
-- The image inside starts at transform: scale(1.3) and settles to scale(1) over 1.2s with the same ease — the counter-scale is what makes it feel like an unmasking, not a wipe.
-- Stagger siblings ~150ms apart via a --d custom property on transition-delay.
-- Trigger by toggling a class when the section enters the viewport (IntersectionObserver, once).
-- Variants: inset(0 100% 0 0) for left-to-right, inset(0 0 0 100%) for right-to-left.
-- Under prefers-reduced-motion, show images unclipped immediately.`,
+  prompt: `Build the Clip-Path Image Reveal in native300×320px geometry, preserving its actual effect, state machine, timing, pointer capture and keyboard behavior. Keep the supplied photographs or literal fragment effect as the visual focus. Remove external instrument headers, formulas and telemetry. Use a calm pale surface or dark effect field as appropriate, with a quiet small control beneath. Set visible UI in regular Inter400, normal tracking; headlines may be24–28px, captions10–11px. Preserve the exact meaningful color of the demonstrated effect, semantic states, polite feedback, reset, reduced motion and resource cleanup. Do not replace an effect with a static illustration.`,
 });
 
 /* ------------------------------------------------------------
@@ -343,13 +287,13 @@ INTRX.register({
   <a class="d-hz-card" href="#" onclick="return false">
     <div class="d-hz-img d-hz-a"></div>
     <div class="d-hz-scrim"></div>
-    <div class="d-hz-meta"><em>01 — Brand</em><strong>Neon District</strong></div>
+    <div class="d-hz-meta"><em>01 — Architecture</em><strong>Limestone</strong></div>
     <span class="d-hz-arrow">↗</span>
   </a>
   <a class="d-hz-card" href="#" onclick="return false">
     <div class="d-hz-img d-hz-b"></div>
     <div class="d-hz-scrim"></div>
-    <div class="d-hz-meta"><em>02 — Web</em><strong>Field Notes</strong></div>
+    <div class="d-hz-meta"><em>02 — Landscape</em><strong>Coastal rock</strong></div>
     <span class="d-hz-arrow">↗</span>
   </a>
 </div>`,
@@ -396,7 +340,10 @@ INTRX.register({
 .d-hz.d-hz-idle .d-hz-b { animation: d-hz-idle-b 6.8s ease-in-out infinite alternate; }
 @keyframes d-hz-idle-a { to { transform: scale(1.055) translate(-4px, -3px); } }
 @keyframes d-hz-idle-b { to { transform: scale(1.05) translate(4px, 3px); } }
-@media (prefers-reduced-motion: reduce) { .d-hz.d-hz-idle .d-hz-img { animation: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-hz.d-hz-idle .d-hz-img { animation: none; } }
+.d-hz{gap:12px;padding:0 20px;box-sizing:border-box}.d-hz-card{width:calc(50% - 6px);height:214px}.d-hz-img{background:#19191c!important}.d-hz-img:before{content:'';position:absolute;left:22%;right:22%;top:18%;height:54%;border:1px solid #777780;transform:skewY(-23deg);background:repeating-linear-gradient(0deg,transparent 0 12px,#44444c 12px 13px)}.d-hz-b:before{border-radius:50%;transform:none;border-color:#fa7319;background:repeating-linear-gradient(90deg,transparent 0 9px,#55555e 9px 10px)}.d-hz-meta{left:12px;right:8px;bottom:14px;opacity:.75;transform:translateY(4px)}.d-hz-meta em{font-size:8px;letter-spacing:.04em}.d-hz-meta strong{font:500 14px/1.5 monospace}.d-hz-card:hover .d-hz-meta{opacity:1}.d-hz-arrow{width:24px;height:24px;font-size:13px}.d-hz-card:focus-visible{outline:1px solid #fa7319;outline-offset:3px}
+/* Photographic field studies, with restrained readable captions. */
+.d-hz-img:before{display:none}.d-hz-img.d-hz-a{background:center/cover url("{{asset:limestone-pavilion}}")!important}.d-hz-img.d-hz-b{background:center/cover url("{{asset:coastal-stack}}")!important}.d-hz-meta{opacity:1;transform:none}.d-hz-meta em{font:500 9px "Inter","Segoe UI",Arial,sans-serif;letter-spacing:.025em;color:#d4dadd}.d-hz-meta strong{font:500 18px/1.15 "Inter","Segoe UI",Arial,sans-serif;letter-spacing:-.03em;color:#f0f3f4}.d-hz-scrim{opacity:1;background:linear-gradient(transparent 45%,#06090dad)}.d-hz-card{border-color:#ffffff12;border-radius:5px}.d-hz{background:#e8ebe4;padding:18px 14px;gap:12px}.d-hz-card{height:224px;border-radius:3px}.d-hz-meta{left:13px;right:10px;bottom:18px}.d-hz-meta em{font:400 9px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;color:#f0f3e2bf}.d-hz-meta strong{font:400 18px/1.08 "Inter",system-ui,sans-serif;letter-spacing:-.02em}.d-hz-arrow{font:400 15px "Inter",system-ui,sans-serif;right:12px;top:12px}.d-hz [class$="-label"],.d-hz [class$="-side"],.d-hz [class$="-spec"],.d-hz [class$="-measure"]{display:none}`,
   js: `
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let idle = !reduced;
@@ -424,17 +371,7 @@ root.querySelectorAll('.d-hz-card').forEach(function (card) {
   });
   card.addEventListener('mouseleave', function () { img.style.transform = ''; });
 });`,
-  prompt: `
-Build a project-card hover treatment, CSS-first.
-
-Requirements:
-- Card is overflow: hidden. The image starts at scale(1.01) and eases to scale(1.08) on hover over 0.8s with cubic-bezier(0.22,1,0.36,1).
-- A bottom gradient scrim (rgba black to transparent at 55%) fades in over 0.4s.
-- Caption (category eyebrow + title) slides up 14px and fades in with the same spring-like ease.
-- An arrow chip in the top-right corner translates in diagonally from (8px, -8px).
-- Before interaction, give both images a subtle Ken Burns drift; stop it permanently on first hover, pointer, or keyboard interaction.
-- Optional JS enhancement: while hovered, translate the image a few px opposite to the cursor for micro-parallax; reset on leave.
-- All transforms only — no width/height/box-shadow animation. Disable autonomous drift under prefers-reduced-motion.`,
+  prompt: `Build the Hover Zoom Project Card in native300×320px geometry, preserving its actual effect, state machine, timing, pointer capture and keyboard behavior. Keep the supplied photographs or literal fragment effect as the visual focus. Remove external instrument headers, formulas and telemetry. Use a calm pale surface or dark effect field as appropriate, with a quiet small control beneath. Set visible UI in regular Inter400, normal tracking; headlines may be24–28px, captions10–11px. Preserve the exact meaningful color of the demonstrated effect, semantic states, polite feedback, reset, reduced motion and resource cleanup. Do not replace an effect with a static illustration.`,
 });
 
 /* ------------------------------------------------------------
@@ -447,71 +384,20 @@ INTRX.register({
   rootClass: 'd-pix',
   tags: ['mosaic', 'canvas 2d'],
   libs: [],
-  desc: 'The image resolves from giant blocks to full resolution in stepped jumps by re-drawing a tiny downscale back up with image smoothing off. Retro-digital, very fashion-tech.',
+  desc: 'A photographic resolution study with six inspectable steps, a keyboard-accessible slider, and a replay control. The canvas samples the supplied coastal image at each resolution.',
   seen: 'Seen on: obys.agency projects, brutalist fashion e-commerce, glitch-era portfolios',
-  hint: 'hover to pixelate, leave to resolve',
-  html: `
-<div class="d-pix">
-  <canvas class="d-pix-canvas" width="480" height="260"></canvas>
-</div>`,
-  css: `
-.d-pix {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-pix-canvas { width: 480px; max-width: 92%; border: 1px solid #2e2e34; cursor: crosshair; image-rendering: pixelated; }`,
-  js: `
-const canvas = root.querySelector('.d-pix-canvas');
-const ctx = canvas.getContext('2d');
-const W = canvas.width, H = canvas.height;
-
-// procedural source image (swap for a loaded <img>)
-const src = document.createElement('canvas');
-src.width = W; src.height = H;
-const s = src.getContext('2d');
-const g = s.createLinearGradient(0, 0, W, H);
-g.addColorStop(0, '#52301f'); g.addColorStop(0.5, '#c8ff2e'); g.addColorStop(1, '#1f3a52');
-s.fillStyle = g; s.fillRect(0, 0, W, H);
-s.fillStyle = '#0a0a0b'; s.font = '700 80px sans-serif';
-s.textAlign = 'center'; s.textBaseline = 'middle';
-s.fillText('PIXEL', W / 2, H / 2);
-
-// stepped resolutions: fraction of full size
-const STEPS = [0.02, 0.04, 0.08, 0.16, 0.35, 1];
-let step = STEPS.length - 1, target = STEPS.length - 1;
-
-function draw() {
-  const f = STEPS[step];
-  const w = Math.max(1, Math.round(W * f));
-  const h = Math.max(1, Math.round(H * f));
-  ctx.imageSmoothingEnabled = false;
-  ctx.clearRect(0, 0, W, H);
-  // downscale to a tiny buffer, then stretch back up
-  const buf = document.createElement('canvas');
-  buf.width = w; buf.height = h;
-  buf.getContext('2d').drawImage(src, 0, 0, w, h);
-  ctx.drawImage(buf, 0, 0, w, h, 0, 0, W, H);
-}
-
-// step toward the target resolution every 70ms (discrete jumps sell the effect)
-setInterval(function () {
-  if (step < target) step++;
-  else if (step > target) step--;
-  draw();
-}, 70);
-
-canvas.addEventListener('mouseenter', function () { target = 0; });
-canvas.addEventListener('mouseleave', function () { target = STEPS.length - 1; });
-draw();`,
-  prompt: `
-Build a pixelation reveal effect with Canvas 2D, vanilla JS.
-
-Requirements:
-- Draw the source image to a canvas through a stepped-resolution pipeline: for pixelation factor f, draw the image into an offscreen buffer of size (W*f, H*f), then draw that buffer stretched back to full size with imageSmoothingEnabled = false.
-- Use discrete steps [0.02, 0.04, 0.08, 0.16, 0.35, 1] and move one step toward the target every ~70ms — the visible jumps are the aesthetic; do not tween smoothly.
-- Reveal on scroll-into-view (start at 0.02, target 1) or invert it as a hover effect.
-- Set image-rendering: pixelated on the canvas.
-- Handle real images with crossOrigin = 'anonymous' and start after load.`,
+  hint: 'adjust resolution or replay the reveal',
+  html: `<div class="d-pix"><div class="d-pix-image"><canvas class="d-pix-canvas" width="600" height="520" aria-label="A coastal rock formation revealed through six pixel resolutions"></canvas><button class="d-pix-play" type="button" aria-label="Replay pixel reveal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19.4 10a7.5 7.5 0 1 1-2-4M17 2v5h-5"/></svg></button></div><label class="d-pix-control"><span>Resolution</span><input type="range" min="0" max="5" step="1" value="5" aria-label="Image resolution"><output>Full</output></label></div>`,
+  css: `.d-pix{height:320px;width:100%;box-sizing:border-box;display:grid;grid-template-rows:minmax(0,1fr) 46px;background:#eeeee9;font-family:"Inter",system-ui,sans-serif;color:#65695e;overflow:hidden}.d-pix-image{position:relative;min-height:0;overflow:hidden}.d-pix-canvas{display:block;width:100%;height:100%;object-fit:cover;image-rendering:pixelated}.d-pix-play{position:absolute;right:12px;bottom:12px;width:30px;height:30px;border:1px solid #ffffff55;border-radius:50%;background:#24392d39;backdrop-filter:blur(8px);color:#fff;font:400 19px "Inter",system-ui,sans-serif;cursor:pointer}.d-pix-control{display:flex;align-items:center;gap:12px;padding:0 15px;font:400 11px "Inter",system-ui,sans-serif}.d-pix-control input{min-width:0;width:100%;height:3px;accent-color:#627259;cursor:pointer}.d-pix-control output{width:28px;text-align:right;font-variant-numeric:tabular-nums;flex-shrink:0}.d-pix button:focus-visible,.d-pix input:focus-visible{outline:2px solid #627259;outline-offset:4px}.d-pix [class$="-label"],.d-pix [class$="-side"],.d-pix [class$="-spec"],.d-pix [class$="-measure"]{display:none}
+.d-pix-play{display:grid;place-items:center;padding:0;line-height:1}.d-pix-play svg{display:block;pointer-events:none}`,
+  js: `const canvas=root.querySelector('canvas'),ctx=canvas.getContext('2d'),range=root.querySelector('input'),out=root.querySelector('output'),replay=root.querySelector('button');
+const source=new Image(),buf=document.createElement('canvas'),steps=[.02,.04,.08,.16,.32,1];let level=5,timer=0,loaded=false;
+function draw(){if(!loaded)return;const w=Math.round(canvas.width*steps[level]),h=Math.round(canvas.height*steps[level]);buf.width=w;buf.height=h;const s=buf.getContext('2d'),ratio=Math.max(w/source.width,h/source.height),dw=source.width*ratio,dh=source.height*ratio;s.drawImage(source,(w-dw)/2,(h-dh)/2,dw,dh);ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(buf,0,0,canvas.width,canvas.height);range.value=level;out.textContent=level===5?'Full':Math.round(steps[level]*100)+'%';}
+range.addEventListener('input',()=>{clearTimeout(timer);level=Number(range.value);draw()});
+function reveal(){clearTimeout(timer);level=0;draw();function next(){if(!root.isConnected)return;if(level<5){level++;draw();timer=setTimeout(next,180)}}timer=setTimeout(next,300)}
+replay.addEventListener('click',reveal);source.onload=()=>{loaded=true;draw()};source.src='{{asset:coastal-stack}}';
+function resize(){const b=root.querySelector('.d-pix-image').getBoundingClientRect(),dpr=Math.min(2,devicePixelRatio||1);canvas.width=Math.max(1,Math.round(b.width*dpr));canvas.height=Math.max(1,Math.round(b.height*dpr));draw()}if('ResizeObserver'in window)new ResizeObserver(resize).observe(root);resize();`,
+  prompt: `Create a native 300×320px photograph pixel-reveal demo. Use the supplied coastal-stack photograph, covering the canvas above a slim warm-white resolution control. Do not synthesize placeholder artwork or add a title overlay. Draw the image through a cached temporary canvas at six resolutions 2%,4%,8%,16%,32%,100%, then enlarge with image smoothing disabled. A semantic range control lets users inspect every resolution, with an accurate percentage output and Full at maximum. A small glass replay button within the photograph starts coarse and reveals at 180ms steps after a short initial pause. Manual input cancels replay. Load the source asynchronously and draw only after onload. Use regular Inter, subtle controls, tabular numeric labels, visible keyboard focus, and keep the photograph as the visual focus. Match the canvas backing dimensions to the measured image area with a capped device-pixel ratio, redraw on resize, and stop replay when the component disconnects.`,
 });
 
 /* ------------------------------------------------------------
@@ -553,7 +439,7 @@ INTRX.register({
 .d-gray-tile.d-gray-t4 { background: linear-gradient(160deg, #d0a3ff, #3a1f52); }
 .d-gray-tile.d-gray-t5 { background: linear-gradient(160deg, #ffe08b, #52481f); }
 /* when the grid contains a hovered tile, mute everything… */
-.d-gray-grid:has(.d-gray-tile:hover) .d-gray-tile { filter: grayscale(1) brightness(0.45); opacity: 0.6; }
+.d-gray-grid:has(.d-gray-tile:hover) .d-gray-tile:not(:hover) { filter: grayscale(1) brightness(0.45); opacity: 0.6; }
 /* …except the hovered one */
 .d-gray-grid .d-gray-tile:hover { filter: none; opacity: 1; transform: translateY(-8px); }
 .d-gray.d-gray-idle .d-gray-tile { animation: d-gray-idle 5s ease-in-out infinite; }
@@ -562,7 +448,10 @@ INTRX.register({
 .d-gray.d-gray-idle .d-gray-tile:nth-child(4) { animation-delay: 1.26s; }
 .d-gray.d-gray-idle .d-gray-tile:nth-child(5) { animation-delay: 1.68s; }
 @keyframes d-gray-idle { 0%, 14%, 100% { transform: none; opacity: 1; } 7% { transform: translateY(-5px) scale(1.015); opacity: .82; } }
-@media (prefers-reduced-motion: reduce) { .d-gray.d-gray-idle .d-gray-tile { animation: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-gray.d-gray-idle .d-gray-tile { animation: none; } }
+.d-gray-grid{width:88%;gap:7px}.d-gray-tile{position:relative;width:auto;flex:1;min-width:0;height:160px;overflow:hidden;background:#202024!important}.d-gray-tile:before{content:'';position:absolute;left:20%;right:20%;top:20%;height:52%;border:1px solid var(--ink,#c77b51);background:repeating-linear-gradient(0deg,transparent 0 8px,var(--ink,#c77b51) 8px 9px);transform:skewY(-20deg)}.d-gray-t2{--ink:#70909d}.d-gray-t3{--ink:#aaa188}.d-gray-t4{--ink:#778f78}.d-gray-t5{--ink:#a47a86}.d-gray-t2:before,.d-gray-t4:before{border-radius:50%;transform:none}.d-gray-tile:after{position:absolute;left:8px;bottom:10px;content:'01';color:#aaaab2;font:10px monospace}.d-gray-t2:after{content:'02'}.d-gray-t3:after{content:'03'}.d-gray-t4:after{content:'04'}.d-gray-t5:after{content:'05'}
+/* Photographic field studies, with restrained readable captions. */
+.d-gray-tile:before{display:none}.d-gray-tile:after{color:#fff;text-shadow:0 1px 4px #0009;font:500 10px "Inter","Segoe UI",Arial,sans-serif}.d-gray-tile{border-radius:3px;border:1px solid #ffffff0c}.d-gray .d-gray-t1{background:42% center/cover url("{{asset:coastal-stack}}")!important}.d-gray .d-gray-t2{background:58% center/cover url("{{asset:limestone-pavilion}}")!important}.d-gray .d-gray-t3{background:35% center/cover url("{{asset:atlantic-shore}}")!important}.d-gray .d-gray-t4{background:72% center/cover url("{{asset:limestone-pavilion}}")!important}.d-gray .d-gray-t5{background:65% center/cover url("{{asset:coastal-stack}}")!important}.d-gray{background:#e8ebe4;padding:20px 13px}.d-gray-grid{gap:7px}.d-gray-tile{border-radius:2px;height:198px}.d-gray-tile:after{font:400 10px "Inter",system-ui,sans-serif}.d-gray [class$="-label"],.d-gray [class$="-side"],.d-gray [class$="-spec"],.d-gray [class$="-measure"]{display:none}`,
   js: `
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 let idle = !reduced;
@@ -592,13 +481,5 @@ if (!CSS.supports('selector(:has(*))')) {
     tiles.forEach(function (t) { t.style.filter = ''; });
   });
 }`,
-  prompt: `
-Build a "focus grid" hover — hovering one item dims all siblings. CSS-first.
-
-Requirements:
-- Grid of image tiles. When any tile is hovered, all tiles get filter: grayscale(1) brightness(0.45) and opacity 0.6, except the hovered tile, which stays full color and lifts translateY(-8px).
-- Implement with pure CSS :has(): .grid:has(.tile:hover) .tile { …muted… } and .tile:hover { filter: none; }.
-- Before interaction, pulse one cell at a time using transform and opacity only; stop permanently on first hover, pointer, or keyboard interaction.
-- Transitions ~0.45s; the lift uses cubic-bezier(0.22,1,0.36,1).
-- Provide a small JS fallback (mouseenter/mouseleave toggling inline filters) gated behind CSS.supports('selector(:has(*))'). Disable the idle pulse under prefers-reduced-motion.`,
+  prompt: `Build the Focus Grid (Dim Siblings) in native300×320px geometry, preserving its actual effect, state machine, timing, pointer capture and keyboard behavior. Keep the supplied photographs or literal fragment effect as the visual focus. Remove external instrument headers, formulas and telemetry. Use a calm pale surface or dark effect field as appropriate, with a quiet small control beneath. Set visible UI in regular Inter400, normal tracking; headlines may be24–28px, captions10–11px. Preserve the exact meaningful color of the demonstrated effect, semantic states, polite feedback, reset, reduced motion and resource cleanup. Do not replace an effect with a static illustration.`,
 });

@@ -11,23 +11,23 @@ INTRX.register({
   seen:'Seen on: MapTheClouds polygon city tiles',
   hint:'hover blocks for records; click the map or press Enter to reshuffle; use R or replay to repeat the seed',
   html:`<div class="d-maps-map-city-tiles d-maps-map-city-tiles-card" role="region" aria-label="Generative city block map">
-  <div class="d-maps-map-city-tiles-head" aria-hidden="true"><span>CITY / GENERATIVE</span><span class="d-maps-map-city-tiles-seed">SEED 42</span></div>
+  <div class="d-maps-map-city-tiles-head" aria-hidden="true"><span>Explore the city</span><span class="d-maps-map-city-tiles-seed">Seed 42</span></div>
   <div class="d-maps-map-city-tiles-stage" role="application" tabindex="0" aria-keyshortcuts="Enter Space R" aria-label="Seeded city map. Press Enter or Space to reshuffle and R to replay the current seed.">
     <svg class="d-maps-map-city-tiles-svg" viewBox="0 0 360 216" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Ninety deterministic city blocks divided by a river">
       <g class="d-maps-map-city-tiles-blocks" aria-label="City blocks"></g>
       <path class="d-maps-map-city-tiles-river" d="M -12 49 C 68 58 111 132 181 120 C 246 108 282 53 372 77" stroke-width="24" />
       <g class="d-maps-map-city-tiles-labels" aria-label="Street labels">
-        <text class="d-maps-map-city-tiles-label" data-index="0" data-delay="1308" x="44" y="38" style="--label-delay:1308ms">NORTH QUAY</text>
-        <text class="d-maps-map-city-tiles-label" data-index="1" data-delay="1388" x="110" y="82" style="--label-delay:1388ms">FOUNDRY</text>
-        <text class="d-maps-map-city-tiles-label" data-index="2" data-delay="1468" x="191" y="99" style="--label-delay:1468ms">OLD MARKET</text>
-        <text class="d-maps-map-city-tiles-label" data-index="3" data-delay="1548" x="270" y="44" style="--label-delay:1548ms">CIVIC</text>
-        <text class="d-maps-map-city-tiles-label" data-index="4" data-delay="1628" x="279" y="174" style="--label-delay:1628ms">SOUTH BANK</text>
+        <text class="d-maps-map-city-tiles-label" data-index="0" data-delay="1308" x="44" y="38" style="--label-delay:1308ms">North quay</text>
+        <text class="d-maps-map-city-tiles-label" data-index="1" data-delay="1388" x="110" y="82" style="--label-delay:1388ms">Foundry</text>
+        <text class="d-maps-map-city-tiles-label" data-index="2" data-delay="1468" x="191" y="99" style="--label-delay:1468ms">Old market</text>
+        <text class="d-maps-map-city-tiles-label" data-index="3" data-delay="1548" x="270" y="44" style="--label-delay:1548ms">Civic</text>
+        <text class="d-maps-map-city-tiles-label" data-index="4" data-delay="1628" x="279" y="174" style="--label-delay:1628ms">South bank</text>
       </g>
       <path class="d-maps-map-city-tiles-historic-outline" pathLength="1" data-delay="1928" data-duration="700" aria-label="Historic center outline" />
     </svg>
-    <output class="d-maps-map-city-tiles-chip" aria-live="polite" aria-atomic="true">HOVER A BLOCK</output>
+    <output class="d-maps-map-city-tiles-chip" aria-live="polite" aria-atomic="true">Hover a block</output>
   </div>
-  <div class="d-maps-map-city-tiles-foot"><span aria-hidden="true">10 × 9 / 90 BLOCKS</span><button class="d-maps-map-city-tiles-replay" type="button" aria-label="Replay current city seed">⟳ REPLAY</button><span aria-hidden="true">HISTORIC / 06</span></div>
+  <div class="d-maps-map-city-tiles-foot"><span aria-hidden="true">10 × 9 / 90 Blocks</span><button class="d-maps-map-city-tiles-replay" type="button" aria-label="Replay current city seed">⟳ Replay</button><span aria-hidden="true">Historic / 06</span></div>
   <span class="d-maps-map-city-tiles-status" aria-live="polite" aria-atomic="true">City seed 42 ready</span>
 </div>`,
   css:`
@@ -41,21 +41,35 @@ INTRX.register({
 .d-maps-map-city-tiles[data-played="true"] .d-maps-map-city-tiles-block{opacity:1;transform:scale(1)}
 .d-maps-map-city-tiles .d-maps-map-city-tiles-block:hover,.d-maps-map-city-tiles .d-maps-map-city-tiles-block--hovered{fill:#161619;stroke:#2e2e34}
 .d-maps-map-city-tiles-river{fill:none;stroke:#0a0a0b;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;pointer-events:none}
-.d-maps-map-city-tiles-label{fill:#5c5c66;stroke:#0a0a0b;stroke-width:2;paint-order:stroke fill;dominant-baseline:middle;text-anchor:middle;font:700 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;opacity:0;transition:opacity 300ms cubic-bezier(.22,1,.36,1) var(--label-delay);pointer-events:none}
+.d-maps-map-city-tiles-label{fill:#5c5c66;stroke:#0a0a0b;stroke-width:2;paint-order:stroke fill;dominant-baseline:middle;text-anchor:middle;font:500 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.08em;opacity:0;transition:opacity 300ms cubic-bezier(.22,1,.36,1) var(--label-delay);pointer-events:none}
 .d-maps-map-city-tiles[data-played="true"] .d-maps-map-city-tiles-label{opacity:1}
 .d-maps-map-city-tiles-historic-outline{fill:none;stroke:#fa7319;stroke-width:1.5;stroke-linejoin:miter;vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 700ms cubic-bezier(.22,1,.36,1) 1928ms;pointer-events:none}
 .d-maps-map-city-tiles[data-played="true"] .d-maps-map-city-tiles-historic-outline{stroke-dashoffset:0}
 .d-maps-map-city-tiles[data-resetting="true"] .d-maps-map-city-tiles-block,.d-maps-map-city-tiles[data-resetting="true"] .d-maps-map-city-tiles-label,.d-maps-map-city-tiles[data-resetting="true"] .d-maps-map-city-tiles-historic-outline{transition:none!important}
-.d-maps-map-city-tiles-chip{position:absolute;z-index:4;right:9px;top:9px;min-width:92px;box-sizing:border-box;padding:5px 6px;border:1px solid #fa7319;background:#0a0a0b;color:#ececef;font:700 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.035em;text-align:center;white-space:nowrap;opacity:0;transform:translateY(-3px);transition:opacity 120ms linear,transform 120ms cubic-bezier(.22,1,.36,1);pointer-events:none}
+.d-maps-map-city-tiles-chip{position:absolute;z-index:4;right:9px;top:9px;min-width:92px;box-sizing:border-box;padding:5px 6px;border:1px solid #fa7319;background:#0a0a0b;color:#ececef;font:500 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.035em;text-align:center;white-space:nowrap;opacity:0;transform:translateY(-3px);transition:opacity 120ms linear,transform 120ms cubic-bezier(.22,1,.36,1);pointer-events:none}
 .d-maps-map-city-tiles[data-has-hover="true"] .d-maps-map-city-tiles-chip{opacity:1;transform:translateY(0)}
 .d-maps-map-city-tiles-foot{position:absolute;z-index:5;left:16px;right:16px;bottom:9px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:9px;color:#5c5c66;font-size:8px;line-height:1;letter-spacing:.045em;white-space:nowrap}
 .d-maps-map-city-tiles-foot>span:last-child{text-align:right}
-.d-maps-map-city-tiles-replay{min-height:28px;padding:6px 9px;border:1px solid #2e2e34;border-radius:999px;background:#101012;color:#9b9ba3;font:700 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.05em;cursor:pointer}
+.d-maps-map-city-tiles-replay{min-height:28px;padding:6px 9px;border:1px solid #2e2e34;border-radius:999px;background:#101012;color:#9b9ba3;font:500 9px/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.05em;cursor:pointer}
 .d-maps-map-city-tiles-replay:hover,.d-maps-map-city-tiles-replay:focus-visible{border-color:#fa7319;color:#ececef;outline:none}
 .d-maps-map-city-tiles-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @container(max-width:340px){.d-maps-map-city-tiles-head{left:12px;right:12px;font-size:9px}.d-maps-map-city-tiles-stage{left:9px;right:9px}.d-maps-map-city-tiles-foot{left:11px;right:11px;gap:5px;font-size:7px}.d-maps-map-city-tiles-replay{padding-inline:7px}}
 @media(prefers-reduced-motion:reduce){.d-maps-map-city-tiles *,.d-maps-map-city-tiles *::before,.d-maps-map-city-tiles *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.d-maps-map-city-tiles *::before,.d-maps-map-city-tiles *::after{content:none!important}}
-`,
+
+/* Material and typography refinement: calm light, fine edges, purposeful type. */
+.d-maps-map-city-tiles{--demo-sans:Manrope,system-ui,sans-serif;--demo-serif:Newsreader,Georgia,serif;font-family:var(--demo-sans)}
+.d-maps-map-city-tiles button,.d-maps-map-city-tiles footer button,.d-maps-map-city-tiles>[class$="-foot"] button{font-family:var(--demo-sans);font-size:10px;font-weight:500;line-height:1.2;letter-spacing:.005em;text-transform:none}
+.d-maps-map-city-tiles footer button,.d-maps-map-city-tiles>[class$="-foot"] button{border-color:#ffffff16;border-radius:4px;background:linear-gradient(180deg,#202225,#191b1e);color:#b7bdc3}
+.d-maps-map-city-tiles footer button:hover,.d-maps-map-city-tiles>[class$="-foot"] button:hover{border-color:#fa73194d;color:#dddfe1;background:#262a2e}
+.d-maps-map-city-tiles footer button:focus-visible,.d-maps-map-city-tiles>[class$="-foot"] button:focus-visible{outline:1px solid #fa7319a8;outline-offset:2px}
+
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-maps-map-city-tiles{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-maps-map-city-tiles :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-maps-map-city-tiles :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-maps-map-city-tiles footer button,.d-maps-map-city-tiles>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-maps-map-city-tiles footer button:hover,.d-maps-map-city-tiles>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-maps-map-city-tiles footer button:focus-visible,.d-maps-map-city-tiles>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-maps-map-city-tiles button[class*="-inspect"]{display:none!important}.d-maps-map-city-tiles :where(input){accent-color:#9bb7c8}.d-maps-map-city-tiles :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-maps-map-city-tiles-head{top:22px;left:22px;font-size:14px;color:#c0ced7}.d-maps-map-city-tiles-seed,.d-maps-map-city-tiles-foot>span{display:none}.d-maps-map-city-tiles-stage{inset:54px 12px 48px;border:0;background:#dce1dc}.d-maps-map-city-tiles-svg{background:#dce1dc}.d-maps-map-city-tiles-block{fill:#c9d1c7;stroke:#f2f4ed;stroke-width:1.5}.d-maps-map-city-tiles-river{stroke:#aebfc4}.d-maps-map-city-tiles-label{fill:#6b796f;stroke:#dce1dc;stroke-width:3;font-size:10px;font-weight:450}.d-maps-map-city-tiles-historic-outline{stroke:#778f7a;stroke-width:2}.d-maps-map-city-tiles-tooltip{background:#f2f3ed;color:#495951;border-color:#85988933}
+
+/* Verified native-width corrections. */
+.d-maps-map-city-tiles-label{font-size:11px;fill:#50684f;stroke-width:3}.d-maps-map-city-tiles-foot{justify-content:center}.d-maps-map-city-tiles-foot button{min-width:100px}`,
   js:`const card=root,cityStage=root.querySelector('.d-maps-map-city-tiles-stage'),svg=root.querySelector('.d-maps-map-city-tiles-svg'),blocksGroup=root.querySelector('.d-maps-map-city-tiles-blocks'),river=root.querySelector('.d-maps-map-city-tiles-river'),labelsGroup=root.querySelector('.d-maps-map-city-tiles-labels'),labelElements=Array.from(root.querySelectorAll('.d-maps-map-city-tiles-label')),historicOutline=root.querySelector('.d-maps-map-city-tiles-historic-outline'),replayButton=root.querySelector('.d-maps-map-city-tiles-replay'),seedReadout=root.querySelector('.d-maps-map-city-tiles-seed'),chip=root.querySelector('.d-maps-map-city-tiles-chip'),status=root.querySelector('.d-maps-map-city-tiles-status');
 const columns=10,rows=9,blockCount=columns*rows,baseSeed=42,viewBox=[0,0,360,216],slotWidth=36,slotHeight=24,baseX=3,baseY=3,blockWidth=30,blockHeight=18,streetGap=6,jitterX=1.8,jitterY=1.5,randomsPerBlock=8,randomsPerSeed=blockCount*randomsPerBlock,center=[4.5,4],blockDuration=240,blockStagger=12,blockMaxDelay=1068,blockEnd=1308,labelDuration=300,labelStart=1308,labelStagger=80,labelEnd=1928,outlineDelay=1928,outlineDuration=700,totalDuration=2628,easing='cubic-bezier(.22,1,.36,1)',riverPath='M -12 49 C 68 58 111 132 181 120 C 246 108 282 53 372 77',riverWidth=24,historicIndices=[34,35,44,45,54,55],labels=[{index:0,text:'NORTH QUAY',x:44,y:38},{index:1,text:'FOUNDRY',x:110,y:82},{index:2,text:'OLD MARKET',x:191,y:99},{index:3,text:'CIVIC',x:270,y:44},{index:4,text:'SOUTH BANK',x:279,y:174}],colors={background:'#0a0a0b',panel:'#101012',bg2:'#161619',line0:'#232327',line1:'#2e2e34',txt0:'#ececef',txt1:'#9b9ba3',txt2:'#5c5c66',acc:'#fa7319'};
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal},passiveListener={signal:controller.signal,passive:true};
@@ -87,8 +101,7 @@ if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserve
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 root.__mapCityTilesInspect=Object.freeze(inspect);root.__mapCityTilesReset=Object.freeze(resetDemo);
 river.setAttribute('d',riverPath);labelsGroup.dataset.count=String(labels.length);historicOutline.dataset.indices=historicIndices.join(',');root.dataset.played='false';root.dataset.resetting='false';root.dataset.hasHover='false';root.dataset.reduced=String(reduced);rebuild(baseSeed,'ready');expose('ready');`,
-  prompt:`
-Build a self-contained, responsive, exactly 320px-tall Maps & Geo card for a generative city reveal. Use an SVG with viewBox exactly 0 0 360 216. Use palette bg0 #0a0a0b, panel/bg1 #101012, bg2 #161619, line0 #232327, line1 #2e2e34, txt0 #ececef, txt1 #9b9ba3, txt2 #5c5c66 and acc #fa7319. Keep the card free of horizontal and vertical overflow at both 380px and 320px widths.
+  prompt:`Use a native 300 by 320 composition. Replace near-invisible black block outlines with readable light city parcels, a soft river and place labels. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained, responsive, exactly 320px-tall Maps & Geo card for a generative city reveal. Use an SVG with viewBox exactly 0 0 360 216. Use palette bg0 #0a0a0b, panel/bg1 #101012, bg2 #161619, line0 #232327, line1 #2e2e34, txt0 #ececef, txt1 #9b9ba3, txt2 #5c5c66 and acc #fa7319. Keep the card free of horizontal and vertical overflow at both 380px and 320px widths.
 
 Generate exactly 10 columns by 9 rows = 90 polygon blocks, row-major, from initial seed 42. A base slot is x = 3 + column × 36, y = 3 + row × 24, width 30 and height 18, leaving street gaps of exactly 6 before jitter. Make exactly one standard mulberry32 stream per seed and consume exactly eight random values per block with no other random consumption. For each row-major block, build TL(x+r0×1.8,y+r1×1.5), TR(x+30−r2×1.8,y+r3×1.5), BR(x+30−r4×1.8,y+18−r5×1.5), BL(x+r6×1.8,y+18−r7×1.5). The mulberry32 step is seed += 0x6D2B79F5; t = imul(t XOR t unsigned-right-shift 15,t OR 1); t XOR-equals t + imul(t XOR t unsigned-right-shift 7,t OR 61); return unsigned(t XOR t unsigned-right-shift 14)/4294967296.
 

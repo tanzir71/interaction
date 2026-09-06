@@ -1,16 +1,16 @@
 /* INTRX registry - live token swap widget */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'swap-widget',
-  title:'Token Swap Widget',
-  cat:'Layout & UI',
-  rootClass:'d-layout-swap-widget',
-  tags:['swap','tokens','finance'],
-  libs:[],
-  desc:'A compact token swap card exchanges stacked amounts and token chips while its conversion rate drifts with a restrained live-market cadence.',
-  seen:"Seen on: Luke's swap component and Uniswap-style interfaces",
-  hint:'activate the center control to flip pay and receive',
-  html:`<div class="d-layout-swap-widget" role="region" aria-label="Live token swap widget">
+  id: "swap-widget",
+  title: "Token Swap Widget",
+  cat: "Layout & UI",
+  rootClass: "d-layout-swap-widget",
+  tags: ["swap","tokens","finance"],
+  libs: [],
+  desc: "A compact token swap card exchanges stacked amounts and token chips while its conversion rate drifts with a restrained live-market cadence.",
+  seen: "Seen on: Luke's swap component and Uniswap-style interfaces",
+  hint: "activate the center control to flip pay and receive",
+  html: `<div class="d-layout-swap-widget" role="region" aria-label="Live token swap widget">
   <div class="d-layout-swap-widget-head" aria-hidden="true"><span>LAYOUT / TOKEN SWAP</span><span>LIVE MARKET</span></div>
   <div class="d-layout-swap-widget-stage">
     <div class="d-layout-swap-widget-card">
@@ -40,7 +40,7 @@ INTRX.register({
   <div class="d-layout-swap-widget-foot" aria-hidden="true"><span>200MS PRICE TWEEN</span><span>3000MS FEED</span></div>
   <span class="d-layout-swap-widget-status" aria-live="polite" aria-atomic="true">Swap ready. One ETH equals 3,209 USDC.</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-swap-widget{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
 .d-layout-swap-widget *{box-sizing:border-box}
 .d-layout-swap-widget-head,.d-layout-swap-widget-foot{position:absolute;right:14px;left:14px;z-index:3;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.08em;pointer-events:none}
@@ -75,8 +75,20 @@ INTRX.register({
 .d-layout-swap-widget-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container (max-width:340px){.d-layout-swap-widget-head,.d-layout-swap-widget-foot{right:10px;left:10px;font-size:7px}.d-layout-swap-widget-stage{right:9px;left:9px}.d-layout-swap-widget-card{width:min(280px,calc(100% - 12px))}.d-layout-swap-widget-amount-stack{width:125px}.d-layout-swap-widget-amount-current,.d-layout-swap-widget-amount-next{font-size:20px}}
 @media (prefers-reduced-motion:reduce){.d-layout-swap-widget-amount-current,.d-layout-swap-widget-amount-next,.d-layout-swap-widget-token,.d-layout-swap-widget-rate,.d-layout-swap-widget-rate-current,.d-layout-swap-widget-rate-next{transition:none}}
-`,
-  js:`
+
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-swap-widget{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-swap-widget,.d-layout-swap-widget-label,.d-layout-swap-widget-amount-current,.d-layout-swap-widget-amount-next,.d-layout-swap-widget-flip span,.d-layout-swap-widget-rate{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-swap-widget p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-swap-widget>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+.d-layout-swap-widget-stage{background:radial-gradient(ellipse at 50% 40%,rgba(255,255,255,.02),transparent 80%),#101012}.d-layout-swap-widget-token-eth i{background:linear-gradient(150deg,#d4d8df 0%,#abb2bf 48%,#8792a4 100%);color:#232a37}.d-layout-swap-widget-token-usdc i{background:linear-gradient(150deg,#75a7d5 0%,#4d8abe 48%,#3570a4 100%)}
+/* Current control composition. */
+.d-layout-swap-widget{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-swap-widget *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-swap-widget button,.d-layout-swap-widget input,.d-layout-swap-widget textarea{font-weight:400}.d-layout-swap-widget>header{display:none}.d-layout-swap-widget>[class$="-head"][aria-hidden="true"],.d-layout-swap-widget>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-swap-widget>[class$="-stage"],.d-layout-swap-widget>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-swap-widget>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-swap-widget>footer>span{display:none}.d-layout-swap-widget>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-swap-widget-card{width:100%;border-radius:13px;padding:12px;background:#10151b}.d-layout-swap-widget-row{border-radius:10px;background:#1a2029;padding:15px}.d-layout-swap-widget-label{font-size:11px}.d-layout-swap-widget-amount-stack b{font-size:29px!important;font-weight:400!important}.d-layout-swap-widget-token b{font-size:11px;font-weight:450}.d-layout-swap-widget-token i{font-size:10px}.d-layout-swap-widget-rate{font-size:10px}.d-layout-swap-widget-tick{font-size:9px}
+/* Current control composition. */
+.d-layout-swap-widget *{text-transform:none!important;letter-spacing:0!important}.d-layout-swap-widget button{font-size:12px!important;font-weight:400!important}.d-layout-swap-widget>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-swap-widget>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-swap-widget>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-swap-widget>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-swap-widget>footer{gap:6px!important}`,
+  js: `
 const card=root.querySelector('.d-layout-swap-widget-card'),flipButton=root.querySelector('.d-layout-swap-widget-flip'),flipIcon=flipButton.querySelector('span'),rows=Array.from(root.querySelectorAll('.d-layout-swap-widget-row')),rateCurrent=root.querySelector('.d-layout-swap-widget-rate-current'),rateNext=root.querySelector('.d-layout-swap-widget-rate-next'),tick=root.querySelector('.d-layout-swap-widget-tick'),status=root.querySelector('.d-layout-swap-widget-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
 const rowParts=rows.map(function(row){return{row:row,amountCurrent:row.querySelector('.d-layout-swap-widget-amount-current'),amountNext:row.querySelector('.d-layout-swap-widget-amount-next'),tokenCurrent:row.querySelector('.d-layout-swap-widget-token-current'),tokenNext:row.querySelector('.d-layout-swap-widget-token-next')}}),drifts=[.0018,-.0026,.003,-.0013,.0022,-.0017];
 let reversed=false,price=3209,flipCount=0,flipping=false,flipElapsed=0,activeTime=0,lastWall=0,frameId=0,nextDrift=3000,driftIndex=0,tweening=false,tweenElapsed=0,priceFrom=price,priceTo=price,tickUntil=0,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,intersectionObserver=null,connectionObserver=null;
@@ -104,5 +116,5 @@ flipButton.addEventListener('click',onFlip,listener);document.addEventListener('
 if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserver(function(entries){visible=!!entries.length&&entries[0].isIntersecting;lastWall=0;if(visible)requestFrame();else if(frameId){cancelAnimationFrame(frameId);frameId=0}},{threshold:.04});intersectionObserver.observe(root)}if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 stableContents();if(!reduced)requestFrame();
 `,
-  prompt:`Build a self-contained responsive 320px Layout and UI token-swap card, 280px wide where space allows. Stack two bg2 wells with 12px radii, labels You pay and You receive, 22px tabular amounts on the left, and compact token chips on the right. Each chip includes a procedural 16px two-color gradient coin with its letter, ticker, and chevron. Overlap the wells with one 36px circular bg1 flip button with a line1 border and down arrow. On activation, rotate the arrow forward 180 degrees over 300ms, reaching 195 degrees once before settling. Animate the top outgoing amount up 14px and the bottom outgoing amount down 14px while fading; bring incoming amounts from the opposite directions over 250ms with a 40ms delay on the receive row. Crossfade token chips. Roll the rate line between 1 ETH = 3,209 USDC and its reciprocal while flashing its bg2 background for 300ms. On a deterministic three-second feed, drift the USDC amount by at most plus or minus 0.3 percent, tween it over 200ms, and color the signed tick ok or err for 500ms. Use one capped requestAnimationFrame clock, pause without hidden or offscreen catch-up, clean up detached instances, keep native button focus and dynamic row labels, and announce major changes politely. Under reduced motion, request no frames, freeze the market, and make deliberate swaps update all stable content instantly.`
+  prompt: ` Stack two bg2 wells with 12px radii, labels You pay and You receive, 22px tabular amounts on the left, and compact token chips on the right. Each chip includes a procedural 16px softly shaded coin using silver-gray for ETH and restrained blue for USDC with its letter, ticker, and chevron. Overlap the wells with one 36px circular bg1 flip button with a line1 border and down arrow. On activation, rotate the arrow forward 180 degrees over 300ms, reaching 195 degrees once before settling. Animate the top outgoing amount up 14px and the bottom outgoing amount down 14px while fading; bring incoming amounts from the opposite directions over 250ms with a 40ms delay on the receive row. Crossfade token chips. Roll the rate line between 1 ETH = 3,209 USDC and its reciprocal while flashing its bg2 background for 300ms. On a deterministic three-second feed, drift the USDC amount by at most plus or minus 0.3 percent, tween it over 200ms, and color the signed tick ok or err for 500ms. Use one capped requestAnimationFrame clock, pause without hidden or offscreen catch-up, clean up detached instances, keep native button focus and dynamic row labels, and announce major changes politely. Under reduced motion, request no frames, freeze the market, and make deliberate swaps update all stable content instantly. Final composition: Rebuilt token-swap hierarchy around normal-weight Inter amounts, clear token labels, and softer nested surfaces. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

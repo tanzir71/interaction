@@ -10,14 +10,14 @@ INTRX.register({
   seen:'Seen on: fictional interface dashboards and hardware audio oscilloscopes',
   hint:'move to tune · click to hold',
   html:`<div class="d-fui-scope" role="region" aria-label="Interactive waveform oscilloscope">
-  <header class="d-fui-scope-topbar"><span>INTRX / SIGNAL SCOPE</span><span class="d-fui-scope-live"><i class="d-fui-scope-live-dot"></i>CH-A LIVE</span></header>
+  <header class="d-fui-scope-topbar"><span>Waveform</span><span class="d-fui-scope-live"><i class="d-fui-scope-live-dot"></i>Ch-a live</span></header>
   <section class="d-fui-scope-panel">
     <i class="d-fui-scope-corner d-fui-scope-corner-tl"></i><i class="d-fui-scope-corner d-fui-scope-corner-tr"></i><i class="d-fui-scope-corner d-fui-scope-corner-bl"></i><i class="d-fui-scope-corner d-fui-scope-corner-br"></i>
-    <div class="d-fui-scope-readout"><output class="d-fui-scope-values">FREQ 2.40kHz / AMP 62%</output><span class="d-fui-scope-hold">HOLD</span></div>
+    <div class="d-fui-scope-readout"><output class="d-fui-scope-values">FREQ 2.40kHz / AMP 62%</output><span class="d-fui-scope-hold">Hold</span></div>
     <canvas class="d-fui-scope-canvas" tabindex="0" role="button" aria-pressed="false" aria-label="Live oscilloscope. Move the pointer to tune frequency and amplitude; click or press Enter or Space to hold the trace for one and a half seconds."></canvas>
     <div class="d-fui-scope-axis-labels" aria-hidden="true"><span>+1.0</span><span>0.0</span><span>−1.0</span></div>
   </section>
-  <footer class="d-fui-scope-footer"><span>GRID 8×6</span><span>DECAY ×0.88</span><span>LERP 0.08</span><span class="d-fui-scope-state">RUN</span></footer>
+  <footer class="d-fui-scope-footer"><span>Grid 8×6</span><span>Decay ×0.88</span><span>Lerp 0.08</span><span class="d-fui-scope-state">RUN</span></footer>
   <span class="d-fui-scope-announcement" aria-live="polite">Oscilloscope running</span>
   <i class="d-fui-scope-scanline" aria-hidden="true"></i>
 </div>`,
@@ -33,6 +33,11 @@ INTRX.register({
 @keyframes d-fui-scope-live-pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes d-fui-scope-scan{from{transform:translateY(0)}to{transform:translateY(256px)}}
 @media(max-width:520px){.d-fui-scope{padding-inline:8px}.d-fui-scope-values{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.d-fui-scope *{animation:none!important;transition:none!important}.d-fui-scope-live-dot{opacity:1}.d-fui-scope-scanline{top:160px}.d-fui-scope-hold{transform:none}}
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-scope{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-scope :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-scope :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-scope footer button,.d-fui-scope>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-scope footer button:hover,.d-fui-scope>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-scope footer button:focus-visible,.d-fui-scope>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-scope button[class*="-inspect"]{display:none!important}.d-fui-scope :where(input){accent-color:#9bb7c8}.d-fui-scope :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-scope:before,.d-fui-scope-corner,.d-fui-scope-scanline,.d-fui-scope-axis-labels{display:none}.d-fui-scope-topbar{height:22px;font-size:14px;color:#c1d0d9}.d-fui-scope-panel{border:0;border-radius:10px;background:#182328;overflow:hidden}.d-fui-scope-readout{top:15px;left:15px;right:auto;padding:0;border:0;background:none;font-size:16px;font-weight:450;color:#cbdde3}.d-fui-scope-values{font-size:16px;font-weight:450}.d-fui-scope-canvas{opacity:.74}.d-fui-scope-footer{font-size:11px;color:#738d9a}.d-fui-scope-footer>span:first-child{display:none}
+.d-fui-scope{background:#121b22}.d-fui-scope>[class$="-topbar"]{text-transform:none}.d-fui-scope>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-scope [class*="-corner"]{display:none}
 `,
   js:`const canvas=root.querySelector('.d-fui-scope-canvas');
 const context=canvas.getContext('2d');
@@ -212,7 +217,7 @@ if('ResizeObserver'in window){resizeObserver=new ResizeObserver(resize);resizeOb
 if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start()},{threshold:.05});intersectionObserver.observe(root)}
 resize();
 if(reduced){phase=.55;renderFrame(false);expose('reduced')}else start();`,
-  prompt:`Build a self-contained 320px-tall fictional oscilloscope using one visible canvas and one persistent offscreen trail canvas. Use JetBrains Mono and only #0a0a0b, #101012, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, and warning #fbbf24. Frame the scope as a 4px-radius FUI panel with four 8px corner ticks, scanlines, a visible accent activity dot, a top-left live readout, and a warning HOLD chip.
+  prompt:`Use a native 300 by 320 composition. Make the waveform the focal point with a clear frequency readout and remove instrument corners and microtext. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional oscilloscope using one visible canvas and one persistent offscreen trail canvas. Use Inter and only #0a0a0b, #101012, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, and warning #fbbf24. Frame the scope as a 4px-radius FUI panel with four 8px corner ticks, scanlines, a visible accent activity dot, a top-left live readout, and a warning HOLD chip.
 
 Redraw a crisp 1px graticule with exactly 8 horizontal divisions across and 6 vertical divisions down on every visible frame, using #232327 grid lines and #2e2e34 center axes. On the persistent buffer, draw a layered harmonic waveform from a primary sine at 72 percent, a second harmonic at 18 percent, and a low component at 10 percent. Render a soft 7px success-green additive glow plus an exact 2px #4ade80 core. Before each live trace, use destination-out at alpha 0.12 so previous phosphor pixels multiply by exactly 0.88 per frame, then composite the buffer over the freshly redrawn grid with lighter blending.
 

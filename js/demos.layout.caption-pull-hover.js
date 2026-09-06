@@ -1,16 +1,16 @@
 /* INTRX registry - editorial caption pull hover */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'caption-pull-hover',
-  title:'Caption Pull Hover',
-  cat:'Layout & UI',
-  rootClass:'d-layout-caption-pull-hover',
-  tags:['editorial','caption','word stagger'],
-  libs:[],
-  desc:'Two independent editorial frames lift their procedural imagery while clipped captions, accent rules, words, and arrows enter and leave in carefully reversed order.',
-  seen:'Seen on: editorial portfolio hovers on design X',
-  hint:'hover either card or focus it with Tab to pull up its caption; press Escape to release keyboard focus',
-  html:`<div class="d-layout-caption-pull-hover" role="region" aria-label="Editorial caption pull hover cards">
+  id: "caption-pull-hover",
+  title: "Caption Pull Hover",
+  cat: "Layout & UI",
+  rootClass: "d-layout-caption-pull-hover",
+  tags: ["editorial","caption","word stagger"],
+  libs: [],
+  desc: "Two independent editorial frames lift their procedural imagery while clipped captions, accent rules, words, and arrows enter and leave in carefully reversed order.",
+  seen: "Seen on: editorial portfolio hovers on design X",
+  hint: "hover either card or focus it with Tab to pull up its caption; press Escape to release keyboard focus",
+  html: `<div class="d-layout-caption-pull-hover" role="region" aria-label="Editorial caption pull hover cards">
   <div class="d-layout-caption-pull-hover-head" aria-hidden="true"><span>EDITORIAL / INDEX</span><span class="d-layout-caption-pull-hover-mode"><i></i> HOVER FIELD</span></div>
   <div class="d-layout-caption-pull-hover-stage" role="group" aria-label="Two independent editorial image cards">
     <article class="d-layout-caption-pull-hover-card" tabindex="0" aria-label="Field Study 01. Hover or focus to reveal: Systems shaped by motion.">
@@ -37,7 +37,7 @@ INTRX.register({
   <div class="d-layout-caption-pull-hover-foot" aria-hidden="true"><span>2 FRAMES / INDEPENDENT</span><span>EXIT x 0.7</span></div>
   <span class="d-layout-caption-pull-hover-status" aria-live="polite" aria-atomic="true">Two editorial frames ready</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-caption-pull-hover{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-layout-caption-pull-hover *{box-sizing:border-box}
 .d-layout-caption-pull-hover-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
@@ -75,8 +75,22 @@ INTRX.register({
 .d-layout-caption-pull-hover-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container(max-width:340px){.d-layout-caption-pull-hover-stage{right:10px;left:10px;padding:8px;gap:7px}.d-layout-caption-pull-hover-head,.d-layout-caption-pull-hover-foot{right:13px;left:13px}.d-layout-caption-pull-hover-caption{height:82px;padding-right:8px;padding-left:8px}.d-layout-caption-pull-hover-caption p{font-size:12px;gap:2px 3px}.d-layout-caption-pull-hover-caption small{left:8px;font-size:5px}.d-layout-caption-pull-hover-caption>b{right:8px}.d-layout-caption-pull-hover-rule{right:8px;left:8px}.d-layout-caption-pull-hover-scene strong{font-size:69px}}
 @media(prefers-reduced-motion:reduce){.d-layout-caption-pull-hover *,.d-layout-caption-pull-hover *::before,.d-layout-caption-pull-hover *::after{animation:none!important;transition:none!important}}
-`,
-  js:`
+
+.d-layout-caption-pull-hover-stage{background:#0a0a0b;border-radius:3px}.d-layout-caption-pull-hover-card{background:#151517!important;border-radius:3px}.d-layout-caption-pull-hover-scene-one{background:linear-gradient(110deg,#222 0 51%,#141414 51% 100%)}.d-layout-caption-pull-hover-scene-two{background:linear-gradient(145deg,#242424 0 46%,#161616 46% 100%)}.d-layout-caption-pull-hover-scene-two>i:nth-of-type(2){background:#242424}.d-layout-caption-pull-hover-frame{background:#161618!important;border-radius:3px}
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-caption-pull-hover{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-caption-pull-hover,.d-layout-caption-pull-hover-scene strong,.d-layout-caption-pull-hover-caption p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-caption-pull-hover p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-caption-pull-hover>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+/* Current control composition. */
+.d-layout-caption-pull-hover{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-caption-pull-hover *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-caption-pull-hover button,.d-layout-caption-pull-hover input,.d-layout-caption-pull-hover textarea{font-weight:400}.d-layout-caption-pull-hover>header{display:none}.d-layout-caption-pull-hover>[class$="-head"][aria-hidden="true"],.d-layout-caption-pull-hover>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-caption-pull-hover>[class$="-stage"],.d-layout-caption-pull-hover>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-caption-pull-hover>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-caption-pull-hover>footer>span{display:none}.d-layout-caption-pull-hover>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-caption-pull-hover-scene>strong{font-size:48px;font-weight:400;color:#b8c0ce;opacity:.4}.d-layout-caption-pull-hover-scene>span{font-size:14px;font-weight:400}.d-layout-caption-pull-hover-caption p{font-size:15px;font-weight:400;line-height:1.1}.d-layout-caption-pull-hover-caption small{font-size:9px}.d-layout-caption-pull-hover-frame{border-radius:10px}.d-layout-caption-pull-hover-scene{background:#252d37}
+/* Current control composition. */
+.d-layout-caption-pull-hover *{text-transform:none!important;letter-spacing:0!important}.d-layout-caption-pull-hover button{font-size:12px!important;font-weight:400!important}.d-layout-caption-pull-hover>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-caption-pull-hover>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-caption-pull-hover>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-caption-pull-hover>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-caption-pull-hover>footer{gap:6px!important}
+/* Current control composition. */
+.d-layout-caption-pull-hover-scene-one{background-image:url("{{asset:coastal-stack}}")!important}.d-layout-caption-pull-hover-scene-two{background-image:url("{{asset:limestone-pavilion}}")!important}.d-layout-caption-pull-hover-scene{background-size:cover!important;background-position:center!important}.d-layout-caption-pull-hover-scene>*{display:none!important}.d-layout-caption-pull-hover-caption{height:87px;padding:11px!important;background:#111820ee}.d-layout-caption-pull-hover-caption p{font-size:14px!important;line-height:1.2}.d-layout-caption-pull-hover-caption small{font-size:8px!important}`,
+  js: `
 const cards=Array.from(root.querySelectorAll('.d-layout-caption-pull-hover-card')),status=root.querySelector('.d-layout-caption-pull-hover-status'),controller=new AbortController(),listener={signal:controller.signal},activeClass='d-layout-caption-pull-hover-card-active',states=new Map(),connectionObserver='MutationObserver'in window?new MutationObserver(function(){if(!root.isConnected)cleanup()}):null;
 let cleaned=false;
 function stateFor(card){if(!states.has(card))states.set(card,{hovered:false,focused:false});return states.get(card)}
@@ -85,5 +99,5 @@ cards.forEach(function(card,index){const state=stateFor(card);card.addEventListe
 function cleanup(){if(cleaned)return;cleaned=true;controller.abort();if(connectionObserver)connectionObserver.disconnect()}
 if(connectionObserver)connectionObserver.observe(document.documentElement,{childList:true,subtree:true});
 `,
-  prompt:`Build one self-contained responsive 320px Layout and UI card with exactly two independent editorial image frames side by side. Each procedural scene combines a split gradient field, geometric forms, and a large index numeral such as 01 at fifteen-percent opacity. Keep an 86px caption bar clipped completely below each frame at rest. Hovering or keyboard-focusing one card must move only its image upward twelve pixels and scale it to 1.03 over 500 milliseconds with a soft ease-out. Pull the caption bar up and reveal every caption word from translateY 100 percent inside its own overflow-hidden mask over 400 milliseconds, staggered by thirty milliseconds. Draw a one-pixel accent rule left-to-right over 350 milliseconds beginning 100 milliseconds after entry. Bring the small right-arrow glyph last from a six-pixel horizontal offset. On leave or blur, use exactly 0.7-times entry durations: image 350, caption and words 280, and rule 245 milliseconds. Reverse the word delays so the last word exits first, followed backward through the sentence; the arrow leaves immediately. Support simultaneous independent card states, pointer and keyboard parity, Escape release, compact typography, detached-instance cleanup, fully scoped styling, and immediate state changes for reduced motion.`
+  prompt: ` Build one self-contained responsive 320px Layout and UI card with exactly two independent editorial image frames side by side. Each procedural scene combines a crisp split grayscale field, geometric forms, and a large index numeral such as 01 at fifteen-percent opacity. Keep an 86px caption bar clipped completely below each frame at rest. Hovering or keyboard-focusing one card must move only its image upward twelve pixels and scale it to 1.03 over 500 milliseconds with a soft ease-out. Pull the caption bar up and reveal every caption word from translateY 100 percent inside its own overflow-hidden mask over 400 milliseconds, staggered by thirty milliseconds. Draw a one-pixel accent rule left-to-right over 350 milliseconds beginning 100 milliseconds after entry. Bring the small right-arrow glyph last from a six-pixel horizontal offset. On leave or blur, use exactly 0.7-times entry durations: image 350, caption and words 280, and rule 245 milliseconds. Reverse the word delays so the last word exits first, followed backward through the sentence; the arrow leaves immediately. Support simultaneous independent card states, pointer and keyboard parity, Escape release, compact typography, detached-instance cleanup, fully scoped styling, and immediate state changes for reduced motion. Final composition: Reduced giant numbered-poster emphasis and enlarged the pulled caption, preserving independent word masks and hover timing. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior. Use the locally embedded coastal-stack and limestone-pavilion photographs as the two image cards, cropped with object-fit cover. Preserve the caption word masks and readable overlay.`
 });

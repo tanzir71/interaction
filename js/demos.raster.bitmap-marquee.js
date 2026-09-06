@@ -24,37 +24,7 @@ INTRX.register({
   <button class="d-bitmap-pause" type="button" aria-pressed="false">Freeze strip</button>
   <p class="d-bitmap-status" aria-live="polite">Bitmap strip running</p>
 </div>`,
-  css: `
-.d-bitmap { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #11120f; color: #eaff60; touch-action: none; }
-.d-bitmap:focus-visible { box-shadow: inset 0 0 0 2px #eaff60; }
-.d-bitmap::before { content: ''; position: absolute; inset: 0; opacity: .17; pointer-events: none;
-  background-image: linear-gradient(rgba(234,255,96,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(234,255,96,.13) 1px, transparent 1px); background-size: 25px 25px; }
-.d-bitmap-stage { position: absolute; left: 50%; top: 50%; width: min(71%, 472px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(234,255,96,.4); background: #050604; box-shadow: 9px 9px 0 rgba(234,255,96,.09); }
-.d-bitmap-canvas { display: block; width: 100%; height: 100%; }
-.d-bitmap-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .12;
-  background: repeating-linear-gradient(0deg, transparent 0 4px, rgba(255,255,255,.13) 4px 5px); mix-blend-mode: screen; }
-.d-bitmap-gate { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: rgba(255,104,78,.76); pointer-events: none; }
-.d-bitmap-gate::before, .d-bitmap-gate::after { content: ''; position: absolute; left: -4px; width: 9px; height: 9px; border: 1px solid #ff684e; transform: rotate(45deg); }
-.d-bitmap-gate::before { top: 8px; }.d-bitmap-gate::after { bottom: 8px; }
-.d-bitmap-label { position: absolute; right: 8px; bottom: 7px; color: rgba(255,255,255,.7); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-bitmap-kicker { position: absolute; left: 17px; top: 18px; color: rgba(234,255,96,.53); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-bitmap-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(234,255,96,.47); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-bitmap-meter strong { min-width: 43px; color: #eaff60; font-size: 18px; font-weight: 500; letter-spacing: 0; text-align: right; }.d-bitmap-meter b { font-weight: 400; }
-.d-bitmap-sample { position: absolute; left: 17px; top: 43px; display: grid; grid-template-columns: repeat(2, 7px) auto; gap: 2px; align-items: center; }
-.d-bitmap-sample i { width: 7px; height: 7px; background: #eaff60; }.d-bitmap-sample i:nth-child(2), .d-bitmap-sample i:nth-child(3) { opacity: .24; }
-.d-bitmap-sample span { grid-row: 1 / 3; grid-column: 3; margin-left: 5px; color: rgba(234,255,96,.47); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-bitmap-pause { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(234,255,96,.37);
-  border-radius: 999px; background: rgba(17,18,15,.84); color: #eaff60; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-bitmap-pause:hover, .d-bitmap-pause[aria-pressed="true"] { background: #eaff60; color: #11120f; transform: translateY(-2px); }
-.d-bitmap-pause:focus-visible { outline: 2px solid #ff684e; outline-offset: 3px; }
-.d-bitmap-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(234,255,96,.49); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-bitmap-stage { width: 77%; height: 190px; }.d-bitmap-sample { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-bitmap-pause { transition: none; } }
-`,
+  css: `.d-bitmap{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-bitmap::before,.d-bitmap::after{display:none}.d-bitmap>span,.d-bitmap>[class$="-meter"],.d-bitmap>[class$="-channels"],.d-bitmap>[class$="-vector"],.d-bitmap>[class$="-order"],.d-bitmap>[class$="-phosphor"],.d-bitmap>[class$="-fields"],.d-bitmap>[class$="-matrix"],.d-bitmap>[class$="-sample"]{display:none}.d-bitmap [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-bitmap [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-bitmap canvas{display:block;width:100%;height:100%;object-fit:cover}.d-bitmap [class$="-stage"]>span,.d-bitmap [class$="-stage"]>[class$="-origin"],.d-bitmap [class$="-labels"],.d-bitmap [class$="-scan"]{display:none}.d-bitmap button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-bitmap button:hover{background:#dde5d3}.d-bitmap button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-bitmap button:focus-visible,.d-bitmap input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-bitmap [class$="-actions"]{display:flex;gap:8px}.d-bitmap:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-bitmap{background:#ebece7}.d-bitmap .d-bitmap-stage{background:#343b30}.d-bitmap canvas{image-rendering:pixelated}`,
   js: `
 const canvas = root.querySelector('.d-bitmap-canvas');
 const stageEl = root.querySelector('.d-bitmap-stage');
@@ -66,7 +36,7 @@ const textCanvas = document.createElement('canvas');
 const textContext = textCanvas.getContext('2d', { willReadFrequently: true });
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const PHRASE = 'PIXEL TYPE  /  SIGNAL  /  REPEAT  /  ', SAMPLE = 4, PIXEL = 5, TEXT_HEIGHT = 56;
-const PALETTE = ['#eaff60', '#7ce8ff', '#ff684e'];
+const PALETTE = ['#e4eadc', '#c4cebb', '#e4eadc'];
 let width = 1, height = 1, dpr = 1, bitmap = [], bitmapColumns = 1, bitmapRows = 1, stripWidth = 1, stripHeight = 1;
 let offset = 0, targetSpeed = 42, speed = 42, paused = false, lastTime = null, dirty = true, lastDraw = 0;
 
@@ -138,7 +108,7 @@ root.addEventListener('keydown', function (event) {
 });
 
 function render() {
-  context.fillStyle = '#050604'; context.fillRect(0, 0, width, height);
+  context.fillStyle = '#30382b'; context.fillRect(0, 0, width, height);
   const top = (height - stripHeight) * .5;
   let base = -offset; while (base > 0) base -= stripWidth;
   for (; base < width; base += stripWidth) {
@@ -160,12 +130,5 @@ function frameLoop(time) {
   requestAnimationFrame(frameLoop);
 }
 requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained chunky bitmap marquee with a real two-stage canvas raster pipeline. First render the phrase "PIXEL TYPE / SIGNAL / REPEAT /" in a bold 42px font into a transparent offscreen canvas measured from text width plus 24px padding and 56px height. Read alpha pixels and divide the mask into 4×4 source samples. Mark a binary cell active only when average alpha coverage is at least 0.18. Cache active row/column coordinates.
-
-Re-render the binary mask into the visible canvas as squares exactly 5px apart and 4px filled, coloring active cells from a small palette. Calculate stripWidth=bitmapColumns*5+40 and stripHeight=bitmapRows*5. Maintain a wrapped offset in [0,stripWidth). Begin the first copy at -offset, walk backward if needed, and repeat copies by stripWidth until past the viewport. This must produce a seamless measured loop rather than duplicated DOM text.
-
-Advance offset from capped frame delta and an eased pixels-per-second speed. Pointer X maps linearly from -70 to +70 and pointerleave returns to +42. A semantic pause button freezes without losing position. Arrow Left/Right choose direction, Up/Down adjust magnitude by 12 or 24 with Shift, Home restores +42, Space pauses, and R resets. Ignore button-originated keys. Draw near 30fps, cap DPR at 2, and rebuild the mask on resize.
-
-Under prefers-reduced-motion, never advance offset automatically. Rename the button to Step 30px; button/Space adds exactly six bitmap pixels, arrow keys step two pixels or six with Shift in either direction, and R resets. Preserve the actual font-mask sampling, binary threshold, wrap math, palette, keyboard access, visible focus, status, and static bitmap strip.`
+  prompt: `Create the Bitmap Type Marquee interaction with a native300×320px composition. Make the literal bitmap glyphs the visual focus on an uncluttered dark green display with a small pause button below. The pixel alphabet is intentionally rasterized, while all interface text uses regular Inter. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

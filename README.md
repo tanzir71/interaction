@@ -1,12 +1,16 @@
 # INTRX — The Interaction Library
 
-A curated, copy-paste reference of the web interactions used by award-winning design agencies. **327 hand-built patterns** — each with a live demo, a single-file code snippet, and a ready-to-paste LLM prompt. Both roadmaps are complete.
+A copy-paste reference of web interactions with **399 native demos** — each with a live preview, a single-file code snippet, and a ready-to-paste LLM prompt.
 
 ## Website & demo
 
 - 🌐 Site (the library IS the demo): <https://tanzir71.github.io/interaction/>
 - ▲ Vercel mirror: <https://intrx.vercel.app/>
 - 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
+
+**New collections:** DRAMS (52), Framer Collection (4) and Interactive Showcase (16). All 52 distinct entries in the DRAMS catalog have native HTML/CSS/JavaScript implementations with source links and creator credit. These are independent interpretations of DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). See the [complete DRAMS mapping](DRAMS_IMPLEMENTATION.md) and [showcase source notes](SHOWCASE_SOURCES.md).
+
+**Visual audit:** The [library audit](LIBRARY_AESTHETIC_AUDIT.md) and [per-ID records](LIBRARY_AESTHETIC_AUDIT.json) document rendered reviews and interaction evidence. The 20 original skeuomorphic demos were rebuilt from scratch with new markup, materials and behavior. The broader refinement covers native preview composition, regular Inter typography, gentle gradients, readable controls and photographic artwork. [Asset and typography notes](ASSET_ART_DIRECTION.md) document the generated photographs, local fonts, licenses and portable exports. Screenshot evidence stays in the local, ignored `.artifacts/` directory.
 
 **Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (23) · Raster & Glitch (29) · Skeuomorph (20) · SVG & Line (10) · 3D & Perspective (12) · Physics (10) · Liquid & Organic (10) · Galleries & Sliders (13) · Navigation & Menus (13) · Buttons & Micro (15) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (28).
 **Expansion categories live:** Maps & Geo (6) · FUI & Terminal (10) · Agent & AI UI (8).
@@ -19,6 +23,9 @@ INTRX is a **zero-build static site** — no framework, no bundler, no dependenc
 ```
 index.html            the shell (nav, search, card grid)
 css/style.css         design system (tokens, cards, tabs)
+css/fonts.css         locally hosted Inter, Manrope and Newsreader
+js/demo-assets.js     embedded artwork and fonts for previews and copied HTML
+js/demo-runtime.js    animation/timer cleanup and offscreen preview suspension
 js/app.js             the renderer:
                         • builds category nav + cards from the registry
                         • lazy-boots each demo only when scrolled into view
@@ -44,6 +51,32 @@ python -m http.server
 
 Then open http://localhost:3000 (or :8000).
 
+## Verify and maintain
+
+Check registry definitions and roadmap coverage with Node.js:
+
+```bash
+node tools/verify-registry.js
+node tools/verify-roadmap.js
+```
+
+With the site running and Playwright available as a development tool, run the browser checks against your local server:
+
+```bash
+node tools/verify-library.js http://127.0.0.1:3000
+node tools/verify-aesthetic.js http://127.0.0.1:3000
+```
+
+The library check covers preview boot, search, detail panels, copied exports, lifecycle, reduced motion, and mobile layout. The aesthetic check exercises targeted native-size interactions. Both accept an optional Chromium CDP URL as the last argument; `PLAYWRIGHT_MODULE` can point to an existing Playwright installation. Results and screenshots are written under `.artifacts/`.
+
+After changing optimized image or font assets, regenerate the embedded bundle:
+
+```bash
+node tools/build-demo-assets.js
+```
+
+The 038 timeline demonstrates a photographic pan/push through a still image over 24 seconds. Its controls share one timeline state; it does not decode a video file. See [asset notes](ASSET_ART_DIRECTION.md) for that scope and the original image prompts.
+
 ## Deploy to GitHub Pages
 
 The repository includes a GitHub Actions workflow that deploys the static site whenever `main` is pushed.
@@ -60,10 +93,12 @@ git push -u origin main
 
 ## Using a pattern
 
-Every card has three tabs:
+Use the title row below a live preview to open its details. The canvas remains available for pointer, scroll, and drag interactions. Filter by new additions, pointer, scroll, or drag; search also matches source names.
 
-- **Demo** — the interaction running live.
-- **Code** — a self-contained HTML + CSS + JS snippet (CDN tags included where GSAP/Lenis are used). Paste into any page.
+Every detail panel has three tabs:
+
+- **Demo notes** — interaction guidance and source references. The live preview stays above the tabs.
+- **Code** — a standalone HTML document with CSS, JavaScript, baseline tokens, and its stage wrapper (CDN tags included where GSAP/Lenis are used). Paste into any page.
 - **LLM Prompt** — a precise specification of the interaction (easings, timings, math, accessibility notes). Paste into Claude or any model to rebuild it in React, Vue, Svelte, or your own stack.
 
 `⌘K` / `Ctrl+K` searches the library.

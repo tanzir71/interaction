@@ -10,19 +10,19 @@ INTRX.register({
   seen:'Seen in terminal-aesthetic posts and the interface work of itsgalo',
   hint:'hover a byte or use arrow keys',
   html:`<div class="d-fui-hex" role="region" aria-label="Interactive hexadecimal memory dump">
-  <header class="d-fui-hex-topbar"><span>INTRX / MEMORY BUS</span><span class="d-fui-hex-live"><i class="d-fui-hex-live-dot"></i>BUFFER LIVE</span></header>
+  <header class="d-fui-hex-topbar"><span>Memory inspector</span><span class="d-fui-hex-live"><i class="d-fui-hex-live-dot"></i>Buffer live</span></header>
   <section class="d-fui-hex-panel" aria-label="Virtual memory monitor">
     <i class="d-fui-hex-corner d-fui-hex-corner-tl"></i><i class="d-fui-hex-corner d-fui-hex-corner-tr"></i><i class="d-fui-hex-corner d-fui-hex-corner-bl"></i><i class="d-fui-hex-corner d-fui-hex-corner-br"></i>
     <div class="d-fui-hex-panel-head"><span>MEMORY / SEGMENT 0x0000</span><span>SEED 0xC0DE</span></div>
     <div class="d-fui-hex-frame">
-      <div class="d-fui-hex-column-head" aria-hidden="true"><span>OFFSET</span><span>00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F</span><span>ASCII</span></div>
+      <div class="d-fui-hex-column-head" aria-hidden="true"><span>Offset</span><span>00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F</span><span>Ascii</span></div>
       <div class="d-fui-hex-viewport" tabindex="0" role="grid" aria-label="Memory bytes; use arrow keys to inspect" aria-rowcount="4096" aria-colcount="16">
         <div class="d-fui-hex-rows"></div><i class="d-fui-hex-link" aria-hidden="true"></i>
       </div>
     </div>
     <span class="d-fui-hex-announcement" aria-live="polite" aria-atomic="true"></span>
   </section>
-  <footer class="d-fui-hex-footer"><span>64KB RANGE</span><span>16 BYTES / ROW</span><span>14PX/S</span><span class="d-fui-hex-state">SCANNING</span></footer>
+  <footer class="d-fui-hex-footer"><span>64Kb range</span><span>16 Bytes / row</span><span>14Px/s</span><span class="d-fui-hex-state">Scanning</span></footer>
   <i class="d-fui-hex-scanline" aria-hidden="true"></i>
 </div>`,
   css:`
@@ -40,6 +40,11 @@ INTRX.register({
 @container(max-width:520px){.d-fui-hex-column-head,.d-fui-hex-row{grid-template-columns:38px minmax(0,1fr) 84px;column-gap:4px}.d-fui-hex-footer span:nth-child(2){display:none}.d-fui-hex-column-head span:nth-child(2){font-size:6px}}
 @container(max-width:340px){.d-fui-hex-column-head,.d-fui-hex-row{grid-template-columns:34px minmax(0,1fr) 80px;column-gap:3px}.d-fui-hex-byte,.d-fui-hex-char{font-size:7.5px}.d-fui-hex-offset{font-size:8px}.d-fui-hex-column-head span:first-child,.d-fui-hex-column-head span:last-child{font-size:8px}.d-fui-hex-column-head span:nth-child(2){font-size:5px}}
 @media(prefers-reduced-motion:reduce){.d-fui-hex *{animation:none!important;transition:none!important}.d-fui-hex-live-dot{opacity:1}.d-fui-hex-scanline{top:160px}.d-fui-hex-link.d-fui-hex-is-active{opacity:1;transform:scaleX(1)}}
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-hex{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-hex :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-hex :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-hex footer button,.d-fui-hex>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-hex footer button:hover,.d-fui-hex>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-hex footer button:focus-visible,.d-fui-hex>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-hex button[class*="-inspect"]{display:none!important}.d-fui-hex :where(input){accent-color:#9bb7c8}.d-fui-hex :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-hex:before,.d-fui-hex-corner,.d-fui-hex-scanline{display:none}.d-fui-hex-topbar{height:24px;font-size:13px;color:#bbccd5}.d-fui-hex-panel{border:0;border-radius:9px;background:#172127;padding:10px}.d-fui-hex-panel-head{font-size:11px;color:#87a1b0}.d-fui-hex-frame{border:0}.d-fui-hex-column-head{font-size:8px;color:#6d8999}.d-fui-hex-rows,.d-fui-hex-rows *{font-family:ui-monospace,monospace!important;font-size:9px;line-height:1.6}.d-fui-hex-footer{font-size:10px;color:#8da4b1}
+.d-fui-hex{background:#121b22}.d-fui-hex>[class$="-topbar"]{text-transform:none}.d-fui-hex>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-hex [class*="-corner"]{display:none}
 `,
   js:`const viewport=root.querySelector('.d-fui-hex-viewport');
 const rowsNode=root.querySelector('.d-fui-hex-rows');
@@ -305,7 +310,7 @@ renderRows();
 setRowsTransform();
 expose(reduced?'reduced':'initial');
 if(!reduced)start()`,
-  prompt:`Build a self-contained 320px-tall fictional hexadecimal memory terminal using JetBrains Mono and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, warning #fbbf24, information #67e8f9, and error #f87171. Use a 4px-radius hard-tech panel, four exact 8px corner ticks, restrained scanlines, an always-visible accent activity dot, 10px uppercase labels, and one keyboard focus ring.
+  prompt:`Use a native 300 by 320 composition. Retain the byte/ASCII view as literal code and reduce redundant terminal frames around it. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional hexadecimal memory terminal using Inter and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, warning #fbbf24, information #67e8f9, and error #f87171. Use a 4px-radius hard-tech panel, four exact 8px corner ticks, restrained scanlines, an always-visible accent activity dot, 10px uppercase labels, and one keyboard focus ring.
 
 Build a classic three-zone dump: a dim four-digit hexadecimal offset column, exactly 16 two-digit uppercase hexadecimal byte pairs per row, and exactly 16 ASCII twins in a right gutter. Use exact 16px rows. Derive every byte statelessly from its absolute 16-bit address and a fixed integer seed; never use generation history for byte content. Printable byte values 32 through 126 show their character and all others show a period. Virtualize buffered rows around a 4096-row, 64KB range and move the track continuously upward at exactly 14 pixels per active second. Absolute offsets and bytes must survive every DOM recycle unchanged.
 
@@ -313,5 +318,5 @@ Hover the byte actually beneath the pointer, including while transformed rows mo
 
 Make the memory viewport the only focusable grid target. Use stable address-derived gridcell IDs, aria-activedescendant, aria-selected, useful cell labels, and one polite live region used only for deliberate keyboard inspection. Focus selects a visible middle byte. ArrowLeft and ArrowRight move one byte, ArrowUp and ArrowDown move 16 bytes, Home and End choose row bounds, and Escape releases inspection without adding hundreds of tab stops.
 
-From the same visibility-aware active-time requestAnimationFrame loop, use a separate mulberry32 stream to choose one visible middle-row run of exactly four contiguous bytes every exact 5000ms. Surround the run with one #fbbf24 box, show PATTERN MATCH, and decay its opacity linearly from 1 to 0 over exactly 1000ms. Use cumulative simulation time, a 50ms frame-delta cap, timestamp reset on visibility resume, one rAF, and clean root-disconnect handling so hidden time never fast-forwards. Expose address, scroll, selection, stability, match, and timing telemetry for verification. Under prefers-reduced-motion, disable all CSS animation, start no frame loop, do not scroll or schedule matches, and retain the same deterministic dump plus instantaneous pointer and keyboard inspection.`
+From the same visibility-aware active-time requestAnimationFrame loop, use a separate mulberry32 stream to choose one visible middle-row run of exactly four contiguous bytes every exact 5000ms. Surround the run with one #fbbf24 box, show PATTERN MATCH, and decay its opacity linearly from 1 to 0 over exactly 1000ms. Use cumulative simulation time, a 50ms frame-delta cap, timestamp reset on visibility resume, one rAF, and clean root-disconnect handling so hidden time never fast-forwards. Expose address, scroll, selection, stability, match, and timing telemetry for verification. Under prefers-reduced-motion, disable all CSS animation, start no frame loop, do not scroll or schedule matches, and retain the same deterministic dump plus instantaneous pointer and keyboard inspection. Use monospace only inside literal hexadecimal, ASCII or terminal-code content; keep all interface labels and numerical readouts in Inter.`
 });

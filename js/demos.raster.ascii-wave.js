@@ -24,45 +24,7 @@ INTRX.register({
   <button class="d-awave-pause" type="button" aria-pressed="false">Pause field</button>
   <p class="d-awave-status" aria-live="polite">Synthetic signal running</p>
 </div>`,
-  css: `
-.d-awave { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #100b1c; color: #c8b7ff; touch-action: none; }
-.d-awave:focus-visible { box-shadow: inset 0 0 0 2px #b89cff; }
-.d-awave::before { content: ''; position: absolute; inset: 0; opacity: .18; pointer-events: none;
-  background-image: radial-gradient(rgba(200,183,255,.28) .65px, transparent .65px); background-size: 7px 7px; }
-.d-awave-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(200,183,255,.42); background: #06040d; box-shadow: 9px 9px 0 rgba(184,156,255,.1); }
-.d-awave-canvas { display: block; width: 100%; height: 100%; }
-.d-awave-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .14;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(200,183,255,.17) 3px 4px); mix-blend-mode: screen; }
-.d-awave-stir { position: absolute; left: 0; top: 0; width: 104px; height: 104px; margin: -52px 0 0 -52px;
-  border: 1px solid rgba(255,122,91,.78); border-radius: 50%; color: #ff7a5b; pointer-events: none; opacity: .32; will-change: transform, opacity; }
-.d-awave-stir::before, .d-awave-stir::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-awave-stir::before { width: 15px; height: 1px; }.d-awave-stir::after { width: 1px; height: 15px; }
-.d-awave-stir i { position: absolute; inset: 10px; border: 1px dashed rgba(255,122,91,.55); border-radius: 50%; }
-.d-awave-stir b { position: absolute; right: 9px; bottom: 8px; font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-awave.d-awave-active .d-awave-stir { opacity: 1; }
-.d-awave-rec { position: absolute; right: 8px; top: 7px; display: flex; align-items: center; gap: 5px; color: rgba(255,255,255,.72);
-  font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-awave-rec i { width: 5px; height: 5px; border-radius: 50%; background: #ff7a5b; box-shadow: 0 0 8px rgba(255,122,91,.7); }
-.d-awave-kicker { position: absolute; left: 17px; top: 18px; color: rgba(200,183,255,.56); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-awave-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(200,183,255,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-awave-meter strong { min-width: 34px; color: #c8b7ff; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-awave-meter b { font-weight: 400; }
-.d-awave-waves { position: absolute; left: 17px; top: 43px; display: grid; gap: 3px; }
-.d-awave-waves i { display: block; width: 54px; height: 3px; opacity: .52;
-  background: repeating-linear-gradient(90deg, #b89cff 0 4px, transparent 4px 7px); }
-.d-awave-waves i:nth-child(2) { width: 42px; margin-left: 7px; opacity: .34; }.d-awave-waves i:nth-child(3) { width: 30px; margin-left: 14px; opacity: .22; }
-.d-awave-pause { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(200,183,255,.4);
-  border-radius: 999px; background: rgba(16,11,28,.84); color: #c8b7ff; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-awave-pause:hover, .d-awave-pause[aria-pressed="true"] { background: #c8b7ff; color: #100b1c; transform: translateY(-2px); }
-.d-awave-pause:focus-visible { outline: 2px solid #ff7a5b; outline-offset: 3px; }
-.d-awave-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(200,183,255,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-awave-stage { width: 75%; height: 190px; }.d-awave-waves { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-awave-stir { will-change: auto; }.d-awave-pause { transition: none; } }
-`,
+  css: `.d-awave{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-awave>span,.d-awave>[class$="-meter"],.d-awave>[class$="-weights"],.d-awave>[class$="-spectrum"],.d-awave>[class$="-scale"],.d-awave>[class$="-ramp"],.d-awave>[class$="-weight"],.d-awave>[class$="-waves"]{display:none}.d-awave>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-awave canvas{width:100%;height:100%;display:block}.d-awave>[class$="-stage"]>*:not(canvas){display:none}.d-awave [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-awave button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-awave button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-awave button:focus-visible,.d-awave:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-awave [class$="-actions"]{display:flex;gap:8px}`,
   js: `
 const canvas = root.querySelector('.d-awave-canvas');
 const stageEl = root.querySelector('.d-awave-stage');
@@ -173,12 +135,5 @@ function frameLoop(time) {
   requestAnimationFrame(frameLoop);
 }
 requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained synthetic ASCII signal animation on canvas with no camera, media stream, permission request, image, or webcam API. Create a fixed 8×10px glyph grid at the measured CSS size. For each cell calculate three independent layers: sin(nx*12.4+time*1.35), sin(ny*15.2-time*0.9), and sin((nx+ny)*9.1+time*0.63), weighted 0.38, 0.34, and 0.28. Convert clamp(0.5+combined*0.42,0,1) into an index in a monotonic ASCII density ramp.
-
-Track a normalized stirrer and infer pointer speed from distance between consecutive normalized pointer positions. Convert speed plus a small pointer or keyboard kick into a clamped stir target. Around the eased stirrer, calculate squared radial influence within an 82–118px radius. Add sin(atan2(dy,dx)*3+distance*0.095-time*4.2)*influence*1.15 to the layered field so pointer motion produces a spiral disturbance rather than merely translating the grid. Tint influenced glyphs from lavender toward orange and allow at most 2.2px vertical jitter.
-
-Advance phase from capped frame delta, ease pointer coordinates by 0.18 and stir by 0.2, decay the stir target after input, render near 30fps, and keep a low active floor while hovered. Pointermove remains passive. Add a visible stir reticle, signal/stir telemetry, polite status, and a semantic pause control. Arrow keys move the virtual stirrer by 0.055, Shift+Arrow by 0.12, Home centers, Space pauses, and R resets phase, without intercepting button keys.
-
-Cap canvas DPR at 2 and rebuild grid positions on resize. Under prefers-reduced-motion, never advance phase automatically: snap stir position and strength directly, preserve pointer and keyboard disturbance, and turn the pause button into an explicit 0.35-radian phase-step control. The static field must still use all three sine layers and the spiral equation. Do not reference getUserMedia, mediaDevices, video elements, or camera permissions anywhere in the implementation.`
+  prompt: `Build Synthetic ASCII Wave as a native300×320px component. Use the sine-driven glyph field as a full image with one pause control. Keep the computed RGB wave colors and keyboard stirrer, without camera legends or meters. Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });

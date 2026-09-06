@@ -24,38 +24,9 @@ INTRX.register({
   <button class="d-interlace-lock" type="button" aria-pressed="false">Lock high field</button>
   <p class="d-interlace-status" aria-live="polite">Low-intensity field sync</p>
 </div>`,
-  css: `
-.d-interlace { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0d1518; color: #c8e9e9; touch-action: none; }
-.d-interlace:focus-visible { box-shadow: inset 0 0 0 2px #63e1dd; }
-.d-interlace::before { content: ''; position: absolute; inset: 0; opacity: .18; pointer-events: none;
-  background-image: linear-gradient(rgba(200,233,233,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(200,233,233,.13) 1px, transparent 1px); background-size: 25px 25px; }
-.d-interlace-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(200,233,233,.38); background: #040708; box-shadow: 9px 9px 0 rgba(99,225,221,.09); }
-.d-interlace-canvas { display: block; width: 100%; height: 100%; }
-.d-interlace-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .1;
-  background: repeating-linear-gradient(0deg, transparent 0 1px, rgba(255,255,255,.12) 1px 2px); mix-blend-mode: screen; }
-.d-interlace-field { position: absolute; right: 8px; top: 7px; color: rgba(255,255,255,.73); text-shadow: 1px 0 #ff4f69, -1px 0 #3fe8ed;
-  font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-interlace-safe { position: absolute; inset: 9%; border: 1px dashed rgba(255,255,255,.15); pointer-events: none; }
-.d-interlace-kicker { position: absolute; left: 17px; top: 18px; color: rgba(200,233,233,.53); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-interlace-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(200,233,233,.46); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-interlace-meter strong { min-width: 34px; color: #c8e9e9; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }.d-interlace-meter b { font-weight: 400; }
-.d-interlace-fields { position: absolute; left: 17px; top: 43px; display: flex; gap: 4px; align-items: center; }
-.d-interlace-fields i { display: grid; width: 19px; height: 17px; place-items: center; border: 1px solid currentColor; font: 7px "JetBrains Mono", monospace; font-style: normal; }
-.d-interlace-fields i:first-child { color: #ff6680; }.d-interlace-fields i:nth-child(2) { color: #58e7e2; }
-.d-interlace-fields span { margin-left: 5px; color: rgba(200,233,233,.47); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-interlace-lock { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(200,233,233,.36);
-  border-radius: 999px; background: rgba(13,21,24,.84); color: #c8e9e9; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-interlace-lock:hover, .d-interlace-lock[aria-pressed="true"] { background: #c8e9e9; color: #0d1518; transform: translateY(-2px); }
-.d-interlace-lock:focus-visible { outline: 2px solid #63e1dd; outline-offset: 3px; }
-.d-interlace-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(200,233,233,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-interlace-stage { width: 75%; height: 190px; }.d-interlace-fields { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-interlace-lock { transition: none; } }
-`,
-  js: `
+  css: `.d-interlace{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-interlace::before,.d-interlace::after{display:none}.d-interlace>span,.d-interlace>[class$="-meter"],.d-interlace>[class$="-channels"],.d-interlace>[class$="-vector"],.d-interlace>[class$="-order"],.d-interlace>[class$="-phosphor"],.d-interlace>[class$="-fields"],.d-interlace>[class$="-matrix"],.d-interlace>[class$="-sample"]{display:none}.d-interlace [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-interlace [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-interlace canvas{display:block;width:100%;height:100%;object-fit:cover}.d-interlace [class$="-stage"]>span,.d-interlace [class$="-stage"]>[class$="-origin"],.d-interlace [class$="-labels"],.d-interlace [class$="-scan"]{display:none}.d-interlace button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-interlace button:hover{background:#dde5d3}.d-interlace button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-interlace button:focus-visible,.d-interlace input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-interlace [class$="-actions"]{display:flex;gap:8px}.d-interlace:focus-visible{outline:2px solid #829969;outline-offset:-2px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-interlace-canvas');
 const stageEl = root.querySelector('.d-interlace-stage');
 const fieldLabel = root.querySelector('.d-interlace-field');
@@ -71,14 +42,9 @@ let width = 1, height = 1, dpr = 1, parity = 0, targetIntensity = .18, intensity
 let dirty = true, lastField = 0;
 
 function renderField(field, time, phase) {
-  const gradient = field.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, phase === 0 ? '#123e50' : '#17364d'); gradient.addColorStop(.5, phase === 0 ? '#2e8c83' : '#477f8f'); gradient.addColorStop(1, '#e3dc6f');
-  field.fillStyle = gradient; field.fillRect(0, 0, width, height);
-  const drift = reduced ? 0 : Math.sin(time * .0017 + phase * .7) * width * .052;
-  field.fillStyle = phase === 0 ? '#dcfff5' : '#ffe5ec'; field.beginPath(); field.arc(width * .7 + drift, height * .33, height * .23, 0, Math.PI * 2); field.fill();
-  field.fillStyle = '#071014'; field.beginPath(); field.arc(width * .7 + drift, height * .33, height * .1, 0, Math.PI * 2); field.fill();
-  field.fillStyle = 'rgba(4,7,9,.68)'; field.fillRect(0, height * .68, width, height * .32);
-  field.fillStyle = '#fff'; field.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; field.textBaseline = 'bottom'; field.fillText('FIELD', width * .05 - drift * .25, height * .95);
+  const picture=photograph; field.fillStyle='#d9ddd4'; field.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight)*1.07,pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;field.drawImage(picture,(width-pw)/2+Math.sin(time*.0007+phase*.18)*4,(height-ph)/2,pw,ph)}
+
 }
 function measure() {
   const box = stageEl.getBoundingClientRect(); width = Math.max(1, Math.round(box.width)); height = Math.max(1, Math.round(box.height));
@@ -140,13 +106,7 @@ function frameLoop(time) {
   }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained interlaced broadcast monitor using two CSS-resolution offscreen source buffers representing adjacent motion phases. At each visible field, draw exactly one 1px source row per output row. Select field A when (row mod 2)==parity and field B otherwise. Swap parity on a measured 20ms cadence and rerender both source buffers with a small temporal phase difference.
-
-For each output row, apply vertical jitter sin(time*0.021+row*0.19+parity*pi)*intensity*1.1, clamped inherently to ±1.1px at maximum intensity. Then darken rows matching current parity with alpha 0.07+intensity*0.1 and add a whole-frame alternating black/white field exposure of only 0.012+intensity*0.026, keeping flicker below 4%. Do not simulate fields with a single opacity-blinking element.
-
-Pointerenter activates intensity, pointer X maps 0.55–1.0, pointermove is passive, and pointerleave returns to 0.18 unless a semantic aria-pressed high-field lock is enabled. Ease intensity by 0.14. Arrow Right/Up adds 0.1, Left/Down subtracts 0.1, Shift uses 0.2, Home restores 0.18, Space locks, and Escape releases. Include parity label, percent telemetry, safe area, focus, and polite status.
-
-Rebuild both source buffers on resize and draw through a DPR transform capped at 2. Under prefers-reduced-motion, never advance source time, swap parity, apply row jitter, or add alternating full-frame exposure. Render one static parity-0 weave when intensity or layout changes, retaining real A/B row alternation, scanline emphasis, hover/keyboard intensity, locking, and the inspectable interlaced composite without temporal flicker.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:limestone-pavilion}}';`,
+  prompt: `Create the Alternating Field Monitor interaction with a native300×320px composition. Use actual supplied limestone-pavilion photography as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

@@ -24,41 +24,7 @@ INTRX.register({
   <button class="d-grain-pause" type="button" aria-pressed="false">Freeze grain</button>
   <p class="d-grain-status" aria-live="polite">Grain overlay running</p>
 </div>`,
-  css: `
-.d-grain { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0a0a0b; color: #ececef; }
-.d-grain:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
-.d-grain::before { content: ''; position: absolute; inset: 0; opacity: .18; pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px); background-size: 28px 28px; }
-.d-grain-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(255,255,255,.4); background: #101012; box-shadow: 9px 9px 0 rgba(255,255,255,.12); }
-.d-grain-art { position: absolute; inset: 0; overflow: hidden; color: #ececef; background: linear-gradient(135deg, #161619 0 48%, #fa7319 48% 72%, #333333 72%); }
-.d-grain-art::before { content: ''; position: absolute; inset: 0; opacity: .32;
-  background: repeating-linear-gradient(90deg, transparent 0 17px, rgba(17,18,22,.18) 17px 18px); }
-.d-grain-art span { position: absolute; left: 15px; top: 14px; font: 8px/1.25 "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-grain-art strong { position: absolute; right: 9px; bottom: -15px; font: 800 82px/.9 "Roboto Mono", sans-serif; letter-spacing: -.09em; }
-.d-grain-art i { position: absolute; left: 28%; top: 25%; width: 88px; height: 88px; border: 17px solid #ececef; border-radius: 50%; mix-blend-mode: multiply; }
-.d-grain-art b { position: absolute; left: 15px; bottom: 12px; font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-grain-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: soft-light; image-rendering: auto; }
-.d-grain-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 28px rgba(19,15,12,.3); }
-.d-grain-frame { position: absolute; right: 8px; top: 7px; color: rgba(255,255,255,.76); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; mix-blend-mode: difference; }
-.d-grain-kicker { position: absolute; left: 17px; top: 18px; color: rgba(255,255,255,.56); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-grain-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(255,255,255,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-grain-meter strong { min-width: 24px; color: #ececef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }.d-grain-meter b { font-weight: 400; }
-.d-grain-control { position: absolute; left: 17px; top: 43px; display: grid; grid-template-columns: auto 76px 24px; align-items: center; gap: 7px;
-  color: rgba(255,255,255,.54); font: 7px "JetBrains Mono", monospace; letter-spacing: .08em; }
-.d-grain-range { width: 76px; height: 2px; margin: 0; accent-color: #fa7319; cursor: pointer; }.d-grain-range:focus-visible { outline: 2px solid #fa7319; outline-offset: 4px; }
-.d-grain-control b { color: #ececef; font-weight: 500; letter-spacing: 0; }
-.d-grain-pause { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(255,255,255,.38);
-  border-radius: 999px; background: rgba(22,22,25,.88); color: #b8b8b8; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-grain-pause:hover, .d-grain-pause[aria-pressed="true"] { background: #fa7319; color: #ffffff; transform: translateY(-2px); }
-.d-grain-pause:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
-.d-grain-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(255,255,255,.52); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-grain-stage { width: 75%; height: 190px; }.d-grain-control { grid-template-columns: auto 54px 24px; }.d-grain-range { width: 54px; } }
-@media (prefers-reduced-motion: reduce) { .d-grain-pause { transition: none; } }
-`,
+  css: `.d-grain{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-grain::before,.d-grain::after{display:none}.d-grain>span,.d-grain>[class$="-meter"],.d-grain>[class$="-channels"],.d-grain>[class$="-vector"],.d-grain>[class$="-order"],.d-grain>[class$="-phosphor"],.d-grain>[class$="-fields"],.d-grain>[class$="-matrix"],.d-grain>[class$="-sample"]{display:none}.d-grain [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-grain [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-grain canvas{display:block;width:100%;height:100%;object-fit:cover}.d-grain [class$="-stage"]>span,.d-grain [class$="-stage"]>[class$="-origin"],.d-grain [class$="-labels"],.d-grain [class$="-scan"]{display:none}.d-grain button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-grain button:hover{background:#dde5d3}.d-grain button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-grain button:focus-visible,.d-grain input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-grain [class$="-actions"]{display:flex;gap:8px}.d-grain:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-grain-art{position:absolute;inset:0;background:url('{{asset:limestone-pavilion}}') center/cover}.d-grain-art>*{display:none}.d-grain-canvas{position:absolute;inset:0;pointer-events:none}.d-grain-control{position:relative;display:flex;gap:7px;align-items:center;max-width:170px;font:400 10px "Inter",system-ui,sans-serif}.d-grain-control span{font-size:0}.d-grain-control span:after{content:'Grain';font-size:11px}.d-grain-control input{min-width:0;width:72px;height:3px;accent-color:#748760}.d-grain-control b{font-weight:400;font-variant-numeric:tabular-nums}.d-grain button{padding-inline:9px;font-size:10px}`,
   js: `
 const canvas = root.querySelector('.d-grain-canvas');
 const stageEl = root.querySelector('.d-grain-stage');
@@ -147,12 +113,5 @@ function frameLoop(time) {
   requestAnimationFrame(frameLoop);
 }
 requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a reusable film-grain overlay function createFilmGrain(canvas, options) that is independent of the artwork under it. Return fps, interval, resize(cssWidth,cssHeight), renderFrame(), set/getIntensity, set/isPaused, getFrame, and getImage. Default to 8fps, so interval is exactly 125ms. Resize the canvas to half CSS resolution with minimum 64×40 and reuse one ImageData until the next resize.
-
-Generate every frame with a seeded xorshift stream keyed by frame number—never Math.random. For each pixel average four uniform samples and subtract 0.5 to create a bell-shaped value, then calculate clamp(round(128+value*210),0,255). Add rare black/white specks around 0.6% each. Set R=G=B exactly and alpha=round(clamp(intensity,0,1)*150). Put the full buffer once, then add five tiny deterministic dust dashes and an occasional one-pixel vertical scratch with intensity-scaled alpha. Use the overlay with pointer-events:none and soft-light blending.
-
-Drive the generator from requestAnimationFrame but call renderFrame only when time-lastNoise is at least interval. Include a labeled 0–100 range input that updates intensity and redraws immediately when frozen, plus a semantic aria-pressed freeze/resume button, frame counter, cadence readout, visible focus, and polite status. Space toggles pause and R renders a new frame, without intercepting slider or button keys.
-
-On resize, allocate a new half-resolution buffer and draw one immediate frame. Under prefers-reduced-motion, begin paused, never update from the frame loop, rename the button to New grain frame, and render exactly one explicit frame per button, R key, slider input, or resize. Preserve the same seeded distribution, reusable API, intensity, dust, scratch, and static overlay appearance.`
+  prompt: `Create the Reusable Film Grain interaction with a native300×320px composition. Use the supplied limestone-pavilion photograph behind the generated grain overlay. Keep a small Grain slider and Freeze control on a slim quiet row below; omit frames, frame counters and decorative legends. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

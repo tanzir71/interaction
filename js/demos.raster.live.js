@@ -31,53 +31,9 @@ INTRX.register({
   <button class="d-bayer-mode" type="button" aria-pressed="false">Invert field</button>
   <p class="d-bayer-status" aria-live="polite">Threshold lens active</p>
 </div>`,
-  css: `
-.d-bayer { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #111114; color: #edff66; touch-action: none; }
-.d-bayer:focus-visible { box-shadow: inset 0 0 0 2px #edff66; }
-.d-bayer::before { content: ''; position: absolute; inset: 0; opacity: .16; pointer-events: none;
-  background-image: linear-gradient(rgba(237,255,102,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(237,255,102,.2) 1px, transparent 1px);
-  background-size: 20px 20px; }
-.d-bayer-stage { position: absolute; left: 50%; top: 50%; width: min(66%, 440px); height: 220px;
-  transform: translate(-50%, -50%); overflow: hidden; border: 1px solid rgba(237,255,102,.38);
-  background: #111114; box-shadow: 10px 10px 0 rgba(237,255,102,.1); }
-.d-bayer-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
-.d-bayer-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(90deg, rgba(255,255,255,.025) 50%, transparent 50%); background-size: 6px 100%; mix-blend-mode: screen; }
-.d-bayer-probe { position: absolute; left: 0; top: 0; width: 104px; height: 104px; margin: -52px 0 0 -52px;
-  border: 1px solid rgba(255,89,64,.8); border-radius: 50%; pointer-events: none; will-change: transform; }
-.d-bayer-probe::before, .d-bayer-probe::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: #ff5940; transform: translate(-50%, -50%); }
-.d-bayer-probe::before { width: 14px; height: 1px; }.d-bayer-probe::after { width: 1px; height: 14px; }
-.d-bayer-probe i { position: absolute; inset: 11px; border: 1px dashed rgba(255,89,64,.32); border-radius: 50%; }
-.d-bayer-index { position: absolute; right: 8px; bottom: -12px; color: rgba(255,89,64,.82);
-  font: 800 76px/.9 "Roboto Mono", sans-serif; letter-spacing: -.08em; pointer-events: none; mix-blend-mode: difference; }
-.d-bayer-matrix { position: absolute; left: 17px; top: 17px; display: grid; grid-template-columns: repeat(4, 17px);
-  border: 1px solid rgba(237,255,102,.3); font: 7px/17px "JetBrains Mono", monospace; text-align: center; }
-.d-bayer-matrix span { width: 17px; height: 17px; border-right: 1px solid rgba(237,255,102,.18);
-  border-bottom: 1px solid rgba(237,255,102,.18); color: rgba(237,255,102,.72); }
-.d-bayer-matrix span:nth-child(4n) { border-right: 0; }.d-bayer-matrix span:nth-last-child(-n+4) { border-bottom: 0; }
-.d-bayer-readout { position: absolute; right: 18px; top: 17px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(237,255,102,.55); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-bayer-readout strong { min-width: 25px; color: #edff66; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-bayer-readout b { font-weight: 400; }
-.d-bayer-mode { position: absolute; left: 18px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(237,255,102,.42);
-  border-radius: 999px; background: #111114; color: #edff66; font: 10px "JetBrains Mono", monospace;
-  cursor: pointer; transition: background .18s, color .18s, transform .18s; }
-.d-bayer-mode:hover { background: #edff66; color: #111114; transform: translateY(-2px); }
-.d-bayer-mode:focus-visible { outline: 2px solid #ff5940; outline-offset: 3px; }
-.d-bayer-status { position: absolute; right: 18px; bottom: 20px; margin: 0; color: rgba(237,255,102,.55);
-  font: 8px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-.d-bayer.d-bayer-invert { background: #edff66; color: #111114; }
-.d-bayer.d-bayer-invert::before { background-image: linear-gradient(rgba(17,17,20,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,20,.2) 1px, transparent 1px); }
-.d-bayer.d-bayer-invert .d-bayer-matrix { border-color: rgba(17,17,20,.35); }
-.d-bayer.d-bayer-invert .d-bayer-matrix span, .d-bayer.d-bayer-invert .d-bayer-readout,
-.d-bayer.d-bayer-invert .d-bayer-status { color: rgba(17,17,20,.65); border-color: rgba(17,17,20,.2); }
-.d-bayer.d-bayer-invert .d-bayer-readout strong { color: #111114; }
-@media (max-width: 620px) { .d-bayer-stage { width: 72%; height: 190px; }.d-bayer-matrix { grid-template-columns: repeat(4, 14px); }.d-bayer-matrix span { width: 14px; height: 14px; line-height: 14px; } }
-@media (prefers-reduced-motion: reduce) { .d-bayer-probe { will-change: auto; }.d-bayer-mode { transition: none; } }
-`,
-  js: `
+  css: `.d-bayer{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-bayer>span,.d-bayer>[class$="-meter"],.d-bayer>[class$="-weights"],.d-bayer>[class$="-spectrum"],.d-bayer>[class$="-scale"],.d-bayer>[class$="-ramp"],.d-bayer>[class$="-weight"],.d-bayer>[class$="-waves"]{display:none}.d-bayer>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-bayer canvas{width:100%;height:100%;display:block}.d-bayer>[class$="-stage"]>*:not(canvas){display:none}.d-bayer [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-bayer button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-bayer button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-bayer button:focus-visible,.d-bayer:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-bayer [class$="-actions"]{display:flex;gap:8px}.d-bayer>[aria-hidden=true]{display:none}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-bayer-canvas');
 const stageEl = root.querySelector('.d-bayer-stage');
 const probe = root.querySelector('.d-bayer-probe');
@@ -93,25 +49,7 @@ let columns = 1, rows = 1, sourceLuma = new Uint8Array(1), output = null;
 let target = { x: .68, y: .36 }, current = { x: target.x, y: target.y };
 let inverted = false, dirty = true, lastDraw = 0;
 
-function drawSource() {
-  const sky = source.createLinearGradient(0, 0, 0, rows);
-  sky.addColorStop(0, '#f4f4f4'); sky.addColorStop(.58, '#777'); sky.addColorStop(1, '#171717');
-  source.fillStyle = sky; source.fillRect(0, 0, columns, rows);
-  source.fillStyle = '#fff'; source.beginPath(); source.arc(columns * .73, rows * .28, rows * .18, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#292929'; source.beginPath(); source.moveTo(0, rows * .72);
-  for (let x = 0; x <= columns; x += 2) source.lineTo(x, rows * (.58 + Math.sin(x * .075) * .055 + Math.sin(x * .021) * .07));
-  source.lineTo(columns, rows); source.lineTo(0, rows); source.closePath(); source.fill();
-  source.fillStyle = '#b8b8b8'; source.beginPath(); source.moveTo(0, rows * .83);
-  for (let x = 0; x <= columns; x += 2) source.lineTo(x, rows * (.72 + Math.sin(x * .047 + 1.8) * .045));
-  source.lineTo(columns, rows); source.lineTo(0, rows); source.closePath(); source.fill();
-  source.fillStyle = '#101010'; source.font = '800 ' + Math.round(rows * .34) + 'px Roboto Mono, monospace';
-  source.textBaseline = 'bottom'; source.fillText('04', columns * .05, rows * .98);
-  const pixels = source.getImageData(0, 0, columns, rows).data;
-  sourceLuma = new Uint8Array(columns * rows);
-  for (let i = 0; i < sourceLuma.length; i++) {
-    const p = i * 4; sourceLuma[i] = Math.round(pixels[p] * .2126 + pixels[p + 1] * .7152 + pixels[p + 2] * .0722);
-  }
-}
+function drawSource(){const picture=photograph;source.fillStyle='#dfe3d8';source.fillRect(0,0,columns,rows);if(picture.naturalWidth){const s=Math.max(columns/picture.naturalWidth,rows/picture.naturalHeight);source.drawImage(picture,(columns-picture.naturalWidth*s)/2,(rows-picture.naturalHeight*s)/2,picture.naturalWidth*s,picture.naturalHeight*s)}const pixels=source.getImageData(0,0,columns,rows).data;sourceLuma=new Uint8Array(columns*rows);for(let i=0;i<sourceLuma.length;i++){const p=i*4;sourceLuma[i]=Math.round(pixels[p]*.2126+pixels[p+1]*.7152+pixels[p+2]*.0722)}}
 
 function measure() {
   const box = stageEl.getBoundingClientRect();
@@ -155,8 +93,8 @@ function render(time) {
   const data = output.data;
   const pulse = reduced ? 0 : Math.sin(time * .0018) * .035;
   const strength = .26 + pulse;
-  const paper = inverted ? [17,17,20] : [237,255,102];
-  const ink = inverted ? [237,255,102] : [17,17,20];
+  const paper = inverted ? [55,64,45] : [221,229,204];
+  const ink = inverted ? [221,229,204] : [55,64,45];
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < columns; x++) {
       const nx = x / Math.max(1, columns - 1), ny = y / Math.max(1, rows - 1);
@@ -184,15 +122,9 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(time); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained one-bit ordered-dither poster using a real 4×4 Bayer threshold matrix on canvas. Render a designed grayscale source at a deliberately low logical resolution: a vertical tonal gradient, bright sun disc, two layered sinusoidal ridges, and oversized dark index typography. Read its pixels once after startup or resize and cache Rec.709 luminance as 0.2126R+0.7152G+0.0722B. Display the output canvas at full CSS size with image-rendering:pixelated.
-
-Use the canonical matrix rows [0,8,2,10], [12,4,14,6], [3,11,1,9], and [15,7,13,5]. For every logical pixel compare normalized luminance against (matrix[y mod 4][x mod 4]+0.5)/16. Turn the result into exactly two palette colors. Add a circular pointer field in normalized coordinates: proximity=max(0,1-distance/0.29), then subtract proximity squared times a roughly 0.26 threshold strength. This must reveal light near the pointer while retaining the ordered four-pixel lattice, not paint a translucent spotlight over a pre-rendered image.
-
-Ease the normalized probe toward pointer targets by 0.16 per frame and give threshold strength a restrained ±0.035 pulse. Cap rendering near 30fps, cache source luminance between resizes, reuse one ImageData buffer, and update the pixels, probe transform, and strength readout together. Rebuild the low-resolution source from the measured stage size using about one logical pixel per three CSS pixels.
-
-Provide a semantic aria-pressed palette inversion button, visible keyboard focus, and polite status text. Arrow keys move a virtual lens by 0.055, Shift+Arrow by 0.12, Home centers it, and Space inverts; do not intercept keys originating on the button. Pointer and resize listeners stay passive. Under prefers-reduced-motion, remove easing and threshold pulsing, render only when dirty, but preserve the exact Bayer comparison, pointer and keyboard placement, resize behavior, inversion, static 26% local threshold change, and pixelated output.`
+requestAnimationFrame(frameLoop);
+photograph.onload=measure;photograph.src='{{asset:coastal-stack}}';`,
+  prompt: `Build Bayer Dither Field as a native300×320px component. Use the supplied coastal-stack photograph. Draw it with cover cropping after image load and recompute the algorithm's source luminance, pixel caches or samples. Retain the actual dither-bayer pixel/glyph algorithm, pointer and keyboard behavior. Put the full image above a slim quiet control row, with readable regular Inter11px controls, normal tracking, pale surfaces and fine borders. Avoid synthetic gradient posters and headline overlays.  Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });
 
 /* ------------------------------------------------------------
@@ -221,49 +153,9 @@ INTRX.register({
   <button class="d-fs-lock" type="button" aria-pressed="false">Lock full color</button>
   <p class="d-fs-status" aria-live="polite">One-bit diffusion active</p>
 </div>`,
-  css: `
-.d-fs { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
-  background: #0a0a0b; color: #ececef; touch-action: none; }
-.d-fs:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
-.d-fs::before { content: ''; position: absolute; inset: 0; opacity: .24; pointer-events: none;
-  background-image: radial-gradient(rgba(17,17,20,.35) .65px, transparent .65px); background-size: 5px 5px; }
-.d-fs-stage { position: absolute; left: 50%; top: 50%; width: min(67%, 448px); height: 220px;
-  transform: translate(-50%, -50%); overflow: hidden; background: #101012; border: 1px solid rgba(17,17,20,.46);
-  box-shadow: 9px 9px 0 rgba(17,17,20,.15); }
-.d-fs-canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; }
-.d-fs-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .16;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.12) 3px 4px); mix-blend-mode: overlay; }
-.d-fs-lens { position: absolute; left: 0; top: 0; width: 126px; height: 126px; margin: -63px 0 0 -63px;
-  border: 1px solid rgba(255,255,255,.82); border-radius: 50%; color: #fff; pointer-events: none;
-  mix-blend-mode: difference; opacity: 0; transform: translate(-200px,-200px) scale(.72); will-change: transform, opacity; }
-.d-fs-lens::before, .d-fs-lens::after { content: ''; position: absolute; left: 50%; top: 50%;
-  background: currentColor; transform: translate(-50%, -50%); }
-.d-fs-lens::before { width: 17px; height: 1px; }.d-fs-lens::after { width: 1px; height: 17px; }
-.d-fs-lens i { position: absolute; inset: 10px; border: 1px dashed rgba(255,255,255,.42); border-radius: 50%; }
-.d-fs-lens b { position: absolute; right: 12px; bottom: 10px; font: 8px "JetBrains Mono", monospace; letter-spacing: .12em; }
-.d-fs.d-fs-active .d-fs-lens { opacity: 1; }
-.d-fs.d-fs-locked .d-fs-lens { border-style: dashed; }
-.d-fs-corner { position: absolute; right: 9px; bottom: 7px; color: rgba(255,255,255,.78);
-  font: 700 25px/.77 "Roboto Mono", sans-serif; letter-spacing: -.06em; text-align: right; mix-blend-mode: difference; }
-.d-fs-kicker { position: absolute; left: 17px; top: 18px; color: rgba(17,17,20,.6);
-  font: 8px "JetBrains Mono", monospace; letter-spacing: .14em; }
-.d-fs-weights { position: absolute; left: 17px; top: 42px; display: grid; grid-template-columns: auto auto; gap: 3px 10px;
-  color: rgba(17,17,20,.48); font: 7px "JetBrains Mono", monospace; letter-spacing: .05em; }
-.d-fs-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(17,17,20,.52); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-fs-meter strong { min-width: 27px; color: #ececef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-fs-meter b { font-weight: 400; }
-.d-fs-lock { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(17,17,20,.42);
-  border-radius: 999px; background: rgba(22,22,25,.88); color: #b8b8b8; font: 10px "JetBrains Mono", monospace;
-  cursor: pointer; transition: color .18s, background .18s, transform .18s; }
-.d-fs-lock:hover, .d-fs-lock[aria-pressed="true"] { color: #fff; background: #fa7319; transform: translateY(-2px); }
-.d-fs-lock:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
-.d-fs-status { position: absolute; right: 18px; bottom: 20px; margin: 0; max-width: 45%; text-align: right;
-  color: rgba(17,17,20,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-fs-stage { width: 73%; height: 190px; }.d-fs-weights { display: none; }.d-fs-lens { width: 106px; height: 106px; margin: -53px 0 0 -53px; } }
-@media (prefers-reduced-motion: reduce) { .d-fs-lens { will-change: auto; }.d-fs-lock { transition: none; } }
-`,
-  js: `
+  css: `.d-fs{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-fs>span,.d-fs>[class$="-meter"],.d-fs>[class$="-weights"],.d-fs>[class$="-spectrum"],.d-fs>[class$="-scale"],.d-fs>[class$="-ramp"],.d-fs>[class$="-weight"],.d-fs>[class$="-waves"]{display:none}.d-fs>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-fs canvas{width:100%;height:100%;display:block}.d-fs>[class$="-stage"]>*:not(canvas){display:none}.d-fs [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-fs button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-fs button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-fs button:focus-visible,.d-fs:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-fs [class$="-actions"]{display:flex;gap:8px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-fs-canvas');
 const stageEl = root.querySelector('.d-fs-stage');
 const lens = root.querySelector('.d-fs-lens');
@@ -274,24 +166,12 @@ const context = canvas.getContext('2d', { alpha: false });
 const sourceCanvas = document.createElement('canvas');
 const source = sourceCanvas.getContext('2d', { willReadFrequently: true });
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const PAPER = [38, 38, 38], INK = [10, 10, 11];
+const PAPER = [205, 205, 211], INK = [15, 15, 18];
 let columns = 1, rows = 1, sourcePixels = new Uint8ClampedArray(4), ditherBits = new Uint8Array(1), output = null;
 let target = { x: .58, y: .44 }, current = { x: target.x, y: target.y };
 let targetAmount = 0, amount = 0, hovering = false, locked = false, dirty = true, lastDraw = 0;
 
-function drawSource() {
-  const backdrop = source.createLinearGradient(0, 0, columns, rows);
-  backdrop.addColorStop(0, '#ff5e4d'); backdrop.addColorStop(.46, '#7747ff'); backdrop.addColorStop(1, '#48e3c2');
-  source.fillStyle = backdrop; source.fillRect(0, 0, columns, rows);
-  source.fillStyle = 'rgba(255,240,91,.96)'; source.beginPath(); source.arc(columns * .73, rows * .31, rows * .24, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(15,15,18,.88)'; source.fillRect(columns * .08, rows * .12, columns * .24, rows * .76);
-  source.strokeStyle = 'rgba(255,255,255,.72)'; source.lineWidth = Math.max(1, rows * .015);
-  for (let i = -2; i < 7; i++) { source.beginPath(); source.moveTo(columns * (i * .16), rows); source.lineTo(columns * (i * .16 + .38), 0); source.stroke(); }
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(rows * .31) + 'px Roboto Mono, monospace'; source.textBaseline = 'middle';
-  source.save(); source.translate(columns * .13, rows * .82); source.rotate(-Math.PI / 2); source.fillText('ERROR', 0, 0); source.restore();
-  source.fillStyle = '#101012'; source.font = '700 ' + Math.round(rows * .14) + 'px JetBrains Mono, monospace'; source.fillText('7/16', columns * .55, rows * .76);
-  sourcePixels = source.getImageData(0, 0, columns, rows).data;
-}
+function drawSource(){const picture=photograph;source.fillStyle='#dfe3d8';source.fillRect(0,0,columns,rows);if(picture.naturalWidth){const s=Math.max(columns/picture.naturalWidth,rows/picture.naturalHeight);source.drawImage(picture,(columns-picture.naturalWidth*s)/2,(rows-picture.naturalHeight*s)/2,picture.naturalWidth*s,picture.naturalHeight*s)}sourcePixels=source.getImageData(0,0,columns,rows).data;}
 
 function diffuse() {
   const work = new Float32Array(columns * rows);
@@ -316,7 +196,7 @@ function diffuse() {
 
 function measure() {
   const box = stageEl.getBoundingClientRect();
-  columns = Math.max(96, Math.round(box.width / 2)); rows = Math.max(54, Math.round(box.height / 2));
+  columns = Math.max(96, Math.round(box.width)); rows = Math.max(54, Math.round(box.height));
   canvas.width = sourceCanvas.width = columns; canvas.height = sourceCanvas.height = rows;
   context.imageSmoothingEnabled = false; drawSource(); diffuse(); output = context.createImageData(columns, rows); dirty = true;
 }
@@ -397,14 +277,8 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained Floyd–Steinberg image treatment that begins as a genuine one-bit error-diffused raster and locally resolves to its original RGB source on hover. Draw a colorful procedural editorial poster into an offscreen canvas at roughly one logical pixel per two CSS pixels, then cache its RGBA pixels. Compute Rec.709 luminance with 0.2126R+0.7152G+0.0722B into a Float32Array so propagated error retains fractional precision.
-
-Scan every row from left to right. Quantize each working luminance to 0 below 128 or 255 otherwise, save that bit, and diffuse error=old-quantized only to unprocessed neighbors: right gets 7/16, next-row left gets 3/16, next-row center gets 5/16, and next-row right gets 1/16. Guard every edge explicitly. Recompute the source and diffusion only on initial measurement or resize; do not rerun diffusion during pointer movement.
-
-For interaction, reuse one ImageData buffer and mix each cached monochrome pixel toward its original RGB pixel. A normalized pointer probe defines a circular local mask using smoothstep from radius 0.31 to 0.22, corrected by rows/columns so it appears circular in CSS space. Ease probe coordinates by 0.16 and reveal amount by 0.13. Hover expands the local full-color resolve; pointerleave returns to one-bit. A semantic aria-pressed control can lock the entire frame to full color, bypassing only the spatial mask while retaining the eased amount.
-
-Arrow keys move the virtual probe by 0.055, Shift+Arrow by 0.12, Home centers, Space toggles the full-color lock, and Escape collapses the reveal. Ignore keys from the button, preserve focus indication, use passive pointermove and resize listeners, and announce states politely. Cap pixel reconstruction near 30fps and stop redrawing once settled. Under prefers-reduced-motion, assign coordinates and reveal amount directly, keep the same diffusion result and color mixing, and redraw only when interaction or resize marks the frame dirty.`
+requestAnimationFrame(frameLoop);
+photograph.onload=measure;photograph.src='{{asset:coastal-stack}}';`,
+  prompt: `Build Floyd–Steinberg Resolve as a native300×320px component. Use the supplied coastal-stack photograph. Draw it with cover cropping after image load and recompute the algorithm's source luminance, pixel caches or samples. Retain the actual dither-floyd-steinberg pixel/glyph algorithm, pointer and keyboard behavior. Put the full image above a slim quiet control row, with readable regular Inter11px controls, normal tracking, pale surfaces and fine borders. Avoid synthetic gradient posters and headline overlays.  Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });
 

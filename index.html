@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INTRX — The Interaction Library. Live demos, code & LLM prompts.</title>
-<meta name="description" content="A curated, copy-paste library of the web interactions used by award-winning design agencies. 327 hand-built patterns — each with a live demo, a single-file code snippet, and an LLM prompt to rebuild it in any stack.">
+<meta name="description" content="399 interactive patterns, including all 52 DRAMS components as credited native demos. Live previews, copyable HTML/CSS/JavaScript, and detailed implementation prompts.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tanzir71.github.io/interaction/">
 <meta property="og:type" content="website">
@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23fa7319' stroke-width='2'/></svg>">
 </head>
 <body>
@@ -52,7 +53,7 @@
       </div>
       <div class="search-wrap">
         <span class="search-key">Ctrl K</span>
-        <input id="search" type="text" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
+        <input id="search" type="search" aria-label="Search interactions" placeholder="Search interactions…" autocomplete="off" spellcheck="false">
       </div>
       <nav id="nav" aria-label="Pattern navigation"><!-- built by app.js --></nav>
     </div>
@@ -64,19 +65,36 @@
 
   <main class="main" id="top">
 
-    <div class="grid-strip mono">INTRX — <span id="hero-count">…</span> live interaction patterns. Click any tile for code + LLM prompt.<button class="strip-close" id="strip-close" type="button" aria-label="Dismiss">✕</button></div>
+    <div class="grid-strip mono"><span class="live-dot"></span><span id="hero-count">…</span> live patterns <span class="strip-note">· made to be played with</span><a href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">Open source ↗</a><button class="strip-close" id="strip-close" type="button" aria-label="Dismiss">✕</button></div>
+
+    <header class="library-head">
+      <div><p class="mono dim">An independent collection of web interactions</p><h1>The details make the difference<span>.</span></h1></div>
+      <p>Explore a little. Move things around.<br>Take the code and make it yours.</p>
+    </header>
+    <div class="library-toolbar">
+      <div class="collection-filters" role="group" aria-label="Filter interactions">
+        <button type="button" data-filter="all" aria-pressed="true">All patterns</button>
+        <button type="button" data-filter="new" aria-pressed="false">New additions <span>72</span></button>
+        <button type="button" data-filter="drams" aria-pressed="false">DRAMS <span>52</span></button>
+        <button type="button" data-filter="pointer" aria-pressed="false">Pointer</button>
+        <button type="button" data-filter="scroll" aria-pressed="false">Scroll</button>
+        <button type="button" data-filter="drag" aria-pressed="false">Drag</button>
+      </div>
+      <span class="result-count mono" id="result-count" role="status"></span>
+    </div>
 
     <div id="cards" class="tile-grid"><!-- demo tiles injected by app.js --></div>
+    <div class="empty-state" id="empty-state" hidden><span class="mono">No matches</span><h2>Nothing here, yet.</h2><p>Try a different word or explore the full collection.</p><button type="button" id="clear-filters">Clear search &amp; filters ↗</button></div>
 
     <section class="agent-strip">
       <div class="agent-strip-inner">
-        <p class="mono accent">works with your ai agent</p>
+        <h2>Build with your AI agent</h2>
         <p>Every pattern's <strong>LLM Prompt</strong> tab is a precise spec — easings, timings, math,
         accessibility notes. Paste it into Claude or any model to rebuild the interaction in React,
         Vue, Svelte, or your own stack. Agent-readable index at
         <a href="llms.txt">/llms.txt</a>.</p>
         <div class="agent-prompt">
-          <code id="agent-prompt">Open https://intrx.vercel.app/llms.txt, find an interaction that matches my brief, then use its LLM Prompt specification to rebuild it in my current framework. Preserve the timing, easing, math, reduced-motion behavior, and keyboard support.</code>
+          <p id="agent-prompt">Open https://intrx.vercel.app/llms.txt, find an interaction that matches my brief, then use its LLM Prompt specification to rebuild it in my current framework. Preserve the timing, easing, math, reduced-motion behavior, and keyboard support.</p>
           <button class="agent-copy" id="agent-copy" type="button">Copy agent prompt</button>
         </div>
       </div>
@@ -84,18 +102,18 @@
 
     <section class="entry-guide" id="guide">
       <div class="entry-head">
-        <p class="mono">SYS · 01 / Use it</p>
-        <h2>From “how did they do that?” to a working interaction.</h2>
+        <p class="entry-eyebrow">01 / Getting started</p>
+        <h2>From inspiration to implementation.</h2>
       </div>
       <div class="entry-grid">
-        <article class="entry-card"><p class="mono num">01 / Ask your agent</p><h3>Copy the implementation spec</h3><p>Choose a card, open <strong>LLM Prompt</strong>, and paste the exact motion brief into your coding agent. It includes timings, easings, math, performance rules, and reduced-motion behavior.</p></article>
-        <article class="entry-card"><p class="mono num">02 / Copy one file</p><h3>Use the vanilla implementation</h3><p>The <strong>Code</strong> tab emits the card's HTML, scoped CSS, JavaScript, and any declared GSAP or Lenis script tags as one copyable snippet.</p></article>
-        <article class="entry-card"><p class="mono num">03 / Run it yourself</p><h3>Serve the static registry</h3><p>No install or build step. Clone the repository and run <code>python -m http.server 8000</code>, or upload the files to any static host.</p></article>
+        <article class="entry-card"><p class="step-label">01 / Ask your agent</p><h3>Copy the motion brief</h3><p>Open a card's <strong>LLM Prompt</strong> tab and paste the brief into your coding agent. It includes timing, easing, accessibility and reduced-motion behavior.</p></article>
+        <article class="entry-card"><p class="step-label">02 / Copy one file</p><h3>Use the source code</h3><p>The <strong>Code</strong> tab gives you HTML, scoped CSS and JavaScript in one snippet, with any required GSAP or Lenis scripts included.</p></article>
+        <article class="entry-card"><p class="step-label">03 / Run it yourself</p><h3>Run the library locally</h3><p>No install or build step. Clone the repository and run <code>python -m http.server 8000</code>, or upload the files to any static host.</p></article>
       </div>
 
       <div class="entry-head">
-        <p class="mono">SYS · 02 / Compare</p>
-        <h2>Curation and implementation detail—not another inspiration feed.</h2>
+        <p class="entry-eyebrow">02 / Compare</p>
+        <h2>How the library compares.</h2>
       </div>
       <div class="compare-wrap">
         <table class="compare">
@@ -127,7 +145,8 @@
     </section>
 
     <footer class="footer">
-      <p class="mono dim">INTRX — built as a public reference. Host it, fork it, extend it. · built by <a href="https://tanziro.com" target="_blank" rel="noopener">tanziro.com</a> · <a href="https://buymeacoffee.com/tanzir" target="_blank" rel="noopener">buy me a coffee</a> · <a href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">github</a></p>
+      <p><strong>INTRX</strong><span>A public reference. Host it, fork it, extend it.</span></p>
+      <nav aria-label="Footer links"><a href="https://tanziro.com" target="_blank" rel="noopener">Built by tanziro.com</a><a href="https://buymeacoffee.com/tanzir" target="_blank" rel="noopener">Support the library</a><a href="https://github.com/tanzir71/interaction" target="_blank" rel="noopener">GitHub ↗</a></nav>
     </footer>
 
   </main>
@@ -419,6 +438,14 @@
 <script src="js/demos.ui.js"></script>
 
 <!-- app -->
+<script src="js/demos.showcase.js"></script>
+<script src="js/demos.framer-data.js"></script>
+<script src="js/demos.drams.sliders.js"></script>
+<script src="js/demos.drams.devices.js"></script>
+<script src="js/demos.drams.dials.js"></script>
+<script src="js/demos.drams.switches.js"></script>
+<script src="js/demo-runtime.js"></script>
+<script src="js/demo-assets.js"></script>
 <script src="js/app.js"></script>
 
 </body>

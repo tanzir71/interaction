@@ -29,41 +29,9 @@ INTRX.register({
   </div>
   <p class="d-crtube-status" aria-live="polite">Channel one locked</p>
 </div>`,
-  css: `
-.d-crtube { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #171714; color: #e5dfc8; touch-action: none; }
-.d-crtube:focus-visible { box-shadow: inset 0 0 0 2px #f1c552; }
-.d-crtube::before { content: ''; position: absolute; inset: 0; opacity: .2; pointer-events: none;
-  background-image: radial-gradient(rgba(229,223,200,.25) .65px, transparent .65px); background-size: 7px 7px; }
-.d-crtube-case { position: absolute; left: 50%; top: 50%; width: min(71%, 472px); height: 234px; transform: translate(-50%, -50%);
-  padding: 7px; border-radius: 20px; background: linear-gradient(145deg, #37352e, #171713); border: 1px solid #555247;
-  box-shadow: inset 0 1px rgba(255,255,255,.13), 10px 11px 0 rgba(0,0,0,.24); }
-.d-crtube-stage { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 14px / 20px; background: #020304;
-  box-shadow: inset 0 0 20px #000, inset 0 0 0 1px rgba(255,255,255,.12); }
-.d-crtube-canvas { display: block; width: 100%; height: 100%; border-radius: inherit; }
-.d-crtube-stage::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
-  box-shadow: inset 0 0 18px rgba(0,0,0,.76), inset 0 0 2px rgba(255,255,255,.25); }
-.d-crtube-channel { position: absolute; right: 9px; top: 8px; color: rgba(235,255,231,.75); text-shadow: 0 0 5px currentColor;
-  font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-crtube-safe { position: absolute; inset: 9%; border: 1px dashed rgba(255,255,255,.16); border-radius: 8px; pointer-events: none; }
-.d-crtube-kicker { position: absolute; left: 17px; top: 18px; color: rgba(229,223,200,.53); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-crtube-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(229,223,200,.46); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-crtube-meter strong { min-width: 34px; color: #e5dfc8; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-crtube-meter b { font-weight: 400; }
-.d-crtube-phosphor { position: absolute; left: 17px; top: 43px; display: flex; gap: 3px; }
-.d-crtube-phosphor i { display: block; width: 6px; height: 17px; }.d-crtube-phosphor i:nth-child(1) { background: #ee5c59; }
-.d-crtube-phosphor i:nth-child(2) { background: #63e66d; }.d-crtube-phosphor i:nth-child(3) { background: #5f82ef; }
-.d-crtube-actions { position: absolute; left: 17px; bottom: 17px; display: flex; gap: 7px; }
-.d-crtube-actions button { padding: 8px 12px; border: 1px solid rgba(229,223,200,.34); border-radius: 999px; background: rgba(23,23,20,.84);
-  color: #e5dfc8; font: 9px "JetBrains Mono", monospace; cursor: pointer; transition: background .18s, color .18s, transform .18s; }
-.d-crtube-actions button:hover, .d-crtube-roll[aria-pressed="true"] { background: #e5dfc8; color: #171714; transform: translateY(-2px); }
-.d-crtube-actions button:focus-visible { outline: 2px solid #f1c552; outline-offset: 3px; }
-.d-crtube-status { position: absolute; right: 18px; bottom: 20px; max-width: 39%; margin: 0; text-align: right;
-  color: rgba(229,223,200,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-crtube-case { width: 77%; height: 205px; }.d-crtube-phosphor { display: none; }.d-crtube-actions button { padding: 8px 9px; font-size: 8px; } }
-@media (prefers-reduced-motion: reduce) { .d-crtube-actions button { transition: none; } }
-`,
-  js: `
+  css: `.d-crtube{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end;padding-bottom:10px}.d-crtube::before,.d-crtube::after{display:none}.d-crtube>span,.d-crtube>[class$="-meter"],.d-crtube>[class$="-channels"],.d-crtube>[class$="-vector"],.d-crtube>[class$="-order"],.d-crtube>[class$="-phosphor"],.d-crtube>[class$="-fields"],.d-crtube>[class$="-matrix"],.d-crtube>[class$="-sample"]{display:none}.d-crtube [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-crtube [class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#ccd3c4;isolation:isolate}.d-crtube canvas{display:block;width:100%;height:100%;object-fit:cover}.d-crtube [class$="-stage"]>span,.d-crtube [class$="-stage"]>[class$="-origin"],.d-crtube [class$="-labels"],.d-crtube [class$="-scan"]{display:none}.d-crtube button{position:relative;min-height:28px;max-height:30px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;cursor:pointer;z-index:5}.d-crtube button:hover{background:#dde5d3}.d-crtube button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-crtube button:focus-visible,.d-crtube input:focus-visible{outline:2px solid #829969;outline-offset:3px}.d-crtube [class$="-actions"]{display:flex;gap:8px}.d-crtube:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-crtube{background:#e2e4dc}.d-crtube-case{position:absolute;inset:18px 14px 54px;border-radius:24px;background:linear-gradient(145deg,#cdd3c3,#afbba0);box-shadow:inset 0 1px #f4f8eb,0 3px 6px #64774a29;padding:11px}.d-crtube .d-crtube-stage{inset:11px;width:auto;overflow:hidden;border-radius:20px;background:#1e2a17;box-shadow:0 1px #e9f0df,inset 0 0 15px #000}.d-crtube-stage:after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,#ffffff13,transparent 35%,transparent 70%,#0f1c1122);pointer-events:none}.d-crtube .d-crtube-channel{display:block;position:absolute;right:12px;top:12px;color:#eef4e4;font:400 9px "Inter",system-ui,sans-serif;text-shadow:0 1px 2px #102210}`,
+  js: `const photograph=new Image();const photographB=new Image();
+
 const canvas = root.querySelector('.d-crtube-canvas');
 const stageEl = root.querySelector('.d-crtube-stage');
 const channelLabel = root.querySelector('.d-crtube-channel');
@@ -81,17 +49,9 @@ let targetWobble = 1, wobble = 1, rollActive = false, staticPinned = false, roll
 let clock = 0, nextRoll = 4400, dirty = true, lastDraw = 0;
 
 function renderSource(time) {
-  const first = channel === 1 ? '#113c54' : '#4a173e', middle = channel === 1 ? '#1d8a7b' : '#c04752', last = channel === 1 ? '#dcf071' : '#f0b64f';
-  const gradient = source.createLinearGradient(0, 0, width, height); gradient.addColorStop(0, first); gradient.addColorStop(.55, middle); gradient.addColorStop(1, last);
-  source.fillStyle = gradient; source.fillRect(0, 0, width, height);
-  const drift = reduced ? 0 : Math.sin(time * .0015) * width * .045;
-  source.fillStyle = channel === 1 ? '#eafce1' : '#95e7ff'; source.beginPath(); source.arc(width * .7 + drift, height * .34, height * .23, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#071011'; source.beginPath(); source.arc(width * .7 + drift, height * .34, height * .1, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(3,5,7,.66)'; source.fillRect(0, height * .68, width, height * .32);
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom';
-  source.fillText(channel === 1 ? 'TUBE' : 'LATE', width * .05 - drift * .3, height * .94);
-  source.strokeStyle = 'rgba(255,255,255,.35)'; source.lineWidth = 1;
-  for (let x = 0; x < width; x += 24) { source.beginPath(); source.moveTo(x, 0); source.lineTo(x + drift * .12, height); source.stroke(); }
+  const picture=channel===1?photograph:photographB; source.fillStyle='#d9ddd4'; source.fillRect(0,0,width,height);
+  if(picture.complete&&picture.naturalWidth){const scale=Math.max(width/picture.naturalWidth,height/picture.naturalHeight),pw=picture.naturalWidth*scale,ph=picture.naturalHeight*scale;source.drawImage(picture,(width-pw)/2,(height-ph)/2,pw,ph)}
+
 }
 function renderWarped(time) {
   warped.clearRect(0, 0, width, height);
@@ -194,13 +154,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { if (reduced) { renderSource(time); renderWarped(time); } drawTube(offset, progress); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained CRT receiver as a staged canvas pipeline. Render an animated broadcast source into one CSS-resolution offscreen canvas, then create a warped buffer by copying horizontal strips exactly 2px high. For strip y calculate normalizedY=y/(height-1)*2-1, scale=1+0.055*normalizedY², destinationWidth=width*scale, and destinationX=(width-destinationWidth)/2 plus two small time/Y sine wobble terms multiplied by an eased horizontal-hold value. This must change strip geometry rather than transform the finished canvas.
-
-For vertical roll, draw the warped buffer into the visible canvas as two wrapped source/destination crops split at an integer roll offset. Animate normal offset from top to bottom for about 920ms and trigger on hover, a semantic button, Space/Enter, and occasional requestAnimationFrame-clock intervals. Add a translucent 44px brightness gradient centered on the roll seam.
-
-After the image pass, draw one black scanline every 3px at 0.24 alpha, repeating red/green/blue 1px shadow-mask columns at 0.035 alpha, and a radial vignette with transparent center, mild 0.72 stop, and roughly 0.82 black edge. Provide two procedural channels, a semantic channel button, channel label, roll percentage, safe-area overlay, polite status, and visible focus. Pointer X tunes wobble from 0.35–2.0 passively; arrow keys adjust 0.15 or 0.35 with Shift, Home restores 1, C changes channel, and Escape clears roll.
-
-Resize source, warped, and output buffers and draw through a DPR transform capped at 2. Under prefers-reduced-motion, disable source drift and all automatic/timed roll progress. Hover or activation shows a stable wrapped frame at 48% offset with the same barrel strips, scanlines, RGB mask, seam bloom, and vignette; pointerleave clears unless pinned, and another activation restores the unrolled frame.`
+requestAnimationFrame(frameLoop);
+photograph.onload=()=>measure();photograph.src='{{asset:atlantic-shore}}';photographB.onload=()=>measure();photographB.src='{{asset:limestone-pavilion}}';`,
+  prompt: `Create the Scanline CRT Receiver interaction with a native300×320px composition. Use actual supplied atlantic-shore photography and limestone-pavilion for the alternate state as the source image, drawing with cover cropping after image.onload. Do not use synthetic gradient posters, ring graphics or huge title overlays. Keep the image as the visual focus above a narrow quiet control row, with regular Inter11px controls, normal tracking and subtle sage borders. Preserve the existing effect algorithm, source buffers, effect-specific pointer/keyboard controls, ARIA values, cancellation and reduced-motion handling. Remove decorative instrument status/header panels; retain live announcements accessibly. Rebuild source pixels and caches when images load or dimensions change.`
 });

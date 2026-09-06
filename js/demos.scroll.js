@@ -16,48 +16,70 @@ INTRX.register({
   hint: 'scroll inside the panel',
   html: `
 <div class="d-lenis">
+ <div class="d-smooth-viewport" tabindex="0" role="region" aria-label="Smooth scrolling study. Scroll inside this panel.">
   <div class="d-lenis-content">
-    <section><h2>01 — Native scroll is instant.</h2></section>
-    <section><h2>02 — Lenis interpolates it.</h2></section>
-    <section><h2>03 — Every frame eases toward the target.</h2></section>
-    <section><h2>04 — That is the entire trick.</h2></section>
+    <section><span>01 / FIND YOUR PACE</span><h2>A softer<br>way to scroll<span>.</span></h2><p>Scroll slowly. Feel the difference. ↓</p></section>
+    <section><span>02 / MOMENTUM</span><h2>Movement,<br>with intention<span>.</span></h2><p>Every gesture carries a little further.</p></section>
+    <section><span>03 / SETTLE</span><h2>Nothing<br>feels abrupt<span>.</span></h2><p>A gentle landing, every time.</p></section>
+    <section><span>04 / BEGIN AGAIN</span><h2>Keep<br>exploring<span>.</span></h2><p>The details are the experience. ↑</p></section>
   </div>
+ </div>
 </div>`,
   css: `
-.d-lenis { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
-.d-lenis::-webkit-scrollbar { width: 3px; }
-.d-lenis::-webkit-scrollbar-thumb { background: #fa7319; }
+.d-lenis { height: 320px; min-height: 320px; width: 100%; overflow: hidden; background: #0a0a0b; font-family:"Inter",system-ui,sans-serif; }
+.d-lenis .d-smooth-viewport { height: 320px !important; overflow-y:auto !important; overscroll-behavior:contain; }
+.d-lenis .d-smooth-viewport::-webkit-scrollbar { width: 3px; }
+.d-lenis .d-smooth-viewport::-webkit-scrollbar-thumb { background: #fa7319; }
 .d-lenis-content section {
-  height: 260px; display: flex; align-items: center; padding: 0 48px;
+  height: 285px; display: flex; flex-direction:column; justify-content:center; align-items:flex-start; padding: 30px;
   border-bottom: 1px solid #232327;
 }
 .d-lenis-content h2 {
-  font-size: clamp(18px, 3vw, 30px); font-weight: 600; letter-spacing: -0.02em; color: #ececef;
-}`,
+  font-size: 30px; font-weight: 500; line-height:1.2; letter-spacing:-0.025em; color: #ececef; margin:20px 0;
+}
+.d-lenis-content section>span{font:8px "Inter",system-ui,sans-serif;letter-spacing:0.06em;color:#787881}
+.d-lenis-content h2 span{color:#fa7319}
+.d-lenis-content p{font:9px "Inter",system-ui,sans-serif;color:#9b9ba3}
+.d-lenis .d-smooth-viewport:focus-visible{outline:1px solid #fa7319;outline-offset:-4px}
+/* Composition at the native preview size. */
+.d-lenis button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-lenis-content h2{font-family:"Newsreader",Georgia,serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-lenis{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-lenis :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-lenis button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-lenis-content section>span{font:400 10px "Inter",system-ui,sans-serif;letter-spacing:.02em;color:#8e9993}.d-lenis-content p{font:400 12px/1.65 "Inter",system-ui,sans-serif;color:#a3aca7}.d-lenis-content h2{font:450 31px/1.13 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-lenis-content section{padding:30px}`,
   js: `
 // For a full page: new Lenis({ lerp: 0.1 }) with no wrapper option.
+if (matchMedia('(prefers-reduced-motion: reduce)').matches || typeof Lenis === 'undefined') return;
 const lenis = new Lenis({
-  wrapper: root,               // the scroll container
-  content: root.firstElementChild,
+  wrapper: root.querySelector('.d-smooth-viewport'),
+  content: root.querySelector('.d-lenis-content'),
   lerp: 0.09,                  // lower = smoother / floatier
   wheelMultiplier: 1,
 });
 
+let frame;
 function raf(time) {
+  if (!root.isConnected) { lenis.destroy(); return; }
   lenis.raf(time);
-  requestAnimationFrame(raf);
+  frame = requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf);`,
+frame = requestAnimationFrame(raf);
+return () => { cancelAnimationFrame(frame); lenis.destroy(); };`,
   prompt: `
 Implement Lenis smooth scrolling on my website.
 
 Requirements:
 - Use the "lenis" npm package (or CDN: https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js).
 - Initialize with lerp around 0.09-0.1 for a smooth but responsive feel.
+- For a component preview use a fixed 320px-tall inner scroll container. Keep the styled root outside the Lenis wrapper, whose class name must not contain the substring "lenis" because Lenis 1.x rewrites that substring. Give the inner viewport keyboard focus and overscroll containment. Use editorial editorial serif headings and a clear scroll cue at native size.
 - Drive it with a requestAnimationFrame loop (lenis.raf(time)).
 - If GSAP ScrollTrigger is present, sync them: lenis.on('scroll', ScrollTrigger.update) and drive Lenis from gsap.ticker instead of a raw rAF loop.
 - Respect prefers-reduced-motion: skip Lenis entirely when the user has it enabled.
-- Anchors (#links) should still work: intercept clicks and call lenis.scrollTo(target).`,
+- Destroy the Lenis instance and cancel its animation frame when unmounting or resetting.
+- Anchors (#links) should still work: intercept clicks and call lenis.scrollTo(target).
+
+Final typography: Use Newsreader at normal weight for the main editorial text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -90,7 +112,7 @@ INTRX.register({
 .d-reveal { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-reveal-spacer {
   height: 300px; display: flex; align-items: center; justify-content: center;
-  color: #5c5c66; font-family: "JetBrains Mono", monospace; font-size: 11px;
+  color: #5c5c66; font-family: "Inter",system-ui,sans-serif; font-size: 11px;
   text-transform: uppercase; letter-spacing: 0.1em;
 }
 .d-reveal-spacer-top { height: 170px; animation: d-reveal-bob 2.2s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
@@ -98,7 +120,7 @@ INTRX.register({
 .d-reveal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 24px 48px; }
 .d-reveal-item {
   border: 1px solid #232327; background: #101012; color: #ececef;
-  padding: 28px 20px; font-weight: 600;
+  padding: 28px 20px; font-weight:500;
   opacity: 0; transform: translateY(40px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
@@ -106,7 +128,14 @@ INTRX.register({
   transition-delay: var(--d, 0s);
 }
 .d-reveal-item:hover { border-color: #3d3d46; }
-.d-reveal-grid.d-reveal-in .d-reveal-item { opacity: 1; transform: none; }`,
+.d-reveal-grid.d-reveal-in .d-reveal-item { opacity: 1; transform: none; }
+/* Composition at the native preview size. */
+.d-reveal-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:24px}.d-reveal-item{min-width:0;padding:24px 4px;text-align:center;font-size:11px}
+/* Composition at the native preview size. */
+.d-reveal button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-reveal-item{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-reveal{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-reveal :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-reveal button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-reveal-box{border-radius:7px;background:#151917;border-color:#ffffff10;font:450 15px "Inter",system-ui,sans-serif;color:#c4d0c7}.d-reveal-hint{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;color:#8b9690}`,
   js: `
 const grid = root.querySelector('.d-reveal-grid');
 const items = grid.querySelectorAll('.d-reveal-item');
@@ -123,8 +152,7 @@ const io = new IntersectionObserver(function (entries) {
 }, { root: root, threshold: 0.25 });
 
 io.observe(grid);`,
-  prompt: `
-Build a staggered scroll-reveal system in vanilla JS (no libraries).
+  prompt: `Build a staggered scroll-reveal system in vanilla JS (no libraries).
 
 Requirements:
 - Elements marked with a data-reveal attribute start at opacity 0 and translateY(40px).
@@ -132,7 +160,13 @@ Requirements:
 - Siblings inside the same container stagger by ~80ms each, via a CSS custom property for transition-delay.
 - The animation should reverse when scrolled out, so it replays on re-entry.
 - Use only CSS transitions driven by a class toggle — no per-frame JS.
-- Respect prefers-reduced-motion by showing elements immediately.`,
+- Respect prefers-reduced-motion by showing elements immediately.
+
+Use three equal flexible columns in the native narrow preview, with 8px gaps, 24px outer padding, compact 11px Inter labels, and grayscale card surfaces.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -164,13 +198,18 @@ INTRX.register({
 .d-parallax-track { height: 900px; position: relative; }
 .d-parallax-scene { position: sticky; top: 0; height: 320px; overflow: hidden; }
 .d-parallax-layer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; will-change: transform; }
-.d-parallax-bg  { font-size: 120px; font-weight: 700; color: #161619; letter-spacing: 0.05em; }
-.d-parallax-mid { font-size: 64px;  font-weight: 700; color: #2e2e34; margin-left: 180px; }
-.d-parallax-fg  { font-size: 32px;  font-weight: 700; color: #fa7319; margin-left: -200px; margin-top: 60px; }
-.d-parallax-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-parallax-idle 1.8s ease-in-out infinite; }
+.d-parallax-bg  { font-size: 120px; font-weight:500; color: #161619; letter-spacing: 0.05em; }
+.d-parallax-mid { font-size: 64px;  font-weight:500; color: #2e2e34; margin-left: 180px; }
+.d-parallax-fg  { font-size: 32px;  font-weight:500; color: #fa7319; margin-left: -200px; margin-top: 60px; }
+.d-parallax-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; animation: d-parallax-idle 1.8s ease-in-out infinite; }
 .d-parallax.d-parallax-idle-stop .d-parallax-idle { opacity: 0; animation: none; }
 @keyframes d-parallax-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
-@media (prefers-reduced-motion: reduce) { .d-parallax-idle { animation: none; opacity: 0; } }`,
+@media (prefers-reduced-motion: reduce) { .d-parallax-idle { animation: none; opacity: 0; } }
+/* Composition at the native preview size. */
+.d-parallax button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-parallax-layer{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-parallax{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-parallax :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-parallax button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-parallax-layer{font-family:"Inter",system-ui,sans-serif;font-weight:500;letter-spacing:-.025em}.d-parallax-hint{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0}.d-parallax-front{color:#abbcae}`,
   js: `
 const layers = root.querySelectorAll('.d-parallax-layer');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -203,7 +242,11 @@ Requirements:
 - Use a passive scroll listener and transform only (no top/margin changes) so it stays on the compositor.
 - Add will-change: transform to the layers.
 - Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Respect prefers-reduced-motion by disabling the effect.`,
+- Respect prefers-reduced-motion by disabling the effect.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -241,14 +284,19 @@ INTRX.register({
 .d-hscroll-panel {
   flex: 0 0 340px; height: 240px;
   border: 1px solid #2e2e34; background: #101012;
-  color: #ececef; font-size: 44px; font-weight: 700;
+  color: #ececef; font-size: 44px; font-weight:500;
   padding: 20px 24px; display: flex; flex-direction: column; justify-content: space-between;
 }
 .d-hscroll-panel em { font-style: normal; font-size: 14px; color: #fa7319; font-weight: 500; }
-.d-hscroll-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-hscroll-idle 1.8s ease-in-out infinite; }
+.d-hscroll-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; animation: d-hscroll-idle 1.8s ease-in-out infinite; }
 .d-hscroll.d-hscroll-idle-stop .d-hscroll-idle { opacity: 0; animation: none; }
 @keyframes d-hscroll-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
-@media (prefers-reduced-motion: reduce) { .d-hscroll-idle { animation: none; opacity: 0; } }`,
+@media (prefers-reduced-motion: reduce) { .d-hscroll-idle { animation: none; opacity: 0; } }
+/* Composition at the native preview size. */
+.d-hscroll button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-hscroll-panel{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-hscroll{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-hscroll :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-hscroll button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-hscroll-panel{border-color:#ffffff10;border-radius:8px;background:#171b18}.d-hscroll-panel b{font:400 49px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}.d-hscroll-panel span{font:450 16px "Inter",system-ui,sans-serif;color:#b4c2b8}.d-hscroll-hint{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0}`,
   js: `
 const row = root.querySelector('.d-hscroll-row');
 const track = root.querySelector('.d-hscroll-track');
@@ -280,7 +328,11 @@ Requirements:
 - Use transform only, passive scroll listener, will-change: transform.
 - Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Optionally note how the same effect is done with GSAP ScrollTrigger (pin: true, scrub: 1, x: -shift) as an alternative.
-- Fall back to a native horizontally-scrollable row when prefers-reduced-motion is set.`,
+- Fall back to a native horizontally-scrollable row when prefers-reduced-motion is set.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -319,10 +371,15 @@ INTRX.register({
 }
 .d-stack-card h3 { font-size: 24px; margin-bottom: 8px; }
 .d-stack-card p { color: #9b9ba3; font-size: 14px; }
-.d-stack-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-stack-idle 1.8s ease-in-out infinite; }
+.d-stack-idle { position: absolute; left: 50%; top: 286px; z-index: 2; color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; animation: d-stack-idle 1.8s ease-in-out infinite; }
 .d-stack.d-stack-idle-stop .d-stack-idle { opacity: 0; animation: none; }
 @keyframes d-stack-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
-@media (prefers-reduced-motion: reduce) { .d-stack-idle { animation: none; opacity: 0; } }`,
+@media (prefers-reduced-motion: reduce) { .d-stack-idle { animation: none; opacity: 0; } }
+/* Composition at the native preview size. */
+.d-stack button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-stack-card h3,.d-stack-card p{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-stack{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-stack :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-stack button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-stack-card{border-color:#ffffff13;border-radius:9px;box-shadow:0 10px 24px #00000012}.d-stack-card h3{font:450 26px/1.15 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-stack-card p{font:400 14px/1.65 "Inter",system-ui,sans-serif;color:#a2aaa5}`,
   js: `
 const cards = [].slice.call(root.querySelectorAll('.d-stack-card'));
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -359,7 +416,11 @@ Requirements:
 - Passive scroll listener; transforms only.
 - Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - The last card never scales.
-- Respect prefers-reduced-motion (skip the scaling, keep the sticky stacking).`,
+- Respect prefers-reduced-motion (skip the scaling, keep the sticky stacking).
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -381,11 +442,11 @@ INTRX.register({
   <div class="d-progress-bar"><span></span></div>
   <div class="d-progress-pct">0%</div>
   <div class="d-progress-body">
-    <p>The bar above is a transform: scaleX — never width.</p>
-    <p>Width triggers layout on every frame.</p>
-    <p>scaleX stays on the compositor thread.</p>
-    <p>That is the difference between smooth and janky.</p>
-    <p>— end —</p>
+    <p>A little progress, with every page.</p>
+    <p>A quiet cue helps you find your place in a long story.</p>
+    <p>Keep reading. The indicator moves with you.</p>
+    <p>Small details make the journey feel considered.</p>
+    <p>You have reached the end.</p>
   </div>
 </div>`,
   css: `
@@ -401,16 +462,18 @@ INTRX.register({
 .d-progress-pct {
   position: sticky; top: 12px; z-index: 2;
   margin-left: auto; margin-right: 16px; width: max-content;
-  font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 11px; color: #fa7319;
+  font-family: "Inter",system-ui,sans-serif; font-size: 11px; color: #fa7319;
 }
 .d-progress-body { padding: 24px 48px 40px; }
 .d-progress-body p {
   margin: 0 0 120px; color: #9b9ba3; font-size: 15px; max-width: 420px;
 }
-.d-progress-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-progress-idle 1.8s ease-in-out infinite; }
+.d-progress-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; animation: d-progress-idle 1.8s ease-in-out infinite; }
 .d-progress.d-progress-idle-stop .d-progress-idle { opacity: 0; animation: none; }
 @keyframes d-progress-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
-@media (prefers-reduced-motion: reduce) { .d-progress-idle { animation: none; opacity: 0; } }`,
+@media (prefers-reduced-motion: reduce) { .d-progress-idle { animation: none; opacity: 0; } }
+/* Refined type, spacing and quiet interaction controls. */
+.d-progress{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-progress :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-progress button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-progress-content p{font:400 18px/1.7 "Inter",system-ui,sans-serif;letter-spacing:0;max-width:28ch}.d-progress-value{font:400 12px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-progress-bar{background:#9faf9f}.d-progress .d-progress-body p{font:400 21px/1.5 "Inter",system-ui,sans-serif;letter-spacing:-.015em;max-width:24ch}.d-progress .d-progress-pct{font:400 12px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}`,
   js: `
 const fill = root.querySelector('.d-progress-bar span');
 const pct = root.querySelector('.d-progress-pct');
@@ -441,7 +504,9 @@ Requirements:
 - Also render a small monospace percentage readout.
 - progress = scrollY / (document height - viewport height), clamped 0..1.
 - Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Passive scroll listener, and update once on load.`,
+- Passive scroll listener, and update once on load.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -467,10 +532,17 @@ INTRX.register({
 .d-skew { height: 320px; width: 100%; overflow-y: auto; background: #0a0a0b; }
 .d-skew-inner { padding: 40px 48px; will-change: transform; }
 .d-skew-inner h2 {
-  font-size: 64px; font-weight: 700; letter-spacing: -0.03em;
+  font-size: 64px; font-weight:500; letter-spacing: -0.03em;
   color: #ececef; line-height: 1.05; margin: 0;
 }
-.d-skew-inner h2:nth-child(odd) { color: #2e2e34; -webkit-text-stroke: 1px #5c5c66; }`,
+.d-skew-inner h2:nth-child(odd) { color: #2e2e34; -webkit-text-stroke: 1px #5c5c66; }
+/* Composition at the native preview size. */
+.d-skew{container-type:inline-size;overflow-x:hidden}.d-skew-inner{padding:36px 22px}.d-skew-inner h2{font:500 clamp(30px,12.5cqw,55px)/1.14 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-skew button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-skew-inner h2{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-skew{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-skew :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-skew button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-skew-content{font-weight:450;letter-spacing:-.025em}.d-skew span{font-family:"Inter",system-ui,sans-serif;font-weight:450}`,
   js: `
 const inner = root.querySelector('.d-skew-inner');
 let current = 0, target = 0, lastScroll = root.scrollTop;
@@ -487,15 +559,20 @@ root.addEventListener('scroll', function () {
   inner.style.transform = 'skewY(' + current.toFixed(3) + 'deg)';
   requestAnimationFrame(tick);
 })();`,
-  prompt: `
-Build a scroll-velocity skew effect in vanilla JS.
+  prompt: `Build a scroll-velocity skew effect in vanilla JS.
 
 Requirements:
 - Track scroll delta per event to estimate velocity.
 - Map velocity to a skewY target, clamped to about ±12deg.
 - In a requestAnimationFrame loop, lerp the current skew toward the target (factor ~0.1) and decay the target by ~0.9 per frame so it returns to 0 when scrolling stops.
 - Apply as transform: skewY on the content wrapper, will-change: transform.
-- Skip entirely under prefers-reduced-motion.`,
+- Skip entirely under prefers-reduced-motion.
+
+Set the scrolling headings in medium-weight Inter, sized with container units to fit a 300–320px-wide preview. Keep 22px horizontal padding and contain horizontal overflow while the content skews.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -544,13 +621,22 @@ INTRX.register({
   border: 1px solid #2e2e34;
 }
 .d-zoom-label {
-  position: relative; font-family: "Roboto Mono", "JetBrains Mono", monospace;
+  position: relative; font-family: "Inter",system-ui,sans-serif;
   font-size: 12px; letter-spacing: 0.3em; color: #fa7319;
 }
-.d-zoom-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Roboto Mono", "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; animation: d-zoom-idle 1.8s ease-in-out infinite; }
+.d-zoom-idle { position: absolute; left: 50%; top: 286px; z-index: 3; color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; animation: d-zoom-idle 1.8s ease-in-out infinite; }
 .d-zoom.d-zoom-idle-stop .d-zoom-idle { opacity: 0; animation: none; }
 @keyframes d-zoom-idle { 50% { transform: translate(-50%, -5px); opacity: .45; } 0%, 100% { transform: translate(-50%, 0); opacity: .8; } }
-@media (prefers-reduced-motion: reduce) { .d-zoom-idle { animation: none; opacity: 0; } }`,
+@media (prefers-reduced-motion: reduce) { .d-zoom-idle { animation: none; opacity: 0; } }
+/* Composition at the native preview size. */
+.d-zoom-media{background:#161619;border:1px solid #555;display:grid;place-content:center;overflow:hidden}.d-zoom-media::before{content:"";position:absolute;width:60%;aspect-ratio:1;border:1px solid #aaa;transform:rotate(45deg);box-shadow:inset 0 0 0 12px #161619,inset 0 0 0 13px #555}.d-zoom-label{position:relative;z-index:1;font-size:12px;letter-spacing:0.04em;color:#eee;background:#161619;padding:8px}
+/* Composition at the native preview size. */
+.d-zoom-art{background:repeating-linear-gradient(90deg,#161619 0 20px,#3a3a3e 20px 21px);filter:none}.d-zoom-media::before{z-index:2;left:20%;top:20%}.d-zoom-label{font-family:"Inter",system-ui,sans-serif;font-size:12px;letter-spacing:0;z-index:3;background:#161619;color:#eee}
+/* Composition at the native preview size. */
+.d-zoom button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-zoom-label{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-zoom{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-zoom :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-zoom button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-zoom-label{font:450 13px "Inter",system-ui,sans-serif;letter-spacing:0}.d-zoom-box{border-color:#ffffff13}`,
   js: `
 const media = root.querySelector('.d-zoom-media');
 const track = root.querySelector('.d-zoom-track');
@@ -573,8 +659,7 @@ function update() {
 
 root.addEventListener('scroll', update, { passive: true });
 update();`,
-  prompt: `
-Build a scroll-driven zoom section, vanilla JS.
+  prompt: `Build a scroll-driven zoom section, vanilla JS.
 
 Requirements:
 - A tall section (~250vh) with a position:sticky full-viewport child.
@@ -582,5 +667,11 @@ Requirements:
 - Apply a cubic ease-out to the scroll progress (1 - (1-p)^3) so the zoom decelerates.
 - Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
 - Transform only; passive scroll listener; will-change: transform.
-- Mention the GSAP ScrollTrigger equivalent (pin + scrub) as an alternative implementation.`,
+- Mention the GSAP ScrollTrigger equivalent (pin + scrub) as an alternative implementation.
+
+For the self-contained preview, use a graphite media plate with fine vertical gray lines, an outlined geometric diamond, and one readable Inter caption. Fit the scene inside its native 320px local scroll viewport.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });

@@ -27,41 +27,9 @@ INTRX.register({
   </div>
   <p class="d-ascii-status" aria-live="polite">Local RGB lens active</p>
 </div>`,
-  css: `
-.d-ascii { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #071411; color: #8effd6; touch-action: none; }
-.d-ascii:focus-visible { box-shadow: inset 0 0 0 2px #8effd6; }
-.d-ascii::before { content: ''; position: absolute; inset: 0; opacity: .16; pointer-events: none;
-  background-image: linear-gradient(rgba(142,255,214,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(142,255,214,.18) 1px, transparent 1px); background-size: 20px 20px; }
-.d-ascii-stage { position: absolute; left: 50%; top: 50%; width: min(69%, 456px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(142,255,214,.42); background: #030b09; box-shadow: 9px 9px 0 rgba(142,255,214,.09); }
-.d-ascii-canvas { display: block; width: 100%; height: 100%; }
-.d-ascii-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .13;
-  background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(142,255,214,.16) 3px 4px); mix-blend-mode: screen; }
-.d-ascii-lens { position: absolute; left: 0; top: 0; width: 112px; height: 112px; margin: -56px 0 0 -56px;
-  border: 1px solid rgba(255,255,255,.76); border-radius: 50%; color: #fff; pointer-events: none; mix-blend-mode: difference; opacity: .38; will-change: transform, opacity; }
-.d-ascii-lens::before, .d-ascii-lens::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-ascii-lens::before { width: 15px; height: 1px; }.d-ascii-lens::after { width: 1px; height: 15px; }
-.d-ascii-lens i { position: absolute; inset: 11px; border: 1px dashed rgba(255,255,255,.5); border-radius: 50%; }
-.d-ascii-lens b { position: absolute; right: 10px; bottom: 9px; font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-ascii.d-ascii-active .d-ascii-lens { opacity: 1; }.d-ascii.d-ascii-global .d-ascii-lens { border-style: dashed; }
-.d-ascii-caret { position: absolute; right: 7px; bottom: 4px; color: rgba(142,255,214,.74); font: 22px "JetBrains Mono", monospace; }
-.d-ascii-kicker { position: absolute; left: 17px; top: 18px; color: rgba(142,255,214,.56); font: 8px "JetBrains Mono", monospace; letter-spacing: .13em; }
-.d-ascii-meter { position: absolute; right: 18px; top: 17px; display: flex; align-items: baseline; gap: 5px;
-  color: rgba(142,255,214,.48); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-ascii-meter strong { color: #8effd6; font-size: 15px; font-weight: 500; letter-spacing: 0; }
-.d-ascii-ramp { position: absolute; left: 17px; top: 42px; display: flex; gap: 3px; color: rgba(142,255,214,.62); font: 8px "JetBrains Mono", monospace; }
-.d-ascii-ramp span { display: grid; width: 10px; height: 13px; place-items: center; border: 1px solid rgba(142,255,214,.13); }
-.d-ascii-actions { position: absolute; left: 17px; bottom: 17px; display: flex; gap: 7px; }
-.d-ascii-actions button { padding: 8px 12px; border: 1px solid rgba(142,255,214,.38); border-radius: 999px; background: rgba(7,20,17,.84);
-  color: #8effd6; font: 9px "JetBrains Mono", monospace; cursor: pointer; transition: background .18s, color .18s, transform .18s; }
-.d-ascii-actions button:hover, .d-ascii-color[aria-pressed="true"] { background: #8effd6; color: #071411; transform: translateY(-2px); }
-.d-ascii-actions button:focus-visible { outline: 2px solid #8effd6; outline-offset: 3px; }
-.d-ascii-status { position: absolute; right: 18px; bottom: 20px; max-width: 37%; margin: 0; text-align: right;
-  color: rgba(142,255,214,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-ascii-stage { width: 75%; height: 190px; }.d-ascii-ramp { display: none; }.d-ascii-actions button { padding: 8px 9px; font-size: 8px; } }
-@media (prefers-reduced-motion: reduce) { .d-ascii-lens { will-change: auto; }.d-ascii-actions button { transition: none; } }
-`,
-  js: `
+  css: `.d-ascii{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-ascii>span,.d-ascii>[class$="-meter"],.d-ascii>[class$="-weights"],.d-ascii>[class$="-spectrum"],.d-ascii>[class$="-scale"],.d-ascii>[class$="-ramp"],.d-ascii>[class$="-weight"],.d-ascii>[class$="-waves"]{display:none}.d-ascii>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-ascii canvas{width:100%;height:100%;display:block}.d-ascii>[class$="-stage"]>*:not(canvas){display:none}.d-ascii [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-ascii button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-ascii button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-ascii button:focus-visible,.d-ascii:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-ascii [class$="-actions"]{display:flex;gap:8px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-ascii-canvas');
 const stageEl = root.querySelector('.d-ascii-stage');
 const lens = root.querySelector('.d-ascii-lens');
@@ -73,22 +41,12 @@ const context = canvas.getContext('2d', { alpha: false });
 const sourceCanvas = document.createElement('canvas');
 const source = sourceCanvas.getContext('2d', { willReadFrequently: true });
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const RAMP = ' .,:;irsXA253hMHGS#9B&@', DENSITIES = [10, 8, 6], MONO = [142, 255, 214];
+const RAMP = ' .,:;irsXA253hMHGS#9B&@', DENSITIES = [10, 8, 6], MONO = [203, 211, 188];
 let width = 1, height = 1, dpr = 1, sourcePixels = new Uint8ClampedArray(4), cells = [], densityIndex = 1;
 let target = { x: .62, y: .42 }, current = { x: target.x, y: target.y };
 let targetLens = .22, lensAmount = targetLens, hovering = false, colorAll = false, dirty = true, lastDraw = 0;
 
-function drawSource() {
-  const gradient = source.createLinearGradient(0, 0, width, height);
-  gradient.addColorStop(0, '#12284b'); gradient.addColorStop(.48, '#e84777'); gradient.addColorStop(1, '#ffd45c');
-  source.fillStyle = gradient; source.fillRect(0, 0, width, height);
-  source.fillStyle = '#7effcf'; source.beginPath(); source.arc(width * .72, height * .34, height * .25, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#10151f'; source.beginPath(); source.arc(width * .72, height * .34, height * .11, 0, Math.PI * 2); source.fill();
-  source.fillStyle = 'rgba(8,12,18,.72)'; source.beginPath(); source.moveTo(0, height * .72); source.lineTo(width * .47, height * .38);
-  source.lineTo(width * .64, height); source.lineTo(0, height); source.closePath(); source.fill();
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .31) + 'px Roboto Mono, sans-serif'; source.textBaseline = 'bottom'; source.fillText('ASCII', width * .04, height * .95);
-  sourcePixels = source.getImageData(0, 0, width, height).data;
-}
+function drawSource(){const picture=photograph;source.fillStyle='#dfe3d8';source.fillRect(0,0,width,height);if(picture.naturalWidth){const s=Math.max(width/picture.naturalWidth,height/picture.naturalHeight);source.drawImage(picture,(width-picture.naturalWidth*s)/2,(height-picture.naturalHeight*s)/2,picture.naturalWidth*s,picture.naturalHeight*s)}sourcePixels=source.getImageData(0,0,width,height).data;}
 function buildCells() {
   const cellWidth = DENSITIES[densityIndex], cellHeight = Math.round(cellWidth * 1.25); cells = [];
   for (let y = 0; y < height; y += cellHeight) {
@@ -181,13 +139,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained ASCII image renderer on canvas. Draw a deliberate full-color source poster into an offscreen canvas at the measured CSS size and cache its pixels. Support cell widths 10, 8, and 6 pixels with cell height rounded to 1.25 times width. For every cell, average every covered source pixel's R/G/B channels rather than sampling a single point. Compute Rec.709 luminance=(0.2126R+0.7152G+0.0722B)/255 and map it monotonically to a density-ordered ramp such as " .,:;irsXA253hMHGS#9B&@" using round(luminance*(length-1)). Cache cell center, baseline, average RGB, luminance, glyph index, and glyph.
-
-Render on a dark terminal field using a monospace font sized from cell height. The glyph choice must depend only on cached luminance. A circular pointer lens may interpolate the glyph's ink color from a fixed mint monochrome RGB toward the cell's cached source RGB using squared proximity, but it must never change the glyph index. A semantic aria-pressed control toggles full-frame source color independently. A second semantic control cycles density and rebuilds cells from already cached source pixels without redrawing the source.
-
-Use a 76–112px lens radius, ease normalized lens position by 0.17 and lens amount by 0.14, redraw near 30fps only while dirty, and stop once settled. Pointerenter raises the lens to 1, pointermove stays passive, and pointerleave returns to a subtle 0.22 ambient amount. Include a reticle, visible grid dimensions, glyph-ramp legend, focus styling, and polite status.
-
-Arrow keys move the virtual lens by 0.055, Shift+Arrow by 0.12, Home centers, Space toggles global color, left bracket selects a coarser density, and right bracket selects a finer density. Ignore keyboard events from either button. On resize, rebuild source pixels and cells and use a DPR transform capped at 2. Under prefers-reduced-motion, snap lens coordinates and amount directly while retaining luminance mapping, local/global color, density switching, keyboard/pointer behavior, responsive rebuilding, and the static ASCII result.`
+requestAnimationFrame(frameLoop);
+photograph.onload=measure;photograph.src='{{asset:coastal-stack}}';`,
+  prompt: `Build ASCII Luminance Terminal as a native300×320px component. Use the supplied coastal-stack photograph. Draw it with cover cropping after image load and recompute the algorithm's source luminance, pixel caches or samples. Retain the actual ascii-render pixel/glyph algorithm, pointer and keyboard behavior. Put the full image above a slim quiet control row, with readable regular Inter11px controls, normal tracking, pale surfaces and fine borders. Avoid synthetic gradient posters and headline overlays.  Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });

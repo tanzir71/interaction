@@ -1,16 +1,16 @@
 /* INTRX registry - shared anchor morph popover */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'popover-anchor-morph',
-  title:'Popover Anchor Morph',
-  cat:'Layout & UI',
-  rootClass:'d-layout-popover-anchor-morph',
-  tags:['popover','FLIP','anchor'],
-  libs:[],
-  desc:'One shared popover moves and resizes between three anchors while its caret tracks the trigger and differently sized content crosses over directionally.',
-  seen:"Seen on: XchylerDrenth's popovers and Family-style morphing UI",
-  hint:'open a trigger, then hover or focus the others to morph the same popover; click outside or press Escape to close',
-  html:`<div class="d-layout-popover-anchor-morph" role="region" aria-label="Morphing shared popover demo">
+  id: "popover-anchor-morph",
+  title: "Popover Anchor Morph",
+  cat: "Layout & UI",
+  rootClass: "d-layout-popover-anchor-morph",
+  tags: ["popover","FLIP","anchor"],
+  libs: [],
+  desc: "One shared popover moves and resizes between three anchors while its caret tracks the trigger and differently sized content crosses over directionally.",
+  seen: "Seen on: XchylerDrenth's popovers and Family-style morphing UI",
+  hint: "open a trigger, then hover or focus the others to morph the same popover; click outside or press Escape to close",
+  html: `<div class="d-layout-popover-anchor-morph" role="region" aria-label="Morphing shared popover demo">
   <div class="d-layout-popover-anchor-morph-head" aria-hidden="true"><span>POPOVER / ANCHORS</span><span class="d-layout-popover-anchor-morph-mode"><i></i> CLOSED</span></div>
   <div class="d-layout-popover-anchor-morph-stage">
     <div class="d-layout-popover-anchor-morph-triggers" aria-label="Popover triggers">
@@ -38,7 +38,7 @@ INTRX.register({
   <div class="d-layout-popover-anchor-morph-foot" aria-hidden="true"><span>1 SURFACE / 3 ANCHORS</span><span>FLIP 280MS</span></div>
   <span class="d-layout-popover-anchor-morph-status" aria-live="polite" aria-atomic="true">Choose a popover trigger</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-popover-anchor-morph{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-layout-popover-anchor-morph *{box-sizing:border-box}
 .d-layout-popover-anchor-morph-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
@@ -85,8 +85,22 @@ INTRX.register({
 .d-layout-popover-anchor-morph-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container(max-width:340px){.d-layout-popover-anchor-morph-stage{right:10px;left:10px}.d-layout-popover-anchor-morph-head,.d-layout-popover-anchor-morph-foot{right:13px;left:13px}.d-layout-popover-anchor-morph-triggers{right:9px;left:9px;gap:5px}.d-layout-popover-anchor-morph-triggers button{font-size:8px}.d-layout-popover-anchor-morph-triggers button b{right:4px}}
 @media(prefers-reduced-motion:reduce){.d-layout-popover-anchor-morph *,.d-layout-popover-anchor-morph *::before,.d-layout-popover-anchor-morph *::after{animation:none!important;transition:none!important}}
-`,
-  js:`
+
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-popover-anchor-morph{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-popover-anchor-morph{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-popover-anchor-morph p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-popover-anchor-morph>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+.d-layout-popover-anchor-morph-stage{background:radial-gradient(ellipse at 50% 25%,rgba(255,255,255,.018),transparent 80%),#0d0d0f}.d-layout-popover-anchor-morph-avatar{background:linear-gradient(150deg,#dadbdd,#a4a6ac);color:#202126;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.d-layout-popover-anchor-morph-copy{font-weight:650}
+
+/* Current control composition. */
+.d-layout-popover-anchor-morph{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-popover-anchor-morph *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-popover-anchor-morph button,.d-layout-popover-anchor-morph input,.d-layout-popover-anchor-morph textarea{font-weight:400}.d-layout-popover-anchor-morph>header{display:none}.d-layout-popover-anchor-morph>[class$="-head"][aria-hidden="true"],.d-layout-popover-anchor-morph>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-popover-anchor-morph>[class$="-stage"],.d-layout-popover-anchor-morph>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-popover-anchor-morph>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-popover-anchor-morph>footer>span{display:none}.d-layout-popover-anchor-morph>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-popover-anchor-morph-triggers button{font-size:12px;padding:10px 14px}.d-layout-popover-anchor-morph-triggers b{font-size:10px;font-weight:400}.d-layout-popover-anchor-morph-popover{border-radius:10px}.d-layout-popover-anchor-morph-panel strong{font-size:12px;font-weight:450}.d-layout-popover-anchor-morph-panel small{font-size:11px;line-height:1.4}.d-layout-popover-anchor-morph-panel b{font-size:9px;font-weight:400}.d-layout-popover-anchor-morph-profile>div>span{font-size:10px}.d-layout-popover-anchor-morph-share label{font-size:12px}.d-layout-popover-anchor-morph-share input{font-size:11px}
+/* Current control composition. */
+.d-layout-popover-anchor-morph *{text-transform:none!important;letter-spacing:0!important}.d-layout-popover-anchor-morph button{font-size:12px!important;font-weight:400!important}.d-layout-popover-anchor-morph>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-popover-anchor-morph>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-popover-anchor-morph>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-popover-anchor-morph>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-popover-anchor-morph>footer{gap:6px!important}`,
+  js: `
 const field=root.querySelector('.d-layout-popover-anchor-morph-stage'),triggers=Array.from(root.querySelectorAll('.d-layout-popover-anchor-morph-triggers button')),popover=root.querySelector('.d-layout-popover-anchor-morph-popover'),caret=root.querySelector('.d-layout-popover-anchor-morph-caret'),panels=Array.from(root.querySelectorAll('.d-layout-popover-anchor-morph-panel')),copyButton=root.querySelector('.d-layout-popover-anchor-morph-copy'),mode=root.querySelector('.d-layout-popover-anchor-morph-mode'),status=root.querySelector('.d-layout-popover-anchor-morph-status'),controller=new AbortController(),listener={signal:controller.signal},openClass='d-layout-popover-anchor-morph-open',closingClass='d-layout-popover-anchor-morph-closing',activeClass='d-layout-popover-anchor-morph-panel-active',departingClass='d-layout-popover-anchor-morph-panel-departing',arrivingClass='d-layout-popover-anchor-morph-panel-arriving';
 const specs=[{width:190,height:96},{width:218,height:132},{width:230,height:104}];
 let opened=false,activeIndex=-1,cleaned=false,resizeObserver=null,connectionObserver=null;
@@ -104,5 +118,5 @@ if('ResizeObserver'in window){resizeObserver=new ResizeObserver(function(){if(op
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 syncTriggers();
 `,
-  prompt:`Build one self-contained responsive 320px Layout and UI card with three trigger buttons named Profile, Alerts, and Share, plus exactly one persistent shared popover. Style it with background-one, a ten-pixel radius, one-pixel line-one border, and one eight-pixel caret element. Clicking a trigger opens from scale 0.95 and opacity zero toward that trigger over 200 milliseconds with a soft ease-out. While open, hovering, focusing, or clicking another trigger must morph the same frame's position, width, and height to the new anchor over 280 milliseconds ease-in-out. Slide the existing caret along the upper edge until it re-centers on the destination trigger; never recreate it. Crossfade content for 180 milliseconds with overlap: the outgoing panel travels ten pixels opposite the navigation direction while the incoming panel arrives from that direction. Use visibly different natural dimensions and realistic content: Profile has an avatar and two detail rows, Alerts has three list items, and Share has a readonly link plus copy chip. Close on outside pointer-down by scaling to 0.97 and fading toward the current anchor over 150 milliseconds. Add synchronized aria-expanded and aria-hidden states, Escape with focus return, compact clamped geometry, ResizeObserver correction, detached-instance cleanup, and immediate transitions for reduced motion.`
+  prompt: ` Style it with background-one, a ten-pixel radius, one-pixel line-one border, and one eight-pixel caret element. Clicking a trigger opens from scale 0.95 and opacity zero toward that trigger over 200 milliseconds with a soft ease-out. While open, hovering, focusing, or clicking another trigger must morph the same frame's position, width, and height to the new anchor over 280 milliseconds ease-in-out. Slide the existing caret along the upper edge until it re-centers on the destination trigger; never recreate it. Crossfade content for 180 milliseconds with overlap: the outgoing panel travels ten pixels opposite the navigation direction while the incoming panel arrives from that direction. Use visibly different natural dimensions and realistic content: Profile has an avatar and two detail rows, Alerts has three list items, and Share has a readonly link plus copy chip. Close on outside pointer-down by scaling to 0.97 and fading toward the current anchor over 150 milliseconds. Add synchronized aria-expanded and aria-hidden states, Escape with focus return, compact clamped geometry, ResizeObserver correction, detached-instance cleanup, and immediate transitions for reduced motion. Final composition: Enlarged the three trigger actions and the actual profile/alerts/share content, including numeric badge and timestamps. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

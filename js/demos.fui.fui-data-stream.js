@@ -10,22 +10,22 @@ INTRX.register({
   seen:'Seen in Steve Lauda’s FUI explorations and dense professional trading terminals',
   hint:'hover a telemetry lane',
   html:`<div class="d-fui-stream" role="region" aria-label="Interactive telemetry data stream">
-  <header class="d-fui-stream-topbar"><span>INTRX / TELEMETRY BUS</span><span class="d-fui-stream-live"><i class="d-fui-stream-live-dot"></i>LINK ACTIVE</span></header>
+  <header class="d-fui-stream-topbar"><span>Activity stream</span><span class="d-fui-stream-live"><i class="d-fui-stream-live-dot"></i>Link active</span></header>
   <section class="d-fui-stream-panel" aria-label="Four live telemetry channels">
     <i class="d-fui-stream-corner d-fui-stream-corner-tl"></i><i class="d-fui-stream-corner d-fui-stream-corner-tr"></i><i class="d-fui-stream-corner d-fui-stream-corner-bl"></i><i class="d-fui-stream-corner d-fui-stream-corner-br"></i>
-    <div class="d-fui-stream-panel-head"><span>PACKET MONITOR / CH.04</span><span>SEED 0x42</span></div>
+    <div class="d-fui-stream-panel-head"><span>Packet monitor / ch.04</span><span>SEED 0x42</span></div>
     <div class="d-fui-stream-window">
       <div class="d-fui-stream-columns">
-        <article class="d-fui-stream-column" data-column="0" tabindex="0" role="listbox" aria-label="HEX packets, 18 pixels per second"><header><span>HEX</span><small>18PX/S</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
-        <article class="d-fui-stream-column" data-column="1" tabindex="0" role="listbox" aria-label="COORD packets, 24 pixels per second"><header><span>COORD</span><small>24PX/S</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
-        <article class="d-fui-stream-column" data-column="2" tabindex="0" role="listbox" aria-label="TIME packets, 30 pixels per second"><header><span>TIME</span><small>30PX/S</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
-        <article class="d-fui-stream-column" data-column="3" tabindex="0" role="listbox" aria-label="STATUS packets, 22 pixels per second"><header><span>STATUS</span><small>22PX/S</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
+        <article class="d-fui-stream-column" data-column="0" tabindex="0" role="listbox" aria-label="HEX packets, 18 pixels per second"><header><span>HEX</span><small>18Px/s</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
+        <article class="d-fui-stream-column" data-column="1" tabindex="0" role="listbox" aria-label="COORD packets, 24 pixels per second"><header><span>Coord</span><small>24Px/s</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
+        <article class="d-fui-stream-column" data-column="2" tabindex="0" role="listbox" aria-label="TIME packets, 30 pixels per second"><header><span>Time</span><small>30Px/s</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
+        <article class="d-fui-stream-column" data-column="3" tabindex="0" role="listbox" aria-label="STATUS packets, 22 pixels per second"><header><span>Status</span><small>22Px/s</small></header><div class="d-fui-stream-viewport"><div class="d-fui-stream-track"></div></div></article>
       </div>
       <i class="d-fui-stream-mask d-fui-stream-mask-top" aria-hidden="true"></i><i class="d-fui-stream-mask d-fui-stream-mask-bottom" aria-hidden="true"></i>
     </div>
-    <output class="d-fui-stream-decoder" aria-hidden="true" hidden>→ PACKET VALID</output><span class="d-fui-stream-announcement" aria-live="polite"></span>
+    <output class="d-fui-stream-decoder" aria-hidden="true" hidden>→ Packet valid</output><span class="d-fui-stream-announcement" aria-live="polite"></span>
   </section>
-  <footer class="d-fui-stream-footer"><span>4 CHANNELS</span><span>ROW 16PX</span><span>CRC PASS</span><span class="d-fui-stream-state">STREAMING</span></footer>
+  <footer class="d-fui-stream-footer"><span>4 Channels</span><span>Row 16px</span><span>Crc pass</span><span class="d-fui-stream-state">Streaming</span></footer>
   <i class="d-fui-stream-scanline" aria-hidden="true"></i>
 </div>`,
   css:`
@@ -40,7 +40,16 @@ INTRX.register({
 .d-fui-stream-scanline{position:absolute;z-index:11;left:13px;right:13px;top:31px;height:1px;background:#fa7319;opacity:.07;pointer-events:none;animation:d-fui-stream-stage-line 5.2s linear infinite}@keyframes d-fui-stream-live-pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes d-fui-stream-stage-line{from{transform:translateY(0)}to{transform:translateY(256px)}}
 @media(max-width:520px){.d-fui-stream{padding-inline:8px}.d-fui-stream-column>header small{display:none}.d-fui-stream-footer span:nth-child(2){display:none}}
 @media(prefers-reduced-motion:reduce){.d-fui-stream *{animation:none!important;transition:none!important}.d-fui-stream-live-dot{opacity:1}.d-fui-stream-scanline{top:160px}}
-`,
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-stream{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-stream :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-stream :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-stream footer button,.d-fui-stream>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-stream footer button:hover,.d-fui-stream>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-stream footer button:focus-visible,.d-fui-stream>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-stream button[class*="-inspect"]{display:none!important}.d-fui-stream :where(input){accent-color:#9bb7c8}.d-fui-stream :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-stream:before,.d-fui-stream-corner,.d-fui-stream-scanline{display:none}.d-fui-stream-topbar{font-size:13px;height:24px;color:#bfccd4}.d-fui-stream-panel{border:0;border-radius:9px;background:#182127;padding:12px 8px}.d-fui-stream-panel-head{display:none}.d-fui-stream-window{inset:12px 8px}.d-fui-stream-columns{font-size:10px;color:#91a5b0}.d-fui-stream-column>span{font-size:10px;letter-spacing:0}.d-fui-stream-track{font-size:11px;color:#a5b5bf}.d-fui-stream-footer{font-size:10px;color:#81959f}.d-fui-stream-footer>span:first-child{display:none}.d-fui-stream-decoder{font-size:11px;background:#27373f;border-color:#809ba333}
+.d-fui-stream{background:#121b22}.d-fui-stream>[class$="-topbar"]{text-transform:none}.d-fui-stream>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-stream [class*="-corner"]{display:none}
+
+/* Verified native-width corrections. */
+.d-fui-stream-window{left:8px;right:8px;top:12px;bottom:12px}.d-fui-stream-columns{grid-template-columns:45px 74px 66px 46px!important}.d-fui-stream-column{min-width:0;overflow:hidden}.d-fui-stream-column>span{font-size:9px;display:block;white-space:nowrap}.d-fui-stream-footer>span:not(:last-child){display:none}
+.d-fui-stream-column header i,.d-fui-stream-column header b{display:none}.d-fui-stream-column header{font-size:10px}.d-fui-stream-column header span{font-size:10px}
+.d-fui-stream-column header small{display:none}.d-fui-stream-column header{justify-content:flex-start;padding-left:3px}.d-fui-stream-column header span{font-size:10px;color:#91aabc}.d-fui-stream-column:nth-child(1) header span{font-size:0}.d-fui-stream-column:nth-child(1) header span:after{content:"ID";font-size:10px}`,
   js:`const columnNodes=[...root.querySelectorAll('.d-fui-stream-column')];
 const panel=root.querySelector('.d-fui-stream-panel');
 const decoder=root.querySelector('.d-fui-stream-decoder');
@@ -251,9 +260,9 @@ function frame(now){
 if('IntersectionObserver'in window){observer=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start()},{threshold:.05});observer.observe(root)}
 states.forEach(renderState);
 if(reduced){expose('reduced')}else{planFlash();start()}`,
-  prompt:`Build a self-contained 320px-tall fictional telemetry terminal using JetBrains Mono and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, warning #fbbf24, and error #f87171. Use a 4px-radius hard-tech frame, four 8px corner ticks, restrained scanlines, and an always-visible accent activity marker. Render labels and captions at 10px uppercase with 0.08em tracking.
+  prompt:`Use a native 300 by 320 composition. Convert overlapping telemetry labels into a legible stream table with separated columns and quiet color states. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional telemetry terminal using Inter and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, warning #fbbf24, and error #f87171. Use a quiet, softly rounded surface with low-contrast boundaries and one clear status indicator. Render labels in sentence case, using Inter with normal tracking.
 
-Split the data window into exactly four columns labeled HEX, COORD, TIME, and STATUS. Render seeded-random 10px JetBrains Mono rows in deterministic formats such as 0x4F2A, 52.51,-13.4, 14:02:11.482, and meaningful status words. Give every row an exact 16px line box and keep buffered rows above and below the viewport. Move the columns continuously upward at exactly 18, 24, 30, and 22 pixels per second. Track cumulative distance independently for each column, recycle rows with a while loop at every 16px crossing, and give every column its own seeded PRNG so pausing one stream freezes both its pixels and generator sequence without perturbing the other three. Overlay exact 32px pointer-transparent fades into #0a0a0b at the top and bottom of the row area.
+Split the data window into exactly four columns labeled HEX, COORD, TIME, and STATUS. Render seeded-random 10px Inter rows in deterministic formats such as 0x4F2A, 52.51,-13.4, 14:02:11.482, and meaningful status words. Give every row an exact 16px line box and keep buffered rows above and below the viewport. Move the columns continuously upward at exactly 18, 24, 30, and 22 pixels per second. Track cumulative distance independently for each column, recycle rows with a while loop at every 16px crossing, and give every column its own seeded PRNG so pausing one stream freezes both its pixels and generator sequence without perturbing the other three. Overlay exact 32px pointer-transparent fades into #0a0a0b at the top and bottom of the row area.
 
 About every three active seconds, use a fifth seeded PRNG to choose one visible middle row and flash a #fa7319 background at exactly 10% alpha for 400ms. Drive scrolling and flash timing from one visibility-aware active-time requestAnimationFrame loop, cap frame deltas, reset the timestamp on resume, and disconnect cleanly with the root. Never fast-forward hidden time.
 

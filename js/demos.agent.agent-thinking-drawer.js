@@ -11,7 +11,7 @@ INTRX.register({
   seen:'Seen on: Claude and ChatGPT thinking disclosures, and AI-agent overview elements by disarto_max',
   hint:'click the reasoning chip to inspect the trace',
   html:`<div class="d-agent-agent-thinking-drawer" role="region" aria-label="Agent reasoning disclosure">
-  <div class="d-agent-agent-thinking-drawer-head" aria-hidden="true"><span>AGENT / REASONING</span><span>LIVE TRACE</span></div>
+  <div class="d-agent-agent-thinking-drawer-head" aria-hidden="true"><span>Working on it</span><span>Live trace</span></div>
   <div class="d-agent-agent-thinking-drawer-stage">
     <div class="d-agent-agent-thinking-drawer-shell">
       <button class="d-agent-agent-thinking-drawer-trigger" type="button" aria-expanded="false">
@@ -25,7 +25,7 @@ INTRX.register({
           <span class="d-agent-agent-thinking-drawer-label">synthesizing…</span>
           <span class="d-agent-agent-thinking-drawer-complete-label">Thought for 6s</span>
         </span>
-        <span class="d-agent-agent-thinking-drawer-meta" aria-hidden="true">8 STEPS</span>
+        <span class="d-agent-agent-thinking-drawer-meta" aria-hidden="true">8 Steps</span>
         <span class="d-agent-agent-thinking-drawer-chevron" aria-hidden="true"></span>
       </button>
       <div class="d-agent-agent-thinking-drawer-panel" role="region" aria-label="Reasoning details" aria-hidden="true">
@@ -41,13 +41,13 @@ INTRX.register({
               <li class="d-agent-agent-thinking-drawer-line" aria-hidden="true">Reconcile the final interaction states</li>
               <li class="d-agent-agent-thinking-drawer-line" aria-hidden="true">Prepare the finished response</li>
             </ol>
-            <div class="d-agent-agent-thinking-drawer-foot" aria-hidden="true"><span>REASONING TRACE</span><span class="d-agent-agent-thinking-drawer-progress">0 / 8</span></div>
+            <div class="d-agent-agent-thinking-drawer-foot" aria-hidden="true"><span>Reasoning trace</span><span class="d-agent-agent-thinking-drawer-progress">0 / 8</span></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="d-agent-agent-thinking-drawer-hint" aria-hidden="true">CLICK TO INSPECT</div>
+  <div class="d-agent-agent-thinking-drawer-hint" aria-hidden="true">Click to inspect</div>
   <span class="d-agent-agent-thinking-drawer-status" aria-live="polite" aria-atomic="true">Agent reasoning in progress</span>
 </div>`,
   css:`
@@ -102,6 +102,10 @@ INTRX.register({
 @keyframes d-agent-agent-thinking-drawer-shimmer{from{background-position:130% 0}to{background-position:-130% 0}}
 @container (max-width:340px){.d-agent-agent-thinking-drawer-stage{right:10px;left:10px}.d-agent-agent-thinking-drawer-shell.d-agent-agent-thinking-drawer-open{width:calc(100% - 18px)}.d-agent-agent-thinking-drawer-body{padding-right:9px;padding-left:9px}.d-agent-agent-thinking-drawer-line{font-size:10px}}
 @media (prefers-reduced-motion:reduce){.d-agent-agent-thinking-drawer-shell,.d-agent-agent-thinking-drawer-check,.d-agent-agent-thinking-drawer-orbit,.d-agent-agent-thinking-drawer-label,.d-agent-agent-thinking-drawer-complete-label,.d-agent-agent-thinking-drawer-meta,.d-agent-agent-thinking-drawer-chevron,.d-agent-agent-thinking-drawer-panel,.d-agent-agent-thinking-drawer-line{animation:none;transition:none}}
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-agent-agent-thinking-drawer{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-agent-agent-thinking-drawer :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-agent-agent-thinking-drawer :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-agent-agent-thinking-drawer footer button,.d-agent-agent-thinking-drawer>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-agent-agent-thinking-drawer footer button:hover,.d-agent-agent-thinking-drawer>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-agent-agent-thinking-drawer footer button:focus-visible,.d-agent-agent-thinking-drawer>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-agent-agent-thinking-drawer button[class*="-inspect"]{display:none!important}.d-agent-agent-thinking-drawer :where(input){accent-color:#9bb7c8}.d-agent-agent-thinking-drawer :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-agent-agent-thinking-drawer-head{top:22px;left:22px;font-size:14px;color:#c7d5df}.d-agent-agent-thinking-drawer-head>span:last-child{display:none}.d-agent-agent-thinking-drawer-stage{inset:55px 16px 22px;border:0;background:#18242c;border-radius:10px}.d-agent-agent-thinking-drawer-stage:before{content:'Reviewing your project';position:absolute;left:18px;top:20px;background:none;mask:none;color:#7893a5;font-size:12px}.d-agent-agent-thinking-drawer-shell{top:58px;width:218px;background:#243641;border-color:#9ab3c220;box-shadow:0 4px 12px #0001}.d-agent-agent-thinking-drawer-shell..d-agent-agent-thinking-drawer-open{width:calc(100% - 24px)}.d-agent-agent-thinking-drawer-trigger{height:43px;font-size:12px;color:#afc4d3}.d-agent-agent-thinking-drawer-meta{font-size:9px;color:#65889f}.d-agent-agent-thinking-drawer-body{padding:9px 12px 14px}.d-agent-agent-thinking-drawer-line{font-size:11px;line-height:1.45;color:#91adbf}.d-agent-agent-thinking-drawer-foot{font-size:10px;color:#66899f}
 `,
   js:`
 const shell=root.querySelector('.d-agent-agent-thinking-drawer-shell'),trigger=root.querySelector('.d-agent-agent-thinking-drawer-trigger'),panel=root.querySelector('.d-agent-agent-thinking-drawer-panel'),phaseLabels=Array.from(root.querySelectorAll('.d-agent-agent-thinking-drawer-label')),lines=Array.from(root.querySelectorAll('.d-agent-agent-thinking-drawer-line')),progress=root.querySelector('.d-agent-agent-thinking-drawer-progress'),status=root.querySelector('.d-agent-agent-thinking-drawer-status');
@@ -128,5 +132,5 @@ trigger.addEventListener('click',onActivate,listener);shell.addEventListener('po
 const observer=new MutationObserver(function(){if(!root.isConnected)cleanup()});observer.observe(document.documentElement,{childList:true,subtree:true});
 if(reduced){elapsed=duration;render(performance.now())}else{render(0);start()}
 `,
-  prompt:`Build a self-contained 320px product-UI reasoning disclosure. Start with a soft pill status chip containing three orbiting accent dots and a shimmer label that crossfades through “reasoning…”, “searching files…”, and “synthesizing…” every two seconds. Activating the single accessible control expands the chip to full width over 300ms, rounds it to a 10px drawer header, and unfolds an auto-height panel over 350ms. Reveal eight concise reasoning lines in sequence at 11px with a 6px fade-and-rise; keep the newest line brighter. At six seconds, replace the spinner with a softly popping CSS-drawn check, settle the exact visible label to “Thought for 6s”, and collapse the open drawer after 800ms unless it is hovered. Activating the completed chip reopens the finished trace. Keep aria-expanded and aria-hidden truthful, use a polite atomic status for major events, preserve keyboard operation through a native button, scope every class to the component, avoid external dependencies, clean up listeners and animation work when detached, pause without catch-up while the document is hidden, and render the finished state immediately with all CSS motion disabled when reduced motion is requested. Keep chrome grayscale on #0a0a0b, use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for live reasoning, focus, and the newest trace line, and communicate completion with neutral linework rather than a colored dingbat.`
+  prompt:`Use a native 300 by 320 composition. Place the reasoning drawer in a real task context, with a legible trigger and expanded steps. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px product-UI reasoning disclosure. Start with a soft pill status chip containing three orbiting accent dots and a shimmer label that crossfades through “reasoning…”, “searching files…”, and “synthesizing…” every two seconds. Activating the single accessible control expands the chip to full width over 300ms, rounds it to a 10px drawer header, and unfolds an auto-height panel over 350ms. Reveal eight concise reasoning lines in sequence at 11px with a 6px fade-and-rise; keep the newest line brighter. At six seconds, replace the spinner with a softly popping CSS-drawn check, settle the exact visible label to “Thought for 6s”, and collapse the open drawer after 800ms unless it is hovered. Activating the completed chip reopens the finished trace. Keep aria-expanded and aria-hidden truthful, use a polite atomic status for major events, preserve keyboard operation through a native button, scope every class to the component, avoid external dependencies, clean up listeners and animation work when detached, pause without catch-up while the document is hidden, and render the finished state immediately with all CSS motion disabled when reduced motion is requested. Keep chrome grayscale on #0a0a0b, use Inter, reserve #fa7319 for live reasoning, focus, and the newest trace line, and communicate completion with neutral linework rather than a colored dingbat.`
 });

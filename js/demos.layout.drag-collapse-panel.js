@@ -1,16 +1,16 @@
 /* INTRX registry - resistance collapse side panel */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'drag-collapse-panel',
-  title:'Drag Collapse Panel',
-  cat:'Layout & UI',
-  rootClass:'d-layout-drag-collapse-panel',
-  tags:['drag','panel','resistance'],
-  libs:[],
-  desc:'A docked inspector follows its resize edge, turns compression into resistance, and resolves a slow pull or fast flick into a tactile tab.',
-  seen:"Seen on: Sebastiano Guerriero's drag-to-collapse demo",
-  hint:'drag the panel’s left edge left, flick after 40px, or use the separator keys; click the tab to reopen',
-  html:`<div class="d-layout-drag-collapse-panel" role="region" aria-label="Draggable collapsible side panel">
+  id: "drag-collapse-panel",
+  title: "Drag Collapse Panel",
+  cat: "Layout & UI",
+  rootClass: "d-layout-drag-collapse-panel",
+  tags: ["drag","panel","resistance"],
+  libs: [],
+  desc: "A docked inspector follows its resize edge, turns compression into resistance, and resolves a slow pull or fast flick into a tactile tab.",
+  seen: "Seen on: Sebastiano Guerriero's drag-to-collapse demo",
+  hint: "drag the panel’s left edge left, flick after 40px, or use the separator keys; click the tab to reopen",
+  html: `<div class="d-layout-drag-collapse-panel" role="region" aria-label="Draggable collapsible side panel">
   <div class="d-layout-drag-collapse-panel-head" aria-hidden="true"><span>LAYOUT / RESISTANCE</span><span class="d-layout-drag-collapse-panel-mode">OPEN</span></div>
   <div class="d-layout-drag-collapse-panel-stage">
     <div class="d-layout-drag-collapse-panel-workspace" aria-hidden="true"><span>WORKSPACE / 04</span><i></i><i></i><i></i><b>Drag the edge<br>to reveal space.</b></div>
@@ -29,7 +29,7 @@ INTRX.register({
   <div class="d-layout-drag-collapse-panel-foot" aria-hidden="true"><span>1:1 → ×0.4</span><span>FLICK / SNAP</span></div>
   <span class="d-layout-drag-collapse-panel-status" aria-live="polite" aria-atomic="true">Inspector panel open at 300 pixels</span>
 </div>`,
-  css:`
+  css: `
 .d-layout-drag-collapse-panel{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate}
 .d-layout-drag-collapse-panel *{box-sizing:border-box}
 .d-layout-drag-collapse-panel-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:9px;line-height:1;letter-spacing:.09em}
@@ -65,8 +65,19 @@ INTRX.register({
 .d-layout-drag-collapse-panel-foot{position:absolute;right:16px;bottom:8px;left:16px;display:flex;justify-content:space-between;color:#5c5c66;font-size:8px;line-height:1;letter-spacing:.08em}
 @container(max-width:340px){.d-layout-drag-collapse-panel-stage{right:7px;left:7px}.d-layout-drag-collapse-panel-head,.d-layout-drag-collapse-panel-foot{right:13px;left:13px}}
 @media(prefers-reduced-motion:reduce){.d-layout-drag-collapse-panel *,.d-layout-drag-collapse-panel *::before,.d-layout-drag-collapse-panel *::after{animation:none!important;transition:none!important}}
-`,
-  js:`
+
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-layout-drag-collapse-panel{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-drag-collapse-panel{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-layout-drag-collapse-panel p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-layout-drag-collapse-panel>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+/* Current control composition. */
+.d-layout-drag-collapse-panel{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-layout-drag-collapse-panel *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-layout-drag-collapse-panel button,.d-layout-drag-collapse-panel input,.d-layout-drag-collapse-panel textarea{font-weight:400}.d-layout-drag-collapse-panel>header{display:none}.d-layout-drag-collapse-panel>[class$="-head"][aria-hidden="true"],.d-layout-drag-collapse-panel>[class$="-foot"][aria-hidden="true"]{display:none}.d-layout-drag-collapse-panel>[class$="-stage"],.d-layout-drag-collapse-panel>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-layout-drag-collapse-panel>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-layout-drag-collapse-panel>footer>span{display:none}.d-layout-drag-collapse-panel>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-layout-drag-collapse-panel-header strong{font-size:11px;font-weight:450}.d-layout-drag-collapse-panel-hint{display:none}.d-layout-drag-collapse-panel-workspace>b{font:400 25px/1.15 "Inter",sans-serif!important}.d-layout-drag-collapse-panel-workspace>span{font-size:10px}.d-layout-drag-collapse-panel-content>span{font-size:10px}.d-layout-drag-collapse-panel-tab{font-size:11px}
+/* Current control composition. */
+.d-layout-drag-collapse-panel *{text-transform:none!important;letter-spacing:0!important}.d-layout-drag-collapse-panel button{font-size:12px!important;font-weight:400!important}.d-layout-drag-collapse-panel>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-layout-drag-collapse-panel>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-layout-drag-collapse-panel>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-layout-drag-collapse-panel>footer button{font-size:11px!important;padding:6px 8px!important}.d-layout-drag-collapse-panel>footer{gap:6px!important}`,
+  js: `
 const panel=root.querySelector('.d-layout-drag-collapse-panel-panel'),edge=root.querySelector('.d-layout-drag-collapse-panel-edge'),tab=root.querySelector('.d-layout-drag-collapse-panel-tab'),content=root.querySelector('.d-layout-drag-collapse-panel-content'),hint=root.querySelector('.d-layout-drag-collapse-panel-hint'),mode=root.querySelector('.d-layout-drag-collapse-panel-mode'),status=root.querySelector('.d-layout-drag-collapse-panel-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
 const openWidth=300,tabWidth=28,directDistance=60,resistance=.4,collapseThreshold=100,flickThreshold=40,flickVelocity=.55;let width=openWidth,phase='open',dragKind='',startX=0,startWidth=openWidth,lastX=0,lastTime=0,velocity=0,threshold=false,frameId=0,lastWall=0,animation=null,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,intersectionObserver=null,connectionObserver=null;
 function clamp(value,minimum,maximum){return Math.max(minimum,Math.min(maximum,value))}
@@ -94,5 +105,5 @@ if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserve
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 render('initial');
 `,
-  prompt:`Build one self-contained responsive 320px Layout and UI scene with a panel exactly 300 pixels wide docked right. Use a dark panel-token face, a header with six grip dots, and three skeleton content rows. Make its left edge a pointer-captured vertical separator with a col-resize cursor. Dragging left narrows the panel one-to-one through the first sixty pixels, then applies rubber-band resistance so additional drag counts at 0.4. Fade content in direct proportion to effective compression. Beyond one hundred effective pixels, turn the grip warning-colored and show RELEASE TO COLLAPSE. On release below threshold, spring to 300 pixels over 400 milliseconds with one overshoot. Beyond threshold, animate to a 28-pixel vertical tab over 300 milliseconds ease-in-out. A fast left flick collapses from any effective compression over forty pixels. The collapsed tab has a rotated label and accent left border; click it or drag it right to expand through a plus-eight-pixel overshoot and a 200-millisecond settle. Add separator keyboard controls and live status, pause while hidden, clean up detached instances, and snap state changes under reduced motion.`
+  prompt: ` Use a dark panel-token face, a header with six grip dots, and three skeleton content rows. Make its left edge a pointer-captured vertical separator with a col-resize cursor. Dragging left narrows the panel one-to-one through the first sixty pixels, then applies rubber-band resistance so additional drag counts at 0.4. Fade content in direct proportion to effective compression. Beyond one hundred effective pixels, turn the grip warning-colored and show RELEASE TO COLLAPSE. On release below threshold, spring to 300 pixels over 400 milliseconds with one overshoot. Beyond threshold, animate to a 28-pixel vertical tab over 300 milliseconds ease-in-out. A fast left flick collapses from any effective compression over forty pixels. The collapsed tab has a rotated label and accent left border; click it or drag it right to expand through a plus-eight-pixel overshoot and a 200-millisecond settle. Add separator keyboard controls and live status, pause while hidden, clean up detached instances, and snap state changes under reduced motion. Final composition: Removed drag-resistance telemetry and enlarged the visible inspector and workspace content. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

@@ -1,16 +1,16 @@
 /* INTRX registry - split mega menu preview */
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
-  id:'mega-menu-preview',
-  title:'Mega Menu Preview',
-  cat:'Navigation & Menus',
-  rootClass:'d-nav-mega-menu-preview',
-  tags:['mega menu','preview pane','navigation'],
-  libs:[],
-  desc:'A compact product nav opens into a split mega menu whose staggered links drive one persistent, direction-aware procedural preview pane.',
-  seen:"Seen on: Marcel's uplinq mega-menu redesign",
-  hint:'open Products, then hover or focus the five links to switch the procedural preview; press Escape to close',
-  html:`<div class="d-nav-mega-menu-preview" role="region" aria-label="Interactive split mega menu">
+  id: "mega-menu-preview",
+  title: "Mega Menu Preview",
+  cat: "Navigation & Menus",
+  rootClass: "d-nav-mega-menu-preview",
+  tags: ["mega menu","preview pane","navigation"],
+  libs: [],
+  desc: "A compact product nav opens into a split mega menu whose staggered links drive one persistent, direction-aware procedural preview pane.",
+  seen: "Seen on: Marcel's uplinq mega-menu redesign",
+  hint: "open Products, then hover or focus the five links to switch the procedural preview; press Escape to close",
+  html: `<div class="d-nav-mega-menu-preview" role="region" aria-label="Interactive split mega menu">
   <div class="d-nav-mega-menu-preview-head" aria-hidden="true"><span>NAV / PRODUCT INDEX</span><span class="d-nav-mega-menu-preview-mode"><i></i> CLOSED</span></div>
   <div class="d-nav-mega-menu-preview-shell">
     <nav class="d-nav-mega-menu-preview-bar" aria-label="Primary demonstration navigation">
@@ -40,7 +40,7 @@ INTRX.register({
   <div class="d-nav-mega-menu-preview-foot" aria-hidden="true"><span>5 ROUTES / 40Â·60</span><span>HEIGHT 300MS</span></div>
   <span class="d-nav-mega-menu-preview-status" aria-live="polite" aria-atomic="true">Mega menu closed</span>
 </div>`,
-  css:`
+  css: `
 .d-nav-mega-menu-preview{position:relative;width:100%;height:320px;box-sizing:border-box;overflow:hidden;contain:layout paint;container-type:inline-size;background:#0a0a0b;color:#ececef;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;isolation:isolate;touch-action:pan-y}
 .d-nav-mega-menu-preview *{box-sizing:border-box}
 .d-nav-mega-menu-preview-head{position:absolute;top:14px;right:16px;left:16px;display:flex;align-items:center;justify-content:space-between;color:#5c5c66;font-size:10px;line-height:1;letter-spacing:.08em}
@@ -108,8 +108,21 @@ INTRX.register({
 .d-nav-mega-menu-preview-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
 @container(max-width:340px){.d-nav-mega-menu-preview-shell{right:10px;left:10px}.d-nav-mega-menu-preview-head,.d-nav-mega-menu-preview-foot{right:13px;left:13px}.d-nav-mega-menu-preview-bar button{font-size:8px}.d-nav-mega-menu-preview-links{padding-left:7px}.d-nav-mega-menu-preview-links button{padding-left:6px}.d-nav-mega-menu-preview-links button:hover,.d-nav-mega-menu-preview-links button:focus-visible,.d-nav-mega-menu-preview-links button[aria-current="true"]{padding-left:12px}.d-nav-mega-menu-preview-links span{font-size:11px}.d-nav-mega-menu-preview-links small{font-size:8px}.d-nav-mega-menu-preview-pane{margin:7px}}
 @media(prefers-reduced-motion:reduce){.d-nav-mega-menu-preview *,.d-nav-mega-menu-preview *::before,.d-nav-mega-menu-preview *::after{animation:none!important;transition:none!important}}
-`,
-  js:`
+
+/* Primary reading type; mono is reserved for values and annotations. */
+.d-nav-mega-menu-preview{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-nav-mega-menu-preview{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
+.d-nav-mega-menu-preview p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-nav-mega-menu-preview>footer button{font-family:Roboto Mono,ui-monospace,monospace}
+
+/* Composition at the native preview size. */
+.d-nav-mega-menu-preview{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-nav-mega-menu-preview *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-nav-mega-menu-preview button,.d-nav-mega-menu-preview input,.d-nav-mega-menu-preview textarea{font-weight:400}.d-nav-mega-menu-preview>header{display:none}.d-nav-mega-menu-preview>[class$="-head"][aria-hidden="true"],.d-nav-mega-menu-preview>[class$="-foot"][aria-hidden="true"]{display:none}.d-nav-mega-menu-preview>[class$="-stage"],.d-nav-mega-menu-preview>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-nav-mega-menu-preview>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-nav-mega-menu-preview>footer>span{display:none}.d-nav-mega-menu-preview>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-nav-mega-menu-preview{padding:20px}.d-nav-mega-menu-preview-shell{width:100%;margin:0}.d-nav-mega-menu-preview-bar>button{font-size:12px;padding:10px 9px}.d-nav-mega-menu-preview-links button{padding:8px 10px}.d-nav-mega-menu-preview-links button>span{font-size:12px;font-weight:450}.d-nav-mega-menu-preview-links small{font-size:10px;line-height:1.4}.d-nav-mega-menu-preview-signal b{font-size:20px;font-weight:400}
+/* Current control composition. */
+.d-nav-mega-menu-preview *{text-transform:none!important;letter-spacing:0!important}.d-nav-mega-menu-preview button{font-size:12px!important;font-weight:400!important}.d-nav-mega-menu-preview>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-nav-mega-menu-preview>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-nav-mega-menu-preview>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
+/* Current control composition. */
+.d-nav-mega-menu-preview-shell{width:100%!important;max-width:100%;box-sizing:border-box}.d-nav-mega-menu-preview-bar>button{padding:10px 8px!important;font-size:11px!important}.d-nav-mega-menu-preview-panel{max-height:217px!important}.d-nav-mega-menu-preview-links button{min-height:38px;padding:5px 8px!important}.d-nav-mega-menu-preview-links button small{font-size:9px!important}.d-nav-mega-menu-preview-links button>span{font-size:11px!important}.d-nav-mega-menu-preview-content{grid-template-columns:46% 54%!important}
+/* Current control composition. */
+.d-nav-mega-menu-preview>footer button{font-size:11px!important;padding:6px 8px!important}.d-nav-mega-menu-preview>footer{gap:6px!important}`,
+  js: `
 const shell=root.querySelector('.d-nav-mega-menu-preview-shell'),bar=root.querySelector('.d-nav-mega-menu-preview-bar'),productButton=root.querySelector('.d-nav-mega-menu-preview-products'),navButtons=Array.from(root.querySelectorAll('.d-nav-mega-menu-preview-bar button')),panel=root.querySelector('.d-nav-mega-menu-preview-panel'),links=Array.from(root.querySelectorAll('.d-nav-mega-menu-preview-links button')),pane=root.querySelector('.d-nav-mega-menu-preview-pane'),scenes=Array.from(root.querySelectorAll('.d-nav-mega-menu-preview-scene')),mode=root.querySelector('.d-nav-mega-menu-preview-mode'),status=root.querySelector('.d-nav-mega-menu-preview-status'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal},passiveListener={signal:controller.signal,passive:true};
 const openClass='d-nav-mega-menu-preview-open',closingClass='d-nav-mega-menu-preview-closing',activeClass='d-nav-mega-menu-preview-scene-active',departingClass='d-nav-mega-menu-preview-scene-departing',arrivingClass='d-nav-mega-menu-preview-scene-arriving';
 let opened=false,activeIndex=0,phase='closed',phaseTime=0,phaseFrom=0,targetHeight=1,lastWall=0,frameId=0,visible=!('IntersectionObserver'in window),documentVisible=document.visibilityState!=='hidden',cleaned=false,resizeObserver=null,intersectionObserver=null,connectionObserver=null;
@@ -137,5 +150,5 @@ if('IntersectionObserver'in window){intersectionObserver=new IntersectionObserve
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 sceneAt(0).classList.add(activeClass);links[0].setAttribute('aria-current','true');sync();
 `,
-  prompt:`Build one self-contained responsive 320px Navigation and Menus card with a three-item background-one nav bar and bottom hairline. PRODUCTS opens a full-width background-one mega panel directly below it. Split the interior forty-sixty: the left side has exactly five links with thirteen-pixel primary labels and ten-pixel captions, while the right side is one persistent procedural preview pane. Morph panel height from zero to its available auto height over 300 milliseconds with a soft ease-out curve that overshoots by eight pixels and settles. Reveal links from eight pixels below with forty-millisecond stagger, then fade in the pane. Hovering or focusing a link indents it six pixels, draws an accent left tick, and crossfades to its dashboard, chart, gallery, workflow, or report scene over 250 milliseconds. Move the outgoing scene twelve pixels opposite navigation direction and bring the incoming scene from twelve pixels in that direction. Drift only the active scene by up to four pixels against the fixed pane background from pointer position. On close, fade content completely for 120 milliseconds while holding full panel height, then collapse height to zero over 220 milliseconds so content is never clipped mid-fade. Add synchronized ARIA, arrows, Escape and outside close, reduced-motion immediacy, offscreen pause, responsive height correction, and detached-instance cleanup.`
+  prompt: ` PRODUCTS opens a full-width background-one mega panel directly below it. Split the interior forty-sixty: the left side has exactly five links with thirteen-pixel primary labels and ten-pixel captions, while the right side is one persistent procedural preview pane. Morph panel height from zero to its available auto height over 300 milliseconds with a soft ease-out curve that overshoots by eight pixels and settles. Reveal links from eight pixels below with forty-millisecond stagger, then fade in the pane. Hovering or focusing a link indents it six pixels, draws an accent left tick, and crossfades to its dashboard, chart, gallery, workflow, or report scene over 250 milliseconds. Move the outgoing scene twelve pixels opposite navigation direction and bring the incoming scene from twelve pixels in that direction. Drift only the active scene by up to four pixels against the fixed pane background from pointer position. On close, fade content completely for 120 milliseconds while holding full panel height, then collapse height to zero over 220 milliseconds so content is never clipped mid-fade. Add synchronized ARIA, arrows, Escape and outside close, reduced-motion immediacy, offscreen pause, responsive height correction, and detached-instance cleanup. Final composition: Enlarged product labels and preview values; removed the split-ratio and duration frame. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });

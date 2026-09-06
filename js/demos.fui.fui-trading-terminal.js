@@ -10,22 +10,22 @@ INTRX.register({
   seen:'Seen in Timothy M.\'s flexible trading terminal work in progress',
   hint:'drag a panel header, double-click to collapse',
   html:`<div class="d-fui-trade" role="region" aria-label="Interactive fictional trading terminal">
-  <header class="d-fui-trade-topbar"><span>INTRX / SYNTHETIC MARKET</span><span class="d-fui-trade-live"><i class="d-fui-trade-live-dot"></i>FEED LIVE</span></header>
+  <header class="d-fui-trade-topbar"><span>Market overview</span><span class="d-fui-trade-live"><i class="d-fui-trade-live-dot"></i>Feed live</span></header>
   <div class="d-fui-trade-workspace" role="list" aria-label="Movable market panels">
     <section class="d-fui-trade-panel d-fui-trade-slot-0" data-panel="price" data-slot="0" role="listitem" aria-label="Price panel">
       <div class="d-fui-trade-shell">
         <i class="d-fui-trade-corner d-fui-trade-corner-tl"></i><i class="d-fui-trade-corner d-fui-trade-corner-tr"></i><i class="d-fui-trade-corner d-fui-trade-corner-bl"></i><i class="d-fui-trade-corner d-fui-trade-corner-br"></i>
-        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-price-body"><span>PRICE <b class="d-fui-trade-price-extra">/ INTRX</b></span><span class="d-fui-trade-price-chip"><b aria-hidden="true">▲</b><span class="d-fui-trade-price-value">127.42</span></span></button>
+        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-price-body"><span>Price <b class="d-fui-trade-price-extra">/ Intrx</b></span><span class="d-fui-trade-price-chip"><b aria-hidden="true">▲</b><span class="d-fui-trade-price-value">127.42</span></span></button>
         <div class="d-fui-trade-body d-fui-trade-price-body" id="d-fui-trade-price-body">
           <div class="d-fui-trade-chart"><canvas class="d-fui-trade-canvas" role="img" aria-label="Sixty point fictional INTRX price chart"></canvas><span class="d-fui-trade-chart-high">134</span><span class="d-fui-trade-chart-low">120</span></div>
-          <div class="d-fui-trade-price-meta"><span>60 POINT WINDOW</span><span>800MS FEED</span></div>
+          <div class="d-fui-trade-price-meta"><span>60 Point window</span><span>800Ms feed</span></div>
         </div>
       </div>
     </section>
     <section class="d-fui-trade-panel d-fui-trade-slot-1" data-panel="book" data-slot="1" role="listitem" aria-label="Order book panel">
       <div class="d-fui-trade-shell">
         <i class="d-fui-trade-corner d-fui-trade-corner-tl"></i><i class="d-fui-trade-corner d-fui-trade-corner-tr"></i><i class="d-fui-trade-corner d-fui-trade-corner-bl"></i><i class="d-fui-trade-corner d-fui-trade-corner-br"></i>
-        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-book-body"><span>BOOK / L2</span><span class="d-fui-trade-panel-state">06 LVL</span></button>
+        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-book-body"><span>Order book</span><span class="d-fui-trade-panel-state">06 Lvl</span></button>
         <div class="d-fui-trade-body d-fui-trade-book-body" id="d-fui-trade-book-body" aria-label="Six bid and ask levels">
           <div class="d-fui-trade-book-head"><span>BID</span><span>PX</span><span>ASK</span></div>
           <div class="d-fui-trade-book-levels"></div>
@@ -35,15 +35,15 @@ INTRX.register({
     <section class="d-fui-trade-panel d-fui-trade-slot-2" data-panel="tape" data-slot="2" role="listitem" aria-label="Trade tape panel">
       <div class="d-fui-trade-shell">
         <i class="d-fui-trade-corner d-fui-trade-corner-tl"></i><i class="d-fui-trade-corner d-fui-trade-corner-tr"></i><i class="d-fui-trade-corner d-fui-trade-corner-bl"></i><i class="d-fui-trade-corner d-fui-trade-corner-br"></i>
-        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-tape-body"><span>TAPE / LAST</span><span class="d-fui-trade-panel-state">UTC+6</span></button>
+        <button class="d-fui-trade-handle" type="button" aria-expanded="true" aria-controls="d-fui-trade-tape-body"><span>Recent trades</span><span class="d-fui-trade-panel-state">Utc+6</span></button>
         <div class="d-fui-trade-body d-fui-trade-tape-body" id="d-fui-trade-tape-body" aria-label="Recent fictional trades">
-          <div class="d-fui-trade-tape-head"><span>PRICE</span><span>SIZE</span></div>
+          <div class="d-fui-trade-tape-head"><span>Price</span><span>Size</span></div>
           <div class="d-fui-trade-tape-rows"></div>
         </div>
       </div>
     </section>
   </div>
-  <footer class="d-fui-trade-footer"><span>INTRX/USD</span><span class="d-fui-trade-direction">MARKET OPEN</span><span>T+0.8S</span></footer>
+  <footer class="d-fui-trade-footer"><span>Intrx/usd</span><span class="d-fui-trade-direction">Market open</span><span>T+0.8s</span></footer>
   <i class="d-fui-trade-scanline" aria-hidden="true"></i>
   <span class="d-fui-trade-status" aria-live="polite" aria-atomic="true"></span>
 </div>`,
@@ -68,7 +68,14 @@ INTRX.register({
 @keyframes d-fui-trade-live-pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes d-fui-trade-scan{from{transform:translateY(0)}to{transform:translateY(260px)}}
 @container(max-width:340px){.d-fui-trade-workspace{grid-template-columns:minmax(0,1.28fr) minmax(0,.92fr);gap:5px}.d-fui-trade-handle{padding-left:7px;padding-right:7px}.d-fui-trade-price-chip{min-width:54px;padding-left:4px;padding-right:4px}.d-fui-trade-price-meta span:first-child{font-size:0}.d-fui-trade-price-meta span:first-child:after{content:'60 PT';font-size:10px}.d-fui-trade-book-head,.d-fui-trade-book-row{grid-template-columns:minmax(0,1fr) 39px minmax(0,1fr)}.d-fui-trade-footer span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){.d-fui-trade *{animation:none!important;transition:none!important}.d-fui-trade-live-dot{opacity:1}.d-fui-trade-scanline{top:160px}.d-fui-trade-shell{transform:none!important}}
-`,
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-trade{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-trade :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-trade :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-trade footer button,.d-fui-trade>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-trade footer button:hover,.d-fui-trade>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-trade footer button:focus-visible,.d-fui-trade>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-trade button[class*="-inspect"]{display:none!important}.d-fui-trade :where(input){accent-color:#9bb7c8}.d-fui-trade :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-trade {padding:16px;grid-template-rows:23px minmax(0,1fr) 12px;gap:8px}.d-fui-trade:before,.d-fui-trade-corner,.d-fui-trade-scanline{display:none}.d-fui-trade-topbar{font-size:13px;color:#beccd6}.d-fui-trade-workspace{grid-template-columns:1fr 1fr;grid-template-rows:1.05fr 1fr;gap:7px}.d-fui-trade-slot-0{grid-area:1/1/2/3}.d-fui-trade-slot-1{grid-area:2/1/3/2}.d-fui-trade-slot-2{grid-area:2/2/3/3}.d-fui-trade-shell{border:0;background:#1a242b;border-radius:7px}.d-fui-trade-handle{height:28px;padding:0 10px;background:#1a242b;border-color:#ffffff09;color:#8099a9;font-size:10px}.d-fui-trade-price-chip{font-size:20px;border:0;background:none;min-width:0;height:25px;font-weight:450}.d-fui-trade-price-chip b{font-size:11px}.d-fui-trade-chart{left:8px;right:8px;top:5px;bottom:8px;border:0;background:#162027}.d-fui-trade-price-meta,.d-fui-trade-chart-high,.d-fui-trade-chart-low{display:none}.d-fui-trade-book-price{font-size:11px;font-weight:450}.d-fui-trade-book-head{font-size:9px}.d-fui-trade-tape-row span:first-child{font-size:11px}.d-fui-trade-tape-row span:last-child{font-size:9px}.d-fui-trade-footer{font-size:10px;color:#7994a4}
+.d-fui-trade{background:#121b22}.d-fui-trade>[class$="-topbar"]{text-transform:none}.d-fui-trade>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-trade [class*="-corner"]{display:none}
+
+/* Verified native-width corrections. */
+.d-fui-trade-price-chip{padding:0;background:none!important;border:0!important}.d-fui-trade-price-chip.d-fui-trade-is-up{color:#aac6b4}.d-fui-trade-price-chip.d-fui-trade-is-down{color:#c9aa9e}.d-fui-trade-handle{font-size:10px;text-transform:none!important}.d-fui-trade-panel-state{font-size:9px}.d-fui-trade-price-extra{font-size:10px}.d-fui-trade-footer{border:0}`,
   js:`const workspace=root.querySelector('.d-fui-trade-workspace');
 const panels=[...root.querySelectorAll('.d-fui-trade-panel')];
 const panelById=new Map(panels.map(function(panel){return [panel.dataset.panel,panel]}));
@@ -573,7 +580,7 @@ priceValue.textContent=price.toFixed(2);
 resizeCanvas();
 expose(reduced?'reduced':'initial');
 if(!reduced)start()`,
-  prompt:`Build a self-contained 320px-tall fictional widget-grid trading terminal using JetBrains Mono and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, warning #fbbf24, information #67e8f9, and error #f87171. Use three hard-tech panels named PRICE, BOOK, and TAPE with 4px radii, 1px frames, four exact 8px by 8px corner ticks made from 2px #2e2e34 borders that brighten to #fa7319 on hover, focus, drag, or drop-target activity. Add restrained scanlines and one persistent accent activity dot. Keep labels 10px uppercase with .08em tracking and visible market values 12px with tabular numerals.
+  prompt:`Use a native 300 by 320 composition. Give the market chart full width above two supporting panels, with clear Inter prices and quieter market colors. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional widget-grid trading terminal using Inter and only #0a0a0b, #101012, #161619, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, success #4ade80, warning #fbbf24, information #67e8f9, and error #f87171. Use three hard-tech panels named PRICE, BOOK, and TAPE with 4px radii, 1px frames, four exact 8px by 8px corner ticks made from 2px #2e2e34 borders that brighten to #fa7319 on hover, focus, drag, or drop-target activity. Add restrained scanlines and one persistent accent activity dot. Keep labels 10px uppercase with .08em tracking and visible market values 12px with tabular numerals.
 
 PRICE is a canvas line chart with exactly 60 deterministic seeded random-walk points in a fixed vertical domain. Draw its line at exactly 1.5px in #fa7319 and fill the area beneath it with a vertical #fa7319-to-transparent gradient. Every exact 800ms of visible active time, append one point just beyond the right edge and shift the 61-point drawing left by one point spacing over exactly 300ms, then remove the first point so the authoritative array remains exactly 60. Update a last-price chip immediately and flash a #4ade80 or #f87171 background for exactly 250ms according to up or down direction.
 

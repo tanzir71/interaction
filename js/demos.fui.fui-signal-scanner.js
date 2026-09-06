@@ -10,10 +10,10 @@ INTRX.register({
   seen:'Seen on: WireTapper-style OSINT radio mapping tools and spectrum-analysis interfaces',
   hint:'move across the spectrum',
   html:`<div class="d-fui-scan" role="region" aria-label="Interactive radio spectrum scanner">
-  <header class="d-fui-scan-topbar"><span>INTRX / RF SPECTRUM</span><span class="d-fui-scan-live"><i class="d-fui-scan-live-dot"></i>SCANNING</span></header>
+  <header class="d-fui-scan-topbar"><span>Find a signal</span><span class="d-fui-scan-live"><i class="d-fui-scan-live-dot"></i>Scanning</span></header>
   <section class="d-fui-scan-panel" tabindex="0" role="slider" aria-label="Selected radio band" aria-valuemin="91.2" aria-valuemax="165.6" aria-valuenow="128.4" aria-valuetext="128.4 megahertz">
     <i class="d-fui-scan-corner d-fui-scan-corner-tl"></i><i class="d-fui-scan-corner d-fui-scan-corner-tr"></i><i class="d-fui-scan-corner d-fui-scan-corner-bl"></i><i class="d-fui-scan-corner d-fui-scan-corner-br"></i>
-    <div class="d-fui-scan-panel-head"><span>NOISE FLOOR / −84dB</span><span class="d-fui-scan-mode">AUTO SWEEP</span></div>
+    <div class="d-fui-scan-panel-head"><span>NOISE FLOOR / −84dB</span><span class="d-fui-scan-mode">Auto sweep</span></div>
     <div class="d-fui-scan-plot">
       <div class="d-fui-scan-bars" aria-hidden="true"></div>
       <i class="d-fui-scan-sweep" aria-hidden="true"></i>
@@ -21,7 +21,7 @@ INTRX.register({
     </div>
     <div class="d-fui-scan-scale" aria-hidden="true"><span>88</span><span>128.4</span><span>168.8 MHz</span></div>
   </section>
-  <footer class="d-fui-scan-footer"><span>64 BANDS</span><span>Δ 1.28MHz</span><span>SWEEP 3.2S</span><span class="d-fui-scan-status">CLEAR</span></footer>
+  <footer class="d-fui-scan-footer"><span>64 Bands</span><span>Δ 1.28MHz</span><span>Sweep 3.2s</span><span class="d-fui-scan-status">Clear</span></footer>
   <span class="d-fui-scan-announcement" aria-live="polite">Spectrum scanner active</span>
   <i class="d-fui-scan-scanline" aria-hidden="true"></i>
 </div>`,
@@ -39,6 +39,11 @@ INTRX.register({
 @keyframes d-fui-scan-live-pulse{0%,100%{opacity:.35}50%{opacity:1}}@keyframes d-fui-scan-stage-line{from{transform:translateY(0)}to{transform:translateY(256px)}}
 @media(max-width:520px){.d-fui-scan{padding-inline:8px}.d-fui-scan-footer span:nth-child(2){display:none}}
 @media(prefers-reduced-motion:reduce){.d-fui-scan *{animation:none!important;transition:none!important}.d-fui-scan-live-dot{opacity:1}.d-fui-scan-scanline{top:160px}}
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-fui-scan{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-fui-scan :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-fui-scan :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-fui-scan footer button,.d-fui-scan>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-fui-scan footer button:hover,.d-fui-scan>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-fui-scan footer button:focus-visible,.d-fui-scan>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-fui-scan button[class*="-inspect"]{display:none!important}.d-fui-scan :where(input){accent-color:#9bb7c8}.d-fui-scan :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-fui-scan:before,.d-fui-scan-corner,.d-fui-scan-scanline{display:none}.d-fui-scan-topbar{height:22px;font-size:14px;color:#c1d0d9}.d-fui-scan-panel{border:0;border-radius:10px;background:#182228}.d-fui-scan-panel-head{font-size:10px;color:#69828f}.d-fui-scan-frequency{font-size:24px;font-weight:450;color:#b4d1df}.d-fui-scan-scale{font-size:10px;color:#788f9d}.d-fui-scan-footer{font-size:10px;color:#78919e}.d-fui-scan-footer>span:first-child{display:none}
+.d-fui-scan{background:#121b22}.d-fui-scan>[class$="-topbar"]{text-transform:none}.d-fui-scan>[class$="-topbar"]>span:last-child{font-size:10px}.d-fui-scan [class*="-corner"]{display:none}
 `,
   js:`const panel=root.querySelector('.d-fui-scan-panel');
 const plot=root.querySelector('.d-fui-scan-plot');
@@ -247,7 +252,7 @@ panel.addEventListener('keydown',function(event){
 if('IntersectionObserver'in window){observer=new IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start()},{threshold:.05});observer.observe(root)}
 updateBand('initial');
 if(reduced){sweepElapsed=sweepDuration*.28;sweepX=plotWidth*.28;sweepNode.style.transform='translate3d('+sweepX.toFixed(2)+'px,0,0)';showContact(47,false);updateSweepClasses();paused=false;expose('reduced')}else{planContact();start()}`,
-  prompt:`Build a self-contained 320px-tall fictional radio spectrum scanner using JetBrains Mono and only #0a0a0b, #101012, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, and error #f87171. Frame the scanner as a 4px-radius FUI panel with four 8px corner ticks, scanlines, and an always-visible accent activity dot.
+  prompt:`Use a native 300 by 320 composition. Give spectral interaction an obvious primary frequency, with reduced grid and border chrome. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained 320px-tall fictional radio spectrum scanner using Inter and only #0a0a0b, #101012, #232327, #2e2e34, #ececef, #9b9ba3, #5c5c66, accent #fa7319, info #67e8f9, success #4ade80, and error #f87171. Frame the scanner as a 4px-radius FUI panel with four 8px corner ticks, scanlines, and an always-visible accent activity dot.
 
 Render exactly 64 DOM spectrum bars, each exactly 2px wide with a 1px gap. Give every bar a seeded noise height, a #5c5c66 body, and an exact 2px #fa7319 tip. Move one exact 1px accent sweep line left to right on a linear 3.2-second cycle. Bars whose centers enter the sweep's 20px influence turn #ececef and run a one-shot 200ms sine pulse from scaleY(1) through an exact scaleY(1.15) peak and back to scaleY(1).
 

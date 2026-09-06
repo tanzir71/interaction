@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 327 hand-built patterns live today. Both roadmaps are complete; no expansion patterns are queued.
+> design agencies. 399 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -9,7 +9,7 @@
 Site: https://tanzir71.github.io/interaction/
 Vercel mirror: https://intrx.vercel.app/
 Repo: https://github.com/tanzir71/interaction
-License: MIT. Free for commercial use. No tracking, fully static.
+License: MIT for this implementation. DRAMS source designs retain their creator attribution: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). No tracking, fully static.
 
 ## What an agent can do with this library
 
@@ -25,7 +25,16 @@ License: MIT. Free for commercial use. No tracking, fully static.
    Root class must be a unique `d-*` prefix; JS receives (root, stage); demos
    must be self-contained, 320px tall, and respect prefers-reduced-motion.
 
-## Live categories (327 patterns)
+## Live categories (399 patterns)
+
+DRAMS (52): native HTML/CSS/JavaScript interpretations of every distinct component listed at https://drams.framer.website/. IDs drams-001 through drams-053, excluding049, which is absent from the source catalog. Five remix previews repeat existing entries. Exact mapping and creator credits: DRAMS_CATALOG.json and DRAMS_IMPLEMENTATION.md. No hosted demo embeds.
+
+Framer Collection (4): framer-formatted-metric, framer-rolling-balance, framer-focus-countdown, framer-financial-trend. Configurable formatting, independent digit reels, countdown controls and an inspectable financial chart. All interface and numerical typography uses local Inter with tabular figures.
+
+Original Skeuomorph (20): all rebuilt from scratch, replacing the previous HTML, CSS and JavaScript. Physical controls, actual transport/keyboard interactions, paper objects and subtle materials. See LIBRARY_AESTHETIC_AUDIT.json for individual evidence.
+
+Interactive Showcase (16): showcase-dot-field, showcase-threads, showcase-ballpit, showcase-ripple-grid, showcase-magnet-lines, showcase-pixel-trail, showcase-ribbons, showcase-mesh-surface, showcase-warp-tunnel, showcase-converging-paths, showcase-orbital-path, showcase-mask-reveal, showcase-circular-gallery, showcase-card-swap, showcase-tracing-story, showcase-elastic-slider
+Source notes: SHOWCASE_SOURCES.md. New entries include a source object with name and URL; each implementation is original and dependency-free.
 
 Scroll (22): lenis-smooth-scroll, scroll-reveal-stagger, parallax-layers,
 horizontal-scroll, sticky-stack, scroll-progress, velocity-skew, scroll-zoom, scroll-text-highlight, scroll-image-sequence, scroll-svg-draw, scroll-rotate-gallery, scroll-split-screen, scroll-marquee-direction, scroll-counter-rotate, scroll-depth-tunnel, scroll-letter-scatter, scroll-color-theme, scroll-clip-morph, scroll-table-of-contents, scroll-inertia-grid, scroll-video-scrubber
@@ -57,9 +66,7 @@ spring-modal, drag-carousel, hover-fill-button, page-transition, logo-marquee, b
 
 ## Roadmap
 
-34 expansion patterns remain. The original CODEX_HANDOFF.md roadmap is complete;
-the active likes-driven batch is specified in CODEX_HANDOFF_2.md. Unpublished
-items are listed on the site as a roadmap — only hand-built, working demos are cards.
+Both CODEX handoffs are complete: 236 original items and 56 expansion items are published. The September 2026 Interactive Showcase adds 16 further patterns. No queued roadmap items remain.
 
 ## House style for contributed demos
 

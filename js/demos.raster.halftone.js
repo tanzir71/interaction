@@ -24,45 +24,9 @@ INTRX.register({
   <button class="d-half-pin" type="button" aria-pressed="false">Pin pressure</button>
   <p class="d-half-status" aria-live="polite">Ambient screen pressure</p>
 </div>`,
-  css: `
-.d-half { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none; background: #0a0a0b; color: #ececef; touch-action: none; }
-.d-half:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
-.d-half::before { content: ''; position: absolute; inset: 0; opacity: .22; pointer-events: none;
-  background-image: radial-gradient(rgba(255,255,255,.28) .65px, transparent .65px); background-size: 6px 6px; }
-.d-half-stage { position: absolute; left: 50%; top: 50%; width: min(68%, 452px); height: 220px; transform: translate(-50%, -50%);
-  overflow: hidden; border: 1px solid rgba(255,255,255,.42); background: #101012; box-shadow: 9px 9px 0 rgba(255,255,255,.12); }
-.d-half-canvas { display: block; width: 100%; height: 100%; }
-.d-half-stage::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .13;
-  background: repeating-linear-gradient(90deg, transparent 0 2px, rgba(255,255,255,.16) 2px 3px); mix-blend-mode: multiply; }
-.d-half-probe { position: absolute; left: 0; top: 0; width: 112px; height: 112px; margin: -56px 0 0 -56px;
-  border: 1px solid rgba(255,86,63,.82); border-radius: 50%; color: #fa7319; pointer-events: none; opacity: .42; will-change: transform, opacity; }
-.d-half-probe::before, .d-half-probe::after { content: ''; position: absolute; left: 50%; top: 50%; background: currentColor; transform: translate(-50%, -50%); }
-.d-half-probe::before { width: 15px; height: 1px; }.d-half-probe::after { width: 1px; height: 15px; }
-.d-half-probe i { position: absolute; inset: 11px; border: 1px dashed rgba(255,86,63,.5); border-radius: 50%; }
-.d-half-probe b { position: absolute; right: 10px; bottom: 9px; font: 7px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-half.d-half-active .d-half-probe { opacity: 1; }
-.d-half-registration { position: absolute; right: 8px; top: 4px; color: rgba(255,86,63,.82); font: 26px/1 "JetBrains Mono", monospace; }
-.d-half-kicker { position: absolute; left: 17px; top: 18px; color: rgba(255,255,255,.58); font: 8px "JetBrains Mono", monospace; letter-spacing: .14em; }
-.d-half-meter { position: absolute; right: 18px; top: 16px; display: flex; align-items: baseline; gap: 4px;
-  color: rgba(255,255,255,.5); font: 8px "JetBrains Mono", monospace; letter-spacing: .1em; }
-.d-half-meter strong { min-width: 34px; color: #ececef; font-size: 20px; font-weight: 500; letter-spacing: 0; text-align: right; }
-.d-half-meter b { font-weight: 400; }
-.d-half-scale { position: absolute; left: 17px; top: 43px; display: flex; align-items: center; gap: 5px; }
-.d-half-scale i { display: block; border-radius: 50%; background: #ececef; }
-.d-half-scale i:nth-child(1) { width: 2px; height: 2px; }.d-half-scale i:nth-child(2) { width: 4px; height: 4px; }
-.d-half-scale i:nth-child(3) { width: 6px; height: 6px; }.d-half-scale i:nth-child(4) { width: 8px; height: 8px; }
-.d-half-scale i:nth-child(5) { width: 10px; height: 10px; }.d-half-scale i:nth-child(6) { width: 12px; height: 12px; }
-.d-half-pin { position: absolute; left: 17px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(255,255,255,.4);
-  border-radius: 999px; background: rgba(22,22,25,.88); color: #b8b8b8; font: 10px "JetBrains Mono", monospace; cursor: pointer;
-  transition: background .18s, color .18s, transform .18s; }
-.d-half-pin:hover, .d-half-pin[aria-pressed="true"] { background: #fa7319; color: #ffffff; transform: translateY(-2px); }
-.d-half-pin:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
-.d-half-status { position: absolute; right: 18px; bottom: 20px; max-width: 46%; margin: 0; text-align: right;
-  color: rgba(255,255,255,.54); font: 8px "JetBrains Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
-@media (max-width: 620px) { .d-half-stage { width: 74%; height: 190px; }.d-half-scale { display: none; } }
-@media (prefers-reduced-motion: reduce) { .d-half-probe { will-change: auto; }.d-half-pin { transition: none; } }
-`,
-  js: `
+  css: `.d-half{height:320px;width:100%;min-height:0;box-sizing:border-box;position:relative;overflow:hidden;background:#eceee7;color:#68745d;font:400 11px "Inter",system-ui,sans-serif;padding:0 0 10px;display:flex;align-items:center;gap:8px;justify-content:center;flex-wrap:wrap;align-content:flex-end}.d-half>span,.d-half>[class$="-meter"],.d-half>[class$="-weights"],.d-half>[class$="-spectrum"],.d-half>[class$="-scale"],.d-half>[class$="-ramp"],.d-half>[class$="-weight"],.d-half>[class$="-waves"]{display:none}.d-half>[class$="-stage"]{position:absolute;inset:0 0 48px;min-height:0;width:100%;height:auto;overflow:hidden;background:#d5dcca}.d-half canvas{width:100%;height:100%;display:block}.d-half>[class$="-stage"]>*:not(canvas){display:none}.d-half [class$="-status"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-half button{position:relative;min-height:28px;border:1px solid #91a2773b;border-radius:16px;padding:5px 13px;background:transparent;color:#61754d;font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;cursor:pointer;z-index:5}.d-half button[aria-pressed=true]{background:#d8e2cd;border-color:#98aa82}.d-half button:focus-visible,.d-half:focus-visible{outline:2px solid #829969;outline-offset:-2px}.d-half [class$="-actions"]{display:flex;gap:8px}`,
+  js: `const photograph=new Image();
+
 const canvas = root.querySelector('.d-half-canvas');
 const stageEl = root.querySelector('.d-half-stage');
 const probe = root.querySelector('.d-half-probe');
@@ -78,16 +42,7 @@ let width = 1, height = 1, dpr = 1, dots = [];
 let target = { x: .64, y: .42 }, current = { x: target.x, y: target.y };
 let targetPressure = .28, pressure = targetPressure, hovering = false, pinned = false, dirty = true, lastDraw = 0;
 
-function drawSource() {
-  const wash = source.createLinearGradient(0, 0, width, height);
-  wash.addColorStop(0, '#f5f5f5'); wash.addColorStop(.46, '#a9a9a9'); wash.addColorStop(1, '#242424');
-  source.fillStyle = wash; source.fillRect(0, 0, width, height);
-  source.fillStyle = '#111'; source.beginPath(); source.arc(width * .72, height * .35, height * .26, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#e5e5e5'; source.beginPath(); source.arc(width * .72, height * .35, height * .12, 0, Math.PI * 2); source.fill();
-  source.fillStyle = '#333'; source.beginPath(); source.moveTo(0, height * .75); source.lineTo(width * .47, height * .38);
-  source.lineTo(width * .62, height); source.lineTo(0, height); source.closePath(); source.fill();
-  source.fillStyle = '#fff'; source.font = '800 ' + Math.round(height * .34) + 'px Roboto Mono, monospace'; source.textBaseline = 'bottom'; source.fillText('DOT', width * .05, height * .95);
-}
+function drawSource(){const picture=photograph;source.fillStyle='#dfe3d8';source.fillRect(0,0,width,height);if(picture.naturalWidth){const s=Math.max(width/picture.naturalWidth,height/picture.naturalHeight);source.drawImage(picture,(width-picture.naturalWidth*s)/2,(height-picture.naturalHeight*s)/2,picture.naturalWidth*s,picture.naturalHeight*s)}}
 function buildDots() {
   drawSource(); const pixels = source.getImageData(0, 0, width, height).data;
   const cos = Math.cos(ANGLE), sin = Math.sin(ANGLE), cx = width * .5, cy = height * .5;
@@ -170,13 +125,7 @@ function frameLoop(time) {
   if (dirty && (reduced || time - lastDraw >= 32)) { render(); lastDraw = time; }
   requestAnimationFrame(frameLoop);
 }
-requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained amplitude-modulated halftone dot interaction on canvas. First draw a deliberate grayscale source poster into an offscreen canvas at the measured CSS size and cache its pixels. Create a square sampling lattice with 9px spacing, rotated exactly 15 degrees around the image center. Iterate a grid large enough to cover the rotated bounds, transform every lattice coordinate into image x/y, discard samples outside the image, and sample Rec.709 luminance as (0.2126R+0.7152G+0.0722B)/255.
-
-For light ink on a dark field calculate darkness=clamp(1-luminance,0,1) and baseRadius=cell*0.52*sqrt(darkness). The square root is required because printed tone follows dot area rather than radius. Cache each dot's x/y, darkness, and base radius on startup or resize; pointer animation must never reread source pixels. Render the dark field and cached circles into a device-pixel-ratio-aware canvas, capping DPR at 2 and drawing in CSS coordinates through setTransform.
-
-The pointer defines a 72–106px pressure field. Compute proximity=max(0,1-distance/radius), square it, and multiply by eased pressure. Swell each dot by that influence times cell*0.46 plus a smaller highlight allowance proportional to 1-darkness, capped at cell*0.92. Tint only influenced ink toward an orange registration color while preserving the luminance-derived base radius outside the field. Ease position by 0.17 and pressure by 0.14, cap redraw near 30fps, and stop once settled.
-
-Pointerenter raises pressure to 1, pointerleave returns it to a subtle 0.28 ambient state unless pinned, and pointermove stays passive. Add a semantic aria-pressed pin button, polite status updates, visible focus, a reticle, and pressure readout. Arrow keys move by 0.055, Shift+Arrow by 0.12, Home centers, Space pins, and Escape releases, without intercepting button keys. Under prefers-reduced-motion, snap position and pressure directly while retaining exact radius math, pointer and keyboard control, pinning, DPR handling, responsive source rebuilding, and the static locally swollen result.`
+requestAnimationFrame(frameLoop);
+photograph.onload=measure;photograph.src='{{asset:coastal-stack}}';`,
+  prompt: `Build Luminance Halftone Field as a native300×320px component. Use the supplied coastal-stack photograph. Draw it with cover cropping after image load and recompute the algorithm's source luminance, pixel caches or samples. Retain the actual halftone-dots pixel/glyph algorithm, pointer and keyboard behavior. Put the full image above a slim quiet control row, with readable regular Inter11px controls, normal tracking, pale surfaces and fine borders. Avoid synthetic gradient posters and headline overlays.  Keep visible interface text in regular Inter400–500. Literal ASCII/bitmap glyph rendering and terminal code retain their intentional fixed-width character metrics. Preserve real interactive states, polite announcements, keyboard focus, cancellation, resize cleanup and reduced-motion alternatives. Hide technical headers and decorative readout/footer panels without removing nodes used by the behavior.`
 });

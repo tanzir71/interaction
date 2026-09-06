@@ -11,7 +11,7 @@ INTRX.register({
   seen:'Seen on: Cursor and Copilot review interfaces',
   hint:'accept or reject the streamed edit; the proposal restarts after two seconds',
   html:`<div class="d-agent-agent-diff-review" role="region" aria-label="Agent edit proposal">
-  <div class="d-agent-agent-diff-review-kicker" aria-hidden="true"><span>AGENT / EDIT</span><span class="d-agent-agent-diff-review-mode">STREAMING</span></div>
+  <div class="d-agent-agent-diff-review-kicker" aria-hidden="true"><span>Agent / edit</span><span class="d-agent-agent-diff-review-mode">Streaming</span></div>
   <section class="d-agent-agent-diff-review-card" aria-labelledby="d-agent-agent-diff-review-title">
     <header class="d-agent-agent-diff-review-header">
       <div class="d-agent-agent-diff-review-file"><i aria-hidden="true">TS</i><strong id="d-agent-agent-diff-review-title">utils/format.ts</strong></div>
@@ -28,8 +28,8 @@ INTRX.register({
       <div class="d-agent-agent-diff-review-line d-agent-agent-diff-review-added" role="listitem" style="--decision-order:3"><span class="d-agent-agent-diff-review-gutter">16</span><span class="d-agent-agent-diff-review-marker">+</span><code>}</code></div>
     </div>
     <div class="d-agent-agent-diff-review-actions">
-      <button class="d-agent-agent-diff-review-accept" type="button" disabled>ACCEPT</button>
-      <button class="d-agent-agent-diff-review-reject" type="button" disabled>REJECT</button>
+      <button class="d-agent-agent-diff-review-accept" type="button" disabled>Accept edit</button>
+      <button class="d-agent-agent-diff-review-reject" type="button" disabled>Discard</button>
     </div>
   </section>
   <span class="d-agent-agent-diff-review-status" aria-live="polite" aria-atomic="true">Edit proposal streaming</span>
@@ -42,23 +42,23 @@ INTRX.register({
 .d-agent-agent-diff-review-card{position:absolute;top:38px;right:12px;bottom:14px;left:12px;overflow:hidden;border:1px solid #232327;border-radius:10px;background:#101012;transition:border-color .2s ease,box-shadow .2s ease}
 .d-agent-agent-diff-review-header{height:43px;padding:0 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #232327;background:#161619}
 .d-agent-agent-diff-review-file{min-width:0;display:flex;align-items:center;gap:8px}
-.d-agent-agent-diff-review-file i{display:grid;width:22px;height:22px;place-items:center;border-radius:5px;background:rgba(250,115,25,.12);color:#fa7319;font-family:inherit;font-size:8px;font-style:normal;font-weight:700;line-height:1;letter-spacing:.04em}
-.d-agent-agent-diff-review-file strong{overflow:hidden;color:#c7c7ce;font-size:11px;font-weight:600;line-height:1;white-space:nowrap;text-overflow:ellipsis}
+.d-agent-agent-diff-review-file i{display:grid;width:22px;height:22px;place-items:center;border-radius:5px;background:rgba(250,115,25,.12);color:#fa7319;font-family:inherit;font-size:8px;font-style:normal;font-weight:500;line-height:1;letter-spacing:.04em}
+.d-agent-agent-diff-review-file strong{overflow:hidden;color:#c7c7ce;font-size:11px;font-weight:500;line-height:1;white-space:nowrap;text-overflow:ellipsis}
 .d-agent-agent-diff-review-chips{display:flex;gap:5px;transition:opacity .2s ease}
-.d-agent-agent-diff-review-chips span{height:19px;padding:0 6px;display:flex;align-items:center;border-radius:10px;font-size:9px;font-weight:700;line-height:1}
+.d-agent-agent-diff-review-chips span{height:19px;padding:0 6px;display:flex;align-items:center;border-radius:10px;font-size:9px;font-weight:500;line-height:1}
 .d-agent-agent-diff-review-chips span:first-child{color:#fa7319;background:rgba(250,115,25,.12)}
 .d-agent-agent-diff-review-chips span:last-child{color:#9b9ba3;background:#232327}
 .d-agent-agent-diff-review-body{height:183px;padding:7px 0;overflow:hidden;background:#0d0d0f}
 .d-agent-agent-diff-review-line{height:21px;padding:0 9px;display:grid;grid-template-columns:20px 10px minmax(0,1fr);align-items:center;overflow:hidden;opacity:0;color:#5c5c66;font-size:9px;line-height:21px;transition:height .3s ease,opacity .2s ease,transform .22s ease,background-color .5s ease,color .5s ease,text-decoration-color .3s ease;transition-delay:0ms}
 .d-agent-agent-diff-review-line code{overflow:hidden;color:inherit;font-family:inherit;font-size:9px;font-weight:500;line-height:21px;white-space:pre;text-overflow:clip}
 .d-agent-agent-diff-review-gutter{color:#3f3f46;text-align:right;font-variant-numeric:tabular-nums;transition:opacity .3s ease}
-.d-agent-agent-diff-review-marker{font-weight:700;text-align:center;transition:opacity .3s ease}
+.d-agent-agent-diff-review-marker{font-weight:500;text-align:center;transition:opacity .3s ease}
 .d-agent-agent-diff-review-context{transform:translateY(3px)}
 .d-agent-agent-diff-review-removed{color:#9b9ba3;background:#161619;text-decoration-line:line-through;text-decoration-color:#5c5c66;transform:translateY(3px)}
 .d-agent-agent-diff-review-added{color:#fa7319;background:rgba(250,115,25,.06);transform:translateX(-12px)}
 .d-agent-agent-diff-review-line.d-agent-agent-diff-review-line-visible{opacity:1;transform:none}
 .d-agent-agent-diff-review-actions{height:40px;padding:7px 10px;display:flex;justify-content:flex-end;gap:7px;border-top:1px solid #232327;background:#101012}
-.d-agent-agent-diff-review-actions button{height:26px;padding:0 11px;border-radius:6px;font-family:inherit;font-size:9px;font-weight:700;line-height:1;letter-spacing:.06em;cursor:pointer;outline:none;transition:opacity .2s ease,border-color .2s ease,background-color .2s ease}
+.d-agent-agent-diff-review-actions button{height:26px;padding:0 11px;border-radius:6px;font-family:inherit;font-size:9px;font-weight:500;line-height:1;letter-spacing:.06em;cursor:pointer;outline:none;transition:opacity .2s ease,border-color .2s ease,background-color .2s ease}
 .d-agent-agent-diff-review-accept{border:1px solid rgba(250,115,25,.45);color:#fa7319;background:rgba(250,115,25,.10)}
 .d-agent-agent-diff-review-reject{border:1px solid #2e2e34;color:#9b9ba3;background:transparent}
 .d-agent-agent-diff-review-actions button:hover:not(:disabled){border-color:#fa7319;color:#ececef}
@@ -74,7 +74,13 @@ INTRX.register({
 @keyframes d-agent-agent-diff-review-border-pulse{0%{box-shadow:0 0 0 0 rgba(250,115,25,.35)}100%{box-shadow:0 0 0 7px rgba(250,115,25,0)}}
 @container(max-width:340px){.d-agent-agent-diff-review-card{right:10px;left:10px}.d-agent-agent-diff-review-line{padding-right:7px;padding-left:7px;grid-template-columns:18px 9px minmax(0,1fr)}.d-agent-agent-diff-review-header{padding:0 10px}}
 @media(prefers-reduced-motion:reduce){.d-agent-agent-diff-review *,.d-agent-agent-diff-review *::before,.d-agent-agent-diff-review *::after{animation:none!important;transition:none!important}}
-`,
+
+/* Composition redesign: native sizing, purposeful content and Inter UI. */
+.d-agent-agent-diff-review{font-family:Inter,system-ui,sans-serif;background:#111214;font-variant-numeric:tabular-nums}.d-agent-agent-diff-review :where(*){font-family:Inter,system-ui,sans-serif!important;letter-spacing:normal!important;font-variant-numeric:tabular-nums}.d-agent-agent-diff-review :where(code,pre,code *,pre *){font-family:ui-monospace,monospace!important}.d-agent-agent-diff-review footer button,.d-agent-agent-diff-review>[class$="-foot"] button{min-height:29px;padding:6px 10px;border:1px solid #a6bdcc15;border-radius:6px;background:#23303a;color:#a8becd;font:450 11px/1.25 Inter,system-ui,sans-serif;text-transform:none;white-space:nowrap}.d-agent-agent-diff-review footer button:hover,.d-agent-agent-diff-review>[class$="-foot"] button:hover{background:#344550;color:#d5e4ed;border-color:#a6bdcc27}.d-agent-agent-diff-review footer button:focus-visible,.d-agent-agent-diff-review>[class$="-foot"] button:focus-visible{outline:2px solid #9db6c7;outline-offset:2px}.d-agent-agent-diff-review button[class*="-inspect"]{display:none!important}.d-agent-agent-diff-review :where(input){accent-color:#9bb7c8}.d-agent-agent-diff-review :where(h1,h2,h3,h4,b,strong){font-weight:500}
+.d-agent-agent-diff-review-kicker{display:none}.d-agent-agent-diff-review-card{inset:20px 14px;border:0;background:#1b2730;border-radius:10px}.d-agent-agent-diff-review-header{height:46px;padding:0 14px;border-color:#ffffff0a}.d-agent-agent-diff-review-file strong{font-size:12px;font-weight:450}.d-agent-agent-diff-review-chips span{font-size:11px;background:#354b54;color:#a9c2ce}.d-agent-agent-diff-review-body{padding:12px 0;background:#131e25}.d-agent-agent-diff-review-line{min-height:21px;font-size:10px;line-height:21px}.d-agent-agent-diff-review-line code{font-family:ui-monospace,monospace!important;font-size:10px;font-weight:400}.d-agent-agent-diff-review-added{background:#2b4e3b33;color:#a1c4ae}.d-agent-agent-diff-review-removed{background:#56352e22;color:#a68c82}.d-agent-agent-diff-review-actions{padding:12px;gap:8px;border:0}.d-agent-agent-diff-review-actions button{height:32px;min-width:86px;font-size:11px;border:0;border-radius:6px}.d-agent-agent-diff-review-accept{background:#688b7c;color:#eef5ed}.d-agent-agent-diff-review-reject{background:#2a3943;color:#93adbd}
+
+/* Verified native-width corrections. */
+.d-agent-agent-diff-review-line{font-size:9px;min-height:20px;line-height:20px}.d-agent-agent-diff-review-line code{font-size:9px}.d-agent-agent-diff-review-body{padding:9px 0}.d-agent-agent-diff-review-actions{padding:12px;height:58px}.d-agent-agent-diff-review-card{bottom:20px}.d-agent-agent-diff-review-header{height:44px}`,
   js:`
 const title=root.querySelector('.d-agent-agent-diff-review-file strong'),mode=root.querySelector('.d-agent-agent-diff-review-mode'),body=root.querySelector('.d-agent-agent-diff-review-body'),acceptButton=root.querySelector('.d-agent-agent-diff-review-accept'),rejectButton=root.querySelector('.d-agent-agent-diff-review-reject'),status=root.querySelector('.d-agent-agent-diff-review-status'),lines=Array.from(root.querySelectorAll('.d-agent-agent-diff-review-line'));
 const schedule=[140,270,400,530,610,690,770,850],holdDuration=2000,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,controller=new AbortController(),listener={signal:controller.signal};
@@ -94,5 +100,5 @@ function cleanup(){if(cleaned)return;cleaned=true;if(frameId){cancelAnimationFra
 if('MutationObserver'in window){connectionObserver=new MutationObserver(function(){if(!root.isConnected)cleanup()});connectionObserver.observe(document.documentElement,{childList:true,subtree:true})}
 if(reduced)setReady();else{setLineVisibility(0);renderStream();requestFrame()}
 `,
-  prompt:`Build one self-contained responsive 320px Agent and AI UI card for reviewing an edit to utils/format.ts. Show +4 and minus 2 chips, then stream context, removed, and added lines; removed lines use a grayscale fill and strike-through, while four accent additions slide from the left with an 80 millisecond stagger. Provide keyboard-accessible Accept and Reject controls. Accept collapses deletions, drains addition tints and markers, changes the header to Applied, and pulses a one-pixel accent border. Reject collapses additions, restores deletions as clean code, and changes the header to Reverted. Hold either outcome for two seconds, then reset and re-stream. Respect reduced motion and clean up detached instances. Keep chrome grayscale on #0a0a0b, use Roboto Mono with JetBrains Mono fallback, reserve #fa7319 for live, active, and focused proposal state, and distinguish additions and removals with plus or minus markers and strike-through rather than opposing hues.`
+  prompt:`Use a native 300 by 320 composition. Focus the review around the actual file, readable code and clearly differentiated Accept/Reject actions. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build one self-contained responsive 320px Agent and AI UI card for reviewing an edit to utils/format.ts. Show +4 and minus 2 chips, then stream context, removed, and added lines; removed lines use a grayscale fill and strike-through, while four accent additions slide from the left with an 80 millisecond stagger. Provide keyboard-accessible Accept and Reject controls. Accept collapses deletions, drains addition tints and markers, changes the header to Applied, and pulses a one-pixel accent border. Reject collapses additions, restores deletions as clean code, and changes the header to Reverted. Hold either outcome for two seconds, then reset and re-stream. Respect reduced motion and clean up detached instances. Keep chrome grayscale on #0a0a0b, use Inter, reserve #fa7319 for live, active, and focused proposal state, and distinguish additions and removals with plus or minus markers and strike-through rather than opposing hues.`
 });

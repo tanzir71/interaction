@@ -1,5 +1,17 @@
 # AESTHETIC_BENCHMARKS — taste pass (for Codex)
 
+## Current direction — September 6, 2026
+
+The owner's latest feedback supersedes the July rules and repair prescriptions below, including the earlier Manrope and monospaced-counter guidance. Treat older sections as historical findings and reference links. The [full-library audit](LIBRARY_AESTHETIC_AUDIT.md) records rendered evidence for each review pass.
+
+- Use locally hosted Inter for interfaces and every numeric counter, with regular weights, normal tracking and tabular numerals. Reserve Newsreader for selected editorial compositions and monospace for literal code or ASCII output. Hover states must preserve natural glyph proportions.
+- Use gradual, directionally consistent material lighting, restrained edges and soft contact shadows. Gradients should describe the surface; flatness and zero radius are not universal requirements.
+- Use credible photographic assets for image and gallery studies. Avoid schematic placeholder illustrations and synthetic gradient artwork when the subject calls for a photograph. See [asset direction and licenses](ASSET_ART_DIRECTION.md).
+- Skeuomorphic demos may use satin aluminium, warm paper, glass, wax and other appropriate material colors on light or dark stages. The complete DRAMS collection uses its own source-specific surfaces and geometry. Preserve usable controls and complete interaction states.
+- Review each demo visually at native 320px height and narrow widths. Keep the established shell palette and semantic accents; palette heuristics do not replace rendered judgment.
+
+## Historical July assessment
+
 Owner verdict: physics/logic are solid, aesthetics are not. The failures are systemic, not per-demo:
 LLM-ideated compositions, no palette discipline inside tiles, Inter inside a mono shell, pastel/light
 roots, emoji-as-art, and 4+ hue families in single demos. The user-flagged items (031 `cursor-eyes-follow`,

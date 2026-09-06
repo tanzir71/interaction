@@ -53,18 +53,25 @@ INTRX.register({
 .d-gooey-nav { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 132px);
   align-items: center; justify-content: space-around; padding: 0 4%; }
 .d-gooey-link { position: relative; width: 132px; height: 52px; border: 0; border-radius: 999px;
-  background: transparent; color: #0a0a0b; font: 600 14px "JetBrains Mono", monospace;
-  letter-spacing: .02em; cursor: pointer; z-index: 2; }
+  background: transparent; color: #0a0a0b; font:500 14px "Inter",system-ui,sans-serif;
+  letter-spacing:0.02em; cursor: pointer; z-index: 2; }
 .d-gooey-link:focus-visible { outline: 2px solid #ececef; outline-offset: 5px; }
 .d-gooey-status { position: absolute; left: 20px; bottom: 16px; margin: 0; color: #5c5c66;
-  font: 10px "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+  font: 10px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @keyframes d-gooey-breathe { 50% { margin: -3px 0 0 -3px; } }
 @media (max-width: 620px) {
   .d-gooey-nav { grid-template-columns: repeat(3, 88px); padding: 0 2%; }
   .d-gooey-link { width: 88px; font-size: 11px; }
   .d-gooey-mass { width: 88px; margin-left: -44px; }
 }
-@media (prefers-reduced-motion: reduce) { .d-gooey-blob { animation: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-gooey-blob { animation: none; } }
+/* Composition at the native preview size. */
+.d-gooey-nav{grid-template-columns:repeat(3,minmax(0,1fr));padding:0 6%;gap:12px}.d-gooey-link{width:100%;font-size:11px}.d-gooey-mass{width:80px;height:44px;margin-left:-40px;margin-top:-22px}.d-gooey-mass-one{left:21%}.d-gooey-mass-three{left:79%}.d-gooey-status{color:#999;font-size:9px}
+/* Composition at the native preview size. */
+.d-gooey button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-gooey-link{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-gooey{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-gooey :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-gooey button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-gooey [class$="-status"],.d-gooey [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-gooey [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-gooey [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-gooey>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-gooey-link{font:450 12px "Inter",system-ui,sans-serif}.d-gooey-status{display:none}.d-gooey-field{filter:url(#d-gooey-filter) saturate(.65)}`,
   js: `
 const blob = root.querySelector('.d-gooey-blob');
 const links = Array.from(root.querySelectorAll('.d-gooey-link'));
@@ -136,11 +143,15 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained gooey cursor navigation interaction in a 320px position-relative root. Put one 54px circular pointer blob and three 132x52px pill-shaped navigation masses inside a single layer using an SVG filter. The filter must blur SourceGraphic by 10px, then apply a color matrix whose alpha row is 0 0 0 22 -9, and composite the crisp source atop the thresholded mass. Render the real button labels in a separate unfiltered nav layer so text stays sharp.
+Build a self-contained gooey cursor navigation interaction in a 320px position-relative root. Put one 54px circular pointer blob and three 80×44px pill-shaped navigation masses inside a single layer using an SVG filter. The filter must blur SourceGraphic by 10px, then apply a color matrix whose alpha row is 0 0 0 22 -9, and composite the crisp source atop the thresholded mass. Render the 11px mono button labels in a separate unfiltered three-column flexible nav layer so text stays sharp.
 
 Track pointer coordinates relative to the root and constrain the blob center by its 27px radius. Animate with one requestAnimationFrame loop using a damped spring: velocity = (velocity + (target - position) * stiffness) * damping, then position += velocity. Use stiffness 0.095 and damping 0.76 while free; on button hover or keyboard focus, retarget to that button's local center with stiffness 0.16 and damping 0.68. While captured, ease the blob toward scaleX 2.45 and scaleY 0.96. While moving freely, add up to 0.42 horizontal stretch and subtract up to 0.18 vertical scale based on min(1, speed / 22), and rotate to atan2(vy, vx). Ease scale components by 0.16 per frame.
 
-Use only transform for frame-by-frame DOM writes, cache queried nodes, and keep pointermove passive. Buttons must remain semantic, keyboard-focusable, and show a high-contrast focus ring. Announce hover/focus/selection state in a polite live region. For prefers-reduced-motion, stop interpolation and render the target position and scale immediately; keep the goo filter and keyboard behavior functional. The idle blob may use a subtle 2.8-second breathing animation, disabled for reduced motion.`
+Use only transform for frame-by-frame DOM writes, cache queried nodes, and keep pointermove passive. Buttons must remain semantic, keyboard-focusable, and show a high-contrast focus ring. Announce hover/focus/selection state in a polite live region. For prefers-reduced-motion, stop interpolation and render the target position and scale immediately; keep the goo filter and keyboard behavior functional. The idle blob may use a subtle 2.8-second breathing animation, disabled for reduced motion.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -178,18 +189,22 @@ INTRX.register({
 .d-emitter-reticle i:last-child { width: 1px; height: 52px; transform: translate(-50%, -50%); }
 .d-emitter.d-emitter-active .d-emitter-reticle { opacity: 0; }
 .d-emitter-readout { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-emitter-readout strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-emitter-burst { position: absolute; left: 20px; bottom: 18px; z-index: 2; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: border-color .2s, color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: border-color .2s, color .2s, transform .2s; }
 .d-emitter-burst:hover { border-color: #fa7319; color: #fa7319; transform: translateY(-2px); }
 .d-emitter-burst:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-emitter-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   .d-emitter-reticle, .d-emitter-burst { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-emitter>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-emitter{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-emitter :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-emitter button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-emitter [class$="-status"],.d-emitter [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-emitter [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-emitter [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-emitter>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}`,
   js: `
 const canvas = root.querySelector('.d-emitter-canvas');
 const ctx = canvas.getContext('2d');
@@ -302,7 +317,9 @@ On pointermove, calculate local coordinates, distance from the previous sample, 
 
 Run one requestAnimationFrame loop. Clamp delta time to 32ms, apply exponential horizontal drag pow(0.985, dt * 60), vertical drag pow(0.992, dt * 60), and gravity of 520px/s². Each particle stores its previous position; draw a round line from that point opposite 0.018 times velocity, then a small circular head. Lifetimes range from 0.32–1.0 seconds and alpha equals remainingLife / maxLife. Cap the pool at 220 particles, remove dead or offstage particles in reverse order, cache DOM references, and keep pointer listeners passive.
 
-The canvas must be aria-hidden; announce button and pointer bursts through a polite live region, retain an obvious focus ring, and keep touch input working with touch-action none. Under prefers-reduced-motion, clear the prior field on each interaction, emit at most 12 particles with zero velocity, skip gravity and lifetime decay, and render a representative static constellation instead of moving trails.`
+The canvas must be aria-hidden; announce button and pointer bursts through a polite live region, retain an obvious focus ring, and keep touch input working with touch-action none. Under prefers-reduced-motion, clear the prior field on each interaction, emit at most 12 particles with zero velocity, skip gravity and lifetime decay, and render a representative static constellation instead of moving trails.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -352,17 +369,21 @@ INTRX.register({
 .d-elastic-anchor { fill: #0a0a0b; stroke: #9b9ba3; stroke-width: 2; vector-effect: non-scaling-stroke; }
 .d-elastic-node { fill: #fa7319; opacity: .75; vector-effect: non-scaling-stroke; }
 .d-elastic-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-elastic-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-elastic-reset { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-elastic-reset:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-elastic-reset:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-elastic-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; pointer-events: none; }
 @keyframes d-elastic-flow { to { stroke-dashoffset: -10; } }
-@media (prefers-reduced-motion: reduce) { .d-elastic-path { animation: none; } .d-elastic-reset { transition: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-elastic-path { animation: none; } .d-elastic-reset { transition: none; } }
+/* Composition at the native preview size. */
+.d-elastic>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-elastic{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-elastic :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-elastic button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-elastic [class$="-status"],.d-elastic [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-elastic [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-elastic [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-elastic>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}`,
   js: `
 const path = root.querySelector('.d-elastic-path');
 const shadow = root.querySelector('.d-elastic-shadow');
@@ -448,7 +469,9 @@ Convert pointer coordinates from the root bounding rectangle into viewBox coordi
 
 Update both path d attributes and the node cx/cy once per frame. Calculate displayed tension as min(99, round(distance(control, baselineCenter) / 2.45)). Cache all elements and bounding-box reads outside the animation loop; use a single rAF and passive pointer listeners. Do not animate layout properties.
 
-Make the root keyboard-focusable with a visible inset focus ring. Arrow keys move the target by 16 viewBox units, Shift+Arrow by 34, Home and a semantic reset button return it to center. Prevent default only for those handled keys, announce the interaction source in a polite live region, and update aria-valuetext only when tension changes by at least 20 points. Under prefers-reduced-motion, disable dash animation and spring interpolation, snapping the control point directly to the target while preserving pointer and keyboard control.`
+Make the root keyboard-focusable with a visible inset focus ring. Arrow keys move the target by 16 viewBox units, Shift+Arrow by 34, Home and a semantic reset button return it to center. Prevent default only for those handled keys, announce the interaction source in a polite live region, and update aria-valuetext only when tension changes by at least 20 points. Under prefers-reduced-motion, disable dash animation and spring interpolation, snapping the control point directly to the target while preserving pointer and keyboard control.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -469,7 +492,7 @@ INTRX.register({
   <div class="d-lens-scene">
     <div class="d-lens-grid" aria-hidden="true"></div>
     <span class="d-lens-kicker">OPTICAL STUDY / 04</span>
-    <strong class="d-lens-title">ALTER<br>THE VIEW</strong>
+    <strong class="d-lens-title">SHIFT<br>IN VIEW</strong>
     <i class="d-lens-orb d-lens-orb-one" aria-hidden="true"></i>
     <i class="d-lens-orb d-lens-orb-two" aria-hidden="true"></i>
     <span class="d-lens-coordinate">X 00.50&nbsp;&nbsp;Y 00.50</span>
@@ -487,14 +510,14 @@ INTRX.register({
 .d-lens-grid { position: absolute; inset: -1px; opacity: .42;
   background-image: linear-gradient(#232327 1px, transparent 1px), linear-gradient(90deg, #232327 1px, transparent 1px);
   background-size: 32px 32px; }
-.d-lens-kicker { position: absolute; top: 18px; left: 20px; font: 10px "Roboto Mono", monospace;
-  letter-spacing: .13em; }
+.d-lens-kicker { position: absolute; top: 18px; left: 20px; font: 10px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
 .d-lens-title { position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%);
-  font: 700 clamp(48px, 8.5vw, 82px)/.78 "Roboto", sans-serif; letter-spacing: -.075em; white-space: nowrap; }
+  font:500 clamp(48px, 8.5vw, 82px)/.78 "Roboto", sans-serif; letter-spacing:-0.025em; white-space: nowrap; }
 .d-lens-orb { position: absolute; display: block; border-radius: 50%; mix-blend-mode: multiply; }
 .d-lens-orb-one { width: 126px; height: 126px; left: 11%; top: 33%; background: #fa7319; }
 .d-lens-orb-two { width: 92px; height: 92px; right: 10%; top: 23%; background: #5c5c66; }
-.d-lens-coordinate { position: absolute; right: 20px; top: 18px; font: 10px "Roboto Mono", monospace; }
+.d-lens-coordinate { position: absolute; right: 20px; top: 18px; font: 10px "Inter",system-ui,sans-serif; }
 .d-lens-window { position: absolute; inset: 0; pointer-events: none; will-change: clip-path;
   clip-path: circle(72px at 50% 50%); filter: invert(.94) grayscale(1) contrast(1.08); }
 .d-lens-copy { transform-origin: 0 0; will-change: transform; }
@@ -509,12 +532,19 @@ INTRX.register({
   border-radius: 999px; background: #ececef; transform: rotate(45deg); transform-origin: left center; }
 .d-lens-zoom { position: absolute; left: 20px; bottom: 18px; z-index: 3; border: 1px solid #2e2e34;
   border-radius: 999px; background: rgba(16,16,18,.86); color: #ececef; padding: 9px 14px;
-  font: 10px "Roboto Mono", monospace; cursor: pointer; backdrop-filter: blur(8px); }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; backdrop-filter: blur(8px); }
 .d-lens-zoom:hover { background: #161619; color: #fa7319; border-color: #fa7319; }
 .d-lens-zoom:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-lens-status { position: absolute; right: 20px; bottom: 20px; z-index: 3; margin: 0;
-  color: #7a7a7f; font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-@media (prefers-reduced-motion: reduce) { .d-lens-window, .d-lens-copy, .d-lens-rim { will-change: auto; } }`,
+  color: #7a7a7f; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce) { .d-lens-window, .d-lens-copy, .d-lens-rim { will-change: auto; } }
+/* Composition at the native preview size. */
+.d-lens{container-type:inline-size}.d-lens-title{left:24px;top:100px;transform:none;font:500 clamp(37px,13cqw,60px)/.93 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-lens-orb{display:none}.d-lens-grid{opacity:.22;background-size:24px 24px}.d-lens-rim{border:1px solid #eee;box-shadow:none}.d-lens-rim::before,.d-lens-rim::after,.d-lens-rim i{display:none}.d-lens-kicker,.d-lens-coordinate{font-size:9px;color:#999}.d-lens-zoom{border-radius:0;background:#161619;backdrop-filter:none}.d-lens-status{font-size:8px;letter-spacing:0}
+/* Composition at the native preview size. */
+.d-lens button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-lens-title{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-lens{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-lens :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-lens button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-lens [class$="-status"],.d-lens [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-lens [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-lens [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-lens>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-lens-title{font:450 clamp(34px,12cqw,48px)/1.04 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-lens:before{opacity:.1}.d-lens-copy{font:400 12px "Inter",system-ui,sans-serif}`,
   js: `
 const scene = root.querySelector('.d-lens-scene');
 const copy = root.querySelector('.d-lens-copy');
@@ -536,6 +566,8 @@ function resize() {
   x = tx = nx * width; y = ty = ny * height;
 }
 window.addEventListener('resize', resize, { passive: true });
+const sizeObserver = new ResizeObserver(resize);
+sizeObserver.observe(root);
 
 function targetFromEvent(event) {
   const box = root.getBoundingClientRect();
@@ -587,13 +619,19 @@ function frame() {
   coordinate.textContent = 'X ' + (x / width).toFixed(2) + '  Y ' + (y / height).toFixed(2);
   requestAnimationFrame(frame);
 }
-requestAnimationFrame(frame);`,
+requestAnimationFrame(frame);
+return function(){sizeObserver.disconnect();window.removeEventListener("resize",resize)};`,
   prompt: `
-Build a self-contained inverted magnifying lens over a graphic poster inside a 320px position-relative root. Keep the exposed stage near-black with grayscale type and geometry plus one #fa7319 artifact. Create one base scene from DOM/CSS only—grid, typography, and grayscale shapes with one orange artifact—then create a full-size lens window containing a cloned copy of that exact scene. Clip the lens window with clip-path circle(72px at x y) and apply a restrained grayscale tonal inversion with mild contrast and no hue rotation. Add a separate 144px circular rim with inset highlights, shadow, and a short rotated handle so the optical boundary stays crisp and uninverted.
+Build a self-contained inverted magnifying lens over a graphic poster inside a 320px position-relative root. Keep the exposed stage near-black with a compact two-line regular Inter title and a fine gray grid. Create one base scene from DOM/CSS only—a fine 24px grid and the regular Inter title SHIFT / IN VIEW—then create a full-size lens window containing a cloned copy of that exact scene. Clip the lens window with clip-path circle(72px at x y) and apply a restrained grayscale tonal inversion with mild contrast and no hue rotation. Add a separate 144px circular hairline rim without gloss or a handle so the optical boundary stays crisp and uninverted.
 
 Track target pointer coordinates relative to the root, clamped by the 72px lens radius. In one requestAnimationFrame loop, ease rendered coordinates with current += (target - current) * 0.16. Keep the magnified duplicate registered beneath the cursor by transforming it from origin 0 0 with translate(x * (1 - zoom), y * (1 - zoom)) scale(zoom). This invariant ensures the source pixel at the lens center does not slide when zoom changes. Update the outer clip path, duplicate transform, rim translation, and a normalized coordinate label once per frame. Do not read layout in the animation loop.
 
-Clicking the scene, pressing Space, or activating a semantic zoom button toggles between 1.16× and 1.35× magnification and updates aria-pressed. Do not let the button's pointer event also trigger the scene toggle. Arrow keys move the lens target by 18px, Shift+Arrow by 36px, and Home recenters it; prevent default only for handled keys. Return the target to center on pointerleave, retain a visible focus treatment, and announce keyboard position and zoom changes through a polite status region. Use passive pointermove and resize listeners. Under prefers-reduced-motion, snap rendered coordinates directly to target while preserving clipping, magnification, pointer, and keyboard behavior.`
+Clicking the scene, pressing Space, or activating a semantic zoom button toggles between 1.16× and 1.35× magnification and updates aria-pressed. Do not let the button's pointer event also trigger the scene toggle. Arrow keys move the lens target by 18px, Shift+Arrow by 36px, and Home recenters it; prevent default only for handled keys. Return the target to center on pointerleave, retain a visible focus treatment, and announce keyboard position and zoom changes through a polite status region. Use passive pointermove and resize listeners. Under prefers-reduced-motion, snap rendered coordinates directly to target while preserving clipping, magnification, pointer, and keyboard behavior.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+Observe the root with ResizeObserver so the lens stays centered when an embedding container changes width; disconnect it on cleanup.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -625,8 +663,8 @@ INTRX.register({
 .d-repel:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-repel-word { position: absolute; left: 50%; top: 48%; display: flex; align-items: center;
   transform: translate(-50%, -50%); white-space: nowrap; }
-.d-repel-word span { display: inline-block; color: #ececef; font: 700 clamp(42px, 8vw, 76px)/1 "Roboto Mono", sans-serif;
-  letter-spacing: -.075em; will-change: transform; }
+.d-repel-word span { display: inline-block; color: #ececef; font:500 clamp(42px, 8vw, 76px)/1 "Roboto Mono", sans-serif;
+  letter-spacing:-0.025em; will-change: transform; }
 .d-repel-word span:nth-of-type(3n) { color: #fa7319; }
 .d-repel-gap { display: block; flex: 0 0 clamp(18px, 3.8vw, 38px); }
 .d-repel-field { position: absolute; left: 0; top: 0; width: 220px; height: 220px; border-radius: 50%;
@@ -638,19 +676,26 @@ INTRX.register({
 .d-repel-field i { position: absolute; inset: 26px; border: 1px dashed rgba(250,115,25,.16); border-radius: 50%; }
 .d-repel.d-repel-active .d-repel-field { opacity: 1; }
 .d-repel-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-repel-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-repel-pulse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-repel-pulse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-repel-pulse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-repel-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   .d-repel-word span, .d-repel-field { will-change: auto; }
   .d-repel-pulse { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-repel{container-type:inline-size}.d-repel-word span{font:500 clamp(24px,8.4cqw,42px)/1 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-repel-gap{flex-basis:14px}.d-repel-word span:nth-of-type(3n){color:#eee}.d-repel-word span:nth-of-type(5){color:#fa7319}.d-repel-field{border-color:#444}.d-repel-field i{border-color:#333}.d-repel-pulse{border-radius:0}.d-repel-status{font-size:8px;letter-spacing:0}
+/* Composition at the native preview size. */
+.d-repel button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-repel-word span{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-repel{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-repel :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-repel button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-repel [class$="-status"],.d-repel [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-repel [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-repel [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-repel>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-repel-word{font:450 29px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-.025em}`,
   js: `
 const letters = Array.from(root.querySelectorAll('.d-repel-word span'));
 const field = root.querySelector('.d-repel-field');
@@ -761,7 +806,11 @@ Track a local pointer or keyboard-controlled force point with a 110px radius. Fo
 
 Pointermove activates the field; pointerleave removes force but lets springs settle naturally. Pointerdown, Space, or a semantic center-pulse button sets pulseScale to 1.55–1.7, then eases it back to 1 by 0.065 per normalized frame. Arrow keys move the virtual force by 20px, Shift+Arrow by 38px, Home centers it, and Escape releases it. Prevent default only for handled keys, show a focus ring, keep pointer listeners passive, and announce input mode through a polite live region.
 
-Display the force radius as a 220px circular overlay and show the strongest current influence as 00–99. Under prefers-reduced-motion, skip velocity integration: place each affected glyph directly along the normalized outward vector by influence * 46px, keep unaffected glyphs home, and preserve pointer, keyboard, pulse, and accessibility behavior.`
+Display the force radius as a 220px circular overlay and show the strongest current influence as 00–99. Under prefers-reduced-motion, skip velocity integration: place each affected glyph directly along the normalized outward vector by influence * 46px, keep unaffected glyphs home, and preserve pointer, keyboard, pulse, and accessibility behavior.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -799,19 +848,23 @@ INTRX.register({
 .d-ripple-cursor i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.2); border-radius: 50%; }
 .d-ripple.d-ripple-active .d-ripple-cursor { opacity: 1; }
 .d-ripple-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-ripple-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-ripple-launch { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-ripple-launch:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-ripple-launch:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-ripple-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; pointer-events: none; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   .d-ripple-cursor { will-change: auto; }
   .d-ripple-launch { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-ripple>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-ripple{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-ripple :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-ripple button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-ripple [class$="-status"],.d-ripple [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-ripple [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-ripple [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-ripple>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}`,
   js: `
 const canvas = root.querySelector('.d-ripple-canvas');
 const ctx = canvas.getContext('2d');
@@ -950,7 +1003,9 @@ Represent each wave as {x, y, radius, life, power}. Pointer movement emits when 
 
 For every dot and wave, calculate distance and a Gaussian ring band: exp(-((distance - radius) / thickness)²) * life * power, where thickness = 18 + power * 10. Add normalized radial displacement * band * 17 and take the maximum band as target brightness. Ease offsets toward target by 0.24 per frame. Preserve a trailing afterimage with energy = max(targetEnergy, energy * pow(0.91, dt * 60)). Draw base dots at 1.25px in #2e2e34; affected dots grow by energy * 3.1px and brighten toward #fa7319. Use one rAF loop, cache state, remove dead/offstage waves, and keep pointer listeners passive.
 
-Provide a visible emitter reticle, 00–99 amplitude readout, focus ring, arrow-key positioning (22px, or 40px with Shift), Home centering, Space launch, and polite status announcements. Prevent default only for handled keys and keep the launch button semantic. Under prefers-reduced-motion, keep one static wave at radius 68, do not expand or decay it, and assign displacement/energy directly without temporal easing; new interactions replace the previous static wave.`
+Provide a visible emitter reticle, 00–99 amplitude readout, focus ring, arrow-key positioning (22px, or 40px with Shift), Home centering, Space launch, and polite status announcements. Prevent default only for handled keys and keep the launch button semantic. Under prefers-reduced-motion, keep one static wave at radius 68, do not expand or decay it, and assign displacement/energy directly without temporal easing; new interactions replace the previous static wave.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -987,9 +1042,9 @@ INTRX.register({
   align-items: center; min-height: 54px; border-bottom: 1px solid #232327; color: #ececef;
   text-decoration: none; transition: color .2s, padding-left .25s cubic-bezier(.22,1,.36,1); }
 .d-preview-link:first-child { border-top: 1px solid #232327; }
-.d-preview-link span, .d-preview-link em { color: #5c5c66; font: 9px "Roboto Mono", monospace;
-  letter-spacing: .1em; font-style: normal; text-transform: uppercase; }
-.d-preview-link strong { font-size: clamp(17px, 3vw, 25px); font-weight: 500; letter-spacing: -.03em; }
+.d-preview-link span, .d-preview-link em { color: #5c5c66; font: 9px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; font-style: normal; text-transform: uppercase; }
+.d-preview-link strong { font-size: clamp(17px, 3vw, 25px); font-weight: 500; letter-spacing:-0.025em; }
 .d-preview-link:hover, .d-preview-link:focus-visible { color: #fa7319; padding-left: 10px; outline: none; }
 .d-preview-link:focus-visible::after { content: ''; position: absolute; inset: 5px -6px; border: 1px solid #fa7319; pointer-events: none; }
 .d-preview-card { position: absolute; left: 0; top: 0; z-index: 4; width: 178px; height: 128px;
@@ -1009,15 +1064,24 @@ INTRX.register({
 .d-preview-art b { position: absolute; right: 12px; bottom: 10px; width: 42px; height: 42px;
   background: rgba(10,10,11,.68); border-radius: 50%; mix-blend-mode: multiply; }
 .d-preview-caption { height: 29px; display: flex; align-items: center; justify-content: space-between;
-  padding: 0 9px; background: #101012; color: #9b9ba3; font: 7px "Roboto Mono", monospace;
-  letter-spacing: .08em; }
+  padding: 0 9px; background: #101012; color: #9b9ba3; font: 7px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
 .d-preview-caption em { color: #fa7319; font-style: normal; }
 .d-preview-status { position: absolute; right: 20px; bottom: 16px; margin: 0; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-preview-link { transition: none; }
   .d-preview-card { will-change: auto; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-preview{container-type:inline-size}.d-preview-link{grid-template-columns:20px minmax(0,1fr);gap:12px;padding-block:15px}.d-preview-link strong{font:500 clamp(16px,6.5cqw,23px)/1.15 "Inter",system-ui,sans-serif;letter-spacing:-0.025em;white-space:nowrap}.d-preview-link em{display:none}.d-preview-art{background:#1c1c1f}.d-preview-art::after{mix-blend-mode:normal;border:1px solid #fa7319}.d-preview-art i{background:#444}.d-preview-status{font-size:9px;color:#999}
+/* Composition at the native preview size. */
+.d-preview button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-preview-link strong{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-preview-card{border-color:#ffffff1a;box-shadow:0 12px 32px #0004}.d-preview-art{background-size:cover;background-position:center}.d-preview-art::before,.d-preview-art::after,.d-preview-art i{display:none}
+/* Refined type, spacing and quiet interaction controls. */
+.d-preview{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-preview :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-preview button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-preview [class$="-status"],.d-preview [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-preview [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-preview [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-preview>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-preview-row{padding:18px 0;border-color:#ffffff18}.d-preview-row b{font:450 23px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-preview-row small{font:400 10px "Inter",system-ui,sans-serif;letter-spacing:0}.d-preview-caption{display:none}`,
   js: `
 const links = Array.from(root.querySelectorAll('.d-preview-link'));
 const card = root.querySelector('.d-preview-card');
@@ -1052,6 +1116,8 @@ function place(rawX, rawY) {
 function select(link, keyboard, event) {
   const index = Number(link.dataset.preview);
   const theme = themes[index];
+ const photos=['{{asset:limestone-pavilion}}','{{asset:coastal-stack}}','{{asset:atlantic-shore}}','{{asset:limestone-pavilion}}'];
+ art.style.backgroundImage='url("'+photos[index]+'")';art.style.backgroundPosition=index===3?'70% center':'center';
   art.style.setProperty('--d-preview-a', theme.a); art.style.setProperty('--d-preview-b', theme.b);
   art.style.setProperty('--d-preview-x', theme.x); art.style.setProperty('--d-preview-y', theme.y);
   art.style.setProperty('--d-preview-radius', theme.radius); art.style.setProperty('--d-preview-turn', theme.turn);
@@ -1105,13 +1171,19 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained project list whose links reveal a floating media preview inside a bare, near-black 320px position-relative root. Use real focusable links and one reusable 178x128px preview card. Each link selects a distinct composition made from the same grayscale and #fa7319 CSS-gradient system, grids, geometric pseudo-elements, and caption text—no network images. Keep the preview pointer-events none and above the list.
+Build a self-contained project list whose links reveal a floating media preview inside a bare, near-black 320px position-relative root. Use real focusable links and one reusable 178x128px preview card. Each link selects a locally embedded editorial photograph: architectural stone, a coastal sea stack, or breaking waves. Use natural texture and a restrained photographic crop, with a soft card shadow and quiet caption. Keep the preview pointer-events none and above the list.
 
 Track pointer coordinates relative to the root. Place the preview 24px to the pointer's right and vertically centered; if it would cross the right edge, flip it to the left. Clamp the final top-left to 10px stage margins. Derive horizontal frame velocity from deltaX / max(8ms, elapsed) * 16.667 and map it to target rotation clamp(velocity * 0.42, -11, 11) degrees.
 
 In one requestAnimationFrame loop, ease x/y toward targets by 0.14, rotation by 0.16 while decaying target rotation by 0.86, scale toward 1 or 0.86 by 0.18, and opacity toward 1 or 0 by 0.2. Write one combined transform and opacity per frame. Cache DOM references, read bounds only in pointer/focus/resize handlers, keep pointermove passive, and clear the preview on pointerleave.
 
-On pointerenter, swap theme variables and caption, then reveal. On pointerleave, hide. On keyboard focus, reveal the same preview positioned beside the focused link using its bounding box; hide on blur. Preserve obvious focus styling, prevent demo links from navigating, and announce the active project through a polite live region. Under prefers-reduced-motion, snap position, scale, and opacity directly and force rotation to zero while preserving hover and focus previews.`
+On pointerenter, swap theme variables and caption, then reveal. On pointerleave, hide. On keyboard focus, reveal the same preview positioned beside the focused link using its bounding box; hide on blur. Preserve obvious focus styling, prevent demo links from navigating, and announce the active project through a polite live region. Under prefers-reduced-motion, snap position, scale, and opacity directly and force rotation to zero while preserving hover and focus previews.
+
+Use compact regular Inter project names in a flexible two-column index/name list. Keep every title on one readable line at narrow width; omit the redundant category column.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -1152,20 +1224,24 @@ INTRX.register({
 .d-ghost-card:focus-visible { outline: 2px solid #ececef; outline-offset: 4px; }
 .d-ghost-card::after { content: ''; position: absolute; right: -24px; top: -28px; width: 84px; height: 84px;
   border: 18px solid rgba(10,10,11,.18); border-radius: 50%; }
-.d-ghost-index { position: absolute; left: 9px; top: 8px; font: 7px "JetBrains Mono", monospace;
-  letter-spacing: .1em; }
-.d-ghost-card strong { position: absolute; left: 9px; bottom: 8px; font: 700 19px/.84 "Roboto Mono", sans-serif;
-  letter-spacing: -.06em; }
+.d-ghost-index { position: absolute; left: 9px; top: 8px; font: 7px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
+.d-ghost-card strong { position: absolute; left: 9px; bottom: 8px; font:500 19px/.84 "Roboto Mono", sans-serif;
+  letter-spacing:-0.025em; }
 .d-ghost-card i { position: absolute; right: 9px; bottom: 9px; width: 17px; height: 17px;
   border: 1px solid #0a0a0b; border-radius: 50%; }
 .d-ghost-card i::before { content: ''; position: absolute; left: 50%; top: 50%; width: 7px; height: 1px;
   background: #0a0a0b; transform: translate(-50%, -50%); }
 .d-ghost-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-ghost-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-ghost-status { position: absolute; right: 20px; bottom: 18px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-@media (prefers-reduced-motion: reduce) { .d-ghost-card { will-change: auto; } }`,
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce) { .d-ghost-card { will-change: auto; } }
+/* Composition at the native preview size. */
+.d-ghost>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-ghost{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-ghost :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-ghost button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-ghost [class$="-status"],.d-ghost [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-ghost [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-ghost [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-ghost>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-ghost-card{border-radius:6px;border:1px solid #ffffff13;background:#a6b39f;color:#182518;box-shadow:0 8px 23px #00000020}.d-ghost-card h2{font:450 24px/1.07 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-ghost::before{opacity:.12}.d-ghost .d-ghost-card{border-radius:6px;border:1px solid #ffffff14;background:#a6b39f;color:#182518;box-shadow:0 8px 23px #00000020}.d-ghost .d-ghost-card h2{font:450 24px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-.025em}`,
   js: `
 const canvas = root.querySelector('.d-ghost-canvas');
 const ctx = canvas.getContext('2d');
@@ -1298,7 +1374,9 @@ On pointerdown, store the grab offset and reset velocity. During pointermove, cl
 
 After release, integrate velocity with dt capped at 32ms, damp each component by pow(0.91, dt*60), and bounce at boundaries with restitution 0.34. Keep stamping every 10px while speed exceeds 55px/s. Ease angle toward clamp(vx*0.015,-9,9) by 0.12. Fade ghosts by 1.7 life units/s. Draw each copy translated and rotated like the card, stretched horizontally by 1 + strength*0.13 and compressed vertically by strength*0.045, using low-alpha #fa7319 plus a couple of dark graphic bars. Use one rAF and clear/redraw the trail each frame.
 
-Arrow keys move by 24px, Shift+Arrow by 46px, Home centers, and Space applies a 360px/s horizontal and -150px/s vertical throw. Prevent default only for handled keys, retain a strong focus ring, expose a live velocity readout, and announce drag/release/keyboard states. Under prefers-reduced-motion, move directly without rotation, inertia, or ghost creation; pointer and keyboard placement must remain functional.`
+Arrow keys move by 24px, Shift+Arrow by 46px, Home centers, and Space applies a 360px/s horizontal and -150px/s vertical throw. Prevent default only for handled keys, retain a strong focus ring, expose a live velocity readout, and announce drag/release/keyboard states. Under prefers-reduced-motion, move directly without rotation, inertia, or ghost creation; pointer and keyboard placement must remain functional.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -1332,7 +1410,7 @@ INTRX.register({
 .d-eyes { position: relative; width: 100%; height: 320px; overflow: hidden; outline: none;
   background: #0a0a0b; color: #b8b8b8; touch-action: none; }
 .d-eyes::before { content: 'LOOK / 09'; position: absolute; left: 20px; top: 18px;
-  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .12em; color: #7a7a7f; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; color: #7a7a7f; }
 .d-eyes:focus-visible { box-shadow: inset 0 0 0 1px #fa7319; }
 .d-eyes-head { position: absolute; left: 50%; top: 47%; width: 250px; height: 130px;
   transform: translate(-50%, -50%); display: flex; gap: 26px; align-items: center;
@@ -1346,21 +1424,25 @@ INTRX.register({
   transform: translateY(-103%); }
 .d-eyes.d-eyes-blinking .d-eyes-lid { animation: d-eyes-blink .28s cubic-bezier(.4,0,.2,1); }
 .d-eyes-readout { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .12em; color: #7a7a7f; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; color: #7a7a7f; }
 .d-eyes-readout strong { font-size: 20px; font-weight: 500; letter-spacing: 0; color: #fa7319; }
 .d-eyes-blink { position: absolute; left: 20px; bottom: 18px; border: 1px solid #333;
   background: transparent; color: #b8b8b8; padding: 8px 14px; text-transform: uppercase;
-  letter-spacing: .08em; font: 10px Roboto Mono,JetBrains Mono,monospace; cursor: pointer;
+  letter-spacing:0.06em; font: 10px "Inter",system-ui,sans-serif; cursor: pointer;
   transition: color .12s, border-color .12s; }
 .d-eyes-blink:hover { border-color: #fa7319; color: #fa7319; }
 .d-eyes-blink:focus-visible { outline: 1px solid #fa7319; outline-offset: 3px; }
 .d-eyes-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #7a7a7f;
-  font: 9px Roboto Mono,JetBrains Mono,monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @keyframes d-eyes-blink { 0%, 100% { transform: translateY(-103%); } 43%, 58% { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) {
   .d-eyes-head, .d-eyes-pupil { will-change: auto; }
   .d-eyes.d-eyes-blinking .d-eyes-lid { animation-duration: .08s; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-eyes-eye{height:104px;background:#161619;border:1px solid #666;box-shadow:inset 0 0 0 8px #0a0a0b,inset 0 0 0 9px #333}.d-eyes-pupil{background:#d8d8dc;border:1px solid #eee;box-sizing:border-box}.d-eyes-pupil i{width:10px;height:10px;left:13px;top:13px;background:#0a0a0b;border-radius:50%}.d-eyes-head{gap:24px}.d-eyes-status{font-size:8px;letter-spacing:0.02em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-eyes{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-eyes :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-eyes button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-eyes-head{display:none}.d-eyes [class$="-status"],.d-eyes [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-eyes [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-eyes [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-eyes>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-eyes-head{display:none}.d-eyes-eye{border-color:#ffffff12}.d-eyes-readout{display:none}.d-eyes-blink{font:400 11px "Inter",system-ui,sans-serif;border-radius:5px;text-transform:none}`,
   js: `
 const head = root.querySelector('.d-eyes-head');
 const eyes = Array.from(root.querySelectorAll('.d-eyes-eye'));
@@ -1462,13 +1544,15 @@ function frame() {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained two-eye graphic inside a 320px position-relative root with a near-black (#0a0a0b) background. Create two oversized elliptical off-white (#ececef) eyes (roughly 104x124px, 26px apart, centered) and one circular dark pupil per eye — no face, ears, mouth, or other character features; the restraint is the aesthetic. Add eyelid elements (same color as the background so a blink reads as the eye closing) above the pupils and a semantic “Blink” button styled as a quiet mono-font outline chip. After layout, measure each eye center relative to the root once and remeasure on resize; do not read layout in the animation loop.
+Build a self-contained two-eye graphic inside a 320px position-relative root with a near-black (#0a0a0b) background. Create two 104×104px dark graphite optical sockets, 24px apart, with thin gray rims and inset registration rings. Each socket contains a pale gray circular pupil with a small dark center — no face, ears, mouth, or other character features; the restraint is the aesthetic. Add eyelid elements (same color as the background so a blink reads as the eye closing) above the pupils and a semantic “Blink” button styled as a quiet mono-font outline chip. After layout, measure each eye center relative to the root once and remeasure on resize; do not read layout in the animation loop.
 
 For each eye, compute dx/dy from its center to the target and angle = atan2(dy, dx). Set reach = min(14, hypot(dx,dy) * 0.085), desiredX = cos(angle) * reach, and desiredY = sin(angle) * reach * 0.68 so pupils remain inside elliptical sockets. Ease the left pupil by 0.18 and right pupil by 0.145 per frame for subtle organic asymmetry. Apply each result as a translate transform. Lean the head by up to 5px x, 3px y, and 2.2 degrees from normalized target position, and show the mean gaze angle.
 
 Pointermove updates local target coordinates; pointerleave returns to the visual center. Pointerdown, Space, or the button retriggers a synchronized 280ms CSS eyelid animation that closes around 43–58% of its timeline. Include occasional idle blinks every random 1.9–4.2 seconds but do not announce automatic blinks. Arrow keys move the virtual gaze by 24px, Shift+Arrow by 42px, and Home centers it. Prevent default only for handled keys, keep pointermove passive, show focus styles, and announce user-triggered blink/gaze states through a polite live region.
 
-Use one requestAnimationFrame loop and transform-only writes. Under prefers-reduced-motion, disable automatic blinks, snap pupils directly to desired offsets, remove head rotation, and shorten user-triggered eyelid closure to about 80ms while preserving pointer and keyboard control.`
+Use one requestAnimationFrame loop and transform-only writes. Under prefers-reduced-motion, disable automatic blinks, snap pupils directly to desired offsets, remove head rotation, and shorten user-triggered eyelid closure to about 80ms while preserving pointer and keyboard control.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -1486,7 +1570,7 @@ INTRX.register({
   hint: 'move through the fluid, click or press Space to pulse',
   html: `
 <div class="d-metaball" tabindex="0" aria-label="Interactive liquid metaballs. Arrow keys move the attractor and Space pulses the fluid.">
-  <div class="d-metaball-field" aria-hidden="true">
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><filter id="metaball-alpha"><feGaussianBlur in="SourceGraphic" stdDeviation="10"/><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 22 -9"/></filter></defs></svg><div class="d-metaball-field" aria-hidden="true">
     <i class="d-metaball-cursor"></i>
     <i class="d-metaball-orb"></i><i class="d-metaball-orb"></i><i class="d-metaball-orb"></i>
     <i class="d-metaball-orb"></i><i class="d-metaball-orb"></i><i class="d-metaball-orb"></i>
@@ -1513,21 +1597,25 @@ INTRX.register({
 .d-metaball-contours i:nth-child(2) { inset: 31px; border-style: dashed; }
 .d-metaball-contours i:nth-child(3) { inset: 67px; }
 .d-metaball-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-metaball-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-metaball-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-metaball-pulse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-metaball-pulse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-metaball-pulse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-metaball-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-metaball-cursor, .d-metaball-orb { will-change: auto; }
   .d-metaball-pulse { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-metaball-field{background:transparent;filter:url(#metaball-alpha)}.d-metaball-cursor,.d-metaball-orb{background:#d8d8dc}.d-metaball-contours{opacity:.25}.d-metaball-pulse{border-radius:0}.d-metaball-status{font-size:8px;letter-spacing:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-metaball{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-metaball :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-metaball button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-metaball [class$="-status"],.d-metaball [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-metaball [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-metaball [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-metaball>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-metaball-label,.d-metaball-meter{display:none}.d-metaball-contours{opacity:.16}`,
   js: `
 const cursorBlob = root.querySelector('.d-metaball-cursor');
 const orbElements = Array.from(root.querySelectorAll('.d-metaball-orb'));
@@ -1630,13 +1718,15 @@ function frame(now) {
 }
 requestAnimationFrame(frame);`,
   prompt: `
-Build a self-contained liquid metaball field inside a 320px position-relative root. Put one pointer mass and six orbiting circular masses inside a full-stage layer with a dark background. Apply blur(11px) contrast(20) to that entire layer so nearby fluorescent shapes cross the alpha threshold and become one crisp liquid silhouette. Keep labels, controls, contour guides, and focus treatment outside the filtered layer.
+Build a self-contained liquid metaball field inside a 320px position-relative root. Put one pointer mass and six orbiting circular masses inside a full-stage transparent layer over a dark root. Apply an SVG alpha-only threshold filter after a Gaussian blur, preserving the grayscale material channels to that entire layer so nearby pale-gray shapes cross the alpha threshold and become one crisp liquid silhouette. Keep labels, controls, contour guides, and focus treatment outside the filtered layer.
 
 Give the six orbiters distinct sizes from 42–72px, phase offsets, signed angular speeds around 0.58–1.02, and elliptical radii. Each frame, calculate baseX = centerX + cos(time*speed + phase)*rx and baseY = centerY + sin(time*speed*1.17 + phase)*ry. For the spring-following pointer mass, update velocity = (velocity + (target-position)*0.075)*0.8, then position += velocity. For each orb, attraction = active ? max(0,1-distanceToPointer/190) : 0, merge = attraction²*0.72, and final position = base + (pointer-base)*merge. Scale by pulse*(1 + attraction*0.16) and show maximum attraction as 00–99 cohesion.
 
 Pointermove sets a clamped target, pointerleave returns it to center and disables attraction, and pointerdown pulses scale to 1.55. Ease pulse back to 1 by 0.055 per frame. Arrow keys move the target by 24px, Shift+Arrow by 42px, Home centers, Space pulses, and a semantic button launches a 1.68 center pulse. Prevent default only for handled keys, ignore button pointerdown in the stage handler, use passive pointer/resize listeners, maintain a strong focus ring, and announce input states.
 
-Use a single requestAnimationFrame loop and transform-only writes. Under prefers-reduced-motion, freeze orbit time at zero, snap the pointer mass directly to its target, disable pulse interpolation, but preserve proximity merging, keyboard movement, and the blur/contrast liquid threshold.`
+Use a single requestAnimationFrame loop and transform-only writes. Under prefers-reduced-motion, freeze orbit time at zero, snap the pointer mass directly to its target, disable pulse interpolation, but preserve proximity merging, keyboard movement, and the alpha-only liquid threshold.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -1668,18 +1758,24 @@ INTRX.register({
 .d-rope:focus-visible { box-shadow: inset 0 0 0 2px #fa7319; }
 .d-rope-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .d-rope-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-rope-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-rope-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-rope-shake { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-rope-shake:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-rope-shake:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-rope-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-@media (prefers-reduced-motion: reduce) { .d-rope-shake { transition: none; } }`,
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce) { .d-rope-shake { transition: none; } }
+/* Composition at the native preview size. */
+.d-rope>button{border-radius:0}
+/* Composition at the native preview size. */
+.d-rope{background:radial-gradient(ellipse at 50% 35%,#181a1d 0,#101114 48%,#0a0a0b 100%)}
+/* Refined type, spacing and quiet interaction controls. */
+.d-rope{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-rope :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-rope button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-rope [class$="-status"],.d-rope [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-rope [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-rope [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-rope>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-rope-label{display:none}.d-rope-readout{display:none}`,
   js: `
 const canvas = root.querySelector('.d-rope-canvas');
 const ctx = canvas.getContext('2d');
@@ -1847,7 +1943,9 @@ Each frame normalize step = min(2, elapsedMs/16.667). Pin point 0 to the target.
 
 Render two smoothed paths through the points using quadraticCurveTo via adjacent midpoints: a 10px low-alpha glow and a crisp 2px #fa7319 rope. Draw the anchor and every third link as small outlined nodes. Clicking, Space, or a semantic shake button injects sway by subtracting sin(index*1.73)*(6+index*0.22) from oldX and adding cos(index*1.17)*3.5 to oldY. Arrow keys move the target 24px, Shift+Arrow 42px, and Home centers it. Prevent default only for handled keys, use passive pointer/resize listeners, expose a sway readout, focus ring, and polite state messages.
 
-Use one rAF loop. Under prefers-reduced-motion, skip Verlet integration and idle drift. Place points directly along a deterministic hanging curve: x = targetX + sin(t*pi)*28*bendDirection and y = targetY + t*availableLength. Space/button flips bendDirection, giving an interactive static alternate without continuous motion.`
+Use one rAF loop. Under prefers-reduced-motion, skip Verlet integration and idle drift. Place points directly along a deterministic hanging curve: x = targetX + sin(t*pi)*28*bendDirection and y = targetY + t*availableLength. Space/button flips bendDirection, giving an interactive static alternate without continuous motion.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -1898,21 +1996,25 @@ INTRX.register({
   border-radius: 50%; background: rgba(236,236,239,.7); }
 .d-stretch-echo { border: 1px solid #fa7319; opacity: 0; will-change: transform, opacity; }
 .d-stretch-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-stretch-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-stretch-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-stretch-sweep { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-stretch-sweep:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-stretch-sweep:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-stretch-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-stretch-blob, .d-stretch-echo { will-change: auto; }
   .d-stretch-sweep { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-stretch>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-stretch{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-stretch :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-stretch button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-stretch [class$="-status"],.d-stretch [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-stretch [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-stretch [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-stretch>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-stretch-label{display:none}.d-stretch-guide{opacity:.17}`,
   js: `
 const blob = root.querySelector('.d-stretch-blob');
 const echoes = Array.from(root.querySelectorAll('.d-stretch-echo'));
@@ -2018,7 +2120,9 @@ Normalize step = clamp(elapsedMs/16.667, 0.1, 2). Ease position using x += (targ
 
 Keep 20 rendered history samples. Three echoes read samples 5, 10, and 16 frames behind, use reduced stretch multipliers, and set opacity from historical intensity up to 0.3. Hide echoes when still. Show speed as rounded frameSpeed*60 capped at 999. Pointermove sets the target, pointerleave returns to center, arrows move 30px, Shift+Arrow 54px, Home centers, and Space or a semantic button alternates a sweep between opposing stage quadrants. Prevent default only for handled keys, use passive pointer/resize listeners, preserve focus treatment, and announce input states.
 
-Under prefers-reduced-motion, snap directly to target, force rotation and both scales to neutral, hide all echoes, and keep pointer plus keyboard positioning functional without deformation.`
+Under prefers-reduced-motion, snap directly to target, force rotation and both scales to neutral, hide all echoes, and keep pointer plus keyboard positioning functional without deformation.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2039,7 +2143,7 @@ INTRX.register({
   <div class="d-snap-layout">
     <button class="d-snap-target d-snap-pill" type="button" data-radius="28"><span>Archive</span><i>24 projects</i></button>
     <button class="d-snap-target d-snap-disc" type="button" data-radius="64"><span>Play</span><i>Film 01:42</i></button>
-    <button class="d-snap-target d-snap-card" type="button" data-radius="5"><span>About the studio</span><i>Since 2014 ↗</i></button>
+    <button class="d-snap-target d-snap-card" type="button" data-radius="5"><span>About the studio</span><i>Since 2014 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></i></button>
   </div>
   <div class="d-snap-frame" aria-hidden="true"><i></i><b></b></div>
   <i class="d-snap-dot" aria-hidden="true"></i>
@@ -2053,9 +2157,9 @@ INTRX.register({
 .d-snap-target { position: relative; border: 1px solid #2e2e34; background: transparent;
   color: #ececef; font-family: inherit; cursor: none; transition: background .22s, color .22s; }
 .d-snap-target span, .d-snap-target i { display: block; pointer-events: none; }
-.d-snap-target span { font-size: 15px; font-weight: 600; letter-spacing: -.03em; }
-.d-snap-target i { margin-top: 7px; color: #7a7a7f; font: 8px "Roboto Mono", monospace;
-  letter-spacing: .08em; text-transform: uppercase; font-style: normal; }
+.d-snap-target span { font-size: 15px; font-weight:500; letter-spacing:-0.025em; }
+.d-snap-target i { margin-top: 7px; color: #7a7a7f; font: 8px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; text-transform: uppercase; font-style: normal; }
 .d-snap-target:hover, .d-snap-target:focus-visible { background: #161619; color: #fa7319; outline: none; }
 .d-snap-target:hover i, .d-snap-target:focus-visible i { color: #9b9ba3; }
 .d-snap-pill { height: 58px; border-radius: 28px; text-align: left; padding: 0 22px; }
@@ -2075,7 +2179,7 @@ INTRX.register({
   margin: -2.5px 0 0 -2.5px; border-radius: 50%; background: #fa7319; opacity: 0;
   pointer-events: none; will-change: transform, opacity; box-shadow: 0 0 0 1px rgba(236,236,239,.26); }
 .d-snap-status { position: absolute; right: 20px; bottom: 16px; margin: 0; color: #7a7a7f;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (max-width: 620px) {
   .d-snap-layout { inset-inline: 4%; gap: 10px; grid-template-columns: 1.1fr .7fr 1fr; }
   .d-snap-disc { width: 86px; height: 86px; }.d-snap-card { padding: 12px; }
@@ -2083,7 +2187,15 @@ INTRX.register({
 @media (prefers-reduced-motion: reduce) {
   .d-snap-frame, .d-snap-dot { will-change: auto; }
   .d-snap-target { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-snap-layout{inset:64px 22px 56px;grid-template-columns:minmax(0,1fr) 82px;grid-template-rows:80px 80px;gap:15px}.d-snap-pill{height:54px;padding:0 12px}.d-snap-disc{width:78px;height:78px}.d-snap-card{grid-column:1/-1;align-self:center;height:68px;padding:12px;border-radius:0;display:flex;justify-content:space-between;align-items:center}.d-snap-target span{font-size:13px}.d-snap-target i{font-size:8px}.d-snap-status{font-size:9px;letter-spacing:0}
+/* Composition at the native preview size. */
+.d-snap button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-snap-target{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-snap{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-snap :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-snap button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-snap [class$="-status"],.d-snap [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-snap [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-snap [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-snap>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-snap-target{border-color:#ffffff20;font:450 14px "Inter",system-ui,sans-serif}.d-snap-target small{font:400 10px "Inter",system-ui,sans-serif;letter-spacing:0;color:#8f9b92}
+.d-snap-card>i{display:inline-flex;align-items:center;gap:5px;margin-top:0}.d-snap-card>i svg{display:block;flex:none}`,
   js: `
 const targets = Array.from(root.querySelectorAll('.d-snap-target'));
 const frame = root.querySelector('.d-snap-frame');
@@ -2180,7 +2292,11 @@ Track pointer coordinates relative to the root. In free mode set goal x/y to poi
 
 Animate x/y as spring velocity=(velocity+(goal-current)*0.14)*0.68; animate width/height/radius with stiffness 0.16 and damping 0.7. The dot lerps by 0.38. Write one translate plus width, height, and border-radius per frame. Recompute a locked target on resize, keep pointermove/resize passive, cache nodes, and never measure inside the rAF loop.
 
-Keyboard focus must invoke the identical snapped geometry, center the dot in the control, show visible target styling, and announce focus/selection through a polite live region. Under prefers-reduced-motion, assign all shell properties and dot coordinates directly to their goals while preserving pointer hover, focus, stage-exit, and resize behavior.`
+Keyboard focus must invoke the identical snapped geometry, center the dot in the control, show visible target styling, and announce focus/selection through a polite live region. Under prefers-reduced-motion, assign all shell properties and dot coordinates directly to their goals while preserving pointer hover, focus, stage-exit, and resize behavior.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2220,12 +2336,12 @@ INTRX.register({
 .d-flash-scene::before { content: ''; position: absolute; inset: 0; opacity: .42;
   background-image: linear-gradient(rgba(10,10,11,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(10,10,11,.2) 1px, transparent 1px);
   background-size: 28px 28px; }
-.d-flash-kicker { position: absolute; left: 20px; top: 18px; font: 8px "JetBrains Mono", monospace;
-  letter-spacing: .12em; }
+.d-flash-kicker { position: absolute; left: 20px; top: 18px; font: 8px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
 .d-flash-title { position: absolute; left: 8%; top: 51%; transform: translateY(-50%);
-  font: 700 clamp(36px, 6vw, 60px)/.8 "Roboto Mono", sans-serif; letter-spacing: -.07em; }
+  font:500 clamp(36px, 6vw, 60px)/.8 "Roboto Mono", sans-serif; letter-spacing:-0.025em; }
 .d-flash-panel { position: absolute; width: 118px; height: 132px; border: 1px solid #0a0a0b; padding: 10px;
-  font: 7px "JetBrains Mono", monospace; box-sizing: border-box; }
+  font: 7px "Inter",system-ui,sans-serif; box-sizing: border-box; }
 .d-flash-panel i { display: block; height: 88px; margin-bottom: 10px; background: #0a0a0b; }
 .d-flash-panel-one { right: 22%; top: 44px; transform: rotate(5deg); }
 .d-flash-panel-one i { background: linear-gradient(135deg, #ff5d3b 0 48%, #0a0a0b 49%); }
@@ -2247,18 +2363,24 @@ INTRX.register({
   border: 1px solid rgba(236,236,239,.14); border-radius: 50%; pointer-events: none; will-change: transform; }
 .d-flash-ring i { position: absolute; inset: 25%; border: 1px dashed rgba(236,236,239,.09); border-radius: 50%; }
 .d-flash-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-flash-meter strong { color: #ececef; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-flash-toggle { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-flash-toggle:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-flash-toggle:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-flash-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #9b9ba3;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-flash-ring { will-change: auto; }.d-flash-toggle { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-flash>button{border-radius:0}
+/* Composition at the native preview size. */
+.d-flash-panel-one i{background:url("{{asset:coastal-stack}}") center/cover}.d-flash-panel-two i{background:url("{{asset:limestone-pavilion}}") center/cover}
+/* Refined type, spacing and quiet interaction controls. */
+.d-flash{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-flash :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-flash button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-flash [class$="-status"],.d-flash [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-flash [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-flash [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-flash>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-flash-title{font:500 48px/.98 "Inter",system-ui,sans-serif;letter-spacing:-.025em}.d-flash-panel{border-color:#ffffff14;border-radius:4px}.d-flash-panel span{font:400 10px "Inter",system-ui,sans-serif;letter-spacing:0}`,
   js: `
 const grain = root.querySelector('.d-flash-grain');
 const grainCtx = grain.getContext('2d');
@@ -2360,7 +2482,10 @@ Add a 128x64 canvas scaled over the stage as pixelated grain. Generate grayscale
 
 Ease rendered light coordinates toward a clamped pointer target by 0.13 per frame. Focused radius is 148px and wide radius 205px; idle radius is 72% of either. Add subtle flicker sin(now*0.019)*2.1 + sin(now*0.0067)*1.4 and a click flare of 15px decaying by 0.82. Ease radius by 0.14, then update the three CSS variables and a 300px guide ring scaled by radius/150. Use one rAF, cache nodes, keep pointer/resize passive, and never regenerate noise faster than its cadence.
 
-Arrow keys move 26px, Shift+Arrow 44px, Home centers, and Space or a semantic aria-pressed button toggles wide/focused mode. Ignore button pointerdown in the stage flare handler, preserve focus treatment, and announce state changes. Under prefers-reduced-motion, snap position/radius directly, remove flicker and flare, and draw grain only once while preserving pointer and keyboard search.`
+Arrow keys move 26px, Shift+Arrow 44px, Home centers, and Space or a semantic aria-pressed button toggles wide/focused mode. Ignore button pointerdown in the stage flare handler, preserve focus treatment, and announce state changes. Under prefers-reduced-motion, snap position/radius directly, remove flicker and flare, and draw grain only once while preserving pointer and keyboard search.
+The revealed artwork uses locally embedded editorial photographs with authentic texture. Preserve the grain flashlight masks and their continuous falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2399,20 +2524,24 @@ INTRX.register({
 .d-rain-reticle::before { width: 9px; height: 1px; }.d-rain-reticle::after { width: 1px; height: 9px; }
 .d-rain-reticle i { position: absolute; inset: 6px; border: 1px dashed rgba(250,115,25,.2); border-radius: 50%; }
 .d-rain-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-rain-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-rain-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-rain-launch { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-rain-launch:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-rain-launch:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-rain-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-rain-reticle { will-change: auto; }.d-rain-launch { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-rain>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-rain{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-rain :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-rain button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-rain [class$="-status"],.d-rain [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-rain [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-rain [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-rain>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-rain-label{display:none}.d-rain-guide{opacity:.1}`,
   js: `
 const canvas = root.querySelector('.d-rain-canvas');
 const ctx = canvas.getContext('2d');
@@ -2535,7 +2664,7 @@ function frame(now) {
     ctx.beginPath(); ctx.moveTo(particle.oldX, particle.oldY); ctx.lineTo(particle.x - particle.vx * 0.018, particle.y - particle.vy * 0.018); ctx.stroke();
     ctx.globalAlpha = alpha; ctx.fillStyle = particle.color;
     ctx.save(); ctx.translate(particle.x, particle.y); ctx.rotate(particle.rotation);
-    ctx.font = '700 ' + particle.size.toFixed(1) + 'px "Roboto Mono", monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.font = '700 ' + particle.size.toFixed(1) + 'px "Inter", sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText(particle.glyph, 0, 0); ctx.restore();
   }
   ctx.globalAlpha = 1;
@@ -2551,7 +2680,9 @@ Each normal burst creates 28 particles at the exact pointer/launcher position. C
 
 In one requestAnimationFrame loop with dt capped at 32ms, apply vx drag pow(0.996,dt*60), gravity 620px/s², position and rotation integration. Bounce from side walls with restitution 0.58. At the floor use vertical restitution 0.46, horizontal friction 0.78, and angular damping 0.72; after at least three low-energy bounces mark settled. Decrease life each frame and fade over the last 0.55s. Draw a low-alpha velocity streak before each rotated glyph. Expand rings at 210px/s and fade them at 1.9 life units/s.
 
-Pointerdown bursts unless it targets the control. Arrow keys position the launcher by 26px, Shift+Arrow by 44px, Home centers, and Space launches. Prevent default only for handled keys, keep pointer/resize passive, expose focus styling and polite state messages. Under prefers-reduced-motion, replace previous content with 12 static glyphs distributed on 30/43/56px radial bands, one fixed 52px origin ring, no velocity/spin/gravity/lifetime decay, while preserving pointer and keyboard placement.`
+Pointerdown bursts unless it targets the control. Arrow keys position the launcher by 26px, Shift+Arrow by 44px, Home centers, and Space launches. Prevent default only for handled keys, keep pointer/resize passive, expose focus styling and polite state messages. Under prefers-reduced-motion, replace previous content with 12 static glyphs distributed on 30/43/56px radial bands, one fixed 52px origin ring, no velocity/spin/gravity/lifetime decay, while preserving pointer and keyboard placement.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2601,20 +2732,24 @@ INTRX.register({
 .d-gridline-field i { position: absolute; inset: 35px; border: 1px dashed rgba(250,115,25,.11); border-radius: 50%; }
 .d-gridline.d-gridline-active .d-gridline-field { opacity: 1; }
 .d-gridline-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-gridline-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "JetBrains Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-gridline-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-gridline-reverse { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "JetBrains Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-gridline-reverse:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-gridline-reverse:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-gridline-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "JetBrains Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-gridline-field { will-change: auto; }.d-gridline-reverse { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-gridline>button{border-radius:0}
+/* Refined type, spacing and quiet interaction controls. */
+.d-gridline{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-gridline :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-gridline button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-gridline [class$="-status"],.d-gridline [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-gridline [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-gridline [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-gridline>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-gridline-label{display:none}.d-gridline-field:before{opacity:.2}`,
   js: `
 const svg = root.querySelector('.d-gridline-svg');
 const vertical = Array.from(root.querySelectorAll('.d-gridline-v'));
@@ -2737,7 +2872,9 @@ For each vertical path sample 13 points; for each horizontal path sample 19. For
 
 Ease field position by 0.18 and strength toward active by 0.16 or toward zero by 0.1. Pointerleave must decay the warp back to perfectly straight. Click, Space, or an aria-pressed semantic button reverses polarity; arrows move the field 28px, Shift+Arrow 46px, and Home centers/deactivates. Prevent default only for handled keys, ignore button pointerdown in the stage handler, use passive pointer/resize listeners, cache nodes, expose force and polite state feedback, and use one rAF.
 
-Under prefers-reduced-motion, snap field position and strength directly to their targets. Keep the static bowed grid, polarity changes, keyboard controls, focus treatment, and responsive viewBox behavior without interpolation.`
+Under prefers-reduced-motion, snap field position and strength directly to their targets. Keep the static bowed grid, polarity changes, keyboard controls, focus treatment, and responsive viewBox behavior without interpolation.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2774,9 +2911,9 @@ INTRX.register({
   background-image: linear-gradient(#151519 1px, transparent 1px), linear-gradient(90deg, #151519 1px, transparent 1px);
   background-size: 28px 28px; }
 .d-heat-scene strong { position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
-  font: 700 clamp(48px, 9vw, 82px)/.78 "Roboto", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
+  font:500 clamp(48px, 9vw, 82px)/.78 "Roboto", sans-serif; letter-spacing:-0.025em; white-space: nowrap; }
 .d-heat-scene span { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 8px "Roboto Mono", monospace; letter-spacing: .12em; }
+  font: 8px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-heat-scene i { position: absolute; display: block; width: 8px; height: 8px; border: 1px solid #2e2e34; border-radius: 50%; }
 .d-heat-scene i:nth-of-type(1) { left: 18%; top: 34%; }.d-heat-scene i:nth-of-type(2) { right: 19%; top: 27%; }
 .d-heat-scene i:nth-of-type(3) { right: 31%; bottom: 23%; }
@@ -2788,22 +2925,31 @@ INTRX.register({
 .d-heat-reticle::before { width: 8px; height: 1px; }.d-heat-reticle::after { width: 1px; height: 8px; }
 .d-heat-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.25); border-radius: 50%; }
 .d-heat-scale { position: absolute; left: 20px; bottom: 64px; display: flex; align-items: center; gap: 7px;
-  color: #5c5c66; font: 7px "Roboto Mono", monospace; letter-spacing: .08em; }
+  color: #5c5c66; font: 7px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-heat-scale i { display: block; width: 76px; height: 3px;
   background: linear-gradient(90deg, #2e2e34, #7a7a7f, #fa7319, #ececef); }
 .d-heat-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-heat-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-heat-ignite { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-heat-ignite:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-heat-ignite:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-heat-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-heat-reticle { will-change: auto; }.d-heat-ignite { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-heat>button{border-radius:0}
+/* Composition at the native preview size. */
+.d-heat{container-type:inline-size}.d-heat-scene strong{font:500 clamp(31px,12.7cqw,54px)/.95 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-heat button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-heat-scene strong{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-heat{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-heat :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-heat button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-heat [class$="-status"],.d-heat [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-heat [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-heat [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-heat>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-heat h2{font:450 34px/1.05 "Inter",system-ui,sans-serif;letter-spacing:-.02em}.d-heat:before{opacity:.12}`,
   js: `
 const canvas = root.querySelector('.d-heat-canvas');
 const ctx = canvas.getContext('2d');
@@ -2936,7 +3082,11 @@ Emit trail points every ~8px along interpolated pointer segments, capped at 14 p
 
 In one requestAnimationFrame loop with dt capped at 32ms, use globalCompositeOperation='lighter'. Move points, damp vx by pow(0.985,dt*60), vy by pow(0.992,dt*60), grow radius 17px/s, and cool temperature by 0.4/s. Draw each as a radial gradient that runs from an off-white core through a #fa7319 mid-band into neutral gray and a transparent edge, with alpha based on temperature. Add horizontal shimmer sin(now*0.006+phase)*(1-temperature)*5 so cooler air wavers more. Remove points at zero temperature and restore source-over blending afterward.
 
-Arrow keys move the launcher 26px, Shift+Arrow 44px, Home centers, and Space flares. Ignore control pointerdown in the stage handler, keep pointer/resize passive, expose temperature and polite state feedback, and retain focus styling. Under prefers-reduced-motion, replace the prior field with 14 static points on three radial bands, disable drift/cooling/shimmer, and preserve pointer, keyboard, and button placement.`
+Arrow keys move the launcher 26px, Shift+Arrow 44px, Home centers, and Space flares. Ignore control pointerdown in the stage handler, keep pointer/resize passive, expose temperature and polite state feedback, and retain focus styling. Under prefers-reduced-motion, replace the prior field with 14 static points on three radial bands, disable drift/cooling/shimmer, and preserve pointer, keyboard, and button placement.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -2977,9 +3127,9 @@ INTRX.register({
   background-image: linear-gradient(#16161a 1px, transparent 1px), linear-gradient(90deg, #16161a 1px, transparent 1px);
   background-size: 32px 32px; }
 .d-hud-scene span { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 8px "Roboto Mono", monospace; letter-spacing: .13em; }
+  font: 8px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-hud-scene strong { position: absolute; left: 50%; top: 49%; transform: translate(-50%, -50%);
-  font: 700 clamp(50px, 10vw, 92px)/.78 "Roboto", sans-serif; letter-spacing: -.08em; white-space: nowrap; }
+  font:500 clamp(50px, 10vw, 92px)/.78 "Roboto", sans-serif; letter-spacing:-0.025em; white-space: nowrap; }
 .d-hud-scene i { position: absolute; width: 38px; height: 38px; border: 1px solid #2a2a30; }
 .d-hud-scene i:nth-of-type(1) { left: 9%; top: 25%; border-right: 0; border-bottom: 0; }
 .d-hud-scene i:nth-of-type(2) { right: 9%; top: 25%; border-left: 0; border-bottom: 0; }
@@ -3011,19 +3161,26 @@ INTRX.register({
   pointer-events: none; will-change: transform; }
 .d-hud-readout { position: absolute; left: 0; top: 0; width: 126px; display: grid; grid-template-columns: 1fr 1fr;
   gap: 3px 10px; padding: 8px 9px; border: 1px solid rgba(250,115,25,.32); background: rgba(10,10,11,.82);
-  color: #5c5c66; font: 8px "Roboto Mono", monospace; pointer-events: none; will-change: transform; }
+  color: #5c5c66; font: 8px "Inter",system-ui,sans-serif; pointer-events: none; will-change: transform; }
 .d-hud-readout b { color: #ececef; font-weight: 500; }
 .d-hud-freeze { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-hud-freeze:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-hud-freeze:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-hud-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   .d-hud-vline, .d-hud-hline, .d-hud-cross, .d-hud-lead, .d-hud-readout { will-change: auto; }
   .d-hud-freeze { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-hud{container-type:inline-size}.d-hud-scene strong{color:#89898e;font-family:"Inter",system-ui,sans-serif;font-size:clamp(35px,13cqw,61px);line-height:.9;letter-spacing:-0.025em}.d-hud-freeze{border-radius:0}
+/* Composition at the native preview size. */
+.d-hud button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-hud-scene strong{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-hud{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-hud :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-hud button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-hud [class$="-status"],.d-hud [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-hud [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-hud [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-hud>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-hud-readout{border-color:#ffffff18;background:#141817cc;border-radius:5px;font:400 10px "Inter",system-ui,sans-serif;letter-spacing:0}.d-hud-readout b{font:400 12px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-hud-scene h2{font:450 35px/1.05 "Inter",system-ui,sans-serif;letter-spacing:-.02em}`,
   js: `
 const svg = root.querySelector('.d-hud-tether');
 const tether = svg.querySelector('path');
@@ -3136,7 +3293,11 @@ Track raw pointer coordinates exactly. Derive raw speed in px/s from distance/ma
 
 Place the 126px readout at intersection+18px, flip left if it would cross width-8, flip above if it would cross height-8, and clamp to 8px. Report raw X/Y, speed, and padded bearing. A semantic aria-pressed Freeze HUD button and Space toggle whether raw motion updates the tracked target; the lead and tether must keep showing live pointer motion while frozen. Pointerleave recenters only when unlocked. Arrow keys move raw target 28px, Shift+Arrow 46px, and Home centers/unlocks. Prevent default only for handled keys, keep pointer/resize passive, preserve focus and polite lock-state feedback, and update the SVG viewBox on resize.
 
-Under prefers-reduced-motion, snap both axes directly to the target with no spring velocity while preserving lead/tether separation during freeze, telemetry, keyboard controls, and edge-aware readout placement.`
+Under prefers-reduced-motion, snap both axes directly to the target with no spring velocity while preserving lead/tether separation during freeze, telemetry, keyboard controls, and edge-aware readout placement.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -3184,10 +3345,10 @@ INTRX.register({
 .d-pull-art::before { content: ''; position: absolute; inset: 0; opacity: .42;
   background-image: linear-gradient(rgba(236,236,239,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(236,236,239,.12) 1px, transparent 1px);
   background-size: 24px 24px; }
-.d-pull-art span { position: absolute; left: 16px; top: 14px; font: 8px/1.2 "Roboto Mono", monospace;
-  letter-spacing: .1em; }
+.d-pull-art span { position: absolute; left: 16px; top: 14px; font: 8px/1.2 "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
 .d-pull-art strong { position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
-  font: 700 clamp(34px, 5vw, 55px)/.75 "Roboto", sans-serif; letter-spacing: -.07em; white-space: nowrap; }
+  font:500 clamp(34px, 5vw, 55px)/.75 "Roboto", sans-serif; letter-spacing:-0.025em; white-space: nowrap; }
 .d-pull-art i { position: absolute; right: 26px; top: 20px; width: 82px; height: 82px;
   border: 16px solid #fa7319; border-radius: 50%; mix-blend-mode: normal; }
 .d-pull-art b { position: absolute; right: 18px; bottom: 16px; width: 48px; height: 48px;
@@ -3206,21 +3367,30 @@ INTRX.register({
 .d-pull-reticle i { position: absolute; inset: 5px; border: 1px dashed rgba(250,115,25,.24); border-radius: 50%; }
 .d-pull.d-pull-active .d-pull-reticle { opacity: 1; }
 .d-pull-label { position: absolute; left: 20px; top: 18px; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .13em; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; }
 .d-pull-meter { position: absolute; top: 18px; right: 20px; display: grid; justify-items: end;
-  color: #5c5c66; font: 9px "Roboto Mono", monospace; letter-spacing: .12em; pointer-events: none; }
+  color: #5c5c66; font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; pointer-events: none; }
 .d-pull-meter strong { color: #fa7319; font-size: 21px; font-weight: 500; letter-spacing: 0; }
 .d-pull-tug { position: absolute; left: 20px; bottom: 18px; border: 1px solid #2e2e34;
   border-radius: 999px; background: #101012; color: #ececef; padding: 9px 14px;
-  font: 10px "Roboto Mono", monospace; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
+  font: 10px "Inter",system-ui,sans-serif; cursor: pointer; transition: color .2s, border-color .2s, transform .2s; }
 .d-pull-tug:hover { color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-pull-tug:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-pull-status { position: absolute; right: 20px; bottom: 20px; margin: 0; color: #5c5c66;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 @media (max-width: 620px) { .d-pull-stage { width: 76%; height: 176px; } }
 @media (prefers-reduced-motion: reduce) {
   .d-pull-card, .d-pull-art, .d-pull-reticle { will-change: auto; }.d-pull-tug { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-pull-tug{border-radius:0}.d-pull-status{font-size:8px;letter-spacing:0}
+/* Composition at the native preview size. */
+.d-pull-art{container-type:inline-size}.d-pull-art strong{font:500 clamp(26px,16cqw,40px)/.93 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-pull-art i{width:52px;height:52px;top:16px;right:14px;border-width:10px}.d-pull-art span{font-size:7px}.d-pull-art b{width:30px;height:30px;right:12px;bottom:12px}
+/* Composition at the native preview size. */
+.d-pull button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-pull-art strong{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-pull{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-pull :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-pull button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-pull [class$="-status"],.d-pull [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-pull [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-pull [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-pull>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-pull-label{display:none}.d-pull-card{border-color:#ffffff1a}.d-pull-card h2{font:450 32px/1.02 "Inter",system-ui,sans-serif;letter-spacing:-.02em}`,
   js: `
 const card = root.querySelector('.d-pull-card');
 const art = root.querySelector('.d-pull-art');
@@ -3326,14 +3496,19 @@ function frameLoop() {
   requestAnimationFrame(frameLoop);
 }
 requestAnimationFrame(frameLoop);`,
-  prompt: `
-Build a self-contained flexible poster whose silhouette bows toward the pointer through an eight-point CSS clip-path polygon. Keep the bare stage near-black and the poster grayscale with one #fa7319 artifact. Use alternating nodes at four corners and four edge midpoints. Mirror the exact geometry in an SVG polygon with eight handle circles so the deformation is inspectable. Keep the card layout rectangle fixed; only its visible polygon changes.
+  prompt: `Build a self-contained flexible poster whose silhouette bows toward the pointer through an eight-point CSS clip-path polygon. Keep the bare stage near-black and the poster grayscale with one #fa7319 artifact. Use alternating nodes at four corners and four edge midpoints. Mirror the exact geometry in an SVG polygon with eight handle circles so the deformation is inspectable. Keep the card layout rectangle fixed; only its visible polygon changes.
 
 Measure the card once and on resize. For each node calculate its pixel base, vector to the local pointer, radius=hypot(width,height)*0.92, and influence=max(0,1-distance/radius)². Corners use weight 0.18 and edge midpoints 0.11. Compute the weighted displacement toward the pointer, multiply by a temporary tug boost, and cap its magnitude at 24px. Animate x/y offsets with velocity=(velocity+(target-current)*0.13)*0.7, then current+=velocity. Rebuild clip-path polygon in pixels, SVG points, and handle cx/cy once per frame.
 
 Pointermove activates tension, pointerleave sets targets back to zero so the shape springs home, and pointerdown briefly raises boost to 1.6, easing to 1 by 0.075 per frame. Add subtle inner-art parallax translate((normalizedX-.5)*12px,(normalizedY-.5)*9px) scale(1.045). Arrow keys move a virtual pull point 24px, Shift+Arrow 42px, Home centers, Escape releases, and Space or a semantic button creates a 1.6–1.7 tug. Prevent default only for handled keys, keep pointer/resize passive, expose force and polite state feedback, and preserve focus styles.
 
-Under prefers-reduced-motion, assign node offsets directly, disable tug amplification and inner parallax, while preserving pointer/keyboard geometry, wireframe handles, responsive measurement, and the static distorted result.`
+Under prefers-reduced-motion, assign node offsets directly, disable tug amplification and inner parallax, while preserving pointer/keyboard geometry, wireframe handles, responsive measurement, and the static distorted result.
+
+Use compact regular Inter poster lettering that fits the measured card, a small structural orange artifact, and a square-cornered outlined Tug control.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -3384,10 +3559,10 @@ INTRX.register({
   linear-gradient(135deg, #fa7319 0 48%, #2e2e34 48% 100%); }
 .d-shadow-art::before { content: ''; position: absolute; inset: 0; opacity: .32;
   background: repeating-linear-gradient(90deg, transparent 0 13px, rgba(236,236,239,.16) 13px 14px); }
-.d-shadow-art span { position: absolute; left: 15px; top: 14px; font: 9px "Roboto Mono", monospace;
-  letter-spacing: .16em; }
-.d-shadow-art strong { position: absolute; right: 10px; bottom: -13px; font: 800 78px/.9 "Roboto", sans-serif;
-  letter-spacing: -.09em; color: #ececef; }
+.d-shadow-art span { position: absolute; left: 15px; top: 14px; font: 9px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; }
+.d-shadow-art strong { position: absolute; right: 10px; bottom: -13px; font:500 78px/.9 "Roboto", sans-serif;
+  letter-spacing:-0.025em; color: #ececef; }
 .d-shadow-art i { position: absolute; left: 28px; bottom: 22px; width: 44px; height: 44px;
   border: 11px solid #ececef; border-radius: 50%; mix-blend-mode: normal; }
 .d-shadow-light { position: absolute; left: 0; top: 0; width: 42px; height: 42px; margin: -21px 0 0 -21px;
@@ -3397,25 +3572,36 @@ INTRX.register({
 .d-shadow-light::before { width: 58px; height: 1px; }.d-shadow-light::after { width: 1px; height: 58px; }
 .d-shadow-light i { position: absolute; inset: 8px; border-radius: 50%; background: #fa7319;
   border: 1px solid rgba(236,236,239,.34); box-shadow: 0 0 0 5px rgba(250,115,25,.22), 0 0 25px rgba(250,115,25,.3); }
-.d-shadow-kicker { position: absolute; left: 18px; top: 17px; font: 9px "Roboto Mono", monospace;
-  letter-spacing: .14em; color: rgba(236,236,239,.58); }
+.d-shadow-kicker { position: absolute; left: 18px; top: 17px; font: 9px "Inter",system-ui,sans-serif;
+  letter-spacing:0.06em; color: rgba(236,236,239,.58); }
 .d-shadow-meter { position: absolute; right: 18px; top: 15px; display: flex; align-items: baseline; gap: 4px;
-  font: 9px "Roboto Mono", monospace; letter-spacing: .11em; color: rgba(236,236,239,.55); }
+  font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; color: rgba(236,236,239,.55); }
 .d-shadow-meter strong { min-width: 26px; font-size: 19px; font-weight: 500; color: #ececef; letter-spacing: 0; text-align: right; }
-.d-shadow-meter b { font-weight: 400; letter-spacing: .06em; }
+.d-shadow-meter b { font-weight: 400; letter-spacing:0.06em; }
 .d-shadow-mode { position: absolute; left: 18px; bottom: 17px; padding: 8px 13px; border: 1px solid rgba(236,236,239,.36);
-  border-radius: 999px; background: rgba(16,16,18,.82); color: #ececef; font: 10px "Roboto Mono", monospace;
+  border-radius: 999px; background: rgba(16,16,18,.82); color: #ececef; font: 10px "Inter",system-ui,sans-serif;
   cursor: pointer; transition: background .18s, color .18s, transform .18s; }
 .d-shadow-mode:hover { background: #161619; color: #fa7319; border-color: #fa7319; transform: translateY(-2px); }
 .d-shadow-mode:focus-visible { outline: 2px solid #fa7319; outline-offset: 3px; }
 .d-shadow-status { position: absolute; right: 18px; bottom: 19px; max-width: 48%; margin: 0; text-align: right;
-  color: rgba(236,236,239,.58); font: 9px "Roboto Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+  color: rgba(236,236,239,.58); font: 9px "Inter",system-ui,sans-serif; letter-spacing:0.06em; text-transform: uppercase; }
 .d-shadow.d-shadow-hard .d-shadow-light i { background: #fff; box-shadow: 0 0 0 3px rgba(255,255,255,.38), 0 0 13px rgba(250,115,25,.34); }
 @media (max-width: 620px) { .d-shadow-stage { width: 190px; height: 128px; }.d-shadow-status { max-width: 42%; } }
 @media (prefers-reduced-motion: reduce) {
   .d-shadow-cast, .d-shadow-contact, .d-shadow-object, .d-shadow-light { will-change: auto; }
   .d-shadow-mode { transition: none; }
-}`,
+}
+/* Composition at the native preview size. */
+.d-shadow-object,.d-shadow-art{border-radius:0}.d-shadow-mode{border-radius:0}.d-shadow-status{font-size:8px;letter-spacing:0}
+/* Composition at the native preview size. */
+.d-shadow button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-shadow-art strong{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-shadow-object{border-color:#ffffff18;box-shadow:inset 0 1px #ffffff1a;border-radius:10px}.d-shadow-art{background:radial-gradient(ellipse at var(--d-shadow-hx) var(--d-shadow-hy),#ffffff1a 0,#ffffff09 36%,transparent 74%),linear-gradient(145deg,#3a3d42 0,#303338 48%,#25282c)}.d-shadow-art strong{color:#e6e7e8;font-weight:500}.d-shadow-art>span{color:#b8bec4}.d-shadow-art i{border-color:#ffffff28;opacity:.5}
+/* Composition at the native preview size. */
+.d-shadow-art strong{font-size:66px;line-height:1;bottom:10px;right:18px;top:auto}
+/* Refined type, spacing and quiet interaction controls. */
+.d-shadow{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-shadow :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-shadow button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-shadow [class$="-status"],.d-shadow [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-shadow [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-shadow [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-shadow>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-shadow-object{border-radius:9px;background:linear-gradient(145deg,#373e3a,#2e3430);border-color:#ffffff09}.d-shadow-number{font:400 50px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:-.02em}`,
   js: `
 const stageEl = root.querySelector('.d-shadow-stage');
 const cast = root.querySelector('.d-shadow-cast');
@@ -3513,7 +3699,13 @@ Derive the shadow from the vector pointing away from the light: fromLight=center
 
 Move a radial specular highlight across the object's inner artwork using clamped CSS custom-property percentages derived from light position. In full motion, ease the light toward its target by 0.14 per frame and tilt the object no more than about five degrees toward the source. Update transform, blur, opacity, highlight variables, marker, and numeric offset meter in one animation frame. Keep all pointer and resize listeners passive, handle only documented keyboard keys, preserve visible focus, and announce mode or input changes through a polite status region.
 
-Under prefers-reduced-motion, snap the light directly to its target and remove object tilt while preserving the physically opposite shadow vector, hard/soft modes, pointer and keyboard control, responsive measurement, contact shadow, specular position, and offset readout.`
+Under prefers-reduced-motion, snap the light directly to its target and remove object tilt while preserving the physically opposite shadow vector, hard/soft modes, pointer and keyboard control, responsive measurement, contact shadow, specular position, and offset readout.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+Use a neutral graphite physical plate with a broad directional highlight at about 10% white opacity, a gentle charcoal ramp and a low-contrast edge. Avoid a white hot spot and orange diagonal fill.
+Keep the complete edition number visible inside the plate, with a measured lower inset.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`
 });
 
 /* ------------------------------------------------------------
@@ -3534,8 +3726,8 @@ INTRX.register({
   <div class="d-cursor-dot"></div>
   <div class="d-cursor-ring"></div>
   <div class="d-cursor-content">
-    <a class="d-cursor-link" href="#" onclick="return false">Hover me</a>
-    <a class="d-cursor-link" href="#" onclick="return false">And me</a>
+    <a class="d-cursor-link" href="#" onclick="return false">Selected work</a>
+    <a class="d-cursor-link" href="#" onclick="return false">About</a>
   </div>
 </div>`,
   css: `
@@ -3553,9 +3745,16 @@ INTRX.register({
 .d-cursor-ring.d-cursor-big { width: 72px; height: 72px; }
 .d-cursor-content { height: 100%; display: flex; align-items: center; justify-content: center; gap: 40px; }
 .d-cursor-link {
-  color: #ececef; text-decoration: none; font-size: 26px; font-weight: 600; cursor: none;
+  color: #ececef; text-decoration: none; font-size: 26px; font-weight:500; cursor: none;
   border-bottom: 1px solid #2e2e34;
-}`,
+}
+/* Composition at the native preview size. */
+.d-cursor-content{gap:26px}.d-cursor-link{font:500 16px/1.5 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Composition at the native preview size. */
+.d-cursor button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-cursor a{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-cursor{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-cursor :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-cursor button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-cursor [class$="-status"],.d-cursor [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-cursor [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-cursor [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-cursor>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-cursor a{font:450 17px "Inter",system-ui,sans-serif;letter-spacing:-.015em;border-color:#ffffff22}`,
   js: `
 const dot = root.querySelector('.d-cursor-dot');
 const ring = root.querySelector('.d-cursor-ring');
@@ -3586,12 +3785,18 @@ root.querySelectorAll('.d-cursor-link').forEach(function (el) {
 Build a custom cursor in vanilla JS.
 
 Requirements:
-- Hide the native cursor (cursor: none) on the page.
-- Render two fixed-position elements: a 6px dot that follows the pointer exactly, and a 36px ring that follows with lerp (factor ~0.12) in a requestAnimationFrame loop.
+- Hide the native cursor (cursor: none) only inside the component preview.
+- Render two locally positioned elements: a 6px dot that follows the pointer exactly, and a 36px ring that follows with lerp (factor ~0.12) in a requestAnimationFrame loop.
 - The ring uses mix-blend-mode: difference so it stays visible over any color.
 - When hovering links/buttons (or any [data-cursor="grow"]), the ring scales up ~2x via a CSS transition.
 - Both elements are pointer-events: none.
-- Disable the whole thing on touch devices (matchMedia '(pointer: coarse)') and under prefers-reduced-motion.`,
+- Disable the whole thing on touch devices (matchMedia '(pointer: coarse)') and under prefers-reduced-motion.
+
+Use two restrained 16px regular Inter links, “Selected work” and “About,” with generous spacing on a near-black stage.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -3624,7 +3829,14 @@ INTRX.register({
   transition: border-color 0.3s, background-color 0.3s;
 }
 .d-magnet-btn:hover { border-color: #fa7319; background: rgba(250,115,25,0.06); }
-.d-magnet-btn span { display: inline-block; pointer-events: none; }`,
+.d-magnet-btn span { display: inline-block; pointer-events: none; }
+/* Composition at the native preview size. */
+.d-magnet{gap:22px;padding:24px;box-sizing:border-box}.d-magnet-btn{width:120px;height:120px;flex-shrink:1;font-size:12px}.d-magnet-btn:hover{background:#161619}
+/* Composition at the native preview size. */
+.d-magnet button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-magnet-btn{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-magnet{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-magnet :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-magnet button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-magnet [class$="-status"],.d-magnet [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-magnet [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-magnet [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-magnet>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-magnet button{font:450 13px "Inter",system-ui,sans-serif;letter-spacing:0;border-color:#ffffff22}.d-magnet button{border-radius:50%;font:450 13px "Inter",system-ui,sans-serif;border-color:#ffffff22}`,
   js: `
 root.querySelectorAll('.d-magnet-btn').forEach(function (btn) {
   const label = btn.querySelector('span');
@@ -3641,8 +3853,7 @@ root.querySelectorAll('.d-magnet-btn').forEach(function (btn) {
     gsap.to([btn, label], { x: 0, y: 0, duration: 0.9, ease: 'elastic.out(1, 0.35)' });
   });
 });`,
-  prompt: `
-Build magnetic buttons with GSAP.
+  prompt: `Build magnetic buttons with GSAP.
 
 Requirements:
 - On mousemove over the button, compute the cursor offset from the button center.
@@ -3651,7 +3862,13 @@ Requirements:
 - On mouseleave, both animate back to 0,0 with elastic.out(1, 0.35) over ~0.9s for a springy snap-back.
 - The label must be pointer-events: none so it never steals hover.
 - Disable on touch devices.
-- If GSAP is unavailable, describe a vanilla fallback using lerp in requestAnimationFrame.`,
+- If GSAP is unavailable, describe a vanilla fallback using lerp in requestAnimationFrame.
+
+Render two compact 120px circular graphite controls with 12px mono labels and orange focus/interaction details. Keep 24px padding and a 22px gap so both remain visible in a narrow preview.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -3669,7 +3886,7 @@ INTRX.register({
   hint: 'sweep your cursor across',
   html: `
 <div class="d-trail">
-  <p class="d-trail-word">MOVE</p>
+  <p class="d-trail-word">Collected<br><em>moments.</em></p><span class="d-trail-caption">A STUDY IN PASSING</span>
 </div>`,
   css: `
 .d-trail {
@@ -3677,7 +3894,7 @@ INTRX.register({
   background: #0a0a0b; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.d-trail-word { font-size: 90px; font-weight: 700; color: #161619; letter-spacing: 0.02em; pointer-events: none; }
+.d-trail-word { font-size: 90px; font-weight:500; color: #161619; letter-spacing: 0.02em; pointer-events: none; }
 .d-trail-img {
   position: absolute; width: 110px; height: 140px;
   pointer-events: none; will-change: transform, opacity;
@@ -3688,20 +3905,26 @@ INTRX.register({
   20%  { transform: translate(-50%, -50%) scale(1) rotate(var(--r));   opacity: 1; }
   100% { transform: translate(-50%, -62%) scale(0.9) rotate(var(--r)); opacity: 0; }
 }
-.d-trail-img { animation: d-trail-pop 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }`,
+.d-trail-img { animation: d-trail-pop 1s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+/* Composition at the native preview size. */
+.d-trail-word{font:500 65px/1 "Inter",system-ui,sans-serif;color:#444;letter-spacing:-0.025em}.d-trail-img{background:#161619;border:1px solid #777;display:grid;place-items:center}.d-trail-img::before{content:"";width:64px;height:64px;border:1px solid #ddd;border-radius:50%;box-shadow:0 0 0 7px #161619,0 0 0 8px #777}.d-trail-img:nth-of-type(2n)::before{border-radius:0;transform:rotate(45deg);border-color:#fa7319}
+/* Composition at the native preview size. */
+.d-trail{container-type:inline-size}.d-trail-word{position:relative;font:400 clamp(40px,14cqw,65px)/.94 "Newsreader",Georgia,serif;letter-spacing:-0.025em;color:#d7d4ce;text-align:center;margin:0}.d-trail-word em{font-weight:400;color:#979b9b}.d-trail-caption{position:absolute;bottom:24px;font:8px/1 "Inter",system-ui,sans-serif;letter-spacing:0.06em;color:#767b80}.d-trail-img{width:112px;height:142px;background-size:cover;background-position:center;border:1px solid #ffffff18;box-shadow:0 12px 34px #0005;display:block}.d-trail-img::before{display:none}
+/* Refined type, spacing and quiet interaction controls. */
+.d-trail{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-trail :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-trail button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-trail [class$="-status"],.d-trail [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-trail [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-trail [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-trail>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-trail-word{font:450 37px/1.12 "Inter",system-ui,sans-serif;letter-spacing:-.025em;text-align:left;max-width:230px}.d-trail-word em{font-style:normal;color:#9baba0}.d-trail-caption{display:none}`,
   js: `
-// procedural "photos" so the demo needs no assets — swap for real <img> tags
-const hues = [78, 200, 320, 30, 160];
+// Geometric print studies; replace the cards with supplied images in production.
+const photos = ['{{asset:coastal-stack}}','{{asset:limestone-pavilion}}','{{asset:atlantic-shore}}'];
 let last = { x: 0, y: 0 }, count = 0;
 
 function spawn(x, y) {
   const el = document.createElement('div');
   el.className = 'd-trail-img';
-  const h = hues[count % hues.length];
+  const photo = photos[count % photos.length];
   el.style.left = x + 'px';
   el.style.top = y + 'px';
   el.style.setProperty('--r', ((Math.random() * 14) - 7) + 'deg');
-  el.style.background = 'linear-gradient(160deg, hsl(' + h + ' 80% 60% / 0.9), hsl(' + h + ' 60% 20%))';
+  el.style.backgroundImage = 'url("' + photo + '")';
   el.style.zIndex = ++count;
   root.appendChild(el);
   setTimeout(function () { el.remove(); }, 1000);
@@ -3720,12 +3943,16 @@ root.addEventListener('mousemove', function (e) {
 Build a cursor image-trail effect in vanilla JS.
 
 Requirements:
-- An array of image URLs cycles as the source.
+- Use three locally embedded photographic assets (coast, architectural pavilion, breaking waves), cropped naturally into compact portrait cards with a subtle edge and soft contact shadow.
 - Track mousemove inside a hero section; when the pointer has moved more than ~90px from the last spawn point, spawn the next image centered at the cursor.
 - Each image plays a one-shot CSS keyframe animation: scale 0.4 -> 1 with fade-in over the first 20%, then drifts upward, scales to 0.9 and fades out by 100% (total ~1s, cubic-bezier(0.22,1,0.36,1)).
 - Give each image a random rotation between -7deg and 7deg via a CSS custom property.
 - Increment z-index per spawn so newer images stack on top; remove each node when its animation ends.
-- Images are pointer-events: none. Disable on touch devices.`,
+- Images are pointer-events: none. Disable on touch devices.
+
+Use a Newsreader serif two-line headline “Collected moments.” with an italic second line and quiet editorial spacing. The photographic cards carry the visual detail.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -3743,8 +3970,8 @@ INTRX.register({
   hint: 'move your mouse in the panel',
   html: `
 <div class="d-spot">
-  <div class="d-spot-base"><h2>WHAT YOU SEE</h2></div>
-  <div class="d-spot-hidden"><h2>WHAT YOU GET</h2></div>
+  <div class="d-spot-base"><h2>LOOK<br>CLOSER.</h2></div>
+  <div class="d-spot-hidden"><h2>KEEP<br>LOOKING.</h2></div>
 </div>`,
   css: `
 .d-spot { position: relative; width: 100%; height: 320px; background: #0a0a0b; overflow: hidden; }
@@ -3752,13 +3979,20 @@ INTRX.register({
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
 }
-.d-spot-base h2 { font-size: 56px; font-weight: 700; color: #232327; letter-spacing: -0.02em; }
+.d-spot-base h2 { font-size: 56px; font-weight:500; color: #232327; letter-spacing: -0.02em; }
 .d-spot-hidden {
   background: #fa7319;
   -webkit-mask-image: radial-gradient(circle 110px at var(--x, -200px) var(--y, -200px), #000 98%, transparent 100%);
           mask-image: radial-gradient(circle 110px at var(--x, -200px) var(--y, -200px), #000 98%, transparent 100%);
 }
-.d-spot-hidden h2 { font-size: 56px; font-weight: 700; color: #0a0a0b; letter-spacing: -0.02em; }`,
+.d-spot-hidden h2 { font-size: 56px; font-weight:500; color: #0a0a0b; letter-spacing: -0.02em; }
+/* Composition at the native preview size. */
+.d-spot{container-type:inline-size}.d-spot-base,.d-spot-hidden{padding:24px;box-sizing:border-box;justify-content:flex-start}.d-spot-base h2,.d-spot-hidden h2{font:500 clamp(31px,11cqw,54px)/1 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-spot-base h2{color:#49494e}
+/* Composition at the native preview size. */
+.d-spot button{font-family:"Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:rgba(255,255,255,.15)}
+.d-spot-base h2,.d-spot-hidden h2{font-family:"Inter",system-ui,sans-serif;letter-spacing:-0.025em}
+/* Refined type, spacing and quiet interaction controls. */
+.d-spot{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-spot :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-spot button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-spot [class$="-status"],.d-spot [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-spot [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-spot [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-spot>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}`,
   js: `
 let mx = -200, my = -200, x = -200, y = -200;
 const hidden = root.querySelector('.d-spot-hidden');
@@ -3781,11 +4015,17 @@ root.addEventListener('mouseleave', function () { mx = -200; my = -200; });
 Build a cursor spotlight mask reveal in vanilla JS + CSS.
 
 Requirements:
-- Two stacked full-size layers: a base layer and a hidden layer with completely different content/colors.
+- Two stacked full-size layers: a base layer and a hidden layer with different grayscale regular Inter content and a restrained orange accent.
 - The hidden layer uses CSS mask-image: radial-gradient(circle 110px at var(--x) var(--y), black 98%, transparent 100%) so it is only visible in a circle around the cursor.
 - Update --x/--y CSS custom properties from mousemove, but lerp toward the pointer (factor ~0.15) in a rAF loop so the spotlight trails slightly.
 - On mouseleave, park the mask far off-canvas so the hidden layer disappears.
-- Include the -webkit-mask-image prefix. Disable on touch devices.`,
+- Include the -webkit-mask-image prefix. Disable on touch devices.
+
+Use the short two-line phrases “LOOK / CLOSER.” and “KEEP / LOOKING.”, native 24px padding, and container-relative role-appropriate type that fits the preview.
+
+Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
 
 /* ------------------------------------------------------------
@@ -3806,9 +4046,9 @@ INTRX.register({
   <div class="d-tilt-card">
     <div class="d-tilt-glare"></div>
     <div class="d-tilt-content">
-      <span class="d-tilt-tag">INTRX-05</span>
-      <h3>Perspective<br>does the work.</h3>
-      <p>rotateX / rotateY + translateZ</p>
+      <span class="d-tilt-tag">FIELD NOTES / 005</span>
+      <h3>Quiet<br>by design.</h3>
+      <p>Architecture, light & perspective.</p>
     </div>
   </div>
 </div>`,
@@ -3832,12 +4072,18 @@ INTRX.register({
   pointer-events: none;
 }
 .d-tilt-content { position: relative; padding: 24px; transform: translateZ(40px); }
-.d-tilt-tag { font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 10px; color: #fa7319; letter-spacing: 0.2em; }
+.d-tilt-tag { font-family: "Inter",system-ui,sans-serif; font-size: 10px; color: #fa7319; letter-spacing: 0.2em; }
 .d-tilt-content h3 { color: #ececef; font-size: 24px; line-height: 1.15; margin: 10px 0 8px; }
-.d-tilt-content p { color: #5c5c66; font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 11px; }
+.d-tilt-content p { color: #5c5c66; font-family: "Inter",system-ui,sans-serif; font-size: 11px; }
 .d-tilt.d-tilt-idle .d-tilt-card { animation: d-tilt-idle 4.8s ease-in-out infinite; }
 @keyframes d-tilt-idle { 0%, 100% { transform: rotateX(-1.5deg) rotateY(-2.5deg); } 50% { transform: rotateX(2deg) rotateY(3deg); } }
-@media (prefers-reduced-motion: reduce) { .d-tilt.d-tilt-idle .d-tilt-card { animation: none; } }`,
+@media (prefers-reduced-motion: reduce) { .d-tilt.d-tilt-idle .d-tilt-card { animation: none; } }
+/* Composition at the native preview size. */
+.d-tilt-card{width:min(280px,calc(100% - 64px));height:210px;background:#19191c;overflow:visible}.d-tilt-glare{inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),#ffffff1c,transparent 65%);overflow:hidden}.d-tilt-content{padding:24px}.d-tilt-content h3{font:500 25px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-0.025em}.d-tilt-content p{color:#999;font-size:10px}.d-tilt-tag{color:#fa7319}.d-tilt-card::after{content:"";position:absolute;width:42px;height:42px;right:24px;bottom:22px;border:1px solid #777;transform:translateZ(28px) rotate(45deg);pointer-events:none}
+/* Composition at the native preview size. */
+.d-tilt-card{width:min(300px,calc(100% - 48px));height:244px;background-image:linear-gradient(180deg,rgba(7,11,13,.02) 20%,rgba(7,11,13,.2) 54%,rgba(7,11,13,.7)),url("{{asset:limestone-pavilion}}");background-size:cover;background-position:center;border:1px solid #ffffff18;box-shadow:0 18px 42px #0004;border-radius:3px}.d-tilt-card::after{display:none}.d-tilt-content{position:absolute;inset:0;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;transform:translateZ(24px)}.d-tilt-tag{position:absolute;top:18px;left:20px;color:#343b3d;font-size:7px;letter-spacing:0.06em}.d-tilt-content h3{font:400 38px/.96 "Newsreader",Georgia,serif;letter-spacing:-0.025em;margin:0 0 9px;color:#f9f7f2}.d-tilt-content p{font:400 10px/1.5 "Inter",system-ui,sans-serif;margin:0;color:#e6e7e7}.d-tilt-glare{background:radial-gradient(ellipse at var(--gx,50%) var(--gy,50%),#ffffff14 0,#ffffff05 35%,transparent 75%);border-radius:3px}
+/* Refined type, spacing and quiet interaction controls. */
+.d-tilt{font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-tilt :is(button,input,select){font-family:"Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-tilt button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-tilt [class$="-status"],.d-tilt [class$="-meter"]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-tilt [class$="-readout"]{font:400 11px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-tilt [class$="-readout"] b{font:400 19px "Inter",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;color:#9aaea0}.d-tilt>button{font:400 11px "Inter",system-ui,sans-serif;letter-spacing:0;text-transform:none;border-color:#ffffff17;border-radius:5px;background:#ffffff04;color:#c5cec8}.d-tilt-content h3{font:450 31px/1.1 "Inter",system-ui,sans-serif;letter-spacing:-.02em;margin-bottom:12px}.d-tilt-content p{font:400 11px/1.5 "Inter",system-ui,sans-serif;max-width:170px}.d-tilt-tag{font:450 9px/1.4 "Inter",system-ui,sans-serif;letter-spacing:.01em}.d-tilt-card{border-radius:7px;border-color:#ffffff0d}.d-tilt-content{padding:22px}`,
   js: `
 const card = root.querySelector('.d-tilt-card');
 const MAX = 10; // degrees
@@ -3871,8 +4117,7 @@ card.addEventListener('pointermove', function (e) {
 card.addEventListener('mouseleave', function () {
   card.style.transform = 'rotateX(0deg) rotateY(0deg)';
 });`,
-  prompt: `
-Build a 3D tilt card with glare, vanilla JS.
+  prompt: `Build a 3D tilt card with glare, vanilla JS.
 
 Requirements:
 - Parent container has perspective: 900px; the card has transform-style: preserve-3d.
@@ -3881,5 +4126,9 @@ Requirements:
 - Inner content sits at translateZ(40px) so it visually floats above the card surface.
 - Before the first interaction, run a slow autonomous tilt sway; stop it permanently on pointer movement, pointerdown, or keydown.
 - transition: transform 0.15s ease-out on the card smooths the motion; on mouseleave everything resets to 0.
-- Disable the idle sway on touch devices and under prefers-reduced-motion.`,
+- Disable the idle sway on touch devices and under prefers-reduced-motion.
+
+Use a 244px-high architectural photographic card with a soft natural-light image, a continuous dark lower scrim, restrained edge contrast and broad subtle glare. Set “Quiet by design.” in Newsreader at 38px, supporting copy in Inter, and a tiny regular Inter edition label. Keep content at translateZ(24px), with a 900px parent perspective and the existing ±10 degree tilt. Embed the photographic asset so the exported component is standalone.
+
+Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.`,
 });
