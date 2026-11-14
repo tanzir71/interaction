@@ -1,42 +1,126 @@
-/* A small lifecycle boundary for independently authored previews. */
+/* Lifecycle and virtual clock for one independently authored demo. */
 (function () {
-  window.INTRX.createRuntime = function (stage) {
-    let disposed = false, sequence = 0;
-    const frames = new Map(), timers = new Set(), intervals = new Set();
-    const visible = () => !document.hidden && stage._visible !== false;
+  const R = window.INTRX;
+  R.createRuntime = function (stage) {
+    let disposed = false, suspended = false, sequence = 0, speed = 1;
+    let realTime = performance.now(), virtualTime = realTime;
+    const frames = new Map(), timers = new Map(), cleanups = new Set(), animations = new Set();
+    const paused = () => suspended || document.hidden;
+    function clock() {
+      const now = performance.now();
+      if (!paused()) virtualTime += (now - realTime) * speed;
+      realTime = now;
+      return virtualTime;
+    }
+    function armFrame(id, frame) {
+      if (disposed || paused() || frame.native != null) return;
+      frame.native = requestAnimationFrame(() => {
+        frame.native = null;
+        if (disposed || paused() || !stage.isConnected) return;
+        frames.delete(id);
+        frame.callback(clock());
+      });
+    }
+    function armTimer(id, timer) {
+      if (disposed || paused() || timer.native != null) return;
+      timer.started = performance.now();
+      timer.native = setTimeout(() => {
+        timer.native = null;
+        if (disposed || paused() || !timers.has(id)) return;
+        if (!timer.repeat) timers.delete(id);
+        timer.remaining = timer.delay;
+        timer.callback(...timer.args);
+        if (timer.repeat && timers.has(id)) armTimer(id, timer);
+      }, timer.remaining / speed);
+    }
+    function freeze() {
+      frames.forEach(frame => { if (frame.native != null) cancelAnimationFrame(frame.native); frame.native = null; });
+      timers.forEach(timer => {
+        if (timer.native != null) {
+          timer.remaining = Math.max(0, timer.remaining - (performance.now() - timer.started) * speed);
+          clearTimeout(timer.native); timer.native = null;
+        }
+      });
+      if (stage.getAnimations) stage.getAnimations({ subtree: true }).forEach(animation => {
+        if (animation.playState === 'running') { animations.add(animation); animation.pause(); }
+      });
+    }
+    function thaw() {
+      if (disposed || paused()) return;
+      realTime = performance.now();
+      frames.forEach((frame,id) => armFrame(id,frame));
+      timers.forEach((timer,id) => armTimer(id,timer));
+      animations.forEach(animation => { if (animation.playState === 'paused') animation.play(); });
+      animations.clear();
+    }
+    function visibility() {
+      // The event fires after document.hidden changes. Accrue the final
+      // visible interval on hide; never add hidden wall time on show.
+      if (document.hidden && !suspended) virtualTime += (performance.now() - realTime) * speed;
+      realTime = performance.now();
+      stage.dataset.suspended = String(paused());
+      if (document.hidden) freeze(); else thaw();
+    }
+    function makeTimer(callback, delay, repeat, args) {
+      const id = ++sequence;
+      const ms = Math.max(repeat ? 1 : 0, Number(delay) || 0);
+      const timer = { callback, delay: ms, remaining: ms, repeat, args, native: null };
+      timers.set(id,timer); armTimer(id,timer); return id;
+    }
+    function clearTimer(id) {
+      const timer = timers.get(id);
+      if (timer) clearTimeout(timer.native);
+      timers.delete(id);
+    }
     const runtime = {
+      get suspended() { return paused(); },
+      get disposed() { return disposed; },
+      get speed() { return speed; },
       requestAnimationFrame(callback) {
-        const id = ++sequence;
-        const tick = time => {
-          if (disposed || !stage.isConnected) return;
-          if (!visible()) { frames.set(id, requestAnimationFrame(tick)); return; }
-          frames.delete(id);
-          callback(time);
-        };
-        frames.set(id, requestAnimationFrame(tick));
-        return id;
+        if (disposed) return 0;
+        const id = ++sequence, frame = { callback, native: null };
+        frames.set(id,frame); armFrame(id,frame); return id;
       },
-      cancelAnimationFrame(id) { cancelAnimationFrame(frames.get(id)); frames.delete(id); },
-      setTimeout(callback, delay, ...args) {
-        const id = setTimeout(() => { timers.delete(id); if (!disposed) callback(...args); }, delay);
-        timers.add(id); return id;
+      cancelAnimationFrame(id) { const frame = frames.get(id); if (frame) cancelAnimationFrame(frame.native); frames.delete(id); },
+      setTimeout(callback,delay,...args) { return disposed ? 0 : makeTimer(callback,delay,false,args); },
+      clearTimeout: clearTimer,
+      setInterval(callback,delay,...args) { return disposed ? 0 : makeTimer(callback,delay,true,args); },
+      clearInterval: clearTimer,
+      suspend() {
+        if (disposed || suspended) return;
+        clock(); freeze(); suspended = true;
+        stage.dataset.suspended = 'true';
       },
-      clearTimeout(id) { clearTimeout(id); timers.delete(id); },
-      setInterval(callback, delay, ...args) {
-        const id = setInterval(() => { if (!disposed && visible()) callback(...args); }, delay);
-        intervals.add(id); return id;
+      resume() {
+        if (disposed || !suspended) return;
+        suspended = false; realTime = performance.now();
+        stage.dataset.suspended = String(document.hidden); thaw();
       },
-      clearInterval(id) { clearInterval(id); intervals.delete(id); },
+      setSpeed(value) {
+        if (![.5,1,2].includes(value)) throw new RangeError('Speed must be 0.5, 1, or 2');
+        clock(); freeze(); speed = value;
+        if (stage.getAnimations) stage.getAnimations({subtree:true}).forEach(animation => animation.updatePlaybackRate(value));
+        thaw();
+      },
+      onDispose(callback) { cleanups.add(callback); return () => cleanups.delete(callback); },
       dispose() {
         if (disposed) return;
-        disposed = true;
-        frames.forEach(id => cancelAnimationFrame(id));
-        timers.forEach(id => clearTimeout(id));
-        intervals.forEach(id => clearInterval(id));
-        frames.clear(); timers.clear(); intervals.clear();
-        if (typeof runtime.cleanup === 'function') runtime.cleanup();
+        clock(); freeze(); disposed = true;
+        document.removeEventListener('visibilitychange',visibility);
+        frames.clear(); timers.clear(); animations.clear();
+        const callbacks = [...cleanups]; cleanups.clear();
+        if (typeof runtime.cleanup === 'function') callbacks.push(runtime.cleanup);
+        callbacks.forEach(callback => { try { callback(); } catch(error) { console.error('[INTRX] cleanup failed',error); } });
       }
     };
+    ['ResizeObserver','IntersectionObserver'].forEach(name => {
+      if (typeof window[name] !== 'function') return;
+      runtime[name] = function(...args) {
+        const observer = new window[name](...args);
+        cleanups.add(()=>observer.disconnect()); return observer;
+      };
+    });
+    document.addEventListener('visibilitychange',visibility);
     return runtime;
   };
 })();

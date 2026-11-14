@@ -23,14 +23,41 @@ The diagnostic stage audit runs with 0 failed boots, 399 missing design sizes,
 These are the pending stage/remediation work, not an accepted final audit.
 Stage and generated-registry checks become available in Phases 1 and 2.
 
+Foundation commit: `62726f3`. The owner subsequently requested direct commits
+and pushes without PRs; the initial foundations PR has been closed.
+
+## Phase 1 — Stage contract
+
+- Declared metadata for all 399 existing demos, using the v4 manifest's gestures
+  and themes, category size presets and explicit intentional-overflow entries.
+- Replaced leaf-based sizing with declared sizes and a ResizeObserver, safe
+  areas, full/thumb context, shared actions and dock controls.
+- Added LiveTiles with desktop/touch caps of 6/1, background suspension,
+  keyboard pause and explicit touch opt-in for hover/drag interactions.
+- Reworked lifecycle scheduling to freeze remaining timer delays and animation
+  frames without native wakeups, retain a virtual clock, support speed changes,
+  pause animations and disconnect runtime-created observers during cleanup.
+- Elastic Tabs exposes Next and Replay actions and cleans up its observer.
+- Added stage validation, runtime tests and focused browser contract checks.
+
+Verification: all 399 preview boots and 97 offline exports pass the full 560-check
+browser suite. Seven deterministic lifecycle/metadata/fit tests pass, as do the
+focused browser action, cleanup, cap, touch and keyboard checks. Registry and
+motion checks pass. The stage audit covers all 399 demos with 0 failed boots,
+0 missing design sizes, 59 overflow, 3 horizontal scroll, 293 text below 11px
+and 77 low-fill results. Its remaining fit gates are required to pass in Phase 4.
+
+The stage verifier records existing chrome/control debt explicitly for 391 demos;
+baseline mode rejects regressions, while `--strict` will require full remediation.
+This is not a claim that the redesigned demo compositions are finished.
+
 ## Remaining work
 
-1. Stage contract, metadata, deterministic fit, lifecycle/actions/dock and audits.
-2. Generated registry, CLI, MCP, agent skill and documentation.
-3. Routed shell, mobile layouts, search palette, performance and accessibility.
-4. Remediation buckets A–G and motion migration across all existing demos.
-5. Thirty new components and ninety-one extension components, by category.
-6. Pro entitlement seams and a full requirement-by-requirement completion audit.
+1. Generated registry, CLI, MCP, agent skill and documentation.
+2. Routed shell, mobile layouts, search palette, performance and accessibility.
+3. Remediation buckets A–G and motion migration across all existing demos.
+4. Thirty new components and ninety-one extension components, by category.
+5. Pro entitlement seams and a full requirement-by-requirement completion audit.
 
 The objective remains active until every phase is implemented, verified,
 committed and pushed. Design completion is not implementation completion.

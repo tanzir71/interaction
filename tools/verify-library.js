@@ -49,8 +49,8 @@ const expectedNewCount = 16 + 4 + 52;
       const results=[];document.documentElement.style.scrollBehavior='auto';
       for(const demo of INTRX.demos){
         demo._card.scrollIntoView({behavior:'instant',block:'center'});
-        for(let i=0;i<30&&!demo._card.querySelector('.demo-stage > *');i++)await new Promise(r=>setTimeout(r,20));
-        results.push({id:demo.id,booted:!!demo._card.querySelector('.demo-stage > *'),failed:demo._card.textContent.includes('demo failed to boot')});
+        for(let i=0;i<30&&!demo._card.querySelector('.stage-content > *');i++)await new Promise(r=>setTimeout(r,20));
+        results.push({id:demo.id,booted:!!demo._card.querySelector('.stage-content > *'),failed:demo._card.querySelector('.demo-stage').dataset.bootError==='true'});
       }
       return results;
     });
@@ -67,7 +67,8 @@ const expectedNewCount = 16 + 4 + 52;
       await open(d.id);
       check(await page.locator('.source-link').count()===1,d.id+' source credit');
       const root=page.locator('.modal-preview .'+d.rootClass);
-      check(Math.abs((await root.boundingBox()).height-320)<2,d.id+' native height');
+      const geometry=await root.evaluate(el=>{const s=el.closest('.demo-stage');return {height:el.getBoundingClientRect().height,expected:el.offsetHeight*s._ctx.scale};});
+      check(Math.abs(geometry.height-geometry.expected)<2,d.id+' declared height fits at context scale');
       await page.getByRole('tab',{name:'Code',exact:true}).click();
       const code=await page.locator('.pane-code pre').textContent();
       check(code.startsWith('<!DOCTYPE html>'),d.id+' standalone document');
@@ -157,8 +158,9 @@ const expectedNewCount = 16 + 4 + 52;
     await page.goto(url,{waitUntil:'networkidle'});
 
     for(const id of ['css3d-isometric-hover','btn-border-beam','input-float-label','lenis-smooth-scroll','slider-stack-deck']){
-      await open(id);const h=await page.locator('.modal-preview .demo-stage > *').boundingBox();
-      check(Math.abs(h.height-320)<2,id+' native 320px layout');
+      await open(id);
+      const fit=await page.locator('.modal-preview .demo-stage').evaluate(stage=>{const r=stage._root.getBoundingClientRect(),s=stage.getBoundingClientRect();return r.width<=s.width+2&&r.height<=s.height+2&&stage._ctx.mode==='full';});
+      check(fit,id+' declared full layout fits its stage');
       await page.screenshot({path:'.artifacts/'+id+'.png'});await close();
     }
     await open('lenis-smooth-scroll');

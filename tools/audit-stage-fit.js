@@ -30,15 +30,18 @@ const GATES = {
     const tiles = [...document.querySelectorAll('[data-intrx-tile], .tile')];
     for (const tile of tiles) {
       tile.scrollIntoView({ block: 'center', behavior: 'instant' });
-      await new Promise(r => setTimeout(r, 140));
       const stage = tile.querySelector('.demo-stage, [data-stage]');
-      const root = stage && stage.firstElementChild;
-      const id = tile.id || tile.dataset.id;
+      // Wait for the observer-driven boot, rather than assuming a busy browser
+      // delivers intersection and resize callbacks within one fixed sleep.
+      for (let i=0; i<50 && stage && !stage._root && !stage.dataset.bootError; i++) await new Promise(r=>setTimeout(r,20));
+      await new Promise(r => setTimeout(r, 140));
+      const root = stage && (stage._root || stage.firstElementChild);
+      const id = tile.dataset.id || tile.id.replace(/^tile-/, '');
       const demo = (window.INTRX && INTRX.demos.find(d => d.id === id)) || {};
       const sr = stage ? stage.getBoundingClientRect() : null;
-      const r = { id, stage: sr && [Math.round(sr.width), Math.round(sr.height)] };
-      if (!root) { r.empty = true; out.push(r); continue; }
-      r.failed = /failed to boot/.test(stage.textContent);
+      const r = { id, stage: sr && [Math.round(sr.width), Math.round(sr.height)], stageMeta:demo.stage || null, designSize:demo.designSize || null };
+      if (!root) { r.empty = true; r.failed = true; out.push(r); continue; }
+      r.failed = stage.dataset.bootError === 'true' || /failed to boot/i.test(stage.textContent);
       const zoom = parseFloat(getComputedStyle(root).zoom) || 1;
       let top = 1e9, left = 1e9, right = -1e9, bottom = -1e9, overflow = 0, leaves = 0, minFont = 99, n = 0;
       for (const el of root.querySelectorAll('*')) {
@@ -88,6 +91,6 @@ const GATES = {
     tinyText: summary.tinyText.length, lowFill: summary.lowFill.length,
   }, null, 2));
   await browser.close();
-  const pass = !summary.failed.length && summary.overflow.length <= GATES.overflow && summary.hscroll.length <= GATES.hscroll && !summary.tinyText.length && !summary.lowFill.length;
+  const pass = !summary.failed.length && !summary.missingDesignSize && summary.overflow.length <= GATES.overflow && summary.hscroll.length <= GATES.hscroll && !summary.tinyText.length && !summary.lowFill.length;
   process.exit(pass ? 0 : 1);
 })().catch(error => { console.error(error); process.exit(1); });

@@ -113,11 +113,12 @@
       const card = document.createElement('article');
       card.className = 'tile';
       card.id = d.id;
+      card.dataset.id = d.id;
       card.setAttribute('aria-labelledby', d.id + '-title');
       card.dataset.search = (d.title + ' ' + d.cat + ' ' + (d.tags || []).join(' ') + ' ' + d.desc + ' ' + (d.source ? d.source.name : '')).toLowerCase();
 
       card.innerHTML =
-        '<div class="demo-stage"></div>' +
+        '<div class="demo-stage stage" data-stage="'+escapeHtml(d.id)+'" data-mode="thumb" data-stage-theme="'+d.stage.theme+'" data-overflow="'+d.stage.overflow+'"></div>' +
         '<div class="tile-caption"><button class="tile-details" type="button" aria-label="' + escapeHtml(d.title) + ' — open details"><span class="tile-number">' + d._num + '</span><span id="' + d.id + '-title">' + escapeHtml(d.title) + '</span><span class="tile-arrow" aria-hidden="true">↗</span></button><p class="tile-hint">' + escapeHtml(d.hint) + '</p></div>' +
         '<div class="tile-frame">' +
           '<svg class="c-tl" viewBox="0 0 8 8"><path d="M0.5 7.5 V0.5 H7.5"/></svg>' +
@@ -132,76 +133,12 @@
     });
   });
 
-  /* ---------- lazy demo boot ---------- */
-  const booted = new Set();
-  function ensureCss(d) {
-    if (d._styled) return;
-    d._styled = true;
-    const style = document.createElement('style');
-    style.textContent = R.resolveAssets(d.css);
-    document.head.appendChild(style);
-  }
+  /* ---------- stage contract and bounded live previews ---------- */
+  const liveTiles = R.liveTiles = new R.LiveTiles();
   function runDemo(d, stage) {
-    if (stage._runtime) stage._runtime.dispose();
-    ensureCss(d);
-    stage.innerHTML = R.resolveAssets(d.html);
-    const rootEl = stage.querySelector('.' + d.rootClass) || stage.firstElementChild;
-    try {
-      const runtime = stage._runtime = R.createRuntime(stage);
-      const names = ['requestAnimationFrame', 'cancelAnimationFrame', 'setTimeout', 'clearTimeout', 'setInterval', 'clearInterval'];
-      runtime.cleanup = new Function('root', 'stage', ...names, R.resolveAssets(d.js))(rootEl, stage, ...names.map(name => runtime[name]));
-    } catch (e) {
-      console.error('[INTRX] demo "' + d.id + '" failed:', e);
-      stage.innerHTML = '<p class="mono dim" style="padding:24px">demo failed to boot — see console</p>';
-    }
-    /* most demos were authored for ~500-570px card stages; scale oversized
-       roots into the fixed tile (320px) / modal (380px) height via zoom,
-       which keeps layout + pointer coordinates consistent.
-       Two refinements:
-       - roots containing an inner scroll container: fit by root clientHeight
-         (their scroll content is tall by design);
-       - widget demos (small centered content in a tall padded root): fit by
-         the union of LEAF-element boxes, so the widget keeps its native
-         size and the tile just crops padding. */
-    const el = stage.firstElementChild;
-    if (el) {
-      const targetH = stage.closest('.modal-preview') ? 380 : 320;
-      let scroller = /(auto|scroll)/.test(getComputedStyle(el).overflowY) ? el : null;
-      const walker = document.createTreeWalker(el, NodeFilter.SHOW_ELEMENT);
-      let node, guard = 0, top = Infinity, bottom = -Infinity;
-      while ((node = walker.nextNode()) && guard++ < 600) {
-        if (!scroller && /(auto|scroll)/.test(getComputedStyle(node).overflowY)) { scroller = node; break; }
-        if (node.children.length === 0 || /^(CANVAS|SVG|IMG|VIDEO)$/.test(node.tagName)) {
-          const r = node.getBoundingClientRect();
-          if (r.height > 0) { if (r.top < top) top = r.top; if (r.bottom > bottom) bottom = r.bottom; }
-        }
-      }
-      let h = el.clientHeight;
-      if (!scroller && bottom > -Infinity) {
-        const leafH = Math.ceil(bottom - top);
-        if (leafH > 0 && leafH < h) h = leafH;
-      }
-      if (h > targetH + 8) el.style.zoom = (targetH / h).toFixed(3);
-    }
+    return R.mountStage(d, stage, stage.closest('.modal-preview') ? 'full' : 'thumb');
   }
-  function boot(d) {
-    if (booted.has(d.id)) return;
-    booted.add(d.id);
-    runDemo(d, d._card.querySelector('.demo-stage'));
-  }
-
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      const stage = en.target.querySelector('.demo-stage');
-      if (stage) stage._visible = en.isIntersecting;
-      en.target.classList.toggle('preview-idle', !en.isIntersecting);
-      if (en.isIntersecting) {
-        const d = R.demos.find(x => x.id === en.target.id);
-        if (d) boot(d);
-      }
-    });
-  }, { rootMargin: '200px 0px' });
-  R.demos.forEach(d => io.observe(d._card));
+  R.demos.forEach(d => liveTiles.add(d, d._card));
 
   /* ---------- detail modal ---------- */
   const backdrop = document.createElement('div');
@@ -249,6 +186,7 @@
       modalOrigin = document.activeElement;
       returnHash = location.hash === '#' + d.id ? '' : location.hash;
     }
+    liveTiles.suspendAll();
     modalDemo = d;
     modal.querySelector('.modal-num').textContent = d._num;
     modal.querySelector('.modal-title').textContent = d.title;
@@ -296,6 +234,7 @@
     mStage.innerHTML = '';
     history.replaceState(null, '', location.pathname + location.search + returnHash);
     if (origin && origin.isConnected) origin.focus({ preventScroll: true });
+    liveTiles.resumeAll();
   }
 
   modalClose.addEventListener('click', closeModal);

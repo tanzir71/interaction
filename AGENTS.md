@@ -8,14 +8,15 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 - Stage metadata (`designSize`, `stage`, `trigger`, `controls`, `a11y`, `tier`) lives in `js/meta.stage.js` once Phase 1 lands.
 
 ## Rules
-- One handoff phase (or one remediation bucket) per PR, in the order of Handoff 3 §9.
+- Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
+  commit and push phases directly; do not open PRs.
 - No bundler, no framework, no runtime dependencies in the site. Only `packages/intrx` may have npm dependencies.
 - Demos never draw their own outer panel or replay/reset buttons; expose actions and list them in `controls`.
 - Rendered thumbnail text ≥ 11px; neutral greys + one accent per demo (no decorative hues); reduced-motion branch required.
 - Build what the v4 tile in Figma shows; the tile wins over older art and older demos.
 - Never copy code or assets from reference sites; new components are original implementations.
 
-## Verify before every PR
+## Verify before each phase commit
 ```bash
 node tools/verify-registry.js
 node tools/verify-stage.js            # from Phase 1
@@ -24,3 +25,18 @@ node tools/verify-library.js http://127.0.0.1:4173
 node tools/audit-stage-fit.js http://127.0.0.1:4173
 node tools/verify-motion.js           # baseline mode until §5b is done, then --strict
 ```
+
+## Stage migration (Phase 1)
+- `js/shell/registry.js` supplies `INTRX.meta` and merges sidecar defaults beneath
+  inline demo fields. `js/meta.stage.js` covers every published demo.
+- `js/shell/stage.js` owns deterministic fit, `ctx`, dock actions and LiveTiles.
+  `js/demo-runtime.js` freezes timers, frames and animations while suspended;
+  cleanup also disconnects runtime-created observers.
+- Existing chrome/control violations are enumerated in
+  `tools/stage-baseline.json`. `verify-stage.js` rejects new violations;
+  `--strict` requires the debt to be removed in Phase 4. Do not grow the baseline
+  when adding or remediating a component. Root exceptions require a written
+  reason in `tools/stage-allowlist.json`.
+- Run `node --test tools/runtime.test.js` when changing lifecycle behavior.
+- Run `node tools/verify-stage-runtime.js http://127.0.0.1:4173` for browser
+  action, live-cap, touch and keyboard checks.

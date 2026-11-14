@@ -27,7 +27,7 @@ demos.forEach(demo => {
   if (!demo.html.includes(demo.rootClass)) errors.push('ROOT NOT IN HTML ' + demo.id);
   if (!categories.includes(demo.cat)) errors.push('UNKNOWN CATEGORY ' + demo.id + ' ' + demo.cat);
   if (demo.prompt.trim().length < 300) errors.push('PROMPT TOO THIN ' + demo.id);
-  try { new Function('root', 'stage', demo.js); } catch (error) { errors.push('JS COMPILE ' + demo.id + ' ' + error.message); }
+  try { new Function('root', 'stage', 'ctx', '{\n' + demo.js + '\n}'); } catch (error) { errors.push('JS COMPILE ' + demo.id + ' ' + error.message); }
 
   // Typography and material palettes are intentional per-demo decisions.
   // The current design brief includes local Inter and pale DRAMS surfaces.

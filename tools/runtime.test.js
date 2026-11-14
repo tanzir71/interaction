@@ -1,0 +1,52 @@
+const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+function setup(){
+ let time=0,id=0;const jobs=new Map(),listeners=new Map();
+ const document={hidden:false,addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:name=>listeners.delete(name)};
+ const schedule=(fn,ms)=>{const key=++id;jobs.set(key,{fn,at:time+ms});return key;};
+ const context={window:{INTRX:{}},document,console,performance:{now:()=>time},requestAnimationFrame:fn=>schedule(fn,16),cancelAnimationFrame:key=>jobs.delete(key),setTimeout:(fn,ms)=>schedule(fn,ms),clearTimeout:key=>jobs.delete(key)};
+ vm.runInNewContext(fs.readFileSync(require.resolve('../js/demo-runtime.js'),'utf8'),context);
+ const stage={dataset:{},isConnected:true,getAnimations:()=>[]};
+ return {runtime:context.window.INTRX.createRuntime(stage),stage,jobs,
+  advance(ms){const end=time+ms;for(;;){const next=[...jobs].filter(([,job])=>job.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!next)break;time=next[1].at;jobs.delete(next[0]);next[1].fn(time);}time=end;},
+  visibility(hidden){document.hidden=hidden;listeners.get('visibilitychange')?.();},listeners};
+}
+test('timeouts retain their remaining delay while suspended without native wakes',()=>{
+ const s=setup();let calls=0;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.runtime.suspend();assert.equal(s.jobs.size,0);
+ s.advance(1000);assert.equal(calls,0);s.runtime.resume();s.advance(59);assert.equal(calls,0);s.advance(1);assert.equal(calls,1);
+});
+test('intervals and pending frames stop and resume on the virtual clock',()=>{
+ const s=setup();let ticks=0,times=[];s.runtime.setInterval(()=>ticks++,10);s.runtime.requestAnimationFrame(t=>times.push(t));s.advance(16);
+ s.runtime.suspend();assert.equal(s.jobs.size,0);s.advance(1000);assert.equal(ticks,1);
+ s.runtime.requestAnimationFrame(t=>times.push(t));assert.equal(s.jobs.size,0);s.runtime.resume();s.advance(16);
+ assert.deepEqual(times,[16,32]);assert.equal(ticks,3);
+});
+test('speed changes preserve pending delay and scale subsequent runtime time',()=>{
+ const s=setup();let calls=0;s.runtime.setTimeout(()=>calls++,100);s.advance(20);s.runtime.setSpeed(2);s.advance(39);assert.equal(calls,0);s.advance(1);assert.equal(calls,1);
+ assert.throws(()=>s.runtime.setSpeed(3),{name:'RangeError'});
+});
+test('document visibility pauses deadlines and resumes without hidden elapsed time',()=>{
+ const s=setup();let calls=0,timestamp;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.visibility(true);assert.equal(s.jobs.size,0);s.advance(1000);
+ s.visibility(false);s.runtime.requestAnimationFrame(t=>timestamp=t);s.advance(16);assert.equal(timestamp,56);s.advance(44);assert.equal(calls,1);
+});
+test('disposal cancels all work, detaches visibility handling, and cleans up once',()=>{
+ const s=setup();let calls=0,cleanup=0;s.runtime.cleanup=()=>cleanup++;s.runtime.onDispose(()=>cleanup++);
+ s.runtime.requestAnimationFrame(()=>calls++);s.runtime.setTimeout(()=>calls++,10);s.runtime.setInterval(()=>calls++,10);
+ s.runtime.dispose();s.runtime.dispose();s.advance(1000);assert.equal(calls,0);assert.equal(cleanup,2);assert.equal(s.jobs.size,0);assert.equal(s.listeners.size,0);
+});
+test('metadata defaults merge beneath inline values and remain replaceable',()=>{
+ const context={window:{}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/registry.js'),'utf8'),context);
+ const R=context.window.INTRX;
+ R.meta({example:{designSize:'md',stage:{theme:'dark',overflow:'clip'},a11y:{keyboard:false,reducedMotion:false}}});
+ const demo={id:'example',stage:{theme:'light'},a11y:{keyboard:true}};R.register(demo);
+ assert.equal(demo.stage.theme,'light');assert.equal(demo.stage.overflow,'clip');assert.equal(demo.a11y.keyboard,true);assert.equal(demo.designSize,'md');
+ R.meta({example:{designSize:'sm',stage:{theme:'dark',overflow:'scroll'},a11y:{keyboard:false,reducedMotion:true}}});
+ assert.equal(demo.designSize,'sm');assert.equal(demo.stage.theme,'light');assert.equal(demo.stage.overflow,'scroll');assert.equal(demo.a11y.reducedMotion,true);
+});
+test('fit uses declared geometry, mode padding and reserved dock space',()=>{
+ const context={window:{INTRX:{}}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/stage.js'),'utf8'),context);
+ const R=context.window.INTRX,content={dataset:{},style:{}},root={style:{},parentElement:content},stage={clientWidth:348,clientHeight:264,dataset:{}};
+ const meta={designSize:'md',controls:[{label:'Next',action:'next'}]};
+ assert.equal(R.fitStage(stage,root,meta,'thumb'),168/360);assert.equal(root.style.width,'480px');assert.equal(content.style.inset,'24px 24px 72px');
+ stage.clientWidth=1200;stage.clientHeight=800;assert.equal(R.fitStage(stage,root,meta,'full'),1);
+ assert.equal(R.fitStage(stage,root,{designSize:'bleed',controls:[]},'full'),1);assert.equal(content.style.inset,'0');assert.equal(root.style.width,'1200px');
+});
