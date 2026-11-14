@@ -9,7 +9,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  let checks=0;const check=(condition,label)=>{assert.ok(condition,label);checks++;};
  const open=async id=>{await page.evaluate(id=>INTRX.router.go('#/c/'+id),id);await page.waitForFunction(id=>document.querySelector('.detail-stage')?._ctx?.mode==='full'&&document.querySelector('.detail-stage').dataset.stage===id,id);};
  const root=selector=>page.locator('.detail-stage').locator(selector);
- const ids=['btn-border-beam','elastic-tabs','toast-stack','btn-success-morph','checkbox-draw-check','copy-inline-feedback'];
+ const ids=['btn-border-beam','elastic-tabs','toast-stack','btn-success-morph','checkbox-draw-check','copy-inline-feedback','btn-shimmer-sweep','btn-icon-hop','btn-ripple-material','btn-jelly-press'];
  try{
   fs.mkdirSync('.artifacts/exemplars',{recursive:true});
   await page.goto(process.argv[2]||'http://127.0.0.1:4173',{waitUntil:'networkidle'});
@@ -105,6 +105,47 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   await open('btn-success-morph');await page.locator('button[data-stage-theme="light"]').click();await page.locator('.detail-stage [data-action="run"]').click();await page.waitForFunction(()=>document.querySelector('.d-success-demo').dataset.state==='success');await page.waitForTimeout(400);
   check(await textContrast('.d-success-demo-confirm','.d-success-demo-button')>=4.5,'Light-stage confirmation text retains accessible contrast');
 
+  await open('btn-shimmer-sweep');check(await root('.d-shimmer-demo').getAttribute('data-running')==='true','Shimmer starts its ambient pass');
+  await page.locator('.detail-stage [data-action="toggle"]').click();await page.waitForTimeout(40);
+  const sheen=await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition);
+  await page.locator('.detail-stage').evaluate(stage=>{stage._runtime.setSpeed(2);stage._runtime.suspend();stage._runtime.resume();});await page.waitForTimeout(100);
+  check(await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition)===sheen,'Shimmer author pause survives speed and suspension');
+  await page.locator('.detail-stage [data-action="toggle"]').click();await page.waitForTimeout(100);
+  check(await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition)!==sheen,'Shimmer resumes from the paused pass');
+  await root('.d-shimmer-demo-button').press('Space');check(await root('.d-shimmer-demo').getAttribute('data-activations')==='1','Shimmer native Space activates once');
+
+  await open('btn-icon-hop');await page.mouse.move(0,0);check(await root('.d-hop-demo').getAttribute('data-running')==='false','Arrow starts docked');
+  await root('.d-hop-demo-button').hover();check(await root('.d-hop-demo').getAttribute('data-running')==='true','Mouse hover starts arrow intent');
+  await page.mouse.move(0,0);await page.waitForTimeout(40);const arrow=await root('.d-hop-demo-arrow').evaluate(el=>getComputedStyle(el).transform);await page.waitForTimeout(100);
+  check(await root('.d-hop-demo-arrow').evaluate(el=>getComputedStyle(el).transform)===arrow,'Leaving pauses the arrow at its current position');
+  await root('.d-hop-demo-button').focus();await page.keyboard.press('Space');check(await root('.d-hop-demo').getAttribute('data-running')==='true'&&await root('.d-hop-demo').getAttribute('data-activations')==='1','Keyboard focus and activation supply arrow intent');
+  await page.locator('.detail-stage [data-action="replay"]').click();check(await root('.d-hop-demo').getAttribute('data-running')==='false'&&await root('.d-hop-demo-arrow').evaluate(el=>getComputedStyle(el).transform==='matrix(1, 0, 0, 1, 0, 0)'),'Arrow replay returns to its original pose');
+
+  await open('btn-ripple-material');await page.locator('.stage-viewport').evaluate(el=>el.style.width='240px');await page.waitForTimeout(150);
+  await root('.d-ripple-demo-button').evaluate(button=>button.addEventListener('pointerdown',event=>{const r=button.querySelector('.d-ripple-demo-wave').getBoundingClientRect();window.rippleOriginError=Math.hypot(r.left+r.width/2-event.clientX,r.top+r.height/2-event.clientY);},{once:true}));
+  const rippleBox=await root('.d-ripple-demo-button').boundingBox();await page.mouse.move(rippleBox.x+rippleBox.width*.2,rippleBox.y+rippleBox.height*.7);await page.mouse.down();await page.mouse.up();
+  const geometry=await root('.d-ripple-demo').evaluate(el=>({origin:el.dataset.origin.split(',').map(Number),radius:Number(el.dataset.radius),width:parseFloat(getComputedStyle(el.querySelector('.d-ripple-demo-layer')).width),height:parseFloat(getComputedStyle(el.querySelector('.d-ripple-demo-layer')).height),ripples:Number(el.dataset.ripples)}));
+  check(await page.evaluate(()=>window.rippleOriginError<.1),'Scaled pointer press maps to the unscaled padding box: '+JSON.stringify(geometry));
+  check(Math.abs(geometry.radius-Math.max(...[[0,0],[geometry.width,0],[0,geometry.height],[geometry.width,geometry.height]].map(([x,y])=>Math.hypot(x-geometry.origin[0],y-geometry.origin[1]))))<.02,'Ripple reaches the farthest actual corner');
+  check(geometry.ripples===1,'Pointerdown and native click create one wave');
+  await root('.d-ripple-demo-button').press('Space');check(await root('.d-ripple-demo').evaluate(el=>{const [x,y]=el.dataset.origin.split(',').map(Number),s=getComputedStyle(el.querySelector('.d-ripple-demo-layer'));return Math.abs(x-parseFloat(s.width)/2)<.01&&Math.abs(y-parseFloat(s.height)/2)<.01;}),'Keyboard ripple is centered');
+  check(await root('.d-ripple-demo').getAttribute('data-active')==='2','Independent ripple waves overlap');
+  await page.waitForFunction(()=>document.querySelector('.detail-stage .d-ripple-demo').dataset.active==='0');check(await root('.d-ripple-demo-wave').count()===0,'Completed waves remove their nodes');
+  await page.locator('.detail-stage [data-action="run"]').click();await page.locator('.detail-stage [data-action="replay"]').click();check(await root('.d-ripple-demo-wave').count()===0,'Clear cancels active ripple feedback immediately');
+
+  await open('btn-jelly-press');await root('.d-jelly-demo-button').hover();await page.mouse.down();await page.waitForTimeout(650);
+  check(await root('.d-jelly-demo').getAttribute('data-phase')==='held'&&await root('.d-jelly-demo-button').evaluate(el=>Math.abs(new DOMMatrixReadOnly(getComputedStyle(el).transform).d-.82)<.002),'Long hold remains compressed beyond the former one-shot duration');
+  await page.mouse.move(0,0);await page.mouse.up();await page.waitForFunction(()=>document.querySelector('.detail-stage .d-jelly-demo').dataset.phase==='rest');check(await root('.d-jelly-demo').getAttribute('data-pressing')==='false','Captured outside release returns to rest');
+  await root('.d-jelly-demo-button').focus();await page.keyboard.down('Space');await page.waitForTimeout(100);check(await root('.d-jelly-demo').getAttribute('data-pressing')==='true','Space holds Jelly Press');
+  const presses=await root('.d-jelly-demo').getAttribute('data-presses');await page.keyboard.down('Space');check(await root('.d-jelly-demo').getAttribute('data-presses')===presses,'Repeated keydown does not restart compression');
+  await page.keyboard.up('Space');await page.waitForTimeout(30);await page.keyboard.down('Space');await page.waitForTimeout(100);check(await root('.d-jelly-demo').getAttribute('data-phase')==='held','A fresh press retargets the in-flight release');await page.keyboard.up('Space');
+  await page.locator('.detail-stage [data-action="run"]').click();await page.locator('.detail-stage [data-action="replay"]').click();await page.waitForTimeout(350);
+  check(await root('.d-jelly-demo').getAttribute('data-phase')==='rest'&&await root('.d-jelly-demo-button').evaluate(el=>getComputedStyle(el).transform==='none'),'Replay cancels simulated holds and spring frames');
+
+  const touch=await browser.newContext({hasTouch:true,isMobile:true,viewport:{width:390,height:844}}),touchPage=await touch.newPage();
+  touchPage.on('pageerror',error=>errors.push(error.message));await touchPage.goto((process.argv[2]||'http://127.0.0.1:4173')+'/#/c/btn-icon-hop');await touchPage.waitForFunction(()=>document.querySelector('.detail-stage')?._ctx?.mode==='full');await touchPage.locator('.detail-stage .d-hop-demo-button').tap();
+  check(await touchPage.locator('.detail-stage .d-hop-demo').getAttribute('data-running')==='true','Touch starts one arrow cycle without hover');await touchPage.waitForFunction(()=>document.querySelector('.detail-stage .d-hop-demo').dataset.running==='false');check(true,'Touch arrow intent finishes without a sticky focus loop');await touchPage.locator('.detail-stage .d-hop-demo-button').tap();await touchPage.locator('.detail-stage [data-action="toggle"]').tap();await touchPage.locator('.detail-stage [data-action="toggle"]').tap();await touchPage.waitForTimeout(1400);check(await touchPage.locator('.detail-stage .d-hop-demo').getAttribute('data-running')==='true','Manual playback cancels an older touch stop timer');await touch.close();
+
   const exports=[];
   for(const id of ids){await open(id);check(await root('footer,header').count()===0,id+' has no demo-owned frame or toolbar');check(await page.locator('.detail-stage').evaluate(stage=>[stage._root,...stage._root.querySelectorAll('*')].every(el=>[...el.classList].every(name=>name.startsWith(stage._root.classList[0])))),id+' keeps all demo classes in its namespace');const output=await page.evaluate(async id=>{const demo=await INTRX.loadDemo(id),code=await INTRX.getCode(demo),preview=await (await fetch(INTRX.byId.get(id).sourcePreview)).json();return {code,matches:preview.source===INTRX.compactSource(code).split('\n').slice(0,18).join('\n')&&preview.lineCount===code.split('\n').length};},id);check(output.matches,id+' preview exactly matches the complete portable source');exports.push({id,code:output.code});}
   const offline=await context.newPage();await offline.route('**/*',route=>route.abort());offline.on('pageerror',error=>errors.push(error.message));
@@ -119,6 +160,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   for(const id of ids){await open(id);await page.waitForTimeout(80);const before=await page.locator('.detail-stage').screenshot();await page.waitForTimeout(150);check(before.equals(await page.locator('.detail-stage').screenshot()),id+' reduced-motion still frame');}
   await open('toast-stack');check(await root('.d-toast-demo').getAttribute('data-count')==='3','Reduced motion keeps notifications available');
   await page.locator('.detail-stage [data-action="add"]').click();check(await root('.d-toast-demo').getAttribute('data-count')==='4','Reduced-motion input still works');
+  await open('btn-ripple-material');await root('.d-ripple-demo-button').press('Space');check(await root('.d-ripple-demo-wave').evaluate(el=>getComputedStyle(el).animationName)==='d-ripple-demo-fade','Reduced-motion ripple fades without radial growth');await page.waitForFunction(()=>document.querySelector('.detail-stage .d-ripple-demo').dataset.active==='0');
+  await open('btn-jelly-press');await root('.d-jelly-demo-button').focus();await page.keyboard.down('Space');await page.waitForTimeout(180);check(await root('.d-jelly-demo-button').evaluate(el=>getComputedStyle(el).transform==='none'&&Number(getComputedStyle(el).opacity)===.8),'Reduced-motion hold gives opacity feedback with a stable shape');await page.keyboard.up('Space');
 
   const fits=await page.evaluate(async ids=>{
    INTRX.disposeView();const app=document.querySelector('#app');app.innerHTML='<section style="display:grid;grid-template-columns:repeat(3,372px);gap:16px;padding:24px" id="exemplar-grid"></section>';const fits=[];

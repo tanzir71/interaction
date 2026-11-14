@@ -126,8 +126,9 @@ lazy detail, dock action, portable export and mobile stage geometry.
 
 ## Phase 4 — Remediation in progress
 
-Bucket A has begun with six v4 implementations: Border Beam, Elastic Tabs,
-Toast Stack, Success Morph, Checkbox Draw and Copy Feedback. Each now renders
+Bucket A now includes ten v4 implementations: Border Beam, Elastic Tabs,
+Toast Stack, Success Morph, Checkbox Draw, Copy Feedback, Shimmer Sweep, Icon
+Hop, Ripple and Jelly Press. Each now renders
 its compact Figma hero without a surrounding demo panel or internal replay/reset
 toolbar. Shared dock actions, keyboard behavior, cancellation, reduced-motion
 poses and standalone exports are covered by `tools/verify-exemplars.js`.
@@ -143,24 +144,32 @@ poses and standalone exports are covered by `tools/verify-exemplars.js`.
   pseudo-elements in exported HTML. Newly created CSS transitions inherit the
   selected animation speed; the tab spring uses virtual-time 60Hz integration.
 - The owner clarified that sparse controls must retain their exact v4 Figma
-  geometry despite the 12% fill heuristic. Five documented fill exceptions are
+  geometry despite the 12% fill heuristic. Nine documented fill exceptions are
   measured against their reference geometry in `tools/stage-fit-allowlist.json`.
   No overflow, scroll or text-size gates were relaxed.
 - Refreshing posters can target changed IDs, and registry generation leaves
   unchanged output files untouched. Stale preview-request failures after a view
   is disposed no longer appear as errors in the next view.
 
-Focused verification: 91 exemplar behavior, reduced-motion, namespace,
+The second control group preserves the compact v4 artwork and adds an ambient
+2000ms sheen, intent-driven arrow hops with one-cycle touch playback, radial
+feedback measured from the live fractional padding box, and a held squash with
+an interruptible spring release. Ripple stays under the pointer when stage zoom
+and active transforms are combined. Jelly Press handles outside release,
+cancellation, key repeats and replay without leaving a held state behind. The
+16px arrow and 80px radial glow are the original Figma SVGs.
+
+Focused verification: 150 exemplar behavior, reduced-motion, namespace,
 native-size and offline-export checks pass. The 32 existing interaction checks,
 desktop/touch lifecycle suite, 12 runtime/shell tests and eight CLI/MCP tests pass.
-The chrome/control baseline has shrunk from 391 to 385 demos and motion debt
-from 168 to 164. These are incremental reductions; bucket A and Phase 4 remain
-incomplete. Six native search posters have been refreshed.
+The chrome/control baseline has shrunk from 391 to 381 demos and motion debt
+from 168 to 160. These are incremental reductions; bucket A and Phase 4 remain
+incomplete. Ten native search posters have been refreshed.
 
 The final broad browser run passes 651 checks, all 399 lazy preview boots and 97
 offline exports. The full audit records 0 failed boots, 0 missing sizes, 61
-overflow, 3 horizontal scroll, 288 tiny-text and 75 low-fill offenders; all five
-approved geometry exceptions validate. None of the six remediated IDs has an
+overflow, 3 horizontal scroll, 284 tiny-text and 75 low-fill offenders; all nine
+approved geometry exceptions validate. None of the ten remediated IDs has an
 overflow, horizontal-scroll or tiny-text failure. The global fit gate remains
 unmet while the other demos are still being remediated.
 
@@ -178,6 +187,11 @@ Final mobile Lighthouse scores are 99 for home (292,279 bytes) and 100 for Elast
 Tabs detail (356,146 bytes), both with a 1.0s LCP. The latest local route-opening
 first-paint measurement is 35ms. This preserves the shell performance gates while
 adding the new artwork and complete-source copy behavior.
+
+The first six controls and preview-performance changes were committed as
+`2fabf60` and pushed to `main`. Node 18/22 verification and Pages deployment
+passed, followed by a public-browser check of the catalog, lazy source loading,
+keyboard actions, portable clipboard export, mobile geometry and checkbox input.
 
 ## Remaining work
 

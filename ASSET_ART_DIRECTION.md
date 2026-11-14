@@ -55,6 +55,8 @@ The SVGs in `assets/components/` are the original static assets supplied by the
 owner's [Interaction Figma file](https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction).
 Their paths and intrinsic dimensions are preserved. They are used by native
 HTML/CSS interactions; no Figma screenshot is used as implementation artwork.
+Git preserves the original SVG bytes across Windows and Unix checkouts so the
+portable bundle remains reproducible.
 
 | Asset | Figma tile | Intrinsic size |
 | --- | --- | --- |
@@ -65,6 +67,8 @@ HTML/CSS interactions; no Figma screenshot is used as implementation artwork.
 | success-check.svg | 149:1615 · Success Morph | 16×16 |
 | checkbox-check.svg | 149:1668 · Checkbox Draw | 14×14 |
 | copy-check.svg | 149:2008 · Copy Feedback | 14×14 |
+| hop-arrow.svg | 149:1594 · Icon Hop | 16×16 |
+| ripple-wave.svg | 149:1723 · Ripple | 80×80 |
 
 `assets/demo-assets.json` maps portable asset names to local files. The registry
 exposes the referenced paths for lightweight previews and content-hashed bundle

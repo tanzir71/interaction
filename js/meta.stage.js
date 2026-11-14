@@ -3606,13 +3606,25 @@ INTRX.meta({
     "caption": "Follow the border light"
   },
   "btn-shimmer-sweep": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / play",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3621,10 +3633,10 @@ INTRX.meta({
     "useCases": [
       "button",
       "shimmer",
-      "hover entry"
+      "ambient highlight"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-text-slide-swap": {
@@ -3650,13 +3662,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-icon-hop": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Play / pause",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3668,7 +3692,7 @@ INTRX.meta({
       "intent loop"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-success-morph": {
@@ -3728,13 +3752,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-ripple-material": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "run"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3746,17 +3782,29 @@ INTRX.meta({
       "click geometry"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-jelly-press": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "run"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3768,7 +3816,7 @@ INTRX.meta({
       "press feedback"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "like-heart-particles": {
@@ -8937,5 +8985,4 @@ INTRX.meta({
     "thumb": "full",
     "addedAt": "2026-11"
   }
-}
-);
+});
