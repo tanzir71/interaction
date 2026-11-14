@@ -1,0 +1,35 @@
+{
+  "presets": {
+    "sm": [
+      320,
+      240
+    ],
+    "md": [
+      480,
+      360
+    ],
+    "lg": [
+      720,
+      480
+    ],
+    "bleed": "Fill the stage"
+  },
+  "padding": {
+    "thumb": 24,
+    "full": 32
+  },
+  "dock": 48,
+  "liveCap": {
+    "desktop": 6,
+    "touch": 1
+  },
+  "rules": [
+    "Declare designSize, stage, trigger, controls and a11y.",
+    "The shell owns the frame, dock and lifecycle.",
+    "Use one neutral ramp plus one accent; rendered text must be at least 11px.",
+    "Expose state changes through ctx.onAction or returned actions.",
+    "Respect ctx.mode, ctx.theme and ctx.reducedMotion.",
+    "Do not start audio without a gesture or capture input outside the stage.",
+    "Use runtime-wrapped timers and return cleanup."
+  ]
+}

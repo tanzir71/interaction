@@ -39,27 +39,7 @@
   }
 
   /* ---------- build the copyable code block for a demo ---------- */
-  function buildCode(d) {
-    let out = '';
-    if (d.source) out += '<!-- '+(d.cat === 'DRAMS' ? 'DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). Native interpretation. ' : '')+escapeHtml(d.source.name)+' | '+escapeHtml(d.source.url)+' -->\n';
-    if (d.libs && d.libs.length) {
-      out += '<!-- CDN dependencies -->\n';
-      d.libs.forEach(l => {
-        if (l === 'gsap') out += '<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"><\/script>\n';
-        if (l === 'scrolltrigger') out += '<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"><\/script>\n';
-        if (l === 'lenis') out += '<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"><\/script>\n';
-      });
-      out += '\n';
-    }
-    const base = ':root{--bg:#0a0a0b;--bg-2:#161617;--bg-3:#1a1a1b;--text:#fff;--text-2:#b8b8b8;--text-3:#7a7a7f;--line:#2c2c2e;--line-2:#333;--accent:#fa7319;--accent-dim:rgba(250,115,25,.12);--mono:"Roboto Mono",ui-monospace,monospace;--sans:var(--mono)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--mono)}button,input{font:inherit}.demo-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:320px;overflow:hidden}.demo-stage *{scrollbar-width:thin;scrollbar-color:#333 transparent}';
-    let fonts = ':root{--font-ui:"Inter",system-ui,sans-serif;--font-numeric:"Inter",system-ui,sans-serif;--font-editorial:"Newsreader",Georgia,serif}';
-    if (/Inter|--font-ui|--font-numeric/.test(d.css)) fonts += R.fontFaces.Inter;
-    if (/Manrope/.test(d.css)) fonts += R.fontFaces.Manrope;
-    if (/Newsreader|--font-editorial/.test(d.css)) fonts += R.fontFaces.Newsreader + R.fontFaces['Newsreader Italic'];
-    out += '<style>\n' + fonts + base + '\n' + R.resolveAssets(d.css.trim()) + '\n</style>\n</head>\n<body>\n<div class="demo-stage">' + R.resolveAssets(d.html.trim()) + '</div>\n\n';
-    out += '<script>\n(function () {\nconst root = document.querySelector(".' + d.rootClass + '");\nconst stage = root.parentElement;\n' + R.resolveAssets(d.js.trim()) + '\n})();\n<\/script>\n</body>\n</html>';
-    return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n<title>' + escapeHtml(d.title) + '</title>\n' + out;
-  }
+  function buildCode(d) { return R.buildCode(d); }
 
   /* ---------- nav ---------- */
   let total = 0;

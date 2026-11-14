@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intrx.vercel.app/registry/schema.json",
+  "title": "INTRX component",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "category",
+    "group",
+    "trigger",
+    "tier",
+    "stage",
+    "a11y",
+    "files",
+    "parts",
+    "prompt",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "trigger": {
+      "enum": [
+        "hover",
+        "press",
+        "drag",
+        "scroll",
+        "type",
+        "ambient"
+      ]
+    },
+    "tier": {
+      "enum": [
+        "free",
+        "pro"
+      ]
+    },
+    "stage": {
+      "type": "object",
+      "required": [
+        "theme",
+        "overflow",
+        "designSize"
+      ]
+    },
+    "a11y": {
+      "type": "object"
+    },
+    "files": {
+      "type": "array"
+    },
+    "parts": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 300
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "tier": {
+            "const": "pro"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "files": {
+            "maxItems": 0
+          },
+          "parts": {
+            "type": "null"
+          },
+          "locked": {
+            "const": true
+          }
+        },
+        "required": [
+          "locked"
+        ]
+      }
+    }
+  ]
+}

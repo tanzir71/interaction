@@ -40,3 +40,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - Run `node --test tools/runtime.test.js` when changing lifecycle behavior.
 - Run `node tools/verify-stage-runtime.js http://127.0.0.1:4173` for browser
   action, live-cap, touch and keyboard checks.
+
+## Registry and agent tooling (Phase 2)
+- `tools/build-registry.js` generates `registry/`, `r/`, both llms files and
+  `js/export-data.js`. Do not hand-edit generated files. Regenerate after changes
+  to demos, metadata, tokens, runtime or exporter.
+- `js/shell/export.js` is the shared portable HTML exporter used by the site and
+  registry builder. `tools/build-demo-assets.js` embeds portable photos/fonts.
+- `packages/intrx` is `@tanziro/intrx` (the unscoped npm name was occupied).
+  Run `npm ci --prefix packages/intrx` and `npm test --prefix packages/intrx`.
+  Local CLI: `node packages/intrx/bin/intrx.js ... --registry ./registry`.
+- Agent instructions are in `skills/intrx`; setup and contributor docs are in
+  `docs/`. npm publication is separate from implementing and pushing this repo.
+- CI validates generated output and the CLI/MCP handshake, then stages only
+  static public files with `tools/prepare-site.js`.

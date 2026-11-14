@@ -98,7 +98,7 @@ const expectedNewCount = 16 + 4 + 52;
       await standalone.setContent(d.code);
       await standalone.evaluate(()=>document.fonts.ready);
       await standalone.waitForTimeout(80);
-      check(await standalone.locator('.demo-stage > div').count()===1,d.id+' offline export renders');
+      check(await standalone.locator('.stage-content > *').count()===1,d.id+' offline export renders its demo root');
       check(await standalone.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)),d.id+' offline images load');
     }
     check(exportErrors.length===0,'Offline exports have no errors: '+exportErrors.join(';'));

@@ -51,13 +51,40 @@ The stage verifier records existing chrome/control debt explicitly for 391 demos
 baseline mode rejects regressions, while `--strict` will require full remediation.
 This is not a claim that the redesigned demo compositions are finished.
 
+Stage contract commit: `914685c`, pushed directly to `main`.
+
+## Phase 2 — Registry and agents
+
+- Generated 806 deterministic artifacts for the 399 current demos: public index,
+  full component items, categories, schema, tokens, stage contract, shadcn items,
+  both llms files and the browser's shared export data.
+- Moved portable HTML generation to `js/shell/export.js`. Exports include the
+  stage context, declared fit, runtime cleanup, controls and embedded local fonts
+  and photography. Generated output normalizes source line endings for CI.
+- Added the `@tanziro/intrx` CLI/MCP package (the unscoped npm name is occupied),
+  local/HTTP registries, ETag revalidation, ranked search, safe file installation,
+  seven MCP tools, resources and two prompts.
+- Added the INTRX agent skill, its stage/motion references and seven documentation
+  sources. The Docs view is part of the following shell phase.
+- CI verifies Node 18 and 22, rejects stale generated output and stages only the
+  public static files for hosting; npm dependencies are excluded.
+
+Verification: registry/stage/motion checks pass, generated output is current,
+seven package tests and seven runtime tests pass, the skill validates, and all
+560 browser checks pass (399 previews and 97 offline exports). A generated Elastic
+Tabs document also passes offline action/replay checks. MCP Inspector connects
+through the local npx package route and lists the seven required tools. The stage
+audit remains at the Phase 1 diagnostic counts, with no boot or metadata failures.
+
+The npm package is implemented and tested locally. Publishing it to npm is a
+separate owner action; setup docs provide working local commands in the meantime.
+
 ## Remaining work
 
-1. Generated registry, CLI, MCP, agent skill and documentation.
-2. Routed shell, mobile layouts, search palette, performance and accessibility.
-3. Remediation buckets A–G and motion migration across all existing demos.
-4. Thirty new components and ninety-one extension components, by category.
-5. Pro entitlement seams and a full requirement-by-requirement completion audit.
+1. Routed shell, mobile layouts, search palette, performance and accessibility.
+2. Remediation buckets A–G and motion migration across all existing demos.
+3. Thirty new components and ninety-one extension components, by category.
+4. Pro entitlement seams and a full requirement-by-requirement completion audit.
 
 The objective remains active until every phase is implemented, verified,
 committed and pushed. Design completion is not implementation completion.
