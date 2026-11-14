@@ -7,12 +7,15 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
  try{
   const page=await browser.newPage({viewport:{width:800,height:700},deviceScaleFactor:1,reducedMotion:'reduce'});
   await page.goto(process.argv[2]||'http://127.0.0.1:4173',{waitUntil:'networkidle'});
-  const ids=await page.evaluate(()=>INTRX.catalog.map(item=>item.id));
+  const catalog=await page.evaluate(()=>INTRX.catalog.map(item=>item.id));
+  const requested=process.argv.find(arg=>arg.startsWith('--ids='))?.slice(6).split(',');
+  if(requested?.some(id=>!catalog.includes(id)))throw Error('Unknown poster id: '+requested.filter(id=>!catalog.includes(id)).join(', '));
+  const ids=requested?[...new Set(requested)]:catalog;
   await page.evaluate(()=>{INTRX.disposeView();document.getElementById('app').innerHTML='<div class="demo-stage stage" id="poster-stage" style="width:360px;height:264px;position:relative"></div>';});
   fs.mkdirSync('assets/posters',{recursive:true});
   const errors=[];
   for(const [index,id]of ids.entries()){
-   await page.evaluate(async id=>{const stage=document.querySelector('#poster-stage'),demo=await INTRX.loadDemo(id);INTRX.mountStage(demo,stage,'thumb');await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));stage._runtime.suspend();if(stage.dataset.bootError)throw Error('Poster boot failed: '+id);},id);
+   await page.evaluate(async id=>{const stage=document.querySelector('#poster-stage'),demo=await INTRX.loadDemo(id);INTRX.mountStage(demo,stage,'thumb');await document.fonts.ready;await Promise.all([...stage.querySelectorAll('img')].map(image=>image.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));stage._runtime.suspend();if(stage.dataset.bootError)throw Error('Poster boot failed: '+id);},id);
    await page.locator('#poster-stage').screenshot({path:path.join('assets/posters',id+'.png'),animations:'disabled'});
    if((index+1)%40===0)console.log('Captured '+(index+1)+' / '+ids.length+' posters');
   }

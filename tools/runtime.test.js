@@ -5,8 +5,8 @@ function setup(){
  const schedule=(fn,ms)=>{const key=++id;jobs.set(key,{fn,at:time+ms});return key;};
  const context={window:{INTRX:{}},document,console,performance:{now:()=>time},requestAnimationFrame:fn=>schedule(fn,16),cancelAnimationFrame:key=>jobs.delete(key),setTimeout:(fn,ms)=>schedule(fn,ms),clearTimeout:key=>jobs.delete(key)};
  vm.runInNewContext(fs.readFileSync(require.resolve('../js/demo-runtime.js'),'utf8'),context);
- const stage={dataset:{},isConnected:true,getAnimations:()=>[]};
- return {runtime:context.window.INTRX.createRuntime(stage),stage,jobs,
+ const stageEvents=new Map(),stage={dataset:{},isConnected:true,getAnimations:()=>[],addEventListener:(name,fn)=>stageEvents.set(name,fn),removeEventListener:name=>stageEvents.delete(name)};
+ return {runtime:context.window.INTRX.createRuntime(stage),stage,jobs,context,stageEvents,
   advance(ms){const end=time+ms;for(;;){const next=[...jobs].filter(([,job])=>job.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!next)break;time=next[1].at;jobs.delete(next[0]);next[1].fn(time);}time=end;},
   visibility(hidden){document.hidden=hidden;listeners.get('visibilitychange')?.();},listeners};
 }
@@ -32,6 +32,22 @@ test('disposal cancels all work, detaches visibility handling, and cleans up onc
  const s=setup();let calls=0,cleanup=0;s.runtime.cleanup=()=>cleanup++;s.runtime.onDispose(()=>cleanup++);
  s.runtime.requestAnimationFrame(()=>calls++);s.runtime.setTimeout(()=>calls++,10);s.runtime.setInterval(()=>calls++,10);
  s.runtime.dispose();s.runtime.dispose();s.advance(1000);assert.equal(calls,0);assert.equal(cleanup,2);assert.equal(s.jobs.size,0);assert.equal(s.listeners.size,0);
+});
+test('lifecycle preserves authored CSS pause while resuming only runtime-paused Web Animations',()=>{
+ const s=setup();
+ class CSSAnimation{constructor(){this.playState='running';this.plays=0;this.pauses=0;}pause(){this.pauses++;this.playState='paused';}play(){this.plays++;this.playState='running';}updatePlaybackRate(rate){this.rate=rate;}}
+ s.context.window.CSSAnimation=CSSAnimation;
+ const css=new CSSAnimation(),wa={playState:'running',plays:0,pause(){this.playState='paused';},play(){this.plays++;this.playState='running';},updatePlaybackRate(rate){this.rate=rate;}},authorPaused={...wa,playState:'paused',plays:0};
+ s.stage.getAnimations=()=>[css,wa,authorPaused];
+ s.runtime.suspend();assert.equal(s.stage.dataset.suspended,'true');assert.equal(css.pauses,0);assert.equal(wa.playState,'paused');
+ s.runtime.resume();assert.equal(css.plays,0);assert.equal(wa.plays,1);assert.equal(authorPaused.plays,0);
+ s.runtime.setSpeed(2);assert.equal(css.rate,2);assert.equal(css.plays,0);assert.equal(css.pauses,0);
+ s.runtime.dispose();assert.equal(s.stage.dataset.suspended,'true');
+});
+test('CSS transitions created after a speed change inherit that speed and listeners clean up',()=>{
+ const s=setup();s.runtime.setSpeed(2);const animation={rate:1,updatePlaybackRate(value){this.rate=value;}};s.stage.getAnimations=()=>[animation];
+ s.stageEvents.get('transitionrun')();assert.equal(animation.rate,2);
+ s.runtime.dispose();assert.equal(s.stageEvents.size,0);
 });
 test('metadata defaults merge beneath inline values and remain replaceable',()=>{
  const context={window:{}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/registry.js'),'utf8'),context);

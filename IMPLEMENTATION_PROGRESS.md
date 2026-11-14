@@ -120,6 +120,65 @@ Search posters capture those current native demos and must be refreshed after
 their redesign. The npm package remains unpublished; UI/docs link working local
 setup and state that npm instructions become available after publication.
 
+Phase 3 commit: `29a942c`, pushed directly to `main`. Node 18/22 CI and both
+Pages deployment jobs passed. A public-browser check confirmed the home catalog,
+lazy detail, dock action, portable export and mobile stage geometry.
+
+## Phase 4 — Remediation in progress
+
+Bucket A has begun with six v4 implementations: Border Beam, Elastic Tabs,
+Toast Stack, Success Morph, Checkbox Draw and Copy Feedback. Each now renders
+its compact Figma hero without a surrounding demo panel or internal replay/reset
+toolbar. Shared dock actions, keyboard behavior, cancellation, reduced-motion
+poses and standalone exports are covered by `tools/verify-exemplars.js`.
+
+- Downloaded the original Figma SVGs without changing paths or intrinsic sizes.
+  `assets/demo-assets.json` records their local paths alongside the existing
+  photographic assets; `ASSET_ART_DIRECTION.md` records their Figma provenance.
+- Previews resolve original local files. Portable exports load content-hashed
+  asset/runtime bundles and embed the same files. This avoids loading the whole
+  font/photo bundle for a small preview icon and prevents stale asset versions.
+- Fixed a shared lifecycle bug where Web Animations `play()` overrode an
+  author's CSS pause. CSS loops now follow the stage suspension rule, including
+  pseudo-elements in exported HTML. Newly created CSS transitions inherit the
+  selected animation speed; the tab spring uses virtual-time 60Hz integration.
+- The owner clarified that sparse controls must retain their exact v4 Figma
+  geometry despite the 12% fill heuristic. Five documented fill exceptions are
+  measured against their reference geometry in `tools/stage-fit-allowlist.json`.
+  No overflow, scroll or text-size gates were relaxed.
+- Refreshing posters can target changed IDs, and registry generation leaves
+  unchanged output files untouched. Stale preview-request failures after a view
+  is disposed no longer appear as errors in the next view.
+
+Focused verification: 91 exemplar behavior, reduced-motion, namespace,
+native-size and offline-export checks pass. The 32 existing interaction checks,
+desktop/touch lifecycle suite, 12 runtime/shell tests and eight CLI/MCP tests pass.
+The chrome/control baseline has shrunk from 391 to 385 demos and motion debt
+from 168 to 164. These are incremental reductions; bucket A and Phase 4 remain
+incomplete. Six native search posters have been refreshed.
+
+The final broad browser run passes 651 checks, all 399 lazy preview boots and 97
+offline exports. The full audit records 0 failed boots, 0 missing sizes, 61
+overflow, 3 horizontal scroll, 288 tiny-text and 75 low-fill offenders; all five
+approved geometry exceptions validate. None of the six remediated IDs has an
+overflow, horizontal-scroll or tiny-text failure. The global fit gate remains
+unmet while the other demos are still being remediated.
+
+Detail's collapsed source now uses generated previews of the actual first 18
+displayed lines and the complete document's line count. This removes the portable
+asset bundle from initial detail loading. Copy and Expand still load the complete
+portable source. Asynchronous copy retains the selected format, gives preparation
+feedback and starts its clipboard write during the initiating gesture. The
+registry now generates 1,205 artifacts, including 399 source previews.
+
+The browser's Inter Latin face is an unmodified distribution from the same font
+revision, with matching glyph/advance metrics and the existing full face retained
+for other supported characters. Critical fonts are preloaded for their routes.
+Final mobile Lighthouse scores are 99 for home (292,279 bytes) and 100 for Elastic
+Tabs detail (356,146 bytes), both with a 1.0s LCP. The latest local route-opening
+first-paint measurement is 35ms. This preserves the shell performance gates while
+adding the new artwork and complete-source copy behavior.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

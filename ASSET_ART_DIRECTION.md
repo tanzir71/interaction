@@ -40,3 +40,34 @@ Geist and Geist Mono are self-hosted variable WOFF2 fonts from
 is included at `assets/fonts/Geist-OFL.txt`. Geist is used by the shell;
 Geist Mono is used for code, counters and metadata. Demo-specific Inter,
 Manrope and Newsreader files remain available during the staged migration.
+
+For browser UI text, `inter-latin-variable.woff2` is an unmodified vendor Latin
+file from the same Inter revision (`4.001;git-66647c0bb`) as the existing face.
+The original face remains the fallback for other supported characters, and
+portable exports retain it. The 73KB Latin file replaces a 158KB transfer on
+Latin-only detail views. All fonts are served locally. Source, licence and
+checksum are in `assets/fonts/inter-latin-provenance.json`; 1,296 shared glyph
+instances, vertical metrics and 30 browser word/kerning measurements matched.
+
+## Handoff 3 v4 control artwork
+
+The SVGs in `assets/components/` are the original static assets supplied by the
+owner's [Interaction Figma file](https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction).
+Their paths and intrinsic dimensions are preserved. They are used by native
+HTML/CSS interactions; no Figma screenshot is used as implementation artwork.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| beam-deploy.svg | 149:1552 · Border Beam | 16×16 |
+| beam-highlight.svg | 149:1552 · Border Beam | 121×1 |
+| beam-glow.svg | 149:1552 · Border Beam | 76×32 |
+| toast-status.svg | 157:1753 · Toast Stack | 8×8 |
+| success-check.svg | 149:1615 · Success Morph | 16×16 |
+| checkbox-check.svg | 149:1668 · Checkbox Draw | 14×14 |
+| copy-check.svg | 149:2008 · Copy Feedback | 14×14 |
+
+`assets/demo-assets.json` maps portable asset names to local files. The registry
+exposes the referenced paths for lightweight previews and content-hashed bundle
+URLs for source export. `tools/build-demo-assets.js` embeds the same original
+files and local fonts into `js/demo-assets.js` for portable HTML. Update the
+manifest, regenerate the asset bundle, then regenerate the registry after edits.

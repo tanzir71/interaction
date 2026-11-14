@@ -32,6 +32,9 @@
   R.initCatalog=async()=>{
     const response=await fetch('registry/index.json',{cache:'no-cache'});if(!response.ok)throw Error('Could not load component catalog');
     R.catalog=await response.json();R.byId=new Map(R.catalog.map(item=>[item.id,item]));
+    R.bundleUrls={assets:R.catalog[0]?.assetBundle||'js/demo-assets.js',export:R.catalog[0]?.exportBundle||'js/export-data.js'};
+    const paths=Object.assign({},...R.catalog.map(item=>item.assetRefs));
+    R.resolveAssets=value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!paths[name])throw Error('Unknown preview asset: '+name);return paths[name];});
     R.meta(Object.fromEntries(R.catalog.map(item=>[item.id,{designSize:item.designSize,stage:item.stage,trigger:item.trigger,controls:item.controls,a11y:item.a11y,tier:item.tier,thumb:item.thumb,useCases:item.useCases,addedAt:item.addedAt}])));
     return R.catalog;
   };
@@ -41,10 +44,9 @@
     if(!demo){const item=R.byId.get(id);if(!item)throw Error('Unknown component');await R.loadScript(item.module);demo=R.demos.find(item=>item.id===id);}
     if(!demo)throw Error('Component registration failed');
     for(const lib of demo.libs||[])if(urls[lib])await R.loadScript(urls[lib]);
-    if(/\{\{asset:/.test(demo.html+demo.css+demo.js))await R.loadScript('js/demo-assets.js');
     return demo;
   };
-  R.getCode=async demo=>{await Promise.all([R.loadScript('js/demo-assets.js'),R.loadScript('js/export-data.js')]);return R.buildCode(demo);};
+  R.getCode=async demo=>{await Promise.all([R.loadScript(R.bundleUrls.assets),R.loadScript(R.bundleUrls.export)]);return R.buildCode(demo);};
   R.rank=(items,query)=>{
     const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
     const fuzzy=(text,word)=>{let pos=0;for(const c of text)if(c===word[pos])pos++;return pos===word.length;};

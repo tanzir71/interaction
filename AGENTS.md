@@ -14,6 +14,10 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 - Demos never draw their own outer panel or replay/reset buttons; expose actions and list them in `controls`.
 - Rendered thumbnail text ≥ 11px; neutral greys + one accent per demo (no decorative hues); reduced-motion branch required.
 - Build what the v4 tile in Figma shows; the tile wins over older art and older demos.
+- Owner clarification, 15 Nov 2026: sparse controls keep the exact Figma size
+  when it conflicts with the 12% fill heuristic. Document each exception and its
+  reference geometry in `tools/stage-fit-allowlist.json`. This changes only the
+  low-fill gate; overflow, horizontal scroll and text-size gates still apply.
 - Never copy code or assets from reference sites; new components are original implementations.
 
 ## Verify before each phase commit
@@ -64,3 +68,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - `assets/posters/` contains native static previews used by palette and related
   results. Refresh with `node tools/build-posters.js http://127.0.0.1:4173`
   after changing demo compositions. Never use a Figma screenshot as tile art.
+- `assets/demo-assets.json` maps portable names to original local assets.
+  Previews use their local paths; copy/export loads the content-hashed portable
+  bundles declared in the generated catalog. Regenerate assets before registry.
+- `node tools/verify-exemplars.js http://127.0.0.1:4173` covers the remediated
+  control set. Keep its behavior and optical-size checks current as it grows.

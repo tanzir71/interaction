@@ -6,6 +6,7 @@
 
  R.announce=message=>{const live=document.getElementById('announcer');live.textContent='';requestAnimationFrame(()=>live.textContent=message);};
  R.bindTabs=container=>container.querySelectorAll('[role="tablist"]').forEach(list=>{
+  if(list.closest('.stage-content'))return; // Each portable demo owns its keyboard behavior.
   if(list.dataset.tabsBound)return;list.dataset.tabsBound='true';
   const tabs=[...list.querySelectorAll('[role="tab"]')].filter(tab=>!tab.disabled);
   const sync=()=>tabs.forEach(tab=>tab.tabIndex=tab.getAttribute('aria-selected')==='true'?0:-1);sync();
@@ -18,13 +19,30 @@
   if(button&&copied){const label=button.innerHTML;button.innerHTML='Copied ✓';setTimeout(()=>{if(button.isConnected)button.innerHTML=label;},1400);}
   return copied;
  };
+ R.copyWhenReady=async(prepare,button)=>{
+  if(button?.dataset.copyBusy)return false;
+  const label=button?.innerHTML,icon=button?.classList.contains('icon-btn');
+  if(button){button.dataset.copyBusy='true';button.setAttribute('aria-busy','true');button.innerHTML=icon?'…':'Preparing…';}R.announce('Preparing clipboard content');
+  const prepared=Promise.resolve().then(prepare);prepared.catch(()=>{});
+  try{
+   if(typeof ClipboardItem==='function'&&navigator.clipboard?.write){
+    // A promised Blob keeps the write tied to this click while source loads.
+    // https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/ClipboardItem
+    const data=prepared.then(value=>new Blob([value],{type:'text/plain'}));data.catch(()=>{});
+    await navigator.clipboard.write([new ClipboardItem({'text/plain':data})]);
+    R.announce('Copied to clipboard');if(button){button.innerHTML=icon?R.icon('check'):'Copied ✓';setTimeout(()=>{if(button.isConnected)button.innerHTML=label;},1400);}return true;
+   }
+   const value=await prepared;if(button)button.innerHTML=label;return await R.copy(value,button);
+  }catch{if(button)button.innerHTML=label;R.announce('Copy unavailable. Please try again.');return false;}
+  finally{if(button){delete button.dataset.copyBusy;button.removeAttribute('aria-busy');}}
+ };
  R.badges=item=>(item.isNew?'<span class="badge--new">New</span>':'')+(item.tier==='pro'?'<span class="badge--pro">Pro</span>':'')+(item.libs||[]).map(lib=>'<span class="badge--lib">'+R.escape(lib)+'</span>').join('');
  R.makeTile=(item,manager,{landing=false}={})=>{
   const card=document.createElement('article');card.className='tile'+(landing?' tile--landing':'');card.id='tile-'+item.id;card.dataset.id=item.id;card.setAttribute('data-intrx-tile','');
   const title=R.escape(item.title),hint=(item.trigger[0].toUpperCase()+item.trigger.slice(1)+' · '+item.hint.replace(/^(hover|press|drag|scroll|type|ambient|move)\s*[·:]?\s*/i,''));
   card.innerHTML='<div class="demo-stage stage" data-stage="'+item.id+'" data-mode="thumb" data-stage-theme="'+item.stage.theme+'" data-overflow="'+item.stage.overflow+'"></div><div class="tile-quick"><button class="icon-btn" data-copy="code" aria-label="Copy '+title+' code">'+R.icon('copy')+'</button><button class="icon-btn" data-copy="prompt" aria-label="Copy '+title+' prompt">⌘</button></div><div class="tile-caption"><button class="tile-details" type="button"><span>'+title+'</span>'+R.badges(item)+'</button><p class="tile-hint">'+R.escape(hint.length<=56?hint:item.trigger[0].toUpperCase()+item.trigger.slice(1)+' · '+item.hint.slice(0,42).replace(/\s+\S*$/,''))+'</p></div>';
   card.querySelector('.tile-details').addEventListener('click',()=>R.router.go('#/c/'+item.id));
-  card.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{try{const demo=await R.loadDemo(item.id);await R.copy(button.dataset.copy==='prompt'?demo.prompt:await R.getCode(demo),button);}catch(error){R.announce(error.message);}}));
+  card.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',()=>R.copyWhenReady(async()=>{const demo=await R.loadDemo(item.id);return button.dataset.copy==='prompt'?demo.prompt:await R.getCode(demo);},button)));
   manager.add(item,card);return card;
  };
  R.renderTiles=(container,items,{landing=false}={})=>{const manager=R.liveTiles||(R.liveTiles=new R.LiveTiles());items.forEach(item=>container.appendChild(R.makeTile(item,manager,{landing})));};

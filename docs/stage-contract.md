@@ -30,3 +30,16 @@ Register one object in a `js/demos.*.js` module and list that module in
 `js/registry-files.json`. Give the entry a unique ID, prefixed classes, complete
 demo strings, metadata and a detailed motion prompt. Regenerate the public
 registry and poster, then run the registry, stage, motion and browser checks.
+
+## Figma geometry and sparse controls
+
+The owner clarified on 15 Nov 2026 that exact v4 Figma geometry takes precedence
+over the 12% area-fill heuristic for intentionally sparse controls. Document each
+exception in `tools/stage-fit-allowlist.json` with its reason, Figma tile, primary
+selector and expected unscaled dimensions. The browser audit checks that geometry
+before applying the exception and reports invalid entries as failures.
+
+These exceptions apply only to low fill. Failed boots, missing metadata,
+overflow, horizontal scrolling and rendered text below 11px still fail their
+respective gates. Use `node tools/verify-exemplars.js` for the current remediated
+controls' interaction, reduced-motion, namespace and offline-export checks.

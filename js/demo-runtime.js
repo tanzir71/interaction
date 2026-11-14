@@ -42,6 +42,10 @@
         }
       });
       if (stage.getAnimations) stage.getAnimations({ subtree: true }).forEach(animation => {
+        // CSS loops follow the stage's suspension rule. Calling play() on a
+        // CSSAnimation overrides its author's animation-play-state, so a later
+        // in-demo Pause would otherwise be ignored after a speed change.
+        if (typeof window.CSSAnimation==='function' && animation instanceof window.CSSAnimation) return;
         if (animation.playState === 'running') { animations.add(animation); animation.pause(); }
       });
     }
@@ -60,6 +64,9 @@
       realTime = performance.now();
       stage.dataset.suspended = String(paused());
       if (document.hidden) freeze(); else thaw();
+    }
+    function syncAnimationSpeed() {
+      if (!disposed && stage.getAnimations) stage.getAnimations({subtree:true}).forEach(animation=>animation.updatePlaybackRate(speed));
     }
     function makeTimer(callback, delay, repeat, args) {
       const id = ++sequence;
@@ -99,13 +106,14 @@
       setSpeed(value) {
         if (![.5,1,2].includes(value)) throw new RangeError('Speed must be 0.5, 1, or 2');
         clock(); freeze(); speed = value;
-        if (stage.getAnimations) stage.getAnimations({subtree:true}).forEach(animation => animation.updatePlaybackRate(value));
+        syncAnimationSpeed();
         thaw();
       },
       onDispose(callback) { cleanups.add(callback); return () => cleanups.delete(callback); },
       dispose() {
         if (disposed) return;
         clock(); freeze(); disposed = true;
+        stage.dataset.suspended = 'true';
         document.removeEventListener('visibilitychange',visibility);
         frames.clear(); timers.clear(); animations.clear();
         const callbacks = [...cleanups]; cleanups.clear();
@@ -121,6 +129,9 @@
       };
     });
     document.addEventListener('visibilitychange',visibility);
+    stage.addEventListener?.('animationstart',syncAnimationSpeed);
+    stage.addEventListener?.('transitionrun',syncAnimationSpeed);
+    cleanups.add(()=>{stage.removeEventListener?.('animationstart',syncAnimationSpeed);stage.removeEventListener?.('transitionrun',syncAnimationSpeed);});
     return runtime;
   };
 })();

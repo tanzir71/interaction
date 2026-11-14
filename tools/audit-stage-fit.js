@@ -9,6 +9,7 @@
    gate fails, so CI can run it once the remediation in §5 is complete. */
 const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const lowFillExceptions=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 
 const GATES = {
   overflow: 0,        // tiles with visible leaves outside the stage (marquees opt out via stage.overflow:'intentional')
@@ -26,7 +27,7 @@ const GATES = {
   await page.goto(url.replace(/\/#.*$/,'').replace(/\/$/,'')+'/#/library', { waitUntil: 'networkidle' });
   while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();
 
-  const results = await page.evaluate(async () => {
+  const results = await page.evaluate(async exceptions => {
     const out = [];
     const tiles = [...document.querySelectorAll('[data-intrx-tile], .tile')];
     for (const tile of tiles) {
@@ -44,6 +45,12 @@ const GATES = {
       if (!root) { r.empty = true; r.failed = true; out.push(r); continue; }
       r.failed = stage.dataset.bootError === 'true' || /failed to boot/i.test(stage.textContent);
       const zoom = parseFloat(getComputedStyle(root).zoom) || 1;
+      const exception=exceptions[id];
+      if(exception){
+        const hero=root.querySelector(exception.selector),bounds=hero?.getBoundingClientRect();
+        const actual=bounds?[bounds.width/zoom,bounds.height/zoom]:null;
+        r.lowFillException={...exception,actual,valid:!!actual&&actual.every((value,i)=>Math.abs(value-exception.designSize[i])<=1)};
+      }
       let top = 1e9, left = 1e9, right = -1e9, bottom = -1e9, overflow = 0, leaves = 0, minFont = 99, n = 0;
       for (const el of root.querySelectorAll('*')) {
         if (n++ > 1500) break;
@@ -71,10 +78,10 @@ const GATES = {
       out.push(r);
     }
     return out;
-  });
+  },lowFillExceptions);
 
   const exemptOverflow = r => r.stageMeta && r.stageMeta.overflow === 'intentional';
-  const exemptFill = r => r.stageMeta && (r.stageMeta.size === 'bleed' || r.designSize === 'bleed');
+  const exemptFill = r => (r.stageMeta && (r.stageMeta.size === 'bleed' || r.designSize === 'bleed')) || r.lowFillException?.valid;
   const summary = {
     total: results.length,
     failed: results.filter(r => r.failed).map(r => r.id),
@@ -83,6 +90,8 @@ const GATES = {
     hscroll: results.filter(r => r.hscroll && !exemptOverflow(r)).map(r => r.id),
     tinyText: results.filter(r => r.minFont < GATES.minFontPx).map(r => r.id + ':' + r.minFont),
     lowFill: results.filter(r => r.fill < GATES.minFill && !exemptFill(r)).map(r => r.id + ':' + r.fill),
+    lowFillExceptions: results.filter(r=>r.lowFillException?.valid).map(r=>r.id),
+    invalidExceptions: results.filter(r=>r.lowFillException&&!r.lowFillException.valid).map(r=>r.id),
   };
   fs.mkdirSync('.artifacts', { recursive: true });
   fs.writeFileSync('.artifacts/stage-fit.json', JSON.stringify({ gates: GATES, summary, results }, null, 2));
@@ -90,8 +99,9 @@ const GATES = {
     total: summary.total, failed: summary.failed.length, missingDesignSize: summary.missingDesignSize,
     overflow: summary.overflow.length, hscroll: summary.hscroll.length,
     tinyText: summary.tinyText.length, lowFill: summary.lowFill.length,
+    lowFillExceptions:summary.lowFillExceptions.length,invalidExceptions:summary.invalidExceptions,
   }, null, 2));
   await browser.close();
-  const pass = !summary.failed.length && !summary.missingDesignSize && summary.overflow.length <= GATES.overflow && summary.hscroll.length <= GATES.hscroll && !summary.tinyText.length && !summary.lowFill.length;
+  const pass = !summary.failed.length && !summary.missingDesignSize && summary.overflow.length <= GATES.overflow && summary.hscroll.length <= GATES.hscroll && !summary.tinyText.length && !summary.lowFill.length && !summary.invalidExceptions.length;
   process.exit(pass ? 0 : 1);
 })().catch(error => { console.error(error); process.exit(1); });

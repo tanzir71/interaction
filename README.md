@@ -32,6 +32,9 @@ Detail pages include a full preview, replay, animation speed, stage theme,
 viewport widths and fullscreen. Source tabs show a complete single-file document,
 individual HTML/CSS/JS parts and an LLM prompt. Copy actions export the full source,
 including portable fonts and imagery. React ports are planned.
+Collapsed source cards use generated previews of the first eighteen displayed
+lines. Expand and Copy load the complete document, with preparation feedback
+while portable assets are loaded.
 
 Press `⌘K` / `Ctrl+K` for fuzzy search. Arrow keys select a result, Enter opens it,
 Escape closes the palette, and `⌘C` / `Ctrl+C` and `⌘P` / `Ctrl+P` copy code or a
@@ -95,6 +98,7 @@ With the local server running and Playwright available as a development tool:
 node tools/verify-library.js http://127.0.0.1:4173
 node tools/verify-stage-runtime.js http://127.0.0.1:4173
 node tools/verify-aesthetic.js http://127.0.0.1:4173
+node tools/verify-exemplars.js http://127.0.0.1:4173
 node tools/audit-stage-fit.js http://127.0.0.1:4173
 ```
 
@@ -109,6 +113,9 @@ After editing demos, metadata, tokens, runtime or exporter, run
 `node tools/build-demo-assets.js`. Refresh native search previews with
 `node tools/build-posters.js http://127.0.0.1:4173` after composition changes.
 Generated files must pass `--check` before committing.
+Poster generation accepts `--ids=elastic-tabs,toast-stack` for a focused refresh.
+The fit audit reports documented Figma size exceptions for sparse controls;
+all other rendered gates remain enforced.
 
 ## Add a pattern
 

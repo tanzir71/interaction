@@ -124,7 +124,7 @@
           record.pending=false;if(!this.records.has(record.tile)||!record.tile.isConnected)return;
           record.ready=demo;
           if(!this.holding){R.mountStage(demo,record.stage,'thumb');this.schedule();}
-        }).catch(error=>{record.pending=false;record.stage.dataset.bootError='true';record.stage.textContent='Preview unavailable';console.error('[INTRX]',error);});
+        }).catch(error=>{record.pending=false;if(!this.records.has(record.tile)||!record.tile.isConnected)return;record.stage.dataset.bootError='true';record.stage.textContent='Preview unavailable';console.error('[INTRX]',error);});
       });
       this.records.forEach(record=>{
         const active=live.has(record),runtime=record.stage._runtime;

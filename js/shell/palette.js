@@ -10,7 +10,7 @@
   dialog.querySelectorAll('[data-scope]').forEach(button=>button.addEventListener('click',()=>{scope=button.dataset.scope;dialog.querySelectorAll('[data-scope]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}));input.addEventListener('input',render);input.addEventListener('keydown',async event=>{
    if(event.key==='Escape'){event.preventDefault();R.closeOverlay();return;}
    if(['ArrowDown','ArrowUp','Enter'].includes(event.key)){event.preventDefault();if(event.key==='Enter')activate();else select(index+(event.key==='ArrowDown'?1:-1));}
-   if((event.metaKey||event.ctrlKey)&&['c','p'].includes(event.key.toLowerCase())&&results[index]?.item){event.preventDefault();const d=await R.loadDemo(results[index].item.id);R.copy(event.key.toLowerCase()==='p'?d.prompt:await R.getCode(d));}
+   if((event.metaKey||event.ctrlKey)&&['c','p'].includes(event.key.toLowerCase())&&results[index]?.item){event.preventDefault();const item=results[index].item,type=event.key.toLowerCase();R.copyWhenReady(async()=>{const d=await R.loadDemo(item.id);return type==='p'?d.prompt:await R.getCode(d);});}
   });render();input.focus();
  };
 })();

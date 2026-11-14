@@ -52,7 +52,7 @@ const {demos}=require('./load-registry')();
    await open(id);const d=demos.find(d=>d.id===id);
    if(d.source)check(await page.locator('.source-link').count()===1,id+' source credit');
    check(await page.locator('.detail-stage').evaluate(s=>Math.abs(s._root.getBoundingClientRect().height-s._root.offsetHeight*s._ctx.scale)<2),id+' declared geometry');
-   await page.getByRole('tab',{name:'Single file',exact:true}).click();await page.locator('#copy-source').click();
+   await page.getByRole('tab',{name:'Single file',exact:true}).click();await page.locator('#copy-source').click();await page.waitForFunction(()=>document.querySelector('#copy-source')?.textContent.includes('Copied'));
    const code=await page.evaluate(()=>navigator.clipboard.readText());check(code.startsWith('<!DOCTYPE html>'),id+' copied document');check(!code.includes('{{asset:'),id+' resolved assets');
    if(d.cat==='DRAMS')check(code.includes('DRAMS by 1042 Studio')&&!/<iframe/i.test(code),id+' native source attribution');
    exports.push({id,rootClass:d.rootClass,code});

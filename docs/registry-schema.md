@@ -4,6 +4,15 @@
 groups and live counts are in `registry/categories.json`. Full items are in
 `registry/c/<id>.json` and use `registry/schema.json`.
 
+Catalog items also declare a content-hashed source `module`, `assetBundle` and
+`exportBundle`, plus `assetRefs` mapping portable asset names to local preview
+paths. The browser uses local files for previews and the versioned bundles for
+embedded portable exports. These fields do not introduce runtime dependencies.
+`sourcePreview` points to a small generated `registry/p/<id>.json` containing the
+actual first 18 displayed lines and the complete source's line count. Copy and
+Expand load the complete portable document; locked entries contain no preview
+source. Previews are versioned and generated alongside complete registry items.
+
 Each item has its ID, title, category/group, trigger, tags, use cases, tier, stage
 geometry, accessibility, libraries, portable files, HTML/CSS/JS parts, prompt,
 notes, related IDs, source credits and version. Pro items expose `locked: true`,

@@ -3575,13 +3575,21 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-border-beam": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / play",
+        "action": "toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3593,7 +3601,7 @@ INTRX.meta({
       "border beam"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
     "caption": "Follow the border light"
   },
@@ -3664,13 +3672,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-success-morph": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Publish",
+        "action": "run"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3682,7 +3702,7 @@ INTRX.meta({
       "loading success"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-confetti-burst": {
@@ -3774,13 +3794,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "checkbox-draw-check": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3792,7 +3824,7 @@ INTRX.meta({
       "accessible control"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "toggle-day-night": {
@@ -3818,13 +3850,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "copy-inline-feedback": {
-    "designSize": "sm",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Copy",
+        "action": "copy"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3836,7 +3880,7 @@ INTRX.meta({
       "inline feedback"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "hover-tooltip-spring": {
@@ -5592,7 +5636,10 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "elastic-tabs": {
-    "designSize": "md",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -5619,7 +5666,7 @@ INTRX.meta({
       "indicator"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
     "caption": "Watch the active pill stretch"
   },
@@ -5670,13 +5717,25 @@ INTRX.meta({
     "caption": "Find a command"
   },
   "toast-stack": {
-    "designSize": "md",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Add toast",
+        "action": "add"
+      },
+      {
+        "label": "Dismiss",
+        "action": "dismiss"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": false,
@@ -5688,7 +5747,7 @@ INTRX.meta({
       "spring"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
     "caption": "Add a toast to the stack"
   },

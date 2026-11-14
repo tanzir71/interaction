@@ -2,7 +2,12 @@
    Original generated art and prompts are documented in ASSET_ART_DIRECTION.md. */
 const fs=require('node:fs');
 const data=(file,mime)=>'data:'+mime+';base64,'+fs.readFileSync(file).toString('base64');
-const images=Object.fromEntries(['coastal-stack','limestone-pavilion','atlantic-shore'].map(name=>[name,data('assets/images/'+name+'.webp','image/webp')]));
+const paths=JSON.parse(fs.readFileSync('assets/demo-assets.json','utf8'));
+const mime={webp:'image/webp',svg:'image/svg+xml',png:'image/png',jpg:'image/jpeg'};
+const images=Object.fromEntries(Object.entries(paths).map(([name,file])=>{
+  const type=mime[file.split('.').pop()];if(!type)throw Error('Unknown demo asset type: '+file);
+  return [name,data(file,type)];
+}));
 const fontFaces={};
 for(const [family,name,style] of [['Geist','geist-variable','normal'],['Geist Mono','geist-mono-variable','normal'],['Inter','inter-variable','normal'],['Manrope','manrope-variable','normal'],['Newsreader','newsreader-variable','normal'],['Newsreader Italic','newsreader-italic-variable','italic']]){
   fontFaces[family]='@font-face{font-family:"'+family.replace(' Italic','')+'";font-style:'+style+';font-weight:'+(family==='Inter'||family.startsWith('Geist')?'100 900':'200 800')+';font-display:swap;src:url("'+data('assets/fonts/'+name+'.woff2','font/woff2')+'") format("woff2")}';

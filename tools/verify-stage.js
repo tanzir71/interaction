@@ -7,7 +7,11 @@ const {demos,metadata}=require('./load-registry')();
 const presets=new Set(['sm','md','lg','bleed']);
 const errors=[],debt={};
 const allowlist=JSON.parse(fs.readFileSync(path.join(__dirname,'stage-allowlist.json'),'utf8'));
+const fitAllowlist=JSON.parse(fs.readFileSync(path.join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 for(const [id,reason]of Object.entries(allowlist))if(typeof reason!=='string'||!reason.trim())errors.push(id+': root exception needs a written reason');
+for(const [id,item]of Object.entries(fitAllowlist)){
+ if(!demos.some(d=>d.id===id)||!item.reason?.trim()||!/^\d+:\d+$/.test(item.figmaNode)||!item.figmaUrl?.startsWith('https://www.figma.com/design/')||!item.selector||!Array.isArray(item.designSize)||item.designSize.length!==2||item.designSize.some(n=>!Number.isFinite(n)||n<=0))errors.push(id+': invalid documented Figma fill exception');
+}
 for(const d of demos){
  const issues=[];
  if(!metadata[d.id])errors.push(d.id+': missing sidecar metadata');
