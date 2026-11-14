@@ -1,156 +1,130 @@
 # INTRX — The Interaction Library
 
-A copy-paste reference of native web interactions — each with a live preview, a single-file code snippet, and a ready-to-paste LLM prompt.
+Native web interactions with live previews, portable HTML and prompts for your
+agent. The site uses plain HTML, CSS and JavaScript with no build step or runtime
+package dependencies.
 
-The Handoff 3 implementation is in progress; see [the implementation ledger](IMPLEMENTATION_PROGRESS.md) for completed phases and remaining acceptance gates.
+- [Live library](https://tanzir71.github.io/interaction/)
+- [Agent-readable index](https://tanzir71.github.io/interaction/llms.txt)
+- [Public registry](https://tanzir71.github.io/interaction/registry/index.json)
 
-## Website & demo
-
-- 🌐 Site (the library IS the demo): <https://tanzir71.github.io/interaction/>
-- ▲ Vercel mirror: <https://intrx.vercel.app/>
-- 🤖 Agent-readable index: <https://tanzir71.github.io/interaction/llms.txt>
-
-**New collections:** DRAMS (52), Framer Collection (4) and Interactive Showcase (16). All 52 distinct entries in the DRAMS catalog have native HTML/CSS/JavaScript implementations with source links and creator credit. These are independent interpretations of DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). See the [complete DRAMS mapping](DRAMS_IMPLEMENTATION.md) and [showcase source notes](SHOWCASE_SOURCES.md).
-
-**Visual audit:** The [library audit](LIBRARY_AESTHETIC_AUDIT.md) and [per-ID records](LIBRARY_AESTHETIC_AUDIT.json) document rendered reviews and interaction evidence. The 20 original skeuomorphic demos were rebuilt from scratch with new markup, materials and behavior. The broader refinement covers native preview composition, regular Inter typography, gentle gradients, readable controls and photographic artwork. [Asset and typography notes](ASSET_ART_DIRECTION.md) document the generated photographs, local fonts, licenses and portable exports. Screenshot evidence stays in the local, ignored `.artifacts/` directory.
-
-**Live categories:** Scroll (22) · Cursor (25) · Text & Type (23) · Image & WebGL (23) · Raster & Glitch (29) · Skeuomorph (20) · SVG & Line (10) · 3D & Perspective (12) · Physics (10) · Liquid & Organic (10) · Galleries & Sliders (13) · Navigation & Menus (13) · Buttons & Micro (15) · Forms & Inputs (10) · Loaders & Progress (10) · Data & Numbers (6) · Ambient (10) · Sound & Haptics (6) · Play & Easter Eggs (8) · Layout & UI (28).
-**Expansion categories live:** Maps & Geo (6) · FUI & Terminal (10) · Agent & AI UI (8).
-**Roadmap:** All 236 original handoff items and all 56 likes-driven expansion items are published.
-
-## Architecture
-
-INTRX is a **zero-build static site** — no framework, no bundler, no dependencies to install. Three layers:
-
-```
-index.html            the shell (nav, search, card grid)
-css/style.css         design system (tokens, cards, tabs)
-css/fonts.css         locally hosted Inter, Manrope and Newsreader
-js/demo-assets.js     embedded artwork and fonts for previews and copied HTML
-js/demo-runtime.js    animation/timer cleanup and offscreen preview suspension
-js/app.js             the renderer:
-                        • builds category nav + cards from the registry
-                        • lazy-boots each demo only when scrolled into view
-                        • tabs (Demo / Code / LLM Prompt), copy buttons, ⌘K search
-js/demos.*.js         the content: one registry file per category,
-                      each pattern registered as a plain JS object
-                      { id, title, cat, html, css, js, prompt, … }
-```
-
-Key design decision: every pattern is **self-contained data** (its own HTML/CSS/JS strings with a unique class prefix), so demos can't leak styles into each other, the whole library is greppable, and adding a pattern means appending one object — no build step, ever. GSAP/Lenis are pulled from CDN only inside snippets that need them.
-
-Because it's pure static files, hosting is trivial: any static server locally, GitHub Pages in production.
+Handoff 3 is in progress. The [implementation ledger](IMPLEMENTATION_PROGRESS.md)
+records completed phases, verification evidence and remaining design gates.
+The current catalog contains 399 demos; the supplied v4 design covers 520.
 
 ## Run locally
 
-No build step. Any static server works:
-
 ```bash
-npx serve .
-# or
-python -m http.server
+node tools/serve.js 4173
 ```
 
-Then open http://localhost:3000 (or :8000).
+Open [localhost:4173](http://127.0.0.1:4173). This dependency-free static server
+compresses text assets. Any other static server also works.
 
-## Verify and maintain
+## Browse and copy
 
-Agent tooling lives in `packages/intrx` (`@tanziro/intrx`, not yet published to
-npm). Install it with `npm ci --prefix packages/intrx`, then run:
+Home features selected components. Library pages offer grouped categories,
+gesture and stack filters, sorting, grid/row density and batches of twelve.
+Open a tile's caption to visit its detail page. Back restores filters, batches
+and scroll position.
+
+Detail pages include a full preview, replay, animation speed, stage theme,
+viewport widths and fullscreen. Source tabs show a complete single-file document,
+individual HTML/CSS/JS parts and an LLM prompt. Copy actions export the full source,
+including portable fonts and imagery. React ports are planned.
+
+Press `⌘K` / `Ctrl+K` for fuzzy search. Arrow keys select a result, Enter opens it,
+Escape closes the palette, and `⌘C` / `Ctrl+C` and `⌘P` / `Ctrl+P` copy code or a
+prompt. On touch screens, hover and drag previews require tap-to-play.
+
+## Architecture
+
+```text
+index.html                static entry and ordered shell scripts
+css/style.css             semantic tokens, shared kit, stages and shell layouts
+css/fonts.css             locally hosted shell and demo fonts
+js/demo-runtime.js        timers, frames, cleanup, suspension and speed
+js/shell/                 registry, exporter, stages, router, palette and UI
+js/shell/views/           home, library, detail, docs and agent views
+js/registry-files.json    ordered demo-source manifest for Node tooling
+js/demos.*.js             self-contained registered demo definitions
+js/meta.stage.js          declared geometry, controls, gestures and accessibility
+js/demo-assets.js         portable imagery/fonts, loaded on demand
+registry/                 generated catalog, complete items, schema and tokens
+r/                        generated shadcn registry items
+assets/posters/           native static frames for search and related results
+packages/intrx/           CLI/MCP package; the only npm dependencies
+```
+
+The shell fetches the lightweight catalog, then loads source modules and
+GSAP/ScrollTrigger/Lenis only when needed. At most six desktop previews or one
+touch preview runs at once. Demos are isolated by class prefixes and receive the
+shared [stage context](docs/stage-contract.md). Hash routes work on static hosts;
+legacy component/category links redirect to their current routes.
+
+## Agent tools
+
+The CLI/MCP package is implemented as `@tanziro/intrx`; npm publication is pending.
+These local commands work now:
 
 ```bash
+npm ci --prefix packages/intrx
 node packages/intrx/bin/intrx.js search "elastic tabs" --registry ./registry
 node packages/intrx/bin/intrx.js add elastic-tabs --registry ./registry
 node packages/intrx/bin/intrx.js mcp --registry ./registry
 ```
 
-See [MCP setup](docs/mcp-setup.md), [CLI usage](docs/cli.md), and the
-[agent skill](skills/intrx/SKILL.md). Registry artifacts and llms files are
-generated by `node tools/build-registry.js`; `--check` detects stale output.
+See [MCP setup](docs/mcp-setup.md), [CLI usage](docs/cli.md) and the
+[agent skill](skills/intrx/SKILL.md). The default registry client retries GitHub
+Pages if the Vercel mirror is unavailable.
 
-Check registry definitions and roadmap coverage with Node.js:
+## Verify and maintain
 
 ```bash
 node tools/verify-registry.js
-node tools/verify-roadmap.js
+node tools/verify-stage.js
+node tools/build-registry.js --check
+node tools/verify-motion.js
+node --test tools/runtime.test.js tools/shell.test.js
+npm test --prefix packages/intrx
 ```
 
-With the site running and Playwright available as a development tool, run the browser checks against your local server:
+With the local server running and Playwright available as a development tool:
 
 ```bash
-node tools/verify-library.js http://127.0.0.1:3000
-node tools/verify-aesthetic.js http://127.0.0.1:3000
+node tools/verify-library.js http://127.0.0.1:4173
+node tools/verify-stage-runtime.js http://127.0.0.1:4173
+node tools/verify-aesthetic.js http://127.0.0.1:4173
+node tools/audit-stage-fit.js http://127.0.0.1:4173
 ```
 
-The library check covers preview boot, search, detail panels, copied exports, lifecycle, reduced motion, and mobile layout. The aesthetic check exercises targeted native-size interactions. Both accept an optional Chromium CDP URL as the last argument; `PLAYWRIGHT_MODULE` can point to an existing Playwright installation. Results and screenshots are written under `.artifacts/`.
+`PLAYWRIGHT_MODULE` may point to an existing Playwright installation and
+`CHROME_PATH` to Chromium. Browser reports and screenshots go to ignored
+`.artifacts/`. Stage and motion baseline modes reject regressions while the
+existing demos undergo Phase 4 remediation; the final strict and rendered-fit
+gates remain required.
 
-After changing optimized image or font assets, regenerate the embedded bundle:
+After editing demos, metadata, tokens, runtime or exporter, run
+`node tools/build-registry.js`. After changing photos or fonts, first regenerate
+`node tools/build-demo-assets.js`. Refresh native search previews with
+`node tools/build-posters.js http://127.0.0.1:4173` after composition changes.
+Generated files must pass `--check` before committing.
 
-```bash
-node tools/build-demo-assets.js
-```
+## Add a pattern
 
-The 038 timeline demonstrates a photographic pan/push through a still image over 24 seconds. Its controls share one timeline state; it does not decode a video file. See [asset notes](ASSET_ART_DIRECTION.md) for that scope and the original image prompts.
+Register a unique, prefixed demo in a `js/demos.*.js` file. Add new source files to
+`js/registry-files.json`, declare stage metadata in `js/meta.stage.js`, and follow
+the [stage contract](docs/stage-contract.md), [motion system](MOTION_SYSTEM.md) and
+current [work order](CODEX_HANDOFF_3.md). Expose replay/reset actions through the
+shared dock, use readable thumbnail text and provide reduced-motion behavior.
+Regenerate the registry and run the checks above.
 
-## Deploy to GitHub Pages
+## Hosting and licence
 
-The repository includes a GitHub Actions workflow that deploys the static site whenever `main` is pushed.
+Pushes to `main` verify Node 18/22, build the public static directory and deploy to
+GitHub Pages through `.github/workflows/pages.yml`. The site works under a path
+prefix and requires no backend.
 
-1. Create an empty GitHub repository, then connect and push this checkout:
-
-```bash
-git remote add origin https://github.com/<you>/<repo>.git
-git push -u origin main
-```
-
-2. If GitHub does not enable Pages automatically on the first run, select **Settings → Pages → Source: GitHub Actions** once, then re-run the `Deploy to GitHub Pages` workflow.
-3. The site will be available at `https://<you>.github.io/<repo>/`. Every later push to `main` redeploys it automatically.
-
-## Using a pattern
-
-Use the title row below a live preview to open its details. The canvas remains available for pointer, scroll, and drag interactions. Filter by new additions, pointer, scroll, or drag; search also matches source names.
-
-Every detail panel has three tabs:
-
-- **Demo notes** — interaction guidance and source references. The live preview stays above the tabs.
-- **Code** — a standalone HTML document with CSS, JavaScript, baseline tokens, and its stage wrapper (CDN tags included where GSAP/Lenis are used). Paste into any page.
-- **LLM Prompt** — a precise specification of the interaction (easings, timings, math, accessibility notes). Paste into Claude or any model to rebuild it in React, Vue, Svelte, or your own stack.
-
-`⌘K` / `Ctrl+K` searches the library.
-
-## Structure
-
-```
-index.html          shell
-css/style.css       design system
-js/app.js           renderer: nav, tabs, lazy demo boot, copy, search
-js/demos.*.js       demo registries by category (add yours here)
-```
-
-## Adding a pattern
-
-Register an object in any `js/demos.*.js` file:
-
-```js
-INTRX.register({
-  id: 'my-effect',            // unique, kebab-case
-  title: 'My Effect',
-  cat: 'Scroll',              // Scroll | Cursor | Text & Type | Image & WebGL | Layout & UI
-  rootClass: 'd-myfx',        // unique class prefix used by html/css/js
-  tags: ['whatever'],
-  libs: [],                   // 'gsap' | 'scrolltrigger' | 'lenis'
-  desc: 'One-paragraph description.',
-  seen: 'Seen on: …',
-  hint: 'hover me',
-  html: `<div class="d-myfx">…</div>`,
-  css:  `.d-myfx { … }`,
-  js:   `/* receives root (the .d-myfx element) and stage */`,
-  prompt: `Build …`,
-});
-```
-
-Demos boot lazily when scrolled into view. Keep all class names prefixed with your `rootClass` so styles never collide.
-
-## License
-
-MIT — use anything here in any project, commercial or not.
+MIT. Third-party font and image licences and source acknowledgements are in
+[credits](docs/license-credits.md), [asset notes](ASSET_ART_DIRECTION.md),
+[DRAMS mapping](DRAMS_IMPLEMENTATION.md) and [showcase sources](SHOWCASE_SOURCES.md).

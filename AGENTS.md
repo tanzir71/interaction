@@ -3,9 +3,9 @@
 Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. Design source: the Figma file linked at the top of that handoff. Motion: **`MOTION_SYSTEM.md`**. Per-component lookup (Figma node, trigger, recipes): **`manifest/components.json`**.
 
 ## Repo in one minute
-- Zero-build static site. `index.html` loads `css/`, `js/demo-runtime.js`, every `js/demos.*.js` registry file, then `js/app.js` (being split into `js/shell/*` in Handoff 3 Phase 3).
+- Zero-build static site. `index.html` loads `css/`, `js/demo-runtime.js` and the plain scripts in `js/shell/`. The shell fetches `registry/index.json`, then lazily loads each demo's module and dependencies.
 - A demo is one `INTRX.register({ id, title, cat, rootClass, tags, libs, desc, seen, hint, html, css, js, prompt })` object. All classes are prefixed with `rootClass`.
-- Stage metadata (`designSize`, `stage`, `trigger`, `controls`, `a11y`, `tier`) lives in `js/meta.stage.js` once Phase 1 lands.
+- Stage metadata (`designSize`, `stage`, `trigger`, `controls`, `a11y`, `tier`) lives in `js/meta.stage.js`. `js/registry-files.json` is the ordered source-module manifest used by Node tooling; add new modules there.
 
 ## Rules
 - Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
@@ -37,7 +37,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   `--strict` requires the debt to be removed in Phase 4. Do not grow the baseline
   when adding or remediating a component. Root exceptions require a written
   reason in `tools/stage-allowlist.json`.
-- Run `node --test tools/runtime.test.js` when changing lifecycle behavior.
+- Run `node --test tools/runtime.test.js tools/shell.test.js` when changing lifecycle or shell behavior.
 - Run `node tools/verify-stage-runtime.js http://127.0.0.1:4173` for browser
   action, live-cap, touch and keyboard checks.
 
@@ -54,3 +54,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   `docs/`. npm publication is separate from implementing and pushing this repo.
 - CI validates generated output and the CLI/MCP handshake, then stages only
   static public files with `tools/prepare-site.js`.
+
+## Routed shell (Phase 3)
+- Run `node tools/serve.js 4173` for the gzip-enabled local static server.
+- Views live in `js/shell/views/`; router, palette and shared UI are separate
+  plain scripts. Preserve route scroll/filter/batch state on Back navigation.
+- `registry/index.json` supplies catalog metadata without eagerly booting demos.
+  Module URLs carry a content hash; regenerate after changing a demo module.
+- `assets/posters/` contains native static previews used by palette and related
+  results. Refresh with `node tools/build-posters.js http://127.0.0.1:4173`
+  after changing demo compositions. Never use a Figma screenshot as tile art.

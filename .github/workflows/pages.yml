@@ -35,7 +35,7 @@ jobs:
           node tools/verify-stage.js
           node tools/verify-motion.js
           node tools/build-registry.js --check
-          node --test tools/runtime.test.js
+          node --test tools/runtime.test.js tools/shell.test.js
       - name: Verify CLI and MCP
         run: |
           npm ci --prefix packages/intrx --no-fund --no-audit

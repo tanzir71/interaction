@@ -23,7 +23,8 @@ const GATES = {
     ? await chromium.connectOverCDP(process.argv[3])
     : await chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH || undefined, args: ['--enable-unsafe-swiftshader'] });
   const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
-  await page.goto(url, { waitUntil: 'networkidle' });
+  await page.goto(url.replace(/\/#.*$/,'').replace(/\/$/,'')+'/#/library', { waitUntil: 'networkidle' });
+  while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();
 
   const results = await page.evaluate(async () => {
     const out = [];
@@ -33,7 +34,7 @@ const GATES = {
       const stage = tile.querySelector('.demo-stage, [data-stage]');
       // Wait for the observer-driven boot, rather than assuming a busy browser
       // delivers intersection and resize callbacks within one fixed sleep.
-      for (let i=0; i<50 && stage && !stage._root && !stage.dataset.bootError; i++) await new Promise(r=>setTimeout(r,20));
+      for (let i=0; i<150 && stage && !stage._root && !stage.dataset.bootError; i++) await new Promise(r=>setTimeout(r,20));
       await new Promise(r => setTimeout(r, 140));
       const root = stage && (stage._root || stage.firstElementChild);
       const id = tile.dataset.id || tile.id.replace(/^tile-/, '');

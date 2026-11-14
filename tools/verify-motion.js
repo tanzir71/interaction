@@ -42,16 +42,7 @@ const SYS_CURVES = new Set([
 const SYS_DUR = new Set([40, 50, 80, 100, 130, 150, 160, 180, 200, 250, 260, 280, 300, 350, 400, 455, 500, 600, 740]);
 const norm = (s) => s.replace(/\s/g, '').replace(/(^|[,(])0\./g, '$1.');
 
-function loadDemos() {
-  const html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-  const srcs = [...html.matchAll(/<script src="(js\/demos[^"]+)"/g)].map((m) => m[1]);
-  const ctx = { console };
-  ctx.window = ctx;
-  ctx.INTRX = { demos: [], register(d) { this.demos.push(d); }, fontFaces: {}, resolveAssets: (s) => s };
-  vm.createContext(ctx);
-  for (const s of srcs) vm.runInContext(fs.readFileSync(path.join(ROOT, s), 'utf8'), ctx, { filename: s });
-  return ctx.INTRX.demos;
-}
+function loadDemos() { return require('./load-registry')(ROOT).demos; }
 
 function audit(d) {
   const src = `${d.css || ''}\n${d.js || ''}`;

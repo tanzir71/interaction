@@ -1,205 +1,75 @@
-/* End-to-end checks for the library shell, preview lifecycle and new collection.
-   Install Playwright as a development tool, then:
-   node tools/verify-library.js http://127.0.0.1:4173 [browser-CDP-url]
-   PLAYWRIGHT_MODULE may point to an existing Playwright installation. */
-const assert = require('node:assert/strict');
-const fs = require('node:fs');
-const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
-const expectedCount = 343 + 4 + JSON.parse(fs.readFileSync('DRAMS_CATALOG.json','utf8')).items.length;
-const expectedNewCount = 16 + 4 + 52;
-
-(async () => {
-  const browser = process.argv[3] ? await chromium.connectOverCDP(process.argv[3]) : await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined,args:['--enable-unsafe-swiftshader']});
-  const context = await browser.newContext({viewport:{width:1440,height:1000}, permissions:['clipboard-read','clipboard-write']});
-  const page = await context.newPage(), errors=[];
-  const dialog = page.getByRole('dialog');
-  page.on('pageerror', error => errors.push(error.message));
-  page.on('console', message => { if(message.type()==='error' && message.text().includes('[INTRX]')) errors.push(message.text()); });
-  const url = process.argv[2] || 'http://127.0.0.1:4173';
-  fs.mkdirSync('.artifacts',{recursive:true});
-  let checks=0;
-  const check=(condition,label)=>{assert.ok(condition,label);checks++;};
-  const open=async id=>{
-    await page.evaluate(id=>{location.hash=id;},id);
-    await page.locator('.modal.open').waitFor();
-    await page.waitForFunction(id=>document.querySelector('.modal-title').textContent===INTRX.demos.find(d=>d.id===id).title,id);
-    // The modal enters with a small scale animation. Measure its settled layout.
-    await page.locator('.modal').evaluate(async el=>Promise.all(el.getAnimations().map(animation=>animation.finished.catch(()=>{}))));
-  };
-  const close=async()=>{await page.locator('.modal-close').click();};
-  try {
-    await page.goto(url,{waitUntil:'networkidle'});
-    check(await page.locator('#cards > .tile').count()===expectedCount,expectedCount+' cards');
-    check(await page.locator('.tile-details').count()===expectedCount,'Every preview has a details button');
-    await page.screenshot({path:'.artifacts/library-desktop.png'});
-    await page.locator('[data-filter="drams"]').click();
-    check(await page.locator('.tile:not(.hidden)').count()===52,'DRAMS filter exposes the complete collection');
-    check(await page.locator('.tile:not(.hidden)').first().getAttribute('id')==='drams-001','DRAMS catalog stays in source order');
-    await page.getByRole('button',{name:'New additions',exact:false}).click();
-    check(await page.locator('.tile:not(.hidden)').count()===expectedNewCount,'New additions filter');
-    await page.getByRole('searchbox').fill('react bits dot');
-    check(await page.locator('.tile:not(.hidden)').count()===1,'Multi-word source search');
-    await page.getByRole('searchbox').fill('no-such-pattern-xyz');
-    check(await page.locator('#empty-state').isVisible(),'Search empty state');
-    await page.locator('#clear-filters').click();
-    check(await page.locator('.tile:not(.hidden)').count()===expectedCount,'Clear restores library');
-
-    // Boot the complete registry through the real intersection observer.
-    const all=await page.evaluate(async()=>{
-      const results=[];document.documentElement.style.scrollBehavior='auto';
-      for(const demo of INTRX.demos){
-        demo._card.scrollIntoView({behavior:'instant',block:'center'});
-        for(let i=0;i<30&&!demo._card.querySelector('.stage-content > *');i++)await new Promise(r=>setTimeout(r,20));
-        results.push({id:demo.id,booted:!!demo._card.querySelector('.stage-content > *'),failed:demo._card.querySelector('.demo-stage').dataset.bootError==='true'});
-      }
-      return results;
-    });
-    check(all.every(d=>d.booted&&!d.failed),'Every registered preview boots: '+JSON.stringify(all.filter(d=>!d.booted||d.failed)));
-    console.log('PASS: all '+expectedCount+' previews boot');
-
-    // Start interaction checks on a fresh page so old third-party demos do not
-    // retain their own global listeners after the exhaustive boot audit.
-    await page.goto(url,{waitUntil:'networkidle'});
-
-    const showcase=await page.evaluate(()=>INTRX.demos.filter(d=>['Interactive Showcase','Framer Collection','DRAMS'].includes(d.cat)).map(d=>({id:d.id,rootClass:d.rootClass,cat:d.cat})));
-    const exports=[];
-    for(const d of showcase){
-      await open(d.id);
-      check(await page.locator('.source-link').count()===1,d.id+' source credit');
-      const root=page.locator('.modal-preview .'+d.rootClass);
-      const geometry=await root.evaluate(el=>{const s=el.closest('.demo-stage');return {height:el.getBoundingClientRect().height,expected:el.offsetHeight*s._ctx.scale};});
-      check(Math.abs(geometry.height-geometry.expected)<2,d.id+' declared height fits at context scale');
-      await page.getByRole('tab',{name:'Code',exact:true}).click();
-      const code=await page.locator('.pane-code pre').textContent();
-      check(code.startsWith('<!DOCTYPE html>'),d.id+' standalone document');
-      if(d.cat==='DRAMS')check(code.includes('DRAMS by 1042 Studio')&&!/<iframe/i.test(code),d.id+' native export with creator credit');
-      exports.push({id:d.id,code});
-      await close();
-    }
-    // Photographic and font-dependent components must export their local assets.
-    const photographicIds=['scroll-clip-morph','scroll-video-scrubber','image-trail','tilt-card'];
-    const originalHardwareIds=await page.evaluate(()=>INTRX.demos.filter(d=>d.cat==='Skeuomorph').map(d=>d.id));
-    for(const id of [...new Set([...photographicIds,'text-blur-focus',...originalHardwareIds])]){
-      await open(id);
-      await page.getByRole('tab',{name:'Code',exact:true}).click();
-      const code=await page.locator('.pane-code pre').textContent();
-      check(!code.includes('{{asset:'),id+' export resolves asset references');
-      const usesBundledFonts=await page.evaluate(id=>/Inter|Manrope|Newsreader|--font-ui|--font-editorial/.test(INTRX.demos.find(d=>d.id===id).css),id);
-      check(usesBundledFonts?code.includes('data:font/woff2;base64,'):code.includes('"Segoe UI",Arial,sans-serif'),id+' export preserves its selected font or system fallback');
-      if(photographicIds.includes(id))check(code.includes('data:image/webp;base64,'),id+' export embeds photography');
-      exports.push({id,code});await close();
-    }
-    // Execute the actual code-tab exports offline, outside the library runtime.
-    const standalone=await context.newPage();
-    const exportErrors=[];standalone.on('pageerror',e=>exportErrors.push(e.message));
-    await standalone.route('**/*',route=>route.abort());
-    for(const d of exports){
-      await standalone.goto('about:blank');
-      await standalone.setContent(d.code);
-      await standalone.evaluate(()=>document.fonts.ready);
-      await standalone.waitForTimeout(80);
-      check(await standalone.locator('.stage-content > *').count()===1,d.id+' offline export renders its demo root');
-      check(await standalone.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)),d.id+' offline images load');
-    }
-    check(exportErrors.length===0,'Offline exports have no errors: '+exportErrors.join(';'));
-    await standalone.close();
-    console.log('PASS: '+exports.length+' standalone exports, embedded assets and source links');
-
-    await page.goto(url,{waitUntil:'networkidle'});
-
-    await open('showcase-dot-field');
-    await page.locator('.modal-preview [tabindex="0"]').press('ArrowRight');
-    check(await page.locator('.modal-preview [data-interacted=true]').count()===1,'Canvas keyboard input');
-    await page.locator('.modal-preview canvas').click({position:{x:100,y:100}});
-    check(await page.locator('.modal.open').count()===1,'Demo interaction preserves dialog');
-    await page.getByRole('tab',{name:'LLM Prompt',exact:true}).click();
-    await page.getByRole('button',{name:'Copy prompt',exact:true}).click();
-    const copied=await page.evaluate(()=>navigator.clipboard.readText());
-    check(copied.includes('Inertial Dot Field'),'Prompt clipboard contains expected text');
-    await page.getByRole('tab',{name:'LLM Prompt',exact:true}).press('ArrowLeft');
-    check(await page.getByRole('tab',{name:'Code',exact:true}).getAttribute('aria-selected')==='true','Keyboard tab navigation');
-    await page.locator('.modal-close').focus();await page.keyboard.press('Shift+Tab');
-    check(await page.evaluate(()=>document.querySelector('.modal').contains(document.activeElement)),'Modal focus trap');
-    await page.locator('.modal-reset').click();
-    check(await page.locator('.modal-preview [data-interacted=true]').count()===0,'Reset creates fresh state');
-    await close();
-    check(await page.evaluate(()=>!document.querySelector('.layout').inert),'Closing restores page interaction');
-    const stopped=await page.evaluate(async()=>{
-      const stage=document.querySelector('.modal-preview .demo-stage');let cleanup=0,callbacks=0;
-      const runtime=INTRX.createRuntime(stage);runtime.cleanup=()=>cleanup++;
-      runtime.requestAnimationFrame(()=>callbacks++);runtime.setTimeout(()=>callbacks++,10);runtime.setInterval(()=>callbacks++,10);
-      runtime.dispose();runtime.dispose();await new Promise(resolve=>setTimeout(resolve,40));
-      return cleanup===1&&callbacks===0;
-    });
-    check(stopped,'Preview disposal calls cleanup');
-
-    await open('showcase-circular-gallery');
-    await dialog.getByRole('button',{name:'Next artwork'}).click();
-    check(await page.locator('.modal-preview [data-index="1"]').count()===1,'Gallery next');
-    const track=page.locator('.modal-preview [class$="-track"]'),box=await track.boundingBox();
-    await page.mouse.move(box.x+box.width*.6,box.y+90);await page.mouse.down();await page.mouse.move(box.x+box.width*.6-150,box.y+90,{steps:10});await page.mouse.up();
-    check(await page.locator('.modal-preview [data-index="2"]').count()===1,'Gallery drag');
-    await close();
-    await open('showcase-card-swap');await dialog.getByRole('button',{name:'Next card'}).click();
-    check(await page.locator('.modal-preview [data-index="1"]').count()===1,'Card stack next');await close();
-    await open('showcase-elastic-slider');await dialog.getByRole('slider',{name:'Volume'}).fill('90');
-    check(await page.locator('.modal-preview output').textContent()==='90','Elastic slider native input');await close();
-    await open('showcase-mask-reveal');await dialog.getByRole('button',{name:'Reveal the hidden message'}).click();
-    check(await dialog.getByRole('button',{name:'Reveal the hidden message'}).getAttribute('aria-pressed')==='true','Mask expand');await close();
-    await open('showcase-converging-paths');
-    await page.locator('.modal-preview [tabindex]').evaluate(el=>{el.scrollTop=el.scrollHeight;});
-    await page.waitForFunction(()=>document.querySelector('.modal-preview [data-progress="1.000"]'));
-    check(await page.locator('.modal-preview [class$="-value"]').textContent()==='100%','Path drawing follows scroll');await close();
-    await open('showcase-tracing-story');await page.locator('.modal-preview [tabindex]').evaluate(el=>{el.scrollTop=el.scrollHeight;});
-    await page.waitForFunction(()=>document.querySelector('.modal-preview [data-chapter="2"]'));
-    check(await page.locator('.modal-preview strong').textContent()==='Respond.','Sticky story tracks chapter');await close();
-    console.log('PASS: new pointer, drag, scroll and keyboard interactions');
-
-    await page.goto(url,{waitUntil:'networkidle'});
-
-    for(const id of ['css3d-isometric-hover','btn-border-beam','input-float-label','lenis-smooth-scroll','slider-stack-deck']){
-      await open(id);
-      const fit=await page.locator('.modal-preview .demo-stage').evaluate(stage=>{const r=stage._root.getBoundingClientRect(),s=stage.getBoundingClientRect();return r.width<=s.width+2&&r.height<=s.height+2&&stage._ctx.mode==='full';});
-      check(fit,id+' declared full layout fits its stage');
-      await page.screenshot({path:'.artifacts/'+id+'.png'});await close();
-    }
-    await open('lenis-smooth-scroll');
-    await page.locator('.modal-preview .d-smooth-viewport').hover();await page.mouse.wheel(0,220);await page.waitForTimeout(350);
-    check(await page.locator('.modal-preview .d-smooth-viewport').evaluate(el=>el.scrollTop)>0,'Lenis scrolls inside its viewport');
-    check(await page.locator('.modal-preview .d-lenis').count()===1,'Lenis preserves root styling after scroll');await close();
-    await open('input-float-label');const email=page.locator('.modal-preview input');await email.fill('hello@example.com');await email.press('Tab');
-    check(await page.locator('.modal-preview [data-floated="true"]').count()===1,'Filled input label stays raised');
-    check(await page.evaluate(()=>{const input=document.querySelector('.modal-preview input');return document.querySelectorAll('[id="'+input.id+'"]').length===1&&input.labels.length===1;}),'Input ids and labels are instance-safe');await close();
-    await open('slider-stack-deck');
-    for(let i=0;i<6;i++){
-      await page.locator('.modal-preview .d-deck-keep').click();
-      // A busy renderer can finish the 430ms flight after a wall-clock sleep.
-      // Wait for the observable recycle state before issuing the next action.
-      await page.waitForFunction(count=>document.querySelector('.modal-preview .d-stack-deck').dataset.dismissed===String(count),i+1);
-    }
-    check(await page.locator('.modal-preview .d-stack-deck').getAttribute('data-dismissed')==='6','Legacy deck cycles beyond one full queue');
-    check(await page.locator('.modal-preview [data-depth="0"]').evaluate(el=>getComputedStyle(el).opacity==='1'),'Recycled card has no stale flyout animation');await close();
-
-    await page.emulateMedia({reducedMotion:'reduce'});await open('showcase-dot-field');
-    const first=await page.locator('.modal-preview canvas').evaluate(c=>c.toDataURL());await page.waitForTimeout(100);
-    check(first===await page.locator('.modal-preview canvas').evaluate(c=>c.toDataURL()),'Reduced motion is static');
-    await page.locator('.modal-preview [tabindex="0"]').press('ArrowRight');
-    check(first!==await page.locator('.modal-preview canvas').evaluate(c=>c.toDataURL()),'Reduced motion still responds to keyboard');await close();
-    await page.emulateMedia({reducedMotion:'no-preference'});
-    await page.setViewportSize({width:390,height:844});await page.goto(url,{waitUntil:'networkidle'});
-    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile has no horizontal overflow');
-    await page.locator('#nav-toggle').click();await page.getByRole('searchbox').fill('elastic');
-    check(await page.locator('.tile:not(.hidden)').count()>0,'Mobile search');
-    await page.locator('#nav a[data-id="showcase-elastic-slider"]').click();
-    check(await page.locator('.modal.open').count()===1,'Mobile search opens matching details');
-    check(await page.locator('#nav-toggle').getAttribute('aria-expanded')==='false','Mobile drawer closes on selection');await close();
-    await page.keyboard.press('Control+k');
-    check(await page.getByRole('searchbox').evaluate(el=>el===document.activeElement),'Mobile keyboard shortcut opens search');
-    await page.getByRole('searchbox').fill('');await page.keyboard.press('Escape');
-    await page.locator('.sidebar').evaluate(el=>Promise.all(el.getAnimations().map(a=>a.finished.catch(()=>{}))));
-    await page.screenshot({path:'.artifacts/library-mobile.png'});
-    check(errors.length===0,'No runtime errors: '+errors.join('; '));
-    fs.writeFileSync('.artifacts/verification.json',JSON.stringify({checks,previews:all.length,exports:exports.length,errors},null,2));
-    console.log('PASS: '+checks+' checks, '+all.length+' previews, '+exports.length+' offline code exports; desktop + mobile screenshots saved.');
-  } finally { await context.close();await browser.close(); }
+/* Routed-shell, complete lazy-preview coverage, and offline export checks. */
+const assert=require('node:assert/strict'),fs=require('node:fs');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {demos}=require('./load-registry')();
+(async()=>{
+ const browser=process.argv[3]?await chromium.connectOverCDP(process.argv[3]):await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined,args:['--enable-unsafe-swiftshader']});
+ const context=await browser.newContext({viewport:{width:1440,height:1000},permissions:['clipboard-read','clipboard-write']}),page=await context.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&m.text().includes('[INTRX]'))errors.push(m.text());});
+ const url=(process.argv[2]||'http://127.0.0.1:4173').replace(/\/$/,''),exports=[];let checks=0;
+ const check=(condition,label)=>{assert.ok(condition,label);checks++;};fs.mkdirSync('.artifacts',{recursive:true});
+ const route=async hash=>{await page.evaluate(hash=>INTRX.router.go(hash),hash);await page.waitForFunction(hash=>INTRX.router.current===hash,hash);};
+ const open=async id=>{await route('#/c/'+id);await page.waitForFunction(id=>document.querySelector('.detail-stage')?._ctx?.mode==='full'&&document.querySelector('.detail-stage').dataset.stage===id,id);};
+ const library=async()=>{await route('#/library');await page.locator('#library-grid').waitFor();};
+ const showAll=async()=>{while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();};
+ try{
+  await page.goto(url+'/#/',{waitUntil:'networkidle'});
+  check(await page.evaluate(()=>INTRX.catalog.length)===demos.length,'Catalog covers every demo');
+  check(await page.locator('.tile').count()===12,'Home has two featured sections');
+  check(!await page.locator('script[src*="gsap"],script[src*="lenis"],script[src*="demo-assets"]').count(),'Home defers animation libraries and portable assets');
+  await page.screenshot({path:'.artifacts/library-home-desktop.png'});
+  await library();check(await page.locator('#library-grid>.tile').count()===Math.min(12,demos.length),'Twelve-item batches');
+  await page.locator('#show-more').click();check(await page.locator('#library-grid>.tile').count()===24,'Show more');
+  await page.locator('[data-trigger="hover"]').click();check(Number(await page.locator('#library-count').textContent())===demos.filter(d=>d.trigger==='hover').length,'Registry gesture counts');
+  await page.locator('[data-trigger="all"]').click();await page.locator('#sort-order').selectOption('az');
+  check((await page.locator('.tile-details').first().textContent()).includes([...demos].sort((a,b)=>a.title.localeCompare(b.title))[0].title),'Alphabetical sort');
+  await page.locator('[data-density="rows"]').click();check(await page.locator('#library-grid').getAttribute('data-density')==='rows','Rows density');
+  await route('#/library/drams');await showAll();check(await page.locator('.tile').count()===demos.filter(d=>d.cat==='DRAMS').length,'Collection route and batching');
+  await route('#/new');check(Number(await page.locator('#library-count').textContent())===await page.evaluate(()=>INTRX.catalog.filter(d=>d.isNew).length),'Computed new count');
+  await page.keyboard.press('Control+k');const search=page.getByRole('dialog',{name:'Search interactions'}).getByRole('combobox');await search.fill('elastc');
+  check((await page.locator('#palette-results').textContent()).includes('Elastic Tabs'),'Fuzzy search');
+  await search.press('ArrowDown');check(await search.getAttribute('aria-activedescendant')==='palette-option-1','Palette arrow navigation');
+  await search.fill('no-such-component-zzzzzz');check(await page.locator('.palette-empty').isVisible(),'Palette empty state');
+  await search.fill('elastic tabs');await search.press('Enter');await page.waitForFunction(()=>location.hash==='#/c/elastic-tabs'&&!!document.querySelector('.detail-stage')?._runtime);
+  check(await page.getByRole('dialog').count()===0,'Search opens a full detail view');
+  await page.locator('#search-trigger').click();await page.locator('#palette-search').fill('tabs');await page.keyboard.press('Escape');check(await page.getByRole('dialog').count()===0,'Escape closes a nonempty search');check(await page.evaluate(()=>document.activeElement.id)==='search-trigger','Palette restores focus');
+  await page.locator('#fullscreen-detail').click();await page.waitForFunction(()=>!!document.fullscreenElement);await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.fullscreenElement);check(true,'Fullscreen enters and Escape exits');
+  await page.locator('.detail-stage [data-action="next"]').click();check(await page.locator('.d-etabs-demo').getAttribute('data-active')==='1','Dock action does not reset state');
+  await page.locator('#demo-speed').selectOption('2');check(await page.locator('.detail-stage').evaluate(s=>s._runtime.speed)===2,'Runtime speed');
+  await page.locator('[data-viewport="mobile"]').click();await page.waitForFunction(()=>document.querySelector('.stage-viewport').getBoundingClientRect().width<=391);check(await page.locator('.stage-viewport').evaluate(el=>el.clientWidth<=390),'Viewport frame');
+  await page.locator('[data-viewport="desktop"]').click();await page.locator('button[data-stage-theme="light"]').click();check(await page.locator('.detail-stage').getAttribute('data-stage-theme')==='light','Stage theme');
+  await page.locator('#replay-detail').click();check(await page.locator('.d-etabs-demo').getAttribute('data-active')==='0','Replay');
+  await page.getByRole('tab',{name:'HTML',exact:true}).focus();await page.keyboard.press('ArrowRight');check(await page.getByRole('tab',{name:'CSS',exact:true}).getAttribute('aria-selected')==='true','Keyboard source tabs');
+  await library();await showAll();
+  const all=await page.evaluate(async()=>{const out=[];for(const item of INTRX.catalog){const tile=document.getElementById('tile-'+item.id);tile.scrollIntoView({block:'center',behavior:'instant'});const stage=tile.querySelector('.demo-stage');for(let i=0;i<150&&!stage._root&&!stage.dataset.bootError;i++)await new Promise(r=>setTimeout(r,20));out.push({id:item.id,booted:!!stage._root,failed:stage.dataset.bootError==='true'});}return out;});
+  check(all.length===demos.length&&all.every(d=>d.booted&&!d.failed),'Every preview boots: '+JSON.stringify(all.filter(d=>!d.booted||d.failed)));
+  console.log('PASS: all '+all.length+' lazy previews boot');
+  await page.locator('#tile-elastic-tabs').scrollIntoViewIfNeeded();const scroll=await page.evaluate(()=>scrollY);await page.locator('#tile-elastic-tabs .tile-details').click();await page.waitForFunction(()=>location.hash==='#/c/elastic-tabs');await page.goBack();await page.waitForFunction(()=>location.hash==='#/library');
+  check(Math.abs((await page.evaluate(()=>scrollY))-scroll)<4,'Back restores route scroll');
+  await page.goto(url+'/#/',{waitUntil:'networkidle'});
+  const ids=[...new Set([...demos.filter(d=>['Interactive Showcase','Framer Collection','DRAMS','Skeuomorph'].includes(d.cat)).map(d=>d.id),'scroll-clip-morph','scroll-video-scrubber','image-trail','tilt-card','text-blur-focus'])];
+  for(const id of ids){
+   await open(id);const d=demos.find(d=>d.id===id);
+   if(d.source)check(await page.locator('.source-link').count()===1,id+' source credit');
+   check(await page.locator('.detail-stage').evaluate(s=>Math.abs(s._root.getBoundingClientRect().height-s._root.offsetHeight*s._ctx.scale)<2),id+' declared geometry');
+   await page.getByRole('tab',{name:'Single file',exact:true}).click();await page.locator('#copy-source').click();
+   const code=await page.evaluate(()=>navigator.clipboard.readText());check(code.startsWith('<!DOCTYPE html>'),id+' copied document');check(!code.includes('{{asset:'),id+' resolved assets');
+   if(d.cat==='DRAMS')check(code.includes('DRAMS by 1042 Studio')&&!/<iframe/i.test(code),id+' native source attribution');
+   exports.push({id,rootClass:d.rootClass,code});
+  }
+  const standalone=await context.newPage(),exportErrors=[];standalone.on('pageerror',e=>exportErrors.push(e.message));await standalone.route('**/*',route=>route.abort());
+  for(const item of exports){await standalone.goto('about:blank');await standalone.setContent(item.code);await standalone.evaluate(()=>document.fonts.ready);await standalone.waitForTimeout(40);check(await standalone.locator('.'+item.rootClass).count()===1,item.id+' offline root');check(await standalone.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)),item.id+' offline images');}
+  check(!exportErrors.length,'Offline export errors: '+exportErrors.join(';'));await standalone.close();console.log('PASS: '+exports.length+' offline exports');
+  await open('showcase-circular-gallery');await page.getByRole('button',{name:'Next artwork'}).click();check(await page.locator('.detail-stage [data-index="1"]').count()===1,'Gallery next');
+  await open('showcase-elastic-slider');await page.getByRole('slider',{name:'Volume'}).fill('90');check(await page.locator('.detail-stage output').textContent()==='90','Native slider');
+  await open('showcase-converging-paths');await page.locator('.detail-stage [tabindex]').evaluate(el=>el.scrollTop=el.scrollHeight);await page.waitForFunction(()=>document.querySelector('.detail-stage [data-progress="1.000"]'));check(await page.locator('.detail-stage [class$="-value"]').textContent()==='100%','Scroll drawing');
+  await open('input-float-label');await page.locator('.detail-stage input').fill('hello@example.com');await page.locator('.detail-stage input').press('Tab');check(await page.locator('.detail-stage [data-floated="true"]').count()===1,'Filled labels stay raised');
+  await open('slider-stack-deck');for(let i=0;i<6;i++){await page.locator('.detail-stage .d-deck-keep').click();await page.waitForFunction(count=>document.querySelector('.detail-stage .d-stack-deck').dataset.dismissed===String(count),i+1);}check(await page.locator('.detail-stage [data-depth="0"]').evaluate(el=>getComputedStyle(el).opacity==='1'),'Continuous deck recycling');
+  await page.emulateMedia({reducedMotion:'reduce'});await open('showcase-dot-field');const frame=await page.locator('.detail-stage canvas').evaluate(c=>c.toDataURL());await page.waitForTimeout(100);check(frame===await page.locator('.detail-stage canvas').evaluate(c=>c.toDataURL()),'Static reduced motion');await page.locator('.detail-stage [tabindex="0"]').press('ArrowRight');check(frame!==await page.locator('.detail-stage canvas').evaluate(c=>c.toDataURL()),'Reduced-motion keyboard input');
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.setViewportSize({width:390,height:844});await page.goto(url+'/#/',{waitUntil:'networkidle'});check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No mobile overflow');await page.locator('#browse-trigger').click();check(await page.getByRole('dialog',{name:'Browse components'}).isVisible(),'Browse sheet');await page.locator('.browse-sheet a[href="#/library/layout-ui"]').click();check(await page.getByRole('dialog').count()===0,'Browse closes on navigation');
+  await open('elastic-tabs');check(await page.locator('.detail-stage').evaluate(stage=>stage.clientWidth>300&&stage._ctx.scale>.3),'Mobile detail stage has usable geometry');check(await page.locator('.mobile-copy-bar').isVisible(),'Sticky mobile copy actions');await page.getByRole('tab',{name:'Agent',exact:true}).click();check(await page.locator('.agent-rail').isVisible(),'Mobile agent panel');await page.screenshot({path:'.artifacts/library-detail-mobile.png'});
+  await page.locator('#theme-toggle').evaluate(el=>el.click());check(await page.evaluate(()=>document.documentElement.dataset.theme)==='light','Light theme');await route('#/docs/mcp-setup');check(await page.locator('.docs-content h1').textContent()==='MCP setup','Markdown docs route');
+  check(!errors.length,'No runtime errors: '+errors.join(';'));
+  fs.writeFileSync('.artifacts/verification.json',JSON.stringify({checks,previews:all.length,exports:exports.length,errors},null,2));console.log('PASS: '+checks+' checks; '+all.length+' previews; '+exports.length+' offline exports; desktop/mobile shell');
+ }finally{await context.close();await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

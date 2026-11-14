@@ -116,7 +116,16 @@
       const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
       const live=new Set(this.holding?[]:visible.filter(record=>record.unlocked&&!record.manualPause&&(!reduced||record.tile===this.preferred)).slice(0,this.cap));
       // Don't boot newly intersecting previews behind an open detail view.
-      if(!this.holding)visible.forEach(record=>{if(!record.stage._runtime)R.mountStage(record.demo,record.stage,'thumb');});
+      if(!this.holding)visible.forEach(record=>{
+        if(record.stage._runtime||record.pending)return;
+        if(!R.loadDemo){R.mountStage(record.demo,record.stage,'thumb');return;}
+        record.pending=true;
+        R.loadDemo(record.demo.id).then(demo=>{
+          record.pending=false;if(!this.records.has(record.tile)||!record.tile.isConnected)return;
+          record.ready=demo;
+          if(!this.holding){R.mountStage(demo,record.stage,'thumb');this.schedule();}
+        }).catch(error=>{record.pending=false;record.stage.dataset.bootError='true';record.stage.textContent='Preview unavailable';console.error('[INTRX]',error);});
+      });
       this.records.forEach(record=>{
         const active=live.has(record),runtime=record.stage._runtime;
         if(runtime)active?runtime.resume():runtime.suspend();

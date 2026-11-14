@@ -84,12 +84,47 @@ Phase 2 commit: `5b6dfd9`, pushed to `main`; GitHub verification passed on Node
 399 entries. The Vercel mirror returned HTTP 402 during verification, so the
 default client retries the GitHub registry when that mirror is unavailable.
 
+## Phase 3 — Routed shell
+
+- Replaced the single renderer with plain-script home, library, detail, docs,
+  router, shared UI and palette modules. Legacy hashes normalize to current
+  routes; Back restores filters, sorting, loaded batches and scroll position.
+- Matched the supplied desktop/mobile shell layouts, including grouped Browse,
+  full detail pages, viewport/theme/speed/fullscreen tools, accessible source
+  tabs, sticky mobile copy actions and the agent setup views.
+- Added keyboard fuzzy search with static native posters, scope controls,
+  highlighted matches, code/prompt shortcuts, Escape and focus restoration.
+- Moved catalog discovery to generated metadata and lazily loaded source modules,
+  animation libraries and portable assets. Module hashes prevent stale demo code.
+  Added a dependency-free gzip development server and native poster generator.
+- Removed hard-coded registry totals and preserved historical comparison/roadmap
+  content in Docs. Counts now reflect the implemented catalog, including zero
+  new v4 entries until Phase 5, rather than Figma's placeholder totals.
+- Ported browser verifiers to the new routes. Regression checks cover collapsed
+  mobile stage geometry, nonempty palette Escape, focus restoration and
+  fullscreen. A fractional scroll endpoint now completes the reading highlight.
+
+Verification: 651 browser checks pass, covering all 399 lazy previews and 97
+offline exports. The 32 targeted interaction checks, desktop/touch lifecycle
+checks, ten runtime/shell tests and eight CLI/MCP tests pass. Registry, metadata,
+motion baseline, roadmap and generated-output checks pass. Detail first paint
+was 26ms locally. Final mobile Lighthouse scores are 93 for home and 100 for
+Elastic Tabs detail; home transfers 282,700 bytes before interaction, below the
+400KB budget. Reports and screenshots are in the local verification artifacts.
+
+The complete stage audit has zero failed boots and zero missing design sizes.
+It still finds 61 overflow, 3 horizontal scroll, 294 text below 11px and 76
+low-fill results. These are pending Phase 4 gates. Existing demo compositions,
+391 chrome/control debts and 168 motion debts are not claimed complete here.
+Search posters capture those current native demos and must be refreshed after
+their redesign. The npm package remains unpublished; UI/docs link working local
+setup and state that npm instructions become available after publication.
+
 ## Remaining work
 
-1. Routed shell, mobile layouts, search palette, performance and accessibility.
-2. Remediation buckets A–G and motion migration across all existing demos.
-3. Thirty new components and ninety-one extension components, by category.
-4. Pro entitlement seams and a full requirement-by-requirement completion audit.
+1. Remediation buckets A–G and motion migration across all existing demos.
+2. Thirty new components and ninety-one extension components, by category.
+3. Pro entitlement seams and a full requirement-by-requirement completion audit.
 
 The objective remains active until every phase is implemented, verified,
 committed and pushed. Design completion is not implementation completion.

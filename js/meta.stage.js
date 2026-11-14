@@ -2426,7 +2426,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Explore the raised layers"
   },
   "css3d-folding-map": {
     "designSize": "md",
@@ -3284,7 +3285,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Snap to the next card"
   },
   "menu-fullscreen-overlay": {
     "designSize": "md",
@@ -3592,7 +3594,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Follow the border light"
   },
   "btn-shimmer-sweep": {
     "designSize": "sm",
@@ -3922,7 +3925,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Lift the label into place"
   },
   "input-underline-grow": {
     "designSize": "md",
@@ -4032,7 +4036,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Watch the meter respond"
   },
   "select-morph-dropdown": {
     "designSize": "md",
@@ -5615,7 +5620,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Watch the active pill stretch"
   },
   "masonry-filter": {
     "designSize": "md",
@@ -5637,7 +5643,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Filter and rearrange"
   },
   "command-palette": {
     "designSize": "md",
@@ -5659,7 +5666,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Find a command"
   },
   "toast-stack": {
     "designSize": "md",
@@ -5681,7 +5689,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Add a toast to the stack"
   },
   "number-input-drag": {
     "designSize": "md",
@@ -7264,7 +7273,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Drag to send a wave"
   },
   "showcase-threads": {
     "designSize": "md",
@@ -7528,7 +7538,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Move through the gallery"
   },
   "showcase-card-swap": {
     "designSize": "md",
@@ -8450,7 +8461,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Switch the power"
   },
   "drams-006": {
     "designSize": "sm",
@@ -8866,4 +8878,5 @@ INTRX.meta({
     "thumb": "full",
     "addedAt": "2026-11"
   }
-});
+}
+);

@@ -2,22 +2,18 @@
 const fs = require('fs');
 const vm = require('vm');
 
-const html = fs.readFileSync('index.html', 'utf8');
-const app = fs.readFileSync('js/app.js', 'utf8');
+const {demos,files,metadata,context}=require('./load-registry')();
 const h2 = fs.readFileSync('CODEX_HANDOFF_2.md', 'utf8');
 const h2Ids = new Set([...h2.matchAll(/^- \[[ xX]\] `([^`]+)`/gm)].map(match => match[1]));
-const categories = app.match(/CAT_ORDER = \[(.*?)\]/s)[1].match(/'[^']+'/g).map(value => value.slice(1, -1));
-const files = [...html.matchAll(/<script src="(js\/demos\.[^"]+\.js)"><\/script>/g)].map(match => match[1]);
-const context = {};
-context.window = context;
-vm.createContext(context);
-files.forEach(file => vm.runInContext(fs.readFileSync(file, 'utf8'), context, { filename: file }));
-
-const demos = context.INTRX.demos;
-const dramsCatalog = JSON.parse(fs.readFileSync('DRAMS_CATALOG.json', 'utf8'));
-const expectedCount = 343 + 4 + dramsCatalog.items.length;
+const categories=Object.values(context.INTRX.groups).flat();
+const dramsCatalog=JSON.parse(fs.readFileSync('DRAMS_CATALOG.json','utf8'));
+const expectedCount=Object.keys(metadata).length;
 const errors = [];
 const warnings = [];
+const manifest=JSON.parse(fs.readFileSync('INTRX-handover/manifest/components.json','utf8')).components;
+for(const row of manifest.filter(row=>row.origin==='repo'))if(!demos.some(d=>d.id===row.id))errors.push('MISSING ORIGINAL '+row.id);
+for(const file of fs.readdirSync('js').filter(name=>/^demos\..*\.js$/.test(name)))if(!files.includes('js/'+file))errors.push('UNLISTED REGISTRY FILE '+file);
+
 const required = ['id','title','cat','rootClass','desc','seen','hint','html','css','js','prompt'];
 const forbiddenRuntime = [/\bfetch\s*\(/, /XMLHttpRequest/, /localStorage/, /https?:\/\//];
 

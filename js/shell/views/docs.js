@@ -1,0 +1,17 @@
+(function(){const R=INTRX;
+ const pages={'getting-started':'Getting started','mcp-setup':'MCP setup','cli':'CLI','agent-skill':'Agent skill','registry-schema':'Registry schema','stage-contract':'Stage contract','license-credits':'License and credits'};
+ R.markdown=text=>{
+  const inline=value=>R.escape(value).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,url)=>{if(/\.md$/.test(url))url='#/docs/'+url.replace(/.*\//,'').slice(0,-3);return /^(https:\/\/|#\/)/.test(url)?'<a href="'+R.escape(url)+'">'+label+'</a>':label;}).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+  let out='',paragraph=[],i=0;const lines=text.split('\n');
+  const flush=()=>{if(paragraph.length){out+='<p>'+inline(paragraph.join(' '))+'</p>';paragraph=[];}};
+  while(i<lines.length){const line=lines[i];
+   if(line.startsWith('```')){flush();const code=[];i++;while(i<lines.length&&!lines[i].startsWith('```'))code.push(lines[i++]);out+='<pre><code>'+R.escape(code.join('\n'))+'</code></pre>';i++;continue;}
+   if(line.includes('|')&&i+1<lines.length&&/^\s*\|?[-: ]+\|[-|: ]+\s*$/.test(lines[i+1])){flush();const cells=value=>value.trim().replace(/^\||\|$/g,'').split('|').map(cell=>cell.trim());out+='<div class="docs-table"><table><thead><tr>'+cells(line).map(cell=>'<th>'+inline(cell)+'</th>').join('')+'</tr></thead><tbody>';i+=2;while(i<lines.length&&lines[i].includes('|'))out+='<tr>'+cells(lines[i++]).map(cell=>'<td>'+inline(cell)+'</td>').join('')+'</tr>';out+='</tbody></table></div>';continue;}
+   const heading=line.match(/^(#{1,4}) (.*)/);if(heading){flush();out+='<h'+heading[1].length+(heading[1].length===1?' tabindex="-1"':'')+'>'+inline(heading[2])+'</h'+heading[1].length+'>';i++;continue;}
+   if(/^[-*] /.test(line)){flush();out+='<ul>';while(i<lines.length&&/^[-*] /.test(lines[i]))out+='<li>'+inline(lines[i++].slice(2))+'</li>';out+='</ul>';continue;}
+   if(!line.trim())flush();else paragraph.push(line);i++;
+  }flush();return out;
+ };
+ R.views.docs=async(hash,route)=>{let page=hash.split('/')[2]||'getting-started';if(!pages[page])page='getting-started';const app=document.getElementById('app');app.innerHTML='<div class="docs-layout content-width"><nav aria-label="Documentation">'+Object.entries(pages).map(([slug,label])=>'<a href="#/docs/'+slug+'"'+(slug===page?' aria-current="page"':'')+'>'+label+'</a>').join('')+'</nav><article class="docs-content"><p>Loading documentation…</p></article></div>'+R.footer();const response=await fetch('docs/'+page+'.md');if(!response.ok)throw Error('Documentation unavailable');const text=await response.text();if(route.isCurrent()){app.querySelector('.docs-content').innerHTML=R.markdown(text);app.querySelector('h1')?.focus({preventScroll:true});}};
+ R.views.agents=async()=>{const app=document.getElementById('app');app.innerHTML='<section class="agents-page content-width"><p class="eyebrow">Agents and MCP</p><h1 tabindex="-1">A little detail.<br>A better interface.</h1><p>Search native interactions from your agent, fetch their source and bring them into your own stack.</p>'+R.agentCard()+'<a class="btn btn--accent" href="#/docs/mcp-setup">Local setup instructions →</a><div class="agent-tool-list"><h2>Seven tools. One interaction library.</h2><p>Search components · Get component · Get prompt · List categories · Get tokens · Get stage contract · Related components</p></div></section>'+R.footer();R.bindConfig(app);};
+})();

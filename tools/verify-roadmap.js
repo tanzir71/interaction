@@ -76,7 +76,7 @@ for (const file of handoffFiles) {
   }
 }
 
-const registryFiles = [...html.matchAll(/<script src="(js\/demos\.[^"]+\.js)"><\/script>/g)].map(match => match[1]);
+const registryFiles=JSON.parse(fs.readFileSync('js/registry-files.json','utf8'));
 const context = {};
 context.window = context;
 vm.createContext(context);
@@ -100,7 +100,7 @@ backlog.forEach(item => {
   const published = publishedIds.has(item.id);
   if (item.checked !== published) errors.push(item.id + ' checkbox does not match published state');
 });
-if (!queuedLabel || Number(queuedLabel[1]) !== roadmap.length) errors.push('queued label does not equal ' + roadmap.length);
+if (roadmapHtml && (!queuedLabel || Number(queuedLabel[1]) !== roadmap.length)) errors.push('queued label does not equal ' + roadmap.length);
 if (chipTitles.length !== roadmap.length) errors.push('chip count is ' + chipTitles.length + ', expected ' + roadmap.length);
 roadmap.forEach((item, index) => {
   if (chipTitles[index] !== item.title) errors.push('chip ' + (index + 1) + ': expected "' + item.title + '", got "' + (chipTitles[index] || '') + '"');
@@ -118,5 +118,5 @@ if (errors.length) {
   errors.forEach(error => console.error('ERROR:', error));
   process.exitCode = 1;
 } else {
-  console.log('PASS — every handoff item is either published or represented by one roadmap chip');
+  console.log('PASS — original handoff coverage and remaining roadmap verified');
 }

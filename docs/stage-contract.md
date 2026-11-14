@@ -23,3 +23,10 @@ poster. Touch hover/drag starts suspended until the visitor opts in.
 Run registry, stage, motion, runtime and browser verifiers before each commit.
 Existing chrome/control debt is recorded explicitly during migration;
 `verify-stage.js --strict` must pass after remediation.
+
+## Adding a pattern
+
+Register one object in a `js/demos.*.js` module and list that module in
+`js/registry-files.json`. Give the entry a unique ID, prefixed classes, complete
+demo strings, metadata and a detailed motion prompt. Regenerate the public
+registry and poster, then run the registry, stage, motion and browser checks.
