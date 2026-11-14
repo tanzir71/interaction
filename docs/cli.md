@@ -16,6 +16,9 @@ The registry source is `--registry`, then `INTRX_REGISTRY_URL`, then the public
 INTRX registry. HTTP responses are cached in `~/.cache/intrx` and revalidated
 with ETags. A local registry directory supports offline use.
 
+If the default Vercel mirror is unavailable, the client retries the public GitHub
+Pages registry. Explicit custom registry sources retain their own failure behavior.
+
 `add` preserves existing files. HTML format writes a portable document; parts
 format writes HTML/CSS/JS for integration with the host application. Keep the
 stage context, actions and cleanup when integrating parts. Locked components

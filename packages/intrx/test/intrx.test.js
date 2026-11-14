@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {createServer} from 'node:http';
 import {Client} from '@modelcontextprotocol/sdk/client/index.js';
 import {StdioClientTransport} from '@modelcontextprotocol/sdk/client/stdio.js';
-import {Registry,rankComponents} from '../src/registry.js';
+import {Registry,rankComponents,DEFAULT_REGISTRY,FALLBACK_REGISTRY} from '../src/registry.js';
 import {addComponent} from '../src/cli.js';
 const root=fileURLToPath(new URL('../../../',import.meta.url));
 const registry=new Registry(path.join(root,'registry'));
@@ -29,6 +29,11 @@ test('locked registry entries never produce source files',async()=>{
 test('registry client strips source from Pro entries even if a registry includes it',async()=>{
  const client=new Registry('.');client.read=async()=>({tier:'pro',prompt:'Available prompt',files:[{content:'secret source'}],parts:{js:'secret source'}});
  const item=await client.component('pro-example');assert.equal(item.locked,true);assert.equal(item.prompt,'Available prompt');assert.equal(item.files,undefined);assert.equal(item.parts,undefined);
+});
+test('default registry falls back to the published GitHub mirror without changing explicit sources',async()=>{
+ const client=new Registry(),calls=[];client.readRemote=async url=>{calls.push(url);if(url.startsWith(DEFAULT_REGISTRY))throw Error('HTTP 402');return [{id:'elastic-tabs'}];};
+ assert.equal((await client.read('index.json'))[0].id,'elastic-tabs');assert.deepEqual(calls,[DEFAULT_REGISTRY+'/index.json',FALLBACK_REGISTRY+'/index.json']);
+ const custom=new Registry('https://example.test/registry');custom.readRemote=async()=>{throw Error('custom failure');};await assert.rejects(custom.read('index.json'),/custom failure/);
 });
 test('HTTP cache revalidates with ETag and uses the cached JSON for a 304',async()=>{
  const dir=await temp(),requests=[];const server=createServer((req,res)=>{requests.push(req.headers['if-none-match']);if(requests.length>1){res.writeHead(304);res.end();}else{res.writeHead(200,{'Content-Type':'application/json',ETag:'"v1"'});res.end('[{"id":"cached"}]');}});

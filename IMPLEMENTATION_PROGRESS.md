@@ -79,6 +79,11 @@ audit remains at the Phase 1 diagnostic counts, with no boot or metadata failure
 The npm package is implemented and tested locally. Publishing it to npm is a
 separate owner action; setup docs provide working local commands in the meantime.
 
+Phase 2 commit: `5b6dfd9`, pushed to `main`; GitHub verification passed on Node
+18 and 22 and the static deployment succeeded. The public GitHub registry returns
+399 entries. The Vercel mirror returned HTTP 402 during verification, so the
+default client retries the GitHub registry when that mirror is unavailable.
+
 ## Remaining work
 
 1. Routed shell, mobile layouts, search palette, performance and accessibility.

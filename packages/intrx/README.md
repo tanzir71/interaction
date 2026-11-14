@@ -17,6 +17,7 @@ The MCP server exposes seven read-only tools, component/category/token resources
 and `add-interaction` / `audit-motion` prompts. Source writing happens through the
 CLI or the host agent. HTTP registries use ETag cache revalidation; local registry
 paths work offline. See `docs/mcp-setup.md` and `docs/cli.md` in the repository.
+The default Vercel registry falls back to GitHub Pages when unavailable.
 
 Run tests with `npm test` in this package. The stdio test launches the actual
 binary and verifies its initialization, tools, resources and prompts.

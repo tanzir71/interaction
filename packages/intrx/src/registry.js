@@ -3,6 +3,7 @@ import path from 'node:path';
 import os from 'node:os';
 import {createHash} from 'node:crypto';
 export const DEFAULT_REGISTRY='https://intrx.vercel.app/registry';
+export const FALLBACK_REGISTRY='https://tanzir71.github.io/interaction/registry';
 export const validId=id=>typeof id==='string'&&/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id);
 export function rankComponents(items,{query='',trigger,category,stack,tier,limit=12}={}){
  const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
@@ -15,7 +16,10 @@ export class Registry{
  async read(file){
   if(!/^[a-z0-9/-]+\.json$/.test(file)||file.includes('..'))throw Error('Invalid registry path');
   if(!this.remote)return JSON.parse(await fs.readFile(path.join(path.resolve(this.source),...file.split('/')),'utf8'));
-  const url=this.source+'/'+file,key=createHash('sha256').update(url).digest('hex'),cacheFile=path.join(this.cacheDir,key+'.json');
+  try{return await this.readRemote(this.source+'/'+file);}catch(error){if(this.source!==DEFAULT_REGISTRY)throw error;return this.readRemote(FALLBACK_REGISTRY+'/'+file);}
+ }
+ async readRemote(url){
+  const key=createHash('sha256').update(url).digest('hex'),cacheFile=path.join(this.cacheDir,key+'.json');
   let cached;try{cached=JSON.parse(await fs.readFile(cacheFile,'utf8'));}catch{}
   const response=await fetch(url,{headers:cached?.etag?{'If-None-Match':cached.etag}:{},signal:AbortSignal.timeout(15000)});
   if(response.status===304&&cached)return cached.data;
