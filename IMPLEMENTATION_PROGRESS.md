@@ -126,10 +126,9 @@ lazy detail, dock action, portable export and mobile stage geometry.
 
 ## Phase 4 — Remediation in progress
 
-Bucket A now includes ten v4 implementations: Border Beam, Elastic Tabs,
-Toast Stack, Success Morph, Checkbox Draw, Copy Feedback, Shimmer Sweep, Icon
-Hop, Ripple and Jelly Press. Each now renders
-its compact Figma hero without a surrounding demo panel or internal replay/reset
+Bucket A now includes all fifteen existing Buttons & Micro demos, plus Elastic
+Tabs and Toast Stack. All seventeen implementations render
+their compact Figma heroes without a surrounding demo panel or internal replay/reset
 toolbar. Shared dock actions, keyboard behavior, cancellation, reduced-motion
 poses and standalone exports are covered by `tools/verify-exemplars.js`.
 
@@ -144,7 +143,7 @@ poses and standalone exports are covered by `tools/verify-exemplars.js`.
   pseudo-elements in exported HTML. Newly created CSS transitions inherit the
   selected animation speed; the tab spring uses virtual-time 60Hz integration.
 - The owner clarified that sparse controls must retain their exact v4 Figma
-  geometry despite the 12% fill heuristic. Nine documented fill exceptions are
+  geometry despite the 12% fill heuristic. Fourteen documented fill exceptions are
   measured against their reference geometry in `tools/stage-fit-allowlist.json`.
   No overflow, scroll or text-size gates were relaxed.
 - Refreshing posters can target changed IDs, and registry generation leaves
@@ -159,17 +158,33 @@ and active transforms are combined. Jelly Press handles outside release,
 cancellation, key repeats and replay without leaving a held state behind. The
 16px arrow and 80px radial glow are the original Figma SVGs.
 
-Focused verification: 150 exemplar behavior, reduced-motion, namespace,
-native-size and offline-export checks pass. The 32 existing interaction checks,
+The remaining button group adds reversible twin labels, a gray eight-dot like
+burst, queued badge updates, the three-way Light/Dark/Auto selector, a four-anchor
+tooltip toolbar, four additive polish layers and a seeded sprite celebration.
+The three-way selector and four polish layers follow the v4 reference rather
+than the superseded celestial switch and five-stage artwork. Auto preference
+tracks system changes, tooltip focus/Escape and touch share the same hint state,
+and timers cancel cleanly when the user interrupts an automatic demonstration.
+Reset restarts the badge's complete arrival interval, and pointer departure
+restores the currently focused tooltip anchor. The browser also verifies the
+badge's separate 260/400/500ms travel/opacity/scale channels, the selector's
+mirrored 1px overshoot and the polish action's 80/250ms press/release timings.
+Confetti uses the original SVG sprites with a virtual-time 60Hz simulation.
+Its reduced-motion confirmation is a still fan. The new SVG size checks also
+found Chrome shortening the 121×1px beam highlight at fractional zoom; explicit
+matching image dimensions preserve its original width.
+
+Focused verification: 282 exemplar behavior, reduced-motion, namespace,
+native-size, original SVG geometry and offline-export checks pass. The 32 existing interaction checks,
 desktop/touch lifecycle suite, 12 runtime/shell tests and eight CLI/MCP tests pass.
-The chrome/control baseline has shrunk from 391 to 381 demos and motion debt
-from 168 to 160. These are incremental reductions; bucket A and Phase 4 remain
-incomplete. Ten native search posters have been refreshed.
+The chrome/control baseline has shrunk from 391 to 374 demos and motion debt
+from 168 to 154. These are incremental reductions; bucket A and Phase 4 remain
+incomplete. Seventeen native search posters have been refreshed.
 
 The final broad browser run passes 651 checks, all 399 lazy preview boots and 97
 offline exports. The full audit records 0 failed boots, 0 missing sizes, 61
-overflow, 3 horizontal scroll, 284 tiny-text and 75 low-fill offenders; all nine
-approved geometry exceptions validate. None of the ten remediated IDs has an
+overflow, 3 horizontal scroll, 276 tiny-text and 75 low-fill offenders; all fourteen
+approved geometry exceptions validate. None of the seventeen remediated IDs has an
 overflow, horizontal-scroll or tiny-text failure. The global fit gate remains
 unmet while the other demos are still being remediated.
 
@@ -192,6 +207,11 @@ The first six controls and preview-performance changes were committed as
 `2fabf60` and pushed to `main`. Node 18/22 verification and Pages deployment
 passed, followed by a public-browser check of the catalog, lazy source loading,
 keyboard actions, portable clipboard export, mobile geometry and checkbox input.
+
+The next four controls were committed as `ccec511` and pushed to `main`. Node
+18/22 verification and Pages deployment passed. The public-browser check covered
+pause, native pointer/keyboard input, original SVG loading, portable clipboard
+source, held/outside release, mobile readability and clean network/console output.
 
 ## Remaining work
 

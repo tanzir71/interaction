@@ -3640,13 +3640,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-text-slide-swap": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Swap / restore",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3658,7 +3670,7 @@ INTRX.meta({
       "duplicate text"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-icon-hop": {
@@ -3730,13 +3742,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "btn-confetti-burst": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Celebrate",
+        "action": "run"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3748,7 +3772,7 @@ INTRX.meta({
       "particle physics"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-ripple-material": {
@@ -3820,13 +3844,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "like-heart-particles": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Like / unlike",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3838,7 +3874,7 @@ INTRX.meta({
       "toggle"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "checkbox-draw-check": {
@@ -3876,25 +3912,37 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "toggle-day-night": {
-    "designSize": "sm",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next theme",
+        "action": "next"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "radiogroup"
     },
     "useCases": [
-      "theme toggle",
-      "sun moon",
-      "stagger"
+      "appearance preferences",
+      "segmented control",
+      "system theme"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "copy-inline-feedback": {
@@ -3932,17 +3980,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "hover-tooltip-spring": {
-    "designSize": "sm",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next hint",
+        "action": "next"
+      },
+      {
+        "label": "Show / hide",
+        "action": "toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "tooltip"
+      "aria": "toolbar"
     },
     "useCases": [
       "tooltip",
@@ -3950,17 +4010,29 @@ INTRX.meta({
       "pointer lag"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "badge-notification-pop": {
-    "designSize": "sm",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / play",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3972,21 +4044,33 @@ INTRX.meta({
       "elastic pop"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "btn-polish-stages": {
-    "designSize": "sm",
+    "designSize": [
+      270,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next layer",
+        "action": "next"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "radiogroup"
     },
     "useCases": [
       "button",
@@ -3994,7 +4078,7 @@ INTRX.meta({
       "polish"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "input-float-label": {

@@ -69,6 +69,32 @@ portable bundle remains reproducible.
 | copy-check.svg | 149:2008 · Copy Feedback | 14×14 |
 | hop-arrow.svg | 149:1594 · Icon Hop | 16×16 |
 | ripple-wave.svg | 149:1723 · Ripple | 80×80 |
+| swap-pointer.svg | 149:1986 · Text Slide Swap | 28.5×29.25 |
+| like-dot.svg | 149:1742 · Like Burst | 3×3 |
+| like-heart.svg | 149:1742 · Like Burst | 24×24 |
+| badge-bell.svg | 149:1769 · Badge Pop | 20×20 |
+| theme-sun.svg | 149:1694 · Theme Switch | 16×16 |
+| theme-moon.svg | 149:1694 · Theme Switch | 16×16 |
+| theme-auto.svg | 149:1694 · Theme Switch | 16×16 |
+| tooltip-save.svg | 110:1297 · Spring Tooltip | 16×16 |
+| tooltip-copy.svg | 110:1297 · Spring Tooltip | 16×16 |
+| tooltip-star.svg | 110:1297 · Spring Tooltip | 16×16 |
+| tooltip-delete.svg | 110:1297 · Spring Tooltip | 16×16 |
+| polish-arrow.svg | 110:1355 · Polish Stages | 16×16 |
+| confetti-dot-accent.svg | 149:1637 · Confetti Burst | 5×5 |
+| confetti-dot-muted.svg | 149:1637 · Confetti Burst | 5×5 |
+| confetti-dot-light.svg | 149:1637 · Confetti Burst | 5×5 |
+| confetti-ray-1.svg | 149:1637 · Confetti Burst | 8.93146×8.19132 |
+| confetti-ray-2.svg | 149:1637 · Confetti Burst | 5.56774×10.6358 |
+| confetti-ray-3.svg | 149:1637 · Confetti Burst | 1.5×11.5 |
+| confetti-ray-4.svg | 149:1637 · Confetti Burst | 5.56774×10.6358 |
+| confetti-ray-5.svg | 149:1637 · Confetti Burst | 8.93146×8.19132 |
+| confetti-check.svg | 149:1637 · Confetti Burst | 16×16 |
+
+Text Slide Swap reuses `hop-arrow.svg`: its downloaded arrow is byte-for-byte
+identical. Confetti's live canvas draws the original sprite images without
+resizing them; the thumbnail preserves every supplied fan layer and stroke
+overhang at its reference position.
 
 `assets/demo-assets.json` maps portable asset names to local files. The registry
 exposes the referenced paths for lightweight previews and content-hashed bundle
