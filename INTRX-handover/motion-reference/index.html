@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INTRX motion reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dur-micro:80ms;--dur-quick:150ms;--dur-fast:250ms;--dur-medium:350ms;--dur-slow:400ms;--dur-xslow:500ms;--stagger:40ms;
+  --ease-out:cubic-bezier(.22,1,.36,1);--ease-close:cubic-bezier(.4,0,.2,1);--ease-in-out:ease-in-out;
+  --ease-pop:cubic-bezier(.34,1.36,.64,1);--ease-settle:cubic-bezier(.34,1.25,.64,1);--ease-bounce:cubic-bezier(.34,1.35,.64,1);
+  --ease-pop-strong:cubic-bezier(.34,1.96,.64,1);--ease-step:cubic-bezier(.35,-.02,.43,1);
+  --move-micro:4px;--move-small:6px;--move-base:8px;--move-medium:12px;--move-large:30px;
+  --scale-large:.96;--scale-medium:.97;--scale-small:.98;--blur-small:2px;--blur-medium:3px;--blur-large:8px;
+  --bg:#111111;--stage:#151515;--s1:#1C1C1C;--s2:#222222;--s3:#2A2A2A;--line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.11);
+  --t1:#F1F1F1;--t2:#9C9C9C;--t3:#6A6A6A;--ac:#FA7319;--ok:#3ECF8E;--err:#F26D6D;
+}
+html.rm{--move-micro:0px;--move-small:0px;--move-base:0px;--move-medium:0px;--move-large:0px;--scale-large:1;--scale-medium:1;--scale-small:1;--blur-small:0px;--blur-medium:0px;--blur-large:0px}
+@media (prefers-reduced-motion:reduce){:root{--move-micro:0px;--move-small:0px;--move-base:0px;--move-medium:0px;--move-large:0px;--scale-large:1;--scale-medium:1;--scale-small:1;--blur-small:0px;--blur-medium:0px;--blur-large:0px}}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--t1);font:14px/1.45 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.006em}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1240px;margin:0 auto;padding:56px 24px 96px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+h1{font-size:34px;line-height:1.1;font-weight:600;letter-spacing:-.025em}
+.lede{color:var(--t2);max-width:620px;margin-top:10px}
+.rmtoggle{display:flex;align-items:center;gap:10px;color:var(--t2);font-size:13px}
+.tokens{display:flex;flex-wrap:wrap;gap:6px;margin:-12px 0 32px}
+.chip{font:12px/1 "JetBrains Mono",monospace;color:var(--t2);background:var(--s1);border:1px solid var(--line);padding:7px 9px;border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
+.card{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:6px}
+.stage{position:relative;height:250px;background:var(--stage);border-radius:15px;display:grid;place-items:center;overflow:hidden}
+.meta{padding:14px 12px 12px}
+.meta h3{font-size:14px;font-weight:500}
+.meta p{color:var(--t3);font-size:12.5px;margin-top:4px}
+.btn{height:40px;padding:0 16px;border-radius:12px;background:var(--t1);color:#111;font-weight:500;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn.sec{background:var(--s2);color:var(--t1);box-shadow:inset 0 0 0 1px var(--line2)}
+.ghost{color:var(--t3);font-size:12px;position:absolute;bottom:14px;left:0;right:0;text-align:center}
+svg{display:block}
+
+/* 1 press */
+.press{transition:transform var(--dur-fast) var(--ease-pop)}
+.press:active{transform:scale(var(--scale-medium));transition:transform var(--dur-micro) var(--ease-out)}
+/* 2 hover lift */
+.lift{width:200px;padding:18px;border-radius:14px;background:var(--s1);box-shadow:0 0 0 1px var(--line),0 1px 2px rgba(0,0,0,.3);transition:transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
+@media (hover:hover){.lift:hover{transform:translateY(-2px);box-shadow:0 0 0 1px var(--line2),0 14px 30px -12px rgba(0,0,0,.6);transition-duration:var(--dur-quick)}}
+.sk{height:7px;border-radius:4px;background:rgba(255,255,255,.08);margin-top:8px}
+/* 3 icon swap */
+.iconbtn{width:48px;height:48px;border-radius:14px;background:var(--s2);box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center}
+.iconbtn>*{grid-area:1/1}
+.ic{transition:opacity var(--dur-quick) var(--ease-close),transform var(--dur-quick) var(--ease-close),filter var(--dur-quick) var(--ease-close)}
+.ic.off{opacity:0;transform:scale(.25);filter:blur(4px)}
+.ic.on{opacity:1;transform:none;filter:none;transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-xslow) var(--ease-out),filter var(--dur-xslow) var(--ease-out)}
+.ic.enter{transform:scale(.25) rotate(80deg);filter:blur(10px)}
+/* 4 text swap */
+.tswap{position:relative;display:inline-grid;overflow:hidden;min-width:132px}
+.tswap span{grid-area:1/1;text-align:center;transition:transform var(--dur-slow) var(--ease-out),opacity var(--dur-slow) var(--ease-out),filter var(--dur-slow) var(--ease-out)}
+.tswap .up{transform:translateY(calc(var(--move-medium)*-1));opacity:0;filter:blur(var(--blur-small))}
+.tswap .down{transform:translateY(var(--move-medium));opacity:0;filter:blur(var(--blur-small));transition:none}
+/* 5 menu */
+.mwrap{position:relative}
+.menu{position:absolute;top:48px;left:0;width:188px;padding:4px;border-radius:12px;background:var(--s2);box-shadow:0 0 0 1px var(--line2),0 18px 44px -14px rgba(0,0,0,.7);transform-origin:top left;
+  opacity:0;transform:scale(var(--scale-large));filter:blur(var(--blur-small));pointer-events:none;transition:opacity var(--dur-quick) var(--ease-out),transform var(--dur-quick) var(--ease-out),filter var(--dur-quick) var(--ease-out)}
+.menu.open{opacity:1;transform:none;filter:none;pointer-events:auto;transition-duration:var(--dur-fast)}
+.menu .it{display:flex;align-items:center;gap:10px;height:32px;padding:0 10px;border-radius:8px;color:#D4D4D2;font-size:13px;opacity:0;transform:translateY(calc(var(--move-micro)*-1));transition:opacity var(--dur-quick) var(--ease-out),transform var(--dur-quick) var(--ease-out)}
+.menu.open .it{opacity:1;transform:none;transition-duration:var(--dur-fast);transition-delay:calc(var(--i)*var(--stagger))}
+.menu .hl{position:absolute;left:4px;right:4px;height:32px;border-radius:8px;background:rgba(255,255,255,.06);transition:transform 160ms var(--ease-out),opacity var(--dur-quick);opacity:0}
+/* 6 modal */
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity var(--dur-quick) var(--ease-out)}
+.dialog{position:absolute;width:230px;padding:18px;border-radius:16px;background:var(--s2);box-shadow:0 0 0 1px var(--line2),0 24px 60px -18px rgba(0,0,0,.8);opacity:0;transform:scale(var(--scale-large));filter:blur(var(--blur-small));pointer-events:none;
+  transition:opacity var(--dur-quick) var(--ease-out),transform var(--dur-quick) var(--ease-out),filter var(--dur-quick) var(--ease-out)}
+.modal.open .scrim{opacity:1;pointer-events:auto;transition-duration:var(--dur-fast)}
+.modal.open .dialog{opacity:1;transform:none;filter:none;pointer-events:auto;transition-duration:var(--dur-fast)}
+/* 7 tooltip */
+.tbar{display:flex;gap:6px;padding:6px;border-radius:14px;background:var(--s2);box-shadow:inset 0 0 0 1px var(--line)}
+.tbar button{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;color:var(--t2);transition:background var(--dur-quick),color var(--dur-quick)}
+.tbar button:hover{background:rgba(255,255,255,.06);color:var(--t1)}
+.tip{position:absolute;top:0;left:0;padding:6px 9px;border-radius:8px;background:var(--t1);color:#111;font-size:12px;font-weight:500;white-space:nowrap;pointer-events:none;opacity:0;transform:translate(var(--x),var(--y)) scale(var(--scale-small));transition:opacity 50ms linear,transform 0ms}
+.tip.show{opacity:1;transform:translate(var(--x),var(--y));transition:opacity var(--dur-quick) ease-out,transform var(--dur-quick) ease-out}
+.tip.show.travel{transition:opacity var(--dur-quick) ease-out,transform 160ms var(--ease-out)}
+/* 8 tabs */
+.tabs{position:relative;display:flex;padding:4px;border-radius:12px;background:#171717;box-shadow:inset 0 0 0 1px var(--line)}
+.tabs button{position:relative;z-index:1;height:32px;padding:0 14px;font-size:13px;font-weight:500;color:var(--t3);transition:color var(--dur-fast) var(--ease-out)}
+.tabs button.on{color:var(--t1)}
+.pill{position:absolute;top:4px;height:32px;border-radius:9px;background:var(--s3);box-shadow:0 1px 2px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.05)}
+/* 9 accordion */
+.acc{width:260px;border-radius:14px;background:var(--s1);box-shadow:0 0 0 1px var(--line)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;height:44px;padding:0 14px;font-size:13px;font-weight:500}
+.chev{transition:transform var(--dur-fast) var(--ease-out)}
+.acc.open .chev{transform:rotate(180deg)}
+.acc-b{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--dur-fast) var(--ease-out)}
+.acc.open .acc-b{grid-template-rows:1fr}
+.acc-b>div{overflow:hidden}
+.acc-b p{padding:0 14px 14px;color:var(--t2);font-size:12.5px;opacity:0;transition:opacity 200ms var(--ease-out)}
+.acc.open .acc-b p{opacity:1}
+/* 10 toggle */
+.tg{width:44px;height:24px;border-radius:12px;background:#3A3A3A;position:relative;transition:background var(--dur-quick) var(--ease-out)}
+.tg i{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.tg.on{background:var(--ac)}
+.tg.on i{translate:20px 0;animation:tgOn var(--dur-medium) var(--ease-bounce)}
+.tg.off i{animation:tgOff var(--dur-medium) var(--ease-bounce)}
+@keyframes tgOn{0%{translate:0 0}55%{translate:21px 0}80%{translate:20px 0}100%{translate:20px 0}}
+@keyframes tgOff{0%{translate:20px 0}55%{translate:-1px 0}80%{translate:0 0}100%{translate:0 0}}
+/* 11 check */
+.crow{display:flex;align-items:center;gap:12px;font-size:13.5px;cursor:pointer;user-select:none}
+.cbox{width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--line2);display:grid;place-items:center;transition:background var(--dur-quick) var(--ease-out),box-shadow var(--dur-quick) var(--ease-out)}
+.cbox path{stroke-dasharray:16;stroke-dashoffset:16;transition:stroke-dashoffset var(--dur-quick) var(--ease-out)}
+.crow.on .cbox{background:var(--t1);box-shadow:none}
+.crow.on .cbox path{stroke-dashoffset:0;transition:stroke-dashoffset var(--dur-medium) var(--ease-out) var(--dur-micro)}
+/* 12 like */
+.like{position:relative;width:48px;height:48px;display:grid;place-items:center}
+.like svg path{fill:transparent;stroke:var(--t2);transition:fill var(--dur-quick),stroke var(--dur-quick)}
+.like.on svg path{fill:#F4386B;stroke:#F4386B}
+.like.pop svg{animation:likePop var(--dur-medium) var(--ease-pop-strong)}
+@keyframes likePop{0%{transform:scale(1)}30%{transform:scale(.82)}100%{transform:scale(1)}}
+.pt{position:absolute;width:3px;height:3px;border-radius:50%;background:#F4386B;opacity:0}
+.like.pop .pt{animation:burst 600ms var(--ease-out)}
+@keyframes burst{0%{opacity:0;transform:translate(0,0) scale(.4)}20%{opacity:1;transform:translate(calc(var(--px)*.25),calc(var(--py)*.25)) scale(1)}100%{opacity:0;transform:translate(var(--px),var(--py)) scale(.6)}}
+.cnt{font-variant-numeric:tabular-nums;font-weight:500;margin-left:4px}
+/* 13 shake */
+.field{width:240px;height:42px;border-radius:12px;background:#171717;box-shadow:inset 0 0 0 1px var(--line2);padding:0 14px;color:var(--t1);font:inherit;border:0;outline:none;transition:box-shadow var(--dur-quick) var(--ease-out)}
+.field:focus{box-shadow:inset 0 0 0 1px var(--ac),0 0 0 3px rgba(250,115,25,.14)}
+.field.err{box-shadow:inset 0 0 0 1px var(--err),0 0 0 3px rgba(242,109,109,.14)}
+.shake{animation:shake 280ms}
+@keyframes shake{0%{transform:translateX(0);animation-timing-function:var(--ease-out)}28.57%{transform:translateX(var(--move-small));animation-timing-function:var(--ease-out)}57.14%{transform:translateX(calc(var(--move-small)*-1));animation-timing-function:var(--ease-out)}78.57%{transform:translateX(var(--move-micro));animation-timing-function:var(--ease-out)}100%{transform:translateX(0)}}
+.errtxt{height:18px;margin-top:8px;font-size:12px;color:var(--err);opacity:0;transform:translateY(-4px);transition:opacity var(--dur-quick) var(--ease-out),transform var(--dur-quick) var(--ease-out)}
+.errtxt.show{opacity:1;transform:none}
+/* 14 drum */
+.drum{display:flex;font-size:44px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;height:1.2em;overflow:hidden;transition:transform 100ms var(--ease-out);-webkit-mask:linear-gradient(transparent,#000 22%,#000 78%,transparent);mask:linear-gradient(transparent,#000 22%,#000 78%,transparent)}
+.drum.antic{transform:scale(.94) translateY(-.06em)}
+.col{display:flex;flex-direction:column;transition:transform 740ms var(--ease-pop)}
+.col span{height:1.2em;line-height:1.2em;text-align:center}
+/* 15 toasts */
+.tstack{position:absolute;left:50%;bottom:58px;width:240px;margin-left:-120px;height:52px}
+.toast{position:absolute;left:0;right:0;bottom:0;height:52px;border-radius:12px;background:var(--s2);box-shadow:0 0 0 1px var(--line2),0 12px 30px -12px rgba(0,0,0,.7);display:flex;align-items:center;gap:10px;padding:0 14px;font-size:13px;
+  transition:transform var(--dur-medium) var(--ease-out),opacity var(--dur-medium) var(--ease-out),filter var(--dur-medium) var(--ease-out)}
+.toast.new{transform:translateY(var(--move-medium)) scale(var(--scale-medium));opacity:0;filter:blur(var(--blur-small));transition:none}
+.toast.bye{opacity:0;transform:translateY(var(--move-medium)) scale(var(--scale-medium));transition-duration:var(--dur-fast)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+/* 16 skeleton */
+.skel{width:250px}
+.skel .row{position:relative;height:9px;margin-top:10px}
+.skel .row b{position:absolute;inset:0;border-radius:5px;background:rgba(255,255,255,.08);transition:opacity var(--dur-fast) var(--ease-out)}
+.skel .row span{position:absolute;inset:-4px 0 auto 0;font-size:12.5px;color:var(--t2);white-space:nowrap;opacity:0;filter:blur(var(--blur-small));transition:opacity var(--dur-slow) var(--ease-in-out),filter var(--dur-slow) var(--ease-in-out)}
+.skel.pulse b{animation:pulse 1000ms var(--ease-in-out)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+.skel.done b{opacity:0}
+.skel.done span{opacity:1;filter:none;transition-delay:calc(var(--i)*var(--stagger))}
+.skel .row.h{height:12px}.skel .row.h span{font-size:14px;color:var(--t1);font-weight:500}
+/* 17 stream */
+.stream{width:270px;min-height:80px;font-size:13.5px;color:#D9D9D7}
+.w{display:inline-block;animation:wordIn 455ms var(--ease-out) both;white-space:pre}
+@keyframes wordIn{from{opacity:0;filter:blur(.042em);transform:translateY(.14em)}to{opacity:1;filter:none;transform:none}}
+/* 18 morph */
+.morph{height:44px;width:132px;border-radius:12px;background:var(--t1);color:#111;font-weight:500;display:grid;place-items:center;overflow:hidden;transition:width var(--dur-medium) var(--ease-settle),border-radius var(--dur-medium) var(--ease-settle),background var(--dur-fast)}
+.morph>*{grid-area:1/1}
+.morph.busy,.morph.done{width:44px;border-radius:22px}
+.morph.done{background:var(--ok)}
+.morph .lbl{transition:opacity var(--dur-quick) var(--ease-out),filter var(--dur-quick)}
+.morph.busy .lbl,.morph.done .lbl{opacity:0;filter:blur(var(--blur-small))}
+.spin{width:18px;height:18px;border-radius:50%;border:2px solid rgba(17,17,17,.25);border-top-color:#111;opacity:0;animation:rot 700ms linear infinite;transition:opacity var(--dur-quick)}
+.morph.busy .spin{opacity:1}
+@keyframes rot{to{transform:rotate(360deg)}}
+.mchk{opacity:0;transform:scale(.25) rotate(80deg);filter:blur(10px);transition:opacity var(--dur-quick) var(--ease-close),transform var(--dur-quick) var(--ease-close),filter var(--dur-quick)}
+.morph.done .mchk{opacity:1;transform:none;filter:none;transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-xslow) var(--ease-out),filter var(--dur-xslow) var(--ease-out)}
+/* 19 float label */
+.fl{position:relative;width:240px}
+.fl input{width:100%;height:46px;border-radius:12px;background:#171717;border:0;outline:none;box-shadow:inset 0 0 0 1px var(--line2);padding:16px 14px 0;color:var(--t1);font:inherit;transition:box-shadow var(--dur-quick) var(--ease-out)}
+.fl label{position:absolute;left:14px;top:13px;color:var(--t3);font-size:14px;pointer-events:none;transform-origin:left top;transition:transform var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out)}
+.fl input:focus{box-shadow:inset 0 0 0 1px var(--ac),0 0 0 3px rgba(250,115,25,.14)}
+.fl input:focus+label,.fl input:not(:placeholder-shown)+label{transform:translateY(-7px) scale(.8);color:var(--t2)}
+.fl input:focus+label{color:var(--ac)}
+/* 20 pop-in badge */
+.bell{position:relative;width:48px;height:48px;border-radius:14px;background:var(--s2);box-shadow:inset 0 0 0 1px var(--line);display:grid;place-items:center}
+.badge{position:absolute;top:-6px;right:-8px;min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--err);color:#fff;font-size:11.5px;font-weight:600;display:grid;place-items:center;font-variant-numeric:tabular-nums;
+  transition:transform 180ms var(--ease-close),opacity 180ms var(--ease-close);transform:scale(.7);opacity:0}
+.badge.in{animation:badgeIn 500ms var(--ease-pop) both}
+.badge.in{opacity:1;transform:none}
+@keyframes badgeIn{0%{transform:translate(-8px,12px) scale(.7);opacity:0}52%{opacity:1}100%{transform:none;opacity:1}}
+.badge .n{display:inline-block}
+.badge .n.flip{animation:nf var(--dur-fast) var(--ease-out)}
+@keyframes nf{from{transform:translateY(5px);filter:blur(2px);opacity:0}to{transform:none;filter:none;opacity:1}}
+html.rm *, html.rm *::before, html.rm *::after{animation-duration:1ms!important;transition-duration:var(--dur-quick)!important;transition-property:opacity,background,color,box-shadow!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>INTRX motion reference</h1>
+    <p class="lede">Every recipe from the INTRX motion system, running with the real tokens. Hover, click and interrupt them halfway: each one should retarget smoothly, exit faster than it enters, and settle without a wobble. Timing and curves are calibrated to transitions.dev.</p>
+  </div>
+  <label class="rmtoggle"><span>Preview reduced motion</span><button class="tg off" id="rmt" aria-pressed="false" aria-label="Preview reduced motion"><i></i></button></label>
+</header>
+<div class="tokens">
+  <span class="chip">--ease-out .22,1,.36,1</span><span class="chip">--ease-close .4,0,.2,1</span><span class="chip">--ease-pop .34,1.36,.64,1</span><span class="chip">--ease-settle .34,1.25,.64,1</span>
+  <span class="chip">80 · 150 · 250 · 350 · 400 · 500ms</span><span class="chip">stagger 40ms</span><span class="chip">blur 2px</span><span class="chip">scale .96–.98</span>
+</div>
+<div class="grid">
+
+<div class="card"><div class="stage"><button class="btn press">Continue</button><span class="ghost">Press and hold</span></div><div class="meta"><h3>Press</h3><p>Scale 0.97 in 80ms, release with --ease-pop in 250ms.</p></div></div>
+
+<div class="card"><div class="stage"><div class="lift"><div class="sk" style="width:60%;height:9px;background:rgba(255,255,255,.14);margin:0"></div><div class="sk"></div><div class="sk" style="width:80%"></div></div><span class="ghost">Hover</span></div><div class="meta"><h3>Hover lift</h3><p>2px lift and a deeper shadow in 150ms; leaves in 250ms. Pointer devices only.</p></div></div>
+
+<div class="card"><div class="stage"><button class="iconbtn" id="copy" aria-label="Copy">
+  <svg class="ic on" id="icCopy" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F1F1F1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg>
+  <svg class="ic off enter" id="icCheck" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ECF8E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+</button><span class="ghost">Click (reverts after 1.5s)</span></div><div class="meta"><h3>Icon swap</h3><p>Out: 150ms to scale 0.25 + blur 4px. In: from scale 0.25, rotate 80deg, blur 10px, 500ms --ease-out.</p></div></div>
+
+<div class="card"><div class="stage"><button class="btn sec" id="sub"><span class="tswap"><span id="t1">Subscribe</span><span id="t2" class="down">Subscribed</span></span></button><span class="ghost">Click to toggle</span></div><div class="meta"><h3>Text swap</h3><p>Old label rises 12px into a 2px blur, new label arrives from below 50ms later, 400ms.</p></div></div>
+
+<div class="card"><div class="stage" style="place-items:start center;padding-top:48px"><div class="mwrap"><button class="btn sec" id="mbtn">Options <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+  <div class="menu" id="menu"><div class="hl" id="mhl"></div>
+    <div class="it" style="--i:0">Share link</div><div class="it" style="--i:1">Duplicate</div><div class="it" style="--i:2">Rename</div><div class="it" style="--i:3;color:#F26D6D">Delete</div></div></div><span class="ghost">Click; hover the rows</span></div><div class="meta"><h3>Origin-aware menu</h3><p>Grows from the trigger corner: 250ms open with a 40ms item stagger, 150ms close. The row highlight travels instead of fading.</p></div></div>
+
+<div class="card"><div class="stage modal" id="modal"><button class="btn" id="mopen">Open dialog</button><div class="scrim" id="scrim"></div>
+  <div class="dialog"><div style="font-weight:600;font-size:14px">Archive project?</div><p style="color:var(--t2);font-size:12.5px;margin:6px 0 16px">You can restore it from settings.</p><div style="display:flex;gap:8px;justify-content:flex-end"><button class="btn sec" style="height:32px;font-size:12.5px" id="mclose">Cancel</button><button class="btn" style="height:32px;font-size:12.5px" id="mclose2">Archive</button></div></div></div>
+  <div class="meta"><h3>Modal</h3><p>Dialog scales from 0.96 with a clearing blur in 250ms; closes in 150ms. Scrim fades with it.</p></div></div>
+
+<div class="card"><div class="stage" id="tstage"><div class="tbar" id="tbar">
+  <button data-t="Bold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 5h6a3.5 3.5 0 0 1 0 7H7zM7 12h7a3.5 3.5 0 0 1 0 7H7z"/></svg></button>
+  <button data-t="Link ⌘K"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button>
+  <button data-t="Comment"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 18l-1 3 4-2h9a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v9"/></svg></button>
+  <button data-t="Delete"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></button>
+</div><div class="tip" id="tip">Bold</div><span class="ghost">Hover, then slide across</span></div><div class="meta"><h3>Tooltip</h3><p>80ms delay, 150ms in, 50ms out. Sliding between buttons skips the delay and travels in 160ms.</p></div></div>
+
+<div class="card"><div class="stage"><div class="tabs" id="tabs"><div class="pill" id="pill"></div><button class="on">Overview</button><button>Usage</button><button>Pricing</button><button>Changelog</button></div><span class="ghost">Click far apart to see the stretch</span></div><div class="meta"><h3>Sliding indicator</h3><p>Leading edge 200ms, trailing edge 300ms, so the pill stretches mid-flight and lands softly.</p></div></div>
+
+<div class="card"><div class="stage"><div class="acc" id="acc"><button class="acc-h">How is usage billed?<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button><div class="acc-b"><div><p>Per seat, monthly. Agent minutes are pooled across the workspace and reset on the 1st.</p></div></div></div><span class="ghost">Click the row</span></div><div class="meta"><h3>Accordion</h3><p>grid-template-rows 0fr → 1fr in 250ms; chevron and content follow on the same clock.</p></div></div>
+
+<div class="card"><div class="stage"><button class="tg off" id="tg" aria-label="Toggle" style="transform:scale(1.6)"><i></i></button><span class="ghost">Click, and click again mid-travel</span></div><div class="meta"><h3>Toggle</h3><p>Thumb travels with a 1px overshoot and settles (55% / 80% keyframes), 350ms --ease-bounce.</p></div></div>
+
+<div class="card"><div class="stage"><div style="display:grid;gap:14px"><div class="crow on" data-c><span class="cbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Product updates</div><div class="crow" data-c><span class="cbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Weekly digest</div><div class="crow" data-c><span class="cbox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Security alerts</div></div></div><div class="meta"><h3>Check / path draw</h3><p>Box fills in 150ms, then the check draws by stroke-dashoffset in 350ms. Unchecking takes 150ms.</p></div></div>
+
+<div class="card"><div class="stage"><div style="display:flex;align-items:center"><button class="like" id="like" aria-label="Like"><svg width="26" height="26" viewBox="0 0 24 24" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.7-7 10-7 10z"/></svg></button><span class="cnt" id="lc">1,285</span></div><span class="ghost">Click</span></div><div class="meta"><h3>Like burst</h3><p>Fill in 150ms, heart dips to 0.82 and returns with --ease-pop-strong, 8 particles drift 20px over 600ms.</p></div></div>
+
+<div class="card"><div class="stage"><form id="sf" style="text-align:left"><input class="field" id="sfi" placeholder="Email" autocomplete="off"><div class="errtxt" id="sfe">Add a domain, like ada@atlas.studio</div></form><span class="ghost">Type "ada" and press Enter</span></div><div class="meta"><h3>Error shake</h3><p>6px, −6px, 4px, 0 over 280ms with --ease-out segments; the message drops in on the same beat.</p></div></div>
+
+<div class="card"><div class="stage"><div class="drum" id="drum"></div><span class="ghost">Click the number</span></div><div class="meta"><h3>Number drum</h3><p>A 100ms anticipation dip, then each digit rolls 740ms with a 1.03 peak, staggered 90ms right to left.</p></div></div>
+
+<div class="card"><div class="stage" id="tst"><div class="tstack" id="ts"></div><button class="btn sec" id="tadd" style="position:absolute;top:28px;height:34px;font-size:12.5px">Add toast</button><span class="ghost">Add a few, then hover the stack</span></div><div class="meta"><h3>Toast stack</h3><p>Rises 12px with a clearing blur in 350ms; deeper toasts scale −6% and fade. Hover spreads them with an 8px gap.</p></div></div>
+
+<div class="card"><div class="stage"><div class="skel" id="skel"><div class="row h" style="--i:0"><b style="width:55%"></b><span>Spring physics, explained</span></div><div class="row" style="--i:1"><b></b><span>Stiffness sets how fast it moves,</span></div><div class="row" style="--i:2"><b style="width:86%"></b><span>damping how quickly it settles.</span></div><div class="row" style="--i:3"><b style="width:64%"></b><span>Mass changes the feel of both.</span></div></div><button class="btn sec" id="skb" style="position:absolute;bottom:40px;height:32px;font-size:12.5px">Load</button></div><div class="meta"><h3>Skeleton reveal</h3><p>One 1000ms pulse, then content resolves from a 2px blur in 400ms, lines 40ms apart.</p></div></div>
+
+<div class="card"><div class="stage"><div class="stream" id="stream"></div><button class="btn sec" id="ask" style="position:absolute;bottom:40px;height:32px;font-size:12.5px">Ask</button></div><div class="meta"><h3>Streaming words</h3><p>Each word resolves on arrival: 0.14em rise, 0.042em blur clearing, 455ms --ease-out.</p></div></div>
+
+<div class="card"><div class="stage"><button class="morph" id="morph"><span class="lbl">Deploy</span><span class="spin"></span><svg class="mchk" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2A1C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button><span class="ghost">Click</span></div><div class="meta"><h3>Button morph</h3><p>Width and radius morph with --ease-settle in 350ms; the spinner hands off to a check that pops in from blur.</p></div></div>
+
+<div class="card"><div class="stage"><div class="fl"><input id="fli" placeholder=" " autocomplete="off"><label for="fli">Work email</label></div><span class="ghost">Focus and type</span></div><div class="meta"><h3>Field focus</h3><p>Ring in 150ms; label lifts and scales to 0.8 in 250ms and stays up while there is a value.</p></div></div>
+
+<div class="card"><div class="stage"><button class="bell" id="bell" aria-label="Notifications"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F1F1F1" stroke-width="1.8" stroke-linecap="round"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></svg><span class="badge" id="badge"><span class="n" id="bn">1</span></span></button><span class="ghost">Click to notify</span></div><div class="meta"><h3>Pop-in</h3><p>Badge slides in on a diagonal (260ms) while scaling from 0.7 with --ease-pop (500ms); counts change with a 250ms number fade.</p></div></div>
+
+</div></div>
+<script>
+const $=s=>document.querySelector(s);
+// reduced motion preview
+const rmt=$('#rmt');rmt.onclick=()=>{const on=!document.documentElement.classList.toggle('rm')?false:true;rmt.classList.toggle('on',on);rmt.classList.toggle('off',!on);rmt.setAttribute('aria-pressed',on)};
+// icon swap
+let ct;$('#copy').onclick=()=>{const a=$('#icCopy'),b=$('#icCheck');a.className='ic off';b.className='ic on';clearTimeout(ct);ct=setTimeout(()=>{b.className='ic off enter';a.className='ic on'},1500)};
+// text swap
+let subd=false;$('#sub').onclick=()=>{const a=$('#t1'),b=$('#t2');const [o,n]=subd?[b,a]:[a,b];subd=!subd;n.className='down';void n.offsetWidth;o.className='up';setTimeout(()=>{n.className=''},50)};
+// menu
+const menu=$('#menu'),mhl=$('#mhl');$('#mbtn').onclick=e=>{e.stopPropagation();menu.classList.toggle('open')};document.addEventListener('click',e=>{if(!menu.contains(e.target))menu.classList.remove('open')});
+menu.querySelectorAll('.it').forEach(it=>it.addEventListener('pointerenter',()=>{mhl.style.opacity=1;mhl.style.transform=`translateY(${it.offsetTop-4}px)`}));menu.addEventListener('pointerleave',()=>mhl.style.opacity=0);
+// modal
+const md=$('#modal');$('#mopen').onclick=()=>md.classList.add('open');[$('#mclose'),$('#mclose2'),$('#scrim')].forEach(b=>b.onclick=()=>md.classList.remove('open'));
+// tooltip
+const tip=$('#tip'),ts=$('#tstage');let tTimer,lastHide=0,visible=false;
+$('#tbar').querySelectorAll('button').forEach(b=>{b.addEventListener('pointerenter',()=>{clearTimeout(tTimer);const r=b.getBoundingClientRect(),s=ts.getBoundingClientRect();tip.textContent=b.dataset.t;const x=r.left-s.left+r.width/2-tip.offsetWidth/2,y=r.top-s.top-38;
+  const travel=visible||(performance.now()-lastHide<300);const show=()=>{tip.classList.toggle('travel',travel);tip.style.setProperty('--x',x+'px');tip.style.setProperty('--y',y+'px');tip.classList.add('show');visible=true};if(travel)show();else{tip.classList.remove('travel');tip.style.setProperty('--x',x+'px');tip.style.setProperty('--y',y+'px');tTimer=setTimeout(show,80)}})});
+$('#tbar').addEventListener('pointerleave',()=>{clearTimeout(tTimer);tip.classList.remove('show');visible=false;lastHide=performance.now()});
+// tabs (elastic edges)
+const tabs=$('#tabs'),pill=$('#pill');let cur=tabs.querySelector('.on');const place=(b,anim)=>{const L=b.offsetLeft,W=b.offsetWidth;if(!anim){pill.style.transition='none';pill.style.left=L+'px';pill.style.width=W+'px';return}
+  const fromL=pill.offsetLeft;const right=L>fromL;pill.style.transition=right?'left 300ms var(--ease-out),width 200ms var(--ease-out)':'left 200ms var(--ease-out),width 300ms var(--ease-out)';
+  // emulate independent edges: animate left/right via left+width with different clocks
+  pill.style.left=L+'px';pill.style.width=W+'px'};
+requestAnimationFrame(()=>place(cur,false));tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{if(b===cur)return;cur.classList.remove('on');b.classList.add('on');place(b,true);cur=b});
+// accordion
+$('#acc .acc-h').onclick=()=>$('#acc').classList.toggle('open');
+// toggles
+const tgl=(el)=>{const on=!el.classList.contains('on');el.classList.remove('on','off');void el.offsetWidth;el.classList.add(on?'on':'off');return on};$('#tg').onclick=()=>tgl($('#tg'));
+// check
+document.querySelectorAll('[data-c]').forEach(r=>r.onclick=()=>r.classList.toggle('on'));
+// like
+const like=$('#like');for(let i=0;i<8;i++){const p=document.createElement('i');p.className='pt';const a=i*Math.PI/4;p.style.setProperty('--px',Math.cos(a)*20+'px');p.style.setProperty('--py',Math.sin(a)*20+'px');like.appendChild(p)}
+let liked=false,lc=1285;like.onclick=()=>{liked=!liked;like.classList.toggle('on',liked);like.classList.remove('pop');if(liked){void like.offsetWidth;like.classList.add('pop')}lc+=liked?1:-1;const el=$('#lc');el.textContent=lc.toLocaleString('en-US');el.animate([{transform:'translateY(4px)',filter:'blur(2px)',opacity:0},{transform:'none',filter:'none',opacity:1}],{duration:250,easing:'cubic-bezier(.22,1,.36,1)'})};
+// shake
+let st;$('#sf').onsubmit=e=>{e.preventDefault();const i=$('#sfi'),er=$('#sfe');const ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value);clearTimeout(st);if(ok){i.classList.remove('err');er.classList.remove('show');return}i.classList.add('err');er.classList.add('show');i.classList.remove('shake');void i.offsetWidth;i.classList.add('shake');st=setTimeout(()=>{i.classList.remove('err');er.classList.remove('show')},3000)};
+// drum
+const drum=$('#drum');let val=178;const vals=[178,1284,4096,256,9999,12];let vi=0;
+const renderDrum=(v,anim)=>{const s=String(v).padStart(4,' ');drum.innerHTML='';[...s].forEach((ch,k)=>{const c=document.createElement('div');c.className='col';for(let d=0;d<10;d++){const sp=document.createElement('span');sp.textContent=d;c.appendChild(sp)}if(ch===' '){c.style.visibility='hidden'}drum.appendChild(c);c.dataset.v=ch===' '?0:+ch})};
+const setDrum=v=>{const s=String(v).padStart(4,' ');const cols=[...drum.children];drum.classList.add('antic');setTimeout(()=>{drum.classList.remove('antic');[...s].forEach((ch,k)=>{const c=cols[k];c.style.visibility=ch===' '?'hidden':'visible';c.style.transitionDelay=((cols.length-1-k)*90)+'ms';c.style.transform=`translateY(${-(ch===' '?0:+ch)*1.2}em)`})},100)};
+renderDrum(0);requestAnimationFrame(()=>setDrum(178));drum.onclick=()=>{vi=(vi+1)%vals.length;setDrum(vals[vi])};
+// toasts
+const tsEl=$('#ts');let toasts=[],hover=false,tn=0;const layout=()=>{toasts.forEach((t,i)=>{const d=toasts.length-1-i;if(hover){t.style.transform=`translateY(${-d*60}px)`;t.style.opacity=1;t.style.filter='none'}else{t.style.transform=`translateY(${-d*12}px) scale(${1-d*.06})`;t.style.opacity=d>2?0:1-d*.3;t.style.filter=d?`blur(${Math.min(d,2)}px)`:'none'}t.style.zIndex=i})};
+$('#tadd').onclick=()=>{const t=document.createElement('div');t.className='toast new';t.innerHTML=`<span class="dot"></span><span>Deploy ${++tn} is live</span>`;tsEl.appendChild(t);toasts.push(t);void t.offsetWidth;t.classList.remove('new');layout();if(toasts.length>4){const o=toasts.shift();o.classList.add('bye');setTimeout(()=>o.remove(),250);layout()}};
+tsEl.addEventListener('pointerenter',()=>{hover=true;layout()});tsEl.addEventListener('pointerleave',()=>{hover=false;layout()});
+// skeleton
+$('#skb').onclick=()=>{const s=$('#skel');s.classList.remove('done','pulse');void s.offsetWidth;s.classList.add('pulse');setTimeout(()=>{s.classList.remove('pulse');s.classList.add('done')},1000)};
+// stream
+const txt='Churn fell to 2.1% in Q3, led by annual plans and faster onboarding. Two cohorts still lag: SMB and self-serve.';let sTimer;
+$('#ask').onclick=()=>{const el=$('#stream');el.innerHTML='';clearInterval(sTimer);const words=txt.split(/(\s+)/);let i=0;sTimer=setInterval(()=>{if(i>=words.length){clearInterval(sTimer);return}const w=document.createElement('span');w.className='w';w.textContent=words[i++];el.appendChild(w)},55)};
+// morph
+const mo=$('#morph');let busy=false;mo.onclick=()=>{if(busy)return;busy=true;mo.className='morph busy';setTimeout(()=>{mo.className='morph done'},1400);setTimeout(()=>{mo.className='morph';busy=false},2900)};
+// badge
+const badge=$('#badge'),bn=$('#bn');let bc=0;$('#bell').onclick=()=>{bc++;if(bc===1){badge.classList.remove('in');void badge.offsetWidth;badge.classList.add('in');bn.textContent=1;return}bn.textContent=bc>9?'9+':bc;bn.classList.remove('flip');void bn.offsetWidth;bn.classList.add('flip');if(bc>12){bc=0;badge.classList.remove('in')}};
+</script>
+</body>
+</html>

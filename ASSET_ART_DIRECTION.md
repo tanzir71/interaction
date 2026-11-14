@@ -31,3 +31,12 @@ Use case: photorealistic-natural. Asset type: luxury architecture editorial phot
 ### Atlantic shore
 
 Use case: photorealistic-natural. Asset type: premium cinematic ocean photography for a scroll-driven film study in a professional interaction library. Wide horizontal 3:2 photograph, high oblique aerial view of long natural rolling Atlantic swells breaking in layers along a black sand shoreline. Dark blue-gray water with restrained muted jade undertones, delicate detailed white sea foam, wet charcoal volcanic sand, no visible horizon. Organic sweeping wave diagonals flow from upper left to lower right. An elegant abstract composition grounded in authentic photographed ocean physics and rich fine texture. Gentle overcast light with a little directional silver sheen, natural exposure, editorial art direction, no artificial glow, no neon teal, no HDR, no illustrated curves or blobs, no text, people, buildings, boats, logos or watermark. Sophisticated quiet cinematic mood, realistic fine irregular froth, broad tonal range without harsh contrast.
+
+## Handoff 3 shell fonts
+
+Geist and Geist Mono are self-hosted variable WOFF2 fonts from
+[vercel/geist-font](https://github.com/vercel/geist-font), revision
+`ef2597cfc42f4797676df105517ccc0a1cfa6569`. Their SIL Open Font License 1.1
+is included at `assets/fonts/Geist-OFL.txt`. Geist is used by the shell;
+Geist Mono is used for code, counters and metadata. Demo-specific Inter,
+Manrope and Newsreader files remain available during the staged migration.

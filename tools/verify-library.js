@@ -169,7 +169,12 @@ const expectedNewCount = 16 + 4 + 52;
     check(await page.locator('.modal-preview [data-floated="true"]').count()===1,'Filled input label stays raised');
     check(await page.evaluate(()=>{const input=document.querySelector('.modal-preview input');return document.querySelectorAll('[id="'+input.id+'"]').length===1&&input.labels.length===1;}),'Input ids and labels are instance-safe');await close();
     await open('slider-stack-deck');
-    for(let i=0;i<6;i++){await page.locator('.modal-preview .d-deck-keep').click();await page.waitForTimeout(470);}
+    for(let i=0;i<6;i++){
+      await page.locator('.modal-preview .d-deck-keep').click();
+      // A busy renderer can finish the 430ms flight after a wall-clock sleep.
+      // Wait for the observable recycle state before issuing the next action.
+      await page.waitForFunction(count=>document.querySelector('.modal-preview .d-stack-deck').dataset.dismissed===String(count),i+1);
+    }
     check(await page.locator('.modal-preview .d-stack-deck').getAttribute('data-dismissed')==='6','Legacy deck cycles beyond one full queue');
     check(await page.locator('.modal-preview [data-depth="0"]').evaluate(el=>getComputedStyle(el).opacity==='1'),'Recycled card has no stale flyout animation');await close();
 
