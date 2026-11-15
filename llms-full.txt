@@ -380,41 +380,13 @@ Build Snap Carousel with the exact native v4 compact composition and a separate 
 
 ## Scroll
 
-### Lenis Smooth Scroll (`lenis-smooth-scroll`)
+### Smooth Scroll (`lenis-smooth-scroll`)
 
-Implement Lenis smooth scrolling on my website.
+Create a four-section smooth-scrolling editorial document in plain HTML, CSS and JavaScript. Preserve all four headings and paragraphs in this example. Use the existing Lenis 1.1.14 dependency with wheelMultiplier 1 and scroll smoothing lerp 0.12 from MOTION_SYSTEM.md. Keep the wrapper class free of the substring "lenis". Native keyboard, touch and reduced-motion scrolling must work without Lenis. Drive only active momentum with requestAnimationFrame, freeze native momentum while suspended and destroy the driver, observers and listeners on disposal. The full composition is 480×360. The compact 240×168 plane contains the exact v4 200×150 document, seven neutral bars and a 3×34 scrollbar thumb. A six-second scripted thumbnail scroll rests at the Figma pose at 40% of story time; user input takes over. Expose Scroll ↓ and Reset through the shell dock. Keep the root transparent and full-view text at least 11px after fitting.
 
-Requirements:
-- Use the "lenis" npm package (or CDN: https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js).
-- Initialize with lerp around 0.09-0.1 for a smooth but responsive feel.
-- For a component preview use a fixed 320px-tall inner scroll container. Keep the styled root outside the Lenis wrapper, whose class name must not contain the substring "lenis" because Lenis 1.x rewrites that substring. Give the inner viewport keyboard focus and overscroll containment. Use editorial editorial serif headings and a clear scroll cue at native size.
-- Drive it with a requestAnimationFrame loop (lenis.raf(time)).
-- If GSAP ScrollTrigger is present, sync them: lenis.on('scroll', ScrollTrigger.update) and drive Lenis from gsap.ticker instead of a raw rAF loop.
-- Respect prefers-reduced-motion: skip Lenis entirely when the user has it enabled.
-- Destroy the Lenis instance and cancel its animation frame when unmounting or resetting.
-- Anchors (#links) should still work: intercept clicks and call lenis.scrollTo(target).
+### Stagger Reveal (`scroll-reveal-stagger`)
 
-Final typography: Use Newsreader at normal weight for the main editorial text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Staggered Scroll Reveal (`scroll-reveal-stagger`)
-
-Build a staggered scroll-reveal system in vanilla JS (no libraries).
-
-Requirements:
-- Elements marked with a data-reveal attribute start at opacity 0 and translateY(40px).
-- When they enter the viewport (IntersectionObserver, threshold ~0.25), they animate to opacity 1 / translateY(0) using a cubic-bezier(0.22,1,0.36,1) ease over ~0.7s.
-- Siblings inside the same container stagger by ~80ms each, via a CSS custom property for transition-delay.
-- The animation should reverse when scrolled out, so it replays on re-entry.
-- Use only CSS transitions driven by a class toggle — no per-frame JS.
-- Respect prefers-reduced-motion by showing elements immediately.
-
-Use three equal flexible columns in the native narrow preview, with 8px gaps, 24px outer padding, compact 11px Inter labels, and grayscale card surfaces.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Build a scroll-triggered stagger reveal in vanilla JavaScript. Preserve the original six items Design, Motion, Code, Type, Color and Grid. Observe their group with one IntersectionObserver rooted in the keyboard-focusable scroll viewport, threshold 0.25. Visibility follows isIntersecting, and leaving the viewport resets the group. Use MOTION_SYSTEM.md Stagger reveal: rise 12px, resolve 2px blur, opacity, 400ms ease-out, 40ms reading-order stagger capped at 300ms. Exit in 150ms with no stagger; reversing must retarget CSS transitions. Reduced motion keeps every item readable, removes transforms and blur and stops the loop. The full 480×360 composition keeps all six cards; the compact 200×168 plane uses the exact v4 three 160×38 rows with 16px neutral icon blocks and 80/96/70px text bars. Auto-scroll thumbnails on a six-second story, with the exact Figma pose at 40% of story time; native user input takes over. Expose Scroll ↓ and Reset through the shell dock. Dispose observers, frames and listeners and freeze native scrolling while suspended.
 
 ### Parallax Depth Layers (`parallax-layers`)
 

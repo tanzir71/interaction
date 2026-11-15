@@ -1,0 +1,138 @@
+{
+  "sourceCommit": "57195797abbf0d96d497f3af5feded88a6068e4f",
+  "sourceHashes": {
+    "lenis-smooth-scroll": {
+      "js": "4a695c970de2e492a14201ccfecd4c4585f78ec78847979186c1488fc09a7bed",
+      "html": "27616582767fcf3fa2defbd72f1071aed5fff3d6d9c89e9d11eacde215e1ae57",
+      "css": "8a2497cce3379c012faed300f8db4776238497e31dbb8051fc951242b786728a"
+    },
+    "scroll-reveal-stagger": {
+      "js": "36904fc1f5023a0b6bddf157940a130f919055689191f1422095d462a739ea59",
+      "html": "3a1391e8063f8d9064c732b0dab0924d45e2821a2226d5c97a92c63d89ded646",
+      "css": "c58b3d5a5a73db9a28d085e0398a3e65b0a6bedf7a976db4b5f08099c680502b"
+    }
+  },
+  "reveal": {
+    "threshold": 0.25,
+    "cases": [
+      {
+        "entries": [],
+        "visible": null
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": false,
+            "intersectionRatio": 0
+          }
+        ],
+        "visible": false
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": true,
+            "intersectionRatio": 0.01
+          }
+        ],
+        "visible": true
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": true,
+            "intersectionRatio": 0.24
+          }
+        ],
+        "visible": true
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": true,
+            "intersectionRatio": 0.25
+          }
+        ],
+        "visible": true
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": true,
+            "intersectionRatio": 1
+          }
+        ],
+        "visible": true
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": false,
+            "intersectionRatio": 0
+          }
+        ],
+        "visible": false
+      },
+      {
+        "entries": [
+          {
+            "isIntersecting": true,
+            "intersectionRatio": 1
+          },
+          {
+            "isIntersecting": false,
+            "intersectionRatio": 0
+          }
+        ],
+        "visible": false
+      }
+    ],
+    "items": [
+      "Design",
+      "Motion",
+      "Code",
+      "Type",
+      "Color",
+      "Grid"
+    ]
+  },
+  "motionOverrides": {
+    "lenisLerp": {
+      "before": 0.09,
+      "after": 0.12,
+      "reason": "MOTION_SYSTEM.md section 2 scroll smoothing"
+    },
+    "reveal": {
+      "duration": 400,
+      "stagger": 40,
+      "exit": 150,
+      "distance": 12,
+      "blur": 2,
+      "reason": "MOTION_SYSTEM.md Stagger reveal recipe"
+    }
+  },
+  "smooth": {
+    "sections": [
+      {
+        "label": "01 / FIND YOUR PACE",
+        "heading": "A softerway to scroll.",
+        "paragraph": "Scroll slowly. Feel the difference. ↓"
+      },
+      {
+        "label": "02 / MOMENTUM",
+        "heading": "Movement,with intention.",
+        "paragraph": "Every gesture carries a little further."
+      },
+      {
+        "label": "03 / SETTLE",
+        "heading": "Nothingfeels abrupt.",
+        "paragraph": "A gentle landing, every time."
+      },
+      {
+        "label": "04 / BEGIN AGAIN",
+        "heading": "Keepexploring.",
+        "paragraph": "The details are the experience. ↑"
+      }
+    ]
+  }
+}

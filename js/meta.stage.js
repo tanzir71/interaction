@@ -2,13 +2,25 @@
    Trigger and theme values follow the v4 manifest; compositions are remediated in Phase 4. */
 INTRX.meta({
   "lenis-smooth-scroll": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -19,29 +31,49 @@ INTRX.meta({
       "lerp"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-reveal-stagger": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "intersection observer",
       "stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      200,
+      168
+    ]
   },
   "parallax-layers": {
     "designSize": "lg",

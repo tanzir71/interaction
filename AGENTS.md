@@ -137,6 +137,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Fill includes painted child frames through `tools/stage-fit-surface.js`;
   transparent wrappers and the fitted root never supply parent surface area.
   Overflow and text gates continue to use leaf geometry.
+  The audit restarts each measured preview so its initial composition does not
+  depend on other tiles' boot times; component verifiers cover complete loops.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.
 - `node tools/verify-galleries.js http://127.0.0.1:4173` covers v4 Fraction
@@ -150,3 +152,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   all snap endpoints, exact native artwork/photo slots, delayed FLIP reversals,
   modal focus/Escape, native-scroll suspension, every mobile project caption,
   cleanup and complete offline exports.
+- `node tools/verify-scroll.js http://127.0.0.1:4173` covers the remediated
+  Smooth Scroll and Stagger Reveal demos: original copy and observer semantics,
+  exact v4 layers, native wheel/keys/touch, interrupted reveals, six-second
+  stories, runtime holds, compact typography and offline exports.

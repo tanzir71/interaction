@@ -1,7 +1,7 @@
 [
   {
     "id": "lenis-smooth-scroll",
-    "title": "Lenis Smooth Scroll",
+    "title": "Smooth Scroll",
     "category": "Scroll",
     "group": "Motion",
     "trigger": "scroll",
@@ -14,8 +14,15 @@
       "lerp"
     ],
     "tier": "free",
-    "desc": "Buttery, inertia-based scrolling that decouples the scroll position from raw wheel input. The baseline of nearly every awwwards site.",
-    "designSize": "lg",
+    "desc": "Four editorial sections scroll with wheel momentum and a gentle landing. Native touch and keyboard scrolling remain available.",
+    "designSize": [
+      480,
+      360
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
@@ -25,26 +32,35 @@
     ],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/lenis-smooth-scroll",
-    "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "thumb": "hero",
+    "module": "js/demos.scroll.smooth.js?v=52aa033172",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/lenis-smooth-scroll.json?v=c10fcc3fb3",
+    "sourcePreview": "registry/p/lenis-smooth-scroll.json?v=f7f3ee30fa",
     "assetRefs": {},
-    "rootClass": "d-lenis",
-    "controls": [],
+    "rootClass": "d-smooth-scroll",
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
       "aria": "region"
     },
     "hint": "Momentum eases every wheel tick into a glide",
-    "sourceName": "Seen on: lenis.darkroom.engineering, most Studio Freight / Darkroom projects",
+    "sourceName": "Seen on: lenis.darkroom.engineering, Studio Freight / Darkroom projects",
     "isNew": false
   },
   {
     "id": "scroll-reveal-stagger",
-    "title": "Staggered Scroll Reveal",
+    "title": "Stagger Reveal",
     "category": "Scroll",
     "group": "Motion",
     "trigger": "scroll",
@@ -57,8 +73,15 @@
       "stagger"
     ],
     "tier": "free",
-    "desc": "Elements translate up and fade in as they enter the viewport, each one slightly delayed after the previous. The workhorse entrance of modern editorial sites.",
-    "designSize": "lg",
+    "desc": "Six cards rise and resolve in reading order when their group enters the scroll viewport. Scrolling away resets the reveal.",
+    "designSize": [
+      480,
+      360
+    ],
+    "thumbDesignSize": [
+      200,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
@@ -66,21 +89,30 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/scroll-reveal-stagger",
-    "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "thumb": "hero",
+    "module": "js/demos.scroll.reveal-stagger.js?v=957b9fc39f",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/scroll-reveal-stagger.json?v=6ad603a693",
+    "sourcePreview": "registry/p/scroll-reveal-stagger.json?v=292ce1af52",
     "assetRefs": {},
     "rootClass": "d-reveal",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Items rise in one after another as they enter",
-    "sourceName": "Seen on: virtually every agency portfolio — Locomotive, Obys, Studio Freight",
+    "sourceName": "Seen on: editorial and agency portfolios — Locomotive, Obys, Studio Freight",
     "isNew": false
   },
   {
@@ -108,7 +140,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/parallax-layers",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/parallax-layers.json?v=871addd67c",
@@ -149,7 +181,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/horizontal-scroll",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/horizontal-scroll.json?v=82fef893fc",
@@ -190,7 +222,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/sticky-stack",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/sticky-stack.json?v=c03da742b9",
@@ -231,7 +263,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/scroll-progress",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/scroll-progress.json?v=d5da5a7e37",
@@ -272,7 +304,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/velocity-skew",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/velocity-skew.json?v=d1c934b0c7",
@@ -315,7 +347,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/scroll-zoom",
     "thumb": "full",
-    "module": "js/demos.scroll.js?v=9306d828f4",
+    "module": "js/demos.scroll.js?v=03a38b98dc",
     "assetBundle": "js/demo-assets.js?v=a83b9db890",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
     "sourcePreview": "registry/p/scroll-zoom.json?v=896376c209",

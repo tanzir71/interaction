@@ -40,10 +40,15 @@ const GATES = {
       // Wait for the observer-driven boot, rather than assuming a busy browser
       // delivers intersection and resize callbacks within one fixed sleep.
       for (let i=0; i<150 && stage && !stage._root && !stage.dataset.bootError; i++) await new Promise(r=>setTimeout(r,20));
-      await new Promise(r => setTimeout(r, 140));
-      const root = stage && (stage._root || stage.firstElementChild);
       const id = tile.dataset.id || tile.id.replace(/^tile-/, '');
       const demo = (window.INTRX && INTRX.demos.find(d => d.id === id)) || {};
+      // Other visible tiles may boot while an earlier dependency is loading.
+      // Restart this preview so the measured pose does not depend on that
+      // delay or on how many other tiles preceded it. Motion verifiers cover
+      // complete loops; this audit checks the component's initial composition.
+      if (stage?._root && demo.id) INTRX.mountStage(demo,stage,'thumb');
+      await new Promise(r => setTimeout(r, 140));
+      const root = stage && (stage._root || stage.firstElementChild);
       const sr = stage ? stage.getBoundingClientRect() : null;
       const r = { id, stage: sr && [Math.round(sr.width), Math.round(sr.height)], stageMeta:demo.stage || null, designSize:demo.designSize || null, renderSize:demo.thumb==='hero'&&demo.thumbDesignSize!==undefined?demo.thumbDesignSize:demo.designSize||null };
       if (!root) { r.empty = true; r.failed = true; out.push(r); continue; }
