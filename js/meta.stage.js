@@ -4082,13 +4082,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "input-float-label": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Fill example",
+        "action": "fill"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4100,18 +4112,29 @@ INTRX.meta({
       "focus"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11",
-    "caption": "Lift the label into place"
+    "thumb": "hero",
+    "addedAt": "2026-11"
   },
   "input-underline-grow": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Focus",
+        "action": "focus"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4123,17 +4146,33 @@ INTRX.meta({
       "entry origin"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "input-shake-error": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "trigger": "type",
-    "controls": [],
+    "trigger": "press",
+    "controls": [
+      {
+        "label": "Submit",
+        "action": "submit"
+      },
+      {
+        "label": "Valid email",
+        "action": "valid"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4145,17 +4184,33 @@ INTRX.meta({
       "error state"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "input-char-counter-arc": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Near limit",
+        "action": "near"
+      },
+      {
+        "label": "Limit",
+        "action": "limit"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4167,17 +4222,29 @@ INTRX.meta({
       "svg progress"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "otp-code-boxes": {
-    "designSize": "md",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Paste example",
+        "action": "paste"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4189,17 +4256,29 @@ INTRX.meta({
       "paste"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "password-strength-bar": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      184
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Try passwords",
+        "action": "example"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4211,18 +4290,37 @@ INTRX.meta({
       "rule checklist"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Watch the meter respond"
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "select-morph-dropdown": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      160
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Open / close",
+        "action": "toggle"
+      },
+      {
+        "label": "Asia Pacific",
+        "action": "pick"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4234,17 +4332,37 @@ INTRX.meta({
       "clip path"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "range-elastic-thumb": {
-    "designSize": "md",
+    "designSize": [
+      260,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Try elastic",
+        "action": "run"
+      },
+      {
+        "label": "+1",
+        "action": "key"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4256,17 +4374,29 @@ INTRX.meta({
       "spring"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "textarea-auto-grow": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      190
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Try examples",
+        "action": "cycle"
+      },
+      {
+        "label": "Clear",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4278,21 +4408,41 @@ INTRX.meta({
       "scrollHeight"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      104
+    ]
   },
   "form-multistep-progress": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      220
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Try flow",
+        "action": "next"
+      },
+      {
+        "label": "Back",
+        "action": "back"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "form"
     },
     "useCases": [
       "form",
@@ -4300,8 +4450,12 @@ INTRX.meta({
       "validation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "preloader-percentage": {
     "designSize": "sm",

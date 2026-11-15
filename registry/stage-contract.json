@@ -23,6 +23,11 @@
     "desktop": 6,
     "touch": 1
   },
+  "heroSize": {
+    "field": "thumbDesignSize",
+    "requires": "thumb: hero",
+    "description": "Optional explicit dimensions or preset for the thumbnail hero; designSize remains the full composition."
+  },
   "rules": [
     "Declare designSize, stage, trigger, controls and a11y.",
     "The shell owns the frame, dock and lifecycle.",

@@ -90,11 +90,30 @@ portable bundle remains reproducible.
 | confetti-ray-4.svg | 149:1637 · Confetti Burst | 5.56774×10.6358 |
 | confetti-ray-5.svg | 149:1637 · Confetti Burst | 8.93146×8.19132 |
 | confetti-check.svg | 149:1637 · Confetti Burst | 16×16 |
+| form-error-icon.svg | 149:1834 · Error Shake | 16×16 |
+| form-counter-art.svg | 149:1857 · Character Counter | 220×52 |
+| form-password-eye.svg | 149:1908 · Password Strength | 16×16 |
+| form-textarea-send.svg | 149:1935 · Auto-grow Textarea | 16×16 |
+| form-step-check.svg | 149:1960 · Multi-step Form | 12×12 |
+| form-step-current.svg | 149:1960 · Multi-step Form | 20×20 |
+| form-step-dot.svg | 149:1960 · Multi-step Form | 8×8 |
+| form-step-empty.svg | 149:1960 · Multi-step Form | 20×20 |
+| form-select-chevron.svg | 149:2048 · Morphing Select | 16×16 |
+| form-select-limited.svg | 149:2048 · Morphing Select | 8×8 |
 
 Text Slide Swap reuses `hop-arrow.svg`: its downloaded arrow is byte-for-byte
 identical. Confetti's live canvas draws the original sprite images without
 resizing them; the thumbnail preserves every supplied fan layer and stroke
 overhang at its reference position.
+
+The selector's healthy status dot is byte-for-byte identical to
+`toast-status.svg`; the `form-select-healthy` asset name reuses that original
+8×8 file. The character counter uses the complete, unmodified 220×52 reference
+asset only for its static thumbnail. Its editable form preserves the earlier
+native character-limit and circular-progress interaction; no paths are extracted
+from the supplied SVG. Password rule checks reuse the original 14×14
+`checkbox-check.svg`. Form artwork retains its intrinsic dimensions in previews
+and offline exports.
 
 `assets/demo-assets.json` maps portable asset names to local files. The registry
 exposes the referenced paths for lightweight previews and content-hashed bundle

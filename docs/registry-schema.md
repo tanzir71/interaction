@@ -13,6 +13,12 @@ actual first 18 displayed lines and the complete source's line count. Copy and
 Expand load the complete portable document; locked entries contain no preview
 source. Previews are versioned and generated alongside complete registry items.
 
+Hero entries may include `thumbDesignSize`, paired with `thumb: 'hero'`. This
+declares the compact preview plane; `designSize` still describes the full
+composition. The catalog, complete component and MCP response preserve both.
+Standalone HTML always mounts the full composition, including criteria or
+workflow panels omitted from the hero.
+
 Each item has its ID, title, category/group, trigger, tags, use cases, tier, stage
 geometry, accessibility, libraries, portable files, HTML/CSS/JS parts, prompt,
 notes, related IDs, source credits and version. Pro items expose `locked: true`,

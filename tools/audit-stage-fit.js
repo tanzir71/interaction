@@ -41,7 +41,7 @@ const GATES = {
       const id = tile.dataset.id || tile.id.replace(/^tile-/, '');
       const demo = (window.INTRX && INTRX.demos.find(d => d.id === id)) || {};
       const sr = stage ? stage.getBoundingClientRect() : null;
-      const r = { id, stage: sr && [Math.round(sr.width), Math.round(sr.height)], stageMeta:demo.stage || null, designSize:demo.designSize || null };
+      const r = { id, stage: sr && [Math.round(sr.width), Math.round(sr.height)], stageMeta:demo.stage || null, designSize:demo.designSize || null, renderSize:demo.thumb==='hero'&&demo.thumbDesignSize!==undefined?demo.thumbDesignSize:demo.designSize||null };
       if (!root) { r.empty = true; r.failed = true; out.push(r); continue; }
       r.failed = stage.dataset.bootError === 'true' || /failed to boot/i.test(stage.textContent);
       const zoom = parseFloat(getComputedStyle(root).zoom) || 1;
@@ -56,13 +56,14 @@ const GATES = {
         if (n++ > 1500) break;
         const cs = getComputedStyle(el);
         if (cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
-        if (el.children.length && !/^(CANVAS|SVG|IMG|VIDEO)$/i.test(el.tagName)) continue;
+        if (el.children.length && !/^(CANVAS|SVG|IMG|VIDEO|INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)) continue;
         const b = el.getBoundingClientRect();
         if (b.width < 1 || b.height < 1) continue;
         leaves++;
         top = Math.min(top, b.top); left = Math.min(left, b.left); right = Math.max(right, b.right); bottom = Math.max(bottom, b.bottom);
         if (b.right > sr.right + 2 || b.left < sr.left - 2 || b.bottom > sr.bottom + 2 || b.top < sr.top - 2) overflow++;
-        if (el.textContent.trim().length > 1) minFont = Math.min(minFont, parseFloat(cs.fontSize) * zoom);
+        const nativeText=/^(INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)&&!['range','checkbox','radio','color','file','hidden'].includes(el.type)&&(el.value||el.placeholder);
+        if ((el.textContent.trim().length > 1 || nativeText) && cs.color!=='rgba(0, 0, 0, 0)') minFont = Math.min(minFont, parseFloat(cs.fontSize) * zoom);
       }
       const iw = Math.max(0, Math.min(right, sr.right) - Math.max(left, sr.left));
       const ih = Math.max(0, Math.min(bottom, sr.bottom) - Math.max(top, sr.top));

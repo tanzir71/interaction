@@ -5,14 +5,15 @@
   R.resolveSize = size => Array.isArray(size) ? size : PRESETS[size];
   R.fitStage = function(stage,root,meta,mode) {
     const content = root.parentElement;
-    const bleed = meta.designSize === 'bleed';
+    const size = mode==='thumb'&&meta.thumb==='hero'&&meta.thumbDesignSize!==undefined ? meta.thumbDesignSize : meta.designSize;
+    const bleed = size === 'bleed';
     content.dataset.bleed = String(bleed);
     const pad = mode === 'thumb' ? 24 : 32;
     const dock = (meta.controls || []).length ? 48 : 0;
     content.style.inset = bleed ? '0' : pad+'px '+pad+'px '+(pad+dock)+'px';
     let width = stage.clientWidth, height = stage.clientHeight, scale = 1;
     if (!bleed) {
-      [width,height] = R.resolveSize(meta.designSize);
+      [width,height] = R.resolveSize(size);
       scale = Math.max(.01,Math.min(1,(stage.clientWidth-pad*2)/width,(stage.clientHeight-pad*2-dock)/height));
     }
     Object.assign(root.style,{width:width+'px',height:height+'px',minWidth:'0',minHeight:'0',maxWidth:'none',maxHeight:'none',flex:'none',zoom:String(scale)});

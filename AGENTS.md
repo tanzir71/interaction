@@ -6,6 +6,8 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 - Zero-build static site. `index.html` loads `css/`, `js/demo-runtime.js` and the plain scripts in `js/shell/`. The shell fetches `registry/index.json`, then lazily loads each demo's module and dependencies.
 - A demo is one `INTRX.register({ id, title, cat, rootClass, tags, libs, desc, seen, hint, html, css, js, prompt })` object. All classes are prefixed with `rootClass`.
 - Stage metadata (`designSize`, `stage`, `trigger`, `controls`, `a11y`, `tier`) lives in `js/meta.stage.js`. `js/registry-files.json` is the ordered source-module manifest used by Node tooling; add new modules there.
+- A `thumb: 'hero'` demo may declare `thumbDesignSize` for its compact plane.
+  `designSize` remains the complete composition used by detail and exports.
 
 ## Rules
 - Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
@@ -73,3 +75,5 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   bundles declared in the generated catalog. Regenerate assets before registry.
 - `node tools/verify-exemplars.js http://127.0.0.1:4173` covers the remediated
   control set. Keep its behavior and optical-size checks current as it grows.
+- `node tools/verify-forms.js http://127.0.0.1:4173` covers native form behavior,
+  hero/full sizing, keyboard input, reduced motion and portable form exports.

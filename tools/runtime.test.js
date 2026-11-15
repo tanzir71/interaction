@@ -66,3 +66,13 @@ test('fit uses declared geometry, mode padding and reserved dock space',()=>{
  stage.clientWidth=1200;stage.clientHeight=800;assert.equal(R.fitStage(stage,root,meta,'full'),1);
  assert.equal(R.fitStage(stage,root,{designSize:'bleed',controls:[]},'full'),1);assert.equal(content.style.inset,'0');assert.equal(root.style.width,'1200px');
 });
+
+test('hero thumbnails fit their declared plane while full exports retain full geometry',()=>{
+ const context={window:{INTRX:{}}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/stage.js'),'utf8'),context);
+ const R=context.window.INTRX,content={dataset:{},style:{}},root={style:{},parentElement:content},stage={clientWidth:286,clientHeight:196,dataset:{}};
+ const meta={designSize:[220,220],thumbDesignSize:[220,100],thumb:'hero',controls:[{label:'Fill',action:'fill'}]};
+ assert.equal(R.fitStage(stage,root,meta,'thumb'),1);assert.equal(root.style.height,'100px');
+ assert.equal(R.fitStage(stage,root,meta,'full'),84/220);assert.equal(root.style.height,'220px');
+ assert.equal(R.fitStage(stage,root,{...meta,thumb:'full'},'thumb'),100/220);assert.equal(root.style.height,'220px');
+ stage.clientHeight=400;assert.equal(R.fitStage(stage,root,meta,'full'),1);assert.equal(root.style.height,'220px');
+});

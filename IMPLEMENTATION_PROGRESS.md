@@ -213,6 +213,54 @@ The next four controls were committed as `ccec511` and pushed to `main`. Node
 pause, native pointer/keyboard input, original SVG loading, portable clipboard
 source, held/outside release, mobile readability and clean network/console output.
 
+## Phase 4 — Existing Forms & Inputs
+
+All ten existing form demos now use their v4 Figma compositions: Floating Label,
+Underline Grow, Error Shake, Counter Ring, One-Time Code, Password Strength,
+Auto-Grow Textarea, Multi-Step Progress, Morphing Select and Elastic Range.
+Together with the earlier controls, 27 existing demos have been remediated.
+Phase 4 remains in progress.
+
+The compact password, composer, wizard and selector heroes declare a separate
+`thumbDesignSize`; the full `designSize` preserves complete native editing,
+criteria, validation and workflow panels in detail and portable HTML. The shell,
+registry schema, generated catalog, source exporter and MCP response carry that
+contract. Fitting remains deterministic from metadata. Ten native search posters
+have been refreshed and ten original Figma SVG files are recorded with their
+intrinsic dimensions and provenance. The healthy selector dot reuses the
+byte-identical Toast Stack asset.
+
+The form suite passes 169 checks, covering actual clipboard paste and browser
+autofill, native Enter submission, cancellation of validation timers, password
+selection preservation, growing and capped notes, validated multi-step completion,
+independent radio groups, compact option scrolling, scaled pointer math and real
+touch dragging with vertical page scrolling preserved. That touch test exposed Chrome applying its native range value
+after a captured custom drag; the form now retains its measured value during
+those native input events. Suspension and disposal cancel pending range work.
+All ten portable exports boot offline, and native text and SVG dimensions pass
+at 372×264 and 286×196.
+
+The shared-runtime regression checks pass: 282 exemplar checks, desktop/touch
+lifecycle checks, 13 runtime/shell tests and eight CLI/MCP tests. The stage
+baseline shrinks from 374 to 364 demos and motion debt from 154 to 151. There
+are 22 validated geometry exceptions, limited to sparse Figma compositions;
+the overflow, scroll and text gates are unchanged. The audit now also measures
+native field values and placeholders. Its current totals are 0 failed boots,
+0 missing sizes, 60 overflow, 3 horizontal scroll, 266 tiny-text and 75 low-fill
+offenders. None of the ten forms fails overflow, horizontal scroll or text size.
+The remaining global failures belong to demos still awaiting remediation.
+The broad browser suite passes 651 checks, all 399 lazy preview boots and 97
+offline exports after the form and hero-sizing changes.
+
+Final quiet mobile Lighthouse runs score 100 for home (292,172 bytes) and 99
+for Password Strength detail (357,531 bytes), both with a 0.96s LCP. The form
+previews retain the lightweight initial source path; complete portable assets
+load only when source is requested.
+
+The earlier seven-control group was committed as `414213a` and pushed to `main`.
+Node 18/22 verification, Pages deployment and the public-browser control smoke
+check passed.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

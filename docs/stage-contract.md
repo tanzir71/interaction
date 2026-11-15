@@ -9,6 +9,13 @@ Thumbnails reserve 24px padding; full views reserve 32px. A control dock reserve
 48px. Fit uses the minimum width/height scale, capped at 1, with CSS zoom to
 preserve pointer geometry. A ResizeObserver updates it on viewport changes.
 
+A simplified `thumb: 'hero'` may declare `thumbDesignSize` as an explicit
+`[width,height]` or non-bleed preset. The shell uses that declared plane only
+for thumbnails. `designSize` continues to size the complete detail composition
+and portable export. For example, Password Strength uses `[220,184]` in full
+and `[220,100]` for its field-and-meter hero; the criteria remain in full view.
+This is deterministic metadata, not a measurement of the rendered leaves.
+
 Demo scripts receive `root`, `stage`, `ctx` and lifecycle-wrapped timers.
 Register actions with `ctx.onAction(name, fn)`, or return an object with `actions`
 and `cleanup`. A returned cleanup function is also supported. `ctx` includes mode,
@@ -43,3 +50,5 @@ These exceptions apply only to low fill. Failed boots, missing metadata,
 overflow, horizontal scrolling and rendered text below 11px still fail their
 respective gates. Use `node tools/verify-exemplars.js` for the current remediated
 controls' interaction, reduced-motion, namespace and offline-export checks.
+`node tools/verify-forms.js` also verifies native editing, validation, paste,
+form completion, declared hero/full geometry and native text readability.

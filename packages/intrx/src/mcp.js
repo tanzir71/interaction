@@ -10,7 +10,7 @@ export function createMcp(registry){
  register('search_components','Find native interactions ranked by title, tags, use cases and description.',{query:z.string().optional(),trigger:trigger.optional(),category:z.string().optional(),stack:z.enum(['vanilla','gsap','webgl','canvas']).optional(),tier:z.enum(['free','pro']).optional(),limit:z.number().int().min(1).max(100).default(12)},async args=>(await registry.search(args)).map(({id,title,category,trigger,desc,url,tier})=>({id,title,category,trigger,desc,url,tier})));
  register('get_component','Fetch source, motion prompt and accessibility notes. Locked items expose the prompt only.',{id,format:z.enum(['html','parts','react','vue']).default('html')},async({id,format})=>{
   const item=await registry.component(id,format);if(item.locked)return item;
-  return {files:item.files,libs:item.libs,designSize:item.designSize,a11y:item.a11y,prompt:item.prompt,notes:item.notes,...(format==='parts'?{parts:item.parts}:{}),...(item.portInstruction?{portInstruction:item.portInstruction}:{})};
+  return {files:item.files,libs:item.libs,designSize:item.designSize,...(item.thumbDesignSize!==undefined?{thumb:item.thumb,thumbDesignSize:item.thumbDesignSize}:{}),a11y:item.a11y,prompt:item.prompt,notes:item.notes,...(format==='parts'?{parts:item.parts}:{}),...(item.portInstruction?{portInstruction:item.portInstruction}:{})};
  });
  register('get_prompt','Get the complete implementation prompt for a component.',{id},async({id})=>(await registry.component(id)).prompt);
  register('list_categories','List registry category names, groups and live counts.',{},async()=>(await registry.read('categories.json')).map(({name,group,count})=>({name,group,count})));

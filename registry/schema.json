@@ -25,6 +25,33 @@
     "title": {
       "type": "string"
     },
+    "thumb": {
+      "enum": [
+        "full",
+        "hero"
+      ]
+    },
+    "thumbDesignSize": {
+      "description": "Optional declared hero plane; valid only with thumb: hero.",
+      "oneOf": [
+        {
+          "enum": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      ]
+    },
     "trigger": {
       "enum": [
         "hover",
@@ -70,6 +97,23 @@
     }
   },
   "allOf": [
+    {
+      "if": {
+        "required": [
+          "thumbDesignSize"
+        ]
+      },
+      "then": {
+        "properties": {
+          "thumb": {
+            "const": "hero"
+          }
+        },
+        "required": [
+          "thumb"
+        ]
+      }
+    },
     {
       "if": {
         "properties": {

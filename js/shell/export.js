@@ -10,7 +10,7 @@
     if(/Inter|--font-ui|--font-numeric/.test(demo.css))fonts+=R.fontFaces.Inter;
     if(/Manrope/.test(demo.css))fonts+=R.fontFaces.Manrope;
     if(/Newsreader|--font-editorial/.test(demo.css))fonts+=R.fontFaces.Newsreader+R.fontFaces['Newsreader Italic'];
-    const data={id:demo.id,title:demo.title,rootClass:demo.rootClass,html:R.resolveAssets(demo.html.trim()),css:'',js:R.resolveAssets(demo.js.trim()),designSize:demo.designSize,stage:demo.stage,controls:demo.controls,_styled:true};
+    const data={id:demo.id,title:demo.title,rootClass:demo.rootClass,html:R.resolveAssets(demo.html.trim()),css:'',js:R.resolveAssets(demo.js.trim()),designSize:demo.designSize,...(demo.thumbDesignSize!==undefined?{thumb:demo.thumb,thumbDesignSize:demo.thumbDesignSize}:{}),stage:demo.stage,controls:demo.controls,_styled:true};
     const source=JSON.stringify(data).replace(/</g,'\\u003c');
     const libs=(demo.libs||[]).map(lib=>urls[lib]?'<script src="'+urls[lib]+'"><\/script>':'').join('\n');
     const credit=demo.source?'<!-- '+(demo.cat==='DRAMS'?'DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). Native interpretation. ':'')+escape(demo.source.name)+' | '+escape(demo.source.url)+' -->\n':'';
