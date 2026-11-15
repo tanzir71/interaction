@@ -2,10 +2,10 @@
 (function () {
   const R = window.INTRX;
   R.createRuntime = function (stage) {
-    let disposed = false, suspended = false, sequence = 0, speed = 1;
+    let disposed = false, suspended = false, inViewport = true, sequence = 0, speed = 1;
     let realTime = performance.now(), virtualTime = realTime;
     const frames = new Map(), timers = new Map(), cleanups = new Set(), animations = new Set();
-    const paused = () => suspended || document.hidden;
+    const paused = () => suspended || document.hidden || !inViewport;
     function clock() {
       const now = performance.now();
       if (!paused()) virtualTime += (now - realTime) * speed;
@@ -60,10 +60,18 @@
     function visibility() {
       // The event fires after document.hidden changes. Accrue the final
       // visible interval on hide; never add hidden wall time on show.
-      if (document.hidden && !suspended) virtualTime += (performance.now() - realTime) * speed;
+      if (document.hidden && !suspended && inViewport) virtualTime += (performance.now() - realTime) * speed;
       realTime = performance.now();
       stage.dataset.suspended = String(paused());
       if (document.hidden) freeze(); else thaw();
+    }
+    function viewport(entries) {
+      if (disposed || !entries.length) return;
+      const visible = entries[0].isIntersecting && entries[0].intersectionRatio > 0;
+      if (visible === inViewport) return;
+      clock(); freeze(); inViewport = visible;
+      stage.dataset.suspended = String(paused());
+      thaw();
     }
     function syncAnimationSpeed() {
       if (!disposed && stage.getAnimations) stage.getAnimations({subtree:true}).forEach(animation=>animation.updatePlaybackRate(speed));
@@ -101,7 +109,7 @@
       resume() {
         if (disposed || !suspended) return;
         suspended = false; realTime = performance.now();
-        stage.dataset.suspended = String(document.hidden); thaw();
+        stage.dataset.suspended = String(paused()); thaw();
       },
       setSpeed(value) {
         if (![.5,1,2].includes(value)) throw new RangeError('Speed must be 0.5, 1, or 2');
@@ -128,6 +136,12 @@
         cleanups.add(()=>observer.disconnect()); return observer;
       };
     });
+    // Thumbnail visibility belongs to LiveTiles and its live-preview cap.
+    // Full previews have a separate viewport hold, orthogonal to manual pause.
+    if (stage.dataset.mode === 'full' && typeof window.IntersectionObserver === 'function') {
+      const observer = new window.IntersectionObserver(viewport, { threshold: 0 });
+      observer.observe(stage); cleanups.add(()=>observer.disconnect());
+    }
     document.addEventListener('visibilitychange',visibility);
     stage.addEventListener?.('animationstart',syncAnimationSpeed);
     stage.addEventListener?.('transitionrun',syncAnimationSpeed);

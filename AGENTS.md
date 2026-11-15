@@ -37,7 +37,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   inline demo fields. `js/meta.stage.js` covers every published demo.
 - `js/shell/stage.js` owns deterministic fit, `ctx`, dock actions and LiveTiles.
   `js/demo-runtime.js` freezes timers, frames and animations while suspended;
-  cleanup also disconnects runtime-created observers.
+  cleanup also disconnects runtime-created observers. Full previews pause
+  offscreen through a separate viewport hold that preserves caller pauses;
+  LiveTiles alone owns thumbnail visibility.
 - Existing chrome/control violations are enumerated in
   `tools/stage-baseline.json`. `verify-stage.js` rejects new violations;
   `--strict` requires the debt to be removed in Phase 4. Do not grow the baseline
@@ -59,7 +61,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - Agent instructions are in `skills/intrx`; setup and contributor docs are in
   `docs/`. npm publication is separate from implementing and pushing this repo.
 - CI validates generated output and the CLI/MCP handshake, then stages only
-  static public files with `tools/prepare-site.js`.
+  static public files with `tools/prepare-site.js`. GitHub Pages uses the custom
+  workflow publishing source; branch publishing must stay disabled.
 
 ## Routed shell (Phase 3)
 - Run `node tools/serve.js 4173` for the gzip-enabled local static server.
@@ -92,6 +95,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - `node tools/verify-navigation.js http://127.0.0.1:4173` covers all 13 v4
   navigation demos, native focus/keys, interrupted transitions, scroll lifecycle,
   exact asset slots, portable source and 390px/375px/360px full typography.
+- `node tools/verify-loaders.js http://127.0.0.1:4173` covers the ten v4
+  loaders, original progress/geometry models, state cancellation, native input,
+  exact SVG slots, runtime suspension, compact typography and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

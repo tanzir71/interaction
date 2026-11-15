@@ -485,6 +485,70 @@ and 75 low-fill offenders. All 28 exact-geometry fill exceptions validate. These
 global counts use the corrected native-mask measurement; untouched ambient
 compositions can vary by one low-fill observation while animating.
 
+## Phase 4 — Loaders and progress
+
+All ten existing Loaders & Progress demos now follow their v4 compositions:
+Liquid Progress, Word Cycle Preloader, Terminal Install, Skeleton Reveal,
+Upload Morph, Percentage Preloader, Counter Reel, Dot Wave, Shape Morph and
+Orbit Loader. Existing-demo remediation reaches 76; the remaining 323 existing
+demos and 121 new/extension entries still require their full implementation
+and audit. The preceding navigation batch was committed and pushed as 6955545,
+passed both Node versions and deployment, and passed all 394 public navigation
+checks and 41 published-artifact comparisons.
+
+Full mode preserves both original paced count formulas, all five greetings and
+language codes, the complete page reveals, both typed commands and output,
+article content, upload file information and circumference, the three-dot sine
+model, twelve-point shape interpolation, nine-point liquid surface, and all
+three orbital radii with signed velocities and four trail samples. The compact
+views retain the simpler five-dot wave, rounded shape and two orbital trains.
+Native object activation preserves speed changes and liquid target updates;
+the remaining controls live in the shared dock. Replay/reset cancels stale
+frames, timers and owned digit animations. Counter clocks start on the runtime
+RAF timestamp so replay after a pause cannot acquire a wall-clock offset.
+
+Fourteen original SVGs retain their source bytes and intrinsic dimensions.
+All sixteen visible SVG instances are checked by asset identity and actual
+rendered geometry at 372×264, 286×264 and 286×196. Frame offsets include the
+Figma stroke without allowing pixel-rounded CSS borders to shift artwork under
+zoom. Skeleton Reveal uses the existing verified archGrid photograph, with its
+1600px full view, 800px portable version and photographer credit. All 98 prior
+portable image payloads, six font faces and non-loader stage records remain
+unchanged. The supplied INTRX-handover folder is unchanged.
+
+The new loader verifier passes 291 checks for original math and state sequences,
+rapid cancellation, complete page/article content, keyboard and native touch,
+full typography at 390px/375px/360px, exact SVG slots, compact views, runtime
+suspension, reduced motion and all ten interactive offline exports. It includes
+an actual offscreen/return check inside copied HTML. Reduced motion commits
+requested progress immediately, holds the exact reference poses and retains
+finite word opacity feedback without sliding the progress marker.
+
+Full previews now have an independent runtime viewport hold. Scrolling a
+preview offscreen freezes RAF, remaining timer delays, CSS loops and Web
+Animations. Returning never overrides a caller pause, and offscreen/hidden wall
+time is excluded from the virtual clock. The same runtime is embedded in copied
+HTML. LiveTiles retains sole ownership of thumbnail visibility and live caps.
+All sixteen runtime/shell and eight CLI/MCP tests pass; browser lifecycle checks
+cover real scroll suspension, caller-pause preservation and CSS caret freezing.
+
+The two counter views update only visible, changed digits and leaf progress
+rules. All ten profiles have a 16.7ms median and at most 16.8ms 95th-percentile
+frame time under 4× CPU slowdown; occasional longer frames remain recorded in
+the raw QA results. Eight exact sparse controls have fill-only exceptions, with
+Figma references and measured native dimensions. The other fit gates retain
+their original thresholds. Stage debt drops from 327 to 317 demos and motion
+debt from 121 to 118, with no new violations.
+
+Final regression verification passes all 394 navigation checks, 651 broad
+checks, all 399 lazy previews and 97 offline exports. All ten native search
+posters are refreshed. Quiet mobile Lighthouse after the runtime change scores
+92 for home (296,093 transferred bytes) and 90 for Elastic Tabs (359,959 bytes),
+meeting both performance gates. The loader batch has no stage-fit offenders.
+The global diagnostic still exits 1 for remaining work: 0 failed boots,
+0 missing sizes, 34 overflow, 2 horizontal-scroll, 219 tiny-text and 75 low-fill
+offenders; all 36 documented exact-geometry fill exceptions validate.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

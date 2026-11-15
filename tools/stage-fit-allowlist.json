@@ -279,6 +279,86 @@
         140,
         160
       ]
+    },
+    "preloader-percentage": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The 48px percentage and 120×2px progress rule retain their exact sparse meter footprint.",
+      "figmaNode": "156:1941",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=156-1941",
+      "selector": ".d-preload-demo-meter",
+      "designSize": [
+        120,
+        72
+      ]
+    },
+    "preloader-word-cycle": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The 30px Hello and 22px ghost greeting keep their exact v4 typography and positions.",
+      "figmaNode": "156:1860",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=156-1860",
+      "selector": ".d-wordload-demo-current",
+      "designSize": [
+        71,
+        39
+      ]
+    },
+    "loader-typing-code": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The native 220×96px terminal retains three 12px monospace rows; its ink fills less than 12% despite the complete frame.",
+      "figmaNode": "156:1878",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=156-1878",
+      "selector": ".d-code-demo-window",
+      "designSize": [
+        220,
+        96
+      ]
+    },
+    "upload-progress-morph": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The native 64px ring preserves the two original SVGs and the 14px 62% label.",
+      "figmaNode": "156:1922",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=156-1922",
+      "selector": ".d-upload-demo-reference",
+      "designSize": [
+        64,
+        64
+      ]
+    },
+    "page-load-counter-slide": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The three 34×82px reel windows retain 6px gaps, original neighbour rows and edge masks.",
+      "figmaNode": "156:1960",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=156-1960",
+      "selector": ".d-counterload-demo-digits",
+      "designSize": [
+        114,
+        82
+      ]
+    },
+    "loader-dots-wave": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. Five original 8px dots retain their 20px spacing and the exact v4 peak wave pose.",
+      "figmaNode": "157:1548",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=157-1548",
+      "selector": ".d-dots-demo-wave-frame",
+      "designSize": [
+        88,
+        18
+      ]
+    },
+    "loader-morph-shapes": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. The native rounded square stays 44px with a 14px radius at the reference pose.",
+      "figmaNode": "157:1570",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=157-1570",
+      "selector": ".d-morphload-demo-shape",
+      "designSize": [
+        44,
+        44
+      ]
+    },
+    "loader-orbit-dots": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse controls. Eight original 7px dots retain the 51px orbit footprint and original neutral opacity ramp.",
+      "figmaNode": "157:1587",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=157-1587",
+      "selector": ".d-orbitload-demo-orbit-frame",
+      "designSize": [
+        51,
+        51
+      ]
     }
   }
 }

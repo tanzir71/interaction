@@ -1,14 +1,15 @@
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
-function setup(){
- let time=0,id=0;const jobs=new Map(),listeners=new Map();
+function setup(options={}){
+ let time=0,id=0;const jobs=new Map(),listeners=new Map(),observers=[];
  const document={hidden:false,addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:name=>listeners.delete(name)};
  const schedule=(fn,ms)=>{const key=++id;jobs.set(key,{fn,at:time+ms});return key;};
  const context={window:{INTRX:{}},document,console,performance:{now:()=>time},requestAnimationFrame:fn=>schedule(fn,16),cancelAnimationFrame:key=>jobs.delete(key),setTimeout:(fn,ms)=>schedule(fn,ms),clearTimeout:key=>jobs.delete(key)};
+ context.window.IntersectionObserver=class{constructor(callback){this.callback=callback;this.disconnects=0;observers.push(this);}observe(target){this.target=target;}disconnect(){this.disconnects++;}};
  vm.runInNewContext(fs.readFileSync(require.resolve('../js/demo-runtime.js'),'utf8'),context);
- const stageEvents=new Map(),stage={dataset:{},isConnected:true,getAnimations:()=>[],addEventListener:(name,fn)=>stageEvents.set(name,fn),removeEventListener:name=>stageEvents.delete(name)};
- return {runtime:context.window.INTRX.createRuntime(stage),stage,jobs,context,stageEvents,
+ const stageEvents=new Map(),stage={dataset:{mode:options.mode},isConnected:true,getAnimations:()=>[],addEventListener:(name,fn)=>stageEvents.set(name,fn),removeEventListener:name=>stageEvents.delete(name)};
+ return {runtime:context.window.INTRX.createRuntime(stage),stage,jobs,context,stageEvents,observers,
   advance(ms){const end=time+ms;for(;;){const next=[...jobs].filter(([,job])=>job.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!next)break;time=next[1].at;jobs.delete(next[0]);next[1].fn(time);}time=end;},
-  visibility(hidden){document.hidden=hidden;listeners.get('visibilitychange')?.();},listeners};
+  visibility(hidden){document.hidden=hidden;listeners.get('visibilitychange')?.();},intersection(visible){observers[0].callback([{isIntersecting:visible,intersectionRatio:visible?1:0}]);},listeners};
 }
 test('timeouts retain their remaining delay while suspended without native wakes',()=>{
  const s=setup();let calls=0;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.runtime.suspend();assert.equal(s.jobs.size,0);
@@ -27,6 +28,20 @@ test('speed changes preserve pending delay and scale subsequent runtime time',()
 test('document visibility pauses deadlines and resumes without hidden elapsed time',()=>{
  const s=setup();let calls=0,timestamp;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.visibility(true);assert.equal(s.jobs.size,0);s.advance(1000);
  s.visibility(false);s.runtime.requestAnimationFrame(t=>timestamp=t);s.advance(16);assert.equal(timestamp,56);s.advance(44);assert.equal(calls,1);
+});
+test('full viewport holds freeze deadlines and exclude offscreen and hidden wall time',()=>{
+ const s=setup({mode:'full'});let calls=0,timestamp;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.intersection(false);
+ assert.equal(s.runtime.suspended,true);assert.equal(s.stage.dataset.suspended,'true');assert.equal(s.jobs.size,0);s.advance(1000);s.visibility(true);s.advance(1000);s.visibility(false);
+ assert.equal(s.jobs.size,0);s.intersection(true);s.runtime.requestAnimationFrame(t=>timestamp=t);s.advance(16);assert.equal(timestamp,56);s.advance(44);assert.equal(calls,1);
+});
+test('returning to the viewport cannot override a caller pause',()=>{
+ const s=setup({mode:'full'});let calls=0;s.runtime.setTimeout(()=>calls++,100);s.runtime.suspend();s.intersection(false);s.advance(1000);s.intersection(true);
+ assert.equal(s.runtime.suspended,true);assert.equal(s.jobs.size,0);s.runtime.resume();s.advance(100);assert.equal(calls,1);
+});
+test('viewport holds retain speed changes, clean up once and leave thumbnail ownership to LiveTiles',()=>{
+ const s=setup({mode:'full'});let calls=0;s.runtime.setTimeout(()=>calls++,100);s.advance(20);s.intersection(false);s.runtime.setSpeed(2);s.advance(1000);assert.equal(s.jobs.size,0);
+ s.intersection(true);s.advance(39);assert.equal(calls,0);s.advance(1);assert.equal(calls,1);s.runtime.dispose();s.runtime.dispose();assert.equal(s.observers[0].disconnects,1);
+ s.intersection(false);s.intersection(true);assert.equal(s.jobs.size,0);const thumb=setup({mode:'thumb'});assert.equal(thumb.observers.length,0);thumb.runtime.dispose();
 });
 test('disposal cancels all work, detaches visibility handling, and cleans up once',()=>{
  const s=setup();let calls=0,cleanup=0;s.runtime.cleanup=()=>cleanup++;s.runtime.onDispose(()=>cleanup++);

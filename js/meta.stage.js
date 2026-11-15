@@ -4679,17 +4679,29 @@ INTRX.meta({
     ]
   },
   "preloader-percentage": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Load page",
+        "action": "run"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "progressbar"
     },
     "useCases": [
       "preloader",
@@ -4697,21 +4709,37 @@ INTRX.meta({
       "curtain"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      160,
+      110
+    ]
   },
   "preloader-word-cycle": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Welcome",
+        "action": "run"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "status"
     },
     "useCases": [
       "preloader",
@@ -4719,17 +4747,37 @@ INTRX.meta({
       "wipe"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      200,
+      124
+    ]
   },
   "loader-dots-wave": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Play / pause",
+        "action": "toggle"
+      },
+      {
+        "label": "Show 90°",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4741,17 +4789,37 @@ INTRX.meta({
       "phase"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      120,
+      64
+    ]
   },
   "loader-morph-shapes": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Play / pause",
+        "action": "toggle"
+      },
+      {
+        "label": "Show 50%",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4763,17 +4831,37 @@ INTRX.meta({
       "interpolation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      100,
+      88
+    ]
   },
   "loader-typing-code": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Run",
+        "action": "run"
+      },
+      {
+        "label": "Finish",
+        "action": "finish"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4785,21 +4873,41 @@ INTRX.meta({
       "typing"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      244,
+      108
+    ]
   },
   "skeleton-shimmer": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Load",
+        "action": "run"
+      },
+      {
+        "label": "Show",
+        "action": "show"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "status"
     },
     "useCases": [
       "skeleton",
@@ -4807,17 +4915,37 @@ INTRX.meta({
       "crossfade"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      120
+    ]
   },
   "progress-blob-fill": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Play / pause",
+        "action": "toggle"
+      },
+      {
+        "label": "Show 68%",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4829,17 +4957,37 @@ INTRX.meta({
       "svg wave"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      280,
+      160
+    ]
   },
   "loader-orbit-dots": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Play / pause",
+        "action": "toggle"
+      },
+      {
+        "label": "Start",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4851,21 +4999,41 @@ INTRX.meta({
       "trails"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      100,
+      88
+    ]
   },
   "upload-progress-morph": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Upload",
+        "action": "run"
+      },
+      {
+        "label": "Show 62%",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "progressbar"
     },
     "useCases": [
       "upload",
@@ -4873,21 +5041,41 @@ INTRX.meta({
       "success morph"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      244,
+      112
+    ]
   },
   "page-load-counter-slide": {
-    "designSize": "sm",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Load page",
+        "action": "run"
+      },
+      {
+        "label": "Show 73%",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "progressbar"
     },
     "useCases": [
       "preloader",
@@ -4895,8 +5083,12 @@ INTRX.meta({
       "panel lift"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      160,
+      110
+    ]
   },
   "chart-bars-race": {
     "designSize": "md",

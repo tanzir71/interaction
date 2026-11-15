@@ -74,3 +74,18 @@ dimensions remain unchanged. `node tools/verify-stage-fit-geometry.js` exercises
 these rules in a real browser, including per-axis clipping and CSS zoom.
 Zero-area screen-reader masks contribute no painted bounds. Single-character
 glyphs and digits remain subject to the same 11px rendered-text gate.
+
+
+`node tools/verify-loaders.js` verifies the ten loader models, their complete
+loading/reveal sequences, original math, native controls, runtime suspension,
+precise SVG geometry, compact typography and interactive offline exports.
+A hero plane must also accommodate its widest interactive state: the upload
+reference is a 64px ring, while Reset can restore its 220px native button.
+Figma child positions inside a stroked frame include that frame's border.
+
+
+Full previews use an independent runtime viewport hold. Scrolling one out of
+view freezes its frames, remaining timer delays and animations; returning does
+not override a caller pause. Hidden document time and offscreen time are both
+excluded from the virtual clock. This behavior is included in portable HTML.
+LiveTiles keeps exclusive ownership of thumbnail visibility and preview caps.

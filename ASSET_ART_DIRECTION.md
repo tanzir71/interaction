@@ -269,4 +269,40 @@ The fourth sidebar icon is byte-identical to `theme-auto.svg`; its
 `nav-rail-settings` portable name reuses that original file. The burger artwork
 contains the 44×44px button and its shadow overhang; the complete 68×68px asset
 remains at the Figma slot. Closed-state strokes are native interactive HTML.
-The bundle now contains 98 image references and the same six embedded font faces.
+The navigation group bundled 98 image references and the same six embedded font faces.
+
+
+## Handoff 3 v4 loaders and progress artwork
+
+All fourteen SVG files below are original exports from the owner's Interaction
+file. Their source bytes, intrinsic dimensions and callsite geometry are kept.
+The wave reuses each outer and middle dot twice; all eight orbit assets retain
+their distinct neutral opacity ramp. Supplied SVGs are never extracted or
+redrawn. Full liquid and upload progress remain data-driven original SVG
+models; their compact reference states use the supplied artwork.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| load-liquid-fill.svg | 111:791 | 110×77.775 |
+| load-upload-track.svg | 156:1922 | 64×64 |
+| load-upload-arc.svg | 156:1922 | 53.9055×64 |
+| load-wave-outer.svg | 157:1548 | 8×8 |
+| load-wave-mid.svg | 157:1548 | 8×8 |
+| load-wave-core.svg | 157:1548 | 8×8 |
+| load-orbit-0.svg | 157:1587 | 7×7 |
+| load-orbit-1.svg | 157:1587 | 7×7 |
+| load-orbit-2.svg | 157:1587 | 7×7 |
+| load-orbit-3.svg | 157:1587 | 7×7 |
+| load-orbit-4.svg | 157:1587 | 7×7 |
+| load-orbit-5.svg | 157:1587 | 7×7 |
+| load-orbit-6.svg | 157:1587 | 7×7 |
+| load-orbit-7.svg | 157:1587 | 7×7 |
+
+Native borders in Liquid Progress, Terminal Install and Skeleton Reveal are
+included in child positions, as confirmed against the Figma frame metadata.
+The liquid SVG is at stage (131,62.2); its sampled solid colour is the existing
+#FA7319 accent. A separate region extends that fill below the unchanged surface
+as the target rises. Skeleton Reveal uses the existing verified archGrid image
+for its resolved article, with both resolutions and the recorded photographer
+credit. No new photograph or remote runtime asset is introduced in this group.
+The bundle now contains 112 image references and the same six font faces.
