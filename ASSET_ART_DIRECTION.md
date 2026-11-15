@@ -537,3 +537,24 @@ central shadow plane), two print backers (164.4×151 and 161.2×147.4), and two
 root dimension, file hash, node and design slot, including repeated instances.
 Wrappers position and animate these exports; their payloads and root dimensions
 remain intact. The portable bundle contains 235 images and six unchanged fonts.
+
+## Scroll depth and pinned compositions
+
+Parallax Layers, Horizontal Scroll and Scroll Zoom reuse the verified dusk,
+cityNight, aurora and ocean files in their exact v4 photo slots. Horizontal
+Scroll also uses the native embers crop from Figma node `159:654`.
+
+The embers photograph is Alican Leblebici's free Unsplash License image
+[`5w2hjEJ06b0`](https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0),
+image ID `photo-1762202742459-4fcdc4beaab4`. The canonical page and free licence
+were verified on 16 November 2026. An independent 1800×732 source download
+matches the native Figma raster with RGB RMS 1.47, attributable to JPEG encoding.
+The local 1600×651 and 800×325 WebP files, source URL and both hashes are recorded
+in `assets/photo-credits.json`; detail and portable HTML retain attribution.
+All ten earlier photo records and image payloads remain unchanged.
+
+`tools/fixtures/scroll-core-geometry.json` records every native primitive and
+photo slot for these six Scroll compositions, captured directly from Figma
+before implementation. Photo wrappers and masks are original HTML/CSS. No
+screenshot or substitute image is tile art, and no new SVG payload is needed.
+The portable bundle now contains 236 images and the same six font faces.

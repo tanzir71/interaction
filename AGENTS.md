@@ -156,3 +156,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Smooth Scroll and Stagger Reveal demos: original copy and observer semantics,
   exact v4 layers, native wheel/keys/touch, interrupted reveals, six-second
   stories, runtime holds, compact typography and offline exports.
+- `node tools/verify-scroll-core.js http://127.0.0.1:4173` covers Parallax,
+  Horizontal Scroll, Sticky Stack, Reading Progress, Velocity Skew and Scroll
+  Zoom. It compares the original numeric models and complete datasets, all
+  native layers/photo slots, 60/120/240Hz skew, native wheel/keys/touch, complete
+  stories, holds/disposal, compact full typography and offline exports.

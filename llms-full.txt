@@ -388,105 +388,29 @@ Create a four-section smooth-scrolling editorial document in plain HTML, CSS and
 
 Build a scroll-triggered stagger reveal in vanilla JavaScript. Preserve the original six items Design, Motion, Code, Type, Color and Grid. Observe their group with one IntersectionObserver rooted in the keyboard-focusable scroll viewport, threshold 0.25. Visibility follows isIntersecting, and leaving the viewport resets the group. Use MOTION_SYSTEM.md Stagger reveal: rise 12px, resolve 2px blur, opacity, 400ms ease-out, 40ms reading-order stagger capped at 300ms. Exit in 150ms with no stagger; reversing must retarget CSS transitions. Reduced motion keeps every item readable, removes transforms and blur and stops the loop. The full 480×360 composition keeps all six cards; the compact 200×168 plane uses the exact v4 three 160×38 rows with 16px neutral icon blocks and 80/96/70px text bars. Auto-scroll thumbnails on a six-second story, with the exact Figma pose at 40% of story time; native user input takes over. Expose Scroll ↓ and Reset through the shell dock. Dispose observers, frames and listeners and freeze native scrolling while suspended.
 
-### Parallax Depth Layers (`parallax-layers`)
+### Parallax Layers (`parallax-layers`)
 
-Build a vanilla-JS parallax section.
+Keep all three original layers and speeds 0.2, 0.5 and 1. Translate each by scrollY × (1 − speed) × 0.5. Use the exact dusk photograph, stationary fine frame and floating card. Full view retains BACK, MID and FRONT labels and three independently moving planes. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
-Requirements:
-- A tall scroll region with a position:sticky scene inside it.
-- Multiple absolutely-positioned layers, each with a data-speed attribute (0.2 = far background, 1.0 = foreground).
-- On scroll, translateY each layer by scrollY * (1 - speed) * 0.5 so layers separate with depth.
-- Use a passive scroll listener and transform only (no top/margin changes) so it stays on the compositor.
-- Add will-change: transform to the layers.
-- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Respect prefers-reduced-motion by disabling the effect.
+### Horizontal Scroll (`horizontal-scroll`)
 
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+Keep Concept, Design, Build and Ship. Pin the scene with position:sticky. Progress is scrollTop/(trackHeight−viewportHeight), clamped to 0..1. Translate the complete row by −progress × (row.scrollWidth−viewportWidth). Keep all four native photographs in order: cityNight, aurora, ocean, embers. Native cards are 108px with 10px gaps, original 48px edge fades and progress rail. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+### Sticky Stack (`sticky-stack`)
 
-### Horizontal Scroll Section (`horizontal-scroll`)
+Keep Strategy, Design, Engineering and Launch with all four original paragraphs. Pin each card with position:sticky. Measure actual first/next painted rectangles; overlap is clamp(1−(next.top−first.top)/first.height). Scale by 1−0.06×overlap and brightness by 1−0.35×overlap. Do not put a CSS transition on these scroll-bound values. The v4 miniature represents the complete stack with three neutral card planes. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
-Build a horizontal-scroll section driven by vertical scrolling, vanilla JS.
+### Reading Progress (`scroll-progress`)
 
-Requirements:
-- A section whose height equals the horizontal distance to travel (e.g. 300vh).
-- Inside it, a position:sticky full-viewport wrapper containing a horizontal flex row of panels.
-- Map vertical scroll progress through the section (0 to 1) to translateX from 0 to -(rowWidth - viewportWidth).
-- Use transform only, passive scroll listener, will-change: transform.
-- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Optionally note how the same effect is done with GSAP ScrollTrigger (pin: true, scrub: 1, x: -shift) as an alternative.
-- Fall back to a native horizontally-scrollable row when prefers-reduced-motion is set.
+Preserve all five original reading paragraphs. Use the exact normalized scroll position for the bar, rounded percentage and full-view ring. Handle a non-scrollable document as zero progress. The native 200×150 document retains six bars and the exact 124px orange fill at its authored checkpoint. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+### Velocity Skew (`velocity-skew`)
 
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Preserve all eight original headline lines. Each scroll delta sets target=clamp(delta×0.45,−12,12). At 60Hz, ease current toward target by 0.1, then decay target by 0.9. Use the exact time-normalized extension for other frame rates: d=0.9^n; current=d×(current+n×target/9), target=d×target. Stop requesting frames once settled. Reduced motion removes skew and stills the loop. The native Momentum study uses all three original Geist 38px layers at the exact positions, opacities and static blur. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
-### Sticky Stacking Cards (`sticky-stack`)
+### Scroll Zoom (`scroll-zoom`)
 
-Build a sticky stacking-cards scroll section, vanilla JS + CSS.
-
-Requirements:
-- A list of full-width cards, each position: sticky with the same top offset, so each new card pins over the previous.
-- As the next card slides over the current one, scale the covered card down to ~0.94 and darken it slightly (brightness), proportional to overlap progress computed from getBoundingClientRect.
-- transform-origin: center top so cards shrink "into" the stack.
-- Passive scroll listener; transforms only.
-- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- The last card never scales.
-- Respect prefers-reduced-motion (skip the scaling, keep the sticky stacking).
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Scroll Progress Indicator (`scroll-progress`)
-
-Add a scroll progress indicator to a page, vanilla JS.
-
-Requirements:
-- A 2px bar fixed to the top of the viewport that fills left-to-right as the user scrolls the page.
-- Fill using transform: scaleX(progress) with transform-origin: left — never animate width.
-- Also render a small monospace percentage readout.
-- progress = scrollY / (document height - viewport height), clamped 0..1.
-- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Passive scroll listener, and update once on load.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Scroll Velocity Skew (`velocity-skew`)
-
-Build a scroll-velocity skew effect in vanilla JS.
-
-Requirements:
-- Track scroll delta per event to estimate velocity.
-- Map velocity to a skewY target, clamped to about ±12deg.
-- In a requestAnimationFrame loop, lerp the current skew toward the target (factor ~0.1) and decay the target by ~0.9 per frame so it returns to 0 when scrolling stops.
-- Apply as transform: skewY on the content wrapper, will-change: transform.
-- Skip entirely under prefers-reduced-motion.
-
-Set the scrolling headings in medium-weight Inter, sized with container units to fit a 300–320px-wide preview. Keep 22px horizontal padding and contain horizontal overflow while the content skews.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Scroll-Driven Zoom (`scroll-zoom`)
-
-Build a scroll-driven zoom section, vanilla JS.
-
-Requirements:
-- A tall section (~250vh) with a position:sticky full-viewport child.
-- Inside, a media element that starts at transform: scale(0.35) and reaches scale(1) as the user scrolls through the section.
-- Apply a cubic ease-out to the scroll progress (1 - (1-p)^3) so the zoom decelerates.
-- Before interaction, show a subtle animated scroll cue; stop it permanently on first pointer or keyboard interaction.
-- Transform only; passive scroll listener; will-change: transform.
-- Mention the GSAP ScrollTrigger equivalent (pin + scrub) as an alternative implementation.
-
-For the self-contained preview, use a graphite media plate with fine vertical gray lines, an outlined geometric diamond, and one readable Inter caption. Fit the scene inside its native 320px local scroll viewport.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Preserve the original bounded progress and cubic zoom: eased=1−(1−p)^3; scale=0.35+0.65×eased. Replace placeholder art with the exact ocean photograph. The v4 still is a 140×98 photo inside a 220×150 camera. Preserve original SVG-free photo cropping, frame corners and overlay border. Use plain HTML, CSS and JavaScript, neutral greys and one functional accent. Keep the root transparent, full-view text at least 11px after fitting, and every original dataset in full view. Thumbnails follow a six-second authored scroll story whose 40% checkpoint is the exact v4 composition. Stop autoplay on native user input. Reduced motion renders the checkpoint still and jumps between full scroll-linked states. The shell owns Scroll ↓, Reset and Replay; do not draw demo-driver buttons. Freeze native scrolling, frames and clocks on caller/viewport/document holds and clean up listeners and observers on disposal. Compact transforms are projections anchored to the v4 pose; full interaction formulas remain unchanged.
 
 ### Scroll Reading Highlight (`scroll-text-highlight`)
 
