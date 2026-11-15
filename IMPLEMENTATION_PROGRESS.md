@@ -398,8 +398,8 @@ vertical touch scrolling, time-based inertia, resisted bounds and spring
 returns; cancellation restores the captured origin. Reduced motion and runtime
 suspension apply to each interaction. All five search posters are refreshed.
 
-The photo-layout browser verifier passes 178 checks for exact photo and pointer slots at
-372×264, compact heroes at 286×264 and 286×196, readable mobile full views,
+The photo-layout browser verifier passes 188 checks for exact photo and pointer slots at
+372×264, compact heroes at 286×264 and 286×196, readable full views at 390px, 375px and 360px,
 native touch, cancellation, keyboard input, interruption, unique associations,
 credits and complete offline exports. The broad suite passes 651 checks, all
 399 lazy previews and 97 offline exports; the earlier layout-control suite
@@ -415,6 +415,8 @@ for these photo layouts, and no other fit gate has been relaxed.
 
 Quiet mobile Lighthouse checks score 99 for home (295,106 transferred bytes)
 and 90 for Elastic Tabs (358,972 bytes), satisfying both performance gates.
+A final 375px check found masonry captions scaling below 11px; their logical
+size is now 12.5px and the additional 375px/360px checks cover all five demos.
 The supplied INTRX-handover folder is unchanged. The previous ten-control batch
 was committed as 56452b1, pushed to main, and passed Node 18/22 verification,
 Pages deployment and all 194 public layout-control checks.
