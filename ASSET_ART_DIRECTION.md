@@ -460,3 +460,20 @@ the complete instrument. The portable bundle has 216 image references and the
 same six fonts; all preceding 211 image payloads remain exact. Target lock keeps
 its sparse 140.8×76.8 reference composition through a fill-only exception. All
 42 exceptions validate without changing overflow, scroll or typography gates.
+
+## FUI packet lanes, biometric gate and hex inspector
+
+V4 packet lanes 166:1127 and hex inspector 166:1200 use native primitives and
+type. The lanes preserve four rows of eight 12×4 dashes, their 24px pitch and
+the second row's reference emphasis. Hex uses the exact 200×110 card, four
+offsets, 24 byte labels and the 20×17 orange selection. Short compact stages
+show four readable byte columns; the standard stage retains all six reference
+columns. Full mode retains sixteen bytes per row and the original ASCII twins.
+
+Biometric gate 166:1179 adds three original exports: two 71×71 ring layers and
+the 24×24 check. Their original bytes, root dimensions and exact slots are in
+`tools/fixtures/fui-artwork.json`. Wrappers carry the scan mask and check motion;
+the SVGs are unmodified. The 93×100 ring/check/label composition has a fill-only
+reference exception. The portable bundle has 219 images with the same six
+fonts, and all preceding 216 image payloads remain exact. No screenshots are
+used as demo artwork.

@@ -5763,17 +5763,32 @@ INTRX.meta({
     ]
   },
   "fui-data-stream": {
-    "designSize": "lg",
+    "designSize": [
+      420,
+      350
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Inspect lane",
+        "action": "next"
+      },
+      {
+        "label": "Pause",
+        "action": "pause"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5782,21 +5797,36 @@ INTRX.meta({
       "data"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-access-granted": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      340
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Scan",
+        "action": "scan"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5805,21 +5835,40 @@ INTRX.meta({
       "security"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-hex-dump": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next byte",
+        "action": "next"
+      },
+      {
+        "label": "Pause",
+        "action": "pause"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5828,8 +5877,12 @@ INTRX.meta({
       "terminal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-trading-terminal": {
     "designSize": "lg",

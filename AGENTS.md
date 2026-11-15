@@ -120,6 +120,11 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   instrument fixtures, native touch/keys, interrupted locks, harmonic traces,
   virtual holds, seeded contacts, actual band transforms, exact SVG slots,
   compact type, suspension, disposal and offline exports.
+- `node tools/verify-fui-terminals.js http://127.0.0.1:4173` covers v4 packet
+  lanes, biometric gate and hex inspector. It checks complete original packet,
+  flash, hash, byte and signature fixtures; native grant/deny, lane holds, byte
+  keys/touch, actual ASCII links and horizontal touch access; compact optical
+  sizing, exact SVG slots, pause, cancellation, cleanup and offline exports.
 - `node tools/verify-entry-layout.js http://127.0.0.1:4173` holds the catalog
   across first paint and checks stable route chrome for modern and legacy
   entries on desktop and mobile. Reserve initial chrome before catalog loading.

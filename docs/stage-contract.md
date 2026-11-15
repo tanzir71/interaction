@@ -192,3 +192,24 @@ detail/category links. This prevents removal of the mobile 56px header or
 desktop 36px promo strip from moving the detail page after first paint. The
 initial scale readout is populated before layout. The delayed-catalog verifier
 checks twelve modern/legacy entry cases at mobile and desktop widths.
+
+Packet lanes retain four independently seeded generators, eighteen rows per
+lane, sixteen-pixel row geometry and their original 18/24/30/22px/s rates. Native
+hover/focus holds only the inspected lane; a separate active-time channel keeps
+the original flash draws. Full decoder geometry converts fitted DOM pixels back
+to CSS units. Compact lanes are native primitives with isolated holds.
+
+Biometric authentication preserves its sixteen-character seeded hashes, 18ms
+typing, two 400ms scans, 800ms result boundary, every-fourth denial and 3000ms
+result hold. Motion uses the shared 500ms icon swap and 280ms error shake.
+Reset cancels pending frames, holds and compact check animations. A compact
+success still uses the exact native v4 ring/check exports.
+
+The full memory inspector keeps the complete 64KB address-derived model,
+4096 rows, nineteen rendered rows, all sixteen bytes and ASCII twins, eight
+neighbor influences, 14px/s scan and original signature schedule/decay. The
+680px memory plane scrolls natively inside the fitted preview on narrow screens;
+the page does not scroll sideways. Existing rows are reused and rebound only
+when their addresses leave the window. Selection clears only previously
+decorated cells, preserving the same data and influence model. The compact
+preview adapts from six to four columns in short stages to retain 11px type.

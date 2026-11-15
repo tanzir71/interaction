@@ -964,6 +964,66 @@ author link to https://tanziro.com/ is verified across eight desktop/mobile
 route cases locally and publicly. Shared stylesheet, footer UI and detail script
 URLs are versioned so returning browsers retrieve the current release.
 
+## Phase 4 — FUI packet lanes, biometric gate and hex inspector
+
+V4 data lanes 166:1127, biometric gate 166:1179 and hex inspector 166:1200 now
+have independent native previews and complete original full models. Existing
+visual remediation reaches 103/399; 296 existing and 121 new/extension entries
+remain. Trading desk, orbital tracker and boot sequence remain unchanged. All
+396 unrelated metadata records/modules and the supplied handover remain exact.
+Chrome/control debt shrinks from 293 to 290 and motion debt from 107 to 105.
+
+Data lanes retain four separate seeds, eighteen-row pools, sixteen-pixel row
+geometry, original 18/24/30/22px/s speeds and independent flash draws. Native
+hover/focus holds only the inspected lane. Fitted decoder geometry uses logical
+CSS units. Reset restores every seed and pool; shared Pause stops all recurring
+work. The native preview preserves all 32 reference dashes and lane emphasis.
+
+Biometric authentication keeps all sixteen-character hashes, 18ms typing, two
+400ms scans, the 800ms result boundary, every-fourth denial and 3000ms reset
+hold. Its scan rotation and result swap use the shared 500ms motion; denial
+uses the 280ms error shake. Repeated busy input preserves the guard. Reset
+cancels pending frames, result holds and native compact check animations. Three
+original exports preserve the two 71px ring layers and 24px check. Wrappers
+carry motion; no SVG paths or screenshots are used as replacement artwork.
+
+Hex preserves all 65,536 address-derived bytes, 4096 rows, sixteen bytes and
+ASCII twins per row, nineteen rendered rows, eight neighbor influences,
+14px/s scanning and original signature draws/decay. The 680px full memory plane
+offers native horizontal scrolling on narrow screens while the page stays
+within its viewport. Standard compact previews retain the exact six-column
+reference; short stages show four columns with 11px type. Native keys retain
+visible selection through compact resizing. Full pointer and link coordinates
+convert fitted pixels back to CSS units.
+
+The original whole-window rebuild produced 166.7ms and 250.1ms frame outliers
+at 4× CPU. Memory now reuses rows and rebinds only addresses that leave the
+window. Selection clears only previously decorated cells, preserving all 304
+rendered bytes and their twins. The latest inspection action takes 10.1ms
+instead of 26ms; Reset takes 4.2ms instead of 39ms. All final profiles contain
+239 intervals with a 16.7ms median and 16.8ms p95. Lane/memory maxima are 33.4ms;
+biometric maximum is 16.8ms, with no recorded long tasks. Earlier raw reports,
+including the 116.7ms lane outlier, remain available for the final performance
+audit. No generator, model extent, data sampling or row count was reduced.
+
+The focused verifier passes 172 checks: 512 original packets, sixteen flash,
+hash and signature draw sequences, complete 64KB byte digest, native holds,
+grant/deny, byte keys/touch, actual ASCII links, real horizontal touch, compact
+geometry/type, exact image slots, pause, interruption, disposal and full offline
+exports. All 216 previous image payloads and six fonts remain exact; the bundle
+now has 219 images. The sparse 93×100 biometric composition has a documented
+fill-only exception. Three native posters are refreshed. Registry, stage,
+motion, 1205 generated artifacts, 17 runtime/shell and eight CLI/MCP checks pass.
+
+Sequential mobile Lighthouse scores 99 for home (297,896 transferred bytes)
+and 100 for Elastic Tabs (361,762 bytes), both with 960ms LCP and zero CLS.
+The full regression passes all 651 checks, 399 lazy previews and 97 offline
+exports. The three previews have zero fit offenders; all 43 fill-only exceptions
+validate. The global fit diagnostic still exits 1 for pending work: zero failed
+boots or missing sizes, 35 overflow, three horizontal-scroll, 192 tiny-text and
+74 low-fill findings. A final compact focus repair leaves every profiled full
+path, prelude, stylesheet and HTML composition byte-identical.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,
