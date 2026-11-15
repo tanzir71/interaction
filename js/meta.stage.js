@@ -5878,17 +5878,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "bottom-sheet": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      208
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next stop",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "button"
     },
     "useCases": [
       "bottom sheet",
@@ -5896,21 +5908,37 @@ INTRX.meta({
       "snap points"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      160
+    ]
   },
   "radial-menu": {
-    "designSize": "md",
+    "designSize": [
+      200,
+      160
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Open / close",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "menu"
     },
     "useCases": [
       "radial menu",
@@ -5918,7 +5946,7 @@ INTRX.meta({
       "polar selection"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "elastic-tabs": {
@@ -5980,17 +6008,29 @@ INTRX.meta({
     "caption": "Filter and rearrange"
   },
   "command-palette": {
-    "designSize": "md",
+    "designSize": [
+      236,
+      176
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Open",
+        "action": "open"
+      },
+      {
+        "label": "Search example",
+        "action": "query"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "dialog"
+      "reducedMotion": true,
+      "aria": "combobox"
     },
     "useCases": [
       "command palette",
@@ -5998,9 +6038,12 @@ INTRX.meta({
       "keyboard"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Find a command"
+    "thumbDesignSize": [
+      236,
+      100
+    ]
   },
   "toast-stack": {
     "designSize": [
@@ -6038,17 +6081,29 @@ INTRX.meta({
     "caption": "Add a toast to the stack"
   },
   "number-input-drag": {
-    "designSize": "md",
+    "designSize": [
+      200,
+      100
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "+25",
+        "action": "add"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "spinbutton"
     },
     "useCases": [
       "number input",
@@ -6056,20 +6111,32 @@ INTRX.meta({
       "pointer"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "context-menu-custom": {
-    "designSize": "md",
+    "designSize": [
+      306,
+      190
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Open menu",
+        "action": "open"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
+      "reducedMotion": true,
       "aria": "menu"
     },
     "useCases": [
@@ -6078,21 +6145,37 @@ INTRX.meta({
       "keyboard"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "resizable-split-pane": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      150
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next stop",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "separator"
     },
     "useCases": [
       "split pane",
@@ -6100,21 +6183,33 @@ INTRX.meta({
       "snap zones"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "card-hover-border-gradient": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      160
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Move light",
+        "action": "run"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "button"
     },
     "useCases": [
       "conic gradient",
@@ -6122,21 +6217,33 @@ INTRX.meta({
       "cursor angle"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "list-reorder-drag": {
-    "designSize": "md",
+    "designSize": [
+      220,
+      244
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Move last to first",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "list"
     },
     "useCases": [
       "reorder",
@@ -6144,21 +6251,37 @@ INTRX.meta({
       "FLIP"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "zoom-ui-inception": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      200
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Zoom in",
+        "action": "next"
+      },
+      {
+        "label": "Back",
+        "action": "back"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "zoom transition",
@@ -6166,21 +6289,37 @@ INTRX.meta({
       "FLIP"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "bento-spotlight": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      164
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next card",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "button"
     },
     "useCases": [
       "bento",
@@ -6188,21 +6327,33 @@ INTRX.meta({
       "hover field"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "swap-widget": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      208
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Swap",
+        "action": "swap"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "button"
     },
     "useCases": [
       "swap",
@@ -6210,8 +6361,12 @@ INTRX.meta({
       "finance"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      100
+    ]
   },
   "drag-collapse-panel": {
     "designSize": "md",

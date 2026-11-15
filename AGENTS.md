@@ -77,3 +77,5 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   control set. Keep its behavior and optical-size checks current as it grows.
 - `node tools/verify-forms.js http://127.0.0.1:4173` covers native form behavior,
   hero/full sizing, keyboard input, reduced motion and portable form exports.
+- `node tools/verify-layout.js http://127.0.0.1:4173` covers layout drag/snap,
+  menus, reflow, navigation, touch, interruption, geometry and portable exports.

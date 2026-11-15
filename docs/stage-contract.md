@@ -52,3 +52,6 @@ respective gates. Use `node tools/verify-exemplars.js` for the current remediate
 controls' interaction, reduced-motion, namespace and offline-export checks.
 `node tools/verify-forms.js` also verifies native editing, validation, paste,
 form completion, declared hero/full geometry and native text readability.
+`node tools/verify-layout.js` covers captured drag/release, snapping, local menu
+placement, keyboard reordering, touch gestures, interruptible navigation and
+swaps, original asset geometry and complete portable behavior.

@@ -261,6 +261,53 @@ The earlier seven-control group was committed as `414213a` and pushed to `main`.
 Node 18/22 verification, Pages deployment and the public-browser control smoke
 check passed.
 
+## Phase 4 — Layout controls and navigation
+
+Eleven more existing Layout & UI demos now follow their v4 references: Bottom
+Sheet, Radial Menu, Command Palette, Scrub Number, Context Menu, Resizable Split,
+Border Glow Card, Drag to Reorder, Zoom Into UI, Bento Spotlight and Swap Card.
+Together with the earlier work, 38 existing demos have been remediated. This
+continues bucket A; the remaining remediation buckets are still pending.
+
+The implementations retain captured drag, velocity projection, local coordinate
+math, keyboard editing, fuzzy ranking, submenu placement and five-row full
+reordering. The v4 scrub modifier and split-stop hints govern their updated
+Shift-times-ten and thirds behavior. Native heroes preserve the original geometry;
+the full compositions retain their complete controls and state. All 23 supplied
+SVGs keep their bytes, layer slots and intrinsic dimensions, with provenance in
+`ASSET_ART_DIRECTION.md`. Eleven native search posters have been refreshed.
+
+The new `tools/verify-layout.js` passes 190 checks. It covers mouse and real touch
+capture/release, snap springs and suspension, precise keyboard nudges, scoped
+shortcuts, independent menu instances, compact local scrolling, validated submenu
+placement, cancellation, keyboard reorder rollback and rapid zoom/swap
+interruption. All eleven full exports boot and execute their primary behavior
+offline. Original artwork geometry and visible text pass at 372x264 and 286x196.
+The touch suite caught and fixed a long-press release click selecting the newly
+opened menu row; the release is now consumed and the next deliberate tap works.
+
+The broad suite passes 651 checks, all 399 lazy previews and 97 offline exports.
+The 13 runtime/shell tests and eight CLI/MCP tests also pass. The stage baseline
+shrinks from 364 to 353 demos and motion debt from 151 to 142, with no new
+violations. The current global audit records 0 failed boots, 0 missing sizes,
+60 overflow, 3 horizontal scroll, 255 tiny-text and 75 low-fill offenders. None
+of these eleven demos is an offender. All 23 sparse-geometry exceptions validate;
+the newly documented exception is the Figma 160x40 scrub field. Other gates are
+unchanged and remain pending across the rest of the library.
+
+The required mobile Lighthouse routes score 94 for home (about 293KB) and 100
+for Elastic Tabs (about 356KB). An additional Command Palette cold-load check
+exposed a needless complete-Inter download for absent keyboard glyphs and eager
+layout of hidden search results. Symbols now use the existing system fallback
+directly while Latin text stays Inter; real results are built on deliberate
+open. Command Palette now scores 99 at about 359KB with a 0.96s LCP. The complete
+source and offline interactions remain available.
+
+The previous form group was committed as `c691bdc` and pushed to `main`. Node
+18/22 verification, Pages deployment and all 169 form checks on the public site
+passed. The published registry preserved full password source and its separate
+hero geometry.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

@@ -120,3 +120,47 @@ exposes the referenced paths for lightweight previews and content-hashed bundle
 URLs for source export. `tools/build-demo-assets.js` embeds the same original
 files and local fonts into `js/demo-assets.js` for portable HTML. Update the
 manifest, regenerate the asset bundle, then regenerate the registry after edits.
+
+## Handoff 3 v4 layout artwork
+
+The following unmodified SVGs come from the same owner-supplied Interaction
+Figma file. They keep their root dimensions and original layer slots in native
+previews and portable HTML. No reference screenshot is used as artwork.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| layout-radial-image.svg | 157:1658 | 16x16 |
+| layout-radial-mic.svg | 157:1658 | 16x16 |
+| layout-radial-file.svg | 157:1658 | 16x16 |
+| layout-radial-link.svg | 157:1658 | 16x16 |
+| layout-radial-calendar.svg | 157:1658 | 16x16 |
+| layout-radial-upload.svg | 157:1658 | 16x16 |
+| layout-radial-plus.svg | 157:1658 | 20x20 |
+| layout-command-search.svg | 157:1722 | 16x16 |
+| layout-scrub-move.svg | 157:1774 | 16x16 |
+| layout-context-share.svg | 157:1796 | 16x16 |
+| layout-context-copy.svg | 157:1796 | 16x16 |
+| layout-context-delete.svg | 157:1796 | 16x16 |
+| layout-context-pointer.svg | 157:1796 | 28.5x29.25 |
+| layout-glow-glow-1.svg | 157:1854 | 114x116 |
+| layout-glow-glow-2.svg | 157:1854 | 114x116 |
+| layout-glow-glow-3.svg | 157:1854 | 114x116 |
+| layout-glow-glow-4.svg | 157:1854 | 114x116 |
+| layout-glow-highlight.svg | 157:1854 | 111x1 |
+| layout-reorder-grip.svg | 157:1880 | 16x16 |
+| layout-reorder-grip-active.svg | 157:1880 | 16x16 |
+| layout-bento-card.svg | 157:1934 | 132x90 |
+| layout-bento-pointer.svg | 157:1934 | 28.5x29.25 |
+| layout-swap-arrow.svg | 157:1963 | 16x16 |
+
+The fifth glow layer repeats `layout-glow-glow-4.svg` exactly as in Figma.
+Reorder retains the three normal-grip slots, the active grip and the overlapping
+bottom-row layer in the static lifted pose. The first Bento card remains the
+complete supplied SVG; its live pointer lighting overlays the original artwork.
+Context Menu and Bento each retain their own original pointer file. Asset hashes
+are compared before reuse; these downloads have distinct original bytes.
+
+The bundled Inter Latin and complete faces contain neither U+2318 (Command)
+nor U+232B (Backspace). Those two keyboard symbols use the same system fallback
+directly; adjacent K/D letters remain Inter. This avoids an unnecessary 158KB
+complete-font download for glyphs it does not contain. No font files are edited.
