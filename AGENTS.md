@@ -115,6 +115,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   review, knowledge orbit, context compaction and context meter: complete original
   fixtures, native decisions/promotion/history, long-horizon cost, source
   accounting, exact SVG slots, compact text, pause and offline exports.
+- `node tools/verify-fui.js http://127.0.0.1:4173` covers the v4 status panel,
+  target lock, oscilloscope and spectrum scan. It checks complete original
+  instrument fixtures, native touch/keys, interrupted locks, harmonic traces,
+  virtual holds, seeded contacts, actual band transforms, exact SVG slots,
+  compact type, suspension, disposal and offline exports.
+- `node tools/verify-entry-layout.js http://127.0.0.1:4173` holds the catalog
+  across first paint and checks stable route chrome for modern and legacy
+  entries on desktop and mobile. Reserve initial chrome before catalog loading.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

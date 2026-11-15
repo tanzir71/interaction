@@ -904,6 +904,66 @@ These four previews have zero stage-fit offenders. The full diagnostic still
 exits1 for remaining remediation: zero failed boots, zero missing design sizes,
 35 overflow, three horizontal-scroll, 199 tiny-text and 74 low-fill findings.
 
+## Phase 4 — FUI status, target, scope and spectrum
+
+The first four FUI tiles now match v4: status panel 166:993, target lock 166:1022,
+oscilloscope 166:1045 and spectrum scan 166:1069. Existing visual remediation
+reaches 100/399; 299 existing and 121 new/extension entries remain. The six
+remaining FUI modules, 395 unrelated metadata records/modules and supplied
+handover files are untouched. Chrome/control debt shrinks from 297 to 293 and
+motion debt from 111 to 107 without additions.
+
+Each lightweight native hero mounts independently of its full instrument.
+Status retains all four panels, original thermal sine, clock and random
+diagnostic delays/row/duration draws. Target preserves all four identities,
+corner/reticle geometry and cursor model; fitted pointer coordinates and native
+focus work on desktop and touch. Interrupted locks now start at every current
+painted corner, including a return flight, rather than snapping to center.
+
+Scope keeps the three-harmonic signal, 1.5px point sampling, original trail
+decay/glow and full DPR-backed canvas. Its 1500ms hold uses virtual time, so
+caller/offscreen pauses preserve the remainder. Two-axis native touch now tunes
+both original inputs and retains them on touchend; mouse leave still resets.
+Spectrum preserves all 64 seeded bases, contact draws, selection/frequency map,
+3.2s sweep, physical 1.15 influence, 2× contacts, 800ms crossing pause and
+1200ms fade. Cached direct body/tip/blip transforms remove inherited variable
+updates without reducing the signal model, data resolution or update cadence.
+
+Six original SVG exports provide six compact instances; five new files and one
+exact-byte reuse bring the portable bundle to 216 images with the same six
+fonts. All prior 211 payloads remain exact. Artwork slots are checked at
+372×264, 286×264 and 286×196; spectrum primitive geometry is also checked.
+Target's exact 140.8×76.8 Figma composition is the 42nd valid fill-only exception.
+The four previews have zero stage-fit offenders. The global diagnostic still
+exits 1 for pending remediation: zero failed boots or missing sizes, 35 overflow,
+three horizontal-scroll, 195 tiny-text and 74 low-fill findings.
+
+The focused verifier passes 286 original-model, actual-rendering, native input,
+interruption, compact typography, virtual hold, suspension, disposal and offline
+checks. Four native posters are refreshed.
+All 651 library checks, 399 lazy previews and 97 offline exports pass, as do
+17 runtime/shell tests, eight CLI/MCP tests and the stage-runtime browser checks.
+Registry, stage, canonical generated output and motion checks pass.
+
+The final 4× CPU profiles each have 239 intervals: median 16.7ms, p95
+16.7–16.8ms. Scope has a retained 33.4ms
+maximum; the other maxima are 16.8ms. Largest measured action is 16.5ms. The
+original scanner p95 33.3ms trace is retained alongside the optimized 16.8ms
+trace. No model sampling or interaction was removed to obtain these results.
+
+A required Lighthouse run exposed an existing cold-entry chrome jump: mobile
+detail initially painted the 56px site header, then removed it after catalog
+loading; desktop similarly removed its 36px promo strip. Initial route chrome
+now resolves before catalog loading, and scale text is populated before layout.
+Twelve delayed-catalog modern/legacy entry checks pass. Retained before/after
+traces show the mobile main shift eliminated. Sequential final mobile Lighthouse
+scores 92 for home (297,867 bytes, LCP 3.030s, CLS 0) and 91 for Elastic Tabs
+(361,733 bytes, LCP 3.570s, CLS 0). The earlier failing detail score of 89 is
+retained. Both required routes meet 90; home remains below 400KB. The shared
+author link to https://tanziro.com/ is verified across eight desktop/mobile
+route cases locally and publicly. Shared stylesheet, footer UI and detail script
+URLs are versioned so returning browsers retrieve the current release.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

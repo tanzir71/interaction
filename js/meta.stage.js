@@ -5580,17 +5580,28 @@ INTRX.meta({
     ]
   },
   "fui-status-dashboard": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      420
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Check system",
+        "action": "check"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5599,21 +5610,36 @@ INTRX.meta({
       "telemetry"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-target-lock": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      340
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next target",
+        "action": "next"
+      },
+      {
+        "label": "Release",
+        "action": "release"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5622,8 +5648,12 @@ INTRX.meta({
       "targeting"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-terminal-boot": {
     "designSize": "lg",
@@ -5649,17 +5679,32 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "fui-waveform-scope": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Hold",
+        "action": "hold"
+      },
+      {
+        "label": "Release",
+        "action": "release"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5668,21 +5713,40 @@ INTRX.meta({
       "waveform"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-signal-scanner": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next band",
+        "action": "next"
+      },
+      {
+        "label": "Contact",
+        "action": "contact"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5691,8 +5755,12 @@ INTRX.meta({
       "radio"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-data-stream": {
     "designSize": "lg",

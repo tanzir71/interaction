@@ -169,3 +169,26 @@ history, queue, threshold compaction and billed cost. Changed cost digits use
 250ms fades with stable slots, including whole-dollar carries. Source allocation
 is deterministic and conserved through compaction without changing old event
 fixtures. Both models preserve explicit caller pauses across viewport changes.
+
+The first four FUI demos mount separate native v4 heroes and complete original
+instruments. Status retains all four monitor modules, its clock, thermal sine
+and random diagnostic policy. Target lock converts physical pointer/DOM
+geometry through the fitted scale and retargets every flight from its painted
+position, including an outgoing return. Native focus, Escape and shared dock
+actions operate on the same model.
+
+Oscilloscope retains its three harmonics, 1.5px sampling, complete trail buffer,
+original input maps and phase model. Canvas resolution uses logical dimensions
+times DPR; stage fitting applies separately. The 1500ms hold shares runtime
+time, and real two-axis touch retains its tuning after release. Spectrum keeps
+all 64 seeded bands, physical influence/boost, selected range, seeded contacts,
+800ms crossing pause and 1200ms contact fade. Cached direct body/tip/blip
+transforms preserve the original model while avoiding inherited variable writes
+on every frame. Reduced mode does no automatic recurring work; cleanup cancels
+owned scheduling, observers and listeners. Full exports retain each model offline.
+
+Cold entry sets route chrome before the catalog response, including legacy
+detail/category links. This prevents removal of the mobile 56px header or
+desktop 36px promo strip from moving the detail page after first paint. The
+initial scale readout is populated before layout. The delayed-catalog verifier
+checks twelve modern/legacy entry cases at mobile and desktop widths.

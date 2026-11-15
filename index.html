@@ -17,12 +17,15 @@
 <link rel="preload" href="assets/fonts/geist-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
 <script>
+// Reserve route chrome before the catalog loads, including legacy entry links.
+const entryHash=location.hash;
+document.documentElement.dataset.route=entryHash.startsWith('#/')?(entryHash.split('/')[1]||'home'):entryHash.startsWith('#cat-')?'library':/^#(?!top$)[a-z0-9-]+$/.test(entryHash)?'c':'home';
 // Direct detail links need the demo UI font before the lazy module arrives.
 if (/^#\/c\/|^#(?!\/|cat-|top)[a-z0-9-]+$/.test(location.hash)) {
   const font=document.createElement('link');font.rel='preload';font.as='font';font.type='font/woff2';font.crossOrigin='anonymous';font.href='assets/fonts/inter-latin-variable.woff2';document.head.appendChild(font);
 }
 </script>
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 <link rel="stylesheet" href="css/fonts.css?v=4">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23fa7319' stroke-width='2'/></svg>">
 </head>
@@ -37,10 +40,10 @@ if (/^#\/c\/|^#(?!\/|cat-|top)[a-z0-9-]+$/.test(location.hash)) {
 <script src="js/shell/export.js?v=5" defer></script>
 <script src="js/shell/stage.js?v=5" defer></script>
 <script src="js/shell/router.js?v=4" defer></script>
-<script src="js/shell/ui.js?v=5" defer></script>
+<script src="js/shell/ui.js?v=6" defer></script>
 <script src="js/shell/views/home.js?v=4" defer></script>
 <script src="js/shell/views/library.js?v=5" defer></script>
-<script src="js/shell/views/detail.js?v=4" defer></script>
+<script src="js/shell/views/detail.js?v=5" defer></script>
 <script src="js/shell/views/docs.js?v=4" defer></script>
 <script src="js/shell/palette.js?v=4" defer></script>
 <script src="js/shell/main.js?v=4" defer></script>

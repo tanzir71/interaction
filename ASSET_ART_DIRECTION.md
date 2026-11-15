@@ -443,3 +443,20 @@ The portable bundle now has 211 images and the same six font faces; all earlier
 signals from the source. Other paint is neutral with orange for active state.
 The meter preserves its sparse 180×51 Figma geometry through a documented
 fill-only exception. Overflow, horizontal scroll and 11px text gates apply.
+
+## FUI status, target, scope and spectrum
+
+The first four v4 instrument previews are status 166:993, target lock 166:1022,
+oscilloscope 166:1045 and spectrum scan 166:1069. Six original SVG exports
+supply six visible instances: four 13.6×13.6 target corners, the 8×8 center dot
+and the 224×150 scope frame/trace/shadow. Five unique files are added; the dot
+reuses the byte-identical `load-wave-core` asset. `tools/fixtures/fui-artwork.json`
+records each node, key, exact slot, root dimensions and SHA-256. No paths are
+extracted or redrawn. Status tracks and the 21 spectrum bars remain primitives.
+
+The scope's default hero preserves the native export; deliberate tuning displays
+the real three-harmonic trace and Reset restores the export. Full mode retains
+the complete instrument. The portable bundle has 216 image references and the
+same six fonts; all preceding 211 image payloads remain exact. Target lock keeps
+its sparse 140.8×76.8 reference composition through a fill-only exception. All
+42 exceptions validate without changing overflow, scroll or typography gates.
