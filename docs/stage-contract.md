@@ -116,3 +116,21 @@ available to assistive technology. Pointer hit testing uses the painted top face
 Its interruptible RAF clock excludes caller pauses and offscreen/hidden time.
 Shared runtime disposal owns returned cleanup, including listeners, observers
 and temporary Web Animations.
+
+The remaining four maps keep complete 360×280 full compositions, with 224×168
+hero planes for globe, route and sites and a 260×168 plane for isolines. Thumb
+mode boots only its lightweight preview controller; full mode removes the unused
+hero artwork. Full globe retains all 2,048 seeded points and native source-over
+depth blending. Route keeps all 63 intersections and deterministic Dijkstra
+paths; radar keeps six sites and their seeded schedules. Both virtual RAF and
+elapsed-time interpolation exclude hidden and suspended time.
+
+Isolines retains the 64×40 field and all seven marching-squares levels. A fixed
+60Hz simulation accumulator makes 30/60/120Hz display schedules produce the same
+field, contours and labels. Sample ranks skip uniform cells, and adjacent cells
+share interpolation on the same oriented edge. Boundary duplicate detection
+retains the original nine-decimal keys. An unchanged reference extractor checks
+degenerate, near-threshold and seeded adversarial fields. Field and projection
+digests are computed when inspected, outside the normal animation path; pending
+digests are explicitly marked. All four exports retain the complete original
+models, shared controls, cleanup and offline native artwork.

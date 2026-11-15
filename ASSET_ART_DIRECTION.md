@@ -378,3 +378,25 @@ Full mode retains the native field and polygon algorithms. No photo, screenshot
 or replacement vector is introduced. The portable bundle now contains 140 image
 references and the same six font faces; all 128 preceding image payloads and
 font faces remain unchanged.
+
+## Handoff 3 v4 globe, route, sites and isoline artwork
+
+The remaining four maps use 48 supplied SVG exports in 270 visible instances.
+One site dot is byte-identical to the globe endpoint, so it reuses that existing
+portable key; 47 unique files are added. The complete six-map manifest records
+301 instances, their original child IDs, exact slots, native dimensions and
+SHA-256 hashes in `tools/fixtures/maps-artwork.json`.
+
+| Preview | Figma tile | Original image instances |
+| --- | --- | --- |
+| Globe Arcs | 166:659 | 165 globe dots, one arc and two endpoints |
+| Route Draw | 166:843 | Eleven grid lines, one route and two endpoints |
+| Site Pings | 166:873 | 77 grid dots and three ring/dot pairs |
+| Isolines | 166:972 | Five ellipse contours |
+
+Images retain their original bytes and explicit native width and height. Motion
+acts on wrappers, masks and opacity. New destinations and pulse instances are
+interactive states; the static Figma illustrations do not replace the complete
+geographic, graph, site or scalar-field models in full mode. No screenshot is
+used as tile art. The portable bundle contains 187 image references and the
+same six font faces; all 140 preceding image payloads and fonts are unchanged.

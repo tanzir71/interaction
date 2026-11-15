@@ -683,6 +683,84 @@ work: zero failed boots, zero missing sizes, 35 overflow, three horizontal-scrol
 valid. The unchanged line-mask-reveal appears in this run's overflow and
 horizontal-scroll lists; it remains an existing remediation item.
 
+## Phase 4 — Maps: globe, route, sites and isolines
+
+The four remaining Maps & Geo demos now have their v4 previews. Visual
+remediation covers 88 existing demos; 311 existing and 121 new/extension entries
+remain. The preceding terrain/city release is f82dfea, with successful Node
+18/22 CI and deployment, 186 public browser checks, 26 committed-artifact
+comparisons and eight footer route/viewport checks.
+
+Full Globe Arcs retains all 2,048 seeded world points, eight real city
+coordinates, 32 deterministic flight pairs, 49 samples per arc, lifted
+midpoints, depth order and source-over alpha. Route Draw retains its 63-node
+graph, seeded diagonal edges, canonical path, deterministic Dijkstra reroutes,
+turn-aware marker, trail model and distance/ETA calculations. Site Pings keeps
+both original landmasses, 24 noise blobs, all six sites, directional navigation,
+eight seeded intervals per site and bounded pulse queues. Its landing timing
+and parallax now use motion tokens; the four dependent fixture hashes change
+explicitly, while original geometry, schedule intervals and RNG draws remain.
+
+Isolines keeps all 2,560 field samples, 2,457 cells, seven levels, the original
+asymptotic decider, Gaussian heat kernel, segment order and chosen label model.
+A fixed 60Hz simulation produces identical fields, contours and labels under
+30/60/120Hz schedules. Per-sample ranks skip uniform cells, shared edge records
+avoid duplicate interpolation, and nine-decimal duplicate keys remain exact on
+boundary candidates. Seventy-three original/adversarial fields are compared
+against an unchanged pre-remediation extractor, including flat levels, shared
+boundaries, near-threshold saddles and seeded fields with exact vertices. The
+probe also proves that these inspections leave the live model unchanged.
+
+All four complete models use 360×280 full compositions with readable native
+SVG/canvas labels at 390px, 375px and 360px. Compact controllers use their own
+224×168 planes, or 260×168 for Isolines, and avoid booting hidden full models.
+Shared controls, native keyboard/touch, finite reduced-motion feedback,
+interruption, offscreen suspension, caller pause preservation and disposal are
+covered by focused checks and interactive offline exports. Projection/field
+checksums are computed when inspected instead of in the animation loop, with
+pending digests explicitly marked.
+
+The four references contain 48 SVG exports in 270 visible instances. One dot
+reuses a byte-identical existing endpoint, adding 47 unique files. All six maps
+now account for 301 native image slots. All original bytes and dimensions are
+verified at 372×264, 286×264 and 286×196. The portable bundle has 187 image
+references; all preceding 140 image payloads, six fonts and 395 unrelated stage
+records are unchanged. INTRX-handover remains untouched. Four native search
+posters are refreshed.
+
+The final 4× CPU profiles have 16.7ms medians. Route and sites have 16.7ms 95th
+percentiles and 16.8ms maxima. Isolines reaches 16.8ms at the 95th percentile,
+with a 33.4ms maximum. Globe reaches 33.4ms at the 95th percentile and maximum;
+its all-point canvas rendering remains a completion-audit performance follow-up.
+The slower bitmap and disjoint-fill experiments are retained as raw evidence;
+the shipped globe preserves individual native circular fills. No point, contour
+level, field resolution or route sample was removed for the profiles.
+
+The library verifier passes 651 checks, all 399 lazy previews and 97 offline
+exports. All 17 runtime/shell and eight CLI/MCP tests pass. Registry, generated
+output, stage and baseline motion checks pass. Terrain interruption samples now
+capture the current pose and reverse it in one browser task; pause/resume checks
+compare virtual elapsed time directly instead of treating driver delays as
+animation time. These verifier changes leave the terrain implementation intact.
+Chrome/control debt shrinks from
+309 to 305; motion debt stays at 114, with no additions. All six maps pass
+1,334 focused checks, including 1,148 for the four complete models and 186 for
+terrain/city. Browser lifecycle checks also pass.
+
+The four remediated previews have no stage-fit offenders and need no new fill
+exceptions. The full audit still exits 1 for remaining remediation: zero failed
+boots, zero missing sizes, 35 overflow, three horizontal-scroll, 207 tiny-text
+and 74 low-fill offenders. All 37 documented exact-geometry exceptions validate;
+no gate or threshold changes. Tiny-text debt drops by four from the preceding
+release.
+
+Quiet mobile Lighthouse scores 95 for home (296,995 transferred bytes) and
+100 for Elastic Tabs (360,861 bytes) on the repeat. The first detail sample is
+89 with LCP 3.585s and CLS .068; the repeat is 1.033s and .000187. Both reports
+are retained, as with the preceding release, for the completion audit. The
+shared footer still visibly links Tanzir Rahman to https://tanziro.com/ and is
+verified on the running dev site across desktop and mobile routes.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

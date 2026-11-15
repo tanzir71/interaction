@@ -5412,13 +5412,29 @@ INTRX.meta({
     ]
   },
   "map-dot-globe-arcs": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      280
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Replay",
+        "action": "replay"
+      },
+      {
+        "label": "Slow / resume",
+        "action": "slow"
+      },
+      {
+        "label": "Next route",
+        "action": "route"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5430,17 +5446,37 @@ INTRX.meta({
       "routes"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "map-route-draw": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      280
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Replay",
+        "action": "replay"
+      },
+      {
+        "label": "Reroute",
+        "action": "reroute"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5452,17 +5488,37 @@ INTRX.meta({
       "wayfinding"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "map-radar-pings": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      280
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Ping",
+        "action": "ping"
+      },
+      {
+        "label": "Anomaly",
+        "action": "anomaly"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5474,17 +5530,37 @@ INTRX.meta({
       "parallax"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "map-isoline-field": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      280
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Heat on / off",
+        "action": "heat"
+      },
+      {
+        "label": "Center heat",
+        "action": "center"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5496,8 +5572,12 @@ INTRX.meta({
       "noise"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      260,
+      168
+    ]
   },
   "fui-status-dashboard": {
     "designSize": "lg",
