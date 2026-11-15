@@ -9,6 +9,7 @@
    gate fails, so CI can run it once the remediation in §5 is complete. */
 const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const stageFitBounds=require('./stage-fit-bounds');
 const lowFillExceptions=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 
 const GATES = {
@@ -25,6 +26,7 @@ const GATES = {
     : await chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH || undefined, args: ['--enable-unsafe-swiftshader'] });
   const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   await page.goto(url.replace(/\/#.*$/,'').replace(/\/$/,'')+'/#/library', { waitUntil: 'networkidle' });
+  await page.addScriptTag({content:'window.INTRXStageFitBounds='+stageFitBounds.toString()+';'});
   while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();
 
   const results = await page.evaluate(async exceptions => {
@@ -57,13 +59,17 @@ const GATES = {
         const cs = getComputedStyle(el);
         if (cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
         if (el.children.length && !/^(CANVAS|SVG|IMG|VIDEO|INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)) continue;
-        const b = el.getBoundingClientRect();
+        // Honor clipping by a native photo frame, scroll viewport or reveal
+        // mask. The fitted root and shell stage are deliberately excluded.
+        const b = window.INTRXStageFitBounds(el,root);
+        if (!b) continue;
         if (b.width < 1 || b.height < 1) continue;
         leaves++;
         top = Math.min(top, b.top); left = Math.min(left, b.left); right = Math.max(right, b.right); bottom = Math.max(bottom, b.bottom);
         if (b.right > sr.right + 2 || b.left < sr.left - 2 || b.bottom > sr.bottom + 2 || b.top < sr.top - 2) overflow++;
         const nativeText=/^(INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)&&!['range','checkbox','radio','color','file','hidden'].includes(el.type)&&(el.value||el.placeholder);
-        if ((el.textContent.trim().length > 1 || nativeText) && cs.color!=='rgba(0, 0, 0, 0)') minFont = Math.min(minFont, parseFloat(cs.fontSize) * zoom);
+        // Split-letter menus and single-digit readouts still contain text.
+        if ((el.textContent.trim().length > 0 || nativeText) && cs.color!=='rgba(0, 0, 0, 0)') minFont = Math.min(minFont, parseFloat(cs.fontSize) * zoom);
       }
       const iw = Math.max(0, Math.min(right, sr.right) - Math.max(left, sr.left));
       const ih = Math.max(0, Math.min(bottom, sr.bottom) - Math.max(top, sr.top));

@@ -3289,17 +3289,29 @@ INTRX.meta({
     "caption": "Snap to the next card"
   },
   "menu-fullscreen-overlay": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle menu",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "fullscreen menu",
@@ -3307,21 +3319,38 @@ INTRX.meta({
       "focus trap"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Press · Links rise in; hover previews the next page"
   },
   "menu-split-reveal": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle menu",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "split screen",
@@ -3329,21 +3358,38 @@ INTRX.meta({
       "stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Press · The page splits apart to reveal the menu"
   },
   "menu-circular-expand": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle menu",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "clip-path",
@@ -3351,17 +3397,34 @@ INTRX.meta({
       "burger origin"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Press · The menu expands as a circle from the button"
   },
   "nav-blur-elevate": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      },
+      {
+        "label": "Top",
+        "action": "top"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3373,17 +3436,34 @@ INTRX.meta({
       "scroll threshold"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Scroll · The bar frosts as content passes under"
   },
   "nav-hide-reveal": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      },
+      {
+        "label": "Top",
+        "action": "top"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3395,21 +3475,38 @@ INTRX.meta({
       "overshoot"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Scroll · Hides down, returns on the way up"
   },
   "nav-active-pill": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next link",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "FLIP",
@@ -3417,21 +3514,38 @@ INTRX.meta({
       "stretch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      260,
+      60
+    ],
+    "caption": "Press · The pill stretches to the next link"
   },
   "menu-letter-cascade": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next link",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "split letters",
@@ -3439,21 +3553,38 @@ INTRX.meta({
       "sibling blur"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      180,
+      160
+    ],
+    "caption": "Hover · Letters roll over one after another"
   },
   "menu-image-peek": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next project",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "menu preview",
@@ -3461,21 +3592,38 @@ INTRX.meta({
       "hover focus"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      136
+    ],
+    "caption": "Hover · A photo follows the pointer over each row"
   },
   "breadcrumb-collapse": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle levels",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "breadcrumb",
@@ -3483,17 +3631,34 @@ INTRX.meta({
       "progressive disclosure"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      68
+    ],
+    "caption": "Press · Hidden levels fold out from the ellipsis"
   },
   "tab-morph-content": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next tab",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3505,21 +3670,38 @@ INTRX.meta({
       "directional slide"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      252,
+      148
+    ],
+    "caption": "Press · The panel cross-fades as the indicator moves"
   },
   "sidebar-rail-expand": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle rail",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "sidebar",
@@ -3527,21 +3709,38 @@ INTRX.meta({
       "label stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      200,
+      160
+    ],
+    "caption": "Press · The rail widens and labels fade in"
   },
   "burger-morph-x": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Toggle menu",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "navigation"
     },
     "useCases": [
       "burger icon",
@@ -3549,21 +3748,38 @@ INTRX.meta({
       "menu toggle"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      120,
+      120
+    ],
+    "caption": "Press · Three bars rotate and merge into an X"
   },
   "mega-menu-preview": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next product",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "menu"
     },
     "useCases": [
       "mega menu",
@@ -3571,8 +3787,13 @@ INTRX.meta({
       "navigation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      156
+    ],
+    "caption": "Hover · Each product previews on the right"
   },
   "btn-border-beam": {
     "designSize": [

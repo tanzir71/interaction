@@ -421,6 +421,70 @@ The supplied INTRX-handover folder is unchanged. The previous ten-control batch
 was committed as 56452b1, pushed to main, and passed Node 18/22 verification,
 Pages deployment and all 194 public layout-control checks.
 
+## Phase 4 — Navigation and menus
+
+All thirteen existing Navigation & Menus demos now follow their exact v4 tiles:
+Fullscreen Overlay, Split Reveal, Circular Expand, Blur-Elevate Nav,
+Hide-on-Scroll Nav, Active Pill Nav, Letter Cascade, Image Peek List,
+Breadcrumb Collapse, Morphing Tabs, Rail to Sidebar, Burger to X and Mega Menu.
+Existing-demo remediation reaches 66; the remaining 333 existing demos and the
+121 new/extension entries still need their complete implementation and audit.
+
+Full mode keeps the original route sets, project captions, complete journal
+articles, hidden breadcrumb levels, distinct tab contents and heights, sidebar
+profile and neighboring canvas, and all five mega-menu products. Native
+keyboard, focus return, local Escape, pointer and touch behavior stay usable.
+The full-screen overlay measures its native launcher and reversibly morphs
+from that rectangle, including its radius. Transitions retarget from their
+current positions; the sidebar interpolates a
+label grid without moving its icon column or directly transitioning width.
+Both scroll previews share one time-based driver, pause with the runtime, stop
+autoplay after manual input and cease scheduling frames once settled. Reduced
+motion holds the v4 preview pose and keeps opacity feedback. CSS and JavaScript
+transitions resolve shared timing/easing tokens, including derived recipe values.
+
+Nine original navigation SVGs retain their source bytes and intrinsic sizes;
+the fourth rail icon reuses the byte-identical existing settings SVG. Aurora
+and Silk have verified free Unsplash sources, exact comparisons against the v2
+originals, photographer credits and checksums for both local WebP variants.
+Silk is explicitly recorded as the source author's 3D render. Full previews use
+1600px imagery; complete portable exports embed only 800px images. All 86 prior
+portable image payloads, the existing font faces and all non-navigation stage
+metadata were compared with the preceding commit and remain unchanged.
+
+The navigation verifier passes 394 checks for complete interactions, measured
+asset slots, interrupted transitions, scroll lifecycle, keyboard focus, native
+touch, unique associations, compact heroes, full text at 390px/375px/360px and
+all thirteen offline exports. Eleven browser geometry checks prove that native
+photo masks and scroll viewports clip painted bounds while root/stage clipping
+cannot exempt overflow. The auditor now includes single-character glyphs and
+digits in its existing 11px text gate and excludes zero-area screen-reader masks.
+This corrects measurement independently of component remediation; reductions
+from that correction are not counted as additional remediated demos.
+
+Four exact sparse Figma controls have documented fill-only exceptions: the
+236×40px active-pill rail, 28×24px breadcrumb ellipsis, 140×160px sidebar and
+44×44px burger button. The overflow, horizontal-scroll and typography gates
+retain their original thresholds. Stage debt drops from 340 to 327 demos and
+motion debt from 129 to 121, with no new violations. All 13 runtime/shell and
+eight CLI/MCP tests pass. The supplied INTRX-handover folder is unchanged.
+
+The five most layout-intensive transitions were profiled with 4× CPU slowdown:
+median frame time is 16.7ms, the 95th percentile is at most 16.8ms and no frame
+exceeded 34ms. Mobile Lighthouse scores 98 for home (295,765 transferred bytes)
+and 90 for Elastic Tabs (359,631 bytes). An initial localhost:3000 home run
+scored 86 with a longer task in the unchanged dot-field preview; the isolated
+control on the previous 127.0.0.1:4173 setup scores 98. Both raw runs are retained
+in local QA artifacts. No home code was changed to obtain the control result.
+
+All thirteen native search posters are refreshed. Final broad verification passes
+651 checks, all 399 lazy previews and 97 offline exports. The thirteen navigation
+demos have no fit offenders. The global diagnostic remains incomplete and exits
+1: 0 failed boots, 0 missing sizes, 34 overflow, 2 horizontal-scroll, 229 tiny-text
+and 75 low-fill offenders. All 28 exact-geometry fill exceptions validate. These
+global counts use the corrected native-mask measurement; untouched ambient
+compositions can vary by one low-fill observation while animating.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

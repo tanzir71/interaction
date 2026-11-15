@@ -62,3 +62,15 @@ native touch, exact v4 photo slots, attribution and offline 800px imagery.
 Verified photographs live in `assets/photo-credits.json`. Portable `photo-*`
 asset names refer to 800px files; generated `fullAssetRefs` select local 1600px
 files for detail previews. Keep source and licence comments in portable HTML.
+
+`node tools/verify-navigation.js` checks native menus, breadcrumbs, tab panels,
+scroll navigation and sidebar expansion, including complete offline interactions
+and readable full views at 390px, 375px and 360px.
+
+The fit auditor intersects artwork bounds with native masks and scroll viewports
+inside the demo. Clipping on the fitted root or outer stage is excluded from that
+calculation so those boundaries cannot conceal overflow. The original image
+dimensions remain unchanged. `node tools/verify-stage-fit-geometry.js` exercises
+these rules in a real browser, including per-axis clipping and CSS zoom.
+Zero-area screen-reader masks contribute no painted bounds. Single-character
+glyphs and digits remain subject to the same 11px rendered-text gate.

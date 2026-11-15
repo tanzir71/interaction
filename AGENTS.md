@@ -89,3 +89,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Portable `photo-*` assets map to the 800px file in `assets/demo-assets.json`.
   The builder derives `photoCredits` and `fullAssetRefs`; detail uses 1600px
   paths while thumbnails and exports use 800px. Keep licence comments in exports.
+- `node tools/verify-navigation.js http://127.0.0.1:4173` covers all 13 v4
+  navigation demos, native focus/keys, interrupted transitions, scroll lifecycle,
+  exact asset slots, portable source and 390px/375px/360px full typography.
+- The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
+  Root and shell-stage clipping never exempt overflowing content. Verify this
+  boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

@@ -2,13 +2,14 @@
 
 ## Handoff 3 — verified Photo library v2
 
-The seven dark photographs below replace the earlier generated artwork in
-Masonry Filter, Table Image Peek, Caption Pull, Flip Expand and Inertia Carousel.
+The nine dark editorial images below supply the remediated photo layouts and
+navigation previews, including Masonry Filter, Table Image Peek, Caption Pull,
+Flip Expand, Inertia Carousel, Blur-Elevate Nav, Image Peek List and Mega Menu.
 Each canonical Unsplash page was checked on 15 November 2026: its photographer,
 free download and Unsplash License were confirmed. The original image IDs were
 recovered through Unsplash visual search against the owner's Figma exports.
-Independent 1800px source downloads matched all seven Figma originals with zero
-perceptual-hash distance (RGB RMS difference 0.22–0.38 on a 0–255 scale).
+Independent 1800px source downloads matched all nine Figma originals with zero
+perceptual-hash distance (RGB RMS difference 0.00–0.38 on a 0–255 scale).
 
 | Key | Unsplash image ID | Photographer and canonical photo |
 | --- | --- | --- |
@@ -19,13 +20,18 @@ perceptual-hash distance (RGB RMS difference 0.22–0.38 on a 0–255 scale).
 | cityNight | photo-1603793510575-a8cf24361baa | [Polina Kuzovkova](https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg) |
 | archGrid | photo-1504625709867-b4e45e3bb9dd | [Christophe Laurenceau](https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo) |
 | portraitC1 | photo-1610659128929-fa69328744e2 | [Carlos Garcia Hansen](https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I) |
+| silk | photo-1638376776402-9a4b75fe21bb | [Milad Fakurian](https://unsplash.com/photos/a-black-and-white-abstract-background-with-wavy-lines-JTKKRK05NAM) |
+| aurora | photo-1483347756197-71ef80e95f73 | [Vincent Guth](https://unsplash.com/photos/silhouette-of-trees-near-aurora-borealis-at-night-62V7ntlKgL8) |
 
-All seven use the [Unsplash License](https://unsplash.com/license), separate
+All nine use the [Unsplash License](https://unsplash.com/license), separate
 from the implementation's MIT licence; none is an Unsplash+ image. Files are
 self-hosted as `assets/images/<key>.webp` (1600px wide) and `<key>-800.webp`
 (800px wide), downloaded with `w=1600&q=80&fm=webp` and
 `w=800&q=80&fm=webp`. Natural image aspect ratios are preserved; native frames
-apply `object-fit: cover`. These are photographs, not Figma screenshots.
+apply `object-fit: cover`. The v2 `silk` key is Milad Fakurian's original
+3D render, categorized as 3D Renders on its source page. Its provenance records
+`kind: "3d-render"`; Aurora records `kind: "photograph"`. Both retain the exact
+approved v2 imagery. Source screenshots remain QA material.
 
 `assets/photo-credits.json` records canonical photo IDs, photographer profiles,
 licences, dimensions and SHA-256 checksums for both files. The registry builder
@@ -236,6 +242,31 @@ The fitted compositions compensate for the shell's 4px optical raise; their
 standard 372x264 asset positions match Figma. The bleed marquee uses the stage
 origin directly. The focused verifier checks both original dimensions and slots.
 
-The manifest now has 78 portable images: 75 original SVG references (73 physical
+That control group bundled 78 portable images: 75 original SVG references (73 physical
 files, including the earlier aliases) and the three existing generated photos.
 No uncredited photo from the new Figma set is published with this control group.
+
+## Handoff 3 v4 navigation artwork
+
+The following original SVGs are downloaded from the owner's Interaction file.
+Their bytes and intrinsic dimensions are preserved in the native previews and
+portable exports. The circular surface is clipped by its native 200×150px
+window while keeping its complete 220×220px image element and source position.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| nav-fullscreen-close.svg | 156:1572 | 16×16 |
+| nav-circle-surface.svg | 156:1615 | 220×220 |
+| nav-circle-close.svg | 156:1615 | 16×16 |
+| nav-blur-bar.svg | 156:1639 | 200×40 |
+| nav-hide-bar.svg | 156:1665 | 200×40 |
+| nav-rail-home.svg | 156:1760 | 16×16 |
+| nav-rail-search.svg | 156:1760 | 16×16 |
+| nav-rail-folder.svg | 156:1760 | 16×16 |
+| nav-burger-open.svg | 156:1792 | 68×68 |
+
+The fourth sidebar icon is byte-identical to `theme-auto.svg`; its
+`nav-rail-settings` portable name reuses that original file. The burger artwork
+contains the 44×44px button and its shadow overhang; the complete 68×68px asset
+remains at the Figma slot. Closed-state strokes are native interactive HTML.
+The bundle now contains 98 image references and the same six embedded font faces.
