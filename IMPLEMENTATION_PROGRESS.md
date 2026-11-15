@@ -1083,10 +1083,86 @@ all 43 existing exceptions validate. The global fit diagnostic still exits 1
 for remaining work: zero failed boots or missing sizes, 35 overflow, three
 horizontal-scroll, 189 tiny-text and 74 low-fill findings.
 
+## Phase 4 — Gallery sequences and photo decks
+
+Fraction Slider, Clip Transition, Stack Deck and Parallax Slides now match their
+native v4 tiles at 185:1709, 185:1737, 185:1760 and 185:1781. Visual remediation
+reaches 110/399; 289 existing and 121 new/extension entries remain. All 395
+unrelated demos and metadata records, including nine other gallery modules,
+remain unchanged. Chrome/control debt shrinks from 287 to 283 and motion debt
+from 102 to 101. The supplied handover remains untouched.
+
+Each compact preview has its own native composition and a complete full model.
+Fraction retains five bounded frames, all direct indicators and a shared index.
+Its number drum uses 100ms anticipation, a 130ms step and 740ms landing, both
+neighbor faces, the token step curve and interruption ghosts. Full-mode photos
+decode after the initial paint so the first transition can reuse prepared images.
+Reduced motion resolves sharp, unmoved photos with finite opacity feedback.
+
+Clip retains four wrapping chapters, clamped normalized pointer origins and
+the complete circular/page transition. The initial tile uses the exact forest
+and dusk crops with original ring and pointer exports. Interrupted transitions
+retain their painted image layers, including the current mask, alpha, shift
+and blur; the next commit releases these layers. Pixel-continuity checks cover
+retargeting while paused. This avoids synchronous canvas compositing/readback.
+
+Deck retains all five identities, recycling order, 90px/.7px/ms decisions,
+.32 vertical movement, .045 rotation with a twelve-degree clamp and 110px stamp
+strength. Fitted drag deltas use logical units. Release carries velocity through
+the 380/32/1 spring; reverse input retargets the pending flight. Full mode shows
+all five layers with twelve-pixel peeks. Escape, Reset and disposal release
+native pointer capture. FLIP measures all cards before writing animations.
+
+Parallax retains four bounded slides, complete 100% panel/35% opposite media
+travel and the normalized ±2.4%/±1.5% look map. Its native split photo composition,
+divider and original arrow exports remain exact. All four use shared dock
+actions, preserve caller/viewport holds and reject stale completion work.
+
+Four unmodified SVGs and the verified dusk photograph bring portable assets
+from 222 to 227 images; every preceding image payload, all six fonts and the
+nine preceding provenance records remain exact. John Towner's free Unsplash
+photograph matches the v4 raster exactly. Its limited clip slot follows the
+owner's v4-tile rule; full/tile files, hashes, detail credit and export licence
+comments are recorded. All four native posters are refreshed.
+
+The first rapid-input profiles recorded 283.3ms reveal and 83.3ms fraction
+outliers. Retaining native image layers and preparing full fraction photos
+removed those long tasks. Final sequential 4× CPU profiles each contain 239
+intervals with 16.7ms medians and p95 at or below 16.8ms. Clip and deck maxima
+are 16.8ms; fraction and parallax each have one interval around 33ms. No final
+profile records a long task. Earlier raw results remain available for the full
+performance audit.
+
+The focused verifier passes 419 checks against the original bounded/wrapping
+states, fourteen native pointer/velocity fixtures, all five queue identities,
+complete drum timing, interruption continuity, touch/keys, three compact sizes,
+390/375/360px full typography, exact photo/SVG slots, caller/viewport holds,
+cleanup and offline exports. The broad deck check now waits for its stack
+transition to settle before asserting the next card's final opacity.
+
+Sequential mobile Lighthouse scores 94 for home (298,583
+transferred bytes) and 91 for the required Elastic Tabs detail
+(362,449 bytes).
+LCP is 3105ms / 3570ms and CLS is
+0 / 0. An additional clip-detail diagnostic scores
+84 with 553,027 bytes and 4620ms simulated LCP;
+its late-discovered 1600px photograph remains a documented performance follow-up.
+The canonical §4.6 routes pass; the photo-detail result is retained separately.
+All seventeen runtime/shell and eight CLI/MCP tests pass.
+
+The full regression passes 651 checks, all 399 lazy previews and 97 offline
+exports. Registry, stage, motion and all 1205 generated artifacts pass. Browser
+stage lifecycle and eleven native-mask/acceptance-boundary checks pass. All four
+galleries meet every fit gate without new exceptions; the existing 43 fill-only
+exceptions validate. The global diagnostic still exits 1 for remaining work:
+zero failed boots or missing sizes, 35 overflow, 3 horizontal-scroll,
+185 tiny-text and 70 low-fill findings.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,
-   including the recorded price-tape and heatmap update-frame spikes.
+   including the recorded price-tape/heatmap update-frame spikes and clip-detail
+   photo discovery/loading follow-up.
 2. Thirty new components and ninety-one extension components, by category.
 3. Pro entitlement seams and a full requirement-by-requirement completion audit.
 

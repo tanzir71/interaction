@@ -3024,17 +3024,32 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "slider-progress-fraction": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Previous",
+        "action": "prev"
+      },
+      {
+        "label": "Next",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "slider",
@@ -3042,21 +3057,40 @@ INTRX.meta({
       "progress line"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      232,
+      168
+    ]
   },
   "slider-clip-transition": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Previous",
+        "action": "prev"
+      },
+      {
+        "label": "Next",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "slider",
@@ -3064,21 +3098,40 @@ INTRX.meta({
       "click origin"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "slider-stack-deck": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pass left",
+        "action": "pass"
+      },
+      {
+        "label": "Keep right",
+        "action": "keep"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "application"
+      "reducedMotion": true
     },
     "useCases": [
       "swipe",
@@ -3086,21 +3139,40 @@ INTRX.meta({
       "drag rotation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "slider-fullbleed-parallax": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Previous",
+        "action": "prev"
+      },
+      {
+        "label": "Next",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "slider",
@@ -3108,8 +3180,12 @@ INTRX.meta({
       "full bleed"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      248,
+      168
+    ]
   },
   "gallery-filmstrip-scrub": {
     "designSize": "lg",

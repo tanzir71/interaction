@@ -136,3 +136,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.
+- `node tools/verify-galleries.js http://127.0.0.1:4173` covers v4 Fraction
+  Slider, Clip Transition, Stack Deck and Parallax Slides. It compares original
+  bounds, wrap, drag/velocity and recycling fixtures; native keys/touch, complete
+  drum timing, interrupted compositing and flights, exact image/crop/SVG slots,
+  optical type, caller/viewport holds, reset cancellation and offline exports.

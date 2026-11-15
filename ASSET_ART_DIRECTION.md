@@ -492,3 +492,27 @@ Boot sequence 166:1366 uses native primitives: a 220×112 terminal, three
 11.5px command lines and a 192×3 rail with 128px representative progress. Its
 short compact layout increases line spacing to retain 11px rendered type.
 Separate full models retain all original market, orbital and device data.
+
+## Gallery sequences and photo decks
+
+The v4 Fraction Slider (185:1709), Clip Transition (185:1737), Stack Deck
+(185:1760) and Parallax Slides (185:1781) use the verified cityNight, forestBlue,
+forestDark, ocean and archGrid sources. Native frames apply the exact reference
+crops; full views use the 1600px variants and portable previews use 800px files.
+Their earlier source payloads and provenance records remain unchanged.
+
+The clip tile explicitly retains the dusk image at 185:1753: John Towner's
+[Red highlands](https://unsplash.com/photos/aerial-photo-of-brown-moutains-JgOeRuGD_Y4),
+image ID `photo-1477346611705-65d1883cee1e`. Its canonical page was verified on
+15 November 2026 as a free Unsplash License photograph. An independent 1200px
+source download matches the Figma raster with zero RGB difference. This exact
+slot follows the owner's v4-tile rule; the general v2 mapping still governs
+other legacy photo keys. Both self-hosted variants and their dimensions/hashes
+are recorded in `assets/photo-credits.json`; detail and exports retain credit.
+
+Four unmodified SVG exports supply the 72×72 clip ring, 28.5×29.25 pointer and
+two 14×14 parallax arrows. Their bytes, dimensions, nodes and native slots are
+recorded in `tools/fixtures/gallery-artwork.json`. Photo crops are native image
+elements; interrupted reveals retain the painted image layers and parallax
+uses a canvas only for its initial reference-to-live transition. The portable
+bundle has 227 images and the same six font faces. No screenshot is tile art.

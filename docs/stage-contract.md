@@ -230,3 +230,25 @@ warning/jitter draws, twenty-four progress cells, a 2500ms ready hold and 250ms
 wipe. Streaming word spans preserve the complete original log text and schedule.
 Replay cancels pending callbacks and owned motion while preserving caller holds.
 All three have separate native v4 previews and complete portable full models.
+
+Gallery sequences use separate native compact compositions and complete full
+photo models. Fraction Slider keeps five bounded frames and five direct
+indicators. Its counter uses the complete number drum sequence, including
+anticipation, step, landing and neighboring faces. Compact counter alignment
+adapts to keep optical type readable while the standard photo/segment slots
+remain exact. Bounded Previous/Next actions expose native disabled states.
+
+Clip Transition keeps four wrapping chapters and clamped pointer origins.
+The initial reference uses actual image elements and unchanged native SVGs.
+An interrupted live reveal retains its painted image layers as an owned
+composite, then starts the next mask from the new input. The next commit
+releases the retained layers without a synchronous canvas readback. The outgoing
+and incoming surfaces retain the page recipe; cancellation preserves the pixels.
+
+Stack Deck retains all five identities and recycling order, the 90px/.7px/ms
+decision, .32 vertical ratio, .045 rotation with a twelve-degree clamp and
+110px stamp strength. Fitted deltas use logical units; release carries velocity
+through the 380/32/1 spring. Full mode shows five layers with twelve-pixel peeks.
+Parallax keeps four bounded slides, complete 100% panel/35% media travel and
+the original normalized look map. Caption motion follows the page recipe.
+Both models retarget from their painted state and reject stale completion work.
