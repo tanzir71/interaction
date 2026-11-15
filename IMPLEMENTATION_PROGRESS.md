@@ -761,6 +761,85 @@ are retained, as with the preceding release, for the completion audit. The
 shared footer still visibly links Tanzir Rahman to https://tanziro.com/ and is
 verified on the running dev site across desktop and mobile routes.
 
+## Phase 4 — Agents: pipeline, graph, streaming and reasoning
+
+The first four Agent & AI UI previews now match their v4 references. Existing
+visual remediation reaches 92; 307 existing and 121 new/extension entries remain.
+Diff review, knowledge orbit, context compaction and token meter are still
+pending. The preceding six-map release is 22837a7, with successful Node 18/22
+CI and deployment, 1,334 public browser checks, 85 committed-artifact
+comparisons and eight public footer route/viewport checks.
+
+Pipeline retains every one of its 780 seeded draws, all six run schedules,
+bounded gap partitions, timestamps, canonical logs, handoff times and exact
+one-in-three TEST failure/retry rule. All non-presentation hashes are unchanged.
+The eight-row cap now fits its readable viewport without repeated scroll-height
+reads. Completion uses the original native check SVG through a primitive mask:
+350ms draw after 80ms, with a 150ms interrupted exit. Its small pop and shake
+stay within a 1.03 scale and one-pixel displacement; operational handoff windows
+remain separate from these shorter presentation poses.
+
+Workflow Graph retains all five normalized nodes, five base edges, the extra
+TOOLS-to-WRITE fixture, normal/narrow geometry oracles, ten-edge limit, cycle
+validation, execution plans and original packet interpolation. Visual dot,
+morph and lift oracles change explicitly for the motion system; graph and plan
+hashes remain exact. Native keyboard and pointer tests create and reject edges.
+Pointer deltas and connection previews now convert through the stage scale, so
+physical dragging stays accurate at narrow sizes. Node movement uses transforms.
+Stable SVG paths, viewport attributes, styles and labels avoid redundant writes.
+
+Streaming preserves every character of the original markdown, all 63 pieces,
+the deterministic bursts and 400ms stall, code example and 3.1-second sequence.
+Words resolve at their original arrivals for 455ms; stable word DOM preserves
+their selection and native animation clocks across later bursts. Shared Pause freezes arrivals and resolving word animations. Loading
+indicators follow the icon-swap recipe, and inactive loops stop. Native Copy
+preserves all three original code lines, accounting for Windows clipboard CRLF.
+The reasoning drawer keeps all eight original trace times, full content and
+six-second completion. Its panel reversals retain current painted opacity;
+the original 800ms completion hold now uses the virtual runtime timer and freezes
+with caller, viewport and document suspension. Shared Replay resets owned work.
+
+Twelve original SVG exports provide fourteen compact image instances; three
+reuse byte-identical existing keys and nine files are added. The portable bundle
+has 196 image references and six fonts. Every native asset slot is checked at
+372×264, 286×264 and 286×196. Inset strokes avoid CSS zoom border rounding
+moving the icons. Three fill-only exceptions retain the sparse rail, graph and
+text geometry. Green completion and orange activity retain the reference's
+functional status signals. Full modes keep their complete original models;
+compact controllers avoid booting hidden full UIs.
+
+The final four 4× CPU profiles each contain 239 frame intervals. Medians are
+16.7ms; 95th percentiles are 16.7–16.8ms. Raw maxima are 33.3ms for pipeline,
+33.3ms for graph/drawer and 16.8ms for streaming, including failure/retry,
+stepping, reset, copy and disclosure actions. Native failure/retry sampling fell
+from approximately 53ms to 12ms after stable writes and batched mask reads;
+no seeded data or graph samples were reduced. All four final raw traces are
+retained. An earlier final-layout sample has one 133.3ms pipeline frame outside
+the measured actions; the unchanged repeat has a 33.3ms maximum. Both remain
+recorded for the completion audit. Stable word DOM removed the repeated burst
+rebuilds that raised streaming's earlier 95th percentile to 33.3ms. The literal
+code now uses local Geist Mono, three visible lines and a separate copy header.
+
+The focused verifier passes 240 checks for complete original fixtures, actual
+rendered logs/markdown, native keyboard/copy, scaled touch dragging, exact image
+slots, stable word identity, word/check motion, interrupted panel opacity,
+completion holds, offscreen/caller pauses, compact text, disposal and all four
+interactive offline exports. Seventeen runtime/shell and eight CLI/MCP tests
+pass. All 651 library checks, 399 lazy previews and 97 offline exports pass.
+Four native posters are refreshed. The four agent prompts now describe their
+actual v4 geometry, controls, motion and complete operational models.
+
+The four previews have zero stage-fit offenders. Their three fill-only
+exceptions validate alongside all preceding exceptions, for 40 total. The full
+audit still exits 1 for remaining remediation: zero failed boots, zero missing
+sizes, 35 overflow, three horizontal-scroll, 203 tiny-text and 74 low-fill
+findings. Chrome/control debt drops from 305 to 301 and motion debt from 114
+to 113, with no additions. All preceding 187 portable image payloads, six font
+faces and 395 unrelated metadata records remain unchanged; INTRX-handover is
+untouched. Quiet final mobile Lighthouse scores 99 for home (297,216 transferred bytes)
+and 100 for Elastic Tabs (361,082 bytes). LCP is .960s and 1.086s respectively;
+CLS is zero and .000187. The home remains below the 400KB pre-interaction budget.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

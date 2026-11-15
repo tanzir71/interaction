@@ -106,6 +106,11 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- `node tools/verify-agents.js http://127.0.0.1:4173` covers the remediated
+  deploy pipeline, workflow graph, streaming response and thinking drawer.
+  It checks original operational fixtures, scaled dragging, cycle rejection,
+  native keys/copy, word and check motion, interruption, completion holds,
+  caller/offscreen pauses, exact artwork, compact text and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

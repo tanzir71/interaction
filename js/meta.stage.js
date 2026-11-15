@@ -5832,17 +5832,32 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "agent-deploy-pipeline": {
-    "designSize": "lg",
+    "designSize": [
+      380,
+      300
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / run",
+        "action": "pause"
+      },
+      {
+        "label": "Next event",
+        "action": "step"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "pipeline",
@@ -5850,8 +5865,12 @@ INTRX.meta({
       "status"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-context-compaction": {
     "designSize": "lg",
@@ -5876,17 +5895,32 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "agent-node-graph": {
-    "designSize": "lg",
+    "designSize": [
+      380,
+      280
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / run",
+        "action": "pause"
+      },
+      {
+        "label": "Next event",
+        "action": "step"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "agents",
@@ -5895,21 +5929,36 @@ INTRX.meta({
       "drag"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-streaming-text": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Replay",
+        "action": "replay"
+      },
+      {
+        "label": "Pause / run",
+        "action": "pause"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "chat",
@@ -5917,21 +5966,36 @@ INTRX.meta({
       "markdown"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      260,
+      168
+    ]
   },
   "agent-thinking-drawer": {
-    "designSize": "lg",
+    "designSize": [
+      360,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Open / close",
+        "action": "toggle"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "agent",
@@ -5939,8 +6003,12 @@ INTRX.meta({
       "disclosure"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-diff-review": {
     "designSize": "lg",

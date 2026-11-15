@@ -400,3 +400,30 @@ interactive states; the static Figma illustrations do not replace the complete
 geographic, graph, site or scalar-field models in full mode. No screenshot is
 used as tile art. The portable bundle contains 187 image references and the
 same six font faces; all 140 preceding image payloads and fonts are unchanged.
+
+## Handoff 3 v4 agent pipeline, graph and reasoning artwork
+
+Twelve original SVG exports supply fourteen visible compact instances across
+the deploy pipeline, workflow graph and thinking drawer. Three exports reuse
+byte-identical existing assets; nine unique files are added. Streaming text is
+native typography. `tools/fixtures/agents-artwork.json` records each design
+child, portable key, file, native size, exact slot and original SHA-256 hash.
+
+| Preview | Figma tile | Original visible image instances |
+| --- | --- | --- |
+| Agent Deploy Pipeline | 166:297 | Two checks, spinner track/arc and pending ring |
+| Agent Workflow Graph | 166:324 | Two connectors, packet and three node icons |
+| Thinking Drawer | 166:372 | Spinner track/arc and disclosure chevron |
+| Agent Streaming Text | 166:354 | Native Inter text; no image substitute |
+
+Artwork remains unmodified, with explicit intrinsic dimensions. Inset strokes
+on compact controls avoid CSS zoom border rounding moving the icons. The full
+pipeline also uses the original check image, revealed by a primitive clip;
+no SVG paths are extracted or redrawn. Green completion and orange active state
+are functional status signals present in the v4 reference. Other paint is
+neutral. Full graph geometry and streaming/disclosure contents remain native.
+
+The portable bundle has 196 image references and the same six font faces.
+All preceding 187 image payloads and fonts are unchanged. Three documented
+fill-only exceptions preserve the exact sparse rail, graph and two-line text
+geometry; text, overflow and horizontal-scroll gates remain in force.

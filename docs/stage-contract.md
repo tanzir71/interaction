@@ -134,3 +134,21 @@ degenerate, near-threshold and seeded adversarial fields. Field and projection
 digests are computed when inspected, outside the normal animation path; pending
 digests are explicitly marked. All four exports retain the complete original
 models, shared controls, cleanup and offline native artwork.
+
+Agent pipeline and graph heroes retain their sparse Figma geometry. Their full
+compositions keep the original seeded schedules, bounded logs, five-node DAG,
+edge validation and execution plans. Graph pointer deltas and connection
+previews convert physical pixels through the fitted scale; nodes move through
+transforms without changing normalized model coordinates. Stable text, SVG
+attributes and styles are written only when their values change. The eight-row
+log cap fits its viewport without forced scroll-height reads on every frame.
+
+Full streaming preserves its original markdown, 63 pieces, burst schedule,
+stall and code example. Word fades start at their original arrival times with
+455ms resolution; rebuilding at a burst preserves each active word's painted
+age. Shared Pause freezes arrival and word animations. Loading indicators use
+the icon-swap recipe, and hidden/completed loops stop. The thinking drawer keeps
+all eight original trace times and its six-second completion, with interruptible
+panel transitions. Its 800ms completion hold uses a runtime timer, so caller,
+viewport and document suspension preserve the remaining delay. Returned cleanup
+aborts input, observers, timers and owned check-mask animations.
