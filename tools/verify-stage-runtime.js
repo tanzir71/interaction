@@ -28,7 +28,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   assert.deepEqual(contract,{incremented:'1',cleared:'0',cleaned:'true',emitted:[1]});
   await page.evaluate(()=>INTRX.router.go('#/c/loader-dots-wave'));
   await page.waitForFunction(()=>Number(document.querySelector('.detail-stage')?._root?.dataset.frames)>2);
-  await page.evaluate(()=>scrollTo(0,document.documentElement.scrollHeight));
+  // Source loading can grow the page after the first scroll. Establish the
+  // actual offscreen geometry before checking the runtime visibility hold.
+  await page.waitForFunction(()=>{scrollTo(0,document.documentElement.scrollHeight);return document.querySelector('.detail-stage').getBoundingClientRect().bottom<=0;});
   await page.waitForFunction(()=>document.querySelector('.detail-stage')._runtime.suspended);
   const frozen=await page.locator('.detail-stage').evaluate(s=>s._root.dataset.frames);
   await page.waitForTimeout(120);assert.equal(await page.locator('.detail-stage').evaluate(s=>s._root.dataset.frames),frozen,'offscreen full preview freezes RAF');
@@ -39,7 +41,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   await page.waitForFunction(before=>Number(document.querySelector('.detail-stage')._root.dataset.frames)>Number(before),frozen);
   await page.evaluate(()=>INTRX.router.go('#/c/loader-typing-code'));
   await page.waitForFunction(()=>document.querySelector('.detail-stage')?.dataset.stage==='loader-typing-code'&&document.querySelector('.detail-stage')._root);
-  await page.evaluate(()=>scrollTo(0,document.documentElement.scrollHeight));
+  // Source loading can grow the page after the first scroll. Establish the
+  // actual offscreen geometry before checking the runtime visibility hold.
+  await page.waitForFunction(()=>{scrollTo(0,document.documentElement.scrollHeight);return document.querySelector('.detail-stage').getBoundingClientRect().bottom<=0;});
   await page.waitForFunction(()=>document.querySelector('.detail-stage')._runtime.suspended);
   assert.equal(await page.locator('.detail-stage .d-code-demo-active i').evaluate(n=>getComputedStyle(n).animationPlayState),'paused','offscreen full preview pauses CSS loops');
   await desktop.close();
