@@ -366,6 +366,59 @@ The preceding eleven-layout group was committed as `6ba4317`, pushed to `main`,
 and passed Node 18/22 verification, Pages deployment and all 190 public layout
 checks, including complete exported Command/Context source and hero geometry.
 
+## Phase 4 — Photographic layouts
+
+Masonry Filter, Table Image Peek, Caption Pull, Flip Expand and Inertia Carousel
+now match their v4 photo compositions. This brings existing-demo remediation to
+53; bucket A and the remaining categories are still in progress. Full mode keeps
+the original eight projects, five table rows, two independent captions, three
+expanding cards and five carousel photographs. The seven other registrations
+in demos.ui.js were compared against the previous commit and remain unchanged.
+
+All seven photographs have verified free Unsplash sources and photographer
+credits. Independent original-image comparisons have zero perceptual-hash
+distance from the Figma exports. Local 1600px and 800px WebPs retain natural
+aspect ratios; the supplied carousel pointer retains its original bytes and
+28.5×29.25px dimensions. ASSET_ART_DIRECTION.md records canonical source URLs
+and assets/photo-credits.json records both variants' SHA-256 checksums.
+
+The shared stage resolves 1600px paths before creating full-preview images,
+including images in inert templates; thumbnail and portable bundles resolve
+800px variants. This avoids fetching both sizes on detail open and keeps full
+previews at 1600px after copying code. Registry metadata and Notes retain the
+credits, and portable HTML carries the source and licence URLs in comments.
+Hidden rows and hero-only frames instantiate photographs when needed.
+
+Filtering preserves DOM order and measures interrupted card positions before
+cancelling transitions. Caption masks reverse their word stagger and maintain
+independent hover, focus and pinned states. Table rows share one expanded strip
+and stop their pointer-follow loop at rest. Shared expansion keeps local focus,
+Escape and scrim behavior. Carousel dragging preserves horizontal capture,
+vertical touch scrolling, time-based inertia, resisted bounds and spring
+returns; cancellation restores the captured origin. Reduced motion and runtime
+suspension apply to each interaction. All five search posters are refreshed.
+
+The photo-layout browser verifier passes 178 checks for exact photo and pointer slots at
+372×264, compact heroes at 286×264 and 286×196, readable mobile full views,
+native touch, cancellation, keyboard input, interruption, unique associations,
+credits and complete offline exports. The broad suite passes 651 checks, all
+399 lazy previews and 97 offline exports; the earlier layout-control suite
+passes 194 checks. All 13 runtime/shell and eight CLI/MCP tests pass.
+
+Stage debt shrinks from 344 to 340 demos and motion debt from 133 to 129, with
+no new violations. None of these five demos is a stage-fit offender. The global
+diagnostic audit remains incomplete: 0 failed boots, 0 missing sizes, 60 overflow,
+3 horizontal scroll, 243 tiny-text and 69 low-fill offenders; all 24 documented
+sparse-geometry exceptions validate. The untouched ambient demos can vary by
+one overflow observation while animating. No new low-fill exception is needed
+for these photo layouts, and no other fit gate has been relaxed.
+
+Quiet mobile Lighthouse checks score 99 for home (295,106 transferred bytes)
+and 90 for Elastic Tabs (358,972 bytes), satisfying both performance gates.
+The supplied INTRX-handover folder is unchanged. The previous ten-control batch
+was committed as 56452b1, pushed to main, and passed Node 18/22 verification,
+Pages deployment and all 194 public layout-control checks.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

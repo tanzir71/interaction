@@ -82,3 +82,10 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - `node tools/verify-layout-controls.js http://127.0.0.1:4173` covers the v4
   inspector, popover, spotlight, window/dock, accordion, dialog, directional
   fill, local page transitions and marquee, including offline and compact views.
+- `node tools/verify-layout-photos.js http://127.0.0.1:4173` covers masonry,
+  image-table previews, masked captions, shared expansion and inertial dragging;
+  it checks native touch, exact photo slots, attribution and offline resolution.
+- Add verified photo provenance and both file hashes to `assets/photo-credits.json`.
+  Portable `photo-*` assets map to the 800px file in `assets/demo-assets.json`.
+  The builder derives `photoCredits` and `fullAssetRefs`; detail uses 1600px
+  paths while thumbnails and exports use 800px. Keep licence comments in exports.

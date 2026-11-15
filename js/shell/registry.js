@@ -35,7 +35,7 @@
     R.bundleUrls={assets:R.catalog[0]?.assetBundle||'js/demo-assets.js',export:R.catalog[0]?.exportBundle||'js/export-data.js'};
     const paths=Object.assign({},...R.catalog.map(item=>item.assetRefs));
     R.resolveAssets=value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!paths[name])throw Error('Unknown preview asset: '+name);return paths[name];});
-    R.meta(Object.fromEntries(R.catalog.map(item=>[item.id,{designSize:item.designSize,thumbDesignSize:item.thumbDesignSize,stage:item.stage,trigger:item.trigger,controls:item.controls,a11y:item.a11y,tier:item.tier,thumb:item.thumb,useCases:item.useCases,addedAt:item.addedAt}])));
+    R.meta(Object.fromEntries(R.catalog.map(item=>[item.id,{designSize:item.designSize,thumbDesignSize:item.thumbDesignSize,stage:item.stage,trigger:item.trigger,controls:item.controls,a11y:item.a11y,tier:item.tier,thumb:item.thumb,useCases:item.useCases,addedAt:item.addedAt,...(item.photoCredits?{photoCredits:item.photoCredits,fullAssetRefs:item.fullAssetRefs}:{})}])));
     return R.catalog;
   };
   const urls={gsap:'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',scrolltrigger:'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',lenis:'https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js'};

@@ -1,5 +1,47 @@
 # Photographic assets and typography
 
+## Handoff 3 — verified Photo library v2
+
+The seven dark photographs below replace the earlier generated artwork in
+Masonry Filter, Table Image Peek, Caption Pull, Flip Expand and Inertia Carousel.
+Each canonical Unsplash page was checked on 15 November 2026: its photographer,
+free download and Unsplash License were confirmed. The original image IDs were
+recovered through Unsplash visual search against the owner's Figma exports.
+Independent 1800px source downloads matched all seven Figma originals with zero
+perceptual-hash distance (RGB RMS difference 0.22–0.38 on a 0–255 scale).
+
+| Key | Unsplash image ID | Photographer and canonical photo |
+| --- | --- | --- |
+| forestDark | photo-1483982258113-b72862e6cff6 | [Rosie Sun](https://unsplash.com/photos/photography-of-forest-1L71sPT5XKc) |
+| forestBlue | photo-1630695230041-8909e3204778 | [Taylor Wright](https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0) |
+| ocean | photo-1484387436194-cf7cb70800ce | [Michael Benz](https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4) |
+| cityTeal | photo-1493514789931-586cb221d7a7 | [Andre Benz](https://unsplash.com/photos/aerial-photography-of-city-skyline-during-night-time-cXU6tNxhub0) |
+| cityNight | photo-1603793510575-a8cf24361baa | [Polina Kuzovkova](https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg) |
+| archGrid | photo-1504625709867-b4e45e3bb9dd | [Christophe Laurenceau](https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo) |
+| portraitC1 | photo-1610659128929-fa69328744e2 | [Carlos Garcia Hansen](https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I) |
+
+All seven use the [Unsplash License](https://unsplash.com/license), separate
+from the implementation's MIT licence; none is an Unsplash+ image. Files are
+self-hosted as `assets/images/<key>.webp` (1600px wide) and `<key>-800.webp`
+(800px wide), downloaded with `w=1600&q=80&fm=webp` and
+`w=800&q=80&fm=webp`. Natural image aspect ratios are preserved; native frames
+apply `object-fit: cover`. These are photographs, not Figma screenshots.
+
+`assets/photo-credits.json` records canonical photo IDs, photographer profiles,
+licences, dimensions and SHA-256 checksums for both files. The registry builder
+validates provenance and checksums and derives per-demo credits from asset use.
+Detail Notes show "Photo: Name / Unsplash" linked to the photo page. Detail
+previews resolve the local 1600px variants before creating image elements;
+thumbnails and portable source use only the 800px variants. Portable HTML
+retains the photo credit, source URL and licence URL in comments, and embeds the
+800px WebP data for offline use. Hidden table rows and hero-only cards defer
+photo creation through inert templates.
+
+The supplied `layout2-carousel-pointer.svg` is used byte-for-byte at its
+original 28.5×29.25px intrinsic size in the Figma 185:1646 thumbnail.
+
+## Earlier generated photographs (being replaced)
+
 The September 6 refinement replaces weak procedural landscapes with three original photographic assets. These are generated photographs, not photographs of documented locations. The built-in image-generation tool produced each image separately; the original PNGs remain in `assets/images`, alongside optimized WebP versions used by the demos.
 
 | Asset | Direction | Used for |

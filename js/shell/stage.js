@@ -32,7 +32,12 @@
     stage.dataset.suspended = 'false'; delete stage.dataset.bootError;
     stage.replaceChildren();
     const content = document.createElement('div'); content.className = 'stage-content';
-    content.innerHTML = R.resolveAssets(demo.html); stage.appendChild(content);
+    // Portable exports omit these local full-size overrides and retain their
+    // embedded tile variants. Resolve before creating images to avoid fetching
+    // both sizes when a detail opens.
+    const fullAssets=mode==='full'&&demo.fullAssetRefs;
+    const markup=fullAssets?demo.html.replace(/\{\{asset:([\w-]+)\}\}/g,(token,name)=>fullAssets[name]||token):demo.html;
+    content.innerHTML = R.resolveAssets(markup); stage.appendChild(content);
     const root = content.querySelector('.'+demo.rootClass) || content.firstElementChild;
     const runtime = stage._runtime = R.createRuntime(stage);
     const actions = new Map();

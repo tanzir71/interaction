@@ -94,6 +94,62 @@
     },
     "version": {
       "type": "string"
+    },
+    "photoCredits": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "asset",
+          "photoId",
+          "imageId",
+          "photographer",
+          "url",
+          "license",
+          "licenseUrl",
+          "verifiedAt"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "asset": {
+            "type": "string"
+          },
+          "photoId": {
+            "type": "string"
+          },
+          "imageId": {
+            "type": "string"
+          },
+          "photographer": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "license": {
+            "const": "Unsplash License"
+          },
+          "licenseUrl": {
+            "const": "https://unsplash.com/license"
+          },
+          "verifiedAt": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "fullAssetRefs": {
+      "description": "Local 1600px detail-preview assets. Portable exports embed the 800px assetRefs variants.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^assets/images/[\\w-]+\\.webp$"
+      }
     }
   },
   "allOf": [

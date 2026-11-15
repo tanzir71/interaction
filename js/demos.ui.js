@@ -48,100 +48,23 @@ icons.forEach((icon,i)=>{icon.addEventListener('click',()=>select(i),options);ic
 
 INTRX.register({
   id: "flip-expand",
-  title: "FLIP Card Expand",
+  title: "Shared Expand",
   cat: "Layout & UI",
-  tags: ["flip","shared element"],
   rootClass: "d-flip",
+  tags: ["FLIP", "shared card", "modal"],
   libs: [],
-  desc: "Click a thumbnail and it grows seamlessly into a detail view using the FLIP technique — layout change first, then an inverted transform plays back. The web version of a shared-element transition.",
-  seen: "Seen on: App Store cards, linear.app, Framer showcase sites",
-  hint: "click a card / click again to close",
-  html: `
-<div class="d-flip">
-  <div class="d-flip-grid">
-    <div class="d-flip-card" style="--c1:#3c5a18;--c2:#0f1a08"><span>Alpha</span></div>
-    <div class="d-flip-card" style="--c1:#1f3a52;--c2:#0b141f"><span>Beta</span></div>
-    <div class="d-flip-card" style="--c1:#52301f;--c2:#1f0b0b"><span>Gamma</span></div>
-  </div>
-</div>`,
-  css: `
-.d-flip {
-  position: relative; width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-flip-grid { display: flex; gap: 16px; }
-.d-flip-card {
-  width: 130px; height: 180px; cursor: pointer;
-  background: linear-gradient(160deg, var(--c1), var(--c2));
-  border: 1px solid #2e2e34;
-  display: flex; align-items: flex-end; padding: 14px;
-  color: #fff; font-weight: 600;
-  transform-origin: top left;
-}
-.d-flip-card.d-flip-expanded {
-  position: absolute; inset: 16px; width: auto; height: auto; z-index: 5;
-  font-size: 28px;
-}
-.d-flip-card.d-flip-animating { transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1); }
-.d-flip{padding:20px;box-sizing:border-box}.d-flip-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%}.d-flip-card{position:relative;width:auto;height:165px;background:#171719;font-size:11px;padding:14px;box-sizing:border-box}.d-flip-card:nth-child(2){background:#202022}.d-flip-card:nth-child(3){background:#28282a}.d-flip-card:before{content:'01';position:absolute;left:14px;top:18px;font:32px/1 Roboto Mono,monospace;color:#48484c}.d-flip-card:nth-child(2):before{content:'02'}.d-flip-card:nth-child(3):before{content:'03'}.d-flip-card:hover{border-color:#fa7319}.d-flip-card.d-flip-expanded{background:#19191b;font-size:28px}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-flip{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-flip p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-flip>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-.d-flip-card:before{font-family:Roboto Mono,ui-monospace,monospace}
-.d-flip-card{background:linear-gradient(160deg,#1f1f23,#18181b);box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}.d-flip-card:nth-child(2){background:linear-gradient(160deg,#26262a,#1e1e22)}.d-flip-card:nth-child(3){background:linear-gradient(160deg,#2b2b2f,#222226)}.d-flip-card.d-flip-expanded{background:linear-gradient(160deg,#252529,#17171a)}
-
-/* Current control composition. */
-.d-flip{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-flip *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-flip button,.d-flip input,.d-flip textarea{font-weight:400}.d-flip>header{display:none}.d-flip>[class$="-head"][aria-hidden="true"],.d-flip>[class$="-foot"][aria-hidden="true"]{display:none}.d-flip>[class$="-stage"],.d-flip>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-flip>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-flip>footer>span{display:none}.d-flip>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-flip-card{border-radius:10px;box-shadow:inset 0 1px #fff09,0 5px 13px #0002}.d-flip-card:before{font-size:32px!important;font-weight:400!important;letter-spacing:0!important;color:#9ba8bb}.d-flip-card>span{font-size:14px;font-weight:450}.d-flip-overlay{border-radius:12px}.d-flip-overlay h3{font-size:28px;font-weight:400}
-/* Current control composition. */
-.d-flip *{text-transform:none!important;letter-spacing:0!important}.d-flip button{font-size:12px!important;font-weight:400!important}.d-flip>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-flip>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-flip>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-flip>footer button{font-size:11px!important;padding:6px 8px!important}.d-flip>footer{gap:6px!important}
-/* Current control composition. */
-.d-flip-card:before{font-family:Inter,system-ui,sans-serif!important;font-variant-numeric:tabular-nums;font-size:32px!important;font-weight:400!important}`,
-  js: `
-root.querySelectorAll('.d-flip-card').forEach(function (card) {
-  card.addEventListener('click', function () {
-    const expanding = !card.classList.contains('d-flip-expanded');
-
-    // FIRST: measure where it is now
-    const first = card.getBoundingClientRect();
-
-    // LAST: change layout instantly
-    card.classList.toggle('d-flip-expanded', expanding);
-    const last = card.getBoundingClientRect();
-
-    // INVERT: transform it back to where it was
-    const dx = first.left - last.left;
-    const dy = first.top - last.top;
-    const sx = first.width / last.width;
-    const sy = first.height / last.height;
-    card.style.transform = 'translate(' + dx + 'px,' + dy + 'px) scale(' + sx + ',' + sy + ')';
-
-    // PLAY: release to identity on the next frame
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        card.classList.add('d-flip-animating');
-        card.style.transform = 'none';
-      });
-    });
-
-    card.addEventListener('transitionend', function h() {
-      card.classList.remove('d-flip-animating');
-      card.removeEventListener('transitionend', h);
-    });
-  });
-});`,
-  prompt: ` Compose three numbered gray cards, each occupying one equal flexible grid column within 20px side margins. Use flat gray surfaces, a thin border, and orange only on hover; the composition must fit at 320px height without clipping at narrow widths.
-Implement a FLIP expand/collapse transition, vanilla JS.
-
-Requirements:
-- FIRST: getBoundingClientRect() of the element before the layout change.
-- LAST: toggle the expanded class (element becomes absolutely positioned filling its container) and measure again.
-- INVERT: set transform = translate(dx, dy) scale(sx, sy) computed from the two rects so it appears unmoved (transform-origin: top left).
-- PLAY: on the next frame (double rAF), enable the transition class and set transform: none; the browser animates from inverted to identity — animating layout at compositor cost only.
-- Use cubic-bezier(0.32, 0.72, 0, 1), ~0.5s. Clean up the transition class on transitionend.
-- Same code path handles both expand and collapse since FLIP is direction-agnostic.
-- Mention document.startViewTransition as the emerging native alternative. Final composition: Normalized the card indices and names and softened card geometry while preserving FLIP expansion. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+  desc: "The selected photograph grows from its measured thumbnail into a local detail view. Three full cards retain native activation, focus return and reversible expansion from the displayed geometry.",
+  seen: "Pattern family: shared-element card expansion",
+  hint: "Press · The thumbnail grows into the detail view",
+  html: `<div class="d-flip"><button class="d-flip-scrim" type="button" tabindex="-1" aria-label="Close expanded card"></button><div class="d-flip-layer" data-index="0"><button class="d-flip-card" type="button" aria-expanded="false" aria-label="Expand Alpha"><span class="d-flip-photo"><template><img class="d-flip-image" src="{{asset:photo-cityNight}}" alt="" draggable="false"></template></span><strong class="d-flip-title">Alpha</strong><span class="d-flip-description">City after dark. Press again or Escape to return.</span><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i></button></div><div class="d-flip-layer" data-index="1"><button class="d-flip-card" type="button" aria-expanded="false" aria-label="Expand Beta"><span class="d-flip-photo"><template><img class="d-flip-image" src="{{asset:photo-forestDark}}" alt="" draggable="false"></template></span><strong class="d-flip-title">Beta</strong><span class="d-flip-description">A quiet forest study. Press again or Escape to return.</span><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i></button></div><div class="d-flip-layer" data-index="2"><button class="d-flip-card" type="button" aria-expanded="false" aria-label="Expand Gamma"><span class="d-flip-photo"><template><img class="d-flip-image" src="{{asset:photo-archGrid}}" alt="" draggable="false"></template></span><strong class="d-flip-title">Gamma</strong><span class="d-flip-description">Architecture in light and shadow. Press again or Escape to return.</span><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i><i class="d-flip-bar" aria-hidden="true"></i></button></div><span class="d-flip-status" role="status"></span></div>`,
+  css: `.d-flip{position:relative;top:4px;font-family:Inter,system-ui,sans-serif;color:#f1f1f1}.d-flip-scrim{position:absolute;inset:0;border:0;border-radius:16px;background:#00000059;opacity:0;pointer-events:none;transition:opacity var(--dur-quick) var(--ease-out)}.d-flip[data-expanded="true"] .d-flip-scrim{opacity:1;pointer-events:auto;transition-duration:var(--dur-fast)}.d-flip-layer{position:absolute;left:12px;top:57px;width:80px;height:124px;transform-origin:0 0;transition:opacity var(--dur-quick) var(--ease-out)}.d-flip-layer:nth-of-type(2){left:100px}.d-flip-layer:nth-of-type(3){left:188px}.d-flip-card{position:absolute;inset:0;width:100%;height:100%;overflow:clip;padding:0;border:1px solid #ffffff0f;border-radius:14px;background:#1c1c1c;color:#f1f1f1;text-align:left;cursor:pointer;box-shadow:0 1px 2px #0000001f,0 8px 20px -8px #0000002e}.d-flip-photo{position:absolute;left:-1px;top:-1px;width:calc(100% + 2px);height:68px;overflow:clip;background:#0b0b0b}.d-flip-image{position:absolute;left:0;top:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover}.d-flip-title{position:absolute;left:9px;top:83px;font:500 12.5px/18px Inter,system-ui,sans-serif}.d-flip-description{position:absolute;left:13px;right:13px;top:168px;opacity:0;visibility:hidden;color:#9c9c9c;font:400 12.5px/17px Inter,system-ui,sans-serif;transition:opacity var(--dur-quick) var(--ease-out)}.d-flip-layer[data-expanded="true"]{left:10px;top:10px;width:260px;height:218px;z-index:3}.d-flip-layer[data-expanded="true"] .d-flip-photo{height:130px}.d-flip-layer[data-expanded="true"] .d-flip-title{left:13px;top:142px;font-size:15px;font-weight:600}.d-flip-layer[data-expanded="true"] .d-flip-description{opacity:1;visibility:visible;transition:opacity 200ms var(--ease-out) 50ms}.d-flip[data-expanded="true"] .d-flip-layer[data-expanded="false"]{opacity:0;pointer-events:none}.d-flip-card:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-4px}.d-flip-bar{display:none}.d-flip[data-mode="thumb"] .d-flip-layer{left:20px;top:0;width:160px;height:140px}.d-flip[data-mode="thumb"] .d-flip-layer:nth-of-type(n+2){display:none}.d-flip[data-mode="thumb"] .d-flip-photo{height:80px}.d-flip[data-mode="thumb"] .d-flip-image{width:160px;height:110px;top:-10px}.d-flip[data-mode="thumb"] .d-flip-title,.d-flip[data-mode="thumb"] .d-flip-description{display:none}.d-flip[data-mode="thumb"] .d-flip-bar{display:block;position:absolute;left:12px;top:92px;width:90px;height:8px;border-radius:4px;background:#ffffff33}.d-flip[data-mode="thumb"] .d-flip-bar+.d-flip-bar{top:108px;width:120px;height:6px;border-radius:3px;background:#ffffff12}.d-flip[data-mode="thumb"] .d-flip-bar+.d-flip-bar+.d-flip-bar{top:120px;width:96px}.d-flip[data-mode="thumb"] .d-flip-layer[data-expanded="true"]{left:0;top:-4px;width:200px;height:148px}.d-flip[data-mode="thumb"] .d-flip-layer[data-expanded="true"] .d-flip-photo{height:88px}.d-flip[data-mode="thumb"] .d-flip-layer[data-expanded="true"] .d-flip-image{width:200px;height:118px}.d-flip-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-flip-layer{transform:none!important}.d-flip-description{transition:opacity var(--dur-quick) var(--ease-out)!important;transition-delay:0ms!important}}`,
+  js: `const layers=[...root.querySelectorAll('.d-flip-layer')],buttons=layers.map(l=>l.querySelector('.d-flip-card')),scrim=root.querySelector('.d-flip-scrim'),status=root.querySelector('[role="status"]'),abort=new AbortController(),options={signal:abort.signal},uid='shared-expand-'+Math.random().toString(36).slice(2);let active=-1,lastIndex=0,token=0,owned=[];root.dataset.mode=ctx.mode;
+layers.forEach((layer,i)=>{if(ctx.mode==='full'||i===0)layer.querySelector('.d-flip-photo').appendChild(layer.querySelector('template').content.cloneNode(true));layer.id=uid+'-'+i;buttons[i].setAttribute('aria-controls',layer.id);const description=layer.querySelector('.d-flip-description');description.id=uid+'-description-'+i;layer.dataset.expanded='false';});
+function change(next){const own=++token,first=new Map(layers.map(l=>[l,l.getBoundingClientRect()]));owned.forEach(a=>a.cancel());owned=[];const previous=active;active=next;if(next>=0)lastIndex=next;root.dataset.expanded=String(active>=0);root.dataset.active=String(active);scrim.inert=active<0;layers.forEach((layer,i)=>{const open=i===active,hidden=active>=0&&!open;layer.dataset.expanded=String(open);layer.inert=hidden;layer.setAttribute('aria-hidden',String(hidden));buttons[i].setAttribute('aria-expanded',String(open));buttons[i].setAttribute('aria-label',(open?'Close ':'Expand ')+layer.querySelector('strong').textContent+(open?' details':''));if(open){layer.setAttribute('role','dialog');layer.setAttribute('aria-modal','false');layer.setAttribute('aria-label',layer.querySelector('strong').textContent+' details');buttons[i].setAttribute('aria-describedby',uid+'-description-'+i);}else{layer.removeAttribute('role');layer.removeAttribute('aria-modal');layer.removeAttribute('aria-label');buttons[i].removeAttribute('aria-describedby');}});
+root.dataset.phase='moving';layers.forEach((layer,i)=>{if(ctx.mode==='thumb'&&i>0)return;const last=layer.getBoundingClientRect(),before=first.get(layer),ease='cubic-bezier(.22,1,.36,1)';if(ctx.reducedMotion){if(i===active||(active<0&&i===previous))owned.push(layer.animate([{opacity:0},{opacity:1}],{duration:150,easing:ease}));return;}if(!last.width||!last.height)return;const dx=(before.left-last.left)/ctx.scale,dy=(before.top-last.top)/ctx.scale,sx=before.width/last.width,sy=before.height/last.height;if(Math.abs(dx)+Math.abs(dy)+Math.abs(sx-1)+Math.abs(sy-1)>.01)owned.push(layer.animate([{transform:'translate('+dx+'px,'+dy+'px) scale('+sx+','+sy+')'},{transform:'none'}],{duration:350,easing:ease}));});
+Promise.allSettled(owned.map(a=>a.finished)).then(()=>{if(own===token)root.dataset.phase='idle';});if(ctx.mode==='full'&&next<0&&previous>=0)buttons[previous].focus({preventScroll:true});if(ctx.mode==='full'&&next>=0)buttons[next].focus({preventScroll:true});status.textContent=next<0?'Card detail closed':layers[next].querySelector('strong').textContent+' detail expanded. Press again or Escape to close.';ctx.emit('expand',{index:next,expanded:next>=0});}
+buttons.forEach((button,i)=>button.addEventListener('click',()=>change(active===i?-1:i),options));scrim.addEventListener('click',()=>change(-1),options);root.addEventListener('keydown',e=>{if(active<0)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();change(-1);}else if(e.key==='Tab'&&ctx.mode==='full'){e.preventDefault();buttons[active].focus({preventScroll:true});}},options);ctx.onAction('expand',()=>change(active>=0?-1:lastIndex));root.dataset.expanded='false';root.dataset.active='-1';root.dataset.phase='idle';scrim.inert=true;return()=>{token++;abort.abort();owned.forEach(a=>a.cancel());};`,
+  prompt: `Implement v4 Shared Expand190:1283. Hero200x156 contains one160x140 #1c1c1c card20,0 with14px corners, exact cityNight photo160x110 at0,-10 clipped by the160x80 top frame; standard image bounds106,20 while the card starts106,30. Native bars90x8/120x6/96x6 are13,93/109/121. Compensate the shell optical raise. Full280x238 retains all three original Alpha/Beta/Gamma cards, now approved cityNight/forestDark/archGrid photographs, native buttons and readable12.5px labels. A selected card grows from80x124 into260x218 at10,10, local250/150ms scrim, full title15px and detail content200ms after50ms. Measure the current displayed rectangles before cancelling old animations, apply the new layout, invert x/y/scale at transform-origin0 0, and FLIP350ms ease-out to identity for both open and close. Fresh toggles retarget mid-flight without stale double-rAF or transitionend handlers. Other cards become inert while the local dialog is open; use unique controls, scoped Tab focus, Escape/scrim/native close and focus return. Thumbnail expansion remains bounded and keeps its abstract caption rather than shrinking full text. Expose Expand/close and Reset in shared dock. Reduced motion crossfades150ms without travel. Native previews use local1600px photos; portable exports only800px with licence credits. Clean up animations/listeners.`
 });
 /* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
@@ -190,86 +113,37 @@ ctx.onAction('open',open);const observer=new ResizeObserver(()=>root.dataset.com
 
 INTRX.register({
   id: "drag-carousel",
-  title: "Inertia Drag Carousel",
+  title: "Inertia Carousel",
   cat: "Layout & UI",
   rootClass: "d-drag",
-  tags: ["pointer events","momentum"],
+  tags: ["drag", "carousel", "inertia", "photography"],
   libs: [],
-  desc: "Grab-and-throw horizontal gallery: pointer drag maps 1:1, release keeps velocity and decays with friction, edges resist with rubber-banding.",
-  seen: "Seen on: siena.film, awwwards galleries, mobile-first portfolios",
-  hint: "drag / throw the row",
-  html: `
-<div class="d-drag">
-  <div class="d-drag-track">
-    <div class="d-drag-cell"><b>Field guide 01</b><span>Find your focus</span></div><div class="d-drag-cell"><b>Field guide 02</b><span>Make some space</span></div>
-    <div class="d-drag-cell"><b>Field guide 03</b><span>Follow the light</span></div><div class="d-drag-cell"><b>Field guide 04</b><span>Keep good notes</span></div>
-    <div class="d-drag-cell"><b>Field guide 05</b><span>Build with care</span></div><div class="d-drag-cell"><b>Field guide 06</b><span>Share the process</span></div>
-    <div class="d-drag-cell"><b>Field guide 07</b><span>Look a little closer</span></div><div class="d-drag-cell"><b>Field guide 08</b><span>Start something</span></div>
-  </div>
-</div>`,
-  css: `
-.d-drag {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; overflow: hidden; cursor: grab;
+  desc: "A captured horizontal drag carries a five-photo row into friction-based inertia, with spring returns at either edge.",
+  seen: "Inertial editorial photo strips",
+  hint: "Drag · Throw the row; it decays with friction",
+  html: `<div class="d-drag" role="region" aria-label="Editorial photo carousel" tabindex="0"><div class="d-drag-viewport"><div class="d-drag-track"><figure class="d-drag-card"><img class="d-drag-photo" src="{{asset:photo-forestDark}}" alt="Forest study" draggable="false"><figcaption class="d-drag-caption">Forest study</figcaption></figure><figure class="d-drag-card"><img class="d-drag-photo" src="{{asset:photo-cityTeal}}" alt="City in teal" draggable="false"><figcaption class="d-drag-caption">City in teal</figcaption></figure><figure class="d-drag-card"><img class="d-drag-photo" src="{{asset:photo-ocean}}" alt="Ocean currents" draggable="false"><figcaption class="d-drag-caption">Ocean currents</figcaption></figure><figure class="d-drag-card"><img class="d-drag-photo" src="{{asset:photo-forestBlue}}" alt="Blue forest" draggable="false"><figcaption class="d-drag-caption">Blue forest</figcaption></figure><figure class="d-drag-card"><img class="d-drag-photo" src="{{asset:photo-cityNight}}" alt="City after dark" draggable="false"><figcaption class="d-drag-caption">City after dark</figcaption></figure></div></div><img class="d-drag-pointer" src="{{asset:layout2-carousel-pointer}}" alt="" draggable="false"><span class="d-drag-status" role="status"></span></div>`,
+  css: `.d-drag{position:relative;font-family:Inter,system-ui,sans-serif;color:#f1f1f1;touch-action:pan-y;cursor:grab;user-select:none;--d-drag-height:220px;--d-drag-width:220px;--d-drag-top:32px;--d-drag-gap:12px}.d-drag[data-dragging="true"]{cursor:grabbing}.d-drag-viewport{position:absolute;left:0;top:var(--d-drag-top);width:100%;height:var(--d-drag-height);overflow:clip}.d-drag-viewport::before,.d-drag-viewport::after{content:"";position:absolute;z-index:2;top:0;bottom:0;width:60px;pointer-events:none;background:linear-gradient(90deg,var(--bg-stage,#151515),transparent)}.d-drag-viewport::before{left:0}.d-drag-viewport::after{right:0;transform:rotate(180deg)}.d-drag-track{position:absolute;left:36px;top:0;display:flex;gap:var(--d-drag-gap);width:max-content;height:100%;will-change:transform}.d-drag-card{position:relative;flex:none;width:var(--d-drag-width);height:100%;margin:0;overflow:clip;border-radius:12px;background:#0b0b0b}.d-drag-card::after{content:"";position:absolute;inset:0;border:1px solid #ffffff14;border-radius:inherit;pointer-events:none}.d-drag-photo{display:block;width:100%;height:100%;max-width:none;object-fit:cover;pointer-events:none}.d-drag-caption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 12px;background:linear-gradient(transparent,#000000b3);font:500 13px/18px Inter,system-ui,sans-serif}.d-drag-pointer{display:none;position:absolute;left:calc(50% + 3.125px);top:calc(var(--d-drag-top) + var(--d-drag-height)*.646875);width:28.5px;height:29.25px;max-width:none;pointer-events:none}.d-drag[data-mode="thumb"]{--d-drag-height:120px;--d-drag-width:88px;--d-drag-top:40px;--d-drag-gap:8px}.d-drag[data-mode="thumb"] .d-drag-caption{display:none}.d-drag[data-mode="thumb"] .d-drag-pointer{display:block}.d-drag:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-4px}.d-drag-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-drag-track{will-change:auto}}`,
+  js: `const viewport=root.querySelector('.d-drag-viewport'),track=root.querySelector('.d-drag-track'),cards=[...root.querySelectorAll('figure')],status=root.querySelector('[role="status"]'),abort=new AbortController(),options={signal:abort.signal};let x=0,v=0,min=0,frame=0,previousTime=0,drag=null,settling=false,mode='idle',step=100,selected=0,resizeKey='';
+root.dataset.mode=ctx.mode;
+const clamp=value=>Math.max(min,Math.min(0,value));
+function paint(){track.style.transform='translateX('+x+'px)';selected=Math.max(0,Math.min(cards.length-1,Math.round(-clamp(x)/step)));Object.assign(root.dataset,{x:x.toFixed(2),velocity:v.toFixed(2),min:min.toFixed(2),selected:String(selected),settling:String(settling),dragging:String(!!drag),phase:mode});}
+function stop(){cancelAnimationFrame(frame);frame=0;settling=false;previousTime=0;}
+function tick(time){frame=0;const dt=Math.min(.032,previousTime?Math.max(.001,(time-previousTime)/1000):1/60);previousTime=time;
+ if(mode==='spring'){const target=clamp(x);v+=(380*(target-x)-32*v)*dt;x+=v*dt;if(Math.abs(target-x)<.05&&Math.abs(v)<.5){x=target;v=0;mode='idle';settling=false;paint();return;}}
+ else{v*=Math.pow(.94,dt*60);x+=v*dt;if(x<min||x>0)mode='spring';else if(Math.abs(v)<5){v=0;mode='idle';settling=false;paint();return;}}
+ paint();frame=requestAnimationFrame(tick);
 }
-.d-drag:active { cursor: grabbing; }
-.d-drag-track { display: flex; gap: 14px; padding: 0 24px; will-change: transform; }
-.d-drag-cell {
-  flex: 0 0 190px; height: 220px;
-  border: 1px solid #2e2e34; background: linear-gradient(160deg, #161619, #101012);
-  color: #5c5c66; font-size: 40px; font-weight: 700;
-  display: flex; align-items: flex-end; padding: 14px;
-  user-select: none;
-}
-/* Current control composition. */
-.d-drag{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-drag *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-drag button,.d-drag input,.d-drag textarea{font-weight:400}.d-drag>header{display:none}.d-drag>[class$="-head"][aria-hidden="true"],.d-drag>[class$="-foot"][aria-hidden="true"]{display:none}.d-drag>[class$="-stage"],.d-drag>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-drag>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-drag>footer>span{display:none}.d-drag>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-drag-cell{font-size:26px;font-weight:400;letter-spacing:0;border-radius:12px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:18px;gap:8px;background:linear-gradient(155deg,#2d3947,#202830);box-shadow:inset 0 1px #fff09}.d-drag-cell>b{font-size:11px;font-weight:400;color:#98a7bc}.d-drag-cell>span{font-size:21px;font-weight:400;line-height:1.12;color:#dce2ea}
-/* Current control composition. */
-.d-drag *{text-transform:none!important;letter-spacing:0!important}.d-drag button{font-size:12px!important;font-weight:400!important}.d-drag>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-drag>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-drag>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-drag>footer button{font-size:11px!important;padding:6px 8px!important}.d-drag>footer{gap:6px!important}
-/* Current control composition. */
-.d-drag{display:flex!important;flex-direction:row!important;padding:0!important;align-items:center;justify-content:flex-start}.d-drag-track{padding:0 24px}.d-drag-cell{box-sizing:border-box;flex:0 0 222px;width:222px;height:230px;padding:22px}`,
-  js: `
-const track = root.querySelector('.d-drag-track');
-let x = 0, vel = 0, dragging = false, lastX = 0;
-
-function maxScroll() { return Math.max(0, track.scrollWidth - root.clientWidth + 48); }
-
-root.addEventListener('pointerdown', function (e) {
-  dragging = true; lastX = e.clientX; vel = 0;
-  root.setPointerCapture(e.pointerId);
-});
-root.addEventListener('pointermove', function (e) {
-  if (!dragging) return;
-  const dx = e.clientX - lastX;
-  lastX = e.clientX;
-  x -= dx;
-  vel = -dx;                       // velocity from the last move
-});
-root.addEventListener('pointerup', function () { dragging = false; });
-root.addEventListener('pointercancel', function () { dragging = false; });
-
-(function tick() {
-  if (!dragging) {
-    x += vel;
-    vel *= 0.94;                   // friction
-  }
-  // rubber-band the edges
-  if (x < 0)            x += (0 - x) * 0.12;
-  if (x > maxScroll())  x += (maxScroll() - x) * 0.12;
-  track.style.transform = 'translateX(' + (-x) + 'px)';
-  requestAnimationFrame(tick);
-})();`,
-  prompt: `
-Build a drag carousel with inertia, vanilla JS (Pointer Events).
-
-Requirements:
-- pointerdown starts a drag (setPointerCapture); pointermove applies the delta 1:1 to a position value and records velocity from the last delta; pointerup releases.
-- A permanent rAF loop: when not dragging, position += velocity and velocity *= 0.94 (friction) so throws glide to a stop.
-- Rubber-band edges: when position is out of bounds, ease it back with pos += (bound - pos) * 0.12 — during drag this creates natural resistance.
-- Apply as translateX on the track (transform only, will-change).
-- cursor: grab / grabbing; user-select: none on cells; prevent native image drag.
-- Ignore click events that follow a real drag (movement > a few px) so cells stay clickable. Final composition: Replaced blank giant-number cards with readable field-guide topics, preserving the draggable momentum track. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+function release(){if(ctx.reducedMotion){x=clamp(x);v=0;mode='idle';settling=false;paint();return;}mode=x<min||x>0?'spring':'inertia';settling=true;previousTime=0;paint();frame=requestAnimationFrame(tick);}
+function moveTo(value,message){stop();if(drag){const id=drag.id;drag=null;if(root.hasPointerCapture(id))root.releasePointerCapture(id);}x=clamp(value);v=0;mode='idle';paint();status.textContent=message||'Photograph '+(selected+1)+' of '+cards.length;ctx.emit('carousel',{index:selected,x});}
+function measure(){const key=ctx.size.w+','+ctx.size.h;if(key===resizeKey)return;resizeKey=key;const progress=min?clamp(x)/min:0;stop();if(drag){const id=drag.id;drag=null;if(root.hasPointerCapture(id))root.releasePointerCapture(id);}const thumb=ctx.mode==='thumb',height=thumb?Math.min(120,Math.max(72,ctx.size.h-112)):Math.max(90,Math.min(240,ctx.size.h-144));root.style.setProperty('--d-drag-height',height+'px');root.style.setProperty('--d-drag-top',thumb?'40px':Math.max(16,(ctx.size.h-48-height)/2)+'px');const width=thumb?88:Math.min(220,Math.max(140,ctx.size.w-100));root.style.setProperty('--d-drag-width',width+'px');step=width+(thumb?8:12);min=Math.min(0,ctx.size.w-72-(cards.length*width+(cards.length-1)*(thumb?8:12)));x=min*progress;v=0;mode='idle';paint();}
+root.addEventListener('pointerdown',e=>{if(e.button!==0||drag)return;stop();drag={id:e.pointerId,start:e.clientX,origin:x,last:e.clientX,time:e.timeStamp};v=0;mode='drag';root.setPointerCapture(e.pointerId);root.focus({preventScroll:true});paint();},options);
+root.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;const now=e.timeStamp,dt=Math.max(1,now-drag.time),delta=(e.clientX-drag.last)/ctx.scale,speed=delta/dt*1000;v=v*.3+speed*.7;drag.last=e.clientX;drag.time=now;const raw=drag.origin+(e.clientX-drag.start)/ctx.scale;x=raw<min?min+(raw-min)*.55:raw>0?raw*.55:raw;paint();},options);
+root.addEventListener('pointerup',e=>{if(!drag||e.pointerId!==drag.id)return;if(e.timeStamp-drag.time>80)v=0;const id=drag.id;drag=null;if(root.hasPointerCapture(id))root.releasePointerCapture(id);release();status.textContent='Photograph '+(selected+1)+' of '+cards.length;ctx.emit('carousel',{index:selected,x});},options);
+function cancel(e){if(!drag||e.pointerId!==drag.id)return;const origin=drag.origin,id=drag.id;drag=null;if(root.hasPointerCapture(id))root.releasePointerCapture(id);moveTo(origin,'Drag cancelled');}
+root.addEventListener('pointercancel',cancel,options);root.addEventListener('lostpointercapture',cancel,options);
+root.addEventListener('keydown',e=>{let value;if(e.key==='ArrowRight'||e.key==='PageDown')value=x-step;else if(e.key==='ArrowLeft'||e.key==='PageUp')value=x+step;else if(e.key==='Home')value=0;else if(e.key==='End')value=min;else if(e.key==='Escape'){moveTo(drag?drag.origin:clamp(x),'Drag stopped');e.preventDefault();e.stopPropagation();return;}else return;e.preventDefault();e.stopPropagation();moveTo(value);},options);
+ctx.onAction('next',()=>moveTo(x<=min+.5?0:x-step));ctx.onAction('reset',()=>moveTo(0,'Carousel reset'));measure();const observer=new ResizeObserver(measure);observer.observe(stage);return()=>{abort.abort();observer.disconnect();stop();if(drag&&root.hasPointerCapture(drag.id))root.releasePointerCapture(drag.id);};`,
+  prompt: `Build an original zero-dependency inertia photo carousel in vanilla HTML, CSS and JavaScript. Use the five credited dark Unsplash photographs in order: forestDark, cityTeal, ocean, forestBlue and cityNight. The shell owns the stage and Next photo / Reset controls. Match the v4 thumbnail: 88×120px rounded photo frames at x36,132,228,324,420 and y40 in a 372×264px stage; retain the original 28.5×29.25px pointer SVG and 60px edge fades. Adapt the height above the dock on smaller stages. Full mode retains all five photographs with readable captions. Capture a horizontal pointer drag, preserve vertical touch scrolling, sample time-based velocity and apply .94 friction per nominal 60Hz frame. Rubber-band outside the bounds at .55 and return with a 380 stiffness / 32 damping spring. Cancel restores the pre-drag position, rapid drags interrupt current inertia, and keyboard arrows, Home, End, PageUp and PageDown operate the same bounded row. Reduced motion keeps direct drag feedback and removes release inertia. Stop animation frames at rest and clean up capture, listeners and observers.`
 });
 /* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({

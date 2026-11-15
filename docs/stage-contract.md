@@ -55,3 +55,10 @@ form completion, declared hero/full geometry and native text readability.
 `node tools/verify-layout.js` covers captured drag/release, snapping, local menu
 placement, keyboard reordering, touch gestures, interruptible navigation and
 swaps, original asset geometry and complete portable behavior.
+`node tools/verify-layout-photos.js` covers photographic masonry, table previews,
+masked captions, shared expansion and inertia, including resolution routing,
+native touch, exact v4 photo slots, attribution and offline 800px imagery.
+
+Verified photographs live in `assets/photo-credits.json`. Portable `photo-*`
+asset names refer to 800px files; generated `fullAssetRefs` select local 1600px
+files for detail previews. Keep source and licence comments in portable HTML.

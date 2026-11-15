@@ -5985,17 +5985,29 @@ INTRX.meta({
     "caption": "Watch the active pill stretch"
   },
   "masonry-filter": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next filter",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "tablist"
     },
     "useCases": [
       "masonry",
@@ -6003,9 +6015,13 @@ INTRX.meta({
       "FLIP"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Filter and rearrange"
+    "caption": "Press · Filtered items shrink away and the grid reflows",
+    "thumbDesignSize": [
+      280,
+      100
+    ]
   },
   "command-palette": {
     "designSize": [
@@ -6441,17 +6457,29 @@ INTRX.meta({
     ]
   },
   "table-image-idle": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next row",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "table",
@@ -6459,21 +6487,38 @@ INTRX.meta({
       "hover"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      156
+    ],
+    "caption": "Hover · The hovered row opens a photo strip in place"
   },
   "caption-pull-hover": {
-    "designSize": "md",
+    "designSize": [
+      240,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next frame",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "button"
     },
     "useCases": [
       "editorial",
@@ -6481,8 +6526,13 @@ INTRX.meta({
       "word stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      152
+    ],
+    "caption": "Hover · The caption panel pulls up over the photo"
   },
   "hero-spotlight-reveal": {
     "designSize": [
@@ -7675,25 +7725,42 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "flip-expand": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Expand card",
+        "action": "expand"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "dialog"
     },
     "useCases": [
       "flip",
       "shared element"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      200,
+      156
+    ],
+    "caption": "Press · The thumbnail grows into the detail view"
   },
   "smooth-accordion": {
     "designSize": [
@@ -7770,17 +7837,26 @@ INTRX.meta({
     ]
   },
   "drag-carousel": {
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "intentional"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next photo",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "pointer events",
@@ -7788,7 +7864,8 @@ INTRX.meta({
     ],
     "tier": "free",
     "thumb": "full",
-    "addedAt": "2026-11"
+    "addedAt": "2026-11",
+    "caption": "Drag · Throw the row; it decays with friction"
   },
   "hover-fill-button": {
     "designSize": [
