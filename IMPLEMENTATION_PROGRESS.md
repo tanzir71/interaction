@@ -308,6 +308,64 @@ The previous form group was committed as `c691bdc` and pushed to `main`. Node
 passed. The published registry preserved full password source and its separate
 hero geometry.
 
+## Phase 4 — Inspector and desktop controls
+
+Ten further Layout & UI demos now follow their v4 tiles: Collapsible Inspector,
+Morphing Popover, Spotlight Reveal, Genie Minimize, Dock Magnify, Smooth
+Accordion, Spring Modal, Directional Fill, Page Transition and Logo Marquee.
+This brings existing-demo remediation to 48; bucket A is still in progress.
+
+The inspector preserves the direct/resisted pull thresholds and carries release
+velocity into the prescribed spring, with native touch cancellation and separator
+keys. Popover retargeting measures the displayed surface before cancelling its
+previous transition; full Profile, Alerts and Share content remains available.
+Share writes the real link or selects it when clipboard access is unavailable.
+The window measures its actual 20px dock tile, dock influence uses untransformed
+centers, and accordion tracks remain interruptible. The local dialog owns focus
+and completion state without stale hide timers. Page navigation mirrors forward
+and back, retains one outgoing layer and preserves the shell route. Marquee pause
+survives suspension and speed changes.
+
+The ten supplied SVG files retain their bytes and dimensions. The Accordion's
+identical right-chevron download reuses the original inspector file. Original
+layer positions are also verified at 372x264, including the window stroke
+overhang, all three dots and the whole two-row marquee artwork. The fitted roots
+compensate for the shell's 4px optical raise; compact views preserve asset sizes
+in their logical planes and keep visible text at least 11px. All ten native
+search posters have been refreshed. Asset provenance is in ASSET_ART_DIRECTION.md.
+
+The new `tools/verify-layout-controls.js` passes 194 checks for native mouse and
+touch, cancellation, keyboard/focus, rapid reversals, suspension, authored pause,
+full source actions offline, reduced-motion still frames, unique associations,
+and exact SVG dimensions/positions. It verifies the minimized window's final
+rectangle against the actual 20px dock tile and checks every visible hero at
+372x264 and 286x196.
+
+The broad suite passes 651 checks, all 399 lazy previews and 97 offline exports.
+The 13 runtime/shell tests and eight CLI/MCP tests pass. Stage debt shrinks from
+353 to 344 demos and motion debt from 142 to 133, with no new violations. The
+global diagnostic audit records 0 failed boots, 0 missing sizes, 59 overflow,
+3 horizontal scroll, 248 tiny-text and 71 low-fill offenders. None of these ten
+demos is an offender. All 24 documented sparse-geometry exceptions validate;
+Directional Fill retains its exact 140x40 Figma button. Other fit gates remain
+unchanged and must pass across the full library before remediation is complete.
+
+Quiet mobile Lighthouse checks score 95 for home (292,899 transferred bytes)
+and 90 for Elastic Tabs (356,766 bytes), meeting both required performance gates.
+The new previews continue to use local asset paths; complete embedded assets
+load when portable source is requested.
+
+Five Layout & UI demos remain: Masonry Filter, Table Image Peek, Caption Pull,
+Flip Expand and Drag Carousel. Their exact v2 Figma photographs have been
+retrieved for comparison; source IDs, authors and licence confirmation are still
+being established before those new photos are published. The drawing library
+preserves image hashes but does not supply the missing credits. The supplied
+handover and the two photo-dependent registrations in demos.ui.js are unchanged.
+
+The preceding eleven-layout group was committed as `6ba4317`, pushed to `main`,
+and passed Node 18/22 verification, Pages deployment and all 190 public layout
+checks, including complete exported Command/Context source and hero geometry.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos.

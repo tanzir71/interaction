@@ -4,245 +4,48 @@ window.INTRX = window.INTRX || { demos: [], register(d) { this.demos.push(d); } 
 /* ------------------------------------------------------------
    Mac-style minimize / maximize
 ------------------------------------------------------------ */
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "mac-window",
-  title: "Mac Minimize / Maximize",
-  cat: "Layout & UI",
-  rootClass: "d-mac",
-  tags: ["flip","window"],
-  libs: [],
-  desc: "A window shrinks into its dock item with scale + translate + fade (macOS \"scale effect\"), and springs back on click. Computed FLIP-style from real element positions, so it works at any layout.",
-  seen: "Seen on: macOS itself; web recreations on portfolio OS-themed sites",
-  hint: "click the yellow dot, then the dock item",
-  html: `
-<div class="d-mac">
-  <div class="d-mac-window">
-    <div class="d-mac-titlebar">
-      <span class="d-mac-dot d-mac-red"></span>
-      <span class="d-mac-dot d-mac-yellow"></span>
-      <span class="d-mac-dot d-mac-green"></span>
-      <em>interactions.app</em>
-    </div>
-    <div class="d-mac-body">
-      <h3>Field notes</h3><p>A place for the ideas you want to keep close.</p>
-    </div>
-  </div>
-  <div class="d-mac-dock">
-    <div class="d-mac-dockitem" data-app="finder"></div>
-    <div class="d-mac-dockitem d-mac-target"></div>
-    <div class="d-mac-dockitem" data-app="term"></div>
-  </div>
-</div>`,
-  css: `
-.d-mac {
-  position: relative; width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center; overflow: hidden;
-}
-.d-mac-window {
-  width: 320px; height: 190px;
-  background: #161619; border: 1px solid #2e2e34; border-radius: 8px;
-  overflow: hidden;
-  transform-origin: center center;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-}
-.d-mac-window.d-mac-animating { transition: transform 0.55s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.45s ease; }
-.d-mac-window.d-mac-min { pointer-events: none; }
-.d-mac-titlebar {
-  height: 30px; display: flex; align-items: center; gap: 6px; padding: 0 10px;
-  background: #101012; border-bottom: 1px solid #232327;
-}
-.d-mac-titlebar em { font-style: normal; font-family: "Roboto Mono", "JetBrains Mono", monospace; font-size: 10px; color: #5c5c66; margin-left: 8px; }
-.d-mac-dot { width: 11px; height: 11px; border-radius: 50%; cursor: pointer; }
-.d-mac-dot.d-mac-red { background: #ff5f57; }
-.d-mac-dot.d-mac-yellow { background: #febc2e; }
-.d-mac-dot.d-mac-green { background: #28c840; }
-.d-mac-body { padding: 20px; color: #9b9ba3; font-size: 14px; }
-.d-mac-body b { color: #febc2e; }
-.d-mac-dock {
-  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
-  display: flex; gap: 10px; padding: 8px 12px;
-  background: rgba(255,255,255,0.06); border: 1px solid #2e2e34; border-radius: 12px;
-  backdrop-filter: blur(8px);
-}
-.d-mac-dockitem {
-  width: 36px; height: 36px; border-radius: 8px;
-  background: linear-gradient(160deg, #2e2e34, #161619);
-  border: 1px solid #3a3a42;
-}
-.d-mac-target { position: relative; cursor: pointer; }
-.d-mac-target::after {
-  content: ""; position: absolute; inset: 8px;
-  border: 2px solid #fa7319; border-radius: 4px;
-  opacity: 0.35; transition: opacity 0.2s;
-}
-.d-mac-target.d-mac-occupied::after { opacity: 1; }
-.d-mac-target.d-mac-occupied { box-shadow: 0 0 18px rgba(250,115,25,0.25); }
-.d-mac.d-mac-idle .d-mac-dot { animation: d-mac-idle 3.6s ease-in-out infinite; }
-.d-mac.d-mac-idle .d-mac-yellow { animation-delay: .18s; }
-.d-mac.d-mac-idle .d-mac-green { animation-delay: .36s; }
-@keyframes d-mac-idle { 0%, 18%, 100% { transform: scale(1); opacity: .72; } 9% { transform: scale(1.22); opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .d-mac.d-mac-idle .d-mac-dot { animation: none; } }
-.d-mac-window{width:min(290px,86%);border-radius:4px;height:178px;box-shadow:0 12px 28px #0004}.d-mac-body{font-size:12px;line-height:1.6}.d-mac-dock{border-radius:4px;padding:6px 10px}.d-mac-dockitem{width:30px;height:30px;border-radius:3px;background:#232325}.d-mac-dot.d-mac-red{background:#b46c68}.d-mac-dot.d-mac-yellow{background:#b69b59}.d-mac-dot.d-mac-green{background:#6e9976}.d-mac-body b{color:#b69b59}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-mac{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-mac-titlebar em{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-mac p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-mac>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-.d-mac-window{background:linear-gradient(180deg,#19191c,#141417);box-shadow:0 16px 36px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.025);border-color:#38383d}
-
-/* Current control composition. */
-.d-mac{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-mac *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-mac button,.d-mac input,.d-mac textarea{font-weight:400}.d-mac>header{display:none}.d-mac>[class$="-head"][aria-hidden="true"],.d-mac>[class$="-foot"][aria-hidden="true"]{display:none}.d-mac>[class$="-stage"],.d-mac>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-mac>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-mac>footer>span{display:none}.d-mac>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-mac-titlebar em{font-size:11px}.d-mac-body{padding:23px}.d-mac-body h3{font-size:23px;font-weight:400;line-height:1.15;margin:0 0 13px}.d-mac-body p{font-size:12px;line-height:1.5;margin:0}.d-mac-window{border-radius:11px;box-shadow:0 14px 28px #0003}.d-mac-dockitem{border-radius:7px}
-/* Current control composition. */
-.d-mac *{text-transform:none!important;letter-spacing:0!important}.d-mac button{font-size:12px!important;font-weight:400!important}.d-mac>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-mac>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-mac>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-mac>footer button{font-size:11px!important;padding:6px 8px!important}.d-mac>footer{gap:6px!important}`,
-  js: `
-const win = root.querySelector('.d-mac-window');
-const target = root.querySelector('.d-mac-target');
-const yellow = root.querySelector('.d-mac-dot.d-mac-yellow');
-let minimized = false;
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let idle = !reduced;
-
-function stopIdle() {
-  if (!idle) return;
-  idle = false;
-  root.classList.remove('d-mac-idle');
-}
-if (!reduced) {
-  root.classList.add('d-mac-idle');
-  root.addEventListener('pointerdown', stopIdle, { once: true });
-  root.addEventListener('keydown', stopIdle, { once: true });
-}
-
-// FLIP: measure both boxes, transform the window into the dock item
-function toDock() {
-  stopIdle();
-  const w = win.getBoundingClientRect();
-  const t = target.getBoundingClientRect();
-  const dx = (t.left + t.width / 2) - (w.left + w.width / 2);
-  const dy = (t.top + t.height / 2) - (w.top + w.height / 2);
-  const s = t.width / w.width;
-  win.classList.add('d-mac-animating', 'd-mac-min');
-  win.style.transform = 'translate(' + dx + 'px,' + dy + 'px) scale(' + s + ')';
-  win.style.opacity = '0';
-  target.classList.add('d-mac-occupied');
-  minimized = true;
-}
-
-function fromDock() {
-  stopIdle();
-  win.classList.add('d-mac-animating');
-  win.classList.remove('d-mac-min');
-  win.style.transform = 'translate(0, 0) scale(1)';
-  win.style.opacity = '1';
-  target.classList.remove('d-mac-occupied');
-  minimized = false;
-}
-
-yellow.addEventListener('click', function () { if (!minimized) toDock(); });
-target.addEventListener('click', function () { if (minimized) fromDock(); });
-
-// clean up the transition class when done
-win.addEventListener('transitionend', function () { win.classList.remove('d-mac-animating'); });`,
-  prompt: ` Use a 320px dark stage, a restrained 290 by 178px charcoal window, compact neutral dock, and muted semantic red/amber/green traffic lights.
-Recreate the macOS minimize/maximize ("scale effect") window animation on the web, vanilla JS.
-
-Requirements:
-- A window element and a dock item element anywhere in the layout.
-- Minimize (FLIP technique): measure both getBoundingClientRect()s; compute dx/dy between centers and scale = dockWidth / windowWidth; apply transform: translate(dx, dy) scale(s) plus opacity: 0, with transition cubic-bezier(0.32, 0.72, 0, 1) over ~0.55s — that bezier is the Apple-feel curve (fast start, long soft landing).
-- Maximize: reset transform to translate(0,0) scale(1) and opacity 1 with the same curve.
-- transform-origin: center; the window keeps pointer-events: none while minimized; the dock item shows an "occupied" indicator.
-- Because positions are measured at click time, it must work responsively at any layout.
-- Before interaction, let the semantic traffic lights breathe subtly; stop that teaser permanently on first pointer or keyboard interaction and disable it for reduced motion.
-- Keep the window chrome grayscale, retaining red/amber/green only for the semantic traffic lights and the site accent for the active dock target.
-- Bonus: for a genie-style bend, note that it requires rendering the window to a canvas/WebGL mesh and warping vertices — offer scale as the practical default. Final composition: Replaced the one-line yellow-dot instruction with a plausible document window and calmer window materials. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"mac-window",
+ title:"Genie Minimize",
+ cat:"Layout & UI",
+ rootClass:"d-mac",
+ tags:["FLIP","window","dock"],
+ libs:[],
+ desc:"A small window resolves into its dock target with measured local translation and scale. Reverse the transition at any point through the native dock or window controls.",
+ seen:"Pattern family: desktop window-to-dock transitions",
+ hint:"Press · The window pours itself into the dock",
+ html:`<div class="d-mac"><div class="d-mac-window" role="group" aria-label="Demo window"><img class="d-mac-silhouette" src="{{asset:layout2-mac-silhouette}}" alt=""><div class="d-mac-header"></div><span class="d-mac-dot" aria-hidden="true" style="left:4px"><img src="{{asset:layout2-mac-dot}}" alt=""></span><button class="d-mac-dot" type="button" aria-label="Minimize window" style="left:14px"><img src="{{asset:layout2-mac-dot}}" alt=""></button><span class="d-mac-dot" aria-hidden="true" style="left:24px"><img src="{{asset:layout2-mac-dot}}" alt=""></span></div><button class="d-mac-target" type="button" aria-label="Restore window from dock"><i aria-hidden="true"></i></button><span class="d-mac-status" role="status"></span></div>`,
+ css:`.d-mac{position:relative;top:4px;font-family:Inter,system-ui,sans-serif}.d-mac-window{position:absolute;left:24px;top:22px;width:152px;height:126px;transform-origin:50% 100%;transition:transform var(--dur-medium) var(--ease-settle),opacity var(--dur-fast) var(--ease-out)}.d-mac-silhouette{position:absolute;left:-.5px;top:-.5px;display:block}.d-mac-header{position:absolute;left:0;top:0;width:152px;height:20px;border-radius:6px;background:#ffffff0a}.d-mac-dot{position:absolute;top:2px;width:14px;height:16px;border:0;padding:0;border-radius:4px;background:none;cursor:pointer}.d-mac-dot img{position:absolute;left:4px;top:5px;display:block}.d-mac-target{position:absolute;left:40px;top:150px;width:120px;height:30px;padding:0;border:1px solid #ffffff1c;border-radius:10px;background:#1c1c1c;cursor:pointer}.d-mac-target i{position:absolute;left:47px;top:4px;width:20px;height:20px;border-radius:6px;background:#3a3a3a;transition:background var(--dur-quick) var(--ease-out)}.d-mac[data-minimized="true"] .d-mac-window{opacity:0;pointer-events:none;transition:transform var(--dur-fast) var(--ease-out),opacity var(--dur-quick) var(--ease-out)}.d-mac[data-minimized="true"] .d-mac-target i{background:#f1f1f1}.d-mac-dot:focus-visible,.d-mac-target:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}.d-mac-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-mac-window{transition:opacity var(--dur-quick) var(--ease-out)!important;transform:none!important}}.d-mac[data-mode="thumb"] .d-mac-window{top:-18px}.d-mac[data-mode="thumb"] .d-mac-target{top:110px}.d-mac[data-mode="thumb"][data-compact="true"] .d-mac-target{top:100px}`,
+ js:`const win=root.querySelector('.d-mac-window'),target=root.querySelector('.d-mac-target'),dots=[...root.querySelectorAll('.d-mac-dot')],status=root.querySelector('[role="status"]');let minimized=false;
+function set(next){minimized=next;const tile=target.querySelector('i').getBoundingClientRect(),bounds=root.getBoundingClientRect(),width=tile.width/ctx.scale,height=tile.height/ctx.scale,dx=(tile.left-bounds.left+tile.width/2)/ctx.scale-win.offsetLeft-win.offsetWidth/2,dy=(tile.bottom-bounds.top)/ctx.scale-win.offsetTop-win.offsetHeight;win.style.transform=next?'translate('+dx+'px,'+dy+'px) scale('+(width/win.offsetWidth)+','+(height/win.offsetHeight)+')':'none';root.dataset.minimized=String(next);win.inert=next;target.setAttribute('aria-label',next?'Restore window from dock':'Window is open');if(next&&win.contains(document.activeElement))target.focus();status.textContent=next?'Window minimized to dock':'Window restored';ctx.emit('window',{minimized:next});}
+dots[1].addEventListener('click',()=>set(true));target.addEventListener('click',()=>{if(minimized){set(false);if(ctx.mode==='full')dots[1].focus();}});ctx.onAction('toggle',()=>set(!minimized));root.dataset.minimized='false';root.dataset.mode=ctx.mode;const observer=new ResizeObserver(()=>root.dataset.compact=String(ctx.size.h<230));observer.observe(stage);root.dataset.compact=String(ctx.size.h<230);return()=>observer.disconnect();`,
+ prompt:`Recreate original Genie Minimize tile184:1806 in a200x180 plane. Place the unmodified153x127 silhouette at23.5,21.5 with the native152x20 header24,22 and three original6px dots at32/42/52,29. Only the center dot is a native Minimize button; the flanking dots are decorative. All own their artwork without resizing. The120x30 dock is40,150 with20px placeholder47,4. No outer frame or idle demo controls. Minimize measures the untransformed window and dock local boxes, resolves translation plus scale into the20px target with250ms ease-out and150ms opacity; restore reverses from the current CSS interpolated state with350ms ease-settle and250ms opacity. Rapid toggles retarget without timers or stale completion. Make window inert while folded, return native focus to dock then restore control, expose Toggle/Reset actions, status and events. Reduced motion uses150ms opacity and no transform. Keep the exact v4 held silhouette as the initial composition.`
 });
+
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "dock-magnify",
-  title: "Dock Magnification",
-  cat: "Layout & UI",
-  rootClass: "d-dock",
-  tags: ["proximity","gaussian"],
-  libs: [],
-  desc: "Icons swell as the cursor nears, with neighbors partially magnified by a smooth distance falloff — the macOS dock, in ~20 lines.",
-  seen: "Seen on: macOS; web versions on developer portfolios and OS-style sites",
-  hint: "glide along the dock",
-  html: `
-<div class="d-dock">
-  <div class="d-dock-bar">
-    <div class="d-dock-icon" style="--h:78"></div>
-    <div class="d-dock-icon" style="--h:200"></div>
-    <div class="d-dock-icon" style="--h:320"></div>
-    <div class="d-dock-icon" style="--h:28"></div>
-    <div class="d-dock-icon" style="--h:120"></div>
-    <div class="d-dock-icon" style="--h:265"></div>
-    <div class="d-dock-icon" style="--h:0"></div>
-  </div>
-</div>`,
-  css: `
-.d-dock {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 36px;
-}
-.d-dock-bar {
-  display: flex; align-items: flex-end; gap: 10px; padding: 10px 14px;
-  border: 1px solid #2e2e34; border-radius: 16px;
-  background: rgba(255,255,255,0.05); backdrop-filter: blur(8px);
-  height: 74px;
-}
-.d-dock-icon {
-  width: 44px; height: 44px; border-radius: 10px;
-  background: linear-gradient(160deg, hsl(var(--h) 75% 55%), hsl(var(--h) 75% 25%));
-  border: 1px solid rgba(255,255,255,0.15);
-  transform-origin: bottom center;
-  will-change: transform;
-}
-.d-dock{align-items:center;padding:0 12px;box-sizing:border-box}.d-dock-bar{height:66px;gap:7px;padding:10px;border-radius:4px;background:#151517;max-width:100%;box-sizing:border-box}.d-dock-icon{position:relative;width:32px;height:36px;border-radius:3px;background:#27272a;border-color:#3c3c40;display:grid;place-items:center}.d-dock-icon:after{content:'◇';color:#aaa;font:20px/1 Roboto Mono,monospace}.d-dock-icon:nth-child(2):after{content:'≡'}.d-dock-icon:nth-child(3):after{content:'⌘'}.d-dock-icon:nth-child(4):after{content:'⊞';color:#fa7319}.d-dock-icon:nth-child(5):after{content:'↗'}.d-dock-icon:nth-child(6):after{content:'◎'}.d-dock-icon:nth-child(7):after{content:'⌁'}.d-dock-bar{background:linear-gradient(180deg,#1b1b1e,#141416);border-color:#35353a;box-shadow:0 10px 20px rgba(0,0,0,.16)}.d-dock-icon{background:linear-gradient(180deg,#2b2b2f,#242427);box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}
-
-/* Current control composition. */
-.d-dock{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-dock *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-dock button,.d-dock input,.d-dock textarea{font-weight:400}.d-dock>header{display:none}.d-dock>[class$="-head"][aria-hidden="true"],.d-dock>[class$="-foot"][aria-hidden="true"]{display:none}.d-dock>[class$="-stage"],.d-dock>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-dock>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-dock>footer>span{display:none}.d-dock>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-dock-bar{border-radius:16px;padding:10px;gap:7px;background:linear-gradient(180deg,#252b33cc,#1b2027df);box-shadow:inset 0 1px #fff1,0 12px 26px #0003}.d-dock-icon{border-radius:10px;box-shadow:inset 0 1px #fff2,0 3px 8px #0003}
-/* Current control composition. */
-.d-dock *{text-transform:none!important;letter-spacing:0!important}.d-dock button{font-size:12px!important;font-weight:400!important}.d-dock>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-dock>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-dock>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-dock>footer button{font-size:11px!important;padding:6px 8px!important}.d-dock>footer{gap:6px!important}`,
-  js: `
-const icons = [].slice.call(root.querySelectorAll('.d-dock-icon'));
-const bar = root.querySelector('.d-dock-bar');
-const RANGE = 110;   // px of influence
-const MAX = 0.9;     // extra scale at the cursor
-
-let mx = null;
-bar.addEventListener('mousemove', function (e) { mx = e.clientX; });
-bar.addEventListener('mouseleave', function () { mx = null; });
-
-(function tick() {
-  icons.forEach(function (icon) {
-    let scale = 1;
-    if (mx !== null) {
-      const b = icon.getBoundingClientRect();
-      const d = Math.abs(mx - (b.left + b.width / 2));
-      const t = Math.max(0, 1 - d / RANGE);
-      scale = 1 + MAX * (t * t * (3 - 2 * t));   // smoothstep falloff
-    }
-    // lerp for a fluid feel
-    const cur = parseFloat(icon.dataset.s || 1);
-    const next = cur + (scale - cur) * 0.25;
-    icon.dataset.s = next;
-    icon.style.transform = 'scale(' + next.toFixed(4) + ')';
-  });
-  requestAnimationFrame(tick);
-})();`,
-  prompt: `Use low-contrast, multi-stop material shading with a broad soft falloff and restrained edge highlights; keep functional accent sweeps distinct. Compose seven 32 by 36px grayscale icon tiles, drawn with line glyphs, inside a centered charcoal dock in a native 320px field. Highlight just one glyph orange; do not assign per-icon hues.
-Recreate macOS dock magnification in vanilla JS.
-
-Requirements:
-- A horizontal row of icons with transform-origin: bottom center.
-- Track the cursor x over the dock. Per icon, distance d from the icon center maps to influence t = max(0, 1 - d / 110), shaped with smoothstep (t*t*(3-2t)).
-- Target scale = 1 + 0.9 * influence. In a rAF loop, lerp each icon's current scale toward its target (factor ~0.25) so motion is fluid rather than snappy.
-- On mouseleave, targets return to 1 and everything settles back.
-- Icons should not shift layout — scale only (gaps absorb the growth), will-change: transform.
-- Disable on touch devices. Final composition: Kept the magnifying dock behavior but replaced hard tile edges with a gentle translucent tray and restrained icon surfaces. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"dock-magnify",
+ title:"Dock Magnify",
+ cat:"Layout & UI",
+ rootClass:"d-dock",
+ tags:["proximity","smoothstep","cursor"],
+ libs:[],
+ desc:"Seven neutral marks respond to distance from a pointer or keyboard selection. Influence uses fixed local centers, smoothstep falloff and time-based easing that stops at rest.",
+ seen:"Pattern family: desktop dock magnification",
+ hint:"Hover · Icons swell around the pointer like a lens",
+ html:`<div class="d-dock" role="group" aria-label="Magnifying dock"><div class="d-dock-bar"></div><button class="d-dock-icon" type="button" aria-label="Application 1" aria-pressed="false" style="left:23px;top:88px;width:28px;height:28px;border-radius:7.28px"></button><button class="d-dock-icon" type="button" aria-label="Application 2" aria-pressed="false" style="left:57px;top:84px;width:32px;height:32px;border-radius:8.32px"></button><button class="d-dock-icon" type="button" aria-label="Application 3" aria-pressed="false" style="left:95px;top:78px;width:38px;height:38px;border-radius:9.88px"></button><button class="d-dock-icon" type="button" aria-label="Application 4" aria-pressed="true" style="left:139px;top:70px;width:46px;height:46px;border-radius:11.96px"></button><button class="d-dock-icon" type="button" aria-label="Application 5" aria-pressed="false" style="left:191px;top:78px;width:38px;height:38px;border-radius:9.88px"></button><button class="d-dock-icon" type="button" aria-label="Application 6" aria-pressed="false" style="left:235px;top:84px;width:32px;height:32px;border-radius:8.32px"></button><button class="d-dock-icon" type="button" aria-label="Application 7" aria-pressed="false" style="left:273px;top:88px;width:28px;height:28px;border-radius:7.28px"></button><img class="d-dock-indicator" src="{{asset:layout2-dock-indicator}}" alt=""><span class="d-dock-status" role="status"></span></div>`,
+ css:`.d-dock{position:relative;top:4px;font-family:Inter,system-ui,sans-serif}.d-dock-bar{position:absolute;left:11px;top:64px;width:302px;height:60px;border:1px solid #ffffff1c;border-radius:18px;background:#1c1c1c;box-shadow:0 1px 2px #0000001f,0 8px 20px #0000002e}.d-dock-icon{position:absolute;display:block;padding:0;border:1px solid #ffffff1c;background:#2a2a2a;transform-origin:50% 100%;cursor:pointer}.d-dock-icon:nth-of-type(4){background:#3a3a3a;box-shadow:0 1px 2px #0000001f,0 8px 20px #0000002e}.d-dock-icon:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-dock-indicator{position:absolute;left:160px;top:128px;display:block;transition:transform var(--dur-fast) var(--ease-out)}.d-dock-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-dock-icon{transform:none!important}.d-dock-indicator{transition:none}}`,
+ js:`const icons=[...root.querySelectorAll('button')],indicator=root.querySelector('img'),status=root.querySelector('[role="status"]'),abort=new AbortController(),options={signal:abort.signal},initial=[28,32,38,46,38,32,28],centers=icons.map(i=>i.offsetLeft+i.offsetWidth/2);let target=null,sizes=initial.slice(),frame=0,last=0,selected=3;
+function paint(){icons.forEach((icon,i)=>icon.style.transform='scale('+(sizes[i]/initial[i])+')');root.dataset.sizes=sizes.map(v=>v.toFixed(2)).join(',');root.dataset.following=String(!!frame);}
+function tick(t){frame=0;const dt=Math.min(40,last?t-last:1000/60),blend=1-Math.pow(.82,dt/(1000/60));last=t;let moving=false;sizes=sizes.map((size,i)=>{const fall=target===null?0:Math.max(0,1-Math.abs(target-centers[i])/110),wanted=24*(1+.9*fall*fall*(3-2*fall)),next=size+(wanted-size)*blend;if(Math.abs(next-wanted)>.015)moving=true;return Math.abs(next-wanted)<.015?wanted:next;});if(moving)frame=requestAnimationFrame(tick);else last=0;paint();}
+function aim(x){target=x;if(ctx.reducedMotion)return;if(!frame){last=0;frame=requestAnimationFrame(tick);}}
+root.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const b=root.getBoundingClientRect();aim((e.clientX-b.left)/ctx.scale);},options);root.addEventListener('pointerleave',()=>aim(null),options);
+function select(index){selected=(index+7)%7;icons.forEach((icon,i)=>icon.setAttribute('aria-pressed',String(i===selected)));indicator.style.transform='translateX('+(centers[selected]-162)+'px)';root.dataset.selected=String(selected);status.textContent='Application '+(selected+1)+' selected';aim(centers[selected]);ctx.emit('dock',{index:selected});}
+icons.forEach((icon,i)=>{icon.addEventListener('click',()=>select(i),options);icon.addEventListener('focus',()=>aim(centers[i]),options);icon.addEventListener('blur',()=>{if(!root.contains(document.activeElement))aim(null);},options);icon.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();e.stopPropagation();const next=e.key==='Home'?0:e.key==='End'?6:(i+(e.key==='ArrowRight'?1:6))%7;icons[next].focus();select(next);},options);});ctx.onAction('next',()=>select(selected+1));root.dataset.selected='3';paint();return()=>{abort.abort();cancelAnimationFrame(frame);};`,
+ prompt:`Implement original v4 Dock Magnify186:1779 in324x136. The302x60 rounded18 rail is11,64; seven neutral native app buttons keep reference sizes28/32/38/46/38/32/28 and positions23/57/95/139/191/235/273, bottom116. Exact4px indicator160,128. Initial composition is the held center peak. Subsequent native hover follows stable untransformed centers with110px influence, smoothstep t²(3−2t), base24px and maxextra.9, easing via time-normalized .18 per-frame lerp. Animate transforms only, stop when settled, clear influence on leave, never measure transformed boxes for feedback. Pointer math divides stage scale. Click/touch chooses an app, moves native indicator250ms and updates pressed state/status; arrow/Home/End keys select and focus. Expose Next app and Reset through shell controls. Reduced motion keeps original icon sizes with instant indicator feedback and no follow loop. Runtime suspension freezes easing, disposal aborts listeners/frames. Keep one original4px SVG and no decorative hue.`
 });
+
 INTRX.register({
   id: "flip-expand",
   title: "FLIP Card Expand",
@@ -340,186 +143,51 @@ Requirements:
 - Same code path handles both expand and collapse since FLIP is direction-agnostic.
 - Mention document.startViewTransition as the emerging native alternative. Final composition: Normalized the card indices and names and softened card geometry while preserving FLIP expansion. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "smooth-accordion",
-  title: "Smooth Accordion",
-  cat: "Layout & UI",
-  rootClass: "d-acc",
-  tags: ["grid 0fr","height auto"],
-  libs: [],
-  desc: "Animating to height:auto — the classic impossible — solved with the grid-template-rows 0fr→1fr trick. No JS measurement, no max-height hacks.",
-  seen: "Seen on: FAQ sections everywhere; the 0fr trick via Kevin Powell",
-  hint: "click the rows",
-  html: `
-<div class="d-acc">
-  <div class="d-acc-list">
-    <div class="d-acc-item d-acc-open">
-      <button class="d-acc-head">What is included?<i>+</i></button>
-      <div class="d-acc-body"><div class="d-acc-inner">A focused collection of reusable components, thoughtful motion, and the details that make an interface feel complete.</div></div>
-    </div>
-    <div class="d-acc-item">
-      <button class="d-acc-head">Can I make it my own?<i>+</i></button>
-      <div class="d-acc-body"><div class="d-acc-inner">Every component can be adjusted to your colors, content, and layout. Start with the essentials and make it yours.</div></div>
-    </div>
-    <div class="d-acc-item">
-      <button class="d-acc-head">How do we get started?<i>+</i></button>
-      <div class="d-acc-body"><div class="d-acc-inner">Choose a component, explore its interaction, then bring the code into your project.</div></div>
-    </div>
-  </div>
-</div>`,
-  css: `
-.d-acc {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-acc-list { width: min(480px, 90%); border: 1px solid #232327; }
-.d-acc-item { border-bottom: 1px solid #232327; }
-.d-acc-item:last-child { border-bottom: none; }
-.d-acc-head {
-  width: 100%; display: flex; justify-content: space-between; align-items: center;
-  background: #101012; border: none; color: #ececef; cursor: pointer;
-  font-size: 14px; font-weight: 600; font-family: inherit; padding: 14px 16px;
-}
-.d-acc-head i {
-  font-style: normal; color: #fa7319; font-size: 16px;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.d-acc-item.d-acc-open .d-acc-head i { transform: rotate(45deg); }
-.d-acc-body {
-  display: grid; grid-template-rows: 0fr;
-  transition: grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.d-acc-item.d-acc-open .d-acc-body { grid-template-rows: 1fr; }
-.d-acc-inner { min-height: 0; overflow: hidden; padding: 0 16px; color: #9b9ba3; font-size: 13px; line-height: 1.6; }
-.d-acc-item.d-acc-open .d-acc-inner { padding-bottom: 14px; }
-.d-acc-row button{color:#ddd}.d-acc-row button span{color:#fa7319}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-acc{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-acc p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-acc>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-
-/* Current control composition. */
-.d-acc{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-acc *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-acc button,.d-acc input,.d-acc textarea{font-weight:400}.d-acc>header{display:none}.d-acc>[class$="-head"][aria-hidden="true"],.d-acc>[class$="-foot"][aria-hidden="true"]{display:none}.d-acc>[class$="-stage"],.d-acc>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-acc>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-acc>footer>span{display:none}.d-acc>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-acc{padding:24px 20px}.d-acc-head{font-size:14px!important;font-weight:450!important;line-height:1.4;padding:16px 0}.d-acc-inner{font-size:12px!important;line-height:1.65;padding-bottom:17px}.d-acc-item{border-color:#303742}.d-acc-head i{font-size:18px;font-weight:400}
-/* Current control composition. */
-.d-acc *{text-transform:none!important;letter-spacing:0!important}.d-acc button{font-size:12px!important;font-weight:400!important}.d-acc>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-acc>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-acc>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-acc>footer button{font-size:11px!important;padding:6px 8px!important}.d-acc>footer{gap:6px!important}
-/* Current control composition. */
-.d-acc-list{width:100%;max-height:272px;overflow:auto;scrollbar-width:thin}.d-acc-head{padding:14px 12px!important;font-size:13px!important}.d-acc-inner{padding:0 12px;font-size:12px!important;line-height:1.55!important}.d-acc-item.d-acc-open .d-acc-inner{padding-bottom:14px}`,
-  js: `
-root.querySelectorAll('.d-acc-head').forEach(function (head) {
-  head.addEventListener('click', function () {
-    const item = head.parentElement;
-    const wasOpen = item.classList.contains('d-acc-open');
-    // close others (single-open behavior)
-    root.querySelectorAll('.d-acc-item').forEach(function (i) { i.classList.remove('d-acc-open'); });
-    if (!wasOpen) item.classList.add('d-acc-open');
-  });
-});`,
-  prompt: `
-
-Requirements:
-- Each panel body: display: grid; grid-template-rows: 0fr; transition on grid-template-rows (~0.45s, cubic-bezier(0.22,1,0.36,1)). Open state sets 1fr.
-- The direct child needs min-height: 0 and overflow: hidden — this is mandatory for the collapse to work.
-- A rotating +/× indicator on the header (transform: rotate(45deg)).
-- JS only toggles classes; single-open behavior (opening one closes the rest).
-- Use button elements with aria-expanded, and hook up prefers-reduced-motion to disable the transition. Final composition: Replaced implementation-specific questions with useful project FAQs and a readable question/answer hierarchy. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"smooth-accordion",
+ title:"Smooth Accordion",
+ cat:"Layout & UI",
+ rootClass:"d-acc",
+ tags:["accordion","grid 0fr","native controls"],
+ libs:[],
+ desc:"Three headers share a single open section. Grid tracks follow content height while opacity and the original chevrons resolve independently, including interrupted reversals.",
+ seen:"Pattern family: single-open disclosure groups",
+ hint:"Press · Panels open with eased height and a turning chevron",
+ html:`<div class="d-acc"><div class="d-acc-card"><section class="d-acc-item" data-open="false"><h3 class="d-acc-heading"><button class="d-acc-head" type="button" aria-expanded="false"><span class="d-acc-label">What changes?</span><i class="d-acc-bar" style="width:70px" aria-hidden="true"></i><img class="d-acc-right" src="{{asset:layout2-accordion-chevron-right}}" alt=""><img class="d-acc-down" src="{{asset:layout2-accordion-chevron-down}}" alt=""></button></h3><div class="d-acc-body"><div class="d-acc-clip"><p class="d-acc-copy">One section opens at a time. Press it again to close it.</p><div class="d-acc-lines" aria-hidden="true"><i></i><i></i></div></div></div></section><section class="d-acc-item" data-open="true"><h3 class="d-acc-heading"><button class="d-acc-head" type="button" aria-expanded="true"><span class="d-acc-label">How does it move?</span><i class="d-acc-bar" style="width:84px" aria-hidden="true"></i><img class="d-acc-right" src="{{asset:layout2-accordion-chevron-right}}" alt=""><img class="d-acc-down" src="{{asset:layout2-accordion-chevron-down}}" alt=""></button></h3><div class="d-acc-body"><div class="d-acc-clip"><p class="d-acc-copy">Height follows its content with a soft, reversible transition.</p><div class="d-acc-lines" aria-hidden="true"><i></i><i></i></div></div></div></section><section class="d-acc-item" data-open="false"><h3 class="d-acc-heading"><button class="d-acc-head" type="button" aria-expanded="false"><span class="d-acc-label">Can I use a keyboard?</span><i class="d-acc-bar" style="width:60px" aria-hidden="true"></i><img class="d-acc-right" src="{{asset:layout2-accordion-chevron-right}}" alt=""><img class="d-acc-down" src="{{asset:layout2-accordion-chevron-down}}" alt=""></button></h3><div class="d-acc-body"><div class="d-acc-clip"><p class="d-acc-copy">Use Tab, Enter or Space. Arrow keys move between headers.</p><div class="d-acc-lines" aria-hidden="true"><i></i><i></i></div></div></div></section></div><span class="d-acc-status" role="status"></span></div>`,
+ css:`.d-acc{position:relative;top:4px;font-family:Inter,system-ui,sans-serif;color:#f1f1f1}.d-acc-card{position:absolute;left:10px;top:0;width:200px;border:1px solid #ffffff0f;border-radius:14px;background:#1c1c1c;overflow:clip;box-shadow:0 1px 2px #0000001f,0 8px 20px -8px #0000002e}.d-acc-heading{margin:0;font-size:13px}.d-acc-head{position:relative;display:block;width:100%;height:40px;padding:0 34px 0 13px;border:0;border-bottom:1px solid #ffffff0d;background:none;color:#9c9c9c;text-align:left;font:500 12px/16px Inter,system-ui,sans-serif;cursor:pointer}.d-acc-item[data-open="true"] .d-acc-head{color:#f1f1f1}.d-acc-head img{position:absolute;right:14px;top:10px;display:block;transition:opacity var(--dur-fast) var(--ease-out),transform var(--dur-fast) var(--ease-out)}.d-acc-down{opacity:0;transform:rotate(-90deg)}.d-acc-item[data-open="true"] .d-acc-right{opacity:0;transform:rotate(90deg)}.d-acc-item[data-open="true"] .d-acc-down{opacity:1;transform:none}.d-acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--dur-fast) var(--ease-out)}.d-acc-item[data-open="true"] .d-acc-body{grid-template-rows:1fr}.d-acc-clip{min-height:0;overflow:hidden;opacity:0;transition:opacity 200ms var(--ease-out)}.d-acc-item[data-open="true"] .d-acc-clip{opacity:1}.d-acc-copy{margin:0;padding:10px 13px;font:400 12px/18px Inter,system-ui,sans-serif;color:#9c9c9c}.d-acc-bar,.d-acc-lines{display:none}.d-acc-head:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-3px}.d-acc[data-mode="thumb"] .d-acc-card{width:180px;height:140px}.d-acc[data-mode="thumb"] .d-acc-label,.d-acc[data-mode="thumb"] .d-acc-copy{display:none}.d-acc[data-mode="thumb"] .d-acc-bar{display:block;position:absolute;left:12px;top:14px;height:8px;border-radius:4px;background:#ffffff24}.d-acc[data-mode="thumb"] .d-acc-item[data-open="true"] .d-acc-bar{background:#ffffff3d}.d-acc[data-mode="thumb"] .d-acc-lines{position:relative;display:block;height:28px}.d-acc-lines i{position:absolute;left:12px;top:0;width:140px;height:6px;border-radius:3px;background:#ffffff12}.d-acc-lines i+i{top:12px;width:110px}.d-acc-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-acc-body{transition:none}.d-acc-head img{transform:none!important;transition:opacity var(--dur-quick) var(--ease-out)}.d-acc-clip{transition:opacity var(--dur-quick) var(--ease-out)}}`,
+ js:`const items=[...root.querySelectorAll('section')],heads=items.map(item=>item.querySelector('button')),status=root.querySelector('[role="status"]'),uid='accordion-'+Math.random().toString(36).slice(2);let selected=1;root.dataset.mode=ctx.mode;
+function paint(){items.forEach((item,i)=>{const open=i===selected;item.dataset.open=String(open);heads[i].setAttribute('aria-expanded',String(open));item.querySelector('.d-acc-body').inert=!open;});root.dataset.open=String(selected);}
+function select(i){selected=selected===i?-1:i;paint();status.textContent=selected<0?'All sections closed':heads[selected].textContent.trim()+' expanded';ctx.emit('accordion',{index:selected});}
+heads.forEach((head,i)=>{const body=items[i].querySelector('.d-acc-body');head.id=uid+'-head-'+i;body.id=uid+'-body-'+i;body.setAttribute('role','region');body.setAttribute('aria-labelledby',head.id);head.setAttribute('aria-controls',body.id);head.addEventListener('click',()=>select(i));head.addEventListener('keydown',e=>{if(!['ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();e.stopPropagation();heads[e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowDown'?1:2))%3].focus();});});ctx.onAction('next',()=>{selected=(selected+1)%3;paint();status.textContent='Section '+(selected+1)+' expanded';});paint();`,
+ prompt:`Match v4 Smooth Accordion184:1703 with180x140 clipped hero at10,0 in200x148 plane, radius14, #1c1c1c. Native40px headers use70/84/60px bars at13,15; initially middle body28px is open with140/110px bars at13,1/13. Preserve original14px right/down assets at151,11 in the hero. Full220x220 retains all three readable question headers and real content at12/18, natural content height,200px card; no thumbnail text squeezing. Single-open activation closes others, reactivating closes all. Grid0fr→1fr250ms ease-out, opacity200ms, chevron rotation/crossfade250ms; CSS reversals are interruptible. Add unique labelled regions, aria-expanded/controls, inert collapsed content, arrow/Home/End header focus. Expose Next section and Reset in shared dock. Reduced motion jumps height and crossfades150ms with no rotations. Preserve v4 bar geometry and all original asset slots.`
 });
+
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "spring-modal",
-  title: "Spring Modal",
-  cat: "Layout & UI",
-  rootClass: "d-modal",
-  tags: ["overshoot","backdrop"],
-  libs: [],
-  desc: "A dialog that enters with scale overshoot (0.9 → 1.02 → 1) and a fading backdrop blur, and exits quickly downward. Snappy in, forgettable out — the correct asymmetry.",
-  seen: "Seen on: linear.app, raycast.com, every polished SaaS product",
-  hint: "open the modal",
-  html: `
-<div class="d-modal">
-  <button class="d-modal-open">Publish update</button>
-  <div class="d-modal-backdrop">
-    <div class="d-modal-box">
-      <h3>Publish this update?</h3>
-      <p>Your changes will become visible to everyone with access to this project.</p>
-      <div class="d-modal-actions">
-        <button class="d-modal-cancel">Cancel</button>
-        <button class="d-modal-confirm">Publish</button>
-      </div>
-    </div>
-  </div>
-</div>`,
-  css: `
-.d-modal {
-  position: relative; width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center; overflow: hidden;
-}
-.d-modal-open {
-  background: #fa7319; color: #000; border: none; font-family: inherit;
-  font-size: 14px; font-weight: 600; padding: 12px 24px; cursor: pointer;
-}
-.d-modal-backdrop {
-  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,0.55); backdrop-filter: blur(0px);
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.25s, backdrop-filter 0.25s;
-}
-.d-modal-backdrop.d-modal-show { opacity: 1; pointer-events: auto; backdrop-filter: blur(4px); }
-.d-modal-box {
-  width: min(340px, 85%); background: #161619; border: 1px solid #2e2e34;
-  padding: 24px; transform: scale(0.9) translateY(12px); opacity: 0;
-}
-.d-modal-backdrop.d-modal-show .d-modal-box { animation: d-modal-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
-.d-modal-backdrop.d-modal-hide .d-modal-box { animation: d-modal-out 0.18s ease-in forwards; }
-@keyframes d-modal-in {
-  from { transform: scale(0.9) translateY(12px); opacity: 0; }
-  to   { transform: scale(1) translateY(0);      opacity: 1; }
-}
-@keyframes d-modal-out {
-  from { transform: scale(1) translateY(0);      opacity: 1; }
-  to   { transform: scale(0.96) translateY(8px); opacity: 0; }
-}
-.d-modal-box h3 { color: #ececef; margin-bottom: 8px; }
-.d-modal-box p { color: #9b9ba3; font-size: 13px; margin-bottom: 18px; }
-.d-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
-.d-modal-actions button { font-family: inherit; font-size: 13px; padding: 8px 16px; cursor: pointer; }
-.d-modal-cancel  { background: none; border: 1px solid #2e2e34; color: #9b9ba3; }
-.d-modal-confirm { background: #fa7319; border: none; color: #000; font-weight: 600; }
-.d-modal-open{background:#242426;color:#eee;border:1px solid #454548;font-size:12px;padding:16px 26px}.d-modal-open:hover{border-color:#fa7319}.d-modal-confirm{background:#fa7319}.d-modal-box{max-width:90%;box-sizing:border-box}.d-modal-box h3{font-size:20px}.d-modal-box p{font-size:11px;line-height:1.6}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-modal{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-modal p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-modal>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-.d-modal-box{background:linear-gradient(160deg,#1d1d21,#151518);border-color:#37373c;box-shadow:0 18px 40px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.025)}
-
-/* Current control composition. */
-.d-modal{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-modal *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-modal button,.d-modal input,.d-modal textarea{font-weight:400}.d-modal>header{display:none}.d-modal>[class$="-head"][aria-hidden="true"],.d-modal>[class$="-foot"][aria-hidden="true"]{display:none}.d-modal>[class$="-stage"],.d-modal>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-modal>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-modal>footer>span{display:none}.d-modal>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-modal-open{font-size:13px;padding:13px 21px;border-radius:9px}.d-modal-box{padding:24px 20px;border-radius:14px;box-shadow:0 12px 35px #0005}.d-modal-box h3{font-size:23px;font-weight:400;line-height:1.15}.d-modal-box p{font-size:12px;line-height:1.6}.d-modal-actions button{font-size:12px;border-radius:8px}
-/* Current control composition. */
-.d-modal *{text-transform:none!important;letter-spacing:0!important}.d-modal button{font-size:12px!important;font-weight:400!important}.d-modal>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-modal>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-modal>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-modal>footer button{font-size:11px!important;padding:6px 8px!important}.d-modal>footer{gap:6px!important}`,
-  js: `
-const backdrop = root.querySelector('.d-modal-backdrop');
-
-function open() { backdrop.classList.remove('d-modal-hide'); backdrop.classList.add('d-modal-show'); }
-function close() {
-  backdrop.classList.add('d-modal-hide');
-  setTimeout(function () { backdrop.classList.remove('d-modal-show', 'd-modal-hide'); }, 180);
-}
-
-root.querySelector('.d-modal-open').addEventListener('click', open);
-root.querySelector('.d-modal-cancel').addEventListener('click', close);
-root.querySelector('.d-modal-confirm').addEventListener('click', close);
-backdrop.addEventListener('click', function (e) { if (e.target === backdrop) close(); });`,
-  prompt: ` Use a 320px near-black stage with a charcoal outlined trigger; use orange only for the confirmation action. The dialog must fit within 90% of the stage width.
-Build a spring-animated modal, vanilla JS + CSS.
-
-Requirements:
-- Backdrop: rgba black + backdrop-filter blur(4px), fading in over 0.25s; clicking it closes the modal.
-- Enter animation: scale 0.9 / translateY(12px) / opacity 0 to identity, 0.45s with cubic-bezier(0.34, 1.56, 0.64, 1) — the >1 y-value produces the overshoot "spring".
-- Exit animation: intentionally different — 0.18s ease-in, scale to 0.96, translateY(8px), fade out. Fast exits, springy entries.
-- Manage with .show/.hide classes and a timeout matching the exit duration.
-- Accessibility: role=dialog, aria-modal, focus trap, Escape to close, return focus to the trigger on close.
-- Prefer the native <dialog> element where possible; the animation classes work the same. Final composition: Turned the spring specimen into an understandable publish confirmation with clear action hierarchy and calmer shape. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"spring-modal",
+ title:"Spring Modal",
+ cat:"Layout & UI",
+ rootClass:"d-modal",
+ tags:["modal","focus","origin aware"],
+ libs:[],
+ desc:"A local confirmation dialog resolves from its native opener, keeps keyboard focus inside while active and reverses immediately on Confirm, Cancel, Escape or scrim press.",
+ seen:"Pattern family: local confirmation dialogs",
+ hint:"Press · The dialog springs up with a gentle overshoot",
+ html:`<div class="d-modal"><button class="d-modal-open" type="button" aria-haspopup="dialog">Open dialog</button><div class="d-modal-backdrop"></div><div class="d-modal-dialog" role="dialog" aria-modal="false"><div class="d-modal-icon"><img src="{{asset:layout2-modal-bell}}" alt=""></div><h3 class="d-modal-title">Enable notifications?</h3><p class="d-modal-copy">Receive updates for this project.</p><i class="d-modal-title-bar" aria-hidden="true"></i><i class="d-modal-copy-bar" aria-hidden="true"></i><button class="d-modal-confirm" type="button">Confirm</button><button class="d-modal-cancel" type="button">Cancel</button></div><span class="d-modal-status" role="status"></span></div>`,
+ css:`.d-modal{position:relative;top:4px;font-family:Inter,system-ui,sans-serif;color:#f1f1f1;--d-modal-x:0px;--d-modal-y:0px;--d-modal-sx:.96;--d-modal-sy:.96}.d-modal-open{position:absolute;left:45px;top:78px;width:130px;height:32px;padding:0;border:1px solid #ffffff1c;border-radius:10px;background:#272727;color:#f1f1f1;font:500 12px Inter,system-ui,sans-serif;cursor:pointer}.d-modal-backdrop{position:absolute;inset:0;border-radius:16px;background:#00000059;opacity:0;pointer-events:none;transition:opacity var(--dur-quick) var(--ease-out)}.d-modal-dialog{position:absolute;left:10px;top:8px;width:200px;height:174px;overflow:clip;border:1px solid #ffffff0f;border-radius:14px;background:#1c1c1c;box-shadow:0 1px 2px #0000001f,0 8px 20px -8px #0000002e;opacity:0;pointer-events:none;transform:translate(var(--d-modal-x),var(--d-modal-y)) scale(var(--d-modal-sx),var(--d-modal-sy));transition:transform var(--dur-quick) var(--ease-out),opacity var(--dur-quick) var(--ease-out)}.d-modal[data-open="true"] .d-modal-backdrop{opacity:1;pointer-events:auto;transition-duration:var(--dur-fast)}.d-modal[data-open="true"] .d-modal-dialog{opacity:1;pointer-events:auto;transform:none;transition:transform var(--dur-fast) var(--ease-out),opacity var(--dur-fast) var(--ease-out)}.d-modal-icon{position:absolute;left:12px;top:12px;width:28px;height:28px;border:1px solid #ffffff0f;border-radius:8px;background:#272727}.d-modal-icon img{position:absolute;left:5px;top:5px;display:block}.d-modal-title{position:absolute;left:13px;top:53px;margin:0;font:600 13px/18px Inter,system-ui,sans-serif}.d-modal-copy{position:absolute;left:13px;top:79px;max-width:174px;margin:0;color:#9c9c9c;font:400 12px/18px Inter,system-ui,sans-serif}.d-modal-confirm,.d-modal-cancel{position:absolute;left:13px;top:134px;width:82px;height:26px;padding:0;border:0;border-radius:10px;background:#f1f1f1;color:#111;font:500 11.5px/normal Inter,system-ui,sans-serif;letter-spacing:.0528px;cursor:pointer}.d-modal-cancel{left:103px;border:1px solid #ffffff0f;background:#272727;color:#f1f1f1;box-shadow:inset 0 1px #ffffff0d}.d-modal button:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-modal-title-bar,.d-modal-copy-bar{display:none}.d-modal[data-mode="thumb"] .d-modal-backdrop{left:0;right:0;top:-34px;bottom:auto;height:170px}.d-modal[data-mode="thumb"][data-compact="true"] .d-modal-backdrop{top:0;height:136px}.d-modal[data-mode="thumb"] .d-modal-dialog{left:35px;top:-12px;width:150px;height:118px}.d-modal[data-mode="thumb"] .d-modal-title,.d-modal[data-mode="thumb"] .d-modal-copy{display:none}.d-modal[data-mode="thumb"] .d-modal-title-bar{display:block;position:absolute;left:12px;top:52px;width:90px;height:8px;border-radius:4px;background:#ffffff38}.d-modal[data-mode="thumb"] .d-modal-copy-bar{display:block;position:absolute;left:12px;top:68px;width:120px;height:6px;border-radius:3px;background:#ffffff12}.d-modal[data-mode="thumb"] .d-modal-confirm,.d-modal[data-mode="thumb"] .d-modal-cancel{left:12px;top:82px;width:58px;height:24px;font-size:11px}.d-modal[data-mode="thumb"] .d-modal-cancel{left:76px}.d-modal[data-mode="thumb"][data-open="true"] .d-modal-open{visibility:hidden}.d-modal-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-modal-dialog{transform:none!important;transition:opacity var(--dur-quick) var(--ease-out)!important}}`,
+ js:`const dialog=root.querySelector('[role="dialog"]'),opener=root.querySelector('.d-modal-open'),scrim=root.querySelector('.d-modal-backdrop'),confirm=root.querySelector('.d-modal-confirm'),cancel=root.querySelector('.d-modal-cancel'),title=root.querySelector('h3'),copy=root.querySelector('p'),status=root.querySelector('[role="status"]'),abort=new AbortController(),options={signal:abort.signal},uid='modal-'+Math.random().toString(36).slice(2);let opened=ctx.mode==='thumb',result='none';
+root.dataset.mode=ctx.mode;dialog.id=uid;title.id=uid+'-title';copy.id=uid+'-copy';dialog.setAttribute('aria-labelledby',title.id);dialog.setAttribute('aria-describedby',copy.id);dialog.setAttribute('aria-label','Enable notifications?');opener.setAttribute('aria-controls',uid);
+function sync(){root.dataset.open=String(opened);root.dataset.result=result;dialog.inert=!opened;dialog.setAttribute('aria-hidden',String(!opened));opener.setAttribute('aria-expanded',String(opened));}
+function origin(){if(ctx.mode==='thumb')return;const sx=opener.offsetWidth/dialog.offsetWidth,sy=opener.offsetHeight/dialog.offsetHeight;root.style.setProperty('--d-modal-x',(opener.offsetLeft+opener.offsetWidth/2-dialog.offsetLeft-dialog.offsetWidth/2)+'px');root.style.setProperty('--d-modal-y',(opener.offsetTop+opener.offsetHeight/2-dialog.offsetTop-dialog.offsetHeight/2)+'px');root.style.setProperty('--d-modal-sx',sx);root.style.setProperty('--d-modal-sy',sy);}
+function open(){if(opened)return;origin();opened=true;sync();if(ctx.mode==='full')confirm.focus();status.textContent='Confirmation dialog opened';ctx.emit('modal',{open:true});}
+function close(reason){if(!opened)return;opened=false;result=reason;sync();if(dialog.contains(document.activeElement)&&ctx.mode==='full')opener.focus();status.textContent=reason==='confirmed'?'Notifications enabled':reason==='cancelled'?'Notification request cancelled':'Dialog dismissed';ctx.emit('modal',{open:false,result:reason});}
+opener.addEventListener('click',open,options);confirm.addEventListener('click',()=>close('confirmed'),options);cancel.addEventListener('click',()=>close('cancelled'),options);scrim.addEventListener('click',()=>close('dismissed'),options);
+root.addEventListener('keydown',e=>{if(!opened)return;if(e.key==='Escape'){e.preventDefault();e.stopPropagation();close('dismissed');}else if(e.key==='Tab'&&dialog.contains(e.target)){if(e.shiftKey&&e.target===confirm){e.preventDefault();cancel.focus();}else if(!e.shiftKey&&e.target===cancel){e.preventDefault();confirm.focus();}}},options);
+ctx.onAction('open',open);const observer=new ResizeObserver(()=>root.dataset.compact=String(ctx.size.h<230));observer.observe(stage);root.dataset.compact=String(ctx.size.h<230);sync();return()=>{abort.abort();observer.disconnect();};`,
+ prompt:`Build v4 Spring Modal184:1734. Hero220x100 keeps a220x170 local scrim at0,-34 and150x118 dialog35,-12, radius14, exact28px icon box with original14px bell,90x8 and120x6 bars,58x24 Confirm/Cancel at13/77,83 with11px labels. Keep label size1:1 at compact widths; shorten/reposition only the compact scrim so it stays inside stage. Full220x190 uses a200x174 confirmation surface, real13px heading and12px body, native opener, meaningful Confirm/Cancel state. Start full closed, hero open without stealing focus. Opening from native button measures local center delta and scales from its rect; CSS transitions are reversible250ms ease-out, close150ms; scrim250/150. Local dialog uses unique associations, inert hidden state, scoped Tab containment, Escape stops propagation, outside scrim closes, focus returns to opener. Never use a delayed close timer. Expose Open and Reset through dock. Reduced motion uses150ms opacity only, keyboard/status/events remain. Preserve bell bytes and dimensions.`
 });
+
 INTRX.register({
   id: "drag-carousel",
   title: "Inertia Drag Carousel",
@@ -603,230 +271,61 @@ Requirements:
 - cursor: grab / grabbing; user-select: none on cells; prevent native image drag.
 - Ignore click events that follow a real drag (movement > a few px) so cells stay clickable. Final composition: Replaced blank giant-number cards with readable field-guide topics, preserving the draggable momentum track. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
 });
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "hover-fill-button",
-  title: "Directional Hover Fill",
-  cat: "Layout & UI",
-  rootClass: "d-fill",
-  tags: ["circle grow","entry point"],
-  libs: [],
-  desc: "A circle expands from the exact point where the cursor entered the button and retreats toward the exit point. Entry/exit-aware fills read as far more \"alive\" than a flat swap.",
-  seen: "Seen on: camillemormal.com, studio CTAs across awwwards",
-  hint: "enter the buttons from different sides",
-  html: `
-<div class="d-fill">
-  <button class="d-fill-btn"><span class="d-fill-circle"></span><em>Discover</em></button>
-  <button class="d-fill-btn"><span class="d-fill-circle"></span><em>Contact</em></button>
-</div>`,
-  css: `
-.d-fill {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center; gap: 32px;
-}
-.d-fill-btn {
-  position: relative; overflow: hidden;
-  background: none; border: 1px solid #2e2e34; color: #ececef;
-  font-family: inherit; font-size: 15px; font-weight: 500;
-  padding: 16px 40px; cursor: pointer;
-  transition: color 0.3s;
-}
-.d-fill-btn em { position: relative; font-style: normal; z-index: 1; }
-.d-fill-btn:hover { color: #000; }
-.d-fill-circle {
-  position: absolute; left: 0; top: 0; width: 20px; height: 20px;
-  background: #fa7319; border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
-}
-.d-fill-btn:hover .d-fill-circle { transform: translate(-50%, -50%) scale(14); }
-.d-fill{gap:12px;padding:20px;box-sizing:border-box}.d-fill-btn{font-size:12px;padding:16px 24px}.d-fill-circle{background:#fa7319}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-fill{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-fill p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-fill>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-
-/* Current control composition. */
-.d-fill{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-fill *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-fill button,.d-fill input,.d-fill textarea{font-weight:400}.d-fill>header{display:none}.d-fill>[class$="-head"][aria-hidden="true"],.d-fill>[class$="-foot"][aria-hidden="true"]{display:none}.d-fill>[class$="-stage"],.d-fill>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-fill>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-fill>footer>span{display:none}.d-fill>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-fill-btn{border-radius:8px;padding:13px 22px}.d-fill-btn em{font-size:13px;font-weight:450}.d-fill-circle{background:#b9c7db}
-/* Current control composition. */
-.d-fill *{text-transform:none!important;letter-spacing:0!important}.d-fill button{font-size:12px!important;font-weight:400!important}.d-fill>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-fill>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-fill>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-fill>footer button{font-size:11px!important;padding:6px 8px!important}.d-fill>footer{gap:6px!important}`,
-  js: `
-root.querySelectorAll('.d-fill-btn').forEach(function (btn) {
-  const circle = btn.querySelector('.d-fill-circle');
-  function place(e) {
-    const b = btn.getBoundingClientRect();
-    circle.style.left = (e.clientX - b.left) + 'px';
-    circle.style.top = (e.clientY - b.top) + 'px';
-  }
-  // position the circle at entry AND exit so it grows/shrinks from the right spot
-  btn.addEventListener('mouseenter', place);
-  btn.addEventListener('mouseleave', place);
-});`,
-  prompt: `
-Build a directional hover-fill button, vanilla JS + CSS.
-
-Requirements:
-- Inside an overflow-hidden button, an absolutely-positioned circle (border-radius 50%, ~20px) starts at transform: translate(-50%,-50%) scale(0).
-- On mouseenter, set the circle's left/top to the cursor position relative to the button, then the :hover CSS scales it to ~scale(14) with cubic-bezier(0.22,1,0.36,1) over 0.45s so it floods the button from the entry point.
-- On mouseleave, re-place the circle at the exit point before the reverse transition, so it shrinks toward where the cursor left.
-- The label sits above the circle (z-index) and its color transitions to the inverse on hover.
-- Scale must be large enough to cover the button diagonal from any corner (compute or overshoot). Final composition: Refined corner geometry and label size while preserving the pointer-origin expanding fill. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"hover-fill-button",
+ title:"Directional Fill",
+ cat:"Layout & UI",
+ rootClass:"d-fill",
+ tags:["directional fill","entry edge","press"],
+ libs:[],
+ desc:"The light layer floods from the closest entry edge and retreats toward the exit. Both text layers stay aligned through reversals, with native focus, press and activation feedback.",
+ seen:"Pattern family: directional button fills",
+ hint:"Hover · The fill floods in from the side you entered",
+ html:`<div class="d-fill"><button class="d-fill-btn" type="button"><span class="d-fill-label">Get started</span><span class="d-fill-light" aria-hidden="true"><span class="d-fill-duplicate">Get started</span></span></button><span class="d-fill-status" role="status"></span></div>`,
+ css:`.d-fill{position:relative;top:4px;font-family:Inter,system-ui,sans-serif}.d-fill-btn{position:absolute;left:20px;top:14px;width:140px;height:40px;overflow:clip;padding:0;border:1px solid #ffffff1c;border-radius:20px;background:#1c1c1c;color:#9c9c9c;cursor:pointer;transition:transform var(--dur-fast) var(--ease-pop)}.d-fill-label,.d-fill-duplicate{position:absolute;left:32.5px;top:10px;white-space:nowrap;font:500 13.5px/normal Inter,system-ui,sans-serif;letter-spacing:-.0648px}.d-fill-light{position:absolute;left:-1px;top:-1px;width:140px;height:40px;overflow:clip;background:#f1f1f1;color:#111;clip-path:inset(0 100% 0 0);transition:clip-path var(--dur-fast) var(--ease-out)}.d-fill-duplicate{left:33.5px;top:11px}.d-fill[data-mode="thumb"][data-used="false"] .d-fill-light{clip-path:inset(0 40% 0 0)}.d-fill-btn:active{transform:scale(.97);transition-duration:var(--dur-micro);transition-timing-function:var(--ease-out)}.d-fill-btn:focus-visible{outline:2px solid var(--focus-ring);outline-offset:4px}.d-fill-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-fill-btn{transform:none!important}.d-fill-light{transition:opacity var(--dur-quick) var(--ease-out);clip-path:none!important;opacity:var(--d-fill-opacity,0)}.d-fill[data-mode="thumb"][data-used="false"] .d-fill-light{opacity:1;clip-path:inset(0 40% 0 0)!important}}`,
+ js:`const button=root.querySelector('button'),light=root.querySelector('.d-fill-light'),status=root.querySelector('[role="status"]');let active=false,hovered=false,count=0,edge='left';root.dataset.mode=ctx.mode;root.dataset.used='false';
+const clips={left:'inset(0 100% 0 0)',right:'inset(0 0 0 100%)',top:'inset(0 0 100% 0)',bottom:'inset(100% 0 0 0)'};
+function nearest(e){const b=button.getBoundingClientRect(),dist=[['left',Math.abs(e.clientX-b.left)],['right',Math.abs(b.right-e.clientX)],['top',Math.abs(e.clientY-b.top)],['bottom',Math.abs(b.bottom-e.clientY)]];return dist.sort((a,b)=>a[1]-b[1])[0][0];}
+function fill(next,e){root.dataset.used='true';if(e)edge=nearest(e);active=next;root.dataset.edge=edge;root.dataset.filled=String(next);light.style.clipPath=next?'inset(0 0 0 0)':clips[edge];light.style.setProperty('--d-fill-opacity',next?'1':'0');}
+button.addEventListener('pointerenter',e=>{if(e.pointerType!=='mouse')return;hovered=true;fill(true,e);});button.addEventListener('pointerleave',e=>{hovered=false;fill(button.matches(':focus-visible'),e);});button.addEventListener('focus',()=>{if(button.matches(':focus-visible'))fill(true);});button.addEventListener('blur',()=>fill(hovered));button.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')fill(true,e);});button.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')fill(false,e);});button.addEventListener('pointercancel',e=>fill(false,e));button.addEventListener('click',()=>{count++;root.dataset.activations=String(count);status.textContent='Get started activated '+count+(count===1?' time':' times');ctx.emit('start',{count});});ctx.onAction('fill',()=>fill(!active));root.dataset.activations='0';root.dataset.filled='false';root.dataset.edge=edge;`,
+ prompt:`Match Directional Fill184:1761 exactly:140x40 button at20,14 in180x80,20px pill, #1c1c1c andwhite11% border;13.5px Inter medium Get started at32.5,10,tracking-.0648. Original light overlay140x40 at-1,-1 clips to84px for the60% initial hero pose, duplicate dark text33.5,11 stays aligned. On real mouse enter/leave measure the closest edge from the current bounding box, reveal from that side and retreat toward exit via reversible250ms ease-out inset interpolation. Focus-visible and touch press get fill feedback; native press .97/80ms then250ms ease-pop. Activation emits a counted start event and live status. No custom fake CTA besides the native button, no owned Replay. Expose Fill/clear and Reset in dock. Under reduced motion keep the same hero pose, then use150ms opacity only and no press transform. Preserve exact140x40 sparse geometry and document owner-approved low-fill exception.`
 });
+
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "page-transition",
-  title: "Page Transition Curtain",
-  cat: "Layout & UI",
-  tags: ["columns","navigation"],
-  rootClass: "d-curtain",
-  libs: [],
-  desc: "Navigation triggers vertical panels that sweep in with a stagger, swap the content while covered, then sweep away. The full-screen wipe between pages on award sites.",
-  seen: "Seen on: obys.agency, holographik.com, most SOTD navigations",
-  hint: "click \"navigate\"",
-  html: `
-<div class="d-curtain">
-  <div class="d-curtain-page">
-    <h2 class="d-curtain-title">HOME</h2>
-    <button class="d-curtain-go">Next page →</button>
-  </div>
-  <div class="d-curtain-panels">
-    <div class="d-curtain-panel" style="--d:0s"></div>
-    <div class="d-curtain-panel" style="--d:0.07s"></div>
-    <div class="d-curtain-panel" style="--d:0.14s"></div>
-    <div class="d-curtain-panel" style="--d:0.21s"></div>
-  </div>
-</div>`,
-  css: `
-.d-curtain { position: relative; width: 100%; height: 320px; background: #0a0a0b; overflow: hidden; }
-.d-curtain-page {
-  height: 100%; display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 18px;
-}
-.d-curtain-title { font-size: 56px; font-weight: 700; color: #ececef; letter-spacing: -0.02em; }
-.d-curtain-go {
-  background: none; border: 1px solid #2e2e34; color: #9b9ba3;
-  font-family: "JetBrains Mono", monospace; font-size: 12px; padding: 10px 20px; cursor: pointer;
-}
-.d-curtain-go:hover { color: #fa7319; border-color: #fa7319; }
-.d-curtain-panels { position: absolute; inset: 0; display: flex; pointer-events: none; }
-.d-curtain-panel {
-  flex: 1; background: #fa7319;
-  transform: scaleY(0); transform-origin: top;
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-  transition-delay: var(--d);
-}
-.d-curtain.d-curtain-covering .d-curtain-panel { transform: scaleY(1); }
-.d-curtain.d-curtain-revealing .d-curtain-panel { transform: scaleY(0); transform-origin: bottom; }
-.d-curtain-go:hover{color:#fa7319;border-color:#fa7319}.d-curtain-panel{background:#fa7319}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-curtain{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-curtain-go{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-curtain p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-curtain>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-
-/* Current control composition. */
-.d-curtain{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-curtain *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-curtain button,.d-curtain input,.d-curtain textarea{font-weight:400}.d-curtain>header{display:none}.d-curtain>[class$="-head"][aria-hidden="true"],.d-curtain>[class$="-foot"][aria-hidden="true"]{display:none}.d-curtain>[class$="-stage"],.d-curtain>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-curtain>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-curtain>footer>span{display:none}.d-curtain>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-curtain-title{font:400 43px/1.1 "Inter",sans-serif!important;letter-spacing:-.025em}.d-curtain-go{font-size:12px;border-radius:8px;padding:12px 17px}.d-curtain-panel{background:#414d5d}
-/* Current control composition. */
-.d-curtain *{text-transform:none!important;letter-spacing:0!important}.d-curtain button{font-size:12px!important;font-weight:400!important}.d-curtain>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-curtain>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-curtain>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-curtain>footer button{font-size:11px!important;padding:6px 8px!important}.d-curtain>footer{gap:6px!important}`,
-  js: `
-const PAGES = ['HOME', 'WORK', 'ABOUT', 'CONTACT'];
-let page = 0, busy = false;
-const title = root.querySelector('.d-curtain-title');
-
-root.querySelector('.d-curtain-go').addEventListener('click', function () {
-  if (busy) return;
-  busy = true;
-  root.classList.remove('d-curtain-revealing');
-  root.classList.add('d-curtain-covering');
-
-  // wait for cover (0.5s + last panel delay 0.21s)
-  setTimeout(function () {
-    page = (page + 1) % PAGES.length;
-    title.textContent = PAGES[page];          // swap content while hidden
-    root.classList.remove('d-curtain-covering');
-    root.classList.add('d-curtain-revealing');
-    setTimeout(function () { busy = false; }, 750);
-  }, 750);
-});`,
-  prompt: `
-Build a curtain page-transition, vanilla JS + CSS.
-
-Requirements:
-- A fixed full-screen overlay of 4 vertical panels (flex: 1 each), each transform: scaleY(0), transform-origin: top.
-- Cover phase: panels scale to 1 with cubic-bezier(0.76, 0, 0.24, 1) over 0.5s, staggered 70ms left-to-right via --d transition delays.
-- While fully covered, swap the page content (or let the router navigate).
-- Reveal phase: switch transform-origin to bottom and scale back to 0 with the same stagger, so the curtain exits downward instead of retracting.
-- Guard with a busy flag; total cover time = duration + last stagger.
-- For real multi-page sites, mention the View Transitions API and intercepting link clicks. Final composition: Reduced the heavy uppercase page display and calmed the curtain material while preserving transition sequencing. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"page-transition",
+ title:"Page Transition",
+ cat:"Layout & UI",
+ rootClass:"d-curtain",
+ tags:["page slide","curtain","navigation"],
+ libs:[],
+ desc:"A four-page local navigator uses mirrored 350ms page slides and a narrow curtain. Rapid navigation retargets from the displayed screen while the persistent frame stays in place.",
+ seen:"Pattern family: directional route transitions",
+ hint:"Press · A curtain wipes from one route to the next",
+ html:`<div class="d-curtain"><div class="d-curtain-card"><div class="d-curtain-screen"><h3 class="d-curtain-title">HOME</h3><p class="d-curtain-copy">A place to begin.</p><div class="d-curtain-content"></div></div><div class="d-curtain-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="d-curtain-wipe" aria-hidden="true"><i></i></div><nav class="d-curtain-nav" aria-label="Demo pages"><button class="d-curtain-back" type="button">Back</button><button class="d-curtain-next" type="button">Next: Work</button></nav></div><span class="d-curtain-status" role="status"></span></div>`,
+ css:`.d-curtain{position:relative;top:4px;font-family:Inter,system-ui,sans-serif;color:#f1f1f1}.d-curtain-card{position:absolute;left:10px;top:0;width:220px;height:198px;overflow:clip;border:1px solid #ffffff0f;border-radius:14px;background:#1c1c1c;box-shadow:0 1px 2px #0000001f,0 8px 20px -8px #0000002e}.d-curtain-screen{position:absolute;inset:0;pointer-events:none}.d-curtain-title{position:absolute;left:15px;top:17px;margin:0;font:600 15px/20px Inter,system-ui,sans-serif}.d-curtain-copy{position:absolute;left:15px;top:45px;margin:0;color:#9c9c9c;font:400 12px/18px Inter,system-ui,sans-serif}.d-curtain-content{position:absolute;left:15px;top:75px;width:188px;height:60px;border-radius:8px;background:#ffffff0a}.d-curtain-nav{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;gap:10px;z-index:3}.d-curtain-nav button{height:26px;padding:0 10px;border:1px solid #ffffff0f;border-radius:8px;background:#272727;color:#f1f1f1;font:500 11.5px Inter,system-ui,sans-serif;cursor:pointer}.d-curtain-nav button:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}.d-curtain-wipe{position:absolute;left:110px;top:-1px;width:88px;height:100%;background:linear-gradient(90deg,#282828,#252525);transform:translateX(120px);pointer-events:none;z-index:2}.d-curtain-wipe i{position:absolute;left:-2px;top:0;width:2px;height:100%;background:#ffffff59}.d-curtain-bars{display:none}.d-curtain[data-mode="thumb"] .d-curtain-card{width:200px;height:150px}.d-curtain[data-mode="thumb"] .d-curtain-screen,.d-curtain[data-mode="thumb"] .d-curtain-nav{display:none}.d-curtain[data-mode="thumb"] .d-curtain-bars{display:block}.d-curtain-bars i{position:absolute;left:14px;top:16px;width:80px;height:8px;border-radius:4px;background:#ffffff33}.d-curtain-bars i+i{top:32px;width:140px;height:6px;border-radius:3px;background:#ffffff12}.d-curtain-bars i+i+i{top:44px;width:120px}.d-curtain-bars i+i+i+i{top:62px;width:168px;height:60px;border-radius:8px;background:#ffffff0a}.d-curtain[data-mode="thumb"][data-used="false"] .d-curtain-wipe{transform:none}.d-curtain-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-curtain-screen{transform:none!important;filter:none!important}.d-curtain-wipe{will-change:auto}}`,
+ js:`const pages=['HOME','WORK','ABOUT','CONTACT'],descriptions=['A place to begin.','Selected projects and ideas.','A little about the studio.','Start a conversation.'],card=root.querySelector('.d-curtain-card'),screen=root.querySelector('.d-curtain-screen'),title=root.querySelector('h3'),copy=root.querySelector('p'),next=root.querySelector('.d-curtain-next'),back=root.querySelector('.d-curtain-back'),wipe=root.querySelector('.d-curtain-wipe'),status=root.querySelector('[role="status"]');let index=0,animations=[],ghost=null,token=0;
+root.dataset.mode=ctx.mode;root.dataset.used='false';root.dataset.phase='idle';root.dataset.page=pages[0];function clear(){animations.forEach(a=>a.cancel());animations=[];if(ghost)ghost.remove();ghost=null;}
+function go(direction){const visual=getComputedStyle(screen),from={transform:visual.transform,opacity:visual.opacity,filter:visual.filter},wipeVisual=getComputedStyle(wipe).transform,moving=root.dataset.phase==='moving',first=root.dataset.used==='false',own=++token;clear();ghost=screen.cloneNode(true);ghost.className='d-curtain-screen d-curtain-ghost';ghost.setAttribute('aria-hidden','true');ghost.inert=true;card.insertBefore(ghost,screen);index=(index+direction+4)%4;title.textContent=pages[index];copy.textContent=descriptions[index];next.textContent='Next: '+pages[(index+1)%4].toLowerCase().replace(/^./,c=>c.toUpperCase());root.dataset.used='true';root.dataset.page=pages[index];root.dataset.direction=direction>0?'forward':'back';root.dataset.phase='moving';status.textContent=pages[index]+' page';const ease='cubic-bezier(.22,1,.36,1)',duration=ctx.reducedMotion?150:350;
+animations.push(ghost.animate([ctx.reducedMotion?{opacity:from.opacity}:from,ctx.reducedMotion?{opacity:0}:{transform:'translateX('+(-direction*30)+'px)',opacity:0,filter:'blur(2px)'}],{duration,easing:ease}));const incoming=screen.animate([ctx.reducedMotion?{opacity:0}:{transform:'translateX('+(direction*30)+'px)',opacity:0,filter:'blur(2px)'},{transform:'none',opacity:1,filter:'none'}],{duration,easing:ease});animations.push(incoming);if(!ctx.reducedMotion){const end=direction>0?-210:120;animations.push(wipe.animate([{transform:moving||first?wipeVisual:'translateX('+(direction>0?120:-210)+'px)'},{transform:'translateX('+end+'px)'}],{duration:350,easing:ease}));}incoming.finished.then(()=>{if(own!==token)return;clear();root.dataset.phase='idle';}).catch(()=>{});ctx.emit('navigate',{page:pages[index],direction});}
+next.addEventListener('click',()=>go(1));back.addEventListener('click',()=>go(-1));root.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();e.stopPropagation();go(e.key==='ArrowRight'?1:-1);}});ctx.onAction('next',()=>go(1));ctx.onAction('back',()=>go(-1));return()=>{token++;clear();};`,
+ prompt:`Build original v4 Page Transition184:1829. Hero220x156 places a200x150 radius14 card10,0 with bars80x8 at15,17,140/120x6 at15,33/45,168x60 gray block15,63; hold the88px curtain at111,-1 and its2px leading edge109,-1. Full240x212 keeps a220x198 frame and readable HOME/WORK/ABOUT/CONTACT screens, real Back/Next navigation and page status. Native forward/back and shared dock navigate the four pages cyclically without changing browser routes. Apply Page slide350ms ease-out: outgoing -30px/opacity0/blur2, incoming +30px to rest; mirror on Back. Keep persistent frame/nav shared, sweep one88px curtain through the frame. Rapid navigation reads the displayed screen before cancelling old WAAPI, retains at most one inert aria-hidden outgoing clone, guards stale finishes, and releases animations on disposal. No busy lock or timer race. Reduced motion uses150ms opacity only; thumbnail retains the exact initial curtain pose. All classes stay prefixed d-curtain, no owned reset or toolbar.`
 });
+
+/* v4 native layout control; shared stage owns framing and actions. */
 INTRX.register({
-  id: "logo-marquee",
-  title: "Infinite Logo Marquee",
-  cat: "Layout & UI",
-  rootClass: "d-logos",
-  tags: ["css animation","mask fade"],
-  libs: [],
-  desc: "The pure-CSS infinite logo strip: content duplicated once, animated -50%, edges faded with a mask, paused on hover. Zero JS, perfectly seamless.",
-  seen: "Seen on: every SaaS landing page \"trusted by\" section",
-  hint: "hover to pause",
-  html: `
-<div class="d-logos">
-  <div class="d-logos-strip">
-    <div class="d-logos-row">
-      <span>ACME</span><span>VERTEX</span><span>NORTH</span><span>OKTA∆</span><span>LUMEN</span><span>ARRAY</span>
-      <span>ACME</span><span>VERTEX</span><span>NORTH</span><span>OKTA∆</span><span>LUMEN</span><span>ARRAY</span>
-    </div>
-  </div>
-</div>`,
-  css: `
-.d-logos {
-  width: 100%; height: 320px; background: #0a0a0b;
-  display: flex; align-items: center; justify-content: center;
-}
-.d-logos-strip {
-  width: min(560px, 92%); overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
-}
-.d-logos-row {
-  display: flex; gap: 48px; width: max-content;
-  animation: d-logos-scroll 18s linear infinite;
-}
-.d-logos-strip:hover .d-logos-row { animation-play-state: paused; }
-.d-logos-row span {
-  font-family: "JetBrains Mono", monospace; font-size: 20px; font-weight: 700;
-  color: #5c5c66; letter-spacing: 0.08em; white-space: nowrap;
-  transition: color 0.3s;
-}
-.d-logos-row span:hover { color: #fa7319; }
-@keyframes d-logos-scroll {
-  to { transform: translateX(calc(-50% - 24px)); }   /* -50% minus half the gap */
-}
-/* Primary reading type; mono is reserved for values and annotations. */
-.d-logos{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-logos-row span{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}
-.d-logos p{font-family:var(--font-ui, 'Manrope', system-ui, sans-serif)}.d-logos>footer button{font-family:Roboto Mono,ui-monospace,monospace}
-
-/* Current control composition. */
-.d-logos{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:0;display:flex;flex-direction:column;height:320px;min-height:0;padding:20px;gap:12px;box-sizing:border-box;background:#0b0e12;color:#e3e7ed}.d-logos *{font-family:"Inter",system-ui,sans-serif!important;font-variant-numeric:tabular-nums;letter-spacing:normal;text-transform:none}.d-logos button,.d-logos input,.d-logos textarea{font-weight:400}.d-logos>header{display:none}.d-logos>[class$="-head"][aria-hidden="true"],.d-logos>[class$="-foot"][aria-hidden="true"]{display:none}.d-logos>[class$="-stage"],.d-logos>[class$="-shell"]{flex:1;min-height:0;max-width:100%;margin:0}.d-logos>footer{flex-shrink:0;gap:8px;justify-content:center;margin:0;min-height:29px;flex-wrap:wrap}.d-logos>footer>span{display:none}.d-logos>footer button{font-size:10px;line-height:1.2;font-weight:400;letter-spacing:0;min-height:27px;padding:6px 8px;border:1px solid #303845;border-radius:6px;background:#151b23;color:#aab7c9}.d-logos-row span{font:500 21px/1.2 "Inter",sans-serif!important;letter-spacing:-.035em;opacity:.78}.d-logos-strip{mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}.d-logos:before{content:"Trusted by independent teams";position:absolute;top:86px;font-size:12px;color:#9aa6b7}
-/* Current control composition. */
-.d-logos *{text-transform:none!important;letter-spacing:0!important}.d-logos button{font-size:12px!important;font-weight:400!important}.d-logos>footer{width:100%;flex-wrap:nowrap!important;gap:5px!important;min-height:27px;height:27px}.d-logos>footer button{font-size:9px!important;padding:6px 5px!important;min-width:0;white-space:nowrap}.d-logos>[class$="-stage"]{max-height:241px;min-height:0;flex-shrink:1;height:241px}
-/* Current control composition. */
-.d-logos>footer button{font-size:11px!important;padding:6px 8px!important}.d-logos>footer{gap:6px!important}
-/* Current control composition. */
-.d-logos-row span{color:#afb8c6!important;opacity:1!important}`,
-  js: `
-// Pure CSS. For dynamic logo lists, duplicate the content once in JS:
-// const row = root.querySelector('.d-logos-row');
-// row.innerHTML += row.innerHTML;`,
-  prompt: `
-
-Requirements:
-- A single row of logos duplicated exactly once (list rendered twice back-to-back), width: max-content, display: flex with a fixed gap.
-- Keyframe animation translateX from 0 to calc(-50% - gap/2) looping linearly (~18s); because the content repeats exactly at that offset, the loop is invisible.
-- Fade the strip's edges with mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent) — include the -webkit prefix.
-- Pause on hover with animation-play-state: paused.
-- Logos are dimmed by default and brighten individually on hover.
-- Respect prefers-reduced-motion by pausing the animation. Final composition: Raised the wordmark contrast and introduced useful context without adding decorative counters. Use locally bundled Inter for the UI and every numeric value, with tabular numerals, weight 400–500 and normal tracking. Keep this composition readable inside a 300×320 preview. The displayed content is a practical interface; hide development telemetry, timing formulas and duplicate coordinate displays. Preserve all existing keyboard, pointer and reduced-motion behavior.`
+ id:"logo-marquee",
+ title:"Logo Marquee",
+ cat:"Layout & UI",
+ rootClass:"d-logos",
+ tags:["marquee","opposing rows","ambient"],
+ libs:[],
+ desc:"Two rows of original neutral marks travel in opposite directions behind soft edge masks. The complete original artwork is repeated and clipped by row without extracting any paths.",
+ seen:"Pattern family: opposing logo marquees",
+ hint:"Ambient · Two rows of marks drift in opposite directions",
+ html:`<div class="d-logos" role="img" aria-label="Two rows of abstract marks moving in opposite directions"><div class="d-logos-row d-logos-top"><div class="d-logos-track"><img src="{{asset:layout2-marquee-rows}}" alt=""><img src="{{asset:layout2-marquee-rows}}" alt=""></div></div><div class="d-logos-row d-logos-bottom"><div class="d-logos-track"><img src="{{asset:layout2-marquee-rows}}" alt=""><img src="{{asset:layout2-marquee-rows}}" alt=""></div></div><span class="d-logos-status" role="status"></span></div>`,
+ css:`.d-logos{position:relative;overflow:clip;font-family:Inter,system-ui,sans-serif}.d-logos-row{position:absolute;left:0;top:58px;width:100%;height:45px;overflow:clip;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}.d-logos-bottom{top:103px}.d-logos-track{position:absolute;left:0;top:0;display:flex;width:744px;height:90px;animation:d-logos-left 24s linear infinite}.d-logos-track img{display:block;flex:none;max-width:none}.d-logos-bottom .d-logos-track{top:-45px;animation-name:d-logos-right;animation-duration:28s}.d-logos[data-paused="true"] .d-logos-track{animation-play-state:paused}.d-logos-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@keyframes d-logos-left{from{transform:translateX(0)}to{transform:translateX(-372px)}}@keyframes d-logos-right{from{transform:translateX(-372px)}to{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.d-logos-track{animation:none!important;transform:none!important}}`,
+ js:`let paused=ctx.reducedMotion;const status=root.querySelector('[role="status"]');root.dataset.paused=String(paused);ctx.onAction('pause',()=>{paused=!paused;root.dataset.paused=String(paused);status.textContent=ctx.reducedMotion?'Reduced motion keeps both rows still':paused?'Marquee paused':'Marquee resumed';ctx.emit('marquee',{paused});});`,
+ prompt:`Implement v4 Logo Marquee185:2046 with the complete unmodified372x90 original SVG at0,58 of a bleed stage. Keep every original asset intrinsic dimension. Clip two45px row windows over repeated whole images instead of extracting/recreating logo paths; top uses image y0, bottom y-45. Repeat each complete image at372px intervals; scroll top0→-372 in24s and bottom-372→0 in28s, linear loops,40px edge masks and intentional clipped horizontal overflow. Native first frame matches the supplied composition; stage runtime pauses loops offscreen or hidden and applies speed. Expose Pause/resume and Reset in shared dock, live status and local events. Keep pause authored through animation-play-state so it survives runtime suspend/resume/speed. Reduced motion renders one still frame. No custom outer panel, no decorative colors, no text logos copied from brands.`
 });

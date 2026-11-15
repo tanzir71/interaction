@@ -164,3 +164,36 @@ The bundled Inter Latin and complete faces contain neither U+2318 (Command)
 nor U+232B (Backspace). Those two keyboard symbols use the same system fallback
 directly; adjacent K/D letters remain Inter. This avoids an unnecessary 158KB
 complete-font download for glyphs it does not contain. No font files are edited.
+
+## Handoff 3 v4 inspector and desktop artwork
+
+These original SVGs are downloaded from the owner-supplied Interaction file.
+Their bytes, intrinsic dimensions and layer positions are retained in the
+native heroes and portable exports. Reference screenshots remain QA material.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| layout2-collapse-chevron-down.svg | 184:1538 | 14x14 |
+| layout2-collapse-chevron-right.svg | 184:1538 | 14x14 |
+| layout2-popover-arrow.svg | 184:1571 | 12x6 |
+| layout2-spotlight-ring.svg | 184:1660 | 100x100 |
+| layout2-mac-silhouette.svg | 184:1806 | 153x127 |
+| layout2-mac-dot.svg | 184:1806 | 6x6 |
+| layout2-dock-indicator.svg | 186:1779 | 4x4 |
+| layout2-accordion-chevron-down.svg | 184:1703 | 14x14 |
+| layout2-modal-bell.svg | 184:1734 | 14x14 |
+| layout2-marquee-rows.svg | 185:2046 | 372x90 |
+
+The Accordion right-chevron download is byte-identical to the inspector's
+right-chevron. Its portable `layout2-accordion-chevron-right` name reuses that
+unmodified file. All three original window-dot slots are retained; only the
+center dot is an interactive Minimize control. The silhouette keeps its half
+pixel stroke overhang. The marquee repeats the complete two-row artwork and
+clips row windows; no paths or individual marks are extracted or redrawn.
+The fitted compositions compensate for the shell's 4px optical raise; their
+standard 372x264 asset positions match Figma. The bleed marquee uses the stage
+origin directly. The focused verifier checks both original dimensions and slots.
+
+The manifest now has 78 portable images: 75 original SVG references (73 physical
+files, including the earlier aliases) and the three existing generated photos.
+No uncredited photo from the new Figma set is published with this control group.

@@ -79,3 +79,6 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   hero/full sizing, keyboard input, reduced motion and portable form exports.
 - `node tools/verify-layout.js http://127.0.0.1:4173` covers layout drag/snap,
   menus, reflow, navigation, touch, interruption, geometry and portable exports.
+- `node tools/verify-layout-controls.js http://127.0.0.1:4173` covers the v4
+  inspector, popover, spotlight, window/dock, accordion, dialog, directional
+  fill, local page transitions and marquee, including offline and compact views.
