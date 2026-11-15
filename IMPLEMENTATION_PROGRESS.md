@@ -617,6 +617,72 @@ Library pages now include the same shared footer. The link is verified on home,
 category, component and licence/credits pages at
 1440px and 390px, including native keyboard focus and external-link attributes.
 
+## Phase 4 — Maps: terrain and city
+
+Topo Extrude and City Blocks now use their v4 native previews. Visual remediation
+covers 84 existing demos; 315 existing demos and 121 new/extension entries remain.
+The four other Maps & Geo models are still pending. The data/footer batch shipped
+as 8720ab9, passed Node 18/22 CI and deployment, and passed the public 203-check
+data suite, 41 committed-artifact comparisons and eight footer route/viewport
+checks. The shared footer credit links to https://tanziro.com/.
+
+Full mode preserves all 216 three-octave terrain values, seeded anchor values,
+elevations and eleven snow cells, plus every original terrain fixture hash.
+The city retains all 90 polygons, eight RNG draws per parcel, ring ordering,
+original river path, five place-label positions, six historic parcels and their
+bounds/path. Both original seed-42 geometry/order hashes remain exact; the next
+seed is verified against all 720 RNG draws and every resulting vertex.
+
+Four original terrain SVGs and eight city-face SVGs provide all 31 visible image
+instances. Every file retains its original bytes and intrinsic dimensions. The
+verifier checks each callsite and effective slot at 372×264, 286×264 and 286×196.
+No image replaces a full mathematical model. All 128 preceding portable image
+payloads, six font faces and 397 unrelated stage records remain unchanged; the
+supplied INTRX-handover directory is untouched. The bundle has 140 image entries.
+
+Both complete models fit a 280×238 composition; 224×168 hero planes preserve the
+compact references. Controls live in the shared dock. Native keyboard and touch
+inspect the same records and elevation values. City seed changes reuse parcel
+nodes and apply transform-only FLIP; replay during an active reveal preserves
+its current presentation. Thumbnail Replay visibly reveals all nine blocks and
+retargets their current opacity when repeated. A single canvas projects every
+terrain top face and extrusion wall from the
+original field, 52° rotation and 900px perspective, while retaining the accessible
+216-cell grid. Painted top-face hit testing selects the real cell. Terrain
+transitions retarget each current height and use the runtime virtual clock.
+Reduced motion holds flat/still geometry with finite opacity feedback.
+Returned cleanup aborts input, disconnects observers and cancels owned motion;
+all shared actions remain inert after disposal.
+
+The focused map verifier passes 186 checks, including original mathematics,
+interruption, native input, readable full/compact inspection, exact image slots,
+caller pause/resume without hidden elapsed time and both complete interactive
+offline exports. All 17 runtime/shell and eight CLI/MCP tests pass. Both native search posters are refreshed. The broad
+suite passes 651 checks, all 399 lazy previews and 97 offline exports.
+
+The final quiet interaction profiles have 16.7ms medians and 16.8ms 95th
+percentiles under 4× CPU slowdown. The raw maxima are 33.3ms for terrain and
+50ms for city, including all three deterministic seed changes. Projecting the
+terrain in one canvas replaces hundreds of animated 3D layers. City reshuffles
+batch transform reads, retain connected parcel nodes and track owned FLIP jobs
+without repeatedly scanning native animations. Assembly transition events track
+whether replay is still moving. Occasional seed-update frames remain recorded;
+this is not a claim that every sampled frame stays below one refresh interval.
+
+Quiet mobile Lighthouse scores 97 for home (296,467 transferred bytes) and
+100 for Elastic Tabs (360,333 bytes) on the idle repeat. The first detail sample
+scored 89 with LCP 3.59s and CLS .068; the repeat measured .96s and .00019. Both
+raw reports are retained for the completion audit rather than hiding this
+variance. No global runtime or shell code changed in this pair.
+
+The terrain/city pair has no stage-fit offenders and needs no fill exceptions.
+Chrome/control debt drops from 311 to 309 demos and motion debt from 116 to 114.
+Both baselines only shrink. The full diagnostic still exits 1 for remaining
+work: zero failed boots, zero missing sizes, 35 overflow, three horizontal-scroll,
+211 tiny-text and 74 low-fill offenders. All 37 exact-geometry exceptions remain
+valid. The unchanged line-mask-reveal appears in this run's overflow and
+horizontal-scroll lists; it remains an existing remediation item.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

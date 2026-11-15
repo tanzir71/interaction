@@ -5332,13 +5332,25 @@ INTRX.meta({
     ]
   },
   "map-topo-extrude": {
-    "designSize": "lg",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Hold / release",
+        "action": "raise"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5350,17 +5362,37 @@ INTRX.meta({
       "3d"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "map-city-tiles": {
-    "designSize": "lg",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Replay",
+        "action": "replay"
+      },
+      {
+        "label": "New seed",
+        "action": "seed"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -5372,8 +5404,12 @@ INTRX.meta({
       "stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "map-dot-globe-arcs": {
     "designSize": "lg",

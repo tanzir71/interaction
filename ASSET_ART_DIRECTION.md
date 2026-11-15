@@ -347,3 +347,34 @@ reference are separate from those original data models. Scrubbing exposes the
 actual monthly-data line instead of claiming its values belong to the static
 price illustration. The bundle now contains 128 image references and the same
 six font faces; every preceding image payload and font face is unchanged.
+
+
+## Handoff 3 v4 terrain and city artwork
+
+Twelve unmodified SVG exports from the owner’s Interaction file supply all
+31 visible image instances: four terrain layers and nine city blocks with three
+faces each. `tools/fixtures/maps-artwork.json` records every design child, slot,
+intrinsic dimension and original SHA-256 hash. `tools/verify-maps.js` checks the
+local bytes and measured geometry in standard and compact stages.
+
+| Assets | Figma tile | Intrinsic dimensions |
+| --- | --- | --- |
+| maps-topo-extrude-layer-0.svg | 166:596 | 201×101 |
+| maps-topo-extrude-layer-1.svg | 166:596 | 157×79 |
+| maps-topo-extrude-layer-2.svg | 166:596 | 113×57 |
+| maps-topo-extrude-layer-3.svg | 166:596 | 69×35 |
+| maps-city-tiles-layer-0.svg | 166:616 | 57×29 |
+| maps-city-tiles-layer-1.svg | 166:616 | 28×24 |
+| maps-city-tiles-layer-2.svg | 166:616 | 28×24 |
+| maps-city-tiles-layer-3.svg | 166:616 | 28×32 |
+| maps-city-tiles-layer-4.svg | 166:616 | 28×32 |
+| maps-city-tiles-layer-5.svg | 166:616 | 57×29 |
+| maps-city-tiles-layer-6.svg | 166:616 | 28×44 |
+| maps-city-tiles-layer-7.svg | 166:616 | 28×44 |
+
+The static previews are original image layers, with native intrinsic sizes.
+Interactive lifts, seeded offsets and replay fades act on their wrappers.
+Full mode retains the native field and polygon algorithms. No photo, screenshot
+or replacement vector is introduced. The portable bundle now contains 140 image
+references and the same six font faces; all 128 preceding image payloads and
+font faces remain unchanged.

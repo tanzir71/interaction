@@ -103,3 +103,16 @@ animation in the stage. Explicit speed changes, including returning to 1×,
 still synchronize existing animations; new CSS motion at another speed still
 uses the lifecycle listener. This avoids repeated identity updates during a
 large stagger reveal while preserving caller pauses and viewport holds.
+
+
+`node tools/verify-maps.js` covers the remediated terrain and city pair. Their
+224×168 hero planes retain every original SVG face; full mode keeps all 216
+terrain cells and 90 city parcels in a 280×238 composition. A thumbnail action
+must visibly affect its hero as well as its underlying model. City Replay
+retargets the current painted opacity when interrupted; seed changes preserve
+parcel nodes and FLIP their centers. The full terrain uses a single canvas to
+project every original cell and extrusion wall; the complete semantic grid stays
+available to assistive technology. Pointer hit testing uses the painted top faces.
+Its interruptible RAF clock excludes caller pauses and offscreen/hidden time.
+Shared runtime disposal owns returned cleanup, including listeners, observers
+and temporary Web Animations.
