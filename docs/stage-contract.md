@@ -152,3 +152,20 @@ all eight original trace times and its six-second completion, with interruptible
 panel transitions. Its 800ms completion hold uses a runtime timer, so caller,
 viewport and document suspension preserve the remaining delay. Returned cleanup
 aborts input, observers, timers and owned check-mask animations.
+
+The remaining agent previews keep their native v4 review, orbit, compaction and
+segmented meter artwork. Full review retains all eight code lines and original
+arrival/hold schedule; source scrolls natively without truncation. Full orbit
+retains thirteen concepts and all twelve original slots, periods, radial wobble
+and neighbor relationships. A native legend keeps the complete vocabulary
+readable, while interrupted promotions retarget from painted positions.
+
+Compaction preserves all sixteen seeded width templates, physical compression,
+token reduction and four-cycle history merge. Stable bubble DOM uses transform
+FLIP reflow when membership changes; tooltip content is cached and its motion
+uses the shared virtual runtime. Only landing/merge UI scale is reduced to a
+1.03 peak. The complete token model retains its 64 seeded events, throughput
+history, queue, threshold compaction and billed cost. Changed cost digits use
+250ms fades with stable slots, including whole-dollar carries. Source allocation
+is deterministic and conserved through compaction without changing old event
+fixtures. Both models preserve explicit caller pauses across viewport changes.

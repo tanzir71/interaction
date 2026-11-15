@@ -840,6 +840,70 @@ untouched. Quiet final mobile Lighthouse scores 99 for home (297,216 transferred
 and 100 for Elastic Tabs (361,082 bytes). LCP is .960s and 1.086s respectively;
 CLS is zero and .000187. The home remains below the 400KB pre-interaction budget.
 
+## Phase 4 — Agent review, knowledge and memory
+
+The remaining four existing Agent & AI UI demos now have v4 previews: Diff
+Review (166:399), Knowledge Orbit (166:428), Context Compaction (166:1294) and
+Context Meter (188:273). All eight existing agent demos are remediated. Visual
+remediation reaches 96/399; 303 existing and 121 new/extension entries remain.
+
+Full diff preserves every code character, all eight arrival times and the
+two-second decision hold. Native acceptance/rejection actually removes the
+appropriate rows and restores clean code. Source remains keyboard-scrollable
+without truncation. Full orbit preserves all thirteen concepts, twelve slots,
+neighbor lists, ring periods, radial wobble and pull model. A native legend
+keeps every concept readable; its center label sits below the native center
+glyph to avoid overlapping the innermost orbit. Interrupted promotions accept
+the latest concept and retarget from painted positions in 350ms.
+
+Compaction retains all sixteen seeded width templates, 96 draws, bound
+compression/pulse functions, token reduction, complete four-cycle timeline and
+history provenance. The fourth cycle retains message counts 12,6,6 with every
+source preview intact. Stable bubble DOM uses transform FLIP reflow with 40ms
+stagger; tooltip content is cached and its 80ms delay/150ms entry/50ms exit use
+owned runtime animations. Only landing and merge UI scale peaks change to 1.03.
+The compact pre-compaction hold now shares the virtual timeline, so a pause
+cannot be bypassed by an automatic timeout; repeated input retains progress.
+
+The complete meter retains all 64 seeded events, 128 draws, 30-point throughput
+history, thresholds, eight-trigger queue, bounded curves, compaction and billed
+cost. All original accounting/geometry checksums remain exact. Native events
+match all 64 original state snapshots; canonical event4159 actually renders
+$100.003 with six digit slots. Only changed digits use 250ms number fades.
+Conversation/files/tools allocation is deterministic, sums to context and is
+proportionally conserved through compaction. Pause freezes both model time and
+owned digit animations. All four exports retain their complete models offline.
+
+Sixteen original SVG exports supply twenty compact instances. Fifteen unique
+files are added; one exact-byte match reuses an existing key. Every native slot
+is checked at 372×264, 286×264 and 286×196. The full orbit center and dynamic
+history glyphs are also checked. The portable bundle has 211 image references
+and the same six fonts. All preceding 196 payloads, 395 unrelated metadata
+records and 395 unrelated demo modules remain exact. Handover files are untouched.
+The 180×51 context meter has a fill-only Figma exception; all 41 exceptions
+validate, with no relaxation of text, overflow or horizontal-scroll gates.
+
+The focused new verifier passes 614 original-model, native input, source
+accounting, artwork, motion, pause, compact, touch, disposal and offline checks.
+The preceding agent verifier passes 260 checks, including all native artwork
+hashes. All 651 library checks, 399 lazy previews and 97 offline exports pass;
+17 runtime/shell and eight CLI/MCP tests pass. Four native posters are refreshed.
+Registry, stage, generated output and motion checks pass. Chrome/control debt
+shrinks from 301 to 297 and motion debt from 113 to 111, without additions.
+
+Each final 4× CPU profile has 239 frame intervals, a 16.7ms median and 16.7–16.8ms
+95th percentile; every maximum is approximately 16.8ms. Measured actions cover
+accept/replay, concept promotion/reset, physical compaction boundaries and
+interrupted token compaction. The largest measured action is 17.7ms. No model,
+history or data resolution is reduced. Sequential mobile Lighthouse scores
+94 for home (297,535 bytes, LCP3.030s, CLS0) and 90 for Elastic Tabs (361,401
+bytes, LCP3.570s, CLS.0680); both meet the required budget and home stays under
+400KB. Raw profiles, screenshots and Lighthouse reports remain in the artifacts.
+
+These four previews have zero stage-fit offenders. The full diagnostic still
+exits1 for remaining remediation: zero failed boots, zero missing design sizes,
+35 overflow, three horizontal-scroll, 199 tiny-text and 74 low-fill findings.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

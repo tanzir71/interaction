@@ -5810,17 +5810,32 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "agent-token-meter": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      330
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Add response",
+        "action": "burst"
+      },
+      {
+        "label": "Pause / run",
+        "action": "pause"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "svg",
@@ -5828,8 +5843,12 @@ INTRX.meta({
       "sparkline"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-deploy-pipeline": {
     "designSize": [
@@ -5873,17 +5892,32 @@ INTRX.meta({
     ]
   },
   "agent-context-compaction": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause / run",
+        "action": "pause"
+      },
+      {
+        "label": "Next event",
+        "action": "step"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "chat",
@@ -5891,8 +5925,12 @@ INTRX.meta({
       "compaction"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-node-graph": {
     "designSize": [
@@ -6011,17 +6049,32 @@ INTRX.meta({
     ]
   },
   "agent-diff-review": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      350
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Accept",
+        "action": "accept"
+      },
+      {
+        "label": "Reject",
+        "action": "reject"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "diff",
@@ -6029,21 +6082,36 @@ INTRX.meta({
       "code"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "agent-knowledge-orbit": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next concept",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": true,
-      "aria": "region"
+      "keyboard": true,
+      "reducedMotion": true
     },
     "useCases": [
       "knowledge graph",
@@ -6052,8 +6120,12 @@ INTRX.meta({
       "agent UI"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "particles-constellation": {
     "designSize": "bleed",

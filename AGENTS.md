@@ -111,6 +111,10 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   It checks original operational fixtures, scaled dragging, cycle rejection,
   native keys/copy, word and check motion, interruption, completion holds,
   caller/offscreen pauses, exact artwork, compact text and offline exports.
+- `node tools/verify-agent-models.js http://127.0.0.1:4173` covers v4 diff
+  review, knowledge orbit, context compaction and context meter: complete original
+  fixtures, native decisions/promotion/history, long-horizon cost, source
+  accounting, exact SVG slots, compact text, pause and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

@@ -427,3 +427,19 @@ The portable bundle has 196 image references and the same six font faces.
 All preceding 187 image payloads and fonts are unchanged. Three documented
 fill-only exceptions preserve the exact sparse rail, graph and two-line text
 geometry; text, overflow and horizontal-scroll gates remain in force.
+
+## Agent review, knowledge and memory
+
+The remaining four v4 agent tiles use sixteen original SVG exports across twenty
+visible instances: diff 166:399 (two 14px decision icons), orbit 166:428 (six
+connectors, six 14px concepts and the native 52px center/shadow), compaction
+166:1294 (16px arrow and layers) and context meter 188:273 (three 6px source
+dots). One exact-byte match reuses an existing asset; fifteen unique files are
+added. Native root dimensions and original bytes are unchanged. The artwork
+fixture records each node, portable key, position, dimensions and SHA-256.
+
+The portable bundle now has 211 images and the same six font faces; all earlier
+196 payloads remain exact. Diff red and green are functional removal/addition
+signals from the source. Other paint is neutral with orange for active state.
+The meter preserves its sparse 180×51 Figma geometry through a documented
+fill-only exception. Overflow, horizontal scroll and 11px text gates apply.
