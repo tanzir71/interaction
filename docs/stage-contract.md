@@ -252,3 +252,34 @@ through the 380/32/1 spring. Full mode shows five layers with twelve-pixel peeks
 Parallax keeps four bounded slides, complete 100% panel/35% media travel and
 the original normalized look map. Caption motion follows the page recipe.
 Both models retarget from their painted state and reject stale completion work.
+
+The remaining galleries preserve complete full models beside native v4 previews:
+eight film frames and timecodes, fourteen honeycomb cells, seven seeded prints,
+twenty-four drift cards, six lightbox origins, nine named wheel projects and
+five cards each for snap, expanding columns and elastic edges. Film selection
+keeps normalized pointer bounds and visited history; only its visual follower
+lerps at .18. Repeated selection within one frame avoids remeasuring its rail.
+Rail size changes use painted-rectangle FLIP and transform-only keyframes;
+the playhead follows through transforms. Snap dots also use transform-based
+emphasis. Drift retains unchanged labels and the wheel avoids unused inherited
+CSS writes on each frame.
+
+Honeycomb neighbors remain closer than 1.2 times the nearest measured distance.
+Prints retain seed 713, the original LCG, rounded coordinates and cyclic order.
+Wheel input retains the .00625 wheel factor, seventy-pixel drag step, .38 direct
+follow, forty-degree pitch and ninety-millisecond idle rounding. Elastic input
+keeps .28 resistance, sixteen-millisecond velocity units and the eight-times
+prediction. Both release through the motion system's 380/32/1 spring.
+
+The drift, snap and elastic galleries use responsive bleed planes with their
+own genuine camera masks. Compact 372px compositions scale within those planes;
+the elastic reference's last photo is clipped ten pixels by its own camera.
+Full snap cards remain seventy percent of the viewport, including the padded
+scroll track; every endpoint can center. Its native smooth scrolling stops on
+caller/document/viewport holds and resumes toward the latest requested target.
+
+Column FLIP captures all first rectangles before cancellation and applies
+backwards fill throughout the forty-millisecond stagger. Lightbox focus enters
+on Open; Escape can reverse an opening dialog even from the shared dock. Its
+document listener is bounded by the component's abort signal and yields to a
+shell dialog. Every mobile wheel project retains its complete place/year copy.

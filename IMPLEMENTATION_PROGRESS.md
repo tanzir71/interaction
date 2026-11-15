@@ -1158,6 +1158,85 @@ exceptions validate. The global diagnostic still exits 1 for remaining work:
 zero failed boots or missing sizes, 35 overflow, 3 horizontal-scroll,
 185 tiny-text and 70 low-fill findings.
 
+## Phase 4 — Remaining galleries and carousels
+
+All nine remaining Galleries & Sliders now have native v4 previews and complete
+full interactions: Filmstrip Scrub, Honeycomb, Print Pile, Dual Row Drift,
+Lightbox Zoom, 3D Wheel, Snap Carousel, Expanding Columns and Elastic Edges.
+Visual remediation reaches 119/399; 280 existing and 121 new/extension entries
+remain. The Interface and Data & AI groups contain 89 and 30 previews with zero
+fit offenders. All 388 unrelated demos and 390 unrelated metadata records
+remain unchanged. Two earlier Layout thumbnails receive only a four-pixel
+vertical alignment correction, verified against their exact Figma slots. The
+preceding four galleries remain exact. Chrome/control debt shrinks from
+283 to 274 and motion debt from 101 to 98. The supplied handover is untouched.
+
+The full models retain eight film frames and every timecode, fourteen hex cells
+with measured nearest-neighbor selection, seven prints with seed 713 and the
+original LCG/rounded poses/order, twenty-four opposing drift cards, six measured
+lightbox origins, nine projects with every place/year, and all five snap,
+elastic and expanding-column items. Compact views preserve the exact v4
+representative compositions. Wheel and elastic retain their input mappings,
+bounds, resistance and velocity prediction; release uses the 380/32/1 spring.
+Independent coordinate, seed and input fixtures were captured before editing.
+
+Native browser checks also cover fixes for selected-text drag interruption,
+delayed FLIP retaining its first pose, all snap endpoints centering, immediate
+switch announcements, native scroll suspension, and Escape reversing an opening
+lightbox from the dock. Cleanup aborts input, releases capture, disconnects
+observers and cancels every owned timer, frame and animation.
+
+Filmstrip batches measurements and changes rail sizes through transform-only
+FLIP; its follower uses transforms. Snap indicators animate transforms instead
+of width. The wheel avoids unused inherited CSS writes, and drift retains its
+unchanged button label. Print entry uses separate wrappers for its 500ms scale,
+260ms shift, 400ms opacity and 350ms FLIP. Static shadow artwork and stationary
+edge gradients retain the required appearance without live filter/mask effects.
+Final sequential 4× CPU profiles contain 239 intervals each: all medians are
+16.7ms, all p95 values are at or below 16.8ms, and none records a long task.
+Film, honeycomb and snap have isolated intervals near 33ms; wheel has one
+66.7ms interval. Other maxima are at or below 16.8ms. The final profiles and
+earlier stall/trace evidence remain in `.artifacts/galleries/`.
+
+Eight untouched SVG exports bring portable assets to 235 images, with all 227
+preceding payloads and six fonts exact. All ten photo-provenance records remain
+unchanged; native Figma/local photo comparisons have RGB RMS below 3.2 after
+equal-size resampling. SVG root sizes, byte hashes, repeated design slots and
+rendered positions are verified. All nine native gallery posters and both
+aligned Layout posters are refreshed.
+No Figma screenshot is shipped as artwork.
+
+The new focused suite passes 1,800 checks. It covers 96 original seeded throws,
+fourteen captured drag/neighbor fixtures, every project place/year and film/print
+identifier, native wheel input and 90ms rounding, interrupted painted geometry,
+transform-only motion, caller/viewport holds, disposal, exact native assets,
+three compact sizes, 390/375/360px touch views and complete offline exports.
+The preceding four-gallery suite passes 419 checks. The broad suite passes
+651 checks, 399 lazy previews and 97 offline exports. All 17 runtime/shell and
+eight CLI/MCP tests, stage lifecycle and sixteen geometry checks pass.
+The two aligned Layout previews also pass the 190-check Layout suite; their
+native positions and exact swap-arrow SVG bytes are checked independently.
+Registry, stage, motion and all 1,205 generated artifacts validate.
+
+Sequential mobile Lighthouse scores 100 for home (299,087
+transferred bytes) and 100 for the required Elastic Tabs detail
+(362,953 bytes). LCP is 960ms / 960ms;
+CLS is 0 / 0. The preceding clip-detail score of 84 remains
+a documented photo-loading follow-up.
+
+The fit auditor now includes visible non-leaf backgrounds and borders while
+ignoring transparent wrappers and the fitted root. Figma confirms the existing
+220×160 nested UI frame and two 200×62 swap wells; the previous leaf-only
+measurement had undercounted their real footprint. Overflow and typography
+continue to use the original leaf geometry. Five new browser checks exercise
+painted frames, transparent wrappers/borders and gradients.
+
+All nine new previews pass every applicable fit gate with no new exceptions;
+all 43 existing fill-only exceptions validate. The global diagnostic still exits
+1 for remaining work: zero failed boots or missing sizes, 35 overflow,
+3 horizontal-scroll, 176 tiny-text and 42 low-fill findings.
+These findings lie outside the two completed groups.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

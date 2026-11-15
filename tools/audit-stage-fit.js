@@ -10,6 +10,7 @@
 const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const stageFitBounds=require('./stage-fit-bounds');
+const paintedStageSurface=require('./stage-fit-surface');
 const lowFillExceptions=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 
 const GATES = {
@@ -27,6 +28,7 @@ const GATES = {
   const page = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
   await page.goto(url.replace(/\/#.*$/,'').replace(/\/$/,'')+'/#/library', { waitUntil: 'networkidle' });
   await page.addScriptTag({content:'window.INTRXStageFitBounds='+stageFitBounds.toString()+';'});
+  await page.addScriptTag({content:'window.INTRXPaintedStageSurface='+paintedStageSurface.toString()+';'});
   while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();
 
   const results = await page.evaluate(async exceptions => {
@@ -53,19 +55,26 @@ const GATES = {
         const actual=bounds?[bounds.width/zoom,bounds.height/zoom]:null;
         r.lowFillException={...exception,actual,valid:!!actual&&actual.every((value,i)=>Math.abs(value-exception.designSize[i])<=1)};
       }
-      let top = 1e9, left = 1e9, right = -1e9, bottom = -1e9, overflow = 0, leaves = 0, minFont = 99, n = 0;
+      let top = 1e9, left = 1e9, right = -1e9, bottom = -1e9, overflow = 0, leaves = 0, painted = 0, minFont = 99, n = 0;
       for (const el of root.querySelectorAll('*')) {
         if (n++ > 1500) break;
         const cs = getComputedStyle(el);
         if (cs.display === 'none' || cs.visibility === 'hidden' || +cs.opacity === 0) continue;
-        if (el.children.length && !/^(CANVAS|SVG|IMG|VIDEO|INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)) continue;
+        const leaf=!el.children.length||/^(CANVAS|SVG|IMG|VIDEO|INPUT|TEXTAREA|SELECT)$/i.test(el.tagName);
+        // A nested control frame paints its own background/border. Ignoring it
+        // undercounts fill for interfaces whose tiny children sit inside it.
+        // Transparent wrappers and the fitted root never supply this area.
+        if (!leaf&&!window.INTRXPaintedStageSurface(cs)) continue;
         // Honor clipping by a native photo frame, scroll viewport or reveal
         // mask. The fitted root and shell stage are deliberately excluded.
         const b = window.INTRXStageFitBounds(el,root);
         if (!b) continue;
         if (b.width < 1 || b.height < 1) continue;
-        leaves++;
+        painted++;
         top = Math.min(top, b.top); left = Math.min(left, b.left); right = Math.max(right, b.right); bottom = Math.max(bottom, b.bottom);
+        // Keep overflow and typography gates on the original leaf geometry.
+        if (!leaf) continue;
+        leaves++;
         if (b.right > sr.right + 2 || b.left < sr.left - 2 || b.bottom > sr.bottom + 2 || b.top < sr.top - 2) overflow++;
         const nativeText=/^(INPUT|TEXTAREA|SELECT)$/i.test(el.tagName)&&!['range','checkbox','radio','color','file','hidden'].includes(el.type)&&(el.value||el.placeholder);
         // Split-letter menus and single-digit readouts still contain text.
@@ -77,7 +86,7 @@ const GATES = {
         zoom: +zoom.toFixed(3),
         leaves, overflow,
         minFont: +minFont.toFixed(1),
-        fill: leaves ? +(iw * ih / (sr.width * sr.height)).toFixed(3) : 0,
+        fill: painted ? +(iw * ih / (sr.width * sr.height)).toFixed(3) : 0,
         hscroll: root.scrollWidth > root.clientWidth + 4,
         stageMeta: demo.stage || null,
         designSize: demo.designSize || null,

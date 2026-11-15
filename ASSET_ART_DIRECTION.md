@@ -516,3 +516,24 @@ recorded in `tools/fixtures/gallery-artwork.json`. Photo crops are native image
 elements; interrupted reveals retain the painted image layers and parallax
 uses a canvas only for its initial reference-to-live transition. The portable
 bundle has 227 images and the same six font faces. No screenshot is tile art.
+
+## Remaining gallery compositions
+
+The other nine v4 gallery tiles use the existing verified forestDark, cityTeal,
+ocean, forestBlue, cityNight, dusk and silk photographs. Every repeated Figma
+raster is byte-identical across these tiles. Comparisons with the retained local
+1600px sources have RGB RMS below 3.2 after equal-size resampling; the difference
+comes from delivery encoding/resizing. Full wheel project content also reuses
+the already verified archGrid and aurora files. No photograph or provenance
+record is replaced.
+
+The exact dusk slots in filmstrip 185:1823/1844, print pile 185:1894, drift
+185:1936 and lightbox 185:1978 follow the same owner-authorized v4-tile rule as
+clip 185:1753. General legacy-key mapping continues elsewhere.
+
+Eight unchanged exports supply four honeycomb shapes (including the 77×85
+central shadow plane), two print backers (164.4×151 and 161.2×147.4), and two
+6×6 snap dots. `tools/fixtures/gallery-artwork.json` records every original
+root dimension, file hash, node and design slot, including repeated instances.
+Wrappers position and animate these exports; their payloads and root dimensions
+remain intact. The portable bundle contains 235 images and six unchanged fonts.

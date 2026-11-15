@@ -134,6 +134,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   native drag, keys and touch; exact native artwork/primitive geometry, compact
   typography, interruptions, caller/viewport holds, cleanup and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
+  Fill includes painted child frames through `tools/stage-fit-surface.js`;
+  transparent wrappers and the fitted root never supply parent surface area.
+  Overflow and text gates continue to use leaf geometry.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.
 - `node tools/verify-galleries.js http://127.0.0.1:4173` covers v4 Fraction
@@ -141,3 +144,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   bounds, wrap, drag/velocity and recycling fixtures; native keys/touch, complete
   drum timing, interrupted compositing and flights, exact image/crop/SVG slots,
   optical type, caller/viewport holds, reset cancellation and offline exports.
+- `node tools/verify-galleries-remaining.js http://127.0.0.1:4173` covers the
+  other nine galleries. It preserves all original timecodes, seeded print poses,
+  neighbor calculations and project data; tests native wheel/drag/focus/scroll,
+  all snap endpoints, exact native artwork/photo slots, delayed FLIP reversals,
+  modal focus/Escape, native-scroll suspension, every mobile project caption,
+  cleanup and complete offline exports.
