@@ -1024,6 +1024,65 @@ boots or missing sizes, 35 overflow, three horizontal-scroll, 192 tiny-text and
 74 low-fill findings. A final compact focus repair leaves every profiled full
 path, prelude, stylesheet and HTML composition byte-identical.
 
+## Phase 4 — FUI trading, orbital tracking and boot output
+
+The last three existing FUI demos now match v4: trading desk 166:1246,
+orbital tracker 166:1273 and boot sequence 166:1366. Existing visual remediation
+reaches 106/399; 293 existing and 121 new/extension entries remain. All 396
+unrelated metadata records/modules and the supplied handover remain exact.
+Chrome/control debt shrinks from 290 to 287 and motion debt from 105 to 102.
+
+Trading retains all sixty market points, six bid/ask levels, four tape rows,
+original random streams and 800ms tick. Native pointer, touch and keyboard
+reorder the complete panels; Enter or double-click collapses through grid rows.
+FLIP retargets from painted rectangles, with final reads batched before writes.
+The native compact preview retains the exact price artwork, five book bars and
+two tape rails. Tape type and price-column spacing remain readable on phones.
+
+Orbital tracking retains three original satellite configurations, thirty-six
+trails, both 73-point halves per orbit, front/back occlusion, station passes,
+20000ms latitude drift and 22ms telemetry typing. Camera and text swaps accept
+interruption. Stable selection attributes and paths are cached; no orbital
+sample is removed. The separate native compact view retains all three original
+image exports and its 70×20 SAT-07 badge.
+
+Boot keeps fourteen asynchronous device emissions/resolutions, original seeded
+warning/jitter draws, twenty-four progress cells, the 2500ms ready hold and
+250ms wipe. Word spans add the streaming recipe without changing any line text
+or operational schedule. Replay cancels pending callbacks and owned motion
+while preserving caller suspension. Reduced mode shows the complete resolved
+log. Its native compact preview uses the exact 220×112 card and reference rail.
+
+The first 4× CPU profiles recorded 116.7ms trading and 150ms orbital outliers.
+The chart now redraws when its data, shift or dimensions change, and orbital
+selection attributes are written only when changed. All original models remain
+complete. The final three profiles each contain 239 intervals, with 16.7ms
+medians and p95 at or below 16.8ms. Trading's maximum is 33.3ms; orbital and
+boot maxima are 16.8ms. No final profile records a long task. Earlier raw
+profiles are retained for the comprehensive performance audit.
+
+The focused verifier passes 505 checks, comparing all 65 complete market
+states, every satellite/trail sample, all full orbit paths, sixteen boot
+schedules and 496 original boot timeline events. It also covers native keys,
+fitted mouse/touch dragging, collapse reversals, camera/text interruption,
+exact image/primitive slots, three compact sizes, 390/375/360px full typography,
+caller/viewport holds, paused Reset/Replay, cleanup and full offline exports.
+Three new unique exports bring the portable bundle to 222 images; all previous
+219 payloads and six fonts remain exact. Three native posters are refreshed.
+
+Sequential mobile Lighthouse scores 100 for home (297,970 transferred bytes)
+and the trading detail (532,632 bytes), both with 960ms LCP. CLS is zero for
+home and 0.000879 for trading. All seventeen runtime/shell and eight CLI/MCP
+tests pass.
+
+The full regression passes all 651 checks, 399 lazy previews and 97 offline
+exports. Registry, stage, motion and all 1205 generated artifacts pass. Browser
+stage lifecycle checks and eleven native-mask/acceptance-boundary checks pass.
+The three new previews have no fit offenders and need no new fill exceptions;
+all 43 existing exceptions validate. The global fit diagnostic still exits 1
+for remaining work: zero failed boots or missing sizes, 35 overflow, three
+horizontal-scroll, 189 tiny-text and 74 low-fill findings.
+
 ## Remaining work
 
 1. Remediation buckets A–G and motion migration across all existing demos,

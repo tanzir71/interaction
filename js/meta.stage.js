@@ -5656,17 +5656,24 @@ INTRX.meta({
     ]
   },
   "fui-terminal-boot": {
-    "designSize": "lg",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": true,
-      "aria": "region"
+      "keyboard": true,
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5675,8 +5682,12 @@ INTRX.meta({
       "state-machine"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-waveform-scope": {
     "designSize": [
@@ -5885,17 +5896,28 @@ INTRX.meta({
     ]
   },
   "fui-trading-terminal": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Swap panels",
+        "action": "swap"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5904,21 +5926,36 @@ INTRX.meta({
       "terminal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      224,
+      168
+    ]
   },
   "fui-orbital-tracker": {
-    "designSize": "lg",
+    "designSize": [
+      440,
+      380
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next satellite",
+        "action": "next"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": true,
-      "aria": "region"
+      "reducedMotion": true
     },
     "useCases": [
       "fui",
@@ -5927,8 +5964,12 @@ INTRX.meta({
       "tracker"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      232,
+      168
+    ]
   },
   "agent-token-meter": {
     "designSize": [

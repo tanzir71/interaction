@@ -213,3 +213,20 @@ the page does not scroll sideways. Existing rows are reused and rebound only
 when their addresses leave the window. Selection clears only previously
 decorated cells, preserving the same data and influence model. The compact
 preview adapts from six to four columns in short stages to retain 11px type.
+
+The trading desk keeps sixty market points, six bid/ask levels, four tape rows
+and its 800ms seeded tick. Fitted pointer deltas use logical CSS units. FLIP
+captures every painted rectangle before cancellation and batches final reads
+before animation writes; collapse uses grid rows. The canvas redraws when its
+series, shift or dimensions change, retaining every original data sample.
+
+Orbital tracking keeps all three original satellite configurations, thirty-six
+trail dots, both 73-point halves per orbit, front/back occlusion, station passes
+and 22ms telemetry typing. Stable SVG selection attributes and orbit paths are
+cached without reducing the model. Camera and text swaps retarget during input.
+
+Boot output retains fourteen asynchronous device resolutions, original seeded
+warning/jitter draws, twenty-four progress cells, a 2500ms ready hold and 250ms
+wipe. Streaming word spans preserve the complete original log text and schedule.
+Replay cancels pending callbacks and owned motion while preserving caller holds.
+All three have separate native v4 previews and complete portable full models.

@@ -128,6 +128,11 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - `node tools/verify-entry-layout.js http://127.0.0.1:4173` holds the catalog
   across first paint and checks stable route chrome for modern and legacy
   entries on desktop and mobile. Reserve initial chrome before catalog loading.
+- `node tools/verify-fui-missions.js http://127.0.0.1:4173` covers v4 trading,
+  orbital tracking and boot output. It checks all original market states,
+  satellite/trail samples, full orbit paths and sixteen boot event timelines;
+  native drag, keys and touch; exact native artwork/primitive geometry, compact
+  typography, interruptions, caller/viewport holds, cleanup and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

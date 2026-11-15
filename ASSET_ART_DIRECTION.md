@@ -477,3 +477,18 @@ the SVGs are unmodified. The 93×100 ring/check/label composition has a fill-onl
 reference exception. The portable bundle has 219 images with the same six
 fonts, and all preceding 216 image payloads remain exact. No screenshots are
 used as demo artwork.
+
+## FUI trading, orbital tracking and boot output
+
+Trading desk 166:1246 retains the native 144×104 price-frame export at (74,28),
+with native book bars and tape rails alongside it. Orbital tracker 166:1273
+retains its 180×60 orbit, 64×64 planet/shadow and 8×8 satellite exports at their
+reference slots. The satellite reuses the byte-identical `form-step-dot` asset.
+All four instances keep original root dimensions and payload bytes; three
+unique exports bring the portable bundle to 222 images with six unchanged fonts.
+All preceding 219 image payloads remain exact.
+
+Boot sequence 166:1366 uses native primitives: a 220×112 terminal, three
+11.5px command lines and a 192×3 rail with 128px representative progress. Its
+short compact layout increases line spacing to retain 11px rendered type.
+Separate full models retain all original market, orbital and device data.
