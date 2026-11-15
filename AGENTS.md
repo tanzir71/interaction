@@ -98,6 +98,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
 - `node tools/verify-loaders.js http://127.0.0.1:4173` covers the ten v4
   loaders, original progress/geometry models, state cancellation, native input,
   exact SVG slots, runtime suspension, compact typography and offline exports.
+- `node tools/verify-data.js http://127.0.0.1:4173` covers all six v4 data
+  demos, original datasets, changed-digit fades, interrupted ranking, shared
+  tooltips, native input, exact SVG slots, compact text and offline exports.
 - The fit auditor honors masks inside a demo through `tools/stage-fit-bounds.js`.
   Root and shell-stage clipping never exempt overflowing content. Verify this
   boundary with `node tools/verify-stage-fit-geometry.js` after audit changes.

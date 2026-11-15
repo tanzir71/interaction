@@ -73,7 +73,10 @@
       stage.dataset.suspended = String(paused());
       thaw();
     }
-    function syncAnimationSpeed() {
+    function syncAnimationSpeed(event) {
+      // New CSS motion already runs at 1x. Explicit setSpeed still synchronizes
+      // existing animations when returning from a different playback rate.
+      if (event && speed === 1) return;
       if (!disposed && stage.getAnimations) stage.getAnimations({subtree:true}).forEach(animation=>animation.updatePlaybackRate(speed));
     }
     function makeTimer(callback, delay, repeat, args) {

@@ -549,9 +549,78 @@ The global diagnostic still exits 1 for remaining work: 0 failed boots,
 0 missing sizes, 34 overflow, 2 horizontal-scroll, 219 tiny-text and 75 low-fill
 offenders; all 36 documented exact-geometry fill exceptions validate.
 
+## Phase 4 — Data and numbers
+
+The six existing Data & Numbers demos now use their v4 compositions: Donut
+Sweep, Radar Sweep, Bar Race, Sparkline Scrub, Ticker Tape and Heatmap Reveal.
+Visual remediation covers 82 existing demos. The remaining 317 existing demos
+and 121 new/extension entries still require implementation and audit. The
+preceding loader batch shipped as 6ee9a9a, with the browser-scroll verifier fix
+in f3f2fe3; both commits passed CI and deployment. Its public verification passed
+291 interaction checks, 49 committed-artifact comparisons and the real lifecycle
+checks after waiting for actual offscreen geometry.
+
+Full mode preserves the original four allocation shares, r48 circumference,
+local progress windows and synchronized legend counts; all five polar targets,
+angular hit rule and exponential decay; both ranked project datasets; all twelve
+monthly values and nearest-sample math; five price baselines and signed ticks;
+and every one of the 42 contribution values and dates. The compact views retain
+the simpler reference compositions. Both illustrative market prices and the
+static sparkline reference are distinguished from the original full datasets.
+The active sparkline shows the actual monthly-data line. Touch selection stays
+visible after release; keyboard selection uses the same sample function.
+
+Sixteen original SVG files keep their source bytes. All seventeen image elements
+are checked by identity, standard slots and unscaled compact geometry. Two empty
+donut exports remain transparent 32px originals in their source layer slots.
+The radar ray uses its exact fractional intrinsic size to avoid browser ratio
+rounding. No photo, remote runtime URL or replacement vector is introduced.
+All 112 preceding portable image payloads, six font faces and unrelated stage
+records are unchanged. The supplied INTRX-handover folder is unchanged.
+
+The data verifier passes 203 checks for the original models, interrupted FLIP,
+changed-digit fades, native keyboard/touch, explicit runtime speed, complete
+portable exports, selected tooltip readability, native SVG geometry, compact
+views, reduced motion and class namespaces. All six interactive exports run
+offline. Ranking captures the currently painted positions before canceling its
+previous motion, then applies measured deltas with the stagger held in place.
+Number fades batch reads and writes and share animation layers only across
+changed character runs; unchanged numeric digits stay still. Hidden tape copies
+receive current values without creating invisible animation layers.
+
+The runtime no longer rescans all animations for each CSS transition at its
+default 1× rate. Explicit speed changes still synchronize existing motion, and
+new CSS motion at another speed still inherits it. New data Web Animations also
+inherit the current explicit speed. Seventeen runtime/shell and eight CLI/MCP
+tests pass. Real browser lifecycle checks preserve desktop/touch caps, native
+opt-in, caller pauses and independent offscreen full-preview suspension.
+
+All six interaction profiles have a 16.7ms median under 4× CPU slowdown after
+fonts and source are ready. The final 95th percentiles range from 16.7ms to
+33.4ms; price updates and heatmap reveals retain occasional longer frames in
+the raw results. Those update-frame spikes remain a performance follow-up for
+the completion audit; correctness checks do not establish a perfectly flat
+60fps trace. Mobile Lighthouse scores 98 for home (296,262 transferred bytes)
+and 100 for Elastic Tabs (360,128 bytes).
+
+Final regression verification passes 394 navigation checks, 651 library checks,
+all 399 lazy previews and 97 offline exports. Six native search posters are
+refreshed. The data group has no stage-fit offenders. One exact 104×104 Figma
+donut has a documented fill-only exception; no gate thresholds changed. Stage chrome/control debt drops from 317 to 311 demos and motion debt from 118 to 116,
+with no new violations. The global audit still exits 1 for remaining work:
+0 failed boots, 0 missing sizes, 34 overflow, 2 horizontal-scroll, 213 tiny-text
+and 75 low-fill offenders. All 37 documented exact-geometry exceptions validate.
+
+The owner follow-up adds a visible “Made by Tanzir Rahman” credit linked to
+https://tanziro.com/ in the shared footer, with a fresh UI script cache version.
+Library pages now include the same shared footer. The link is verified on home,
+category, component and licence/credits pages at
+1440px and 390px, including native keyboard focus and external-link attributes.
+
 ## Remaining work
 
-1. Remediation buckets A–G and motion migration across all existing demos.
+1. Remediation buckets A–G and motion migration across all existing demos,
+   including the recorded price-tape and heatmap update-frame spikes.
 2. Thirty new components and ninety-one extension components, by category.
 3. Pro entitlement seams and a full requirement-by-requirement completion audit.
 

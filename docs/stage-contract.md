@@ -89,3 +89,17 @@ view freezes its frames, remaining timer delays and animations; returning does
 not override a caller pause. Hidden document time and offscreen time are both
 excluded from the virtual clock. This behavior is included in portable HTML.
 LiveTiles keeps exclusive ownership of thumbnail visibility and preview caps.
+
+
+`node tools/verify-data.js` covers the six original data models, native touch
+and keyboard input, measured SVG slots, compact/full readability and all six
+interactive offline exports. Number fades preserve unchanged digits and group
+adjacent changed characters into shared animation layers; offscreen tape copies
+receive their current values without creating invisible fade animations. New
+Web Animations inherit the current explicit runtime speed.
+
+At the default 1× speed, CSS animation/transition events do not rescan every
+animation in the stage. Explicit speed changes, including returning to 1×,
+still synchronize existing animations; new CSS motion at another speed still
+uses the lifecycle listener. This avoids repeated identity updates during a
+large stagger reveal while preserving caller pauses and viewport holds.

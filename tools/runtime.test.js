@@ -64,6 +64,14 @@ test('CSS transitions created after a speed change inherit that speed and listen
  s.stageEvents.get('transitionrun')();assert.equal(animation.rate,2);
  s.runtime.dispose();assert.equal(s.stageEvents.size,0);
 });
+test('default-speed CSS events do not rescan animations, while explicit speed reset still synchronizes',()=>{
+ const s=setup();let scans=0;const animation={playState:'finished',rate:.75,updatePlaybackRate(value){this.rate=value;}};
+ s.stage.getAnimations=()=>{scans++;return[animation];};
+ s.stageEvents.get('animationstart')({type:'animationstart'});s.stageEvents.get('transitionrun')({type:'transitionrun'});
+ assert.equal(scans,0);assert.equal(animation.rate,.75);
+ s.runtime.setSpeed(2);assert.equal(animation.rate,2);s.runtime.setSpeed(1);assert.equal(animation.rate,1);
+ const resetScans=scans;s.stageEvents.get('transitionrun')({type:'transitionrun'});assert.equal(scans,resetScans);s.runtime.dispose();
+});
 test('metadata defaults merge beneath inline values and remain replaceable',()=>{
  const context={window:{}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/registry.js'),'utf8'),context);
  const R=context.window.INTRX;

@@ -5091,17 +5091,33 @@ INTRX.meta({
     ]
   },
   "chart-bars-race": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Next period",
+        "action": "run"
+      },
+      {
+        "label": "Baseline",
+        "action": "baseline"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "status"
     },
     "useCases": [
       "chart",
@@ -5109,21 +5125,41 @@ INTRX.meta({
       "ranking"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      132
+    ]
   },
   "chart-donut-sweep": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Sweep",
+        "action": "run"
+      },
+      {
+        "label": "Show all",
+        "action": "complete"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "img"
+      "reducedMotion": true,
+      "aria": "status"
     },
     "useCases": [
       "chart",
@@ -5131,21 +5167,37 @@ INTRX.meta({
       "count up"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      160,
+      140
+    ]
   },
   "sparkline-hover-scrub": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "label": "September",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "img"
+      "reducedMotion": true,
+      "aria": "status"
     },
     "useCases": [
       "sparkline",
@@ -5153,21 +5205,41 @@ INTRX.meta({
       "scrub"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      244,
+      160
+    ]
   },
   "heatmap-fade-in": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Reveal",
+        "action": "run"
+      },
+      {
+        "label": "Week 4",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "grid"
+      "aria": "status"
     },
     "useCases": [
       "heatmap",
@@ -5175,21 +5247,38 @@ INTRX.meta({
       "tooltip"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      220,
+      136
+    ]
   },
   "ticker-tape-prices": {
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "intentional"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Update",
+        "action": "tick"
+      },
+      {
+        "label": "Pause tape",
+        "action": "toggle"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "status"
     },
     "useCases": [
       "ticker",
@@ -5197,21 +5286,37 @@ INTRX.meta({
       "flash"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11"
   },
   "radar-sweep-blips": {
-    "designSize": "md",
+    "designSize": [
+      280,
+      238
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Pause sweep",
+        "action": "toggle"
+      },
+      {
+        "label": "140°",
+        "action": "inspect"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "status"
     },
     "useCases": [
       "radar",
@@ -5219,8 +5324,12 @@ INTRX.meta({
       "decay"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      180,
+      160
+    ]
   },
   "map-topo-extrude": {
     "designSize": "lg",

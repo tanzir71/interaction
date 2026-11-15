@@ -305,4 +305,45 @@ The liquid SVG is at stage (131,62.2); its sampled solid colour is the existing
 as the target rises. Skeleton Reveal uses the existing verified archGrid image
 for its resolved article, with both resolutions and the recorded photographer
 credit. No new photograph or remote runtime asset is introduced in this group.
-The bundle now contains 112 image references and the same six font faces.
+The loader group bundled 112 image references and the same six font faces.
+
+
+## Handoff 3 v4 data artwork
+
+These sixteen SVGs are unmodified original exports from the owner's Interaction
+file. All seventeen visible image elements retain their original asset identity
+and measured slots, including both empty donut layers. Floating-point dimensions
+are set to the source dimensions to prevent replaced-element ratio rounding.
+
+| Asset | Figma tile | Intrinsic size |
+| --- | --- | --- |
+| data-donut-track.svg | 166:457 | 104×104 |
+| data-donut-right.svg | 166:457 | 52×89.9064 |
+| data-donut-empty.svg | 166:457 | 32×32 |
+| data-donut-lower.svg | 166:457 | 74.4699×30.5669 |
+| data-donut-left.svg | 166:457 | 21.1795×55.2866 |
+| data-radar-inner.svg | 166:572 | 44×44 |
+| data-radar-middle.svg | 166:572 | 88×88 |
+| data-radar-outer.svg | 166:572 | 132×132 |
+| data-radar-sector.svg | 166:572 | 45.1801×66 |
+| data-radar-ray.svg | 166:572 | 1.2×67.2 |
+| data-radar-near.svg | 166:572 | 6×6 |
+| data-radar-left.svg | 166:572 | 5×5 |
+| data-radar-right.svg | 166:572 | 5×5 |
+| data-spark-line.svg | 166:1345 | 221.6×39.4002 |
+| data-spark-cross.svg | 166:1345 | 1×127 |
+| data-spark-dot.svg | 166:1345 | 14×14 |
+
+The two empty donut layers export as transparent 32×32 SVGs. The original
+files are retained at their source origins in the 104×104 layer slots; their
+Figma child screenshots contain no painted content. No replacement arc is drawn.
+The remaining supplied donut segments, radar rings/beam/blips and sparkline
+artwork retain their complete shapes and native dimensions.
+
+The green radar accent and green/red price feedback match their v4 references.
+Price colours convey the sign of an illustrative change. Full previews preserve
+the original datasets; the compact market labels and illustrative sparkline
+reference are separate from those original data models. Scrubbing exposes the
+actual monthly-data line instead of claiming its values belong to the static
+price illustration. The bundle now contains 128 image references and the same
+six font faces; every preceding image payload and font face is unchanged.
