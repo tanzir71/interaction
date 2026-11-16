@@ -210,3 +210,15 @@ compositions have documented Figma-size fill exceptions; other fit gates remain
 unchanged. The focused verifier checks all original data and numeric models,
 native geometry and artwork, real input, interrupted motion, caller holds,
 deferred Reset, compact full typography and complete offline exports.
+
+## Initial preview holds
+
+Morphing Popover and Spring Modal now paint their open native reference state
+synchronously. Holding a preview before its first frame no longer freezes an
+entrance at opacity zero. Their original transitions become available on the
+first live frame; the full views retain their closed initial state and existing
+interaction behavior. A pending startup frame is cancelled on disposal.
+
+The startup verifier checks both motion preferences at four stage sizes, exact
+reference dimensions and opacity, resumed transitions, full open/Escape behavior
+and cleanup. The full layout-control regression suite remains unchanged.

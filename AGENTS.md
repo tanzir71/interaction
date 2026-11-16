@@ -183,3 +183,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   complete full content, exact native type/SVG geometry, scaled input, actual
   wheel/keys/touch, flap reversals, six-second stories, compact typography,
   suspended intents, cleanup and complete offline exports.
+- `node tools/verify-preview-start.js http://127.0.0.1:4173` checks that
+  Morphing Popover and Spring Modal paint their native reference state when
+  paused before the first frame. It covers four sizes, normal/reduced motion,
+  restored live transitions, unchanged full interactions and startup cleanup.
