@@ -558,3 +558,21 @@ photo slot for these six Scroll compositions, captured directly from Figma
 before implementation. Photo wrappers and masks are original HTML/CSS. No
 screenshot or substitute image is tile art, and no new SVG payload is needed.
 The portable bundle now contains 236 images and the same six font faces.
+
+## Scroll narratives
+
+Text Highlight, Image Sequence, SVG Draw, Rotating Gallery and Split Screen use
+their exact v4 native layers, recorded in `tools/fixtures/scroll-narrative-geometry.json`.
+The four `scroll-route-*` SVG exports are copied unchanged; their original
+222×54, 110×206 and 10×10 roots and SHA-256 hashes are recorded independently in
+`tools/fixtures/scroll-narrative-artwork.json`. The grey curve's negative inset
+is preserved. Reveal masks and the mirrored live second half are original CSS;
+the exported SVG payloads are neither extracted nor redrawn.
+
+The sequence retains every original polygon, projection, bolt and grid vertex.
+Approved Dusk photography is affinely mapped to its horizontal faces. Its
+compact filmstrip uses five native Dusk crops; the orbit keeps the five exact
+Embers, Silk, Aurora, Ocean and CityTeal slots. Full views retain seven projects
+and four split chapters using approved local photographs. All 236 earlier image
+payloads, six font faces and eleven photo-credit records remain unchanged. The
+portable bundle now has 240 image aliases, including the four route exports.

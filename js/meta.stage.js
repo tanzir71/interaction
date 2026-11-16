@@ -292,17 +292,29 @@ INTRX.meta({
     ]
   },
   "scroll-text-highlight": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "scroll",
@@ -310,21 +322,37 @@ INTRX.meta({
       "progress"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      144
+    ]
   },
   "scroll-image-sequence": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "canvas",
@@ -332,21 +360,37 @@ INTRX.meta({
       "scroll"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      320,
+      168
+    ]
   },
   "scroll-svg-draw": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "svg",
@@ -354,21 +398,34 @@ INTRX.meta({
       "scroll"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-rotate-gallery": {
-    "designSize": "lg",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "gallery",
@@ -380,17 +437,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "scroll-split-screen": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "sticky",
@@ -398,8 +467,12 @@ INTRX.meta({
       "crossfade"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-marquee-direction": {
     "designSize": "lg",

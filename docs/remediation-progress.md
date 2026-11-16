@@ -1,7 +1,7 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 127 of the 399 existing demos: Interface (89),
-Data & AI (30), and the first eight Motion demos. The remaining work includes 272
+The v4 redesign is complete for 132 of the 399 existing demos: Interface (89),
+Data & AI (30), and the first thirteen Motion demos. The remaining work includes 267
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -75,6 +75,29 @@ complete six-second stories, pauses, cleanup, narrow full views and all six
 offline exports. All original models and all 22 high-fidelity Figma references
 were captured before source changes.
 
-Next in the Scroll manifest: Text Highlight, Image Sequence, SVG Draw and the
-remaining eleven scroll studies. New/extension components, Pro seams and the
-final requirement audit remain open.
+## Scroll: reading, sequence, route, gallery and split chapters
+
+Text Highlight, Image Sequence, SVG Draw, Rotating Gallery and Split Screen now
+match their native v4 compositions. Full views retain the complete original
+21-word passage, 48-frame projected assembly, three measured route curves,
+seven project records and four material chapters with all paragraphs and data.
+Independent fixtures were captured before implementation. The sequence's 240
+projection hashes cover all 48 frames at five canvas sizes and DPR settings;
+all geometric drawing operations remain exact while approved Dusk photography
+is mapped onto the four horizontal surfaces.
+
+The native route uses four unmodified SVG exports with their original root
+dimensions. Translated masks reveal the orange half; the mirrored second half
+follows the same symmetric curve. Split Screen keeps its native photo and four
+text bars separate so the photo's mask cannot hide the copy. Full layouts keep
+readable type at 390, 375 and 360px, including SVG labels and material units.
+
+`node tools/verify-scroll-narratives.js http://127.0.0.1:4173` checks the original
+models and datasets, every native layer, real keyboard/wheel/touch, six-second
+preview stories, interruption, held Reset, cleanup and complete offline exports.
+Reduced motion holds the exact preview checkpoint, uses discrete route/gallery
+states and removes split reveal transforms. No new photographs or dependencies
+were added; all eleven credit records remain unchanged.
+
+Nine Scroll studies remain, starting with Marquee Direction and Counter Rotate.
+New/extension components, Pro seams and the final requirement audit remain open.

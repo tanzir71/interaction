@@ -161,3 +161,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Zoom. It compares the original numeric models and complete datasets, all
   native layers/photo slots, 60/120/240Hz skew, native wheel/keys/touch, complete
   stories, holds/disposal, compact full typography and offline exports.
+- `node tools/verify-scroll-narratives.js http://127.0.0.1:4173` covers reading
+  highlight, all 48 sequence poses at five canvas/DPR settings, measured route
+  drawing, all seven rotating projects and all four split chapters, including
+  native artwork, real input, compact typography, holds and offline exports.
