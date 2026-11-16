@@ -199,3 +199,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   card and mask geometry, live renderer agreement, native keys/touch scrolling,
   interrupted flights, inertia cancellation, caller/viewport holds, queued
   intent, cleanup, compact full type and complete offline exports.
+- `node tools/verify-text-expressive.js http://127.0.0.1:4173` covers v4 Ransom
+  Note, Glitch Layers, Circular Badge and Accordion Type. It compares original
+  seeded cutouts, burst slices, orbital trajectories and row weights; checks
+  every native type/card/SVG slot, actual input, interrupted FLIP, uniform type,
+  orbit pivot and refresh-rate equivalence, caller/viewport holds, cleanup,
+  compact full typography and complete offline exports.

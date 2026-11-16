@@ -1,8 +1,8 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 156 of the 399 existing demos: Interface (89),
-Data & AI (30), all twenty-two Scroll demos, and the first fifteen Text & Type
-demos in Motion. The remaining work includes 243
+The v4 redesign is complete for 160 of the 399 existing demos: Interface (89),
+Data & AI (30), all twenty-two Scroll demos, and the first nineteen Text & Type
+demos in Motion. The remaining work includes 239
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -173,7 +173,7 @@ wheel/keyboard/touch, complete six-second stories, caller holds, deferred Reset,
 cleanup, tall and short stage endpoints, and complete offline exports with
 original asset bytes and credits.
 
-Eight Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
+Four Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
 new/extension components, Pro seams and the final requirement audit stay open.
 
 ## Text & Type: reveals, decode, marquee, flaps, proximity and statistics
@@ -291,3 +291,44 @@ reference states under reduced motion.
 fixtures, exact native geometry at four sizes, live optical and fill output,
 native keys and touch, reversed flights, caller and viewport holds, queued
 intent, cleanup, compact full typography and complete offline exports.
+
+## Text & Type: cutouts, channel slices, circular badge and accordion
+
+Ransom Note, Glitch Layers, Circular Badge and Accordion Type now use their
+exact v4 native compositions. Three sparse previews retain the authored
+184×44px card group, 160×60px channel group and 99×99px dot ring under documented
+fill exceptions. Compact planes keep the smallest native text above 11 physical
+pixels while preserving the geometry of the 372×264px reference.
+
+Full views retain all eleven KEEP IT WEIRD cutouts, both SIGNAL / LOST lines,
+the complete original circular text path and all four studio disciplines.
+Independent captures preserve twelve seeded arrangements, every font, weight,
+palette and irregular corner sample; burst slice bands and channel offsets;
+accelerated and reversed orbit trajectories; and every hover/focus/latch
+combination with the original row-weight recurrence. Legacy paper colours are
+painted as neutral greys, retaining the single original orange sample. Red and
+cyan in Glitch are the functional channel colours specified by the v4 tile.
+
+Cutouts use measured centre FLIP with the shared 350ms duration and capped 40ms
+stagger. Bursts retain the original 520ms clock, 45ms slices and seeded stream,
+including interruption and complete recovery. The orbit retains its original
+18/96° per second model with fixed 60Hz integration at higher refresh rates.
+Its full SVG rotates around the original 380×195 centre. At compact widths,
+spacing fits the complete phrase around the original path while glyphs retain
+their 12px physical size and proportions. The native ring uses
+all twenty-eight original 3px SVG dots and the exact 20px arrow; three new asset
+files are embedded unchanged in exports.
+
+The accordion retains active weight 2.05, the original sibling distribution,
+font/weight relationship and pointer precedence over focus and latch. The
+shared 250ms accordion motion replaces the legacy easing. Labels move from
+their current measured centres and scale uniformly, retaining their proportions;
+rules move through transforms. Font and row sizes change once per requested
+layout. Reduced motion jumps layout with brief opacity feedback; ambient
+motion becomes a readable still frame. All four own frame and observer cleanup
+and preserve queued input across caller, document and viewport holds.
+
+`node tools/verify-text-expressive.js http://127.0.0.1:4173` compares independent
+original models, exact native geometry and every SVG slot, complete full
+content, real input, interrupted motion, orbit refresh-rate equivalence and
+pivot stability, holds, cleanup, compact typography and offline exports.
