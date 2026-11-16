@@ -217,3 +217,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   actual stroke and GPU output, native keys/touch, retargeting, holds, graphics
   context loss and fallback, complete stories, cleanup, compact type and offline
   exports. Full compositions retain the complete original SVG models.
+- `node tools/verify-svg-remaining.js http://127.0.0.1:4173` covers the other six
+  SVG demos. It compares original perimeter, pen schedules, menu endpoints,
+  noise fields, seven measured circuit routes and all four 240-point figures;
+  checks exact native artwork and photo slots, scaled selection, real pen and
+  touch, complete live stories, interrupted menus, holds, cleanup, compact type,
+  offline exports and the complete font in separate CSS and the actual CSS tab.

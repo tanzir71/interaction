@@ -8,7 +8,10 @@ These are independent native interpretations, with per-component source links.
 Other references retain their source attribution in registry items and exports.
 
 Font licences are included in `assets/fonts`: Geist and Geist Mono (Vercel and
-Basement Studio), Inter, Manrope and Newsreader use SIL OFL 1.1. Photography
+Basement Studio), Inter, Manrope, Newsreader and Allura use SIL OFL 1.1. Allura is
+by Robert Leuschke and The Allura Project Authors; its original font and licence
+are from [Google Fonts](https://github.com/google/fonts/tree/main/ofl/allura).
+Photography
 provenance and generated-image prompts are documented in `ASSET_ART_DIRECTION.md`.
 The local v4 photographs have verified free Unsplash sources, recorded
 with both file checksums in `assets/photo-credits.json`. Their detail pages and

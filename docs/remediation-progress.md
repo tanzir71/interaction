@@ -1,9 +1,9 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 168 of the 399 existing demos: Interface (89),
+The v4 redesign is complete for 174 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus the first four SVG & Line demos in Motion. The remaining work includes
-231 existing demos, 121 new or extension components, Pro seams, and the final audit.
+demos plus all ten SVG & Line demos in Motion. The remaining work includes
+225 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 
@@ -432,3 +432,57 @@ original SVG remains visible. All sixteen desktop and 4x CPU profiles have a
 95th-percentile interval of at most 16.8ms and no long tasks. Both blob thumbnail
 runs retain two approximately 33ms intervals; this remains performance debt for
 the final audit. The other fourteen profiles have no missed intervals.
+
+## SVG & Line: selections, signatures, fluid menus and complete loops
+
+The remaining six SVG demos match their v4 native tiles (`161:670`, `161:692`,
+`161:710`, `161:741`, `161:763`, `161:793`). Thirteen new SVG files preserve their
+supplied bytes and dimensions. Two icons exactly match existing local assets;
+the photo selection reuses the approved, credited architecture photograph.
+Signature uses the original Allura face, bundled locally with its SIL OFL licence.
+The exact 44×170px open menu stack has a documented sparse fill exception.
+
+Marching Ants supports scaled native drag and lower-right resize, arrow movement,
+Shift-arrow resizing and live dimensions. Its size badge keeps 11px physical
+text in compact views. Full retains the original measured perimeter, two dash
+lanes, acceleration, phase integration and sampled runner. Signature accepts real
+mouse, pen and touch input with pressure-aware width. Replay retains all five
+original paths, distinct pen rates, measured durations, 90ms lifts and arc-length
+nib. The native signed reference uses the exact Allura text and baseline.
+
+The fluid menu retains its real blur/alpha/composite filter and synchronized
+semantic and filtered layers. Native shows the supplied three-action stack;
+full retains all four original radial actions. Motion retargets live positions
+with a 250ms entrance, 40ms item stagger and an unstaggered 150ms exit; opacity,
+scale, rise and icon blur follow the origin-aware menu recipe. Keyboard wrapping, restored focus, outside
+close, inert closed actions and deferred intents remain available.
+
+Full contour views retain all fourteen original 32-point paths and four-octave
+field, with eased pointer influence. All seven original circuit routes, sampled packets and factors remain
+complete. All four Lissajous presets, 240 vertices per figure, hold/morph schedule,
+echo and tracer remain live. Native views transform the supplied contour assets,
+route dots along the supplied traces, and trace the exact supplied 3:2 curve.
+The full tracer has an angular clock independent of the dash pattern, correcting
+an inherited 153-unit jump when the dash phase wrapped. Its traversal wraps with
+the figure cycle, when the preset's endpoints coincide; intermediate open morph
+curves keep their original geometry. Parameter schedules and dash integration
+remain unchanged, and the original captures are kept.
+Caller, viewport and document holds preserve state; cleanup owns documents,
+observers, pointer capture and custom ink. Touch leaves no sticky hover state.
+
+Single-file exports and separate CSS retain the complete signature font and
+licence. The CSS tab abbreviates embedded font data for reading; Copy preserves
+the original bytes. The shared exporter supplies the same CSS to the registry,
+CLI and site. Other components retain their existing exported CSS.
+
+`node tools/verify-svg-remaining.js http://127.0.0.1:4173` compares immutable
+original fixtures, exact native assets and photo crop, actual pen pressure and
+touch, complete live timelines, all curve vertices and circuit paths, native
+keyboard behavior, interrupted menus, holds, cleanup, compact full typography,
+network-blocked exports, separate CSS and the actual CSS-tab copy flow.
+
+All twenty-four final desktop and 4x CPU profiles use the current module hashes.
+Their 95th-percentile frame interval is at most 16.8ms, with no long tasks. The
+full Lissajous stress run retains one 33.4ms interval; the other twenty-three
+profiles have no missed intervals. Earlier variable measurements are retained
+alongside these results for the final performance audit.
