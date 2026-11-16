@@ -2748,13 +2748,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "svg-path-draw-hover": {
-    "designSize": "sm",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2766,17 +2778,33 @@ INTRX.meta({
       "path length"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      112
+    ]
   },
   "svg-blob-morph": {
-    "designSize": "sm",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hold"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2788,17 +2816,33 @@ INTRX.meta({
       "morph"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      260,
+      208
+    ]
   },
   "svg-squiggle-underline": {
-    "designSize": "sm",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2810,17 +2854,33 @@ INTRX.meta({
       "live path"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      152
+    ]
   },
   "svg-line-graph-live": {
-    "designSize": "sm",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Next"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2832,8 +2892,12 @@ INTRX.meta({
       "data morph"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      260,
+      152
+    ]
   },
   "svg-marching-ants": {
     "designSize": "sm",

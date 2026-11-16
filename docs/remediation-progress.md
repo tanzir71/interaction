@@ -1,9 +1,9 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 164 of the 399 existing demos: Interface (89),
+The v4 redesign is complete for 168 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos in Motion. The remaining work includes 235
-existing demos, 121 new or extension components, Pro seams, and the final audit.
+demos plus the first four SVG & Line demos in Motion. The remaining work includes
+231 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 
@@ -379,3 +379,56 @@ original fixtures, exact native geometry at four sizes in both motion modes,
 real input, live interruption, complete article and number targets, observer
 subscription/reset semantics, story completion, caller and viewport holds,
 native scroll momentum, compact full typography and complete offline exports.
+
+## SVG & Line: measured paths, radial morphs, underlines and live charts
+
+Path Draw, Blob Morph, Squiggle Underline and Live Line Graph now match their
+v4 native compositions (`161:609`, `161:1242`, `161:632`, `161:650`). Eight supplied
+SVG files retain their original bytes, dimensions and design slots. Fractional
+image dimensions are explicit so compact CSS zoom preserves the thin strokes.
+The 160×40px icon group and 132×55.4px underline composition retain their exact
+Figma sizes through documented fill exceptions. Other fit gates still apply.
+
+Full views retain all eleven paths across Compass, Current, Orbit and Monogram;
+all three sixteen-radius blob states; all three editorial underline phrases and
+their complete two-frequency model; and all three eight-value chart datasets.
+Independent original captures cover path lengths, radial convergence and spline
+poses, procedural wave timecodes and complete chart curves. The shared motion
+system replaces the older timing, path stagger and locked chart input.
+
+Path drawing uses measured stroke lengths, a 350ms entrance after 80ms, capped
+40ms stagger and a 150ms exit. Native outlines animate in owned SVG documents
+created from the unchanged assets. Blob motion retains its original exponential
+convergence, sixteen-point topology, pointer bulge and cyclic spline. Full views
+keep idle, focus/hover and held states; the native preview adds a six-second
+three-state story. Underlines retain their original active-only shared clock;
+full Clear preserves phase while native Reset restores the reference frame.
+
+Native shape, underline and chart deformation uses a texture rendered from the
+supplied SVG, with shared mesh edges and original model values. No supplied path
+data is copied or replaced. The blob uses 64 radial sectors; the underline uses
+96 strips and a reveal located from measured path length; the chart uses 48
+strips and all eight original values. The chart's exact dot and ring follow its
+last value. Full chart replots retarget current floats, and only changed readout
+digits animate. Reduced motion keeps loops still and uses brief opacity feedback.
+
+The renderer owns textures, buffers, graphics contexts and asynchronous loading.
+Context loss or unavailable WebGL uses a Canvas fallback. Caller, document and
+viewport holds preserve model and displayed state; cleanup revokes Blob URLs and
+removes embedded documents and canvases. The native blob and chart stories cover
+all three original states before wrapping. All previous 253 image payloads, six
+font faces and fourteen photo credits are unchanged; no dependency was added.
+
+`node tools/verify-svg-core.js http://127.0.0.1:4173` checks original fixtures,
+native artwork and geometry at four sizes in both motion modes, actual stroke
+endpoints, chart pixels against an independent original-curve reference, native
+input, interrupted motion, holds, complete stories, fallback, cleanup, compact
+full typography and complete offline exports. Six SVG & Line demos remain.
+
+Changing full underline and chart paths use normalized stroke lengths, preserving
+their complete endpoint through deformation without measuring during each frame.
+The native renderer prepares its reference mesh before becoming ready while the
+original SVG remains visible. All sixteen desktop and 4x CPU profiles have a
+95th-percentile interval of at most 16.8ms and no long tasks. Both blob thumbnail
+runs retain two approximately 33ms intervals; this remains performance debt for
+the final audit. The other fourteen profiles have no missed intervals.

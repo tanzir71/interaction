@@ -1,0 +1,150 @@
+{
+  "assets": {
+    "svg-path-heart": {
+      "file": "assets/components/svg-path-heart.svg",
+      "sha256": "84f3efb5128fa175cf30baee6d78b056d23ba3bbade1dd97458e4815fb09e0f8",
+      "size": [
+        40,
+        40
+      ],
+      "bytes": 654
+    },
+    "svg-path-star": {
+      "file": "assets/components/svg-path-star.svg",
+      "sha256": "d3178c84c7a3a6bfa73028b28954ee7caef0c7617a463937e10b57e4fc11ad83",
+      "size": [
+        40,
+        40
+      ],
+      "bytes": 458
+    },
+    "svg-path-bolt": {
+      "file": "assets/components/svg-path-bolt.svg",
+      "sha256": "acb93f9311a44fec6e0314e38575e96bce1c2179e85e7399d50f3f085c3dc5d9",
+      "size": [
+        40,
+        40
+      ],
+      "bytes": 377
+    },
+    "svg-blob-native": {
+      "file": "assets/components/svg-blob-native.svg",
+      "sha256": "52ce8cff33877ebe8073e7440d61f34d2b7fad73128b6cd4e26900135e99b040",
+      "size": [
+        161,
+        161
+      ],
+      "bytes": 1930
+    },
+    "svg-squiggle-native": {
+      "file": "assets/components/svg-squiggle-native.svg",
+      "sha256": "d92ff2054bd111e419fdf112ff1d331934e1a122f386307ab7f3613765c0954a",
+      "size": [
+        121.8,
+        6.8
+      ],
+      "bytes": 2214
+    },
+    "svg-graph-line": {
+      "file": "assets/components/svg-graph-line.svg",
+      "sha256": "c0b61deab55315f314826983eea03a69398b58262e4e0501a5b5ce176644b82d",
+      "size": [
+        211.8,
+        43.8001
+      ],
+      "bytes": 727
+    },
+    "svg-graph-dot": {
+      "file": "assets/components/svg-graph-dot.svg",
+      "sha256": "a5be7dbb62f0fba2d88ca105099e76be1c98d569fbe41506010bea6adefbd134",
+      "size": [
+        12,
+        12
+      ],
+      "bytes": 265
+    },
+    "svg-graph-ring": {
+      "file": "assets/components/svg-graph-ring.svg",
+      "sha256": "8b4333b1418ee760bbfe6c473f8d79525aaa07f48462f4ba6a8d56b16c50a99d",
+      "size": [
+        20,
+        20
+      ],
+      "bytes": 258
+    }
+  },
+  "slots": [
+    {
+      "id": "svg-path-draw-hover",
+      "selector": ".d-svgdraw-native-item:nth-child(1) img",
+      "x": 106,
+      "y": 80,
+      "w": 40,
+      "h": 40,
+      "asset": "svg-path-heart"
+    },
+    {
+      "id": "svg-path-draw-hover",
+      "selector": ".d-svgdraw-native-item:nth-child(2) img",
+      "x": 166,
+      "y": 80,
+      "w": 40,
+      "h": 40,
+      "asset": "svg-path-star"
+    },
+    {
+      "id": "svg-path-draw-hover",
+      "selector": ".d-svgdraw-native-item:nth-child(3) img",
+      "x": 226,
+      "y": 80,
+      "w": 40,
+      "h": 40,
+      "asset": "svg-path-bolt"
+    },
+    {
+      "id": "svg-blob-morph",
+      "selector": ".d-blobmorph-native-image",
+      "x": 105.5,
+      "y": 29.5,
+      "w": 161,
+      "h": 161,
+      "asset": "svg-blob-native"
+    },
+    {
+      "id": "svg-squiggle-underline",
+      "selector": ".d-squiggle-native-image",
+      "x": 125.1,
+      "y": 120.6,
+      "w": 121.8,
+      "h": 6.8,
+      "asset": "svg-squiggle-native"
+    },
+    {
+      "id": "svg-line-graph-live",
+      "selector": ".d-linegraph-native-line",
+      "x": 75.1,
+      "y": 99.1,
+      "w": 211.8,
+      "h": 43.8001,
+      "asset": "svg-graph-line"
+    },
+    {
+      "id": "svg-line-graph-live",
+      "selector": ".d-linegraph-native-dot",
+      "x": 280,
+      "y": 94,
+      "w": 12,
+      "h": 12,
+      "asset": "svg-graph-dot"
+    },
+    {
+      "id": "svg-line-graph-live",
+      "selector": ".d-linegraph-native-ring",
+      "x": 276,
+      "y": 90,
+      "w": 20,
+      "h": 20,
+      "asset": "svg-graph-ring"
+    }
+  ]
+}

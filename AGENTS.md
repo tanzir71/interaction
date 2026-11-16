@@ -211,3 +211,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and geometry; actual keyboard, wheel and touch; live retargeting; one-shot
   observers and stale generations; complete stories, holds, cleanup, compact
   typography and complete offline exports.
+- `node tools/verify-svg-core.js http://127.0.0.1:4173` covers v4 Path Draw,
+  Blob Morph, Squiggle Underline and Live Line Graph. It compares original
+  path/radial/wave/dataset fixtures, exact supplied artwork and native geometry,
+  actual stroke and GPU output, native keys/touch, retargeting, holds, graphics
+  context loss and fallback, complete stories, cleanup, compact type and offline
+  exports. Full compositions retain the complete original SVG models.
