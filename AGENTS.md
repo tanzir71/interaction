@@ -176,3 +176,10 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   recurrences and 280 direct video frame fixtures; checks exact native photo/SVG
   slots, live renderer agreement, real keyboard/wheel/touch, compact typography,
   full endpoints, six-second stories, holds, cleanup and complete offline exports.
+- `node tools/verify-text-core.js http://127.0.0.1:4173` covers Split Text
+  Reveal, Text Scramble, Kinetic Marquee, Line Mask Reveal, Split-Flap Roll,
+  Proximity Type and Stat Counter. It compares independent original glyph
+  queues, signed velocity/decay, proximity fields and count samples; checks
+  complete full content, exact native type/SVG geometry, scaled input, actual
+  wheel/keys/touch, flap reversals, six-second stories, compact typography,
+  suspended intents, cleanup and complete offline exports.

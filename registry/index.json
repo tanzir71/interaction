@@ -2846,7 +2846,7 @@
   },
   {
     "id": "split-text-reveal",
-    "title": "Split-Text Character Reveal",
+    "title": "Split Text Reveal",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "scroll",
@@ -2860,28 +2860,35 @@
     ],
     "tier": "free",
     "desc": "The headline is split into characters that rise out of an overflow-hidden mask with a per-character stagger. The canonical award-site headline entrance.",
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "libs": [
-      "gsap"
-    ],
+    "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/split-text-reveal",
     "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "module": "js/demos.text.split-reveal.js?v=bed0a1dbc1",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/split-text-reveal.json?v=efdab31e2a",
+    "sourcePreview": "registry/p/split-text-reveal.json?v=6842d75ce1",
     "assetRefs": {},
     "rootClass": "d-split",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "hint": "Words rise out of a mask line, one by one",
     "sourceName": "Seen on: every GSAP SplitText showcase, Obys, Locomotive",
@@ -2889,7 +2896,7 @@
   },
   {
     "id": "text-scramble",
-    "title": "Text Scramble / Decode",
+    "title": "Text Scramble",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
@@ -2903,7 +2910,14 @@
     ],
     "tier": "free",
     "desc": "Characters cycle through random glyphs before locking into place left-to-right — the \"decrypting\" effect. Strong with monospace fonts and technical brands.",
-    "designSize": "md",
+    "designSize": [
+      560,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -2911,18 +2925,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-scramble",
-    "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "thumb": "hero",
+    "module": "js/demos.text.scramble.js?v=758bfa7217",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-scramble.json?v=4beea0cd10",
+    "sourcePreview": "registry/p/text-scramble.json?v=40f1f1b310",
     "assetRefs": {},
     "rootClass": "d-scramble",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "button"
     },
     "hint": "Random glyphs resolve into the word",
     "sourceName": "Seen on: cybersecurity brands, resend.com, terminal-aesthetic portfolios",
@@ -2944,26 +2967,35 @@
     ],
     "tier": "free",
     "desc": "An endlessly looping text band whose speed and direction respond to scroll velocity. Seamless because the content is duplicated and wrapped with modulo.",
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "scroll"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/kinetic-marquee",
     "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "module": "js/demos.text.kinetic-marquee.js?v=831a3f78e4",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/kinetic-marquee.json?v=318277064f",
+    "sourcePreview": "registry/p/kinetic-marquee.json?v=698e80ca80",
     "assetRefs": {},
     "rootClass": "d-marquee",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "The type runs faster with scroll velocity",
     "sourceName": "Seen on: studio websites everywhere — Baillat, Phantom, holographik",
@@ -2985,7 +3017,7 @@
     ],
     "tier": "free",
     "desc": "Paragraph lines slide up from behind invisible masks, one line after another. Calmer than per-character animation — the standard for body copy and manifestos.",
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -2994,17 +3026,26 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/line-mask-reveal",
     "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "module": "js/demos.text.line-mask-reveal.js?v=18cbf2de13",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/line-mask-reveal.json?v=885ae1152d",
+    "sourcePreview": "registry/p/line-mask-reveal.json?v=b6e7827f24",
     "assetRefs": {},
     "rootClass": "d-lines",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "hint": "Each line slides up from behind its mask",
     "sourceName": "Seen on: lusion.co, editorial studios, brand manifestos",
@@ -3012,7 +3053,7 @@
   },
   {
     "id": "letter-roll",
-    "title": "Hover Letter Roll",
+    "title": "Split-Flap Roll",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
@@ -3026,7 +3067,14 @@
     ],
     "tier": "free",
     "desc": "On hover, each character rolls upward and an identical copy rolls in from below, staggered across the word. The signature nav-link hover of high-end studios.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      360
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3034,18 +3082,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/letter-roll",
-    "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "thumb": "hero",
+    "module": "js/demos.text.letter-roll.js?v=16ba44d880",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/letter-roll.json?v=d090512786",
+    "sourcePreview": "registry/p/letter-roll.json?v=a4e55c025e",
     "assetRefs": {},
     "rootClass": "d-roll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
+      "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "Each letter flips like a departures board",
     "sourceName": "Seen on: dennissnellenberg.com nav, Kirifuda, countless SOTD menus",
@@ -3067,7 +3124,14 @@
     ],
     "tier": "free",
     "desc": "Each letter reacts to cursor distance — near letters swell and lift, far ones stay put, creating a wave that follows the pointer through the headline.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3075,18 +3139,29 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/proximity-type",
-    "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "thumb": "hero",
+    "module": "js/demos.text.proximity-type.js?v=d9b59290dd",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/proximity-type.json?v=869fad96cf",
-    "assetRefs": {},
+    "sourcePreview": "registry/p/proximity-type.json?v=35be5af535",
+    "assetRefs": {
+      "layout2-carousel-pointer": "assets/components/layout2-carousel-pointer.svg"
+    },
     "rootClass": "d-prox",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "button"
     },
     "hint": "Letters swell and thicken near the pointer",
     "sourceName": "Seen on: type foundries (Dinamo, Pangram Pangram playgrounds), experimental portfolios",
@@ -3094,7 +3169,7 @@
   },
   {
     "id": "stat-counter",
-    "title": "Odometer Stat Counter",
+    "title": "Stat Counter",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "scroll",
@@ -3108,7 +3183,14 @@
     ],
     "tier": "free",
     "desc": "Numbers count up with a hard ease-out when scrolled into view, odometer style. tabular-nums keeps digits from jittering the layout.",
-    "designSize": "md",
+    "designSize": [
+      560,
+      360
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3116,18 +3198,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/stat-counter",
-    "thumb": "full",
-    "module": "js/demos.text.js?v=8be155ef53",
+    "thumb": "hero",
+    "module": "js/demos.text.stat-counter.js?v=10a77d9d63",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/stat-counter.json?v=94ac299161",
+    "sourcePreview": "registry/p/stat-counter.json?v=e865f54530",
     "assetRefs": {},
     "rootClass": "d-count",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "The figure counts up when it enters view",
     "sourceName": "Seen on: agency about-pages, annual reports, SaaS landing metrics",

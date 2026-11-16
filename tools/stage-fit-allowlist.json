@@ -459,6 +459,46 @@
         107,
         104
       ]
+    },
+    "text-scramble": {
+      "reason": "Owner clarification,15Nov2026: preserve exact sparse v4 geometry: the140×52 DESI#% text frame at116,82. Only low fill is exempt; overflow, horizontal scroll and text size remain gated.",
+      "figmaNode": "160:617",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=160-617",
+      "selector": ".d-scramble-native-text",
+      "designSize": [
+        140,
+        52
+      ]
+    },
+    "letter-roll": {
+      "reason": "Owner clarification,15Nov2026: preserve exact sparse v4 geometry: six32×48 cells at80,72 with4px gaps in a212×48 group. Only low fill is exempt; overflow, horizontal scroll and text size remain gated.",
+      "figmaNode": "160:660",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=160-660",
+      "selector": ".d-roll-flaps",
+      "designSize": [
+        212,
+        48
+      ]
+    },
+    "proximity-type": {
+      "reason": "Owner clarification,15Nov2026: preserve exact sparse v4 geometry: the198×60 word at92.5,76 plus the exact cursor shadow, yielding198×78.875; only compact stages fall below12%. Only low fill is exempt; overflow, horizontal scroll and text size remain gated.",
+      "figmaNode": "160:694",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=160-694",
+      "selector": ".d-prox-native",
+      "designSize": [
+        198,
+        78.875
+      ]
+    },
+    "stat-counter": {
+      "reason": "Owner clarification,15Nov2026: preserve exact sparse v4 geometry: the150×62 numeral at111,70 and80×7 rule at146,138, a150×75 composition; compact stages fall below12%. Only low fill is exempt; overflow, horizontal scroll and text size remain gated.",
+      "figmaNode": "160:1062",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=160-1062",
+      "selector": ".d-count-native-count",
+      "designSize": [
+        150,
+        75
+      ]
     }
   }
 }

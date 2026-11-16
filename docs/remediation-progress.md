@@ -1,7 +1,8 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 141 of the 399 existing demos: Interface (89),
-Data & AI (30), and all twenty-two Scroll demos in Motion. The remaining work includes 258
+The v4 redesign is complete for 148 of the 399 existing demos: Interface (89),
+Data & AI (30), all twenty-two Scroll demos, and the first seven Text & Type
+demos in Motion. The remaining work includes 251
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -172,5 +173,40 @@ wheel/keyboard/touch, complete six-second stories, caller holds, deferred Reset,
 cleanup, tall and short stage endpoints, and complete offline exports with
 original asset bytes and credits.
 
-Text, SVG and 3D studies in Motion remain. Other unfinished categories,
+Sixteen Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
 new/extension components, Pro seams and the final requirement audit stay open.
+
+## Text & Type: reveals, decode, marquee, flaps, proximity and statistics
+
+The first seven native previews match the v4 type, masks, flap cells and counter
+geometry. Full views preserve both original headline lines, all four reveal
+lines, four complete scramble phrases, both six-chunk marquee bands, all three
+navigation labels and duplicate character stacks, ELASTIC, and the original
+128 / 14 / 99% statistics with their labels. The native counter separately uses
+the exact 12,480 composition. Split Text Reveal now uses the shared motion
+system without its former GSAP dependency.
+
+Independent fixtures were captured before any source changes: every seeded
+scramble queue step, fourteen marquee wheel states and thirty settling states,
+seventeen measured proximity inputs, original character/line/link structure,
+and thirteen quartic count samples. The marquee preserves its signed 60Hz
+arithmetic, including the asymmetric response to negative velocity; fractional
+integration gives equivalent 120/240Hz displacement. Proximity keeps the
+140px radius, smoothstep falloff, 22px lift and 0.35 scale gain while accounting
+for fitted coordinates. The complete 1300ms quartic count is unchanged.
+
+Native flaps have continuous, reversible 3D poses. Counter digits use actual
+3D face geometry, anticipation, the named step curve, 740ms landing and 90ms
+stagger; unchanged digit structures are reused during counting. Native
+proximity blends fixed font-weight layers through opacity. Its pointer is the
+byte-identical existing SVG, including its original dimensions and negative
+insets, so no assets or dependencies were added. The text scramble's glyph
+layer ignores pointer hits to keep DOM updates from restarting hover.
+
+Scroll-triggered previews follow six-second stories. Full reveals and counters
+start when they enter view; full marquee input uses native wheel, scrolling,
+touch and keys. Reduced motion renders readable initial states. Four sparse
+compositions have documented Figma-size fill exceptions; other fit gates remain
+unchanged. The focused verifier checks all original data and numeric models,
+native geometry and artwork, real input, interrupted motion, caller holds,
+deferred Reset, compact full typography and complete offline exports.

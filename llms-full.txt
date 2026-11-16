@@ -470,118 +470,33 @@ Preserve the complete24-second original film camera, all four chapters at0,6,13.
 
 ## Text & Type
 
-### Split-Text Character Reveal (`split-text-reveal`)
+### Split Text Reveal (`split-text-reveal`)
 
-Build a split-text character reveal with GSAP (or vanilla).
+Preserve the complete A thought. / Made visible. full headline and all23 character masks. Replace GSAP with the motion system400ms rise12px/blur2px/opacity reveal and40ms stagger capped300ms, with80ms line offset. Native preview has the exact Every word / rises / in turn typography,372×44 mask and partial third-word reference. Full copy/dataset: ["A thought.","Made visible."]. Native stage geometry (372×264, dock reserved separately): [{"name":"Every word","x":109.5,"y":58,"w":153,"h":39},{"name":"Frame","x":0,"y":96,"w":372,"h":44},{"name":"rises","x":112,"y":104,"w":67,"h":39},{"name":"in turn","x":198,"y":120,"w":89,"h":39}]. Full design size "bleed"; native plane "372×264 bleed". Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-split. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
-Requirements:
-- Split each headline into individual characters. Wrap every character in an outer span with overflow: hidden (the mask) and an inner span that animates. Preserve spaces as &nbsp;.
-- Animate the inner spans from yPercent: 110 and rotate: 6deg to 0 with power4.out, duration ~0.9s, stagger 0.025s per character.
-- Trigger on page load and again when the element scrolls into view (IntersectionObserver or ScrollTrigger).
-- Keep accessibility: set aria-label with the original text on the heading and aria-hidden on the spans.
-- Under prefers-reduced-motion, skip splitting entirely.
+### Text Scramble (`text-scramble`)
 
-Set the two lines “A thought.” and “Made visible.” in compact medium-weight role-appropriate type, with the second line orange. Use 24px padding and container-relative sizes so both lines fit a 300–320px-wide preview.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Text Scramble / Decode (`text-scramble`)
-
-Build a text scramble / decode effect in vanilla JS (the classic "hacker text").
-
-Requirements:
-- A setText(next) function that transitions the current string to the next one.
-- For each character position, pick a random start frame (0-30) and end frame (start + 0-30). Before start, show the old character; between start and end, show a random glyph from a set like !<>-_\/[]{}—=+*^?#, re-randomized with ~28% probability per frame so it flickers; after end, lock in the new character.
-- Run on requestAnimationFrame until all characters resolve.
-- Render in-progress glyphs in #fa7319 (wrap in a span).
-- Use a monospace font so the line does not jitter horizontally.
-- Cycle through an array of phrases on click or on an interval, and expose setText for reuse.
-
-Use a restrained mono heading in light gray on graphite, with decoding glyphs in #fa7319. Keep native 24px padding and container-relative type so the complete phrases fit narrow previews.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Preserve all four original phrases, complete glyph alphabet, randomized0..29 start/end queues and0.28 replacement probability. Evaluate every logical queue step in a time-based400ms Text swap; do not make outcomes depend on display refresh. Hover decodes, clicking or keyboard activation cycles all original phrases in full view. Native preview starts at exact DESI#% and resolves DESIGN. Render glyphs as literal text, including angle brackets and backslashes. Exact original glyph alphabet: "!<>-_\\/[]{}—=+*^?#________". Full copy/dataset: ["Ideas into form","Make it matter","Move with purpose","Keep exploring"]. Native stage geometry (372×264, dock reserved separately): [{"name":"DESI#%","x":116,"y":82,"w":140,"h":52}]. Full design size [560,320]; native plane [240,168]. Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-scramble. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
 ### Kinetic Marquee (`kinetic-marquee`)
 
-Build an infinite kinetic marquee in vanilla JS.
-
-Requirements:
-- A nowrap track whose content chunk is repeated ~6x so it always overflows.
-- A rAF loop advances an x position by a base speed (~0.6px/frame); wrap with modulo of one chunk width so the loop is seamless: translateX(-(((x % w) + w) % w)).
-- Listen to wheel/scroll and add the delta to a velocity value that boosts the marquee speed, with friction (*= 0.94 per frame) so it settles back to base speed.
-- Two bands moving in opposite directions, the second with outlined (text-stroke) type.
-- transform only, will-change: transform.
-- Under prefers-reduced-motion, keep it static.
-
-Use medium-weight Inter, with #fa7319 punctuation accents and a gray outline second row.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter small numeric readouts, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Preserve both original bands and six complete DESIGN ◆ MOTION ◆ CODE ◆ chunks per band. Wheel impulse is deltaY*.004, friction.94 per60Hz frame, with dir*(.6+abs(velocity))+velocity*dir displacement and positive modulo. Preserve its signed asymmetry. Fractional-frame integration must equal60/120/240Hz outcomes. Native has the complete709px MOTION—CRAFT text, original x-30 and70px fades in a372×206 camera. Full copy/dataset: "DESIGN ◆ MOTION ◆ CODE ◆ repeated six times per each of two bands". Native stage geometry (372×264, dock reserved separately): [{"name":"Frame","x":0,"y":0,"w":372,"h":206},{"name":"MOTION — CRAFT — MOTION — CRAFT","x":-30,"y":78,"w":709,"h":52},{"name":"Frame","x":0,"y":0,"w":70,"h":206},{"name":"Frame","x":302,"y":0,"w":70,"h":206}]. Full design size "bleed"; native plane "372×264 bleed". Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-marquee. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
 ### Line Mask Reveal (`line-mask-reveal`)
 
-Build a line-by-line mask text reveal, vanilla JS + CSS.
+Keep all four original full lines exactly. Use400ms12px rise/blur2px/opacity,40ms stagger,150ms exit and150ms reduced-motion crossfade. Native Quiet motion / reads as quality uses its exact372×40 mask and the reference12px second-line offset. Full copy/dataset: ["Every small detail.","A little more weight.","A little less friction.","A better feeling."]. Native stage geometry (372×264, dock reserved separately): [{"name":"Quiet motion","x":98,"y":62,"w":176,"h":39},{"name":"Frame","x":0,"y":104,"w":372,"h":40},{"name":"reads as quality","x":78,"y":116,"w":216,"h":39}]. Full design size "bleed"; native plane "372×264 bleed". Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-lines. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
-Requirements:
-- Each visual line of text is a block element with overflow: hidden; inside it an inner element starts at transform: translateY(110%).
-- On trigger, add a class that transitions the inner elements to translateY(0) with cubic-bezier(0.19,1,0.22,1) over ~0.9s.
-- Stagger lines by ~120ms each using a --d custom property on transition-delay.
-- To replay, remove the class, force a reflow (void el.offsetWidth), and re-add it.
-- Trigger on scroll into view with IntersectionObserver.
-- Note: for real multi-line paragraphs, split lines at runtime (e.g. SplitType or GSAP SplitText 'lines' mode) instead of hand-authored spans.
-- Under prefers-reduced-motion, show text immediately.
+### Split-Flap Roll (`letter-roll`)
 
-Use the four short lines “Every small detail.”, “A little more weight.”, “A little less friction.”, and “A better feeling.” in compact role-appropriate type with 24px padding and one orange accent line. Size each complete line to fit narrow previews.
-
-Final typography: Use Newsreader at normal weight for the main editorial text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Hover Letter Roll (`letter-roll`)
-
-Build the "letter roll" nav-link hover, vanilla JS + CSS.
-
-Requirements:
-- For each link, split the label into characters. Each character becomes an overflow-hidden mask (height: 1.15em) containing a vertical stack of two copies of the same character.
-- On link hover, every stack transitions transform: translateY(-50%) so the bottom copy rolls into view; ease cubic-bezier(0.76,0,0.24,1), duration ~0.5s.
-- Stagger characters left-to-right by ~25ms each via a --d custom property on transition-delay.
-- The incoming (second) copy can be a different color for an accent flash.
-- On mouse leave it rolls back automatically (same transition).
-- Auto-roll once on boot as a teaser, then return to hover-only behavior; cancel the teaser permanently on first pointer or keyboard interaction.
-- Respect prefers-reduced-motion by skipping the boot teaser and transitions.
-- Preserve accessibility: keep the original label as aria-label.
-
-Set the links in medium-weight 34px role-appropriate type. Apply the same rolling stack transform on keyboard focus-visible as on hover.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Keep all three original Work,Studio,Contact links and every duplicate character stack. Native is the exact six32×48 split-flap cells,36px spacing,DEPART label and seam geometry; hover flips toward ARRIVE and leave reverses from current pose. Use shared400ms text-swap motion,40ms capped stagger, faster exit and150ms opacity-only reduced motion. Preserve one idle demonstration that stops on real input. Full copy/dataset: ["Work","Studio","Contact"]. Native stage geometry (372×264, dock reserved separately): [{"name":"Frame","x":80,"y":72,"w":32,"h":48},{"name":"D","x":87,"y":82,"w":18,"h":31},{"name":"Frame","x":80,"y":95.5,"w":32,"h":1},{"name":"Frame","x":116,"y":72,"w":32,"h":48},{"name":"E","x":124.5,"y":82,"w":15,"h":31},{"name":"Frame","x":116,"y":95.5,"w":32,"h":1},{"name":"Frame","x":152,"y":72,"w":32,"h":48},{"name":"P","x":160,"y":82,"w":16,"h":31},{"name":"Frame","x":152,"y":95.5,"w":32,"h":1},{"name":"Frame","x":188,"y":72,"w":32,"h":48},{"name":"A","x":195,"y":82,"w":18,"h":31},{"name":"Frame","x":188,"y":95.5,"w":32,"h":1},{"name":"Frame","x":224,"y":72,"w":32,"h":48},{"name":"R","x":231.5,"y":82,"w":17,"h":31},{"name":"Frame","x":224,"y":95.5,"w":32,"h":1},{"name":"Frame","x":260,"y":72,"w":32,"h":48},{"name":"T","x":268.5,"y":82,"w":15,"h":31},{"name":"Frame","x":260,"y":95.5,"w":32,"h":1}]. Full design size [480,360]; native plane [240,168]. Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-roll. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
 ### Proximity Type (`proximity-type`)
 
-Build a proximity-reactive headline (mac-dock effect for letters), vanilla JS.
+Keep ELASTIC in full view,140px influence radius, smoothstep(1-distance/radius),22px lift,.35 scale gain and functional orange threshold. Normalize pointer coordinates through fitted scale. Native Proximity preserves exact46px variable-font weights400/500/600 and the original cursor SVG in its18px slot; reuse the byte-identical layout2-carousel-pointer asset at28.5×29.25 with negative insets. Use fixed glyph advances and opacity layers for weight blending, preserving the native reference pose. Full copy/dataset: {"full":"ELASTIC","nativeRuns":[["Pr",400],["o",500],["xim",600],["i",500],["ty",400]]}. Native stage geometry (372×264, dock reserved separately): [{"name":"Proximity","x":92.5,"y":76,"w":198,"h":60},{"name":"Frame","x":190,"y":128,"w":18,"h":18}]. Full design size [480,320]; native plane [240,168]. Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-prox. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
-Requirements:
-- Split the headline into per-character spans (display: inline-block).
-- Track the cursor globally; in a rAF loop compute each letter's distance from the cursor via getBoundingClientRect centers.
-- Influence t = max(0, 1 - dist / 140) passed through smoothstep (t*t*(3-2t)).
-- Apply transform: translateY(-22px * ease) scale(1 + 0.35 * ease), and tint letters above ~0.35 influence with an accent color.
-- Park the cursor at -9999 on mouseleave so letters settle back.
-- Optional upgrade: with a variable font, also map ease to font-variation-settings wght.
-- Disable on touch devices and under prefers-reduced-motion.
+### Stat Counter (`stat-counter`)
 
-Use a medium-weight sans-serif headline, native 24px padding, and container-relative sizing. Tint influenced letters #fa7319 while the remaining letters stay light gray.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Odometer Stat Counter (`stat-counter`)
-
-Build a native 300 by 320px studio statistics card. Use a muted Studio at a glance label, one featured 128 Projects delivered metric, a fine divider, and two smaller statistics: 14 Design awards and 99% Client satisfaction. Set every number in locally bundled Inter at weight400–450, tabular numerals, zero letter spacing and normal character proportions. The featured number is50px; the two supporting values are32px. Give labels11–13px readable Inter and a clear Replay numbers button. Animate all three values from zero in one requestAnimationFrame loop with quartic ease-out over1.3seconds. Format decimals through data-decimals and preserve each data-target/data-suffix. Trigger once when visible; Replay restarts fromzero. Reduced motion shows final values immediately. Announce completion only and cancel the animation/observer on cleanup. Keep subdued charcoal surfaces and visible keyboard focus; no telemetry header or decorative rulers.
+Keep all three original targets128,14,99%, labels, locale formatting and the complete1300ms quartic count1-(1-p)^4. Trigger when entering view at.3 threshold. Native is the exact12,480 numeral and80×7 rule. Use real3D digit cells,100ms anticipation at.94 scale/lift.125em,130ms step with ease-step,740ms landing1.03 peak and90ms per-digit stagger. Keep the full original dataset independently from the native12480 target. Full copy/dataset: [{"target":128,"label":"Projects delivered"},{"target":14,"label":"Design awards"},{"target":99,"suffix":"%","label":"Client satisfaction"}]. Native stage geometry (372×264, dock reserved separately): [{"name":"12,480","x":111,"y":70,"w":150,"h":62},{"name":"Frame","x":146,"y":138,"w":80,"h":7}]. Full design size [560,360]; native plane [240,168]. Use plain HTML/CSS/JavaScript, no runtime dependency; prefix every class with d-count. Match every supplied v4 native position and asset exactly. Root stays transparent and shell owns all dock actions, Reset and Replay. Preserve complete original full content and models. Scroll-triggered thumbnails use six-second authored stories and reduced motion holds the exact reference. User input interrupts automatic motion. Caller/document/viewport holds freeze all motion and pending intents; Reset while held applies on resume. Clean up listeners, observers, frames, timers and animations. Rendered text remains at least 11px.
 
 ### Text Wave Hover (`text-wave-hover`)
 

@@ -1402,17 +1402,26 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "split-text-reveal": {
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "splittext",
@@ -1423,38 +1432,63 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "text-scramble": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "button"
     },
     "useCases": [
       "glyphs",
       "matrix"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "kinetic-marquee": {
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "infinite",
@@ -1465,17 +1499,26 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "line-mask-reveal": {
-    "designSize": "md",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "clip-path",
@@ -1486,67 +1529,115 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "letter-roll": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
+      "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "nav",
       "duplicate"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "proximity-type": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "button"
     },
     "useCases": [
       "distance field",
       "wave"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "stat-counter": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "numbers",
       "ease-out"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "text-wave-hover": {
     "designSize": "md",
