@@ -1,8 +1,8 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 148 of the 399 existing demos: Interface (89),
-Data & AI (30), all twenty-two Scroll demos, and the first seven Text & Type
-demos in Motion. The remaining work includes 251
+The v4 redesign is complete for 152 of the 399 existing demos: Interface (89),
+Data & AI (30), all twenty-two Scroll demos, and the first eleven Text & Type
+demos in Motion. The remaining work includes 247
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -173,7 +173,7 @@ wheel/keyboard/touch, complete six-second stories, caller holds, deferred Reset,
 cleanup, tall and short stage endpoints, and complete offline exports with
 original asset bytes and credits.
 
-Sixteen Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
+Twelve Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
 new/extension components, Pro seams and the final requirement audit stay open.
 
 ## Text & Type: reveals, decode, marquee, flaps, proximity and statistics
@@ -222,3 +222,34 @@ interaction behavior. A pending startup frame is cancelled on disposal.
 The startup verifier checks both motion preferences at four stage sizes, exact
 reference dimensions and opacity, resumed transitions, full open/Escape behavior
 and cleanup. The full layout-control regression suite remains unchanged.
+
+## Text & Type: wave, image fill, typewriter and falling letters
+
+The next four native previews match the v4 Wavelength pose, EMBER image crop,
+Building the future line and 2×26px caret, and four independently placed FALL
+glyphs over the 180px floor. The photo is the supplied ember image already
+present in the credited local library; previews use the 800px file and full
+detail uses 1600px. Exports embed the original portable file and licence.
+No image payloads, fonts, credits or dependencies were added.
+
+Full views keep Make waves, both OPEN / WATER lines, all three complete
+typewriter messages and all thirteen FALL INTO PLACE bodies. Independent
+captures preserve every wave origin, all texture speed and offset states,
+all four states of each original message, and four complete collision runs.
+The wave retains its 55ms distance delay, 24px damped sine and original
+rotation coupling. The texture retains its 640px wrap and sine drift.
+The typewriter retains 70ms typing, 38ms deleting, 1200ms holds and 360ms gaps;
+new glyphs use the shared streaming recipe. Falling letters retain the
+original gravity, restitution, wall response, friction, impulse and sleep
+thresholds. Fixed 60Hz state integration preserves the discrete models at
+120/240Hz. The native image crop follows actual pointer input and returns to
+the exact reference crop when the pointer leaves.
+
+All four use shell controls, native keyboard and touch, readable compact
+typography, deferred Reset during caller or viewport holds, and owned frame
+and observer cleanup. Wave and Typewriter have documented sparse native
+geometry exceptions; other fit gates remain unchanged. The focused verifier
+compares original numeric fixtures, exact artwork and geometry at four sizes,
+real input, live renderer agreement, pause boundaries and offline exports.
+A new impulse after rest starts a fresh frame clock; repeated pointer input
+keeps the current clock, so it cannot freeze an active animation.

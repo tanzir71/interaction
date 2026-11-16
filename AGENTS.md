@@ -187,3 +187,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Morphing Popover and Spring Modal paint their native reference state when
   paused before the first frame. It covers four sizes, normal/reduced motion,
   restored live transitions, unchanged full interactions and startup cleanup.
+- `node tools/verify-text-interactive.js http://127.0.0.1:4173` covers v4
+  Text Wave, Image-Filled Type, Typewriter and Falling Letters. It compares
+  independent original wave origins, texture offsets, every typing state and
+  all thirteen collision bodies; checks native photo/type geometry, real
+  pointer/keys/touch, interrupted motion, idle restarts, caller/viewport holds,
+  compact full typography, deferred Reset, cleanup and complete offline exports.

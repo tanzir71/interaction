@@ -3226,7 +3226,7 @@
   },
   {
     "id": "text-wave-hover",
-    "title": "Text Wave Hover",
+    "title": "Text Wave",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
@@ -3241,8 +3241,15 @@
       "hover"
     ],
     "tier": "free",
-    "desc": "A damped sine ripple travels outward from the exact glyph where the pointer enters. Propagation delay comes from glyph distance, so entering at either edge or the center produces a genuinely different wave.",
-    "designSize": "md",
+    "desc": "A damped ripple starts at the glyph you enter. The v4 Wavelength preview retains its exact native wave pose; the full Make waves phrase preserves the original distance delay, amplitude, frequency and damping.",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3250,14 +3257,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-wave-hover",
-    "thumb": "full",
-    "module": "js/demos.text.wave-hover.js?v=a2e989a630",
+    "thumb": "hero",
+    "module": "js/demos.text.wave-hover.js?v=7dfaa7bfbb",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-wave-hover.json?v=2466c63fb4",
+    "sourcePreview": "registry/p/text-wave-hover.json?v=793a08b6be",
     "assetRefs": {},
     "rootClass": "d-textwave",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3269,23 +3285,30 @@
   },
   {
     "id": "text-clip-image",
-    "title": "Text Clip Image",
+    "title": "Image-Filled Type",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
     "tags": [
-      "background-clip",
-      "procedural texture",
-      "canvas"
+      "image-filled type",
+      "photo pan",
+      "typography"
     ],
     "useCases": [
-      "background-clip",
-      "procedural texture",
-      "canvas"
+      "image-filled type",
+      "photo pan",
+      "typography"
     ],
     "tier": "free",
-    "desc": "A seeded canvas texture of chromatic bands and grain pans inside oversized type. The moving fill is generated locally, repeats exactly across loads, and sleeps whenever the demo leaves the viewport.",
-    "designSize": "md",
+    "desc": "The credited ember photograph pans inside native EMBER type with the pointer. The full OPEN WATER treatment retains its complete 640px offset cycle, sine drift, pause state and 0.2 to 2 times speed range.",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      264,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3293,16 +3316,25 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-clip-image",
-    "thumb": "full",
-    "module": "js/demos.text.clip-image.js?v=e3e2d76657",
+    "thumb": "hero",
+    "module": "js/demos.text.clip-image.js?v=d51ff082bd",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-clip-image.json?v=12495ac555",
+    "sourcePreview": "registry/p/text-clip-image.json?v=50ce66ebc6",
     "assetRefs": {
-      "atlantic-shore": "assets/images/atlantic-shore.webp"
+      "photo-embers": "assets/images/embers-800.webp"
     },
     "rootClass": "d-cliptype",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3310,11 +3342,27 @@
     },
     "hint": "The photo inside the letters pans with the pointer",
     "sourceName": "Seen on: title treatments, music campaigns, fashion identities, and expressive editorial covers",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "embers",
+        "asset": "photo-embers",
+        "photoId": "5w2hjEJ06b0",
+        "imageId": "photo-1762202742459-4fcdc4beaab4",
+        "photographer": "Alican Leblebici",
+        "url": "https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-embers": "assets/images/embers.webp"
+    }
   },
   {
     "id": "text-typewriter-caret",
-    "title": "Text Typewriter Caret",
+    "title": "Typewriter",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "ambient",
@@ -3329,8 +3377,15 @@
       "state machine"
     ],
     "tier": "free",
-    "desc": "Three messages cycle through explicit typing, hold, deleting, and gap states beside a blinking block caret. Character timing and state timing are independent, so pause and resume never corrupt the sequence.",
-    "designSize": "md",
+    "desc": "Characters resolve beside a breathing caret. The native Building the future preview matches the v4 geometry; full view keeps all three original messages and the independent typing, hold, deleting and gap states.",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3338,14 +3393,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-typewriter-caret",
-    "thumb": "full",
-    "module": "js/demos.text.typewriter-caret.js?v=f10413d07b",
+    "thumb": "hero",
+    "module": "js/demos.text.typewriter-caret.js?v=8c6cbbd318",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-typewriter-caret.json?v=21aba0cf60",
+    "sourcePreview": "registry/p/text-typewriter-caret.json?v=24ff274295",
     "assetRefs": {},
     "rootClass": "d-typewriter",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Ambient"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3357,7 +3421,7 @@
   },
   {
     "id": "text-falling-letters",
-    "title": "Text Falling Letters",
+    "title": "Falling Letters",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "press",
@@ -3372,8 +3436,15 @@
       "typography"
     ],
     "tier": "free",
-    "desc": "Thirteen glyph bodies fall under gravity, bounce against a measured floor, collide with side walls, and sleep at rest. Clicking or keyboard activation applies deterministic impulses away from the activation point.",
-    "designSize": "md",
+    "desc": "The native FALL composition drops and bounces from the press position. Full view retains all thirteen original glyph bodies, gravity, measured floor and walls, restitution, friction, deterministic impulse and sleep thresholds.",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3381,14 +3452,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-falling-letters",
-    "thumb": "full",
-    "module": "js/demos.text.falling-letters.js?v=a2489d1268",
+    "thumb": "hero",
+    "module": "js/demos.text.falling-letters.js?v=8f4eabc921",
     "assetBundle": "js/demo-assets.js?v=5aecc81830",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-falling-letters.json?v=0e075fc718",
+    "sourcePreview": "registry/p/text-falling-letters.json?v=78f179fdb0",
     "assetRefs": {},
     "rootClass": "d-fallingtype",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
