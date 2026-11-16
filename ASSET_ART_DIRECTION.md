@@ -588,6 +588,8 @@ Counter-Rotating Rings uses the four unchanged SVG exports for all 36 outer
 dots, 24 inner dots, 40px core and 16px arrow. Theme Shift uses the complete
 204×148 SVG export at its original negative inset around a 180×124 frame.
 Its internal gradient, sun, glow and lower band remain in that original asset.
+Separate neutral opacity layers express dawn and night around the unchanged
+warm checkpoint; the SVG payload and intrinsic dimensions stay intact.
 No SVG paths are extracted, inlined or redrawn. Root dimensions, hashes and
 source callsites are recorded in `tools/fixtures/scroll-effects-artwork.json`;
 native layer geometry is in `scroll-effects-geometry.json`.

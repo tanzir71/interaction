@@ -119,6 +119,12 @@ camera contains its frames without widening the fitted root. Theme preview
 layout stays fixed while fonts load, so native scroll anchoring cannot shift
 the reference pose.
 
+Theme Shift's native journey uses separate neutral dawn and night layers.
+Only their opacity changes: dawn starts at 0.12, the exact warm Figma checkpoint
+has no veil, and night ends at 0.88. Reset restores the untouched native art.
+The full view keeps all original RGB interpolation; thumbnail playback avoids
+updating its invisible palette styles.
+
 Native rings use all 60 original SVG dot instances, the core and arrow. The
 theme uses the complete original SVG with its gradient, sun, glow, lower band
 and negative inset. The tunnel adds the exact Milky Way photo by Dns Dgn;
