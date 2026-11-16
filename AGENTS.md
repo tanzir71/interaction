@@ -165,3 +165,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   highlight, all 48 sequence poses at five canvas/DPR settings, measured route
   drawing, all seven rotating projects and all four split chapters, including
   native artwork, real input, compact typography, holds and offline exports.
+- `node tools/verify-scroll-effects.js http://127.0.0.1:4173` covers Crossing
+  Marquees, Counter-Rotating Rings, Depth Tunnel, Letter Scatter and Theme Shift.
+  It compares original velocity/rotation/depth/glyph/RGB fixtures, equivalent
+  60/120/240Hz motion, every native artwork slot, live renderer/model agreement,
+  real wheel/keys/touch, complete stories, holds, compact type and offline exports.

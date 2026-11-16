@@ -439,6 +439,16 @@
         211,
         49
       ]
+    },
+    "scroll-letter-scatter": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact Figma geometry for sparse type. The seven SCATTER glyph boxes (159:952–159:958) span 201×80.6px at x85.5/y57.2 in the 372×264 reference stage. This is 16.5% at reference size and 10.2% in the 286×196 compact stage after deterministic fitting; keep the exact optical size. Only the low-fill heuristic is exempt.",
+      "figmaNode": "159:939",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=159-939",
+      "selector": ".d-letterscatter-native-letters",
+      "designSize": [
+        201,
+        80.6
+      ]
     }
   }
 }

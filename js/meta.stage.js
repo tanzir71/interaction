@@ -475,17 +475,26 @@ INTRX.meta({
     ]
   },
   "scroll-marquee-direction": {
-    "designSize": "lg",
+    "designSize": "bleed",
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "marquee",
@@ -497,17 +506,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "scroll-counter-rotate": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "svg text",
@@ -515,21 +536,37 @@ INTRX.meta({
       "scroll"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-depth-tunnel": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "depth",
@@ -537,21 +574,37 @@ INTRX.meta({
       "scroll"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      300,
+      168
+    ]
   },
   "scroll-letter-scatter": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "typography",
@@ -559,21 +612,37 @@ INTRX.meta({
       "scroll"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-color-theme": {
-    "designSize": "lg",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll ↓"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "region"
     },
     "useCases": [
       "color",
@@ -581,8 +650,12 @@ INTRX.meta({
       "interpolation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-clip-morph": {
     "designSize": "lg",

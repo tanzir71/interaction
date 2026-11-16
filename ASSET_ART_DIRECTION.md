@@ -576,3 +576,31 @@ Embers, Silk, Aurora, Ocean and CityTeal slots. Full views retain seven projects
 and four split chapters using approved local photographs. All 236 earlier image
 payloads, six font faces and eleven photo-credit records remain unchanged. The
 portable bundle now has 240 image aliases, including the four route exports.
+
+## Direction, rings, depth and theme
+
+Crossing Marquees and Letter Scatter use original live typography. The former
+retains all three full bands; its native camera uses the exact two Geist bands
+and edge fades. The latter retains all nine full glyph paths while its seven
+native SCATTER glyphs follow the v4 positions and opacity values.
+
+Counter-Rotating Rings uses the four unchanged SVG exports for all 36 outer
+dots, 24 inner dots, 40px core and 16px arrow. Theme Shift uses the complete
+204×148 SVG export at its original negative inset around a 180×124 frame.
+Its internal gradient, sun, glow and lower band remain in that original asset.
+No SVG paths are extracted, inlined or redrawn. Root dimensions, hashes and
+source callsites are recorded in `tools/fixtures/scroll-effects-artwork.json`;
+native layer geometry is in `scroll-effects-geometry.json`.
+
+Depth Tunnel uses Dns Dgn's free Unsplash License photograph
+[`9wH624ALFQA`](https://unsplash.com/photos/milky-way-on-mountains-9wH624ALFQA),
+image ID `photo-1515705576963-95cad62945b6`. The primary page and licence were
+verified on 16 November 2026. An independent 1800×1200 primary download matches
+the native Figma raster at RGB RMS 2.27, consistent with JPEG encoding. Local
+1600×1067 and 800×533 WebP derivatives, attribution and both SHA-256 hashes are
+recorded in `assets/photo-credits.json`. The exact 80×50 native photo crop is
+preserved; the full tunnel retains all nine original exponential frame models.
+
+All 240 earlier image payloads, six font faces and eleven earlier photo-credit
+records remain unchanged. The portable bundle now has 246 image aliases and
+twelve photo-credit records.

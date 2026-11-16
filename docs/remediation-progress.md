@@ -1,7 +1,7 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 132 of the 399 existing demos: Interface (89),
-Data & AI (30), and the first thirteen Motion demos. The remaining work includes 267
+The v4 redesign is complete for 137 of the 399 existing demos: Interface (89),
+Data & AI (30), and the first eighteen Motion demos. The remaining work includes 262
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -99,5 +99,39 @@ Reduced motion holds the exact preview checkpoint, uses discrete route/gallery
 states and removes split reveal transforms. No new photographs or dependencies
 were added; all eleven credit records remain unchanged.
 
-Nine Scroll studies remain, starting with Marquee Direction and Counter Rotate.
-New/extension components, Pro seams and the final requirement audit remain open.
+## Scroll: directional type, rings, depth, glyphs and palettes
+
+Crossing Marquees, Counter-Rotating Rings, Depth Tunnel, Letter Scatter and Theme
+Shift now use their native v4 compositions. Full views retain all three original
+type bands, both complete ring strings and 1.5/−2 turns, nine depth frames and
+2.25 cycles, all nine BREAK FORM paths, and every channel and chapter in the
+four original palettes. Their fixtures contain 70 position samples and 30
+marquee settling states captured before implementation.
+
+The marquee keeps the original 60Hz arithmetic. Its fractional-frame extension
+integrates the same velocity recurrence and belt displacement at 120 and 240Hz.
+Direction persists after velocity decays. Full ring copy stays readable on small
+screens, with complete text below the rings in compact full views. Native dots
+rotate around point pivots, keeping transparent layout boxes out of horizontal
+scroll bounds. Letter Scatter caches seeded paths and its native reference;
+thumbnail playback updates only the visible glyph layer. The depth
+camera contains its frames without widening the fitted root. Theme preview
+layout stays fixed while fonts load, so native scroll anchoring cannot shift
+the reference pose.
+
+Native rings use all 60 original SVG dot instances, the core and arrow. The
+theme uses the complete original SVG with its gradient, sun, glow, lower band
+and negative inset. The tunnel adds the exact Milky Way photo by Dns Dgn;
+provenance and both file hashes are recorded in `assets/photo-credits.json`.
+Letter Scatter preserves the exact 201×80.6px glyph composition. Its low-fill
+exception at the smallest compact stage follows the owner's Figma-size
+clarification; overflow, horizontal scrolling and typography remain gated.
+
+`node tools/verify-scroll-effects.js http://127.0.0.1:4173` checks the independent
+original models, live renderer agreement, native geometry/assets, real input,
+six-second stories, holds, cleanup, compact full views and complete offline
+exports. Palette hues remain functional data in the full theme demonstration.
+
+Four Scroll studies remain: Clip Morph, Table of Contents, Inertia Grid and
+Video Scrubber. New/extension components, Pro seams and the final requirement
+audit remain open.
