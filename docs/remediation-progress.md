@@ -1,7 +1,7 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 137 of the 399 existing demos: Interface (89),
-Data & AI (30), and the first eighteen Motion demos. The remaining work includes 262
+The v4 redesign is complete for 141 of the 399 existing demos: Interface (89),
+Data & AI (30), and all twenty-two Scroll demos in Motion. The remaining work includes 258
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -138,6 +138,39 @@ original models, live renderer agreement, native geometry/assets, real input,
 six-second stories, holds, cleanup, compact full views and complete offline
 exports. Palette hues remain functional data in the full theme demonstration.
 
-Four Scroll studies remain: Clip Morph, Table of Contents, Inertia Grid and
-Video Scrubber. New/extension components, Pro seams and the final requirement
-audit remain open.
+## Scroll: aperture, contents, inertia and film
+
+Clip Morph, Table of Contents, Inertia Grid and Video Scrubber complete the
+existing Scroll category. Their native previews match the exact v4 geometry;
+full views keep the original sixteen-point aperture and rectangular endpoints,
+all four complete article sections and reading times, all twelve project names,
+and all four film chapters across the original 24-second timeline.
+
+Independent fixtures preserve 56 original scroll positions, 30 grid settling
+states, and 280 direct video render traces at five size/DPR settings, including
+frame zero and chapter boundaries. The grid retains the exact 60Hz rates
+0.18, 0.11 and 0.065; exponential interpolation gives equivalent settling at
+120 and 240Hz. The film keeps the original cover/pan/zoom equations, gradient,
+tenths clock and 24fps timecode. Scaled native scrolling resolves the end clock
+to 24.0 despite a fractional pixel at the physical scroll limit.
+
+The new Chrome and Interior Dark assets use the exact supplied images, with
+verified Unsplash sources, authors, licences and both local file hashes recorded
+in `assets/photo-credits.json`. Chrome is Rohit Choudhari's original 3D render;
+the interior is Dmitry Ant's photograph. The scrubber knob retains its complete
+original 37×37 SVG and negative inset. All 246 previous image payloads, six font
+faces and twelve previous credit records remain unchanged.
+
+The sparse table of contents preserves its exact 107×104 group. Its documented
+low-fill exception follows the owner's Figma-size clarification and changes no
+overflow, horizontal scroll or typography requirement.
+
+`node tools/verify-scroll-final.js http://127.0.0.1:4173` compares independent
+original fixtures with the implemented models and live renderers. It also checks
+all native asset slots at four sizes, readable 390/375/360px full views, native
+wheel/keyboard/touch, complete six-second stories, caller holds, deferred Reset,
+cleanup, tall and short stage endpoints, and complete offline exports with
+original asset bytes and credits.
+
+Text, SVG and 3D studies in Motion remain. Other unfinished categories,
+new/extension components, Pro seams and the final requirement audit stay open.

@@ -170,3 +170,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   It compares original velocity/rotation/depth/glyph/RGB fixtures, equivalent
   60/120/240Hz motion, every native artwork slot, live renderer/model agreement,
   real wheel/keys/touch, complete stories, holds, compact type and offline exports.
+- `node tools/verify-scroll-final.js http://127.0.0.1:4173` covers Clip Morph,
+  Table of Contents, Inertia Grid and Video Scrubber. It compares the original
+  sixteen-point aperture, complete article and project data, all three inertia
+  recurrences and 280 direct video frame fixtures; checks exact native photo/SVG
+  slots, live renderer agreement, real keyboard/wheel/touch, compact typography,
+  full endpoints, six-second stories, holds, cleanup and complete offline exports.

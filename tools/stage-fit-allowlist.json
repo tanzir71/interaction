@@ -449,6 +449,16 @@
         201,
         80.6
       ]
+    },
+    "scroll-table-of-contents": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve the sparse v4 table of contents. Its 104px rail, 3×22px marker and 70/90/60/80×7px lines occupy an exact 107×104px group at (121,52) in the 372×264 stage, below the 12% fill heuristic. Only low fill is exempt; overflow, horizontal scroll and text remain gated.",
+      "figmaNode": "159:981",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=159-981",
+      "selector": ".d-scrolltoc-native",
+      "designSize": [
+        107,
+        104
+      ]
     }
   }
 }
