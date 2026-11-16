@@ -193,3 +193,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   all thirteen collision bodies; checks native photo/type geometry, real
   pointer/keys/touch, interrupted motion, idle restarts, caller/viewport holds,
   compact full typography, deferred Reset, cleanup and complete offline exports.
+- `node tools/verify-text-focus.js http://127.0.0.1:4173` covers v4 Blur to
+  Focus, Strike and Replace, Anagram Shuffle and Outline Fill. It compares
+  original optical/state/permutation/fill fixtures; checks exact native type,
+  card and mask geometry, live renderer agreement, native keys/touch scrolling,
+  interrupted flights, inertia cancellation, caller/viewport holds, queued
+  intent, cleanup, compact full type and complete offline exports.

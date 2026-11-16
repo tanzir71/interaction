@@ -1,8 +1,8 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 152 of the 399 existing demos: Interface (89),
-Data & AI (30), all twenty-two Scroll demos, and the first eleven Text & Type
-demos in Motion. The remaining work includes 247
+The v4 redesign is complete for 156 of the 399 existing demos: Interface (89),
+Data & AI (30), all twenty-two Scroll demos, and the first fifteen Text & Type
+demos in Motion. The remaining work includes 243
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -173,7 +173,7 @@ wheel/keyboard/touch, complete six-second stories, caller holds, deferred Reset,
 cleanup, tall and short stage endpoints, and complete offline exports with
 original asset bytes and credits.
 
-Twelve Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
+Eight Text & Type demos, plus SVG and 3D studies in Motion, remain. Other unfinished categories,
 new/extension components, Pro seams and the final requirement audit stay open.
 
 ## Text & Type: reveals, decode, marquee, flaps, proximity and statistics
@@ -253,3 +253,41 @@ compares original numeric fixtures, exact artwork and geometry at four sizes,
 real input, live renderer agreement, pause boundaries and offline exports.
 A new impulse after rest starts a fresh frame clock; repeated pointer input
 keeps the current clock, so it cannot freeze an active animation.
+
+## Text & Type: focus, replacement, anagram and outline fill
+
+Blur to Focus, Strike and Replace, Anagram Shuffle and Outline Fill now match
+their native v4 type, placement, card geometry and mask. Blur's 183×34px group
+and Strike's 173×56px group keep their exact Figma sizes under the owner's
+sparse-fill exception. Overflow, horizontal scroll and type gates still apply.
+Anagram card strokes are painted inside the cards so fractional stage scaling
+does not shift their glyphs through rounded layout borders.
+
+Full views preserve all seven focus words, both complete replacement phrases,
+STATE / TASTE with distinct repeated-letter identities, and both SOLID / SIGNAL
+lines. Independent fixtures retain the original optical relationships, flag
+combinations, measured permutations and exponential fill recurrence. Focus uses
+the shared 400ms reveal and 40ms stagger; its tracking field moves glyphs through
+transforms. Replacement retargets from its current pose. Anagram measures actual
+First and Last centers and retains the same nodes during interrupted flights.
+
+Full focus and fill views use actual native scroll containers with keyboard and
+touch input. Scroll takes priority over dormant hover; deliberate hover, focus
+and latch interactions remain available. Switching input maps the current
+composition to the scroll plane. Scroll ranges refresh on resize, keeping
+geometry reads out of the scroll handler. Caller holds cancel native touch inertia and
+freeze both the model and scroll position. Deferred resets beat late entry
+observers, and queued toggles retain the user's final intent.
+
+Outline uses one new supplied SVG, unchanged at 372×206px with luminance-mask
+semantics and its original checkpoint boundary. A native canvas paints the
+inspected 1px inside stroke at 35% white; fill layers extend the full scroll
+range without changing the SVG. Portable exports preserve the original bytes.
+All 249 previous image payloads, six font faces and fourteen photo credits are
+unchanged. Both scroll previews follow six-second stories and hold readable
+reference states under reduced motion.
+
+`node tools/verify-text-focus.js http://127.0.0.1:4173` covers original numeric
+fixtures, exact native geometry at four sizes, live optical and fill output,
+native keys and touch, reversed flights, caller and viewport holds, queued
+intent, cleanup, compact full typography and complete offline exports.
