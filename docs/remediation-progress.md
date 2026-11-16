@@ -1,8 +1,8 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 160 of the 399 existing demos: Interface (89),
-Data & AI (30), all twenty-two Scroll demos, and the first nineteen Text & Type
-demos in Motion. The remaining work includes 239
+The v4 redesign is complete for 164 of the 399 existing demos: Interface (89),
+Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
+demos in Motion. The remaining work includes 235
 existing demos, 121 new or extension components, Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -332,3 +332,50 @@ and preserve queued input across caller, document and viewport holds.
 original models, exact native geometry and every SVG slot, complete full
 content, real input, interrupted motion, orbit refresh-rate equivalence and
 pivot stability, holds, cleanup, compact typography and offline exports.
+
+## Text & Type: shared underline, price drums, highlights and fragments
+
+Magic Underline, Price Roll, Highlighter Swipe and Broken Grid Type complete
+the existing Text & Type category. Their native views match v4 nodes `160:969`,
+`161:1220`, `160:989` and `160:1009`. The sparse 181×26px navigation and 100×62px
+BRO text retain their authored size through documented fill exceptions. The
+three original 60px clip frames remain intact, including the empty third clip.
+All other fit gates still apply. No assets, fonts or dependencies were added.
+
+The full underline retains Work, Studio, Notes and Contact, its complete
+editorial statement, measured link geometry and pointer > focus > latch
+precedence. The shared 250ms easing replaces the older timing while preserving
+the 8px hop and height coupling. Retargeting captures the live x, width and y;
+transformed bar sections preserve the rounded end caps without animating layout.
+
+Price Roll retains all four full values (0427, 1984, 2026, 7315), BASE 20,
+forward modulo and one through four extra turns. Native billing starts at
+Yearly $19/mo; Monthly selects $24/mo. Each digit uses ten actual 3D faces with
+the shared 100ms anticipation, 130ms step, 740ms landing and 90ms stagger.
+Neighbors retain the specified scale, blur and opacity. The motion system
+supersedes legacy timing and input locking; interrupted rolls preserve their
+current fractional positions, scale and lift. Leading zeros collapse visually
+while accessible values remain complete. Widths change once per target; measured
+digit centers and the suffix move through transforms. The outer stage uses normal clip
+boundaries; each drum owns its internal mask.
+
+The highlighter retains the complete Newsreader article and all four original
+semantic marks. Its local observer keeps threshold 0.55, negative 6% margins,
+one-shot unobserve behavior and the no-observer fallback. Wrapped phrases paint
+individual marker bands. Replay clears eligibility and increments an observer
+generation, so stale callbacks cannot mark a new run. Holds stop native scroll
+momentum and defer eligible marks. The native sentence follows a complete
+six-second story, 400ms reveal and 40ms stagger; wheel, keys and touch take over.
+
+The full broken headline retains all six original clip partitions, translations
+and rotations, and the complete “Break / the grid.” text. Shared 350ms motion
+and capped 40ms stagger replace the older timing. Retargeting preserves current
+fragment poses, and hover, focus and latch remain independent. Reduced motion
+uses static target geometry with 150ms opacity feedback; all four demos own
+their frame, listener and observer cleanup and preserve pending intent on hold.
+
+`node tools/verify-text-final.js http://127.0.0.1:4173` checks independent
+original fixtures, exact native geometry at four sizes in both motion modes,
+real input, live interruption, complete article and number targets, observer
+subscription/reset semantics, story completion, caller and viewport holds,
+native scroll momentum, compact full typography and complete offline exports.

@@ -3958,7 +3958,7 @@
   },
   {
     "id": "text-underline-magic",
-    "title": "Text Underline Magic",
+    "title": "Magic Underline",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
@@ -3974,7 +3974,14 @@
     ],
     "tier": "free",
     "desc": "One measured underline draws beneath a navigation label, then hops between targets on a small arc. Mid-flight retargeting begins from its current geometry, so fast pointer movement remains continuous.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      112
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -3982,14 +3989,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-underline-magic",
-    "thumb": "full",
-    "module": "js/demos.text.underline-magic.js?v=af76a81354",
+    "thumb": "hero",
+    "module": "js/demos.text.underline-magic.js?v=1eaeec691d",
     "assetBundle": "js/demo-assets.js?v=bec60d698c",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-underline-magic.json?v=ecf5b6501a",
+    "sourcePreview": "registry/p/text-underline-magic.json?v=cad06a847d",
     "assetRefs": {},
     "rootClass": "d-magicline",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4001,7 +4017,7 @@
   },
   {
     "id": "text-numbers-slot",
-    "title": "Text Numbers Slot",
+    "title": "Price Roll",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "press",
@@ -4017,22 +4033,38 @@
     ],
     "tier": "free",
     "desc": "Four digit columns roll independently toward each new value. Every reel takes its shortest forward distance plus extra full turns, lands on an exact digit, then normalizes invisibly for the next transition.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      120
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-numbers-slot",
-    "thumb": "full",
-    "module": "js/demos.text.numbers-slot.js?v=b37633f56d",
+    "thumb": "hero",
+    "module": "js/demos.text.numbers-slot.js?v=7ef90b1db5",
     "assetBundle": "js/demo-assets.js?v=bec60d698c",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-numbers-slot.json?v=0d4693ee84",
+    "sourcePreview": "registry/p/text-numbers-slot.json?v=a88007083c",
     "assetRefs": {},
     "rootClass": "d-numberslot",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Next"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4044,7 +4076,7 @@
   },
   {
     "id": "text-highlighter-swipe",
-    "title": "Text Highlighter Swipe",
+    "title": "Highlighter Swipe",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "scroll",
@@ -4060,7 +4092,14 @@
     ],
     "tier": "free",
     "desc": "Four semantic key phrases receive irregular marker swipes when they become substantially visible in a local reading flow. Each phrase triggers once, then leaves observation until the sequence is replayed.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      360
+    ],
+    "thumbDesignSize": [
+      240,
+      136
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
@@ -4068,14 +4107,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-highlighter-swipe",
-    "thumb": "full",
-    "module": "js/demos.text.highlighter-swipe.js?v=7456eed568",
+    "thumb": "hero",
+    "module": "js/demos.text.highlighter-swipe.js?v=1a70cf6679",
     "assetBundle": "js/demo-assets.js?v=bec60d698c",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-highlighter-swipe.json?v=a9cfd5c3f0",
+    "sourcePreview": "registry/p/text-highlighter-swipe.json?v=43830ba8d7",
     "assetRefs": {},
     "rootClass": "d-highlighter",
-    "controls": [],
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -4087,7 +4135,7 @@
   },
   {
     "id": "text-broken-grid",
-    "title": "Text Broken Grid",
+    "title": "Broken Grid Type",
     "category": "Text & Type",
     "group": "Motion",
     "trigger": "hover",
@@ -4103,7 +4151,14 @@
     ],
     "tier": "free",
     "desc": "Six non-overlapping clip cells cut one registered headline into a displaced broken grid. Hover or focus removes each fragment transform so the partition tiles back into a single exact phrase.",
-    "designSize": "md",
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      136
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -4111,14 +4166,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/text-broken-grid",
-    "thumb": "full",
-    "module": "js/demos.text.broken-grid.js?v=1310abba27",
+    "thumb": "hero",
+    "module": "js/demos.text.broken-grid.js?v=b09d5d5704",
     "assetBundle": "js/demo-assets.js?v=bec60d698c",
     "exportBundle": "js/export-data.js?v=8b5aecba83",
-    "sourcePreview": "registry/p/text-broken-grid.json?v=278fdb4d4b",
+    "sourcePreview": "registry/p/text-broken-grid.json?v=4a92aa6b9d",
     "assetRefs": {},
     "rootClass": "d-brokengrid",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,

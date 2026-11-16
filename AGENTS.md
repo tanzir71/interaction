@@ -205,3 +205,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   every native type/card/SVG slot, actual input, interrupted FLIP, uniform type,
   orbit pivot and refresh-rate equivalence, caller/viewport holds, cleanup,
   compact full typography and complete offline exports.
+- `node tools/verify-text-final.js http://127.0.0.1:4173` covers v4 Magic
+  Underline, Price Roll, Highlighter Swipe and Broken Grid Type. It compares
+  original priority, reel, article and fragment fixtures; exact native type
+  and geometry; actual keyboard, wheel and touch; live retargeting; one-shot
+  observers and stale generations; complete stories, holds, cleanup, compact
+  typography and complete offline exports.
