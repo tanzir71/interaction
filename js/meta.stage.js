@@ -3128,17 +3128,29 @@ INTRX.meta({
     ]
   },
   "css3d-cube-nav": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3146,17 +3158,33 @@ INTRX.meta({
       "navigation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      160,
+      136
+    ]
   },
   "css3d-card-flip-grid": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Reveal all"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3168,17 +3196,37 @@ INTRX.meta({
       "cards"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      192,
+      144
+    ]
   },
   "css3d-book-page": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "previous",
+        "label": "Previous"
+      },
+      {
+        "action": "activate",
+        "label": "Next"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3190,21 +3238,41 @@ INTRX.meta({
       "editorial"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      208,
+      152
+    ]
   },
   "css3d-carousel-cylinder": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "previous",
+        "label": "Previous"
+      },
+      {
+        "action": "activate",
+        "label": "Next"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3212,8 +3280,12 @@ INTRX.meta({
       "carousel"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      144
+    ]
   },
   "css3d-parallax-room": {
     "designSize": "md",

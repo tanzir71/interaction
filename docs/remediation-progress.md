@@ -1,9 +1,10 @@
 # Visual remediation progress
 
-The v4 redesign is complete for 174 of the 399 existing demos: Interface (89),
+The v4 stage compositions are remediated for 178 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos in Motion. The remaining work includes
-225 existing demos, 121 new or extension components, Pro seams, and the final audit.
+demos plus all ten SVG & Line demos and four 3D & Perspective demos in Motion.
+The remaining work includes 221 existing demos, 121 new or extension components,
+Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 
@@ -486,3 +487,50 @@ Their 95th-percentile frame interval is at most 16.8ms, with no long tasks. The
 full Lissajous stress run retains one 33.4ms interval; the other twenty-three
 profiles have no missed intervals. Earlier variable measurements are retained
 alongside these results for the final performance audit.
+
+## 3D & Perspective: navigation, flip cards, journal pages and orbit inertia
+
+Cube Navigation, Flip Grid, Page Turn and Cylinder Carousel now follow v4
+(`161:811`, `161:830`, `161:852`, `161:876`). Three supplied cube SVGs retain
+their original bytes and dimensions. An inverse basis maps those faces onto
+rotating 3D planes; the native still keeps the exact 113×83.9px composition,
+including stroke overscan. Its sparse fill exception follows the owner's size
+clarification. Full view retains all four original navigation faces and copy,
+signed nearest-turn selection, scaled drag and the original release threshold.
+
+The native flip grid has six 52×58px cards, including the exact 16px edge-on
+fifth card. Effective corners and borders remain constant as the plane turns.
+Full view keeps all eight original fronts and notes, all 256 selection states,
+and the original diagonal wave order with the system's 40ms stagger.
+
+The journal retains all four chapters, complete copy, quotes, coordinates and
+page numbers. Its native pages, bars and 52×114px raised leaf match the design.
+Dragging follows the scaled pointer; release uses the prescribed snappy spring
+and original 55px swipe threshold. Reversals and grabs continue from the visible
+pose. Chained turns consume remaining frame time, including exact boundary
+rounding, so complete stories agree at 60, 120 and 240Hz. Full turns retain the
+original fold-shadow and midpoint-light models with interruptible system timing.
+
+The cylinder keeps all eight original posters, signed nearest rotations,
+0.32 drag ratio, velocity units, 0.94 inertia decay and 0.16 stopping threshold.
+Its continuous clock agrees with the original 16ms recurrence and stop boundary;
+arrival uses the prescribed soft spring, checked against an independent force
+integration. Native shows the five exact approved photo slots. Counter-scaling
+keeps their center-cover crops uniform while frames move around the ring.
+All existing photo credits, image payloads and seven font faces remain intact.
+
+Shared dock actions replace local controls. Caller and viewport holds preserve
+live poses, defer actions, release capture and clean up owned work. Full copy
+remains readable at 390, 375 and 360px; reduced motion keeps the telling still
+and opacity feedback. `node tools/verify-perspective-core.js` checks independent
+original fixtures, real inputs, renderer clocks, native artwork, complete
+network-blocked exports and their original embedded image bytes.
+
+The cylinder's stress trace exposed font-size changes on culled rear faces.
+Removing those invisible updates preserves visible type and reduced layout
+events from 176 to 3, and paint events from 1,427 to 11 in the diagnostic story.
+All sixteen current desktop and 4x CPU profiles have p95 intervals at most
+16.8ms and no long tasks. The flip thumbnail retains one stress-frame gap;
+the full cylinder retains three. An inconsistent slow thumbnail run remains
+recorded alongside clean cold/warm repeats and traces; its cause is unproven.
+These tails remain part of the final performance audit.

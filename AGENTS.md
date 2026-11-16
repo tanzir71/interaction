@@ -223,3 +223,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   checks exact native artwork and photo slots, scaled selection, real pen and
   touch, complete live stories, interrupted menus, holds, cleanup, compact type,
   offline exports and the complete font in separate CSS and the actual CSS tab.
+- `node tools/verify-perspective-core.js http://127.0.0.1:4173` covers v4 Cube
+  Navigation, Flip Grid, Page Turn and Cylinder Carousel. It compares original
+  navigation, all 256 card states, four complete spreads and eight poster/inertia
+  models; checks exact SVG/photo slots, native keys/drag/touch, interruption,
+  independent spring forces, actual 60/120/240Hz renderer clocks, compact type,
+  caller/viewport holds, capture cleanup and complete offline exports.

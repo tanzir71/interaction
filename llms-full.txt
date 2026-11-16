@@ -642,37 +642,21 @@ V4: classes remain prefixed d-lissajous; full480x360 retains all original data a
 
 ## 3D & Perspective
 
-### CSS 3D Cube Nav (`css3d-cube-nav`)
+### Cube Navigation (`css3d-cube-nav`)
 
-Use a native 300 by 320 composition. Replace manifesto text with a photographic four-face editorial navigation card. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained CSS 3D cube navigation demo with four semantic content faces. Use perspective on the scene, preserve-3d on the cube, and four faces at 0, 90, 180, and -90 degrees with translateZ equal to half the cube width. The active face must snap to exact 90-degree rotations with a physical cubic-bezier transition.
+Build Cube Navigation as an original zero-dependency component. Match v4 Figma 161:811 in the hero thumbnail and preserve every original full content state. Use the three unchanged supplied SVG faces on real projected 3D planes, with all four original navigation faces in full; preserve signed normalization, nearest turns, .42 drag ratio and 24-degree release threshold. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
 
-Provide four visible navigation tabs plus keyboard controls: arrows move one face, Home selects the first, and End selects the last. Horizontal pointer dragging previews the rotation continuously; release snaps by distance to the nearest face, with a small committed-swipe threshold. Wheel input advances one face with a short lockout. Keep rotation turns unbounded internally so transitions take the shortest wrapped route.
+### Flip Grid (`css3d-card-flip-grid`)
 
-Synchronize the active tab, counter, aria-current, aria-hidden face states, and a polite live status. Include pointer capture, touch-action pan-y, visible focus, responsive cube depth, reduced-motion handling, completely scoped CSS, and no dependencies.
+Build Flip Grid as an original zero-dependency component. Match v4 Figma 161:830 in the hero thumbnail and preserve every original full content state. Show the exact six-card 52x58px native grid, including the 16px edge-on fifth card; preserve all eight original fronts, notes, toggle states and diagonal wave order in full. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
 
-### CSS 3D Card Flip Grid (`css3d-card-flip-grid`)
+### Page Turn (`css3d-book-page`)
 
-Use a native 300 by 320 composition. Reduce crowded typography and make the eight reversible cards a focused compact collection. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained CSS 3D flip-card grid with eight semantic button cards arranged in two rows of four. Every card has front and back faces using backface-visibility hidden, a preserve-3d inner wrapper, and a 180-degree Y rotation. A card click flips only that card and keeps aria-pressed, its action label, a revealed counter, and live status synchronized.
+Build Page Turn as an original zero-dependency component. Match v4 Figma 161:852 in the hero thumbnail and preserve every original full content state. Use the exact native two-page 180x110 book, 52x114 lifted leaf and original bars; preserve all four original journal spreads and the 55px swipe threshold. Implement continuous page curl, interrupted turns, native keys and scaled drag with snappy spring release. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
 
-Add a master Reveal all / Conceal all control. When activated, derive each transition delay from its grid row and column: revealing uses (row+column)*85ms so a wave travels top-left to bottom-right; concealing uses ((1-row)+(3-column))*85ms so it reverses from bottom-right. Clear delays after the last transition so later individual clicks respond immediately.
+### Cylinder Carousel (`css3d-carousel-cylinder`)
 
-Include hover lift without losing the current flip angle, visible focus, responsive two-column presentation, reduced-motion handling that removes duration and stagger, fully scoped CSS, and no dependencies.
-
-### CSS 3D Book Page (`css3d-book-page`)
-
-Use a native 300 by 320 composition. Replace dark interface pages with warm paper and intentional editorial typography. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained CSS 3D editorial book with four data-driven spreads and a convincing two-half page turn. Keep static left and right page halves, plus one absolute turning half with separate front and back faces, preserve-3d, hidden backfaces, and a hinge at the book spine. Advancing rotates the right half from 0 to -180 degrees; reversing anchors a left half at its right edge and rotates to +180 degrees. Add a moving fold/shade layer and a fixed spine.
-
-Before each turn, populate the turning front from the current outgoing half and its back from the target incoming half. Lock input for the 820ms animation, then commit both static halves, clear the turning layer, update the spread counter, disabled controls, aria label, and live status. Support Previous/Next buttons, Arrow/Page keys, Home/End, and horizontal swipe threshold of 55px.
-
-Use graphite pages with light editorial type, a quiet center crease and one orange chapter mark. Keep the turning overlay hidden at rest so both pages remain visible. Include subtle paper grain made only with CSS gradients, responsive typography, visible focus, reduced-motion duration collapse, fully scoped CSS, and no dependencies.
-
-### CSS 3D Carousel Cylinder (`css3d-carousel-cylinder`)
-
-Use a native 300 by 320 composition. Replace eight near-identical word specimens with a photo-led rotating travel collection. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained inertial CSS 3D cylinder carousel with eight poster panels. Place every panel at rotateY(index*45deg) translateZ(radius), put preserve-3d on the ring and perspective on the viewport, and rotate the ring with one continuous degree value. Compute the active poster as wrapped round(-rotation/45).
-
-On pointer drag, add dx*0.32 to rotation and sample angular velocity normalized to a 16ms frame. On release, run one requestAnimationFrame loop multiplying velocity by 0.94 until below 0.16 degrees per frame, then ease to the nearest exact 45-degree stop. Tabs, previous/next, arrows, Home, and End must use a shortest-equivalent unbounded target so the orbit never makes an unnecessary full turn.
-
-Synchronize active depth opacity/brightness, dots, readout, aria-current, and live status. Use pointer capture, touch-action pan-y, visible focus, responsive radius, reduced-motion-safe styling, scoped CSS, and no dependencies. Panels share one accent tone (site violet) instead of per-panel hues, and the layout is sized to fit a ~320px stage. After ~2s without interaction the ring drifts ~0.05deg/frame as an idle teaser — stop it permanently on the first pointer or key interaction and skip it under prefers-reduced-motion.
+Build Cylinder Carousel as an original zero-dependency component. Match v4 Figma 161:876 in the hero thumbnail and preserve every original full content state. Use the exact five supplied editorial photo slots in the native preview and all eight original posters in full. Preserve signed norm, nearest rotations, .32 drag ratio, 16ms velocity, .94 inertia and .16 stop threshold; use time-based clocks and a soft170/26 snap spring. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
 
 ### CSS 3D Parallax Room (`css3d-parallax-room`)
 
