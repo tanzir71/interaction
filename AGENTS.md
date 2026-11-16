@@ -217,6 +217,11 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   actual stroke and GPU output, native keys/touch, retargeting, holds, graphics
   context loss and fallback, complete stories, cleanup, compact type and offline
   exports. Full compositions retain the complete original SVG models.
+- `node tools/verify-perspective-spatial.js http://127.0.0.1:4173` covers v4
+  Parallax Room and Folding Map: original gallery and route content, exact SVG
+  and photo slots, projective corner joins, original idle easing and phases,
+  real keys/touch, interrupted motion, 60/120/240Hz renderer clocks, user intent
+  priority over delayed visibility, holds, cleanup and complete offline exports.
 - `node tools/verify-svg-remaining.js http://127.0.0.1:4173` covers the other six
   SVG demos. It compares original perimeter, pen schedules, menu endpoints,
   noise fields, seven measured circuit routes and all four 240-point figures;

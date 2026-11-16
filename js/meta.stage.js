@@ -3288,17 +3288,29 @@ INTRX.meta({
     ]
   },
   "css3d-parallax-room": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      460
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3306,8 +3318,12 @@ INTRX.meta({
       "pointer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      252,
+      168
+    ]
   },
   "css3d-isometric-hover": {
     "designSize": "md",
@@ -3333,13 +3349,25 @@ INTRX.meta({
     "caption": "Explore the raised layers"
   },
   "css3d-folding-map": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -3351,8 +3379,12 @@ INTRX.meta({
       "IntersectionObserver"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      192,
+      144
+    ]
   },
   "webgl-point-globe": {
     "designSize": "md",

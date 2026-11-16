@@ -1,9 +1,9 @@
 # Visual remediation progress
 
-The v4 stage compositions are remediated for 178 of the 399 existing demos: Interface (89),
+The v4 stage compositions are remediated for 180 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos and four 3D & Perspective demos in Motion.
-The remaining work includes 221 existing demos, 121 new or extension components,
+demos plus all ten SVG & Line demos and six 3D & Perspective demos in Motion.
+The remaining work includes 219 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -534,3 +534,41 @@ All sixteen current desktop and 4x CPU profiles have p95 intervals at most
 the full cylinder retains three. An inconsistent slow thumbnail run remains
 recorded alongside clean cold/warm repeats and traces; its cause is unproven.
 These tails remain part of the final performance audit.
+
+## 3D & Perspective: Parallax Room and Folding Map
+
+Parallax Room and Folding Map now follow v4 nodes `161:907` and `161:932`.
+Five supplied SVGs retain their original bytes and root dimensions. The room
+keeps the exact 220×144px wireframe, 100×64px rear wall and 50×36px forest print.
+Projective transforms keep all four supplied edges attached to their front and
+rear corners as the camera moves. The approved forestBlue original supplies the
+native photo; full view retains the three original architectural photographs,
+wall artwork, bench, ceiling lights and complete five-plane gallery. Corrected
+wall origins make the interior and its side photographs visible.
+
+The room preserves its normalized pointer field, ±22°/±12° clamps, 3°/2° key
+steps and all three original presets. The old frame-dependent 9% damping is
+replaced by the prescribed 400ms pointer tilt and 1000ms return. Touch and
+reduced motion do not activate hover; deliberate keys and camera presets remain
+available. All controls and readouts use the shared lifecycle and optical type.
+
+The map keeps four exact 40×92px dark panels and the unchanged 141.8×37.8002px
+route image, clipped continuously across their creases. Full view retains all
+four original route paths, place names, coordinates, compass and route metrics.
+Original alternating fold angles remain 87°, −88°, 88° and −88°. Opening takes
+400ms per panel, closing 250ms, with 40ms forward or reverse stagger. Reversals
+start from the actual visible plane angles. Its original 3600ms idle easing,
+2.2° alternating peaks and −220ms phase offsets are checked against the actual
+old CSS animation at explicit timeline samples, including live rendered planes.
+
+The original 0.45 visibility threshold and one-shot automatic unfold remain.
+An explicit user action takes priority over late visibility deliveries, even
+while suspended. The first pointer or keyboard interaction permanently stops
+the idle teaser. Holds freeze actual paint and defer intent; cleanup removes
+owned observers and frames. `node tools/verify-perspective-spatial.js` checks
+independent originals, exact physical native geometry, full content and type at
+390/375/360px, native keys and touch, interrupted motion, 60/120/240Hz clocks,
+deferred intent and complete network-blocked exports.
+
+All eight current desktop and 4× CPU profiles run at approximately 60fps, with
+95th-percentile intervals at most 16.8ms, no long tasks and no missed frames.

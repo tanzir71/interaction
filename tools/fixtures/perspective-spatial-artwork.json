@@ -1,0 +1,134 @@
+{
+  "assets": {
+    "perspective-room-tl": {
+      "name": "room-tl",
+      "url": "https://www.figma.com/api/mcp/asset/33aefbf4-1bca-41fe-ab20-36e8bed72e73/1e377.svg",
+      "file": "assets/components/perspective-room-tl.svg",
+      "sha256": "d958025ceb91e407215119e113286a9846d78576a59b72842d0e3422b83721a4",
+      "bytes": 335,
+      "exactMatch": null,
+      "width": 61.0001,
+      "height": 41.0001
+    },
+    "perspective-room-tr": {
+      "name": "room-tr",
+      "url": "https://www.figma.com/api/mcp/asset/33aefbf4-1bca-41fe-ab20-36e8bed72e73/2d241.svg",
+      "file": "assets/components/perspective-room-tr.svg",
+      "sha256": "d07186f29928926c71f680b13c337e2c8b69c302b894d81067daef49aa60f7e2",
+      "bytes": 335,
+      "exactMatch": null,
+      "width": 61.0001,
+      "height": 41.0001
+    },
+    "perspective-room-bl": {
+      "name": "room-bl",
+      "url": "https://www.figma.com/api/mcp/asset/33aefbf4-1bca-41fe-ab20-36e8bed72e73/41dc8.svg",
+      "file": "assets/components/perspective-room-bl.svg",
+      "sha256": "7e4f0519f953b913f1a5530744656cdc9309b8a6d859c03281efb6c0ac6f35de",
+      "bytes": 335,
+      "exactMatch": null,
+      "width": 61.0001,
+      "height": 41.0001
+    },
+    "perspective-room-br": {
+      "name": "room-br",
+      "url": "https://www.figma.com/api/mcp/asset/33aefbf4-1bca-41fe-ab20-36e8bed72e73/b02fe.svg",
+      "file": "assets/components/perspective-room-br.svg",
+      "sha256": "43c3f8c10c00470bc3a0073677d5ebc2ee260d16f4a9476738593cca305b2342",
+      "bytes": 335,
+      "exactMatch": null,
+      "width": 61.0001,
+      "height": 41.0001
+    },
+    "perspective-map-route": {
+      "name": "map-route",
+      "url": "https://www.figma.com/api/mcp/asset/8cf804f9-f68c-442f-a484-56d5c3ad9829/4a494.svg",
+      "file": "assets/components/perspective-map-route.svg",
+      "sha256": "bf4a3e565a7aa011ff42e6a0d7b30ce0c1f71eaddc14ab246da83a368962d685",
+      "bytes": 391,
+      "exactMatch": null,
+      "width": 141.8,
+      "height": 37.8002
+    }
+  },
+  "slots": [
+    {
+      "id": "css3d-parallax-room",
+      "selector": ".d-room-native-tl",
+      "x": 75.5,
+      "y": 31.5,
+      "w": 61.0001,
+      "h": 41.0001,
+      "asset": "perspective-room-tl"
+    },
+    {
+      "id": "css3d-parallax-room",
+      "selector": ".d-room-native-tr",
+      "x": 235.5,
+      "y": 31.5,
+      "w": 61.0001,
+      "h": 41.0001,
+      "asset": "perspective-room-tr"
+    },
+    {
+      "id": "css3d-parallax-room",
+      "selector": ".d-room-native-bl",
+      "x": 75.5,
+      "y": 135.5,
+      "w": 61.0001,
+      "h": 41.0001,
+      "asset": "perspective-room-bl"
+    },
+    {
+      "id": "css3d-parallax-room",
+      "selector": ".d-room-native-br",
+      "x": 235.5,
+      "y": 135.5,
+      "w": 61.0001,
+      "h": 41.0001,
+      "asset": "perspective-room-br"
+    },
+    {
+      "id": "css3d-folding-map",
+      "selector": ".d-fold-map-native-panel img",
+      "asset": "perspective-map-route",
+      "x": 115.1,
+      "y": 83.0999,
+      "w": 141.8,
+      "h": 37.8002,
+      "mask": "Four original 40x92 native panel clips; unchanged image repeated across clips"
+    }
+  ],
+  "photos": {
+    "forestBlue": {
+      "photoId": "2aSpCOPNyO0",
+      "imageId": "photo-1630695230041-8909e3204778",
+      "photographer": "Taylor Wright",
+      "profile": "https://unsplash.com/@taylorwright22",
+      "page": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-15",
+      "asset": "photo-forestBlue",
+      "files": {
+        "full": {
+          "path": "assets/images/forestBlue.webp",
+          "width": 1600,
+          "height": 1067,
+          "sha256": "edb6aa5fc94ca1fba67d8050de39d03034bed500313f15f855286b2b12eff961"
+        },
+        "tile": {
+          "path": "assets/images/forestBlue-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "1061619b273f696f81d6f6267e6bedcc954515209b56ea5faaaf30e608f97d9e"
+        }
+      }
+    }
+  },
+  "titles": {
+    "css3d-parallax-room": "Parallax Room",
+    "css3d-folding-map": "Folding Map"
+  }
+}

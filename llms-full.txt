@@ -658,13 +658,9 @@ Build Page Turn as an original zero-dependency component. Match v4 Figma 161:852
 
 Build Cylinder Carousel as an original zero-dependency component. Match v4 Figma 161:876 in the hero thumbnail and preserve every original full content state. Use the exact five supplied editorial photo slots in the native preview and all eight original posters in full. Preserve signed norm, nearest rotations, .32 drag ratio, 16ms velocity, .94 inertia and .16 stop threshold; use time-based clocks and a soft170/26 snap spring. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
 
-### CSS 3D Parallax Room (`css3d-parallax-room`)
+### Parallax Room (`css3d-parallax-room`)
 
-Use a native 300 by 320 composition. Complete the gallery with actual photographic side-wall works and quiet navigation. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained CSS 3D gallery room from separate back-wall, left-wall, right-wall, floor, and ceiling planes. Put all planes inside one preserve-3d box and construct the room with translateZ plus 90-degree X/Y rotations around correct wall edges. Use the supplied limestone-pavilion image token as the framed architectural print. Surround it with neutral walls, quiet side posters, subdued ceiling lights, a soft floor and a minimal bench; retain the plane geometry and camera controls.
-
-Map normalized pointer position to target camera angles X ±19 degrees and Y ±9 degrees. Run one requestAnimationFrame damping loop that moves current values 9% toward target and stops within 0.02 degrees. Pointer leave resets center. Arrow keys step X by 3 and Y by 2; R/Home resets. Three view buttons select -18/7, 0/0, and 18/7 presets.
-
-Synchronize coordinate readout, aria-pressed preset buttons, and live status. Clamp all angles, honor reduced motion by applying targets immediately, provide visible focus and touch-action pan-y, use fully scoped responsive CSS, and no dependencies.
+Build Parallax Room as an original zero-dependency component. Match v4 Figma 161:907 in the native thumbnail, using the unchanged supplied SVGs in their exact original sizes and slots. Keep the complete original five-plane gallery, three architectural photographs, original wall artwork and all camera presets in full. Native uses the exact forestBlue photo and four supplied depth edges. Map normalized pointer to +/-19 degrees yaw and +/-9 degrees pitch, clamp +/-22 and +/-12, preserve 3/2-degree key steps and -18/7,0/0,18/7 presets. Follow for400ms and return1000ms with system ease-out; disable hover for touch and reduced motion. Use real projective planes so the rear wall and its image share depth. Use shared dock actions, original local portable assets, native keyboard/touch, optical full typography >=11px at360px, caller/viewport holds, deferred held intent and complete observer/frame cleanup.
 
 ### CSS 3D Isometric Hover (`css3d-isometric-hover`)
 
@@ -674,13 +670,9 @@ The stage is a button-like keyboard target: hover previews, click or Enter/Space
 
 Include distinct content inside every plane, depth-preserving transforms, visible focus, responsive dimensions, reduced-motion handling, fully scoped CSS, and no dependencies.
 
-### CSS 3D Folding Map (`css3d-folding-map`)
+### Folding Map (`css3d-folding-map`)
 
-Use a native 300 by 320 composition. Make the paper map legible through light paper, restrained contours and place names. Use locally bundled Inter at weights 400–550 for UI and every numerical readout, with tabular numerals and normal tracking. Monospace is reserved for actual code or ASCII. Preserve pointer, keyboard, deterministic fixtures, reset behavior and lifecycle contracts. Build a self-contained four-panel CSS 3D folding route map. Each panel is one quarter of a continuous illustrated sheet. In folded state alternate transform origins and rotations: panel A right/+87, B left/-88, C right/+88, D left/-88 degrees. In open state all rotateY to zero with panel-order delays of 95ms, creating a crease-by-crease unfold.
-
-Use IntersectionObserver at 0.45 threshold to unfold once automatically when the component enters view, unless the user has already interacted. While the open map is idle, let alternating panels breathe by about 2 degrees; stop that teaser permanently on first pointer or keyboard interaction and disable it for reduced motion. A visible control and Enter/Space toggle fold state; Escape folds. Keep aria-pressed, stage label, state label, control copy, and live status synchronized.
-
-Create a continuous dashed route using one SVG segment per panel, plus CSS contours, paper texture, coordinates, compass, and route metrics. Include correct preserve-3d/perspective, alternating transform origins, visible focus, responsive sizing, reduced-motion handling, scoped CSS, and no dependencies.
+Build Folding Map as an original zero-dependency component. Match v4 Figma 161:932 in the native thumbnail, using the unchanged supplied SVGs in their exact original sizes and slots. Keep all four complete original route segments, place names, coordinates, compass and metrics in full. Native shows four exact40x92 dark panels, with the unchanged141.8x37.8002 orange SVG clipped across them. Preserve alternating87/-88/88/-88-degree folds and0.45 one-shot visibility semantics, user override and permanent idle cancellation. Use400ms opening/250ms closing,40ms forward/reverse stagger, and retarget from actual visible angles. Keep the original3600ms alternating2.2-degree idle model; reduced motion uses a still frame and150ms opacity. Use shared dock actions, original local portable assets, native keyboard/touch, optical full typography >=11px at360px, caller/viewport holds, deferred held intent and complete observer/frame cleanup.
 
 ### WebGL Point Globe (`webgl-point-globe`)
 
