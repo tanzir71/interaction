@@ -46,6 +46,18 @@ photo creation through inert templates.
 The supplied `layout2-carousel-pointer.svg` is used byte-for-byte at its
 original 28.5×29.25px intrinsic size in the Figma 185:1646 thumbnail.
 
+## V2 sea provenance
+
+The v2 `sea` photograph is Clayton Tonna's [Deep Blue Sea](https://unsplash.com/photos/shallow-focus-photo-of-body-of-water-qINZ8zEYErY),
+image `photo-1578664865136-74b450f31cd9`. Its canonical page was checked on
+17 November 2026 and confirms a free download under the Unsplash License.
+The 1600px and 800px self-hosted WebP files preserve its natural aspect ratio;
+both dimensions and SHA-256 hashes are recorded in `assets/photo-credits.json`.
+An independent 1800×1200 source JPEG matches the Figma PNG with RGB RMS 1.34
+on a 0–255 scale. The 1600px WebP has an RGB RMS difference of 4.63 after
+resizing, consistent with the smaller, compressed delivery variant.
+Image Trail uses this distinct water photograph for its complete composition.
+
 ## Earlier generated photographs (being replaced)
 
 The September 6 refinement replaces weak procedural landscapes with three original photographic assets. These are generated photographs, not photographs of documented locations. The built-in image-generation tool produced each image separately; the original PNGs remain in `assets/images`, alongside optimized WebP versions used by the demos.

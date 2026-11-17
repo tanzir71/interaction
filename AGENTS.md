@@ -271,6 +271,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   primitive geometry; actual transforms and GPU/Canvas output; physical input,
   moving touch targets, equivalent clocks, loop resets, queued intents, holds,
   cleanup, themes, compact full type and sixteen fresh-context offline exports.
+- `node tools/verify-cursor-classic.js http://127.0.0.1:4173` covers v4 Trailing
+  Cursor, Magnetic Button, Image Trail, Spotlight Mask and Tilt and Glare. It
+  compares independent original lerp, GSAP 3.12.5 easing and interrupted tween,
+  photo threshold/flight and tilt fixtures; checks actual CSS flight matrices,
+  long-running idle phases, exact SVG/photo/type slots, real keys and touch,
+  coarse/reduced stills, renderer clocks, queued intent, independent holds,
+  cleanup and twenty fresh-context offline exports. Magnetic Button has no
+  runtime library dependency.
 - `node tools/verify-cursor-targets.js http://127.0.0.1:4173` covers v4 Snap
   Targets, Flashlight, Glyph Rain and Magnetic Grid. It compares original snap,
   beam/noise, complete particle and sampled-path fixtures; exact native SVG and

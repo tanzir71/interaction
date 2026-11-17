@@ -780,92 +780,25 @@ Build Pull Distort in a transparent shell-owned stage with shared Tug and Reset 
 
 Build Shadow Parallax in a transparent shell-owned stage with shared Light and Reset actions, plain JavaScript and no dependencies. Match exact v4 Figma 165:981, preserving every supplied SVG byte, intrinsic size and design slot. Preserve LIGHT STUDY01, FORM07, full220x148 object,44px ring,42px lamp, complete contact/cast shadows and offset readout. Retain default96/64 light,24px horizontal and46px lower bounds,.14 easing, original soft/hard distance-based reach, blur, opacity, anisotropic stretch, contact offset/scale and highlight coordinates, original3.6/4.8-degree object tilt and18/34px keys. Native retains exact44px supplied light,120x80 card, both bars and6px diffuse shadow, calibrating its original light/shadow field to the v4 reference pose. Preserve complete original numerical models in a fixed60Hz simulation with equivalent60/120/240Hz rendering, real mouse/keys/touch, six-second native stories, interrupted input, compact11px minimum full typography, still reduced motion with deliberate intent, queued held actions, independent caller/viewport holds and complete owned-resource cleanup. Approved photographs use800px native/offline and1600px live full with photographer attribution and licence comments.
 
-### Custom Trailing Cursor (`custom-cursor`)
+### Trailing Cursor (`custom-cursor`)
 
-Build a custom cursor in vanilla JS.
-
-Requirements:
-- Hide the native cursor (cursor: none) only inside the component preview.
-- Render two locally positioned elements: a 6px dot that follows the pointer exactly, and a 36px ring that follows with lerp (factor ~0.12) in a requestAnimationFrame loop.
-- The ring uses mix-blend-mode: difference so it stays visible over any color.
-- When hovering links/buttons (or any [data-cursor="grow"]), the ring scales up ~2x via a CSS transition.
-- Both elements are pointer-events: none.
-- Disable the whole thing on touch devices (matchMedia '(pointer: coarse)') and under prefers-reduced-motion.
-
-Use two restrained 16px regular Inter links, “Selected work” and “About,” with generous spacing on a near-black stage.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Build Trailing Cursor in the transparent shell-owned stage with Move and Reset dock actions, plain JavaScript and no dependencies. Match exact Figma v4 165:1002, every supplied asset byte and intrinsic size, native photo crop and primitive geometry. Keep every original full composition, complete copy, numerical input model and photo cycle. Preserve .12 trailing, .15 spotlight, 90px strict trail threshold, original segmented 1000ms photo flight and 14-degree range, exact quartic and elastic magnetic easing and retargeting, max10-degree tilt and 4800ms idle model. Use the motion system for UI follow/return, press and ring growth. Keep still reduced-motion and coarse-pointer branches, native buttons and links, deliberate keys and touch, six-second native stories, queued held actions, independent caller/viewport suspension and complete disposal. Native/offline photos use800px; live full uses1600px with original photographer attribution and licence comments.
 
 ### Magnetic Button (`magnetic-button`)
 
-Build magnetic buttons with GSAP.
+Build Magnetic Button in the transparent shell-owned stage with Hover and Reset dock actions, plain JavaScript and no dependencies. Match exact Figma v4 165:1020, every supplied asset byte and intrinsic size, native photo crop and primitive geometry. Keep every original full composition, complete copy, numerical input model and photo cycle. Preserve .12 trailing, .15 spotlight, 90px strict trail threshold, original segmented 1000ms photo flight and 14-degree range, exact quartic and elastic magnetic easing and retargeting, max10-degree tilt and 4800ms idle model. Use the motion system for UI follow/return, press and ring growth. Keep still reduced-motion and coarse-pointer branches, native buttons and links, deliberate keys and touch, six-second native stories, queued held actions, independent caller/viewport suspension and complete disposal. Native/offline photos use800px; live full uses1600px with original photographer attribution and licence comments.
 
-Requirements:
-- On mousemove over the button, compute the cursor offset from the button center.
-- Translate the button toward the cursor at ~0.4 of the offset, and the inner label at ~0.7 (parallax between shell and label).
-- Use gsap.to with power3.out, duration ~0.4s, so movement is smoothed.
-- On mouseleave, both animate back to 0,0 with elastic.out(1, 0.35) over ~0.9s for a springy snap-back.
-- The label must be pointer-events: none so it never steals hover.
-- Disable on touch devices.
-- If GSAP is unavailable, describe a vanilla fallback using lerp in requestAnimationFrame.
+### Image Trail (`image-trail`)
 
-Render two compact 120px circular graphite controls with 12px mono labels and orange focus/interaction details. Keep 24px padding and a 22px gap so both remain visible in a narrow preview.
+Build Image Trail in the transparent shell-owned stage with Move and Reset dock actions, plain JavaScript and no dependencies. Match exact Figma v4 163:1258, every supplied asset byte and intrinsic size, native photo crop and primitive geometry. Keep every original full composition, complete copy, numerical input model and photo cycle. Preserve .12 trailing, .15 spotlight, 90px strict trail threshold, original segmented 1000ms photo flight and 14-degree range, exact quartic and elastic magnetic easing and retargeting, max10-degree tilt and 4800ms idle model. Use the motion system for UI follow/return, press and ring growth. Keep still reduced-motion and coarse-pointer branches, native buttons and links, deliberate keys and touch, six-second native stories, queued held actions, independent caller/viewport suspension and complete disposal. Native/offline photos use800px; live full uses1600px with original photographer attribution and licence comments.
 
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
+### Spotlight Mask (`spotlight-mask`)
 
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Build Spotlight Mask in the transparent shell-owned stage with Move and Reset dock actions, plain JavaScript and no dependencies. Match exact Figma v4 163:1288, every supplied asset byte and intrinsic size, native photo crop and primitive geometry. Keep every original full composition, complete copy, numerical input model and photo cycle. Preserve .12 trailing, .15 spotlight, 90px strict trail threshold, original segmented 1000ms photo flight and 14-degree range, exact quartic and elastic magnetic easing and retargeting, max10-degree tilt and 4800ms idle model. Use the motion system for UI follow/return, press and ring growth. Keep still reduced-motion and coarse-pointer branches, native buttons and links, deliberate keys and touch, six-second native stories, queued held actions, independent caller/viewport suspension and complete disposal. Native/offline photos use800px; live full uses1600px with original photographer attribution and licence comments.
 
-### Cursor Image Trail (`image-trail`)
+### Tilt and Glare (`tilt-card`)
 
-Build a cursor image-trail effect in vanilla JS.
-
-Requirements:
-- Use three locally embedded photographic assets (coast, architectural pavilion, breaking waves), cropped naturally into compact portrait cards with a subtle edge and soft contact shadow.
-- Track mousemove inside a hero section; when the pointer has moved more than ~90px from the last spawn point, spawn the next image centered at the cursor.
-- Each image plays a one-shot CSS keyframe animation: scale 0.4 -> 1 with fade-in over the first 20%, then drifts upward, scales to 0.9 and fades out by 100% (total ~1s, cubic-bezier(0.22,1,0.36,1)).
-- Give each image a random rotation between -7deg and 7deg via a CSS custom property.
-- Increment z-index per spawn so newer images stack on top; remove each node when its animation ends.
-- Images are pointer-events: none. Disable on touch devices.
-
-Use a Newsreader serif two-line headline “Collected moments.” with an italic second line and quiet editorial spacing. The photographic cards carry the visual detail.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### Spotlight Mask Hover (`spotlight-mask`)
-
-Build a cursor spotlight mask reveal in vanilla JS + CSS.
-
-Requirements:
-- Two stacked full-size layers: a base layer and a hidden layer with different grayscale regular Inter content and a restrained orange accent.
-- The hidden layer uses CSS mask-image: radial-gradient(circle 110px at var(--x) var(--y), black 98%, transparent 100%) so it is only visible in a circle around the cursor.
-- Update --x/--y CSS custom properties from mousemove, but lerp toward the pointer (factor ~0.15) in a rAF loop so the spotlight trails slightly.
-- On mouseleave, park the mask far off-canvas so the hidden layer disappears.
-- Include the -webkit-mask-image prefix. Disable on touch devices.
-
-Use the short two-line phrases “LOOK / CLOSER.” and “KEEP / LOOKING.”, native 24px padding, and container-relative role-appropriate type that fits the preview.
-
-Final typography: Use Inter for the main display or interface text. Use Inter for actions and readable interface copy; retain regular Inter counters, coordinates and technical annotations. Keep material borders subdued and gradients broad with continuous, gentle falloff.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
-
-### 3D Tilt Card + Glare (`tilt-card`)
-
-Build a 3D tilt card with glare, vanilla JS.
-
-Requirements:
-- Parent container has perspective: 900px; the card has transform-style: preserve-3d.
-- On mousemove, normalize the cursor position over the card (0..1) and map to rotateX/rotateY, max ±10deg, so the card tilts toward the cursor.
-- A glare layer (radial-gradient, pointer-events: none) follows the cursor via --gx/--gy custom properties.
-- Inner content sits at translateZ(40px) so it visually floats above the card surface.
-- Before the first interaction, run a slow autonomous tilt sway; stop it permanently on pointer movement, pointerdown, or keydown.
-- transition: transform 0.15s ease-out on the card smooths the motion; on mouseleave everything resets to 0.
-- Disable the idle sway on touch devices and under prefers-reduced-motion.
-
-Use a 244px-high architectural photographic card with a soft natural-light image, a continuous dark lower scrim, restrained edge contrast and broad subtle glare. Set “Quiet by design.” in Newsreader at 38px, supporting copy in Inter, and a tiny regular Inter edition label. Keep content at translateZ(24px), with a 900px parent perspective and the existing ±10 degree tilt. Embed the photographic asset so the exported component is standalone.
-
-Use the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.
+Build Tilt and Glare in the transparent shell-owned stage with Hover and Reset dock actions, plain JavaScript and no dependencies. Match exact Figma v4 163:1313, every supplied asset byte and intrinsic size, native photo crop and primitive geometry. Keep every original full composition, complete copy, numerical input model and photo cycle. Preserve .12 trailing, .15 spotlight, 90px strict trail threshold, original segmented 1000ms photo flight and 14-degree range, exact quartic and elastic magnetic easing and retargeting, max10-degree tilt and 4800ms idle model. Use the motion system for UI follow/return, press and ring growth. Keep still reduced-motion and coarse-pointer branches, native buttons and links, deliberate keys and touch, six-second native stories, queued held actions, independent caller/viewport suspension and complete disposal. Native/offline photos use800px; live full uses1600px with original photographer attribution and licence comments.
 
 ## Physics
 

@@ -1,21 +1,83 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 206 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 211 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and the first twenty Cursor demos in Pointer & Physics.
-The remaining work includes 193 existing demos, 121 new or extension components,
+and all twenty-five Cursor demos in Pointer & Physics.
+The remaining work includes 188 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 44 remaining demos.
-None of the 206 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 42 remaining demos.
+None of the 211 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 206 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 96 tiny-text findings and
-35 low-fill findings; findings can overlap within a demo. All 75 documented
+among these 211 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 94 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 78 documented
 Figma fill exceptions validate.
+
+## Cursor: the five classic interactions
+
+Trailing Cursor, Magnetic Button, Image Trail, Spotlight Mask and Tilt and Glare
+follow v4 nodes `165:1002`, `165:1020`, `163:1258`, `163:1288` and `163:1313`.
+Five lazy modules replace the final cursor bundle while retaining catalog order.
+The other twenty completed cursor modules and all twenty-eight remaining original
+Pointer & Physics objects stay unchanged. Stage debt falls to 185 and motion debt
+to 69. Exact sparse ring/dot, button and four-photo geometry has three documented
+fill exceptions. The full photo migrations remove two more retired-photo demos.
+
+Native compositions retain the unchanged 28px ring, 6px dot and three separately
+downloaded, byte-identical 28.5×29.25 pointers. They preserve the exact button and
+ghost offsets, four 64×48 photo slots with their original opacity, five spotlight
+bars and soft elliptical field, and the 140×150 chrome crop and diagonal glare.
+The shared 240×168 plane has the same two-pixel lift as the other cursor previews.
+Native artwork and full text are checked at four compact preview widths and
+390/375/360px full widths, with normal and reduced motion.
+
+Full Trailing Cursor keeps both original links, direct dot and .12 follower.
+Magnetic Button keeps both 120px circular controls, .4/.7 shell/label attraction,
+400ms quartic follow and 900ms elastic return. Independent fixtures from actual
+GSAP 3.12.5 include interrupted and overlapping tweens; the production module now
+implements those curves and retargeting without a runtime library dependency.
+Image Trail keeps its complete copy, strict distance greater than 90px, three-photo
+cycle, original random-call order, ±7° print poses, 112×142 portraits, segmented
+1000ms flight and exact removal time. Real elapsed time drives deliberate flights;
+their live CSS matrices match independent samples of the original animation.
+
+Spotlight Mask keeps both original messages, .15 follow and full 110px circular
+98–100% mask. Its bounded static gradient moves with transforms. Tilt and Glare
+keeps the full architecture card, complete field-note copy, original ±10° target
+and glare equations, raised content and 4800ms idle model. Live checks continue
+through 24 seconds, so the full idle cycle cannot accidentally reset with the
+six-second native story. The motion system supplies 400ms follow, 1000ms return,
+300ms glare opacity and 150/250ms ring growth and release.
+
+Image Trail's full coast/architecture/water sequence uses approved ocean, archGrid
+and sea photographs. The exact sea image is Clayton Tonna's free Unsplash License
+photograph `qINZ8zEYErY`, verified on 17 November 2026. Both self-hosted sizes,
+dimensions and hashes are recorded. Native Image Trail retains the supplied
+cityTeal, aurora, ocean and embers crops; native Tilt retains chrome, while its
+full retired pavilion image becomes archGrid. Live full uses 1600px photographs;
+native previews and exports use 800px. Inert templates defer unused compositions.
+
+Coarse pointers keep still reference previews and usable native buttons/links.
+Reduced motion retains the native cursor and deliberate opacity feedback.
+Keyboard and touch placement, interrupted motion, queued Reset, independent
+caller/viewport holds and complete cleanup are verified. Incidental held hover
+cannot override Reset. `node tools/verify-cursor-classic.js http://127.0.0.1:4173`
+passes 8,772 model, artwork, input, rendering and portable checks, including twenty
+fresh contexts with all network access blocked.
+
+All twenty current desktop and 4× CPU profiles average about 60fps, with p95
+frame intervals at most 16.8ms, no missed intervals and no long tasks. Earlier
+performance tails in other demos remain open for the final audit. The fresh
+399-demo audit finds no fit violations among all 211 remediated native
+compositions. Registry generation, 651 library checks, 97 general offline
+exports, shell lifecycle checks, seventeen runtime/shell tests and eight CLI/MCP
+tests pass locally. GitHub Actions remains disabled; the account's Actions budget
+is $0 and its live budget table reports Usage blocked. This phase is committed
+and pushed directly without a PR or workflow run.
 
 ## Cursor: thermal fields, crosshair telemetry, pull and shadow
 
