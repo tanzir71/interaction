@@ -3387,17 +3387,29 @@ INTRX.meta({
     ]
   },
   "webgl-point-globe": {
-    "designSize": "md",
+    "designSize": [
+      520,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Drag"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "button"
+      "aria": "group"
     },
     "useCases": [
       "WebGL",
@@ -3405,21 +3417,37 @@ INTRX.meta({
       "shader"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      180,
+      168
+    ]
   },
   "webgl-wobbly-sphere": {
-    "designSize": "md",
+    "designSize": [
+      480,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "button"
+      "aria": "group"
     },
     "useCases": [
       "WebGL",
@@ -3427,8 +3455,12 @@ INTRX.meta({
       "velocity"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      168,
+      168
+    ]
   },
   "css3d-depth-hero": {
     "designSize": "md",

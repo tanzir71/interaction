@@ -1,9 +1,9 @@
 # Visual remediation progress
 
-The v4 stage compositions are remediated for 180 of the 399 existing demos: Interface (89),
+The v4 stage compositions are remediated for 182 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos and six 3D & Perspective demos in Motion.
-The remaining work includes 219 existing demos, 121 new or extension components,
+demos plus all ten SVG & Line demos and eight 3D & Perspective demos in Motion.
+The remaining work includes 217 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
@@ -572,3 +572,57 @@ deferred intent and complete network-blocked exports.
 
 All eight current desktop and 4× CPU profiles run at approximately 60fps, with
 95th-percentile intervals at most 16.8ms, no long tasks and no missed frames.
+
+## 3D & Perspective: Point Globe and Wobbly Sphere
+
+Point Globe and Wobbly Sphere follow v4 nodes `161:953` and `161:1135`.
+Forty new supplied SVG files retain their original bytes and root dimensions;
+the orange city dot exactly reuses an existing local asset. Native globe has
+all 166 exact front slots and a hidden rear hemisphere for complete rotations.
+Native sphere uses the unchanged 144×144px body and 56×42px highlight. Its
+two textures deform on complete grids with the original wave and impulse
+field; the still preserves every alpha pixel and the supplied image geometry.
+No photograph, font, credit or dependency changed.
+
+Full view retains all 1,800 original Float32 Fibonacci points, the complete
+1,617-vertex/3,072-triangle sphere and both original vertex shaders. The sphere
+now culls its inward-wound back faces and uses the depth direction of its
+original projection, exposing the exterior instead of its interior. The
+buffers, vertex deformation, wave, normal and projection equations remain
+unchanged. Context loss or unsupported WebGL preserves complete geometry in
+Canvas; restoration keeps the current pose. Cleanup releases buffers, shaders,
+programs, textures, frames, observers and pointer capture.
+
+Globe keeps its original drift, scaled drag, pitch limits, key increments and
+pointer field. Its fractional damping agrees with every original 16ms sample;
+drag release uses the prescribed 170/26 soft spring. Repeated turns preserve
+visible pose and velocity. A drag release cannot become an accidental pause.
+Sphere keeps all three presets, tilt, pointer speed and original energy decay,
+extended analytically across refresh rates. Actual renderer stories agree at
+60, 120 and 240Hz. Click or Space pauses; deliberate keys remain available.
+Reduced motion keeps the telling still and 150ms opacity feedback.
+
+Both components combine deferred intent before applying it: incidental hover
+cannot replace a held Reset, mode choice or pause. Caller and viewport holds
+stay independent and freeze the displayed pose. Shared dock actions replace
+local demo controls. Full typography remains at least 11px at 390/375/360px.
+`node tools/verify-perspective-gpu.js http://127.0.0.1:4173` checks independent
+original fixtures, actual GPU uploads/uniforms, exact native artwork and texture
+pixels, real mouse/keys/touch, interruptions, holds, graphics recovery, complete
+fallback and disposal. Each of the four portable full/native exports runs in
+a fresh browser context with all network access blocked.
+
+The thumbnail caches spherical coordinates and changes depth brightness in
+1% steps, removing repeated calculations and unnecessary per-dot filter
+updates. A focused 4× CPU run improved from a 49.9ms to 16.8ms p95 interval,
+with no long tasks after the change. All four final desktop profiles retain
+p95 at most 16.8ms and no long tasks; three missed intervals remain across
+the two thumbnails. Final stress profiles remain variable: globe thumbnail
+and full sphere exceed the frame budget, with long tasks. Follow-up system
+samples measured 88–100% total CPU load from other applications, but the cause
+of the timing variation is unproven. All slow and clean traces remain recorded
+for the final performance audit; the stress budget is not claimed as passed.
+
+Per the owner's 17 Nov instruction, GitHub Actions stays disabled and the
+account-wide Actions budget stays $0 with usage stopped at the limit. This
+phase is verified locally and pushed directly; Pages publication is paused.

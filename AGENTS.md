@@ -12,6 +12,10 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 ## Rules
 - Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
   commit and push phases directly; do not open PRs.
+- Owner instruction, 17 Nov 2026: keep GitHub Actions disabled for this
+  repository. Run verification locally; commit and push without starting or
+  re-enabling workflows. The owner's account-wide Actions budget is $0 with
+  "Stop usage when budget limit is reached" enabled; preserve this limit.
 - No bundler, no framework, no runtime dependencies in the site. Only `packages/intrx` may have npm dependencies.
 - Demos never draw their own outer panel or replay/reset buttons; expose actions and list them in `controls`.
 - Rendered thumbnail text ≥ 11px; neutral greys + one accent per demo (no decorative hues); reduced-motion branch required.
@@ -234,3 +238,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models; checks exact SVG/photo slots, native keys/drag/touch, interruption,
   independent spring forces, actual 60/120/240Hz renderer clocks, compact type,
   caller/viewport holds, capture cleanup and complete offline exports.
+- `node tools/verify-perspective-gpu.js http://127.0.0.1:4173` covers v4 Point
+  Globe and Wobbly Sphere: complete original point/mesh buffers and vertex
+  shaders, orbit/energy/spring fixtures, exact native SVG slots and texture
+  pixels, actual GPU uniforms and 60/120/240Hz renderer clocks, native drag,
+  keys and touch, queued intent, holds, context loss/recovery, complete Canvas
+  fallback, resource cleanup, compact type and fresh-context offline exports.
