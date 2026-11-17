@@ -4095,17 +4095,33 @@ INTRX.meta({
     ]
   },
   "collision-bubbles": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Burst"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "elastic collision",
@@ -4113,21 +4129,37 @@ INTRX.meta({
       "simulation"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "soft-body-blob": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Poke"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "soft body",
@@ -4135,21 +4167,37 @@ INTRX.meta({
       "pressure"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "cloth-flag": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Gust"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "Verlet",
@@ -4157,21 +4205,37 @@ INTRX.meta({
       "constraints"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "wrecking-ball-text": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Release"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "pendulum",
@@ -4179,21 +4243,37 @@ INTRX.meta({
       "text"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "inertia-window-drag": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Throw"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "inertia",
@@ -4201,21 +4281,37 @@ INTRX.meta({
       "boundary bounce"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "magnet-snap-grid": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Pull"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -4223,8 +4319,12 @@ INTRX.meta({
       "snap grid"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "liquid-blob-buttons": {
     "designSize": "md",

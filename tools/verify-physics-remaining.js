@@ -1,0 +1,9 @@
+/* Complete original solvers, exact v4 artwork, physical input, rendering and offline exports. */
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),assert=require('node:assert/strict');
+const base=process.argv[2]||'http://127.0.0.1:4173',dir='.artifacts/physics-remaining',results=[];fs.mkdirSync(dir,{recursive:true});
+for(const name of['models','artwork','input','drag','rendering','portable']){
+ const started=Date.now(),r=cp.spawnSync(process.execPath,[path.join(__dirname,'verification/physics-remaining-'+name+'.js'),base],{encoding:'utf8',maxBuffer:4*1024*1024});fs.writeFileSync(dir+'/'+name+'.log',r.stdout+r.stderr);
+ if(r.status!==0){process.stdout.write(r.stdout);process.stderr.write(r.stderr);process.exit(r.status||1)}
+ const p=dir+'/'+name+'.json';assert(fs.statSync(p).mtimeMs>=started,'Fresh Physics result');const result=JSON.parse(fs.readFileSync(p));assert(result.checks>0);assert.deepEqual(result.errors,[]);results.push({name,checks:result.checks});process.stdout.write(r.stdout);
+}
+const checks=results.reduce((n,r)=>n+r.checks,0);fs.writeFileSync(dir+'/results.json',JSON.stringify({base,checks,cases:results,ids:['collision-bubbles','soft-body-blob','cloth-flag','wrecking-ball-text','inertia-window-drag','magnet-snap-grid'],errors:[],verifiedAt:new Date().toISOString()},null,2));console.log('PASS: '+checks+' complete remaining Physics checks');

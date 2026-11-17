@@ -301,3 +301,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   touch dragging, capture interruption, independent holds, cleanup, compact full
   type and sixteen fresh-context offline exports. Native Gravity retains all
   eleven v4 icon slots; its full composition retains the original ten symbols.
+- `node tools/verify-physics-remaining.js http://127.0.0.1:4173` covers v4
+  Collision Bubbles, Soft Body, Cloth Flag, Wrecking Ball, Inertia Window and
+  Magnet Snap Grid. It compares 2,160 independent original solver frames,
+  complete full content, exact SVG bytes and slots, actual SVG/Canvas rendering,
+  60/120/240Hz clocks and six-second native stories. It checks real range,
+  keyboard, scaled mouse and touch input; occupied-slot swaps, pressure markers,
+  interrupted capture, independent holds, WebGL loss/recovery, complete Canvas
+  fallback and resource cleanup; compact full type and twenty-four fresh-context
+  offline exports. Native Collision retains nineteen bubbles versus twelve in
+  full; native Snap retains two modules versus all six original full modules.

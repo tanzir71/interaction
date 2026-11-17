@@ -1,0 +1,17 @@
+const crypto=require('node:crypto'),{fs,A,ids,same,ok,open,finish}=require('./physics-remaining-harness');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),allowed=new Set(Object.values(A.assets).map(a=>a.sha256));
+(async()=>{let r;try{
+ for(const preference of['no-preference','reduce'])for(const mode of['thumb','full'])for(let i=0;i<ids.length;i++){
+  r=await open({blank:true,context:{reducedMotion:preference}});await r.context.route(/^https?:/,route=>route.abort());same(await r.page.evaluate(()=>typeof window.INTRX),'undefined','fresh offline context');
+  const record=JSON.parse(fs.readFileSync('registry/c/'+ids[i]+'.json'));same(record.libs,[],'no runtime dependency');let html=record.files[0].content;
+  if(mode==='thumb'){const next=html.replace(',"full");})();',',"thumb");})();');ok(next!==html,'native portable mode selected');html=next}
+  ok(!html.includes('www.figma.com/api/mcp/asset'),'no temporary Figma asset URL');ok(!html.includes('{{asset:'),'all portable assets resolved');await r.page.setContent(html,{waitUntil:'load'});await r.page.waitForFunction(()=>{const s=document.querySelector('.stage');if(s?.dataset.bootError==='true')throw Error('Offline Physics boot failed');return s?._root?.__PhysicsInspect?.().ready});
+  const data=await r.page.evaluate(()=>{const root=document.querySelector('.stage')._root;return{state:root.__PhysicsInspect(),images:[...root.querySelectorAll('img')].map(n=>({src:n.src,loaded:n.complete&&n.naturalWidth>0}))}});same(data.state.mode,mode,'correct offline composition');
+  for(const image of data.images){ok(image.loaded,'offline SVG decodes');ok(image.src.startsWith('data:'),'SVG fully embedded');ok(allowed.has(sha(Buffer.from(image.src.split(',')[1],'base64'))),'exact original SVG bytes offline')}
+  const m=data.state.motion;if(i===0)same(m.bodies.length,mode==='thumb'?19:12,'complete original and native collision populations');if(i===1)same(m.nodes.length,24,'all original soft-body springs');if(i===2){same(m.points.length,126,'all original cloth vertices');same(m.points.filter(p=>p.pinned).length,9,'all original pinned points')}if(i===3)same(m.bodies.length,6,'complete offline IMPACT word');if(i===4)same([m.panelWidth,m.panelHeight],mode==='thumb'?[140,90]:[232,170],'complete original and native window bounds');if(i===5)same(m.bodies.length,mode==='thumb'?2:6,'complete original and native module populations');
+  await r.page.locator('[data-action="activate"]').click();await r.page.waitForTimeout(300);const next=await r.page.evaluate(()=>document.querySelector('.stage')._root.__PhysicsInspect());same(next.motion.auto,false,'offline deliberate action takes over');if(preference==='reduce')same(next.frames,0,'offline reduced feedback stops');
+  if(preference!=='reduce'&&i===1)ok(next.motion.nodes.some(n=>Math.abs(n.r-128)>.01),'offline coupled springs animate');if(preference!=='reduce'&&i===2)ok(next.motion.points.some(p=>!p.pinned&&Math.abs(p.x-p.ox)+Math.abs(p.y-p.oy)>.1),'offline full cloth solver animates');
+  const clean=await r.page.evaluate(()=>{const s=document.querySelector('.stage'),root=s._root;s._runtime.dispose();return root.__PhysicsInspect()});same(clean.cleaned,true,'offline disposal');same(clean.frames,0,'offline callbacks canceled');await r.close();
+ }
+ finish('portable');
+}catch(e){if(r)await r.browser.close();throw e}})().catch(e=>{console.error(e);process.exitCode=1});

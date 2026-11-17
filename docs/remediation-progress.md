@@ -1,21 +1,86 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 215 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 221 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all twenty-five Cursor demos plus four Physics demos in Pointer & Physics.
-The remaining work includes 184 existing demos, 121 new or extension components,
+and all twenty-five Cursor demos plus all ten Physics demos in Pointer & Physics.
+The remaining work includes 178 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 42 remaining demos.
-None of the 215 remediated native compositions retains those references.
+None of the 221 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 215 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 90 tiny-text findings and
+among these 221 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 84 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 81 documented
 Figma fill exceptions validate.
+
+## Physics: collisions, soft mesh, cloth, impact and snapping
+
+Collision Bubbles, Soft Body, Cloth Flag, Wrecking Ball, Inertia Window and Magnet
+Snap Grid follow v4 nodes `164:562`, `164:599`, `165:1087`, `165:1041`, `164:642`
+and `164:666`. Their six existing lazy modules retain catalog order. The other
+twenty-nine completed Cursor/Physics modules, eighteen remaining original
+Pointer & Physics objects and 393 other metadata records stay unchanged.
+Chrome/control debt falls to 175; motion debt stays at 69. No new fill exceptions
+or photography changes are needed.
+
+All nine supplied SVG sources retain their exact downloaded bytes and intrinsic
+dimensions. Seven become local files; two reuse identical existing pointer
+artwork. Native compositions preserve nineteen 38px bubbles, both soft-body
+layers, the complete supplied flag, cable and ball, the two word groups, both
+window ghosts and supplied front, all six magnetic slots and both modules.
+Full Collision retains the twelve original named/radius-varied bodies; full Snap
+retains all six original module labels, glyphs, occupancy and swap behavior.
+
+The original models keep elastic pair ordering and repeller velocity transfer;
+all 24 sequential coupled radial springs and pressure falloffs; all 126 cloth
+vertices, nine pins, five constraint passes and complete wind phases; the full
+pendulum and six IMPACT bodies; original window friction, throws, rebound and
+shadow equations; and the critically damped slot spring. Cloth constraint lookup
+uses direct vertex indices while preserving the source's ordered operations.
+Independent captures compare every field across 2,160 original frames.
+
+The native jelly and flag deform their supplied textures through the original
+fields. The WebGL path shares mesh edges; the Canvas fallback closes triangle
+seams. Context loss/recovery preserves held physical state, and disposal frees
+both backends. GPU mesh positions reuse an allocated buffer, and cloth sampling
+keeps the original bilinear ordering without per-vertex tuple arrays. Full SVG
+and Canvas renderers match original source poses and all mesh drawing commands.
+Both preview/full clocks agree at 60/120/240Hz; every
+native story restores its telling reference after six seconds.
+
+Native range, pressure, wind, impact, throw and snap input works with mouse,
+keyboard and touch at scaled sizes. Cloth keyboard grabs have a visible vertex
+marker, and slot arrows follow the actual three-column layout. Full Soft Body
+keeps the original localized pressure indicator. Full Inertia Window keeps
+Notes, the session label, headline and complete explanatory copy with the same
+232×170 physical body. Caller/viewport holds, queued Reset, interrupted capture,
+reduced/coarse stills, compact full text and twenty-four fresh-context offline
+exports are verified by `node tools/verify-physics-remaining.js`. Collision
+Pause/Resume labels and pressed state also agree after Reset and suspension.
+The focused suite passes 507,919 checks across the six groups of assertions.
+
+The complete library verifier passes 651 checks, all 399 lazy previews and 97
+general offline exports. Registry, stage, motion, generated-output, browser
+stage-runtime, seventeen runtime/shell and eight CLI/MCP checks pass locally.
+The fresh audit finds no gate violations among the 221 remediated native
+compositions. Generated artifacts and the six native posters are refreshed.
+
+All twelve current desktop profiles and twelve 4× CPU profiles average 60fps,
+with p95 intervals at most 16.8ms, no slow intervals and no long tasks. The
+retained earlier 4× run averaged 52.9–59.8fps, with 178 slow intervals and 34
+long tasks up to 125ms; its separate three-view diagnostic averaged 59.4–59.9fps.
+Only Soft Body and Cloth changed during the allocation optimization, so improved
+timing in the other four views also demonstrates run-to-run variation. Both
+sets of evidence are preserved, and the broader stress-performance audit remains
+open alongside the earlier Gravity tail.
+
+This phase is committed and pushed directly to `main`. Repository Actions remain
+disabled with no active runs; the account's verified $0 Actions budget and
+stop-at-limit setting remain preserved. No workflow or deployment is started.
 
 ## Physics: spring response, pendulums, constraints and gravity
 
