@@ -321,3 +321,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   cleanup and sixteen fresh-context offline exports. Native membranes retain
   two controls versus three in full; native lava retains the three supplied
   colored regions while full retains all seven original bodies.
+- `node tools/verify-liquid-remaining.js http://127.0.0.1:4173` covers v4 Ink
+  Bleed, Melt Drip, Smoke Wisps, Bubble Pop, Liquid Image and Liquid Mask. It
+  compares all 2,160 independent original frames, complete wave buffers,
+  97-point/seven-droplet mask hashes, every glyph strip and all 180 plume and
+  18-body burst paint commands. It checks exact supplied SVG/photo/type slots,
+  licensed 800/1600px resolution, capped mask DPR, live canonical easing,
+  scaled physical pointer/touch and native keys, interrupted reveals, focus
+  recovery, queued intent, independent holds, 60/120/240Hz clocks, six-second
+  stories, GPU/Canvas photo deformation, cleanup and twenty-four fresh-context
+  offline exports. Native Bubble Pop has eight supplied slots; full retains
+  all eighteen original bodies. Full Smoke reserves 400×340px for its complete
+  mobile caption; its 600×400 physical field remains unchanged.

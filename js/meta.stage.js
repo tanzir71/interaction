@@ -4491,17 +4491,29 @@ INTRX.meta({
     ]
   },
   "ink-bleed-reveal": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Spill"
+      },
+      {
+        "action": "reset",
+        "label": "Fresh sheet"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "application"
+      "aria": "group"
     },
     "useCases": [
       "svg mask",
@@ -4509,21 +4521,41 @@ INTRX.meta({
       "reveal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "melt-drip-text": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Melt sweep"
+      },
+      {
+        "action": "reset",
+        "label": "Cool"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -4531,21 +4563,41 @@ INTRX.meta({
       "pointer heat"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "smoke-wisps": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      340
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Breeze"
+      },
+      {
+        "action": "reset",
+        "label": "Clear"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -4553,21 +4605,41 @@ INTRX.meta({
       "particles"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "bubble-float-pop": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "trigger": "drag",
-    "controls": [],
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Pop cluster"
+      },
+      {
+        "action": "reset",
+        "label": "Refill"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -4575,21 +4647,37 @@ INTRX.meta({
       "burst"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "liquid-image-ripple": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Drop"
+      },
+      {
+        "action": "reset",
+        "label": "Still"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -4597,21 +4685,37 @@ INTRX.meta({
       "image displacement"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "liquid-mask-reveal": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Flood"
+      },
+      {
+        "action": "reset",
+        "label": "Restore"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -4619,8 +4723,12 @@ INTRX.meta({
       "metaball"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "slider-elastic-edges": {
     "designSize": "bleed",

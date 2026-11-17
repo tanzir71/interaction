@@ -1,21 +1,99 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 225 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 231 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all twenty-five Cursor demos, all ten Physics demos and four Liquid demos in
-Pointer & Physics. The remaining work includes 174 existing demos, 121 new or extension components,
+and all twenty-five Cursor demos, all ten Physics demos and all ten Liquid demos in
+Pointer & Physics. The remaining work includes 168 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 42 remaining demos.
-None of the 225 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 39 remaining demos.
+None of the 231 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 225 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 80 tiny-text findings and
+among these 231 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 74 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 82 documented
 Figma fill exceptions validate.
+
+## Liquid: ink, melting type, smoke, bubbles and photographic fields
+
+Ink Bleed, Melt Drip, Smoke, Bubble Pop, Liquid Image and Liquid Mask follow v4
+nodes `164:733`, `164:758`, `164:779`, `164:798`, `164:830` and `164:852`. Their
+six existing lazy modules retain catalog order. The prior 39 remediated
+Pointer & Physics demos, eight original Play demos, 315 other source modules
+and 393 other metadata records stay unchanged. Chrome/control debt falls to
+165 and motion debt to 66. All 82 fill exceptions stay unchanged; these six
+native compositions pass the ordinary fill gate at their exact reference size.
+
+Fifteen supplied SVGs retain their exact bytes and intrinsic dimensions:
+both photographic masks, five bubble body/highlight pairs and three ripple
+rings. Bubble Pop has eight visible native bubbles using the five supplied
+pairs; its full field retains all eighteen original bodies. The approved Roses
+and Smoke photographs are identified against the primary Unsplash originals,
+confirmed under the free licence, self-hosted at 1600px and 800px, and recorded
+with both file hashes and photographer credits. Sea reuses the previously
+verified local photograph. Portable assets now contain 432 aliases and eighteen
+photo-credit records. Three full compositions shed retired generated photos,
+leaving 39 demos to migrate.
+
+Full Ink retains all five recycled turbulent blooms, original 600×380 input
+coordinates and archive/land/sea/field-notes copy. Melt retains the complete
+600×380 glyph bitmap, original gradient/scanline alpha and all 150 heated
+columns, while its visible RGB paint follows the neutral palette. Smoke retains
+all 180 seeded tracers, curl-noise derivatives, vortex and gust forces, complete
+trails and particle lifetimes. Its exact native photograph deforms through the
+same field, with GPU rendering and a complete Canvas fallback. Bubble Pop
+retains buoyancy, all eight droplets per pop, expanding rings, the 84-tick
+respawn and the original last visible pop frame.
+
+Liquid Image retains all three 288×200 Float32 buffers, ordered updates,
+0.985 damping, original wake/drop/idle amplitudes, sample indexing, four-pixel
+displacement per axis and twelve-percent specular gain. Its renderer avoids
+per-pixel object allocation without changing any sampled result. Liquid Mask
+retains two distinct complete photographs, all 97 boundary points and seven
+droplets, the original half-resolution mask, blur/threshold operation and
+0.08 follow. Entry/exit and flood/restore use the canonical timing and easing
+tokens; interrupted pointer activation preserves the visible center and radius.
+Keyboard and shell activation still center the original flood. Canvas readbacks
+use dedicated CPU surfaces and cached photo rasters while preserving exact
+original mask pixels.
+
+The shell owns all driver controls. Every original action remains available,
+including Pause for each three-action simulation. Native mouse, keyboard and
+touch input, moving bubble targets, scaled capture, caller/viewport holds,
+queued intent, reset cancellation, graphics loss/recovery, reduced/coarse stills
+and disposal are verified. Native views retain the 240×168 reference plane.
+Full views use 400×320; Smoke uses 400×340 so its complete caption stays inside
+the stage on narrow screens. Full Melt and Bubble canvases adapt their neutral
+paint to light stages. All six complete compositions retain readable type at
+390px, 375px and 360px.
+
+`node tools/verify-liquid-remaining.js http://127.0.0.1:4173` passes 7,460,882
+checks across six suites, covering all 2,160 original model frames,
+independent paint fixtures, complete live pixels,
+60/120/240Hz clocks, six-second stories, exact native assets and twenty-four
+fresh-context offline exports. Source hashes bind the focused suites, broader
+checks and profiles to the modules being committed. Registry, stage, motion
+and generated-output checks pass, alongside 651 library checks, all 399 lazy
+previews, 97 general offline exports, browser stage-runtime checks, seventeen
+runtime/shell tests and eight CLI/MCP tests. The six native posters are
+refreshed. The full fit
+audit still fails on unfinished groups; all 231 remediated native compositions
+pass every fit gate.
+
+All twelve final desktop profiles average 60fps, with p95 intervals at most
+16.8ms, no slow intervals and no long tasks. Final 4× CPU samples average
+55.0–60.0fps and retain 63 slow intervals and nine long tasks; Liquid Image
+averages 55.0fps in native and 57.1fps in full. Before renderer optimization,
+those views averaged 49.7fps and 48.6fps. An earlier optimized run averaged
+59.1fps and 59.4fps, demonstrating timing variation across runs. Original,
+intermediate and final samples remain separate and source-bound. The broader
+final stress audit remains open. Repository Actions stay disabled. The last live account check
+confirmed a $0 Actions budget, Stop usage when budget limit is reached enabled,
+and Usage blocked. A later attempted UI recheck stopped before reading billing
+because Computer Use could not verify the browser URL; it changed no settings.
 
 ## Liquid: membranes, magnetic fields, water and thermal bodies
 

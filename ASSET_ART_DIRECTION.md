@@ -638,3 +638,29 @@ unchanged supplied card texture and both native bars through its original eight
 nodes, with GPU and Canvas renderers. All fourteen previous photo-credit records
 remain unchanged; the portable bundle now has 376 image aliases, seven font
 faces and fifteen photo credits.
+
+## Ink, plume and liquid photography
+
+Ink Bleed and Liquid Mask use the exact v2 roses photograph by
+[Alessio Soggetti](https://unsplash.com/photos/red-roses-flower-arrangement-KQBsTXCvGwM),
+photo ID `KQBsTXCvGwM`, image ID `photo-1516565349308-c76fe36a115c`.
+Smoke Wisps uses [Pascal Meier's White smoke](https://unsplash.com/photos/white-smoke-1uVCTVSn-2o),
+photo ID `1uVCTVSn-2o`, image ID `photo-1556388275-bb5585725aca`.
+Both primary photo pages confirm the free Unsplash License, verified on
+17 November 2026. Independent 1800px primary downloads match their Figma
+rasters at RGB RMS 0.64 and 0.70 respectively. The source photographs retain
+their complete native crops; no generated substitute or screenshot is tile art.
+
+Local Roses derivatives are 1600×1068 and 800×534; Smoke derivatives are
+1600×1067 and 800×533. Their identities, attribution, licence, dimensions and
+both SHA-256 hashes are in `assets/photo-credits.json`. Portable `photo-roses`
+and `photo-smoke` names resolve to the 800px files. Liquid Image reuses Clayton
+Tonna's already verified v2 Sea image. The full ink composition preserves its
+original archive and coastal copy over Sea; the full liquid mask keeps two
+distinct photographic views, Sea and Roses, and all original reveal states.
+
+The remaining Liquid previews add fifteen unchanged supplied SVGs: two
+200×150 masks, five bubble body/highlight pairs and three photographic ripple
+rings. All eight Bubble Pop slots reuse the correct pair at its intrinsic
+size; no SVG paths are extracted or redrawn. The portable bundle now has 432
+image aliases, the same seven font faces and eighteen photo-credit records.
