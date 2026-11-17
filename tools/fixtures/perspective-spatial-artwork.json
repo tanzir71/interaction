@@ -125,10 +125,91 @@
           "sha256": "1061619b273f696f81d6f6267e6bedcc954515209b56ea5faaaf30e608f97d9e"
         }
       }
+    },
+    "archGrid": {
+      "photoId": "MPWbGMrZ6eo",
+      "imageId": "photo-1504625709867-b4e45e3bb9dd",
+      "photographer": "Christophe Laurenceau",
+      "profile": "https://unsplash.com/@justcallmechristophe",
+      "page": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-15",
+      "asset": "photo-archGrid",
+      "files": {
+        "full": {
+          "path": "assets/images/archGrid.webp",
+          "width": 1600,
+          "height": 1060,
+          "sha256": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f"
+        },
+        "tile": {
+          "path": "assets/images/archGrid-800.webp",
+          "width": 800,
+          "height": 530,
+          "sha256": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde"
+        }
+      }
+    },
+    "cityNight": {
+      "photoId": "zd8v_Ig3ndg",
+      "imageId": "photo-1603793510575-a8cf24361baa",
+      "photographer": "Polina Kuzovkova",
+      "profile": "https://unsplash.com/@p_kuzovkova",
+      "page": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-15",
+      "asset": "photo-cityNight",
+      "files": {
+        "full": {
+          "path": "assets/images/cityNight.webp",
+          "width": 1600,
+          "height": 1067,
+          "sha256": "a71c690d4ac18dfc307b6d7359914b0e49b6bc374bb1e169b4d7444b59371995"
+        },
+        "tile": {
+          "path": "assets/images/cityNight-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b3c751386ba8699adf8cf48a2da5e4a45bca28330056e6fa48aa9f053d3e6229"
+        }
+      }
     }
   },
   "titles": {
     "css3d-parallax-room": "Parallax Room",
     "css3d-folding-map": "Folding Map"
-  }
+  },
+  "fullPhotoSlots": [
+    {
+      "selector": ".d-room-art > .d-room-gallery-photo",
+      "key": "forestBlue",
+      "frame": [
+        260,
+        270
+      ],
+      "fit": "cover"
+    },
+    {
+      "selector": ".d-room-left .d-room-poster > .d-room-gallery-photo",
+      "key": "archGrid",
+      "frame": [
+        145,
+        190
+      ],
+      "fit": "cover"
+    },
+    {
+      "selector": ".d-room-right .d-room-poster > .d-room-gallery-photo",
+      "key": "cityNight",
+      "frame": [
+        145,
+        190
+      ],
+      "fit": "cover"
+    }
+  ]
 }

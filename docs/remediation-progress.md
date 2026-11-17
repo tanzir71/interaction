@@ -6,10 +6,9 @@ demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Mot
 The remaining work includes 213 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
-Full-view photography reconciliation and performance tails remain open. A current
-asset inventory finds retired generated photo references in 47 demos, including
-Parallax Room among those with a remediated native composition. Its full gallery
-needs approved v2 photographs; the other 46 references are in remaining demos.
+Photography replacement and performance tails remain open. A current asset
+inventory finds the three retired generated photo keys in 46 remaining demos.
+None of the 186 remediated native compositions retains those references.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 
@@ -547,9 +546,10 @@ Five supplied SVGs retain their original bytes and root dimensions. The room
 keeps the exact 220×144px wireframe, 100×64px rear wall and 50×36px forest print.
 Projective transforms keep all four supplied edges attached to their front and
 rear corners as the camera moves. The approved forestBlue original supplies the
-native photo; full view retains the three original architectural photographs,
-wall artwork, bench, ceiling lights and complete five-plane gallery. Corrected
-wall origins make the interior and its side photographs visible.
+native photo and full back-wall print. Full side walls use the approved archGrid
+and cityNight photographs. Wall artwork, bench, ceiling lights and the complete
+five-plane gallery remain. Corrected wall origins make the interior and its side
+photographs visible.
 
 The room preserves its normalized pointer field, ±22°/±12° clamps, 3°/2° key
 steps and all three original presets. The old frame-dependent 9% damping is
@@ -575,8 +575,20 @@ independent originals, exact physical native geometry, full content and type at
 390/375/360px, native keys and touch, interrupted motion, 60/120/240Hz clocks,
 deferred intent and complete network-blocked exports.
 
-All eight current desktop and 4× CPU profiles run at approximately 60fps, with
+The original eight desktop and 4× CPU profiles ran at approximately 60fps, with
 95th-percentile intervals at most 16.8ms, no long tasks and no missed frames.
+
+The full gallery now uses the approved v2 photo set in its original three frames.
+Full-only templates keep those photographs inert in thumbnails. Detail resolves
+the 1600px files before image creation; portable exports embed the credited
+800px originals. The verifier checks all frame bounds, source bytes, aspect
+ratios, clipping, inert templates, actual Notes credit links and standalone
+licence comments. Camera equations, presets, native artwork and stage metadata
+remain unchanged.
+
+The refreshed room's desktop profiles run at approximately 60fps, with no missed
+frames or long tasks. Both stress profiles retain p95 intervals at most 16.8ms;
+they contain 17 missed intervals and one long task, retained for the final audit.
 
 ## 3D & Perspective: Point Globe and Wobbly Sphere
 
