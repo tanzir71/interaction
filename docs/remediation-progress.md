@@ -1,14 +1,68 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 186 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 190 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion.
-The remaining work includes 213 existing demos, 121 new or extension components,
+demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
+and the first four Cursor demos in Pointer & Physics.
+The remaining work includes 209 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 46 remaining demos.
-None of the 186 remediated native compositions retains those references.
+None of the 190 remediated native compositions retains those references.
+
+The current full fit audit boots all 399 demos and reports no gate violations
+among these 190 native compositions. The unfinished groups still account for
+21 overflow findings, one horizontal-scroll finding, 110 tiny-text findings and
+36 low-fill findings; findings can overlap within a demo. All 67 documented
+Figma fill exceptions validate.
+
+## Cursor: follower, sparks, cable and lens
+
+Gooey Cursor, Particle Emitter, Elastic Cable and Inverted Lens now follow v4
+nodes `165:480`, `165:500`, `165:525` and `163:1334`. Each has its own lazy source
+module. The other 49 Pointer & Physics registered objects and 395 stage metadata
+records are unchanged. The public library still contains 399 components.
+
+The native previews use all supplied SVGs in their original dimensions and
+positions: twelve new assets and two exact existing matches. Gooey Cursor keeps
+the 150×40 target and 32px pointer; the emitter keeps all seven 1.5–4.5px sparks
+and its cursor; the cable keeps its 182×24.0001 curve, both anchors and cursor;
+the lens keeps the 200×150 archGrid crop and 72px inversion circle. Three sparse
+compositions have documented fill exceptions. Overflow and typography gates
+continue to apply. The Get started label stays readable at landing-tile sizes
+and uses difference blending while the pointer covers it.
+
+Full views retain Index, Studio and Contact, the complete 220-particle emitter,
+the original 800×320 quadratic cable model, and the complete optical study with
+its title, grid, two orbs and coordinates. Original spring constants, particle
+lifetimes, emission/velocity rules, gravity, cable bounds/impulse/tension,
+keyboard increments and 1.16/1.35 lens zooms are compared with immutable fixtures
+captured from the original registered JavaScript. The cable deforms the supplied
+artwork texture through the actual quadratic displacement, including a Canvas
+fallback after graphics-context loss. The lens uses the already credited
+archGrid photograph, at 1600px in live full view and 800px in portable exports.
+
+All four simulations run the original recurrence at a fixed 60Hz, with equivalent
+60/120/240Hz renderer clocks. Native idle stories return through the reference
+pose every six seconds; deliberate input takes over. Reduced motion starts on
+the reference still, disables hover and retains explicit actions. Shared dock
+actions replace in-demo controls. Held input composes on resume without changing
+the suspended model; caller and viewport holds remain independent. Frames,
+observers, pointer capture and graphics resources are released on cleanup.
+
+`node tools/verify-cursor-core.js http://127.0.0.1:4173` passes 24,559 checks:
+original numeric fixtures, actual rendered paths/textures/masks, exact artwork
+at four widths and both motion preferences, compact full typography, physical
+mouse/keyboard/touch, complete stories, interruptions, suspension and cleanup,
+plus sixteen fresh-context offline exports and live photo attribution.
+
+Sixteen interaction profiles cover native/full at desktop and 4× CPU slowdown.
+All have p95 frame intervals at or below 16.8ms and no long tasks. Desktop has
+no missed frames; the 4× full Gooey Cursor has one 33.3ms gap and the full emitter
+has two gaps up to 33.4ms. These three tail frames remain recorded for the final
+performance audit. Chrome/control debt falls from 210 to 206; the motion baseline
+remains 73 and the fill allowlist grows from 64 to 67 with the owner's exceptions.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 

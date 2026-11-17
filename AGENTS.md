@@ -253,3 +253,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   native SVG/photo/type slots, real wheel/keys/touch, interrupted transitions,
   60/120/240Hz renderer clocks, queued intents, independent holds, clipped-text
   protection at every camera limit, cleanup and eight fresh-context exports.
+- `node tools/verify-cursor-core.js http://127.0.0.1:4173` covers v4 Gooey
+  Cursor, Particle Emitter, Elastic Cable and Inverted Lens. It compares the
+  original spring, particle, quadratic and zoom fixtures; exact native SVG and
+  photo slots; actual painted paths, textures and masks; physical mouse, keys
+  and touch; equivalent renderer clocks; queued input and independent holds;
+  graphics loss/fallback, optical type, cleanup and sixteen offline exports.
