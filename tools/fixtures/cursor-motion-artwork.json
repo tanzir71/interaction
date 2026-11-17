@@ -1,0 +1,213 @@
+{
+  "assets": {
+    "eyes-socket": {
+      "key": "pointer-eyes-socket",
+      "file": "assets/components/pointer-eyes-socket.svg",
+      "width": 48,
+      "height": 48,
+      "sha256": "d44c3ac3abb37b58e5f7ace12e26f11f6aae3687a2bd9d63376856feb40ce4ed",
+      "source": ".artifacts/pointer-v4/downloads-motion/eyes-socket.svg",
+      "reused": false
+    },
+    "eyes-pupil": {
+      "key": "pointer-eyes-pupil",
+      "file": "assets/components/pointer-eyes-pupil.svg",
+      "width": 14,
+      "height": 14,
+      "sha256": "668d5a05af311df34844e902b321086f4e8de9defeb4a333324faeca35b26c37",
+      "source": ".artifacts/pointer-v4/downloads-motion/eyes-pupil.svg",
+      "reused": false
+    },
+    "eyes-pointer": {
+      "key": "swap-pointer",
+      "file": "assets/components/swap-pointer.svg",
+      "width": 28.5,
+      "height": 29.25,
+      "sha256": "3c7f5b9c2ff027983345086c27f7351433fbdc96ad2ad695a579907094f55110",
+      "source": ".artifacts/pointer-v4/downloads-motion/eyes-pointer.svg",
+      "reused": true
+    },
+    "metaball-large": {
+      "key": "pointer-metaball-large",
+      "file": "assets/components/pointer-metaball-large.svg",
+      "width": 52,
+      "height": 52,
+      "sha256": "f5981b2a4915d8d415252f837f18d55f3af17dbe06a10687973052aef083d3cc",
+      "source": ".artifacts/pointer-v4/downloads-motion/metaball-large.svg",
+      "reused": false
+    },
+    "metaball-small": {
+      "key": "pointer-metaball-small",
+      "file": "assets/components/pointer-metaball-small.svg",
+      "width": 40,
+      "height": 40,
+      "sha256": "d00a8a2b0fedacdfa8186b3564b5fc6dd352dbdc0e04efa77f04c8194a2d8484",
+      "source": ".artifacts/pointer-v4/downloads-motion/metaball-small.svg",
+      "reused": false
+    },
+    "rope-shadow": {
+      "key": "pointer-rope-shadow",
+      "file": "assets/components/pointer-rope-shadow.svg",
+      "width": 236.001,
+      "height": 112,
+      "sha256": "9c937591a4e1f26e802eb85fa1197efeae8e1b6c8ca8701807a9c52a8208d3d2",
+      "source": ".artifacts/pointer-v4/downloads-motion/rope-shadow.svg",
+      "reused": false
+    },
+    "rope-line": {
+      "key": "pointer-rope-line",
+      "file": "assets/components/pointer-rope-line.svg",
+      "width": 230.001,
+      "height": 106,
+      "sha256": "76e4d1cab98dc8ca2d7c909eea9f83ecd2ed7cababd819862666d5f3fe80ca66",
+      "source": ".artifacts/pointer-v4/downloads-motion/rope-line.svg",
+      "reused": false
+    },
+    "rope-pin": {
+      "key": "pointer-elastic-1",
+      "file": "assets/components/pointer-elastic-1.svg",
+      "width": 12,
+      "height": 12,
+      "sha256": "e45368715c46c3c788619c934d9474a3b6d21e5524ebb5def0e0a07a0ee090b3",
+      "source": ".artifacts/pointer-v4/downloads-motion/rope-pin.svg",
+      "reused": true
+    },
+    "rope-tip": {
+      "key": "pointer-rope-tip",
+      "file": "assets/components/pointer-rope-tip.svg",
+      "width": 38,
+      "height": 38,
+      "sha256": "7966f41c440cc57b61c6929cf6a043e4c8afec50145b4e2bbc8d756d5ec3390d",
+      "source": ".artifacts/pointer-v4/downloads-motion/rope-tip.svg",
+      "reused": false
+    },
+    "rope-pointer": {
+      "key": "layout2-carousel-pointer",
+      "file": "assets/components/layout2-carousel-pointer.svg",
+      "width": 28.5,
+      "height": 29.25,
+      "sha256": "2e16409f0ceb993a5120a438eea9e99f1e56cc7c8d61a29c1089e0b2360bf00f",
+      "source": ".artifacts/pointer-v4/downloads-motion/rope-pointer.svg",
+      "reused": true
+    }
+  },
+  "geometry": {
+    "cursor-eyes-follow": [
+      {
+        "name": "eyes-socket",
+        "selector": ".d-eyes-rim",
+        "nth": 0,
+        "x": 60,
+        "y": 58,
+        "w": 48,
+        "h": 48
+      },
+      {
+        "name": "eyes-pupil",
+        "selector": ".d-eyes-native .d-eyes-pupil",
+        "nth": 0,
+        "x": 86,
+        "y": 80,
+        "w": 14,
+        "h": 14
+      },
+      {
+        "name": "eyes-socket",
+        "selector": ".d-eyes-rim",
+        "nth": 1,
+        "x": 132,
+        "y": 58,
+        "w": 48,
+        "h": 48
+      },
+      {
+        "name": "eyes-pupil",
+        "selector": ".d-eyes-native .d-eyes-pupil",
+        "nth": 1,
+        "x": 158,
+        "y": 80,
+        "w": 14,
+        "h": 14
+      },
+      {
+        "name": "eyes-pointer",
+        "selector": ".d-eyes-pointer",
+        "x": 201.125,
+        "y": 117.625,
+        "w": 28.5,
+        "h": 29.25
+      }
+    ],
+    "cursor-liquid-metaball": [
+      {
+        "name": "metaball-large",
+        "selector": ".d-metaball-native-blob",
+        "nth": 0,
+        "x": 80,
+        "y": 54,
+        "w": 52,
+        "h": 52
+      },
+      {
+        "name": "metaball-large",
+        "selector": ".d-metaball-native-blob",
+        "nth": 1,
+        "x": 108,
+        "y": 54,
+        "w": 52,
+        "h": 52
+      },
+      {
+        "name": "metaball-small",
+        "selector": ".d-metaball-native-blob",
+        "nth": 2,
+        "x": 100,
+        "y": 78,
+        "w": 40,
+        "h": 40
+      }
+    ],
+    "cursor-rope-trail": [
+      {
+        "name": "rope-shadow",
+        "selector": ".d-rope-shadow",
+        "x": 26,
+        "y": 28,
+        "w": 236.001,
+        "h": 112
+      },
+      {
+        "name": "rope-line",
+        "selector": ".d-rope-line",
+        "x": 29,
+        "y": 31,
+        "w": 230.001,
+        "h": 106
+      },
+      {
+        "name": "rope-pin",
+        "selector": ".d-rope-pin",
+        "x": 24,
+        "y": 26,
+        "w": 12,
+        "h": 12
+      },
+      {
+        "name": "rope-tip",
+        "selector": ".d-rope-tip",
+        "x": 239,
+        "y": 21,
+        "w": 38,
+        "h": 38
+      },
+      {
+        "name": "rope-pointer",
+        "selector": ".d-rope-pointer",
+        "x": 257.125,
+        "y": 33.625,
+        "w": 28.5,
+        "h": 29.25
+      }
+    ]
+  }
+}

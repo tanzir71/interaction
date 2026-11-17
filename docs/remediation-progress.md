@@ -1,21 +1,71 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 194 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 198 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and the first eight Cursor demos in Pointer & Physics.
-The remaining work includes 205 existing demos, 121 new or extension components,
+and the first twelve Cursor demos in Pointer & Physics.
+The remaining work includes 201 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 45 remaining demos.
-None of the 194 remediated native compositions retains those references.
+None of the 198 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 194 native compositions. The unfinished groups still account for
-21 overflow findings, one horizontal-scroll finding, 107 tiny-text findings and
-36 low-fill findings; findings can overlap within a demo. All 70 documented
+among these 198 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 104 tiny-text findings and
+35 low-fill findings; findings can overlap within a demo. All 72 documented
 Figma fill exceptions validate.
+
+## Cursor: watching eyes, liquid masses, rope and velocity
+
+Watching Eyes, Liquid Metaballs, Rope Trail and Velocity Stretch follow v4 nodes
+`167:843`, `165:770`, `163:1373` and `165:789`. Four lazy modules preserve the other
+41 original Pointer & Physics objects, the eight completed cursor modules and
+395 stage metadata records. Chrome/control debt falls from 202 to 198; the motion
+baseline remains at 73. Two fill exceptions preserve the sparse metaball and
+velocity compositions. The eyes and cable already exceed the fill heuristic.
+Seven new supplied SVGs and three exact existing matches retain their root sizes.
+
+Native previews retain both 48px sockets, both 14px pupils and their cursor;
+the two 52px and one 40px shaded masses; both exact cable layers, pin, tip and
+cursor; and the 40×14 capsule beside its 52×14 quarter-opacity, 1.5px-blurred echo.
+The eye mapping accounts for the reference pupils' 9px horizontal and 5px vertical
+offsets, so tracking remains centered in each actual socket.
+
+Full views restore the original pair of 104px optical sockets and preserve the
+asymmetric .18/.145 gaze easing, elliptical reach, head lean and synchronized
+280ms blink. They retain all six original orbit specifications and their pointer
+mass, spring, quadratic attraction, pulse and alpha threshold; all 22 rope links,
+five constraint iterations, gravity, damping, shake impulses and idle anchor;
+and the complete 20-frame velocity history, shortest-angle easing, squash/stretch
+and three delayed echoes. The original 16.667ms denominator remains inside the
+fixed 60Hz simulation. Browser fixtures were captured from the immutable original
+JavaScript before production edits; the eye fixture uses the intended visible
+socket composition at logical 400×320, avoiding the old startup measurement issue.
+
+Native rope motion deforms the unchanged supplied SVG textures through the
+original solver's field. GPU context loss falls back to Canvas; both paths paint
+real output and dispose their resources. The full-view touch hit area follows the
+moving anchor. Mouse, keys, physical touch, six-second native stories, queued
+intents, independent caller/viewport holds and disposal are covered. Reduced
+motion starts still and keeps deliberate input with opacity feedback.
+
+`node tools/verify-cursor-motion.js http://127.0.0.1:4173` passes 55,302 checks of original model
+fixtures, actual full transforms, every native asset slot at four sizes and both
+motion preferences, compact full typography, input, graphics fallback, holds,
+cleanup, dark/light stages and sixteen fresh-context offline exports.
+
+All four generated prompts describe the transparent shell-owned stage, shared
+dock and complete original numerical models. Eyelids use the original translating
+overlay, and the moving head and pupils declare compositor hints. The sixteen
+final interaction profiles match the current module hashes. All eight desktop
+profiles hold about 60fps, with p95/max intervals at or below 16.8ms, zero missed
+frames and zero long tasks. At 4× CPU slowdown, profiles range from 57.95 to 60fps
+with p95 at or below 16.8ms; 24 missed frames and six long tasks remain across the
+eyes, metaballs and native rope captures. The worst frame gap is 100ms and longest
+task 113ms. These stress tails remain open for the performance audit; the earlier
+captures are retained alongside the final source-matched measurements.
 
 ## Cursor: repelling type, ripples, project previews and ghost drag
 

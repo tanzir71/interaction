@@ -265,3 +265,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   textures and ghost projections; exact native assets and type; all four project
   photographs and credits; mouse/keys/touch, loop resets, queued input, holds,
   cleanup, dark/light stages and sixteen fresh-context offline exports.
+- `node tools/verify-cursor-motion.js http://127.0.0.1:4173` covers v4 Watching
+  Eyes, Liquid Metaballs, Rope Trail and Velocity Stretch. It compares original
+  gaze, six-orb, 22-link and velocity-history fixtures; exact native SVG and
+  primitive geometry; actual transforms and GPU/Canvas output; physical input,
+  moving touch targets, equivalent clocks, loop resets, queued intents, holds,
+  cleanup, themes, compact full type and sixteen fresh-context offline exports.
