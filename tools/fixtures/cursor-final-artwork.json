@@ -1,0 +1,138 @@
+{
+  "assets": {
+    "heat-glow": {
+      "file": "assets/components/pointer-heat-glow.svg",
+      "key": "pointer-heat-glow",
+      "sha256": "209bb981080260e0173bd79d9dcec59bea917a20d8d52910f6c12a6568e3feb9",
+      "reused": false,
+      "width": 100,
+      "height": 100
+    },
+    "hud-vertical": {
+      "file": "assets/components/pointer-hud-vertical.svg",
+      "key": "pointer-hud-vertical",
+      "sha256": "0392c26f2a46766b8ce709bd1e2c9e6e4e44495023ae183b306721079a471aff",
+      "reused": false,
+      "width": 1,
+      "height": 165
+    },
+    "hud-horizontal": {
+      "file": "assets/components/pointer-hud-horizontal.svg",
+      "key": "pointer-hud-horizontal",
+      "sha256": "834411506439541649778e01c925b12dec49d6bea7bc8991231458612e4c1f9e",
+      "reused": false,
+      "width": 293,
+      "height": 1
+    },
+    "pull-card": {
+      "file": "assets/components/pointer-pull-card.svg",
+      "key": "pointer-pull-card",
+      "sha256": "789707681cd2396fbc7fc4b6e088ed868296ed163dd1788235b2207fba36b7eb",
+      "reused": false,
+      "width": 201,
+      "height": 129
+    },
+    "pull-pointer": {
+      "file": "assets/components/gallery-clip-pointer.svg",
+      "key": "pointer-pull-pointer",
+      "sha256": "fdc3119b908a73d6da78e89cb7daa07ae7e5b4c98c6cf756b9f2517568353d9e",
+      "reused": true,
+      "width": 28.5,
+      "height": 29.25
+    },
+    "shadow-light": {
+      "file": "assets/components/pointer-shadow-light.svg",
+      "key": "pointer-shadow-light",
+      "sha256": "88c464861add92e5f792ff8c66c3867710c06031bbaa12b6f1eb55c707abafc4",
+      "reused": false,
+      "width": 44,
+      "height": 44
+    }
+  },
+  "geometry": {
+    "cursor-heat-shimmer": [
+      {
+        "name": "heat-glow",
+        "selector": ".d-heat-glow",
+        "x": 70,
+        "y": 33,
+        "w": 100,
+        "h": 100
+      }
+    ],
+    "cursor-crosshair-hud": [
+      {
+        "name": "hud-vertical",
+        "selector": ".d-hud-vertical",
+        "x": 159.5,
+        "y": -0.5,
+        "w": 1,
+        "h": 165
+      },
+      {
+        "name": "hud-horizontal",
+        "selector": ".d-hud-horizontal",
+        "x": 13.5,
+        "y": 81.5,
+        "w": 293,
+        "h": 1
+      }
+    ],
+    "cursor-pull-distort": [
+      {
+        "name": "pull-card",
+        "selector": ".d-pull-card-art",
+        "x": 17.5,
+        "y": 25.5,
+        "w": 201,
+        "h": 129
+      },
+      {
+        "name": "pull-pointer",
+        "selector": ".d-pull-pointer",
+        "x": 199.125,
+        "y": 75.625,
+        "w": 28.5,
+        "h": 29.25
+      }
+    ],
+    "cursor-shadow-parallax": [
+      {
+        "name": "shadow-light",
+        "selector": ".d-shadow-native-light",
+        "x": 14,
+        "y": 0,
+        "w": 44,
+        "h": 44
+      }
+    ]
+  },
+  "photoCredits": {
+    "fire": {
+      "photoId": "JKAKwrATVq8",
+      "imageId": "photo-1530374195309-8c25022c4753",
+      "photographer": "David McCumskay",
+      "profile": "https://unsplash.com/@david_mccumskay",
+      "page": "https://unsplash.com/photos/brown-smoke-on-black-background-JKAKwrATVq8",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-17",
+      "asset": "photo-fire",
+      "files": {
+        "full": {
+          "path": "assets/images/fire.webp",
+          "width": 1600,
+          "height": 1067,
+          "sha256": "133f8460d495e93434ee459d99e76ce9a5ec35eb330bbde12f06725f8b85f1c0"
+        },
+        "tile": {
+          "path": "assets/images/fire-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "f1c10f663b10158ac5e2d6f14f4bc68047144d6d02e8fb029fad2caa7cf77970"
+        }
+      }
+    }
+  }
+}

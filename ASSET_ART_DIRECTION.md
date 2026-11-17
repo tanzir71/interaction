@@ -606,3 +606,23 @@ preserved; the full tunnel retains all nine original exponential frame models.
 All 240 earlier image payloads, six font faces and eleven earlier photo-credit
 records remain unchanged. The portable bundle now has 246 image aliases and
 twelve photo-credit records.
+
+## Thermal cursor photograph
+
+Heat Shimmer uses the exact v2 fire image, David McCumskay's
+[`JKAKwrATVq8`](https://unsplash.com/photos/brown-smoke-on-black-background-JKAKwrATVq8),
+image ID `photo-1530374195309-8c25022c4753`. The primary photo and photographer
+pages confirmed its free Unsplash License on 17 November 2026. A separate
+1800×1200 primary download matches the Figma raster at RGB RMS 0.53. The local
+1600×1067 and 800×533 WebP files, provenance and both hashes are recorded in
+`assets/photo-credits.json`; portable `photo-fire` resolves to the 800px file.
+The native 200×150 crop and supplied 100×100 circular optical overlay remain
+intact. Its Figma background blur radius of 6 maps to a 3px CSS backdrop blur.
+
+The final four Cursor previews add five unchanged supplied SVG files and reuse
+the exact existing pull pointer. The 1×165 and 293×1 HUD lines, 201×129 pull-card
+artwork and 44×44 lamp retain their root sizes. The pull surface deforms the
+unchanged supplied card texture and both native bars through its original eight
+nodes, with GPU and Canvas renderers. All fourteen previous photo-credit records
+remain unchanged; the portable bundle now has 376 image aliases, seven font
+faces and fifteen photo credits.

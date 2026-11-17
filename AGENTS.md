@@ -278,3 +278,10 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   clocks, queued input, independent holds and cleanup; GPU/Canvas fallback,
   compact type, beam compositing and cached glyph fidelity, plus sixteen offline
   exports with the complete original content and both photo credits.
+- `node tools/verify-cursor-final.js http://127.0.0.1:4173` covers v4 Heat
+  Shimmer, Crosshair HUD, Pull Distort and Shadow Parallax. It compares complete
+  original thermal fields, unequal HUD springs/telemetry, eight-node deformation
+  and soft/hard light fixtures; exact native artwork, typography and stage slots;
+  physical mouse/keys/touch, captured drag/cancellation, queued intents and holds;
+  cached thermal pixels, GPU/Canvas fallback, cleanup and sixteen offline exports
+  with the original full content and verified photo attribution.

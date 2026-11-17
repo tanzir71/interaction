@@ -1,21 +1,82 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 202 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 206 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and the first sixteen Cursor demos in Pointer & Physics.
-The remaining work includes 197 existing demos, 121 new or extension components,
+and the first twenty Cursor demos in Pointer & Physics.
+The remaining work includes 193 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 44 remaining demos.
-None of the 202 remediated native compositions retains those references.
+None of the 206 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 202 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 100 tiny-text findings and
-35 low-fill findings; findings can overlap within a demo. All 74 documented
+among these 206 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 96 tiny-text findings and
+35 low-fill findings; findings can overlap within a demo. All 75 documented
 Figma fill exceptions validate.
+
+## Cursor: thermal fields, crosshair telemetry, pull and shadow
+
+Heat Shimmer, Crosshair HUD, Pull Distort and Shadow Parallax follow v4 nodes
+`165:919`, `165:939`, `165:960` and `165:981`. Four lazy modules preserve the other
+33 original Pointer & Physics objects, sixteen completed cursor modules and 395
+stage metadata records. The five older cursor demos retain their original bundle
+and catalog positions. Chrome/control debt falls from 194 to 190; the motion
+baseline stays at 73. One exact-geometry fill exception preserves the sparse HUD,
+bringing the allowlist to 75. The remaining retired-photo inventory stays at 44
+demos, with none among these 206 native compositions.
+
+Native previews retain the exact 200×150 fire crop and 100×100 circular optical
+overlay; 1×165 and 293×1 crosshair lines, 24px frame and 78×22 coordinate surface;
+201×129 pull-card artwork, both bars and original pointer; and the 44px lamp,
+120×80 object, both bars and diffuse cast. A 320×168 HUD plane keeps both line
+assets at their original physical sizes. A two-pixel composition lift aligns all
+four complete 372×264 previews to their actual Figma stage slots, including
+negative half-pixel stroke outsets. Native coordinates use the supplied Geist
+Mono Medium 11.5px type and preserve that optical size on compact stages.
+
+The fire photograph is David McCumskay's free Unsplash License image
+`JKAKwrATVq8`, image ID `photo-1530374195309-8c25022c4753`. A separate primary
+1800×1200 download matches the native Figma raster at RGB RMS 0.53. Local 800px
+and 1600px WebP files, provenance and both hashes are recorded. The native lens
+retains the source SVG with its actual background blur; the original full thermal
+instrument avoids loading this native-only photograph. All fourteen earlier photo
+credits remain unchanged. Five new supplied SVGs and one exact existing pointer
+bring the portable bundle to 376 image aliases, seven fonts and fifteen credits.
+
+Full views preserve THERMAL TRACE, all markers, COOL/HOT scale and temperature;
+SECTOR 07, ACQUIRE SIGNAL, four targeting corners and X/Y/VEL/BRG telemetry;
+ELASTIC MATTER, FORM FOLLOWS FORCE, the original poster, ring, square and all eight
+wire handles; and LIGHT STUDY / 01, FORM 07, contact/cast shadows and offset meter.
+Fixtures captured before production edits retain every original thermal particle,
+random call and 140-point cap; unequal HUD axis springs and frozen-target/raw-input
+states; all eight distortion nodes, boost, influence, polygon and art parallax;
+and both light modes' reach, blur, opacity, stretch, contact, highlight and tilt.
+Fixed 60Hz simulations preserve these trajectories at 60/120/240Hz rendering.
+
+Thermal fields use an immutable radial sprite with independent pixel comparisons
+against the original optical ramp at thirty radius/temperature/DPR combinations.
+The native pull renderer deforms the unchanged supplied card texture and exact
+bars with the original eight nodes; graphics loss paints a complete Canvas
+fallback. Shared dock actions retain the current target/light position. Physical
+touch places the HUD and lamp; a quick pull tap seeds one original spring step.
+Interrupted dragging releases browser capture, freezes every node through caller
+holds, and queues tension release for resume. Reduced input uses direct states
+and bounded opacity feedback. Reset, six-second stories, queued actions, viewport
+holds, cleanup, compact type and sixteen fresh-context offline exports are covered
+by `node tools/verify-cursor-final.js http://127.0.0.1:4173`: 54,027 focused checks.
+
+All sixteen final interaction profiles match the verified module hashes. Seven
+desktop captures hold about 60fps without missed frames; native Shadow Parallax
+records 59.75fps and two missed frames, with no long tasks in any desktop capture.
+Desktop p95 stays at or below 16.8ms and the worst gap is 33.4ms. At 4× CPU
+slowdown, the HUD, pull and shadow profiles hold about 60fps with no missed frames
+or long tasks. Thermal native/full captures reach 58.42/45.84fps and account for
+all 142 stress missed frames and four long tasks. The full thermal p95 is 33.4ms,
+worst gap 66.7ms and longest task 57ms. These costs remain open for the final
+performance audit.
 
 ## Cursor: snap targets, flashlight, glyph rain and magnetic grid
 
