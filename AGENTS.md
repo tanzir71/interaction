@@ -259,3 +259,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   photo slots; actual painted paths, textures and masks; physical mouse, keys
   and touch; equivalent renderer clocks; queued input and independent holds;
   graphics loss/fallback, optical type, cleanup and sixteen offline exports.
+- `node tools/verify-cursor-fields.js http://127.0.0.1:4173` covers v4 Text
+  Repel, Grid Ripple, Hover Preview and Drag Ghost. It compares complete original
+  glyph, responsive-grid, multiwave, placement and inertia fixtures; actual dot
+  textures and ghost projections; exact native assets and type; all four project
+  photographs and credits; mouse/keys/touch, loop resets, queued input, holds,
+  cleanup, dark/light stages and sixteen fresh-context offline exports.

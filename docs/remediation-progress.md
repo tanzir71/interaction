@@ -1,28 +1,79 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 190 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 194 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and the first four Cursor demos in Pointer & Physics.
-The remaining work includes 209 existing demos, 121 new or extension components,
+and the first eight Cursor demos in Pointer & Physics.
+The remaining work includes 205 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 46 remaining demos.
-None of the 190 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 45 remaining demos.
+None of the 194 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 190 native compositions. The unfinished groups still account for
-21 overflow findings, one horizontal-scroll finding, 110 tiny-text findings and
-36 low-fill findings; findings can overlap within a demo. All 67 documented
+among these 194 native compositions. The unfinished groups still account for
+21 overflow findings, one horizontal-scroll finding, 107 tiny-text findings and
+36 low-fill findings; findings can overlap within a demo. All 70 documented
 Figma fill exceptions validate.
+
+## Cursor: repelling type, ripples, project previews and ghost drag
+
+Text Repel, Grid Ripple, Hover Preview and Drag Ghost follow v4 nodes `165:546`,
+`165:567`, `165:702` and `165:726`. Their four lazy modules preserve the other 45
+original Pointer & Physics objects, the first four completed cursor modules and
+395 stage metadata records. Chrome/control debt falls from 206 to 202; the motion
+baseline stays at 73. Three exact-geometry fill exceptions bring the allowlist
+to 70. The only new artwork file is the supplied 3.52px bright dot; five SVGs
+match existing local assets exactly.
+
+The native compositions retain every supplied slot: five 40px Geist glyphs and
+their cursor, all 117 grid dots including twelve bright positions, three precise
+placeholder rows beside the 80×60 aurora crop, and the 120×86 thrown card with its
+110×80 origin marker, two bars and cursor. Full views retain all nine MAKE SPACE
+glyphs, the complete responsive Gaussian field, all four original projects and
+the complete MOVE MATTER artifact. The original radius, squared force, spring,
+pulse, grid, propagation, lifetime, placement, velocity, damping, bounce, tilt,
+ghost-strength and ghost-fade formulas are checked against fixtures captured
+before editing. The original 16.667ms force denominator remains intact inside
+the fixed 60Hz simulation.
+
+Hover Preview replaces its retired generated content with the already credited
+forestDark, aurora, cityNight and archGrid photographs. All four project names
+and categories remain, along with the fourth image's original 70% crop. Native
+uses the exact aurora image; live full view resolves all four 1600px photographs,
+and offline exports embed the 800px files with their attribution. Inert templates
+keep the other full photographs out of thumbnail loading. The remaining retired
+photo inventory falls from 46 to 45 demos, with none among these 194 compositions.
+
+Mouse, keyboard and touch remain native. Quick touch seeds one original force
+step so the feedback is visible before the next frame; lift, leave or cancellation
+releases Text Repel and the glyphs return home. Ghost dragging retains pointer
+capture and release velocity, while Home centers and shared Reset restores the
+reference pose. Six-second native stories restore the complete reference,
+including the ghost's origin marker. Reduced motion starts still and retains
+direct input with opacity feedback. Dark and light stages preserve readable ink
+and original photo colours. Held input composes on resume; caller and viewport
+holds stay independent; disposal cancels frames, listeners, observers and capture.
+
+`node tools/verify-cursor-fields.js http://127.0.0.1:4173` passes 142,966 checks:
+complete original numeric fixtures, actual glyph transforms, all painted dots and
+ghost projections, exact native asset/type/primitive geometry, optical full text,
+physical input, quick-touch release, loop resets, both stage themes, suspension
+and cleanup, sixteen fresh-context offline exports and all four live photo credits.
+
+Sixteen interaction profiles cover thumbnail/full modes on desktop and at 4× CPU
+slowdown. Every profile matches the current module hash, measures about 60fps,
+and has p95 and maximum frame intervals at or below 16.8ms, with no missed frames
+or long tasks. The Text Repel profiles were refreshed after the touch fix; their
+earlier captures remain available for the final performance audit.
 
 ## Cursor: follower, sparks, cable and lens
 
 Gooey Cursor, Particle Emitter, Elastic Cable and Inverted Lens now follow v4
 nodes `165:480`, `165:500`, `165:525` and `163:1334`. Each has its own lazy source
-module. The other 49 Pointer & Physics registered objects and 395 stage metadata
-records are unchanged. The public library still contains 399 components.
+module. That pass left the other 49 Pointer & Physics registered objects and
+395 stage metadata records unchanged. The public library still contains 399 components.
 
 The native previews use all supplied SVGs in their original dimensions and
 positions: twelve new assets and two exact existing matches. Gooey Cursor keeps
