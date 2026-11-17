@@ -8585,17 +8585,33 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "dvd-screensaver": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "step",
+        "label": "Step frame"
+      },
+      {
+        "action": "corner",
+        "label": "Aim for corner"
+      },
+      {
+        "action": "toggle",
+        "label": "Pause"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "bounce",
@@ -8603,21 +8619,41 @@ INTRX.meta({
       "easter egg"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "konami-unlock": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "trigger": "press",
-    "controls": [],
+    "trigger": "type",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next key"
+      },
+      {
+        "action": "wrong",
+        "label": "Wrong key"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "keyboard",
@@ -8625,21 +8661,41 @@ INTRX.meta({
       "easter egg"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      300,
+      168
+    ]
   },
   "click-fireworks": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Launch"
+      },
+      {
+        "action": "toggle",
+        "label": "Pause sky"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -8647,21 +8703,41 @@ INTRX.meta({
       "click"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "drag-to-break": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "inspect",
+        "label": "Inspect intact"
+      },
+      {
+        "action": "shake",
+        "label": "Shake"
+      },
+      {
+        "action": "reset",
+        "label": "Repair"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -8669,21 +8745,41 @@ INTRX.meta({
       "shatter"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "pet-the-blob": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "trigger": "drag",
-    "controls": [],
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "inspect",
+        "label": "Inspect idle"
+      },
+      {
+        "action": "pet",
+        "label": "Pet"
+      },
+      {
+        "action": "reset",
+        "label": "Rest"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "character",
@@ -8691,21 +8787,41 @@ INTRX.meta({
       "pointer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "gravity-flip-page": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "flip",
+        "label": "Flip gravity"
+      },
+      {
+        "action": "step",
+        "label": "Step physics"
+      },
+      {
+        "action": "toggle",
+        "label": "Pause world"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "physics",
@@ -8713,21 +8829,41 @@ INTRX.meta({
       "ui fragments"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "wobbly-window-drag": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      360
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "impulse",
+        "label": "Nudge"
+      },
+      {
+        "action": "toggle",
+        "label": "Freeze spring"
+      },
+      {
+        "action": "reset",
+        "label": "Center"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -8735,21 +8871,41 @@ INTRX.meta({
       "window"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "snake-in-grid": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      420
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
-    "trigger": "press",
-    "controls": [],
+    "trigger": "type",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Play"
+      },
+      {
+        "action": "step",
+        "label": "Step once"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "game",
@@ -8757,8 +8913,12 @@ INTRX.meta({
       "canvas"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "bottom-sheet": {
     "designSize": [

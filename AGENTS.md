@@ -333,3 +333,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   offline exports. Native Bubble Pop has eight supplied slots; full retains
   all eighteen original bodies. Full Smoke reserves 400×340px for its complete
   mobile caption; its 600×400 physical field remains unchanged.
+- `node tools/verify-play.js http://127.0.0.1:4173` covers all eight v4 Play
+  demos. It compares 2,880 independent original model frames, every live
+  firework paint command, exact supplied SVG/type/primitive slots, native keys,
+  scaled mouse and touch, capture interruption, complete six-second stories,
+  60/120/240Hz clocks, independent holds, queued intent, reduced motion,
+  Canvas loss/recovery, complete SVG fallback, disposal and thirty-two fresh
+  network-blocked exports. Full Snake retains the complete 20×14 world and
+  eight foods; its native camera shows the supplied 10×8 grid. Gravity keeps
+  the original eight-body solver beneath a readable full composition. Konami's
+  exact eight-cap preview has a documented sparse-fill exception; the complete
+  ten-key sequence remains functional.

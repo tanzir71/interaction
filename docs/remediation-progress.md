@@ -1,21 +1,89 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 231 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 239 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all twenty-five Cursor demos, all ten Physics demos and all ten Liquid demos in
-Pointer & Physics. The remaining work includes 168 existing demos, 121 new or extension components,
+and all fifty-three Pointer & Physics demos, including the eight Play demos.
+The remaining work includes 160 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 39 remaining demos.
-None of the 231 remediated native compositions retains those references.
+None of the 239 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 231 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 74 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 82 documented
+among these 239 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 66 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Play: bounce, secrets, fireworks, fracture, pet, gravity, window and snake
+
+The final eight Pointer & Physics demos follow v4 nodes `164:877`, `164:896`,
+`164:936`, `164:969`, `164:992`, `164:1012`, `164:1033` and `164:1055`.
+Their existing lazy modules retain catalog order. The prior forty-five
+Pointer & Physics demos, 313 other source modules and 391 other metadata
+records stay unchanged. Chrome/control debt falls from 165 to 157 and motion
+debt from 66 to 62, without increasing either baseline. Konami adds the owner's
+documented sparse-fill exception: eight 32px caps, 4px gaps, 284×32px total
+against the 372×264px reference stage. All eighty-two earlier exceptions stay
+unchanged; overflow and text-size gates still apply.
+
+Thirty-six supplied SVG bindings preserve exact bytes, intrinsic fractional
+bounds and native callsites. Thirty-five assets are new; snake food reuses an
+existing byte-identical file. Native views keep the supplied badge, caps,
+sixteen firework rays and center, fracture slab, pet/rings, gravity page,
+window/shadow and 10×8 grid. No photo, credit, font or dependency changes.
+Portable assets now contain 468 aliases and eighteen unchanged photo credits.
+
+Full compositions retain all original numerical models and content: combined
+corner reflection and five bounce states; the complete ten-key secret, recovery
+rules and forty-eight confetti fixtures; all rockets, forty-two sparks per
+burst and delayed three-rocket salvo; both fracture thresholds and twelve
+polygons; slow-stroke pet affection, eye/lean fields and expiring hearts; all
+eight original gravity bodies; the complete window spring/bounds recurrence;
+and the 20×14 snake world, all eight foods, score and original collision rules.
+Gravity's readable full camera maps the unchanged source bodies into columns,
+preserving initial and floor/ceiling anchors. The full window reserves more
+height for its copy while retaining the original bound calculation. Snake's
+native camera follows its supplied six-cell pose through the complete world;
+full retains the original four-cell seed. All full type remains at least 11px
+at 390px, 375px and 360px.
+
+Physics uses a fixed source clock; the game preserves independent 145ms
+deadlines. Complete native stories loop every six seconds until deliberate
+input. Press and pop-in feedback use canonical motion tokens; reduced motion
+keeps meaningful stills, deliberate controls and the playable discrete game.
+Deferred intent, independent caller/viewport holds, released captures, stale
+launch cancellation and cleanup remain covered. Fireworks records every source
+substep, freezes actual pixels on Pause, and retains complete recursive trails
+in its SVG fallback. Graphics restoration preserves the current model.
+
+`node tools/verify-play.js http://127.0.0.1:4173` passes 477,250 checks across
+six suites, including 2,880 independently captured original frames, exact
+artwork, every original firework paint command, real scaled mouse/keys/touch,
+60/120/240Hz clocks, interruptions, holds, cleanup and thirty-two fresh-context
+network-blocked exports. Production exports contain no mutable test hook.
+
+Registry, stage, motion and generated-output checks pass, alongside 651 library
+checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
+checks, seventeen runtime/shell tests and eight CLI/MCP tests. A clean package
+install and its npm test command also pass. The eight native posters are
+refreshed. Source hashes bind the focused suites and broader checks to the
+committed modules. All 239 remediated native compositions pass every fit gate;
+the full audit still fails on unfinished groups.
+
+All sixteen desktop profiles average 59.9–60.0fps, with p95 frame intervals
+at most 16.8ms and no long tasks. Full Fracture retains one 33.3ms gap; the
+other fifteen profiles have no slow intervals. The sixteen 4× CPU profiles
+average 52.6–60.0fps and retain 105 slow intervals and twenty-four long tasks.
+Native Fireworks averages 53.7fps and full Window Drag 52.6fps, both with
+33.4ms p95 intervals. The final stress audit remains open. Complete samples
+and the incomplete first timing probe are retained with source/harness hashes.
+
+Repository Actions remain disabled and there are no active runs. A fresh live
+account check confirms the saved $0 Actions budget, Stop usage when budget
+limit is reached checked, and Usage blocked. No billing change was needed.
 
 ## Liquid: ink, melting type, smoke, bubbles and photographic fields
 

@@ -664,3 +664,25 @@ The remaining Liquid previews add fifteen unchanged supplied SVGs: two
 rings. All eight Bubble Pop slots reuse the correct pair at its intrinsic
 size; no SVG paths are extracted or redrawn. The portable bundle now has 432
 image aliases, the same seven font faces and eighteen photo-credit records.
+
+## Play keys, rays, fractures and soft objects
+
+The eight Play previews follow v4 nodes `164:877`, `164:896`, `164:936`,
+`164:969`, `164:992`, `164:1012`, `164:1033` and `164:1055`. Thirty-six SVG
+bindings retain the supplied bytes and intrinsic sizes: six key arrows,
+seventeen firework rays/center, six cracks, four pet body/face layers, two
+window layers and the snake food. Thirty-five files are new; the food reuses
+an existing byte-identical local asset. Fractional stroke/shadow bounds remain
+explicit CSS image dimensions. No SVG paths are extracted or redrawn.
+
+Native primitive geometry remains exact: the 220×150px bounce arena and
+68×26px badge; eight 32×32px caps with 4px gaps; the 160×110px fracture slab;
+the 60px pet and 84/108/132px rings; the 180×150px gravity page and four child
+frames; the 166×112px window body inside its 191×137px shadow export; and all
+eighty 16px snake cells on an 18px pitch. Konami's 284×32px row retains the
+owner-approved sparse-fill exception against the 372×264px Figma stage.
+
+Per-asset node IDs, root/render bounds, callsites and SHA-256 hashes are in
+`tools/fixtures/play-native-artwork.json`. The portable bundle now has 468
+image aliases, the same seven font faces and eighteen unchanged photo-credit
+records. This phase adds no photography or site dependencies.
