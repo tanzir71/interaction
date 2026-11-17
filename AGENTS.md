@@ -293,3 +293,11 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   physical mouse/keys/touch, captured drag/cancellation, queued intents and holds;
   cached thermal pixels, GPU/Canvas fallback, cleanup and sixteen offline exports
   with the original full content and verified photo attribution.
+- `node tools/verify-physics-core.js http://127.0.0.1:4173` covers v4 Spring
+  Follower, Pendulum Tags, Chain Links and Gravity Icons. It compares independent
+  original presets, angular impulses, all18 Verlet joints and complete ten-body
+  collision/throw fixtures; checks exact SVG and primitive geometry, live source
+  renderer agreement, real range/preset/keyboard input, scaled mouse and native
+  touch dragging, capture interruption, independent holds, cleanup, compact full
+  type and sixteen fresh-context offline exports. Native Gravity retains all
+  eleven v4 icon slots; its full composition retains the original ten symbols.

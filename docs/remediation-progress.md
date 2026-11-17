@@ -1,21 +1,84 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 211 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 215 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all twenty-five Cursor demos in Pointer & Physics.
-The remaining work includes 188 existing demos, 121 new or extension components,
+and all twenty-five Cursor demos plus four Physics demos in Pointer & Physics.
+The remaining work includes 184 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 42 remaining demos.
-None of the 211 remediated native compositions retains those references.
+None of the 215 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 211 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 94 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 78 documented
+among these 215 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 90 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 81 documented
 Figma fill exceptions validate.
+
+## Physics: spring response, pendulums, constraints and gravity
+
+Spring Follower, Pendulum Tags, Chain Links and Gravity Icons follow v4 nodes
+`163:1354`, `164:480`, `165:1061` and `164:508`. The four existing lazy modules
+retain their catalog positions; all twenty-five completed Cursor modules,
+twenty-four remaining original Pointer & Physics objects and 395 other stage
+records stay unchanged. Chrome/control debt falls to 181; motion debt stays at
+69. Three documented fill exceptions preserve the sparse spring, pendulums and
+outlined links, bringing the allowlist to 81. Photography provenance and the
+remaining retired-photo inventory stay unchanged.
+
+Native previews retain the exact 101.4×17.2062 spring artwork, 16px ring and 8px
+target; all five supplied 1px string slots, 24×32 tags and 180×3 rail; ten 24×14
+outlined chain links; and all eleven 34px icon cells with their supplied 16px
+artwork. Sixteen independently downloaded SVG sources retain their exact bytes;
+five reuse identical existing files. Native gravity keeps the complete v4 pile
+and floating lightning icon. Its full view keeps the original ten glyphs.
+
+Full Spring Follower retains both real range inputs, all three original presets,
+live stiffness/damping classification, 28px keyboard targeting, original bounds
+and semi-implicit Euler response. Pendulum Tags retains all five named/numbered
+tags, original physical lengths, localized falloff, alternating impulse weights,
+920 gravity and .992 Verlet damping. Chain Links retains all eighteen points,
+seventeen segments, fixed anchors, six ordered constraint passes, 850 gravity
+and original midpoint pulses. The ten native capsules project selected original
+joints, so the grabbed capsule follows its actual scaled pointer position.
+Arrows select a joint, Enter grabs/releases it, and arrows move the held joint
+with visible selection feedback. Space retains the original midpoint pulse.
+
+Full Gravity Icons retains all ten original symbols, seeded random-call order,
+980 acceleration, wall/floor restitution, friction, all three pair-collision
+passes, held-body exclusion and clamped throws. Its simulation clock preserves
+the original 60Hz timestamp arithmetic at sensitive contact boundaries. The
+native eleven-body study applies the same solver at its exact v4 size. Reduced
+full gravity shows a still from the original solver's settled drop; native
+reduced/coarse previews retain their exact reference poses. Deliberate input
+remains available with bounded opacity feedback.
+
+Independent captures cover 1,800 original simulation frames and adversarial
+collision pairs. The verifier compares every recorded joint/body, preset,
+impulse and paint sample; actual full renderers also match the source captures.
+Real range keys, presets, mouse, keyboard and touch dragging exercise live
+controls and scaled geometry. Caller/viewport holds release browser capture,
+freeze all physical fields and safely finalize interrupted grabs on resume.
+Reset ordering, complete disposal, equivalent 60/120/240Hz renderer clocks,
+compact full typography and sixteen fresh-context offline exports are checked.
+`node tools/verify-physics-core.js http://127.0.0.1:4173` passes 110,325 checks.
+
+All eight desktop profiles average 60fps, with p95 intervals at most 16.8ms,
+no missed intervals and no long tasks. The original eight 4× CPU profiles are
+retained: full Spring and native Pendulum have isolated slow frames, while full
+Gravity averages 54fps with 33.4ms p95, forty slow intervals and eight long tasks
+(71ms maximum). Separate traced runs of those three views hold 60fps without
+slow intervals. These differing measurements leave the stress performance tail
+open for the final audit; the clean diagnostic runs do not replace the originals.
+
+The fresh 399-demo fit audit has no violations among all 215 remediated native
+compositions. Registry generation, 651 library checks, 97 general offline
+exports, shell lifecycle checks, seventeen runtime/shell tests and eight CLI/MCP
+tests pass locally. GitHub Actions stays disabled, with no active runs, and the
+account-wide Actions budget is $0 with its hard stop enabled. This phase is
+committed and pushed directly without a PR or workflow run.
 
 ## Cursor: the five classic interactions
 
