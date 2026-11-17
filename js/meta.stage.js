@@ -3326,17 +3326,29 @@ INTRX.meta({
     ]
   },
   "css3d-isometric-hover": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      520
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "button"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3344,9 +3356,13 @@ INTRX.meta({
       "exploded view"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Explore the raised layers"
+    "caption": "Explore the raised layers",
+    "thumbDesignSize": [
+      204,
+      168
+    ]
   },
   "css3d-folding-map": {
     "designSize": [
@@ -3463,17 +3479,33 @@ INTRX.meta({
     ]
   },
   "css3d-depth-hero": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      460
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Hover"
+      },
+      {
+        "action": "depth",
+        "label": "Depth on"
+      },
+      {
+        "action": "reset",
+        "label": "Recenter"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3481,21 +3513,37 @@ INTRX.meta({
       "device tilt"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      232,
+      168
+    ]
   },
   "voxel-assemble": {
-    "designSize": "md",
+    "designSize": [
+      520,
+      440
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -3503,21 +3551,37 @@ INTRX.meta({
       "voxels"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      152,
+      112
+    ]
   },
   "css3d-exploded-device": {
-    "designSize": "md",
+    "designSize": [
+      560,
+      472
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "clip"
+      "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "activate",
+        "label": "Scroll"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "CSS 3D",
@@ -3525,8 +3589,12 @@ INTRX.meta({
       "device"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      212,
+      168
+    ]
   },
   "spring-cursor-follower": {
     "designSize": "md",

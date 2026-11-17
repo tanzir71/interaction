@@ -1,10 +1,15 @@
 # Visual remediation progress
 
-The v4 stage compositions are remediated for 182 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 186 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos and eight 3D & Perspective demos in Motion.
-The remaining work includes 217 existing demos, 121 new or extension components,
+demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion.
+The remaining work includes 213 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
+
+Full-view photography reconciliation and performance tails remain open. A current
+asset inventory finds retired generated photo references in 47 demos, including
+Parallax Room among those with a remediated native composition. Its full gallery
+needs approved v2 photographs; the other 46 references are in remaining demos.
 
 ## Scroll: Smooth Scroll and Stagger Reveal
 
@@ -626,3 +631,64 @@ for the final performance audit; the stress budget is not claimed as passed.
 Per the owner's 17 Nov instruction, GitHub Actions stays disabled and the
 account-wide Actions budget stays $0 with usage stopped at the limit. This
 phase is verified locally and pushed directly; Pages publication is paused.
+
+## 3D & Perspective: the voxel monument, device, depth hero and layer stack
+
+The final four native compositions follow v4 nodes `161:1153`, `161:1181`,
+`161:1259` and `162:692`. Nine supplied SVG files retain their exact bytes and
+intrinsic dimensions. The voxel sculpture uses all twelve original face slots;
+its 121×79.4px stroke-inclusive bounds have the owner's documented sparse-fill
+exception. Device and stack retain all three supplied planes. Depth Hero uses
+both independent dusk crops and the exact 34px Geist semibold headline. Compact
+planes fit the shared padding at their physical reference size.
+
+Full Voxel Assemble retains all 180 original coordinates, sorted draw order,
+eight accent positions, deterministic scatter, three faces and 14/7/14
+projection. The .15/.72 excavation recurrence now has an analytic fractional
+clock and the original settlement threshold. Actual painted faces are compared
+with independent original captures during assembly and quadratic gravity.
+The motion system supplies 400ms assembly, 40ms stagger capped at 300ms, a small
+80ms contact settle and 500ms collapse with the original 230px quadratic travel
+and 600ms rebuild hold. Reversals start at the visible pose. Three cached
+Path2D faces reduce repeated Canvas calls without changing their vertices;
+invisible faces skip drawing. Scaled pointer input, 12/24px arrow steps,
+centered excavation and interrupted rebuilding remain available.
+
+Exploded Device keeps its complete four-layer circuit board, screen, glass,
+labels and 132×174px scene. Assembled Z positions remain 0/8/16/24; exploded
+positions remain 0/50/100/150. Its original 8s, ±3° sway is retained. A real
+scroll viewport maps wheel, touch and keyboard input to separation; hover,
+pinning and Escape remain available. Opening takes 400ms, closing 250ms, with
+40ms forward/reverse stagger and actual 150ms contact feedback. The native
+six-second story begins at the exact expanded reference checkpoint.
+
+Depth Hero retains all five original depth planes, angle limits, pointer and
+key increments, complete copy, orbit and foreground readouts. Its full view
+replaces the retired generated background with the approved, credited dusk
+photograph. Native depth compensation preserves both exact reference crops at
+rest. Follow takes 400ms and return 1000ms; the depth comparison remains
+available. Foreground readouts stay inside their mask at every camera limit
+on 390/375/360px screens. Full copy has a neutral contrast layer.
+
+Isometric Stack keeps all five original report layers, the complete 64.8
+report, controls, bar heights and legend descriptions. Its 225×155px world
+retains the original 58°/−40° basis, assembled and exploded Z positions,
+12→14px shadow offset and .22 isolation opacity. Native selection lifts the
+chosen supplied slab by 20px; full hover, focus, pinning and Escape remain
+available. The telling native still starts with the top slab lifted. Follow
+takes 400ms and return 1000ms, with 150ms highlight opacity.
+
+`node tools/verify-perspective-final.js http://127.0.0.1:4173` covers independent
+original fixtures, actual painted geometry, every native SVG/photo/type slot,
+real pointer/wheel/keys/touch, interrupted motion, complete renderer stories at
+60/120/240Hz, queued Reset and later explicit intent, independent caller and
+viewport holds, compact full typography, clipped-text protection, disposal and
+eight fresh-context network-blocked exports. Reduced motion holds the native
+reference and retains deliberate input with 150ms opacity feedback.
+
+All eight current desktop profiles have p95 frame intervals at most 16.8ms
+and no long tasks; full voxel retains one 66.7ms gap. Cached paths reduced
+full voxel's measured stress long tasks from 34 to 16 and increased its
+average from 43.2 to 47.1fps. Stress runs still retain gaps and long tasks;
+full voxel and Depth Hero exceed the frame budget. All old and current results
+remain recorded for the final performance audit.

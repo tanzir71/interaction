@@ -20,6 +20,9 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 - Demos never draw their own outer panel or replay/reset buttons; expose actions and list them in `controls`.
 - Rendered thumbnail text ≥ 11px; neutral greys + one accent per demo (no decorative hues); reduced-motion branch required.
 - Build what the v4 tile in Figma shows; the tile wins over older art and older demos.
+- Full compositions also use approved v2 photography. Migrate the retired
+  generated `coastal-stack`, `limestone-pavilion` and `atlantic-shore` content
+  while preserving original interaction models and copy.
 - Owner clarification, 15 Nov 2026: sparse controls keep the exact Figma size
   when it conflicts with the 12% fill heuristic. Document each exception and its
   reference geometry in `tools/stage-fit-allowlist.json`. This changes only the
@@ -244,3 +247,9 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   pixels, actual GPU uniforms and 60/120/240Hz renderer clocks, native drag,
   keys and touch, queued intent, holds, context loss/recovery, complete Canvas
   fallback, resource cleanup, compact type and fresh-context offline exports.
+- `node tools/verify-perspective-final.js http://127.0.0.1:4173` covers v4
+  Voxel Assemble, Exploded Device, Depth Hero and Isometric Stack: original
+  blocks, excavation, device and layer geometry, actual painted faces, exact
+  native SVG/photo/type slots, real wheel/keys/touch, interrupted transitions,
+  60/120/240Hz renderer clocks, queued intents, independent holds, clipped-text
+  protection at every camera limit, cleanup and eight fresh-context exports.
