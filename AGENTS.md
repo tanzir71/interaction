@@ -344,3 +344,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   the original eight-body solver beneath a readable full composition. Konami's
   exact eight-cap preview has a documented sparse-fill exception; the complete
   ten-key sequence remains functional.
+- `node tools/verify-image-core.js http://127.0.0.1:4173` covers v4 Particle
+  Dissolve, Clip Reveal, Hover Zoom Card, Pixelate Reveal and Focus Grid. It
+  compares all 1,464 original glyph particles across 360 source frames, actual
+  particle paint commands, every pixel channel against the unmodified original
+  drawing function, and live idle matrices against the original CSS keyframes.
+  It checks all 151 native nodes, 96 supplied SVG instances, ten exact photo
+  slots, complete full content, native mouse/keys/touch, interrupted reveals,
+  queued intent, independent holds, 60/120/240Hz clocks, six-second stories,
+  Canvas/SVG recovery, cleanup, compact type and twenty fresh-context offline
+  exports. Native Focus Grid has six supplied tiles; full keeps five original
+  items. The original sampling color is retained offscreen to preserve glyph
+  edge samples; visible particles use the v4 accent.

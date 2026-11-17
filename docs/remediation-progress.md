@@ -1,21 +1,102 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 239 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 244 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all fifty-three Pointer & Physics demos, including the eight Play demos.
-The remaining work includes 160 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and the first five Image & WebGL demos.
+The remaining work includes 155 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 39 remaining demos.
-None of the 239 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 35 remaining demos.
+None of the 244 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 239 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 66 tiny-text findings and
+among these 244 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 63 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Image & WebGL: particles, clip, zoom, resolution and focus
+
+Particle Dissolve, Clip Reveal, Hover Zoom Card, Pixelate Reveal and Focus Grid
+follow v4 nodes `168:807`, `168:922`, `168:942`, `168:961` and `168:1005`.
+Five separate lazy modules preserve catalog order. The original WebGL Hover
+Distortion object remains unchanged in its existing module, alongside 320 other
+unchanged original source modules, 394 other objects and 394 other metadata
+records. Stage debt falls from 157 to 152 and motion debt from 62 to 57 without
+growing either baseline. All eighty-three earlier fill exceptions remain
+unchanged; these five native compositions use the ordinary fill gate.
+
+All 151 supplied native nodes retain their geometry. Eight exact SVG payloads
+appear in ninety-six particle slots with their fractional root dimensions.
+Ten native photo slots resolve to previously verified local photographs;
+full compositions retain the original content using the same approved v2 set.
+No photo-credit record, font or dependency changes. Four full compositions
+replace retired generated imagery, leaving 35 demos to migrate. Portable assets
+now contain 476 aliases and eighteen unchanged photo credits.
+
+Full Particle Dissolve retains the original FORM bitmap, all 1,464 sampled
+homes, seeds and delays, drift/turbulence, distance alpha and .06/.82 reforming
+spring. The offscreen sampler keeps its original color: changing it alters four
+antialiased edge samples. The visible paint uses the native mint accent.
+All 360 complete original frame states and every live paint command agree with
+independent captures. A complete SVG renderer retains every particle during
+Canvas loss, and restoration preserves the current pose.
+
+Clip Reveal retains three complete photographs, numbered captions, inset masks
+and the original 1.3→1 counter-scale. Replay, Close and Reveal interrupt from
+the current state. Canonical 400ms movement, 40ms stagger and faster 150ms exit
+replace the old timings. Hover Zoom keeps both original project captions,
+1.01/1.08 zoom endpoints and signed eight-pixel pointer field. Its 6s/6.8s
+alternating idle transforms agree with the original CSS animation engine.
+Deliberate mouse, focus or touch input ends the original idle behavior.
+
+Pixelate Reveal retains all six 2/4/8/16/32/100-percent backing resolutions,
+the exact cover crop, 300ms opening hold, 180ms deadlines, final cleanup callback
+and manual cancellation. The actual Canvas output matches every channel of the
+unmodified original drawing function at three widths and two DPR settings.
+The native telling still retains the supplied checker and divider; deliberate
+input runs the real photographic sampling model. CPU sampling supplies every
+cell in the SVG fallback during graphics loss.
+
+Focus Grid keeps all five full photo slots, original crops and numbered items,
+sibling grayscale/brightness/opacity, and its 5s idle with .42s phase offsets.
+The native camera has all six supplied photographs and the exact Silk focus
+checkpoint. Live idle transforms and opacity match the original CSS keyframes.
+Hover lift and elevation follow the canonical 2px, 150ms-in/250ms-out recipe.
+The native selection shadow follows the selected photograph. Keyboard focus,
+pinning and touch retain access to every item; vertical gestures yield page
+scrolling. Reduced motion preserves deliberate state feedback and designed
+stills. Explicit queued Reset takes priority over incidental held hover.
+
+`node tools/verify-image-core.js http://127.0.0.1:4173` passes 29,929,121 checks
+across seven suites, including exact assets and native geometry, complete source
+models and paint, real input, 60/120/240Hz clocks, six-second stories, independent
+caller/viewport holds, interruptions, graphics recovery, resource cleanup,
+390/375/360px full typography and twenty fresh network-blocked exports.
+
+Registry, stage, motion and generated-output checks pass, with 651 library
+checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
+checks, seventeen runtime/shell tests and eight CLI/MCP tests. The five native
+posters are refreshed. Source hashes bind the focused suites and broad checks
+to the committed modules. All 244 remediated native compositions pass every fit
+gate; the full audit still fails on unfinished groups. The package test was
+rechecked successfully after an overlapping clean dependency install finished.
+
+All ten current desktop profiles average 59.9–60.0fps, with p95 frame
+intervals at most 16.8ms, 1 slow interval and 0 long tasks.
+The ten 4× CPU profiles average 45.1–60.0fps and retain 192 slow intervals
+and 19 long tasks, up to 107.0ms. Particle Dissolve averages 50.2fps
+in native and 45.1fps in full; its 4× CPU 60fps target remains open.
+Measurements share this host with other active work. The earlier source-bound
+profiles and separate model/render/style diagnostics are retained, including
+the mixed results of an experimental layer hint that was not shipped.
+
+
+Repository Actions remain disabled. Verification runs locally, and this phase
+is committed and pushed directly. The account-wide Actions budget stays $0
+with usage stopped at the limit; Pages publication remains paused.
 
 ## Play: bounce, secrets, fireworks, fracture, pet, gravity, window and snake
 

@@ -686,3 +686,29 @@ Per-asset node IDs, root/render bounds, callsites and SHA-256 hashes are in
 `tools/fixtures/play-native-artwork.json`. The portable bundle now has 468
 image aliases, the same seven font faces and eighteen unchanged photo-credit
 records. This phase adds no photography or site dependencies.
+
+## Image reveals, particle dust and focused photographs
+
+Particle Dissolve, Clip Reveal, Hover Zoom Card, Pixelate Reveal and Focus Grid
+follow v4 nodes `168:807`, `168:922`, `168:942`, `168:961` and `168:1005`.
+Eight supplied SVG exports retain their exact bytes and intrinsic square sizes
+6, 5.3, 4.6, 3.9, 3.2, 2.5, 1.8 and 1.1px. Their ninety-six native instances
+keep all eight columns and twelve rows, the supplied mint fills and opacity.
+Fractional CSS dimensions prevent HTML width attributes from truncating them.
+
+The ten native photo slots reuse the verified Aurora, City Teal, Forest Blue,
+Dusk, Embers, Silk, Ocean and Roses files. Full compositions also reuse Sea
+and Architectural Grid for the original project and field-study content.
+Independent matches against the freshly exported Figma JPEGs have thumbnail
+RGB RMS 0.39–1.41; hashes bind those comparisons to the unchanged local
+photographs. No new photo, photographer, licence record or font is introduced.
+Figma raw-image arrays are resolved by content identity rather than their
+returned order.
+
+Native image dimensions and crops remain exact: the 120×150px Aurora mask over
+a 200×150px photograph; 140×98px City inset; the 240×178px Forest crop at
+−20/−14 inside its 200×150px card; the 200×150px Dusk photo with all twenty-four
+25px checker cells and its 1px divider; and all six 52px Focus Grid photographs.
+The native stills use real local photographs and original vector exports;
+Figma screenshots are reference evidence only. The portable bundle now has
+476 image aliases, the same seven font faces and eighteen photo-credit records.
