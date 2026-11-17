@@ -1,21 +1,86 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 221 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 225 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and all twenty-five Cursor demos plus all ten Physics demos in Pointer & Physics.
-The remaining work includes 178 existing demos, 121 new or extension components,
+and all twenty-five Cursor demos, all ten Physics demos and four Liquid demos in
+Pointer & Physics. The remaining work includes 174 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 42 remaining demos.
-None of the 221 remediated native compositions retains those references.
+None of the 225 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 221 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 84 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 81 documented
+among these 225 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 80 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 82 documented
 Figma fill exceptions validate.
+
+## Liquid: membranes, magnetic fields, water and thermal bodies
+
+Liquid Buttons, Ferrofluid, Water Ripple and Lava Lamp follow v4 nodes
+`164:1272`, `164:1201`, `164:691` and `164:712`. Four existing lazy modules keep
+their catalog positions. The prior 35 Cursor/Physics modules, fourteen remaining
+original Pointer & Physics objects and 395 other metadata records stay unchanged.
+Chrome/control debt falls to 171 and motion debt to 68. One documented fill
+exception preserves the two 84×40 liquid controls and their 12px separation.
+Ferrofluid's 55-bar field and the complete lamp remain at their exact sizes.
+
+Eight supplied SVGs retain their exact bytes and intrinsic dimensions: the
+orange membrane, all five water layers, the complete lamp and its shadow.
+Native labels retain the supplied 13.5px Inter styling with optical protection
+at compact widths. Full membranes retain Explore, Listen and Collect, the
+original normalized pointer-radius and tilt equations, active state, energy
+decay and staggered pulse. Reset starts a new generation so an old pulse or
+rest timer cannot alter the new state.
+
+Full Ferrofluid retains all 35 original sources and the complete 288×180 scalar
+field. Its GPU renderer evaluates every source at every pixel and reads the
+coverage channel; Canvas fallback evaluates the complete original raster.
+The renderer caches the uploaded field values and program locations, avoiding
+duplicate readbacks when input has not yet changed a simulation pose. A draw-call
+regression checks both reuse and the next complete two-pass field update.
+Independent source captures verify exact CPU pixels. Live GPU channels are
+compared with the original raster to within one intensity step. The native
+55-bar composition responds through the same source field and retains every
+reference height, opacity, corner and position.
+
+Water retains all 128×80 cells and three Float32 buffers, ordered wave updates,
+original wake and splash kernels, gradient luminance, pause and clear behavior.
+The five supplied native textures deform through those wave gradients, with
+complete software fallback. Full lava retains all seven original bodies,
+thermal phases, wrap equations, overlaps, merge, palette and native heat range.
+Its compact view preserves the three colored regions of the supplied texture
+while the vessel stays fixed; their movement projects original trajectories.
+Palette also changes the compact lamp and shadow, and Reset restores their
+supplied reference color.
+
+The verifier covers original captures across 1,440 frames, complete live pixels,
+native mouse/keys/touch, scaled drag capture, heat-range input, independent
+caller/viewport holds, queued intent, six-second stories, 60/120/240Hz clocks,
+graphics loss/recovery, reduced/coarse stills, compact typography, cleanup and
+sixteen fresh-context offline exports. Photography provenance and the remaining
+retired-photo inventory stay unchanged.
+
+`node tools/verify-liquid-core.js http://127.0.0.1:4173` passes 3,084,359 checks
+across six suites. Registry, stage, motion and generated-output checks pass,
+alongside 651 library checks, all 399 lazy previews, 97 general offline exports,
+browser stage-runtime checks, seventeen runtime/shell tests and eight CLI/MCP
+tests. A fresh full audit passes every gate among all 225 remediated native
+compositions. Eight supplied SVGs are self-hosted, and the four native posters
+are refreshed. No shared shell/runtime, prior component or photo-credit changes
+are needed for this group.
+
+All eight current desktop profiles and eight 4× CPU profiles average 60fps,
+with p95 intervals at most 16.8ms, no slow intervals and no long tasks. The
+retained uncached run recorded 28 slow intervals across eight 4× views, with
+full Ferrofluid averaging 57.4fps. Its traced diagnostic averaged 51.2fps and
+recorded 81 slow intervals; repeated GPU readbacks dominated the recorded work.
+The original and optimized measurements remain available. Timing in unchanged
+views also varies between runs, and the broader final stress audit remains open.
+Verification stays local with repository Actions disabled and the account's
+verified $0 Actions budget and stop-at-limit setting preserved.
 
 ## Physics: collisions, soft mesh, cloth, impact and snapping
 

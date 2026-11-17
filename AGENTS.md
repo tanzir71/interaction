@@ -311,3 +311,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   fallback and resource cleanup; compact full type and twenty-four fresh-context
   offline exports. Native Collision retains nineteen bubbles versus twelve in
   full; native Snap retains two modules versus all six original full modules.
+- `node tools/verify-liquid-core.js http://127.0.0.1:4173` covers v4 Liquid
+  Buttons, Ferrofluid, Water Ripple and Lava Lamp. It compares 1,440 independent
+  original frames, all scalar pixels and wave-buffer hashes, exact native SVG
+  slots and all 55 supplied primitive bars. It checks complete live GPU/Canvas
+  output, all seven thermal transforms, actual 60/120/240Hz clocks, six-second
+  native stories, real keyboard/mouse/touch and range input, reset generations,
+  independent holds, context loss/recovery, software fallback, compact type,
+  cleanup and sixteen fresh-context offline exports. Native membranes retain
+  two controls versus three in full; native lava retains the three supplied
+  colored regions while full retains all seven original bodies.
