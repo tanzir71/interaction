@@ -271,3 +271,10 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   primitive geometry; actual transforms and GPU/Canvas output; physical input,
   moving touch targets, equivalent clocks, loop resets, queued intents, holds,
   cleanup, themes, compact full type and sixteen fresh-context offline exports.
+- `node tools/verify-cursor-targets.js http://127.0.0.1:4173` covers v4 Snap
+  Targets, Flashlight, Glyph Rain and Magnetic Grid. It compares original snap,
+  beam/noise, complete particle and sampled-path fixtures; exact native SVG and
+  photo slots; physical mouse/keys/touch; native stories, interruption, equivalent
+  clocks, queued input, independent holds and cleanup; GPU/Canvas fallback,
+  compact type, beam compositing and cached glyph fidelity, plus sixteen offline
+  exports with the complete original content and both photo credits.

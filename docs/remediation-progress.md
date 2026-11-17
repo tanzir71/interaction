@@ -1,21 +1,75 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 198 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 202 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-and the first twelve Cursor demos in Pointer & Physics.
-The remaining work includes 201 existing demos, 121 new or extension components,
+and the first sixteen Cursor demos in Pointer & Physics.
+The remaining work includes 197 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 45 remaining demos.
-None of the 198 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 44 remaining demos.
+None of the 202 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 198 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 104 tiny-text findings and
-35 low-fill findings; findings can overlap within a demo. All 72 documented
+among these 202 native compositions. The unfinished groups still account for
+21 overflow findings, zero horizontal-scroll findings, 100 tiny-text findings and
+35 low-fill findings; findings can overlap within a demo. All 74 documented
 Figma fill exceptions validate.
+
+## Cursor: snap targets, flashlight, glyph rain and magnetic grid
+
+Snap Targets, Flashlight, Glyph Rain and Magnetic Grid follow v4 nodes `165:807`,
+`165:836`, `165:859` and `165:884`. Four lazy modules retain the other 37 original
+Pointer & Physics objects, all twelve completed cursor modules and 395 stage
+metadata records. Chrome/control debt falls from 198 to 194; the motion baseline
+stays at 73. Two exact-geometry fill exceptions preserve the sparse target and
+glyph compositions, bringing the allowlist to 74. Eighteen new supplied SVGs and
+four exact existing matches retain their complete original bytes and root sizes.
+
+Native previews retain the three 40px targets, 16px icons and 52px circular-corner
+outline; the 220×150 forest card and exact luminance stencil; all seven geometric
+glyph slots and their cursor; and every one of the seventeen magnetic line slots.
+The flashlight's initial full-photo reference fades after 650ms into its moving
+supplied stencil; the same photograph counter-transforms to keep its crop fixed.
+Native magnetic motion deforms the unchanged vertical and horizontal SVG textures
+through one owned graphics context, with a complete Canvas fallback.
+
+Full views preserve Archive / 24 projects, Play / Film 01:42 and About the studio /
+Since 2014 with their original bounds, snap padding, radii and independent springs.
+The changing outline is a vector path with real circular arcs. Flashlight retains
+WHAT / THE DARK / KEEPS, both rotated photo panels, captions and orbit. Its retired
+generated imagery becomes the approved forestDark and archGrid photographs,
+resolving 1600px in live full views and 800px in native previews and exports, with
+both existing photographer credits. The remaining retired-photo inventory falls
+from 45 to 44 demos, with none among these 202 native compositions.
+
+The independent original fixtures cover all beam-follow, radius, flicker and flare
+samples, the seeded 128×64 noise and five actual Canvas readbacks; all ten original
+glyphs, the 28/12-particle bursts, complete 160-body cap, random-call order, gravity,
+bounces, settlement and lifetime; and all eighteen original full magnetic paths,
+their 13/19 samples, quadratic smoothing, orientation gains and both polarities.
+Fixed 60Hz simulations retain the original trajectories at 60/120/240Hz rendering.
+
+Flashlight composes fixed radial masks with transforms while retaining the original
+optical stops and world-fixed grain. Glyph Rain caches exact native SVGs and all
+ten full Inter glyphs as immutable sprite bitmaps; particle count, physics and
+content remain complete. Independent screenshot and raster checks compare six
+beam poses and all glyphs at three sizes in both themes, including ink coverage,
+alignment and compact optical sizing. Physical mouse, keyboard and touch, six-second
+native stories, interrupted input, queued intents, independent caller/viewport
+holds, resource cleanup and sixteen fresh-context offline exports are covered by
+`node tools/verify-cursor-targets.js http://127.0.0.1:4173`, which passes 79,116 checks.
+
+All sixteen final interaction profiles match the verified module hashes. All eight
+desktop profiles hold about 60fps, with p95/max intervals at or below 16.8ms, no
+missed frames and no long tasks. At 4× CPU slowdown the complete capture ranges
+from 35.14 to 60fps, with 289 missed frames and 73 long tasks, concentrated in full
+Glyph Rain and Magnetic Grid. The worst gap is 116.7ms and longest task 105ms.
+The full Glyph Rain p95 reaches 66.7ms and Magnetic Grid reaches 33.4ms. These
+stress costs remain open for the performance audit. Earlier and isolated renderer
+captures are retained alongside this complete capture; a faster isolated result
+does not establish a stable stress-performance fix.
 
 ## Cursor: watching eyes, liquid masses, rope and velocity
 

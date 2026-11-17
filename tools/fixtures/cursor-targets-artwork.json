@@ -1,0 +1,634 @@
+{
+  "assets": {
+    "snap-image": {
+      "key": "pointer-snap-image",
+      "file": "assets/components/pointer-snap-image.svg",
+      "width": 16,
+      "height": 16,
+      "sha256": "7d4bd8b2183aa612e858691b7c1c788f93ff48cde015566c05347f480b05ce93",
+      "source": ".artifacts/pointer-v4/downloads-targets/snap-image.svg",
+      "reused": false
+    },
+    "snap-file": {
+      "key": "tooltip-save",
+      "file": "assets/components/tooltip-save.svg",
+      "width": 16,
+      "height": 16,
+      "sha256": "b003bb785da0fbd7873672f2cbe3b61e8eedc98522639a3f3cfe005ae6e954f4",
+      "source": ".artifacts/pointer-v4/downloads-targets/snap-file.svg",
+      "reused": true
+    },
+    "snap-link": {
+      "key": "pointer-snap-link",
+      "file": "assets/components/pointer-snap-link.svg",
+      "width": 16,
+      "height": 16,
+      "sha256": "40454c05ab4251376dd9c283e36b1e0b67d993cfddef71841f4d29f34e2ce3e8",
+      "source": ".artifacts/pointer-v4/downloads-targets/snap-link.svg",
+      "reused": false
+    },
+    "flashlight-mask": {
+      "key": "pointer-flashlight-mask",
+      "file": "assets/components/pointer-flashlight-mask.svg",
+      "width": 220,
+      "height": 150,
+      "sha256": "1a39a933cad665fdc82857158a5b6637bec56ed1183e9eb376fd275d19699881",
+      "source": ".artifacts/pointer-v4/downloads-targets/flashlight-mask.svg",
+      "reused": false
+    },
+    "rain-circle": {
+      "key": "scroll-route-dot-on",
+      "file": "assets/components/scroll-route-dot-on.svg",
+      "width": 10,
+      "height": 10,
+      "sha256": "64f9d326965d97f8b1f8926c501ad5560be33f612935445f1af0d7e7824ebf4e",
+      "source": ".artifacts/pointer-v4/downloads-targets/rain-circle.svg",
+      "reused": true
+    },
+    "rain-triangle": {
+      "key": "pointer-rain-triangle",
+      "file": "assets/components/pointer-rain-triangle.svg",
+      "width": 10.3923,
+      "height": 9,
+      "sha256": "2be791ffb3f974b077c3e6c078488c978b0ffa0213097923c47c6258b4783eb7",
+      "source": ".artifacts/pointer-v4/downloads-targets/rain-triangle.svg",
+      "reused": false
+    },
+    "rain-pointer": {
+      "key": "swap-pointer",
+      "file": "assets/components/swap-pointer.svg",
+      "width": 28.5,
+      "height": 29.25,
+      "sha256": "3c7f5b9c2ff027983345086c27f7351433fbdc96ad2ad695a579907094f55110",
+      "source": ".artifacts/pointer-v4/downloads-targets/rain-pointer.svg",
+      "reused": true
+    },
+    "magnetic-00": {
+      "key": "pointer-magnetic-00",
+      "file": "assets/components/pointer-magnetic-00.svg",
+      "width": 1,
+      "height": 145,
+      "sha256": "e4829d123f57f487c41d79e8ba4cd8f558156b4994f8cd777564d409b9ce6357",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-00.svg",
+      "reused": false
+    },
+    "magnetic-01": {
+      "key": "pointer-magnetic-01",
+      "file": "assets/components/pointer-magnetic-01.svg",
+      "width": 4.5,
+      "height": 145,
+      "sha256": "3da441c0de8e18fe77a2bda11d6a1556443b3c171f206242f3810511c77e2bba",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-01.svg",
+      "reused": false
+    },
+    "magnetic-02": {
+      "key": "pointer-magnetic-02",
+      "file": "assets/components/pointer-magnetic-02.svg",
+      "width": 8,
+      "height": 145,
+      "sha256": "d989f7ef75bb2ba31b51eeaacc41e5e8bcd65dbb1aac700c5ffb323792507c2f",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-02.svg",
+      "reused": false
+    },
+    "magnetic-03": {
+      "key": "pointer-magnetic-03",
+      "file": "assets/components/pointer-magnetic-03.svg",
+      "width": 11.5,
+      "height": 145,
+      "sha256": "00dfb2a22e2207ed3c6c537379358e02b3dd9bc708a7cb135b1e2bd8d8376e5c",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-03.svg",
+      "reused": false
+    },
+    "magnetic-04": {
+      "key": "pointer-magnetic-04",
+      "file": "assets/components/pointer-magnetic-04.svg",
+      "width": 11.5,
+      "height": 145,
+      "sha256": "7856b86c8d150390b807332be782b8bc90ed28ac73de937f33e77ffe397b7294",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-04.svg",
+      "reused": false
+    },
+    "magnetic-05": {
+      "key": "pointer-magnetic-05",
+      "file": "assets/components/pointer-magnetic-05.svg",
+      "width": 8,
+      "height": 145,
+      "sha256": "fcaf23d4e73389d68ef7b1a081865c4c2b0d4bca784fbd7704a641287093f204",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-05.svg",
+      "reused": false
+    },
+    "magnetic-06": {
+      "key": "pointer-magnetic-06",
+      "file": "assets/components/pointer-magnetic-06.svg",
+      "width": 4.5,
+      "height": 145,
+      "sha256": "a960827f4014c0c71fc0f5c5cf622676a6467180f2f3e7b790eedd6b08026c77",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-06.svg",
+      "reused": false
+    },
+    "magnetic-07": {
+      "key": "pointer-magnetic-07",
+      "file": "assets/components/pointer-magnetic-07.svg",
+      "width": 161,
+      "height": 1,
+      "sha256": "698eef97840c15e2012460d3091916fc6027369431650c06dcf19cbd0e0556c8",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-07.svg",
+      "reused": false
+    },
+    "magnetic-08": {
+      "key": "pointer-magnetic-08",
+      "file": "assets/components/pointer-magnetic-08.svg",
+      "width": 161,
+      "height": 5,
+      "sha256": "e79cd82051ee3e481647b5f9d5284c07923ab5b01f4b718213ce2e3c5317b5ac",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-08.svg",
+      "reused": false
+    },
+    "magnetic-09": {
+      "key": "pointer-magnetic-09",
+      "file": "assets/components/pointer-magnetic-09.svg",
+      "width": 161,
+      "height": 9,
+      "sha256": "86f0de27a3baf1f502b830519f7e998de7ba2c642764b5cc1895b168ef0a2efb",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-09.svg",
+      "reused": false
+    },
+    "magnetic-10": {
+      "key": "pointer-magnetic-10",
+      "file": "assets/components/pointer-magnetic-10.svg",
+      "width": 161,
+      "height": 13,
+      "sha256": "0fb12f3bb3006f918fec8596d78efbd49673fba204812ed6d255750d1550c668",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-10.svg",
+      "reused": false
+    },
+    "magnetic-11": {
+      "key": "pointer-magnetic-11",
+      "file": "assets/components/pointer-magnetic-11.svg",
+      "width": 161,
+      "height": 13,
+      "sha256": "5a93aaf4358179b576c9dfcf29e6d223e6b835d1c9a63d1ba6b6774870371e4d",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-11.svg",
+      "reused": false
+    },
+    "magnetic-12": {
+      "key": "pointer-magnetic-12",
+      "file": "assets/components/pointer-magnetic-12.svg",
+      "width": 161,
+      "height": 9,
+      "sha256": "82aeb85db8e4e23a75dfa4e6513e7eca3a6881fca294595752a6f4aa53060e68",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-12.svg",
+      "reused": false
+    },
+    "magnetic-13": {
+      "key": "pointer-magnetic-13",
+      "file": "assets/components/pointer-magnetic-13.svg",
+      "width": 161,
+      "height": 5,
+      "sha256": "02422f520f79c95abaf455c1722736577fadab36e27ec2738e0dd642f2474afa",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-13.svg",
+      "reused": false
+    },
+    "magnetic-pointer": {
+      "key": "layout2-carousel-pointer",
+      "file": "assets/components/layout2-carousel-pointer.svg",
+      "width": 28.5,
+      "height": 29.25,
+      "sha256": "2e16409f0ceb993a5120a438eea9e99f1e56cc7c8d61a29c1089e0b2360bf00f",
+      "source": ".artifacts/pointer-v4/downloads-targets/magnetic-pointer.svg",
+      "reused": true
+    }
+  },
+  "referencePhoto": {
+    "key": "forestDark",
+    "file": ".artifacts/pointer-v4/downloads-targets/forestDark.png",
+    "sha256": "a7604b9fe3ba5a7259a9812951e0339944318a2f44b4799b2f1d7f2a237647c9"
+  },
+  "geometry": {
+    "cursor-snap-targets": [
+      {
+        "name": "snap-image",
+        "selector": ".d-snap-icon",
+        "nth": 0,
+        "x": 62,
+        "y": 76,
+        "w": 16,
+        "h": 16
+      },
+      {
+        "name": "snap-file",
+        "selector": ".d-snap-icon",
+        "nth": 1,
+        "x": 122,
+        "y": 76,
+        "w": 16,
+        "h": 16
+      },
+      {
+        "name": "snap-link",
+        "selector": ".d-snap-icon",
+        "nth": 2,
+        "x": 182,
+        "y": 76,
+        "w": 16,
+        "h": 16
+      }
+    ],
+    "cursor-flashlight-noise": [],
+    "cursor-emoji-rain": [
+      {
+        "name": "rain-circle",
+        "selector": ".d-rain-native-image[data-slot=\"0\"]",
+        "x": 62.3,
+        "y": 60.78,
+        "w": 10,
+        "h": 10
+      },
+      {
+        "name": "rain-triangle",
+        "selector": ".d-rain-native-image[data-slot=\"1\"]",
+        "x": 74.844,
+        "y": 41.96,
+        "w": 10.3923,
+        "h": 9
+      },
+      {
+        "name": "rain-circle",
+        "selector": ".d-rain-native-image[data-slot=\"3\"]",
+        "x": 115,
+        "y": 27,
+        "w": 10,
+        "h": 10
+      },
+      {
+        "name": "rain-triangle",
+        "selector": ".d-rain-native-image[data-slot=\"5\"]",
+        "x": 154.764,
+        "y": 41.96,
+        "w": 10.3923,
+        "h": 9
+      },
+      {
+        "name": "rain-circle",
+        "selector": ".d-rain-native-image[data-slot=\"6\"]",
+        "x": 167.7,
+        "y": 60.78,
+        "w": 10,
+        "h": 10
+      },
+      {
+        "name": "rain-pointer",
+        "selector": ".d-rain-pointer",
+        "x": 111.125,
+        "y": 81.625,
+        "w": 28.5,
+        "h": 29.25
+      }
+    ],
+    "cursor-magnetic-grid-lines": [
+      {
+        "name": "magnetic-00",
+        "selector": ".d-gridline-native-vector[data-slot=\"v0\"]",
+        "x": 39.5,
+        "y": 9.5,
+        "w": 1,
+        "h": 145
+      },
+      {
+        "name": "magnetic-01",
+        "selector": ".d-gridline-native-vector[data-slot=\"v1\"]",
+        "x": 59.5,
+        "y": 9.5,
+        "w": 4.5,
+        "h": 145
+      },
+      {
+        "name": "magnetic-02",
+        "selector": ".d-gridline-native-vector[data-slot=\"v2\"]",
+        "x": 79.5,
+        "y": 9.5,
+        "w": 8,
+        "h": 145
+      },
+      {
+        "name": "magnetic-03",
+        "selector": ".d-gridline-native-vector[data-slot=\"v3\"]",
+        "x": 99.5,
+        "y": 9.5,
+        "w": 11.5,
+        "h": 145
+      },
+      {
+        "name": "magnetic-00",
+        "selector": ".d-gridline-native-vector[data-slot=\"v4\"]",
+        "x": 119.5,
+        "y": 9.5,
+        "w": 1,
+        "h": 145
+      },
+      {
+        "name": "magnetic-04",
+        "selector": ".d-gridline-native-vector[data-slot=\"v5\"]",
+        "x": 129,
+        "y": 9.5,
+        "w": 11.5,
+        "h": 145
+      },
+      {
+        "name": "magnetic-05",
+        "selector": ".d-gridline-native-vector[data-slot=\"v6\"]",
+        "x": 152.5,
+        "y": 9.5,
+        "w": 8,
+        "h": 145
+      },
+      {
+        "name": "magnetic-06",
+        "selector": ".d-gridline-native-vector[data-slot=\"v7\"]",
+        "x": 176,
+        "y": 9.5,
+        "w": 4.5,
+        "h": 145
+      },
+      {
+        "name": "magnetic-00",
+        "selector": ".d-gridline-native-vector[data-slot=\"v8\"]",
+        "x": 199.5,
+        "y": 9.5,
+        "w": 1,
+        "h": 145
+      },
+      {
+        "name": "magnetic-07",
+        "selector": ".d-gridline-native-vector[data-slot=\"h0\"]",
+        "x": 39.5,
+        "y": 11.5,
+        "w": 161,
+        "h": 1
+      },
+      {
+        "name": "magnetic-08",
+        "selector": ".d-gridline-native-vector[data-slot=\"h1\"]",
+        "x": 39.5,
+        "y": 31.5,
+        "w": 161,
+        "h": 5
+      },
+      {
+        "name": "magnetic-09",
+        "selector": ".d-gridline-native-vector[data-slot=\"h2\"]",
+        "x": 39.5,
+        "y": 51.5,
+        "w": 161,
+        "h": 9
+      },
+      {
+        "name": "magnetic-10",
+        "selector": ".d-gridline-native-vector[data-slot=\"h3\"]",
+        "x": 39.5,
+        "y": 71.5,
+        "w": 161,
+        "h": 13
+      },
+      {
+        "name": "magnetic-11",
+        "selector": ".d-gridline-native-vector[data-slot=\"h4\"]",
+        "x": 39.5,
+        "y": 79.5,
+        "w": 161,
+        "h": 13
+      },
+      {
+        "name": "magnetic-12",
+        "selector": ".d-gridline-native-vector[data-slot=\"h5\"]",
+        "x": 39.5,
+        "y": 103.5,
+        "w": 161,
+        "h": 9
+      },
+      {
+        "name": "magnetic-13",
+        "selector": ".d-gridline-native-vector[data-slot=\"h6\"]",
+        "x": 39.5,
+        "y": 127.5,
+        "w": 161,
+        "h": 5
+      },
+      {
+        "name": "magnetic-07",
+        "selector": ".d-gridline-native-vector[data-slot=\"h7\"]",
+        "x": 39.5,
+        "y": 151.5,
+        "w": 161,
+        "h": 1
+      },
+      {
+        "name": "magnetic-pointer",
+        "selector": ".d-gridline-pointer",
+        "x": 113.125,
+        "y": 75.625,
+        "w": 28.5,
+        "h": 29.25
+      }
+    ]
+  },
+  "gridSlots": [
+    {
+      "axis": "v",
+      "name": "magnetic-00",
+      "x": 39.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-01",
+      "x": 59.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-02",
+      "x": 79.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-03",
+      "x": 99.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-00",
+      "x": 119.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-04",
+      "x": 129,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-05",
+      "x": 152.5,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-06",
+      "x": 176,
+      "y": 9.5
+    },
+    {
+      "axis": "v",
+      "name": "magnetic-00",
+      "x": 199.5,
+      "y": 9.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-07",
+      "x": 39.5,
+      "y": 11.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-08",
+      "x": 39.5,
+      "y": 31.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-09",
+      "x": 39.5,
+      "y": 51.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-10",
+      "x": 39.5,
+      "y": 71.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-11",
+      "x": 39.5,
+      "y": 79.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-12",
+      "x": 39.5,
+      "y": 103.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-13",
+      "x": 39.5,
+      "y": 127.5
+    },
+    {
+      "axis": "h",
+      "name": "magnetic-07",
+      "x": 39.5,
+      "y": 151.5
+    }
+  ],
+  "rainSlots": [
+    {
+      "name": "rain-circle",
+      "x": 62.3,
+      "y": 60.78
+    },
+    {
+      "name": "rain-triangle",
+      "x": 74.844,
+      "y": 41.96
+    },
+    {
+      "square": true,
+      "x": 93.49,
+      "y": 31.14
+    },
+    {
+      "name": "rain-circle",
+      "x": 115,
+      "y": 27
+    },
+    {
+      "square": true,
+      "x": 136.51,
+      "y": 31.14
+    },
+    {
+      "name": "rain-triangle",
+      "x": 154.764,
+      "y": 41.96
+    },
+    {
+      "name": "rain-circle",
+      "x": 167.7,
+      "y": 60.78
+    }
+  ],
+  "photos": [
+    "forestDark",
+    "archGrid"
+  ],
+  "photoCredits": {
+    "forestDark": {
+      "photoId": "1L71sPT5XKc",
+      "imageId": "photo-1483982258113-b72862e6cff6",
+      "photographer": "Rosie Sun",
+      "profile": "https://unsplash.com/@rosiesun",
+      "page": "https://unsplash.com/photos/photography-of-forest-1L71sPT5XKc",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-15",
+      "asset": "photo-forestDark",
+      "files": {
+        "full": {
+          "path": "assets/images/forestDark.webp",
+          "width": 1600,
+          "height": 1067,
+          "sha256": "b633345a713a8c8e548c779b4376a71110ab9abd080efee88e4b9910da7cb176"
+        },
+        "tile": {
+          "path": "assets/images/forestDark-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "153327d19d550da4c4531fcd150bb391cbb7d4b7c98984c6ea289230c56a5dd5"
+        }
+      }
+    },
+    "archGrid": {
+      "photoId": "MPWbGMrZ6eo",
+      "imageId": "photo-1504625709867-b4e45e3bb9dd",
+      "photographer": "Christophe Laurenceau",
+      "profile": "https://unsplash.com/@justcallmechristophe",
+      "page": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license",
+      "free": true,
+      "verifiedAt": "2026-11-15",
+      "asset": "photo-archGrid",
+      "files": {
+        "full": {
+          "path": "assets/images/archGrid.webp",
+          "width": 1600,
+          "height": 1060,
+          "sha256": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f"
+        },
+        "tile": {
+          "path": "assets/images/archGrid-800.webp",
+          "width": 800,
+          "height": 530,
+          "sha256": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde"
+        }
+      }
+    }
+  }
+}
