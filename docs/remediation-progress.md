@@ -1,21 +1,66 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 248 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 252 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and the first nine Image & WebGL demos.
-The remaining work includes 151 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and the first thirteen Image & WebGL demos.
+The remaining work includes 147 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 31 remaining demos.
-None of the 248 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 27 remaining demos.
+None of the 252 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 248 native compositions. The unfinished groups still account for
-20 overflow findings, zero horizontal-scroll findings, 60 tiny-text findings and
+among these 252 native compositions. The unfinished groups still account for
+20 overflow findings, zero horizontal-scroll findings, 56 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Image fields: static, mesh waves, slice depth and recursive zoom
+
+Static TV, Vertex Wave, Slice Fan and Infinite Zoom now use the exact v4
+native compositions. All 69 supplied elements and 17 image instances retain
+their authored geometry across 372/390/375/360px stages. Four supplied SVG
+payloads cover the eight mirrored wave slots. The approved Interior Dark,
+Milkyway, City Night and Sea photographs replace the retired generated content;
+native and exported cameras use 800px files, full previews use 1600px files.
+Each camera decodes only its own sources.
+
+TV retains its complete original static, tear, chroma, carrier and grain
+shader. Vertex retains both literal shaders, all 1189 interleaved vertices,
+6720 indices and 2240 triangles, including radial impulses, analytic lighting
+and pointer projection. Actual uploaded textures and rendered GPU channels
+match independent original-shader renders in both cameras and themes. The
+fallback evaluates the complete mathematical effect with worker cancellation
+and a synchronous path, bounded to a 256px raster.
+
+Full Slice Fan retains all eight original slats, panorama offsets and depth
+poses; native uses the five exact Figma strips. Interruptible reveal runs
+350ms in either direction with 40ms stagger capped at 300ms. Tilt follows in
+400ms and returns in 1000ms, disabled for touch and reduced motion. Recursive
+Zoom retains the complete eleven-candidate field, 2.15 ratio, even-odd holes,
+cover crops, original velocities, steering response and depth steps. An
+independent capture of the original drawing functions verifies 88 paint cases
+and actual Canvas commands. Complete SVG rendering covers Canvas loss.
+
+`node tools/verify-image-fields.js http://127.0.0.1:4173` passes 161,956 checks
+across nine suites: independent original states and shader samples, exact
+artwork, actual pixels and drawing commands, real mouse/keys/moving touch,
+reversals, 60/120/240Hz clocks, six-second stories, queued explicit intent,
+independent holds, graphics recovery, cleanup and sixteen fresh offline exports.
+The preview clock snaps to each scripted cue, preventing a floating-point
+boundary from delaying Slice Fan by one frame at some refresh rates.
+
+The sixteen complete 480-frame profiles in
+`docs/performance/image-fields-2026-11-18.json` average 59.9–60.0fps at normal
+and 4× CPU rates. Each rate retains one 33.3–33.4ms gap in native Vertex Wave;
+the other fourteen scenes have no slow intervals. All p95 intervals are at
+most 16.8ms, with no long tasks in the complete runs. Earlier partial samples
+retain a 50ms gap and long task. These local SwiftShader measurements record
+the remaining timing tails without declaring the final performance audit
+passed. `tools/profile-image-fields.js` reproduces both CPU rates and binds
+each report to the current sources and measurement tool.
 
 ## Current final-perspective timing
 
@@ -135,7 +180,7 @@ Registry, stage, motion and generated-output checks pass, alongside 651 library
 checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
 checks, seventeen runtime/shell tests and eight CLI/MCP tests. The four native
 posters are refreshed. Source hashes bind the focused suites and broad checks
-to the verified modules. All 248 remediated native compositions pass every fit
+to the verified modules. All 252 remediated native compositions pass every fit
 gate; the full audit still fails on unfinished groups.
 
 All eight desktop profiles average 60.0fps, with p95 frame intervals at most

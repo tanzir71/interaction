@@ -1,0 +1,5906 @@
+{
+  "fileKey": "OpP74UYjFHRU5q9OBPhoSY",
+  "sourceCommit": "5d1748331f8ee2e56c7a44cffcdc614c68c6d0a7",
+  "captureSHA256": "5e9743e6f6e09ced4ac388f541f62e5a3c0c0304836855441d2d290218af5a71",
+  "mathSHA256": "28649a19c667845be95b33146aaa18df1d24b36bba8ea8f30cf834b8348004ef",
+  "assets": {
+    "image-vertex-wave-0": {
+      "file": "assets/components/image-vertex-wave-0.svg",
+      "sha256": "e4838f598ab5dac52d58df1b8bd836bab21992b8a5eda78df57b85b56cddf161",
+      "width": 221,
+      "height": 3.4
+    },
+    "image-vertex-wave-1": {
+      "file": "assets/components/image-vertex-wave-1.svg",
+      "sha256": "4e7309463f78e25223a6b06c358b5f19982278ed70025fe368c8697500109814",
+      "width": 221,
+      "height": 7.6
+    },
+    "image-vertex-wave-2": {
+      "file": "assets/components/image-vertex-wave-2.svg",
+      "sha256": "c0fb119360dfec43ac891181f3ec8bd5e833329f5fc76b525f773a14ab1d3b66",
+      "width": 221,
+      "height": 11
+    },
+    "image-vertex-wave-3": {
+      "file": "assets/components/image-vertex-wave-3.svg",
+      "sha256": "319a872de11765087ff2ec043dd121842053395e0da70e473ff71bc1d98a5dcb",
+      "width": 221,
+      "height": 12.8
+    }
+  },
+  "configs": [
+    {
+      "id": "webgl-static-tv",
+      "kind": "tv",
+      "C": "d-image-static-v4",
+      "stage": "168:1320",
+      "photo": "interiorDark",
+      "controls": [
+        [
+          "toggle",
+          "Hold signal"
+        ],
+        [
+          "release",
+          "Release signal"
+        ]
+      ]
+    },
+    {
+      "id": "webgl-vertex-wave",
+      "kind": "vertex",
+      "C": "d-image-vertex-v4",
+      "stage": "168:1378",
+      "photo": "sea",
+      "controls": [
+        [
+          "toggle",
+          "Pin wave"
+        ],
+        [
+          "release",
+          "Release wave"
+        ]
+      ]
+    },
+    {
+      "id": "image-slice-hover",
+      "kind": "slice",
+      "C": "d-image-slices-v4",
+      "stage": "168:1402",
+      "photo": "milkyway",
+      "controls": [
+        [
+          "toggle",
+          "Pin fan"
+        ],
+        [
+          "release",
+          "Release fan"
+        ]
+      ],
+      "slices": [
+        {
+          "id": "168:1403",
+          "index": 0,
+          "geometry": [
+            86,
+            38,
+            38,
+            130
+          ],
+          "photo": [
+            0,
+            -10,
+            200,
+            150
+          ]
+        },
+        {
+          "id": "168:1405",
+          "index": 1,
+          "geometry": [
+            127,
+            32,
+            38,
+            142
+          ],
+          "photo": [
+            -41,
+            -4,
+            200,
+            150
+          ]
+        },
+        {
+          "id": "168:1407",
+          "index": 2,
+          "geometry": [
+            168,
+            28,
+            38,
+            150
+          ],
+          "photo": [
+            -82,
+            0,
+            200,
+            150
+          ]
+        },
+        {
+          "id": "168:1409",
+          "index": 3,
+          "geometry": [
+            209,
+            32,
+            38,
+            142
+          ],
+          "photo": [
+            -123,
+            -4,
+            200,
+            150
+          ]
+        },
+        {
+          "id": "168:1411",
+          "index": 4,
+          "geometry": [
+            250,
+            38,
+            38,
+            130
+          ],
+          "photo": [
+            -164,
+            -10,
+            200,
+            150
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-infinite-zoom",
+      "kind": "zoom",
+      "C": "d-image-zoom-v4",
+      "stage": "168:1428",
+      "photo": "cityNight",
+      "controls": [
+        [
+          "toggle",
+          "Pause zoom"
+        ],
+        [
+          "center",
+          "Center point"
+        ]
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": "168:1320",
+      "name": "Stage content",
+      "bounds": {
+        "x": 1302,
+        "y": 616,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 14,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              86
+            ],
+            [
+              0,
+              1,
+              28
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              156
+            ],
+            [
+              0,
+              1,
+              224
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1321",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "local": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 1376,
+            "y": 640,
+            "width": 224,
+            "height": 174
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1322",
+              "name": "photo/interiorDark",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1323",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1324",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1325",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1326",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1327",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1328",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1329",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1330",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1331",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1332",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1333",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1334",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1335",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1336",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1337",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1338",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1339",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1340",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1341",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1342",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1343",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1344",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1345",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1346",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1347",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1348",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1349",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1350",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1351",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1352",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1353",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1354",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1355",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1356",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1357",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1358",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1359",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1360",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1361",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1362",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "187:3376",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            156,
+            224,
+            60,
+            28
+          ],
+          "local": [
+            156,
+            224,
+            60,
+            28
+          ],
+          "renderBounds": {
+            "x": 1458,
+            "y": 840,
+            "width": 60,
+            "height": 28
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "187:3377",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1378",
+      "name": "Stage content",
+      "bounds": {
+        "x": 2134,
+        "y": 616,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.17000000178813934,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              50.79999923706055
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.25999999046325684,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              64.69999694824219
+            ]
+          ]
+        },
+        "2": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.33000001311302185,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              79
+            ]
+          ]
+        },
+        "3": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.3700000047683716,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              94.0999984741211
+            ]
+          ]
+        },
+        "4": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.3700000047683716,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              110.0999984741211
+            ]
+          ]
+        },
+        "5": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.33000001311302185,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              127
+            ]
+          ]
+        },
+        "6": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.25999999046325684,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              144.6999969482422
+            ]
+          ]
+        },
+        "7": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.17000000178813934,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              76
+            ],
+            [
+              0,
+              1,
+              162.8000030517578
+            ]
+          ]
+        },
+        "8": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              157.5
+            ],
+            [
+              0,
+              1,
+              224
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1379",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            50.79998779296875,
+            220,
+            2.4000000953674316
+          ],
+          "local": [
+            76,
+            50.79999923706055,
+            220,
+            2.4000000953674316
+          ],
+          "renderBounds": {
+            "x": 2209.5,
+            "y": 666.2999877929688,
+            "width": 221,
+            "height": 3.4000244140625
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "168:1380",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            64.70001220703125,
+            220,
+            6.599999904632568
+          ],
+          "local": [
+            76,
+            64.69999694824219,
+            220,
+            6.599999904632568
+          ],
+          "renderBounds": {
+            "x": 2209.5,
+            "y": 680.2000122070312,
+            "width": 221,
+            "height": 7.5999755859375
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "168:1381",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            79,
+            220,
+            10
+          ],
+          "local": [
+            76,
+            79,
+            220,
+            10
+          ],
+          "renderBounds": {
+            "x": 2209.499755859375,
+            "y": 694.5,
+            "width": 221.000244140625,
+            "height": 11
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "168:1382",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            94.0999755859375,
+            220,
+            11.800000190734863
+          ],
+          "local": [
+            76,
+            94.0999984741211,
+            220,
+            11.800000190734863
+          ],
+          "renderBounds": {
+            "x": 2209.499755859375,
+            "y": 709.5999755859375,
+            "width": 221.00048828125,
+            "height": 12.79998779296875
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "168:1383",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            110.0999755859375,
+            220,
+            11.800000190734863
+          ],
+          "local": [
+            76,
+            110.0999984741211,
+            220,
+            11.800000190734863
+          ],
+          "renderBounds": {
+            "x": 2209.499755859375,
+            "y": 725.5999755859375,
+            "width": 221.00048828125,
+            "height": 12.79998779296875
+          },
+          "style": "4",
+          "children": []
+        },
+        {
+          "id": "168:1384",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            127,
+            220,
+            10
+          ],
+          "local": [
+            76,
+            127,
+            220,
+            10
+          ],
+          "renderBounds": {
+            "x": 2209.499755859375,
+            "y": 742.5,
+            "width": 221.000244140625,
+            "height": 11
+          },
+          "style": "5",
+          "children": []
+        },
+        {
+          "id": "168:1385",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            144.70001220703125,
+            220,
+            6.599999904632568
+          ],
+          "local": [
+            76,
+            144.6999969482422,
+            220,
+            6.599999904632568
+          ],
+          "renderBounds": {
+            "x": 2209.5,
+            "y": 760.2000122070312,
+            "width": 221,
+            "height": 7.5999755859375
+          },
+          "style": "6",
+          "children": []
+        },
+        {
+          "id": "168:1386",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            76,
+            162.79998779296875,
+            220,
+            2.4000000953674316
+          ],
+          "local": [
+            76,
+            162.8000030517578,
+            220,
+            2.4000000953674316
+          ],
+          "renderBounds": {
+            "x": 2209.5,
+            "y": 778.2999877929688,
+            "width": 221,
+            "height": 3.4000244140625
+          },
+          "style": "7",
+          "children": []
+        },
+        {
+          "id": "187:3388",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "local": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "renderBounds": {
+            "x": 2291.5,
+            "y": 840,
+            "width": 57,
+            "height": 28
+          },
+          "style": "8",
+          "children": [
+            {
+              "id": "187:3389",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1402",
+      "name": "Stage content",
+      "bounds": {
+        "x": 54,
+        "y": 988,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              86
+            ],
+            [
+              0,
+              1,
+              38
+            ]
+          ]
+        },
+        "1": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              127
+            ],
+            [
+              0,
+              1,
+              32
+            ]
+          ]
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              168
+            ],
+            [
+              0,
+              1,
+              28
+            ]
+          ]
+        },
+        "3": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              209
+            ],
+            [
+              0,
+              1,
+              32
+            ]
+          ]
+        },
+        "4": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              250
+            ],
+            [
+              0,
+              1,
+              38
+            ]
+          ]
+        },
+        "5": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              156
+            ],
+            [
+              0,
+              1,
+              224
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1403",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            86,
+            38,
+            38,
+            130
+          ],
+          "local": [
+            86,
+            38,
+            38,
+            130
+          ],
+          "renderBounds": {
+            "x": 140,
+            "y": 1026,
+            "width": 38,
+            "height": 130
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1404",
+              "name": "photo/milkyway",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1405",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            127,
+            32,
+            38,
+            142
+          ],
+          "local": [
+            127,
+            32,
+            38,
+            142
+          ],
+          "renderBounds": {
+            "x": 181,
+            "y": 1020,
+            "width": 38,
+            "height": 142
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "168:1406",
+              "name": "photo/milkyway",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1407",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            168,
+            28,
+            38,
+            150
+          ],
+          "local": [
+            168,
+            28,
+            38,
+            150
+          ],
+          "renderBounds": {
+            "x": 210,
+            "y": 1012,
+            "width": 62,
+            "height": 174
+          },
+          "style": "2",
+          "children": [
+            {
+              "id": "168:1408",
+              "name": "photo/milkyway",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1409",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            209,
+            32,
+            38,
+            142
+          ],
+          "local": [
+            209,
+            32,
+            38,
+            142
+          ],
+          "renderBounds": {
+            "x": 263,
+            "y": 1020,
+            "width": 38,
+            "height": 142
+          },
+          "style": "3",
+          "children": [
+            {
+              "id": "168:1410",
+              "name": "photo/milkyway",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1411",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            250,
+            38,
+            38,
+            130
+          ],
+          "local": [
+            250,
+            38,
+            38,
+            130
+          ],
+          "renderBounds": {
+            "x": 304,
+            "y": 1026,
+            "width": 38,
+            "height": 130
+          },
+          "style": "4",
+          "children": [
+            {
+              "id": "168:1412",
+              "name": "photo/milkyway",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "187:3400",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            156,
+            224,
+            60,
+            28
+          ],
+          "local": [
+            156,
+            224,
+            60,
+            28
+          ],
+          "renderBounds": {
+            "x": 210,
+            "y": 1212,
+            "width": 60,
+            "height": 28
+          },
+          "style": "5",
+          "children": [
+            {
+              "id": "187:3401",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1428",
+      "name": "Stage content",
+      "bounds": {
+        "x": 470,
+        "y": 988,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 14,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              86
+            ],
+            [
+              0,
+              1,
+              28
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              157.5
+            ],
+            [
+              0,
+              1,
+              224
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1429",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "local": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 544,
+            "y": 1012,
+            "width": 224,
+            "height": 174
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1430",
+              "name": "photo/cityNight",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1431",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1432",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 3
+            }
+          ]
+        },
+        {
+          "id": "187:3412",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "local": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "renderBounds": {
+            "x": 627.5,
+            "y": 1212,
+            "width": 57,
+            "height": 28
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "187:3413",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nested": [
+    {
+      "id": "168:1321",
+      "bounds": {
+        "x": 1388,
+        "y": 644,
+        "width": 200,
+        "height": 150
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "7bb17afa4fb31c37b1869caad8dc907b4a20ac7d"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07999999821186066,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 14,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "3": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              4
+            ]
+          ]
+        },
+        "4": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              8
+            ]
+          ]
+        },
+        "5": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              12
+            ]
+          ]
+        },
+        "6": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              16
+            ]
+          ]
+        },
+        "7": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              20
+            ]
+          ]
+        },
+        "8": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              24
+            ]
+          ]
+        },
+        "9": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              28
+            ]
+          ]
+        },
+        "10": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              32
+            ]
+          ]
+        },
+        "11": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              36
+            ]
+          ]
+        },
+        "12": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              40
+            ]
+          ]
+        },
+        "13": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              44
+            ]
+          ]
+        },
+        "14": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              48
+            ]
+          ]
+        },
+        "15": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              52
+            ]
+          ]
+        },
+        "16": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              56
+            ]
+          ]
+        },
+        "17": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              60
+            ]
+          ]
+        },
+        "18": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              64
+            ]
+          ]
+        },
+        "19": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              68
+            ]
+          ]
+        },
+        "20": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              72
+            ]
+          ]
+        },
+        "21": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              76
+            ]
+          ]
+        },
+        "22": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              80
+            ]
+          ]
+        },
+        "23": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              84
+            ]
+          ]
+        },
+        "24": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              88
+            ]
+          ]
+        },
+        "25": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              92
+            ]
+          ]
+        },
+        "26": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              96
+            ]
+          ]
+        },
+        "27": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              100
+            ]
+          ]
+        },
+        "28": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              104
+            ]
+          ]
+        },
+        "29": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              108
+            ]
+          ]
+        },
+        "30": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              112
+            ]
+          ]
+        },
+        "31": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              116
+            ]
+          ]
+        },
+        "32": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              120
+            ]
+          ]
+        },
+        "33": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              124
+            ]
+          ]
+        },
+        "34": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              128
+            ]
+          ]
+        },
+        "35": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              132
+            ]
+          ]
+        },
+        "36": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              136
+            ]
+          ]
+        },
+        "37": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              140
+            ]
+          ]
+        },
+        "38": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              144
+            ]
+          ]
+        },
+        "39": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05000000074505806,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              148
+            ]
+          ]
+        },
+        "40": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.05999999865889549,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              60
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1322",
+          "name": "photo/interiorDark",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "absolute": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 644,
+            "width": 200,
+            "height": 150
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "168:1323",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "absolute": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 644,
+            "width": 200,
+            "height": 150
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "168:1324",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            0,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 644,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "168:1325",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            4,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            4,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 648,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "168:1326",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            8,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            8,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 652,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "4",
+          "children": []
+        },
+        {
+          "id": "168:1327",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            12,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            12,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 656,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "5",
+          "children": []
+        },
+        {
+          "id": "168:1328",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            16,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            16,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 660,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "6",
+          "children": []
+        },
+        {
+          "id": "168:1329",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            20,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            20,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 664,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "7",
+          "children": []
+        },
+        {
+          "id": "168:1330",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            24,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            24,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 668,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "8",
+          "children": []
+        },
+        {
+          "id": "168:1331",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            28,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            28,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 672,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "9",
+          "children": []
+        },
+        {
+          "id": "168:1332",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            32,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            32,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 676,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "10",
+          "children": []
+        },
+        {
+          "id": "168:1333",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            36,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            36,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 680,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "11",
+          "children": []
+        },
+        {
+          "id": "168:1334",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            40,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            40,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 684,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "12",
+          "children": []
+        },
+        {
+          "id": "168:1335",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            44,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            44,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 688,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "13",
+          "children": []
+        },
+        {
+          "id": "168:1336",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            48,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            48,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 692,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "14",
+          "children": []
+        },
+        {
+          "id": "168:1337",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            52,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            52,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 696,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "15",
+          "children": []
+        },
+        {
+          "id": "168:1338",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            56,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            56,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 700,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "16",
+          "children": []
+        },
+        {
+          "id": "168:1339",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            60,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            60,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 704,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "17",
+          "children": []
+        },
+        {
+          "id": "168:1340",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            64,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            64,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 708,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "18",
+          "children": []
+        },
+        {
+          "id": "168:1341",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            68,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            68,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 712,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "19",
+          "children": []
+        },
+        {
+          "id": "168:1342",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            72,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            72,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 716,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "20",
+          "children": []
+        },
+        {
+          "id": "168:1343",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            76,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            76,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 720,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "21",
+          "children": []
+        },
+        {
+          "id": "168:1344",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            80,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            80,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 724,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "22",
+          "children": []
+        },
+        {
+          "id": "168:1345",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            84,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            84,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 728,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "23",
+          "children": []
+        },
+        {
+          "id": "168:1346",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            88,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            88,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 732,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "24",
+          "children": []
+        },
+        {
+          "id": "168:1347",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            92,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            92,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 736,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "25",
+          "children": []
+        },
+        {
+          "id": "168:1348",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            96,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            96,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 740,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "26",
+          "children": []
+        },
+        {
+          "id": "168:1349",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            100,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            100,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 744,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "27",
+          "children": []
+        },
+        {
+          "id": "168:1350",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            104,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            104,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 748,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "28",
+          "children": []
+        },
+        {
+          "id": "168:1351",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            108,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            108,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 752,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "29",
+          "children": []
+        },
+        {
+          "id": "168:1352",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            112,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            112,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 756,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "30",
+          "children": []
+        },
+        {
+          "id": "168:1353",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            116,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            116,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 760,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "31",
+          "children": []
+        },
+        {
+          "id": "168:1354",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            120,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            120,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 764,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "32",
+          "children": []
+        },
+        {
+          "id": "168:1355",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            124,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            124,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 768,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "33",
+          "children": []
+        },
+        {
+          "id": "168:1356",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            128,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            128,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 772,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "34",
+          "children": []
+        },
+        {
+          "id": "168:1357",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            132,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            132,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 776,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "35",
+          "children": []
+        },
+        {
+          "id": "168:1358",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            136,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            136,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 780,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "36",
+          "children": []
+        },
+        {
+          "id": "168:1359",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            140,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            140,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 784,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "37",
+          "children": []
+        },
+        {
+          "id": "168:1360",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            144,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            144,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 788,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "38",
+          "children": []
+        },
+        {
+          "id": "168:1361",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            148,
+            200,
+            1.399999976158142
+          ],
+          "absolute": [
+            0,
+            148,
+            200,
+            1.399999976158142
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 792,
+            "width": 200,
+            "height": 1.4000244140625
+          },
+          "style": "39",
+          "children": []
+        },
+        {
+          "id": "168:1362",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            60,
+            200,
+            18
+          ],
+          "absolute": [
+            0,
+            60,
+            200,
+            18
+          ],
+          "renderBounds": {
+            "x": 1388,
+            "y": 704,
+            "width": 200,
+            "height": 18
+          },
+          "style": "40",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1403",
+      "bounds": {
+        "x": 140,
+        "y": 1026,
+        "width": 38,
+        "height": 130
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "94bacd89043262a363145de6aeafa225f6fcd6c0"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              -10
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1404",
+          "name": "photo/milkyway",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            -10,
+            200,
+            150
+          ],
+          "absolute": [
+            0,
+            -10,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 140,
+            "y": 1026,
+            "width": 38,
+            "height": 130
+          },
+          "style": "0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1405",
+      "bounds": {
+        "x": 181,
+        "y": 1020,
+        "width": 38,
+        "height": 142
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "94bacd89043262a363145de6aeafa225f6fcd6c0"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              -41
+            ],
+            [
+              0,
+              1,
+              -4
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1406",
+          "name": "photo/milkyway",
+          "type": "FRAME",
+          "geometry": [
+            -41,
+            -4,
+            200,
+            150
+          ],
+          "absolute": [
+            -41,
+            -4,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 181,
+            "y": 1020,
+            "width": 38,
+            "height": 142
+          },
+          "style": "0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1407",
+      "bounds": {
+        "x": 222,
+        "y": 1016,
+        "width": 38,
+        "height": 150
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "94bacd89043262a363145de6aeafa225f6fcd6c0"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              -82
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1408",
+          "name": "photo/milkyway",
+          "type": "FRAME",
+          "geometry": [
+            -82,
+            0,
+            200,
+            150
+          ],
+          "absolute": [
+            -82,
+            0,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 222,
+            "y": 1016,
+            "width": 38,
+            "height": 150
+          },
+          "style": "0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1409",
+      "bounds": {
+        "x": 263,
+        "y": 1020,
+        "width": 38,
+        "height": 142
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "94bacd89043262a363145de6aeafa225f6fcd6c0"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              -123
+            ],
+            [
+              0,
+              1,
+              -4
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1410",
+          "name": "photo/milkyway",
+          "type": "FRAME",
+          "geometry": [
+            -123,
+            -4,
+            200,
+            150
+          ],
+          "absolute": [
+            -123,
+            -4,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 263,
+            "y": 1020,
+            "width": 38,
+            "height": 142
+          },
+          "style": "0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1411",
+      "bounds": {
+        "x": 304,
+        "y": 1026,
+        "width": 38,
+        "height": 130
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "94bacd89043262a363145de6aeafa225f6fcd6c0"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              -164
+            ],
+            [
+              0,
+              1,
+              -10
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1412",
+          "name": "photo/milkyway",
+          "type": "FRAME",
+          "geometry": [
+            -164,
+            -10,
+            200,
+            150
+          ],
+          "absolute": [
+            -164,
+            -10,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 304,
+            "y": 1026,
+            "width": 36,
+            "height": 130
+          },
+          "style": "0",
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "168:1429",
+      "bounds": {
+        "x": 556,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07999999821186066,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 14,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 8,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              50
+            ],
+            [
+              0,
+              1,
+              38
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1430",
+          "name": "photo/cityNight",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "absolute": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 556,
+            "y": 1016,
+            "width": 200,
+            "height": 150
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "168:1431",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "absolute": [
+            0,
+            0,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 556,
+            "y": 1016,
+            "width": 200,
+            "height": 150
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "168:1432",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            50,
+            38,
+            100,
+            74
+          ],
+          "absolute": [
+            50,
+            38,
+            100,
+            74
+          ],
+          "renderBounds": {
+            "x": 594,
+            "y": 1050,
+            "width": 124,
+            "height": 98
+          },
+          "style": "2",
+          "children": [
+            {
+              "id": "168:1433",
+              "name": "photo/cityNight",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1434",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1435",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1432",
+      "bounds": {
+        "x": 606,
+        "y": 1054,
+        "width": 100,
+        "height": 74
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "1": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07999999821186066,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 8,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 5,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              25
+            ],
+            [
+              0,
+              1,
+              19
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1433",
+          "name": "photo/cityNight",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            100,
+            74
+          ],
+          "absolute": [
+            0,
+            0,
+            100,
+            74
+          ],
+          "renderBounds": {
+            "x": 606,
+            "y": 1054,
+            "width": 100,
+            "height": 74
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "168:1434",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            100,
+            74
+          ],
+          "absolute": [
+            0,
+            0,
+            100,
+            74
+          ],
+          "renderBounds": {
+            "x": 606,
+            "y": 1054,
+            "width": 100,
+            "height": 74
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "168:1435",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            25,
+            19,
+            50,
+            36
+          ],
+          "absolute": [
+            25,
+            19,
+            50,
+            36
+          ],
+          "renderBounds": {
+            "x": 619,
+            "y": 1069,
+            "width": 74,
+            "height": 59
+          },
+          "style": "2",
+          "children": [
+            {
+              "id": "168:1436",
+              "name": "photo/cityNight",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "168:1437",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1435",
+      "styles": {
+        "0": {
+          "id": "168:1436",
+          "name": "photo/cityNight",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            50,
+            36
+          ],
+          "renderBounds": {
+            "x": 631,
+            "y": 1073,
+            "width": 50,
+            "height": 36
+          },
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        "1": {
+          "id": "168:1437",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            50,
+            36
+          ],
+          "renderBounds": {
+            "x": 631,
+            "y": 1073,
+            "width": 50,
+            "height": 36
+          },
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07999999821186066,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 5,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1436",
+          "name": "photo/cityNight",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            50,
+            36
+          ],
+          "renderBounds": {
+            "x": 631,
+            "y": 1073,
+            "width": 50,
+            "height": 36
+          },
+          "fills": [
+            {
+              "type": "IMAGE",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "scaleMode": "FILL",
+              "scalingFactor": 1,
+              "rotation": 0,
+              "filters": {
+                "exposure": 0,
+                "contrast": 0,
+                "saturation": 0,
+                "temperature": 0,
+                "tint": 0,
+                "highlights": 0,
+                "shadows": 0
+              },
+              "imageTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ],
+              "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "style": "0"
+        },
+        {
+          "id": "168:1437",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            0,
+            0,
+            50,
+            36
+          ],
+          "renderBounds": {
+            "x": 631,
+            "y": 1073,
+            "width": 50,
+            "height": 36
+          },
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07999999821186066,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 5,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0,
+          "relativeTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "style": "1"
+        }
+      ]
+    }
+  ],
+  "inner": {
+    "frame": {
+      "id": "168:1435",
+      "name": "Frame",
+      "type": "FRAME",
+      "geometry": [
+        25,
+        19,
+        50,
+        36
+      ],
+      "renderBounds": {
+        "x": 619,
+        "y": 1069,
+        "width": 74,
+        "height": 59
+      },
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 5,
+      "opacity": 1,
+      "blendMode": "PASS_THROUGH",
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 20,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.18000000715255737
+          },
+          "offset": {
+            "x": 0,
+            "y": 8
+          },
+          "spread": -8,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 2,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.11999999731779099
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ],
+      "clipsContent": true,
+      "rotation": 0,
+      "relativeTransform": [
+        [
+          1,
+          0,
+          25
+        ],
+        [
+          0,
+          1,
+          19
+        ]
+      ]
+    },
+    "layers": [
+      {
+        "id": "168:1436",
+        "name": "photo/cityNight",
+        "type": "FRAME",
+        "geometry": [
+          0,
+          0,
+          50,
+          36
+        ],
+        "renderBounds": {
+          "x": 631,
+          "y": 1073,
+          "width": 50,
+          "height": 36
+        },
+        "fills": [
+          {
+            "type": "IMAGE",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "scaleMode": "FILL",
+            "scalingFactor": 1,
+            "rotation": 0,
+            "filters": {
+              "exposure": 0,
+              "contrast": 0,
+              "saturation": 0,
+              "temperature": 0,
+              "tint": 0,
+              "highlights": 0,
+              "shadows": 0
+            },
+            "imageTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "effects": [],
+        "clipsContent": true,
+        "rotation": 0,
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "id": "168:1437",
+        "name": "Frame",
+        "type": "FRAME",
+        "geometry": [
+          0,
+          0,
+          50,
+          36
+        ],
+        "renderBounds": {
+          "x": 631,
+          "y": 1073,
+          "width": 50,
+          "height": 36
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07999999821186066,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 5,
+        "opacity": 1,
+        "blendMode": "PASS_THROUGH",
+        "effects": [],
+        "clipsContent": false,
+        "rotation": 0,
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "photoIdentity": [
+    {
+      "stage": "168-1320",
+      "key": "interiorDark",
+      "thumbnail_RGB_RMS": 0.5645698799135104,
+      "secondClosest": [
+        54.39144866153134,
+        "cityTeal"
+      ],
+      "figmaSHA256": "651c21e2afd6e472a6cea9b1177c23eceb15fc74dd9f451f0530677cf5659710",
+      "localSHA256": "1b82d06c2b487dedba07c56d5e7dd787774d77437e00da0a0d389f324bbac08f"
+    },
+    {
+      "stage": "168-1402",
+      "key": "milkyway",
+      "thumbnail_RGB_RMS": 0.6312190586476298,
+      "secondClosest": [
+        39.037192496431814,
+        "cityTeal"
+      ],
+      "figmaSHA256": "da511f0f5248f61369bf4fd24cd36523a3e14293d07eb40af0731050e54e8726",
+      "localSHA256": "91d376c8bdf5159dc4403c558f0fde6132d1c731350618f533245b1841702059"
+    },
+    {
+      "stage": "168-1428",
+      "key": "cityNight",
+      "thumbnail_RGB_RMS": 1.4461732609526579,
+      "secondClosest": [
+        27.49118387724003,
+        "forestDark"
+      ],
+      "figmaSHA256": "3d0aa178ca4053f9b4b82a197b9150de590299bb073c9cec379d2bcda09d2c59",
+      "localSHA256": "a71c690d4ac18dfc307b6d7359914b0e49b6bc374bb1e169b4d7444b59371995"
+    }
+  ]
+}

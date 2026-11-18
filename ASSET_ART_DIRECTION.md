@@ -738,3 +738,27 @@ rounding. The lens retains its supplied 2.5px exported backdrop blur.
 `tools/fixtures/image-gpu-artwork.json` records every asset hash and native
 slot. Portable assets now contain 504 aliases, the same seven font faces and
 eighteen unchanged photo credits. This phase introduces no new photography.
+
+## Broadcast static, displaced waves, fanned photographs and recursive frames
+
+Static TV, Vertex Wave, Slice Fan and Infinite Zoom follow v4 nodes `168:1308`,
+`168:1366`, `168:1390` and `168:1416`. Four supplied vector payloads retain
+their exact bytes and stroke-inclusive sizes: 221×3.4, 221×7.6, 221×11 and
+221×12.8px. The eight native wave slots reuse them in mirrored order. They
+become the actual native mesh texture when the preview starts moving.
+
+All 69 native nodes retain their supplied geometry. TV has the 200×150px
+Interior Dark photograph, its outline and all 39 scanlines. Slice Fan has five
+38px strips with one shared 200×150px Milkyway panorama and the exact crop
+offsets; the complete full composition retains eight original slats. Infinite
+Zoom has the 200×150px City Night photograph and both nested frames at
+100×74px and 50×36px, including their individual outlines and radii.
+
+The three photographs already have approved local files and provenance.
+Independent identity comparisons against the Figma exports yield RGB RMS
+0.56, 0.63 and 1.45 respectively. Full Vertex Wave uses the approved Sea photo.
+Native previews and portable exports use 800px files; full previews use 1600px
+files. Only the active camera decodes its sources. Screenshots remain reference
+evidence and are never used as tile art. `tools/fixtures/image-fields-artwork.json`
+records the exact geometry, photo matches and vector hashes. The portable
+bundle has 508 image aliases, seven font faces and eighteen photo credits.

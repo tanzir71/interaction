@@ -2950,17 +2950,29 @@ INTRX.meta({
     ]
   },
   "webgl-static-tv": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Hold signal"
+      },
+      {
+        "action": "release",
+        "label": "Release signal"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "WebGL",
@@ -2968,8 +2980,12 @@ INTRX.meta({
       "signal reveal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-kaleidoscope": {
     "designSize": "bleed",
@@ -2994,17 +3010,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "webgl-vertex-wave": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin wave"
+      },
+      {
+        "action": "release",
+        "label": "Release wave"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "WebGL",
@@ -3012,21 +3040,37 @@ INTRX.meta({
       "indexed mesh"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "image-slice-hover": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin fan"
+      },
+      {
+        "action": "release",
+        "label": "Release fan"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "CSS 3D",
@@ -3034,21 +3078,37 @@ INTRX.meta({
       "stagger"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "image-infinite-zoom": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause zoom"
+      },
+      {
+        "action": "center",
+        "label": "Center point"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "Canvas",
@@ -3056,8 +3116,12 @@ INTRX.meta({
       "procedural frames"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "comparison-slider": {
     "designSize": "md",

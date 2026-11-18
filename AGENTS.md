@@ -370,3 +370,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   exports. Native Focus Grid has six supplied tiles; full keeps five original
   items. The original sampling color is retained offscreen to preserve glyph
   edge samples; visible particles use the v4 accent.
+- `node tools/verify-image-fields.js http://127.0.0.1:4173` covers v4 Static
+  TV, Vertex Wave, Slice Fan and Infinite Zoom. It compares independent original
+  states, literal shaders and complete mesh buffers, mathematical samples,
+  actual GPU pixels, native artwork and camera textures, original eight-slat
+  endpoints and recursive Canvas commands. It checks real mouse/keys/touch,
+  interrupted reveals, 60/120/240Hz clocks, six-second stories, queued intent,
+  caller/viewport holds, worker and synchronous fallback, graphics recovery,
+  cleanup and sixteen fresh-context offline exports. Native Slice Fan has five
+  exact Figma slices; full keeps all eight original slats. Frame timing can be
+  recorded with `node tools/profile-image-fields.js http://127.0.0.1:4173 --cpu=1`
+  or `--cpu=4`; these reports record findings without declaring the timing gate
+  passed.
