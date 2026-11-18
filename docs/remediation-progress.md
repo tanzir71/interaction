@@ -17,6 +17,35 @@ among these 248 native compositions. The unfinished groups still account for
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
 
+## Particle Dissolve: remove repeated dock layout
+
+The particle runtime now updates its Dissolve/Reform label only when the label
+changes. Previously, assigning the same `textContent` every frame replaced the
+button's text node and repeatedly forced layout. Both native and full cameras
+retain every original model, particle, paint command, timing, photograph and
+supplied SVG. All other source modules and metadata remain unchanged.
+
+A paired 4× CPU diagnostic over 300 frames reduced label mutations from 300
+to 2 in native and 302 to 2 in full. Measured layout time fell from 308.8 to
+1.8ms in native and 214.9 to 5.9ms in full. This establishes the removed layout
+work. A fresh pre-change baseline already averaged 59.8–60.0fps on this shared
+host, so the older 45–50fps traces are retained without attributing their full
+timing difference to this guard.
+
+All 29,929,121 image-core checks pass against the updated source, including
+complete original states, every particle paint command, exact native artwork,
+refresh-rate equivalence, real input, holds, recovery, disposal and twenty
+network-blocked exports. Registry, stage, motion and generated-output checks
+also pass, with 651 library checks, all 399 previews and 97 general offline
+exports. All 248 remediated previews still pass every fit gate. The full fit
+audit retains the same findings in unfinished groups.
+
+Final current-source profiles hold 60.0fps in both cameras at normal and 4× CPU
+speed, with p95 frame intervals at most 16.8ms, no slow intervals and no long
+tasks. All four complete traces retain the source and harness hashes. This
+focused pass leaves the other groups' historical performance tails for the
+final audit.
+
 ## Image & WebGL: distortion, ripples, curl noise and fisheye
 
 Hover Distortion, Ripple Click, Pixel River and Fisheye Lens follow v4 nodes
@@ -166,8 +195,9 @@ rechecked successfully after an overlapping clean dependency install finished.
 All ten current desktop profiles average 59.9–60.0fps, with p95 frame
 intervals at most 16.8ms, 1 slow interval and 0 long tasks.
 The ten 4× CPU profiles average 45.1–60.0fps and retain 192 slow intervals
-and 19 long tasks, up to 107.0ms. Particle Dissolve averages 50.2fps
-in native and 45.1fps in full; its 4× CPU 60fps target remains open.
+and 19 long tasks, up to 107.0ms. Particle Dissolve averaged 50.2fps
+in native and 45.1fps in full; its 4× CPU 60fps target was left open at that
+release. The later layout and frame-timing follow-up is recorded above.
 Measurements share this host with other active work. The earlier source-bound
 profiles and separate model/render/style diagnostics are retained, including
 the mixed results of an experimental layer hint that was not shipped.
