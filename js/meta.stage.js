@@ -2988,17 +2988,29 @@ INTRX.meta({
     ]
   },
   "webgl-kaleidoscope": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Hold angle"
+      },
+      {
+        "action": "release",
+        "label": "Release angle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "WebGL",
@@ -3006,8 +3018,12 @@ INTRX.meta({
       "angle easing"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-vertex-wave": {
     "designSize": [
@@ -3234,17 +3250,29 @@ INTRX.meta({
     ]
   },
   "image-shatter-click": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "fracture",
+        "label": "Shatter image"
+      },
+      {
+        "action": "reset",
+        "label": "Rebuild image"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "Canvas",
@@ -3252,8 +3280,12 @@ INTRX.meta({
       "shards"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "image-blinds-reveal": {
     "designSize": [
@@ -3294,17 +3326,29 @@ INTRX.meta({
     ]
   },
   "image-magnetic-tiles": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin field"
+      },
+      {
+        "action": "release",
+        "label": "Release field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "button"
     },
     "useCases": [
       "image grid",
@@ -3312,21 +3356,37 @@ INTRX.meta({
       "spring"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-hologram-particles": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "center",
+        "label": "Center repulsor"
+      },
+      {
+        "action": "reset",
+        "label": "Reform wordmark"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "button"
     },
     "useCases": [
       "canvas",
@@ -3334,8 +3394,12 @@ INTRX.meta({
       "hologram"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      280,
+      168
+    ]
   },
   "webgl-neural-signals": {
     "designSize": "bleed",

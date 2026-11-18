@@ -790,3 +790,29 @@ full previews use 1600px. Only the active camera decodes its sources.
 `tools/fixtures/image-photos-artwork.json` binds the supplied geometry, file
 hashes and photo identities. Portable assets now have 510 aliases, with the
 same seven font faces and eighteen photo-credit records.
+
+## Mirrored fields, photographic shards, magnetic fragments and particle type
+
+Kaleidoscope, Shatter, Magnetic Tiles and Hologram Wordmark use v4 nodes
+`171:1345`, `171:1420`, `168:1536` and `172:795`. All 27 unique supplied SVGs
+retain their original file bytes, intrinsic dimensions and individual slots.
+Kaleidoscope uses all eight wedge assets, sixteen dot placements, its 144px
+outline and 10px orange pivot. Full preserves the original twelve-sector
+photographic fragment shader and complete equivalent Canvas fallback.
+
+Shatter keeps its 200×150px City Night photograph and all ten crack assets;
+its moving triangles carry the actual clipped photograph and those assets.
+Magnetic Tiles keeps twelve 44px Silk fragments on the 46px source pitch,
+each clipping its exact 184×138px photograph plane. The two raised center
+fragments keep their supplied positions, shadows and highlight. Independent
+source-photo comparisons give RGB RMS 1.45 for City Night and 0.39 for Silk.
+
+The native INTRX wordmark is Geist 600 at 58px with −2.83% tracking in its
+162×75px reference frame. Its gradient, six supplied 2px marker placements
+and 120px rule remain intact. Live particles reform this same native glyph.
+Full keeps every original Inter-raster particle and operational scan/glitch
+timeline. Full photographic cameras use the credited Architectural Grid
+source at 1600px; native and portable cameras use 800px files. Only the
+selected camera decodes its sources. The portable bundle has 537 aliases,
+seven font faces and the same eighteen photo credits. Exact native geometry,
+source identities and SVG hashes live in `tools/fixtures/image-assemblies-artwork.json`.

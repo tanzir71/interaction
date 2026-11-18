@@ -1,0 +1,5128 @@
+{
+  "fileKey": "OpP74UYjFHRU5q9OBPhoSY",
+  "sourceCommit": "d0a49f88eff1fbed6ca3e27f09a8b01a83f98048",
+  "originalCaptureSHA256": "0075bece595552a7490b12f14d19414f7c6b07adc1ac1bd37b28a299ab2e319f",
+  "originalDrawSHA256": "dee8ccec8c6e1f8cfec1caee80f99cc960e5595ed19abb641268eecacf80d882",
+  "configs": [
+    {
+      "id": "webgl-kaleidoscope",
+      "kind": "kaleido",
+      "C": "d-assembly-kaleido-v4",
+      "stage": "171:1357",
+      "thumbSize": [
+        240,
+        168
+      ],
+      "controls": [
+        [
+          "toggle",
+          "Hold angle"
+        ],
+        [
+          "release",
+          "Release angle"
+        ]
+      ]
+    },
+    {
+      "id": "image-shatter-click",
+      "kind": "shatter",
+      "C": "d-assembly-shatter-v4",
+      "stage": "171:1432",
+      "thumbSize": [
+        240,
+        168
+      ],
+      "controls": [
+        [
+          "fracture",
+          "Shatter image"
+        ],
+        [
+          "reset",
+          "Rebuild image"
+        ]
+      ]
+    },
+    {
+      "id": "image-magnetic-tiles",
+      "kind": "magnetic",
+      "C": "d-assembly-magnetic-v4",
+      "stage": "168:1548",
+      "thumbSize": [
+        240,
+        168
+      ],
+      "controls": [
+        [
+          "toggle",
+          "Pin field"
+        ],
+        [
+          "release",
+          "Release field"
+        ]
+      ]
+    },
+    {
+      "id": "webgl-hologram-particles",
+      "kind": "hologram",
+      "C": "d-assembly-hologram-v4",
+      "stage": "172:808",
+      "thumbSize": [
+        280,
+        168
+      ],
+      "controls": [
+        [
+          "center",
+          "Center repulsor"
+        ],
+        [
+          "reset",
+          "Reform wordmark"
+        ]
+      ]
+    }
+  ],
+  "assets": {
+    "image-kaleidoscope-8": {
+      "key": "image-kaleidoscope-8",
+      "file": "assets/components/image-kaleidoscope-8.svg",
+      "sha256": "678145806ac3f71795b2b815537f684fddcc8e6df4582584944f0213dfdb3c41",
+      "width": 51.9,
+      "height": 73
+    },
+    "image-kaleidoscope-0": {
+      "key": "image-kaleidoscope-0",
+      "file": "assets/components/image-kaleidoscope-0.svg",
+      "sha256": "75ed4f08637edce5d3dbc1229f8286cbb3b5cb78dcf9b73c2c95becb05808c6a",
+      "width": 9,
+      "height": 9
+    },
+    "image-kaleidoscope-1": {
+      "key": "image-kaleidoscope-1",
+      "file": "assets/components/image-kaleidoscope-1.svg",
+      "sha256": "f323c1c4e3ceb4f5a1e195ea15c4b867cd6cf5f7bd571974f48d17466ab0fac6",
+      "width": 5,
+      "height": 5
+    },
+    "image-kaleidoscope-2": {
+      "key": "image-kaleidoscope-2",
+      "file": "assets/components/image-kaleidoscope-2.svg",
+      "sha256": "db6c1b73c2ea0beb1901aa54fa6a024ad1f22a8e1619ac8543f3ef10bee093f7",
+      "width": 73,
+      "height": 51.9
+    },
+    "image-kaleidoscope-5": {
+      "key": "image-kaleidoscope-5",
+      "file": "assets/components/image-kaleidoscope-5.svg",
+      "sha256": "3291759c7565e002f6fbc2d96a108a45d8c38c7186f473f35319ca7fb8dc5845",
+      "width": 9,
+      "height": 9
+    },
+    "image-kaleidoscope-3": {
+      "key": "image-kaleidoscope-3",
+      "file": "assets/components/image-kaleidoscope-3.svg",
+      "sha256": "f9adead5e3ab934c603d35de910aa457dce1a557d70dd660b08fbd0abcfe201d",
+      "width": 5,
+      "height": 5
+    },
+    "image-kaleidoscope-6": {
+      "key": "image-kaleidoscope-6",
+      "file": "assets/components/image-kaleidoscope-6.svg",
+      "sha256": "3b46592455d5f7cf10a95813bd92700444bc704a7a1d425b7ee2d96ac4841e3c",
+      "width": 73,
+      "height": 51.9
+    },
+    "image-kaleidoscope-7": {
+      "key": "image-kaleidoscope-7",
+      "file": "assets/components/image-kaleidoscope-7.svg",
+      "sha256": "d7bb34a03ad28d578d9cc84db3c712c0f954994c88f5d7526beac4d7d285ebc7",
+      "width": 51.9,
+      "height": 73
+    },
+    "image-kaleidoscope-9": {
+      "key": "image-kaleidoscope-9",
+      "file": "assets/components/image-kaleidoscope-9.svg",
+      "sha256": "bd8910d67bb4ff142a99568c239c8e29c8350f182b558b3ea3944d8014e0e227",
+      "width": 51.9,
+      "height": 73
+    },
+    "image-kaleidoscope-12": {
+      "key": "image-kaleidoscope-12",
+      "file": "assets/components/image-kaleidoscope-12.svg",
+      "sha256": "5bc011b929fee4ec2673034d88126e5ae0ea33d71690f945a5b6a1b7b31127c6",
+      "width": 73,
+      "height": 51.9
+    },
+    "image-kaleidoscope-11": {
+      "key": "image-kaleidoscope-11",
+      "file": "assets/components/image-kaleidoscope-11.svg",
+      "sha256": "34f26c552a42be9bdeafce1de3e0ff8d43c439486a99c3909820f9abbda05f8f",
+      "width": 73,
+      "height": 51.9
+    },
+    "image-kaleidoscope-13": {
+      "key": "image-kaleidoscope-13",
+      "file": "assets/components/image-kaleidoscope-13.svg",
+      "sha256": "0937897a7582264f696d4022e91c5361f4e499a53f8c3de29faab9ee8a3a029c",
+      "width": 51.9,
+      "height": 73
+    },
+    "image-shatter-2": {
+      "key": "image-shatter-2",
+      "file": "assets/components/image-shatter-2.svg",
+      "sha256": "c546aac046777219f78b30456a816d0b2b6744a8cc930c731d6325c24fda44be",
+      "width": 111.866,
+      "height": 37.7379
+    },
+    "image-shatter-4": {
+      "key": "image-shatter-4",
+      "file": "assets/components/image-shatter-4.svg",
+      "sha256": "21c367358ba2a03b3b08e52a25f0d2db5fc5b0bbaeb2fd7f6793c97ee187f2b9",
+      "width": 27.788,
+      "height": 52.7375
+    },
+    "image-shatter-1": {
+      "key": "image-shatter-1",
+      "file": "assets/components/image-shatter-1.svg",
+      "sha256": "f341a422a0c372ffbd941509749b2a9892de60cc51ede16b4b022d3435a3943e",
+      "width": 46.9222,
+      "height": 89.6926
+    },
+    "image-shatter-6": {
+      "key": "image-shatter-6",
+      "file": "assets/components/image-shatter-6.svg",
+      "sha256": "8840ce2b13aedf294ed238c3e188a9ca8f8b1152ef3f0afcc21fd55c50e0a928",
+      "width": 65.6718,
+      "height": 22.4305
+    },
+    "image-shatter-0": {
+      "key": "image-shatter-0",
+      "file": "assets/components/image-shatter-0.svg",
+      "sha256": "a65e85e73987d057ca622aa4ef2087bfaa8645fba6b09477f0edca6e64a4ef55",
+      "width": 111.866,
+      "height": 37.7379
+    },
+    "image-shatter-3": {
+      "key": "image-shatter-3",
+      "file": "assets/components/image-shatter-3.svg",
+      "sha256": "d7a78b9ecfc49cc18b2b05e2f6bc1bb2d66a9c68816ca02065ee6a00613919df",
+      "width": 27.788,
+      "height": 52.7375
+    },
+    "image-shatter-8": {
+      "key": "image-shatter-8",
+      "file": "assets/components/image-shatter-8.svg",
+      "sha256": "48eb2a8bf0d049e5e1252ce4889a447604f0f582d2d9abeaa5421095bedb20fe",
+      "width": 46.9222,
+      "height": 89.6926
+    },
+    "image-shatter-5": {
+      "key": "image-shatter-5",
+      "file": "assets/components/image-shatter-5.svg",
+      "sha256": "5e277461e5d7894ef7fe4aad4113f0365c4f9b0ef3036dabd81573590416a28f",
+      "width": 65.6718,
+      "height": 22.4305
+    },
+    "image-shatter-7": {
+      "key": "image-shatter-7",
+      "file": "assets/components/image-shatter-7.svg",
+      "sha256": "4bc4a5772b6f488805a59ae44c6646efb480daa2415ab238eed6b593262070e8",
+      "width": 41.6,
+      "height": 33.6
+    },
+    "image-shatter-9": {
+      "key": "image-shatter-9",
+      "file": "assets/components/image-shatter-9.svg",
+      "sha256": "672472be2063957bfb15d3e5df56d0f0f0300e54cd18e1de6b7454baa32e1d00",
+      "width": 82.4,
+      "height": 66
+    },
+    "image-hologram-0": {
+      "key": "image-hologram-0",
+      "file": "assets/components/image-hologram-0.svg",
+      "sha256": "ce931b79f4a67fe809c47420018105f2c7ca4fbe87b48cb2e5d605884a9624ea",
+      "width": 2,
+      "height": 2
+    },
+    "image-hologram-1": {
+      "key": "image-hologram-1",
+      "file": "assets/components/image-hologram-1.svg",
+      "sha256": "6e6ed79b2aa645458772d8db538573a4e946f5646cb0e3eab2d863ab1dcb9801",
+      "width": 2,
+      "height": 2
+    },
+    "image-hologram-2": {
+      "key": "image-hologram-2",
+      "file": "assets/components/image-hologram-2.svg",
+      "sha256": "b9188c01a46ea6c999a7f66550b0771ae372ce01c9c7289646c0c97b0d33b343",
+      "width": 2,
+      "height": 2
+    },
+    "image-kaleidoscope-10": {
+      "key": "image-kaleidoscope-10",
+      "file": "assets/components/image-kaleidoscope-10.svg",
+      "sha256": "f17e0b80b88aabe5d64b98a3bc3f2422ed90b56195c3263b722f54101bfef27a",
+      "width": 144,
+      "height": 144
+    },
+    "image-kaleidoscope-4": {
+      "key": "image-kaleidoscope-4",
+      "file": "assets/components/image-kaleidoscope-4.svg",
+      "sha256": "64f9d326965d97f8b1f8926c501ad5560be33f612935445f1af0d7e7824ebf4e",
+      "width": 10,
+      "height": 10
+    }
+  },
+  "nodeMap": {
+    "171:1358": "image-kaleidoscope-8",
+    "171:1359": "image-kaleidoscope-0",
+    "171:1360": "image-kaleidoscope-1",
+    "171:1361": "image-kaleidoscope-2",
+    "171:1362": "image-kaleidoscope-5",
+    "171:1363": "image-kaleidoscope-3",
+    "171:1364": "image-kaleidoscope-6",
+    "171:1367": "image-kaleidoscope-7",
+    "171:1370": "image-kaleidoscope-9",
+    "171:1373": "image-kaleidoscope-12",
+    "171:1376": "image-kaleidoscope-11",
+    "171:1379": "image-kaleidoscope-13",
+    "171:1436": "image-shatter-2",
+    "171:1437": "image-shatter-4",
+    "171:1438": "image-shatter-1",
+    "171:1439": "image-shatter-6",
+    "171:1440": "image-shatter-0",
+    "171:1441": "image-shatter-3",
+    "171:1442": "image-shatter-8",
+    "171:1443": "image-shatter-5",
+    "171:1444": "image-shatter-7",
+    "171:1445": "image-shatter-9",
+    "172:811": "image-hologram-0",
+    "172:812": "image-hologram-1",
+    "172:813": "image-hologram-2",
+    "171:1365": "image-kaleidoscope-0",
+    "171:1366": "image-kaleidoscope-1",
+    "171:1368": "image-kaleidoscope-5",
+    "171:1369": "image-kaleidoscope-3",
+    "171:1371": "image-kaleidoscope-0",
+    "171:1372": "image-kaleidoscope-1",
+    "171:1374": "image-kaleidoscope-5",
+    "171:1375": "image-kaleidoscope-3",
+    "171:1377": "image-kaleidoscope-0",
+    "171:1378": "image-kaleidoscope-1",
+    "171:1380": "image-kaleidoscope-5",
+    "171:1381": "image-kaleidoscope-3",
+    "171:1382": "image-kaleidoscope-10",
+    "171:1383": "image-kaleidoscope-4",
+    "172:814": "image-hologram-0",
+    "172:815": "image-hologram-1",
+    "172:816": "image-hologram-2"
+  },
+  "stages": [
+    {
+      "id": "171:1357",
+      "name": "Stage content",
+      "bounds": {
+        "x": 1718,
+        "y": 616,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.07500000298023224,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.10000000149011612,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "1": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.699999988079071,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.03500000014901161,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.10000000149011612,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "CENTER",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "3": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.3499999940395355,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "4": {
+          "fills": [],
+          "strokes": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.14000000059604645,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "5": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.9803921580314636,
+                "g": 0.45098039507865906,
+                "b": 0.09803921729326248
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "6": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0
+        }
+      },
+      "layers": [
+        {
+          "id": "171:1358",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            186,
+            30,
+            50.900001525878906,
+            72
+          ],
+          "local": [
+            186,
+            30,
+            50.900001525878906,
+            72
+          ],
+          "renderBounds": {
+            "x": 1903.5,
+            "y": 645.5,
+            "width": 51.9000244140625,
+            "height": 73
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "171:1359",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            199.1033935546875,
+            55.00152587890625,
+            9,
+            9
+          ],
+          "local": [
+            199.1034393310547,
+            55.00154113769531,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1917.1033935546875,
+            "y": 671.0015258789062,
+            "width": 9,
+            "height": 9
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1360",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            193.44970703125,
+            75.4791259765625,
+            5,
+            5
+          ],
+          "local": [
+            193.44976806640625,
+            75.47913360595703,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1911.44970703125,
+            "y": 691.4791259765625,
+            "width": 5,
+            "height": 5
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1361",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            186,
+            51.0999755859375,
+            72,
+            50.900001525878906
+          ],
+          "local": [
+            186,
+            51.099998474121094,
+            72,
+            50.900001525878906
+          ],
+          "renderBounds": {
+            "x": 1903.5,
+            "y": 666.5999755859375,
+            "width": 73,
+            "height": 51.9000244140625
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "171:1362",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            223.9984130859375,
+            79.89654541015625,
+            9,
+            9
+          ],
+          "local": [
+            223.9984588623047,
+            79.89656066894531,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1941.9984130859375,
+            "y": 695.8965454101562,
+            "width": 9,
+            "height": 9
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1363",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            207.5208740234375,
+            89.55023193359375,
+            5,
+            5
+          ],
+          "local": [
+            207.5208740234375,
+            89.55023193359375,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1925.5208740234375,
+            "y": 705.5502319335938,
+            "width": 5,
+            "height": 5
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1364",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            186,
+            102,
+            72,
+            50.900001525878906
+          ],
+          "local": [
+            186,
+            102,
+            72,
+            50.900001525878906
+          ],
+          "renderBounds": {
+            "x": 1903.5,
+            "y": 717.5,
+            "width": 73,
+            "height": 51.9000244140625
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "171:1365",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            223.9984130859375,
+            115.10345458984375,
+            9,
+            9
+          ],
+          "local": [
+            223.9984588623047,
+            115.10343933105469,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1941.9984130859375,
+            "y": 731.1034545898438,
+            "width": 9,
+            "height": 9
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1366",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            207.5208740234375,
+            109.44976806640625,
+            5,
+            5
+          ],
+          "local": [
+            207.5208740234375,
+            109.44976806640625,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1925.5208740234375,
+            "y": 725.4497680664062,
+            "width": 5,
+            "height": 5
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1367",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            186,
+            102,
+            50.900001525878906,
+            72
+          ],
+          "local": [
+            186,
+            102,
+            50.900001525878906,
+            72
+          ],
+          "renderBounds": {
+            "x": 1903.5,
+            "y": 717.5,
+            "width": 51.9000244140625,
+            "height": 73
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "171:1368",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            199.1033935546875,
+            139.99847412109375,
+            9,
+            9
+          ],
+          "local": [
+            199.1034393310547,
+            139.9984588623047,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1917.1033935546875,
+            "y": 755.9984741210938,
+            "width": 9,
+            "height": 9
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1369",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            193.44970703125,
+            123.5208740234375,
+            5,
+            5
+          ],
+          "local": [
+            193.44976806640625,
+            123.52086639404297,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1911.44970703125,
+            "y": 739.5208740234375,
+            "width": 5,
+            "height": 5
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1370",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            135.0999755859375,
+            102,
+            50.900001525878906,
+            72
+          ],
+          "local": [
+            135.10000610351562,
+            102,
+            50.900001525878906,
+            72
+          ],
+          "renderBounds": {
+            "x": 1852.5999755859375,
+            "y": 717.5,
+            "width": 51.9000244140625,
+            "height": 73
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "171:1371",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            163.8966064453125,
+            139.99847412109375,
+            9,
+            9
+          ],
+          "local": [
+            163.8965606689453,
+            139.9984588623047,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1881.8966064453125,
+            "y": 755.9984741210938,
+            "width": 9,
+            "height": 9
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1372",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            173.55029296875,
+            123.5208740234375,
+            5,
+            5
+          ],
+          "local": [
+            173.55023193359375,
+            123.52086639404297,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1891.55029296875,
+            "y": 739.5208740234375,
+            "width": 5,
+            "height": 5
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1373",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            114,
+            102,
+            72,
+            50.900001525878906
+          ],
+          "local": [
+            114,
+            102,
+            72,
+            50.900001525878906
+          ],
+          "renderBounds": {
+            "x": 1831.5,
+            "y": 717.5,
+            "width": 73,
+            "height": 51.9000244140625
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "171:1374",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            139.0015869140625,
+            115.10345458984375,
+            9,
+            9
+          ],
+          "local": [
+            139.0015411376953,
+            115.10343933105469,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1857.0015869140625,
+            "y": 731.1034545898438,
+            "width": 9,
+            "height": 9
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1375",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            159.4791259765625,
+            109.44976806640625,
+            5,
+            5
+          ],
+          "local": [
+            159.4791259765625,
+            109.44976806640625,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1877.4791259765625,
+            "y": 725.4497680664062,
+            "width": 5,
+            "height": 5
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1376",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            114,
+            51.0999755859375,
+            72,
+            50.900001525878906
+          ],
+          "local": [
+            114,
+            51.099998474121094,
+            72,
+            50.900001525878906
+          ],
+          "renderBounds": {
+            "x": 1831.5,
+            "y": 666.5999755859375,
+            "width": 73,
+            "height": 51.9000244140625
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "171:1377",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            139.0015869140625,
+            79.89654541015625,
+            9,
+            9
+          ],
+          "local": [
+            139.0015411376953,
+            79.89656066894531,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1857.0015869140625,
+            "y": 695.8965454101562,
+            "width": 9,
+            "height": 9
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1378",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            159.4791259765625,
+            89.55023193359375,
+            5,
+            5
+          ],
+          "local": [
+            159.4791259765625,
+            89.55023193359375,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1877.4791259765625,
+            "y": 705.5502319335938,
+            "width": 5,
+            "height": 5
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "171:1379",
+          "name": "Vector",
+          "type": "VECTOR",
+          "geometry": [
+            135.0999755859375,
+            30,
+            50.900001525878906,
+            72
+          ],
+          "local": [
+            135.10000610351562,
+            30,
+            50.900001525878906,
+            72
+          ],
+          "renderBounds": {
+            "x": 1852.5999755859375,
+            "y": 645.5,
+            "width": 51.9000244140625,
+            "height": 73
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "171:1380",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            163.8966064453125,
+            55.00152587890625,
+            9,
+            9
+          ],
+          "local": [
+            163.8965606689453,
+            55.00154113769531,
+            9,
+            9
+          ],
+          "renderBounds": {
+            "x": 1881.8966064453125,
+            "y": 671.0015258789062,
+            "width": 9,
+            "height": 9
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1381",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            173.55029296875,
+            75.4791259765625,
+            5,
+            5
+          ],
+          "local": [
+            173.55023193359375,
+            75.47913360595703,
+            5,
+            5
+          ],
+          "renderBounds": {
+            "x": 1891.55029296875,
+            "y": 691.4791259765625,
+            "width": 5,
+            "height": 5
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "171:1382",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            114,
+            30,
+            144,
+            144
+          ],
+          "local": [
+            114,
+            30,
+            144,
+            144
+          ],
+          "renderBounds": {
+            "x": 1832,
+            "y": 646,
+            "width": 144,
+            "height": 144
+          },
+          "style": "4",
+          "children": []
+        },
+        {
+          "id": "171:1383",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            181,
+            97,
+            10,
+            10
+          ],
+          "local": [
+            181,
+            97,
+            10,
+            10
+          ],
+          "renderBounds": {
+            "x": 1899,
+            "y": 713,
+            "width": 10,
+            "height": 10
+          },
+          "style": "5",
+          "children": []
+        },
+        {
+          "id": "187:4216",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "local": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "renderBounds": {
+            "x": 1875.5,
+            "y": 840,
+            "width": 57,
+            "height": 28
+          },
+          "style": "6",
+          "children": [
+            {
+              "id": "187:4217",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "171:1432",
+      "name": "Stage content",
+      "bounds": {
+        "x": 2134,
+        "y": 988,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 14,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 20,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.18000000715255737
+              },
+              "offset": {
+                "x": 0,
+                "y": 8
+              },
+              "spread": -8,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 2,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.11999999731779099
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0
+        },
+        "1": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0
+        }
+      },
+      "layers": [
+        {
+          "id": "171:1433",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "local": [
+            86,
+            28,
+            200,
+            150
+          ],
+          "renderBounds": {
+            "x": 2208,
+            "y": 1012,
+            "width": 224,
+            "height": 174
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "171:1434",
+              "name": "photo/cityNight",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "171:1435",
+              "name": "Frame",
+              "type": "FRAME",
+              "childCount": 0
+            },
+            {
+              "id": "171:1436",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1437",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1438",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1439",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1440",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1441",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1442",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1443",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1444",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            },
+            {
+              "id": "171:1445",
+              "name": "Vector",
+              "type": "VECTOR",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "187:4228",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157,
+            224,
+            58,
+            28
+          ],
+          "local": [
+            157,
+            224,
+            58,
+            28
+          ],
+          "renderBounds": {
+            "x": 2291,
+            "y": 1212,
+            "width": 58,
+            "height": 28
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "187:4229",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "168:1548",
+      "name": "Stage content",
+      "bounds": {
+        "x": 470,
+        "y": 1360,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0
+        },
+        "1": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 0.04313725605607033,
+                "g": 0.04313725605607033,
+                "b": 0.04313725605607033
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 6,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 44,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.550000011920929
+              },
+              "offset": {
+                "x": 0,
+                "y": 18
+              },
+              "spread": -14,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "DROP_SHADOW",
+              "visible": true,
+              "radius": 3,
+              "boundVariables": {},
+              "color": {
+                "r": 0,
+                "g": 0,
+                "b": 0,
+                "a": 0.30000001192092896
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL",
+              "showShadowBehindNode": true
+            },
+            {
+              "type": "INNER_SHADOW",
+              "visible": true,
+              "radius": 0,
+              "boundVariables": {},
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.05999999865889549
+              },
+              "offset": {
+                "x": 0,
+                "y": 1
+              },
+              "spread": 0,
+              "blendMode": "NORMAL"
+            }
+          ],
+          "clipsContent": true,
+          "rotation": 0
+        },
+        "2": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0
+        }
+      },
+      "layers": [
+        {
+          "id": "168:1549",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            96,
+            40,
+            44,
+            44
+          ],
+          "local": [
+            96,
+            40,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 566,
+            "y": 1400,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1550",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1551",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            142,
+            40,
+            44,
+            44
+          ],
+          "local": [
+            142,
+            40,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 612,
+            "y": 1400,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1552",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1553",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            188,
+            40,
+            44,
+            44
+          ],
+          "local": [
+            188,
+            40,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 658,
+            "y": 1400,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1554",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1555",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            234,
+            40,
+            44,
+            44
+          ],
+          "local": [
+            234,
+            40,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 704,
+            "y": 1400,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1556",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1557",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            96,
+            86,
+            44,
+            44
+          ],
+          "local": [
+            96,
+            86,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 566,
+            "y": 1446,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1558",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1559",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            140,
+            82,
+            44,
+            44
+          ],
+          "local": [
+            140,
+            82,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 580,
+            "y": 1430,
+            "width": 104,
+            "height": 104
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "168:1560",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1561",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            186,
+            82,
+            44,
+            44
+          ],
+          "local": [
+            186,
+            82,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 626,
+            "y": 1430,
+            "width": 104,
+            "height": 104
+          },
+          "style": "1",
+          "children": [
+            {
+              "id": "168:1562",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1563",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            234,
+            86,
+            44,
+            44
+          ],
+          "local": [
+            234,
+            86,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 704,
+            "y": 1446,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1564",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1565",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            96,
+            132,
+            44,
+            44
+          ],
+          "local": [
+            96,
+            132,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 566,
+            "y": 1492,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1566",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1567",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            142,
+            132,
+            44,
+            44
+          ],
+          "local": [
+            142,
+            132,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 612,
+            "y": 1492,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1568",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1569",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            188,
+            132,
+            44,
+            44
+          ],
+          "local": [
+            188,
+            132,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 658,
+            "y": 1492,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1570",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "168:1571",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            234,
+            132,
+            44,
+            44
+          ],
+          "local": [
+            234,
+            132,
+            44,
+            44
+          ],
+          "renderBounds": {
+            "x": 704,
+            "y": 1492,
+            "width": 44,
+            "height": 44
+          },
+          "style": "0",
+          "children": [
+            {
+              "id": "168:1572",
+              "name": "photo/silk",
+              "type": "FRAME",
+              "childCount": 0
+            }
+          ]
+        },
+        {
+          "id": "187:3472",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "local": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "renderBounds": {
+            "x": 627.5,
+            "y": 1584,
+            "width": 57,
+            "height": 28
+          },
+          "style": "2",
+          "children": [
+            {
+              "id": "187:3473",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "172:808",
+      "name": "Stage content",
+      "bounds": {
+        "x": 886,
+        "y": 1360,
+        "width": 372,
+        "height": 264
+      },
+      "styles": {
+        "0": {
+          "fills": [
+            {
+              "type": "GRADIENT_LINEAR",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "gradientStops": [
+                {
+                  "color": {
+                    "r": 0.7686274647712708,
+                    "g": 0.7686274647712708,
+                    "b": 0.7686274647712708,
+                    "a": 1
+                  },
+                  "position": 0,
+                  "boundVariables": {}
+                },
+                {
+                  "color": {
+                    "r": 0.6039215922355652,
+                    "g": 0.6039215922355652,
+                    "b": 0.6039215922355652,
+                    "a": 1
+                  },
+                  "position": 1,
+                  "boundVariables": {}
+                }
+              ],
+              "gradientTransform": [
+                [
+                  6.123234262925839e-17,
+                  1,
+                  -5.551115123125783e-17
+                ],
+                [
+                  -1,
+                  6.123234262925839e-17,
+                  1
+                ]
+              ]
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "OUTSIDE",
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "1": {
+          "fills": [
+            {
+              "type": "GRADIENT_LINEAR",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "gradientStops": [
+                {
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  },
+                  "position": 0,
+                  "boundVariables": {}
+                },
+                {
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0.3499999940395355
+                  },
+                  "position": 0.5,
+                  "boundVariables": {}
+                },
+                {
+                  "color": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 0
+                  },
+                  "position": 1,
+                  "boundVariables": {}
+                }
+              ],
+              "gradientTransform": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ]
+              ]
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": false,
+          "rotation": 0
+        },
+        "2": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.5,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "3": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.3499999940395355,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "4": {
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 0.20000000298023224,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1
+              },
+              "boundVariables": {}
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "rotation": 0
+        },
+        "5": {
+          "fills": [],
+          "strokes": [],
+          "strokeWeight": 1,
+          "strokeAlign": "INSIDE",
+          "cornerRadius": 0,
+          "opacity": 1,
+          "blendMode": "PASS_THROUGH",
+          "effects": [],
+          "clipsContent": true,
+          "rotation": 0
+        }
+      },
+      "layers": [
+        {
+          "id": "172:809",
+          "name": "INTRX",
+          "type": "TEXT",
+          "geometry": [
+            105,
+            70,
+            162,
+            75
+          ],
+          "local": [
+            105,
+            70,
+            162,
+            75
+          ],
+          "renderBounds": {
+            "x": 995.6400146484375,
+            "y": 1446.8199462890625,
+            "width": 156.3106689453125,
+            "height": 41.1800537109375
+          },
+          "style": "0",
+          "children": []
+        },
+        {
+          "id": "172:810",
+          "name": "Frame",
+          "type": "FRAME",
+          "geometry": [
+            126,
+            146,
+            120,
+            1
+          ],
+          "local": [
+            126,
+            146,
+            120,
+            1
+          ],
+          "renderBounds": {
+            "x": 1012,
+            "y": 1506,
+            "width": 120,
+            "height": 1
+          },
+          "style": "1",
+          "children": []
+        },
+        {
+          "id": "172:811",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            81,
+            77,
+            2,
+            2
+          ],
+          "local": [
+            81,
+            77,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 967,
+            "y": 1437,
+            "width": 2,
+            "height": 2
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "172:812",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            69,
+            91,
+            2,
+            2
+          ],
+          "local": [
+            69,
+            91,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 955,
+            "y": 1451,
+            "width": 2,
+            "height": 2
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "172:813",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            57,
+            105,
+            2,
+            2
+          ],
+          "local": [
+            57,
+            105,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 943,
+            "y": 1465,
+            "width": 2,
+            "height": 2
+          },
+          "style": "4",
+          "children": []
+        },
+        {
+          "id": "172:814",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            289,
+            77,
+            2,
+            2
+          ],
+          "local": [
+            289,
+            77,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 1175,
+            "y": 1437,
+            "width": 2,
+            "height": 2
+          },
+          "style": "2",
+          "children": []
+        },
+        {
+          "id": "172:815",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            301,
+            91,
+            2,
+            2
+          ],
+          "local": [
+            301,
+            91,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 1187,
+            "y": 1451,
+            "width": 2,
+            "height": 2
+          },
+          "style": "3",
+          "children": []
+        },
+        {
+          "id": "172:816",
+          "name": "Ellipse",
+          "type": "ELLIPSE",
+          "geometry": [
+            313,
+            105,
+            2,
+            2
+          ],
+          "local": [
+            313,
+            105,
+            2,
+            2
+          ],
+          "renderBounds": {
+            "x": 1199,
+            "y": 1465,
+            "width": 2,
+            "height": 2
+          },
+          "style": "4",
+          "children": []
+        },
+        {
+          "id": "187:4300",
+          "name": "Dock",
+          "type": "FRAME",
+          "geometry": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "local": [
+            157.5,
+            224,
+            57,
+            28
+          ],
+          "renderBounds": {
+            "x": 1043.5,
+            "y": 1584,
+            "width": 57,
+            "height": 28
+          },
+          "style": "5",
+          "children": [
+            {
+              "id": "187:4301",
+              "name": "DockButton",
+              "type": "INSTANCE",
+              "childCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "details": [
+    {
+      "id": "171:1433",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "171:1432",
+      "x": 86,
+      "y": 28,
+      "width": 200,
+      "height": 150,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 20,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.18000000715255737
+          },
+          "offset": {
+            "x": 0,
+            "y": 8
+          },
+          "spread": -8,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 2,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.11999999731779099
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        }
+      ],
+      "cornerRadius": 14,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 2220,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "absoluteRenderBounds": {
+        "x": 2208,
+        "y": 1012,
+        "width": 224,
+        "height": 174
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          86
+        ],
+        [
+          0,
+          1,
+          28
+        ]
+      ],
+      "children": [
+        {
+          "id": "171:1434",
+          "name": "photo/cityNight",
+          "type": "FRAME"
+        },
+        {
+          "id": "171:1435",
+          "name": "Frame",
+          "type": "FRAME"
+        },
+        {
+          "id": "171:1436",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1437",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1438",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1439",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1440",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1441",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1442",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1443",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1444",
+          "name": "Vector",
+          "type": "VECTOR"
+        },
+        {
+          "id": "171:1445",
+          "name": "Vector",
+          "type": "VECTOR"
+        }
+      ]
+    },
+    {
+      "id": "171:1434",
+      "name": "photo/cityNight",
+      "type": "FRAME",
+      "parent": "171:1433",
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 150,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "ce05f0bfa1fce14b662aeb2b044d450ffefb151c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 2220,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "absoluteRenderBounds": {
+        "x": 2220,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "171:1435",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "171:1433",
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 150,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.07999999821186066,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 14,
+      "clipsContent": false,
+      "absoluteBoundingBox": {
+        "x": 2220,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "absoluteRenderBounds": {
+        "x": 2220,
+        "y": 1016,
+        "width": 200,
+        "height": 150
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "171:1436",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 100,
+      "y": 75,
+      "width": 110.86554718017578,
+      "height": 36.73760986328125,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2320,
+        "y": 1091,
+        "width": 110.86554718017578,
+        "height": 36.73760986328125
+      },
+      "absoluteRenderBounds": {
+        "x": 2319.499755859375,
+        "y": 1090.4998779296875,
+        "width": 100.500244140625,
+        "height": 37.7379150390625
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          100
+        ],
+        [
+          0,
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "171:1437",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 100,
+      "y": 75,
+      "width": 26.787839889526367,
+      "height": 51.73725509643555,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2320,
+        "y": 1091,
+        "width": 26.787839889526367,
+        "height": 51.73725509643555
+      },
+      "absoluteRenderBounds": {
+        "x": 2319.5,
+        "y": 1090.4998779296875,
+        "width": 27.787841796875,
+        "height": 52.7374267578125
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          100
+        ],
+        [
+          0,
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "171:1438",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 54.07798767089844,
+      "y": 75,
+      "width": 45.92201232910156,
+      "height": 88.69243621826172,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2274.077880859375,
+        "y": 1091,
+        "width": 45.92201232910156,
+        "height": 88.69243621826172
+      },
+      "absoluteRenderBounds": {
+        "x": 2273.577880859375,
+        "y": 1090.4998779296875,
+        "width": 46.922119140625,
+        "height": 75.5001220703125
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          54.07798767089844
+        ],
+        [
+          0,
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "171:1439",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 35.328433990478516,
+      "y": 75,
+      "width": 64.67156982421875,
+      "height": 21.430273056030273,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2255.328369140625,
+        "y": 1091,
+        "width": 64.67156982421875,
+        "height": 21.430273056030273
+      },
+      "absoluteRenderBounds": {
+        "x": 2254.828125,
+        "y": 1090.4998779296875,
+        "width": 65.671875,
+        "height": 22.4305419921875
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          35.328433990478516
+        ],
+        [
+          0,
+          1,
+          75
+        ]
+      ]
+    },
+    {
+      "id": "171:1440",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": -10.865544319152832,
+      "y": 38.26239013671875,
+      "width": 110.86554718017578,
+      "height": 36.73760986328125,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2209.134521484375,
+        "y": 1054.262451171875,
+        "width": 110.86554718017578,
+        "height": 36.73760986328125
+      },
+      "absoluteRenderBounds": {
+        "x": 2220,
+        "y": 1053.7623291015625,
+        "width": 100.500244140625,
+        "height": 37.7379150390625
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -10.865544319152832
+        ],
+        [
+          0,
+          1,
+          38.26239013671875
+        ]
+      ]
+    },
+    {
+      "id": "171:1441",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 73.212158203125,
+      "y": 23.262746810913086,
+      "width": 26.787839889526367,
+      "height": 51.73725509643555,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2293.212158203125,
+        "y": 1039.2626953125,
+        "width": 26.787839889526367,
+        "height": 51.73725509643555
+      },
+      "absoluteRenderBounds": {
+        "x": 2292.712158203125,
+        "y": 1038.7625732421875,
+        "width": 27.787841796875,
+        "height": 52.7374267578125
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          73.212158203125
+        ],
+        [
+          0,
+          1,
+          23.262746810913086
+        ]
+      ]
+    },
+    {
+      "id": "171:1442",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 100,
+      "y": -13.692435264587402,
+      "width": 45.92201232910156,
+      "height": 88.69243621826172,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2320,
+        "y": 1002.3075561523438,
+        "width": 45.92201232910156,
+        "height": 88.69243621826172
+      },
+      "absoluteRenderBounds": {
+        "x": 2319.5,
+        "y": 1016,
+        "width": 46.922119140625,
+        "height": 75.5001220703125
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          100
+        ],
+        [
+          0,
+          1,
+          -13.692435264587402
+        ]
+      ]
+    },
+    {
+      "id": "171:1443",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 100,
+      "y": 53.56972885131836,
+      "width": 64.67156982421875,
+      "height": 21.430273056030273,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.5,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2320,
+        "y": 1069.5697021484375,
+        "width": 64.67156982421875,
+        "height": 21.430273056030273
+      },
+      "absoluteRenderBounds": {
+        "x": 2319.499755859375,
+        "y": 1069.069580078125,
+        "width": 65.671875,
+        "height": 22.4305419921875
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          100
+        ],
+        [
+          0,
+          1,
+          53.56972885131836
+        ]
+      ]
+    },
+    {
+      "id": "171:1444",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 79.69999694824219,
+      "y": 58.70000076293945,
+      "width": 40.599998474121094,
+      "height": 32.599998474121094,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.30000001192092896,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2299.699951171875,
+        "y": 1074.699951171875,
+        "width": 40.599998474121094,
+        "height": 32.599998474121094
+      },
+      "absoluteRenderBounds": {
+        "x": 2299.199951171875,
+        "y": 1074.199951171875,
+        "width": 41.60009765625,
+        "height": 33.5999755859375
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          79.69999694824219
+        ],
+        [
+          0,
+          1,
+          58.70000076293945
+        ]
+      ]
+    },
+    {
+      "id": "171:1445",
+      "name": "Vector",
+      "type": "VECTOR",
+      "parent": "171:1433",
+      "x": 59.29999923706055,
+      "y": 42.5,
+      "width": 81.4000015258789,
+      "height": 65,
+      "fills": [],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.30000001192092896,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "CENTER",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "absoluteBoundingBox": {
+        "x": 2279.300048828125,
+        "y": 1058.5,
+        "width": 81.4000015258789,
+        "height": 65
+      },
+      "absoluteRenderBounds": {
+        "x": 2278.800048828125,
+        "y": 1058,
+        "width": 82.39990234375,
+        "height": 66
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          59.29999923706055
+        ],
+        [
+          0,
+          1,
+          42.5
+        ]
+      ]
+    },
+    {
+      "id": "168:1549",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 96,
+      "y": 40,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          96
+        ],
+        [
+          0,
+          1,
+          40
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1550",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1550",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1549",
+      "x": 0,
+      "y": 0,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1551",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 142,
+      "y": 40,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 612,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 612,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          142
+        ],
+        [
+          0,
+          1,
+          40
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1552",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1552",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1551",
+      "x": -46,
+      "y": 0,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 612,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -46
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1553",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 188,
+      "y": 40,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 658,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 658,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          188
+        ],
+        [
+          0,
+          1,
+          40
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1554",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1554",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1553",
+      "x": -92,
+      "y": 0,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 658,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -92
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1555",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 234,
+      "y": 40,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 704,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          234
+        ],
+        [
+          0,
+          1,
+          40
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1556",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1556",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1555",
+      "x": -138,
+      "y": 0,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1400,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -138
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1557",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 96,
+      "y": 86,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          96
+        ],
+        [
+          0,
+          1,
+          86
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1558",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1558",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1557",
+      "x": 0,
+      "y": -46,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -46
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1559",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 140,
+      "y": 82,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 44,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.550000011920929
+          },
+          "offset": {
+            "x": 0,
+            "y": 18
+          },
+          "spread": -14,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 3,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.30000001192092896
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "INNER_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {},
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.05999999865889549
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL"
+        }
+      ],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 610,
+        "y": 1442,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 580,
+        "y": 1430,
+        "width": 104,
+        "height": 104
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          140
+        ],
+        [
+          0,
+          1,
+          82
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1560",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1560",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1559",
+      "x": -46,
+      "y": -46,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 564,
+        "y": 1396,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 610,
+        "y": 1442,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -46
+        ],
+        [
+          0,
+          1,
+          -46
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1561",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 186,
+      "y": 82,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 44,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.550000011920929
+          },
+          "offset": {
+            "x": 0,
+            "y": 18
+          },
+          "spread": -14,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "DROP_SHADOW",
+          "visible": true,
+          "radius": 3,
+          "boundVariables": {},
+          "color": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0.30000001192092896
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL",
+          "showShadowBehindNode": true
+        },
+        {
+          "type": "INNER_SHADOW",
+          "visible": true,
+          "radius": 0,
+          "boundVariables": {},
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 0.05999999865889549
+          },
+          "offset": {
+            "x": 0,
+            "y": 1
+          },
+          "spread": 0,
+          "blendMode": "NORMAL"
+        }
+      ],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 656,
+        "y": 1442,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 626,
+        "y": 1430,
+        "width": 104,
+        "height": 104
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          186
+        ],
+        [
+          0,
+          1,
+          82
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1562",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1562",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1561",
+      "x": -92,
+      "y": -46,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 564,
+        "y": 1396,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 656,
+        "y": 1442,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -92
+        ],
+        [
+          0,
+          1,
+          -46
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1563",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 234,
+      "y": 86,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 704,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          234
+        ],
+        [
+          0,
+          1,
+          86
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1564",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1564",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1563",
+      "x": -138,
+      "y": -46,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1446,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -138
+        ],
+        [
+          0,
+          1,
+          -46
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1565",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 96,
+      "y": 132,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          96
+        ],
+        [
+          0,
+          1,
+          132
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1566",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1566",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1565",
+      "x": 0,
+      "y": -92,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 566,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -92
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1567",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 142,
+      "y": 132,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 612,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 612,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          142
+        ],
+        [
+          0,
+          1,
+          132
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1568",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1568",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1567",
+      "x": -46,
+      "y": -92,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 612,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -46
+        ],
+        [
+          0,
+          1,
+          -92
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1569",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 188,
+      "y": 132,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 658,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 658,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          188
+        ],
+        [
+          0,
+          1,
+          132
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1570",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1570",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1569",
+      "x": -92,
+      "y": -92,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 658,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -92
+        ],
+        [
+          0,
+          1,
+          -92
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "168:1571",
+      "name": "Frame",
+      "type": "FRAME",
+      "parent": "168:1548",
+      "x": 234,
+      "y": 132,
+      "width": 44,
+      "height": 44,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.04313725605607033,
+            "g": 0.04313725605607033,
+            "b": 0.04313725605607033
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 6,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 704,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          234
+        ],
+        [
+          0,
+          1,
+          132
+        ]
+      ],
+      "children": [
+        {
+          "id": "168:1572",
+          "name": "photo/silk",
+          "type": "FRAME"
+        }
+      ]
+    },
+    {
+      "id": "168:1572",
+      "name": "photo/silk",
+      "type": "FRAME",
+      "parent": "168:1571",
+      "x": -138,
+      "y": -92,
+      "width": 184,
+      "height": 138,
+      "fills": [
+        {
+          "type": "IMAGE",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "scaleMode": "FILL",
+          "scalingFactor": 1,
+          "rotation": 0,
+          "filters": {
+            "exposure": 0,
+            "contrast": 0,
+            "saturation": 0,
+            "temperature": 0,
+            "tint": 0,
+            "highlights": 0,
+            "shadows": 0
+          },
+          "imageTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "imageHash": "f217c5ed67b144357159f6c594ac29bd2cc52e4c"
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "opacity": 1,
+      "effects": [],
+      "cornerRadius": 0,
+      "clipsContent": true,
+      "absoluteBoundingBox": {
+        "x": 566,
+        "y": 1400,
+        "width": 184,
+        "height": 138
+      },
+      "absoluteRenderBounds": {
+        "x": 704,
+        "y": 1492,
+        "width": 44,
+        "height": 44
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          -138
+        ],
+        [
+          0,
+          1,
+          -92
+        ]
+      ],
+      "children": []
+    },
+    {
+      "id": "172:809",
+      "name": "INTRX",
+      "type": "TEXT",
+      "parent": "172:808",
+      "x": 105,
+      "y": 70,
+      "width": 162,
+      "height": 75,
+      "fills": [
+        {
+          "type": "GRADIENT_LINEAR",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 0.7686274647712708,
+                "g": 0.7686274647712708,
+                "b": 0.7686274647712708,
+                "a": 1
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 0.6039215922355652,
+                "g": 0.6039215922355652,
+                "b": 0.6039215922355652,
+                "a": 1
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              6.123234262925839e-17,
+              1,
+              -5.551115123125783e-17
+            ],
+            [
+              -1,
+              6.123234262925839e-17,
+              1
+            ]
+          ]
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "OUTSIDE",
+      "opacity": 1,
+      "effects": [],
+      "absoluteBoundingBox": {
+        "x": 991,
+        "y": 1430,
+        "width": 162,
+        "height": 75
+      },
+      "absoluteRenderBounds": {
+        "x": 995.6400146484375,
+        "y": 1446.8199462890625,
+        "width": 156.3106689453125,
+        "height": 41.1800537109375
+      },
+      "relativeTransform": [
+        [
+          1,
+          0,
+          105
+        ],
+        [
+          0,
+          1,
+          70
+        ]
+      ],
+      "characters": "INTRX",
+      "fontName": {
+        "family": "Geist",
+        "style": "SemiBold",
+        "variationSettings": {
+          "wght": 600
+        }
+      },
+      "fontSize": 58,
+      "fontWeight": 600,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": -2.8299999237060547
+      },
+      "textAlignHorizontal": "LEFT",
+      "textAlignVertical": "TOP",
+      "textAutoResize": "WIDTH_AND_HEIGHT"
+    }
+  ],
+  "photoIdentity": [
+    {
+      "demo": "shatter",
+      "key": "cityNight",
+      "thumbnail_RGB_RMS": 1.4461732609526579,
+      "secondClosest": [
+        27.49118387724003,
+        "forestDark"
+      ],
+      "figmaSHA256": "3d0aa178ca4053f9b4b82a197b9150de590299bb073c9cec379d2bcda09d2c59",
+      "localSHA256": "a71c690d4ac18dfc307b6d7359914b0e49b6bc374bb1e169b4d7444b59371995"
+    },
+    {
+      "demo": "magnetic",
+      "key": "silk",
+      "thumbnail_RGB_RMS": 0.3882217740330047,
+      "secondClosest": [
+        20.630736260391515,
+        "roses"
+      ],
+      "figmaSHA256": "4a4a3ff58e39721bfc002eeb5c2b3573967c9427ac604db1e76f67e29ded28a5",
+      "localSHA256": "a63845b54d3a11791af6f4da979a3d32e1ac25c6ecce87e1163e4b355837eb66"
+    }
+  ]
+}

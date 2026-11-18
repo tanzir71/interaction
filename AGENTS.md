@@ -393,3 +393,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Blinds has six reference louvers while full retains ten. Record frame timing
   with `node tools/profile-image-photos.js http://127.0.0.1:4173 --cpu=1` or
   `--cpu=4`; full Ken Burns includes a complete three-scene source cycle.
+- `node tools/verify-image-assemblies.js http://127.0.0.1:4173` covers v4
+  Kaleidoscope, Shatter, Magnetic Tiles and Hologram Wordmark. It compares the
+  complete original twelve-sector shader, 96 triangular shards, twenty-tile
+  field and 1,865-particle raster against independent normal/reduced captures;
+  exact native SVG/photo/type slots, actual matrices, painted particles and
+  two-frame RGB splits; real keys/touch and vertical scrolling; equivalent
+  native clocks, independent holds, queued intent, GPU loss/recovery and
+  complete photographic fallback, cleanup and sixteen fresh offline exports.
+  Literal original drawing functions also verify transformed photo/particle
+  pixels at DPR 1/2; independent 128x128 subpixel samples verify triangle-edge
+  coverage across GPU and Canvas rasterizers.
+  Native has eight sectors and twelve tiles. Record timing with
+  `node tools/profile-image-assemblies.js http://127.0.0.1:4173 --cpu=1` or
+  `--cpu=4`; full Hologram includes all four original glitch intervals.

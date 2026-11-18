@@ -1,0 +1,15 @@
+{
+  "sourceCommit": "d0a49f88eff1fbed6ca3e27f09a8b01a83f98048",
+  "definitions": [
+    {
+      "id": "webgl-hologram-particles",
+      "sourceSHA256": "bb43af509bd76ba1c43511b969a37fa02f2a111eab05c705a13d08877e50f014",
+      "draw": "function draw(){context.setTransform(dpr,0,0,dpr,0,0);context.clearRect(0,0,width,height);const scanY=((activeTime%scanDuration)/scanDuration)*(height+44)-22,glitch=glitchFrames>0;context.globalCompositeOperation='lighter';context.fillStyle='#fa7319';for(const particle of particles){const flicker=.75+.25*Math.sin(activeTime*.0042+particle.phase),distance=Math.abs(particle.y-scanY);context.globalAlpha=flicker;context.fillRect(particle.x-1,particle.y-1,2,2);if(distance<22){context.globalAlpha=flicker*.4*(1-distance/22);context.fillRect(particle.x-1,particle.y-1,2,2)}}if(glitch){context.fillStyle='#67e8f9';for(const particle of particles){context.globalAlpha=.22+.12*Math.sin(activeTime*.004+particle.phase);context.fillRect(particle.x-3,particle.y-1,2,2)}context.fillStyle='#f472b6';for(const particle of particles){context.globalAlpha=.2+.1*Math.cos(activeTime*.004+particle.phase);context.fillRect(particle.x+1,particle.y-1,2,2)}}context.globalAlpha=1;context.globalCompositeOperation='source-over'}\n"
+    },
+    {
+      "id": "image-shatter-click",
+      "sourceSHA256": "0e74dee977516313b41d3e16a7cce4318516bfbf3408de1087f0f5e9171538f1",
+      "draw": "function drawShard(shard){ctx.save();ctx.globalAlpha=shard.alpha;ctx.translate(shard.cx+shard.dx,shard.cy+shard.dy);ctx.rotate(shard.rotation);ctx.translate(-shard.cx,-shard.cy);ctx.beginPath();ctx.moveTo(shard.vertices[0].x,shard.vertices[0].y);ctx.lineTo(shard.vertices[1].x,shard.vertices[1].y);ctx.lineTo(shard.vertices[2].x,shard.vertices[2].y);ctx.closePath();ctx.clip();ctx.drawImage(source,0,0);ctx.strokeStyle='rgba(255,236,185,.35)';ctx.lineWidth=1;ctx.stroke();ctx.restore()}function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);if(state==='intact')ctx.drawImage(source,0,0);else shards.forEach(drawShard)}"
+    }
+  ]
+}

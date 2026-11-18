@@ -1,21 +1,91 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 256 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 260 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and seventeen Image & WebGL demos.
-The remaining work includes 143 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and twenty-one Image & WebGL demos.
+The remaining work includes 139 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 23 remaining demos.
-None of the 256 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 20 remaining demos.
+None of the 260 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 256 native compositions. The unfinished groups still account for
-20 overflow findings, zero horizontal-scroll findings, 52 tiny-text findings and
+among these 260 native compositions. The unfinished groups still account for
+20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Image assemblies: mirrored fields, shards, magnetic fragments and particle type
+
+Kaleidoscope, Shatter, Magnetic Tiles and Hologram Wordmark now use their exact
+v4 native compositions. The native mirrored assembly retains all eight supplied
+wedges, sixteen dots, the 144px circular outline and its 10px pivot. Full keeps
+the complete original twelve-sector photographic shader, shortest-angle
+bearing and exponential easing. Context loss switches to a complete polar
+photographic Canvas renderer; recovery rebuilds the original GPU resources.
+The fallback matches a WebGL reference at the same pixel resolution with RGB
+RMS 2.11 and preserves caller suspension through recovery.
+
+Shatter retains all 96 original jittered triangles, alternating diagonals,
+source hash, impact-relative forces, angular momentum, gravity and complete
+2.5-second flight/fade. The native City Night photograph keeps all ten supplied
+crack SVGs, and the moving shards carry that actual composition. Full uses the
+approved Architectural Grid photograph. A second activation, Escape or Rebuild
+cancels the flight; reduced motion renders its original displaced still.
+
+Magnetic Tiles preserves all twenty full tiles, original radial influence,
+five spring coordinates, 900px perspective, pin/release and keyboard stepping.
+Its native twelve-fragment Silk composition retains each 184×138px source crop,
+the two raised center cards and their exact shadows. The first deliberate
+input starts from those visible reference poses. Fixed simulation clocks keep
+the same spring forces and complete six-second native stories at 60/120/240Hz.
+
+Hologram preserves the entire original 1,865-particle Inter raster, golden-ratio
+phases, home springs, pointer forces, scan band and four glitch intervals.
+Both RGB split frames actually paint every particle. Native particles reform
+the exact neutral Geist wordmark with its supplied six marker slots and rule.
+Full retains the original operational timeline. All four demos support native
+keys and touch, vertical page scrolling, queued deliberate intent, independent
+caller/viewport holds, cleanup and fresh complete offline exports.
+
+Independent captures contain 4,080 complete original normal/reduced states.
+The model verifier checks the production mathematical functions and live full
+renderers against those captures, including all 96 shards, twenty tile states
+and every source particle checkpoint. The artwork verifier binds all 27 SVG
+files and native slots, exact typography and both original photo identities.
+
+Shatter and Hologram now paint through GPU batches while keeping those original
+simulation functions. Shatter uses the photograph and crack texture on all 96
+projected triangles; Hologram batches the complete glyph and both RGB split
+passes. Their complete Canvas renderers remain available without WebGL and
+during graphics loss. Recovery preserves the model and caller pause, and
+disposal releases programs, buffers, textures and shaders.
+
+Literal original drawing functions independently check 32 rendered poses at
+DPR 1 and 2. Hologram stays below 0.69 RGB RMS and 0.50 alpha RMS. Shatter's GPU
+area coverage differs from Canvas antialiasing, with maximum RGB RMS 2.22 and
+alpha RMS 4.74; the verifier separately samples 24 isolated projected edges at
+128×128 subpixels. Maximum sampled alpha error is 0.71 on the 0–255 scale.
+These checks cover the actual photograph, clipping, stroke, scan and split
+passes rather than relying only on model values.
+
+`node tools/verify-image-assemblies.js http://127.0.0.1:4173` passes
+4,038,098 checks across eight suites, including actual graphics loss/recovery
+and graphics-unavailable rendering in both cameras. Sixteen fresh, network-blocked
+exports retain all active photos, vectors, fonts, interactions and cleanup.
+
+The sixteen final measurements in
+`docs/performance/image-assemblies-2026-11-18.json` average 59.8–60.0fps at
+normal CPU speed and 59.3–59.9fps at 4× CPU slowdown; every p95 interval is at
+most 16.8ms. Desktop Hologram native retains one slow interval and one 55ms
+long task. The stress runs retain 29 slow intervals and three long tasks,
+up to 93ms. Before GPU batching, stress Hologram averaged 39.7/47.4fps in
+native/full and full Shatter averaged 56.0fps; their final values are
+59.3/59.4fps and 59.9fps. Full Hologram spans all four original glitch
+intervals. The source-bound reports preserve both versions and leave these
+timing tails and the broader performance audit open.
 
 ## Photographic controls: comparison, drifting scenes, radial colour and louvers
 
@@ -224,7 +294,7 @@ Registry, stage, motion and generated-output checks pass, alongside 651 library
 checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
 checks, seventeen runtime/shell tests and eight CLI/MCP tests. The four native
 posters are refreshed. Source hashes bind the focused suites and broad checks
-to the verified modules. All 256 remediated native compositions pass every fit
+to the verified modules. All 260 remediated native compositions pass every fit
 gate; the full audit still fails on unfinished groups.
 
 All eight desktop profiles average 60.0fps, with p95 frame intervals at most
