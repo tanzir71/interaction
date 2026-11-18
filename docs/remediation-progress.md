@@ -17,6 +17,31 @@ among these 248 native compositions. The unfinished groups still account for
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
 
+## Current final-perspective timing
+
+The local profiler `tools/profile-perspective-final.js` reproduces 480-frame
+native/full stories for Voxel Assemble, Exploded Device, Depth Hero and
+Isometric Stack. It exercises interruptions, excavation, camera keys, contact
+and selection. Run with `--cpu=1` or `--cpu=4`; `--ids` selects a smaller set.
+Each report binds the complete source and harness hashes, verifies that the
+browser catalog matches local sources, and rejects changes during measurement.
+It records findings without turning completion into a performance gate pass.
+
+The sixteen measurements in
+`docs/performance/perspective-final-2026-11-18.json` cover both cameras and CPU
+rates. All eight desktop runs average 60.0fps, with no slow intervals or long
+tasks. The eight 4× CPU runs average 59.9–60.0fps with no long tasks. Native
+Voxel retains one 33.3ms interval; the other seven have no slow intervals.
+Every p95 is at most 16.8ms. Separate earlier rechecks retained one 66.6ms gap
+and one long task; those traces and the original 47.1fps full-Voxel result
+remain recorded. The cause of the variation is unproven.
+
+An easing-cache trial retained bit-identical numeric output and reduced solver
+calls, but did not improve measured render time. It was not applied to the
+runtime. This checkpoint adds measurement tooling and evidence; all component
+models, renderers, assets and metadata retain their existing source bytes.
+The broader performance audit and unfinished component work remain open.
+
 ## Particle Dissolve: remove repeated dock layout
 
 The particle runtime now updates its Dissolve/Reform label only when the label
@@ -1562,6 +1587,7 @@ reference and retains deliberate input with 150ms opacity feedback.
 All eight current desktop profiles have p95 frame intervals at most 16.8ms
 and no long tasks; full voxel retains one 66.7ms gap. Cached paths reduced
 full voxel's measured stress long tasks from 34 to 16 and increased its
-average from 43.2 to 47.1fps. Stress runs still retain gaps and long tasks;
-full voxel and Depth Hero exceed the frame budget. All old and current results
-remain recorded for the final performance audit.
+average from 43.2 to 47.1fps. At that release, stress runs retained gaps and
+long tasks; full voxel and Depth Hero exceeded the frame budget. The later
+source-bound rechecks are recorded above. All old and current results remain
+recorded for the final performance audit.

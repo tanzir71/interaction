@@ -1,0 +1,1867 @@
+{
+  "purpose": "Actual480-frame native/full stories for Voxel Assemble, Exploded Device, Depth Hero and Isometric Stack; measurements do not assert global performance acceptance.",
+  "sourceCommit": "643b18c1a33e2f05d0b3fb52d99ad15426d045cb",
+  "commands": [
+    "node tools/profile-perspective-final.js http://127.0.0.1:4173 --cpu=1",
+    "node tools/profile-perspective-final.js http://127.0.0.1:4173 --cpu=4"
+  ],
+  "desktop": {
+    "base": "http://127.0.0.1:4173",
+    "cpuRate": 1,
+    "framesPerCase": 480,
+    "startedAt": "2026-11-18T01:02:18.133Z",
+    "complete": true,
+    "ids": [
+      "voxel-assemble",
+      "css3d-exploded-device",
+      "css3d-depth-hero",
+      "css3d-isometric-hover"
+    ],
+    "sourceHashes": {
+      "js/demos.three.voxel-assemble.js": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+      "js/demos.three.css3d-exploded-device.js": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+      "js/demos.three.depth-hero.js": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+      "js/demos.three.isometric-hover.js": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "2e80d572f195b4f1c7dd9d079c92ffdab0ab2f3b67ea06ad2db02141370b7777",
+      "js/shell/stage.js": "92e382ef67c5874c84f7a269128a31b67ebe6342eabe88cd32ae6cbda81874d7",
+      "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+      "js/meta.stage.js": "4979112c7cf086c97ff75f4a7e8a91f3520f3cad0f5e5656ecc8bb2771c56555",
+      "registry/index.json": "eedbf61e73b474e43f413e104a730d1a37beba598b491377d01ed0a7dc2ec8e1"
+    },
+    "harnessHash": "444be3aec56da1fb5f18e10864bc38ea96b9452e9f6fa78dc0b463c5acc6c25d",
+    "results": [
+      {
+        "id": "voxel-assemble",
+        "mode": "thumb",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000000728,
+        "max": 16.800000000000182,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "phase": "assembled"
+          },
+          {
+            "frame": 20,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 40,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 60,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 80,
+            "phase": "assembling"
+          },
+          {
+            "frame": 100,
+            "phase": "assembling"
+          },
+          {
+            "frame": 120,
+            "phase": "assembled"
+          },
+          {
+            "frame": 140,
+            "phase": "assembled"
+          },
+          {
+            "frame": 160,
+            "phase": "assembled"
+          },
+          {
+            "frame": 180,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 200,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 220,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 240,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 260,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 280,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 300,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 320,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 340,
+            "phase": "assembling"
+          },
+          {
+            "frame": 360,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 380,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 400,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 420,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 440,
+            "phase": "assembled"
+          },
+          {
+            "frame": 460,
+            "phase": "assembled"
+          }
+        ],
+        "module": "js/demos.three.voxel-assemble.js?v=66d81cd3ac",
+        "sourceSHA256": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+        "verifiedAt": "2026-11-18T01:02:27.900Z"
+      },
+      {
+        "id": "voxel-assemble",
+        "mode": "full",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.00250532381312,
+        "p95": 16.799999999999272,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "phase": "assembled"
+          },
+          {
+            "frame": 20,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 40,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 60,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 80,
+            "phase": "assembling"
+          },
+          {
+            "frame": 100,
+            "phase": "assembling"
+          },
+          {
+            "frame": 120,
+            "phase": "assembling"
+          },
+          {
+            "frame": 140,
+            "phase": "assembled"
+          },
+          {
+            "frame": 160,
+            "phase": "assembled"
+          },
+          {
+            "frame": 180,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 200,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 220,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 240,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 260,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 280,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 300,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 320,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 340,
+            "phase": "assembling"
+          },
+          {
+            "frame": 360,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 380,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 400,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 420,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 440,
+            "phase": "assembling"
+          },
+          {
+            "frame": 460,
+            "phase": "assembling"
+          }
+        ],
+        "module": "js/demos.three.voxel-assemble.js?v=66d81cd3ac",
+        "sourceSHA256": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+        "verifiedAt": "2026-11-18T01:02:36.816Z"
+      },
+      {
+        "id": "css3d-exploded-device",
+        "mode": "thumb",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000000728,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 20,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 40,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 60,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 80,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 100,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 120,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 140,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 160,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 180,
+            "progress": "0.992510"
+          },
+          {
+            "frame": 200,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 220,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 240,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 260,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 280,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 300,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 320,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 340,
+            "progress": "0.970230"
+          },
+          {
+            "frame": 360,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 380,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 400,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 420,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 440,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 460,
+            "progress": "1.000000"
+          }
+        ],
+        "module": "js/demos.three.css3d-exploded-device.js?v=89d805b563",
+        "sourceSHA256": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+        "verifiedAt": "2026-11-18T01:02:45.781Z"
+      },
+      {
+        "id": "css3d-exploded-device",
+        "mode": "full",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.799999999995634,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 20,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 40,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 60,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 80,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 100,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 120,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 140,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 160,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 180,
+            "progress": "0.992589"
+          },
+          {
+            "frame": 200,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 220,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 240,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 260,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 280,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 300,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 320,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 340,
+            "progress": "0.970478"
+          },
+          {
+            "frame": 360,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 380,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 400,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 420,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 440,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 460,
+            "progress": "0.000000"
+          }
+        ],
+        "module": "js/demos.three.css3d-exploded-device.js?v=89d805b563",
+        "sourceSHA256": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+        "verifiedAt": "2026-11-18T01:02:54.715Z"
+      },
+      {
+        "id": "css3d-depth-hero",
+        "mode": "thumb",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.003256961755746,
+        "p95": 16.799999999995634,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "depth": "true"
+          },
+          {
+            "frame": 20,
+            "depth": "true"
+          },
+          {
+            "frame": 40,
+            "depth": "true"
+          },
+          {
+            "frame": 60,
+            "depth": "true"
+          },
+          {
+            "frame": 80,
+            "depth": "true"
+          },
+          {
+            "frame": 100,
+            "depth": "true"
+          },
+          {
+            "frame": 120,
+            "depth": "true"
+          },
+          {
+            "frame": 140,
+            "depth": "true"
+          },
+          {
+            "frame": 160,
+            "depth": "true"
+          },
+          {
+            "frame": 180,
+            "depth": "true"
+          },
+          {
+            "frame": 200,
+            "depth": "true"
+          },
+          {
+            "frame": 220,
+            "depth": "true"
+          },
+          {
+            "frame": 240,
+            "depth": "true"
+          },
+          {
+            "frame": 260,
+            "depth": "false"
+          },
+          {
+            "frame": 280,
+            "depth": "false"
+          },
+          {
+            "frame": 300,
+            "depth": "true"
+          },
+          {
+            "frame": 320,
+            "depth": "true"
+          },
+          {
+            "frame": 340,
+            "depth": "true"
+          },
+          {
+            "frame": 360,
+            "depth": "true"
+          },
+          {
+            "frame": 380,
+            "depth": "true"
+          },
+          {
+            "frame": 400,
+            "depth": "true"
+          },
+          {
+            "frame": 420,
+            "depth": "true"
+          },
+          {
+            "frame": 440,
+            "depth": "true"
+          },
+          {
+            "frame": 460,
+            "depth": "true"
+          }
+        ],
+        "module": "js/demos.three.depth-hero.js?v=ef951f442f",
+        "sourceSHA256": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+        "verifiedAt": "2026-11-18T01:03:03.648Z"
+      },
+      {
+        "id": "css3d-depth-hero",
+        "mode": "full",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000004366,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "depth": "true"
+          },
+          {
+            "frame": 20,
+            "depth": "true"
+          },
+          {
+            "frame": 40,
+            "depth": "true"
+          },
+          {
+            "frame": 60,
+            "depth": "true"
+          },
+          {
+            "frame": 80,
+            "depth": "true"
+          },
+          {
+            "frame": 100,
+            "depth": "true"
+          },
+          {
+            "frame": 120,
+            "depth": "true"
+          },
+          {
+            "frame": 140,
+            "depth": "true"
+          },
+          {
+            "frame": 160,
+            "depth": "true"
+          },
+          {
+            "frame": 180,
+            "depth": "true"
+          },
+          {
+            "frame": 200,
+            "depth": "true"
+          },
+          {
+            "frame": 220,
+            "depth": "true"
+          },
+          {
+            "frame": 240,
+            "depth": "true"
+          },
+          {
+            "frame": 260,
+            "depth": "false"
+          },
+          {
+            "frame": 280,
+            "depth": "false"
+          },
+          {
+            "frame": 300,
+            "depth": "true"
+          },
+          {
+            "frame": 320,
+            "depth": "true"
+          },
+          {
+            "frame": 340,
+            "depth": "true"
+          },
+          {
+            "frame": 360,
+            "depth": "true"
+          },
+          {
+            "frame": 380,
+            "depth": "true"
+          },
+          {
+            "frame": 400,
+            "depth": "true"
+          },
+          {
+            "frame": 420,
+            "depth": "true"
+          },
+          {
+            "frame": 440,
+            "depth": "true"
+          },
+          {
+            "frame": 460,
+            "depth": "true"
+          }
+        ],
+        "module": "js/demos.three.depth-hero.js?v=ef951f442f",
+        "sourceSHA256": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+        "verifiedAt": "2026-11-18T01:03:12.580Z"
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "mode": "thumb",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.799999999995634,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "selected": "2"
+          },
+          {
+            "frame": 20,
+            "selected": "0"
+          },
+          {
+            "frame": 40,
+            "selected": "0"
+          },
+          {
+            "frame": 60,
+            "selected": "0"
+          },
+          {
+            "frame": 80,
+            "selected": "0"
+          },
+          {
+            "frame": 100,
+            "selected": "0"
+          },
+          {
+            "frame": 120,
+            "selected": "0"
+          },
+          {
+            "frame": 140,
+            "selected": "0"
+          },
+          {
+            "frame": 160,
+            "selected": "2"
+          },
+          {
+            "frame": 180,
+            "selected": "2"
+          },
+          {
+            "frame": 200,
+            "selected": "2"
+          },
+          {
+            "frame": 220,
+            "selected": "2"
+          },
+          {
+            "frame": 240,
+            "selected": "2"
+          },
+          {
+            "frame": 260,
+            "selected": "-1"
+          },
+          {
+            "frame": 280,
+            "selected": "-1"
+          },
+          {
+            "frame": 300,
+            "selected": "-1"
+          },
+          {
+            "frame": 320,
+            "selected": "0"
+          },
+          {
+            "frame": 340,
+            "selected": "0"
+          },
+          {
+            "frame": 360,
+            "selected": "0"
+          },
+          {
+            "frame": 380,
+            "selected": "2"
+          },
+          {
+            "frame": 400,
+            "selected": "2"
+          },
+          {
+            "frame": 420,
+            "selected": "2"
+          },
+          {
+            "frame": 440,
+            "selected": "2"
+          },
+          {
+            "frame": 460,
+            "selected": "2"
+          }
+        ],
+        "module": "js/demos.three.isometric-hover.js?v=be0e62c2d3",
+        "sourceSHA256": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+        "verifiedAt": "2026-11-18T01:03:21.510Z"
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "mode": "full",
+        "cpuRate": 1,
+        "frames": 479,
+        "fps": 60.00273081321858,
+        "p95": 16.70000000001164,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "selected": "-1"
+          },
+          {
+            "frame": 20,
+            "selected": "-1"
+          },
+          {
+            "frame": 40,
+            "selected": "-1"
+          },
+          {
+            "frame": 60,
+            "selected": "-1"
+          },
+          {
+            "frame": 80,
+            "selected": "4"
+          },
+          {
+            "frame": 100,
+            "selected": "4"
+          },
+          {
+            "frame": 120,
+            "selected": "4"
+          },
+          {
+            "frame": 140,
+            "selected": "4"
+          },
+          {
+            "frame": 160,
+            "selected": "2"
+          },
+          {
+            "frame": 180,
+            "selected": "2"
+          },
+          {
+            "frame": 200,
+            "selected": "2"
+          },
+          {
+            "frame": 220,
+            "selected": "2"
+          },
+          {
+            "frame": 240,
+            "selected": "2"
+          },
+          {
+            "frame": 260,
+            "selected": "-1"
+          },
+          {
+            "frame": 280,
+            "selected": "-1"
+          },
+          {
+            "frame": 300,
+            "selected": "-1"
+          },
+          {
+            "frame": 320,
+            "selected": "-1"
+          },
+          {
+            "frame": 340,
+            "selected": "-1"
+          },
+          {
+            "frame": 360,
+            "selected": "-1"
+          },
+          {
+            "frame": 380,
+            "selected": "-1"
+          },
+          {
+            "frame": 400,
+            "selected": "-1"
+          },
+          {
+            "frame": 420,
+            "selected": "0"
+          },
+          {
+            "frame": 440,
+            "selected": "0"
+          },
+          {
+            "frame": 460,
+            "selected": "0"
+          }
+        ],
+        "module": "js/demos.three.isometric-hover.js?v=be0e62c2d3",
+        "sourceSHA256": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+        "verifiedAt": "2026-11-18T01:03:30.426Z"
+      }
+    ],
+    "errors": [],
+    "completedAt": "2026-11-18T01:03:30.429Z"
+  },
+  "cpu4": {
+    "base": "http://127.0.0.1:4173",
+    "cpuRate": 4,
+    "framesPerCase": 480,
+    "startedAt": "2026-11-18T01:03:30.912Z",
+    "complete": true,
+    "ids": [
+      "voxel-assemble",
+      "css3d-exploded-device",
+      "css3d-depth-hero",
+      "css3d-isometric-hover"
+    ],
+    "sourceHashes": {
+      "js/demos.three.voxel-assemble.js": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+      "js/demos.three.css3d-exploded-device.js": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+      "js/demos.three.depth-hero.js": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+      "js/demos.three.isometric-hover.js": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "2e80d572f195b4f1c7dd9d079c92ffdab0ab2f3b67ea06ad2db02141370b7777",
+      "js/shell/stage.js": "92e382ef67c5874c84f7a269128a31b67ebe6342eabe88cd32ae6cbda81874d7",
+      "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+      "js/meta.stage.js": "4979112c7cf086c97ff75f4a7e8a91f3520f3cad0f5e5656ecc8bb2771c56555",
+      "registry/index.json": "eedbf61e73b474e43f413e104a730d1a37beba598b491377d01ed0a7dc2ec8e1"
+    },
+    "harnessHash": "444be3aec56da1fb5f18e10864bc38ea96b9452e9f6fa78dc0b463c5acc6c25d",
+    "results": [
+      {
+        "id": "voxel-assemble",
+        "mode": "thumb",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 59.87724539670237,
+        "p95": 16.700000000000728,
+        "max": 33.30000000000018,
+        "slowIntervals": [
+          {
+            "frame": 186,
+            "duration": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "phase": "assembled"
+          },
+          {
+            "frame": 20,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 40,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 60,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 80,
+            "phase": "assembling"
+          },
+          {
+            "frame": 100,
+            "phase": "assembling"
+          },
+          {
+            "frame": 120,
+            "phase": "assembled"
+          },
+          {
+            "frame": 140,
+            "phase": "assembled"
+          },
+          {
+            "frame": 160,
+            "phase": "assembled"
+          },
+          {
+            "frame": 180,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 200,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 220,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 240,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 260,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 280,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 300,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 320,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 340,
+            "phase": "assembling"
+          },
+          {
+            "frame": 360,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 380,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 400,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 420,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 440,
+            "phase": "assembled"
+          },
+          {
+            "frame": 460,
+            "phase": "assembled"
+          }
+        ],
+        "module": "js/demos.three.voxel-assemble.js?v=66d81cd3ac",
+        "sourceSHA256": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+        "verifiedAt": "2026-11-18T01:03:41.064Z"
+      },
+      {
+        "id": "voxel-assemble",
+        "mode": "full",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.00325696175576,
+        "p95": 16.700000000000728,
+        "max": 16.80000000000109,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "phase": "assembled"
+          },
+          {
+            "frame": 20,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 40,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 60,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 80,
+            "phase": "assembling"
+          },
+          {
+            "frame": 100,
+            "phase": "assembling"
+          },
+          {
+            "frame": 120,
+            "phase": "assembling"
+          },
+          {
+            "frame": 140,
+            "phase": "assembled"
+          },
+          {
+            "frame": 160,
+            "phase": "assembled"
+          },
+          {
+            "frame": 180,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 200,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 220,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 240,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 260,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 280,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 300,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 320,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 340,
+            "phase": "assembling"
+          },
+          {
+            "frame": 360,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 380,
+            "phase": "collapsing"
+          },
+          {
+            "frame": 400,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 420,
+            "phase": "collapsed"
+          },
+          {
+            "frame": 440,
+            "phase": "assembling"
+          },
+          {
+            "frame": 460,
+            "phase": "assembling"
+          }
+        ],
+        "module": "js/demos.three.voxel-assemble.js?v=66d81cd3ac",
+        "sourceSHA256": "66d81cd3ac23a35ae39100e661abda653fc6bc50e55c2a532491047dbd1a811b",
+        "verifiedAt": "2026-11-18T01:03:50.049Z"
+      },
+      {
+        "id": "css3d-exploded-device",
+        "mode": "thumb",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000000728,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 20,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 40,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 60,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 80,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 100,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 120,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 140,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 160,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 180,
+            "progress": "0.992665"
+          },
+          {
+            "frame": 200,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 220,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 240,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 260,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 280,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 300,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 320,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 340,
+            "progress": "0.970783"
+          },
+          {
+            "frame": 360,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 380,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 400,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 420,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 440,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 460,
+            "progress": "1.000000"
+          }
+        ],
+        "module": "js/demos.three.css3d-exploded-device.js?v=89d805b563",
+        "sourceSHA256": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+        "verifiedAt": "2026-11-18T01:03:59.097Z"
+      },
+      {
+        "id": "css3d-exploded-device",
+        "mode": "full",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000004366,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 20,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 40,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 60,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 80,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 100,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 120,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 140,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 160,
+            "progress": "0.750000"
+          },
+          {
+            "frame": 180,
+            "progress": "0.992772"
+          },
+          {
+            "frame": 200,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 220,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 240,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 260,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 280,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 300,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 320,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 340,
+            "progress": "0.970905"
+          },
+          {
+            "frame": 360,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 380,
+            "progress": "1.000000"
+          },
+          {
+            "frame": 400,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 420,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 440,
+            "progress": "0.000000"
+          },
+          {
+            "frame": 460,
+            "progress": "0.000000"
+          }
+        ],
+        "module": "js/demos.three.css3d-exploded-device.js?v=89d805b563",
+        "sourceSHA256": "89d805b56305a8f73be5d3835eefb4a7fc124037351f0eab0f393f9190a39af0",
+        "verifiedAt": "2026-11-18T01:04:08.078Z"
+      },
+      {
+        "id": "css3d-depth-hero",
+        "mode": "thumb",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.799999999995634,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "depth": "true"
+          },
+          {
+            "frame": 20,
+            "depth": "true"
+          },
+          {
+            "frame": 40,
+            "depth": "true"
+          },
+          {
+            "frame": 60,
+            "depth": "true"
+          },
+          {
+            "frame": 80,
+            "depth": "true"
+          },
+          {
+            "frame": 100,
+            "depth": "true"
+          },
+          {
+            "frame": 120,
+            "depth": "true"
+          },
+          {
+            "frame": 140,
+            "depth": "true"
+          },
+          {
+            "frame": 160,
+            "depth": "true"
+          },
+          {
+            "frame": 180,
+            "depth": "true"
+          },
+          {
+            "frame": 200,
+            "depth": "true"
+          },
+          {
+            "frame": 220,
+            "depth": "true"
+          },
+          {
+            "frame": 240,
+            "depth": "true"
+          },
+          {
+            "frame": 260,
+            "depth": "false"
+          },
+          {
+            "frame": 280,
+            "depth": "false"
+          },
+          {
+            "frame": 300,
+            "depth": "true"
+          },
+          {
+            "frame": 320,
+            "depth": "true"
+          },
+          {
+            "frame": 340,
+            "depth": "true"
+          },
+          {
+            "frame": 360,
+            "depth": "true"
+          },
+          {
+            "frame": 380,
+            "depth": "true"
+          },
+          {
+            "frame": 400,
+            "depth": "true"
+          },
+          {
+            "frame": 420,
+            "depth": "true"
+          },
+          {
+            "frame": 440,
+            "depth": "true"
+          },
+          {
+            "frame": 460,
+            "depth": "true"
+          }
+        ],
+        "module": "js/demos.three.depth-hero.js?v=ef951f442f",
+        "sourceSHA256": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+        "verifiedAt": "2026-11-18T01:04:17.079Z"
+      },
+      {
+        "id": "css3d-depth-hero",
+        "mode": "full",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.700000000004366,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "depth": "true"
+          },
+          {
+            "frame": 20,
+            "depth": "true"
+          },
+          {
+            "frame": 40,
+            "depth": "true"
+          },
+          {
+            "frame": 60,
+            "depth": "true"
+          },
+          {
+            "frame": 80,
+            "depth": "true"
+          },
+          {
+            "frame": 100,
+            "depth": "true"
+          },
+          {
+            "frame": 120,
+            "depth": "true"
+          },
+          {
+            "frame": 140,
+            "depth": "true"
+          },
+          {
+            "frame": 160,
+            "depth": "true"
+          },
+          {
+            "frame": 180,
+            "depth": "true"
+          },
+          {
+            "frame": 200,
+            "depth": "true"
+          },
+          {
+            "frame": 220,
+            "depth": "true"
+          },
+          {
+            "frame": 240,
+            "depth": "true"
+          },
+          {
+            "frame": 260,
+            "depth": "false"
+          },
+          {
+            "frame": 280,
+            "depth": "false"
+          },
+          {
+            "frame": 300,
+            "depth": "true"
+          },
+          {
+            "frame": 320,
+            "depth": "true"
+          },
+          {
+            "frame": 340,
+            "depth": "true"
+          },
+          {
+            "frame": 360,
+            "depth": "true"
+          },
+          {
+            "frame": 380,
+            "depth": "true"
+          },
+          {
+            "frame": 400,
+            "depth": "true"
+          },
+          {
+            "frame": 420,
+            "depth": "true"
+          },
+          {
+            "frame": 440,
+            "depth": "true"
+          },
+          {
+            "frame": 460,
+            "depth": "true"
+          }
+        ],
+        "module": "js/demos.three.depth-hero.js?v=ef951f442f",
+        "sourceSHA256": "ef951f442f7a9c479d11ee277c7285fe30e2d00e9c549f896c7e71826d757e9e",
+        "verifiedAt": "2026-11-18T01:04:26.096Z"
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "mode": "thumb",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.002505323813104,
+        "p95": 16.799999999995634,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "selected": "2"
+          },
+          {
+            "frame": 20,
+            "selected": "0"
+          },
+          {
+            "frame": 40,
+            "selected": "0"
+          },
+          {
+            "frame": 60,
+            "selected": "0"
+          },
+          {
+            "frame": 80,
+            "selected": "0"
+          },
+          {
+            "frame": 100,
+            "selected": "0"
+          },
+          {
+            "frame": 120,
+            "selected": "0"
+          },
+          {
+            "frame": 140,
+            "selected": "0"
+          },
+          {
+            "frame": 160,
+            "selected": "2"
+          },
+          {
+            "frame": 180,
+            "selected": "2"
+          },
+          {
+            "frame": 200,
+            "selected": "2"
+          },
+          {
+            "frame": 220,
+            "selected": "2"
+          },
+          {
+            "frame": 240,
+            "selected": "2"
+          },
+          {
+            "frame": 260,
+            "selected": "-1"
+          },
+          {
+            "frame": 280,
+            "selected": "-1"
+          },
+          {
+            "frame": 300,
+            "selected": "-1"
+          },
+          {
+            "frame": 320,
+            "selected": "0"
+          },
+          {
+            "frame": 340,
+            "selected": "0"
+          },
+          {
+            "frame": 360,
+            "selected": "0"
+          },
+          {
+            "frame": 380,
+            "selected": "2"
+          },
+          {
+            "frame": 400,
+            "selected": "2"
+          },
+          {
+            "frame": 420,
+            "selected": "2"
+          },
+          {
+            "frame": 440,
+            "selected": "2"
+          },
+          {
+            "frame": 460,
+            "selected": "2"
+          }
+        ],
+        "module": "js/demos.three.isometric-hover.js?v=be0e62c2d3",
+        "sourceSHA256": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+        "verifiedAt": "2026-11-18T01:04:35.123Z"
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "mode": "full",
+        "cpuRate": 4,
+        "frames": 479,
+        "fps": 60.00295630431894,
+        "p95": 16.70000000001164,
+        "max": 16.80000000000291,
+        "slowIntervals": [],
+        "longTasks": [],
+        "samples": [
+          {
+            "frame": 0,
+            "selected": "-1"
+          },
+          {
+            "frame": 20,
+            "selected": "-1"
+          },
+          {
+            "frame": 40,
+            "selected": "-1"
+          },
+          {
+            "frame": 60,
+            "selected": "-1"
+          },
+          {
+            "frame": 80,
+            "selected": "4"
+          },
+          {
+            "frame": 100,
+            "selected": "4"
+          },
+          {
+            "frame": 120,
+            "selected": "4"
+          },
+          {
+            "frame": 140,
+            "selected": "4"
+          },
+          {
+            "frame": 160,
+            "selected": "2"
+          },
+          {
+            "frame": 180,
+            "selected": "2"
+          },
+          {
+            "frame": 200,
+            "selected": "2"
+          },
+          {
+            "frame": 220,
+            "selected": "2"
+          },
+          {
+            "frame": 240,
+            "selected": "2"
+          },
+          {
+            "frame": 260,
+            "selected": "-1"
+          },
+          {
+            "frame": 280,
+            "selected": "-1"
+          },
+          {
+            "frame": 300,
+            "selected": "-1"
+          },
+          {
+            "frame": 320,
+            "selected": "-1"
+          },
+          {
+            "frame": 340,
+            "selected": "-1"
+          },
+          {
+            "frame": 360,
+            "selected": "-1"
+          },
+          {
+            "frame": 380,
+            "selected": "-1"
+          },
+          {
+            "frame": 400,
+            "selected": "-1"
+          },
+          {
+            "frame": 420,
+            "selected": "0"
+          },
+          {
+            "frame": 440,
+            "selected": "0"
+          },
+          {
+            "frame": 460,
+            "selected": "0"
+          }
+        ],
+        "module": "js/demos.three.isometric-hover.js?v=be0e62c2d3",
+        "sourceSHA256": "be0e62c2d36018177e86ae019f6dda73a55a375e4da59c23e08e95f524c71269",
+        "verifiedAt": "2026-11-18T01:04:44.123Z"
+      }
+    ],
+    "errors": [],
+    "completedAt": "2026-11-18T01:04:44.127Z"
+  }
+}

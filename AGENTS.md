@@ -253,6 +253,12 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   native SVG/photo/type slots, real wheel/keys/touch, interrupted transitions,
   60/120/240Hz renderer clocks, queued intents, independent holds, clipped-text
   protection at every camera limit, cleanup and eight fresh-context exports.
+- `node tools/profile-perspective-final.js http://127.0.0.1:4173 --cpu=4`
+  records actual 480-frame native/full stories for those four scenes; use
+  `--cpu=1` for desktop and `--ids=voxel-assemble` to isolate a scene. Reports
+  bind source and harness hashes, record gaps and long tasks, and reject source
+  changes during measurement. Completion records a measurement, not a timing
+  gate pass. Use the recorded findings in the final performance audit.
 - `node tools/verify-cursor-core.js http://127.0.0.1:4173` covers v4 Gooey
   Cursor, Particle Emitter, Elastic Cable and Inverted Lens. It compares the
   original spring, particle, quadratic and zoom fixtures; exact native SVG and
