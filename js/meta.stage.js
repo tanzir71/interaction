@@ -3402,17 +3402,29 @@ INTRX.meta({
     ]
   },
   "webgl-neural-signals": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "cascade",
+        "label": "Send cascade"
+      },
+      {
+        "action": "clear",
+        "label": "Clear trace"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -3420,21 +3432,37 @@ INTRX.meta({
       "signals"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "painterly-smear": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "source",
+        "label": "Change canvas"
+      },
+      {
+        "action": "reset",
+        "label": "Reset paint"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -3442,8 +3470,12 @@ INTRX.meta({
       "smudge"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "svg-path-draw-hover": {
     "designSize": [

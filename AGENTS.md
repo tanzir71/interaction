@@ -407,3 +407,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Native has eight sectors and twelve tiles. Record timing with
   `node tools/profile-image-assemblies.js http://127.0.0.1:4173 --cpu=1` or
   `--cpu=4`; full Hologram includes all four original glitch intervals.
+- `node tools/verify-image-final.js http://127.0.0.1:4173` covers v4 Neural
+  Signals and Painterly Smear. It compares complete original routing histories,
+  the nineteen-node/seventy-eight-edge graph, all original painting fields,
+  brush samples, bristles, queue and quantized drying against independent
+  captures. It verifies literal network and photographic pigment pixels,
+  every native SVG/photo slot, real mouse/keys/moving touch and vertical
+  scrolling, both source choices, interrupted input, two complete stories at
+  60/120/240Hz, queued intent, caller/viewport holds, cleanup and twelve fresh
+  offline exports. Original pixel fixtures use verified lossless XOR packing.
+  Record timing with `node tools/profile-image-final.js http://127.0.0.1:4173
+  --cpu=1` or `--cpu=4`; full paint spans its twelve-second glare and both
+  interactive sources.

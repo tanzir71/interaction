@@ -816,3 +816,32 @@ source at 1600px; native and portable cameras use 800px files. Only the
 selected camera decodes its sources. The portable bundle has 537 aliases,
 seven font faces and the same eighteen photo credits. Exact native geometry,
 source identities and SVG hashes live in `tools/fixtures/image-assemblies-artwork.json`.
+
+## Neural routes and photographic pigment
+
+Neural Signals and Painterly Smear use v4 tiles `168:1607` and `168:1652`.
+All sixteen distinct SVG payloads retain their original bytes and root
+dimensions. The network has twenty connection slots and nine 12px neuron
+slots, including the exact orange route and three selected nodes. The full
+composition retains all nineteen original neurons and seventy-eight weighted
+directed connections. Its native three-layer graph uses counts 3/4/2.
+
+The Figma `magnolia` key is [Annie Spratt's Moody Hellebores](https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA),
+image `photo-1518343161123-c7e9ab4dc4da`. The canonical page confirmed a free
+download under the Unsplash License on 18 November 2026; it is not Unsplash+.
+The independently downloaded 1800px original matches the Figma upload with
+RGB RMS 0.42 on the 0–255 scale. The key remains `magnolia` to match the design
+library; provenance records the photographer's actual title.
+
+Self-hosted 1600px and 800px WebP files preserve the original aspect ratio.
+Native paint retains the 200×150px crop, 14px mask, inside rim, exact shadows
+and supplied 218.005×66px blurred pigment stroke. Its negative horizontal
+offset is clipped by the photo frame. SVG image elements explicitly retain
+their supplied dimensions to avoid browser intrinsic-size rounding. Full
+previews use the credited 1600px photo; thumbnails and exports use 800px.
+
+The complete original procedural painting remains an interactive source
+beside the photograph. Both sources use the actual sampled brush and original
+drying model. `tools/fixtures/image-final-artwork.json` binds all thirty-three
+native slots and photo identities. The portable bundle now has 554 aliases,
+nineteen photo credits and the same seven font faces.

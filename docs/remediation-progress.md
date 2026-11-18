@@ -1,21 +1,68 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 260 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 262 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and twenty-one Image & WebGL demos.
-The remaining work includes 139 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos.
+The remaining work includes 137 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 20 remaining demos.
-None of the 260 remediated native compositions retains those references.
+None of the 262 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 260 native compositions. The unfinished groups still account for
+among these 262 native compositions. The unfinished groups still account for
 20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Final Image & WebGL: neural routes and sampled pigment
+
+Neural Signals and Painterly Smear complete the twenty-three Image & WebGL
+native compositions. The neural thumbnail retains every supplied connection
+and neuron slot in its 3/4/2 graph; full keeps the complete original 4/6/6/3
+graph with nineteen nodes and seventy-eight weighted edges. The original
+seeded PRNG, weighted selection without replacement, 300ms ambient launches,
+450ms smoothstep journeys, branching, flashes, output rings and complete
+downstream cascades remain intact. Physical node selection and keyboard
+wrapping reach every node, including interrupted future cascades.
+
+Painterly Smear defaults to the exact approved photo and supplied blurred
+pigment stroke. Its full view also retains the complete original procedural
+painting as a source choice: all five pigment fields, three curved bands and
+deterministic tooth grain. Both canvases use the actual evolving pixels for
+four bristled samples per segment, the original displacement and radius
+phases, eight-segment FIFO, quantized drying and twelve-second tilted glare.
+Reset preserves the original brush phase and clock while canceling queued
+pigment. Drying scans only the rectangle touched by actual dabs; independent
+captures prove that this retains every original pixel and rounding result.
+
+The newly verified Figma `magnolia` source is Annie Spratt's free Unsplash
+photo, titled Moody Hellebores. Its original matches the design upload with
+RGB RMS 0.42. Native uses the exact 200×150px crop, mask, shadows, rim and
+unchanged 218.005×66px stroke; full resolves the 1600px file and portable
+source uses 800px. The complete photo credit and licence survive exports.
+
+`node tools/verify-image-final.js http://127.0.0.1:4173` passes 116,931,728
+checks across eight suites. Independent captures cover 3,840 original states;
+lossless XOR packing retains their complete pixel planes in a 2.56MB fixture.
+The mathematical functions and complete live histories match the original
+routing and pigment captures. Actual full-network drawing also matches the
+literal original draw functions at DPR 1 and 2; the photo renderer matches
+the untouched pigment functions with zero differing pixel values in both
+cameras and motion preferences. Real keys, mouse, moving touch, vertical
+scrolling, interrupted input, two complete native stories at 60/120/240Hz,
+queued intent, independent holds, cleanup and twelve fresh offline exports
+are verified. Chrome/control debt falls to 134; motion debt remains 51.
+
+The eight source-bound measurements in
+`docs/performance/image-final-2026-11-18.json` average 60.0fps at normal CPU
+speed and 59.9–60.0fps at 4× slowdown. Every p95 interval is at most 16.8ms,
+with no long tasks. The stress runs retain three 33.3–33.4ms intervals;
+normal-speed runs retain none. Full paint covers the complete glare period,
+both source changes, sampled strokes and interrupted Reset. These local
+results leave earlier groups' timing tails and the site-wide audit open.
 
 ## Image assemblies: mirrored fields, shards, magnetic fragments and particle type
 
