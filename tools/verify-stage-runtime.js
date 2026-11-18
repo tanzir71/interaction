@@ -19,13 +19,13 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
     const stage=document.createElement('div');stage.style.cssText='position:fixed;width:400px;height:400px';document.body.appendChild(stage);
     const emitted=[];stage.addEventListener('intrx:change',event=>emitted.push(event.detail));
     const demo={id:'test-actions',title:'Test actions',rootClass:'test-actions',html:'<div class="test-actions">0</div>',css:'.test-actions{color:inherit}',
-      js:'let count=0;ctx.onAction("increment",()=>{root.textContent=String(++count);ctx.emit("change",count)});return {actions:{clear(){root.textContent="0"}},cleanup(){stage.dataset.cleaned="true"}};',
+      js:'root.dataset.clock=String(ctx.now());let count=0;ctx.onAction("increment",()=>{root.textContent=String(++count);ctx.emit("change",count)});return {actions:{clear(){root.textContent="0"}},cleanup(){stage.dataset.cleaned="true"}};',
       designSize:'sm',stage:{theme:'dark',overflow:'clip'},controls:[{label:'Increment',action:'increment'},{label:'Clear',action:'clear'}]};
     const runtime=INTRX.mountStage(demo,stage,'full');stage.querySelector('[data-action="increment"]').click();
     const incremented=stage._root.textContent;stage.querySelector('[data-action="clear"]').click();const cleared=stage._root.textContent;
-    runtime.dispose();const cleaned=stage.dataset.cleaned;stage.remove();return {incremented,cleared,cleaned,emitted};
+    runtime.dispose();const clock=Number.isFinite(Number(stage._root.dataset.clock))&&stage._ctx.now()===runtime.now(),cleaned=stage.dataset.cleaned;stage.remove();return {incremented,cleared,cleaned,emitted,clock};
   });
-  assert.deepEqual(contract,{incremented:'1',cleared:'0',cleaned:'true',emitted:[1]});
+  assert.deepEqual(contract,{incremented:'1',cleared:'0',cleaned:'true',emitted:[1],clock:true});
   await page.evaluate(()=>INTRX.router.go('#/c/loader-dots-wave'));
   await page.waitForFunction(()=>Number(document.querySelector('.detail-stage')?._root?.dataset.frames)>2);
   // Source loading can grow the page after the first scroll. Establish the

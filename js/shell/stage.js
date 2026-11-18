@@ -44,6 +44,7 @@
     const ctx = {
       mode, theme:demo.stage.theme, reducedMotion:matchMedia('(prefers-reduced-motion:reduce)').matches,
       scale:1, size:{w:0,h:0},
+      now:() => runtime.now(),
       onAction(name,fn) { if (typeof fn !== 'function') throw new TypeError('Action must be a function'); actions.set(name,fn); },
       emit(name,detail) { stage.dispatchEvent(new CustomEvent('intrx:'+name,{detail,bubbles:true})); }
     };

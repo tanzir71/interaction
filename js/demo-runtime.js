@@ -94,6 +94,7 @@
       get suspended() { return paused(); },
       get disposed() { return disposed; },
       get speed() { return speed; },
+      now() { return disposed ? virtualTime : clock(); },
       requestAnimationFrame(callback) {
         if (disposed) return 0;
         const id = ++sequence, frame = { callback, native: null };

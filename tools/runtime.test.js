@@ -25,6 +25,20 @@ test('speed changes preserve pending delay and scale subsequent runtime time',()
  const s=setup();let calls=0;s.runtime.setTimeout(()=>calls++,100);s.advance(20);s.runtime.setSpeed(2);s.advance(39);assert.equal(calls,0);s.advance(1);assert.equal(calls,1);
  assert.throws(()=>s.runtime.setSpeed(3),{name:'RangeError'});
 });
+
+test('clock reads share frame time, speed and independent holds, then freeze on disposal',()=>{
+ const s=setup({mode:'full'});assert.equal(s.runtime.now(),0);
+ s.advance(7);assert.equal(s.runtime.now(),7);assert.equal(s.runtime.now(),7);
+ let timestamp;s.runtime.requestAnimationFrame(time=>timestamp=time);
+ s.advance(4);assert.equal(s.runtime.now(),11);s.advance(12);assert.equal(timestamp,23);assert.equal(s.runtime.now(),timestamp);
+ s.runtime.setSpeed(2);s.advance(5);assert.equal(s.runtime.now(),33);
+ s.runtime.suspend();s.advance(1000);assert.equal(s.runtime.now(),33);
+ s.visibility(true);s.runtime.resume();s.advance(1000);assert.equal(s.runtime.now(),33);
+ s.visibility(false);s.intersection(false);s.runtime.setSpeed(.5);s.advance(1000);assert.equal(s.runtime.now(),33);
+ s.intersection(true);s.advance(8);assert.equal(s.runtime.now(),37);
+ s.runtime.requestAnimationFrame(time=>timestamp=time);s.advance(16);assert.equal(timestamp,45);assert.equal(s.runtime.now(),timestamp);
+ s.runtime.dispose();s.advance(1000);assert.equal(s.runtime.now(),45);assert.equal(s.jobs.size,0);
+});
 test('document visibility pauses deadlines and resumes without hidden elapsed time',()=>{
  const s=setup();let calls=0,timestamp;s.runtime.setTimeout(()=>calls++,100);s.advance(40);s.visibility(true);assert.equal(s.jobs.size,0);s.advance(1000);
  s.visibility(false);s.runtime.requestAnimationFrame(t=>timestamp=t);s.advance(16);assert.equal(timestamp,56);s.advance(44);assert.equal(calls,1);

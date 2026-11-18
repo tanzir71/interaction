@@ -22,6 +22,11 @@ and `cleanup`. A returned cleanup function is also supported. `ctx` includes mod
 theme, reduced-motion preference, scale and stage size. Custom changes can be
 announced with `ctx.emit(name, detail)`.
 
+`ctx.now()` reads the same virtual time passed to wrapped animation frames.
+Use it to anchor a run when it starts between frames. It follows playback speed,
+excludes caller pauses, hidden documents and offscreen holds, and stays frozen
+after disposal. Clock reads do not schedule work.
+
 Keep one hero object per thumbnail and text at least 11px after scaling. Do not
 add an outer frame or replay/reset controls inside the demo. Use one neutral
 ramp and one accent. Preserve keyboard access and a deliberate reduced-motion
