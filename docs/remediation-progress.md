@@ -1,21 +1,65 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 252 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 256 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and the first thirteen Image & WebGL demos.
-The remaining work includes 147 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and seventeen Image & WebGL demos.
+The remaining work includes 143 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 27 remaining demos.
-None of the 252 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 23 remaining demos.
+None of the 256 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 252 native compositions. The unfinished groups still account for
-20 overflow findings, zero horizontal-scroll findings, 56 tiny-text findings and
+among these 256 native compositions. The unfinished groups still account for
+20 overflow findings, zero horizontal-scroll findings, 52 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Photographic controls: comparison, drifting scenes, radial colour and louvers
+
+Comparison Slider, Ken Burns Crossfade, Duotone Sweep and Blinds Reveal use
+their exact v4 native compositions. The native range starts at 50 while full
+retains the original 52% restored split. Both use the real 0–100, step-one
+range input, native keys, original announcements, double-click centering and
+shared Center action. Direct input follows immediately; centering uses the
+interruptible 380/32 spring, checked against independent numerical integration.
+Native announcements describe divider position; full retains restored-percent
+semantics and both original photographic treatments.
+
+Ken Burns retains all three original captions, names, smoothstep camera
+paths, translation/scale rounding, eight-second scene duration, 6.4-second fade
+start, 1.6-second dissolve and 80ms integration cap. Left/Right, Space, Escape,
+pause and cyclic navigation remain available. The six-second native story
+samples the complete three-scene source cycle; full keeps its original clock.
+Actual full rendering matches all 3,602 captured normal/reduced-motion frames.
+Native keeps the 220×165px Forest Blue crop, centred vignette and indicators.
+
+Duotone retains the original hover, focus, latch, release and radial-origin
+states, including both full photographic filter pipelines. The exact native
+Roses window uses the supplied 200×150px luminance SVG and 82% functional
+purple tint. Live reveals run 350ms in/out and origins follow in 160ms. Full
+Blinds retains all ten louvers, 850px perspective, top-edge pivots and 88°
+endpoint; native has the six supplied partial strips. Motion runs 350ms with
+40ms stagger capped at 300ms. Reversals start from the visible circle or angle.
+Animation clocks use elapsed logical time, including deferred pointer entry,
+so the visible stories agree at 60, 120 and 240Hz.
+
+`node tools/verify-image-photos.js http://127.0.0.1:4173` passes 212,497 checks
+across seven suites. These cover independent original models and clock caps,
+actual camera transforms, fades, clipping and filters, exact native geometry,
+photograph and SVG identities, compact full typography, real mouse/keys/touch,
+native vertical scrolling, interruptions, queued intent, independent caller
+and viewport holds, disposal and sixteen fresh offline exports. Reduced
+motion preserves meaningful state changes without animation loops.
+
+The sixteen measurements in
+`docs/performance/image-photos-2026-11-18.json` average 60.0fps at normal and
+4× CPU rates, with p95 intervals at most 16.8ms and no slow intervals or long
+tasks. Full Ken Burns includes a complete three-scene cycle. The profiler binds
+source and harness hashes; these local measurements leave the final site-wide
+performance audit open.
 
 ## Image fields: static, mesh waves, slice depth and recursive zoom
 
@@ -180,7 +224,7 @@ Registry, stage, motion and generated-output checks pass, alongside 651 library
 checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
 checks, seventeen runtime/shell tests and eight CLI/MCP tests. The four native
 posters are refreshed. Source hashes bind the focused suites and broad checks
-to the verified modules. All 252 remediated native compositions pass every fit
+to the verified modules. All 256 remediated native compositions pass every fit
 gate; the full audit still fails on unfinished groups.
 
 All eight desktop profiles average 60.0fps, with p95 frame intervals at most

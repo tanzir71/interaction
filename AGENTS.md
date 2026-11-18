@@ -382,3 +382,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   recorded with `node tools/profile-image-fields.js http://127.0.0.1:4173 --cpu=1`
   or `--cpu=4`; these reports record findings without declaring the timing gate
   passed.
+- `node tools/verify-image-photos.js http://127.0.0.1:4173` covers v4 Comparison
+  Slider, Ken Burns Crossfade, Duotone Sweep and Blinds Reveal. It checks the
+  complete original range, camera paths, three-scene timeline, radial states
+  and ten-louver endpoints against independent captures; exact native photos,
+  crops, vector and luminance-mask payloads; actual painted CSS and source
+  clocks; independent numerical spring samples; mouse/keys/moving touch and
+  vertical scrolling; interruptions, 60/120/240Hz stories, queued intent,
+  caller/viewport holds, cleanup and sixteen fresh offline exports. Native
+  Blinds has six reference louvers while full retains ten. Record frame timing
+  with `node tools/profile-image-photos.js http://127.0.0.1:4173 --cpu=1` or
+  `--cpu=4`; full Ken Burns includes a complete three-scene source cycle.

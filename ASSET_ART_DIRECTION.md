@@ -762,3 +762,31 @@ files. Only the active camera decodes its sources. Screenshots remain reference
 evidence and are never used as tile art. `tools/fixtures/image-fields-artwork.json`
 records the exact geometry, photo matches and vector hashes. The portable
 bundle has 508 image aliases, seven font faces and eighteen photo credits.
+
+## Image comparison, drifting scenes, duotone windows and louvers
+
+Comparison Slider, Ken Burns Crossfade, Duotone Sweep and Blinds Reveal follow
+v4 nodes `168:1441`, `168:1465`, `168:1488` and `168:1511`. The two supplied
+SVGs retain their exact bytes and intrinsic dimensions: the 16×16px move icon
+inside Comparison's 24px circular handle, and the 200×150px luminance mask for
+Duotone. The latter contains the complete white field and its black 100px
+window at 40/25, centred at 90/75. CSS uses the original mask as luminance;
+the circle is never redrawn as substitute tile art.
+
+The four native photo identities are the already credited Forest Dark,
+Forest Blue, Roses and Aurora files. Independent comparisons against Figma's
+source exports yield RGB RMS 1.05, 1.35, 0.67 and 1.43. All native card frames
+remain 200×150px. Comparison keeps the supplied .55 black left treatment and
+2px divider. Ken Burns keeps its 220×165px photograph at −10/−6, centred
+radial vignette and three supplied indicators. Duotone keeps the functional
+82% purple tint outside its source mask. Blinds retains all six partial
+strips on their 25px pitch, including the two .01px source slivers.
+
+Full compositions use the approved Dusk, Architectural Grid and Sea photos.
+Ken Burns retains all three original names and captions. Comparison and
+Duotone retain their original photographic filter pipelines; full Blinds keeps
+all ten original rotating louvers. Native and portable sources are 800px;
+full previews use 1600px. Only the active camera decodes its sources.
+`tools/fixtures/image-photos-artwork.json` binds the supplied geometry, file
+hashes and photo identities. Portable assets now have 510 aliases, with the
+same seven font faces and eighteen photo-credit records.
