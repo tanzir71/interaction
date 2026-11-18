@@ -9996,17 +9996,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "dither-bayer": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "invert",
+        "label": "Invert field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10014,21 +10022,33 @@ INTRX.meta({
       "bayer-matrix"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "dither-floyd-steinberg": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "lock",
+        "label": "Lock full color"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10036,21 +10056,33 @@ INTRX.meta({
       "color-reveal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "dither-blue-noise": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Dissolve to B"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10058,8 +10090,12 @@ INTRX.meta({
       "image-transition"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "halftone-dots": {
     "designSize": "bleed",

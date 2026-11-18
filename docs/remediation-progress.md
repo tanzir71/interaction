@@ -1,21 +1,94 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 262 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 265 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos.
-The remaining work includes 137 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first three Raster & Glitch demos.
+The remaining work includes 134 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 20 remaining demos.
-None of the 262 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 17 remaining demos.
+None of the 265 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 262 native compositions. The unfinished groups still account for
+among these 265 native compositions. The unfinished groups still account for
 20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 83 documented
+33 low-fill findings; findings can overlap within a demo. All 84 documented
 Figma fill exceptions validate.
+
+## Raster & Glitch: ordered dither, error diffusion and blue noise
+
+The first three Raster & Glitch compositions follow v4 nodes `169:807`,
+`169:1133` and `169:1531`. Bayer keeps all 309 supplied 4×4px FRAME
+primitives on its 36×20 grid. The 144×80px grid occupies 11.7% of the
+372×264px reference stage; its sparse reference geometry is documented in the
+fill allowlist. Error-Diffusion Resolve keeps all 380 supplied dot slots and
+62 unchanged SVG files, including the transparent export whose intrinsic
+32px plane is scaled into its 3.2px slot without changing the file. Its
+60px colour lens retains the exact 200×150px portrait plane, −70/−44px
+source offset, inside stroke and shadows.
+
+Blue-Noise Dissolve keeps the 200×150px photo plane, 14px mask, inside rim,
+shadows and transparent radial gradient primitive. The isolated gradient PNG
+export contained an opaque background and is excluded from product assets.
+The newly verified portraitC2 photograph is Miguel Angel Avila’s free Unsplash
+source, with 1600px full and 800px portable files, both hashes, attribution and
+licence. Full compositions use the approved C1/C2 portraits in place of the
+retired generated photographs.
+
+Full Bayer retains its complete matrix, rounded Rec709 luminance, proximity
+threshold and pulse. Full error diffusion retains its Float32 work buffer,
+threshold128, all four error weights, reversed smoothstep colour lens and
+full-colour lock. Blue noise retains all 1024 exact toroidal ranks, seed527,
+unsigned tie break, complete RGBA source selection, directed radial wave,
+progress recurrence and exact interrupted endpoints. The renderer caches immutable coordinates and
+source planes. Error diffusion skips the hidden native Canvas, copies stable
+monochrome regions and computes the original hypot/smoothstep only where the
+falloff can change the colour. Blue noise computes radial distance only for
+ranks within the directed wave band and copies opaque source pixels as words.
+Boundary pixels keep the original arithmetic. Six-second stories reuse their
+immutable source buffers instead of repeating image processing. The fixed simulation
+clock preserves the original 60Hz models and 32ms pixel cadence across
+60/120/240Hz displays. Bayer and error diffusion use the approved neutral
+paper/ink palette. Full views also preserve the original threshold matrix,
+error weights, source captions, source identities and live percentage readouts,
+with optical text at least11px on360px stages.
+
+`node tools/verify-raster-core.js http://127.0.0.1:4173` passes 45,424,187
+focused checks. The 4.63MB lossless fixture retains 4,320 independent original
+states and complete pixel checkpoints. Published kernels match every captured
+state, luminance/rank/diffusion buffer and pixel. Another 4,456,598 checks
+exercise exact inner/outer lens boundaries, rank thresholds, wave limits and
+endpoints against the literal original functions. Actual full Canvas output is
+also compared against the literal original drawing functions. Every native
+asset callsite and geometry, physical mouse/keys/touch, vertical scrolling,
+compact full stages, interrupted input, reduced motion, two complete native
+stories at every refresh rate, queued deliberate intent, caller/viewport
+holds, disposal and twelve fresh network-blocked exports are covered.
+Chrome/control debt is 131; motion debt remains 51.
+
+The full catalog check passes 651 checks, all 399 lazy previews and 97 offline
+exports. All 265 remediated native compositions pass the fit gates; remaining
+fit findings belong to unfinished groups. The other 396 original objects and
+metadata records, including untouched registrations in the shared raster
+module, are retained. Halftone’s complete original model and all geometry are
+captured, but its implementation awaits 61 exact circle exports after the
+Figma MCP plan quota was reached. There are 26 Raster & Glitch demos left,
+134 existing demos overall, 121 new/extensions, Pro seams and the final audit.
+
+All six final normal-speed profiles average about60fps, with no slow frame
+intervals or long tasks. The six final4× CPU profiles average59.75–60.00fps;
+they retain four33–50ms intervals and zero long tasks. Error diffusion’s full
+stress average rose from24.14fps to59.75fps; blue noise’s rose from39.98fps
+to60.00fps. The original158 and49 long-task results, intermediate native
+restart finding and all raw timings remain in
+`docs/performance/raster-core-2026-11-18.json`. The site-wide performance
+audit remains open.
+
+GitHub Actions remains disabled. The account Actions budget was checked live
+at $0 with stop-at-limit enabled and Usage blocked; repository Actions has no
+active runs. Verification and direct phase commits stay local.
 
 ## Final Image & WebGL: neural routes and sampled pigment
 

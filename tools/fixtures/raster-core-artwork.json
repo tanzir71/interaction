@@ -1,0 +1,8000 @@
+{
+  "fileKey": "OpP74UYjFHRU5q9OBPhoSY",
+  "sourceCommit": "8e0141b34a21d23bd26e7dc02a8a1be7a69c4c03",
+  "originalCaptureSHA256": "a34a50ae4f774b7f051d47a2695199e0daec3726808e5cceedb1c0caebdc0e07",
+  "configs": [
+    {
+      "id": "dither-bayer",
+      "kind": "bayer",
+      "C": "d-raster-bayer-v4",
+      "controls": [
+        [
+          "invert",
+          "Invert field"
+        ]
+      ]
+    },
+    {
+      "id": "dither-floyd-steinberg",
+      "kind": "fs",
+      "C": "d-raster-fs-v4",
+      "controls": [
+        [
+          "lock",
+          "Lock full color"
+        ]
+      ]
+    },
+    {
+      "id": "dither-blue-noise",
+      "kind": "blue",
+      "C": "d-raster-blue-v4",
+      "controls": [
+        [
+          "toggle",
+          "Dissolve to B"
+        ]
+      ]
+    }
+  ],
+  "originalHTML": {
+    "dither-bayer": "\n<div class=\"d-bayer\" tabindex=\"0\" aria-label=\"Interactive ordered-dither poster. Arrow keys move the threshold lens, Home resets it, and Space inverts the palette.\">\n  <div class=\"d-bayer-stage\">\n    <canvas class=\"d-bayer-canvas\" role=\"img\" aria-label=\"One-bit landscape processed with a four by four Bayer threshold matrix\"></canvas>\n    <div class=\"d-bayer-probe\" aria-hidden=\"true\"><i></i></div>\n    <span class=\"d-bayer-index\" aria-hidden=\"true\">04</span>\n  </div>\n  <div class=\"d-bayer-matrix\" aria-hidden=\"true\">\n    <span>00</span><span>08</span><span>02</span><span>10</span>\n    <span>12</span><span>04</span><span>14</span><span>06</span>\n    <span>03</span><span>11</span><span>01</span><span>09</span>\n    <span>15</span><span>07</span><span>13</span><span>05</span>\n  </div>\n  <div class=\"d-bayer-readout\" aria-hidden=\"true\"><span>LOCAL Δ</span><strong>26</strong><b>%</b></div>\n  <button class=\"d-bayer-mode\" type=\"button\" aria-pressed=\"false\">Invert field</button>\n  <p class=\"d-bayer-status\" aria-live=\"polite\">Threshold lens active</p>\n</div>",
+    "dither-floyd-steinberg": "\n<div class=\"d-fs\" tabindex=\"0\" aria-label=\"Floyd-Steinberg dither with color reveal. Arrow keys move the reveal, Home centers it, Space locks color, and Escape collapses it.\">\n  <span class=\"d-fs-kicker\">ERROR DIFFUSION / RGB</span>\n  <div class=\"d-fs-weights\" aria-hidden=\"true\"><span>→ 7/16</span><span>↙ 3/16</span><span>↓ 5/16</span><span>↘ 1/16</span></div>\n  <div class=\"d-fs-stage\">\n    <canvas class=\"d-fs-canvas\" role=\"img\" aria-label=\"A one-bit Floyd-Steinberg poster resolving into full color near the pointer\"></canvas>\n    <div class=\"d-fs-lens\" aria-hidden=\"true\"><i></i><b>RGB</b></div>\n    <span class=\"d-fs-corner\" aria-hidden=\"true\">FS<br>01</span>\n  </div>\n  <div class=\"d-fs-meter\" aria-hidden=\"true\"><span>RESOLVE</span><strong>00</strong><b>%</b></div>\n  <button class=\"d-fs-lock\" type=\"button\" aria-pressed=\"false\">Lock full color</button>\n  <p class=\"d-fs-status\" aria-live=\"polite\">One-bit diffusion active</p>\n</div>",
+    "dither-blue-noise": "\n<div class=\"d-blue\" tabindex=\"0\" aria-label=\"Blue-noise image dissolve. Click or press Space to swap images; arrow keys move the transition origin and Home centers it.\">\n  <span class=\"d-blue-kicker\">RANKED MASK / 32²</span>\n  <div class=\"d-blue-stage\">\n    <canvas class=\"d-blue-canvas\" role=\"img\" aria-label=\"Two graphic images transitioning through a ranked blue-noise threshold mask\"></canvas>\n    <div class=\"d-blue-origin\" aria-hidden=\"true\"><i></i></div>\n    <div class=\"d-blue-labels\" aria-hidden=\"true\"><span>A / NIGHT</span><span>B / SIGNAL</span></div>\n  </div>\n  <div class=\"d-blue-meter\" aria-hidden=\"true\"><span>DISSOLVE</span><strong>000</strong><b>%</b></div>\n  <div class=\"d-blue-spectrum\" aria-hidden=\"true\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>\n  <button class=\"d-blue-toggle\" type=\"button\" aria-pressed=\"false\">Dissolve to B</button>\n  <p class=\"d-blue-status\" aria-live=\"polite\">Image A · mask idle</p>\n</div>"
+  },
+  "assets": {
+    "raster-diffusion-dot-0": {
+      "key": "raster-diffusion-dot-0",
+      "file": "assets/components/raster-diffusion-dot-0.svg",
+      "sha256": "9f3558ac4de18bdd5618ff24bfffbbddd06a7c7226d1b7a693b779be872b5c68",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-1": {
+      "key": "raster-diffusion-dot-1",
+      "file": "assets/components/raster-diffusion-dot-1.svg",
+      "sha256": "a228982f719398d8592328277a886564d7e112c63497fb2f96822933a087915f",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-2": {
+      "key": "raster-diffusion-dot-2",
+      "file": "assets/components/raster-diffusion-dot-2.svg",
+      "sha256": "cc68bbef8db5b638f093abf832793ae23ce2271fc729342315e5effc4dbcfaeb",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-3": {
+      "key": "raster-diffusion-dot-3",
+      "file": "assets/components/raster-diffusion-dot-3.svg",
+      "sha256": "9443c1288900dcda45a43efe4330db978dd4fc25e00986c2baa48800bbd455f0",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-4": {
+      "key": "raster-diffusion-dot-4",
+      "file": "assets/components/raster-diffusion-dot-4.svg",
+      "sha256": "e7f556ed7a793eb1eb772239f598129c3b01e7dfa9744be9256180269b743d51",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-5": {
+      "key": "raster-diffusion-dot-5",
+      "file": "assets/components/raster-diffusion-dot-5.svg",
+      "sha256": "f8ae20140aa765fa0db5d9db86d4f5cbd39207e9f5708f491399f36121a60eb3",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-6": {
+      "key": "raster-diffusion-dot-6",
+      "file": "assets/components/raster-diffusion-dot-6.svg",
+      "sha256": "687507a4e74731d5d9fb604aec262162a111ce082e57027ceabb8c11b0bc25b5",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-7": {
+      "key": "raster-diffusion-dot-7",
+      "file": "assets/components/raster-diffusion-dot-7.svg",
+      "sha256": "8229f014050a80523afaca1f5d582df0b87e3408b68ec4f80d51228b2ea5b074",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-8": {
+      "key": "raster-diffusion-dot-8",
+      "file": "assets/components/raster-diffusion-dot-8.svg",
+      "sha256": "869f3923c6ad8cfd7b2f61672ebc3700b785c9f634ad15492b61f381aca11a6d",
+      "width": 32,
+      "height": 32
+    },
+    "raster-diffusion-dot-9": {
+      "key": "raster-diffusion-dot-9",
+      "file": "assets/components/raster-diffusion-dot-9.svg",
+      "sha256": "56d2d90a0b8c7a6ef0a1e782e68baf3cb227fd5bf24396eabbcc722d4d2f757f",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-10": {
+      "key": "raster-diffusion-dot-10",
+      "file": "assets/components/raster-diffusion-dot-10.svg",
+      "sha256": "5df22a76ef281062db74b02093ff3c986c05a528c7a0a0e9a2357adfa25a00a5",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-11": {
+      "key": "raster-diffusion-dot-11",
+      "file": "assets/components/raster-diffusion-dot-11.svg",
+      "sha256": "1ddc95ff851cdc1a1ff4cf1a469514df33470afa620af6d59d3a4642799bccfd",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-12": {
+      "key": "raster-diffusion-dot-12",
+      "file": "assets/components/raster-diffusion-dot-12.svg",
+      "sha256": "b04a0e40531d0513ef9d443fda06a1d579a166fa86895ead4ae2c4d25aec31c1",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-13": {
+      "key": "raster-diffusion-dot-13",
+      "file": "assets/components/raster-diffusion-dot-13.svg",
+      "sha256": "a5261b8c76838fcd65b8fa28e2b5a1a5c226839559ea246b478b0f7448fbc483",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-14": {
+      "key": "raster-diffusion-dot-14",
+      "file": "assets/components/raster-diffusion-dot-14.svg",
+      "sha256": "b534cca72e016f745b771492186a333492922ca2902a2002d3672e1c7cd04fec",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-15": {
+      "key": "raster-diffusion-dot-15",
+      "file": "assets/components/raster-diffusion-dot-15.svg",
+      "sha256": "962d4f94617d5f004df9e57e6da1ce3c35b4145c3d3c5ef9a335d78bb42a6c69",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-16": {
+      "key": "raster-diffusion-dot-16",
+      "file": "assets/components/raster-diffusion-dot-16.svg",
+      "sha256": "4499df1dce3c6b73879dd349f15347f82f88c142f82a95d20dcf2ced5c65e13a",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-17": {
+      "key": "raster-diffusion-dot-17",
+      "file": "assets/components/raster-diffusion-dot-17.svg",
+      "sha256": "eb247e3a5e2523e3efa3cc866236ab2240c6034d7bb49bb8d7f9d0354ad9d648",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-18": {
+      "key": "raster-diffusion-dot-18",
+      "file": "assets/components/raster-diffusion-dot-18.svg",
+      "sha256": "abbca955550dd131540ff17ba3b54303b148a661a91e290ed9654b82c1c11e79",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-19": {
+      "key": "raster-diffusion-dot-19",
+      "file": "assets/components/raster-diffusion-dot-19.svg",
+      "sha256": "6535f2e853d0035c4016c2789cd026e64f544797bb8e158a8cc5f48d94ffabf7",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-20": {
+      "key": "raster-diffusion-dot-20",
+      "file": "assets/components/raster-diffusion-dot-20.svg",
+      "sha256": "dc814d11bb0ccb6a1187ba60e559ff0c7d6d306f3feab23381dac308cbc6a978",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-21": {
+      "key": "raster-diffusion-dot-21",
+      "file": "assets/components/raster-diffusion-dot-21.svg",
+      "sha256": "caeeddfafb84ea6a48392adce6125fde892099e88f31acee82364b9dbd71ded0",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-22": {
+      "key": "raster-diffusion-dot-22",
+      "file": "assets/components/raster-diffusion-dot-22.svg",
+      "sha256": "2a5edbad377070106d75ae974e331a1760068880880863e5c522a4ea1be38e1d",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-23": {
+      "key": "raster-diffusion-dot-23",
+      "file": "assets/components/raster-diffusion-dot-23.svg",
+      "sha256": "7997e2fbaf24c9276206615a3111fc5fd745ceefb0143a9f64822a1aea0260c4",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-24": {
+      "key": "raster-diffusion-dot-24",
+      "file": "assets/components/raster-diffusion-dot-24.svg",
+      "sha256": "b828c3be19e42f09843ea5ffad8b44ac3a289539058e2b736df3d4255553863f",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-25": {
+      "key": "raster-diffusion-dot-25",
+      "file": "assets/components/raster-diffusion-dot-25.svg",
+      "sha256": "33f31c4e1f04269126a75065184b0ff85468e50b952e97372eed04c4dee51b77",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-26": {
+      "key": "raster-diffusion-dot-26",
+      "file": "assets/components/raster-diffusion-dot-26.svg",
+      "sha256": "b56bd323d6f629c4f6fe134389bd3a6aa45340ba741eb4f7dbbc4f2d2f9ebfb5",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-27": {
+      "key": "raster-diffusion-dot-27",
+      "file": "assets/components/raster-diffusion-dot-27.svg",
+      "sha256": "6d774277c7790d43f4baf83714b1bff965ebecaa10108d0f15cdc837e2db1b6e",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-28": {
+      "key": "raster-diffusion-dot-28",
+      "file": "assets/components/raster-diffusion-dot-28.svg",
+      "sha256": "7ed5131ba44476268051144077dcba23a28e827e4998783af01c661dfea5c4ab",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-29": {
+      "key": "raster-diffusion-dot-29",
+      "file": "assets/components/raster-diffusion-dot-29.svg",
+      "sha256": "1c68df045f8a4268fd0941872b8ffb2e0da1f5fb38561c153a15b529fb8a14ec",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-30": {
+      "key": "raster-diffusion-dot-30",
+      "file": "assets/components/raster-diffusion-dot-30.svg",
+      "sha256": "13005c94045c49d1a7868ab673182a0a385aa2f0c534ae7a96b3822fa58cc265",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-31": {
+      "key": "raster-diffusion-dot-31",
+      "file": "assets/components/raster-diffusion-dot-31.svg",
+      "sha256": "093d383047fe0e4fd2622058363d097879837d1cd95400c79fe5da90f04289b4",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-32": {
+      "key": "raster-diffusion-dot-32",
+      "file": "assets/components/raster-diffusion-dot-32.svg",
+      "sha256": "8e36327b013e8b7ed9c2136667b7001e4ecdb49453941a6c452da3b2f6c82c4e",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-33": {
+      "key": "raster-diffusion-dot-33",
+      "file": "assets/components/raster-diffusion-dot-33.svg",
+      "sha256": "c2d2b5f176d1b3aafcc074f47274e8a776a672356905af9ee7e633f672af7ae0",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-34": {
+      "key": "raster-diffusion-dot-34",
+      "file": "assets/components/raster-diffusion-dot-34.svg",
+      "sha256": "b64a99aa1fac8c9ce72edd50a748b57f6f8329cbe284d20b9772dbfd01c920cf",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-35": {
+      "key": "raster-diffusion-dot-35",
+      "file": "assets/components/raster-diffusion-dot-35.svg",
+      "sha256": "4f565fc406c24f34419e4e19d67c13a63ba42b05af92df09cc32f9689e4d8e41",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-36": {
+      "key": "raster-diffusion-dot-36",
+      "file": "assets/components/raster-diffusion-dot-36.svg",
+      "sha256": "3b8ed1591248dcf240ec195cf0c4296beb702a5684bde08692e2ed27dcd0da8e",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-37": {
+      "key": "raster-diffusion-dot-37",
+      "file": "assets/components/raster-diffusion-dot-37.svg",
+      "sha256": "884a06b5259fb4ba61431e4be7823f92147496d6cd32cf8d0e4e8ee5bf7bdcf7",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-38": {
+      "key": "raster-diffusion-dot-38",
+      "file": "assets/components/raster-diffusion-dot-38.svg",
+      "sha256": "bae7037615d90b24e76421299e8840f4640f80dbaf916df1bcf9f6e5253fe104",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-39": {
+      "key": "raster-diffusion-dot-39",
+      "file": "assets/components/raster-diffusion-dot-39.svg",
+      "sha256": "b4f158c0157507a974b543493d75a812a08734cb318bacd5fc1093d7d6b430bf",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-40": {
+      "key": "raster-diffusion-dot-40",
+      "file": "assets/components/raster-diffusion-dot-40.svg",
+      "sha256": "76ff4cfb050394a422b07b7bf432af8310f2a210e0c939034532f52a3dbf5a05",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-41": {
+      "key": "raster-diffusion-dot-41",
+      "file": "assets/components/raster-diffusion-dot-41.svg",
+      "sha256": "1c533da13fb138bb8f5ed3d9cee273bf897ccf66c67416053b091010d96a65a9",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-42": {
+      "key": "raster-diffusion-dot-42",
+      "file": "assets/components/raster-diffusion-dot-42.svg",
+      "sha256": "f2bc73a4b6295683e1c4dd237cd03cfbb4a51839caa91c7a3b9c099e7359f3cf",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-43": {
+      "key": "raster-diffusion-dot-43",
+      "file": "assets/components/raster-diffusion-dot-43.svg",
+      "sha256": "27279950d2972d8d8d086d6717e0d052d9939fe666bb194448f3c65d78f35a50",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-44": {
+      "key": "raster-diffusion-dot-44",
+      "file": "assets/components/raster-diffusion-dot-44.svg",
+      "sha256": "3bb91e8235697ca8ffa8746ce7ee228d4c31af72a53e06003e9d1f3f96174ae5",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-45": {
+      "key": "raster-diffusion-dot-45",
+      "file": "assets/components/raster-diffusion-dot-45.svg",
+      "sha256": "f169b6df8975b31921693eed6f9ebf77150d08f1ab3c5817981a2a2cef84e8dd",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-46": {
+      "key": "raster-diffusion-dot-46",
+      "file": "assets/components/raster-diffusion-dot-46.svg",
+      "sha256": "a5458cde8e18ae671fc9de65367be436f4c0583672290186e28c5133fa94a236",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-47": {
+      "key": "raster-diffusion-dot-47",
+      "file": "assets/components/raster-diffusion-dot-47.svg",
+      "sha256": "bfca2899c4046ae5796d00420e0820730001b7746622e42c526043b3f7dfa12a",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-48": {
+      "key": "raster-diffusion-dot-48",
+      "file": "assets/components/raster-diffusion-dot-48.svg",
+      "sha256": "8df554048f260ef20b0d5f2d62568065461db7fb5642c70f7bae1f36c9f00be1",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-49": {
+      "key": "raster-diffusion-dot-49",
+      "file": "assets/components/raster-diffusion-dot-49.svg",
+      "sha256": "c68c64b0ca0f964fde9edc74def6be8447ac37e6906196a74faa523feb0b38f9",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-50": {
+      "key": "raster-diffusion-dot-50",
+      "file": "assets/components/raster-diffusion-dot-50.svg",
+      "sha256": "8ebc4d53157e3d1077e106711b50d8035f8e7424a70dd3eb320d85bfd31a6d7a",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-51": {
+      "key": "raster-diffusion-dot-51",
+      "file": "assets/components/raster-diffusion-dot-51.svg",
+      "sha256": "f78bdfc32be193e799e97cd2db89de2c50f60a75bd0174229d0944a2bd1f9a9d",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-52": {
+      "key": "raster-diffusion-dot-52",
+      "file": "assets/components/raster-diffusion-dot-52.svg",
+      "sha256": "81bf7e78853fe4104945de93ae7adcdc770b2a839290a6325514c1dd6b093109",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-53": {
+      "key": "raster-diffusion-dot-53",
+      "file": "assets/components/raster-diffusion-dot-53.svg",
+      "sha256": "bebc52e3865b8104c67bde46fa1ef79efa85aeb3654899ebc16da135035e2533",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-54": {
+      "key": "raster-diffusion-dot-54",
+      "file": "assets/components/raster-diffusion-dot-54.svg",
+      "sha256": "879c4c70a942e2e774aadf37a53a2251399028d2f1454bbf440616a0b8aeba5a",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-55": {
+      "key": "raster-diffusion-dot-55",
+      "file": "assets/components/raster-diffusion-dot-55.svg",
+      "sha256": "263a301d79b2036b5d2e1f4cf2748936aef4e9569ebd39cf4c460b737c252920",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-56": {
+      "key": "raster-diffusion-dot-56",
+      "file": "assets/components/raster-diffusion-dot-56.svg",
+      "sha256": "b4c0ecc5deba365916ec889de9aae4305267ad9024c2804fc14bdd5c44f79146",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-57": {
+      "key": "raster-diffusion-dot-57",
+      "file": "assets/components/raster-diffusion-dot-57.svg",
+      "sha256": "1f2245b69cf8f8b5e7c37e2b44640618d9000ac6d70d2be6f1e472a3d4b96325",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-58": {
+      "key": "raster-diffusion-dot-58",
+      "file": "assets/components/raster-diffusion-dot-58.svg",
+      "sha256": "4d546235ef20cbf405e7e42881574dbd6969a39ede65026483acf2115f01ee85",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-59": {
+      "key": "raster-diffusion-dot-59",
+      "file": "assets/components/raster-diffusion-dot-59.svg",
+      "sha256": "b98398b23da4de08e431d135c06020d36b222ae52286de556c2a0ef9b66fb082",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-60": {
+      "key": "raster-diffusion-dot-60",
+      "file": "assets/components/raster-diffusion-dot-60.svg",
+      "sha256": "db3e66581f3e3aba5cdf25823a7eb58611771399c7a709759918c343bba14001",
+      "width": 3.2,
+      "height": 3.2
+    },
+    "raster-diffusion-dot-61": {
+      "key": "raster-diffusion-dot-61",
+      "file": "assets/components/raster-diffusion-dot-61.svg",
+      "sha256": "b0256f86f78301573e4a7f763353b76494e2e0b9e55424926743af473cda73e7",
+      "width": 3.2,
+      "height": 3.2
+    }
+  },
+  "nodeMap": {
+    "169:1146": "raster-diffusion-dot-0",
+    "169:1147": "raster-diffusion-dot-1",
+    "169:1148": "raster-diffusion-dot-2",
+    "169:1149": "raster-diffusion-dot-3",
+    "169:1150": "raster-diffusion-dot-4",
+    "169:1151": "raster-diffusion-dot-5",
+    "169:1152": "raster-diffusion-dot-5",
+    "169:1153": "raster-diffusion-dot-4",
+    "169:1154": "raster-diffusion-dot-3",
+    "169:1155": "raster-diffusion-dot-2",
+    "169:1156": "raster-diffusion-dot-6",
+    "169:1157": "raster-diffusion-dot-7",
+    "169:1158": "raster-diffusion-dot-8",
+    "169:1159": "raster-diffusion-dot-6",
+    "169:1160": "raster-diffusion-dot-9",
+    "169:1161": "raster-diffusion-dot-5",
+    "169:1162": "raster-diffusion-dot-10",
+    "169:1163": "raster-diffusion-dot-11",
+    "169:1164": "raster-diffusion-dot-12",
+    "169:1165": "raster-diffusion-dot-13",
+    "169:1166": "raster-diffusion-dot-13",
+    "169:1167": "raster-diffusion-dot-12",
+    "169:1168": "raster-diffusion-dot-11",
+    "169:1169": "raster-diffusion-dot-14",
+    "169:1170": "raster-diffusion-dot-4",
+    "169:1171": "raster-diffusion-dot-15",
+    "169:1172": "raster-diffusion-dot-16",
+    "169:1173": "raster-diffusion-dot-8",
+    "169:1174": "raster-diffusion-dot-1",
+    "169:1175": "raster-diffusion-dot-3",
+    "169:1176": "raster-diffusion-dot-10",
+    "169:1177": "raster-diffusion-dot-12",
+    "169:1178": "raster-diffusion-dot-17",
+    "169:1179": "raster-diffusion-dot-18",
+    "169:1180": "raster-diffusion-dot-19",
+    "169:1181": "raster-diffusion-dot-19",
+    "169:1182": "raster-diffusion-dot-19",
+    "169:1183": "raster-diffusion-dot-20",
+    "169:1184": "raster-diffusion-dot-21",
+    "169:1185": "raster-diffusion-dot-22",
+    "169:1186": "raster-diffusion-dot-11",
+    "169:1187": "raster-diffusion-dot-5",
+    "169:1188": "raster-diffusion-dot-2",
+    "169:1189": "raster-diffusion-dot-16",
+    "169:1190": "raster-diffusion-dot-6",
+    "169:1191": "raster-diffusion-dot-3",
+    "169:1192": "raster-diffusion-dot-23",
+    "169:1193": "raster-diffusion-dot-22",
+    "169:1194": "raster-diffusion-dot-20",
+    "169:1195": "raster-diffusion-dot-24",
+    "169:1196": "raster-diffusion-dot-25",
+    "169:1197": "raster-diffusion-dot-26",
+    "169:1198": "raster-diffusion-dot-27",
+    "169:1199": "raster-diffusion-dot-26",
+    "169:1200": "raster-diffusion-dot-28",
+    "169:1201": "raster-diffusion-dot-29",
+    "169:1202": "raster-diffusion-dot-19",
+    "169:1203": "raster-diffusion-dot-21",
+    "169:1204": "raster-diffusion-dot-12",
+    "169:1205": "raster-diffusion-dot-14",
+    "169:1206": "raster-diffusion-dot-2",
+    "169:1207": "raster-diffusion-dot-0",
+    "169:1208": "raster-diffusion-dot-16",
+    "169:1209": "raster-diffusion-dot-9",
+    "169:1210": "raster-diffusion-dot-10",
+    "169:1211": "raster-diffusion-dot-22",
+    "169:1212": "raster-diffusion-dot-20",
+    "169:1213": "raster-diffusion-dot-25",
+    "169:1214": "raster-diffusion-dot-27",
+    "169:1215": "raster-diffusion-dot-30",
+    "169:1216": "raster-diffusion-dot-31",
+    "169:1217": "raster-diffusion-dot-32",
+    "169:1218": "raster-diffusion-dot-32",
+    "169:1219": "raster-diffusion-dot-33",
+    "169:1220": "raster-diffusion-dot-34",
+    "169:1221": "raster-diffusion-dot-26",
+    "169:1222": "raster-diffusion-dot-24",
+    "169:1223": "raster-diffusion-dot-18",
+    "169:1224": "raster-diffusion-dot-12",
+    "169:1225": "raster-diffusion-dot-5",
+    "169:1226": "raster-diffusion-dot-15",
+    "169:1227": "raster-diffusion-dot-7",
+    "169:1228": "raster-diffusion-dot-8",
+    "169:1229": "raster-diffusion-dot-15",
+    "169:1230": "raster-diffusion-dot-5",
+    "169:1231": "raster-diffusion-dot-13",
+    "169:1232": "raster-diffusion-dot-20",
+    "169:1233": "raster-diffusion-dot-25",
+    "169:1234": "raster-diffusion-dot-35",
+    "169:1235": "raster-diffusion-dot-31",
+    "169:1236": "raster-diffusion-dot-36",
+    "169:1237": "raster-diffusion-dot-37",
+    "169:1238": "raster-diffusion-dot-38",
+    "169:1239": "raster-diffusion-dot-38",
+    "169:1240": "raster-diffusion-dot-39",
+    "169:1241": "raster-diffusion-dot-40",
+    "169:1242": "raster-diffusion-dot-33",
+    "169:1243": "raster-diffusion-dot-27",
+    "169:1244": "raster-diffusion-dot-24",
+    "169:1245": "raster-diffusion-dot-21",
+    "169:1246": "raster-diffusion-dot-11",
+    "169:1247": "raster-diffusion-dot-3",
+    "169:1248": "raster-diffusion-dot-16",
+    "169:1249": "raster-diffusion-dot-0",
+    "169:1250": "raster-diffusion-dot-9",
+    "169:1251": "raster-diffusion-dot-23",
+    "169:1252": "raster-diffusion-dot-21",
+    "169:1253": "raster-diffusion-dot-24",
+    "169:1254": "raster-diffusion-dot-27",
+    "169:1255": "raster-diffusion-dot-32",
+    "169:1256": "raster-diffusion-dot-39",
+    "169:1257": "raster-diffusion-dot-41",
+    "169:1258": "raster-diffusion-dot-42",
+    "169:1259": "raster-diffusion-dot-43",
+    "169:1260": "raster-diffusion-dot-43",
+    "169:1261": "raster-diffusion-dot-44",
+    "169:1262": "raster-diffusion-dot-38",
+    "169:1263": "raster-diffusion-dot-45",
+    "169:1264": "raster-diffusion-dot-33",
+    "169:1265": "raster-diffusion-dot-28",
+    "169:1266": "raster-diffusion-dot-19",
+    "169:1267": "raster-diffusion-dot-13",
+    "169:1268": "raster-diffusion-dot-14",
+    "169:1269": "raster-diffusion-dot-15",
+    "169:1270": "raster-diffusion-dot-6",
+    "169:1271": "raster-diffusion-dot-4",
+    "169:1272": "raster-diffusion-dot-12",
+    "169:1273": "raster-diffusion-dot-20",
+    "169:1274": "raster-diffusion-dot-28",
+    "169:1275": "raster-diffusion-dot-33",
+    "169:1276": "raster-diffusion-dot-36",
+    "169:1277": "raster-diffusion-dot-41",
+    "169:1278": "raster-diffusion-dot-46",
+    "169:1279": "raster-diffusion-dot-47",
+    "169:1280": "raster-diffusion-dot-48",
+    "169:1281": "raster-diffusion-dot-48",
+    "169:1282": "raster-diffusion-dot-49",
+    "169:1283": "raster-diffusion-dot-42",
+    "169:1284": "raster-diffusion-dot-38",
+    "169:1285": "raster-diffusion-dot-40",
+    "169:1286": "raster-diffusion-dot-35",
+    "169:1287": "raster-diffusion-dot-29",
+    "169:1288": "raster-diffusion-dot-21",
+    "169:1289": "raster-diffusion-dot-23",
+    "169:1290": "raster-diffusion-dot-9",
+    "169:1291": "raster-diffusion-dot-0",
+    "169:1292": "raster-diffusion-dot-1",
+    "169:1293": "raster-diffusion-dot-5",
+    "169:1294": "raster-diffusion-dot-22",
+    "169:1295": "raster-diffusion-dot-50",
+    "169:1296": "raster-diffusion-dot-27",
+    "169:1297": "raster-diffusion-dot-32",
+    "169:1298": "raster-diffusion-dot-38",
+    "169:1299": "raster-diffusion-dot-42",
+    "169:1300": "raster-diffusion-dot-51",
+    "169:1301": "raster-diffusion-dot-52",
+    "169:1302": "raster-diffusion-dot-53",
+    "169:1303": "raster-diffusion-dot-53",
+    "169:1304": "raster-diffusion-dot-54",
+    "169:1305": "raster-diffusion-dot-49",
+    "169:1306": "raster-diffusion-dot-55",
+    "169:1307": "raster-diffusion-dot-36",
+    "169:1308": "raster-diffusion-dot-30",
+    "169:1309": "raster-diffusion-dot-25",
+    "169:1310": "raster-diffusion-dot-18",
+    "169:1311": "raster-diffusion-dot-11",
+    "169:1312": "raster-diffusion-dot-3",
+    "169:1313": "raster-diffusion-dot-16",
+    "169:1314": "raster-diffusion-dot-15",
+    "169:1315": "raster-diffusion-dot-14",
+    "169:1316": "raster-diffusion-dot-22",
+    "169:1317": "raster-diffusion-dot-50",
+    "169:1318": "raster-diffusion-dot-35",
+    "169:1319": "raster-diffusion-dot-40",
+    "169:1320": "raster-diffusion-dot-56",
+    "169:1321": "raster-diffusion-dot-46",
+    "169:1322": "raster-diffusion-dot-57",
+    "169:1323": "raster-diffusion-dot-58",
+    "169:1324": "raster-diffusion-dot-59",
+    "169:1325": "raster-diffusion-dot-60",
+    "169:1326": "raster-diffusion-dot-61",
+    "169:1327": "raster-diffusion-dot-51",
+    "169:1328": "raster-diffusion-dot-42",
+    "169:1329": "raster-diffusion-dot-37",
+    "169:1330": "raster-diffusion-dot-33",
+    "169:1331": "raster-diffusion-dot-28",
+    "169:1332": "raster-diffusion-dot-20",
+    "169:1333": "raster-diffusion-dot-12",
+    "169:1334": "raster-diffusion-dot-4",
+    "169:1335": "raster-diffusion-dot-16",
+    "169:1336": "raster-diffusion-dot-15",
+    "169:1337": "raster-diffusion-dot-14",
+    "169:1338": "raster-diffusion-dot-22",
+    "169:1339": "raster-diffusion-dot-50",
+    "169:1340": "raster-diffusion-dot-35",
+    "169:1341": "raster-diffusion-dot-40",
+    "169:1342": "raster-diffusion-dot-56",
+    "169:1343": "raster-diffusion-dot-46",
+    "169:1344": "raster-diffusion-dot-57",
+    "169:1345": "raster-diffusion-dot-58",
+    "169:1346": "raster-diffusion-dot-59",
+    "169:1347": "raster-diffusion-dot-60",
+    "169:1348": "raster-diffusion-dot-61",
+    "169:1349": "raster-diffusion-dot-51",
+    "169:1350": "raster-diffusion-dot-42",
+    "169:1351": "raster-diffusion-dot-37",
+    "169:1352": "raster-diffusion-dot-33",
+    "169:1353": "raster-diffusion-dot-28",
+    "169:1354": "raster-diffusion-dot-20",
+    "169:1355": "raster-diffusion-dot-12",
+    "169:1356": "raster-diffusion-dot-4",
+    "169:1357": "raster-diffusion-dot-16",
+    "169:1358": "raster-diffusion-dot-1",
+    "169:1359": "raster-diffusion-dot-5",
+    "169:1360": "raster-diffusion-dot-22",
+    "169:1361": "raster-diffusion-dot-50",
+    "169:1362": "raster-diffusion-dot-27",
+    "169:1363": "raster-diffusion-dot-32",
+    "169:1364": "raster-diffusion-dot-38",
+    "169:1365": "raster-diffusion-dot-42",
+    "169:1366": "raster-diffusion-dot-51",
+    "169:1367": "raster-diffusion-dot-52",
+    "169:1368": "raster-diffusion-dot-53",
+    "169:1369": "raster-diffusion-dot-53",
+    "169:1370": "raster-diffusion-dot-54",
+    "169:1371": "raster-diffusion-dot-49",
+    "169:1372": "raster-diffusion-dot-55",
+    "169:1373": "raster-diffusion-dot-36",
+    "169:1374": "raster-diffusion-dot-30",
+    "169:1375": "raster-diffusion-dot-25",
+    "169:1376": "raster-diffusion-dot-18",
+    "169:1377": "raster-diffusion-dot-11",
+    "169:1378": "raster-diffusion-dot-3",
+    "169:1379": "raster-diffusion-dot-16",
+    "169:1380": "raster-diffusion-dot-6",
+    "169:1381": "raster-diffusion-dot-4",
+    "169:1382": "raster-diffusion-dot-12",
+    "169:1383": "raster-diffusion-dot-20",
+    "169:1384": "raster-diffusion-dot-28",
+    "169:1385": "raster-diffusion-dot-33",
+    "169:1386": "raster-diffusion-dot-36",
+    "169:1387": "raster-diffusion-dot-41",
+    "169:1388": "raster-diffusion-dot-46",
+    "169:1389": "raster-diffusion-dot-47",
+    "169:1390": "raster-diffusion-dot-48",
+    "169:1391": "raster-diffusion-dot-48",
+    "169:1392": "raster-diffusion-dot-49",
+    "169:1393": "raster-diffusion-dot-42",
+    "169:1394": "raster-diffusion-dot-38",
+    "169:1395": "raster-diffusion-dot-40",
+    "169:1396": "raster-diffusion-dot-35",
+    "169:1397": "raster-diffusion-dot-29",
+    "169:1398": "raster-diffusion-dot-21",
+    "169:1399": "raster-diffusion-dot-23",
+    "169:1400": "raster-diffusion-dot-9",
+    "169:1401": "raster-diffusion-dot-0",
+    "169:1402": "raster-diffusion-dot-0",
+    "169:1403": "raster-diffusion-dot-9",
+    "169:1404": "raster-diffusion-dot-23",
+    "169:1405": "raster-diffusion-dot-21",
+    "169:1406": "raster-diffusion-dot-24",
+    "169:1407": "raster-diffusion-dot-27",
+    "169:1408": "raster-diffusion-dot-32",
+    "169:1409": "raster-diffusion-dot-39",
+    "169:1410": "raster-diffusion-dot-41",
+    "169:1411": "raster-diffusion-dot-42",
+    "169:1412": "raster-diffusion-dot-43",
+    "169:1413": "raster-diffusion-dot-43",
+    "169:1414": "raster-diffusion-dot-44",
+    "169:1415": "raster-diffusion-dot-38",
+    "169:1416": "raster-diffusion-dot-45",
+    "169:1417": "raster-diffusion-dot-33",
+    "169:1418": "raster-diffusion-dot-28",
+    "169:1419": "raster-diffusion-dot-19",
+    "169:1420": "raster-diffusion-dot-13",
+    "169:1421": "raster-diffusion-dot-14",
+    "169:1422": "raster-diffusion-dot-15",
+    "169:1423": "raster-diffusion-dot-8",
+    "169:1424": "raster-diffusion-dot-15",
+    "169:1425": "raster-diffusion-dot-5",
+    "169:1426": "raster-diffusion-dot-13",
+    "169:1427": "raster-diffusion-dot-20",
+    "169:1428": "raster-diffusion-dot-25",
+    "169:1429": "raster-diffusion-dot-35",
+    "169:1430": "raster-diffusion-dot-31",
+    "169:1431": "raster-diffusion-dot-36",
+    "169:1432": "raster-diffusion-dot-37",
+    "169:1433": "raster-diffusion-dot-38",
+    "169:1434": "raster-diffusion-dot-38",
+    "169:1435": "raster-diffusion-dot-39",
+    "169:1436": "raster-diffusion-dot-40",
+    "169:1437": "raster-diffusion-dot-33",
+    "169:1438": "raster-diffusion-dot-27",
+    "169:1439": "raster-diffusion-dot-24",
+    "169:1440": "raster-diffusion-dot-21",
+    "169:1441": "raster-diffusion-dot-11",
+    "169:1442": "raster-diffusion-dot-3",
+    "169:1443": "raster-diffusion-dot-16",
+    "169:1444": "raster-diffusion-dot-16",
+    "169:1445": "raster-diffusion-dot-9",
+    "169:1446": "raster-diffusion-dot-10",
+    "169:1447": "raster-diffusion-dot-22",
+    "169:1448": "raster-diffusion-dot-20",
+    "169:1449": "raster-diffusion-dot-25",
+    "169:1450": "raster-diffusion-dot-27",
+    "169:1451": "raster-diffusion-dot-30",
+    "169:1452": "raster-diffusion-dot-31",
+    "169:1453": "raster-diffusion-dot-32",
+    "169:1454": "raster-diffusion-dot-32",
+    "169:1455": "raster-diffusion-dot-33",
+    "169:1456": "raster-diffusion-dot-34",
+    "169:1457": "raster-diffusion-dot-26",
+    "169:1458": "raster-diffusion-dot-24",
+    "169:1459": "raster-diffusion-dot-18",
+    "169:1460": "raster-diffusion-dot-12",
+    "169:1461": "raster-diffusion-dot-5",
+    "169:1462": "raster-diffusion-dot-15",
+    "169:1463": "raster-diffusion-dot-7",
+    "169:1464": "raster-diffusion-dot-6",
+    "169:1465": "raster-diffusion-dot-3",
+    "169:1466": "raster-diffusion-dot-23",
+    "169:1467": "raster-diffusion-dot-22",
+    "169:1468": "raster-diffusion-dot-20",
+    "169:1469": "raster-diffusion-dot-24",
+    "169:1470": "raster-diffusion-dot-25",
+    "169:1471": "raster-diffusion-dot-26",
+    "169:1472": "raster-diffusion-dot-27",
+    "169:1473": "raster-diffusion-dot-26",
+    "169:1474": "raster-diffusion-dot-28",
+    "169:1475": "raster-diffusion-dot-29",
+    "169:1476": "raster-diffusion-dot-19",
+    "169:1477": "raster-diffusion-dot-21",
+    "169:1478": "raster-diffusion-dot-12",
+    "169:1479": "raster-diffusion-dot-14",
+    "169:1480": "raster-diffusion-dot-2",
+    "169:1481": "raster-diffusion-dot-0",
+    "169:1482": "raster-diffusion-dot-8",
+    "169:1483": "raster-diffusion-dot-1",
+    "169:1484": "raster-diffusion-dot-3",
+    "169:1485": "raster-diffusion-dot-10",
+    "169:1486": "raster-diffusion-dot-12",
+    "169:1487": "raster-diffusion-dot-17",
+    "169:1488": "raster-diffusion-dot-18",
+    "169:1489": "raster-diffusion-dot-19",
+    "169:1490": "raster-diffusion-dot-19",
+    "169:1491": "raster-diffusion-dot-19",
+    "169:1492": "raster-diffusion-dot-20",
+    "169:1493": "raster-diffusion-dot-21",
+    "169:1494": "raster-diffusion-dot-22",
+    "169:1495": "raster-diffusion-dot-11",
+    "169:1496": "raster-diffusion-dot-5",
+    "169:1497": "raster-diffusion-dot-2",
+    "169:1498": "raster-diffusion-dot-16",
+    "169:1499": "raster-diffusion-dot-8",
+    "169:1500": "raster-diffusion-dot-6",
+    "169:1501": "raster-diffusion-dot-9",
+    "169:1502": "raster-diffusion-dot-5",
+    "169:1503": "raster-diffusion-dot-10",
+    "169:1504": "raster-diffusion-dot-11",
+    "169:1505": "raster-diffusion-dot-12",
+    "169:1506": "raster-diffusion-dot-13",
+    "169:1507": "raster-diffusion-dot-13",
+    "169:1508": "raster-diffusion-dot-12",
+    "169:1509": "raster-diffusion-dot-11",
+    "169:1510": "raster-diffusion-dot-14",
+    "169:1511": "raster-diffusion-dot-4",
+    "169:1512": "raster-diffusion-dot-15",
+    "169:1513": "raster-diffusion-dot-16",
+    "169:1514": "raster-diffusion-dot-0",
+    "169:1515": "raster-diffusion-dot-1",
+    "169:1516": "raster-diffusion-dot-2",
+    "169:1517": "raster-diffusion-dot-3",
+    "169:1518": "raster-diffusion-dot-4",
+    "169:1519": "raster-diffusion-dot-5",
+    "169:1520": "raster-diffusion-dot-5",
+    "169:1521": "raster-diffusion-dot-4",
+    "169:1522": "raster-diffusion-dot-3",
+    "169:1523": "raster-diffusion-dot-2",
+    "169:1524": "raster-diffusion-dot-6",
+    "169:1525": "raster-diffusion-dot-7"
+  },
+  "bayer": {
+    "stage": "169:820",
+    "width": 372,
+    "height": 264,
+    "styles": [
+      {
+        "type": "FRAME",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      }
+    ],
+    "rows": [
+      [
+        "169:821",
+        130,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:822",
+        138,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:823",
+        146,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:824",
+        154,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:825",
+        162,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:826",
+        170,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:827",
+        178,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:828",
+        186,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:829",
+        194,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:830",
+        202,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:831",
+        210,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:832",
+        218,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:833",
+        226,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:834",
+        234,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:835",
+        242,
+        62,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:836",
+        150,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:837",
+        158,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:838",
+        166,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:839",
+        174,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:840",
+        182,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:841",
+        190,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:842",
+        198,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:843",
+        206,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:844",
+        214,
+        66,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:845",
+        138,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:846",
+        146,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:847",
+        154,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:848",
+        162,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:849",
+        170,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:850",
+        178,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:851",
+        186,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:852",
+        190,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:853",
+        194,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:854",
+        202,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:855",
+        210,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:856",
+        218,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:857",
+        226,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:858",
+        234,
+        70,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:859",
+        142,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:860",
+        158,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:861",
+        166,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:862",
+        174,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:863",
+        182,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:864",
+        190,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:865",
+        198,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:866",
+        206,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:867",
+        214,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:868",
+        222,
+        74,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:869",
+        130,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:870",
+        138,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:871",
+        146,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:872",
+        154,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:873",
+        162,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:874",
+        166,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:875",
+        170,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:876",
+        174,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:877",
+        178,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:878",
+        182,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:879",
+        186,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:880",
+        190,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:881",
+        194,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:882",
+        198,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:883",
+        202,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:884",
+        210,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:885",
+        218,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:886",
+        226,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:887",
+        234,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:888",
+        242,
+        78,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:889",
+        134,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:890",
+        150,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:891",
+        158,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:892",
+        166,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:893",
+        174,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:894",
+        182,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:895",
+        190,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:896",
+        198,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:897",
+        206,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:898",
+        214,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:899",
+        222,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:900",
+        230,
+        82,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:901",
+        122,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:902",
+        130,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:903",
+        138,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:904",
+        146,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:905",
+        154,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:906",
+        158,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:907",
+        162,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:908",
+        170,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:909",
+        174,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:910",
+        178,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:911",
+        182,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:912",
+        186,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:913",
+        190,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:914",
+        194,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:915",
+        198,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:916",
+        202,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:917",
+        206,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:918",
+        210,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:919",
+        218,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:920",
+        226,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:921",
+        234,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:922",
+        250,
+        86,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:923",
+        142,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:924",
+        150,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:925",
+        158,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:926",
+        166,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:927",
+        174,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:928",
+        182,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:929",
+        186,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:930",
+        190,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:931",
+        198,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:932",
+        206,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:933",
+        214,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:934",
+        222,
+        90,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:935",
+        114,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:936",
+        122,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:937",
+        130,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:938",
+        138,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:939",
+        146,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:940",
+        150,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:941",
+        154,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:942",
+        158,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:943",
+        162,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:944",
+        166,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:945",
+        170,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:946",
+        174,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:947",
+        178,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:948",
+        182,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:949",
+        186,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:950",
+        190,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:951",
+        194,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:952",
+        198,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:953",
+        202,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:954",
+        206,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:955",
+        210,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:956",
+        214,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:957",
+        218,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:958",
+        226,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:959",
+        234,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:960",
+        242,
+        94,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:961",
+        134,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:962",
+        142,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:963",
+        150,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:964",
+        158,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:965",
+        166,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:966",
+        174,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:967",
+        178,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:968",
+        182,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:969",
+        186,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:970",
+        190,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:971",
+        194,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:972",
+        198,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:973",
+        206,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:974",
+        214,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:975",
+        222,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:976",
+        230,
+        98,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:977",
+        122,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:978",
+        130,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:979",
+        138,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:980",
+        146,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:981",
+        154,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:982",
+        158,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:983",
+        162,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:984",
+        166,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:985",
+        170,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:986",
+        174,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:987",
+        178,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:988",
+        182,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:989",
+        186,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:990",
+        190,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:991",
+        194,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:992",
+        198,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:993",
+        202,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:994",
+        206,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:995",
+        210,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:996",
+        218,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:997",
+        226,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:998",
+        234,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:999",
+        242,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1000",
+        250,
+        102,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1001",
+        142,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1002",
+        150,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1003",
+        158,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1004",
+        166,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1005",
+        174,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1006",
+        182,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1007",
+        186,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1008",
+        190,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1009",
+        198,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1010",
+        206,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1011",
+        214,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1012",
+        222,
+        106,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1013",
+        114,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1014",
+        122,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1015",
+        130,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1016",
+        138,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1017",
+        146,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1018",
+        150,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1019",
+        154,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1020",
+        162,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1021",
+        166,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1022",
+        170,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1023",
+        174,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1024",
+        178,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1025",
+        182,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1026",
+        186,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1027",
+        190,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1028",
+        194,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1029",
+        198,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1030",
+        202,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1031",
+        206,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1032",
+        210,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1033",
+        214,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1034",
+        218,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1035",
+        226,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1036",
+        234,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1037",
+        242,
+        110,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1038",
+        134,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1039",
+        142,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1040",
+        150,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1041",
+        158,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1042",
+        166,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1043",
+        174,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1044",
+        178,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1045",
+        182,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1046",
+        190,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1047",
+        194,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1048",
+        198,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1049",
+        206,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1050",
+        214,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1051",
+        222,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1052",
+        230,
+        114,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1053",
+        122,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1054",
+        130,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1055",
+        138,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1056",
+        146,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1057",
+        154,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1058",
+        162,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1059",
+        170,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1060",
+        174,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1061",
+        178,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1062",
+        182,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1063",
+        186,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1064",
+        190,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1065",
+        194,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1066",
+        202,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1067",
+        206,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1068",
+        210,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1069",
+        218,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1070",
+        226,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1071",
+        234,
+        118,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1072",
+        142,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1073",
+        150,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1074",
+        158,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1075",
+        166,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1076",
+        174,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1077",
+        182,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1078",
+        190,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1079",
+        198,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1080",
+        206,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1081",
+        214,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1082",
+        222,
+        122,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1083",
+        130,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1084",
+        138,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1085",
+        146,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1086",
+        154,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1087",
+        162,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1088",
+        166,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1089",
+        170,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1090",
+        178,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1091",
+        182,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1092",
+        186,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1093",
+        190,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1094",
+        194,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1095",
+        198,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1096",
+        202,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1097",
+        210,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1098",
+        218,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1099",
+        226,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1100",
+        234,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1101",
+        242,
+        126,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1102",
+        150,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1103",
+        158,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1104",
+        166,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1105",
+        174,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1106",
+        182,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1107",
+        190,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1108",
+        198,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1109",
+        206,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1110",
+        214,
+        130,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1111",
+        138,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1112",
+        146,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1113",
+        154,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1114",
+        162,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1115",
+        170,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1116",
+        178,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1117",
+        186,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1118",
+        194,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1119",
+        202,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1120",
+        210,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1121",
+        218,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1122",
+        226,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1123",
+        234,
+        134,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1124",
+        158,
+        138,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1125",
+        174,
+        138,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1126",
+        182,
+        138,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1127",
+        190,
+        138,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1128",
+        198,
+        138,
+        4,
+        4,
+        0
+      ],
+      [
+        "169:1129",
+        206,
+        138,
+        4,
+        4,
+        0
+      ]
+    ]
+  },
+  "diffusion": {
+    "stage": "169:1145",
+    "width": 372,
+    "height": 264,
+    "styles": [
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.019999999552965164,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05000000074505806,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07000000029802322,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.09000000357627869,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10999999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.03999999910593033,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.009999999776482582,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07999999821186066,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.12999999523162842,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.15000000596046448,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.1599999964237213,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.11999999731779099,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.029999999329447746,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.1899999976158142,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20999999344348907,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23000000417232513,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20000000298023224,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.18000000715255737,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.25,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.27000001072883606,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.28999999165534973,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.30000001192092896,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2800000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.25999999046325684,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.33000001311302185,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.36000001430511475,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3400000035762787,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3199999928474426,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.38999998569488525,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4099999964237213,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.41999998688697815,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3700000047683716,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4399999976158142,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4699999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.47999998927116394,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.46000000834465027,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3799999952316284,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.49000000953674316,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5199999809265137,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5400000214576721,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5099999904632568,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5299999713897705,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5799999833106995,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.6000000238418579,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5600000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.44999998807907104,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4300000071525574,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.550000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.6100000143051147,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.6600000262260437,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.6499999761581421,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "ELLIPSE",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5899999737739563,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [],
+        "cornerRadius": 0
+      },
+      {
+        "type": "FRAME",
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "opacity": 1,
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "cornerRadius": 30
+      }
+    ],
+    "rows": [
+      [
+        "169:1146",
+        142,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1147",
+        150,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1148",
+        158,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1149",
+        166,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1150",
+        174,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1151",
+        182,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1152",
+        190,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1153",
+        198,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1154",
+        206,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1155",
+        214,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1156",
+        222,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1157",
+        230,
+        24.399999618530273,
+        3.200000047683716,
+        3.200000047683716,
+        7
+      ],
+      [
+        "169:1158",
+        126,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1159",
+        134,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1160",
+        142,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1161",
+        150,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1162",
+        158,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1163",
+        166,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1164",
+        174,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1165",
+        182,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1166",
+        190,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1167",
+        198,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1168",
+        206,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1169",
+        214,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1170",
+        222,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1171",
+        230,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1172",
+        238,
+        32.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1173",
+        118,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1174",
+        126,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1175",
+        134,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1176",
+        142,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1177",
+        150,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1178",
+        158,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        17
+      ],
+      [
+        "169:1179",
+        166,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1180",
+        174,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1181",
+        182,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1182",
+        190,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1183",
+        198,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1184",
+        206,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1185",
+        214,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1186",
+        222,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1187",
+        230,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1188",
+        238,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1189",
+        246,
+        40.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1190",
+        118,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1191",
+        126,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1192",
+        134,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1193",
+        142,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1194",
+        150,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1195",
+        158,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1196",
+        166,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1197",
+        174,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1198",
+        182,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1199",
+        190,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1200",
+        198,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1201",
+        206,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        29
+      ],
+      [
+        "169:1202",
+        214,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1203",
+        222,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1204",
+        230,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1205",
+        238,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1206",
+        246,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1207",
+        254,
+        48.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1208",
+        110,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1209",
+        118,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1210",
+        126,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1211",
+        134,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1212",
+        142,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1213",
+        150,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1214",
+        158,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1215",
+        166,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        30
+      ],
+      [
+        "169:1216",
+        174,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        31
+      ],
+      [
+        "169:1217",
+        182,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1218",
+        190,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1219",
+        198,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1220",
+        206,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        34
+      ],
+      [
+        "169:1221",
+        214,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1222",
+        222,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1223",
+        230,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1224",
+        238,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1225",
+        246,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1226",
+        254,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1227",
+        262,
+        56.400001525878906,
+        3.200000047683716,
+        3.200000047683716,
+        7
+      ],
+      [
+        "169:1228",
+        102,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1229",
+        110,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1230",
+        118,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1231",
+        126,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1232",
+        134,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1233",
+        142,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1234",
+        150,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1235",
+        158,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        31
+      ],
+      [
+        "169:1236",
+        166,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1237",
+        174,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        37
+      ],
+      [
+        "169:1238",
+        182,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1239",
+        190,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1240",
+        198,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        39
+      ],
+      [
+        "169:1241",
+        206,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1242",
+        214,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1243",
+        222,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1244",
+        230,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1245",
+        238,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1246",
+        246,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1247",
+        254,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1248",
+        262,
+        64.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1249",
+        102,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1250",
+        110,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1251",
+        118,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1252",
+        126,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1253",
+        134,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1254",
+        142,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1255",
+        150,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1256",
+        158,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        39
+      ],
+      [
+        "169:1257",
+        166,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        41
+      ],
+      [
+        "169:1258",
+        174,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1259",
+        182,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        43
+      ],
+      [
+        "169:1260",
+        190,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        43
+      ],
+      [
+        "169:1261",
+        198,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        44
+      ],
+      [
+        "169:1262",
+        206,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1263",
+        214,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        45
+      ],
+      [
+        "169:1264",
+        222,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1265",
+        230,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1266",
+        238,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1267",
+        246,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1268",
+        254,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1269",
+        262,
+        72.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1270",
+        102,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1271",
+        110,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1272",
+        118,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1273",
+        126,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1274",
+        134,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1275",
+        142,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1276",
+        150,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1277",
+        158,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        41
+      ],
+      [
+        "169:1278",
+        166,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        46
+      ],
+      [
+        "169:1279",
+        174,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        47
+      ],
+      [
+        "169:1280",
+        182,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        48
+      ],
+      [
+        "169:1281",
+        190,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        48
+      ],
+      [
+        "169:1282",
+        198,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        49
+      ],
+      [
+        "169:1283",
+        206,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1284",
+        214,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1285",
+        222,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1286",
+        230,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1287",
+        238,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        29
+      ],
+      [
+        "169:1288",
+        246,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1289",
+        254,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1290",
+        262,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1291",
+        270,
+        80.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1292",
+        102,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1293",
+        110,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1294",
+        118,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1295",
+        126,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        50
+      ],
+      [
+        "169:1296",
+        134,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1297",
+        142,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1298",
+        150,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1299",
+        158,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1300",
+        166,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        51
+      ],
+      [
+        "169:1301",
+        174,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        52
+      ],
+      [
+        "169:1302",
+        182,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        53
+      ],
+      [
+        "169:1303",
+        190,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        53
+      ],
+      [
+        "169:1304",
+        198,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        54
+      ],
+      [
+        "169:1305",
+        206,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        49
+      ],
+      [
+        "169:1306",
+        214,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        55
+      ],
+      [
+        "169:1307",
+        222,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1308",
+        230,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        30
+      ],
+      [
+        "169:1309",
+        238,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1310",
+        246,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1311",
+        254,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1312",
+        262,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1313",
+        270,
+        88.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1314",
+        102,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1315",
+        110,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1316",
+        118,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1317",
+        126,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        50
+      ],
+      [
+        "169:1318",
+        134,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1319",
+        142,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1320",
+        150,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        56
+      ],
+      [
+        "169:1321",
+        158,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        46
+      ],
+      [
+        "169:1322",
+        166,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        57
+      ],
+      [
+        "169:1323",
+        174,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        58
+      ],
+      [
+        "169:1324",
+        182,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        59
+      ],
+      [
+        "169:1325",
+        190,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        60
+      ],
+      [
+        "169:1326",
+        198,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        61
+      ],
+      [
+        "169:1327",
+        206,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        51
+      ],
+      [
+        "169:1328",
+        214,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1329",
+        222,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        37
+      ],
+      [
+        "169:1330",
+        230,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1331",
+        238,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1332",
+        246,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1333",
+        254,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1334",
+        262,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1335",
+        270,
+        96.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1336",
+        102,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1337",
+        110,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1338",
+        118,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1339",
+        126,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        50
+      ],
+      [
+        "169:1340",
+        134,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1341",
+        142,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1342",
+        150,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        56
+      ],
+      [
+        "169:1343",
+        158,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        46
+      ],
+      [
+        "169:1344",
+        166,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        57
+      ],
+      [
+        "169:1345",
+        174,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        58
+      ],
+      [
+        "169:1346",
+        182,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        59
+      ],
+      [
+        "169:1347",
+        190,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        60
+      ],
+      [
+        "169:1348",
+        198,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        61
+      ],
+      [
+        "169:1349",
+        206,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        51
+      ],
+      [
+        "169:1350",
+        214,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1351",
+        222,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        37
+      ],
+      [
+        "169:1352",
+        230,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1353",
+        238,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1354",
+        246,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1355",
+        254,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1356",
+        262,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1357",
+        270,
+        104.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1358",
+        102,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1359",
+        110,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1360",
+        118,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1361",
+        126,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        50
+      ],
+      [
+        "169:1362",
+        134,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1363",
+        142,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1364",
+        150,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1365",
+        158,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1366",
+        166,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        51
+      ],
+      [
+        "169:1367",
+        174,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        52
+      ],
+      [
+        "169:1368",
+        182,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        53
+      ],
+      [
+        "169:1369",
+        190,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        53
+      ],
+      [
+        "169:1370",
+        198,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        54
+      ],
+      [
+        "169:1371",
+        206,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        49
+      ],
+      [
+        "169:1372",
+        214,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        55
+      ],
+      [
+        "169:1373",
+        222,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1374",
+        230,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        30
+      ],
+      [
+        "169:1375",
+        238,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1376",
+        246,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1377",
+        254,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1378",
+        262,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1379",
+        270,
+        112.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1380",
+        102,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1381",
+        110,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1382",
+        118,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1383",
+        126,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1384",
+        134,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1385",
+        142,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1386",
+        150,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1387",
+        158,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        41
+      ],
+      [
+        "169:1388",
+        166,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        46
+      ],
+      [
+        "169:1389",
+        174,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        47
+      ],
+      [
+        "169:1390",
+        182,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        48
+      ],
+      [
+        "169:1391",
+        190,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        48
+      ],
+      [
+        "169:1392",
+        198,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        49
+      ],
+      [
+        "169:1393",
+        206,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1394",
+        214,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1395",
+        222,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1396",
+        230,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1397",
+        238,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        29
+      ],
+      [
+        "169:1398",
+        246,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1399",
+        254,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1400",
+        262,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1401",
+        270,
+        120.4000015258789,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1402",
+        102,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1403",
+        110,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1404",
+        118,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1405",
+        126,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1406",
+        134,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1407",
+        142,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1408",
+        150,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1409",
+        158,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        39
+      ],
+      [
+        "169:1410",
+        166,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        41
+      ],
+      [
+        "169:1411",
+        174,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        42
+      ],
+      [
+        "169:1412",
+        182,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        43
+      ],
+      [
+        "169:1413",
+        190,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        43
+      ],
+      [
+        "169:1414",
+        198,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        44
+      ],
+      [
+        "169:1415",
+        206,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1416",
+        214,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        45
+      ],
+      [
+        "169:1417",
+        222,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1418",
+        230,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1419",
+        238,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1420",
+        246,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1421",
+        254,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1422",
+        262,
+        128.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1423",
+        102,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1424",
+        110,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1425",
+        118,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1426",
+        126,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1427",
+        134,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1428",
+        142,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1429",
+        150,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        35
+      ],
+      [
+        "169:1430",
+        158,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        31
+      ],
+      [
+        "169:1431",
+        166,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        36
+      ],
+      [
+        "169:1432",
+        174,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        37
+      ],
+      [
+        "169:1433",
+        182,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1434",
+        190,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        38
+      ],
+      [
+        "169:1435",
+        198,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        39
+      ],
+      [
+        "169:1436",
+        206,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        40
+      ],
+      [
+        "169:1437",
+        214,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1438",
+        222,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1439",
+        230,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1440",
+        238,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1441",
+        246,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1442",
+        254,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1443",
+        262,
+        136.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1444",
+        110,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1445",
+        118,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1446",
+        126,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1447",
+        134,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1448",
+        142,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1449",
+        150,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1450",
+        158,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1451",
+        166,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        30
+      ],
+      [
+        "169:1452",
+        174,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        31
+      ],
+      [
+        "169:1453",
+        182,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1454",
+        190,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        32
+      ],
+      [
+        "169:1455",
+        198,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        33
+      ],
+      [
+        "169:1456",
+        206,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        34
+      ],
+      [
+        "169:1457",
+        214,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1458",
+        222,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1459",
+        230,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1460",
+        238,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1461",
+        246,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1462",
+        254,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1463",
+        262,
+        144.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        7
+      ],
+      [
+        "169:1464",
+        118,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1465",
+        126,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1466",
+        134,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        23
+      ],
+      [
+        "169:1467",
+        142,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1468",
+        150,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1469",
+        158,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        24
+      ],
+      [
+        "169:1470",
+        166,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        25
+      ],
+      [
+        "169:1471",
+        174,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1472",
+        182,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        27
+      ],
+      [
+        "169:1473",
+        190,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        26
+      ],
+      [
+        "169:1474",
+        198,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        28
+      ],
+      [
+        "169:1475",
+        206,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        29
+      ],
+      [
+        "169:1476",
+        214,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1477",
+        222,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1478",
+        230,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1479",
+        238,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1480",
+        246,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1481",
+        254,
+        152.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1482",
+        118,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1483",
+        126,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1484",
+        134,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1485",
+        142,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1486",
+        150,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1487",
+        158,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        17
+      ],
+      [
+        "169:1488",
+        166,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        18
+      ],
+      [
+        "169:1489",
+        174,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1490",
+        182,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1491",
+        190,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        19
+      ],
+      [
+        "169:1492",
+        198,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        20
+      ],
+      [
+        "169:1493",
+        206,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        21
+      ],
+      [
+        "169:1494",
+        214,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        22
+      ],
+      [
+        "169:1495",
+        222,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1496",
+        230,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1497",
+        238,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1498",
+        246,
+        160.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1499",
+        126,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        8
+      ],
+      [
+        "169:1500",
+        134,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1501",
+        142,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        9
+      ],
+      [
+        "169:1502",
+        150,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1503",
+        158,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        10
+      ],
+      [
+        "169:1504",
+        166,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1505",
+        174,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1506",
+        182,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1507",
+        190,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        13
+      ],
+      [
+        "169:1508",
+        198,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        12
+      ],
+      [
+        "169:1509",
+        206,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        11
+      ],
+      [
+        "169:1510",
+        214,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        14
+      ],
+      [
+        "169:1511",
+        222,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1512",
+        230,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        15
+      ],
+      [
+        "169:1513",
+        238,
+        168.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        16
+      ],
+      [
+        "169:1514",
+        142,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        0
+      ],
+      [
+        "169:1515",
+        150,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        1
+      ],
+      [
+        "169:1516",
+        158,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1517",
+        166,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1518",
+        174,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1519",
+        182,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1520",
+        190,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        5
+      ],
+      [
+        "169:1521",
+        198,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        4
+      ],
+      [
+        "169:1522",
+        206,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        3
+      ],
+      [
+        "169:1523",
+        214,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        2
+      ],
+      [
+        "169:1524",
+        222,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        6
+      ],
+      [
+        "169:1525",
+        230,
+        176.39999389648438,
+        3.200000047683716,
+        3.200000047683716,
+        7
+      ],
+      [
+        "169:1526",
+        156,
+        72,
+        60,
+        60,
+        62
+      ]
+    ]
+  },
+  "photoIdentity": [
+    {
+      "key": "portraitC1",
+      "referenceSHA256": "62644dea1ee92c135e81665236a41dc62d86dd7567e3a3abbf32ffcbf535f5b3",
+      "files": [
+        {
+          "path": "assets\\images\\portraitC1.webp",
+          "width": 1600,
+          "height": 1067,
+          "sha256": "45a6166cf58d244d67e110b13f9f76e2fc3b2c850a4a6376ee3c170b1a6dee8f",
+          "RMS": 1.70390913113361
+        },
+        {
+          "path": "assets\\images\\portraitC1-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "34be04d85d970fa4b336f07905689d61d594396c452a3a2c375c79e5f4f01d3c",
+          "RMS": 2.223685282266333
+        }
+      ]
+    },
+    {
+      "key": "portraitC2",
+      "referenceSHA256": "cc079525327acacdec2b0313fad2d1ae95d68409fe2b83d93ab1e2f010524dc8",
+      "files": [
+        {
+          "path": ".artifacts\\raster-core-v4\\portraitC2-1600.webp",
+          "width": 1600,
+          "height": 1060,
+          "sha256": "6d4d689f87d3a05bbd9b8271fe086ec5d9e05908e621f0dc4ae80211237236b3",
+          "RMS": 1.575089405653682
+        },
+        {
+          "path": ".artifacts\\raster-core-v4\\portraitC2-800.webp",
+          "width": 800,
+          "height": 530,
+          "sha256": "a0d1e4b256096d989d2537dc274a9bf554f5473afe51bdd1b66812fca8708212",
+          "RMS": 1.8847913071756612
+        }
+      ]
+    }
+  ],
+  "gradient": {
+    "node": "169:1547",
+    "type": "GRADIENT_RADIAL",
+    "stops": [
+      [
+        0,
+        "#151515",
+        0
+      ],
+      [
+        1,
+        "#151515",
+        1
+      ]
+    ],
+    "transform": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "css": "radial-gradient(ellipse closest-side at 50% 50%,rgba(21,21,21,0),#151515)"
+  },
+  "pendingHalftone": {
+    "missingSVGExports": 61,
+    "reason": "Figma MCP Professional plan call limit reached; original numeric models and all geometry captured, source changes deferred until remaining exports are available"
+  }
+}

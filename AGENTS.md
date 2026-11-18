@@ -419,3 +419,12 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record timing with `node tools/profile-image-final.js http://127.0.0.1:4173
   --cpu=1` or `--cpu=4`; full paint spans its twelve-second glare and both
   interactive sources.
+- `node tools/verify-raster-core.js http://127.0.0.1:4173` covers v4 Bayer
+  Dither, Error-Diffusion Resolve and Blue-Noise Dissolve. It compares original
+  luma, threshold, diffusion, rank, progress and pixel histories; checks all
+  native primitive/SVG/photo slots, actual full Canvas pixels, physical mouse,
+  keys and touch scrolling, interrupted input, reduced motion, complete stories
+  at 60/120/240Hz, queued intent, independent holds, cleanup and twelve fresh
+  offline exports. Record timing with `node tools/profile-raster-core.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Halftone remains pending its
+  remaining exact SVG exports after the Figma MCP plan quota was reached.
