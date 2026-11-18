@@ -1,21 +1,58 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 265 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 266 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first three Raster & Glitch demos.
-The remaining work includes 134 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first four Raster & Glitch demos.
+The remaining work includes 133 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 17 remaining demos.
-None of the 265 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 16 remaining demos.
+None of the 266 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 265 native compositions. The unfinished groups still account for
+among these 266 native compositions. The unfinished groups still account for
 20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 84 documented
 Figma fill exceptions validate.
+
+## Halftone Field
+
+Halftone follows v4 tile `169:1551` and all 210 circle slots on stage
+`169:1563`. Its 240×168px native plane retains exact positions, dimensions
+and neutral fill. On 18 November 2026, the owner explicitly approved recreating
+only the 61 missing circle exports from the captured exact geometry. The other
+145 unique supplied SVGs retain their bytes and intrinsic dimensions.
+Functional white pressure disks grow beneath the fixed supplied SVGs. The
+six-second story returns to the exact reference.
+
+Full retains the complete original 15-degree/9px grid, Rec709 sampling,
+area-correct radii, .17 position and .14 pressure recurrences, 32ms draw cadence,
+all pin/hover/keyboard states, readout and copy. It uses the credited C1 portrait
+at 1600px in detail and 800px in exports. The renderer caches the immutable
+neutral print and draws its pressure patch on an unclipped plane with the
+literal original painter. This preserves antialiased edges and circle order.
+Native omits hidden Canvas work; full skips redundant text updates.
+
+The focused verifier passes 356,922,768 checks. Its independent fixture retains
+2,880 original states and pixel checkpoints. Another 512 normal/reduced states
+compare every cached output pixel against the literal original drawing function
+at two sizes and DPR 1/2. Every native file, slot and live radius is checked,
+along with physical input, touch scrolling, 60/120/240Hz stories, reduced motion,
+queued input, independent holds, compact full type, disposal and eight fresh
+offline exports.
+
+The authored dark stage keeps the exact reference white. Light stages retain
+the same SVG files, geometry and alpha while applying a black ink filter and
+dark annotation text. Both themes are covered by browser and offline checks.
+
+Both final normal-speed profiles average 60fps with no slow intervals or long
+tasks. The final 4× CPU native/full profiles average 59.14/59.18fps, with nine
+slow intervals and no long tasks. The earlier 22.53fps full result with
+172 long tasks, intermediate findings, native timing variation, and the rejected
+clipped-cache pixel finding remain in `docs/performance/halftone-2026-11-18.json`.
+These measurements do not close the site-wide performance audit.
 
 ## Raster & Glitch: ordered dither, error diffusion and blue noise
 
@@ -72,10 +109,9 @@ The full catalog check passes 651 checks, all 399 lazy previews and 97 offline
 exports. All 265 remediated native compositions pass the fit gates; remaining
 fit findings belong to unfinished groups. The other 396 original objects and
 metadata records, including untouched registrations in the shared raster
-module, are retained. Halftone’s complete original model and all geometry are
-captured, but its implementation awaits 61 exact circle exports after the
-Figma MCP plan quota was reached. There are 26 Raster & Glitch demos left,
-134 existing demos overall, 121 new/extensions, Pro seams and the final audit.
+module, are retained. Halftone was subsequently completed under the explicit owner-approved
+circle reconstruction described above. There are now 25 Raster & Glitch demos
+left, 133 existing demos overall, 121 new/extensions, Pro seams and the final audit.
 
 All six final normal-speed profiles average about60fps, with no slow frame
 intervals or long tasks. The six final4× CPU profiles average59.75–60.00fps;

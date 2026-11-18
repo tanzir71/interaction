@@ -845,3 +845,31 @@ beside the photograph. Both sources use the actual sampled brush and original
 drying model. `tools/fixtures/image-final-artwork.json` binds all thirty-three
 native slots and photo identities. The portable bundle now has 554 aliases,
 nineteen photo credits and the same seven font faces.
+
+## Halftone Field: approved missing-circle reconstruction
+
+The owner explicitly answered “Recreate from the captured exact geometry” on
+18 November 2026 after the Figma MCP quota stopped the remaining circle exports
+for tile `169:1551`, stage `169:1563`. This exception covers only the 61 missing
+circle files. It does not authorize replacing the 145 available unique SVGs or
+approximating other Figma artwork.
+
+All 210 slots retain their captured positions and dimensions in the 240×168px
+native plane, at stage offset 66/24px in the 372×264px reference. The 61 new SVGs
+use the captured circle radius, center and `#F1F1F1` fill; their root dimensions
+and viewBox equal the recorded floating-point dimensions. The 145 available
+SVGs retain their exact bytes and intrinsic root dimensions. SVG image slots
+avoid HTML intrinsic-size rounding for subpixel exports. The artwork fixture
+records every slot, source kind, file hash and the captured geometry hash.
+
+The native pressure field expands those circles and returns to the authored
+reference every six seconds. Full retains its complete original 15-degree,
+9px photographic print screen, pressure model, copy and readout. It uses the
+already credited portraitC1 photograph: 1600px in detail and 800px in exports.
+The portable bundle now contains 823 aliases, seven font faces and twenty
+photo credits. No Figma screenshot is used as product artwork.
+
+The default dark stage preserves the exact white reference. Light stages apply
+a black ink filter to the complete native artwork and use dark labels, while
+retaining every SVG file, alpha value and slot. The full photographic print and
+its functional pressure accent stay intact.

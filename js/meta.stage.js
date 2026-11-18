@@ -10098,17 +10098,25 @@ INTRX.meta({
     ]
   },
   "halftone-dots": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "pin",
+        "label": "Pin pressure"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10116,8 +10124,12 @@ INTRX.meta({
       "luminance"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "halftone-lines": {
     "designSize": "bleed",

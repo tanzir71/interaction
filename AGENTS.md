@@ -426,5 +426,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   keys and touch scrolling, interrupted input, reduced motion, complete stories
   at 60/120/240Hz, queued intent, independent holds, cleanup and twelve fresh
   offline exports. Record timing with `node tools/profile-raster-core.js
-  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Halftone remains pending its
-  remaining exact SVG exports after the Figma MCP plan quota was reached.
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Halftone's missing exports were
+  subsequently resolved through the explicit owner exception below.
+- `node tools/verify-halftone.js http://127.0.0.1:4173` covers v4 Halftone
+  Field: all 210 exact native slots, 145 unchanged supplied SVGs and the 61
+  missing circles reconstructed from captured geometry with the owner's
+  explicit approval on 18 Nov 2026. It compares complete original states,
+  sampling and live Canvas pixels; native keys, mouse and touch scrolling;
+  six-second stories at 60/120/240Hz, holds, queued input, reduced motion,
+  compact full type, cleanup and eight fresh offline exports. Record timing
+  with `node tools/profile-halftone.js http://127.0.0.1:4173 --cpu=1` or
+  `--cpu=4`. The next three raster drafts remain private until their Figma
+  references are available; the circle exception applies only to Halftone.
