@@ -712,3 +712,29 @@ a 200×150px photograph; 140×98px City inset; the 240×178px Forest crop at
 The native stills use real local photographs and original vector exports;
 Figma screenshots are reference evidence only. The portable bundle now has
 476 image aliases, the same seven font faces and eighteen photo-credit records.
+
+## Photographic distortion, ripples, curl noise and fisheye
+
+Hover Distortion, Ripple Click, Pixel River and Fisheye Lens follow v4 nodes
+`168:1672`, `168:1039`, `168:1061` and `168:1175`. Twenty-eight supplied SVG
+payloads retain their exact bytes and intrinsic sizes: one 80px lens, three
+elliptical ripple rings and twenty-four distinct fisheye dots. All 117 dot
+slots reuse an exact size, rotation and style match from the supplied exports;
+no circle or path is redrawn. Pixel River retains all ninety-eight authored
+rounded bars. All 225 native nodes retain their fractional coordinates.
+
+The two 200×150px native photographs use the already verified Chrome and Sea
+files. Independent identity checks against the exported Figma originals yield
+RGB RMS 0.62 and 1.25. Sea is selected by content identity: Figma's returned
+name `sea2` does not refer to the separate Ocean photograph. Full compositions
+reuse Chrome, Sea and Architectural Grid. Previews load the 1600px source in
+full view and 800px in native view; portable exports embed the 800px file.
+
+Both native procedural fields become actual shader textures, retaining the
+supplied SVG dots and original primitive bars. Independent reference renders
+match every uploaded texture byte in both themes. Source coordinates are read
+from the original style attributes to avoid CSSOM's six-significant-digit
+rounding. The lens retains its supplied 2.5px exported backdrop blur.
+`tools/fixtures/image-gpu-artwork.json` records every asset hash and native
+slot. Portable assets now contain 504 aliases, the same seven font faces and
+eighteen unchanged photo credits. This phase introduces no new photography.

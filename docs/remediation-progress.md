@@ -1,21 +1,100 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 244 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 248 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and the first five Image & WebGL demos.
-The remaining work includes 155 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and the first nine Image & WebGL demos.
+The remaining work includes 151 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 35 remaining demos.
-None of the 244 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 31 remaining demos.
+None of the 248 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 244 native compositions. The unfinished groups still account for
-21 overflow findings, zero horizontal-scroll findings, 63 tiny-text findings and
+among these 248 native compositions. The unfinished groups still account for
+20 overflow findings, zero horizontal-scroll findings, 60 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 83 documented
 Figma fill exceptions validate.
+
+## Image & WebGL: distortion, ripples, curl noise and fisheye
+
+Hover Distortion, Ripple Click, Pixel River and Fisheye Lens follow v4 nodes
+`168:1672`, `168:1039`, `168:1061` and `168:1175`. Four existing lazy modules
+retain catalog order; all 322 other modules, 395 other original objects and
+395 other metadata records remain unchanged. Stage debt falls from 152 to 148
+and motion debt from 57 to 56 without growing either baseline. All eighty-three
+earlier fill exceptions remain unchanged; these four previews use the ordinary
+fill gate. Four full compositions replace retired generated photographs.
+
+All 225 native nodes retain their exact declared fractional geometry. The
+98 rounded bars become Pixel River's actual shader texture. All 117 fisheye
+dots use supplied SVGs; exact size, rotation and style matches reduce those
+slots to twenty-four distinct payloads. The 80px lens and three elliptical
+ripple rings retain their supplied bytes. Both 200×150px native photographs
+reuse the verified Chrome and Sea files; full compositions also use
+Architectural Grid. Native/full-only images stay inert until their camera
+mounts. Full previews decode 1600px photos; native and exports use 800px.
+Portable assets now contain 504 aliases and eighteen unchanged photo credits.
+
+Every original vertex/fragment shader, fullscreen buffer and draw primitive
+is preserved literally. Distortion retains its radial/vertical displacement,
+chromatic sampling and original .06 intensity recurrence, normalized to
+elapsed time. Ripple keeps all five origins, oldest-first replacement, 3.2s
+lifetime, signed wave, envelope, glow and cumulative source counter; Clear
+retains the original counter and focus behavior. Reduced ripple retains the
+original .62s static age. River keeps its complete four-octave noise/curl
+derivatives, time domain, 150×90 quantization, signed displacement, .22 idle
+intensity and original exponential response. Fisheye retains its aspect-correct
+.235 radius, .62 strength, magnification, rim/shade, pointer/radius response
+and original settling threshold. Full distortion keeps its original square
+cover texture; the native camera uses the supplied photographic crop.
+
+Independent pre-change captures cover 1,444 complete original states. Forty-eight
+live GPU comparisons against the original shaders match every output byte,
+including the photographic cover crops. All eight native texture uploads
+match independent Figma-based reference renders byte for byte in both themes.
+Reading raw authored style coordinates avoids CSSOM rounding in the texture.
+Independent scalar and bilinear samples cover the complete mathematical Canvas
+fallback. Its double-precision noise can differ from GPU transcendental
+precision; the fallback retains the complete model at a 256px raster cap.
+
+Mouse, native keys and moving touch operate the real fields. Vertical touch
+yields page scrolling. Six-second native stories end on deliberate input;
+coarse pointers and reduced motion retain designed stills. Reduced deliberate
+states use 150ms opacity feedback. Explicit held Reset/Clear/Release takes
+priority over incidental hover. Caller and viewport holds remain independent
+and freeze both model and painted output. Coalesced workers reject stale
+generations, preserve pending explicit input, and release on disposal.
+Real GPU loss reconstructs one complete held Canvas frame; restoration retains
+the current state and caller pause. Cleanup accounts for every graphics handle,
+observer, frame, worker and Blob URL.
+
+`node tools/verify-image-gpu.js http://127.0.0.1:4173` passes 60,516 checks across
+nine source-bound suites, covering exact artwork and uploaded textures, original
+models and real paint, native input, 60/120/240Hz renderer clocks, complete
+stories, holds, interruptions, recovery and disposal. Sixteen complete portable
+native/full exports run in fresh browser contexts with all network access
+blocked, including both motion preferences and source/license checks.
+
+Registry, stage, motion and generated-output checks pass, alongside 651 library
+checks, all 399 lazy previews, 97 general offline exports, browser stage-runtime
+checks, seventeen runtime/shell tests and eight CLI/MCP tests. The four native
+posters are refreshed. Source hashes bind the focused suites and broad checks
+to the verified modules. All 248 remediated native compositions pass every fit
+gate; the full audit still fails on unfinished groups.
+
+All eight desktop profiles average 60.0fps, with p95 frame intervals at most
+16.8ms, no slow intervals and no long tasks. The eight 4× CPU profiles average
+59.9–60.0fps with the same p95 ceiling and no long tasks. Full distortion and
+native River each retain one 33.4ms gap; the other six stress profiles have no
+slow intervals. The source-bound traces record Chromium's SwiftShader renderer
+on this shared host. Earlier performance tails in other groups remain open
+for the final audit; these measurements do not close them.
+
+Repository Actions remain disabled, with no active runs. The account-wide
+Actions budget stays $0 with usage stopped at the limit. Verification runs
+locally; this phase is committed and pushed directly, with Pages paused.
 
 ## Image & WebGL: particles, clip, zoom, resolution and focus
 

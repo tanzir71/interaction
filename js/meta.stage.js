@@ -2594,25 +2594,41 @@ INTRX.meta({
     ]
   },
   "webgl-distortion": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin distortion"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
-      "keyboard": false,
-      "reducedMotion": false,
-      "aria": null
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "group"
     },
     "useCases": [
       "shader",
       "displacement"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "particle-dissolve": {
     "designSize": [
@@ -2820,13 +2836,25 @@ INTRX.meta({
     ]
   },
   "webgl-ripple-click": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "spawn",
+        "label": "Ripple"
+      },
+      {
+        "action": "clear",
+        "label": "Clear ripples"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2838,17 +2866,33 @@ INTRX.meta({
       "uniform arrays"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-pixel-river": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Latch current"
+      },
+      {
+        "action": "release",
+        "label": "Release"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2860,17 +2904,33 @@ INTRX.meta({
       "pixel shader"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-fisheye-hover": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin lens"
+      },
+      {
+        "action": "release",
+        "label": "Release"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -2882,8 +2942,12 @@ INTRX.meta({
       "pointer easing"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "webgl-static-tv": {
     "designSize": "bleed",

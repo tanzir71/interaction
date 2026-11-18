@@ -271,6 +271,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   primitive geometry; actual transforms and GPU/Canvas output; physical input,
   moving touch targets, equivalent clocks, loop resets, queued intents, holds,
   cleanup, themes, compact full type and sixteen fresh-context offline exports.
+- `node tools/verify-image-gpu.js http://127.0.0.1:4173` covers v4 Hover
+  Distortion, Ripple Click, Pixel River and Fisheye Lens. It compares independent
+  original states, shader sources, buffers and fragment samples; actual GPU
+  pixels and photographic crops; every native asset, primitive and uploaded
+  texture; native mouse, keys and moving touch; equivalent renderer clocks,
+  complete stories, queued intent and independent holds; worker cancellation,
+  mathematical Canvas fallback, real context loss/recovery, disposal and
+  sixteen fresh-context network-blocked exports.
 - `node tools/verify-cursor-classic.js http://127.0.0.1:4173` covers v4 Trailing
   Cursor, Magnetic Button, Image Trail, Spotlight Mask and Tilt and Glare. It
   compares independent original lerp, GSAP 3.12.5 easing and interrupted tween,
