@@ -39,7 +39,7 @@ for(const d of demos){
  if(!['hover','press','drag','scroll','type','ambient'].includes(d.trigger)||!['free','pro'].includes(d.tier))throw Error(d.id+': invalid trigger/tier');
  if(!['dark','light'].includes(d.stage.theme)||!['clip','scroll','intentional'].includes(d.stage.overflow))throw Error(d.id+': invalid stage');
  const size=R.resolveSize(d.designSize);if(d.designSize!=='bleed'&&(!Array.isArray(size)||size.length!==2||size.some(n=>!Number.isFinite(n)||n<=0)))throw Error(d.id+': invalid design size');
- if(d.thumbDesignSize!==undefined){const thumb=R.resolveSize(d.thumbDesignSize);if(d.thumb!=='hero'||!Array.isArray(thumb)||thumb.length!==2||thumb.some(n=>!Number.isFinite(n)||n<=0))throw Error(d.id+': invalid hero design size');}
+ if(d.thumbDesignSize!==undefined){const thumb=R.resolveSize(d.thumbDesignSize);if(d.thumb!=='hero'||d.thumbDesignSize!=='bleed'&&(!Array.isArray(thumb)||thumb.length!==2||thumb.some(n=>!Number.isFinite(n)||n<=0)))throw Error(d.id+': invalid hero design size');}
  for(const key of ['tags','libs','useCases'])if(!Array.isArray(d[key])||d[key].some(value=>typeof value!=='string'))throw Error(d.id+': invalid '+key);
  if(!Array.isArray(d.controls)||d.controls.length>3||d.controls.some(c=>!c.label||!c.action))throw Error(d.id+': invalid controls');
  if(typeof d.a11y?.keyboard!=='boolean'||typeof d.a11y.reducedMotion!=='boolean')throw Error(d.id+': invalid a11y');

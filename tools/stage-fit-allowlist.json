@@ -839,6 +839,16 @@
         144,
         80
       ]
+    },
+    "ascii-type-explode": {
+      "reason": "Owner clarification, 15 Nov 2026: keep exact sparse Figma geometry. Tile 169:1961 has the 123×68 TYPE word at (124.5,70) and six 8×17 glyph slots at (66,52), (52,76), (38,100), (306,52), (320,76) and (334,100) in a 372×264 stage. Their 9,180px² combined surface is about 9.35% of the stage. The native full-width stage preserves all supplied positions and 13px glyph type on compact screens; the complete eight-character editor and original bitmap flights remain functional.",
+      "figmaNode": "169:1961",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=169-1961",
+      "selector": ".d-raster-sim-type-v4-native-slot[data-native-node=\"169:1974\"]",
+      "designSize": [
+        123,
+        68
+      ]
     }
   }
 }

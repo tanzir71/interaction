@@ -18,7 +18,7 @@ for(const d of demos){
  const size=d.designSize;
  if(!(typeof size==='string'&&presets.has(size))&&!(Array.isArray(size)&&size.length===2&&size.every(n=>Number.isFinite(n)&&n>0)))errors.push(d.id+': invalid designSize');
  const thumb=d.thumbDesignSize;
- if(thumb!==undefined&&(d.thumb!=='hero'||!(typeof thumb==='string'&&presets.has(thumb)&&thumb!=='bleed')&&!(Array.isArray(thumb)&&thumb.length===2&&thumb.every(n=>Number.isFinite(n)&&n>0))))errors.push(d.id+': invalid hero thumbDesignSize');
+ if(thumb!==undefined&&(d.thumb!=='hero'||!(typeof thumb==='string'&&presets.has(thumb))&&!(Array.isArray(thumb)&&thumb.length===2&&thumb.every(n=>Number.isFinite(n)&&n>0))))errors.push(d.id+': invalid hero thumbDesignSize');
  if(!d.stage||!['dark','light'].includes(d.stage.theme)||!['clip','scroll','intentional'].includes(d.stage.overflow))errors.push(d.id+': invalid stage');
  if(!['hover','press','drag','scroll','type','ambient'].includes(d.trigger))errors.push(d.id+': invalid trigger');
  if(!Array.isArray(d.controls)||d.controls.length>3||d.controls.some(c=>!c.label||!c.action||typeof c.label!=='string'||typeof c.action!=='string'))errors.push(d.id+': invalid controls');

@@ -450,3 +450,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record source-bound native/full timing with `node tools/profile-raster-studies.js
   http://127.0.0.1:4173 --cpu=4` or `--cpu=1`. Native timing is near 60fps;
   several full views and full mobile Wave startup remain performance audit work.
+- `node tools/verify-raster-simulations.js http://127.0.0.1:4173` covers v4
+  ASCII Fire, Fluid Stir and Type Explode: all 24 original SVGs, the blank fire
+  row, exact native pixels, complete original heat/pressure/velocity/bitmap
+  buffers, 34,608 replayed full/native states and complete full paint digests.
+  It checks real input, moving touch and capture, Pan scrolling, native caret
+  selections and composition during live frames, 60/120/240Hz stories, holds,
+  full cameras, cleanup, LiveTiles and 24 fresh offline contexts. Type's sparse
+  artwork has a documented fill exception; its full-width hero retains physical
+  glyph sizes while its full view keeps 400×320 geometry. Portrait Reveal's
+  native C3 photograph still requires source and licence verification.
+  Record native/full timing with `node tools/profile-raster-simulations.js
+  http://127.0.0.1:4173 --cpu=4` or `--cpu=1`.

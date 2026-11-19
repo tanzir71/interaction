@@ -10,11 +10,17 @@ Thumbnails reserve 24px padding; full views reserve 32px. A control dock reserve
 preserve pointer geometry. A ResizeObserver updates it on viewport changes.
 
 A simplified `thumb: 'hero'` may declare `thumbDesignSize` as an explicit
-`[width,height]` or non-bleed preset. The shell uses that declared plane only
+`[width,height]`, preset or `bleed`. The shell uses that declared plane only
 for thumbnails. `designSize` continues to size the complete detail composition
 and portable export. For example, Password Strength uses `[220,184]` in full
 and `[220,100]` for its field-and-meter hero; the criteria remain in full view.
 This is deterministic metadata, not a measurement of the rendered leaves.
+
+Use `bleed` for a native composition whose supplied artwork spans the stage,
+such as Type Explode's outer glyphs. Its hero keeps physical glyph sizes and
+centers the reference slots at compact widths; the full view still uses its
+400×320 composition. Sparse-fill exceptions continue to require documented
+Figma geometry, and overflow and text-size gates still apply.
 
 Demo scripts receive `root`, `stage`, `ctx` and lifecycle-wrapped timers.
 Register actions with `ctx.onAction(name, fn)`, or return an object with `actions`

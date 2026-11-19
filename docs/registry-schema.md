@@ -16,6 +16,8 @@ source. Previews are versioned and generated alongside complete registry items.
 Hero entries may include `thumbDesignSize`, paired with `thumb: 'hero'`. This
 declares the compact preview plane; `designSize` still describes the full
 composition. The catalog, complete component and MCP response preserve both.
+`thumbDesignSize: 'bleed'` uses the full stage for native artwork while retaining
+the separate full composition's geometry.
 Standalone HTML always mounts the full composition, including criteria or
 workflow panels omitted from the hero.
 

@@ -10265,17 +10265,33 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "ascii-fire": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "fuel",
+        "label": "Fuel surge"
+      },
+      {
+        "action": "calm",
+        "label": "Calm wind"
+      },
+      {
+        "action": "reset",
+        "label": "Restart field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10284,21 +10300,41 @@ INTRX.meta({
       "demoscene"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-fluid-stir": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause solver"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10307,8 +10343,12 @@ INTRX.meta({
       "advection"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-portrait-reveal": {
     "designSize": "bleed",
@@ -10357,17 +10397,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "ascii-type-explode": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Clear banner"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10376,8 +10424,9 @@ INTRX.meta({
       "particles"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": "bleed"
   },
   "terminal-window": {
     "designSize": "md",

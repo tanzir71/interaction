@@ -1,21 +1,67 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 269 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 272 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first seven Raster & Glitch demos.
-The remaining work includes 130 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus ten Raster & Glitch demos.
+The remaining work includes 127 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 14 remaining demos.
-None of the 269 remediated native compositions retains those references.
+None of the 272 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 269 native compositions. The unfinished groups still account for
-20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 84 documented
+among these 272 native compositions. The unfinished groups still account for
+18 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 85 documented
 Figma fill exceptions validate.
+
+## ASCII Fire, Fluid Stir and Type Explode
+
+The native views follow tiles `169:1858`, `169:1883` and `169:1961` with all
+24 unchanged original SVGs and the empty fire row. Their initial pixels match
+independently positioned original exports at 372px and 328px. Fire projects
+the original heat field and wind onto its supplied flame rows; Fluid projects
+its original velocity and density onto the nine supplied rows. Native Type
+starts at the `TYPE` reference checkpoint, retains the six supplied outer
+glyphs and uses a real text input for edits. Its full view starts with `HELLO`.
+The full-width hero keeps 13px glyphs readable on compact screens. The sparse
+word and glyph surface has its exact Figma geometry recorded in the fill
+allowlist; full detail and exports retain the separate 400×320 composition.
+
+Full views keep the complete 64×28 heat field, 48×24 fluid field and four
+Jacobi passes, all 36 five-by-seven character maps, eight-character editing,
+original flight/scatter/idle-wave models, controls and copy. Native views omit
+the unused full offscreen painter while retaining every original model field
+and readout. Reduced input feedback uses 150ms opacity cross-fades, with a
+presentation clock that freezes across caller and document holds. Both native
+and full Type views preserve browser caret and range selections during live
+frames; input commits alone apply the source editor's normalized caret.
+
+`node tools/verify-raster-simulations.js http://127.0.0.1:4173` covers 34,608
+full/native replayed states, complete model digests and full drawing/pixel
+digests, exact supplied artwork, real mouse/keys/moving touch, native capture,
+Pan scrolling, interrupted editing and composition, 60/120/240Hz stories,
+independent holds, compact complete cameras, cleanup, actual LiveTiles and
+24 fresh network-blocked exports. Record twelve-second native/full timing
+with `node tools/profile-raster-simulations.js http://127.0.0.1:4173 --cpu=4`
+or `--cpu=1`; these measurements do not close the final performance audit.
+Cold detail routes and navigation cleanup also pass on desktop and mobile.
+
+All twelve normal-speed profiles average 60fps without slow intervals and
+paint within 133ms. The 4× CPU measurements retain native Fluid desktop gaps,
+several startups above 300ms and full-view gaps. Full mobile Fire averages
+19.0fps with 615ms first paint. Both complete input schedules, source hashes
+and trace hashes are recorded in
+`docs/performance/raster-simulations-2026-11-19.json`. Fonts are prepared before
+these isolated Stage measurements; route/module transfer and the final timing
+audit remain open.
+
+ASCII Portrait remains unfinished. Its exact geometry and ten original glyph
+rows are captured, and its complete original procedural model is verified,
+but the native reference requires the C3 photograph whose provenance is still
+being established. No substitute photograph has been added.
 
 ## Engraving Screen, ASCII Luminance and ASCII Wave
 

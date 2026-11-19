@@ -113,3 +113,13 @@ test('hero thumbnails fit their declared plane while full exports retain full ge
  assert.equal(R.fitStage(stage,root,{...meta,thumb:'full'},'thumb'),100/220);assert.equal(root.style.height,'220px');
  stage.clientHeight=400;assert.equal(R.fitStage(stage,root,meta,'full'),1);assert.equal(root.style.height,'220px');
 });
+
+test('full-width hero thumbnails preserve their separate full composition',()=>{
+ const context={window:{INTRX:{}}};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/stage.js'),'utf8'),context);
+ const R=context.window.INTRX,content={dataset:{},style:{}},root={style:{},parentElement:content},stage={clientWidth:328,clientHeight:264,dataset:{}};
+ const meta={designSize:[400,320],thumbDesignSize:'bleed',thumb:'hero',controls:[{label:'Clear banner',action:'reset'}]};
+ assert.equal(R.fitStage(stage,root,meta,'thumb'),1);assert.equal(content.dataset.bleed,'true');assert.equal(content.style.inset,'0');
+ assert.equal(root.style.width,'328px');assert.equal(root.style.height,'264px');
+ stage.clientWidth=650;stage.clientHeight=520;assert.equal(R.fitStage(stage,root,meta,'full'),1);
+ assert.equal(content.dataset.bleed,'false');assert.equal(root.style.width,'400px');assert.equal(root.style.height,'320px');
+});

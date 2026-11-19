@@ -20082,7 +20082,14 @@
     ],
     "tier": "free",
     "desc": "A seeded 64 by 28 heat buffer rises through classic three-cell fire propagation, with local cursor wind, four thermal color bands, and a two-second full-fuel surge.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20090,18 +20097,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-fire",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-fire.js?v=2bdd98dc96",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-fire.js?v=7cca3779e1",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-fire.json?v=3b47aab700",
+    "sourcePreview": "registry/p/ascii-fire.json?v=3d9409c93e",
     "assetRefs": {},
-    "rootClass": "d-ascii-fire",
-    "controls": [],
+    "rootClass": "d-raster-sim-fire-v4",
+    "controls": [
+      {
+        "action": "fuel",
+        "label": "Fuel surge"
+      },
+      {
+        "action": "calm",
+        "label": "Calm wind"
+      },
+      {
+        "action": "reset",
+        "label": "Restart field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "hint": "Wind bends the flames; click to add fuel",
     "sourceName": "Seen in demoscene classics and terminal-art accounts",
@@ -20127,7 +20147,14 @@
     ],
     "tier": "free",
     "desc": "A deterministic 48 by 24 density and velocity field uses semi-Lagrangian advection, four-step pressure projection, two living emitters, and a pointer-driven velocity splat.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20135,18 +20162,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-fluid-stir",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-fluid-stir.js?v=f6b5efbaea",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-fluid-stir.js?v=92eaabdbfa",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-fluid-stir.json?v=67b188132f",
+    "sourcePreview": "registry/p/ascii-fluid-stir.json?v=27a7ebb55c",
     "assetRefs": {},
-    "rootClass": "d-ascii-fluid",
-    "controls": [],
+    "rootClass": "d-raster-sim-fluid-v4",
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause solver"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "hint": "Stir the glyph fluid into a vortex",
     "sourceName": "Seen in ASCII studio tools and glyph-fluid sketches by Vansh and itsgalo",
@@ -20262,7 +20302,11 @@
     ],
     "tier": "free",
     "desc": "A native input builds a live 5 by 7 ASCII banner whose deterministic glyph cells fly in, settle, scatter on deletion, and idle-wave by column.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": "bleed",
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20270,18 +20314,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-type-explode",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-type-explode.js?v=21aa1eea01",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-type-explode.js?v=cdfc26aa47",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-type-explode.json?v=cdd0022326",
+    "sourcePreview": "registry/p/ascii-type-explode.json?v=410905a891",
     "assetRefs": {},
-    "rootClass": "d-ascii-type-explode",
-    "controls": [],
+    "rootClass": "d-raster-sim-type-v4",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Clear banner"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "hint": "Each letter bursts into glyphs",
     "sourceName": "Seen in figlet and terminal banner culture",
