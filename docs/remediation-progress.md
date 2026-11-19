@@ -1,21 +1,55 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 266 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 269 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first four Raster & Glitch demos.
-The remaining work includes 133 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus the first seven Raster & Glitch demos.
+The remaining work includes 130 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 16 remaining demos.
-None of the 266 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 14 remaining demos.
+None of the 269 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 266 native compositions. The unfinished groups still account for
+among these 269 native compositions. The unfinished groups still account for
 20 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 84 documented
 Figma fill exceptions validate.
+
+## Engraving Screen, ASCII Luminance and ASCII Wave
+
+The native views match tiles `169:1777`, `169:1808` and `169:1833`. All fifteen
+line exports and sixteen nonempty glyph-row exports retain their original SVG
+bytes, intrinsic dimensions and captured positions. Two empty ASCII rows stay
+empty. Initial native pixels match independently placed original exports at
+372px and 328px. An invisible 240×168 interaction plane leaves room for the
+complete angle range without horizontal scrolling or enlarged artwork.
+
+Full views retain every original photographic ribbon and glyph cell, all three
+ASCII densities, the full glyph ramp, RGB lens, phase controls and numerical
+models. The two photographic studies use the approved portrait: 1600px in local
+detail and 800px in portable exports, with credits and licence comments.
+Original state, input, source sampling and readouts remain unchanged. The native
+adapter removes the unused complete offscreen paint pass and projects those
+models onto the supplied line and glyph artwork. Wave phase continues across
+both six-second preview stories. Reduced feedback uses 150ms opacity fades.
+
+`node tools/verify-raster-studies.js http://127.0.0.1:4173` replays 17,280
+original model frames, including complete source buffers, drawing traces and
+pixel digests. It checks exact native paint, all angle and density limits,
+60/120/240Hz clocks, physical keys/mouse/touch, real LiveTiles visibility and
+touch unlock, independent pauses, queued input, copied-buffer retirement,
+72 compact full layouts and 24 fresh network-blocked exports. The global fit
+findings above remain in unfinished components; the site-wide fit gate remains
+open until those are remediated.
+
+`node tools/profile-raster-studies.js http://127.0.0.1:4173 --cpu=4`
+records source-bound native/full desktop and mobile stories. The native runs
+measure 59.7–60fps with first paint below 245ms. Full-view performance remains
+open: desktop runs measure 47.5/58.2/41.6fps and mobile runs 34.9/51.7/21.0fps
+for engraving/ASCII/wave respectively. Full mobile Wave first paint measures
+371ms. These findings do not pass the final frame-time or startup gates.
 
 ## Halftone Field
 

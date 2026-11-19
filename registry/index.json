@@ -19826,7 +19826,14 @@
     ],
     "tier": "free",
     "desc": "Parallel engraving ribbons reconstruct a grayscale poster through continuously sampled line weight. Moving across the image rotates and resamples the screen, exposing how angle changes the same tonal source.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      432
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -19834,24 +19841,45 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/halftone-lines",
-    "thumb": "full",
-    "module": "js/demos.raster.lines.js?v=d3a32dbd5f",
+    "thumb": "hero",
+    "module": "js/demos.raster.lines.js?v=9da8129a7e",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/halftone-lines.json?v=607ae94387",
+    "sourcePreview": "registry/p/halftone-lines.json?v=b77ff344b0",
     "assetRefs": {
-      "coastal-stack": "assets/images/coastal-stack.webp"
+      "photo-portraitC1": "assets/images/portraitC1-800.webp"
     },
-    "rootClass": "d-lines",
-    "controls": [],
+    "rootClass": "d-study-host-lines-v4",
+    "controls": [
+      {
+        "action": "lock",
+        "label": "Lock 32°"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "hint": "Rotate the line screen; tone becomes line weight",
     "sourceName": "Seen on: newspaper-inspired identities, archival storytelling, luxury editorial campaigns",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "portraitC1",
+        "asset": "photo-portraitC1",
+        "photoId": "TfjOwcrMj5I",
+        "imageId": "photo-1610659128929-fa69328744e2",
+        "photographer": "Carlos Garcia Hansen",
+        "url": "https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-portraitC1": "assets/images/portraitC1.webp"
+    }
   },
   {
     "id": "ascii-render",
@@ -19871,7 +19899,14 @@
     ],
     "tier": "free",
     "desc": "A colorful source poster is averaged into fixed cells and rebuilt from a monotonic glyph-density ramp. A cursor lens restores source color independently, while three resolution levels expose the sampling structure.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      448
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -19879,24 +19914,49 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-render",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii.js?v=ca1dd556e6",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii.js?v=03a1f93dd1",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-render.json?v=4ec6728ba6",
+    "sourcePreview": "registry/p/ascii-render.json?v=81f048dfb1",
     "assetRefs": {
-      "coastal-stack": "assets/images/coastal-stack.webp"
+      "photo-portraitC1": "assets/images/portraitC1-800.webp"
     },
-    "rootClass": "d-ascii",
-    "controls": [],
+    "rootClass": "d-study-host-ascii-v4",
+    "controls": [
+      {
+        "action": "color",
+        "label": "Color glyphs"
+      },
+      {
+        "action": "density",
+        "label": "Density 08"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "hint": "Luminance becomes characters; scan for colour",
     "sourceName": "Seen on: developer portfolios, digital archives, experimental music and culture sites",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "portraitC1",
+        "asset": "photo-portraitC1",
+        "photoId": "TfjOwcrMj5I",
+        "imageId": "photo-1610659128929-fa69328744e2",
+        "photographer": "Carlos Garcia Hansen",
+        "url": "https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-portraitC1": "assets/images/portraitC1.webp"
+    }
   },
   {
     "id": "ascii-webcam-style-wave",
@@ -19916,7 +19976,14 @@
     ],
     "tier": "free",
     "desc": "A camera-like ASCII signal made entirely from three layered sine fields. Pointer velocity injects a decaying spiral disturbance, bending glyph density and color without requesting camera access.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -19924,18 +19991,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-webcam-style-wave",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-wave.js?v=14042c20c8",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-wave.js?v=ee4a120500",
     "assetBundle": "js/demo-assets.js?v=99a2490aa6",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-webcam-style-wave.json?v=1dd767e72c",
+    "sourcePreview": "registry/p/ascii-webcam-style-wave.json?v=91af9ca052",
     "assetRefs": {},
-    "rootClass": "d-awave",
-    "controls": [],
+    "rootClass": "d-study-host-wave-v4",
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset phase"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "hint": "Stir the signal; the wave ripples through the glyphs",
     "sourceName": "Seen on: audiovisual portfolios, terminal-inspired installations, experimental event sites",

@@ -10132,17 +10132,25 @@ INTRX.meta({
     ]
   },
   "halftone-lines": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      432
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "lock",
+        "label": "Lock 32°"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10150,21 +10158,37 @@ INTRX.meta({
       "variable-width"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-render": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      448
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "color",
+        "label": "Color glyphs"
+      },
+      {
+        "action": "density",
+        "label": "Density 08"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10172,21 +10196,37 @@ INTRX.meta({
       "luminance"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-webcam-style-wave": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset phase"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10194,8 +10234,12 @@ INTRX.meta({
       "sine-field"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-donut-3d": {
     "designSize": "bleed",

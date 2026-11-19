@@ -436,5 +436,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   six-second stories at 60/120/240Hz, holds, queued input, reduced motion,
   compact full type, cleanup and eight fresh offline exports. Record timing
   with `node tools/profile-halftone.js http://127.0.0.1:4173 --cpu=1` or
-  `--cpu=4`. The next three raster drafts remain private until their Figma
-  references are available; the circle exception applies only to Halftone.
+  `--cpu=4`. The circle reconstruction exception applies only to Halftone.
+- `node tools/verify-raster-studies.js http://127.0.0.1:4173` covers v4
+  Engraving Screen, ASCII Luminance and ASCII Wave. It verifies all 31 original
+  SVG exports and two blank text rows, exact native pixels and geometry,
+  complete original photographic/ribbon/glyph models, source buffers, drawing
+  traces and pixel digests across 17,280 replayed frames. It checks actual
+  keys, mouse and moving touch, every density, continuous wave phase,
+  60/120/240Hz clocks, independent holds, LiveTiles visibility and touch unlock,
+  readable complete full views, resource retirement and 24 fresh offline
+  contexts. Native views replace the hidden paint pass; all original state,
+  input, sampling and readout code remains unchanged.
+  Record source-bound native/full timing with `node tools/profile-raster-studies.js
+  http://127.0.0.1:4173 --cpu=4` or `--cpu=1`. Native timing is near 60fps;
+  several full views and full mobile Wave startup remain performance audit work.
