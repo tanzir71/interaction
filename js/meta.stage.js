@@ -10351,17 +10351,33 @@ INTRX.meta({
     ]
   },
   "ascii-portrait-reveal": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle reveal"
+      },
+      {
+        "action": "center",
+        "label": "Center reveal"
+      },
+      {
+        "action": "reset",
+        "label": "Reset portrait"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10370,8 +10386,12 @@ INTRX.meta({
       "reveal"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-morph": {
     "designSize": "bleed",

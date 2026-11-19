@@ -1,19 +1,19 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 272 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 273 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus ten Raster & Glitch demos.
-The remaining work includes 127 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus eleven Raster & Glitch demos.
+The remaining work includes 126 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 14 remaining demos.
-None of the 272 remediated native compositions retains those references.
+None of the 273 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 272 native compositions. The unfinished groups still account for
-18 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
+among these 273 native compositions. The unfinished groups still account for
+17 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 85 documented
 Figma fill exceptions validate.
 
@@ -58,10 +58,42 @@ and trace hashes are recorded in
 these isolated Stage measurements; route/module transfer and the final timing
 audit remain open.
 
-ASCII Portrait remains unfinished. Its exact geometry and ten original glyph
-rows are captured, and its complete original procedural model is verified,
-but the native reference requires the C3 photograph whose provenance is still
-being established. No substitute photograph has been added.
+## ASCII Portrait Reveal
+
+The native view follows tile `169:1908`: ten unchanged 11px SVG rows and the
+100×150px left crop of the 200×150px C3 photograph at stage position (86,28).
+The original Figma image is identified as Sylvester Sabo's free Unsplash photo
+`V5tNnQfTges`. The public source has the same 1800×1199 geometry and differs
+from the original Figma JPEG by less than 0.28 per RGB channel on average.
+Verified 800px and 1600px files, hashes and licence credits are recorded in
+`assets/photo-credits.json`. Native/reference crop comparisons allow only
+sparse one-channel browser rounding; all ten SVG payloads remain byte exact.
+
+Both views preserve the complete original 192×96 procedural grayscale source,
+48×24 glyph sampling, squared 90px reveal, accent annulus and 600ms residual
+trail. The native photograph develops through these same weights. The full
+view composites approved C3 photography over the complete original glyph
+renderer without changing its source data, sampling, controls or copy. Detail
+uses 1600px photography; portable exports embed 800px and keep licence comments.
+Reduced input feedback uses 150ms opacity transitions. Both source and feedback
+clocks freeze during holds, and disposal retires photo buffers and callbacks.
+
+`node tools/verify-raster-portrait.js http://127.0.0.1:4173` passes ten groups
+and 64,431 checks. It compares 11,536 complete original full/native states,
+including more than one billion numeric values in frame digests and 112 full
+pixel checkpoints. Every native/full photographic reveal channel matches an
+independent projection. It also checks physical mouse, keys and moving touch,
+native page scrolling, complete compact cameras, 60/120/240Hz input stories,
+queued intent, independent holds, feedback cleanup, actual LiveTiles and cold
+detail routes, plus eight fresh network-blocked exports with verified credits.
+
+All four final normal-speed twelve-second timing runs average 60fps with no
+slow intervals and first paint between 34ms and 59ms. Final 4× CPU runs average
+51.8–56.8fps, with up to 82 slow intervals and a 466ms full mobile startup.
+The initial candidate recorded 56.3–59.3fps and first paint below 185ms; both
+measurements retain their source hashes, complete input schedules and trace
+hashes in `docs/performance/raster-portrait-2026-11-19.json`. These isolated
+Stage measurements keep stress performance and the final timing audit open.
 
 ## Engraving Screen, ASCII Luminance and ASCII Wave
 
