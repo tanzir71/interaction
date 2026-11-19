@@ -471,3 +471,19 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   exports with photo credits. Local detail uses 1600px C3; exports use 800px.
   Record native/full timing with `node tools/profile-raster-portrait.js
   http://127.0.0.1:4173 --cpu=4` or `--cpu=1`.
+- `node tools/verify-raster-fields.js http://127.0.0.1:4173` covers v4 ASCII
+  Donut, ASCII Morph, Dot Matrix and Halftone Globe: 455 unchanged original
+  SVGs and four blank rows, exact native pixels, 82,624 full/native original
+  model states and complete full paint/pixel digests, plus 41,312 states through
+  the production hidden-paint context with real font measurement. Independent equations
+  check every native glyph/dot projection and actual Canvas pixels. It covers
+  physical mouse/keys/moving touch, capture and Pan scrolling, all four shapes,
+  retargeting, complete message/orbit stories at 60/120/240Hz, independent holds,
+  queued intent, paused themes, reduced feedback, compact full cameras,
+  synthetic Canvas loss/restoration notifications, cleanup, LiveTiles/routes
+  and 32 fresh network-blocked exports. Sparse Donut, Matrix and Globe keep
+  their exact Figma geometry through documented fill exceptions. Full views
+  retain all 2,160 torus samples, both 480-cell figures, all 104 message columns
+  and all 1,152 original globe points. Record isolated native/full timing with
+  `node tools/profile-raster-fields.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
+  measurements record findings without declaring final timing gates passed.

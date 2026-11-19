@@ -20037,7 +20037,14 @@
     ],
     "tier": "free",
     "desc": "A classic luminance-shaded torus is rebuilt from 2,160 deterministic samples into a 48 by 24 character z-buffer, with edge-aware accent light and inertial drag rotation.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20045,18 +20052,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-donut-3d",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-donut-3d.js?v=e641cf2cbf",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-donut-3d.js?v=0ebe9ed892",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-donut-3d.json?v=b7cb6ca263",
+    "sourcePreview": "registry/p/ascii-donut-3d.json?v=36d0944a51",
     "assetRefs": {},
-    "rootClass": "d-ascii-donut",
-    "controls": [],
+    "rootClass": "d-raster-field-donut-v4",
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause torus"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "hint": "Spin the torus rendered in characters",
     "sourceName": "Seen in a1k0n's donut.c and terminal-art sketches",
@@ -20295,7 +20315,14 @@
     ],
     "tier": "free",
     "desc": "Two exact 30 by 16 ASCII figures interpolate glyph by glyph through a radial luminance wave with a lavender blank-transition flash.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20303,18 +20330,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ascii-morph",
-    "thumb": "full",
-    "module": "js/demos.raster.ascii-morph.js?v=af642acc67",
+    "thumb": "hero",
+    "module": "js/demos.raster.ascii-morph.js?v=334a7d8b90",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ascii-morph.json?v=571f867940",
+    "sourcePreview": "registry/p/ascii-morph.json?v=19592bf18c",
     "assetRefs": {},
-    "rootClass": "d-ascii-morph",
-    "controls": [],
+    "rootClass": "d-raster-field-morph-v4",
+    "controls": [
+      {
+        "action": "swap",
+        "label": "Swap"
+      },
+      {
+        "action": "cancel",
+        "label": "Cancel"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "hint": "Characters ripple from one shape into another",
     "sourceName": "Seen in terminal-art tool builders and glyph-morph experiments by Fay and Vansh",
@@ -20439,7 +20479,14 @@
     ],
     "tier": "free",
     "desc": "A 56-column LED marquee scrolls hand-built glyphs at a measured speed while its dots morph between four switchable shapes with a column-staggered trough.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20447,18 +20494,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/dot-matrix-shapes",
-    "thumb": "full",
-    "module": "js/demos.raster.dot-matrix-shapes.js?v=6b7ac76baa",
+    "thumb": "hero",
+    "module": "js/demos.raster.dot-matrix-shapes.js?v=37f26cf656",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/dot-matrix-shapes.json?v=48f5d293da",
+    "sourcePreview": "registry/p/dot-matrix-shapes.json?v=bc22ae00e8",
     "assetRefs": {},
-    "rootClass": "d-raster-dot-matrix-shapes",
-    "controls": [],
+    "rootClass": "d-raster-field-matrix-v4",
+    "controls": [
+      {
+        "action": "shape",
+        "label": "Shape: circle"
+      },
+      {
+        "action": "reset",
+        "label": "Reset matrix"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "hint": "Accent a column; switch the dot shape",
     "sourceName": "Seen in dotmatrix by zzzzshawn and modular display studies",
@@ -20482,7 +20538,14 @@
     ],
     "tier": "free",
     "desc": "A deterministic halftone sphere turns through a fixed upper-left light. Stored value-noise continents, cursor-driven axis tilt, backface culling, and a restrained violet terminator make the flat dot field read as a globe.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20490,18 +20553,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/halftone-globe-canvas",
-    "thumb": "full",
-    "module": "js/demos.raster.halftone-globe-canvas.js?v=867014fcb6",
+    "thumb": "hero",
+    "module": "js/demos.raster.halftone-globe-canvas.js?v=fa132e0d47",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/halftone-globe-canvas.json?v=b37cdd5c09",
+    "sourcePreview": "registry/p/halftone-globe-canvas.json?v=9961dd5475",
     "assetRefs": {},
-    "rootClass": "d-raster-halftone-globe-canvas",
-    "controls": [],
+    "rootClass": "d-raster-field-globe-v4",
+    "controls": [
+      {
+        "action": "center",
+        "label": "Center axis"
+      },
+      {
+        "action": "reset",
+        "label": "Reset globe"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "hint": "Tilt the dotted globe; light falls across it",
     "sourceName": "Seen on: MapTheClouds Day 54 GLSL halftone globe, editorial data maps, climate interfaces, and generative atlas identities",

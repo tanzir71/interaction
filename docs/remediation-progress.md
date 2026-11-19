@@ -1,21 +1,79 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 273 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 277 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus eleven Raster & Glitch demos.
-The remaining work includes 126 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus fifteen Raster & Glitch demos.
+The remaining work includes 122 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 14 remaining demos.
-None of the 273 remediated native compositions retains those references.
+None of the 277 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 273 native compositions. The unfinished groups still account for
-17 overflow findings, zero horizontal-scroll findings, 49 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 85 documented
+among these 277 native compositions. The unfinished groups still account for
+14 overflow findings, zero horizontal-scroll findings, 48 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 88 documented
 Figma fill exceptions validate.
+
+## ASCII Donut, ASCII Morph, Dot Matrix and Halftone Globe
+
+The native views follow v4 tiles `169:2982`, `172:820`, `169:2009` and
+`169:2160` with all 455 unchanged original SVGs and four empty text rows.
+Their initial pixels match separately positioned original exports at 372px and
+328px, DPR 1 and 2. Donut projects the complete original torus z-buffer into
+readable 11px glyphs. Morph uses the supplied circle and the original diamond,
+with original radial delays, per-cell interpolation and interruption latches;
+its full view retains the original skull and diamond. Matrix projects the
+complete scrolling message onto the 135 supplied dots and preserves all four
+shapes. Globe pairs the 306 supplied dots into front/back samples, preserving
+the original seeded continent field, orbit, tilt and lighting equations.
+Globe compiles cached paths from the exact supplied SVG circle attributes,
+avoiding repeated SVG image rasterization during motion. Its original still
+SVG payloads and their intrinsic geometry remain unchanged.
+
+Full views retain all 2,160 torus samples and the 48×24 depth buffer, both
+30×16 literal figures and 400ms radial transitions, the complete 56×14 matrix
+and 104-column message, and all 1,152 original globe points. Camera scrolling
+keeps the full fields accessible with readable type. Donut, Matrix and Globe
+keep their exact sparse Figma sizes through documented fill exceptions;
+overflow and text gates still apply. Shell docks expose at most three actions.
+Morph keeps Center on the Home key so Swap, Cancel and Reset fit its dock.
+Its native announcements name the circle; full announcements retain the skull.
+
+`node tools/verify-raster-fields.js http://127.0.0.1:4173` passes fourteen
+source-bound groups and 30,269,233 checks. Its 64 engine cases replay 82,624
+complete original states, 582,567,680 numerical values and 480 full pixel
+checkpoints. Another 32 production-context cases replay 41,312 complete states
+and 291,283,840 values, proving that skipping hidden path, transform and paint
+state work preserves every source field while retaining real font measurement. Independent mathematical and native projection oracles verify
+11,635,574 projection assertions and 203,857,920 exact Canvas channels.
+Checks include physical mouse, keyboard and moving touch, original scaled
+input, captured torus dragging and Pan scrolling, all four shapes, interrupted
+morphs, complete 60/120/240Hz message/orbit stories, independent holds, queued
+Reset and later intent, paused theme changes, reduced opacity feedback and
+resource cleanup. Canvas loss checks dispatch synthetic loss/restoration
+notifications; these scenes do not claim GPU context-loss testing. Actual
+LiveTiles, desktop/mobile detail routes and 32 fresh blocked-network exports
+also pass, with every supplied native SVG embedded byte for byte.
+
+Record timing with `node tools/profile-raster-fields.js http://127.0.0.1:4173
+--cpu=1` or `--cpu=4`. Complete Matrix stories span 28 seconds; the other
+three span fourteen seconds. Measurements include actual paint/layout traces
+and source hashes, preserve the complete original models and DPR, and leave
+the final performance audit open.
+
+All sixteen final normal-speed cases hold 60fps with no slow intervals.
+Native first paint is 38–212ms; full first paint is 39–90ms. Under 4× CPU,
+native cases span 42.4–60fps and full cases 43.4–60fps. Native Globe first
+paint reaches 1,129ms desktop and 1,633ms mobile; full mobile Globe reaches
+319ms. Native mobile Globe readiness reaches 3,545ms. These startup and
+frame-gap findings remain open. Complete source/input schedules, source
+hashes, state/event digests and trace hashes are recorded in
+`docs/performance/raster-fields-2026-11-20.json`. Fonts are prepared before
+these isolated Stage measurements; public route/module transfer and the final
+performance audit remain open.
 
 ## ASCII Fire, Fluid Stir and Type Explode
 

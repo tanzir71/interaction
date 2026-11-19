@@ -10242,17 +10242,33 @@ INTRX.meta({
     ]
   },
   "ascii-donut-3d": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "pause",
+        "label": "Pause torus"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10261,8 +10277,12 @@ INTRX.meta({
       "z-buffer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-fire": {
     "designSize": [
@@ -10394,17 +10414,33 @@ INTRX.meta({
     ]
   },
   "ascii-morph": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "swap",
+        "label": "Swap"
+      },
+      {
+        "action": "cancel",
+        "label": "Cancel"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "group"
+      "aria": "application"
     },
     "useCases": [
       "ascii",
@@ -10413,8 +10449,12 @@ INTRX.meta({
       "radial"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ascii-type-explode": {
     "designSize": [
@@ -10472,17 +10512,29 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "dot-matrix-shapes": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "shape",
+        "label": "Shape: circle"
+      },
+      {
+        "action": "reset",
+        "label": "Reset matrix"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "useCases": [
       "dot-matrix",
@@ -10491,21 +10543,37 @@ INTRX.meta({
       "canvas"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "halftone-globe-canvas": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "center",
+        "label": "Center axis"
+      },
+      {
+        "action": "reset",
+        "label": "Reset globe"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -10513,8 +10581,12 @@ INTRX.meta({
       "globe"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "engraving-lines-warp": {
     "designSize": "bleed",
