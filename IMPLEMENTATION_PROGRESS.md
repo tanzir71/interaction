@@ -1247,3 +1247,28 @@ These findings lie outside the two completed groups.
 
 The objective remains active until every phase is implemented, verified,
 committed and pushed. Design completion is not implementation completion.
+
+## Raster instruments — 20 Nov 2026
+
+Terminal Window, Engraved Relief, Pixel Lissajous and RGB Slices now use their
+exact v4 native artwork: 169 unchanged SVGs, both original terminal sessions,
+all commands, the complete 46-row relief field, all 600 Lissajous samples and
+both 1–9 ranges, plus three native/ten full RGB bands. Approved cityNight and
+archGrid replace the retired RGB photo; both credits and hashes are retained.
+Full views keep complete 400×400 compositions and accessible scroll cameras.
+Generator prompts now describe the v4 layouts, controls and approved assets.
+
+The instrument verifier passes thirteen source-bound groups covering complete
+original models and pixels, independent native/full paint, actual input and
+scrolling, clock equivalence, holds, paused themes, reduced feedback, early
+disposal, viewport/route ownership and 32 fresh offline exports. See
+`docs/remediation-progress.md` for the counts, source scope and timing findings.
+The sparse Lissajous first pose retains its exact Figma geometry through the
+written fill exception.
+
+Visual remediation reaches 281/399. Another 118 existing demos and all 121
+new/extension components remain, alongside Pro seams and the final audit.
+The full fit diagnostic reports 14 overflow, zero horizontal scroll, 46 tiny
+text and 33 low-fill findings; all 89 exceptions validate. Stage debt is 115
+and motion debt remains 51. These are unfinished global gates. Verification
+runs locally; direct commits/pushes preserve disabled Actions and the $0 limit.

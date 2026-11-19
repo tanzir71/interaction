@@ -23,6 +23,9 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 - Full compositions also use approved v2 photography. Migrate the retired
   generated `coastal-stack`, `limestone-pavilion` and `atlantic-shore` content
   while preserving original interaction models and copy.
+- Refresh each remediated demo's generator prompt to describe its v4 geometry,
+  controls and approved assets; preserve the displayed composition's copy and
+  complete original datasets and models.
 - Owner clarification, 15 Nov 2026: sparse controls keep the exact Figma size
   when it conflicts with the 12% fill heuristic. Document each exception and its
   reference geometry in `tools/stage-fit-allowlist.json`. This changes only the
@@ -487,3 +490,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and all 1,152 original globe points. Record isolated native/full timing with
   `node tools/profile-raster-fields.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
   measurements record findings without declaring final timing gates passed.
+- `node tools/verify-raster-instruments.js http://127.0.0.1:4173` covers v4
+  Terminal Window, Engraved Relief, Pixel Lissajous and RGB Slices: all 169
+  unchanged SVGs, 131,584 original full/native states, complete original models
+  and full pixels, independent native and filtered full pixels, plus approved
+  RGB photography. It checks real keys/mouse/moving touch, sessions and command
+  loops, complete frequency ranges, native scrolling, 60/120/240Hz clocks,
+  independent holds, paused themes, queued intent, reduced opacity feedback,
+  actual viewport/route ownership, context-state restoration, early disposal
+  and 32 fresh offline exports. Native Lissajous has a documented sparse-fill
+  exception; its complete 600-sample original model remains functional.
+  Record isolated native/full timing with `node tools/profile-raster-instruments.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Measurement records findings and
+  leaves final timing gates open.

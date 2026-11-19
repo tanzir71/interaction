@@ -1,21 +1,82 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 277 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 281 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus fifteen Raster & Glitch demos.
-The remaining work includes 122 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus nineteen Raster & Glitch demos.
+The remaining work includes 118 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 14 remaining demos.
-None of the 277 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 13 remaining demos.
+None of the 281 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 277 native compositions. The unfinished groups still account for
-14 overflow findings, zero horizontal-scroll findings, 48 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 88 documented
+among these 281 native compositions. The unfinished groups still account for
+14 overflow findings, zero horizontal-scroll findings, 46 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 89 documented
 Figma fill exceptions validate.
+
+## Terminal, Engraved Relief, Pixel Lissajous and RGB Slices
+
+The native views follow v4 tiles `169:1984`, `169:2482`, `169:3007`
+and `169:2512` with all 169 original SVG exports unchanged. Terminal keeps
+the supplied 220×124px window, rounded clip, shadow and outlined first-pose
+copy. Its live view projects the complete original two-session command tape,
+seeded typing delays, spinner, scrolling history and bounded drag. Session and
+Reset are shell-owned; native Page Up/Down and full tab keys remain functional.
+
+Relief animates the fourteen supplied curves using the complete original
+46-row, 3,910-vertex relief field. Lissajous keeps the exact 147-pixel still
+and four frequency bars, then projects all 600 original sine samples and
+persistent trails. Both native ranges retain the full original 1–9 domain,
+defaults, interrupted 800ms frequency model and phase clock. The illustrated
+first-pose bars retain their supplied 42/70 and 28/70 lengths; live ranges use
+the original parameter values. Its sparse first pose has a documented fill
+exception; overflow and text gates still apply.
+
+RGB uses the supplied cityNight crop, three displaced strips and three original
+separator SVGs. Its live strips project original bands 0, 4 and 9, with the
+original seeded offsets, channel split, jitter, 860ms envelope and automatic
+cadence. Retina native photos retain their full backing resolution. Full
+retains all ten original bands and uses approved archGrid photography, removing
+one retired limestone reference. Both free-photo credits and file hashes are
+preserved. Complete full compositions use 400×400 geometry and accessible
+scroll cameras; native stages retain the separate 240×168 composition.
+
+`node tools/verify-raster-instruments.js http://127.0.0.1:4173` passes thirteen
+source-bound groups and 66,681,378 checks. Sixty-four emitted full/native
+engine cases replay 131,584 states and 6,272 complete model checkpoints;
+full engines match 397,261,440 original Canvas channels. Independent equations
+check 66,421,493 model assertions. Native Bezier, retained sine-trail and RGB
+oracles match 79,660,800 painted channels; full palette checks compare
+28,696,320 channels within one rounding unit. Fresh literal-source references
+also match 216,627,840 channels with the approved full photograph. Lossless
+shared vector storage preserves every original numerical checkpoint. Generator prompts and their
+registry exports now describe the v4 dimensions, controls and approved assets.
+
+Production checks cover real mouse, keys and moving touch, captured drag and
+cancellation, both sessions, two complete command loops, frequency endpoints,
+native page/camera scrolling, equivalent 60/120/240Hz models and Canvas paint,
+independent caller/viewport holds, paused themes and ordered deferred actions.
+Reduced feedback uses interruptible 150ms opacity transitions. Snapshot IDs
+remain unique. Synthetic Canvas loss notifications plus actual context-state
+resets verify exact restored retina pixels; early disposal retires asynchronous
+font/image work. LiveTiles, desktop/mobile routes and 32 fresh network-blocked
+exports pass. These checks do not claim induced GPU context loss.
+
+The fit auditor explicitly loads an unselected tile before taking its metadata
+and initial-pose snapshot, avoiding a LiveTiles selection race. All 399 records
+resolve; sixteen mask/surface/geometry checks pass without changing fit gates.
+
+Record source-bound timing with `node tools/profile-raster-instruments.js
+http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Terminal stories span 36 seconds;
+other instruments span eight seconds. Measurements record actual RAF gaps,
+long tasks and paint/layout traces with no per-frame model inspection. The
+original RGB paint cadence remains unchanged. Isolated startup excludes public
+module transfer; measurements do not declare the final timing gates passed.
+
+Normal-speed native RAF throughput spans 59.8–60.0fps; full spans 58.9–60.0fps. Native first paint spans 47–79ms and full 36–101ms. Under 4× CPU, native throughput spans 10.2–59.3fps and full 10.2–44.9fps. 11 measured cases exceed 300ms first paint and 19 contain slow RAF intervals. Complete results, gaps, long tasks, source bindings and trace hashes are recorded in `docs/performance/raster-instruments-2026-11-20.json`. These findings remain part of the final performance audit.
 
 ## ASCII Donut, ASCII Morph, Dot Matrix and Halftone Globe
 

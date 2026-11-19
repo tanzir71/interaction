@@ -41,12 +41,14 @@ const GATES = {
       // delivers intersection and resize callbacks within one fixed sleep.
       for (let i=0; i<150 && stage && !stage._root && !stage.dataset.bootError; i++) await new Promise(r=>setTimeout(r,20));
       const id = tile.dataset.id || tile.id.replace(/^tile-/, '');
-      const demo = (window.INTRX && INTRX.demos.find(d => d.id === id)) || {};
+      // Adjacent tiles can occupy LiveTiles' active slots. Load the audited
+      // tile explicitly before taking its metadata and initial-pose snapshot.
+      const demo = INTRX.demos.find(d => d.id === id) || await INTRX.loadDemo(id);
       // Other visible tiles may boot while an earlier dependency is loading.
       // Restart this preview so the measured pose does not depend on that
       // delay or on how many other tiles preceded it. Motion verifiers cover
       // complete loops; this audit checks the component's initial composition.
-      if (stage?._root && demo.id) INTRX.mountStage(demo,stage,'thumb');
+      if (stage && demo.id) INTRX.mountStage(demo,stage,'thumb');
       await new Promise(r => setTimeout(r, 140));
       const root = stage && (stage._root || stage.firstElementChild);
       const sr = stage ? stage.getBoundingClientRect() : null;

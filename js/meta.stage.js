@@ -10489,17 +10489,29 @@ INTRX.meta({
     "thumbDesignSize": "bleed"
   },
   "terminal-window": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "session",
+        "label": "Session: shell"
+      },
+      {
+        "action": "reset",
+        "label": "Reset terminal"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "terminal",
@@ -10508,8 +10520,12 @@ INTRX.meta({
       "typing"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "dot-matrix-shapes": {
     "designSize": [
@@ -10589,17 +10605,33 @@ INTRX.meta({
     ]
   },
   "engraving-lines-warp": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "center",
+        "label": "Center lens"
+      },
+      {
+        "action": "release",
+        "label": "Release lens"
+      },
+      {
+        "action": "reset",
+        "label": "Reset engraving"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -10607,21 +10639,33 @@ INTRX.meta({
       "relief"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "pixel-lissajous-lab": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset curve"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -10629,21 +10673,37 @@ INTRX.meta({
       "lissajous"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "glitch-rgb-slices": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "inject",
+        "label": "Inject burst"
+      },
+      {
+        "action": "clear",
+        "label": "Clear burst"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "group"
     },
     "useCases": [
       "canvas",
@@ -10651,8 +10711,12 @@ INTRX.meta({
       "slice-displacement"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "glitch-datamosh-blocks": {
     "designSize": "bleed",

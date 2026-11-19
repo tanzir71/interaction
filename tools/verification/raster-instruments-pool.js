@@ -1,0 +1,13 @@
+// Verification fixtures only. Intern and byte-shuffle original IEEE-754 vectors
+// losslessly so repeated DPR/camera cases do not store the same geometry again.
+const fs=require('fs'),zlib=require('zlib'),crypto=require('crypto'),assert=require('assert/strict'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+function encoder(){const values=new Map();
+ function encode(v){if(Array.isArray(v))return v.map(encode);if(!v||typeof v!=='object')return v;if(v.$vector){const raw=Buffer.from(v.$vector,'base64'),id=hash(raw);if(!values.has(id))values.set(id,raw);return{$poolVector:id,format:v.format,length:v.length};}return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,encode(x)]));}
+ function restore(v){if(Array.isArray(v))return v.map(restore);if(!v||typeof v!=='object')return v;if(v.$poolVector)return{$vector:values.get(v.$poolVector).toString('base64'),format:v.format,length:v.length};return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,restore(x)]));}
+ function save(prefix){const entries=[],blocks=[];let offset=0;for(const[id,raw]of values){const shuffled=Buffer.alloc(raw.length),stride=raw.length%8===0?8:1,count=raw.length/stride;for(let byte=0;byte<stride;byte++)for(let n=0;n<count;n++)shuffled[byte*count+n]=raw[n*stride+byte];entries.push({id,offset,bytes:raw.length,stride});blocks.push(shuffled);offset+=raw.length;}const file=prefix+'.bin.gz',indexFile=prefix+'.json';fs.writeFileSync(file,zlib.gzipSync(Buffer.concat(blocks),{level:9}));fs.writeFileSync(indexFile,JSON.stringify({format:'byte-shuffle-v1',entries})+'\n');return{file,sha256:hash(fs.readFileSync(file)),indexFile,indexSHA256:hash(fs.readFileSync(indexFile)),vectors:entries.length,rawBytes:offset,bytes:fs.statSync(file).size};}
+ return{encode,restore,save};
+}
+function decoder(pool){assert.equal(hash(fs.readFileSync(pool.file)),pool.sha256);assert.equal(hash(fs.readFileSync(pool.indexFile)),pool.indexSHA256);const bytes=zlib.gunzipSync(fs.readFileSync(pool.file)),index=JSON.parse(fs.readFileSync(pool.indexFile));assert.equal(index.format,'byte-shuffle-v1');const values=new Map();for(const e of index.entries){const raw=Buffer.alloc(e.bytes),count=e.bytes/e.stride;for(let byte=0;byte<e.stride;byte++)for(let n=0;n<count;n++)raw[n*e.stride+byte]=bytes[e.offset+byte*count+n];assert.equal(hash(raw),e.id,'Lossless original vector');values.set(e.id,raw.toString('base64'));}
+ function restore(v){if(Array.isArray(v))return v.map(restore);if(!v||typeof v!=='object')return v;if(v.$poolVector){assert(values.has(v.$poolVector),'Known original vector');return{$vector:values.get(v.$poolVector),format:v.format,length:v.length};}return Object.fromEntries(Object.entries(v).map(([k,x])=>[k,restore(x)]));}return{restore};
+}
+module.exports={encoder,decoder};

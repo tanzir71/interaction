@@ -879,6 +879,16 @@
         0.800000011920929,
         0.800000011920929
       ]
+    },
+    "pixel-lissajous-lab": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse Figma geometry. Tile 169:3007 has 147 supplied 5×5 pixels in x=117.5–254.5, y=45.5–140.5, plus 70/42/70/28×3px frequency bars at (106/106/196/196,164) inside the 372×264 stage. The original 151 SVGs stay unchanged. This exception covers the initial native composition only; the complete original 600-sample curve and both 1–9 frequency ranges remain functional. No overflow, horizontal-scroll or text-size exemption.",
+      "figmaNode": "169:3007",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=169-3007",
+      "selector": ".d-instrument-lissajous-v4-native-slot[data-native-node=\"169:3020\"]",
+      "designSize": [
+        5,
+        5
+      ]
     }
   }
 }

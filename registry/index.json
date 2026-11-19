@@ -20434,7 +20434,14 @@
     ],
     "tier": "free",
     "desc": "A bounded draggable terminal runs a deterministic command tape with jittered typing, staged output, an ASCII spinner, natural history scrolling, and accessible session tabs.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20442,18 +20449,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/terminal-window",
-    "thumb": "full",
-    "module": "js/demos.raster.terminal-window.js?v=d1830dd20c",
+    "thumb": "hero",
+    "module": "js/demos.raster.terminal-window.js?v=b7eb4f4f6f",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/terminal-window.json?v=ff8867d15b",
+    "sourcePreview": "registry/p/terminal-window.json?v=c89ab7c0f8",
     "assetRefs": {},
-    "rootClass": "d-raster-terminal-window",
-    "controls": [],
+    "rootClass": "d-instrument-terminal-v4",
+    "controls": [
+      {
+        "action": "session",
+        "label": "Session: shell"
+      },
+      {
+        "action": "reset",
+        "label": "Reset terminal"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "hint": "Move the window and switch between sessions",
     "sourceName": "Seen in tmux-ide teasers and developer portfolio terminals",
@@ -20597,7 +20613,14 @@
     ],
     "tier": "free",
     "desc": "Forty-six fine rules bend through a deterministic three-bump relief. A slow periodic noise drift gives the field a currency-engraving breath while the pointer locally doubles and thickens the relief.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20605,18 +20628,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/engraving-lines-warp",
-    "thumb": "full",
-    "module": "js/demos.raster.engraving-lines-warp.js?v=c3ce1dd601",
+    "thumb": "hero",
+    "module": "js/demos.raster.engraving-lines-warp.js?v=908d562777",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/engraving-lines-warp.json?v=9f3b710f41",
+    "sourcePreview": "registry/p/engraving-lines-warp.json?v=bb4d229a4a",
     "assetRefs": {},
-    "rootClass": "d-raster-engraving-lines-warp",
-    "controls": [],
+    "rootClass": "d-instrument-engraving-v4",
+    "controls": [
+      {
+        "action": "center",
+        "label": "Center lens"
+      },
+      {
+        "action": "release",
+        "label": "Release lens"
+      },
+      {
+        "action": "reset",
+        "label": "Reset engraving"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "hint": "The plate swells into relief under the pointer",
     "sourceName": "Seen in currency-engraving explorations on design X, security-print studies, generative guilloché posters, and tactile editorial identities",
@@ -20640,7 +20676,14 @@
     ],
     "tier": "free",
     "desc": "A chunky, persistent-canvas Lissajous curve morphs continuously between integer frequency pairs. Six hundred grid-snapped samples leave a restrained phosphor trail while the phase advances forever.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20648,18 +20691,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/pixel-lissajous-lab",
-    "thumb": "full",
-    "module": "js/demos.raster.pixel-lissajous-lab.js?v=25638c6c79",
+    "thumb": "hero",
+    "module": "js/demos.raster.pixel-lissajous-lab.js?v=2d2b2f7088",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/pixel-lissajous-lab.json?v=3cf97a39ad",
+    "sourcePreview": "registry/p/pixel-lissajous-lab.json?v=f7312cf2e4",
     "assetRefs": {},
-    "rootClass": "d-raster-pixel-lissajous-lab",
-    "controls": [],
+    "rootClass": "d-instrument-lissajous-v4",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset curve"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "region"
+      "aria": "group"
     },
     "hint": "Step the two frequencies; the figure re-pixelates",
     "sourceName": "Seen on: mona_biasia's Lissajous SVG generator, datacurve icon sets, vector oscilloscopes, and pixel instrument panels",
@@ -20683,7 +20731,14 @@
     ],
     "tier": "free",
     "desc": "A cached poster is decomposed into real red, green, and blue channel buffers. Deterministic horizontal bands displace and reconstruct those channels during hover bursts, producing chromatic tears rather than duplicated CSS text.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -20691,24 +20746,62 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/glitch-rgb-slices",
-    "thumb": "full",
-    "module": "js/demos.raster.rgb-glitch.js?v=3e0094cb59",
+    "thumb": "hero",
+    "module": "js/demos.raster.rgb-glitch.js?v=c311f28684",
     "assetBundle": "js/demo-assets.js?v=2182ecd289",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/glitch-rgb-slices.json?v=a7339b2f8a",
+    "sourcePreview": "registry/p/glitch-rgb-slices.json?v=0f6724cac9",
     "assetRefs": {
-      "limestone-pavilion": "assets/images/limestone-pavilion.webp"
+      "photo-archGrid": "assets/images/archGrid-800.webp",
+      "photo-cityNight": "assets/images/cityNight-800.webp"
     },
-    "rootClass": "d-rgb",
-    "controls": [],
+    "rootClass": "d-instrument-rgb-v4",
+    "controls": [
+      {
+        "action": "inject",
+        "label": "Inject burst"
+      },
+      {
+        "action": "clear",
+        "label": "Clear burst"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "group"
     },
     "hint": "The signal tears into colour-split bands",
     "sourceName": "Seen on: broadcast identities, electronic music releases, speculative-tech portfolios",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "archGrid",
+        "asset": "photo-archGrid",
+        "photoId": "MPWbGMrZ6eo",
+        "imageId": "photo-1504625709867-b4e45e3bb9dd",
+        "photographer": "Christophe Laurenceau",
+        "url": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "cityNight",
+        "asset": "photo-cityNight",
+        "photoId": "zd8v_Ig3ndg",
+        "imageId": "photo-1603793510575-a8cf24361baa",
+        "photographer": "Polina Kuzovkova",
+        "url": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-archGrid": "assets/images/archGrid.webp",
+      "photo-cityNight": "assets/images/cityNight.webp"
+    }
   },
   {
     "id": "glitch-datamosh-blocks",
