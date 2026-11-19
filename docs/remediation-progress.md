@@ -1,21 +1,72 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 281 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 284 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus nineteen Raster & Glitch demos.
-The remaining work includes 118 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus twenty-two Raster & Glitch demos.
+The remaining work includes 115 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 13 remaining demos.
-None of the 281 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 10 remaining demos.
+None of the 284 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 281 native compositions. The unfinished groups still account for
+among these 284 native compositions. The unfinished groups still account for
 14 overflow findings, zero horizontal-scroll findings, 46 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 89 documented
 Figma fill exceptions validate.
+
+## Datamosh, CRT Receiver and VHS Tracking
+
+The native compositions follow v4 tiles `169:2539`, `169:2568` and
+`169:2621`. All 39 supplied overlay SVGs remain unchanged and retain their
+intrinsic dimensions. Datamosh keeps the exact trails cover crop and five
+30×20px fragments with their original +10px source offset. CRT keeps its
+180×136px rounded tube, cityTeal crop, all 34 scanline SVGs and vignette.
+The scanline frames are 1.5px high; their original 180×2px SVG roots are
+preserved. VHS keeps the roses crop, blurred band and tracking line.
+
+Active native Datamosh projects its complete original feedback buffer through
+the same five exact crop windows; its cover photo and crop geometry stay fixed.
+The complete source models run at compact resolution. CRT presents its
+original curved strips and wrapped roll beneath
+the supplied scanline/vignette artwork. Full views retain all twelve blocks
+and three feedback trails, every original tube strip and both channels, and
+all four tracking bands, wrapped chroma rows and eighteen head-switch marks.
+Their 368×268px fields remain accessible through readable 400×400px full
+compositions. Full photos use ocean, archGrid and sea; native photos use
+trails, cityTeal and roses. This removes retired photos from three more demos.
+The newly identified trails photo is verified free Unsplash photography by
+[Osman Rana](https://unsplash.com/photos/time-lapse-car-running-on-road-G7VN8NadjO0),
+with both resolution hashes and provenance in the photo ledger.
+
+The ten groups in `tools/verify-raster-film.js` cover 56 emitted engine
+cases, 67,256 original states, 5,336 complete model checkpoints and
+1,097,084,160 original Canvas pixel channels, including a separate literal
+180×136px CRT capture. Actual compact photographic projections match
+4,358,400 independent source-engine pixel channels, including channel-only CRT switching in reduced motion. The browser groups cover
+72 native layouts, 72 full layouts, 36 complete eight-second stories at
+60/120/240Hz, native keys and moving touch, vertical scrolling, independent
+holds, paused themes, queued intent, interrupted reduced opacity feedback,
+startup disposal, real LiveTiles/routes and 24 fresh network-blocked exports.
+Context-state notification checks cover the native reference and restoration;
+they do not claim literal GPU reset coverage.
+
+The [24 source-bound performance measurements](performance/raster-film-2026-11-20.json)
+record native/full desktop DPR1 and mobile DPR2 at CPU1 and CPU4. Unthrottled
+native scenes stay at 60fps; full scenes span 59.9–60fps. At CPU4, native
+scenes span 59.1–60fps, while full scenes span 21.1–60fps. The mobile full
+CRT records 21.1fps, an 83.4ms p95 interval, 142 slow intervals and 57 long
+tasks. Mobile full Datamosh records 52.8fps, 31 slow intervals and 11 long
+tasks. These remain findings for the final performance audit.
+
+Measured isolated first paints span 23–140ms across both CPU rates; CPU4
+full readiness spans 247–477ms. Font preparation precedes mount, so public
+route/module transfer remains unmeasured here. The original 32ms source paint
+cap is preserved; scheduler RAF measurements do not change that cadence.
+Source clocks are retained explicitly, including the CRT stress clock lag.
+Final timing gates remain open.
 
 ## Terminal, Engraved Relief, Pixel Lissajous and RGB Slices
 

@@ -1,0 +1,1679 @@
+{
+  "fileKey": "OpP74UYjFHRU5q9OBPhoSY",
+  "page": "36:9",
+  "components": [
+    {
+      "id": "glitch-datamosh-blocks",
+      "kind": "mosh",
+      "C": "d-film-mosh-v4",
+      "photos": [
+        {
+          "photoId": "IgWNxx7paz4",
+          "imageId": "photo-1484387436194-cf7cb70800ce",
+          "photographer": "Michael Benz",
+          "profile": "https://unsplash.com/@michaelbenz",
+          "page": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+          "license": "Unsplash License",
+          "licenseUrl": "https://unsplash.com/license",
+          "free": true,
+          "verifiedAt": "2026-11-15",
+          "asset": "photo-ocean",
+          "files": {
+            "full": {
+              "path": "assets/images/ocean.webp",
+              "width": 1600,
+              "height": 1067,
+              "sha256": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb"
+            },
+            "tile": {
+              "path": "assets/images/ocean-800.webp",
+              "width": 800,
+              "height": 533,
+              "sha256": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9"
+            }
+          },
+          "key": "ocean"
+        }
+      ],
+      "file": "js/demos.raster.datamosh.js",
+      "figmaNode": "169:2539",
+      "native": {
+        "photo": "trails",
+        "node": "169:2553",
+        "frame": "169:2552",
+        "width": 200,
+        "height": 150,
+        "left": 20,
+        "top": 8,
+        "radius": 14,
+        "svg": [
+          "169:2554"
+        ],
+        "photos": [
+          {
+            "photoId": "G7VN8NadjO0",
+            "imageId": "photo-1495420378468-78588a508652",
+            "photographer": "Osman Rana",
+            "profile": "https://unsplash.com/@osmanrana",
+            "page": "https://unsplash.com/photos/time-lapse-car-running-on-road-G7VN8NadjO0",
+            "license": "Unsplash License",
+            "licenseUrl": "https://unsplash.com/license",
+            "free": true,
+            "verifiedAt": "2026-11-20",
+            "asset": "photo-trails",
+            "files": {
+              "full": {
+                "path": "assets/images/trails.webp",
+                "width": 1600,
+                "height": 1067,
+                "sha256": "b303a1a9d97b005fcfad7a060b87b0e6f98bff82bee882a46680af58f8b21c07"
+              },
+              "tile": {
+                "path": "assets/images/trails-800.webp",
+                "width": 800,
+                "height": 533,
+                "sha256": "851845942fcefcaf7bc876178c237cb1e7d15122f93341e6b0037d323f87b47f"
+              }
+            }
+          }
+        ],
+        "slots": [
+          {
+            "id": "169:2554",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 0,
+            "width": 200,
+            "height": 150,
+            "absoluteBoundingBox": {
+              "x": 556,
+              "y": 2952,
+              "width": 200,
+              "height": 150
+            },
+            "absoluteRenderBounds": {
+              "x": 556,
+              "y": 2952,
+              "width": 200,
+              "height": 150
+            },
+            "svg": {
+              "id": "169:2554",
+              "file": "assets/components/raster-film/169-2554.svg",
+              "bytes": 203,
+              "sha256": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58"
+            }
+          }
+        ]
+      },
+      "controls": [
+        [
+          "inject",
+          "Corrupt frame"
+        ],
+        [
+          "clear",
+          "Restore frame"
+        ]
+      ],
+      "kernels": {
+        "full": "a13125bcfd17147eb13d264106d0737d9b884d897ac2b0a0efb05c046f4d18a4",
+        "native": "9bbc636b9bd4e6319710695b8e8b2f6f9c0f2e2125adf0ec5afb2cc3be9f40d0"
+      }
+    },
+    {
+      "id": "scanline-crt",
+      "kind": "crt",
+      "C": "d-film-crt-v4",
+      "photos": [
+        {
+          "photoId": "IgWNxx7paz4",
+          "imageId": "photo-1484387436194-cf7cb70800ce",
+          "photographer": "Michael Benz",
+          "profile": "https://unsplash.com/@michaelbenz",
+          "page": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+          "license": "Unsplash License",
+          "licenseUrl": "https://unsplash.com/license",
+          "free": true,
+          "verifiedAt": "2026-11-15",
+          "asset": "photo-ocean",
+          "files": {
+            "full": {
+              "path": "assets/images/ocean.webp",
+              "width": 1600,
+              "height": 1067,
+              "sha256": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb"
+            },
+            "tile": {
+              "path": "assets/images/ocean-800.webp",
+              "width": 800,
+              "height": 533,
+              "sha256": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9"
+            }
+          },
+          "key": "ocean"
+        },
+        {
+          "photoId": "MPWbGMrZ6eo",
+          "imageId": "photo-1504625709867-b4e45e3bb9dd",
+          "photographer": "Christophe Laurenceau",
+          "profile": "https://unsplash.com/@justcallmechristophe",
+          "page": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+          "license": "Unsplash License",
+          "licenseUrl": "https://unsplash.com/license",
+          "free": true,
+          "verifiedAt": "2026-11-15",
+          "asset": "photo-archGrid",
+          "files": {
+            "full": {
+              "path": "assets/images/archGrid.webp",
+              "width": 1600,
+              "height": 1060,
+              "sha256": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f"
+            },
+            "tile": {
+              "path": "assets/images/archGrid-800.webp",
+              "width": 800,
+              "height": 530,
+              "sha256": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde"
+            }
+          },
+          "key": "archGrid"
+        }
+      ],
+      "file": "js/demos.raster.crt.js",
+      "figmaNode": "169:2568",
+      "native": {
+        "photo": "cityTeal",
+        "node": "169:2582",
+        "frame": "169:2581",
+        "width": 180,
+        "height": 136,
+        "left": 30,
+        "top": 14,
+        "radius": 28,
+        "svg": [
+          "169:2583",
+          "169:2584",
+          "169:2585",
+          "169:2586",
+          "169:2587",
+          "169:2588",
+          "169:2589",
+          "169:2590",
+          "169:2591",
+          "169:2592",
+          "169:2593",
+          "169:2594",
+          "169:2595",
+          "169:2596",
+          "169:2597",
+          "169:2598",
+          "169:2599",
+          "169:2600",
+          "169:2601",
+          "169:2602",
+          "169:2603",
+          "169:2604",
+          "169:2605",
+          "169:2606",
+          "169:2607",
+          "169:2608",
+          "169:2609",
+          "169:2610",
+          "169:2611",
+          "169:2612",
+          "169:2613",
+          "169:2614",
+          "169:2615",
+          "169:2616",
+          "169:2617"
+        ],
+        "photos": [
+          {
+            "photoId": "cXU6tNxhub0",
+            "imageId": "photo-1493514789931-586cb221d7a7",
+            "photographer": "Andre Benz",
+            "profile": "https://unsplash.com/@trapnation",
+            "page": "https://unsplash.com/photos/aerial-photography-of-city-skyline-during-night-time-cXU6tNxhub0",
+            "license": "Unsplash License",
+            "licenseUrl": "https://unsplash.com/license",
+            "free": true,
+            "verifiedAt": "2026-11-15",
+            "asset": "photo-cityTeal",
+            "files": {
+              "full": {
+                "path": "assets/images/cityTeal.webp",
+                "width": 1600,
+                "height": 1067,
+                "sha256": "ce35cf5a5a093a096e0c5f9bd06fb042d39cbb33f4155da6653714f32a4a6bdc"
+              },
+              "tile": {
+                "path": "assets/images/cityTeal-800.webp",
+                "width": 800,
+                "height": 533,
+                "sha256": "dff6a935070ba084a5b74106e1ad2214c975b3ae2ae2872ad60571844597de88"
+              }
+            }
+          },
+          {
+            "photoId": "MPWbGMrZ6eo",
+            "imageId": "photo-1504625709867-b4e45e3bb9dd",
+            "photographer": "Christophe Laurenceau",
+            "profile": "https://unsplash.com/@justcallmechristophe",
+            "page": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+            "license": "Unsplash License",
+            "licenseUrl": "https://unsplash.com/license",
+            "free": true,
+            "verifiedAt": "2026-11-15",
+            "asset": "photo-archGrid",
+            "files": {
+              "full": {
+                "path": "assets/images/archGrid.webp",
+                "width": 1600,
+                "height": 1060,
+                "sha256": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f"
+              },
+              "tile": {
+                "path": "assets/images/archGrid-800.webp",
+                "width": 800,
+                "height": 530,
+                "sha256": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde"
+              }
+            }
+          }
+        ],
+        "slots": [
+          {
+            "id": "169:2583",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 0,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2958,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2958,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2583",
+              "file": "assets/components/raster-film/169-2583.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2584",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 4,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2962,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2962,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2584",
+              "file": "assets/components/raster-film/169-2584.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2585",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 8,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2966,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2966,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2585",
+              "file": "assets/components/raster-film/169-2585.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2586",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 12,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2970,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2970,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2586",
+              "file": "assets/components/raster-film/169-2586.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2587",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 16,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2974,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2974,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2587",
+              "file": "assets/components/raster-film/169-2587.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2588",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 20,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2978,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2978,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2588",
+              "file": "assets/components/raster-film/169-2588.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2589",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 24,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2982,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2982,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2589",
+              "file": "assets/components/raster-film/169-2589.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2590",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 28,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2986,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2986,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2590",
+              "file": "assets/components/raster-film/169-2590.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2591",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 32,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2990,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2990,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2591",
+              "file": "assets/components/raster-film/169-2591.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2592",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 36,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2994,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2994,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2592",
+              "file": "assets/components/raster-film/169-2592.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2593",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 40,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2998,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2998,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2593",
+              "file": "assets/components/raster-film/169-2593.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2594",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 44,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3002,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3002,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2594",
+              "file": "assets/components/raster-film/169-2594.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2595",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 48,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3006,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3006,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2595",
+              "file": "assets/components/raster-film/169-2595.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2596",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 52,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3010,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3010,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2596",
+              "file": "assets/components/raster-film/169-2596.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2597",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 56,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3014,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3014,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2597",
+              "file": "assets/components/raster-film/169-2597.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2598",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 60,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3018,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3018,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2598",
+              "file": "assets/components/raster-film/169-2598.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2599",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 64,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3022,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3022,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2599",
+              "file": "assets/components/raster-film/169-2599.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2600",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 68,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3026,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3026,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2600",
+              "file": "assets/components/raster-film/169-2600.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2601",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 72,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3030,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3030,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2601",
+              "file": "assets/components/raster-film/169-2601.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2602",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 76,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3034,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3034,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2602",
+              "file": "assets/components/raster-film/169-2602.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2603",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 80,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3038,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3038,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2603",
+              "file": "assets/components/raster-film/169-2603.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2604",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 84,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3042,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3042,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2604",
+              "file": "assets/components/raster-film/169-2604.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2605",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 88,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3046,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3046,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2605",
+              "file": "assets/components/raster-film/169-2605.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2606",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 92,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3050,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3050,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2606",
+              "file": "assets/components/raster-film/169-2606.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2607",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 96,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3054,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3054,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2607",
+              "file": "assets/components/raster-film/169-2607.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2608",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 100,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3058,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3058,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2608",
+              "file": "assets/components/raster-film/169-2608.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2609",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 104,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3062,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3062,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2609",
+              "file": "assets/components/raster-film/169-2609.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2610",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 108,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3066,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3066,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2610",
+              "file": "assets/components/raster-film/169-2610.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2611",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 112,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3070,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3070,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2611",
+              "file": "assets/components/raster-film/169-2611.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2612",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 116,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3074,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3074,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2612",
+              "file": "assets/components/raster-film/169-2612.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2613",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 120,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3078,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3078,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2613",
+              "file": "assets/components/raster-film/169-2613.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2614",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 124,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3082,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3082,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2614",
+              "file": "assets/components/raster-film/169-2614.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2615",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 128,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3086,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3086,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2615",
+              "file": "assets/components/raster-film/169-2615.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2616",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 132,
+            "width": 180,
+            "height": 1.5,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 3090,
+              "width": 180,
+              "height": 1.5
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 3090,
+              "width": 180,
+              "height": 1.5
+            },
+            "svg": {
+              "id": "169:2616",
+              "file": "assets/components/raster-film/169-2616.svg",
+              "bytes": 169,
+              "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+            }
+          },
+          {
+            "id": "169:2617",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 0,
+            "width": 180,
+            "height": 136,
+            "absoluteBoundingBox": {
+              "x": 982,
+              "y": 2958,
+              "width": 180,
+              "height": 136
+            },
+            "absoluteRenderBounds": {
+              "x": 982,
+              "y": 2958,
+              "width": 180,
+              "height": 136
+            },
+            "svg": {
+              "id": "169:2617",
+              "file": "assets/components/raster-film/169-2617.svg",
+              "bytes": 419,
+              "sha256": "5a1e6c2f75a2943f612e3e0de30979a8173183abfd4a4ced88ddadb334336ab8"
+            }
+          }
+        ]
+      },
+      "controls": [
+        [
+          "inject",
+          "Roll signal"
+        ],
+        [
+          "channel",
+          "Channel 02"
+        ],
+        [
+          "clear",
+          "Restore sync"
+        ]
+      ],
+      "kernels": {
+        "full": "7136161280294dd5876d996944e72d067c4dbc3a2d67f3939db04f34c1805514",
+        "native": "205b467bdf51e643a290ae74d4b440205bf35e713cb7b1db2aa847de0cb28d85"
+      }
+    },
+    {
+      "id": "vhs-tracking",
+      "kind": "vhs",
+      "C": "d-film-vhs-v4",
+      "photos": [
+        {
+          "photoId": "qINZ8zEYErY",
+          "imageId": "photo-1578664865136-74b450f31cd9",
+          "photographer": "Clayton Tonna",
+          "profile": "https://unsplash.com/@claytontonna",
+          "page": "https://unsplash.com/photos/shallow-focus-photo-of-body-of-water-qINZ8zEYErY",
+          "license": "Unsplash License",
+          "licenseUrl": "https://unsplash.com/license",
+          "free": true,
+          "verifiedAt": "2026-11-17",
+          "asset": "photo-sea",
+          "files": {
+            "full": {
+              "path": "assets/images/sea.webp",
+              "width": 1600,
+              "height": 1067,
+              "sha256": "4d2c5b68993fac35117039d98f29b29d6e52869238030a54c96beca323f5c5a3"
+            },
+            "tile": {
+              "path": "assets/images/sea-800.webp",
+              "width": 800,
+              "height": 533,
+              "sha256": "4cda89e9102d12aff9e285fbbe54d11d0ee1a05fecdad49a16545d775092c9cc"
+            }
+          },
+          "key": "sea"
+        }
+      ],
+      "file": "js/demos.raster.vhs.js",
+      "figmaNode": "169:2621",
+      "native": {
+        "photo": "roses",
+        "node": "169:2635",
+        "frame": "169:2634",
+        "width": 200,
+        "height": 150,
+        "left": 20,
+        "top": 8,
+        "radius": 14,
+        "svg": [
+          "169:2636",
+          "169:2637",
+          "169:2638"
+        ],
+        "photos": [
+          {
+            "photoId": "KQBsTXCvGwM",
+            "imageId": "photo-1516565349308-c76fe36a115c",
+            "photographer": "Alessio Soggetti",
+            "profile": "https://unsplash.com/@asoggetti",
+            "page": "https://unsplash.com/photos/red-roses-flower-arrangement-KQBsTXCvGwM",
+            "license": "Unsplash License",
+            "licenseUrl": "https://unsplash.com/license",
+            "free": true,
+            "verifiedAt": "2026-11-17",
+            "asset": "photo-roses",
+            "files": {
+              "full": {
+                "path": "assets/images/roses.webp",
+                "width": 1600,
+                "height": 1068,
+                "sha256": "72c3948010931c8b3cf85cf26f0c939c0c1c67b371b4f4229e66af42c48c84ac"
+              },
+              "tile": {
+                "path": "assets/images/roses-800.webp",
+                "width": 800,
+                "height": 534,
+                "sha256": "473e8a778608e1101aebafcb889ec2b6c9b62b3233f296c973397a96849ee22c"
+              }
+            }
+          }
+        ],
+        "slots": [
+          {
+            "id": "169:2636",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 0,
+            "width": 200,
+            "height": 150,
+            "absoluteBoundingBox": {
+              "x": 1388,
+              "y": 2952,
+              "width": 200,
+              "height": 150
+            },
+            "absoluteRenderBounds": {
+              "x": 1388,
+              "y": 2952,
+              "width": 200,
+              "height": 150
+            },
+            "svg": {
+              "id": "169:2636",
+              "file": "assets/components/raster-film/169-2636.svg",
+              "bytes": 203,
+              "sha256": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58"
+            }
+          },
+          {
+            "id": "169:2637",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 92,
+            "width": 200,
+            "height": 12,
+            "absoluteBoundingBox": {
+              "x": 1388,
+              "y": 3044,
+              "width": 200,
+              "height": 12
+            },
+            "absoluteRenderBounds": {
+              "x": 1388,
+              "y": 3042,
+              "width": 200,
+              "height": 16
+            },
+            "svg": {
+              "id": "169:2637",
+              "file": "assets/components/raster-film/169-2637.svg",
+              "bytes": 590,
+              "sha256": "18e11d2420a533b61d5591598cbfd7adbd29c0242dc848c36835e737c3cc5e63"
+            }
+          },
+          {
+            "id": "169:2638",
+            "name": "Frame",
+            "type": "FRAME",
+            "x": 0,
+            "y": 98,
+            "width": 200,
+            "height": 2,
+            "absoluteBoundingBox": {
+              "x": 1388,
+              "y": 3050,
+              "width": 200,
+              "height": 2
+            },
+            "absoluteRenderBounds": {
+              "x": 1388,
+              "y": 3050,
+              "width": 200,
+              "height": 2
+            },
+            "svg": {
+              "id": "169:2638",
+              "file": "assets/components/raster-film/169-2638.svg",
+              "bytes": 167,
+              "sha256": "77c5712d2ce0ec430ebcc1b287bc17ac7efb92a76541234f78eddcd179dd10d7"
+            }
+          }
+        ]
+      },
+      "controls": [
+        [
+          "inject",
+          "Lose tracking"
+        ],
+        [
+          "clear",
+          "Restore tape"
+        ]
+      ],
+      "kernels": {
+        "full": "c11c8042cbdf99584e35bdd9a7ebddeab971c6b3879d7f9c3a4ffd5f715eefbc",
+        "native": "eeb493b29a04afa994477b4001e4f056c0ac99f30beba899b1593e735736fe9f"
+      }
+    }
+  ],
+  "svgs": [
+    {
+      "id": "169:2554",
+      "file": "assets/components/raster-film/169-2554.svg",
+      "bytes": 203,
+      "sha256": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58"
+    },
+    {
+      "id": "169:2583",
+      "file": "assets/components/raster-film/169-2583.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2584",
+      "file": "assets/components/raster-film/169-2584.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2585",
+      "file": "assets/components/raster-film/169-2585.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2586",
+      "file": "assets/components/raster-film/169-2586.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2587",
+      "file": "assets/components/raster-film/169-2587.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2588",
+      "file": "assets/components/raster-film/169-2588.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2589",
+      "file": "assets/components/raster-film/169-2589.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2590",
+      "file": "assets/components/raster-film/169-2590.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2591",
+      "file": "assets/components/raster-film/169-2591.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2592",
+      "file": "assets/components/raster-film/169-2592.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2593",
+      "file": "assets/components/raster-film/169-2593.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2594",
+      "file": "assets/components/raster-film/169-2594.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2595",
+      "file": "assets/components/raster-film/169-2595.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2596",
+      "file": "assets/components/raster-film/169-2596.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2597",
+      "file": "assets/components/raster-film/169-2597.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2598",
+      "file": "assets/components/raster-film/169-2598.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2599",
+      "file": "assets/components/raster-film/169-2599.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2600",
+      "file": "assets/components/raster-film/169-2600.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2601",
+      "file": "assets/components/raster-film/169-2601.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2602",
+      "file": "assets/components/raster-film/169-2602.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2603",
+      "file": "assets/components/raster-film/169-2603.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2604",
+      "file": "assets/components/raster-film/169-2604.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2605",
+      "file": "assets/components/raster-film/169-2605.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2606",
+      "file": "assets/components/raster-film/169-2606.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2607",
+      "file": "assets/components/raster-film/169-2607.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2608",
+      "file": "assets/components/raster-film/169-2608.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2609",
+      "file": "assets/components/raster-film/169-2609.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2610",
+      "file": "assets/components/raster-film/169-2610.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2611",
+      "file": "assets/components/raster-film/169-2611.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2612",
+      "file": "assets/components/raster-film/169-2612.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2613",
+      "file": "assets/components/raster-film/169-2613.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2614",
+      "file": "assets/components/raster-film/169-2614.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2615",
+      "file": "assets/components/raster-film/169-2615.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2616",
+      "file": "assets/components/raster-film/169-2616.svg",
+      "bytes": 169,
+      "sha256": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1"
+    },
+    {
+      "id": "169:2617",
+      "file": "assets/components/raster-film/169-2617.svg",
+      "bytes": 419,
+      "sha256": "5a1e6c2f75a2943f612e3e0de30979a8173183abfd4a4ced88ddadb334336ab8"
+    },
+    {
+      "id": "169:2636",
+      "file": "assets/components/raster-film/169-2636.svg",
+      "bytes": 203,
+      "sha256": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58"
+    },
+    {
+      "id": "169:2637",
+      "file": "assets/components/raster-film/169-2637.svg",
+      "bytes": 590,
+      "sha256": "18e11d2420a533b61d5591598cbfd7adbd29c0242dc848c36835e737c3cc5e63"
+    },
+    {
+      "id": "169:2638",
+      "file": "assets/components/raster-film/169-2638.svg",
+      "bytes": 167,
+      "sha256": "77c5712d2ce0ec430ebcc1b287bc17ac7efb92a76541234f78eddcd179dd10d7"
+    }
+  ],
+  "originalSVGs": 39,
+  "models": {
+    "file": "tools/fixtures/raster-film-original-models.json",
+    "sha256": "b08a035eb1f24f49a8f2326cc3dba5f904c20d99ad3452022bcc19e595eff150",
+    "cases": 28
+  },
+  "exportSettings": {
+    "format": "SVG_STRING",
+    "useAbsoluteBounds": true,
+    "svgOutlineText": true
+  },
+  "scope": "Exact v4 first poses, five macroblock photo crops and 39 unchanged original overlay SVGs. Active compact corruption projects the complete original feedback buffer through the five exact crop windows. Tracking retains the complete original model at native resolution. CRT uses all original curved strips and wrapped roll under its exact scanline/vignette artwork. Full retains all original fields and channels with approved v2 photography. Native CRT reference geometry is verified through a separate literal-original 180×136 capture."
+}

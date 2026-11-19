@@ -1,0 +1,3312 @@
+{
+  "recordedAt": "2026-11-19T23:15:33.059Z",
+  "localDate": "2026-11-20",
+  "timeZone": "Asia/Dhaka",
+  "cases": 24,
+  "timingGatePassed": false,
+  "sourceHashes": {
+    "js/demos.raster.datamosh.js": "68c3204c0f92bfdc42883db3e25271c3c51943e631e699ec0938db9a4253afdf",
+    "js/demos.raster.crt.js": "7a3f48e2257a85cd4f8827cdfccec58dd38a08cac4730a9b354f0cce672a5ed9",
+    "js/demos.raster.vhs.js": "7044626058ad1d303daba56630060b88ebe11aec5fc9b063f549c920fdd65912",
+    "tools/fixtures/raster-film-artwork.json": "aef30ee1eaa832867b5eddb5fd2b89e3f6c0a3967e273be3f8e262c4c591b0e7",
+    "tools/fixtures/raster-film-original-models.json": "b08a035eb1f24f49a8f2326cc3dba5f904c20d99ad3452022bcc19e595eff150",
+    "tools/verification/raster-film-harness.js": "9ef89eaeb0a22125450090245f8fc11c1a77152f8129548086c222815f639513",
+    "tools/verification/raster-film-original.js": "6865df25432c7b5d3800d92710faf26b956265bb432048c1991c65bcf0f38e55",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "8989c1921e7643f56fa8c4e41dbf3633a775821f9903f692d9ad842761356191",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "registry/index.json": "897a3c5600532eb954246731b41def00cda4cf95d80dccda09d52162efa37b40",
+    "tools/profile-raster-film.js": "ca81d0deb2afe22c4c78769bafd93cc1d4550743483797abfbf0e344e94e92c6",
+    "assets/components/raster-film/169-2554.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-film/169-2583.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2584.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2585.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2586.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2587.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2588.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2589.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2590.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2591.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2592.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2593.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2594.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2595.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2596.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2597.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2598.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2599.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2600.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2601.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2602.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2603.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2604.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2605.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2606.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2607.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2608.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2609.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2610.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2611.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2612.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2613.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2614.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2615.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2616.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2617.svg": "5a1e6c2f75a2943f612e3e0de30979a8173183abfd4a4ced88ddadb334336ab8",
+    "assets/components/raster-film/169-2636.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-film/169-2637.svg": "18e11d2420a533b61d5591598cbfd7adbd29c0242dc848c36835e737c3cc5e63",
+    "assets/components/raster-film/169-2638.svg": "77c5712d2ce0ec430ebcc1b287bc17ac7efb92a76541234f78eddcd179dd10d7",
+    "assets/images/ocean.webp": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb",
+    "assets/images/ocean-800.webp": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9",
+    "assets/images/trails.webp": "b303a1a9d97b005fcfad7a060b87b0e6f98bff82bee882a46680af58f8b21c07",
+    "assets/images/trails-800.webp": "851845942fcefcaf7bc876178c237cb1e7d15122f93341e6b0037d323f87b47f",
+    "assets/images/archGrid.webp": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f",
+    "assets/images/archGrid-800.webp": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde",
+    "assets/images/cityTeal.webp": "ce35cf5a5a093a096e0c5f9bd06fb042d39cbb33f4155da6653714f32a4a6bdc",
+    "assets/images/cityTeal-800.webp": "dff6a935070ba084a5b74106e1ad2214c975b3ae2ae2872ad60571844597de88",
+    "assets/images/sea.webp": "4d2c5b68993fac35117039d98f29b29d6e52869238030a54c96beca323f5c5a3",
+    "assets/images/sea-800.webp": "4cda89e9102d12aff9e285fbbe54d11d0ee1a05fecdad49a16545d775092c9cc",
+    "assets/images/roses.webp": "72c3948010931c8b3cf85cf26f0c939c0c1c67b371b4f4229e66af42c48c84ac",
+    "assets/images/roses-800.webp": "473e8a778608e1101aebafcb889ec2b6c9b62b3233f296c973397a96849ee22c",
+    "assets/images/atlantic-shore.webp": "2c5f2bb09430f7f034361edbf35d353faece6b6644dbba20fdcf2e37651252c9",
+    "assets/images/limestone-pavilion.webp": "725ec11fb11897600b5ad908e3bcb566ceae646bf29316f4b72607f9d72b9fb8",
+    "assets/images/coastal-stack.webp": "7b80eff846a8a21b5a2fdeba9f3d5dd960a4384bb8268195f8b6d09be35a586d"
+  },
+  "sourceReports": [
+    {
+      "cpu": 1,
+      "file": ".artifacts/raster-film/performance-cpu1-1795129747700.json",
+      "sha256": "a4e4926d7118bab35b672c49d8ca593215bed4a634d017db7be70e2ccea075ae"
+    },
+    {
+      "cpu": 4,
+      "file": ".artifacts/raster-film/performance-cpu4-1795129868923.json",
+      "sha256": "a2eec4a50eb668aa2bb60d28694c725191e4328ef0ff712c3e70aa86a7ff01d0"
+    }
+  ],
+  "summary": [
+    {
+      "cpu": 1,
+      "mode": "thumb",
+      "cases": 6,
+      "fps": [
+        60.001995908387805,
+        60.00225008437817
+      ],
+      "firstPaintMS": [
+        23.19999999552965,
+        37.79999999701977
+      ],
+      "readinessMS": [
+        34.399999998509884,
+        72.89999999850988
+      ],
+      "maxP95MS": 16.799999999999272,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 1,
+      "mode": "full",
+      "cases": 6,
+      "fps": [
+        59.87724539670238,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        22.80000000447035,
+        75.29999999701977
+      ],
+      "readinessMS": [
+        56.899999998509884,
+        238.59999999403954
+      ],
+      "maxP95MS": 16.799999999999727,
+      "slowCases": 1,
+      "slowIntervals": 1,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "thumb",
+      "cases": 6,
+      "fps": [
+        59.126478161954054,
+        60.0030001500075
+      ],
+      "firstPaintMS": [
+        79.69999999552965,
+        108.20000000298023
+      ],
+      "readinessMS": [
+        131.79999999701977,
+        207.20000000298023
+      ],
+      "maxP95MS": 16.799999999999955,
+      "slowCases": 2,
+      "slowIntervals": 7,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "full",
+      "cases": 6,
+      "fps": [
+        21.08178234619031,
+        60.00225008437816
+      ],
+      "firstPaintMS": [
+        82.59999999403954,
+        139.60000000149012
+      ],
+      "readinessMS": [
+        247.10000000149012,
+        476.8999999985099
+      ],
+      "maxP95MS": 83.40000000000009,
+      "slowCases": 4,
+      "slowIntervals": 178,
+      "longTasks": 70,
+      "firstPaintOver300MS": 0
+    }
+  ],
+  "results": [
+    {
+      "kind": "mosh",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 34.399999998509884,
+        "firstPaint": 25.099999994039536
+      },
+      "motion": {
+        "duration": 8009.10000000149,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.69999999552965
+          },
+          {
+            "name": "input",
+            "at": 408.69999999552965
+          },
+          {
+            "name": "release",
+            "at": 1808.5999999955297
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.5999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3608.49999999553
+          },
+          {
+            "name": "leave",
+            "at": 5008.49999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5115121641135615,
+            "y": 0.3998917592607507
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6933.33333333337,
+          "lastCorrupt": 7933.3333333333885,
+          "clock": 8016.666666666723,
+          "nextAuto": 10793.33333333337,
+          "dirty": true,
+          "lastDraw": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-thumb-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "ea1c480b17fd7d017f45c45925b3fd848725e3b64995db9b0809a45bbe4ac375",
+        "events": 17636
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 55.79999999701977,
+        "firstPaint": 24.299999997019768
+      },
+      "motion": {
+        "duration": 8010.20000000298,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.90000000298022
+          },
+          {
+            "name": "input",
+            "at": 408.80000000298025
+          },
+          {
+            "name": "release",
+            "at": 1808.8000000029801
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.7000000029802
+          },
+          {
+            "name": "settle",
+            "at": 3608.7000000029802
+          },
+          {
+            "name": "leave",
+            "at": 5008.70000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 180,
+          "height": 136,
+          "dpr": 1,
+          "channel": 2,
+          "pointerX": 0.5114722302005495,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8016.666666666723,
+          "nextRoll": 9736.666666666657,
+          "dirty": true,
+          "lastDraw": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-thumb-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "b3a3b696b11b56e515d49151f511cf6319f39fdad12bc95e3ba0c11371b88407",
+        "events": 24670
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 54.70000000298023,
+        "firstPaint": 30.100000001490116
+      },
+      "motion": {
+        "duration": 8014.10000000149,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.10000000149012
+          },
+          {
+            "name": "input",
+            "at": 412.20000000149014
+          },
+          {
+            "name": "release",
+            "at": 1812.1000000014901
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.10000000149
+          },
+          {
+            "name": "settle",
+            "at": 3612.00000000149
+          },
+          {
+            "name": "leave",
+            "at": 5012.00000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5101142146765766,
+            "y": 0.3993095864629976
+          },
+          "intensity": 1.047282234567135,
+          "bands": [
+            {
+              "y": 23.439037147909403,
+              "height": 33.29224808048457,
+              "amplitude": 15.3145192791868,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 26.570660951547325,
+              "height": 40.912941632792354,
+              "amplitude": 9.339292251585956,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 35.72145205414361,
+              "height": 26.62481381231919,
+              "amplitude": 16.01994337291498,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 95.27623611925608,
+              "height": 22.67641470208764,
+              "amplitude": 8.550661459394496,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7966.666666666722,
+          "clock": 8033.33333333339,
+          "nextTracking": 12706.666666666722,
+          "dirty": false,
+          "lastDraw": 8033.33333333339,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-thumb-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "cd280d85a7a1daf1074a9c38fbcf4d8ec1944c135ce5bbed75a6d23560389f72",
+        "events": 16689
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 54.399999998509884,
+        "firstPaint": 25.5
+      },
+      "motion": {
+        "duration": 8013.29999999702,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212
+          },
+          {
+            "name": "input",
+            "at": 412.1
+          },
+          {
+            "name": "release",
+            "at": 1812
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.9
+          },
+          {
+            "name": "settle",
+            "at": 3611.9
+          },
+          {
+            "name": "leave",
+            "at": 5011.8
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "focus": {
+            "x": 0.5101941115030771,
+            "y": 0.39934277961025944
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6950.000000000037,
+          "lastCorrupt": 7950.0000000000555,
+          "clock": 8033.33333333339,
+          "nextAuto": 10810.000000000036,
+          "dirty": false,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-thumb-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "620ec658a62f07cd86b726b9cca752f38e09258fd5fd7ee23c6e6f30bf928b72",
+        "events": 17663
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 72.89999999850988,
+        "firstPaint": 37.79999999701977
+      },
+      "motion": {
+        "duration": 8016.60000000149,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 215.8999999970198
+          },
+          {
+            "name": "input",
+            "at": 415.8999999970198
+          },
+          {
+            "name": "release",
+            "at": 1815.8999999970197
+          },
+          {
+            "name": "interrupt",
+            "at": 2415.7999999970198
+          },
+          {
+            "name": "settle",
+            "at": 3615.7999999970198
+          },
+          {
+            "name": "leave",
+            "at": 5015.699999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 180,
+          "height": 136,
+          "dpr": 2,
+          "channel": 2,
+          "pointerX": 0.5086758074755847,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8016.666666666723,
+          "nextRoll": 9736.666666666657,
+          "dirty": true,
+          "lastDraw": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-thumb-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "49e48d8036b9f0433aade93b9cba976bc8ffe5ceddde7d77c067e8eecd9ed21b",
+        "events": 24702
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 42.19999999552965,
+        "firstPaint": 23.19999999552965
+      },
+      "motion": {
+        "duration": 8016.20000000298,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.39999999999998
+          },
+          {
+            "name": "input",
+            "at": 413.4
+          },
+          {
+            "name": "release",
+            "at": 1813.4
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.4
+          },
+          {
+            "name": "settle",
+            "at": 3613.2
+          },
+          {
+            "name": "leave",
+            "at": 5013.2
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "focus": {
+            "x": 0.5096348001854196,
+            "y": 0.3991106161006319
+          },
+          "intensity": 1.046937056133502,
+          "bands": [
+            {
+              "y": 23.439037147909403,
+              "height": 33.29224808048457,
+              "amplitude": 15.30947169831304,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 26.570660951547325,
+              "height": 40.912941632792354,
+              "amplitude": 9.336214072500855,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 35.69160649978876,
+              "height": 26.62481381231919,
+              "amplitude": 16.014663288160524,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 95.24639056490123,
+              "height": 22.67641470208764,
+              "amplitude": 8.547843208657817,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-thumb-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "300ea129bd67c34927f320777b7d0b9ffd4978884b31c1dc640be678975fd548",
+        "events": 16682
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 83.39999999850988,
+        "firstPaint": 61.899999998509884
+      },
+      "motion": {
+        "duration": 8014,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.6999999985099
+          },
+          {
+            "name": "input",
+            "at": 412.59999999850993
+          },
+          {
+            "name": "release",
+            "at": 1812.59999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.5999999985097
+          },
+          {
+            "name": "settle",
+            "at": 3612.49999999851
+          },
+          {
+            "name": "leave",
+            "at": 5012.49999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5099144655610184,
+            "y": 0.39922664285575904
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6950.000000000037,
+          "lastCorrupt": 7950.0000000000555,
+          "clock": 8033.33333333339,
+          "nextAuto": 10810.000000000036,
+          "dirty": false,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-full-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "80ba0a1acb3a355544f9962d773ccc1fdfbbb53f820f4aab16bb25fe39e0c8ae",
+        "events": 33141
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 103,
+        "firstPaint": 75.29999999701977
+      },
+      "motion": {
+        "duration": 8010.79999999702,
+        "frames": 479,
+        "fps": 59.87724539670238,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 145,
+            "ms": 33.40000000000009
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.39999999403955
+          },
+          {
+            "name": "input",
+            "at": 409.3999999940395
+          },
+          {
+            "name": "release",
+            "at": 1809.2999999940396
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.2999999940394
+          },
+          {
+            "name": "settle",
+            "at": 3609.2999999940394
+          },
+          {
+            "name": "leave",
+            "at": 5009.19999999404
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "channel": 2,
+          "pointerX": 0.511232617163136,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8050.000000000057,
+          "nextRoll": 9736.666666666657,
+          "dirty": true,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-full-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "e4e91a9e9fd55f14abf7291b1c68272bcd8f48da4984401e94a70f0d62252224",
+        "events": 34195
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 63.69999999552965,
+        "firstPaint": 32.29999999701977
+      },
+      "motion": {
+        "duration": 8014.5999999940395,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.69999999701975
+          },
+          {
+            "name": "input",
+            "at": 412.5999999970197
+          },
+          {
+            "name": "release",
+            "at": 1812.5999999970197
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.59999999702
+          },
+          {
+            "name": "settle",
+            "at": 3612.4999999970196
+          },
+          {
+            "name": "leave",
+            "at": 5012.49999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5099544161845128,
+            "y": 0.3992432270892398
+          },
+          "intensity": 1.0471671796528492,
+          "bands": [
+            {
+              "y": 43.19479702971876,
+              "height": 33.29224808048457,
+              "amplitude": 15.312836818962769,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 48.965932324994355,
+              "height": 40.912941632792354,
+              "amplitude": 9.338266232587419,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 63.804543357902844,
+              "height": 26.62481381231919,
+              "amplitude": 16.01818341447131,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 170.20909088757048,
+              "height": 22.67641470208764,
+              "amplitude": 8.549722079742264,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-full-desktop-cpu1-1795129747700-trace.json",
+        "sha256": "d8098b9f873d290ede27661abc1dbfd4c5bdeaddd4cf3aed67f84446a1d16b0f",
+        "events": 33295
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 238.59999999403954,
+        "firstPaint": 38
+      },
+      "motion": {
+        "duration": 8002.19999999553,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.10000000149012
+          },
+          {
+            "name": "input",
+            "at": 401.1000000014901
+          },
+          {
+            "name": "release",
+            "at": 1801.0000000014902
+          },
+          {
+            "name": "interrupt",
+            "at": 2401.00000000149
+          },
+          {
+            "name": "settle",
+            "at": 3600.9000000014903
+          },
+          {
+            "name": "leave",
+            "at": 5000.80000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "focus": {
+            "x": 0.514585570851482,
+            "y": 0.40118213301202094
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 7016.666666666705,
+          "lastCorrupt": 8016.666666666723,
+          "clock": 8100.000000000058,
+          "nextAuto": 10876.666666666704,
+          "dirty": false,
+          "lastDraw": 8100.000000000058
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-full-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "14f948acaf0e1554e5e607fa7670c24c99006b18bfaa79b8940e34836a0f2747",
+        "events": 33306
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 66.39999999850988,
+        "firstPaint": 22.80000000447035
+      },
+      "motion": {
+        "duration": 8003,
+        "frames": 480,
+        "fps": 60.00150003750094,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.00000000447034
+          },
+          {
+            "name": "input",
+            "at": 401.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1800.9000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.9000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3600.9000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5000.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "channel": 2,
+          "pointerX": 0.514585570850293,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8000.000000000056,
+          "nextRoll": 9736.666666666657,
+          "dirty": false,
+          "lastDraw": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-full-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "57c1ff794fd84d2edcad90c81268e94afa827ca8fd6459fe8527033dca89e591",
+        "events": 34084
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 56.899999998509884,
+        "firstPaint": 25.899999998509884
+      },
+      "motion": {
+        "duration": 8016.39999999851,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 215.59999999850987
+          },
+          {
+            "name": "input",
+            "at": 415.59999999850993
+          },
+          {
+            "name": "release",
+            "at": 1815.4999999985098
+          },
+          {
+            "name": "interrupt",
+            "at": 2415.49999999851
+          },
+          {
+            "name": "settle",
+            "at": 3615.49999999851
+          },
+          {
+            "name": "leave",
+            "at": 5015.39999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "focus": {
+            "x": 0.508755731473715,
+            "y": 0.39874667811986475
+          },
+          "intensity": 1.0463041266610749,
+          "bands": [
+            {
+              "y": 43.19479702971876,
+              "height": 33.29224808048457,
+              "amplitude": 15.300216303455837,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 48.965932324994355,
+              "height": 40.912941632792354,
+              "amplitude": 9.330569831509711,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 63.67146823411032,
+              "height": 26.62481381231919,
+              "amplitude": 16.00498156725219,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 170.07601576377795,
+              "height": 22.67641470208764,
+              "amplitude": 8.542675580039887,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-full-mobile-cpu1-1795129747700-trace.json",
+        "sha256": "047c72b6510781fbda8556a9fe7ddbe90789b7a2989f284816a1fc8a8574b3ce",
+        "events": 33157
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 131.79999999701977,
+        "firstPaint": 79.69999999552965
+      },
+      "motion": {
+        "duration": 8012.5,
+        "frames": 480,
+        "fps": 60.00150003750094,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.59999999701978
+          },
+          {
+            "name": "input",
+            "at": 409.5999999970197
+          },
+          {
+            "name": "release",
+            "at": 1809.59999999702
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.59999999702
+          },
+          {
+            "name": "settle",
+            "at": 3609.4999999970196
+          },
+          {
+            "name": "leave",
+            "at": 5009.49999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5111527425368075,
+            "y": 0.3997417961284092
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6933.33333333337,
+          "lastCorrupt": 7933.3333333333885,
+          "clock": 8033.33333333339,
+          "nextAuto": 10793.33333333337,
+          "dirty": false,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-thumb-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "dd5b8458f927a72326f4e6a0ec3e6b396999764323a835c0425f272e92245016",
+        "events": 17734
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 207.20000000298023,
+        "firstPaint": 108.20000000298023
+      },
+      "motion": {
+        "duration": 8009.19999999553,
+        "frames": 479,
+        "fps": 59.87724539670238,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 145,
+            "ms": 33.40000000000009
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 205.70000000000005
+          },
+          {
+            "name": "input",
+            "at": 405.70000000000005
+          },
+          {
+            "name": "release",
+            "at": 1805.6999999999998
+          },
+          {
+            "name": "interrupt",
+            "at": 2405.6
+          },
+          {
+            "name": "settle",
+            "at": 3605.6
+          },
+          {
+            "name": "leave",
+            "at": 5005.5
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 180,
+          "height": 136,
+          "dpr": 1,
+          "channel": 2,
+          "pointerX": 0.512709960107181,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8050.000000000057,
+          "nextRoll": 9736.666666666657,
+          "dirty": true,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-thumb-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "4fffe9cbf98f7e2fec416419a90eef7760a12b4fb1a13e8d9a51ada70d3e9a30",
+        "events": 32398
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 167.5,
+        "firstPaint": 104.60000000149012
+      },
+      "motion": {
+        "duration": 8016.5,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.8999999955297
+          },
+          {
+            "name": "input",
+            "at": 409.8999999955297
+          },
+          {
+            "name": "release",
+            "at": 1809.8999999955295
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.7999999955296
+          },
+          {
+            "name": "settle",
+            "at": 3609.7999999955296
+          },
+          {
+            "name": "leave",
+            "at": 5009.69999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5110329272578662,
+            "y": 0.3996918486061522
+          },
+          "intensity": 1.0479437076256637,
+          "bands": [
+            {
+              "y": 23.439037147909403,
+              "height": 33.29224808048457,
+              "amplitude": 15.324192069933305,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 26.570660951547325,
+              "height": 40.912941632792354,
+              "amplitude": 9.345191034174112,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 35.778791375616805,
+              "height": 26.62481381231919,
+              "amplitude": 16.030061715984857,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 95.33357544072928,
+              "height": 22.67641470208764,
+              "amplitude": 8.556062135545874,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7966.666666666722,
+          "clock": 8033.33333333339,
+          "nextTracking": 12706.666666666722,
+          "dirty": false,
+          "lastDraw": 8033.33333333339,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-thumb-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "a36dc6751dd0bd96085f72826ca5691fa2fc0d8e6c4057180fd0c3e62a0df4a7",
+        "events": 17821
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 140,
+        "firstPaint": 83.79999999701977
+      },
+      "motion": {
+        "duration": 8011.5999999940395,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.59999999403954
+          },
+          {
+            "name": "input",
+            "at": 409.4999999940395
+          },
+          {
+            "name": "release",
+            "at": 1809.5999999940395
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.4999999940396
+          },
+          {
+            "name": "settle",
+            "at": 3609.3999999940397
+          },
+          {
+            "name": "leave",
+            "at": 5009.39999999404
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "focus": {
+            "x": 0.5111527425379976,
+            "y": 0.3997417961289055
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6950.000000000037,
+          "lastCorrupt": 7950.0000000000555,
+          "clock": 8033.33333333339,
+          "nextAuto": 10810.000000000036,
+          "dirty": false,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-thumb-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "353cd1161d0c7c1b39fe60b57f151ffdee13fdbe61b22fb073798716f4297c67",
+        "events": 17695
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 177.29999999701977,
+        "firstPaint": 101.29999999701977
+      },
+      "motion": {
+        "duration": 8008.5,
+        "frames": 473,
+        "fps": 59.126478161954054,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 52,
+            "ms": 50.09999999999991
+          },
+          {
+            "frame": 53,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 54,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 55,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 57,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 139,
+            "ms": 33.40000000000009
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 205.4999999985099
+          },
+          {
+            "name": "input",
+            "at": 405.4999999985099
+          },
+          {
+            "name": "release",
+            "at": 1805.3999999985099
+          },
+          {
+            "name": "interrupt",
+            "at": 2405.29999999851
+          },
+          {
+            "name": "settle",
+            "at": 3605.29999999851
+          },
+          {
+            "name": "leave",
+            "at": 5005.2999999985095
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 180,
+          "height": 136,
+          "dpr": 2,
+          "channel": 2,
+          "pointerX": 0.4928400609859201,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 8016.666666666723,
+          "nextRoll": 9736.666666666657,
+          "dirty": true,
+          "lastDraw": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-thumb-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "648a3281b4bfa999ba1a2e56c8babf46c6279ac1ccca11f697709c15f7b8d3d3",
+        "events": 31921
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 146.70000000298023,
+        "firstPaint": 90.20000000298023
+      },
+      "motion": {
+        "duration": 8019.10000000149,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.89999999999998
+          },
+          {
+            "name": "input",
+            "at": 409.9
+          },
+          {
+            "name": "release",
+            "at": 1809.8000000000002
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.8
+          },
+          {
+            "name": "settle",
+            "at": 3609.8
+          },
+          {
+            "name": "leave",
+            "at": 5009.7
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "focus": {
+            "x": 0.5110329272560807,
+            "y": 0.39969184860540813
+          },
+          "intensity": 1.0479437076243783,
+          "bands": [
+            {
+              "y": 23.439037147909403,
+              "height": 33.29224808048457,
+              "amplitude": 15.324192069914508,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 26.570660951547325,
+              "height": 40.912941632792354,
+              "amplitude": 9.34519103416265,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 35.77879137550519,
+              "height": 26.62481381231919,
+              "amplitude": 16.030061715965196,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 95.33357544061766,
+              "height": 22.67641470208764,
+              "amplitude": 8.55606213553538,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-thumb-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "bdbdc29b0e832faf1d5c93564a81699903e46d31425a0d4b0e2965998631e213",
+        "events": 18201
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 273.3999999985099,
+        "firstPaint": 83.79999999701977
+      },
+      "motion": {
+        "duration": 8008,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 203.79999999701977
+          },
+          {
+            "name": "input",
+            "at": 403.79999999701977
+          },
+          {
+            "name": "release",
+            "at": 1803.6999999970199
+          },
+          {
+            "name": "interrupt",
+            "at": 2403.69999999702
+          },
+          {
+            "name": "settle",
+            "at": 3603.69999999702
+          },
+          {
+            "name": "leave",
+            "at": 5003.699999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5134683303052876,
+            "y": 0.4007113870950048
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6950.000000000037,
+          "lastCorrupt": 7950.0000000000555,
+          "clock": 8033.33333333339,
+          "nextAuto": 10810.000000000036,
+          "dirty": false,
+          "lastDraw": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-full-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "bc1ef692b207cee13fddfc5714685b5833f4265b25dac0294b3c10db73496acd",
+        "events": 33203
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 267.8999999985099,
+        "firstPaint": 82.59999999403954
+      },
+      "motion": {
+        "duration": 8016.39999999851,
+        "frames": 475,
+        "fps": 59.377226645999215,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 145,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 146,
+            "ms": 33.40000000000009
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 2410.60000000149,
+            "duration": 92
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.69999999552965
+          },
+          {
+            "name": "input",
+            "at": 409.69999999552965
+          },
+          {
+            "name": "release",
+            "at": 1809.5999999955297
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.5999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3609.49999999553
+          },
+          {
+            "name": "leave",
+            "at": 5009.49999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "channel": 2,
+          "pointerX": 0.5111128045548703,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 7966.666666666722,
+          "nextRoll": 9736.666666666657,
+          "dirty": false,
+          "lastDraw": 7966.666666666722
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-full-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "ec23074c179a09112a7e149cf632f1afed4939ff211891e98b3e807ef59293a5",
+        "events": 34432
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 247.10000000149012,
+        "firstPaint": 87.79999999701977
+      },
+      "motion": {
+        "duration": 8007.39999999851,
+        "frames": 476,
+        "fps": 59.50297514875744,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 176,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 177,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 178,
+            "ms": 50.09999999999991
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 2988,
+            "duration": 53
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 200.9999999955296
+          },
+          {
+            "name": "input",
+            "at": 400.9999999955296
+          },
+          {
+            "name": "release",
+            "at": 1800.8999999955295
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.8999999955295
+          },
+          {
+            "name": "settle",
+            "at": 3600.8999999955295
+          },
+          {
+            "name": "leave",
+            "at": 5000.79999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "focus": {
+            "x": 0.5145855708538598,
+            "y": 0.4011821330130248
+          },
+          "intensity": 1.0505016110147791,
+          "bands": [
+            {
+              "y": 43.19479702971876,
+              "height": 33.29224808048457,
+              "amplitude": 15.361596562699381,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 48.965932324994355,
+              "height": 40.912941632792354,
+              "amplitude": 9.368001511153267,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 64.32417014547721,
+              "height": 26.62481381231919,
+              "amplitude": 16.069189150877282,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 170.72871767514482,
+              "height": 22.67641470208764,
+              "amplitude": 8.576946444669293,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-full-desktop-cpu4-1795129868923-trace.json",
+        "sha256": "a55dc302a9b288f26d8d751fd9e847db7d9d483529ee04886130282b6a8f9483",
+        "events": 33026
+      }
+    },
+    {
+      "kind": "mosh",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 476.8999999985099,
+        "firstPaint": 139.60000000149012
+      },
+      "motion": {
+        "duration": 8018,
+        "frames": 423,
+        "fps": 52.76748624677221,
+        "p95": 33.40000000000009,
+        "gaps": [
+          {
+            "frame": 2,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 3,
+            "ms": 50
+          },
+          {
+            "frame": 4,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 8,
+            "ms": 50
+          },
+          {
+            "frame": 9,
+            "ms": 66.60000000000002
+          },
+          {
+            "frame": 10,
+            "ms": 49.999999999999886
+          },
+          {
+            "frame": 11,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 12,
+            "ms": 50
+          },
+          {
+            "frame": 13,
+            "ms": 50
+          },
+          {
+            "frame": 14,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 17,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 31,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 32,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 34,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 37,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 39,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 40,
+            "ms": 50
+          },
+          {
+            "frame": 41,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 42,
+            "ms": 50
+          },
+          {
+            "frame": 43,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 45,
+            "ms": 83.19999999999982
+          },
+          {
+            "frame": 48,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 49,
+            "ms": 50
+          },
+          {
+            "frame": 54,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 56,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 66,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 68,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 93,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 156,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 162,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 181.29999999701977,
+            "duration": 56
+          },
+          {
+            "at": 238.39999999850988,
+            "duration": 61
+          },
+          {
+            "at": 300.59999999403954,
+            "duration": 57
+          },
+          {
+            "at": 358.09999999403954,
+            "duration": 60
+          },
+          {
+            "at": 465.79999999701977,
+            "duration": 51
+          },
+          {
+            "at": 583.5999999940395,
+            "duration": 61
+          },
+          {
+            "at": 1093.1999999955297,
+            "duration": 69
+          },
+          {
+            "at": 1163.1999999955297,
+            "duration": 56
+          },
+          {
+            "at": 1221.2999999970198,
+            "duration": 75
+          },
+          {
+            "at": 1297.7999999970198,
+            "duration": 59
+          },
+          {
+            "at": 1426.6999999955297,
+            "duration": 69
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 226.89999999850988
+          },
+          {
+            "name": "input",
+            "at": 410.19999999850984
+          },
+          {
+            "name": "release",
+            "at": 1810.0999999985097
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.0999999985097
+          },
+          {
+            "name": "settle",
+            "at": 3610.0999999985097
+          },
+          {
+            "name": "leave",
+            "at": 5009.99999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "focus": {
+            "x": 0.49759858842399163,
+            "y": 0.39422730459836086
+          },
+          "burstActive": false,
+          "staticPinned": false,
+          "burstId": 5,
+          "corruptionStep": 13,
+          "burstStart": 6983.333333333371,
+          "lastCorrupt": 7983.333333333389,
+          "clock": 8066.666666666724,
+          "nextAuto": 10843.333333333372,
+          "dirty": false,
+          "lastDraw": 8066.666666666724
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosh-full-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "56a9185f05a8efbc3660fbc58c7b9287cc85025b609f8386075766811006b0c1",
+        "events": 30157
+      }
+    },
+    {
+      "kind": "crt",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 399.40000000596046,
+        "firstPaint": 124
+      },
+      "motion": {
+        "duration": 8015.60000000149,
+        "frames": 169,
+        "fps": 21.08178234619031,
+        "p95": 83.40000000000009,
+        "gaps": [
+          {
+            "frame": 1,
+            "ms": 50.10000000000002
+          },
+          {
+            "frame": 2,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 3,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 4,
+            "ms": 50
+          },
+          {
+            "frame": 5,
+            "ms": 83.30000000000007
+          },
+          {
+            "frame": 6,
+            "ms": 66.69999999999993
+          },
+          {
+            "frame": 7,
+            "ms": 83.30000000000007
+          },
+          {
+            "frame": 8,
+            "ms": 50.10000000000002
+          },
+          {
+            "frame": 9,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 10,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 11,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 12,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 13,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 14,
+            "ms": 50
+          },
+          {
+            "frame": 15,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 16,
+            "ms": 50
+          },
+          {
+            "frame": 17,
+            "ms": 100.09999999999991
+          },
+          {
+            "frame": 18,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 19,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 20,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 21,
+            "ms": 66.79999999999995
+          },
+          {
+            "frame": 22,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 23,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 24,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 25,
+            "ms": 50
+          },
+          {
+            "frame": 26,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 27,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 28,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 29,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 30,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 31,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 32,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 33,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 34,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 35,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 36,
+            "ms": 50
+          },
+          {
+            "frame": 37,
+            "ms": 50
+          },
+          {
+            "frame": 38,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 39,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 40,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 41,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 42,
+            "ms": 50
+          },
+          {
+            "frame": 43,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 45,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 46,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 47,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 48,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 49,
+            "ms": 150
+          },
+          {
+            "frame": 50,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 51,
+            "ms": 50
+          },
+          {
+            "frame": 52,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 53,
+            "ms": 50.09999999999991
+          },
+          {
+            "frame": 54,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 55,
+            "ms": 50
+          },
+          {
+            "frame": 56,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 57,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 58,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 59,
+            "ms": 50
+          },
+          {
+            "frame": 60,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 61,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 62,
+            "ms": 100.09999999999991
+          },
+          {
+            "frame": 63,
+            "ms": 50
+          },
+          {
+            "frame": 64,
+            "ms": 83.20000000000027
+          },
+          {
+            "frame": 65,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 66,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 67,
+            "ms": 50
+          },
+          {
+            "frame": 68,
+            "ms": 83.39999999999964
+          },
+          {
+            "frame": 69,
+            "ms": 50
+          },
+          {
+            "frame": 70,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 71,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 72,
+            "ms": 99.90000000000055
+          },
+          {
+            "frame": 73,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 75,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 76,
+            "ms": 50
+          },
+          {
+            "frame": 77,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 78,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 79,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 80,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 81,
+            "ms": 50
+          },
+          {
+            "frame": 82,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 83,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 84,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 85,
+            "ms": 83.39999999999964
+          },
+          {
+            "frame": 86,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 87,
+            "ms": 83.40000000000055
+          },
+          {
+            "frame": 88,
+            "ms": 50
+          },
+          {
+            "frame": 89,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 90,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 91,
+            "ms": 100
+          },
+          {
+            "frame": 92,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 93,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 94,
+            "ms": 50
+          },
+          {
+            "frame": 95,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 96,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 97,
+            "ms": 50
+          },
+          {
+            "frame": 98,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 99,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 100,
+            "ms": 50
+          },
+          {
+            "frame": 101,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 102,
+            "ms": 50
+          },
+          {
+            "frame": 103,
+            "ms": 83.40000000000055
+          },
+          {
+            "frame": 104,
+            "ms": 50
+          },
+          {
+            "frame": 105,
+            "ms": 83.29999999999927
+          },
+          {
+            "frame": 106,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 107,
+            "ms": 83.19999999999982
+          },
+          {
+            "frame": 108,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 109,
+            "ms": 100
+          },
+          {
+            "frame": 110,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 111,
+            "ms": 66.70000000000073
+          },
+          {
+            "frame": 112,
+            "ms": 50
+          },
+          {
+            "frame": 113,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 114,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 115,
+            "ms": 50
+          },
+          {
+            "frame": 116,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 117,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 118,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 119,
+            "ms": 83.39999999999964
+          },
+          {
+            "frame": 120,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 121,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 122,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 123,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 125,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 128,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 131,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 132,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 135,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 136,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 139,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 142,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 144,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 146,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 147,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 148,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 151,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 155,
+            "ms": 33.400000000001455
+          },
+          {
+            "frame": 157,
+            "ms": 33.400000000001455
+          },
+          {
+            "frame": 160,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 163,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 164,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 165,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 168,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 169.60000000149012,
+            "duration": 77
+          },
+          {
+            "at": 248,
+            "duration": 64
+          },
+          {
+            "at": 319.3999999985099,
+            "duration": 87
+          },
+          {
+            "at": 458.6000000014901,
+            "duration": 74
+          },
+          {
+            "at": 584.3999999985099,
+            "duration": 75
+          },
+          {
+            "at": 659.8999999985099,
+            "duration": 59
+          },
+          {
+            "at": 723.7000000029802,
+            "duration": 80
+          },
+          {
+            "at": 804.3999999985099,
+            "duration": 51
+          },
+          {
+            "at": 863,
+            "duration": 69
+          },
+          {
+            "at": 932.3999999985099,
+            "duration": 57
+          },
+          {
+            "at": 995,
+            "duration": 90
+          },
+          {
+            "at": 1086.5,
+            "duration": 57
+          },
+          {
+            "at": 1148.2999999970198,
+            "duration": 71
+          },
+          {
+            "at": 1272.2999999970198,
+            "duration": 70
+          },
+          {
+            "at": 1421.5,
+            "duration": 81
+          },
+          {
+            "at": 1502.8999999985099,
+            "duration": 52
+          },
+          {
+            "at": 1558.8999999985099,
+            "duration": 57
+          },
+          {
+            "at": 1965.2000000029802,
+            "duration": 57
+          },
+          {
+            "at": 2239.10000000149,
+            "duration": 62
+          },
+          {
+            "at": 2445.5,
+            "duration": 133
+          },
+          {
+            "at": 2582.60000000149,
+            "duration": 64
+          },
+          {
+            "at": 2703.2999999970198,
+            "duration": 81
+          },
+          {
+            "at": 2835.39999999851,
+            "duration": 75
+          },
+          {
+            "at": 2911.5,
+            "duration": 58
+          },
+          {
+            "at": 2974.89999999851,
+            "duration": 79
+          },
+          {
+            "at": 3054.89999999851,
+            "duration": 50
+          },
+          {
+            "at": 3109,
+            "duration": 64
+          },
+          {
+            "at": 3223,
+            "duration": 73
+          },
+          {
+            "at": 3345.10000000149,
+            "duration": 88
+          },
+          {
+            "at": 3433.7000000029802,
+            "duration": 51
+          },
+          {
+            "at": 3488.39999999851,
+            "duration": 83
+          },
+          {
+            "at": 3572.39999999851,
+            "duration": 56
+          },
+          {
+            "at": 3634.7999999970198,
+            "duration": 88
+          },
+          {
+            "at": 3773.89999999851,
+            "duration": 78
+          },
+          {
+            "at": 3905.10000000149,
+            "duration": 74
+          },
+          {
+            "at": 4027.89999999851,
+            "duration": 83
+          },
+          {
+            "at": 4293.10000000149,
+            "duration": 66
+          },
+          {
+            "at": 4412.20000000298,
+            "duration": 61
+          },
+          {
+            "at": 4559.10000000149,
+            "duration": 61
+          },
+          {
+            "at": 4672.89999999851,
+            "duration": 83
+          },
+          {
+            "at": 4757,
+            "duration": 52
+          },
+          {
+            "at": 4813.89999999851,
+            "duration": 74
+          },
+          {
+            "at": 4940.70000000298,
+            "duration": 69
+          },
+          {
+            "at": 5061.60000000149,
+            "duration": 87
+          },
+          {
+            "at": 5204,
+            "duration": 70
+          },
+          {
+            "at": 5322,
+            "duration": 57
+          },
+          {
+            "at": 5467.20000000298,
+            "duration": 62
+          },
+          {
+            "at": 5619,
+            "duration": 69
+          },
+          {
+            "at": 5738,
+            "duration": 76
+          },
+          {
+            "at": 5864.5,
+            "duration": 81
+          },
+          {
+            "at": 5997.70000000298,
+            "duration": 71
+          },
+          {
+            "at": 6117.10000000149,
+            "duration": 93
+          },
+          {
+            "at": 6256.89999999851,
+            "duration": 68
+          },
+          {
+            "at": 6412.20000000298,
+            "duration": 74
+          },
+          {
+            "at": 6536.60000000149,
+            "duration": 58
+          },
+          {
+            "at": 6673.70000000298,
+            "duration": 71
+          },
+          {
+            "at": 6827.89999999851,
+            "duration": 54
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 242.3999999970198
+          },
+          {
+            "name": "input",
+            "at": 442.4999999970198
+          },
+          {
+            "name": "release",
+            "at": 1809.09999999702
+          },
+          {
+            "name": "interrupt",
+            "at": 2425.69999999702
+          },
+          {
+            "name": "settle",
+            "at": 3625.59999999702
+          },
+          {
+            "name": "leave",
+            "at": 5042.199999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "channel": 2,
+          "pointerX": 0.5312302025414771,
+          "targetWobble": 1,
+          "wobble": 1.0000000000000009,
+          "rollActive": false,
+          "staticPinned": false,
+          "rollStart": 4416.666666666658,
+          "clock": 6766.666666666701,
+          "nextRoll": 9736.666666666657,
+          "dirty": false,
+          "lastDraw": 6766.666666666701
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-crt-full-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "07e66899d957d3ea8660f4ea7bccb750c1f916e2732cd53a8e48287d71b889e7",
+        "events": 14821
+      }
+    },
+    {
+      "kind": "vhs",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 256.20000000298023,
+        "firstPaint": 92.5
+      },
+      "motion": {
+        "duration": 8004.89999999851,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.69999999850984
+          },
+          {
+            "name": "input",
+            "at": 401.69999999850984
+          },
+          {
+            "name": "release",
+            "at": 1801.5999999985097
+          },
+          {
+            "name": "interrupt",
+            "at": 2401.69999999851
+          },
+          {
+            "name": "settle",
+            "at": 3601.5999999985097
+          },
+          {
+            "name": "leave",
+            "at": 5001.49999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "focus": {
+            "x": 0.5143063022287633,
+            "y": 0.4010642844136244
+          },
+          "intensity": 1.0503005376047096,
+          "bands": [
+            {
+              "y": 43.19479702971876,
+              "height": 33.29224808048457,
+              "amplitude": 15.358656244881125,
+              "frequency": 0.10663965514861048,
+              "speed": 0.010284838514402508,
+              "phase": 3.549892523363961
+            },
+            {
+              "y": 48.965932324994355,
+              "height": 40.912941632792354,
+              "amplitude": 9.366208409658102,
+              "frequency": 0.10099498516647146,
+              "speed": 0.00644486572034657,
+              "phase": 0.7727044451674183
+            },
+            {
+              "y": 64.29258672083792,
+              "height": 26.62481381231919,
+              "amplitude": 16.066113394852028,
+              "frequency": 0.056680360852042214,
+              "speed": 0.007766149941831828,
+              "phase": 3.5851863714601144
+            },
+            {
+              "y": 170.69713425050554,
+              "height": 22.67641470208764,
+              "amplitude": 8.575304756687542,
+              "frequency": 0.060186276668682696,
+              "speed": 0.0075790233947336675,
+              "phase": 6.127810790955898
+            }
+          ],
+          "trackingActive": true,
+          "staticPinned": false,
+          "batchId": 5,
+          "trackingStart": 7950.0000000000555,
+          "clock": 8016.666666666723,
+          "nextTracking": 12690.000000000055,
+          "dirty": false,
+          "lastDraw": 8016.666666666723,
+          "envelope": 0.3239522935532187
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-vhs-full-mobile-cpu4-1795129868923-trace.json",
+        "sha256": "b1871b0c78e5f8d95e0fb65d9da83dbbe9a598d5b12008d1cd977111cf663214",
+        "events": 33168
+      }
+    }
+  ],
+  "findings": [
+    "CPU4 mobile full CRT and full Datamosh retain material frame gaps. The native scenes and unthrottled full scenes are separate measurements.",
+    "The original 32ms source paint cap remains intact. These are scheduler RAF measurements with source clocks and CDP trace bindings, not a claim that the original source cadence changed.",
+    "All cases contain complete eight-second real-time input stories. The source clock is recorded explicitly; slow scheduler intervals are capped by the existing host accumulator.",
+    "Font preparation precedes mounting. Public route and module-transfer costs remain part of the final audit. Measurements do not pass final timing gates."
+  ],
+  "scope": "Isolated emitted native/full film scenes, desktop DPR1 and mobile DPR2, CPU1/4. Eight-second interrupted input stories record actual scheduler RAF intervals, long tasks, FCP/readiness and CDP layout/paint/frame traces. The original 32ms source paint cap remains intact; scheduler FPS does not imply a different source render cadence. Fonts are prepared before mounting. No model snapshots or pixel readbacks occur per frame. Physical input is verified separately. Measurements exclude public route/module transfer and leave final timing gates open.",
+  "gitSourceHashes": {
+    "js/demos.raster.datamosh.js": "68c3204c0f92bfdc42883db3e25271c3c51943e631e699ec0938db9a4253afdf",
+    "js/demos.raster.crt.js": "7a3f48e2257a85cd4f8827cdfccec58dd38a08cac4730a9b354f0cce672a5ed9",
+    "js/demos.raster.vhs.js": "7044626058ad1d303daba56630060b88ebe11aec5fc9b063f549c920fdd65912",
+    "tools/fixtures/raster-film-artwork.json": "aef30ee1eaa832867b5eddb5fd2b89e3f6c0a3967e273be3f8e262c4c591b0e7",
+    "tools/fixtures/raster-film-original-models.json": "b08a035eb1f24f49a8f2326cc3dba5f904c20d99ad3452022bcc19e595eff150",
+    "tools/verification/raster-film-harness.js": "9ef89eaeb0a22125450090245f8fc11c1a77152f8129548086c222815f639513",
+    "tools/verification/raster-film-original.js": "6865df25432c7b5d3800d92710faf26b956265bb432048c1991c65bcf0f38e55",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/registry.js": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700",
+    "js/shell/router.js": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f",
+    "js/shell/views/detail.js": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "8989c1921e7643f56fa8c4e41dbf3633a775821f9903f692d9ad842761356191",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "registry/index.json": "897a3c5600532eb954246731b41def00cda4cf95d80dccda09d52162efa37b40",
+    "tools/profile-raster-film.js": "ca81d0deb2afe22c4c78769bafd93cc1d4550743483797abfbf0e344e94e92c6",
+    "assets/components/raster-film/169-2554.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-film/169-2583.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2584.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2585.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2586.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2587.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2588.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2589.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2590.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2591.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2592.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2593.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2594.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2595.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2596.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2597.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2598.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2599.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2600.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2601.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2602.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2603.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2604.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2605.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2606.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2607.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2608.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2609.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2610.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2611.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2612.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2613.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2614.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2615.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2616.svg": "d9a97be055b4240d9bacb8649921639200c2e50bcf72e9d2babaa3092dbf67f1",
+    "assets/components/raster-film/169-2617.svg": "5a1e6c2f75a2943f612e3e0de30979a8173183abfd4a4ced88ddadb334336ab8",
+    "assets/components/raster-film/169-2636.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-film/169-2637.svg": "18e11d2420a533b61d5591598cbfd7adbd29c0242dc848c36835e737c3cc5e63",
+    "assets/components/raster-film/169-2638.svg": "77c5712d2ce0ec430ebcc1b287bc17ac7efb92a76541234f78eddcd179dd10d7",
+    "assets/images/ocean.webp": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb",
+    "assets/images/ocean-800.webp": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9",
+    "assets/images/trails.webp": "b303a1a9d97b005fcfad7a060b87b0e6f98bff82bee882a46680af58f8b21c07",
+    "assets/images/trails-800.webp": "851845942fcefcaf7bc876178c237cb1e7d15122f93341e6b0037d323f87b47f",
+    "assets/images/archGrid.webp": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f",
+    "assets/images/archGrid-800.webp": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde",
+    "assets/images/cityTeal.webp": "ce35cf5a5a093a096e0c5f9bd06fb042d39cbb33f4155da6653714f32a4a6bdc",
+    "assets/images/cityTeal-800.webp": "dff6a935070ba084a5b74106e1ad2214c975b3ae2ae2872ad60571844597de88",
+    "assets/images/sea.webp": "4d2c5b68993fac35117039d98f29b29d6e52869238030a54c96beca323f5c5a3",
+    "assets/images/sea-800.webp": "4cda89e9102d12aff9e285fbbe54d11d0ee1a05fecdad49a16545d775092c9cc",
+    "assets/images/roses.webp": "72c3948010931c8b3cf85cf26f0c939c0c1c67b371b4f4229e66af42c48c84ac",
+    "assets/images/roses-800.webp": "473e8a778608e1101aebafcb889ec2b6c9b62b3233f296c973397a96849ee22c",
+    "assets/images/atlantic-shore.webp": "2c5f2bb09430f7f034361edbf35d353faece6b6644dbba20fdcf2e37651252c9",
+    "assets/images/limestone-pavilion.webp": "725ec11fb11897600b5ad908e3bcb566ceae646bf29316f4b72607f9d72b9fb8",
+    "assets/images/coastal-stack.webp": "7b80eff846a8a21b5a2fdeba9f3d5dd960a4384bb8268195f8b6d09be35a586d"
+  },
+  "checkoutLineEndings": {
+    "policy": "Measured sourceHashes bind the actual Windows checkout. gitSourceHashes bind the unchanged Git blobs; listed text files differ only by CRLF versus LF. All newly changed source, SVG payloads, fixture manifests and original harness bytes match the index exactly.",
+    "files": [
+      {
+        "file": "css/style.css",
+        "measuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "gitSHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903"
+      },
+      {
+        "file": "css/fonts.css",
+        "measuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "gitSHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9"
+      },
+      {
+        "file": "js/demo-runtime.js",
+        "measuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "gitSHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a"
+      },
+      {
+        "file": "js/shell/stage.js",
+        "measuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "gitSHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0"
+      },
+      {
+        "file": "js/shell/registry.js",
+        "measuredSHA256": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+        "gitSHA256": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700"
+      },
+      {
+        "file": "js/shell/router.js",
+        "measuredSHA256": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+        "gitSHA256": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f"
+      },
+      {
+        "file": "js/shell/views/detail.js",
+        "measuredSHA256": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+        "gitSHA256": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28"
+      },
+      {
+        "file": "js/shell/export.js",
+        "measuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "gitSHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635"
+      }
+    ]
+  }
+}

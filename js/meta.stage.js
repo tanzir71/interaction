@@ -10719,13 +10719,25 @@ INTRX.meta({
     ]
   },
   "glitch-datamosh-blocks": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "inject",
+        "label": "Corrupt frame"
+      },
+      {
+        "action": "clear",
+        "label": "Restore frame"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10737,17 +10749,37 @@ INTRX.meta({
       "macroblocks"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scanline-crt": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "inject",
+        "label": "Roll signal"
+      },
+      {
+        "action": "channel",
+        "label": "Channel 02"
+      },
+      {
+        "action": "clear",
+        "label": "Restore sync"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10759,17 +10791,33 @@ INTRX.meta({
       "scanlines"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "vhs-tracking": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "inject",
+        "label": "Lose tracking"
+      },
+      {
+        "action": "clear",
+        "label": "Restore tape"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10781,8 +10829,12 @@ INTRX.meta({
       "chroma-bleed"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "pixel-sort": {
     "designSize": "bleed",

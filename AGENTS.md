@@ -503,3 +503,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated native/full timing with `node tools/profile-raster-instruments.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Measurement records findings and
   leaves final timing gates open.
+- `node tools/verify-raster-film.js http://127.0.0.1:4173` covers v4 Datamosh,
+  CRT Receiver and VHS Tracking: 39 unchanged original SVGs, exact approved
+  photo crops, 67,256 original engine states and complete original pixel planes.
+  It checks actual photographic output, native mouse/keys/moving touch, full
+  cameras and optical type, 60/120/240Hz stories, independent caller/viewport
+  holds, paused themes, queued intent, reduced opacity feedback, startup
+  disposal, LiveTiles/routes and 24 fresh network-blocked exports. CRT retains
+  the supplied 180×136px tube and all 34 intrinsic 180×2px scanline SVG roots.
+  Full compositions retain all original blocks, trails, strips, channels and
+  tracking rows. Record isolated native/full timing with
+  `node tools/profile-raster-film.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
+  the reports retain the original 32ms paint cap and leave final timing gates open.
