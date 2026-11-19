@@ -46,10 +46,18 @@ open until those are remediated.
 
 `node tools/profile-raster-studies.js http://127.0.0.1:4173 --cpu=4`
 records source-bound native/full desktop and mobile stories. The native runs
-measure 59.7–60fps with first paint below 245ms. Full-view performance remains
-open: desktop runs measure 47.5/58.2/41.6fps and mobile runs 34.9/51.7/21.0fps
-for engraving/ASCII/wave respectively. Full mobile Wave first paint measures
-371ms. These findings do not pass the final frame-time or startup gates.
+originally measured 59.7–60fps with first paint below 245ms. The corrected
+benchmark schedules input by elapsed time and asserts all three control changes
+and pointer leave, so slow frames cannot omit later interactions. All twelve
+corrected stories complete. Native runs measure 58.9–60fps, including a 306ms
+mobile engraving startup outlier. Full-view performance remains open: desktop
+runs measure 44.9/54.2/39.8fps and mobile runs 21.8/49.5/17.9fps for
+engraving/ASCII/wave respectively. Full mobile Wave first paint measures 341ms.
+Both source-bound runs and their trace hashes remain in
+`docs/performance/raster-studies-2026-11-19.json`; these are separate interaction
+stories and are not a renderer improvement comparison. Private rendering probes
+showed no reliable gain and were not promoted. These findings do not pass the
+final frame-time or startup gates.
 
 ## Halftone Field
 
