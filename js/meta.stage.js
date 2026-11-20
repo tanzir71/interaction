@@ -11958,17 +11958,29 @@ INTRX.meta({
     ]
   },
   "wax-seal-stamp": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Seal again"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "press-hold",
@@ -11976,21 +11988,37 @@ INTRX.meta({
       "cooling"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "op1-panel": {
-    "designSize": "sm",
+    "designSize": [
+      520,
+      560
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "hardware",
@@ -11998,21 +12026,33 @@ INTRX.meta({
       "dot-matrix"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "dynamic-notch": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "notch",
@@ -12020,8 +12060,12 @@ INTRX.meta({
       "hardware"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "vinyl-player-card": {
     "designSize": "sm",

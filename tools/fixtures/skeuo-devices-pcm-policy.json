@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "mixingMaxAbsolute": 2.384185791015625e-7,
+  "mixingRMSE": 1e-8,
+  "tailMaxAbsolutePerNote": 0.0002,
+  "tailExtraQuanta": 2,
+  "scope": "Exact musical graph, source state, all native parameter commands and once-only source cleanup are mandatory. Outside measured source onended windows PCM has strict float32 mixing bounds, at most four times the six original reruns' observed outside-window errors, capped at 2^-22 absolute and 1e-8 RMS. Each cleanup window begins at the native quantum containing oscillator stop and ends two render quanta after the latest actual/reference disconnect currentTime. Only that filter tail may vary by at most two times the original .0001 final gain envelope per ending note. Raw recordings and callback timestamps remain immutable. This does not widen other Sound-family tests.",
+  "reason": "Whole-track repeatability policy v1 was rejected by a fresh unchanged-original 368px run: native filter disconnection changed a short stop tail by 2.0675757696153596e-5. The replacement localizes permissible variation to those native callback windows and retains strict mixing bounds for the rest of every recording."
+}

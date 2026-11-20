@@ -22968,7 +22968,7 @@
   },
   {
     "id": "wax-seal-stamp",
-    "title": "Sealed Correspondence",
+    "title": "Sealed Letter",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22983,8 +22983,15 @@
       "cooling"
     ],
     "tier": "free",
-    "desc": "A folded cotton-paper envelope closes with a small oxblood wax seal. Pressing the seal breaks it into two natural halves and lifts the flap to reveal a personal note; sealing reverses the complete interaction.",
-    "designSize": "sm",
+    "desc": "Break the seal to open; seal it again",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22992,18 +22999,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/wax-seal-stamp",
-    "thumb": "full",
-    "module": "js/demos.skeuo.wax-seal.js?v=77bec3ad23",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.wax-seal.js?v=1eeb985113",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/wax-seal-stamp.json?v=5261e39226",
+    "sourcePreview": "registry/p/wax-seal-stamp.json?v=4c2378c45d",
     "assetRefs": {},
     "rootClass": "d-hardware-wax-seal",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      },
+      {
+        "action": "reset",
+        "label": "Seal again"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Break the seal to open; seal it again",
     "sourceName": "Seen on: luxury invitations, heritage brands, editorial reveals, and ceremonial checkout moments",
@@ -23011,7 +23027,7 @@
   },
   {
     "id": "op1-panel",
-    "title": "Pocket Synthesizer",
+    "title": "Pocket Synth",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -23026,8 +23042,15 @@
       "dot-matrix"
     ],
     "tier": "free",
-    "desc": "A compact cream synthesizer has a working two-octave keyboard, four coloured rotary caps and a recessed waveform display. Clicking or using the computer keyboard plays actual notes; filter, tone, decay and volume are independent physical controls.",
-    "designSize": "sm",
+    "desc": "Click keys or A–L; drag the four knobs",
+    "designSize": [
+      520,
+      560
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23035,18 +23058,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/op1-panel",
-    "thumb": "full",
-    "module": "js/demos.skeuo.op1-panel.js?v=242416152c",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.op1-panel.js?v=8a58f34eb1",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/op1-panel.json?v=25b233ea55",
+    "sourcePreview": "registry/p/op1-panel.json?v=57ee48d3be",
     "assetRefs": {},
     "rootClass": "d-hardware-op1-panel",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Click keys or A–L; drag the four knobs",
     "sourceName": "Seen on: Lee Black's OP-1 calculator in Framer",
@@ -23054,7 +23086,7 @@
   },
   {
     "id": "dynamic-notch",
-    "title": "Expanding Activity Capsule",
+    "title": "Activity Capsule",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -23069,8 +23101,15 @@
       "hardware"
     ],
     "tier": "free",
-    "desc": "A minimal music activity lives inside a smoothly expanding black capsule at the top of a porcelain phone. Its compact waveform becomes a useful player with transport controls, elapsed time and a seek slider, all within the same surface.",
-    "designSize": "sm",
+    "desc": "The capsule expands into a live player",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23078,22 +23117,45 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/dynamic-notch",
-    "thumb": "full",
-    "module": "js/demos.skeuo.dynamic-notch.js?v=264dac1ca8",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.dynamic-notch.js?v=4e064d75d0",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/dynamic-notch.json?v=8165d104aa",
-    "assetRefs": {},
+    "sourcePreview": "registry/p/dynamic-notch.json?v=acc1a64531",
+    "assetRefs": {
+      "photo-magnolia": "assets/images/magnolia-800.webp"
+    },
     "rootClass": "d-hardware-dynamic-notch",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "The capsule expands into a live player",
     "sourceName": "Seen on: iamnoman's MacBook notch case study and Apple Dynamic Island",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "magnolia",
+        "asset": "photo-magnolia",
+        "photoId": "J4gm_1GKfAA",
+        "imageId": "photo-1518343161123-c7e9ab4dc4da",
+        "photographer": "Annie Spratt",
+        "url": "https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-magnolia": "assets/images/magnolia.webp"
+    }
   },
   {
     "id": "vinyl-player-card",

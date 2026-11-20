@@ -684,3 +684,22 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   stable opacity compositing. Preserve the lighter’s sparse-fill exception.
   Record isolated timing with `node tools/profile-skeuo-mechanisms.js
   http://127.0.0.1:4173 --cpu=1` or`--cpu=4`; measurements leave gates open.
+- `node tools/verify-skeuo-devices.js http://127.0.0.1:4173` covers v4
+  Sealed Letter, Pocket Synth and Activity Capsule: five unchanged supplied
+  SVGs and fourteen complete original fixtures, including native PCM under
+  the unchanged localized cleanup policy. Its 22 groups cover canonical
+  press/dissolve/Undo, all four 380/32 knob springs, complete original models,
+  192 moving layouts, actual trusted and failed/recovered inaudible audio,
+  mouse/keys/moving touch, independent holds, capture cleanup, 36 source
+  stories, 48 retargets, themes/focus, photo resolution, cold routes/LiveTiles
+  and 24 fresh offline exports. Native synth seeds visual G without sound;
+  full retains all seventeen keys. Native capsule seeds playing at43 seconds;
+  full starts paused. Reuse verified Magnolia800/1600 variants and preserve
+  licence comments in exports. Exact four-color functional knobs and the
+  capsule's sparse geometry follow Figma. Paused Escape/shortcuts must be
+  consumed immediately. CSSOM rounded outline widths need a small boundary
+  correction when copied so actual device-pixel focus width stays unchanged.
+  Retarget paint is exact except the documented full-normal capsule bound of
+  one RGB level in one pixel; source and geometry remain exact. Record isolated
+  timing with `node tools/profile-skeuo-devices.js http://127.0.0.1:4173
+  --cpu=1` or `--cpu=4`; measurements leave timing gates open.

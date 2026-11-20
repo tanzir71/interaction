@@ -1050,3 +1050,27 @@ and written sparse-fill exception. Native planes stay 240×168 at origin 66,20.
 Full compositions retain all original content and interaction models. Note’s
 full 400×560 presentation keeps its complete copy readable. No photography,
 font, attribution or portable-alias changes occur in this batch.
+
+
+### Sealed Letter, Pocket Synth and Activity Capsule
+
+Tiles170:1939,170:1959 and170:1990 use exact docked240×168 native planes at
+reference66,20. Five original SVGs remain unchanged under
+`assets/components/skeuo-devices/`; their artwork manifest binds every hash,
+intrinsic root and render slot. Ceiled182×62 flap and11×16 pause roots retain
+their supplied source bytes. No Figma screenshot is product artwork.
+Synth's200×110 panel, four 28 px circles and ten 15×34 keys use exact captured
+primitive geometry/materials. Functional blue/green/white/orange knob fills
+follow Figma as a written exception to the single-accent heuristic. Capsule
+keeps 180×64/r32, its 40 px photo/rim, source bars and original pause vector,
+with an owner-authorized sparse-fill exception. Other fit gates remain.
+The centered value caption is functional feedback inside the 240 px root.
+
+Magnolia reuses the already verified Annie Spratt Moody Hellebores files and
+credit:800×533 for native/portable,1600×1067 for full detail. Captured Figma
+image hash9bc0a53a023de5c2d13a488c2f11d7402f1ac225 and both existing file hashes
+remain bound in the artwork manifest. No photo, font, credit or alias changes.
+Portable exports keep complete licence comments. Browser posters capture
+initial native states. Full views retain all original content and models.
+Retarget geometry is exact; the explicitly bounded full-normal material
+compositing finding is at most one RGB level in one pixel, not an SVG change.

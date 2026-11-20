@@ -1491,3 +1491,27 @@ Visual remediation reaches 322/399. Five Skeuomorph demos,72 Collections,
 121 new/extensions,Pro seams and final audits remain. The [timing report](docs/performance/skeuo-mechanisms-2026-11-21.json)
 records 24 isolated CPU 1/4 stories and leaves timing gates open. Actions stays
 disabled; the previously verified account-wide $0 stop limit is preserved.
+
+
+## Phase 4 — Sealed Letter, Pocket Synth and Activity Capsule
+
+Three native v4 devices preserve five unchanged SVGs and fourteen complete
+original fixtures, including synth PCM under the existing cleanup policy.
+Twenty-two groups pass 82,339 checks:192 moving layouts, independent canonical
+motion, native ranges and trusted inaudible audio/recovery, input/capture and
+holds,36 source stories,24 fresh exports and cold routes/LiveTiles. Exact
+Figma knob colors and the capsule's sparse sizing are documented. Magnolia
+800/1600 files and attribution are reused. Initial root-width checks protect
+the centered synth value caption. Retained focus rings preserve actual width;
+full-normal capsule retarget records at most one RGB level in one pixel.
+
+Remediation reaches 325/399. All 325 pass fit; the unfinished 74 retain19 tiny-text
+and 33 low-fill findings, with zero overflow/sideways-scroll and 100 valid fill
+exceptions. Stage debt73; static motion debt 40, with no new violations.
+Required local registry/stage/generated/library/fit/motion checks pass for
+the owned set; full fit exits1 for unfinished work. All 19 runtime/shell,
+8 CLI/MCP and16 fit-geometry checks pass. The [timing report](docs/performance/skeuo-devices-2026-11-21.json)
+records 24 isolated CPU1/4 stories with real trusted inaudible synth audio;
+timing gates remain open. Two Skeuomorph demos, 72 Collections, 121 new/extensions,
+Pro seams and final audits remain. Direct commit/push; Actions disabled;
+previously verified account-wide$0 stop limit preserved.

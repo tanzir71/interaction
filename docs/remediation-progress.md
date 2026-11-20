@@ -1,21 +1,85 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 322 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 325 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and fifteen Skeuomorph demos.
-The remaining work includes 77 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and eighteen Skeuomorph demos.
+The remaining work includes 74 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 322 remediated native compositions retains those references.
+None of the 325 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 322 native compositions. The unfinished groups still account for
-1 overflow finding, zero horizontal-scroll findings, 22 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 99 documented
+among these 325 native compositions. The unfinished groups still account for
+0 overflow findings, zero horizontal-scroll findings, 19 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 100 documented
 Figma fill exceptions validate.
+
+## Sealed Letter, Pocket Synth and Activity Capsule
+
+Tiles `170:1939`, `170:1959` and `170:1990` retain their exact docked
+240×168 px native planes at reference origin(66,20). Five unchanged supplied
+SVGs preserve intrinsic roots and render bounds. Synth keeps the exact panel,
+four circles, ten key primitives and functional blue/green/white/orange fills.
+Capsule keeps its 180×64 material, photo/rim/bars and supplied pause vector;
+its documented sparse-fill exception changes only the fill gate.
+
+Full compositions retain complete original programs and content: all letter
+copy, seventeen synth keys and four parameters, and the complete phone/player
+with 210-second seek, restart and Still Life. Native synth seeds only the
+original G-note visual checkpoint, without sound. Native capsule starts
+collapsed/playing at 43 seconds; full starts collapsed/paused. Synth's full
+520×560 composition reserves enough space for its original keyboard/caption.
+The native value caption stays centered inside its 240 px root, preventing
+invisible horizontal overflow without changing the supplied artwork.
+
+Visible seal press/dissolve/Undo, both capsule material/clock transitions and
+all four knob release springs use canonical recipes. Knobs preserve native
+HTML range input and original values beneath their 380/32/mass1 release.
+Held Escape and recognized musical shortcuts are consumed immediately while
+source actions queue. Focus/active highlights are immediate; physical motion
+uses the paused stage clock. A 0.001 px correction above CSSOM's rounded used
+outline width preserves the same painted device-pixel focus width in retained
+layers. Retargets preserve every pixel except full-normal capsule compositing:
+one RGB level in at most one pixel is explicitly bounded and reported.
+Geometry, original state and all supplied SVG bytes remain exact.
+
+Verified Annie Spratt Magnolia photos and provenance are reused unchanged:
+800 px for native/portable output,1600 px for full detail. Actual requests,
+decoded dimensions and centered crops are checked; portable headers retain
+the attribution and Unsplash licence. No photo/font/alias files change.
+
+Twenty-two public verifier groups pass 82,339 checks, including 14 complete
+lossless original fixtures, native PCM under the unchanged localized cleanup
+policy, 192 moving layouts with explicit initial root-width checks, real
+trusted and failed/recovered inaudible audio, physical input/touch/scroll,
+independent caller/document/full-viewport holds, actual capture release and
+early cleanup. They include 36 six-second source stories, 48 retargets, 12 cold
+route/LiveTiles cases and 24 fresh network-blocked exports. Every actual audio
+context closes; test signals use MediaStreams and speaker connections fail.
+
+All 325 remediated native compositions pass fit. The complete 399 diagnostic
+retains 19 tiny-text and 33 low-fill findings in unfinished work; overflow and
+horizontal-scroll findings are both zero. All 100 fill exceptions validate.
+Stage debt is 73 and static motion debt 40, without new violations. Registry
+generation verifies 1205 artifacts. Local checks include 651 library checks,
+399 previews,97 exports,19 runtime/shell tests,8 CLI/MCP tests,16 fit-geometry
+checks and stage-runtime verification. Original 116 private source files,
+610 frozen original archive files and 240 prior publication files remain intact.
+
+The [timing report](performance/skeuo-devices-2026-11-21.json) records 24 isolated
+eight-second native/full CPU1/4 desktop/mobile stories. CPU1 records
+60.0–60.0 fps,0 intervals above25 ms and0 long tasks;
+CPU4 records55.0–60.0 fps,74 slow intervals and17 long tasks.
+First trace Paint spans20.2–203.1 ms; readiness reaches
+219.5 ms. Fonts are prepared first; route transfer is excluded.
+Synth cases activate a real inaudible context through trusted Space before
+measurement. Measurements preserve timing findings and leave final gates open.
+Two Skeuomorph demos, 72 Collections, 121 new/extensions, Pro seams and final
+audits remain. Actions stays disabled and the previously verified account-wide
+$0 stop-at-limit setting is preserved. Work is committed/pushed directly.
 
 ## Mechanical Counter, Pocket Lighter and Tear-Off Note
 
