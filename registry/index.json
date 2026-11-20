@@ -16665,7 +16665,14 @@
     ],
     "tier": "free",
     "desc": "A deterministic particle field drifts across a DPR-aware canvas and draws links only below an 86px threshold. Pointer force falls off with distance and can switch between attraction and repulsion without changing the shared simulation clock.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16673,18 +16680,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/particles-constellation",
-    "thumb": "full",
-    "module": "js/demos.ambient.particles-constellation.js?v=4e0a5d94b0",
+    "thumb": "hero",
+    "module": "js/demos.ambient.particles-constellation.js?v=10066b2a61",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/particles-constellation.json?v=d9e64ce8b8",
+    "sourcePreview": "registry/p/particles-constellation.json?v=74a08550ab",
     "assetRefs": {},
-    "rootClass": "d-constellation-demo",
-    "controls": [],
+    "rootClass": "d-ambient-field-constellation-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause field"
+      },
+      {
+        "action": "mode",
+        "label": "Mode repel"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Nearby stars link up around the pointer",
     "sourceName": "Seen on: technology homepages, network products, creative studios, AI tools, and ambient hero backgrounds",
@@ -16751,7 +16771,14 @@
     ],
     "tier": "free",
     "desc": "A seeded particle stream follows a curl-like trigonometric field. Moving across the canvas installs a localized vortex that bends nearby trails without replacing the underlying flow.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16759,18 +16786,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/flow-field",
-    "thumb": "full",
-    "module": "js/demos.ambient.flow-field.js?v=2e9044976f",
+    "thumb": "hero",
+    "module": "js/demos.ambient.flow-field.js?v=5e145626a7",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/flow-field.json?v=dfbd99a643",
+    "sourcePreview": "registry/p/flow-field.json?v=c4e6b29338",
     "assetRefs": {},
-    "rootClass": "d-flow-demo",
-    "controls": [],
+    "rootClass": "d-ambient-field-flow-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause flow"
+      },
+      {
+        "action": "clear",
+        "label": "Clear vortex"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Thousands of strokes follow an invisible current",
     "sourceName": "Seen on: generative identities, science tools, music releases, and atmospheric portfolio heroes",
@@ -16794,7 +16834,14 @@
     ],
     "tier": "free",
     "desc": "Seeded stars advance through a perspective camera and recycle at the near plane. Hovering eases flight speed upward and lengthens each star into a depth-correct streak.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16802,18 +16849,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/starfield-warp",
-    "thumb": "full",
-    "module": "js/demos.ambient.starfield-warp.js?v=76944bbb52",
+    "thumb": "hero",
+    "module": "js/demos.ambient.starfield-warp.js?v=5171f120eb",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/starfield-warp.json?v=06a0a8a755",
+    "sourcePreview": "registry/p/starfield-warp.json?v=d0b0f3af7b",
     "assetRefs": {},
-    "rootClass": "d-star-demo",
-    "controls": [],
+    "rootClass": "d-ambient-field-stars-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause flight"
+      },
+      {
+        "action": "warp",
+        "label": "Engage warp"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Stars stretch into streaks as warp engages",
     "sourceName": "Seen on: launch countdowns, sci-fi products, immersive intros, and playful 404 pages",
@@ -16966,7 +17026,14 @@
     ],
     "tier": "free",
     "desc": "Seeded fireflies wander with individual phase noise and pulsing light. A stationary pointer becomes an attractor only after an idle delay, so exploration stays loose before the swarm gathers.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16974,18 +17041,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/fireflies-night",
-    "thumb": "full",
-    "module": "js/demos.ambient.fireflies-night.js?v=900489f785",
+    "thumb": "hero",
+    "module": "js/demos.ambient.fireflies-night.js?v=1ab09019e3",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/fireflies-night.json?v=563c96f378",
+    "sourcePreview": "registry/p/fireflies-night.json?v=843ba21dfc",
     "assetRefs": {},
-    "rootClass": "d-firefly-demo",
-    "controls": [],
+    "rootClass": "d-ambient-field-fireflies-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause swarm"
+      },
+      {
+        "action": "summon",
+        "label": "Summon"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Rest the pointer and the swarm gathers",
     "sourceName": "Seen on: nature brands, wellness stories, festival pages, bedtime products, and quiet portfolio scenes",

@@ -8617,17 +8617,33 @@ INTRX.meta({
     ]
   },
   "particles-constellation": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause field"
+      },
+      {
+        "action": "mode",
+        "label": "Mode repel"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8635,8 +8651,12 @@ INTRX.meta({
       "proximity"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "gradient-mesh-drift": {
     "designSize": "bleed",
@@ -8661,17 +8681,33 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "flow-field": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause flow"
+      },
+      {
+        "action": "clear",
+        "label": "Clear vortex"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8679,21 +8715,41 @@ INTRX.meta({
       "particles"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "starfield-warp": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause flight"
+      },
+      {
+        "action": "warp",
+        "label": "Engage warp"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8701,8 +8757,12 @@ INTRX.meta({
       "perspective"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "conway-life-fade": {
     "designSize": "bleed",
@@ -8771,17 +8831,33 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "fireflies-night": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause swarm"
+      },
+      {
+        "action": "summon",
+        "label": "Summon"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8789,8 +8865,12 @@ INTRX.meta({
       "idle cursor"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "aurora-curtains": {
     "designSize": "bleed",

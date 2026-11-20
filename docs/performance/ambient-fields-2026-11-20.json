@@ -1,0 +1,4744 @@
+{
+  "recordedAt": "2026-11-20T02:34:25.208Z",
+  "localDate": "2026-11-20",
+  "timeZone": "Asia/Dhaka",
+  "cases": 32,
+  "timingGatePassed": false,
+  "sourceHashes": {
+    "js/demos.ambient.particles-constellation.js": "10066b2a61cdc5409f6df79dc0c1f75b9c22e4380b400d9c0e079751f6874422",
+    "js/demos.ambient.flow-field.js": "5e145626a7148b28053ea3b676fdf1acc68f57c257996757b2320c0eb2e28307",
+    "js/demos.ambient.starfield-warp.js": "5171f120ebcaf5b57d27de9ec45aa5992a85fddd61a760beeb04ea80a074b9e4",
+    "js/demos.ambient.fireflies-night.js": "1ab09019e3bf46d07582362b0d07652d45f06503f2d85490196d67cdea1c14a0",
+    "tools/fixtures/ambient-fields-artwork.json": "77aff8d0ad0bef019f698c6eb9c0820305d665450cc416bb8607c9b6f9aa1cc1",
+    "tools/fixtures/ambient-fields-original-models.json": "5c970b90fb06fef2d0ca9344a3aeee4ff0a7729510923fc13f4693d8db2a87bc",
+    "tools/verification/ambient-fields-harness.js": "033c1dd19eb0cccc1916ace738df903a6906063744bf7258640b0fe39d13e75a",
+    "tools/verification/ambient-fields-original.js": "bf2d2214c1688d29b37746435d39823b3cf55c1dc7cd2d03977a7083bc3018c5",
+    "tools/verification/ambient-fields-normalizer.js": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "2d8915f6fc0e08e1c828d8e5b4604deace52273350bca7bcd07c51ee82aaf8d0",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "registry/index.json": "e2f4480386c06f8c97f6d070296af7412ae955050ddc0026ce6a81b299beffcf",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-ambient-fields.js": "ee9c90064d9c663ed8e90e5e3a1bbcd18161d07ba94a28ef78c62059f03c8f48",
+    "assets/components/ambient-fields/170-820.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-821.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-822.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-823.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-824.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-825.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-826.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-827.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-828.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-829.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-830.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-831.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-832.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-833.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-834.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-835.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-836.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-837.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-838.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-839.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-840.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-841.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-842.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-843.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-844.svg": "c4af6ca924c624a00467e8fb5078c2ed5f5f71d6293c82aa68b7a768a2cd26dd",
+    "assets/components/ambient-fields/170-845.svg": "b4136956f683065768ad868102fca7f37b35f1e5de82726b8bb5bbb5f0f1eb99",
+    "assets/components/ambient-fields/170-846.svg": "6115ea710920b7e6b822358aece8f74a3f7121f11c84e6c71862c0b24d37a52b",
+    "assets/components/ambient-fields/170-847.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-848.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-849.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-850.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-851.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-852.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-853.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-854.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-855.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-856.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-857.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-858.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-859.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-860.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-861.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-862.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-863.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-864.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-865.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-866.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-867.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-868.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-869.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-870.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-871.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-872.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-873.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-874.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-875.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-876.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-877.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-878.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-879.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-880.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-881.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-882.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-883.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-884.svg": "595bda5ab90f184267b29e3bfa60b3ff35deb98ad3ffd157ebd02f05cf9214f0",
+    "assets/components/ambient-fields/170-885.svg": "33a280058e304f39db4c99e7be742b9a9fa4986dea19eb46ad65ab97d784beb2",
+    "assets/components/ambient-fields/170-886.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-887.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-888.svg": "0d3ebdb71bdbda29e98c39e5e00b481c62823c5fa7fda134c450eab88d6a23a2",
+    "assets/components/ambient-fields/170-889.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-890.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-891.svg": "33a280058e304f39db4c99e7be742b9a9fa4986dea19eb46ad65ab97d784beb2",
+    "assets/components/ambient-fields/170-892.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-893.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-894.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-895.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-896.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-897.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-898.svg": "595bda5ab90f184267b29e3bfa60b3ff35deb98ad3ffd157ebd02f05cf9214f0",
+    "assets/components/ambient-fields/170-899.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-900.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-901.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-902.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-903.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-904.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-905.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-943.svg": "80e8016f7b5410ea0fbcdfab0a222aa66689e28d258deca82ef3a9a15de02428",
+    "assets/components/ambient-fields/170-944.svg": "34f85d1320adaa4319e0d5cfd736171975fa88b2b88827238659d58f788d7b90",
+    "assets/components/ambient-fields/170-945.svg": "20eddc93d7299f7ccd36be50f271f90986c190ebf87a9a6d0a68265fb25b6896",
+    "assets/components/ambient-fields/170-946.svg": "40162e2f8bcdcf866da231db180be7459d698d59745a730ee013fe87a37da7a9",
+    "assets/components/ambient-fields/170-947.svg": "4b15ec312efaccfb694aa89f93526d17f863ae93d5f39c02b65cee750c31c7e8",
+    "assets/components/ambient-fields/170-948.svg": "11633ad3a0dbba3875f9b165a3837534f0cf8af1c83cdc6dc51182631d9fbc5a",
+    "assets/components/ambient-fields/170-949.svg": "4cca97125250ab1ae0dd8daf762249879135e79dc9c7e515f4f5b27787a8e0d0",
+    "assets/components/ambient-fields/170-950.svg": "f8dd57033f3d28a26bb760d4ebdd44b41fe965b4e596af2ced8780f5ff7a4652",
+    "assets/components/ambient-fields/170-951.svg": "9091359c8cf175b09b886ca7f7245ed59d75c6f38cce6c3224e8ec1728516c1e",
+    "assets/components/ambient-fields/170-952.svg": "bd5060aaea45e4af70911407adafa665f1ea1e02fc7cbc60b56354e3a93d74e3",
+    "assets/components/ambient-fields/170-953.svg": "984ea7963344ecc70ecf836a2c6f6da264cdaa7d061243ecc86888e771f97e68",
+    "assets/components/ambient-fields/170-954.svg": "0804e0d4497cfcc0f594b9ac6096736c6d27b98aa2a6f36faa89e64179497cb9",
+    "assets/components/ambient-fields/170-955.svg": "b934f2c6562c7824e5a837619144b9deb6411414d61fc96e0290c31ea6386977",
+    "assets/components/ambient-fields/170-956.svg": "141681e0e56a493e42ef67e665b512fa5f49754fb6d2f0745fde9b67901ce817",
+    "assets/components/ambient-fields/170-957.svg": "bf9ed7c65d650768e4119bee98e689255ace90b2fc5c0e6cb1445af7e8036efe",
+    "assets/components/ambient-fields/170-958.svg": "c5e7c72a102af3cc4f2c65be14c70fe1bbfcb45b3d99940cc5d075d96ccafdca",
+    "assets/components/ambient-fields/170-959.svg": "494a7a795ac865ab63028a566b908e51e3f8c538ec56490018b0cd803e2f4ed4",
+    "assets/components/ambient-fields/170-960.svg": "6b647b2045a7042e11a905c2b2bbb075da98c57759a3fb118270e10f48c85e99",
+    "assets/components/ambient-fields/170-961.svg": "a8f7b5eefb66a6aced100641792a5313f3e5e8c95d968924026dc12ba787d63e",
+    "assets/components/ambient-fields/170-962.svg": "157e4da73d79b903dfd4cbd65d3e1b81d6daba876ee64a1ab4db509acdb5edcb",
+    "assets/components/ambient-fields/170-963.svg": "e9dfbe44e503d91d95398d2108367f331bb1d7b2723857811c93a301b660b7fa",
+    "assets/components/ambient-fields/170-964.svg": "ce1b63aef3ac0413e84ba0783dd027bd6762984de8edfca79054664467be0277",
+    "assets/components/ambient-fields/170-965.svg": "698523f06c42a5b612be37c3be36002bbf4189b6c6ef1dd1d3ed34888f2bda21",
+    "assets/components/ambient-fields/170-966.svg": "b4e2546450e724398b3120552c94a232f52bdcab963a7488d0ffbfdd242b4e8b",
+    "assets/components/ambient-fields/170-967.svg": "ec919cc0e53701aa59a7c5d9147a3d1130540ee599139b3ee484335e17798812",
+    "assets/components/ambient-fields/170-968.svg": "e2f3fdb28850b8f66bdd9b4c40d6985abc33224b544c8037e47f1f395f580f84",
+    "assets/components/ambient-fields/170-969.svg": "791f6ecf223b23c0e2010c7865d7b97f3d5a26937005d4582fee3b8454f8cf63",
+    "assets/components/ambient-fields/170-970.svg": "180b30f46f9be793419cf2250a8dc6056e566d20a92eee0fd3db0e3f6607ab1d",
+    "assets/components/ambient-fields/170-971.svg": "d0fe04a9e27596c1bc82ef50abd29be1f64e8b9f847b1ca002cbe7605b4700bf",
+    "assets/components/ambient-fields/170-972.svg": "bd5cab48437bed253151291b57b6c13ee68c6677ce4fae76b92ec19d06cc8f0c",
+    "assets/components/ambient-fields/170-973.svg": "8418758576b3ba4a00f35f0daa5cc0e5162089d4658ac633fb652f1e47ce5790",
+    "assets/components/ambient-fields/170-974.svg": "5a0b64b04f6eef6c4dc67bb06143b34821b468e358eded6b6d67a274ef4ca405",
+    "assets/components/ambient-fields/170-975.svg": "ad3d1b285ca8d1fc6577ee7e7b2e20ab0487b56b7ab2fd0c7e5fc80866cb82b9",
+    "assets/components/ambient-fields/170-976.svg": "fe1440a657d1b258e1e743353f466b17977130e4955d496cd9b439885cd481fe",
+    "assets/components/ambient-fields/170-977.svg": "87eba4237bd16ccec7a891d1a7d5265f07e877c4d9c956bfc7898f3d1cc6b942",
+    "assets/components/ambient-fields/170-978.svg": "04f86c9e6a5d519b9b5aa52033bf77b2a1da8e8193e474243073f1f5aeee8af3",
+    "assets/components/ambient-fields/170-979.svg": "2a1c48f628caf7218f8afcc526b9d841e7dc47a585e3f558c73145e35994950f",
+    "assets/components/ambient-fields/170-980.svg": "75468993a5a9d538e4131e0668e410cea1e8f17a09d9732f0b4111aa0bdda6c3",
+    "assets/components/ambient-fields/170-981.svg": "7f16bd93c7249bdaf99cd73ccfbe4b629ca1117b89bc6e1365d13da39d2c4ccf",
+    "assets/components/ambient-fields/170-982.svg": "e9ff6302991be3dfa3b511710ebdc52b51dcdec00f512e694b7c92ec84629b8c",
+    "assets/components/ambient-fields/170-983.svg": "c59bc247c2f767d8740220546abc0bea689df039f57b926079a34bdd72c75814",
+    "assets/components/ambient-fields/170-984.svg": "8c778b3b9b6a3d7ff6c95fc6fcd59c37e351c1be7ae7a7edc55e37ae79dd6376",
+    "assets/components/ambient-fields/170-985.svg": "edcd7f4ad7368e6b4a10e6597f136be03e1776e4afd03710094b9397ba7b9d25",
+    "assets/components/ambient-fields/170-986.svg": "c4058b447c44bf131bc20615594d6107564ff77296f1a564d8834012dac5dcb7",
+    "assets/components/ambient-fields/170-987.svg": "87e59169ffb9d5e8abc497cd39f73cbb85c067beaebe00aa1bf501d271ea7008",
+    "assets/components/ambient-fields/170-988.svg": "b81ac0eea0e65454851a9756972f810c8d994cdb2c053d1cbd65fc559e1923ab",
+    "assets/components/ambient-fields/170-989.svg": "90658b08d4b50f9c34cb56a764a6af590b9b9bf398ef9788a0903c9b2fcb343d",
+    "assets/components/ambient-fields/170-990.svg": "a7cf6b92cc4c2a137d16162581d8a5e823a6b953f2c9f7ff9acc26d85f1c9112",
+    "assets/components/ambient-fields/170-991.svg": "7215c3aa20acfd543df37d3f085e6887d53f70097207e552900ae2f9f82bfc90",
+    "assets/components/ambient-fields/170-992.svg": "20864ef12a883d3bdf8ccb1e88e27694b8560308f1bba722b7a68419c8b39c80",
+    "assets/components/ambient-fields/170-993.svg": "07c6a487bd7e071e90a7b07639715c80dd4e73147a494595c274cb35d6d8c561",
+    "assets/components/ambient-fields/170-994.svg": "1a5ce18dbe646c1eb1744e3cfadcba18411097761f09819523b3eba43e46f271",
+    "assets/components/ambient-fields/170-995.svg": "81f111bc4fa024159a5c39ea32f8ef2cbff9cb74c8443e39c6135332c7cd55af",
+    "assets/components/ambient-fields/170-996.svg": "c6aa9cf252e756d89bda2d48eb518c032a0ff45240222f88eb2794bb680874c0",
+    "assets/components/ambient-fields/170-997.svg": "fc9d817ba95d485d3a0cb90d8b95044ab6fd0792e5f5b2dffb95b9bc18752039",
+    "assets/components/ambient-fields/170-998.svg": "7e422d024bc3902cd815a975f5113755091d98cf51b14c020818d4865fda8345",
+    "assets/components/ambient-fields/170-999.svg": "997f2ba6d629c4160719929a106a6d681754e65025d86d700dcfa5aa551e0920",
+    "assets/components/ambient-fields/170-1000.svg": "fe2537a36f501311d5ec2a36a18d17246e9c86c66c99e4fca90294b2eb246adb",
+    "assets/components/ambient-fields/170-1001.svg": "3d5c8945764347dbcf87a1d0917f031643666343742617f9f3b1d252ab675e55",
+    "assets/components/ambient-fields/170-1002.svg": "91cd8bb57af2442f57ec004e37998e49581cc02449b77ce6cb7a39a2459a8941",
+    "assets/components/ambient-fields/170-1003.svg": "e46417ac6093fefd2dec195e27db6b846074eac8f8aeb9d8dc1668f5eb81186f",
+    "assets/components/ambient-fields/170-1004.svg": "13de2c249da01621cf0d91739ca201ca452f8d6bbd372f488cab8ccaff722eb0",
+    "assets/components/ambient-fields/170-1005.svg": "fc10d18db4e8743a3718603c7730d9d28e7fee6d67d4b49f932f8148c0a6b554",
+    "assets/components/ambient-fields/170-1006.svg": "4848ca8fe3c38611e7b30233f7d9c950490d2c2d36e472946c5709893201c446",
+    "assets/components/ambient-fields/170-1007.svg": "8bd9312853a04fc5112a798d17c1ab0fb873b947a597e48f69bdb781280f36a2",
+    "assets/components/ambient-fields/170-1008.svg": "7f284d3be0b09b82dc7496658cb1ae4e957ccf2a33e309479e0979f55d4e0509",
+    "assets/components/ambient-fields/170-1009.svg": "baf1b9f336bcd5ed38bd473098051013e068ffbdd6b9ba048fef8a7200e3c3c9",
+    "assets/components/ambient-fields/170-1010.svg": "a9f6f47d1a0d563aeaefb9549572472c8df6c0a95e24a6a0cc4bc67b06b83dfc",
+    "assets/components/ambient-fields/170-1011.svg": "e24d9d7767c0825d4fcd947fa2144991b671f6b2dd641e7ce3ec8320d96dc6c2",
+    "assets/components/ambient-fields/170-1012.svg": "56f5076af866906bfcd94e9d8953900166482d838974a0a85c6bb321bb4cb9e7",
+    "assets/components/ambient-fields/170-1013.svg": "dd0e0262c39a61a5d58b5c8a3a6b4a2f994e005246cdccc1d471c02b85b7e450",
+    "assets/components/ambient-fields/170-1014.svg": "9fbe14d66ba6e667ad57ba6536c0fee5bf2566dc1559b10b049b2dcdbcfe5e21",
+    "assets/components/ambient-fields/170-1015.svg": "b801c275a5ac4ef8ba32dbef28b2fe662aba3ebc705aa1b92891b3ed795c2ec1",
+    "assets/components/ambient-fields/170-1016.svg": "58d2a637ed82700dc6e63ca5c19b48b3e95dcb63e299227ca0af27c963606937",
+    "assets/components/ambient-fields/170-1017.svg": "3b9666330bb0176a842dde6010878c8935476ea38bf436631606c0576c24ba5a",
+    "assets/components/ambient-fields/170-1018.svg": "46fe70b4ec319df84e7da80418d06edfebd25d7b9780c394c1323f6468dc4407",
+    "assets/components/ambient-fields/170-1019.svg": "6848a6eb09dc279f5582342c4f0ef4aca6158f44b69058e3649fc1dee010f722",
+    "assets/components/ambient-fields/170-1020.svg": "6b4d8d94d8475d03969ef0e7f473e50b9d93191d52c352cc3d1c3d460cabaee1",
+    "assets/components/ambient-fields/170-1021.svg": "2b4f612f19d3a3ec9636243556d56a02769e92bf39cd59f2643ac11826037349",
+    "assets/components/ambient-fields/170-1022.svg": "059ddd250b2b71ea4b7de06665c96d92d41abe00adb26495e1cc2a9e928261b5",
+    "assets/components/ambient-fields/170-1023.svg": "be594a1501b4259b79860789c7608ab62af49be90b8f7052dc04805cac0961ed",
+    "assets/components/ambient-fields/170-1024.svg": "01d5995fc055e580335be1468262417534d3cffa74f9d107dc2e6746bc80a8c5",
+    "assets/components/ambient-fields/170-1025.svg": "7f00d385f1255fdd40d601fbbd7c21adab2b17ab5cae4ad62dfe5132c12bdef4",
+    "assets/components/ambient-fields/170-1026.svg": "5ca08b8d25aa5bcfe81cecbfdc942f1d5b2def2c7a4e9e97ab6c5a88c00108c5",
+    "assets/components/ambient-fields/170-1027.svg": "a3e9db091f809b59de53a00678fdc952171157469d2d4846491bfe83191f5377",
+    "assets/components/ambient-fields/170-1028.svg": "61d978c27627cf5f21138767bab7d865d43c886bca8bdd0a337c12ad04ca3d72",
+    "assets/components/ambient-fields/170-1029.svg": "1b4e2879d418de1a481f27147fa9cfd45ff84621102b204f374ce1aabebed426",
+    "assets/components/ambient-fields/170-1030.svg": "76455ab9d10942872116bf3c574b1d01077268f7e8c608f2d4e1e709a1dbb69f",
+    "assets/components/ambient-fields/170-1031.svg": "9fa773d0087578612a3d9ed4884c03d79f0885f4f18e030f33dfa1b635a88698",
+    "assets/components/ambient-fields/170-1032.svg": "54cc0b9c6ed158e6676d7cdab8e832f969abff998b83c721e7c10b4011494a8c",
+    "assets/components/ambient-fields/170-1033.svg": "119776048a913a96857cd41ebadd9549831a341a44acf84a3965eaf3c976052e",
+    "assets/components/ambient-fields/170-1034.svg": "2fba1efd157d63389f1cff5381b2892034396a59f62d89fd318ef41846a95c65",
+    "assets/components/ambient-fields/170-1035.svg": "ac3dcd275c89af874631abfe3ead2fe39acb7266a9ade204f7ac526a602471f0",
+    "assets/components/ambient-fields/170-1036.svg": "b7fc59aa7151734dbf8b5b188de0e345d02bd23d72713a8d6baf925de6e83759",
+    "assets/components/ambient-fields/170-1037.svg": "913d2cbf0060476d7c0b5b01822d0f472257be7c88266801aa041a9f2577bc11",
+    "assets/components/ambient-fields/170-1038.svg": "cd7d3b4f2741a114bde40bfb7b5ccabf04059ff28427a27f4539ab5c54fc2725",
+    "assets/components/ambient-fields/170-1039.svg": "e3d53dcc4a457739407a26e1ae4b4201690f8bb584eba45d10de899e88018cef",
+    "assets/components/ambient-fields/170-1040.svg": "52aa2c0ff21a796e7184283f10e061ace24f5d6a74fa863308db2fd9994fa9e6",
+    "assets/components/ambient-fields/170-1041.svg": "204872653e452ab6e5fe7c39e4fa893afbadbd0655a0cfe8a56ecb870f8f845a",
+    "assets/components/ambient-fields/170-1042.svg": "a25930a1e08da87e998b7b80e44c081f58363818ce4cdb17b1a8ceefe45be396",
+    "assets/components/ambient-fields/170-1043.svg": "c2da5099f845f5cb679c87832fec611419dd4238f26136ed1efd5a01fd112fa6",
+    "assets/components/ambient-fields/170-1044.svg": "f551ba660b0dc97fc77ccbd3475879e943b5b0f1a25264164d7cbdc1a644c82c",
+    "assets/components/ambient-fields/170-1045.svg": "a6fb85a5dd1e1621fe715519b049b71c3a650544c387461aac4ad8d4e880d380",
+    "assets/components/ambient-fields/170-1046.svg": "1b54ea915cc6545a4442c0218b69fb1ff51fd541a99e6d2261770f37b9b93999",
+    "assets/components/ambient-fields/170-1047.svg": "0d0986b8e9f075a84c6feff84f17e799f79f4d3d52a5c4f1e9e076397dfbfaff",
+    "assets/components/ambient-fields/170-1048.svg": "71a50daa3c3b18cbaecf7c4978f05fab98a37a0b8af1309db9face2b71f9371f",
+    "assets/components/ambient-fields/170-1049.svg": "2f13bf057e3096a24c728e00b0639895eb3fe7305ae9e2f0b2fc896fd992a95d",
+    "assets/components/ambient-fields/170-1050.svg": "1668ab4bfa9736476485c6049c40c36b6ca34df652f2d490bd54200eb96a0866",
+    "assets/components/ambient-fields/170-1051.svg": "b4fbd1d36b55b60aa0e4d79a898e342b4fdcae64a777519c10e09da9763b1387",
+    "assets/components/ambient-fields/170-1052.svg": "63694192951873ffb3b227a21d3a03fefac2a4f7ad5376c579dbda04fec48547",
+    "assets/components/ambient-fields/170-1053.svg": "e1a6c1663d60cbb7b86f98817b568714aa1da891c4a618e1e88098d73091c7ea",
+    "assets/components/ambient-fields/170-1054.svg": "a1123d247ee719ae8311819e058238b17b03ceff886dba5de4e48ca9643da9f6",
+    "assets/components/ambient-fields/170-1055.svg": "8e72ef830e5c9b281e610973fbdb38d3f7c5173d6d181691e96277cd1063b1ba",
+    "assets/components/ambient-fields/170-1056.svg": "d4099aa1330b41752c6428b1ca65863324e5b834c93a381070d331cc7e84ce0b",
+    "assets/components/ambient-fields/170-1057.svg": "04a3913eef4cdf1019ba59b66b74f67a5701bd057a43dcd741c4378def4a79ea",
+    "assets/components/ambient-fields/170-1058.svg": "1f18bebc17c07c624225e446259e02b5dda061146616e67d3a91d818cac147b7",
+    "assets/components/ambient-fields/170-1059.svg": "a9853076ae66eb70f8cd7dd3acbc1da1983cb71b86641b222b3ed100de89d535",
+    "assets/components/ambient-fields/170-1060.svg": "7e58c385895bf5e3cd716cda7213c7a8240445788b0385aad2d99658b1680aa3",
+    "assets/components/ambient-fields/170-1061.svg": "9753f81118991607f76ce110dbcc65fcbb36b443131f20a0f30b38c4b09ee378",
+    "assets/components/ambient-fields/170-1062.svg": "1903d5913992b2c4a87cc467fc708ffd79132ccb6bbefb6e075f9cb399c3ca0a",
+    "assets/components/ambient-fields/170-1063.svg": "4514f2bdfd00d0f6d820863418eb0ac1db598c5738c2d8780219d1c847683374",
+    "assets/components/ambient-fields/170-1064.svg": "abd8efa8becbfe70ecc3763408c6319940f701e130ebe9a2022662eac9f178c3",
+    "assets/components/ambient-fields/170-1065.svg": "7c8b56bc7ada85dd6f2dc82d0e531a98b4a21943ac5d6e0b741742d889eeb632",
+    "assets/components/ambient-fields/170-1066.svg": "0523f12cda58d368f79a5595b2971d0fa22a6226425c6d45a7f103ba7e910559",
+    "assets/components/ambient-fields/170-1067.svg": "eb305e914585d1f22edf28f3ece0147e6d68376921ba9463b2b39c26c93c8b47",
+    "assets/components/ambient-fields/170-1068.svg": "84078cb04fc8ada48ab9d5824a4ba2b13f5009d94ea81a09565f810a670a8d2c",
+    "assets/components/ambient-fields/170-1069.svg": "639a6d957d52e0339fe3d7fc1fbc1fd890daece1af8f1de028f218e78fe0196a",
+    "assets/components/ambient-fields/170-1070.svg": "0587934730097680b37dafacfe8d505a1380b7ce84d08f210e811856d5ef2151",
+    "assets/components/ambient-fields/170-1071.svg": "ac132c44c4d18d081ab7af7806dd1f22f10b6c6961912442f10b8b361848afd7",
+    "assets/components/ambient-fields/170-1072.svg": "2d625061dae45f760558d1cc9a678f56fb12a7dc62572e16a230ee0b69ad87d3",
+    "assets/components/ambient-fields/170-1073.svg": "2e8d3161d40403064c4211a22a41ab806ebf9a7c8aef9b9babceb8231ae1e812",
+    "assets/components/ambient-fields/170-1074.svg": "07038d87ed2fc48937638ba6c2335d05e0ea9f6010a5dc6a6cb52ca59be26411",
+    "assets/components/ambient-fields/170-1075.svg": "1acd64d573ad09c549c8da08ddb531ec6948dcd69d23bcda7bc569614ed8ed77",
+    "assets/components/ambient-fields/170-1076.svg": "34ea0df85d7985d78df099a5d1c9ef03b1a8d2616d9a731418881f340b635982",
+    "assets/components/ambient-fields/170-1077.svg": "7dbb2034adaa70f20af6f1aefee78aa1b1ab616464e16a1bae4ea90f64a25d4b",
+    "assets/components/ambient-fields/170-1094.svg": "4c3b6832c941ad530279e05daaf28c32b7b1ed79fc273348b09d6e7db6f1b70d",
+    "assets/components/ambient-fields/170-1095.svg": "0e729eb4d0995a5afd3ed546fc87c9fe11de4c37917e32ffeee4a0bbc085e65f",
+    "assets/components/ambient-fields/170-1096.svg": "8b63443c9fcc1ebd123b0145d42a829fce858444ca2062b1fcedcb777047d8dd",
+    "assets/components/ambient-fields/170-1097.svg": "190b6e00126b2fb67a500e23826a9b862752d4183ac07801ce0664b5b2e772de",
+    "assets/components/ambient-fields/170-1098.svg": "3e269bd5ab7e401efab7a251a0e7e900b9b398d866bbc14a47f37800eacaef43",
+    "assets/components/ambient-fields/170-1099.svg": "8e44e444abbacfaec7bc368d3befbfecca58f16b7f50ea5ee2d73f1bb5fb9bfd",
+    "assets/components/ambient-fields/170-1100.svg": "329e55e7d65ade208097c50c4331878e5f8cdad33dfa47f0cb71b471ae465d2f",
+    "assets/components/ambient-fields/170-1101.svg": "c1ce9e08438730fb0f514cf6c3dafdc922458b5c8376138bccd785b2a30a184c",
+    "assets/components/ambient-fields/170-1102.svg": "ef367e402682beeb78400125c5fa3124565f2a76157c1311feec10902d99968d",
+    "assets/components/ambient-fields/170-1103.svg": "6003c9e1acfd145e292acb0d2be7f43e565c22ffd973a9b4874f593f72a637f8",
+    "assets/components/ambient-fields/170-1104.svg": "5a9f9332c81c83bc764eb73e55903895c5411ff38153a95329aa18e8564209cc",
+    "assets/components/ambient-fields/170-1105.svg": "f00bad54001e68d6c1d555fc921ea74b7ac53e8b27b575bdd066d64238cdde31",
+    "assets/components/ambient-fields/170-1106.svg": "9dbbd0e9f6a370b50ef2a036fc45640003461831121f317da202fde9366c3185",
+    "assets/components/ambient-fields/170-1107.svg": "81f7520ea02451af4d150fbba53f5150dd5126312c243f84fdf23d5824c3048d",
+    "assets/components/ambient-fields/170-1108.svg": "3b2686a523403854c2402b08e10424f91183b1304d1472dd2302f00d46e9a5ba",
+    "assets/components/ambient-fields/170-1109.svg": "5c9997ac2d1c3620fe0ad8d3a1cf8b17a26bde95bac2921bd1f08277f472b0e8",
+    "assets/components/ambient-fields/170-1110.svg": "cfa1f28c2118d17630dd7e632373fae4b29b7b08831341deb3515b883db9a7ec",
+    "assets/components/ambient-fields/170-1111.svg": "a706398cc2eb77e70ceee036dcee9bff1d8094e7a75b2329127ee65ecce2c793",
+    "assets/components/ambient-fields/170-1112.svg": "dd215bb4ba5846a06f7f923db3beb2d0f641d475cb86a968065ecd4e0b5d250b",
+    "assets/components/ambient-fields/170-1113.svg": "8b5e377fa0b07863dcda91b15af42cd039a79530363afb5cdd46983d80a37dc8",
+    "assets/components/ambient-fields/170-1114.svg": "c9553728a81a15c7ce674d4de7b23509c15356336fde0ff37acce209663dff1c",
+    "assets/components/ambient-fields/170-1115.svg": "f56687bc167c0b88d42af631dc3b8595deefc7badd6e1d618ed428f4af3a5175",
+    "assets/components/ambient-fields/170-1116.svg": "478d13c759a010ca7778c59feb128c761a37dcba9a6c7a9547bbf4738f37a022",
+    "assets/components/ambient-fields/170-1117.svg": "c6571cb86eb43156342b0af2edbc914bbac1fc5fac8803a94632471675501a25",
+    "assets/components/ambient-fields/171-2192.svg": "762ff40765259b5c65e2192b1b10cae882730998de6cffa437f0ed8f0a8cd0f3",
+    "assets/components/ambient-fields/171-2193.svg": "4d14e0910fad049ec4697e9778fced94cac9c583c7acd434952c8289add30b22",
+    "assets/components/ambient-fields/171-2194.svg": "e568ad29e552f94dbca0c501c671ada8fbe86a693a0a76972ded8c4880d857c6",
+    "assets/components/ambient-fields/171-2195.svg": "db8837881e42d57e160e59c6cc98cea320db54d38b7ca670d42f12fa8aef2204",
+    "assets/components/ambient-fields/171-2196.svg": "60bc920e7a34fa4a3cf719576aad93114f75c341fb6cd0b11315232c9862e1c3",
+    "assets/components/ambient-fields/171-2197.svg": "65916634a101ecd53ef5395681fc11801b9c6a29e8615fb84b3a7254b806e582",
+    "assets/components/ambient-fields/171-2198.svg": "299346d7be3d345fb56437cf7f79dc7f052c3e7ce9aecadb6e82072326775511",
+    "assets/components/ambient-fields/171-2199.svg": "7d558c3fde6421b196e81dc5870bd425356c510bb9f72646ab07a62e7a45fb80",
+    "assets/components/ambient-fields/171-2200.svg": "e89fc7aedc6c472769d9350ee09c486bc96617fae0d1e7c1f66d60e61236aa3e",
+    "assets/components/ambient-fields/171-2201.svg": "663c0b6f88b5043a7b723daaa68afacee558f433ba0b73a00f1ccbe4b725187a",
+    "assets/components/ambient-fields/171-2202.svg": "e8ae0c51360cda38d5ca891d0e6421033485d9a761ee6857cc9d589a24e82445",
+    "assets/components/ambient-fields/171-2203.svg": "551d0ee3e8cc37dbcf3d75e7214cb14c53be156585d8b0a0f9e03a6ea507212b"
+  },
+  "sourceReports": [
+    {
+      "file": ".artifacts/ambient-fields/performance-cpu1-1795141747352.json",
+      "sha256": "9c73cabf62e1098279f2fed855215fa015d65172272b563c88e14d31d5348e32"
+    },
+    {
+      "file": ".artifacts/ambient-fields/performance-cpu4-1795141901343.json",
+      "sha256": "0528b52c9eaef6e7868fd675be408675634e5d1bb9921095d942f6ec1811b319"
+    }
+  ],
+  "summary": [
+    {
+      "cpu": 1,
+      "mode": "thumb",
+      "cases": 8,
+      "fps": [
+        60.002250084378154,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        45,
+        216.29999999701977
+      ],
+      "readinessMS": [
+        70.69999999552965,
+        313.5
+      ],
+      "maxP95MS": 16.799999999999955,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 1,
+      "mode": "full",
+      "cases": 8,
+      "fps": [
+        60.00150003750093,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        31,
+        43.400000005960464
+      ],
+      "readinessMS": [
+        49.399999998509884,
+        62
+      ],
+      "maxP95MS": 16.799999999999955,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "thumb",
+      "cases": 8,
+      "fps": [
+        33.91430736549189,
+        60.00274440826816
+      ],
+      "firstPaintMS": [
+        278.20000000298023,
+        1113.2000000029802
+      ],
+      "readinessMS": [
+        352.29999999701977,
+        1797.3000000044703
+      ],
+      "maxP95MS": 50.100000000000364,
+      "slowCases": 6,
+      "slowIntervals": 455,
+      "longTasks": 6,
+      "firstPaintOver300MS": 6
+    },
+    {
+      "cpu": 4,
+      "mode": "full",
+      "cases": 8,
+      "fps": [
+        59.877245396702385,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        101.60000000149012,
+        229.10000000149012
+      ],
+      "readinessMS": [
+        132.79999999701977,
+        282.5
+      ],
+      "maxP95MS": 16.799999999999727,
+      "slowCases": 1,
+      "slowIntervals": 1,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    }
+  ],
+  "results": [
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 73.29999999701977,
+        "firstPaint": 45
+      },
+      "motion": {
+        "duration": 8013.69999999553,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.3999999970198
+          },
+          {
+            "name": "input",
+            "at": 411.3999999970198
+          },
+          {
+            "name": "release",
+            "at": 1811.2999999970198
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.2999999970198
+          },
+          {
+            "name": "settle",
+            "at": 3611.2999999970198
+          },
+          {
+            "name": "leave",
+            "at": 5011.199999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 122.51369699195196,
+            "y": 67.10911640808473,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 244,
+          "toggles": 4,
+          "raf": 413,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-thumb-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "71221be54fbe2f6a93060832bcd432930e60dcbf65d3ae4beb855414acad4b96",
+        "events": 47045
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 192.69999999552965,
+        "firstPaint": 141.60000000149012
+      },
+      "motion": {
+        "duration": 8014.19999999553,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.5
+          },
+          {
+            "name": "input",
+            "at": 412.5
+          },
+          {
+            "name": "release",
+            "at": 1812.4
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.3
+          },
+          {
+            "name": "settle",
+            "at": 3612.3
+          },
+          {
+            "name": "leave",
+            "at": 5012.3
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1040000000000014,
+          "frames": 263,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 415,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-thumb-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "0fbf092a3945099f78e5688bffe97ce73b7f8e4bd469885d0267ab3e92cb15e6",
+        "events": 28282
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 73.20000000298023,
+        "firstPaint": 51.29999999701977
+      },
+      "motion": {
+        "duration": 8012.5999999940395,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.89999999403955
+          },
+          {
+            "name": "input",
+            "at": 410.8999999940395
+          },
+          {
+            "name": "release",
+            "at": 1810.8999999940395
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.7999999940394
+          },
+          {
+            "name": "settle",
+            "at": 3610.7999999940394
+          },
+          {
+            "name": "leave",
+            "at": 5010.799999994039
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 240,
+          "h": 168,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-thumb-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "ddcbe4a0c97f1d4c492d43b504e953b8a37fa5b1613328e7aeaed4e89af392fd",
+        "events": 32074
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 70.69999999552965,
+        "firstPaint": 46.600000001490116
+      },
+      "motion": {
+        "duration": 8013.20000000298,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.90000000447037
+          },
+          {
+            "name": "input",
+            "at": 411.90000000447037
+          },
+          {
+            "name": "release",
+            "at": 1811.9000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.9000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3611.8000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5011.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1750,
+          "gather": false,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-thumb-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "8066eaa37fab56c74ee4f4494162e6490fde0e219b834bbc16e9041e8ad47195",
+        "events": 27308
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 111.20000000298023,
+        "firstPaint": 78.10000000149012
+      },
+      "motion": {
+        "duration": 8005.69999999553,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999955,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 202.7
+          },
+          {
+            "name": "input",
+            "at": 402.6
+          },
+          {
+            "name": "release",
+            "at": 1802.5
+          },
+          {
+            "name": "interrupt",
+            "at": 2402.5
+          },
+          {
+            "name": "settle",
+            "at": 3602.4
+          },
+          {
+            "name": "leave",
+            "at": 5002.4
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 123.35690490800619,
+            "y": 67.35619506762136,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 244,
+          "toggles": 4,
+          "raf": 413,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-thumb-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "c1500d2247c1a4605b47de947f911757865c30bc24d19f50cd8488fb1b5f492d",
+        "events": 45763
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 313.5,
+        "firstPaint": 216.29999999701977
+      },
+      "motion": {
+        "duration": 8003.69999999553,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 202.19999999403956
+          },
+          {
+            "name": "input",
+            "at": 402.19999999403956
+          },
+          {
+            "name": "release",
+            "at": 1802.1999999940394
+          },
+          {
+            "name": "interrupt",
+            "at": 2402.0999999940395
+          },
+          {
+            "name": "settle",
+            "at": 3601.9999999940396
+          },
+          {
+            "name": "leave",
+            "at": 5001.999999994039
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 418,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-thumb-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "781c6f203522a04a5ec662fbcf7890efa3aa8b2f48db61d7ca530ac191118eb8",
+        "events": 28433
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 101.5,
+        "firstPaint": 73.09999999403954
+      },
+      "motion": {
+        "duration": 8012.4000000059605,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999955,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.2
+          },
+          {
+            "name": "input",
+            "at": 411.1
+          },
+          {
+            "name": "release",
+            "at": 1811.1
+          },
+          {
+            "name": "interrupt",
+            "at": 2411
+          },
+          {
+            "name": "settle",
+            "at": 3611
+          },
+          {
+            "name": "leave",
+            "at": 5010.9
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 240,
+          "h": 168,
+          "speed": 1.0000048193708415,
+          "target": 1,
+          "running": true,
+          "frames": 263,
+          "toggles": 4,
+          "hover": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-thumb-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "27ca0ae02271400ca6678bd95ee5c6c7684346805f247176594e283e0173f67b",
+        "events": 33107
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 77.89999999850988,
+        "firstPaint": 54.399999998509884
+      },
+      "motion": {
+        "duration": 8012,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.89999999850988
+          },
+          {
+            "name": "input",
+            "at": 409.9999999985099
+          },
+          {
+            "name": "release",
+            "at": 1809.8999999985099
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.89999999851
+          },
+          {
+            "name": "settle",
+            "at": 3609.79999999851
+          },
+          {
+            "name": "leave",
+            "at": 5009.7999999985095
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1750,
+          "gather": false,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-thumb-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "daceb18429aa986b6fb3db2768ac683d77653b18e1b39911b83deaa164d30b7f",
+        "events": 27312
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 51.79999999701977,
+        "firstPaint": 36.19999999552965
+      },
+      "motion": {
+        "duration": 8012.5,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.40000000149013
+          },
+          {
+            "name": "input",
+            "at": 411.40000000149007
+          },
+          {
+            "name": "release",
+            "at": 1811.40000000149
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.30000000149
+          },
+          {
+            "name": "settle",
+            "at": 3611.30000000149
+          },
+          {
+            "name": "leave",
+            "at": 5011.2000000014905
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 187.8396355085203,
+            "y": 107.0505666450381,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 52,
+          "toggles": 4,
+          "raf": 412,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-full-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "8928a5b6b699d34408a94b2e2b2b1c8d432fdddad1b713161a454c135c6e1f76",
+        "events": 22332
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 62,
+        "firstPaint": 43.400000005960464
+      },
+      "motion": {
+        "duration": 8012.20000000298,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.00000000447034
+          },
+          {
+            "name": "input",
+            "at": 411.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1810.9000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.00000000447
+          },
+          {
+            "name": "settle",
+            "at": 3610.8000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5010.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 413,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-full-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "05681fa4b14bb59cecc5a7a5acaf808882824a4feb37b9fd5c20599a4b828d8d",
+        "events": 23336
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 61.69999999552965,
+        "firstPaint": 35.399999998509884
+      },
+      "motion": {
+        "duration": 8012,
+        "frames": 480,
+        "fps": 60.001500037500946,
+        "p95": 16.799999999999955,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.80000000298025
+          },
+          {
+            "name": "input",
+            "at": 410.70000000298023
+          },
+          {
+            "name": "release",
+            "at": 1810.7000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.7000000029802
+          },
+          {
+            "name": "settle",
+            "at": 3610.6000000029803
+          },
+          {
+            "name": "leave",
+            "at": 5010.60000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 368,
+          "h": 268,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-full-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "734dd5e3e5eeb12ac57125f68d394ef4d63b26a372eacc2efcfa68493ff5da85",
+        "events": 23137
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 57.20000000298023,
+        "firstPaint": 43
+      },
+      "motion": {
+        "duration": 8012,
+        "frames": 480,
+        "fps": 60.001500037500946,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.30000000298025
+          },
+          {
+            "name": "input",
+            "at": 411.20000000298023
+          },
+          {
+            "name": "release",
+            "at": 1811.2000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.2000000029802
+          },
+          {
+            "name": "settle",
+            "at": 3611.2000000029802
+          },
+          {
+            "name": "leave",
+            "at": 5011.10000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1733.3333333333335,
+          "gather": false,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-full-desktop-cpu1-1795141747352-trace.json",
+        "sha256": "eb8d489bf613069de132ff36ef4b6717954b73f5b43fd1d66a76eabe646d1bb7",
+        "events": 22246
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 49.399999998509884,
+        "firstPaint": 33.20000000298023
+      },
+      "motion": {
+        "duration": 8012.60000000149,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.70000000149014
+          },
+          {
+            "name": "input",
+            "at": 410.6000000014901
+          },
+          {
+            "name": "release",
+            "at": 1810.6000000014901
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.50000000149
+          },
+          {
+            "name": "settle",
+            "at": 3610.50000000149
+          },
+          {
+            "name": "leave",
+            "at": 5010.50000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 187.9572301865956,
+            "y": 107.0862025399917,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 52,
+          "toggles": 4,
+          "raf": 412,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-full-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "5150db63900d4eb980bb9c9444f1168c1aa519a56d283d4dfb79130db0958b75",
+        "events": 22336
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 53.600000001490116,
+        "firstPaint": 38.600000001490116
+      },
+      "motion": {
+        "duration": 8011.69999999553,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.4999999985099
+          },
+          {
+            "name": "input",
+            "at": 410.4999999985099
+          },
+          {
+            "name": "release",
+            "at": 1810.4999999985098
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.49999999851
+          },
+          {
+            "name": "settle",
+            "at": 3610.39999999851
+          },
+          {
+            "name": "leave",
+            "at": 5010.39999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 412,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-full-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "28c631a3db772da921bd59361435df54225dd40f379932a7ad1c0eaa0d752eba",
+        "events": 23264
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 60.899999998509884,
+        "firstPaint": 41.80000000447035
+      },
+      "motion": {
+        "duration": 8011.20000000298,
+        "frames": 480,
+        "fps": 60.00150003750093,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.6000000029802
+          },
+          {
+            "name": "input",
+            "at": 409.6000000029802
+          },
+          {
+            "name": "release",
+            "at": 1809.6000000029803
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.6000000029803
+          },
+          {
+            "name": "settle",
+            "at": 3609.5000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5009.40000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 368,
+          "h": 268,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-full-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "606e9f1d63aa2f4a2a869ed0f8733c82100593a560a9897d26fb062af3f6ea6d",
+        "events": 23128
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 51.899999998509884,
+        "firstPaint": 31
+      },
+      "motion": {
+        "duration": 8011.39999999851,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.90000000298022
+          },
+          {
+            "name": "input",
+            "at": 409.9000000029803
+          },
+          {
+            "name": "release",
+            "at": 1809.9000000029803
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.90000000298
+          },
+          {
+            "name": "settle",
+            "at": 3609.80000000298
+          },
+          {
+            "name": "leave",
+            "at": 5009.800000002981
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1733.3333333333335,
+          "gather": false,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-full-mobile-cpu1-1795141747352-trace.json",
+        "sha256": "283c5c0152e8b5d3bc186f85d6c95eb121bb41858df8fa0271ab622ce5c503a1",
+        "events": 21490
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 481,
+        "firstPaint": 358.3999999985099
+      },
+      "motion": {
+        "duration": 8036.79999999702,
+        "frames": 331,
+        "fps": 41.2050292543259,
+        "p95": 49.900000000000546,
+        "gaps": [
+          {
+            "frame": 1,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 4,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 8,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 10,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 13,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 14,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 16,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 18,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 19,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 20,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 21,
+            "ms": 50
+          },
+          {
+            "frame": 23,
+            "ms": 50
+          },
+          {
+            "frame": 24,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 25,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 27,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 29,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 30,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 32,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 33,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 35,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 36,
+            "ms": 50
+          },
+          {
+            "frame": 38,
+            "ms": 50
+          },
+          {
+            "frame": 39,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 40,
+            "ms": 50
+          },
+          {
+            "frame": 41,
+            "ms": 50
+          },
+          {
+            "frame": 42,
+            "ms": 50
+          },
+          {
+            "frame": 43,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 45,
+            "ms": 50.09999999999991
+          },
+          {
+            "frame": 46,
+            "ms": 50
+          },
+          {
+            "frame": 47,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 48,
+            "ms": 50
+          },
+          {
+            "frame": 49,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 50,
+            "ms": 50.09999999999991
+          },
+          {
+            "frame": 51,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 52,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 53,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 54,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 55,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 56,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 57,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 58,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 59,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 60,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 61,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 62,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 63,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 64,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 66,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 156,
+            "ms": 50
+          },
+          {
+            "frame": 157,
+            "ms": 50
+          },
+          {
+            "frame": 158,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 159,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 160,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 162,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 164,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 165,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 166,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 167,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 168,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 170,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 172,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 173,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 178,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 182,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 186,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 188,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 189,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 191,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 194,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 196,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 197,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 198,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 200,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 204,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 205,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 207,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 208,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 209,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 211,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 212,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 213,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 214,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 215,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 216,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 217,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 219,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 221,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 223,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 231,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 232,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 234,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 237,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 238,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 239,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 242,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 245,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 249,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 251,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 254,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 255,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 257,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 259,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 261,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 263,
+            "ms": 50
+          },
+          {
+            "frame": 265,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 266,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 268,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 271,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 272,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 273,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 275,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 276,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 277,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 278,
+            "ms": 50
+          },
+          {
+            "frame": 279,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 281,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 284,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 285,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 287,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 289,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 292,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 295,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 298,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 299,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 301,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 302,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 324,
+            "ms": 33.400000000001455
+          },
+          {
+            "frame": 325,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 326,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 328,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 331,
+            "ms": 50
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1375.3999999985099,
+            "duration": 50
+          },
+          {
+            "at": 3602.5999999940395,
+            "duration": 66
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 219.09999999403954
+          },
+          {
+            "name": "input",
+            "at": 419.09999999403954
+          },
+          {
+            "name": "release",
+            "at": 1802.3999999940397
+          },
+          {
+            "name": "interrupt",
+            "at": 2402.2999999940394
+          },
+          {
+            "name": "settle",
+            "at": 3602.2999999940394
+          },
+          {
+            "name": "leave",
+            "at": 5018.999999994039
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 123.36648133590995,
+            "y": 67.35901935998834,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 244,
+          "toggles": 4,
+          "raf": 422,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-thumb-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "9b9303996318fabbbe616d577a5f8ce03d9b306c94d281fb043b8d8e9aa06b78",
+        "events": 35733
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 1797.3000000044703,
+        "firstPaint": 1113.2000000029802
+      },
+      "motion": {
+        "duration": 8041.39999999851,
+        "frames": 425,
+        "fps": 52.9067596165816,
+        "p95": 33.30000000000109,
+        "gaps": [
+          {
+            "frame": 1,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 4,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 6,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 7,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 9,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 23,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 33,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 36,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 39,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 42,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 45,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 47,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 48,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 49,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 63,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 65,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 66,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 67,
+            "ms": 50
+          },
+          {
+            "frame": 72,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 74,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 83,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 121,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 122,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 123,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 213,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 222,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 226,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 237,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 240,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 246,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 248,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 252,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 257,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 271,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 317,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 333,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 335,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 337,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 340,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 341,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 347,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 348,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 349,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 351,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 365,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 367,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 381,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 398,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 400,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 407,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 409,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 420,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1514.2999999970198,
+            "duration": 51
+          },
+          {
+            "at": 7148.79999999702,
+            "duration": 52
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213
+          },
+          {
+            "name": "input",
+            "at": 413
+          },
+          {
+            "name": "release",
+            "at": 1813
+          },
+          {
+            "name": "interrupt",
+            "at": 2429.5
+          },
+          {
+            "name": "settle",
+            "at": 3612.8999999999996
+          },
+          {
+            "name": "leave",
+            "at": 5012.8
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 436,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-thumb-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "15363750e04fb74946cda87716f25d5865ee7b055372e92a41f7d81c88ace3d5",
+        "events": 31579
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 352.29999999701977,
+        "firstPaint": 278.20000000298023
+      },
+      "motion": {
+        "duration": 8020,
+        "frames": 475,
+        "fps": 59.253530262960936,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 243,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 249,
+            "ms": 50
+          },
+          {
+            "frame": 285,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 383,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 385,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 215.80000000298025
+          },
+          {
+            "name": "input",
+            "at": 415.80000000298025
+          },
+          {
+            "name": "release",
+            "at": 1815.7000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2415.7000000029802
+          },
+          {
+            "name": "settle",
+            "at": 3615.60000000298
+          },
+          {
+            "name": "leave",
+            "at": 5015.60000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 240,
+          "h": 168,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 419
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-thumb-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "e0c16af1749a2ecc6610018186991c4edf482f630d99d89589c6dce70aadb141",
+        "events": 37647
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 392.20000000298023,
+        "firstPaint": 337.5
+      },
+      "motion": {
+        "duration": 8022.4000000059605,
+        "frames": 481,
+        "fps": 60.0019959083878,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 216.60000000149012
+          },
+          {
+            "name": "input",
+            "at": 416.5000000014901
+          },
+          {
+            "name": "release",
+            "at": 1816.4000000014903
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.50000000149
+          },
+          {
+            "name": "settle",
+            "at": 3616.30000000149
+          },
+          {
+            "name": "leave",
+            "at": 5016.30000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1833.3333333333326,
+          "gather": false,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 418
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-thumb-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "1654ef3410eaf8715d18b1b5e4b659748e51d662dc376455523394b479c9e3c2",
+        "events": 34193
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 615.8999999985099,
+        "firstPaint": 378.8999999985099
+      },
+      "motion": {
+        "duration": 8058.79999999702,
+        "frames": 273,
+        "fps": 33.91430736549189,
+        "p95": 50.100000000000364,
+        "gaps": [
+          {
+            "frame": 1,
+            "ms": 50
+          },
+          {
+            "frame": 2,
+            "ms": 66.69999999999993
+          },
+          {
+            "frame": 3,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 4,
+            "ms": 50
+          },
+          {
+            "frame": 5,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 6,
+            "ms": 50
+          },
+          {
+            "frame": 7,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 8,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 9,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 10,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 11,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 12,
+            "ms": 50
+          },
+          {
+            "frame": 13,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 14,
+            "ms": 50
+          },
+          {
+            "frame": 15,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 16,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 19,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 21,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 23,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 26,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 28,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 29,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 30,
+            "ms": 50.100000000000136
+          },
+          {
+            "frame": 31,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 32,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 33,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 34,
+            "ms": 50.100000000000136
+          },
+          {
+            "frame": 35,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 36,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 37,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 38,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 39,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 40,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 41,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 42,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 50
+          },
+          {
+            "frame": 45,
+            "ms": 50
+          },
+          {
+            "frame": 46,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 48,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 49,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 50,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 51,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 52,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 54,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 55,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 57,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 58,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 59,
+            "ms": 66.70000000000027
+          },
+          {
+            "frame": 61,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 62,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 63,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 64,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 66,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 68,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 69,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 70,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 139,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 141,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 142,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 145,
+            "ms": 33.20000000000073
+          },
+          {
+            "frame": 148,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 150,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 151,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 153,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 154,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 155,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 156,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 157,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 158,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 159,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 160,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 161,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 162,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 164,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 166,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 167,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 168,
+            "ms": 33.20000000000073
+          },
+          {
+            "frame": 170,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 172,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 173,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 175,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 176,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 179,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 181,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 182,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 184,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 186,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 187,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 188,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 189,
+            "ms": 50
+          },
+          {
+            "frame": 191,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 192,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 193,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 194,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 195,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 196,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 197,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 198,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 199,
+            "ms": 50
+          },
+          {
+            "frame": 200,
+            "ms": 33.5
+          },
+          {
+            "frame": 201,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 202,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 203,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 204,
+            "ms": 50
+          },
+          {
+            "frame": 205,
+            "ms": 50
+          },
+          {
+            "frame": 207,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 208,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 209,
+            "ms": 50
+          },
+          {
+            "frame": 210,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 211,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 212,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 213,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 214,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 215,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 216,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 217,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 218,
+            "ms": 50
+          },
+          {
+            "frame": 219,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 220,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 222,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 224,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 226,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 229,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 233,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 234,
+            "ms": 50
+          },
+          {
+            "frame": 235,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 236,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 238,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 239,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 240,
+            "ms": 50
+          },
+          {
+            "frame": 242,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 243,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 244,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 245,
+            "ms": 50
+          },
+          {
+            "frame": 246,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 247,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 248,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 249,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 250,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 251,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 255,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 257,
+            "ms": 66.70000000000073
+          },
+          {
+            "frame": 258,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 259,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 260,
+            "ms": 33.400000000001455
+          },
+          {
+            "frame": 261,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 262,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 264,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 265,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 267,
+            "ms": 50
+          },
+          {
+            "frame": 268,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 269,
+            "ms": 50
+          },
+          {
+            "frame": 270,
+            "ms": 33.400000000001455
+          },
+          {
+            "frame": 271,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 272,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 273,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 439.69999999552965,
+            "duration": 57
+          },
+          {
+            "at": 7419.29999999702,
+            "duration": 55
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 231.9999999985098
+          },
+          {
+            "name": "input",
+            "at": 415.3999999985099
+          },
+          {
+            "name": "release",
+            "at": 1815.29999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2415.29999999851
+          },
+          {
+            "name": "settle",
+            "at": 3615.2999999985095
+          },
+          {
+            "name": "leave",
+            "at": 5031.7999999985095
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 122.12055697716573,
+            "y": 66.99499268078986,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 262,
+          "links": 244,
+          "toggles": 4,
+          "raf": 424,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-thumb-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "b73f0f85d8bbdca720fa1ab6182f5a070b8c956131941fdafd8c7d56b7cdfe78",
+        "events": 30091
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 1783.6999999955297,
+        "firstPaint": 1104.1999999955297
+      },
+      "motion": {
+        "duration": 8096.5999999940395,
+        "frames": 385,
+        "fps": 47.630830137325255,
+        "p95": 33.400000000000546,
+        "gaps": [
+          {
+            "frame": 21,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 23,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 24,
+            "ms": 50
+          },
+          {
+            "frame": 25,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 26,
+            "ms": 50
+          },
+          {
+            "frame": 27,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 28,
+            "ms": 50.09999999999991
+          },
+          {
+            "frame": 29,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 30,
+            "ms": 50
+          },
+          {
+            "frame": 31,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 32,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 35,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 39,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 41,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 43,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 50
+          },
+          {
+            "frame": 45,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 46,
+            "ms": 50
+          },
+          {
+            "frame": 48,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 49,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 50,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 51,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 52,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 53,
+            "ms": 50
+          },
+          {
+            "frame": 54,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 57,
+            "ms": 50
+          },
+          {
+            "frame": 59,
+            "ms": 66.70000000000027
+          },
+          {
+            "frame": 69,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 90,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 93,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 102,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 104,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 177,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 179,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 181,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 184,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 185,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 186,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 188,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 190,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 195,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 196,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 198,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 203,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 210,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 211,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 213,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 215,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 238,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 241,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 242,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 244,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 245,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 247,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 250,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 252,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 253,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 255,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 257,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 261,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 267,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 274,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 276,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 277,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 278,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 282,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 284,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 285,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 287,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 295,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 306,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 357,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 360,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 362,
+            "ms": 50
+          },
+          {
+            "frame": 364,
+            "ms": 50
+          },
+          {
+            "frame": 365,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 367,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 369,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 371,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 377,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 380,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 384,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 385,
+            "ms": 83.29999999999927
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 205.49999999403963
+          },
+          {
+            "name": "input",
+            "at": 405.4999999940396
+          },
+          {
+            "name": "release",
+            "at": 1805.4999999940396
+          },
+          {
+            "name": "interrupt",
+            "at": 2405.499999994039
+          },
+          {
+            "name": "settle",
+            "at": 3605.3999999940397
+          },
+          {
+            "name": "leave",
+            "at": 5005.299999994039
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1280000000000014,
+          "frames": 266,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 434,
+          "w": 240,
+          "h": 168
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-thumb-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "952e05a3d8e4e265097aee7e1a865958358430916b3580f1a1a3943490603d8b",
+        "events": 29813
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 449.1000000014901,
+        "firstPaint": 332.6000000014901
+      },
+      "motion": {
+        "duration": 8018.60000000149,
+        "frames": 450,
+        "fps": 56.13492340701562,
+        "p95": 33.29999999999927,
+        "gaps": [
+          {
+            "frame": 21,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 106,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 110,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 236,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 239,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 248,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 250,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 255,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 256,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 257,
+            "ms": 50
+          },
+          {
+            "frame": 259,
+            "ms": 50
+          },
+          {
+            "frame": 260,
+            "ms": 50
+          },
+          {
+            "frame": 261,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 265,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 286,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 290,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 295,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 299,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 310,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 382,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 400,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 402,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 410,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 412,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 414,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 429,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.39999999999998
+          },
+          {
+            "name": "input",
+            "at": 408.4000000000001
+          },
+          {
+            "name": "release",
+            "at": 1808.3000000000002
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.3
+          },
+          {
+            "name": "settle",
+            "at": 3608.2
+          },
+          {
+            "name": "leave",
+            "at": 5008.2
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 240,
+          "h": 168,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 422
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-thumb-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "0cf677bfcd033c08e369ab867ce78a7d416f489593c060402d324b3f2cd05360",
+        "events": 34908
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 361.69999999552965,
+        "firstPaint": 285.3999999985099
+      },
+      "motion": {
+        "duration": 8012.89999999851,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.8999999970198
+          },
+          {
+            "name": "input",
+            "at": 408.8999999970198
+          },
+          {
+            "name": "release",
+            "at": 1808.8999999970197
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.8999999970197
+          },
+          {
+            "name": "settle",
+            "at": 3608.7999999970198
+          },
+          {
+            "name": "leave",
+            "at": 5008.699999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1866.6666666666656,
+          "gather": false,
+          "w": 240,
+          "h": 168,
+          "frames": 263,
+          "running": true,
+          "toggles": 4,
+          "raf": 419
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-thumb-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "c0d5ef3056c6cd5c859cf3f68e79436957b2849c056bff24caf77f1efc478713",
+        "events": 31706
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 282.5,
+        "firstPaint": 229.10000000149012
+      },
+      "motion": {
+        "duration": 8018.0999999940395,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 214.60000000000002
+          },
+          {
+            "name": "input",
+            "at": 414.70000000000005
+          },
+          {
+            "name": "release",
+            "at": 1814.6
+          },
+          {
+            "name": "interrupt",
+            "at": 2414.5
+          },
+          {
+            "name": "settle",
+            "at": 3614.5
+          },
+          {
+            "name": "leave",
+            "at": 5014.5
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 187.35445687628214,
+            "y": 106.903975269447,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 52,
+          "toggles": 4,
+          "raf": 418,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-full-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "7b09ea821a1ff0bedfd9da797469ed05c7630faee2077124bb46e36ce434bdc9",
+        "events": 28479
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 181.39999999850988,
+        "firstPaint": 143.20000000298023
+      },
+      "motion": {
+        "duration": 8006.5,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.5000000044704
+          },
+          {
+            "name": "input",
+            "at": 404.40000000447037
+          },
+          {
+            "name": "release",
+            "at": 1804.4000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.4000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3604.3000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5004.20000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 414,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-full-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "fca41ac771f2e976974169bde29751bfc0a4455bdc5bf2c46386f8ecec5ccfab",
+        "events": 27456
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 218.29999999701977,
+        "firstPaint": 173
+      },
+      "motion": {
+        "duration": 8023.20000000298,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 216.1000000044703
+          },
+          {
+            "name": "input",
+            "at": 416.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1816.0000000044702
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.00000000447
+          },
+          {
+            "name": "settle",
+            "at": 3615.9000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5015.900000004471
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 368,
+          "h": 268,
+          "speed": 1.0000048193708415,
+          "target": 1,
+          "running": true,
+          "frames": 263,
+          "toggles": 4,
+          "hover": false,
+          "raf": 416
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-full-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "ea955e4a907fc35f41c9e93cd6105e0764e33b1148d0aa99a7a05ad340afd83f",
+        "events": 25641
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 148.60000000149012,
+        "firstPaint": 112.39999999850988
+      },
+      "motion": {
+        "duration": 8016.60000000149,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.90000000149007
+          },
+          {
+            "name": "input",
+            "at": 413.0000000014901
+          },
+          {
+            "name": "release",
+            "at": 1812.9000000014903
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.80000000149
+          },
+          {
+            "name": "settle",
+            "at": 3612.80000000149
+          },
+          {
+            "name": "leave",
+            "at": 5012.80000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1783.333333333333,
+          "gather": false,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 415
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-full-desktop-cpu4-1795141901343-trace.json",
+        "sha256": "b35edc53bca77be8d22fd334928ce3d5a7f7ad79cedb395616302b2c36cfc532",
+        "events": 22815
+      }
+    },
+    {
+      "kind": "constellation",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 199.29999999701977,
+        "firstPaint": 165.79999999701977
+      },
+      "motion": {
+        "duration": 8012,
+        "frames": 480,
+        "fps": 60.00150003750094,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.5000000014901
+          },
+          {
+            "name": "input",
+            "at": 409.5000000014901
+          },
+          {
+            "name": "release",
+            "at": 1809.4000000014903
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.4000000014903
+          },
+          {
+            "name": "settle",
+            "at": 3609.30000000149
+          },
+          {
+            "name": "leave",
+            "at": 5009.30000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": {
+            "x": 188.11890626629165,
+            "y": 107.13526453813671,
+            "active": false
+          },
+          "mode": "repel",
+          "running": true,
+          "frames": 264,
+          "links": 52,
+          "toggles": 4,
+          "raf": 415,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-constellation-full-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "70efd3e9c6afaa76a76d12962a5080b3bf71ecbdb761e710ed10da5537c8aa95",
+        "events": 24473
+      }
+    },
+    {
+      "kind": "flow",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 132.79999999701977,
+        "firstPaint": 106.10000000149012
+      },
+      "motion": {
+        "duration": 8007,
+        "frames": 479,
+        "fps": 59.877245396702385,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 33.39999999999998
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.30000000298025
+          },
+          {
+            "name": "input",
+            "at": 404.30000000298025
+          },
+          {
+            "name": "release",
+            "at": 1804.2000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.2000000029802
+          },
+          {
+            "name": "settle",
+            "at": 3604.1000000029803
+          },
+          {
+            "name": "leave",
+            "at": 5004.10000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "time": 2.1120000000000014,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "vortex": null,
+          "raf": 414,
+          "w": 368,
+          "h": 268
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-flow-full-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "21df331eabcb2805a284cd40fbf9e26c37ea6ce7bc4e2508636b761b4eddd184",
+        "events": 29416
+      }
+    },
+    {
+      "kind": "stars",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 143.89999999850988,
+        "firstPaint": 101.60000000149012
+      },
+      "motion": {
+        "duration": 8006.60000000149,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.40000000298022
+          },
+          {
+            "name": "input",
+            "at": 404.4000000029803
+          },
+          {
+            "name": "release",
+            "at": 1804.3000000029801
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.30000000298
+          },
+          {
+            "name": "settle",
+            "at": 3604.30000000298
+          },
+          {
+            "name": "leave",
+            "at": 5004.20000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "w": 368,
+          "h": 268,
+          "speed": 1.0000048199312288,
+          "target": 1,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "hover": false,
+          "raf": 415
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-stars-full-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "e8b4afd83b4a3e0b0fe3f06abd03432c116ef1b4b15f58bf1ab373ade9ee1a51",
+        "events": 25860
+      }
+    },
+    {
+      "kind": "fireflies",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 201.70000000298023,
+        "firstPaint": 132.60000000149012
+      },
+      "motion": {
+        "duration": 8011.5,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.6000000044703
+          },
+          {
+            "name": "input",
+            "at": 410.5000000044704
+          },
+          {
+            "name": "release",
+            "at": 1810.5000000044702
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.4000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3610.4000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5010.400000004471
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "pointer": null,
+          "idleSince": 1833.3333333333326,
+          "gather": false,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "raf": 418
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-fireflies-full-mobile-cpu4-1795141901343-trace.json",
+        "sha256": "e6ba4085317a548574228cfc621ef145557ede901d634a7a5c56b8777dce7d98",
+        "events": 29063
+      }
+    }
+  ],
+  "findings": [
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "fps": 60.0030001500075,
+      "p95MS": 16.799999999999272,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 313.5
+    },
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 41.2050292543259,
+      "p95MS": 49.900000000000546,
+      "slowIntervals": 132,
+      "longTasks": 2,
+      "readinessMS": 481
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 52.9067596165816,
+      "p95MS": 33.30000000000109,
+      "slowIntervals": 53,
+      "longTasks": 2,
+      "readinessMS": 1797.3000000044703
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 59.253530262960936,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 5,
+      "longTasks": 0,
+      "readinessMS": 352.29999999701977
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 60.0019959083878,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 392.20000000298023
+    },
+    {
+      "kind": "constellation",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 33.91430736549189,
+      "p95MS": 50.100000000000364,
+      "slowIntervals": 156,
+      "longTasks": 2,
+      "readinessMS": 615.8999999985099
+    },
+    {
+      "kind": "flow",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 47.630830137325255,
+      "p95MS": 33.400000000000546,
+      "slowIntervals": 83,
+      "longTasks": 0,
+      "readinessMS": 1783.6999999955297
+    },
+    {
+      "kind": "stars",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 56.13492340701562,
+      "p95MS": 33.29999999999927,
+      "slowIntervals": 26,
+      "longTasks": 0,
+      "readinessMS": 449.1000000014901
+    },
+    {
+      "kind": "fireflies",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 60.00274440826816,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 361.69999999552965
+    },
+    {
+      "kind": "flow",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 59.877245396702385,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 1,
+      "longTasks": 0,
+      "readinessMS": 132.79999999701977
+    }
+  ],
+  "scope": "Isolated emitted native/full Ambient fields, desktop DPR1 and mobile DPR2 at CPU1/4. Eight-second interrupted stories retain complete original simulation and measure actual RAF intervals, long tasks, first paint, readiness and CDP traces. Fonts are prepared before mounting; no per-frame model inspection or pixel readback. Physical input is verified separately. Measurements exclude public route transfer and leave final timing gates open.",
+  "gitSourceHashes": {
+    "js/demos.ambient.particles-constellation.js": "10066b2a61cdc5409f6df79dc0c1f75b9c22e4380b400d9c0e079751f6874422",
+    "js/demos.ambient.flow-field.js": "5e145626a7148b28053ea3b676fdf1acc68f57c257996757b2320c0eb2e28307",
+    "js/demos.ambient.starfield-warp.js": "5171f120ebcaf5b57d27de9ec45aa5992a85fddd61a760beeb04ea80a074b9e4",
+    "js/demos.ambient.fireflies-night.js": "1ab09019e3bf46d07582362b0d07652d45f06503f2d85490196d67cdea1c14a0",
+    "tools/fixtures/ambient-fields-artwork.json": "77aff8d0ad0bef019f698c6eb9c0820305d665450cc416bb8607c9b6f9aa1cc1",
+    "tools/fixtures/ambient-fields-original-models.json": "5c970b90fb06fef2d0ca9344a3aeee4ff0a7729510923fc13f4693d8db2a87bc",
+    "tools/verification/ambient-fields-harness.js": "033c1dd19eb0cccc1916ace738df903a6906063744bf7258640b0fe39d13e75a",
+    "tools/verification/ambient-fields-original.js": "bf2d2214c1688d29b37746435d39823b3cf55c1dc7cd2d03977a7083bc3018c5",
+    "tools/verification/ambient-fields-normalizer.js": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/load-registry.js": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/registry.js": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700",
+    "js/shell/router.js": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f",
+    "js/shell/views/detail.js": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "2d8915f6fc0e08e1c828d8e5b4604deace52273350bca7bcd07c51ee82aaf8d0",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "registry/index.json": "e2f4480386c06f8c97f6d070296af7412ae955050ddc0026ce6a81b299beffcf",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-ambient-fields.js": "ee9c90064d9c663ed8e90e5e3a1bbcd18161d07ba94a28ef78c62059f03c8f48",
+    "assets/components/ambient-fields/170-820.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-821.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-822.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-823.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-824.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-825.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-826.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-827.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-828.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-829.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-830.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-831.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-832.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-833.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-834.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-835.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-836.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-837.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-838.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-839.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-840.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-841.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-842.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-843.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-844.svg": "c4af6ca924c624a00467e8fb5078c2ed5f5f71d6293c82aa68b7a768a2cd26dd",
+    "assets/components/ambient-fields/170-845.svg": "b4136956f683065768ad868102fca7f37b35f1e5de82726b8bb5bbb5f0f1eb99",
+    "assets/components/ambient-fields/170-846.svg": "6115ea710920b7e6b822358aece8f74a3f7121f11c84e6c71862c0b24d37a52b",
+    "assets/components/ambient-fields/170-847.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-848.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-849.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-850.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-851.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-852.svg": "22e09e3d0ac74e2e04156e171d68423cba1a5d3948ba485f8d9478d8e23a68d4",
+    "assets/components/ambient-fields/170-853.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-854.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-855.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-856.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-857.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-858.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-859.svg": "b678bcff7a16c581c264270c459db76bbcb3e0b2771fa87257738f08d6466ac0",
+    "assets/components/ambient-fields/170-860.svg": "43a666541c1acef199fc494ba6f1a8fa7032a61191cc60d769d5972b267f9f35",
+    "assets/components/ambient-fields/170-861.svg": "f95ee06e4ace594f1feeb5225a9b03e3234618e425ad6196d1710688a20f100b",
+    "assets/components/ambient-fields/170-862.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-863.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-864.svg": "09964cb5b1fbaf7338b3523f11e6fd7e2c8921718ca9511c078411f25bd64217",
+    "assets/components/ambient-fields/170-865.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-866.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-867.svg": "45b38467e125b3ce0510d2862dea16f17f37fe6596d2b88fd98d90d7f663b7cc",
+    "assets/components/ambient-fields/170-868.svg": "ed98027980959bfca8b590aa1e14d85abd48498695998623c45e01fda2ee793e",
+    "assets/components/ambient-fields/170-869.svg": "a0ab052118c18c98a8758d96601294ec4ae79b7efb3556796c650aeb2e64fe99",
+    "assets/components/ambient-fields/170-870.svg": "789ad674b0262261ea3702250a32da184e9aed4f19828a7843075e388aa5959b",
+    "assets/components/ambient-fields/170-871.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-872.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-873.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-874.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-875.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-876.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-877.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-878.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-879.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-880.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-881.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-882.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-883.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-884.svg": "595bda5ab90f184267b29e3bfa60b3ff35deb98ad3ffd157ebd02f05cf9214f0",
+    "assets/components/ambient-fields/170-885.svg": "33a280058e304f39db4c99e7be742b9a9fa4986dea19eb46ad65ab97d784beb2",
+    "assets/components/ambient-fields/170-886.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-887.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-888.svg": "0d3ebdb71bdbda29e98c39e5e00b481c62823c5fa7fda134c450eab88d6a23a2",
+    "assets/components/ambient-fields/170-889.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-890.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-891.svg": "33a280058e304f39db4c99e7be742b9a9fa4986dea19eb46ad65ab97d784beb2",
+    "assets/components/ambient-fields/170-892.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-893.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-894.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-895.svg": "a59ba54a4f6cca6c0daa3dae5a251fca6444f4cc919c0c2140b6af202e26cb1a",
+    "assets/components/ambient-fields/170-896.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-897.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-898.svg": "595bda5ab90f184267b29e3bfa60b3ff35deb98ad3ffd157ebd02f05cf9214f0",
+    "assets/components/ambient-fields/170-899.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-900.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-901.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-902.svg": "c15f26c885768bb742058dbab0d99e24cb23f3f6622f3c57217a809acebd296a",
+    "assets/components/ambient-fields/170-903.svg": "e94d817a365021536be4e5f41ad430513edf6655e26a23cf8ca6f2aac3d3004d",
+    "assets/components/ambient-fields/170-904.svg": "ee2cc726cac7797e1199b6a1db94d573e0a598749e8a5145850cbc4bd3f8e7d9",
+    "assets/components/ambient-fields/170-905.svg": "a124e88d2aef1f7014697cbf059fc799b23f4582ae05302f72cf4b09540c25c4",
+    "assets/components/ambient-fields/170-943.svg": "80e8016f7b5410ea0fbcdfab0a222aa66689e28d258deca82ef3a9a15de02428",
+    "assets/components/ambient-fields/170-944.svg": "34f85d1320adaa4319e0d5cfd736171975fa88b2b88827238659d58f788d7b90",
+    "assets/components/ambient-fields/170-945.svg": "20eddc93d7299f7ccd36be50f271f90986c190ebf87a9a6d0a68265fb25b6896",
+    "assets/components/ambient-fields/170-946.svg": "40162e2f8bcdcf866da231db180be7459d698d59745a730ee013fe87a37da7a9",
+    "assets/components/ambient-fields/170-947.svg": "4b15ec312efaccfb694aa89f93526d17f863ae93d5f39c02b65cee750c31c7e8",
+    "assets/components/ambient-fields/170-948.svg": "11633ad3a0dbba3875f9b165a3837534f0cf8af1c83cdc6dc51182631d9fbc5a",
+    "assets/components/ambient-fields/170-949.svg": "4cca97125250ab1ae0dd8daf762249879135e79dc9c7e515f4f5b27787a8e0d0",
+    "assets/components/ambient-fields/170-950.svg": "f8dd57033f3d28a26bb760d4ebdd44b41fe965b4e596af2ced8780f5ff7a4652",
+    "assets/components/ambient-fields/170-951.svg": "9091359c8cf175b09b886ca7f7245ed59d75c6f38cce6c3224e8ec1728516c1e",
+    "assets/components/ambient-fields/170-952.svg": "bd5060aaea45e4af70911407adafa665f1ea1e02fc7cbc60b56354e3a93d74e3",
+    "assets/components/ambient-fields/170-953.svg": "984ea7963344ecc70ecf836a2c6f6da264cdaa7d061243ecc86888e771f97e68",
+    "assets/components/ambient-fields/170-954.svg": "0804e0d4497cfcc0f594b9ac6096736c6d27b98aa2a6f36faa89e64179497cb9",
+    "assets/components/ambient-fields/170-955.svg": "b934f2c6562c7824e5a837619144b9deb6411414d61fc96e0290c31ea6386977",
+    "assets/components/ambient-fields/170-956.svg": "141681e0e56a493e42ef67e665b512fa5f49754fb6d2f0745fde9b67901ce817",
+    "assets/components/ambient-fields/170-957.svg": "bf9ed7c65d650768e4119bee98e689255ace90b2fc5c0e6cb1445af7e8036efe",
+    "assets/components/ambient-fields/170-958.svg": "c5e7c72a102af3cc4f2c65be14c70fe1bbfcb45b3d99940cc5d075d96ccafdca",
+    "assets/components/ambient-fields/170-959.svg": "494a7a795ac865ab63028a566b908e51e3f8c538ec56490018b0cd803e2f4ed4",
+    "assets/components/ambient-fields/170-960.svg": "6b647b2045a7042e11a905c2b2bbb075da98c57759a3fb118270e10f48c85e99",
+    "assets/components/ambient-fields/170-961.svg": "a8f7b5eefb66a6aced100641792a5313f3e5e8c95d968924026dc12ba787d63e",
+    "assets/components/ambient-fields/170-962.svg": "157e4da73d79b903dfd4cbd65d3e1b81d6daba876ee64a1ab4db509acdb5edcb",
+    "assets/components/ambient-fields/170-963.svg": "e9dfbe44e503d91d95398d2108367f331bb1d7b2723857811c93a301b660b7fa",
+    "assets/components/ambient-fields/170-964.svg": "ce1b63aef3ac0413e84ba0783dd027bd6762984de8edfca79054664467be0277",
+    "assets/components/ambient-fields/170-965.svg": "698523f06c42a5b612be37c3be36002bbf4189b6c6ef1dd1d3ed34888f2bda21",
+    "assets/components/ambient-fields/170-966.svg": "b4e2546450e724398b3120552c94a232f52bdcab963a7488d0ffbfdd242b4e8b",
+    "assets/components/ambient-fields/170-967.svg": "ec919cc0e53701aa59a7c5d9147a3d1130540ee599139b3ee484335e17798812",
+    "assets/components/ambient-fields/170-968.svg": "e2f3fdb28850b8f66bdd9b4c40d6985abc33224b544c8037e47f1f395f580f84",
+    "assets/components/ambient-fields/170-969.svg": "791f6ecf223b23c0e2010c7865d7b97f3d5a26937005d4582fee3b8454f8cf63",
+    "assets/components/ambient-fields/170-970.svg": "180b30f46f9be793419cf2250a8dc6056e566d20a92eee0fd3db0e3f6607ab1d",
+    "assets/components/ambient-fields/170-971.svg": "d0fe04a9e27596c1bc82ef50abd29be1f64e8b9f847b1ca002cbe7605b4700bf",
+    "assets/components/ambient-fields/170-972.svg": "bd5cab48437bed253151291b57b6c13ee68c6677ce4fae76b92ec19d06cc8f0c",
+    "assets/components/ambient-fields/170-973.svg": "8418758576b3ba4a00f35f0daa5cc0e5162089d4658ac633fb652f1e47ce5790",
+    "assets/components/ambient-fields/170-974.svg": "5a0b64b04f6eef6c4dc67bb06143b34821b468e358eded6b6d67a274ef4ca405",
+    "assets/components/ambient-fields/170-975.svg": "ad3d1b285ca8d1fc6577ee7e7b2e20ab0487b56b7ab2fd0c7e5fc80866cb82b9",
+    "assets/components/ambient-fields/170-976.svg": "fe1440a657d1b258e1e743353f466b17977130e4955d496cd9b439885cd481fe",
+    "assets/components/ambient-fields/170-977.svg": "87eba4237bd16ccec7a891d1a7d5265f07e877c4d9c956bfc7898f3d1cc6b942",
+    "assets/components/ambient-fields/170-978.svg": "04f86c9e6a5d519b9b5aa52033bf77b2a1da8e8193e474243073f1f5aeee8af3",
+    "assets/components/ambient-fields/170-979.svg": "2a1c48f628caf7218f8afcc526b9d841e7dc47a585e3f558c73145e35994950f",
+    "assets/components/ambient-fields/170-980.svg": "75468993a5a9d538e4131e0668e410cea1e8f17a09d9732f0b4111aa0bdda6c3",
+    "assets/components/ambient-fields/170-981.svg": "7f16bd93c7249bdaf99cd73ccfbe4b629ca1117b89bc6e1365d13da39d2c4ccf",
+    "assets/components/ambient-fields/170-982.svg": "e9ff6302991be3dfa3b511710ebdc52b51dcdec00f512e694b7c92ec84629b8c",
+    "assets/components/ambient-fields/170-983.svg": "c59bc247c2f767d8740220546abc0bea689df039f57b926079a34bdd72c75814",
+    "assets/components/ambient-fields/170-984.svg": "8c778b3b9b6a3d7ff6c95fc6fcd59c37e351c1be7ae7a7edc55e37ae79dd6376",
+    "assets/components/ambient-fields/170-985.svg": "edcd7f4ad7368e6b4a10e6597f136be03e1776e4afd03710094b9397ba7b9d25",
+    "assets/components/ambient-fields/170-986.svg": "c4058b447c44bf131bc20615594d6107564ff77296f1a564d8834012dac5dcb7",
+    "assets/components/ambient-fields/170-987.svg": "87e59169ffb9d5e8abc497cd39f73cbb85c067beaebe00aa1bf501d271ea7008",
+    "assets/components/ambient-fields/170-988.svg": "b81ac0eea0e65454851a9756972f810c8d994cdb2c053d1cbd65fc559e1923ab",
+    "assets/components/ambient-fields/170-989.svg": "90658b08d4b50f9c34cb56a764a6af590b9b9bf398ef9788a0903c9b2fcb343d",
+    "assets/components/ambient-fields/170-990.svg": "a7cf6b92cc4c2a137d16162581d8a5e823a6b953f2c9f7ff9acc26d85f1c9112",
+    "assets/components/ambient-fields/170-991.svg": "7215c3aa20acfd543df37d3f085e6887d53f70097207e552900ae2f9f82bfc90",
+    "assets/components/ambient-fields/170-992.svg": "20864ef12a883d3bdf8ccb1e88e27694b8560308f1bba722b7a68419c8b39c80",
+    "assets/components/ambient-fields/170-993.svg": "07c6a487bd7e071e90a7b07639715c80dd4e73147a494595c274cb35d6d8c561",
+    "assets/components/ambient-fields/170-994.svg": "1a5ce18dbe646c1eb1744e3cfadcba18411097761f09819523b3eba43e46f271",
+    "assets/components/ambient-fields/170-995.svg": "81f111bc4fa024159a5c39ea32f8ef2cbff9cb74c8443e39c6135332c7cd55af",
+    "assets/components/ambient-fields/170-996.svg": "c6aa9cf252e756d89bda2d48eb518c032a0ff45240222f88eb2794bb680874c0",
+    "assets/components/ambient-fields/170-997.svg": "fc9d817ba95d485d3a0cb90d8b95044ab6fd0792e5f5b2dffb95b9bc18752039",
+    "assets/components/ambient-fields/170-998.svg": "7e422d024bc3902cd815a975f5113755091d98cf51b14c020818d4865fda8345",
+    "assets/components/ambient-fields/170-999.svg": "997f2ba6d629c4160719929a106a6d681754e65025d86d700dcfa5aa551e0920",
+    "assets/components/ambient-fields/170-1000.svg": "fe2537a36f501311d5ec2a36a18d17246e9c86c66c99e4fca90294b2eb246adb",
+    "assets/components/ambient-fields/170-1001.svg": "3d5c8945764347dbcf87a1d0917f031643666343742617f9f3b1d252ab675e55",
+    "assets/components/ambient-fields/170-1002.svg": "91cd8bb57af2442f57ec004e37998e49581cc02449b77ce6cb7a39a2459a8941",
+    "assets/components/ambient-fields/170-1003.svg": "e46417ac6093fefd2dec195e27db6b846074eac8f8aeb9d8dc1668f5eb81186f",
+    "assets/components/ambient-fields/170-1004.svg": "13de2c249da01621cf0d91739ca201ca452f8d6bbd372f488cab8ccaff722eb0",
+    "assets/components/ambient-fields/170-1005.svg": "fc10d18db4e8743a3718603c7730d9d28e7fee6d67d4b49f932f8148c0a6b554",
+    "assets/components/ambient-fields/170-1006.svg": "4848ca8fe3c38611e7b30233f7d9c950490d2c2d36e472946c5709893201c446",
+    "assets/components/ambient-fields/170-1007.svg": "8bd9312853a04fc5112a798d17c1ab0fb873b947a597e48f69bdb781280f36a2",
+    "assets/components/ambient-fields/170-1008.svg": "7f284d3be0b09b82dc7496658cb1ae4e957ccf2a33e309479e0979f55d4e0509",
+    "assets/components/ambient-fields/170-1009.svg": "baf1b9f336bcd5ed38bd473098051013e068ffbdd6b9ba048fef8a7200e3c3c9",
+    "assets/components/ambient-fields/170-1010.svg": "a9f6f47d1a0d563aeaefb9549572472c8df6c0a95e24a6a0cc4bc67b06b83dfc",
+    "assets/components/ambient-fields/170-1011.svg": "e24d9d7767c0825d4fcd947fa2144991b671f6b2dd641e7ce3ec8320d96dc6c2",
+    "assets/components/ambient-fields/170-1012.svg": "56f5076af866906bfcd94e9d8953900166482d838974a0a85c6bb321bb4cb9e7",
+    "assets/components/ambient-fields/170-1013.svg": "dd0e0262c39a61a5d58b5c8a3a6b4a2f994e005246cdccc1d471c02b85b7e450",
+    "assets/components/ambient-fields/170-1014.svg": "9fbe14d66ba6e667ad57ba6536c0fee5bf2566dc1559b10b049b2dcdbcfe5e21",
+    "assets/components/ambient-fields/170-1015.svg": "b801c275a5ac4ef8ba32dbef28b2fe662aba3ebc705aa1b92891b3ed795c2ec1",
+    "assets/components/ambient-fields/170-1016.svg": "58d2a637ed82700dc6e63ca5c19b48b3e95dcb63e299227ca0af27c963606937",
+    "assets/components/ambient-fields/170-1017.svg": "3b9666330bb0176a842dde6010878c8935476ea38bf436631606c0576c24ba5a",
+    "assets/components/ambient-fields/170-1018.svg": "46fe70b4ec319df84e7da80418d06edfebd25d7b9780c394c1323f6468dc4407",
+    "assets/components/ambient-fields/170-1019.svg": "6848a6eb09dc279f5582342c4f0ef4aca6158f44b69058e3649fc1dee010f722",
+    "assets/components/ambient-fields/170-1020.svg": "6b4d8d94d8475d03969ef0e7f473e50b9d93191d52c352cc3d1c3d460cabaee1",
+    "assets/components/ambient-fields/170-1021.svg": "2b4f612f19d3a3ec9636243556d56a02769e92bf39cd59f2643ac11826037349",
+    "assets/components/ambient-fields/170-1022.svg": "059ddd250b2b71ea4b7de06665c96d92d41abe00adb26495e1cc2a9e928261b5",
+    "assets/components/ambient-fields/170-1023.svg": "be594a1501b4259b79860789c7608ab62af49be90b8f7052dc04805cac0961ed",
+    "assets/components/ambient-fields/170-1024.svg": "01d5995fc055e580335be1468262417534d3cffa74f9d107dc2e6746bc80a8c5",
+    "assets/components/ambient-fields/170-1025.svg": "7f00d385f1255fdd40d601fbbd7c21adab2b17ab5cae4ad62dfe5132c12bdef4",
+    "assets/components/ambient-fields/170-1026.svg": "5ca08b8d25aa5bcfe81cecbfdc942f1d5b2def2c7a4e9e97ab6c5a88c00108c5",
+    "assets/components/ambient-fields/170-1027.svg": "a3e9db091f809b59de53a00678fdc952171157469d2d4846491bfe83191f5377",
+    "assets/components/ambient-fields/170-1028.svg": "61d978c27627cf5f21138767bab7d865d43c886bca8bdd0a337c12ad04ca3d72",
+    "assets/components/ambient-fields/170-1029.svg": "1b4e2879d418de1a481f27147fa9cfd45ff84621102b204f374ce1aabebed426",
+    "assets/components/ambient-fields/170-1030.svg": "76455ab9d10942872116bf3c574b1d01077268f7e8c608f2d4e1e709a1dbb69f",
+    "assets/components/ambient-fields/170-1031.svg": "9fa773d0087578612a3d9ed4884c03d79f0885f4f18e030f33dfa1b635a88698",
+    "assets/components/ambient-fields/170-1032.svg": "54cc0b9c6ed158e6676d7cdab8e832f969abff998b83c721e7c10b4011494a8c",
+    "assets/components/ambient-fields/170-1033.svg": "119776048a913a96857cd41ebadd9549831a341a44acf84a3965eaf3c976052e",
+    "assets/components/ambient-fields/170-1034.svg": "2fba1efd157d63389f1cff5381b2892034396a59f62d89fd318ef41846a95c65",
+    "assets/components/ambient-fields/170-1035.svg": "ac3dcd275c89af874631abfe3ead2fe39acb7266a9ade204f7ac526a602471f0",
+    "assets/components/ambient-fields/170-1036.svg": "b7fc59aa7151734dbf8b5b188de0e345d02bd23d72713a8d6baf925de6e83759",
+    "assets/components/ambient-fields/170-1037.svg": "913d2cbf0060476d7c0b5b01822d0f472257be7c88266801aa041a9f2577bc11",
+    "assets/components/ambient-fields/170-1038.svg": "cd7d3b4f2741a114bde40bfb7b5ccabf04059ff28427a27f4539ab5c54fc2725",
+    "assets/components/ambient-fields/170-1039.svg": "e3d53dcc4a457739407a26e1ae4b4201690f8bb584eba45d10de899e88018cef",
+    "assets/components/ambient-fields/170-1040.svg": "52aa2c0ff21a796e7184283f10e061ace24f5d6a74fa863308db2fd9994fa9e6",
+    "assets/components/ambient-fields/170-1041.svg": "204872653e452ab6e5fe7c39e4fa893afbadbd0655a0cfe8a56ecb870f8f845a",
+    "assets/components/ambient-fields/170-1042.svg": "a25930a1e08da87e998b7b80e44c081f58363818ce4cdb17b1a8ceefe45be396",
+    "assets/components/ambient-fields/170-1043.svg": "c2da5099f845f5cb679c87832fec611419dd4238f26136ed1efd5a01fd112fa6",
+    "assets/components/ambient-fields/170-1044.svg": "f551ba660b0dc97fc77ccbd3475879e943b5b0f1a25264164d7cbdc1a644c82c",
+    "assets/components/ambient-fields/170-1045.svg": "a6fb85a5dd1e1621fe715519b049b71c3a650544c387461aac4ad8d4e880d380",
+    "assets/components/ambient-fields/170-1046.svg": "1b54ea915cc6545a4442c0218b69fb1ff51fd541a99e6d2261770f37b9b93999",
+    "assets/components/ambient-fields/170-1047.svg": "0d0986b8e9f075a84c6feff84f17e799f79f4d3d52a5c4f1e9e076397dfbfaff",
+    "assets/components/ambient-fields/170-1048.svg": "71a50daa3c3b18cbaecf7c4978f05fab98a37a0b8af1309db9face2b71f9371f",
+    "assets/components/ambient-fields/170-1049.svg": "2f13bf057e3096a24c728e00b0639895eb3fe7305ae9e2f0b2fc896fd992a95d",
+    "assets/components/ambient-fields/170-1050.svg": "1668ab4bfa9736476485c6049c40c36b6ca34df652f2d490bd54200eb96a0866",
+    "assets/components/ambient-fields/170-1051.svg": "b4fbd1d36b55b60aa0e4d79a898e342b4fdcae64a777519c10e09da9763b1387",
+    "assets/components/ambient-fields/170-1052.svg": "63694192951873ffb3b227a21d3a03fefac2a4f7ad5376c579dbda04fec48547",
+    "assets/components/ambient-fields/170-1053.svg": "e1a6c1663d60cbb7b86f98817b568714aa1da891c4a618e1e88098d73091c7ea",
+    "assets/components/ambient-fields/170-1054.svg": "a1123d247ee719ae8311819e058238b17b03ceff886dba5de4e48ca9643da9f6",
+    "assets/components/ambient-fields/170-1055.svg": "8e72ef830e5c9b281e610973fbdb38d3f7c5173d6d181691e96277cd1063b1ba",
+    "assets/components/ambient-fields/170-1056.svg": "d4099aa1330b41752c6428b1ca65863324e5b834c93a381070d331cc7e84ce0b",
+    "assets/components/ambient-fields/170-1057.svg": "04a3913eef4cdf1019ba59b66b74f67a5701bd057a43dcd741c4378def4a79ea",
+    "assets/components/ambient-fields/170-1058.svg": "1f18bebc17c07c624225e446259e02b5dda061146616e67d3a91d818cac147b7",
+    "assets/components/ambient-fields/170-1059.svg": "a9853076ae66eb70f8cd7dd3acbc1da1983cb71b86641b222b3ed100de89d535",
+    "assets/components/ambient-fields/170-1060.svg": "7e58c385895bf5e3cd716cda7213c7a8240445788b0385aad2d99658b1680aa3",
+    "assets/components/ambient-fields/170-1061.svg": "9753f81118991607f76ce110dbcc65fcbb36b443131f20a0f30b38c4b09ee378",
+    "assets/components/ambient-fields/170-1062.svg": "1903d5913992b2c4a87cc467fc708ffd79132ccb6bbefb6e075f9cb399c3ca0a",
+    "assets/components/ambient-fields/170-1063.svg": "4514f2bdfd00d0f6d820863418eb0ac1db598c5738c2d8780219d1c847683374",
+    "assets/components/ambient-fields/170-1064.svg": "abd8efa8becbfe70ecc3763408c6319940f701e130ebe9a2022662eac9f178c3",
+    "assets/components/ambient-fields/170-1065.svg": "7c8b56bc7ada85dd6f2dc82d0e531a98b4a21943ac5d6e0b741742d889eeb632",
+    "assets/components/ambient-fields/170-1066.svg": "0523f12cda58d368f79a5595b2971d0fa22a6226425c6d45a7f103ba7e910559",
+    "assets/components/ambient-fields/170-1067.svg": "eb305e914585d1f22edf28f3ece0147e6d68376921ba9463b2b39c26c93c8b47",
+    "assets/components/ambient-fields/170-1068.svg": "84078cb04fc8ada48ab9d5824a4ba2b13f5009d94ea81a09565f810a670a8d2c",
+    "assets/components/ambient-fields/170-1069.svg": "639a6d957d52e0339fe3d7fc1fbc1fd890daece1af8f1de028f218e78fe0196a",
+    "assets/components/ambient-fields/170-1070.svg": "0587934730097680b37dafacfe8d505a1380b7ce84d08f210e811856d5ef2151",
+    "assets/components/ambient-fields/170-1071.svg": "ac132c44c4d18d081ab7af7806dd1f22f10b6c6961912442f10b8b361848afd7",
+    "assets/components/ambient-fields/170-1072.svg": "2d625061dae45f760558d1cc9a678f56fb12a7dc62572e16a230ee0b69ad87d3",
+    "assets/components/ambient-fields/170-1073.svg": "2e8d3161d40403064c4211a22a41ab806ebf9a7c8aef9b9babceb8231ae1e812",
+    "assets/components/ambient-fields/170-1074.svg": "07038d87ed2fc48937638ba6c2335d05e0ea9f6010a5dc6a6cb52ca59be26411",
+    "assets/components/ambient-fields/170-1075.svg": "1acd64d573ad09c549c8da08ddb531ec6948dcd69d23bcda7bc569614ed8ed77",
+    "assets/components/ambient-fields/170-1076.svg": "34ea0df85d7985d78df099a5d1c9ef03b1a8d2616d9a731418881f340b635982",
+    "assets/components/ambient-fields/170-1077.svg": "7dbb2034adaa70f20af6f1aefee78aa1b1ab616464e16a1bae4ea90f64a25d4b",
+    "assets/components/ambient-fields/170-1094.svg": "4c3b6832c941ad530279e05daaf28c32b7b1ed79fc273348b09d6e7db6f1b70d",
+    "assets/components/ambient-fields/170-1095.svg": "0e729eb4d0995a5afd3ed546fc87c9fe11de4c37917e32ffeee4a0bbc085e65f",
+    "assets/components/ambient-fields/170-1096.svg": "8b63443c9fcc1ebd123b0145d42a829fce858444ca2062b1fcedcb777047d8dd",
+    "assets/components/ambient-fields/170-1097.svg": "190b6e00126b2fb67a500e23826a9b862752d4183ac07801ce0664b5b2e772de",
+    "assets/components/ambient-fields/170-1098.svg": "3e269bd5ab7e401efab7a251a0e7e900b9b398d866bbc14a47f37800eacaef43",
+    "assets/components/ambient-fields/170-1099.svg": "8e44e444abbacfaec7bc368d3befbfecca58f16b7f50ea5ee2d73f1bb5fb9bfd",
+    "assets/components/ambient-fields/170-1100.svg": "329e55e7d65ade208097c50c4331878e5f8cdad33dfa47f0cb71b471ae465d2f",
+    "assets/components/ambient-fields/170-1101.svg": "c1ce9e08438730fb0f514cf6c3dafdc922458b5c8376138bccd785b2a30a184c",
+    "assets/components/ambient-fields/170-1102.svg": "ef367e402682beeb78400125c5fa3124565f2a76157c1311feec10902d99968d",
+    "assets/components/ambient-fields/170-1103.svg": "6003c9e1acfd145e292acb0d2be7f43e565c22ffd973a9b4874f593f72a637f8",
+    "assets/components/ambient-fields/170-1104.svg": "5a9f9332c81c83bc764eb73e55903895c5411ff38153a95329aa18e8564209cc",
+    "assets/components/ambient-fields/170-1105.svg": "f00bad54001e68d6c1d555fc921ea74b7ac53e8b27b575bdd066d64238cdde31",
+    "assets/components/ambient-fields/170-1106.svg": "9dbbd0e9f6a370b50ef2a036fc45640003461831121f317da202fde9366c3185",
+    "assets/components/ambient-fields/170-1107.svg": "81f7520ea02451af4d150fbba53f5150dd5126312c243f84fdf23d5824c3048d",
+    "assets/components/ambient-fields/170-1108.svg": "3b2686a523403854c2402b08e10424f91183b1304d1472dd2302f00d46e9a5ba",
+    "assets/components/ambient-fields/170-1109.svg": "5c9997ac2d1c3620fe0ad8d3a1cf8b17a26bde95bac2921bd1f08277f472b0e8",
+    "assets/components/ambient-fields/170-1110.svg": "cfa1f28c2118d17630dd7e632373fae4b29b7b08831341deb3515b883db9a7ec",
+    "assets/components/ambient-fields/170-1111.svg": "a706398cc2eb77e70ceee036dcee9bff1d8094e7a75b2329127ee65ecce2c793",
+    "assets/components/ambient-fields/170-1112.svg": "dd215bb4ba5846a06f7f923db3beb2d0f641d475cb86a968065ecd4e0b5d250b",
+    "assets/components/ambient-fields/170-1113.svg": "8b5e377fa0b07863dcda91b15af42cd039a79530363afb5cdd46983d80a37dc8",
+    "assets/components/ambient-fields/170-1114.svg": "c9553728a81a15c7ce674d4de7b23509c15356336fde0ff37acce209663dff1c",
+    "assets/components/ambient-fields/170-1115.svg": "f56687bc167c0b88d42af631dc3b8595deefc7badd6e1d618ed428f4af3a5175",
+    "assets/components/ambient-fields/170-1116.svg": "478d13c759a010ca7778c59feb128c761a37dcba9a6c7a9547bbf4738f37a022",
+    "assets/components/ambient-fields/170-1117.svg": "c6571cb86eb43156342b0af2edbc914bbac1fc5fac8803a94632471675501a25",
+    "assets/components/ambient-fields/171-2192.svg": "762ff40765259b5c65e2192b1b10cae882730998de6cffa437f0ed8f0a8cd0f3",
+    "assets/components/ambient-fields/171-2193.svg": "4d14e0910fad049ec4697e9778fced94cac9c583c7acd434952c8289add30b22",
+    "assets/components/ambient-fields/171-2194.svg": "e568ad29e552f94dbca0c501c671ada8fbe86a693a0a76972ded8c4880d857c6",
+    "assets/components/ambient-fields/171-2195.svg": "db8837881e42d57e160e59c6cc98cea320db54d38b7ca670d42f12fa8aef2204",
+    "assets/components/ambient-fields/171-2196.svg": "60bc920e7a34fa4a3cf719576aad93114f75c341fb6cd0b11315232c9862e1c3",
+    "assets/components/ambient-fields/171-2197.svg": "65916634a101ecd53ef5395681fc11801b9c6a29e8615fb84b3a7254b806e582",
+    "assets/components/ambient-fields/171-2198.svg": "299346d7be3d345fb56437cf7f79dc7f052c3e7ce9aecadb6e82072326775511",
+    "assets/components/ambient-fields/171-2199.svg": "7d558c3fde6421b196e81dc5870bd425356c510bb9f72646ab07a62e7a45fb80",
+    "assets/components/ambient-fields/171-2200.svg": "e89fc7aedc6c472769d9350ee09c486bc96617fae0d1e7c1f66d60e61236aa3e",
+    "assets/components/ambient-fields/171-2201.svg": "663c0b6f88b5043a7b723daaa68afacee558f433ba0b73a00f1ccbe4b725187a",
+    "assets/components/ambient-fields/171-2202.svg": "e8ae0c51360cda38d5ca891d0e6421033485d9a761ee6857cc9d589a24e82445",
+    "assets/components/ambient-fields/171-2203.svg": "551d0ee3e8cc37dbcf3d75e7214cb14c53be156585d8b0a0f9e03a6ea507212b"
+  },
+  "checkoutLineEndings": {
+    "policy": "Measured source hashes bind actual checkout bytes. Only these unchanged UTF-8 files differ from their Git blobs by CRLF to LF normalization. Every new or changed payload must match the Git index exactly before publication.",
+    "normalized": [
+      {
+        "file": "tools/load-registry.js",
+        "measuredSHA256": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+        "gitSHA256": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091"
+      },
+      {
+        "file": "css/style.css",
+        "measuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "gitSHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903"
+      },
+      {
+        "file": "css/fonts.css",
+        "measuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "gitSHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9"
+      },
+      {
+        "file": "js/demo-runtime.js",
+        "measuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "gitSHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a"
+      },
+      {
+        "file": "js/shell/stage.js",
+        "measuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "gitSHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0"
+      },
+      {
+        "file": "js/shell/registry.js",
+        "measuredSHA256": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+        "gitSHA256": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700"
+      },
+      {
+        "file": "js/shell/router.js",
+        "measuredSHA256": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+        "gitSHA256": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f"
+      },
+      {
+        "file": "js/shell/views/detail.js",
+        "measuredSHA256": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+        "gitSHA256": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28"
+      },
+      {
+        "file": "js/shell/export.js",
+        "measuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "gitSHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635"
+      }
+    ]
+  }
+}

@@ -1,21 +1,72 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 291 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 295 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos.
-The remaining work includes 108 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and four Ambient demos.
+The remaining work includes 104 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 5 remaining demos.
-None of the 291 remediated native compositions retains those references.
+None of the 295 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 291 native compositions. The unfinished groups still account for
-14 overflow findings, zero horizontal-scroll findings, 44 tiny-text findings and
+among these 295 native compositions. The unfinished groups still account for
+10 overflow findings, zero horizontal-scroll findings, 44 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 90 documented
 Figma fill exceptions validate.
+
+## Constellation, Flow Field, Starfield Warp and Fireflies
+
+The four native compositions follow tiles `170:806`, `170:930`,
+`170:1081` and `171:2179`. The 240×168px native plane stays at (66,20)
+inside the reference 372×264px stage. All 257 SVG payloads remain unchanged.
+Exports use painted stroke bounds (`useAbsoluteBounds:false`) so horizontal
+and vertical vector assets retain a nonzero intrinsic viewport. Captured
+render bounds determine their positions; SVG roots are never resized or edited.
+
+Constellation retains the supplied 35 nodes and 51 edges; original seeded
+velocities, attraction/repulsion, damping and wrap drive the authored network.
+Flow retains all 135 supplied strokes and rotates each by the original live
+field relative to its initial angle. Starfield projects every fourth original
+star into the 24 authored rays, retaining depth recycling, speed easing and
+streak ratios. Fireflies retains all twelve supplied glow assets, original
+phases and velocities, idle gathering, damping, wrap and halo alpha transfer.
+Full views retain the complete original 28-particle network, 72 tracers and
+accumulated trails, 96-star flight and 34-firefly swarm in a 368×268px field.
+All original source drawing functions, model datasets and copy remain present.
+
+The nine groups in `tools/verify-ambient-fields.js` cover 64 emitted engine
+cases, 76,864 original states, 7,344 complete model checkpoints and 664,549,120
+original Canvas channels. Independent native equations check 1,200 live frames
+per scene, actual SVG matrices, link endpoints, vector directions, recycled
+star projections and alpha filters. Browser checks cover 96 native and 96 full
+layouts, 48 ten-second native/full stories at 60/120/240Hz, physical touch and
+vertical scrolling, native keys/selects, independent holds, queued Reset,
+interrupted reduced opacity feedback and unique ghost filter identities,
+early cleanup, actual routes and LiveTiles, plus 32 fresh network-blocked exports.
+
+All four pass the fit audit without new exceptions. Their measured fill at
+the auditor's 347×264px stages is 27.6%, 31.4%, 39.9% and 14.7%. The batch
+removes four overflow findings and four own-control debts. The remaining
+global debt is 10 overflow, 44 tiny-text and 33 low-fill findings, 101
+chrome/control debts and 51 motion debts. Five retired-photo runtime references
+remain in unfinished groups. The other 322 source modules and 395 metadata
+entries are unchanged.
+
+Isolated desktop/mobile CPU1 and CPU4 measurements are recorded in
+[the source-bound performance report](performance/ambient-fields-2026-11-20.json).
+These record eight-second interrupted stories, actual RAF intervals, long tasks,
+first paint, readiness and CDP traces. Fonts are prepared before mounting;
+public route transfer is outside this measurement. Final timing gates remain open.
+CPU1 records 60fps across all sixteen cases without slow frame intervals.
+CPU4 native results span 33.9–60.0fps, with 455
+slow intervals and 6 first paints above 300ms;
+the slowest native first paint is 1113.2ms.
+CPU4 full results span 59.9–60.0fps. Native Constellation and Flow
+retain unresolved rendering costs; these measurements do not declare the final
+performance gate passed.
 
 ## Film Grain, Bitmap Marquee and Chromatic Type
 

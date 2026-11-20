@@ -541,3 +541,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with `node tools/profile-raster-signal.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Preserve dense-SVG startup and
   full-grain timing findings for the final audit; measurement is not a timing pass.
+- `node tools/verify-ambient-fields.js http://127.0.0.1:4173` covers v4
+  Constellation, Flow Field, Starfield Warp and Fireflies: all 257 unchanged
+  SVG exports, 76,864 original states and complete original Canvas planes.
+  Independent native checks cover the authored 35-node network and 12-firefly
+  swarm, all 135 vector-field directions, and 24 rays projected from the full
+  96-star flight. It checks compact type, real touch and scrolling, equivalent
+  clocks, independent holds, queued Reset, interrupted opacity feedback,
+  routes, LiveTiles, early cleanup and 32 fresh offline exports. Full views
+  retain all original 28 particles, 72 tracers, 96 stars and 34 fireflies.
+  SVG exports use `useAbsoluteBounds:false` to preserve painted stroke bounds
+  for zero-axis vectors; never replace or edit the exported payloads.
+  Record isolated timing with `node tools/profile-ambient-fields.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain findings for the final audit.
