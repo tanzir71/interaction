@@ -11495,17 +11495,25 @@ INTRX.meta({
     ]
   },
   "rotary-knob": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11513,8 +11521,12 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "brushed-metal-slider": {
     "designSize": [
@@ -11657,17 +11669,33 @@ INTRX.meta({
     ]
   },
   "flip-clock": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "start",
+        "label": "Start"
+      },
+      {
+        "action": "add",
+        "label": "+5 min"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11675,11 +11703,18 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "embossed-press": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -11689,7 +11724,7 @@ INTRX.meta({
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "press",
@@ -11697,8 +11732,12 @@ INTRX.meta({
       "pressure"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      216
+    ]
   },
   "analog-gauge": {
     "designSize": "sm",

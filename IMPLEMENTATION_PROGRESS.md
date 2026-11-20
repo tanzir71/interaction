@@ -1388,3 +1388,65 @@ Collections, 121 new/extensions, Pro seams and final audits remain. Only
 `showcase-circular-gallery` still uses the retired runtime photo keys. Direct
 commits/pushes preserve disabled Actions and the account-wide $0 stop-at-limit
 policy.
+
+## Listening Dial, Split-Flap Timer and Embossed Key — 20 Nov 2026
+
+Three more existing demos now have native v4 compositions and complete original
+full views. Fourteen supplied SVG payloads remain byte-exact; four outlined timer
+glyphs are verification-only. Dial and timer retain 240×168px compact planes;
+the undocked key uses a 240×216px root so its upper native composition keeps the
+authored stage origin. No photograph, font, credit or asset alias changes.
+
+Dial preserves the original 260-degree integer value model, keyboard range and
+mute restoration, with direct dragging, 0.55 rubber band and velocity-carrying
+380/32 spring release. Capture pickup, key intent during drag, cancellation and
+window blur preserve continuous paint and release the actual pointer owner.
+
+Timer uses an explicit paused 12:45 native checkpoint, retaining 25:00 in full
+and for Reset/restart. Its original 120ms poll, +300 seconds and 5999-second
+cap remain. Persistent Number drums use canonical anticipation, step, landing
+and stagger, retaining full card materials and center seams. Read-only UI/work
+accessors preserve complete original animation history without mapping that
+history on every render. Reduced motion uses a retained-layer crossfade.
+
+Key retains Saved in native and idle in full, original Saving/disabled state,
+650ms normal and zero-delay reduced completion, reset, labels and status copy.
+Press and icon swap use canonical curves and preserve visible layers on reversal.
+Full optical sizing accounts for the press scale, keeping short-view text above
+11px through the complete interaction. Native key type also stays above 11px
+through press in 286×196px landing cards, retaining 13.5px at the reference size
+and the original control geometry.
+
+The fourteen public verifier groups pass 414,611 checks: twelve original cases
+bound to both compiled factories, independent authored starts and four complete
+25-minute sessions, 192 layouts, 36 six-second live stories at 60/120/240Hz,
+physical mouse/keys/moving touch, raster reversals, independent holds, cold
+routes, LiveTiles, cleanup and 24 fresh network-blocked exports. Original SVG
+geometry and computed stroke styles are strict; translucent-stroke raster
+coverage records bounded subpixel antialiasing rather than identical pixels.
+
+Registry generation checks 1,205 artifacts. The library passes 651 checks,
+399 previews and 97 offline exports. Nineteen runtime/shell tests, eight CLI/MCP
+tests, sixteen fit-geometry checks and stage-runtime checks pass locally.
+Three exact-reference low-fill exceptions preserve authored sizes. The full fit
+diagnostic now reports two overflow, zero horizontal-scroll, 28 tiny-text and
+33 low-fill findings in unfinished demos, with 96 valid exceptions and no
+failed boots, missing sizes or invalid exceptions. Stage debt is 81; static
+motion debt remains 41, including the original timer curve on hidden model
+nodes. No baseline debt grows. Three native browser posters were refreshed.
+
+Visual remediation reaches 316/399. Eleven Skeuomorph demos, seventy-two
+Collections, 121 new/extensions, Pro seams and final audits remain.
+
+The [source-bound timing report](docs/performance/skeuo-tactile-2026-11-20.json)
+records 24 isolated eight-second stories. Timer metric/style caching and
+dirty-field painting retain the complete verified original programs and history,
+raising CPU4 timer results from the preserved 33.3–35.9fps baseline to
+50.5–53.1fps. CPU1 records 60fps with no slow intervals or long tasks. CPU4
+native records 52.7–59.9fps, 105 intervals above 25ms and three long tasks;
+full records 50.5–60.0fps, 139 slow intervals and fifteen long tasks. Full
+desktop timer first paint reaches 345.2ms and readiness reaches 364.5ms.
+Fonts are prepared before mounting; route transfer is excluded. All timing
+findings and earlier tails remain open for the final audit.
+Direct commit/push continues with Actions disabled and the $0 stop-at-limit
+policy preserved.

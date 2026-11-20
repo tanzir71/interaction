@@ -987,3 +987,36 @@ interaction models remain, with 1600px detail paths and 800px portable assets.
 Original generated buffers are isolated in regression fixtures and never
 included in product output. Only `showcase-circular-gallery` still uses the
 retired runtime keys.
+
+### Listening Dial, Split-Flap Timer and Embossed Key
+
+The tactile batch preserves fourteen original SVG exports from tiles
+`171:2103`, `170:1726` and `170:1754`. Dial uses all eleven supplied tick
+vectors, the 68px circle's 92px shadow export and the 6px orange indicator.
+Its authored indicator is at 27 degrees; numeric motion keeps the original
+260-degree law. Original path data and default SVG attributes remain intact;
+live stroke styles select the source state's 0.7/0.18 opacity and neutral
+gray on the optional light stage.
+
+Timer keeps four 38×56px cards at (106,70), (148,70), (202,70) and (244,70),
+with 32px Geist Semibold on a 42px line and the original center seams. Its
+four outlined glyph exports are verification-only. Persistent live drums
+start at the authored 12:45 without changing original Reset or restart.
+
+Key retains the 120×48px face at (126,78), 124×52px outline at (124,76),
+supplied 18px green check and 13.5px Inter Medium label. Its undocked root
+reserves 240×216px, keeping the upper native composition at the same stage
+origin (66,20). Full compositions retain complete original content and
+behavior; full optical sizing accounts for the press scale.
+The native label retains 13.5px at the reference size and uses an optical floor
+to stay above 11px through press in 286×196px landing cards. Its control geometry
+stays fixed.
+
+The original exports live in `assets/components/skeuo-tactile/`, with outlined
+timer references under `tools/fixtures/skeuo-tactile-reference/`. The artwork
+manifest records every payload hash and captured geometry. Three low-fill
+exceptions preserve these sparse authored controls; other fit gates remain.
+Tick geometry and computed stroke styles are exact checks; independent
+translucent-SVG raster coverage records bounded antialiasing differences,
+rather than claiming identical pixels. Posters come from paused native
+browser renders. This batch adds no photograph, font, credit or alias.

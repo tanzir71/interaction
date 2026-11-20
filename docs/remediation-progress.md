@@ -1,21 +1,111 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 313 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 316 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and six Skeuomorph demos.
-The remaining work includes 86 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and nine Skeuomorph demos.
+The remaining work includes 83 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 313 remediated native compositions retains those references.
+None of the 316 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 313 native compositions. The unfinished groups still account for
-3 overflow findings, zero horizontal-scroll findings, 31 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 93 documented
+among these 316 native compositions. The unfinished groups still account for
+2 overflow findings, zero horizontal-scroll findings, 28 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 96 documented
 Figma fill exceptions validate.
+
+## Listening Dial, Split-Flap Timer and Embossed Key
+
+Tiles `171:2103`, `170:1726` and `170:1754` retain their captured native
+geometry and complete original full compositions. Fourteen product SVGs keep
+their exact exported bytes. Four outlined timer glyphs are verification data;
+the live timer uses 32px Geist Semibold with a 42px line. Dial and timer use
+240×168px compact planes. The undocked key uses a 240×216px root containing
+the same upper 240×168px composition, keeping its face at (126,78) rather
+than moving it down with the extra undocked space. No photographs, fonts,
+credits or aliases change.
+
+Dial starts at 60 in native and 42 in full. Its native indicator uses the
+authored 27-degree rest; the original 260-degree value and drag law, integer
+clamp, branch cut, arrow/Page/Home/End keys and mute restoration remain.
+Dragging follows directly, past-bound motion uses 0.55 rubber band, and
+release carries pointer velocity into the 380/32, mass-one spring. Pickup
+preserves the visible pose. Keyboard intent during capture clears spurious
+pointer momentum; blur and cancellation release actual capture. Original tick
+paths retain their geometry while source value selects 0.7/0.18 opacity.
+The optional light stage uses neutral gray strokes.
+
+Timer starts paused at 765 seconds (12:45) in native and 1500 seconds (25:00)
+in full. An explicit native checkpoint avoids replaying 735 seconds at boot.
+The complete original program retains its 120ms polling, +300 seconds,
+5999-second cap, 25-minute Reset and restart after completion. Read-only
+scalar/work accessors avoid enumerating historical animation records while
+rendering; complete source history remains available to inspection. Persistent
+drums use 100ms anticipation, 130ms steps, 740ms landing and 90ms position
+stagger. Neighbor paint enters and retires continuously, keeping authored
+rest states clean. Full card surfaces and center seams remain intact.
+Retargets preserve painted poses; reduced motion uses a 150ms crossfade.
+
+Key starts Saved in native through the original click/650ms source, while
+full starts idle. Original Saving, disabled state, completion, reset, copy
+and zero-delay reduced callback remain. Press uses 0.97 scale in 80ms and
+250ms release. Icon swap preserves visible layers and order through reversals:
+150ms exit, 500ms incoming geometry and 400ms incoming opacity. Reduced
+motion uses 150ms opacity. Full optical sizing accounts for the press scale,
+keeping compact text above 11px throughout the interaction.
+Native also keeps an optical font floor in 286×196px landing cards, including
+the pressed state, while retaining 13.5px at the reference size and the
+original control geometry. Responsive optical observation disconnects on cleanup.
+
+Fourteen groups in `tools/verify-skeuo-tactile.js` pass 414,611 checks.
+Twenty-four full/native factory bindings cover twelve original cases and
+twelve actual replays, 5,064 bound states and 1,016 complete DOM/model
+checkpoints. Identical factories share exact evidence. Separate authored
+checkpoint comparisons cover 2,644 complete model snapshots, including four
+whole 25-minute timer sessions, restart and cap. Thirty-six six-second
+live stories compare 30,276 source states with independent original programs.
+
+Verification also covers 192 layouts, exact SVG/primitive/type slots,
+independent 60/120/240Hz recipes, actual mouse/keys/moving touch, interruption,
+queued intent, caller/document/viewport holds, active capture cleanup, cold
+routes, LiveTiles and 24 fresh network-blocked exports. Tick geometry and
+computed color/opacity/width/caps are strict gates. Translucent SVG raster
+coverage admits subpixel antialiasing differences up to 32 channel levels,
+with mean absolute difference at most 0.5 across the measured RGBA channels;
+the recorded pixels are not described as identical. Controlled visibility
+signals are not OS visibility measurements. These demos construct no audio.
+
+Three exact-reference sparse-fill exceptions preserve Figma dimensions;
+overflow, horizontal scroll and text gates remain. The batch removes one
+overflow finding, three tiny-text findings and three chrome debts. Current
+stage debt is 81. Static motion debt remains 41, including the historical
+curve retained on the timer's hidden original model; visible drums follow
+the canonical recipe. No baseline debt is added. Registry generation checks
+1,205 artifacts; the library passes 651 checks, 399 previews and 97 offline
+exports. Nineteen runtime/shell tests, eight CLI/MCP tests, sixteen fit-geometry
+checks and shared stage runtime checks pass. The full diagnostic still exits
+1 for the unfinished demos listed above. All 96 fill exceptions validate.
+Three browser-generated posters capture the authored paused initial states.
+
+The [source-bound timing report](performance/skeuo-tactile-2026-11-20.json)
+records 24 isolated eight-second stories. Metric caching, inherited glyph
+styles, dirty-field painting and cached style writes raise the CPU4 timer
+from the preserved 33.3–35.9fps baseline to 50.5–53.1fps. Complete original
+programs and history, geometry and motion trajectories remain verified.
+CPU1 records 60fps with no slow intervals or long tasks. CPU4 native records
+52.7–59.9fps, 105 intervals above 25ms and three long tasks; full records
+50.5–60.0fps, 139 slow intervals and fifteen long tasks. Native first paints
+range from 126.1ms to 240.9ms; full ranges from 167.6ms to 345.2ms. Full desktop
+timer exceeds the 300ms first-paint target, and readiness reaches 364.5ms.
+Fonts are prepared before mounting and route transfer is excluded. Measurements
+and all earlier performance tails remain open for the final audit; no timing
+gate is declared passed.
+
+Eleven Skeuomorph demos, all seventy-two Collections, 121 new/extensions,
+Pro seams and final audits remain.
 
 ## Paper Plans, Frosted Pass and Dot Matrix Clock
 

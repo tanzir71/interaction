@@ -22157,7 +22157,7 @@
   },
   {
     "id": "rotary-knob",
-    "title": "Precision Listening Dial",
+    "title": "Listening Dial",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "drag",
@@ -22173,7 +22173,14 @@
     ],
     "tier": "free",
     "desc": "A weighted satin dial adjusts the listening level through a calibrated arc.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22181,18 +22188,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/rotary-knob",
-    "thumb": "full",
-    "module": "js/demos.skeuo.rotary-knob.js?v=e11a25cb56",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.rotary-knob.js?v=18b0c7433b",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/rotary-knob.json?v=260beb9996",
+    "sourcePreview": "registry/p/rotary-knob.json?v=cbdcf216ce",
     "assetRefs": {},
     "rootClass": "d-rotary",
-    "controls": [],
+    "controls": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "hint": "Turn the dial; arrows make fine adjustments",
     "sourceName": "Native physical interface study",
@@ -22499,7 +22511,7 @@
   },
   {
     "id": "flip-clock",
-    "title": "Split-Flap Focus Timer",
+    "title": "Split-Flap Timer",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22515,7 +22527,14 @@
     ],
     "tier": "free",
     "desc": "A four-digit mechanical countdown uses separate upper and lower leaves for each flip.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22523,18 +22542,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/flip-clock",
-    "thumb": "full",
-    "module": "js/demos.skeuo.flip-clock.js?v=de2c309b3d",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.flip-clock.js?v=d1856bc49b",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/flip-clock.json?v=badeac80b5",
+    "sourcePreview": "registry/p/flip-clock.json?v=767d197ed8",
     "assetRefs": {},
     "rootClass": "d-flap",
-    "controls": [],
+    "controls": [
+      {
+        "action": "start",
+        "label": "Start"
+      },
+      {
+        "action": "add",
+        "label": "+5 min"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Start a focus block; add five or reset",
     "sourceName": "Native physical interface study",
@@ -22542,7 +22574,7 @@
   },
   {
     "id": "embossed-press",
-    "title": "Embossed Save Key",
+    "title": "Embossed Key",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22558,7 +22590,14 @@
     ],
     "tier": "free",
     "desc": "A single recessed ceramic key sits in a softly radiused aluminum surround. The cap travels into its socket, then a quiet indicator confirms that the save action has completed.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      216
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22566,18 +22605,18 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/embossed-press",
-    "thumb": "full",
-    "module": "js/demos.skeuo.embossed-press.js?v=b12986e83c",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.embossed-press.js?v=15e1a56742",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/embossed-press.json?v=033645d779",
+    "sourcePreview": "registry/p/embossed-press.json?v=c63cf3ec4d",
     "assetRefs": {},
     "rootClass": "d-hardware-embossed-press",
     "controls": [],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Save presses in; a check confirms",
     "sourceName": "Seen on: tactile brand systems, material configurators, luxury packaging, and physical-interface studies",

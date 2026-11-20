@@ -568,6 +568,29 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   frames, including the authored 12:45 clock. The default capture is unchanged.
   Record isolated timing with `node tools/profile-skeuo-materials.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; final timing gates stay open.
+- `node tools/verify-skeuo-tactile.js http://127.0.0.1:4173` covers v4
+  Listening Dial, Split-Flap Timer and Embossed Key: fourteen original product
+  SVGs, four verification-only glyphs, twelve original fixtures and complete
+  original full programs. It checks authored native starts, four complete
+  25-minute timer sessions, 192 layouts including 286×196px landing cards,
+  independent 60/120/240Hz motion,
+  complete six-second stories, real mouse/keys/moving touch, painted reversals,
+  independent holds, actual capture cleanup, routes, LiveTiles and 24 fresh
+  offline exports. Preserve the original 260-degree dial law, timer poll/cap/
+  reset/restart and key saving/disabled behavior. Keep all drum layers present
+  at first paint, preserve full card surfaces/seams and retain visible layers
+  during retargets. Do not discard historical source animation records.
+  Native timer starts paused at 12:45 through an explicit checkpoint; full
+  and Reset/restart retain 25:00. The undocked key uses a 240×216px root to
+  keep its upper native composition at the authored stage origin. Three sparse
+  fill exceptions preserve exact Figma sizes; other fit gates remain. Keep
+  native key type at 13.5px at the reference size and at
+  least 11px through press in landing cards; preserve the control geometry.
+  Its responsive optical observer must disconnect during cleanup. Profile
+  isolated eight-second stories with `node tools/profile-skeuo-tactile.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Record findings without passing
+  final timing gates. Static motion debt still records the original timer's
+  hidden-model curve; visible drums use the canonical recipe.
 - `node tools/verify-ambient-cells.js http://127.0.0.1:4173` covers v4 Life,
   Reactive Bars and Glyph Rain: all 153 unchanged SVG assets, 57,648 original
   engine states, complete typed models and 333,273,600 original Canvas channels.
