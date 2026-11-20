@@ -554,3 +554,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   for zero-axis vectors; never replace or edit the exported payloads.
   Record isolated timing with `node tools/profile-ambient-fields.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain findings for the final audit.
+- `node tools/verify-ambient-cells.js http://127.0.0.1:4173` covers v4 Life,
+  Reactive Bars and Glyph Rain: all 153 unchanged SVG assets, 57,648 original
+  engine states, complete typed models and 333,273,600 original Canvas channels.
+  Independent native checks cover the 14×9 toroidal colony and Float32 memory,
+  all 24 signal bands and seventeen authored bar transforms, ten seeded glyph
+  columns, original aperture dimensions and 4,838,400 dynamic Kana channels.
+  It checks real input and touch scrolling, 72 native and 72 full layouts,
+  equivalent clocks, independent holds, queued Reset, interrupted reduced
+  feedback, early cleanup, routes, LiveTiles and 24 fresh offline exports.
+  Full views retain the original 32×20 colony, all 24 bands, both glyph sets
+  and complete responsive columns. Native Latin keeps the ten supplied SVGs;
+  native Kana uses dynamic original glyph data. Life drawing owns touch inside
+  its full canvas; vertical page scrolling remains available beside that field.
+  Record isolated timing with `node tools/profile-ambient-cells.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurement is not a timing pass.

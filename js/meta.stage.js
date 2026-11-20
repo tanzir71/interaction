@@ -8765,17 +8765,33 @@ INTRX.meta({
     ]
   },
   "conway-life-fade": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause colony"
+      },
+      {
+        "action": "step",
+        "label": "Step once"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "cellular automaton",
@@ -8783,21 +8799,41 @@ INTRX.meta({
       "generative"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "audio-reactive-bars": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause spectrum"
+      },
+      {
+        "action": "pulse",
+        "label": "Pulse"
+      },
+      {
+        "action": "reset",
+        "label": "Reset signal"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "visualizer",
@@ -8805,21 +8841,41 @@ INTRX.meta({
       "hover"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "matrix-rain": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause rain"
+      },
+      {
+        "action": "glyphs",
+        "label": "Kana"
+      },
+      {
+        "action": "reset",
+        "label": "Reset columns"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8827,8 +8883,12 @@ INTRX.meta({
       "cursor"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "fireflies-night": {
     "designSize": [

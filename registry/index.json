@@ -16897,7 +16897,14 @@
     ],
     "tier": "free",
     "desc": "Conway’s rules run on a 32×20 grid while dead cells retain a short phosphor afterglow. Pointer drawing writes live cells directly into the simulation instead of applying a decorative overlay.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16905,18 +16912,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/conway-life-fade",
-    "thumb": "full",
-    "module": "js/demos.ambient.conway-life-fade.js?v=48422526be",
+    "thumb": "hero",
+    "module": "js/demos.ambient.conway-life-fade.js?v=4481ce59f7",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/conway-life-fade.json?v=31408a7cea",
+    "sourcePreview": "registry/p/conway-life-fade.json?v=bd5449c5b8",
     "assetRefs": {},
-    "rootClass": "d-life-demo",
-    "controls": [],
+    "rootClass": "d-ambient-cell-life-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause colony"
+      },
+      {
+        "action": "step",
+        "label": "Step once"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "A colony evolves; old cells fade as they die",
     "sourceName": "Seen on: experimental studios, developer portfolios, generative exhibits, and system-status backdrops",
@@ -16940,7 +16960,14 @@
     ],
     "tier": "free",
     "desc": "Twenty-four frequency bars combine three phase-offset sine bands. Pointer position selects a frequency neighborhood and injects energy that spreads to adjacent bars before decaying.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16948,18 +16975,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/audio-reactive-bars",
-    "thumb": "full",
-    "module": "js/demos.ambient.audio-reactive-bars.js?v=cf754c7f16",
+    "thumb": "hero",
+    "module": "js/demos.ambient.audio-reactive-bars.js?v=0f47036b90",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/audio-reactive-bars.json?v=8a5fec441c",
+    "sourcePreview": "registry/p/audio-reactive-bars.json?v=0e1bd621c7",
     "assetRefs": {},
-    "rootClass": "d-spectrum-demo",
-    "controls": [],
+    "rootClass": "d-ambient-cell-spectrum-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause spectrum"
+      },
+      {
+        "action": "pulse",
+        "label": "Pulse"
+      },
+      {
+        "action": "reset",
+        "label": "Reset signal"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Bands jump as you sweep across frequencies",
     "sourceName": "Seen on: music platforms, voice products, showreels, live-stream overlays, and listening experiences",
@@ -16983,7 +17023,14 @@
     ],
     "tier": "free",
     "desc": "Seeded glyph columns fall at independent rates with bright heads and fading tails. The cursor opens a soft circular aperture by suppressing glyph opacity inside its radius.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -16991,18 +17038,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/matrix-rain",
-    "thumb": "full",
-    "module": "js/demos.ambient.matrix-rain.js?v=cd48eaadef",
+    "thumb": "hero",
+    "module": "js/demos.ambient.matrix-rain.js?v=3e73b3d8ba",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/matrix-rain.json?v=21d03c8a5d",
+    "sourcePreview": "registry/p/matrix-rain.json?v=e87fe4d4cf",
     "assetRefs": {},
-    "rootClass": "d-matrix-demo",
-    "controls": [],
+    "rootClass": "d-ambient-cell-rain-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause rain"
+      },
+      {
+        "action": "glyphs",
+        "label": "Kana"
+      },
+      {
+        "action": "reset",
+        "label": "Reset columns"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "hint": "Columns of glyphs rain; part them with the pointer",
     "sourceName": "Seen on: cyber-security pages, developer tools, terminal themes, games, and digital installations",

@@ -1,21 +1,81 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 295 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 298 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and four Ambient demos.
-The remaining work includes 104 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and seven Ambient demos.
+The remaining work includes 101 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 5 remaining demos.
-None of the 295 remediated native compositions retains those references.
+None of the 298 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 295 native compositions. The unfinished groups still account for
-10 overflow findings, zero horizontal-scroll findings, 44 tiny-text findings and
+among these 298 native compositions. The unfinished groups still account for
+7 overflow findings, zero horizontal-scroll findings, 43 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 90 documented
 Figma fill exceptions validate.
+
+## Life, Reactive Bars and Glyph Rain
+
+The native compositions follow tiles `170:1121`, `170:1263` and
+`170:1296`, retaining all 153 unchanged SVG payloads and their intrinsic
+painted bounds. All three use a 240×168px native plane at (66,20) in the
+372×264px reference stage. Full compositions preserve the original copy and
+complete models in a 400×472px composition with a 368×268px physical field.
+
+Life keeps all 126 supplied 10×10px rounded cells at 12px pitch and the
+thirteen authored live cells. The native 14×9 board uses the original
+toroidal B3/S23 solver, >115ms generation cadence and Float32 .58 memory
+decay; alpha transfer changes births and afterglow without modifying assets.
+The full board retains all 640 cells and fifteen original seed coordinates.
+Arrows select, Enter writes, N steps and C clears; full touch drawing owns
+the field, with vertical scrolling available beside it. Native vertical
+panning cancels drawing safely.
+
+Reactive Bars keeps seventeen 6px authored bars, their exact initial heights,
+opacity sequence and central orange accent. Each samples the center of its
+interval in the complete 24-band model and scales about its authored center.
+The original three sine signals, Float32 energy diffusion, Gaussian excitation
+and full-spectrum pulse remain unchanged. Full view exposes every band.
+
+Glyph Rain keeps all ten supplied 11px outlined columns and their exact
+characters, green fills and 14px leading. Two unchanged copies of each asset
+loop within its 140px column from unwrapped original seeded displacement.
+The original 34px aperture and 32px feather part the native artwork. G switches
+to dynamically drawn original Kana data, retaining offsets, frame cadence
+and eleven-glyph tails. Full view keeps both complete original character sets,
+all responsive columns, the original 12px font, 17px pitch and 187px tail wrap.
+Native Latin deliberately retains the supplied v4 strings; original Latin
+glyph selection remains intact in the full composition and source model.
+
+The nine groups in `tools/verify-ambient-cells.js` cover 48 emitted engine
+cases, 57,648 original states, 5,584 complete typed-model checkpoints and
+333,273,600 original Canvas channels. Independent native checks cover 240
+generations and real writes at DPR1/2, all original signal bands and actual
+bar matrices, 1,200-frame column stories and 4,838,400 actual Kana channels.
+Browser checks cover 72 native and 72 full layouts, 36 ten-second native/full
+stories at 60/120/240Hz, physical touch and scrolling, all native actions,
+independent holds, queued Reset, interrupted reduced opacity feedback, early
+cleanup, routes and LiveTiles, plus 24 fresh network-blocked exports.
+
+All three pass the fit audit without new exceptions. At the auditor's
+347×264px stages their measured fill is 19.8%, 37.4% and 22.9%. The batch
+removes three overflow findings, one tiny-text finding and three control debts.
+Remaining global debt is 7 overflow, 43 tiny-text and 33 low-fill findings,
+98 chrome/control debts and 51 motion debts. The other 323 source modules and
+396 metadata entries are unchanged. Five retired-photo runtime references
+remain in unfinished groups.
+
+The [source-bound timing report](performance/ambient-cells-2026-11-20.json)
+records 24 isolated desktop/mobile CPU1/CPU4 cases and eight-second interrupted
+stories with actual scheduler intervals, long tasks, first paint, readiness
+and CDP traces. Native CPU1 spans 60.0–60.0fps; native CPU4 spans
+56.4–60.0fps with 25 slow intervals and
+3 first paints above 300ms. Full CPU4 spans
+55.3–60.0fps. Fonts are prepared before mounting and public route
+transfer is outside this measurement. Final timing gates remain open.
 
 ## Constellation, Flow Field, Starfield Warp and Fireflies
 

@@ -1,0 +1,2423 @@
+{
+  "recordedAt": "2026-11-20T03:02:24.670Z",
+  "localDate": "2026-11-20",
+  "timeZone": "Asia/Dhaka",
+  "cases": 24,
+  "timingGatePassed": false,
+  "sourceHashes": {
+    "js/demos.ambient.conway-life-fade.js": "4481ce59f7e3bbf7c63c7f60a7fc7c9d20c05536bdb1c9cec5332b3531504594",
+    "js/demos.ambient.audio-reactive-bars.js": "0f47036b90446c90bb5b4e42aafba6c42b9bd1c5295eb4b0adc5acf4e79403d4",
+    "js/demos.ambient.matrix-rain.js": "3e73b3d8ba7e5cac98991e564ec6724603eaf0866e7675251c9c454a9552bcbc",
+    "tools/fixtures/ambient-cells-artwork.json": "82310e7191bc9d12fdc137107f8f27bc95d8ddb22b7542b1257cd8d77eda4b12",
+    "tools/fixtures/ambient-cells-original-models.json": "fcb15883e3cf5732f2b4cbdbf0650889d08fd48a01f9c2e4257aeb28851b064e",
+    "tools/verification/ambient-cells-harness.js": "8913efc8b53c656ce7a5416747f0daf93518c951ff258769576bd0f84c5fddaf",
+    "tools/verification/ambient-cells-original.js": "bf2d2214c1688d29b37746435d39823b3cf55c1dc7cd2d03977a7083bc3018c5",
+    "tools/verification/ambient-cells-normalizer.js": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "5fd96c4c4755556fab7802cf43026f0035d2777afb645ae70da87deea52874b3",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "registry/index.json": "9949c7d173845ffc307256e33987fbee74474db287711f6b2e7815b66913248a",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-ambient-cells.js": "a1a7bd2038dedc7249c9d45ba2fcb770c567fc3d31b7e9edd21fe174b904eba3",
+    "assets/components/ambient-cells/170-1134.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1135.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1136.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1137.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1138.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1139.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1140.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1141.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1142.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1143.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1144.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1145.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1146.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1147.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1148.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1149.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1150.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1151.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1152.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1153.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1154.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1155.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1156.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1157.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1158.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1159.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1160.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1161.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1162.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1163.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1164.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1165.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1166.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1167.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1168.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1169.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1170.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1171.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1172.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1173.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1174.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1175.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1176.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1177.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1178.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1179.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1180.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1181.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1182.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1183.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1184.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1185.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1186.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1187.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1188.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1189.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1190.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1191.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1192.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1193.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1194.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1195.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1196.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1197.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1198.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1199.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1200.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1201.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1202.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1203.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1204.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1205.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1206.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1207.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1208.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1209.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1210.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1211.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1212.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1213.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1214.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1215.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1216.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1217.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1218.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1219.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1220.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1221.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1222.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1223.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1224.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1225.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1226.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1227.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1228.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1229.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1230.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1231.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1232.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1233.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1234.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1235.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1236.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1237.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1238.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1239.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1240.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1241.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1242.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1243.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1244.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1245.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1246.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1247.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1248.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1249.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1250.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1251.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1252.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1253.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1254.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1255.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1256.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1257.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1258.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1259.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1276.svg": "775d30c0f91d88dbf83051421156fd16c1a961a4bca2896b26248ebf753829ce",
+    "assets/components/ambient-cells/170-1277.svg": "32f5faf704175d4932a56bb8a1e039fca3ad9eb6fa478fcea2258fed4f512469",
+    "assets/components/ambient-cells/170-1278.svg": "f9a273a0949fae4e43bc2343c215139edb671a0d4ce5cd2c04013e6472cde2b7",
+    "assets/components/ambient-cells/170-1279.svg": "72fbec51b9cea73a951e634ff9d2b4849607e39f92d405558fba10b5945b0846",
+    "assets/components/ambient-cells/170-1280.svg": "a106f3bf2d2bb73bc08bce082f3bd02d92adfb92c54fe5f3f657bf085b056858",
+    "assets/components/ambient-cells/170-1281.svg": "c6ed05d81298f1e4bccdfba33b61946e281717db93255406a11a20bf887d3211",
+    "assets/components/ambient-cells/170-1282.svg": "9e1bb1cafc51c66f155954ce94015223f78374f1186c72878286dee199b207f4",
+    "assets/components/ambient-cells/170-1283.svg": "4b3a29f8800b1ccba49e38ad6401d1ee7f4186dafdcd87013130e2eb74d7c8d3",
+    "assets/components/ambient-cells/170-1284.svg": "9f6bcb4f6b433f7b6a1a42578760f4680ec33eb72dfd17cec87b7c2f9eb11a00",
+    "assets/components/ambient-cells/170-1285.svg": "50300913af1d9b2496f8dc6b91edace525a6c5f8af156c10fc8204c1bf283c9c",
+    "assets/components/ambient-cells/170-1286.svg": "7553d93ceba22a34fbc577c374850d9044d41b85ac0a5aa4f10e0bf1c1c8b99c",
+    "assets/components/ambient-cells/170-1287.svg": "4cd4a540341beddaea4414b6420beb56a265542de8a071d08f8ec0d56cfa9222",
+    "assets/components/ambient-cells/170-1288.svg": "88dada887f920f6e407e2db6e8436fcb75ac1e8fe7590d68a5b5e8b4685081d7",
+    "assets/components/ambient-cells/170-1289.svg": "c88178217db1432828447d900442d08ea2628ff780960be34502e55f175ef1ef",
+    "assets/components/ambient-cells/170-1290.svg": "d2bd55474ad440ae53ae1ff73351dccf49e65e736d753aeef88eac1454b0b15c",
+    "assets/components/ambient-cells/170-1291.svg": "c66b332082a602a09d02a4b681b1c1afd442f4a587b21e57991eb74c4eb201e7",
+    "assets/components/ambient-cells/170-1292.svg": "53c69e62804c541f9e87cf7f9b7d356ca357b9f0626d632003644d3810a221ab",
+    "assets/components/ambient-cells/170-1309.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1310.svg": "f38d5614ffd1615eeb1c84669666778167b0375a30b3b481f2e6b0c576832266",
+    "assets/components/ambient-cells/170-1311.svg": "c78303d437ed4147f09ea7c6b5d44eff4df7e4ec876a801d20a2d015a844abf4",
+    "assets/components/ambient-cells/170-1312.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1313.svg": "f38d5614ffd1615eeb1c84669666778167b0375a30b3b481f2e6b0c576832266",
+    "assets/components/ambient-cells/170-1314.svg": "c78303d437ed4147f09ea7c6b5d44eff4df7e4ec876a801d20a2d015a844abf4",
+    "assets/components/ambient-cells/170-1315.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1316.svg": "759cf5982383a95dbbb501c92b9397a1be1bd65640a00c52f88832f3675b38fa",
+    "assets/components/ambient-cells/170-1317.svg": "29f145db2093695f859e9c4cf3245e70a734b68e21f586dd80793958ed2a4fa2",
+    "assets/components/ambient-cells/170-1318.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6"
+  },
+  "sourceReports": [
+    {
+      "file": ".artifacts/ambient-cells/performance-cpu1-1795143413209.json",
+      "sha256": "c256680d535855de2a1722abb5ef5d5cc832ef98c3265d9baf20d53d423717f0"
+    },
+    {
+      "file": ".artifacts/ambient-cells/performance-cpu4-1795143555878.json",
+      "sha256": "1f55df9998ca87e5c4f1599b5a5b6d27e7eb17eda9ba604aa08f723180ffa50d"
+    }
+  ],
+  "summary": [
+    {
+      "cpu": 1,
+      "mode": "thumb",
+      "cases": 6,
+      "fps": [
+        60.00150003750094,
+        60.0030001500075
+      ],
+      "firstPaintMS": [
+        38.69999999552965,
+        73.29999999701977
+      ],
+      "readinessMS": [
+        56.5,
+        101.39999999850988
+      ],
+      "maxP95MS": 16.799999999999272,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 1,
+      "mode": "full",
+      "cases": 6,
+      "fps": [
+        60.002250084378154,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        26.600000001490116,
+        55
+      ],
+      "readinessMS": [
+        48.29999999701977,
+        74.59999999403954
+      ],
+      "maxP95MS": 16.799999999999272,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "thumb",
+      "cases": 6,
+      "fps": [
+        56.384411955491245,
+        60.00225008437817
+      ],
+      "firstPaintMS": [
+        252.60000000149012,
+        408.79999999701977
+      ],
+      "readinessMS": [
+        278.6000000014901,
+        500.69999999552965
+      ],
+      "maxP95MS": 16.800000000000182,
+      "slowCases": 3,
+      "slowIntervals": 25,
+      "longTasks": 5,
+      "firstPaintOver300MS": 3
+    },
+    {
+      "cpu": 4,
+      "mode": "full",
+      "cases": 6,
+      "fps": [
+        55.2624028541846,
+        60.002250084378154
+      ],
+      "firstPaintMS": [
+        145,
+        359.6000000014901
+      ],
+      "readinessMS": [
+        171.10000000149012,
+        414.70000000298023
+      ],
+      "maxP95MS": 16.800000000000182,
+      "slowCases": 5,
+      "slowIntervals": 33,
+      "longTasks": 8,
+      "firstPaintOver300MS": 2
+    }
+  ],
+  "results": [
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 66.40000000596046,
+        "firstPaint": 41.30000000447035
+      },
+      "motion": {
+        "duration": 8010.69999999553,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.89999999850988
+          },
+          {
+            "name": "input",
+            "at": 408.8999999985099
+          },
+          {
+            "name": "release",
+            "at": 1808.79999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.79999999851
+          },
+          {
+            "name": "settle",
+            "at": 3608.69999999851
+          },
+          {
+            "name": "leave",
+            "at": 5008.59999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 37,
+          "frames": 37,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 240,
+          "h": 168,
+          "drawing": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-thumb-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "e078fa2f65f55e6ff7c70dc9c365ba0300e049d134a51d3c49637668e0da76a5",
+        "events": 14995
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 63.399999998509884,
+        "firstPaint": 38.69999999552965
+      },
+      "motion": {
+        "duration": 8012.5,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.79999999403952
+          },
+          {
+            "name": "input",
+            "at": 411.7999999940396
+          },
+          {
+            "name": "release",
+            "at": 1811.7999999940396
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.6999999940394
+          },
+          {
+            "name": "settle",
+            "at": 3611.5999999940395
+          },
+          {
+            "name": "leave",
+            "at": 5011.5999999940395
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.600000000000026,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-thumb-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "7bd2e64cc53b3335db355f16d976bfc3204380f08cf3141db23d2a2d1715afe0",
+        "events": 22079
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 101.39999999850988,
+        "firstPaint": 70
+      },
+      "motion": {
+        "duration": 8011.70000000298,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.1000000029802
+          },
+          {
+            "name": "input",
+            "at": 410.1000000029802
+          },
+          {
+            "name": "release",
+            "at": 1810.0000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.0000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3610.0000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5009.90000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-thumb-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "c51db7dccc1d4702d3dd141b15ee7ea5f9d64fb7d10d33c94d0585d497a5686d",
+        "events": 23285
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 56.5,
+        "firstPaint": 39.20000000298023
+      },
+      "motion": {
+        "duration": 8012.5,
+        "frames": 480,
+        "fps": 60.00150003750094,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.0000000059605
+          },
+          {
+            "name": "input",
+            "at": 411.90000000596046
+          },
+          {
+            "name": "release",
+            "at": 1811.9000000059605
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.8000000059606
+          },
+          {
+            "name": "settle",
+            "at": 3611.9000000059605
+          },
+          {
+            "name": "leave",
+            "at": 5011.80000000596
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 38,
+          "frames": 38,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 240,
+          "h": 168,
+          "drawing": false,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-thumb-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "89ac890594b6cd51b3bd54d94df98132a64e8fdda024e871de20bd87c33192b6",
+        "events": 14961
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 75.70000000298023,
+        "firstPaint": 43.600000001490116
+      },
+      "motion": {
+        "duration": 8013.39999999851,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.20000000298023
+          },
+          {
+            "name": "input",
+            "at": 412.20000000298023
+          },
+          {
+            "name": "release",
+            "at": 1812.1000000029803
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.1000000029803
+          },
+          {
+            "name": "settle",
+            "at": 3612.1000000029803
+          },
+          {
+            "name": "leave",
+            "at": 5012.00000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.600000000000026,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-thumb-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "b6ccc6bd827641843fb97a5498de9dcface1f427dfe5d6c7f2205eadde74c2df",
+        "events": 22095
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 97.79999999701977,
+        "firstPaint": 73.29999999701977
+      },
+      "motion": {
+        "duration": 8013,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.2
+          },
+          {
+            "name": "input",
+            "at": 411.20000000000005
+          },
+          {
+            "name": "release",
+            "at": 1811.1
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.1
+          },
+          {
+            "name": "settle",
+            "at": 3611
+          },
+          {
+            "name": "leave",
+            "at": 5011
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-thumb-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "9488869b5f5d16154cedd0d494cee7084a78f439173354d06f8ea5fd209ac21d",
+        "events": 23250
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 48.599999994039536,
+        "firstPaint": 30.099999994039536
+      },
+      "motion": {
+        "duration": 8013.70000000298,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.79999999850986
+          },
+          {
+            "name": "input",
+            "at": 412.79999999850986
+          },
+          {
+            "name": "release",
+            "at": 1812.79999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.69999999851
+          },
+          {
+            "name": "settle",
+            "at": 3612.69999999851
+          },
+          {
+            "name": "leave",
+            "at": 5012.59999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 38,
+          "frames": 38,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 368,
+          "h": 268,
+          "drawing": false,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-full-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "6e4201125a3baa2ab1591e511e2497db07b00e0cb3d2b1da908d6f22d4d41c58",
+        "events": 15073
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 56.70000000298023,
+        "firstPaint": 28.299999997019768
+      },
+      "motion": {
+        "duration": 8014.39999999851,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.09999999552963
+          },
+          {
+            "name": "input",
+            "at": 412.09999999552963
+          },
+          {
+            "name": "release",
+            "at": 1811.9999999955296
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.0999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3611.99999999553
+          },
+          {
+            "name": "leave",
+            "at": 5011.8999999955295
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.600000000000026,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-full-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "dd02a2a70139f449542e4de417877df2dfec8fe451c0c237bbc3120e7d38d28a",
+        "events": 23327
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 74.59999999403954,
+        "firstPaint": 48.899999998509884
+      },
+      "motion": {
+        "duration": 8014.60000000149,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.00000000298024
+          },
+          {
+            "name": "input",
+            "at": 413.1000000029802
+          },
+          {
+            "name": "release",
+            "at": 1813.0000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.0000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3613.0000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5012.90000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-full-desktop-cpu1-1795143413209-trace.json",
+        "sha256": "02a6340782e51239adf82f740f147421d580d2915f91dacaf6caac40d9ffa0ec",
+        "events": 21970
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 66.79999999701977,
+        "firstPaint": 44.600000001490116
+      },
+      "motion": {
+        "duration": 8013.5,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.70000000596048
+          },
+          {
+            "name": "input",
+            "at": 411.7000000059604
+          },
+          {
+            "name": "release",
+            "at": 1811.7000000059606
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.7000000059606
+          },
+          {
+            "name": "settle",
+            "at": 3611.6000000059603
+          },
+          {
+            "name": "leave",
+            "at": 5011.500000005961
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 37,
+          "frames": 37,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 368,
+          "h": 268,
+          "drawing": false,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-full-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "c1c3b197acac8582540e9db94f85b7a72c762529126cda730fd30985251eec90",
+        "events": 15091
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 48.29999999701977,
+        "firstPaint": 26.600000001490116
+      },
+      "motion": {
+        "duration": 8012.0999999940395,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.59999999850987
+          },
+          {
+            "name": "input",
+            "at": 410.59999999850993
+          },
+          {
+            "name": "release",
+            "at": 1810.59999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.49999999851
+          },
+          {
+            "name": "settle",
+            "at": 3610.49999999851
+          },
+          {
+            "name": "leave",
+            "at": 5010.39999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.600000000000026,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-full-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "b94a14c71fba2a62481d5a8dbc8a47f6a14c7e4df7e9e0b752a518bd18b3a489",
+        "events": 23221
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 74,
+        "firstPaint": 55
+      },
+      "motion": {
+        "duration": 8012.39999999851,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.39999999999998
+          },
+          {
+            "name": "input",
+            "at": 410.4
+          },
+          {
+            "name": "release",
+            "at": 1810.4
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.3
+          },
+          {
+            "name": "settle",
+            "at": 3610.3
+          },
+          {
+            "name": "leave",
+            "at": 5010.2
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 412
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-full-mobile-cpu1-1795143413209-trace.json",
+        "sha256": "51c25c75a3884e7ca79e2a98603edebd8a32fad98b2737fd7e26b6c3e00ccf2c",
+        "events": 22363
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 278.6000000014901,
+        "firstPaint": 252.60000000149012
+      },
+      "motion": {
+        "duration": 8003.89999999851,
+        "frames": 478,
+        "fps": 59.753734608413026,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 115,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 144,
+            "ms": 33.29999999999973
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.0000000014901
+          },
+          {
+            "name": "input",
+            "at": 401.0000000014901
+          },
+          {
+            "name": "release",
+            "at": 1800.9000000014903
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.9000000014903
+          },
+          {
+            "name": "settle",
+            "at": 3600.80000000149
+          },
+          {
+            "name": "leave",
+            "at": 5000.80000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 37,
+          "frames": 37,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 240,
+          "h": 168,
+          "drawing": false,
+          "raf": 414
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-thumb-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "7dc0bb45a4d2d37c308b68b08381d8bde403d06ab987a1aa5e4588a4df075e4c",
+        "events": 15384
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 500.69999999552965,
+        "firstPaint": 408.79999999701977
+      },
+      "motion": {
+        "duration": 8018.10000000149,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999955,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.4999999970198
+          },
+          {
+            "name": "input",
+            "at": 413.4999999970198
+          },
+          {
+            "name": "release",
+            "at": 1813.3999999970197
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.3999999970197
+          },
+          {
+            "name": "settle",
+            "at": 3613.2999999970198
+          },
+          {
+            "name": "leave",
+            "at": 5013.29999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.575000000000026,
+          "running": true,
+          "frames": 263,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 420
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-thumb-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "d1c878c776bbb23ad43f26d46560441f804542dfe36f26cde370a43e2df45400",
+        "events": 27897
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 386.70000000298023,
+        "firstPaint": 332.70000000298023
+      },
+      "motion": {
+        "duration": 8010.4000000059605,
+        "frames": 471,
+        "fps": 58.87794389719486,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 25,
+            "ms": 50
+          },
+          {
+            "frame": 35,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 38,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 49,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 52,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 55,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 247,
+            "ms": 49.900000000000546
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 404,
+            "duration": 58
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 203.1000000059605
+          },
+          {
+            "name": "input",
+            "at": 403.1000000059605
+          },
+          {
+            "name": "release",
+            "at": 1803.0000000059604
+          },
+          {
+            "name": "interrupt",
+            "at": 2403.0000000059604
+          },
+          {
+            "name": "settle",
+            "at": 3602.9000000059605
+          },
+          {
+            "name": "leave",
+            "at": 5002.80000000596
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 240,
+          "h": 168,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 415
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-thumb-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "281f59c39df7073b5587755eba7a03fbe09266db22f466eb96d6f16d7e953b68",
+        "events": 27870
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 327.5,
+        "firstPaint": 292.8999999985099
+      },
+      "motion": {
+        "duration": 8007,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.29999999552967
+          },
+          {
+            "name": "input",
+            "at": 404.2999999955297
+          },
+          {
+            "name": "release",
+            "at": 1804.1999999955297
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.1999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3604.0999999955293
+          },
+          {
+            "name": "leave",
+            "at": 5004.099999995529
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 38,
+          "frames": 38,
+          "running": true,
+          "toggles": 4,
+          "last": 6883.333333333369,
+          "w": 240,
+          "h": 168,
+          "drawing": false,
+          "raf": 415
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-thumb-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "7e69762ce5fa8d7b497c0c0401cd78c5ba8cf111efbade62444d833666987783",
+        "events": 15467
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 357.19999999552965,
+        "firstPaint": 297.59999999403954
+      },
+      "motion": {
+        "duration": 8020.39999999851,
+        "frames": 481,
+        "fps": 60.0019959083878,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 216.69999999552965
+          },
+          {
+            "name": "input",
+            "at": 416.59999999552963
+          },
+          {
+            "name": "release",
+            "at": 1816.4999999955298
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.5999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3616.49999999553
+          },
+          {
+            "name": "leave",
+            "at": 5016.3999999955295
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.575000000000026,
+          "running": true,
+          "frames": 263,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 417
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-thumb-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "28a9120f5997abc797fa26f7cc480a12a4d71dc649ae9486116aacdcea799052",
+        "events": 23370
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 428.70000000298023,
+        "firstPaint": 345
+      },
+      "motion": {
+        "duration": 8019,
+        "frames": 452,
+        "fps": 56.384411955491245,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 27,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 29,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 52,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 135,
+            "ms": 50
+          },
+          {
+            "frame": 323,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 324,
+            "ms": 116.69999999999982
+          },
+          {
+            "frame": 325,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 328,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 330,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 378,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 380,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 384,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 385,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 391,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 394,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 413.29999999701977,
+            "duration": 93
+          },
+          {
+            "at": 5530.29999999702,
+            "duration": 52
+          },
+          {
+            "at": 5587.5999999940395,
+            "duration": 118
+          },
+          {
+            "at": 5721,
+            "duration": 50
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.09999999701972
+          },
+          {
+            "name": "input",
+            "at": 412.19999999701986
+          },
+          {
+            "name": "release",
+            "at": 1812.09999999702
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.09999999702
+          },
+          {
+            "name": "settle",
+            "at": 3611.9999999970196
+          },
+          {
+            "name": "leave",
+            "at": 5011.99999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 240,
+          "h": 168,
+          "frames": 258,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 411
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-thumb-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "9c0954918e70a370195b0edd2c6f6ec2ea7e3c9dbf3477dd448da3767c017b61",
+        "events": 26432
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 247.60000000149012,
+        "firstPaint": 220.60000000149012
+      },
+      "motion": {
+        "duration": 8002.20000000298,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 200.90000000596046
+          },
+          {
+            "name": "input",
+            "at": 400.80000000596044
+          },
+          {
+            "name": "release",
+            "at": 1800.8000000059606
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.8000000059606
+          },
+          {
+            "name": "settle",
+            "at": 3600.8000000059606
+          },
+          {
+            "name": "leave",
+            "at": 5000.700000005961
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 37,
+          "frames": 37,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 368,
+          "h": 268,
+          "drawing": false,
+          "raf": 414
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-full-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "038b5c2560ef84c0f550cd996baf5dc6a59c0caf5c83ff8b371e7791b2c56232",
+        "events": 15230
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 192.39999999850988,
+        "firstPaint": 149.5
+      },
+      "motion": {
+        "duration": 8017.79999999702,
+        "frames": 479,
+        "fps": 59.75250735991217,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 90,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 421,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 214.19999999701975
+          },
+          {
+            "name": "input",
+            "at": 414.19999999701975
+          },
+          {
+            "name": "release",
+            "at": 1814.1999999970199
+          },
+          {
+            "name": "interrupt",
+            "at": 2414.19999999702
+          },
+          {
+            "name": "settle",
+            "at": 3614.09999999702
+          },
+          {
+            "name": "leave",
+            "at": 5013.99999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.600000000000026,
+          "running": true,
+          "frames": 264,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 415
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-full-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "0fd001f14f87128570de8d03222d3ac320fe428a324232cbbef2f122d1fb1d43",
+        "events": 28361
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 400.20000000298023,
+        "firstPaint": 305.8999999985099
+      },
+      "motion": {
+        "duration": 8013.70000000298,
+        "frames": 478,
+        "fps": 59.627763085674374,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 81,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 82,
+            "ms": 33.299999999999955
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 207.3999999970198
+          },
+          {
+            "name": "input",
+            "at": 407.4999999970198
+          },
+          {
+            "name": "release",
+            "at": 1807.3999999970197
+          },
+          {
+            "name": "interrupt",
+            "at": 2407.2999999970198
+          },
+          {
+            "name": "settle",
+            "at": 3607.2999999970198
+          },
+          {
+            "name": "leave",
+            "at": 5007.29999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 368,
+          "h": 268,
+          "frames": 264,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 420
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-full-desktop-cpu4-1795143555878-trace.json",
+        "sha256": "83091ee5438cb04c74089e536137c8b6948ddf9c450e551be19e64d0680e3dae",
+        "events": 28608
+      }
+    },
+    {
+      "kind": "life",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 171.10000000149012,
+        "firstPaint": 149.10000000149012
+      },
+      "motion": {
+        "duration": 8010.60000000149,
+        "frames": 479,
+        "fps": 59.877993899694985,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 343,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.1000000029802
+          },
+          {
+            "name": "input",
+            "at": 408.1000000029802
+          },
+          {
+            "name": "release",
+            "at": 1808.1000000029803
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.0000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3608.0000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5007.90000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "generation": 37,
+          "frames": 37,
+          "running": true,
+          "toggles": 4,
+          "last": 6766.666666666701,
+          "w": 368,
+          "h": 268,
+          "drawing": false,
+          "raf": 414
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-life-full-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "38d8a213d4d4814be1aa165c12cb289e2564e2903780042ab677c4c0e1bed835",
+        "events": 15280
+      }
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 182.39999999850988,
+        "firstPaint": 145
+      },
+      "motion": {
+        "duration": 8013.5999999940395,
+        "frames": 472,
+        "fps": 59.00295014750738,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 61,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 76,
+            "ms": 50
+          },
+          {
+            "frame": 120,
+            "ms": 50
+          },
+          {
+            "frame": 212,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 225,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 406,
+            "ms": 33.19999999999982
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1275.6999999955297,
+            "duration": 53
+          },
+          {
+            "at": 2043.2999999970198,
+            "duration": 50
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.4999999955296
+          },
+          {
+            "name": "input",
+            "at": 408.59999999552963
+          },
+          {
+            "name": "release",
+            "at": 1808.4999999955298
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.3999999955295
+          },
+          {
+            "name": "settle",
+            "at": 3608.49999999553
+          },
+          {
+            "name": "leave",
+            "at": 5008.3999999955295
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "phase": 6.575000000000026,
+          "running": true,
+          "frames": 263,
+          "toggles": 4,
+          "focus": -1,
+          "raf": 414
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-spectrum-full-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "33c1ab7517de377e03c39118d1af13fab00cae09f429950762bc72657b033967",
+        "events": 29257
+      }
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 414.70000000298023,
+        "firstPaint": 359.6000000014901
+      },
+      "motion": {
+        "duration": 8005.9000000059605,
+        "frames": 443,
+        "fps": 55.2624028541846,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 50
+          },
+          {
+            "frame": 28,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 54,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 58,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 66,
+            "ms": 50
+          },
+          {
+            "frame": 67,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 74,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 75,
+            "ms": 50
+          },
+          {
+            "frame": 76,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 77,
+            "ms": 50
+          },
+          {
+            "frame": 217,
+            "ms": 50
+          },
+          {
+            "frame": 227,
+            "ms": 50
+          },
+          {
+            "frame": 248,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 365,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 375,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 376,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 377,
+            "ms": 33.20000000000073
+          },
+          {
+            "frame": 378,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 380,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 422,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 431,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 405.6000000014901,
+            "duration": 52
+          },
+          {
+            "at": 1180.7000000029802,
+            "duration": 51
+          },
+          {
+            "at": 1233.7000000029802,
+            "duration": 63
+          },
+          {
+            "at": 1404.8000000044703,
+            "duration": 84
+          },
+          {
+            "at": 3923.60000000149,
+            "duration": 60
+          },
+          {
+            "at": 6722.5,
+            "duration": 58
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.40000000447037
+          },
+          {
+            "name": "input",
+            "at": 404.30000000447035
+          },
+          {
+            "name": "release",
+            "at": 1804.3000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.3000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3604.20000000447
+          },
+          {
+            "name": "leave",
+            "at": 5004.20000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "setIndex": 1,
+          "w": 368,
+          "h": 268,
+          "frames": 261,
+          "running": true,
+          "toggles": 4,
+          "pointer": null,
+          "raf": 413
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-rain-full-mobile-cpu4-1795143555878-trace.json",
+        "sha256": "30c11f64e0b9d81a32e97f7821b72606272e5a3797a0418a85183a5f85ca75de",
+        "events": 25183
+      }
+    }
+  ],
+  "findings": [
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 59.753734608413026,
+      "p95MS": 16.799999999999272,
+      "slowIntervals": 2,
+      "longTasks": 0,
+      "readinessMS": 278.6000000014901
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 60.001995908387805,
+      "p95MS": 16.799999999999955,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 500.69999999552965
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 58.87794389719486,
+      "p95MS": 16.799999999999727,
+      "slowIntervals": 7,
+      "longTasks": 1,
+      "readinessMS": 386.70000000298023
+    },
+    {
+      "kind": "life",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 60.00225008437817,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 327.5
+    },
+    {
+      "kind": "spectrum",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 60.0019959083878,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 357.19999999552965
+    },
+    {
+      "kind": "rain",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 56.384411955491245,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 16,
+      "longTasks": 4,
+      "readinessMS": 428.70000000298023
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 59.75250735991217,
+      "p95MS": 16.799999999999727,
+      "slowIntervals": 2,
+      "longTasks": 0,
+      "readinessMS": 192.39999999850988
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 59.627763085674374,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 3,
+      "longTasks": 0,
+      "readinessMS": 400.20000000298023
+    },
+    {
+      "kind": "life",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 59.877993899694985,
+      "p95MS": 16.799999999999272,
+      "slowIntervals": 1,
+      "longTasks": 0,
+      "readinessMS": 171.10000000149012
+    },
+    {
+      "kind": "spectrum",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 59.00295014750738,
+      "p95MS": 16.799999999999955,
+      "slowIntervals": 6,
+      "longTasks": 2,
+      "readinessMS": 182.39999999850988
+    },
+    {
+      "kind": "rain",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 55.2624028541846,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 21,
+      "longTasks": 6,
+      "readinessMS": 414.70000000298023
+    }
+  ],
+  "scope": "Isolated emitted native/full Ambient fields, desktop DPR1 and mobile DPR2 at CPU1/4. Eight-second interrupted stories retain complete original simulation and measure actual RAF intervals, long tasks, first paint, readiness and CDP traces. Fonts are prepared before mounting; no per-frame model inspection or pixel readback. Physical input is verified separately. Measurements exclude public route transfer and leave final timing gates open.",
+  "gitSourceHashes": {
+    "js/demos.ambient.conway-life-fade.js": "4481ce59f7e3bbf7c63c7f60a7fc7c9d20c05536bdb1c9cec5332b3531504594",
+    "js/demos.ambient.audio-reactive-bars.js": "0f47036b90446c90bb5b4e42aafba6c42b9bd1c5295eb4b0adc5acf4e79403d4",
+    "js/demos.ambient.matrix-rain.js": "3e73b3d8ba7e5cac98991e564ec6724603eaf0866e7675251c9c454a9552bcbc",
+    "tools/fixtures/ambient-cells-artwork.json": "82310e7191bc9d12fdc137107f8f27bc95d8ddb22b7542b1257cd8d77eda4b12",
+    "tools/fixtures/ambient-cells-original-models.json": "fcb15883e3cf5732f2b4cbdbf0650889d08fd48a01f9c2e4257aeb28851b064e",
+    "tools/verification/ambient-cells-harness.js": "8913efc8b53c656ce7a5416747f0daf93518c951ff258769576bd0f84c5fddaf",
+    "tools/verification/ambient-cells-original.js": "bf2d2214c1688d29b37746435d39823b3cf55c1dc7cd2d03977a7083bc3018c5",
+    "tools/verification/ambient-cells-normalizer.js": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/load-registry.js": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/registry.js": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700",
+    "js/shell/router.js": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f",
+    "js/shell/views/detail.js": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "5fd96c4c4755556fab7802cf43026f0035d2777afb645ae70da87deea52874b3",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "registry/index.json": "9949c7d173845ffc307256e33987fbee74474db287711f6b2e7815b66913248a",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-ambient-cells.js": "a1a7bd2038dedc7249c9d45ba2fcb770c567fc3d31b7e9edd21fe174b904eba3",
+    "assets/components/ambient-cells/170-1134.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1135.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1136.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1137.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1138.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1139.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1140.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1141.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1142.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1143.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1144.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1145.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1146.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1147.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1148.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1149.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1150.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1151.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1152.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1153.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1154.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1155.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1156.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1157.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1158.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1159.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1160.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1161.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1162.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1163.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1164.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1165.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1166.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1167.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1168.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1169.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1170.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1171.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1172.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1173.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1174.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1175.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1176.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1177.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1178.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1179.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1180.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1181.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1182.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1183.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1184.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1185.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1186.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1187.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1188.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1189.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1190.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1191.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1192.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1193.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1194.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1195.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1196.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1197.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1198.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1199.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1200.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1201.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1202.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1203.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1204.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1205.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1206.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1207.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1208.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1209.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1210.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1211.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1212.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1213.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1214.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1215.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1216.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1217.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1218.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1219.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1220.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1221.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1222.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1223.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1224.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1225.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1226.svg": "89d759ba008eea6b8c93b36bcc3d6aeb3b4b003f4726bcf4341dab965811b690",
+    "assets/components/ambient-cells/170-1227.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1228.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1229.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1230.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1231.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1232.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1233.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1234.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1235.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1236.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1237.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1238.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1239.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1240.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1241.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1242.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1243.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1244.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1245.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1246.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1247.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1248.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1249.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1250.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1251.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1252.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1253.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1254.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1255.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1256.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1257.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1258.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1259.svg": "81733080b8747357c8a8b0ce8e1be5c8efec89d57b479afe987bc0062b2325dc",
+    "assets/components/ambient-cells/170-1276.svg": "775d30c0f91d88dbf83051421156fd16c1a961a4bca2896b26248ebf753829ce",
+    "assets/components/ambient-cells/170-1277.svg": "32f5faf704175d4932a56bb8a1e039fca3ad9eb6fa478fcea2258fed4f512469",
+    "assets/components/ambient-cells/170-1278.svg": "f9a273a0949fae4e43bc2343c215139edb671a0d4ce5cd2c04013e6472cde2b7",
+    "assets/components/ambient-cells/170-1279.svg": "72fbec51b9cea73a951e634ff9d2b4849607e39f92d405558fba10b5945b0846",
+    "assets/components/ambient-cells/170-1280.svg": "a106f3bf2d2bb73bc08bce082f3bd02d92adfb92c54fe5f3f657bf085b056858",
+    "assets/components/ambient-cells/170-1281.svg": "c6ed05d81298f1e4bccdfba33b61946e281717db93255406a11a20bf887d3211",
+    "assets/components/ambient-cells/170-1282.svg": "9e1bb1cafc51c66f155954ce94015223f78374f1186c72878286dee199b207f4",
+    "assets/components/ambient-cells/170-1283.svg": "4b3a29f8800b1ccba49e38ad6401d1ee7f4186dafdcd87013130e2eb74d7c8d3",
+    "assets/components/ambient-cells/170-1284.svg": "9f6bcb4f6b433f7b6a1a42578760f4680ec33eb72dfd17cec87b7c2f9eb11a00",
+    "assets/components/ambient-cells/170-1285.svg": "50300913af1d9b2496f8dc6b91edace525a6c5f8af156c10fc8204c1bf283c9c",
+    "assets/components/ambient-cells/170-1286.svg": "7553d93ceba22a34fbc577c374850d9044d41b85ac0a5aa4f10e0bf1c1c8b99c",
+    "assets/components/ambient-cells/170-1287.svg": "4cd4a540341beddaea4414b6420beb56a265542de8a071d08f8ec0d56cfa9222",
+    "assets/components/ambient-cells/170-1288.svg": "88dada887f920f6e407e2db6e8436fcb75ac1e8fe7590d68a5b5e8b4685081d7",
+    "assets/components/ambient-cells/170-1289.svg": "c88178217db1432828447d900442d08ea2628ff780960be34502e55f175ef1ef",
+    "assets/components/ambient-cells/170-1290.svg": "d2bd55474ad440ae53ae1ff73351dccf49e65e736d753aeef88eac1454b0b15c",
+    "assets/components/ambient-cells/170-1291.svg": "c66b332082a602a09d02a4b681b1c1afd442f4a587b21e57991eb74c4eb201e7",
+    "assets/components/ambient-cells/170-1292.svg": "53c69e62804c541f9e87cf7f9b7d356ca357b9f0626d632003644d3810a221ab",
+    "assets/components/ambient-cells/170-1309.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1310.svg": "f38d5614ffd1615eeb1c84669666778167b0375a30b3b481f2e6b0c576832266",
+    "assets/components/ambient-cells/170-1311.svg": "c78303d437ed4147f09ea7c6b5d44eff4df7e4ec876a801d20a2d015a844abf4",
+    "assets/components/ambient-cells/170-1312.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1313.svg": "f38d5614ffd1615eeb1c84669666778167b0375a30b3b481f2e6b0c576832266",
+    "assets/components/ambient-cells/170-1314.svg": "c78303d437ed4147f09ea7c6b5d44eff4df7e4ec876a801d20a2d015a844abf4",
+    "assets/components/ambient-cells/170-1315.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6",
+    "assets/components/ambient-cells/170-1316.svg": "759cf5982383a95dbbb501c92b9397a1be1bd65640a00c52f88832f3675b38fa",
+    "assets/components/ambient-cells/170-1317.svg": "29f145db2093695f859e9c4cf3245e70a734b68e21f586dd80793958ed2a4fa2",
+    "assets/components/ambient-cells/170-1318.svg": "35cfe6211d3e1b53d2bc10fca816906108d52445029767d4ff970c95490fb3e6"
+  },
+  "checkoutLineEndings": {
+    "policy": "Measured source hashes bind actual checkout bytes. Only these unchanged UTF-8 files differ from their Git blobs by CRLF to LF normalization. Every new or changed payload must match the Git index exactly before publication.",
+    "normalized": [
+      {
+        "file": "tools/load-registry.js",
+        "measuredSHA256": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+        "gitSHA256": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091"
+      },
+      {
+        "file": "css/style.css",
+        "measuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "gitSHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903"
+      },
+      {
+        "file": "css/fonts.css",
+        "measuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "gitSHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9"
+      },
+      {
+        "file": "js/demo-runtime.js",
+        "measuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "gitSHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a"
+      },
+      {
+        "file": "js/shell/stage.js",
+        "measuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "gitSHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0"
+      },
+      {
+        "file": "js/shell/registry.js",
+        "measuredSHA256": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+        "gitSHA256": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700"
+      },
+      {
+        "file": "js/shell/router.js",
+        "measuredSHA256": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+        "gitSHA256": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f"
+      },
+      {
+        "file": "js/shell/views/detail.js",
+        "measuredSHA256": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+        "gitSHA256": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28"
+      },
+      {
+        "file": "js/shell/export.js",
+        "measuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "gitSHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635"
+      }
+    ]
+  }
+}
