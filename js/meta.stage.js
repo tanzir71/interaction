@@ -8659,17 +8659,29 @@ INTRX.meta({
     ]
   },
   "gradient-mesh-drift": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause mesh"
+      },
+      {
+        "action": "reset",
+        "label": "Reset phase"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "gradient mesh",
@@ -8677,8 +8689,12 @@ INTRX.meta({
       "pointer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      300,
+      168
+    ]
   },
   "flow-field": {
     "designSize": [
@@ -8933,17 +8949,33 @@ INTRX.meta({
     ]
   },
   "aurora-curtains": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      472
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause curtains"
+      },
+      {
+        "action": "palette",
+        "label": "Dusk"
+      },
+      {
+        "action": "reset",
+        "label": "Reset sky"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8951,21 +8983,41 @@ INTRX.meta({
       "waves"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "rain-window": {
-    "designSize": "bleed",
+    "designSize": [
+      440,
+      548
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pause rain"
+      },
+      {
+        "action": "shower",
+        "label": "Rainfall"
+      },
+      {
+        "action": "reset",
+        "label": "Reset pane"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "application"
     },
     "useCases": [
       "canvas",
@@ -8973,8 +9025,12 @@ INTRX.meta({
       "droplets"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "ui-sound-kit": {
     "designSize": "md",

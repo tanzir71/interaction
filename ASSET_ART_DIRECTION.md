@@ -1,5 +1,25 @@
 # Photographic assets and typography
 
+## Rain Window — approved v2 source, verified 20 November 2026
+
+The `rain` key is [Max van den Oetelaar's airport-window photograph](https://unsplash.com/photos/a-window-with-rain-drops-on-it-at-night-1e60bqR1Ar0),
+Unsplash photo `1e60bqR1Ar0`, image `photo-1643287146701-93c795880dda`.
+The primary photo page confirms the free [Unsplash License](https://unsplash.com/license).
+An independent 1800px JPEG download at quality 82 has SHA-1
+`fa352e5af6719470756f08abc782f77edfc68f0e`, identical to the original
+Figma image hash at library node `104:5` and Rain tile image `170:1383`.
+Its SHA-256 is `c1e47c0e7abffe18581eed2f01f6f4614cf3bc012109fa7bcde3a71aaca548ac`.
+
+Self-hosted quality-85 WebP variants preserve the source aspect ratio:
+`assets/images/rain.webp` is 1600×1067px, SHA-256
+`4d8a4be98e1511d34eb32f368ccc6c6af589f65b6110b6bd4f24aa5baf2c929c`;
+`assets/images/rain-800.webp` is 800×533px, SHA-256
+`0f025d78016b0d5810a15e20e6b4868eff41e0aede10e3bfcfd660968ee8740e`.
+`photo-rain` resolves to the 800px file for thumbnails and portable exports;
+full detail resolves to 1600px. Native geometry is the supplied 200×150px
+centered cover crop with a 14px radius. Full Rain replaces its retired generated
+background while retaining the original drop solver and “After / rain” copy.
+
 ## Handoff 3 — verified Photo library v2
 
 The nine dark editorial images below supply the remediated photo layouts and

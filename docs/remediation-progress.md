@@ -1,21 +1,37 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 298 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 301 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and seven Ambient demos.
-The remaining work includes 101 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and all ten Ambient demos.
+The remaining work includes 98 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 5 remaining demos.
-None of the 298 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 4 remaining demos.
+None of the 301 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 298 native compositions. The unfinished groups still account for
-7 overflow findings, zero horizontal-scroll findings, 43 tiny-text findings and
+among these 301 native compositions. The unfinished groups still account for
+5 overflow findings, zero horizontal-scroll findings, 43 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 90 documented
 Figma fill exceptions validate.
+
+## Mesh Drift, Aurora Curtains and Rain Window
+
+The final three Ambient previews follow tiles `170:909`, `170:1350` and `170:1369`. All seven original SVG payloads remain unchanged. Mesh preserves all five 54×77px ellipses and their 40px blur bounds in a 300×168px plane at (36,20). Aurora and Rain retain their 200×150px photos at (86,28), 14px radii and original border SVGs. Both use a 240×168px plane at (66,20). The reference stage is 372×264px.
+
+Mesh maps the original rounded drift and nearest-field nudge onto each authored SVG. Aurora bends the approved photo with all four original curtain fields and 101 uploaded displacement columns. A luminance and horizon mask preserves the tree silhouettes. Its GPU and complete bilinear Canvas output differ by at most one channel value in the tested poses, with exact foreground pixels. Rain retains all 38 seeded drops, weighted merging, recycling, regrowth, press-to-add and ten-drop showers; its actual native drop pixels match the original drawing function at DPR1/2. Initial suspended photo previews show the untouched reference image.
+
+Full compositions retain the complete original copy and numeric interaction models. Mesh and Aurora use 400×472px layouts; Rain uses 440×548px to keep the complete photographer credit and keyboard guide readable on narrow screens. The physical full field stays 368×268px. The newly identified rain photograph matches the original Figma image SHA-1 byte for byte; full detail uses its licensed 1600px file, while previews and portable exports use 800px. This removes another retired generated background; four demos elsewhere still use retired keys.
+
+The eleven groups in `tools/verify-ambient-atmospheres.js` cover 146,902 checks, 48 emitted engine cases, 57,648 original scalar states, 5,600 complete model checkpoints and 83,318,400 original Canvas channels. Full Aurora retains every original column in the actual GPU buffer. Independent native stories cover 1,200 frames per scene at DPR1/2, including 71 rain recycles and 22 merges per story. Browser checks include 72 native and 72 full layouts, 36 clock stories at 60/120/240Hz, real moving touch and vertical scrolling, caller/viewport holds, paused themes, queued Reset, reduced opacity feedback, early cleanup, routes, LiveTiles and 24 fresh network-blocked exports. Both Aurora renderers pass real held WebGL loss/restoration, unavailable GPU and failed compilation with complete Canvas fallback and resource cleanup.
+
+All three native previews pass fit without new exceptions. At the auditor’s 347×264px stages Mesh fills 47.5%, Aurora 32.7% and Rain 32.7%. This batch removes two overflow findings and two control debts. Global stage debt is 96; motion debt remains 51. Registry generation, 651 library checks with 399 previews and 97 offline exports, 19 lifecycle/shell tests, eight CLI/MCP tests, stage runtime and all sixteen fit-geometry boundaries pass locally. The global fit command still exits 1 for the unfinished groups listed above.
+
+Timing remains open. The 24 source-bound isolated stories in `docs/performance/ambient-atmospheres-2026-11-20.json` measure eight seconds each on CPU1/4, desktop DPR1 and mobile DPR2, with actual CDP traces, distinct GPU paints, interruptions and long tasks. Native CPU1 records 60.0–60.0fps. Native CPU4 records 59.5–60.0fps with 2 intervals above 25ms and 0 first paints at or above 300ms. Full CPU4 records 52.3–60.0fps with 62 slow intervals and 0 first paints at or above 300ms. These are measurements, not a final timing pass.
+
+Full Aurora uses the preserved native blur atlas on the GPU. Its complete original model and uploaded geometry remain exact; GPU rasterization differs from original Canvas by up to 6 alpha values and 6.24 composited RGB values in the earlier frozen comparison (maximum per-case mean RGB difference 0.389). The actual emitted Canvas fallback remains byte-exact in recovery tests. Keep this raster difference and the sustained CPU4 timing finding open for the final audit, along with the previously documented performance tails. The slower private fused-shader experiment is excluded.
 
 ## Life, Reactive Bars and Glyph Rain
 

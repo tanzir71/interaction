@@ -569,3 +569,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   its full canvas; vertical page scrolling remains available beside that field.
   Record isolated timing with `node tools/profile-ambient-cells.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurement is not a timing pass.
+- `node tools/verify-ambient-atmospheres.js http://127.0.0.1:4173` covers v4
+  Mesh Drift, Aurora Curtains and Rain Window: seven unchanged Figma SVGs,
+  approved Aurora and Rain photographs, complete original full models and
+  independent native projections. It checks actual uploaded curtain columns,
+  photo displacement and rain pixels, real GPU loss/restoration, complete
+  Canvas fallbacks, compact type, physical input and touch scrolling, equivalent
+  clocks, independent holds, queued Reset, reduced feedback, startup disposal,
+  routes, LiveTiles and 24 fresh offline exports. Full Aurora retains every
+  original layer and column; its blur atlas has measured raster differences
+  from original Canvas. Preserve those differences and performance findings
+  for the final audit. Record isolated native/full timing with
+  `node tools/profile-ambient-atmospheres.js http://127.0.0.1:4173 --cpu=1`
+  or `--cpu=4`; measurement is not a timing pass.
