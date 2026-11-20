@@ -11740,7 +11740,10 @@ INTRX.meta({
     ]
   },
   "analog-gauge": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -11750,7 +11753,7 @@ INTRX.meta({
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11758,11 +11761,18 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      216
+    ]
   },
   "punch-card-keyboard": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -11772,7 +11782,7 @@ INTRX.meta({
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11780,21 +11790,41 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      216
+    ]
   },
   "cassette-reels": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "rewind",
+        "label": "Rewind"
+      },
+      {
+        "action": "forward",
+        "label": "Advance 30s"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11802,8 +11832,12 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "slot-machine-reel": {
     "designSize": "sm",

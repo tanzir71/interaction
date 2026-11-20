@@ -988,6 +988,20 @@ Original generated buffers are isolated in regression fixtures and never
 included in product output. Only `showcase-circular-gallery` still uses the
 retired runtime keys.
 
+### Needle Meter, Macro Keys and Tape Transport
+
+The instruments batch preserves twenty original SVG payloads from tiles
+`170:1775`, `170:1807` and `170:1835`: thirteen meter ticks, needle and hub,
+plus four tape circles and the original housing/shadow composite. They live in
+`assets/components/skeuo-instruments/`; the artwork manifest records payload
+hashes, original render bounds and captured native material data. The six macro
+caps and their inset faces use twelve exact CSS primitives. The invisible meter
+scaffold has no painted export. No screenshot is used as product artwork, and
+no new photograph, font, photo credit or asset alias is introduced. SVG image
+width and height repeat the supplied root dimensions to preserve intrinsic
+geometry under CSS zoom. Figma PNG antialiasing differences remain measurements
+rather than byte identity claims. The original full compositions stay complete.
+
 ### Listening Dial, Split-Flap Timer and Embossed Key
 
 The tactile batch preserves fourteen original SVG exports from tiles

@@ -73,3 +73,11 @@ tools/fixtures/skeuo-tactile-original-models.json -text
 tools/verification/skeuo-tactile-*.js -text
 tools/verify-skeuo-tactile.js -text
 tools/profile-skeuo-tactile.js -text
+
+assets/components/skeuo-instruments/*.svg -text
+tools/fixtures/skeuo-instruments-artwork.json -text
+tools/fixtures/skeuo-instruments-original-models.json -text
+tools/fixtures/skeuo-instruments-original/**/*.gz binary
+tools/verification/skeuo-instruments-*.js -text
+tools/verify-skeuo-instruments.js -text
+tools/profile-skeuo-instruments.js -text

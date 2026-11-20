@@ -591,6 +591,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Record findings without passing
   final timing gates. Static motion debt still records the original timer's
   hidden-model curve; visible drums use the canonical recipe.
+- `node tools/verify-skeuo-instruments.js http://127.0.0.1:4173` covers v4
+  Needle Meter, Macro Keys and Tape Transport: twenty unchanged original SVGs,
+  exact macro materials, twelve complete original fixtures and all full models.
+  It checks 192 layouts, independent motion at 60/120/240Hz, complete source
+  stories and four full tape sessions, actual mouse/keys/moving touch, retained
+  paint on interruption, independent holds, early/active cleanup, cold routes,
+  LiveTiles and 24 fresh network-blocked exports. Native starts are -3dB,
+  right alignment and paused 90 seconds; full keeps -8dB, left and zero.
+  Keep the meter's 380/32 visible spring separate from its original 135/15
+  source solver. Macro retains all six formatting actions. Shared tape buttons
+  own their actual implicit touch capture and release it during disposal.
+  Closed native range thumbs require explicit capture transfer before release.
+  Meter and macro use undocked 240×216px planes and documented sparse-fill
+  exceptions. Full Macro's intrinsic Reset key remains original static debt.
+  Touch cases use fresh contexts to isolate preceding native scroll momentum.
+  Record isolated eight-second timing with `node tools/profile-skeuo-instruments.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave timing gates open.
 - `node tools/verify-ambient-cells.js http://127.0.0.1:4173` covers v4 Life,
   Reactive Bars and Glyph Rain: all 153 unchanged SVG assets, 57,648 original
   engine states, complete typed models and 333,273,600 original Canvas channels.

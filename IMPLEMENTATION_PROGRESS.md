@@ -1450,3 +1450,25 @@ Fonts are prepared before mounting; route transfer is excluded. All timing
 findings and earlier tails remain open for the final audit.
 Direct commit/push continues with Actions disabled and the $0 stop-at-limit
 policy preserved.
+
+
+## Phase 4 — Needle Meter, Macro Keys and Tape Transport
+
+Three further native v4 compositions retain 20 original SVGs, exact macro
+materials, all complete original full programs and 12 lossless fixtures.
+Native checkpoints keep −3dB/right/90 seconds; full retains −8dB/left/zero.
+
+Twelve component groups pass 164,775 checks, including 192 layouts, independent
+canonical motion, four complete tape sessions, actual input and capture cleanup,
+24 fresh offline exports, cold routes and LiveTiles. The six required local
+phase commands pass for the remediated set; the full diagnostic records
+1 overflow, 25 tiny-text and 33 low-fill findings in unfinished demos. All 98
+fill exceptions validate. Stage debt is 79; motion debt stays 41 without new debt.
+Registry generation, 651 library checks/399 previews/97 exports, 19 runtime/shell
+tests, 8 CLI/MCP tests, 16 fit-geometry checks and stage-runtime checks pass.
+
+Visual remediation reaches 319/399. Eight Skeuomorph demos, 72 Collections,
+121 new/extensions, Pro seams and final audits remain. Twenty-four isolated
+CPU1/4 timing stories are recorded in the [timing report](docs/performance/skeuo-instruments-2026-11-20.json);
+measurements leave all final timing gates open. GitHub Actions remains disabled,
+with the previously verified account-wide $0 stop limit preserved.

@@ -1,21 +1,94 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 316 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 319 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and nine Skeuomorph demos.
-The remaining work includes 83 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and twelve Skeuomorph demos.
+The remaining work includes 80 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 316 remediated native compositions retains those references.
+None of the 319 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 316 native compositions. The unfinished groups still account for
-2 overflow findings, zero horizontal-scroll findings, 28 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 96 documented
+among these 319 native compositions. The unfinished groups still account for
+1 overflow finding, zero horizontal-scroll findings, 25 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 98 documented
 Figma fill exceptions validate.
+
+## Needle Meter, Macro Keys and Tape Transport
+
+Tiles `170:1775`, `170:1807` and `170:1835` retain twenty original SVG
+payloads and twelve exact macro cap/face primitives. The meter and macro keys
+use undocked 240×216px planes to keep the reference origin at (66,20); tape
+uses 240×168px. The invisible meter scaffold supplies no painted area.
+No photograph, font, credit or alias changes. Two sparse-fill exceptions keep
+the authored dimensions; overflow and typography gates remain active.
+
+Native starts are −3dB, right alignment and paused 90 seconds, reached through
+original range, formatting and seek actions. Full keeps −8dB, left alignment
+and zero seconds. The meter preserves all 24 full ticks and its original
+135/15 solver; visible release uses the canonical 380/32, mass-one spring,
+0.55 rubber band and actual pointer momentum. Macro keeps six actions, all
+16 formatting combinations, the complete note and native shortcuts. Tape
+keeps the complete 180-second model, 110-degree/second rotation, 1.13 reel
+ratio, seek, rewind, cap, completion and restart. Its native radius factors
+are relative to the authored 0.76 checkpoint. Full status clears the housing.
+
+Closed native range thumbs transfer capture to the known input before release.
+Tape owns implicit touch capture on its shared dock; disposal releases it
+without depending on pan cancellation. The press controller owns transform
+and opacity interpolation, avoiding a second shell CSS transition. Native
+shows Play/Pause; full also shows Rewind and Advance 30s. Full Macro's
+intrinsic original Reset key remains counted in static chrome/control debt.
+
+Twelve groups in `tools/verify-skeuo-instruments.js` pass
+164,775 checks. Twenty-four factory bindings cover twelve unique original
+fixtures and twelve replays, 5,064 bound states and 912 complete model checkpoints.
+Forty actual source stories include thirty-six six-second runs at
+60/120/240Hz and four whole tape sessions with restart/rewind. They check
+75,436 actual states against separate unchanged original programs.
+Verification also covers 192 layouts, 96 active layout phases, exact original
+SVG bytes/slots and captured materials, independent spring and press curves,
+real mouse/keys/moving touch, independent caller/document/viewport holds,
+queued intent, early and active disposal, cold routes, LiveTiles and 24 fresh
+network-blocked exports. Touch cases use fresh contexts to isolate scroll
+momentum from preceding cases. These demos construct no audio.
+
+Paint tests retain strict computed geometry/material equality. Needle pixels
+have an absolute one-channel continuity gate. Press controls independently
+calibrate eight no-intent layer rebuilds before release, then allow at most
+one channel beyond each pixel's measured repaint envelope. Raw differences,
+spread and excess are reported; the current 24 cases record maxima of
+0, 0 and 0, respectively. These results do not claim Figma PNG identity.
+
+The full audit boots all 399 demos. These three pass every fit gate; unfinished
+demos retain 1 overflow, 0 horizontal-scroll, 25 tiny-text and 33 low-fill
+findings, with all 98 exceptions valid. Stage debt is 79 and static motion
+debt is 41; no debt is added. Registry checks cover 1,205 artifacts. Local
+library checks pass 651 checks, 399 previews and 97 exports. The phase also
+passes nineteen runtime/shell tests, eight CLI/MCP tests, sixteen fit-geometry
+checks and shared stage-runtime checks. Three browser-generated posters use
+the authored initial frames. The full fit diagnostic still exits 1 for
+unfinished demos. Actions remain disabled; the account-wide $0 stop limit
+is preserved. No PR or workflow is started.
+
+The [source-bound timing report](performance/skeuo-instruments-2026-11-20.json)
+records 24 isolated eight-second native/full stories at CPU1/4 and desktop/mobile
+DPR1/2, including active input, holds, queued actions and resume. CPU1 records
+59.9–60.0fps, 1 interval above 25ms and 0 long tasks;
+CPU4 records 57.0–60.0fps, 19 slow intervals and 4 long tasks.
+First trace Paint ranges from 15.6ms to 241.8ms; readiness reaches
+273.1ms. Startup uses the first browser trace Paint after the mount
+mark; PaintTiming FCP is separately captured when available at readiness.
+CSS-only native macro caps do not require a contentful-paint event. Trace
+hashes and raw intervals remain recorded. Fonts are prepared before mounting,
+and route transfer is excluded. Timing gates and all earlier performance tails
+remain open. These measurements record findings for the final audit.
+
+Eight Skeuomorph demos, all seventy-two Collections, 121 new/extensions,
+Pro seams and final audits remain.
 
 ## Listening Dial, Split-Flap Timer and Embossed Key
 

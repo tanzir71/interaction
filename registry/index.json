@@ -22624,7 +22624,7 @@
   },
   {
     "id": "analog-gauge",
-    "title": "Calibrated Needle Meter",
+    "title": "Needle Meter",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "drag",
@@ -22639,8 +22639,15 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "A cream analog meter responds to its calibrated level slider with a damped physical needle.",
-    "designSize": "sm",
+    "desc": "Set the level; the needle settles with inertia",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      216
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22648,18 +22655,18 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/analog-gauge",
-    "thumb": "full",
-    "module": "js/demos.skeuo.analog-gauge.js?v=6c6bdadb4b",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.analog-gauge.js?v=cdcc50b95f",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/analog-gauge.json?v=39dad45c55",
+    "sourcePreview": "registry/p/analog-gauge.json?v=8735b36e86",
     "assetRefs": {},
     "rootClass": "d-gauge",
     "controls": [],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "hint": "Set the level; the needle settles with inertia",
     "sourceName": "Native physical interface study",
@@ -22667,7 +22674,7 @@
   },
   {
     "id": "punch-card-keyboard",
-    "title": "Sculpted Macro Keys",
+    "title": "Macro Keys",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22682,8 +22689,15 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "Six sculpted mechanical keycaps control the typography of a live note.",
-    "designSize": "sm",
+    "desc": "Sculpted keys fire their macros",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      216
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22691,18 +22705,18 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/punch-card-keyboard",
-    "thumb": "full",
-    "module": "js/demos.skeuo.punch-keyboard.js?v=071044b769",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.punch-keyboard.js?v=6509305818",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/punch-card-keyboard.json?v=3521eb1f60",
+    "sourcePreview": "registry/p/punch-card-keyboard.json?v=4314268cf8",
     "assetRefs": {},
     "rootClass": "d-punch",
     "controls": [],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Sculpted keys fire their macros",
     "sourceName": "Native physical interface study",
@@ -22710,7 +22724,7 @@
   },
   {
     "id": "cassette-reels",
-    "title": "Quiet Tape Transport",
+    "title": "Tape Transport",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22725,8 +22739,15 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "A molded cassette feeds tape between two real hub assemblies with working transport and position control.",
-    "designSize": "sm",
+    "desc": "Play, seek or rewind; the reels trade tape",
+    "designSize": [
+      400,
+      520
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22734,18 +22755,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/cassette-reels",
-    "thumb": "full",
-    "module": "js/demos.skeuo.cassette.js?v=4ee7a35621",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.cassette.js?v=7eaca6b489",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/cassette-reels.json?v=0d86d19cac",
+    "sourcePreview": "registry/p/cassette-reels.json?v=c718a44f0d",
     "assetRefs": {},
     "rootClass": "d-cassette",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "rewind",
+        "label": "Rewind"
+      },
+      {
+        "action": "forward",
+        "label": "Advance 30s"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "hint": "Play, seek or rewind; the reels trade tape",
     "sourceName": "Native physical interface study",
