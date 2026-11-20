@@ -1,0 +1,3484 @@
+{
+  "at": "2026-11-20T18:33:16.491Z",
+  "cases": 24,
+  "sourceHashes": {
+    "js/demos.skeuo.slot-reel.js": "f1a1e51b2c0691f616f5664f46a09f09179f9e040cd8042cdec66cdf5ad4dbd9",
+    "js/demos.skeuo.zippo.js": "61ff2a488843ec4167df9f0140f783be33300a7091d0ee2ce753765dc9640cfc",
+    "js/demos.skeuo.torn-paper.js": "5db107c4eb658701f5bcd3ad449e005a9de5b40012b8cf5b6cc41e14866c2d87",
+    "tools/fixtures/skeuo-mechanisms-artwork.json": "f2e97d5f02458d7e0a9d10300593a301804f49fd44c512316c73a65b34094d06",
+    "tools/fixtures/skeuo-mechanisms-original-models.json": "b97e9496705bd7713296e5df40aef42628e12c061e84961a7d28a87fdfadeaea",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/slot-machine-reel-300x320.pool.json.gz": "6cb8c1ff86425c3bd55b7118b0e69beea4c92629503aa352e4a18861267b8892",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/slot-machine-reel-300x320-reduced.pool.json.gz": "22619f066dfab275acbbc275a7dc5eb7803e2623142a3dc7f6b779a4c9ee1587",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/slot-machine-reel-368x320.pool.json.gz": "cda49a271a78213a217e8c42b9ef4f29ae0cac010c67b59d38f2de95366fdab9",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/slot-machine-reel-368x320-reduced.pool.json.gz": "4908eec7d447659a6dc63c398fbfbfd05ce5aa4b9d6d4b69fbb4db28c92618c1",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/zippo-flame-300x320.pool.json.gz": "58357db632089a67fa0d6474f5eda76a2f08f478a0ab813b78b2bcd096064dd3",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/zippo-flame-300x320-reduced.pool.json.gz": "e073c6d7a8e230699c2b514ed18d90dacf6ed86405e4297a4d3f093dce4715ae",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/zippo-flame-368x320.pool.json.gz": "140eb0011d44a3ee575fd6cec7785c1d786ca43390c944e136cb15e944cbb6d2",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/zippo-flame-368x320-reduced.pool.json.gz": "1bb3ea5c1079054bde1e4774b5f09680fd554a9d659db78cb663023d4d10d385",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/torn-paper-edge-300x320.pool.json.gz": "516edd878f9d7d04207717d828411a0670bcf81f0b8f96a03863df0825dc0ee7",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/torn-paper-edge-300x320-reduced.pool.json.gz": "a55b84074ac676a255d5aa8d695a90fddf5e063cea4a732583333db45f993e48",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/torn-paper-edge-368x320.pool.json.gz": "0b20520c5a0dd41b32224ae31adb5f93659c4c2332828af7ce1ba34748afef8a",
+    "tools/fixtures/skeuo-mechanisms-original/fixtures/torn-paper-edge-368x320-reduced.pool.json.gz": "d10dd1eb4807f99412d5f3f90df1a52d7f54ca4bc8a1eb926eca9866261762df",
+    "tools/verification/skeuo-original/unpack-fixture.cjs": "433509767c008d99ba999fa4e472dc17ff4818c8489e6668c236e1f63691e72f",
+    "tools/verification/skeuo-original/source-function.cjs": "c84919e01d4a5942431dabf47c65fa9a2c978d2762ab9fa5be49a59f682ff3d4",
+    "tools/verification/skeuo-original/coordinate-policy.cjs": "3941eb8967ff002077f94a4012c675d96b722c5bd7639a6f5eb1728606fccb76",
+    "tools/verification/sound-original/snapshot.cjs": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/verification/sound-original/audio-recorder.cjs": "67a0ad2be47c76821c8abfd791448232adee4557e24f9f4ba5d32feeb13a324f",
+    "assets/components/skeuo-mechanisms/170-1911.svg": "726f691718f7f6cc51b2615e729eb5173d43dd1261be49bac957bbfe39f70406",
+    "assets/components/skeuo-mechanisms/170-1912.svg": "b56e1f281f5bdc47d653a1f15dc8574c6b7354ab8f8d8b804d1be07550d0bb8b",
+    "assets/components/skeuo-mechanisms/170-1913.svg": "8ddc33d907ee22bdaab674887686cf4b4f15913a7f082e86596d859f9a0b8f10",
+    "assets/components/skeuo-mechanisms/171-2171.svg": "91092e48a6ad91dba15ec91d179b6f863df80de490b4fc7f28139cb80f76b4ff",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1872.svg": "f0d35313a4348daec576390feadf89bb99e6f11b382329e3903aefff6571f79b",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1873.svg": "60a451045488e130e635ad14eb7e5790a2a4413e3d1550bb540253f013855b8c",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1874.svg": "267a2eae0a24dd782f24cdce5ebf9a26896effe5cdb0b4a0fe93da234eecfe30",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1878.svg": "c9d6a209dc9caf918ce70d93c98f7d7a4b9ba4311ba9ab185ea4d6a27f122045",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1879.svg": "6b947f951b13a5e36b67a0e9620d51ccaf171a0f819b98f05b06379912437ed7",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1880.svg": "9e6d1f078e4eaa6108f7ed7edfeb26d541817ddabebf26acdfae5d63c5a44b46",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1884.svg": "9d1cbb7000a2a3bbacc9a2c24237203b43a12015d5369b8df13c2c3e6dcb09c9",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1885.svg": "b5664c5f50167a8a79385efe43a5401c9e6d7a96c5cfecbc3a63738628795fd2",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1886.svg": "3a14a389579febdabda4d70e561d2a56d81737eee0a52bbd5d2f2f4d98e698bc",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1890.svg": "8ee0cf869caab1431266ea58581add563c013767ef1c9aa24d48abc501d76e58",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1891.svg": "f442584730d17af3c3c0cb8b0d64c4d2f3921f6d9115abd2263d55d52b68148b",
+    "tools/fixtures/skeuo-mechanisms-reference/170-1892.svg": "e7bc1a9db0345191bcde0e6cfc2156438fdb6e74dcbe8d6cdc925c3353a08a4b",
+    "tools/verification/skeuo-mechanisms-harness.js": "dcbe9564e24b297cd41333225250b3e19546e78ced9d9e7c3d1ef350d3a5f936",
+    "tools/verification/sound-png.js": "cdf14c0b25508c0cd9f31be0b7219e7b95548d0924e08279b517d622a4446cc5",
+    "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+    "tools/stage-fit-bounds.js": "b13aa0359ebfc805038c00d656e58682440c39ba024c4972027900a072c0c194",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "assets/photo-credits.json": "72ca83f271f4ab8a269d885b8a42ddcf57ba095cb470300b96ba1c95e2ed139c",
+    "assets/demo-assets.json": "0249247f5896b7081ac2a2c3edc6dec29aac5386e7b1a140d585b8a5ded8380b",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/meta.stage.js": "32de6c5c7e331f9d1879efda7f5e1b7f0afdc28920243d3cd2241ec44da32ed2",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "registry/index.json": "184e901f70e52d19b7bb23581b5a7fc7254b8f85189eec997f6c34e7bb62aa22",
+    "tools/profile-skeuo-mechanisms.js": "fa765fdc7c05615cac0692f06409a8c84620c584b575b484b3a21ecaaa00caa6"
+  },
+  "timingGatePassed": false,
+  "summary": [
+    {
+      "cpu": 1,
+      "fps": [
+        59.50301881143655,
+        60.0030001500075
+      ],
+      "firstPaint": [
+        22.936,
+        54.605
+      ],
+      "maxReady": 71,
+      "slowIntervals": 4,
+      "longTasks": 1
+    },
+    {
+      "cpu": 4,
+      "fps": [
+        48.30075936760861,
+        59.37827453719875
+      ],
+      "firstPaint": [
+        90.038,
+        465.908
+      ],
+      "maxReady": 592.5999999940395,
+      "slowIntervals": 235,
+      "longTasks": 37
+    }
+  ],
+  "results": [
+    {
+      "kind": "counter",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 55.29999999701977,
+        "firstContentfulPaint": null,
+        "firstPaint": 45.371,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8012.4000000059605,
+        "frames": 480,
+        "fps": 59.87799857789753,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 289,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 195.3
+          },
+          {
+            "name": "release",
+            "at": 311.9
+          },
+          {
+            "name": "press-again",
+            "at": 1012
+          },
+          {
+            "name": "release-again",
+            "at": 1511.9
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2195.3
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2311.9
+          },
+          {
+            "name": "hold",
+            "at": 2412
+          },
+          {
+            "name": "queued-action",
+            "at": 3611.9
+          },
+          {
+            "name": "resume",
+            "at": 4011.8999999999996
+          },
+          {
+            "name": "second-press",
+            "at": 4311.9
+          },
+          {
+            "name": "second-release",
+            "at": 4428.5
+          },
+          {
+            "name": "last-press",
+            "at": 5711.8
+          },
+          {
+            "name": "last-release",
+            "at": 5828.4
+          },
+          {
+            "name": "finish",
+            "at": 7011.7
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-thumb-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "f4567347c0bae276a5a69f4c3d5e6a94cea66eeb6ae675ad616a12653ecf7683",
+        "events": 22453
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 34.80000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 28.991,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8010.79999999702,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 192.99999999701976
+          },
+          {
+            "name": "release",
+            "at": 309.5999999970197
+          },
+          {
+            "name": "press-again",
+            "at": 1009.5999999970197
+          },
+          {
+            "name": "release-again",
+            "at": 1509.4999999970198
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2192.8999999970197
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.4999999970196
+          },
+          {
+            "name": "hold",
+            "at": 2409.4999999970196
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.3999999970197
+          },
+          {
+            "name": "resume",
+            "at": 4009.4999999970196
+          },
+          {
+            "name": "second-press",
+            "at": 4309.39999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4426.09999999702
+          },
+          {
+            "name": "last-press",
+            "at": 5709.39999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5826.09999999702
+          },
+          {
+            "name": "finish",
+            "at": 7009.29999999702
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": true,
+          "lit": true
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-thumb-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "48e01a09468d9cb90f1ba1ad1ca8317ac3672e28edf73c0af8fc807f9dfadc71",
+        "events": 17485
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 33.6000000089407,
+        "firstContentfulPaint": null,
+        "firstPaint": 27.153,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8002.699999988079,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 185.09999998807905
+          },
+          {
+            "name": "release",
+            "at": 301.7999999880791
+          },
+          {
+            "name": "press-again",
+            "at": 1001.799999988079
+          },
+          {
+            "name": "release-again",
+            "at": 1501.799999988079
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2185.099999988079
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2301.699999988079
+          },
+          {
+            "name": "hold",
+            "at": 2401.699999988079
+          },
+          {
+            "name": "queued-action",
+            "at": 3601.699999988079
+          },
+          {
+            "name": "resume",
+            "at": 4001.699999988079
+          },
+          {
+            "name": "second-press",
+            "at": 4301.699999988079
+          },
+          {
+            "name": "second-release",
+            "at": 4434.999999988079
+          },
+          {
+            "name": "last-press",
+            "at": 5701.599999988079
+          },
+          {
+            "name": "last-release",
+            "at": 5834.899999988079
+          },
+          {
+            "name": "finish",
+            "at": 7001.599999988079
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-thumb-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "6e5e820bff72a6e692a29b77d8b695b80554f64317987e73518d80fb74d2032b",
+        "events": 17293
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 54.900000005960464,
+        "firstContentfulPaint": null,
+        "firstPaint": 44.248,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8012.5,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 194.49999999701976
+          },
+          {
+            "name": "release",
+            "at": 311.0999999970197
+          },
+          {
+            "name": "press-again",
+            "at": 1011.0999999970197
+          },
+          {
+            "name": "release-again",
+            "at": 1511.0999999970197
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2194.2999999970198
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2311.09999999702
+          },
+          {
+            "name": "hold",
+            "at": 2410.9999999970196
+          },
+          {
+            "name": "queued-action",
+            "at": 3610.9999999970196
+          },
+          {
+            "name": "resume",
+            "at": 4010.89999999702
+          },
+          {
+            "name": "second-press",
+            "at": 4310.99999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4427.59999999702
+          },
+          {
+            "name": "last-press",
+            "at": 5710.89999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5827.59999999702
+          },
+          {
+            "name": "finish",
+            "at": 7010.79999999702
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-thumb-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "af0fe1c01855e9672f73fb4cf7c42f37aa80475fbc980b8d3187bb8bf8b2fa68",
+        "events": 21556
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 37.3999999910593,
+        "firstContentfulPaint": null,
+        "firstPaint": 29.498,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8004.29999999702,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 187.19999999701975
+          },
+          {
+            "name": "release",
+            "at": 303.8999999970198
+          },
+          {
+            "name": "press-again",
+            "at": 1003.7999999970198
+          },
+          {
+            "name": "release-again",
+            "at": 1503.7999999970198
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2187.09999999702
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2303.7999999970198
+          },
+          {
+            "name": "hold",
+            "at": 2403.7999999970198
+          },
+          {
+            "name": "queued-action",
+            "at": 3603.69999999702
+          },
+          {
+            "name": "resume",
+            "at": 4003.6999999970194
+          },
+          {
+            "name": "second-press",
+            "at": 4303.59999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4420.29999999702
+          },
+          {
+            "name": "last-press",
+            "at": 5703.59999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5820.29999999702
+          },
+          {
+            "name": "finish",
+            "at": 7003.59999999702
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": true,
+          "lit": true
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-thumb-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "443a332b2c2fd31e6d367fd62c0fa68f48c531ef1e36a40ea1f110b5298f1594",
+        "events": 17483
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 29.099999994039536,
+        "firstContentfulPaint": null,
+        "firstPaint": 22.936,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8007.70000000298,
+        "frames": 477,
+        "fps": 59.50301881143655,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 435,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 437,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 7224.79999999702,
+            "duration": 52
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 190.50000000298024
+          },
+          {
+            "name": "release",
+            "at": 307.1000000029802
+          },
+          {
+            "name": "press-again",
+            "at": 1007.1000000029803
+          },
+          {
+            "name": "release-again",
+            "at": 1507.2000000029802
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2190.40000000298
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2307.1000000029803
+          },
+          {
+            "name": "hold",
+            "at": 2407.1000000029803
+          },
+          {
+            "name": "queued-action",
+            "at": 3607.0000000029804
+          },
+          {
+            "name": "resume",
+            "at": 4007.0000000029804
+          },
+          {
+            "name": "second-press",
+            "at": 4307.00000000298
+          },
+          {
+            "name": "second-release",
+            "at": 4423.70000000298
+          },
+          {
+            "name": "last-press",
+            "at": 5706.90000000298
+          },
+          {
+            "name": "last-release",
+            "at": 5823.60000000298
+          },
+          {
+            "name": "finish",
+            "at": 7006.90000000298
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-thumb-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "0f63c14d00e7329d8fb2610bd1f388f4b580517d92f1df168c6f51f09c848138",
+        "events": 17129
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 71,
+        "firstContentfulPaint": null,
+        "firstPaint": 54.605,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8015.5,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 180.60000000000002
+          },
+          {
+            "name": "release",
+            "at": 313.9
+          },
+          {
+            "name": "press-again",
+            "at": 1013.9000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1513.9
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2180.5
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2313.8
+          },
+          {
+            "name": "hold",
+            "at": 2413.9
+          },
+          {
+            "name": "queued-action",
+            "at": 3613.8
+          },
+          {
+            "name": "resume",
+            "at": 4013.8
+          },
+          {
+            "name": "second-press",
+            "at": 4313.8
+          },
+          {
+            "name": "second-release",
+            "at": 4430.4
+          },
+          {
+            "name": "last-press",
+            "at": 5713.8
+          },
+          {
+            "name": "last-release",
+            "at": 5830.4
+          },
+          {
+            "name": "finish",
+            "at": 7013.7
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-full-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "3b5d34491a1cbf785b44f3035e903017971ed27134e749e895adb75e2194f265",
+        "events": 22072
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 56.29999999701977,
+        "firstContentfulPaint": null,
+        "firstPaint": 41.821,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.70000000298,
+        "frames": 482,
+        "fps": 60.00174278920964,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 182.80000000894074
+          },
+          {
+            "name": "release",
+            "at": 316.2000000089407
+          },
+          {
+            "name": "press-again",
+            "at": 1016.2000000089406
+          },
+          {
+            "name": "release-again",
+            "at": 1516.1000000089407
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2182.8000000089405
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2316.1000000089407
+          },
+          {
+            "name": "hold",
+            "at": 2416.1000000089407
+          },
+          {
+            "name": "queued-action",
+            "at": 3616.000000008941
+          },
+          {
+            "name": "resume",
+            "at": 4016.1000000089407
+          },
+          {
+            "name": "second-press",
+            "at": 4316.00000000894
+          },
+          {
+            "name": "second-release",
+            "at": 4432.700000008941
+          },
+          {
+            "name": "last-press",
+            "at": 5715.900000008941
+          },
+          {
+            "name": "last-release",
+            "at": 5832.600000008941
+          },
+          {
+            "name": "finish",
+            "at": 7015.900000008941
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": false,
+          "lit": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-full-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "5aaefd0ed827d6c1c78d457bcfe0e695209d74b7c9cc97902ab024c91669373c",
+        "events": 18289
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 35.70000000298023,
+        "firstContentfulPaint": null,
+        "firstPaint": 30.431,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8019.20000000298,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 182.90000000298022
+          },
+          {
+            "name": "release",
+            "at": 316.4000000029803
+          },
+          {
+            "name": "press-again",
+            "at": 1016.3000000029801
+          },
+          {
+            "name": "release-again",
+            "at": 1516.3000000029801
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2183.0000000029804
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2316.2000000029802
+          },
+          {
+            "name": "hold",
+            "at": 2416.2000000029802
+          },
+          {
+            "name": "queued-action",
+            "at": 3616.2000000029802
+          },
+          {
+            "name": "resume",
+            "at": 4016.10000000298
+          },
+          {
+            "name": "second-press",
+            "at": 4316.20000000298
+          },
+          {
+            "name": "second-release",
+            "at": 4432.90000000298
+          },
+          {
+            "name": "last-press",
+            "at": 5716.10000000298
+          },
+          {
+            "name": "last-release",
+            "at": 5832.800000002981
+          },
+          {
+            "name": "finish",
+            "at": 7016.10000000298
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-full-desktop-cpu1-1795199305472-trace.json",
+        "sha256": "60f9c7c79ff043c6fd564ea8e8db2118d9c4b26e3d1c07d669c7098ab66ba3a0",
+        "events": 20807
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 59.900000005960464,
+        "firstContentfulPaint": null,
+        "firstPaint": 51.1,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8007.20000000298,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 190.09999999701978
+          },
+          {
+            "name": "release",
+            "at": 306.69999999701975
+          },
+          {
+            "name": "press-again",
+            "at": 1006.6999999970199
+          },
+          {
+            "name": "release-again",
+            "at": 1506.6999999970199
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189.9999999970196
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2306.59999999702
+          },
+          {
+            "name": "hold",
+            "at": 2406.69999999702
+          },
+          {
+            "name": "queued-action",
+            "at": 3606.59999999702
+          },
+          {
+            "name": "resume",
+            "at": 4006.59999999702
+          },
+          {
+            "name": "second-press",
+            "at": 4306.59999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4423.199999997019
+          },
+          {
+            "name": "last-press",
+            "at": 5706.49999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5823.09999999702
+          },
+          {
+            "name": "finish",
+            "at": 7006.49999999702
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-full-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "a9bea6a55ba810a9ab2b6d19b0252643738c1a8ff7fadbf727b58b9373937657",
+        "events": 21937
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 49.400000005960464,
+        "firstContentfulPaint": null,
+        "firstPaint": 37.567,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.70000000298,
+        "frames": 480,
+        "fps": 59.87725163414999,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 434,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 182.60000000000002
+          },
+          {
+            "name": "release",
+            "at": 316
+          },
+          {
+            "name": "press-again",
+            "at": 1015.9000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1515.9
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2182.5
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2315.9
+          },
+          {
+            "name": "hold",
+            "at": 2415.9
+          },
+          {
+            "name": "queued-action",
+            "at": 3615.8
+          },
+          {
+            "name": "resume",
+            "at": 4015.8999999999996
+          },
+          {
+            "name": "second-press",
+            "at": 4315.8
+          },
+          {
+            "name": "second-release",
+            "at": 4432.5
+          },
+          {
+            "name": "last-press",
+            "at": 5715.8
+          },
+          {
+            "name": "last-release",
+            "at": 5832.4
+          },
+          {
+            "name": "finish",
+            "at": 7015.7
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": false,
+          "lit": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-full-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "cc111689850caefca44d3f6002904900f421d6e30d47b1557c71a56719f2a02f",
+        "events": 19244
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 47.70000000298023,
+        "firstContentfulPaint": null,
+        "firstPaint": 32.043,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8007.699999988079,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.799999999999955,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 189.79999999999995
+          },
+          {
+            "name": "release",
+            "at": 306.4
+          },
+          {
+            "name": "press-again",
+            "at": 1006.4000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1506.4
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189.7
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2306.4
+          },
+          {
+            "name": "hold",
+            "at": 2406.4
+          },
+          {
+            "name": "queued-action",
+            "at": 3606.3
+          },
+          {
+            "name": "resume",
+            "at": 4006.3999999999996
+          },
+          {
+            "name": "second-press",
+            "at": 4306.3
+          },
+          {
+            "name": "second-release",
+            "at": 4423
+          },
+          {
+            "name": "last-press",
+            "at": 5706.2
+          },
+          {
+            "name": "last-release",
+            "at": 5822.9
+          },
+          {
+            "name": "finish",
+            "at": 7006.2
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-full-mobile-cpu1-1795199305472-trace.json",
+        "sha256": "90f4a567bd19f6aa3dbd16100e0d5131885f732455f1f8463aa74da26f93032e",
+        "events": 19938
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 403.79999999701977,
+        "firstContentfulPaint": null,
+        "firstPaint": 384.093,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8013.0999999940395,
+        "frames": 443,
+        "fps": 55.37707664037401,
+        "p95": 33.29999999999973,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 30,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 31,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 32,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 49,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 96,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 99,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 107,
+            "ms": 50
+          },
+          {
+            "frame": 115,
+            "ms": 50
+          },
+          {
+            "frame": 116,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 117,
+            "ms": 50
+          },
+          {
+            "frame": 125,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 256,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 261,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 271,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 276,
+            "ms": 50
+          },
+          {
+            "frame": 306,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 364,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 391,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 398,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 403,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 404,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 406,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 424,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 428,
+            "ms": 33.400000000001455
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 527.5999999940395,
+            "duration": 64
+          },
+          {
+            "at": 2137,
+            "duration": 50
+          },
+          {
+            "at": 2188.2000000029802,
+            "duration": 55
+          },
+          {
+            "at": 2245.4000000059605,
+            "duration": 53
+          },
+          {
+            "at": 2410.7000000029802,
+            "duration": 55
+          },
+          {
+            "at": 5543.9000000059605,
+            "duration": 53
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 193.20000000596042
+          },
+          {
+            "name": "release",
+            "at": 309.90000000596046
+          },
+          {
+            "name": "press-again",
+            "at": 1009.8000000059606
+          },
+          {
+            "name": "release-again",
+            "at": 1509.8000000059606
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2243.1000000059603
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.8000000059606
+          },
+          {
+            "name": "hold",
+            "at": 2409.8000000059606
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.7000000059606
+          },
+          {
+            "name": "resume",
+            "at": 4009.7000000059606
+          },
+          {
+            "name": "second-press",
+            "at": 4309.700000005961
+          },
+          {
+            "name": "second-release",
+            "at": 4426.30000000596
+          },
+          {
+            "name": "last-press",
+            "at": 5709.60000000596
+          },
+          {
+            "name": "last-release",
+            "at": 5826.30000000596
+          },
+          {
+            "name": "finish",
+            "at": 7009.60000000596
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-thumb-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "a6d85a938d7872a95d955120eb7d7dffc43b84180ba5a9d4532c36fac87977da",
+        "events": 25452
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 361,
+        "firstContentfulPaint": null,
+        "firstPaint": 305.304,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8017.9000000059605,
+        "frames": 476,
+        "fps": 59.25483312793317,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 147,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 242,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 332,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 355,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 384,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 467,
+            "ms": 33.30000000000109
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 182.30000000298025
+          },
+          {
+            "name": "release",
+            "at": 315.6000000029803
+          },
+          {
+            "name": "press-again",
+            "at": 1015.6000000029803
+          },
+          {
+            "name": "release-again",
+            "at": 1515.6000000029803
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2182.30000000298
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2315.6000000029803
+          },
+          {
+            "name": "hold",
+            "at": 2415.5000000029804
+          },
+          {
+            "name": "queued-action",
+            "at": 3615.5000000029804
+          },
+          {
+            "name": "resume",
+            "at": 4015.5000000029804
+          },
+          {
+            "name": "second-press",
+            "at": 4315.50000000298
+          },
+          {
+            "name": "second-release",
+            "at": 4432.10000000298
+          },
+          {
+            "name": "last-press",
+            "at": 5715.50000000298
+          },
+          {
+            "name": "last-release",
+            "at": 5832.10000000298
+          },
+          {
+            "name": "finish",
+            "at": 7015.40000000298
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": true,
+          "lit": true
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-thumb-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "22d85d2b3b2eb7bc679d38c09d22d32303793c15d8bc6ae41cddd9bd2c42c758",
+        "events": 20566
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 274.3999999910593,
+        "firstContentfulPaint": 266.5,
+        "firstPaint": 229.3,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8011.4000000059605,
+        "frames": 475,
+        "fps": 59.25426942604444,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 13,
+            "ms": 50
+          },
+          {
+            "frame": 252,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 263,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 427,
+            "ms": 50.100000000000364
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 193.79999999701977,
+            "duration": 57
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 191.90000000298028
+          },
+          {
+            "name": "release",
+            "at": 308.5000000029802
+          },
+          {
+            "name": "press-again",
+            "at": 1008.5000000029802
+          },
+          {
+            "name": "release-again",
+            "at": 1508.5000000029802
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2191.90000000298
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2308.40000000298
+          },
+          {
+            "name": "hold",
+            "at": 2408.5000000029804
+          },
+          {
+            "name": "queued-action",
+            "at": 3608.40000000298
+          },
+          {
+            "name": "resume",
+            "at": 4008.5000000029804
+          },
+          {
+            "name": "second-press",
+            "at": 4308.40000000298
+          },
+          {
+            "name": "second-release",
+            "at": 4441.800000002981
+          },
+          {
+            "name": "last-press",
+            "at": 5708.40000000298
+          },
+          {
+            "name": "last-release",
+            "at": 5825.00000000298
+          },
+          {
+            "name": "finish",
+            "at": 7008.300000002981
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-thumb-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "673b088cf7c010fdcde35dc6c1f5cf32124c5fdc2814c5c6c145b3343d8015bd",
+        "events": 18690
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 267.5,
+        "firstContentfulPaint": 257.40000000596046,
+        "firstPaint": 229.962,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8013,
+        "frames": 422,
+        "fps": 52.751978199182474,
+        "p95": 33.399999999999636,
+        "gaps": [
+          {
+            "frame": 24,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 31,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 36,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 45,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 73,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 77,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 104,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 105,
+            "ms": 50
+          },
+          {
+            "frame": 106,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 107,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 229,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 236,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 238,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 241,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 249,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 253,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 254,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 258,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 260,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 274,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 290,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 300,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 301,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 323,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 324,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 333,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 335,
+            "ms": 50
+          },
+          {
+            "frame": 336,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 342,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 343,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 344,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 345,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 360,
+            "ms": 50
+          },
+          {
+            "frame": 363,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 367,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 374,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 382,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 384,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 393,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 399,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 408,
+            "ms": 49.99999999999909
+          },
+          {
+            "frame": 412,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 418,
+            "ms": 50
+          },
+          {
+            "frame": 421,
+            "ms": 33.30000000000109
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1360.5,
+            "duration": 65
+          },
+          {
+            "at": 5844.9000000059605,
+            "duration": 68
+          },
+          {
+            "at": 6094.9000000059605,
+            "duration": 62
+          },
+          {
+            "at": 6305.20000000298,
+            "duration": 68
+          },
+          {
+            "at": 7456.4000000059605,
+            "duration": 75
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 191
+          },
+          {
+            "name": "release",
+            "at": 307.6
+          },
+          {
+            "name": "press-again",
+            "at": 1007.5999999999999
+          },
+          {
+            "name": "release-again",
+            "at": 1507.6
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2190.9
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2307.6
+          },
+          {
+            "name": "hold",
+            "at": 2407.6
+          },
+          {
+            "name": "queued-action",
+            "at": 3607.5
+          },
+          {
+            "name": "resume",
+            "at": 4007.5
+          },
+          {
+            "name": "second-press",
+            "at": 4307.5
+          },
+          {
+            "name": "second-release",
+            "at": 4424.1
+          },
+          {
+            "name": "last-press",
+            "at": 5707.4
+          },
+          {
+            "name": "last-release",
+            "at": 5840.8
+          },
+          {
+            "name": "finish",
+            "at": 7007.4
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-thumb-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "35ccf9d6e142f77622003b2f8ad27c01a879a5a9427dfcf393f322502ba26f41",
+        "events": 24048
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 114,
+        "firstContentfulPaint": null,
+        "firstPaint": 90.038,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8009,
+        "frames": 468,
+        "fps": 58.50292514625732,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 221,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 246,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 275,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 288,
+            "ms": 66.60000000000036
+          },
+          {
+            "frame": 289,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 291,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 314,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 326,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 341,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 410,
+            "ms": 33.400000000000546
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 189.10000000000002
+          },
+          {
+            "name": "release",
+            "at": 305.70000000000005
+          },
+          {
+            "name": "press-again",
+            "at": 1005.7
+          },
+          {
+            "name": "release-again",
+            "at": 1505.6
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2305.6
+          },
+          {
+            "name": "hold",
+            "at": 2405.6
+          },
+          {
+            "name": "queued-action",
+            "at": 3605.6
+          },
+          {
+            "name": "resume",
+            "at": 4005.6000000000004
+          },
+          {
+            "name": "second-press",
+            "at": 4305.6
+          },
+          {
+            "name": "second-release",
+            "at": 4422.2
+          },
+          {
+            "name": "last-press",
+            "at": 5705.5
+          },
+          {
+            "name": "last-release",
+            "at": 5822.1
+          },
+          {
+            "name": "finish",
+            "at": 7005.4
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": true,
+          "lit": true
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-thumb-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "5dc07196333b7e3fce68092e12dccc7545b41e6dcc3670cabdce57f37272d63b",
+        "events": 20559
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 332.59999999403954,
+        "firstContentfulPaint": 300.19999998807907,
+        "firstPaint": 273.528,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8019.399999991059,
+        "frames": 472,
+        "fps": 59.00295014750738,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 14,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 375,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 416,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 463,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 189.3999999910593,
+            "duration": 89
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 188.09999999105935
+          },
+          {
+            "name": "release",
+            "at": 321.3999999910593
+          },
+          {
+            "name": "press-again",
+            "at": 1004.6999999910593
+          },
+          {
+            "name": "release-again",
+            "at": 1504.5999999910591
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2187.8999999910593
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2304.599999991059
+          },
+          {
+            "name": "hold",
+            "at": 2404.6999999910595
+          },
+          {
+            "name": "queued-action",
+            "at": 3604.599999991059
+          },
+          {
+            "name": "resume",
+            "at": 4004.599999991059
+          },
+          {
+            "name": "second-press",
+            "at": 4304.49999999106
+          },
+          {
+            "name": "second-release",
+            "at": 4421.1999999910595
+          },
+          {
+            "name": "last-press",
+            "at": 5704.49999999106
+          },
+          {
+            "name": "last-release",
+            "at": 5821.1999999910595
+          },
+          {
+            "name": "finish",
+            "at": 7004.49999999106
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-thumb-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "c911e993306c1149a63eedc302444f9d9f3ca3d6d2dae779e46e09b5508b3ab5",
+        "events": 18983
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 432.8999999910593,
+        "firstContentfulPaint": null,
+        "firstPaint": 399.912,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8032.79999999702,
+        "frames": 448,
+        "fps": 55.769254708643,
+        "p95": 16.80000000000109,
+        "gaps": [
+          {
+            "frame": 13,
+            "ms": 50
+          },
+          {
+            "frame": 90,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 111,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 113,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 114,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 116,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 118,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 133,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 160,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 224,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 231,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 237,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 276,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 278,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 383,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 394,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 395,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 409,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 441,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 446,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 448,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 192.1000000089407,
+            "duration": 56
+          },
+          {
+            "at": 1967.6000000089407,
+            "duration": 75
+          },
+          {
+            "at": 2407.6000000089407,
+            "duration": 92
+          },
+          {
+            "at": 5025.29999999702,
+            "duration": 57
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 189.70000000596042
+          },
+          {
+            "name": "release",
+            "at": 306.40000000596046
+          },
+          {
+            "name": "press-again",
+            "at": 1006.4000000059605
+          },
+          {
+            "name": "release-again",
+            "at": 1506.3000000059606
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189.6000000059603
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2306.3000000059606
+          },
+          {
+            "name": "hold",
+            "at": 2406.3000000059606
+          },
+          {
+            "name": "queued-action",
+            "at": 3606.30000000596
+          },
+          {
+            "name": "resume",
+            "at": 4006.2000000059606
+          },
+          {
+            "name": "second-press",
+            "at": 4306.200000005961
+          },
+          {
+            "name": "second-release",
+            "at": 4422.9000000059605
+          },
+          {
+            "name": "last-press",
+            "at": 5706.200000005961
+          },
+          {
+            "name": "last-release",
+            "at": 5822.80000000596
+          },
+          {
+            "name": "finish",
+            "at": 7006.10000000596
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-full-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "99d7302930b1b321f0842370c5e48a3ac8ca71fbebf1c330558fefb079216146",
+        "events": 26107
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 262.20000000298023,
+        "firstContentfulPaint": null,
+        "firstPaint": 216.345,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8006.9000000059605,
+        "frames": 465,
+        "fps": 58.00608752058281,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 20,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 132,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 249,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 250,
+            "ms": 50
+          },
+          {
+            "frame": 253,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 255,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 337,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 341,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 342,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 377,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 378,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 379,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 408,
+            "ms": 33.400000000000546
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4158.4000000059605,
+            "duration": 77
+          },
+          {
+            "at": 5708,
+            "duration": 77
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 189.80000000596044
+          },
+          {
+            "name": "release",
+            "at": 306.40000000596046
+          },
+          {
+            "name": "press-again",
+            "at": 1006.5000000059604
+          },
+          {
+            "name": "release-again",
+            "at": 1506.4000000059605
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189.7000000059606
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2306.3000000059606
+          },
+          {
+            "name": "hold",
+            "at": 2406.4000000059605
+          },
+          {
+            "name": "queued-action",
+            "at": 3606.30000000596
+          },
+          {
+            "name": "resume",
+            "at": 4006.30000000596
+          },
+          {
+            "name": "second-press",
+            "at": 4306.30000000596
+          },
+          {
+            "name": "second-release",
+            "at": 4423.000000005961
+          },
+          {
+            "name": "last-press",
+            "at": 5706.200000005961
+          },
+          {
+            "name": "last-release",
+            "at": 5822.9000000059605
+          },
+          {
+            "name": "finish",
+            "at": 7006.200000005961
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": false,
+          "lit": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-full-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "f377cf550c601be1c53af0cb50a933a949de8c27573102dd9646ce911bd0fcb8",
+        "events": 21206
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 325.8999999910593,
+        "firstContentfulPaint": 289.69999998807907,
+        "firstPaint": 258.964,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016,
+        "frames": 441,
+        "fps": 55.0122249388753,
+        "p95": 33.30000000000018,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 89,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 133,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 134,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 141,
+            "ms": 50
+          },
+          {
+            "frame": 175,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 234,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 237,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 238,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 240,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 242,
+            "ms": 50
+          },
+          {
+            "frame": 245,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 246,
+            "ms": 50.099999999999454
+          },
+          {
+            "frame": 260,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 261,
+            "ms": 33.20000000000073
+          },
+          {
+            "frame": 265,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 266,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 267,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 271,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 273,
+            "ms": 50
+          },
+          {
+            "frame": 317,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 324,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 340,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 346,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 367,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 390,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 396,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 400,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 408,
+            "ms": 50
+          },
+          {
+            "frame": 409,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 410,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 2414.9000000059605,
+            "duration": 59
+          },
+          {
+            "at": 4215.5,
+            "duration": 58
+          },
+          {
+            "at": 4331.70000000298,
+            "duration": 59
+          },
+          {
+            "at": 4597.9000000059605,
+            "duration": 50
+          },
+          {
+            "at": 4762.70000000298,
+            "duration": 54
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 180.79999999701977
+          },
+          {
+            "name": "release",
+            "at": 314.0999999970197
+          },
+          {
+            "name": "press-again",
+            "at": 1014.0999999970197
+          },
+          {
+            "name": "release-again",
+            "at": 1514.09999999702
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2180.69999999702
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2314.09999999702
+          },
+          {
+            "name": "hold",
+            "at": 2413.9999999970196
+          },
+          {
+            "name": "queued-action",
+            "at": 3613.9999999970196
+          },
+          {
+            "name": "resume",
+            "at": 4013.9999999970196
+          },
+          {
+            "name": "second-press",
+            "at": 4330.59999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4430.59999999702
+          },
+          {
+            "name": "last-press",
+            "at": 5713.89999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5830.49999999702
+          },
+          {
+            "name": "finish",
+            "at": 7013.89999999702
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-full-desktop-cpu4-1795199423981-trace.json",
+        "sha256": "64e2adff0b2a63c3493ef0ef7d876ec836b4aecbd75dc548475b8a2ef97ac8f3",
+        "events": 23093
+      }
+    },
+    {
+      "kind": "counter",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 592.5999999940395,
+        "firstContentfulPaint": 506.79999999701977,
+        "firstPaint": 465.908,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8031.79999999702,
+        "frames": 388,
+        "fps": 48.30075936760861,
+        "p95": 33.400000000000546,
+        "gaps": [
+          {
+            "frame": 13,
+            "ms": 50
+          },
+          {
+            "frame": 19,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 20,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 21,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 23,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 24,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 25,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 28,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 29,
+            "ms": 116.70000000000005
+          },
+          {
+            "frame": 30,
+            "ms": 50
+          },
+          {
+            "frame": 45,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 74,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 88,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 97,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 101,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 104,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 109,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 110,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 115,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 116,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 118,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 211,
+            "ms": 116.70000000000073
+          },
+          {
+            "frame": 215,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 216,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 220,
+            "ms": 50
+          },
+          {
+            "frame": 221,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 229,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 234,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 237,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 238,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 239,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 241,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 244,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 250,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 252,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 254,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 255,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 272,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 283,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 289,
+            "ms": 50
+          },
+          {
+            "frame": 310,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 311,
+            "ms": 50
+          },
+          {
+            "frame": 312,
+            "ms": 50
+          },
+          {
+            "frame": 313,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 315,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 320,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 323,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 324,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 325,
+            "ms": 50
+          },
+          {
+            "frame": 329,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 331,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 332,
+            "ms": 50
+          },
+          {
+            "frame": 336,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 340,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 341,
+            "ms": 66.70000000000073
+          },
+          {
+            "frame": 342,
+            "ms": 50
+          },
+          {
+            "frame": 351,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 353,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 355,
+            "ms": 33.20000000000073
+          },
+          {
+            "frame": 356,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 382,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 387,
+            "ms": 33.30000000000109
+          },
+          {
+            "frame": 388,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 187.8999999910593,
+            "duration": 62
+          },
+          {
+            "at": 614,
+            "duration": 122
+          },
+          {
+            "at": 2305.5999999940395,
+            "duration": 99
+          },
+          {
+            "at": 4005.3999999910593,
+            "duration": 130
+          },
+          {
+            "at": 4348.5999999940395,
+            "duration": 74
+          },
+          {
+            "at": 4745.5,
+            "duration": 60
+          },
+          {
+            "at": 4806.0999999940395,
+            "duration": 57
+          },
+          {
+            "at": 5821.399999991059,
+            "duration": 61
+          },
+          {
+            "at": 6806.79999999702,
+            "duration": 54
+          },
+          {
+            "at": 7039.0999999940395,
+            "duration": 64
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 187.59999999701972
+          },
+          {
+            "name": "release",
+            "at": 304.29999999701977
+          },
+          {
+            "name": "press-again",
+            "at": 1004.3999999970197
+          },
+          {
+            "name": "release-again",
+            "at": 1504.2999999970198
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2204.19999999702
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2304.2999999970198
+          },
+          {
+            "name": "hold",
+            "at": 2420.9999999970196
+          },
+          {
+            "name": "queued-action",
+            "at": 3604.1999999970194
+          },
+          {
+            "name": "resume",
+            "at": 4004.1999999970194
+          },
+          {
+            "name": "second-press",
+            "at": 4337.49999999702
+          },
+          {
+            "name": "second-release",
+            "at": 4420.79999999702
+          },
+          {
+            "name": "last-press",
+            "at": 5704.09999999702
+          },
+          {
+            "name": "last-release",
+            "at": 5820.79999999702
+          },
+          {
+            "name": "finish",
+            "at": 7020.699999997019
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "value": 783,
+          "busy": false,
+          "timer": 5
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-counter-full-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "cc72fafe3dee826dff1b9c082cf3a96d075722f137fec4af0664be02f5dddef0",
+        "events": 22833
+      }
+    },
+    {
+      "kind": "lighter",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 172.5,
+        "firstContentfulPaint": null,
+        "firstPaint": 160.706,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.5999999940395,
+        "frames": 469,
+        "fps": 58.50506461753406,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 241,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 250,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 255,
+            "ms": 50
+          },
+          {
+            "frame": 272,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 273,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 342,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 384,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 425,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4015.5999999940395,
+            "duration": 75
+          },
+          {
+            "at": 4302.399999991059,
+            "duration": 50
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 181.39999999999998
+          },
+          {
+            "name": "release",
+            "at": 314.70000000000005
+          },
+          {
+            "name": "press-again",
+            "at": 1014.7
+          },
+          {
+            "name": "release-again",
+            "at": 1514.7
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2181.3
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2314.7
+          },
+          {
+            "name": "hold",
+            "at": 2414.6
+          },
+          {
+            "name": "queued-action",
+            "at": 3614.7
+          },
+          {
+            "name": "resume",
+            "at": 4014.6000000000004
+          },
+          {
+            "name": "second-press",
+            "at": 4314.6
+          },
+          {
+            "name": "second-release",
+            "at": 4431.2
+          },
+          {
+            "name": "last-press",
+            "at": 5714.5
+          },
+          {
+            "name": "last-release",
+            "at": 5831.3
+          },
+          {
+            "name": "finish",
+            "at": 7014.5
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "opened": false,
+          "lit": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-lighter-full-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "9f7d07237f71a7a7a174a23e4d08cd5a96b195d81e082a30e4302d92c5ecfb8b",
+        "events": 21269
+      }
+    },
+    {
+      "kind": "note",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 349.90000000596046,
+        "firstContentfulPaint": null,
+        "firstPaint": 325.071,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8011.79999999702,
+        "frames": 476,
+        "fps": 59.37827453719875,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 259,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 347,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 348,
+            "ms": 50
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 5830.600000008941,
+            "duration": 57
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 193.20000000894072
+          },
+          {
+            "name": "release",
+            "at": 309.80000000894074
+          },
+          {
+            "name": "press-again",
+            "at": 1009.8000000089407
+          },
+          {
+            "name": "release-again",
+            "at": 1509.8000000089405
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2193.1000000089407
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.8000000089405
+          },
+          {
+            "name": "hold",
+            "at": 2409.8000000089405
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.700000008941
+          },
+          {
+            "name": "resume",
+            "at": 4009.700000008941
+          },
+          {
+            "name": "second-press",
+            "at": 4309.700000008941
+          },
+          {
+            "name": "second-release",
+            "at": 4426.400000008941
+          },
+          {
+            "name": "last-press",
+            "at": 5709.600000008941
+          },
+          {
+            "name": "last-release",
+            "at": 5826.3000000089405
+          },
+          {
+            "name": "finish",
+            "at": 7009.600000008941
+          }
+        ],
+        "cycles": 10,
+        "storyComplete": true,
+        "source": {
+          "y": null,
+          "torn": false
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-note-full-mobile-cpu4-1795199423981-trace.json",
+        "sha256": "ebcb2068d31eaaea201651789f62db37cc04c2499ec4ee17593737842d96fcee",
+        "events": 24938
+      }
+    }
+  ],
+  "runs": [
+    {
+      "file": ".artifacts/skeuo-mechanisms/performance-cpu1-1795199305472.json",
+      "sha256": "8e08e1181469755ba9c504a62d58e8ca3e8367504b6bd0c5aabae3c3f617624f"
+    },
+    {
+      "file": ".artifacts/skeuo-mechanisms/performance-cpu4-1795199423981.json",
+      "sha256": "bf6043d7ed9745633d5d3d650cb8eef3b119f05603c9867770fd394a80448be2"
+    }
+  ],
+  "scope": "24 isolated eight-second native/full mechanism stories, CPU1/4, desktopDPR1/mobileDPR2. Actual frames, long tasks, cold startup and trace hashes are recorded; fonts are prepared before mounting, source state is read at endpoints and route transfer is excluded. Scripted DOM input exercises real controllers; physical input, exact source equivalence and optical geometry are verified separately. Complete raw reports and traces remain local artifacts. Measurement does not pass a final timing gate; all prior tails remain open."
+}

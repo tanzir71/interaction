@@ -1034,3 +1034,19 @@ Tick geometry and computed stroke styles are exact checks; independent
 translucent-SVG raster coverage records bounded antialiasing differences,
 rather than claiming identical pixels. Posters come from paused native
 browser renders. This batch adds no photograph, font, credit or alias.
+
+
+### Mechanical Counter, Pocket Lighter and Tear-Off Note
+
+Tiles 170:1858,170:1898 and 171:2158 retain 4 unchanged original product SVGs in
+`assets/components/skeuo-mechanisms/` and 12 unchanged outlined glyph references
+in`tools/fixtures/skeuo-mechanisms-reference/`. The artwork manifest binds
+all original payload hashes, exact render bounds and native slots/materials.
+The dynamic counter uses bundled Geist 600 with captured proportional metrics;
+its four 38×80 frames and the paper’s four ink bars use captured CSS geometry.
+No Figma screenshot is product artwork. The lighter’s source 52×70 body,
+52×4 highlight and 26.50585×56 flame retain their original shadow/glow roots
+and written sparse-fill exception. Native planes stay 240×168 at origin 66,20.
+Full compositions retain all original content and interaction models. Note’s
+full 400×560 presentation keeps its complete copy readable. No photography,
+font, attribution or portable-alias changes occur in this batch.

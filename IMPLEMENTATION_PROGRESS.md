@@ -1472,3 +1472,22 @@ Visual remediation reaches 319/399. Eight Skeuomorph demos, 72 Collections,
 CPU1/4 timing stories are recorded in the [timing report](docs/performance/skeuo-instruments-2026-11-20.json);
 measurements leave all final timing gates open. GitHub Actions remains disabled,
 with the previously verified account-wide $0 stop limit preserved.
+
+
+## Phase 4 — Mechanical Counter, Pocket Lighter and Tear-Off Note
+
+Three more native v4 compositions retain 4 original product SVGs,12 outlined
+reference glyphs, exact native primitives and complete original full models.
+Thirteen verifier groups pass 607,996 checks, including complete 10000-value
+counter cycles,192 layouts, canonical visible motion, actual input/capture
+cleanup, independent holds,36 source stories,24 fresh offline exports and
+cold routes/LiveTiles. The six required phase commands pass for the remediated
+set; the full diagnostic leaves 1 overflow,22 tiny-text and 33 low-fill findings
+in unfinished demos, with 99 valid fill exceptions. Stage debt 76; motion debt 41.
+The registry,651 library checks/399 previews/97 exports,19 runtime/shell tests,
+8 CLI/MCP tests, 16 geometry checks and stage-runtime checks pass locally.
+
+Visual remediation reaches 322/399. Five Skeuomorph demos,72 Collections,
+121 new/extensions,Pro seams and final audits remain. The [timing report](docs/performance/skeuo-mechanisms-2026-11-21.json)
+records 24 isolated CPU 1/4 stories and leaves timing gates open. Actions stays
+disabled; the previously verified account-wide $0 stop limit is preserved.

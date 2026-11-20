@@ -1,21 +1,102 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 319 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 322 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and twelve Skeuomorph demos.
-The remaining work includes 80 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and fifteen Skeuomorph demos.
+The remaining work includes 77 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 319 remediated native compositions retains those references.
+None of the 322 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 319 native compositions. The unfinished groups still account for
-1 overflow finding, zero horizontal-scroll findings, 25 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 98 documented
+among these 322 native compositions. The unfinished groups still account for
+1 overflow finding, zero horizontal-scroll findings, 22 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 99 documented
 Figma fill exceptions validate.
+
+## Mechanical Counter, Pocket Lighter and Tear-Off Note
+
+Tiles `170:1858`, `170:1898` and `171:2158` use docked 240×168 px
+native planes at reference origin(66,20). Four unchanged original product SVGs,
+twelve outlined counter glyph references, four 38×80 drum frames and four exact
+ink bars retain the supplied geometry and materials. The lighter keeps its
+documented sparse-fill exception; overflow and type gates still apply.
+No photograph, font, credit or alias changes.
+
+Counter preserves the original 0783 start, +311 modulo 10000, same-task busy
+gate, 1150 ms completion and Reset cancellation. Four complete 10000-value
+source cycles cover every possible value at 300/368 px and normal/reduced
+motion. Its visible drums use 100 ms anticipation, 130 ms stepping, 740 ms landing,
+90 ms index stagger and a complete extra revolution. Settled native neighbors
+retain their captured 30 px Geist 600 geometry and 0.4 opacity; moving neighbors
+use canonical depth, blur and opacity. A dynamic optical floor keeps moving
+type readable in the smallest previews. Reduced motion retains complete old
+glyph and neighbor layers for 150 ms.
+
+Lighter preserves the entire three-state original ignition graph. Native
+starts open and lit through original Open+Strike; full starts closed/unlit.
+Compact Press cycles Close→Open→Strike against current state, including
+queued commands. Full keeps separate Open and Strike. The hinge opens 350 ms
+and closes 250 ms; flame opacity enters 350 ms/exits 250 ms. The original 1.4-second
+alternating angular/scale flicker uses the equivalent named ease-in-out token.
+Native phase calibration leaves SVG bytes intact. Reduced motion holds the
+flame still and retains whole cap-state compositions through 150 ms fades.
+
+Note preserves the complete original reminder, clip, masks and copy. Full
+uses 400×560 with an auto-height upper paper and 440 px scene so the complete
+caption stays readable. The original model retains its 45-unit drag cap,
+delta/12 angle and strict greater-than 14 tear threshold. Presentation follows
+the pointer, rubber-bands at 0.55 beyond bounds and carries velocity into the
+380/32 spring; painted camera limits prevent extreme-input overflow without
+changing the source model or spring trajectory. Short drags consume the
+synthetic click. Actual capture releases immediately while held, with visual
+release deferred until resume. Reduced press/release feedback and complete
+retained-root topology changes use 150 ms opacity. Stable containing blocks,
+paint order and opacity layers preserve rapid reversals.
+
+Thirteen groups in `tools/verify-skeuo-mechanisms.js` pass
+607,996 checks. Twenty-four compiled bindings share twelve exact original
+replays, covering 5,064 bound states and 712 complete model checkpoints.
+Thirty-six six-second actual host stories compare 30,732 states with
+separate unchanged original programs at 60/120/240 Hz. Checks also cover 192
+layouts and active extrema, every SVG/type/primitive slot and material,
+independent numerical motion, physical mouse/keys/moving touch, page scrolling,
+caller/document/viewport holds, queued intent, early/active disposal, actual
+implicit/explicit capture, cold routes, LiveTiles and 24 fresh network-blocked
+exports. These scenes construct no audio. Actual retarget raster comparisons
+remain within one channel; their current maximum is 1. Normal paper raster checks
+use a short release with unchanged tear topology; reduced checks retain whole
+old compositions across repeated topology changes. No Figma PNG identity is
+claimed. All 116 immutable old sources, 610 original archive files and 217 prior
+publication evidence files remain unchanged.
+
+The full audit boots 399 demos. These three pass every fit gate; unfinished
+demos retain 1 overflow, 0 horizontal-scroll, 22 tiny-text and 33 low-fill
+findings, with all 99 exceptions valid. Stage debt falls to 76; static motion debt
+stays 41 without new violations. Registry generation verifies 1205 artifacts.
+Local library checks pass 651 checks, 399 previews and 97 exports, alongside 19
+runtime/shell tests, 8 CLI/MCP tests, 16 fit-geometry checks and stage-runtime
+checks. Three browser posters retain initial authored states. The full fit
+diagnostic still exits 1 for unfinished demos. Actions remains disabled and
+the previously verified account-wide $0 stop limit is preserved. No PR or
+workflow is started.
+
+The [source-bound timing report](performance/skeuo-mechanisms-2026-11-21.json)
+records 24 isolated eight-second native/full stories at CPU 1/4 and desktop/mobile
+DPR 1/2, including source input, interruptions, caller holds, queued actions and
+resume. CPU 1 records 59.5–60.0 fps, 4 intervals above 25 ms and 1 long task;
+CPU 4 records 48.3–59.4 fps, 235 slow intervals and 37 long tasks.
+First trace Paint ranges 22.9–465.9 ms; readiness reaches
+592.6 ms. Startup is the first trace Paint after mounting; FCP is separately
+recorded when available. Fonts are prepared first and route transfer is
+excluded. Trace hashes and raw intervals remain recorded. These measurements
+leave final timing gates and every previous performance tail open.
+
+Five Skeuomorph demos, all 72 Collections, 121 new/extensions, Pro seams and
+final audits remain.
 
 ## Needle Meter, Macro Keys and Tape Transport
 

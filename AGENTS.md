@@ -665,3 +665,22 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   color coverage; do not claim byte-exact fringes. These controls create no audio.
   Record isolated timing with `node tools/profile-skeuo-controls.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain findings for the final audit.
+
+- `node tools/verify-skeuo-mechanisms.js http://127.0.0.1:4173` covers v4
+  Mechanical Counter, Pocket Lighter and Tear-Off Note:4 unchanged product
+  SVGs,12 outlined glyph references and 12 complete original fixtures. Its 13
+  groups cover the entire 10000-value counter domain, original ignition and
+  strict tear models, exact geometry/materials, independent canonical motion,
+  192 layouts, physical input and moving touch, independent holds, actual
+  implicit/explicit capture release, early cleanup,36 live source stories,
+  repeated painted interruptions, cold routes, LiveTiles and 24 fresh offline
+  exports. Keep native starts 0783/open+lit/fresh and complete original full
+  defaults. Counter uses canonical drums; lighter retains its original 1.4 s
+  alternating flicker with the named ease-in-out token. Note retains original
+  greater-than 14 tear logic beneath its 380/32 visible release spring. Full
+  note uses 400×560 with complete readable copy. Held paper release clears
+  ownership immediately and defers visual release until resume. Reduced
+  root fades require relative containing blocks, correct paint order and
+  stable opacity compositing. Preserve the lighter’s sparse-fill exception.
+  Record isolated timing with `node tools/profile-skeuo-mechanisms.js
+  http://127.0.0.1:4173 --cpu=1` or`--cpu=4`; measurements leave gates open.

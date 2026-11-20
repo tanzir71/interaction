@@ -22802,27 +22802,43 @@
       "motion-blur"
     ],
     "tier": "free",
-    "desc": "Four individually mounted drums roll through clean tabular numerals inside a charcoal counting machine. A large tactile lever advances the sequence; a smaller reset key restores the starting value.",
-    "designSize": "sm",
+    "desc": "Count advances the drums; reset restores 0783",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/slot-machine-reel",
-    "thumb": "full",
-    "module": "js/demos.skeuo.slot-reel.js?v=75f0f14889",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.slot-reel.js?v=f1a1e51b2c",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/slot-machine-reel.json?v=28d2bcf7f8",
+    "sourcePreview": "registry/p/slot-machine-reel.json?v=ca27619ea8",
     "assetRefs": {},
     "rootClass": "d-hardware-slot-reel",
-    "controls": [],
+    "controls": [
+      {
+        "action": "advance",
+        "label": "Advance"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Count advances the drums; reset restores 0783",
     "sourceName": "Seen on: playful launch pages, casino-inspired campaigns, prize interactions, and kinetic navigation experiments",
@@ -22830,7 +22846,7 @@
   },
   {
     "id": "zippo-flame",
-    "title": "Hinged Pocket Lighter",
+    "title": "Pocket Lighter",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22845,8 +22861,15 @@
       "flicker"
     ],
     "tier": "free",
-    "desc": "A pocket-sized brushed steel lighter is built around its real hinge: the cap opens, a separate strike wheel ignites the wick, and closing the cap extinguishes it. Its small flame is a restrained translucent volume above a perforated wind guard.",
-    "designSize": "sm",
+    "desc": "Flip the cap, strike the wheel, close to snuff",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22854,18 +22877,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/zippo-flame",
-    "thumb": "full",
-    "module": "js/demos.skeuo.zippo.js?v=2fa7be60eb",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.zippo.js?v=61ff2a4888",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/zippo-flame.json?v=95ccb11384",
+    "sourcePreview": "registry/p/zippo-flame.json?v=459240cd5a",
     "assetRefs": {},
     "rootClass": "d-hardware-zippo",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      },
+      {
+        "action": "open",
+        "label": "Open"
+      },
+      {
+        "action": "strike",
+        "label": "Strike"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Flip the cap, strike the wheel, close to snuff",
     "sourceName": "Seen on: fashion campaigns, cinematic portfolios, product stories, and atmospheric landing pages",
@@ -22873,7 +22909,7 @@
   },
   {
     "id": "torn-paper-edge",
-    "title": "Tear-off Note",
+    "title": "Tear-Off Note",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "drag",
@@ -22888,8 +22924,15 @@
       "paper"
     ],
     "tier": "free",
-    "desc": "A useful perforated task card is suspended from a brass clip. Pulling its lower tab separates a naturally irregular paper edge; the saved reminder settles below and the remaining paper retains its own torn silhouette.",
-    "designSize": "sm",
+    "desc": "Pull the tab down to tear the note away",
+    "designSize": [
+      400,
+      560
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22897,18 +22940,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/torn-paper-edge",
-    "thumb": "full",
-    "module": "js/demos.skeuo.torn-paper.js?v=855dc36747",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.torn-paper.js?v=5db107c4eb",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/torn-paper-edge.json?v=d7a4c44acd",
+    "sourcePreview": "registry/p/torn-paper-edge.json?v=7192a6a775",
     "assetRefs": {},
     "rootClass": "d-hardware-torn-paper",
-    "controls": [],
+    "controls": [
+      {
+        "action": "take",
+        "label": "Drag"
+      },
+      {
+        "action": "reset",
+        "label": "New note"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Pull the tab down to tear the note away",
     "sourceName": "Seen on: editorial case studies, craft brands, zines, cultural sites, and collage-inspired portfolios",

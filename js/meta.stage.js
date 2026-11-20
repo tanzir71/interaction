@@ -11840,17 +11840,29 @@ INTRX.meta({
     ]
   },
   "slot-machine-reel": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "advance",
+        "label": "Advance"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "reel",
@@ -11858,21 +11870,41 @@ INTRX.meta({
       "motion-blur"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "zippo-flame": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      },
+      {
+        "action": "open",
+        "label": "Open"
+      },
+      {
+        "action": "strike",
+        "label": "Strike"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "flame",
@@ -11880,21 +11912,37 @@ INTRX.meta({
       "flicker"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "torn-paper-edge": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      560
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "take",
+        "label": "Drag"
+      },
+      {
+        "action": "reset",
+        "label": "New note"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "useCases": [
       "svg",
@@ -11902,8 +11950,12 @@ INTRX.meta({
       "paper"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "wax-seal-stamp": {
     "designSize": "sm",
