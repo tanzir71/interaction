@@ -1,21 +1,68 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 288 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 291 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus twenty-six Raster & Glitch demos.
-The remaining work includes 111 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos.
+The remaining work includes 108 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 6 remaining demos.
-None of the 288 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 5 remaining demos.
+None of the 291 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 288 native compositions. The unfinished groups still account for
-14 overflow findings, zero horizontal-scroll findings, 46 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 89 documented
+among these 291 native compositions. The unfinished groups still account for
+14 overflow findings, zero horizontal-scroll findings, 44 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 90 documented
 Figma fill exceptions validate.
+
+## Film Grain, Bitmap Marquee and Chromatic Type
+
+All twenty-nine existing Raster demos now have their native v4 compositions.
+These final three follow tiles `171:1870`, `171:1474` and `169:2963`.
+All 597 supplied SVG payloads remain unchanged: Grain keeps its border, wash
+and 213 grain primitives; Bitmap keeps 360 dots, the complete vector text,
+sixteen horizontal masks and two edge fades; Chromatic keeps all three
+SHIFT outlines. Every intrinsic SVG size and declared slot is checked; the
+browser may quantize CSS layout by at most 1/64px.
+
+Native Grain retains the 200×150px dusk cover and complete original seeded
+8fps field. Its full view retains the native intensity range and every noise,
+dust and scratch sample over approved archGrid photography. Bitmap retains
+its exact 240×64px strip; its original paint-clock offset is unwrapped before
+wrapping the 360px supplied text asset. Full view retains the entire original
+binary glyph mask, sampling, phrase and signed speed model. Chromatic retains
+the three 146×70px frames at 109,74, 117,74 and 113,74, while the original
+two-axis velocity model drives their live transforms. The neutral image uses
+a CSS filter for legibility on light stages. Full view retains all original
+Signal. layers, polarity, bursts and complete velocity state.
+
+The measured Chromatic fill is 11.8%. Its exact reference geometry has a
+documented owner-approved sparse-fill exception; other geometry and type
+gates remain active. This batch removes retired generated photography from
+one more demo. Five such runtime references remain in unfinished groups.
+
+The ten groups in `tools/verify-raster-signal.js` cover 48 emitted engine
+cases, 57,648 original states, 5,648 complete typed-model checkpoints and
+232,845,696 original Canvas channels. Independent literal-source projections
+check live grain pixels and every native text transform through source-loop
+wraps, reversals and resets. Browser checks cover all 597 assets, 72 native and
+72 full layouts, long native/full stories at 60/120/240Hz, physical input,
+touch range input and vertical scrolling, independent holds, paused themes,
+queued intent, interrupted reduced feedback, startup disposal, real routes
+and LiveTiles, plus 24 fresh network-blocked exports.
+
+The [24 source-bound timing measurements](performance/raster-signal-2026-11-20.json)
+record desktop DPR1 and mobile DPR2 at CPU1 and CPU4. CPU1 native and full
+scenes stay near 60fps. CPU4 native scenes span 59.0–60.0fps; full scenes span 53.4–60.0fps.
+All slow intervals, long tasks and readiness measurements remain in the
+report. At CPU4, native desktop Grain first paints in 783ms, native desktop
+Bitmap in 885ms and native mobile Bitmap in 1,011ms. Native readiness reaches
+1,101ms. Full desktop Grain records 53.4fps, 35 slow intervals and ten long
+tasks. Dense-vector startup and full-grain work remain open for the final
+performance audit. Fonts are prepared before mounting; public route/module transfer is
+excluded. These measurements leave final timing gates open.
 
 ## Pixel Sort, Threshold Mosaic, Interlace Field and Posterize Lens
 

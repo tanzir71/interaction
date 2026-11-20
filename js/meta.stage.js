@@ -10875,17 +10875,29 @@ INTRX.meta({
     ]
   },
   "noise-grain-overlay": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      448
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "ambient",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Freeze grain"
+      },
+      {
+        "action": "step",
+        "label": "New grain frame"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "img"
     },
     "useCases": [
       "canvas",
@@ -10893,8 +10905,12 @@ INTRX.meta({
       "overlay"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "threshold-mosaic-transition": {
     "designSize": [
@@ -10935,13 +10951,25 @@ INTRX.meta({
     ]
   },
   "bitmap-font-marquee": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Freeze strip"
+      },
+      {
+        "action": "reset",
+        "label": "Reset position"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10953,8 +10981,12 @@ INTRX.meta({
       "marquee"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "interlace-flicker": {
     "designSize": [
@@ -11037,17 +11069,33 @@ INTRX.meta({
     ]
   },
   "chromatic-type": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "polarity",
+        "label": "Polarity: normal"
+      },
+      {
+        "action": "burst",
+        "label": "Inject burst"
+      },
+      {
+        "action": "settle",
+        "label": "Register layers"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "img"
     },
     "useCases": [
       "typography",
@@ -11055,8 +11103,12 @@ INTRX.meta({
       "pointer-velocity"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "neumorphic-buttons": {
     "designSize": "sm",

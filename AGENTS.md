@@ -528,3 +528,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated native/full timing with `node tools/profile-raster-processing.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave final timing
   gates open. Context-state notifications do not claim literal GPU reset tests.
+- `node tools/verify-raster-signal.js http://127.0.0.1:4173` covers v4 Film
+  Grain, Bitmap Marquee and Chromatic Type: all 597 original SVGs, 57,648
+  original states, complete typed buffers and original Canvas planes. It
+  checks exact native slots and intrinsic dimensions, live source projections,
+  complete glyph loops and velocity trajectories, physical input and touch
+  scrolling, native range input, 72 native and 72 full layouts, long stories
+  at 60/120/240Hz, independent holds, queued intent, reduced feedback, startup
+  disposal, LiveTiles/routes and 24 fresh offline exports. Chromatic retains
+  its exact sparse geometry through a documented fill exception; its neutral
+  layer remains legible on light stages without changing the SVG payload.
+  Record isolated timing with `node tools/profile-raster-signal.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Preserve dense-SVG startup and
+  full-grain timing findings for the final audit; measurement is not a timing pass.
