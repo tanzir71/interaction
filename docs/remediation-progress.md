@@ -1,21 +1,102 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 310 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 313 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and three Skeuomorph controls.
-The remaining work includes 89 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and six Skeuomorph demos.
+The remaining work includes 86 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 3 remaining demos.
-None of the 310 remediated native compositions retains those references.
+inventory finds the retired generated photo keys in 1 remaining demo.
+None of the 313 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 310 native compositions. The unfinished groups still account for
-3 overflow findings, zero horizontal-scroll findings, 34 tiny-text findings and
+among these 313 native compositions. The unfinished groups still account for
+3 overflow findings, zero horizontal-scroll findings, 31 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 93 documented
 Figma fill exceptions validate.
+
+## Paper Plans, Frosted Pass and Dot Matrix Clock
+
+Tiles `170:1657`, `170:1686` and `170:1708` now have their exact 240×168px
+native planes and complete 400×480px full compositions. Two original check
+SVGs and the supplied glass highlight retain their original bytes. The clock
+uses the local 40px Geist Mono face; its outlined SVG remains verification-only.
+All 323 unrelated modules, 396 unrelated metadata records, 116 earlier private
+source files and eleven frozen reference releases remain unchanged. Other
+catalog records change only their shared asset cache hashes.
+
+Paper retains all three original plans, six native task fields and full copy.
+Its three preview rows project cyclic fields 2×plan+[0,1,2], including a peek
+at the next plan. Native starts with the first two checks selected; full keeps
+the original unchecked defaults. Checks fill in 150ms and draw in 350ms after
+80ms. Page slides take 350ms while the original 330ms busy gate stays intact.
+Reversals in that 20ms window preserve visible layers. Reduced motion uses
+150ms opacity. The shell owns Next.
+
+Glass keeps the supplied photo, pane, highlight and caption geometry, using
+the newly verified approved fluidBlue photograph. Full retains the complete
+original pass, front/back copy and Sea photograph. Pointer tilt follows in
+400ms and returns in 1000ms, with 300ms glare and 1000px perspective. Touch
+and reduced motion suppress pointer tilt and preserve semantic flip feedback.
+The measured CSS blur(7px) matches this Figma composition more closely than
+blur(14px); this does not establish a general renderer conversion.
+
+The clock paints 12:45 when paused before its first live frame, then follows
+the original real wall time, both formats and power. Resume refreshes real
+time. Native power-off is blank; full retains all 142 original dots and ten
+glyphs. Changed digits use 250ms fades with 4px travel and 2px blur, or 150ms
+opacity when reduced. Retained digit nodes stay in place through reversals,
+avoiding a measured clipping/compositor raster change from node reattachment.
+All three demos retire active implicit touch capture during disposal.
+
+The ten groups in `tools/verify-skeuo-materials.js` pass 46,710 checks.
+Forty full/native factory bindings cover twenty original cases, 28 actual
+replays, 6,760 bound state samples and 1,536 complete DOM/model checkpoints.
+Identical factories share exact evidence; the distinct frozen full clock
+adapter runs independently. Lossless pooled strings reconstruct every original
+fixture byte and verify its hash. Original generated photos are regression
+data only. Full Paper now uses approved Sea, Forest Dark and Dusk images;
+full Glass uses Sea, with 1600px detail paths and 800px portable variants.
+
+Verification covers 168 layouts, independent 60/120/240Hz motion, interrupted
+page/digit raster continuity, all six task fields through real keys, moving
+touch, vertical scrolling and capture cleanup. It checks actual materials and
+photo pixels, peak glyph ink, caller/document/viewport holds, cold routes,
+LiveTiles, early cleanup and 24 fresh network-blocked exports. Font fringes and
+cross-renderer blur are not claimed byte-exact. Controlled document signals
+are not OS visibility measurements. These demos construct no audio.
+
+All three previews pass the fit gates without new exceptions. The batch
+removes three tiny-text findings and three chrome debts; stage debt is 84 and
+motion debt is 41. Registry generation validates 1,205 artifacts. The broad
+library suite passes 651 checks, 399 previews and 97 offline exports. All
+nineteen lifecycle/shell tests, eight CLI/MCP tests, sixteen fit-geometry checks
+and shared stage runtime checks pass locally. The full fit diagnostic still
+exits 1 for the unfinished groups: three overflow, 31 tiny-text and 33 low-fill
+findings, with no horizontal scroll, failed boots, missing sizes or invalid
+exceptions. All 93 existing Figma exceptions validate. Three posters were
+refreshed with the paused-initial capture option; its default behavior stays
+the same.
+
+The 24 isolated eight-second CPU1/4 timing stories are recorded in
+`docs/performance/skeuo-materials-2026-11-20.json`. CPU1 native measures
+59.9–60.0fps with one slow interval and no long tasks; full holds 60fps with
+none. CPU4 native records 52.4–60.0fps, 41 intervals above 25ms and 29 long
+tasks; full records 57.6–60.0fps, 33 slow intervals and eight long tasks. Two
+native first paints exceed 300ms, with a 342.7ms maximum; full first paints
+range from 166.6ms to 264.2ms. Readiness reaches 635.9ms in native stress runs.
+These results and all earlier timing tails remain open for the final audit;
+measurement does not pass the timing gate, and no cause is inferred from
+frame-rate variation.
+
+Visual remediation reaches 313/399. Fourteen Skeuomorph demos, all seventy-two
+Collections, 121 new/extensions, Pro seams and final audits remain. Only
+`showcase-circular-gallery` still uses the retired runtime photo keys. Direct
+commits/pushes preserve disabled Actions and the account-wide $0 stop-at-limit
+policy.
+
 
 ## Three Skeuomorph controls
 

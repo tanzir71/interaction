@@ -11,11 +11,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   const requested=process.argv.find(arg=>arg.startsWith('--ids='))?.slice(6).split(',');
   if(requested?.some(id=>!catalog.includes(id)))throw Error('Unknown poster id: '+requested.filter(id=>!catalog.includes(id)).join(', '));
   const ids=requested?[...new Set(requested)]:catalog;
+  const initial=process.argv.includes('--initial');
   await page.evaluate(()=>{INTRX.disposeView();document.getElementById('app').innerHTML='<div class="demo-stage stage" id="poster-stage" style="width:360px;height:264px;position:relative"></div>';});
   fs.mkdirSync('assets/posters',{recursive:true});
   const errors=[];
   for(const [index,id]of ids.entries()){
-   await page.evaluate(async id=>{const stage=document.querySelector('#poster-stage'),demo=await INTRX.loadDemo(id);INTRX.mountStage(demo,stage,'thumb');await document.fonts.ready;await Promise.all([...stage.querySelectorAll('img')].map(image=>image.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));stage._runtime.suspend();if(stage.dataset.bootError)throw Error('Poster boot failed: '+id);},id);
+   await page.evaluate(async({id,initial})=>{const stage=document.querySelector('#poster-stage'),demo=await INTRX.loadDemo(id);INTRX.mountStage(demo,stage,'thumb');if(initial)stage._runtime.suspend();await document.fonts.ready;await Promise.all([...stage.querySelectorAll('img')].map(image=>image.decode()));await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));stage._runtime.suspend();if(stage.dataset.bootError)throw Error('Poster boot failed: '+id);},{id,initial});
    await page.locator('#poster-stage').screenshot({path:path.join('assets/posters',id+'.png'),animations:'disabled'});
    if((index+1)%40===0)console.log('Captured '+(index+1)+' / '+ids.length+' posters');
   }

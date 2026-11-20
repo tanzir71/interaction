@@ -11551,17 +11551,25 @@ INTRX.meta({
     ]
   },
   "paper-stack-cards": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next plan"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11569,21 +11577,33 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "glass-refraction-card": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "flip",
+        "label": "Flip"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11591,21 +11611,37 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "led-segment-display": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "format",
+        "label": "24-hour"
+      },
+      {
+        "action": "power",
+        "label": "Power"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "img"
+      "aria": "region"
     },
     "useCases": [
       "seven-segment",
@@ -11613,8 +11649,12 @@ INTRX.meta({
       "counter"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "flip-clock": {
     "designSize": "sm",

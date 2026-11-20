@@ -1,0 +1,6 @@
+// Pointer ratios computed from different transformed native bounding boxes can
+// differ at the last IEEE-754 bits. Only those coordinate-derived fields and
+// CSS tokens use 12 decimal places; clocks, solvers and all other data stay exact.
+function normalizeMarkup(value,id){if(!['glass-refraction-card','foil-trading-card'].includes(id))return value;return value.replace(/(--(?:rx|ry|light|x|y):\s*)([-+\d.eE]+)(deg|%)/g,(_,prefix,number,unit)=>prefix+Number(Number(number).toFixed(12))+unit);}
+function normalizeHistory(rows,id){const number=value=>typeof value==='number'?Number(value.toFixed(12)):value,state=value=>{if(!value)return value;const result={...value};if(id==='foil-trading-card'){result.x=number(result.x);result.y=number(result.y);}if(id==='rotary-knob')result.startAngle=number(result.startAngle);return result;};return rows.map(row=>{const result={...row,state:state(row.state)};if(row.model)result.model={...row.model,source:{...row.model.source,state:state(row.model.source.state)},dom:{...row.model.dom,attributes:row.model.dom.attributes.map(([key,value])=>[key,key==='style'?normalizeMarkup(value,id):value])}};return result;});}
+module.exports={normalizeMarkup,normalizeHistory};

@@ -944,3 +944,46 @@ including all three grooves. Full views retain their complete original
 400×480px compositions. Existing photos, fonts, provenance and portable
 asset aliases are unchanged. Reference PNG samples are verification data;
 no Figma screenshot is product artwork.
+
+## Skeuomorph paper, glass and clock
+
+Paper Plans, Frosted Pass and Dot Matrix Clock follow tiles `170:1657`,
+`170:1686` and `170:1708`. Their native planes are 240×168px at (66,20) in
+the 372×264px stage. The artwork manifest binds two unchanged 10px check SVGs,
+the original 120×90px glass highlight, exact parent materials and the separate
+verification-only outlined clock. The live clock uses local Geist Mono at
+40px/52px, regular weight, with the original orange ink and 10px glow.
+Reference PNGs supply verification samples only.
+
+Paper retains three 150×128px sheets at (96,28), (104,36) and (112,44).
+Its 14px checks and 80/64/72×7px rules retain the supplied positions. Glass
+retains its 200×150px photo at (86,28), 120×90px pane at (126,58) and 60×7px
+caption at (140,116). Captured Figma blur radius 14 was compared with actual
+CSS compositor output: blur(7px) gives mean squared channel error 6.02 in the
+measured pane, versus 38.46 for blur(14px). This result applies to this
+composition; the two renderers are not claimed byte-identical. The clock
+retains its 180×72px clipped housing at (96,66) and authored 12:45 still.
+
+The missing approved `fluidBlue` photograph was matched to Pawel Czerwinski's
+[blue and black abstract painting](https://unsplash.com/photos/blue-and-black-abstract-painting-prMn9KINLtI),
+photo `prMn9KINLtI`, image `photo-1597773150796-e5c14ebecbf5`. On 20 November
+2026 the primary Unsplash result confirmed free use under the Unsplash License;
+the direct photo page returned 429. Image identity was independently checked
+against Figma's original 1800×1200px JPEG, SHA-256
+`732b16028d3d82f02bbc7fe0e3ddb99c915e2c276728137722bf376e2fad50b9`.
+The matching 1800px JPEG variant has 64px comparison MSE 0.0912.
+
+The self-hosted 1600×1067px `fluidBlue.webp` SHA-256 is
+`090bb1cfca4b51cac9c8c62266d0828857fada390d8ca7ccadc4b0d35e0f763c`;
+the 800×533px `fluidBlue-800.webp` SHA-256 is
+`bbdb8b8eee327466eff0a811860fcc9a4aeae4b04077a14d26764ab5f29fc240`.
+The portable alias uses the 800px file. Detail attribution includes the
+photographer and original page. Existing 23 photo-credit records and aliases
+are unchanged; the new record brings the total to 24.
+
+Full Paper replaces retired generated photographs with the approved Sea,
+Forest Dark and Dusk sources. Full Glass uses Sea. Complete original copy and
+interaction models remain, with 1600px detail paths and 800px portable assets.
+Original generated buffers are isolated in regression fixtures and never
+included in product output. Only `showcase-circular-gallery` still uses the
+retired runtime keys.
