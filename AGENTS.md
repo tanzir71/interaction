@@ -582,3 +582,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   for the final audit. Record isolated native/full timing with
   `node tools/profile-ambient-atmospheres.js http://127.0.0.1:4173 --cpu=1`
   or `--cpu=4`; measurement is not a timing pass.
+- `node tools/verify-sound.js http://127.0.0.1:4173` covers all six v4
+  Sound instruments: 58 unchanged SVGs, all 34 complete original fixtures,
+  synthesis graphs, lossless noise/PCM buffers and original model/Canvas
+  output. Native PCM uses the unchanged independently measured platform
+  repeatability policy. It checks trusted activation and expired gestures,
+  actual AudioContext suspension/closure/recovery, authored mute, independent
+  holds, exact native pixels, real keys/mouse/moving touch and scrolling,
+  60/120/240Hz clocks, compact full type, startup/route/viewport cleanup and
+  48 fresh network-blocked exports. Test audio uses an inaudible MediaStream;
+  speaker connections are rejected. Native drums use the Figma pattern while
+  full keeps the original pattern. Native drone starts/resets at 85px; full
+  keeps its complete original scroll range. Theremin keeps its complete audio
+  range while its painted marker stays 9px inside the rounded field. Typing
+  retains its exact sparse geometry through the documented fill exception.
+  Record isolated timing with `node tools/profile-sound.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Each story first activates a
+  real context through trusted input. Measurements leave final timing gates open.

@@ -1272,3 +1272,20 @@ The full fit diagnostic reports 14 overflow, zero horizontal scroll, 46 tiny
 text and 33 low-fill findings; all 89 exceptions validate. Stage debt is 115
 and motion debt remains 51. These are unfinished global gates. Verification
 runs locally; direct commits/pushes preserve disabled Actions and the $0 limit.
+
+## Sound instruments — 20 Nov 2026
+
+All six Sound demos now have native v4 previews from 58 unchanged SVGs and
+complete original full interactions. The twelve focused verification groups
+pass 460,232 checks, including original models and synthesis, lossless buffers,
+measured native PCM repeatability, actual trusted audio/input, painted pixels,
+72 refresh-rate stories, compact layouts, independent holds, context recovery,
+cleanup and 48 fresh offline exports. Typing retains its exact sparse Figma
+geometry through a documented fill exception. Full Drone now uses the already
+credited Sea photograph. See `docs/remediation-progress.md` for source scope,
+current global counts and timing findings.
+
+Visual remediation reaches 307/399. Another 92 existing demos (20 Skeuomorph
+and 72 Collections) and all 121 new/extension components remain, alongside
+Pro seams and the final audits. The objective remains active. Verification
+runs locally; direct commits/pushes preserve disabled Actions and the $0 limit.

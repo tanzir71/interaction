@@ -9033,17 +9033,33 @@ INTRX.meta({
     ]
   },
   "ui-sound-kit": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9051,21 +9067,41 @@ INTRX.meta({
       "gesture gated"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "typing-mechanical": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "type",
-    "controls": [],
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9073,21 +9109,41 @@ INTRX.meta({
       "keyboard"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "theremin-pad": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "wave",
+        "label": "Wave sine"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9095,21 +9151,41 @@ INTRX.meta({
       "instrument"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "notification-chime-stack": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "add",
+        "label": "Add notification"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9117,21 +9193,41 @@ INTRX.meta({
       "arpeggio"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "drum-grid-sequencer": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "grid"
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9139,21 +9235,41 @@ INTRX.meta({
       "drum machine"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "scroll-pitch-drone": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "scroll"
+      "overflow": "clip"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "useCases": [
       "webaudio",
@@ -9161,8 +9277,12 @@ INTRX.meta({
       "easter egg"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "dvd-screensaver": {
     "designSize": [

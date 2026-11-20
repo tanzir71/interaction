@@ -1,0 +1,159 @@
+{
+  "at": "2026-11-19T00:17:32.687Z",
+  "cases": 12,
+  "nativeRepeats": 36,
+  "sourceHashes": {
+    "verify-native-repeatability.cjs": "8d37a189f3224b22715fc5664d3fa1e0dd5b62e16b6906c8a4602c4a8fa17c30",
+    "probe-repeatability.cjs": "bc5fac29ae25748bc377315eefef298405d7bdcd6d57acf6a746c109e5ba8234",
+    "audio-recorder.cjs": "67a0ad2be47c76821c8abfd791448232adee4557e24f9f4ba5d32feeb13a324f",
+    "original-harness.cjs": "073a6a7f1ed7848c3ee6ed48c5383f4cdca0dad8f93eb7c8fbc543309af467fc"
+  },
+  "results": [
+    {
+      "id": "ui-sound-kit",
+      "sampleRate": 44100,
+      "key": "ui-sound-kit-200x150-sr44100-dpr1",
+      "file": "repeatability-ui-sound-kit-200x150-sr44100-dpr1.json",
+      "sha256": "9fae5bc62580cdddd98df3b25713818638d22942d69a385cdb7ace3ad94c5bd2",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    },
+    {
+      "id": "ui-sound-kit",
+      "sampleRate": 48000,
+      "key": "ui-sound-kit-200x150-sr48000-dpr1",
+      "file": "repeatability-ui-sound-kit-200x150-sr48000-dpr1.json",
+      "sha256": "2fc9810239a3aef666d00a5ada9d7279f2e4ca36f6d55e7bfe8f4f19b2a85d76",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    },
+    {
+      "id": "typing-mechanical",
+      "sampleRate": 44100,
+      "key": "typing-mechanical-200x150-sr44100-dpr1",
+      "file": "repeatability-typing-mechanical-200x150-sr44100-dpr1.json",
+      "sha256": "e18f99d37c56a475c6cbafcc73bb6276bf523982fa2f50a469c24a41197d8123",
+      "nativeRepeats": 3,
+      "maxAbsolute": 1.4901161193847656e-8,
+      "rmse": 1.2270864028037925e-10,
+      "maxAllowedAbsolute": 5.960464477539063e-8,
+      "maxAllowedRMSE": 4.90834561121517e-10
+    },
+    {
+      "id": "typing-mechanical",
+      "sampleRate": 48000,
+      "key": "typing-mechanical-200x150-sr48000-dpr1",
+      "file": "repeatability-typing-mechanical-200x150-sr48000-dpr1.json",
+      "sha256": "d4bd4ce136f139a077c2b22bdf4d7533c8f996d3ec352fae1b1e08afb015b15a",
+      "nativeRepeats": 3,
+      "maxAbsolute": 1.4901161193847656e-8,
+      "rmse": 1.2817193037778409e-10,
+      "maxAllowedAbsolute": 5.960464477539063e-8,
+      "maxAllowedRMSE": 5.126877215111363e-10
+    },
+    {
+      "id": "theremin-pad",
+      "sampleRate": 44100,
+      "key": "theremin-pad-200x150-sr44100-dpr2",
+      "file": "repeatability-theremin-pad-200x150-sr44100-dpr2.json",
+      "sha256": "e37545dab7bed3abb9188dd6a8eb870bb3c62b39c6710e5520275901ad026f14",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    },
+    {
+      "id": "theremin-pad",
+      "sampleRate": 48000,
+      "key": "theremin-pad-200x150-sr48000-dpr2",
+      "file": "repeatability-theremin-pad-200x150-sr48000-dpr2.json",
+      "sha256": "62ad646c6119b23832b7065cd6eecbe3cfe7bdae7adf85d0195fef3a3c7377b0",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    },
+    {
+      "id": "notification-chime-stack",
+      "sampleRate": 44100,
+      "key": "notification-chime-stack-200x150-sr44100-dpr1",
+      "file": "repeatability-notification-chime-stack-200x150-sr44100-dpr1.json",
+      "sha256": "2035cb067677d7dbb2688022a24cf223989e2e4047f004ca3d6e97d5bbbedad3",
+      "nativeRepeats": 3,
+      "maxAbsolute": 4.470348358154297e-8,
+      "rmse": 7.003442259362948e-10,
+      "maxAllowedAbsolute": 1.7881393432617188e-7,
+      "maxAllowedRMSE": 2.8013769037451793e-9
+    },
+    {
+      "id": "notification-chime-stack",
+      "sampleRate": 48000,
+      "key": "notification-chime-stack-200x150-sr48000-dpr1",
+      "file": "repeatability-notification-chime-stack-200x150-sr48000-dpr1.json",
+      "sha256": "e550d9be04a64694e02d23b1825cf61d24c9011323d49d47425219e1e001ca4e",
+      "nativeRepeats": 3,
+      "maxAbsolute": 4.470348358154297e-8,
+      "rmse": 7.498679800291454e-10,
+      "maxAllowedAbsolute": 1.7881393432617188e-7,
+      "maxAllowedRMSE": 2.9994719201165817e-9
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "sampleRate": 44100,
+      "key": "drum-grid-sequencer-200x150-sr44100-dpr1",
+      "file": "repeatability-drum-grid-sequencer-200x150-sr44100-dpr1.json",
+      "sha256": "0e1cbed14826538a440df1ee45486b56cd46d1b600a1ce26e54b8110bec6663e",
+      "nativeRepeats": 3,
+      "maxAbsolute": 5.960464477539063e-8,
+      "rmse": 6.941237432799791e-10,
+      "maxAllowedAbsolute": 2.384185791015625e-7,
+      "maxAllowedRMSE": 2.7764949731199162e-9
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "sampleRate": 48000,
+      "key": "drum-grid-sequencer-200x150-sr48000-dpr1",
+      "file": "repeatability-drum-grid-sequencer-200x150-sr48000-dpr1.json",
+      "sha256": "6fb91f52e3de13aeb66bb92492366a86527dbd6cc08b62e4f00396feaa98c446",
+      "nativeRepeats": 3,
+      "maxAbsolute": 5.960464477539063e-8,
+      "rmse": 7.679481150965186e-10,
+      "maxAllowedAbsolute": 2.384185791015625e-7,
+      "maxAllowedRMSE": 3.0717924603860746e-9
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "sampleRate": 44100,
+      "key": "scroll-pitch-drone-200x150-sr44100-dpr1",
+      "file": "repeatability-scroll-pitch-drone-200x150-sr44100-dpr1.json",
+      "sha256": "7fcca1fb57fc83e7b6d2952d3041908f869279c6c838a278cd1128ff39159337",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "sampleRate": 48000,
+      "key": "scroll-pitch-drone-200x150-sr48000-dpr1",
+      "file": "repeatability-scroll-pitch-drone-200x150-sr48000-dpr1.json",
+      "sha256": "3725dc602cbf60b1062b193d667641a079133fc2dbf9ec852275fade896ded40",
+      "nativeRepeats": 3,
+      "maxAbsolute": 0,
+      "rmse": 0,
+      "maxAllowedAbsolute": 0,
+      "maxAllowedRMSE": 0
+    }
+  ],
+  "scope": "Three fresh pinned-browser reruns of each original source at both sample rates. Every original complete model/audio graph repeats exactly. Native PCM rounding is measured without modifying any original fixture. Nonrepeatable channels permit at most four times the observed maximum absolute/RMS variation, capped at 2^-22 absolute and 1e-8 RMS. Sources that repeat bit-exactly retain a zero-error PCM gate.",
+  "errors": []
+}

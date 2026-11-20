@@ -17327,7 +17327,14 @@
     ],
     "tier": "free",
     "desc": "Four interface controls synthesize their own short envelopes: hover ticks, confirm bells, warning drops, and a two-note toggle. AudioContext creation happens only inside a user gesture.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -17335,18 +17342,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-sound-kit",
-    "thumb": "full",
-    "module": "js/demos.sound.ui-sound-kit.js?v=42bb3ea979",
+    "thumb": "hero",
+    "module": "js/demos.sound.ui-sound-kit.js?v=94ddb1235b",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/ui-sound-kit.json?v=16dcc7e607",
+    "sourcePreview": "registry/p/ui-sound-kit.json?v=01d8af8d4f",
     "assetRefs": {},
-    "rootClass": "d-soundkit-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-kit",
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Each pad plays its voice; mute from the corner",
     "sourceName": "Seen on: game menus, tactile product tools, creative software, kiosks, and playful design systems",
@@ -17370,7 +17390,14 @@
     ],
     "tier": "free",
     "desc": "Each printable keystroke synthesizes a short filtered-noise thock plus a pitched body tone. Roboto Mono-key timing controls velocity, brightness, and key travel so fast typing feels sharper than deliberate typing.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -17378,18 +17405,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/typing-mechanical",
-    "thumb": "full",
-    "module": "js/demos.sound.typing-mechanical.js?v=42205bda2e",
+    "thumb": "hero",
+    "module": "js/demos.sound.typing-mechanical.js?v=f20a6dba61",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/typing-mechanical.json?v=e295224bec",
+    "sourcePreview": "registry/p/typing-mechanical.json?v=3168326c80",
     "assetRefs": {},
-    "rootClass": "d-typeaudio-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-typing",
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Each key thocks; the velocity meter follows you",
     "sourceName": "Seen on: writing tools, terminal products, narrative sites, coding toys, and tactile editors",
@@ -17413,7 +17453,14 @@
     ],
     "tier": "free",
     "desc": "A press-and-drag surface maps horizontal position logarithmically across two octaves and vertical position to amplitude. A live trace records the performed gesture while audio exists only during contact.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -17421,18 +17468,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/theremin-pad",
-    "thumb": "full",
-    "module": "js/demos.sound.theremin-pad.js?v=e727064368",
+    "thumb": "hero",
+    "module": "js/demos.sound.theremin-pad.js?v=c063dbb688",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/theremin-pad.json?v=f02595664a",
+    "sourcePreview": "registry/p/theremin-pad.json?v=95a6cd721f",
     "assetRefs": {},
-    "rootClass": "d-theremin-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-theremin",
+    "controls": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "wave",
+        "label": "Wave sine"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Pitch rides x, volume rides y",
     "sourceName": "Seen on: music experiments, sound-brand tools, playful portfolios, installations, and instrument explainers",
@@ -17456,7 +17516,14 @@
     ],
     "tier": "free",
     "desc": "Each new toast enters a springy stack and receives the next scale degree. A gesture-gated three-note chime climbs with stack depth, while dismissing a toast compacts the remaining cards.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -17464,18 +17531,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/notification-chime-stack",
-    "thumb": "full",
-    "module": "js/demos.sound.notification-chime-stack.js?v=a3b95af852",
+    "thumb": "hero",
+    "module": "js/demos.sound.notification-chime-stack.js?v=f2cbd5e871",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/notification-chime-stack.json?v=4cb104fdcb",
+    "sourcePreview": "registry/p/notification-chime-stack.json?v=a39ef0767b",
     "assetRefs": {},
-    "rootClass": "d-chime-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-chime",
+    "controls": [
+      {
+        "action": "add",
+        "label": "Add notification"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Each new notification climbs one note higher",
     "sourceName": "Seen on: collaboration tools, dashboards, productivity apps, games, and polished system feedback",
@@ -17499,7 +17579,14 @@
     ],
     "tier": "free",
     "desc": "A mutable 4×8 step grid drives four synthesized percussion voices. The playhead advances at the selected tempo, highlights each column, and reads active cells at playback time.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -17507,18 +17594,31 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drum-grid-sequencer",
-    "thumb": "full",
-    "module": "js/demos.sound.drum-grid-sequencer.js?v=0ee8d2b8da",
+    "thumb": "hero",
+    "module": "js/demos.sound.drum-grid-sequencer.js?v=549a0f94d3",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drum-grid-sequencer.json?v=7864e439e3",
+    "sourcePreview": "registry/p/drum-grid-sequencer.json?v=e9f0b33798",
     "assetRefs": {},
-    "rootClass": "d-drum-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-drums",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "grid"
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Toggle steps; the playhead loops the pattern",
     "sourceName": "Seen on: music products, interactive portfolios, learning tools, games, and playful onboarding",
@@ -17542,32 +17642,68 @@
     ],
     "tier": "free",
     "desc": "An opt-in headphone drone combines two quiet oscillators. Measured scroll velocity opens its low-pass filter, raises pitch slightly, and tilts a spectral horizon before easing back to rest.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      540
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "scroll"
+      "overflow": "clip"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/scroll-pitch-drone",
-    "thumb": "full",
-    "module": "js/demos.sound.scroll-pitch-drone.js?v=2467a10e91",
+    "thumb": "hero",
+    "module": "js/demos.sound.scroll-pitch-drone.js?v=341672ca59",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/scroll-pitch-drone.json?v=658cc021f9",
+    "sourcePreview": "registry/p/scroll-pitch-drone.json?v=81ec731d97",
     "assetRefs": {
-      "atlantic-shore": "assets/images/atlantic-shore.webp"
+      "photo-sea": "assets/images/sea-800.webp"
     },
-    "rootClass": "d-drone-demo",
-    "controls": [],
+    "rootClass": "d-sound-v4-drone",
+    "controls": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "application"
     },
     "hint": "Scroll speed bends the drone up and down",
     "sourceName": "Seen on: immersive essays, album sites, digital exhibitions, cinematic stories, and hidden headphone modes",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "sea",
+        "asset": "photo-sea",
+        "photoId": "qINZ8zEYErY",
+        "imageId": "photo-1578664865136-74b450f31cd9",
+        "photographer": "Clayton Tonna",
+        "url": "https://unsplash.com/photos/shallow-focus-photo-of-body-of-water-qINZ8zEYErY",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-17"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-sea": "assets/images/sea.webp"
+    }
   },
   {
     "id": "dvd-screensaver",

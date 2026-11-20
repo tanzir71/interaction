@@ -1,21 +1,84 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 301 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 307 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos and all ten Ambient demos.
-The remaining work includes 98 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos and all six Sound demos.
+The remaining work includes 92 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 4 remaining demos.
-None of the 301 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 3 remaining demos.
+None of the 307 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 301 native compositions. The unfinished groups still account for
-5 overflow findings, zero horizontal-scroll findings, 43 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 90 documented
+among these 307 native compositions. The unfinished groups still account for
+5 overflow findings, zero horizontal-scroll findings, 37 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 91 documented
 Figma fill exceptions validate.
+
+## Six Sound instruments
+
+UI Sound Kit, Typing Mechanical, Theremin Pad, Notification Chime Stack,
+Drum Grid Sequencer and Scroll Pitch Drone now use all 58 unchanged v4 SVGs.
+Their native planes are 240×168px at (66,20) in the 372×264px reference stage;
+full compositions retain complete original copy and interactions in 400×540px
+layouts. All 320 unrelated source modules and 393 unrelated metadata records
+remain unchanged. The existing approved Sea photograph replaces the retired
+full Drone image without changing photo/font payloads or provenance.
+
+The native controls operate the complete original instruments. Kit retains
+all four voices. Typing keeps its 180-character input, original timing, impact
+decay and six-entry history; its exact 164×59px painted union has a documented
+fill exception. Theremin retains the exponential 220×4^x pitch, original gain,
+three waveforms and full trace. Only its painted crosshair and marker stay
+9px inside the rounded frame, so endpoint input cannot hide the marker.
+Chime keeps all original messages, musical roots and dismissal/replay rules.
+Native Drums starts with the exact Figma pattern and third-column still;
+full retains every original seed cell and all four voices/eight steps.
+Native Drone starts and resets at the rounded 85px reference position while
+full preserves its complete 600px scroll span, three chapters and audio laws.
+
+The twelve groups in `tools/verify-sound.js` pass 460,232 checks. All 34
+independent original fixtures bind both emitted kernels, covering 70,868
+source states, 8,664 complete model checkpoints, 184,027,648 original Canvas
+channels and 56,733,600 PCM frames. The actual emitted audio owner is checked
+separately against all 34 original graphs and another 28,366,800 PCM frames.
+Noise and original typed buffers remain lossless in a deduplicated gzip pool.
+Actual native PCM uses the unchanged independently measured platform
+repeatability policy; it is not claimed universally byte-exact.
+
+Browser verification covers all supplied payloads and native geometry,
+144 native and 192 full layouts, actual drum pixels and all nine Theremin
+endpoint/midpoint pixels, physical keys/mouse/moving touch and page scrolling,
+72 ten-second stories at 60/120/240Hz, trusted activation, expired gestures,
+authored mute, actual AudioContext suspension/closure/recovery, independent
+caller/viewport holds, startup/route cleanup and 48 fresh offline exports.
+Verification redirects audio to an inaudible MediaStream and rejects speaker
+connections. Touch pads no longer trigger mouse-hover voices. Full drum labels
+remain readable at 328px; Reset correctly restores live cell alpha transfer.
+
+All six native previews pass the fit gates; Typing's exact 164×59px exception
+validates. This batch removes six tiny-text findings and six control debts.
+Global stage debt is 90 and motion debt is 45, with no new violations. The full
+fit diagnostic still exits 1 for the unfinished groups listed above.
+Registry generation and all 1,205 artifacts validate. The broad library suite
+passes 651 checks, all 399 previews and 97 offline exports. All 19 lifecycle
+and shell tests, eight CLI/MCP tests, stage runtime and sixteen fit-geometry
+boundary checks pass locally. GitHub Actions remains disabled, with no queued
+or running workflows; the previously verified $0 stop-at-limit policy is
+preserved.
+
+Timing remains open. The 48 source-bound eight-second stories in
+`docs/performance/sound-2026-11-20.json` use actual trusted audio activation,
+inaudible running contexts, interrupted holds, queued Reset and CDP traces.
+CPU1 native records 60.0fps with no slow intervals; full records 59.9–60.0fps
+with one interval above 25ms. CPU4 native records 51.5–60.0fps, 37 slow
+intervals and 17 long tasks. CPU4 full records 23.5–60.0fps, 185 slow intervals
+and 73 long tasks; its worst p95 is 133.4ms. Full Typing's desktop first paint
+is 341.2ms in that stress run. These slowdowns and all raw traces remain open
+for the final performance audit; the measurements do not pass the timing gate.
+No cause is inferred from the frame-rate variation.
 
 ## Mesh Drift, Aurora Curtains and Rain Window
 

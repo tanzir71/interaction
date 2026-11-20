@@ -1,0 +1,110 @@
+{
+  "at": "2026-11-19T00:22:14.308Z",
+  "parent": {
+    "file": "original-release.json",
+    "sha256": "3bee1b778bc414d237d0203ce289b7f7b3709e0043ce0f7daf473262c052432e"
+  },
+  "nativeEvidence": {
+    "file": "native-repeatability-proof.json",
+    "sha256": "678b54fe1e2974defd0c5ee4906e61927447a1d5a79ad1a22fa7eeb246d57d83"
+  },
+  "scope": "Only native rendered PCM uses the measured repeatability envelope. Every scalar state, synthesis program/graph, typed noise sample, drawing command and native RGBA byte remains exact. Complete PCM metadata and all float32 samples are compared; sources whose original renders repeat exactly keep zero tolerance. Original fixture bytes are unchanged.",
+  "limits": [
+    {
+      "id": "ui-sound-kit",
+      "sampleRate": 44100,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    },
+    {
+      "id": "ui-sound-kit",
+      "sampleRate": 48000,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    },
+    {
+      "id": "typing-mechanical",
+      "sampleRate": 44100,
+      "maxAbsolute": 5.960464477539063e-8,
+      "maxRMSE": 4.90834561121517e-10,
+      "nativeObservedAbsolute": 1.4901161193847656e-8,
+      "nativeObservedRMSE": 1.2270864028037925e-10
+    },
+    {
+      "id": "typing-mechanical",
+      "sampleRate": 48000,
+      "maxAbsolute": 5.960464477539063e-8,
+      "maxRMSE": 5.126877215111363e-10,
+      "nativeObservedAbsolute": 1.4901161193847656e-8,
+      "nativeObservedRMSE": 1.2817193037778409e-10
+    },
+    {
+      "id": "theremin-pad",
+      "sampleRate": 44100,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    },
+    {
+      "id": "theremin-pad",
+      "sampleRate": 48000,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    },
+    {
+      "id": "notification-chime-stack",
+      "sampleRate": 44100,
+      "maxAbsolute": 1.7881393432617188e-7,
+      "maxRMSE": 2.8013769037451793e-9,
+      "nativeObservedAbsolute": 4.470348358154297e-8,
+      "nativeObservedRMSE": 7.003442259362948e-10
+    },
+    {
+      "id": "notification-chime-stack",
+      "sampleRate": 48000,
+      "maxAbsolute": 1.7881393432617188e-7,
+      "maxRMSE": 2.9994719201165817e-9,
+      "nativeObservedAbsolute": 4.470348358154297e-8,
+      "nativeObservedRMSE": 7.498679800291454e-10
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "sampleRate": 44100,
+      "maxAbsolute": 2.384185791015625e-7,
+      "maxRMSE": 2.7764949731199162e-9,
+      "nativeObservedAbsolute": 5.960464477539063e-8,
+      "nativeObservedRMSE": 6.941237432799791e-10
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "sampleRate": 48000,
+      "maxAbsolute": 2.384185791015625e-7,
+      "maxRMSE": 3.0717924603860746e-9,
+      "nativeObservedAbsolute": 5.960464477539063e-8,
+      "nativeObservedRMSE": 7.679481150965186e-10
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "sampleRate": 44100,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "sampleRate": 48000,
+      "maxAbsolute": 0,
+      "maxRMSE": 0,
+      "nativeObservedAbsolute": 0,
+      "nativeObservedRMSE": 0
+    }
+  ]
+}

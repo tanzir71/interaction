@@ -893,3 +893,30 @@ The default dark stage preserves the exact white reference. Light stages apply
 a black ink filter to the complete native artwork and use dark labels, while
 retaining every SVG file, alpha value and slot. The full photographic print and
 its functional pressure accent stay intact.
+
+## Sound instruments
+
+UI Sound Kit, Typing Mechanical, Theremin Pad, Notification Chime Stack,
+Drum Grid Sequencer and Scroll Pitch Drone follow v4 tiles `170:1388`,
+`170:1417`, `170:1443`, `170:1465`, `170:1490` and `170:1539`. All 58 supplied
+SVG files retain their original bytes and intrinsic painted bounds. Each
+native plane is 240×168px at (66,20) in the 372×264px reference stage.
+`tools/fixtures/sound-artwork.json` records every original payload and slot.
+
+Kit retains four 58px pads and the highlighted bell's 82px shadow export.
+Typing retains four 32px caps, their 56px shadow exports and the 140×3px rail.
+Its exact 164×59px painted union has a documented sparse-fill exception.
+The Theremin keeps its 160×148px rounded field, center axes and 12px orange
+marker with its 36px glow. Pointer input spans the complete original pitch
+and gain ranges; the moving artwork stays 9px inside the rounded corners.
+Chime retains both supplied back cards, the 200×48px front material, bell,
+rule and three level bars. Drums retains all 32 supplied 20px cells at 24px
+pitch and the 24×104px third-column still. Live alpha/color transfer changes
+the painted states without modifying the SVGs.
+
+Drone retains its exact sine SVG, 3×100px rail and 3×34px thumb. The native
+scroll camera starts and resets at 85px to preserve the reference checkpoint.
+Its full composition replaces the retired generated photograph with the
+already credited Sea source: 1600px in detail and 800px in portable exports.
+Existing photo/font files, provenance and portable asset aliases are unchanged.
+No Figma screenshot is used as product artwork.
