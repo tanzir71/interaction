@@ -22063,7 +22063,14 @@
     ],
     "tier": "free",
     "desc": "A soft-touch switch settles into a recessed cradle and changes a real focus state.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22071,18 +22078,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/neumorphic-buttons",
-    "thumb": "full",
-    "module": "js/demos.skeuo.neumorphic.js?v=47b359c642",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.neumorphic.js?v=9dec1afd1c",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/neumorphic-buttons.json?v=24fedb1639",
+    "sourcePreview": "registry/p/neumorphic-buttons.json?v=2b65092487",
     "assetRefs": {},
     "rootClass": "d-neumo",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "region"
     },
     "hint": "Pick a mode; the chosen key sinks into the surface",
     "sourceName": "Native physical interface study",
@@ -22090,7 +22102,7 @@
   },
   {
     "id": "mechanical-switch",
-    "title": "Tactile Desk Rocker",
+    "title": "Desk Rocker",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -22106,7 +22118,14 @@
     ],
     "tier": "free",
     "desc": "A deeply recessed rocker changes the desk light with a convincing two-position tilt.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22114,18 +22133,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/mechanical-switch",
-    "thumb": "full",
-    "module": "js/demos.skeuo.mechanical-switch.js?v=3c5ea6f045",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.mechanical-switch.js?v=85ed8a3234",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/mechanical-switch.json?v=8a9c34ece6",
+    "sourcePreview": "registry/p/mechanical-switch.json?v=edd546baf6",
     "assetRefs": {},
     "rootClass": "d-mech",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "region"
     },
     "hint": "The rocker clicks over; the pilot light follows",
     "sourceName": "Native physical interface study",
@@ -22176,7 +22200,7 @@
   },
   {
     "id": "brushed-metal-slider",
-    "title": "Satin Light Fader",
+    "title": "Satin Fader",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "drag",
@@ -22192,7 +22216,14 @@
     ],
     "tier": "free",
     "desc": "A finely brushed vertical fader changes the brightness of the surrounding surface.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -22200,18 +22231,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/brushed-metal-slider",
-    "thumb": "full",
-    "module": "js/demos.skeuo.brushed-slider.js?v=58ff502d3d",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.brushed-slider.js?v=d00a4cf214",
     "assetBundle": "js/demo-assets.js?v=c0448c0a93",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/brushed-metal-slider.json?v=15dffee258",
+    "sourcePreview": "registry/p/brushed-metal-slider.json?v=018ed0e977",
     "assetRefs": {},
     "rootClass": "d-metal-slide",
-    "controls": [],
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "hint": "Slide the fader; light level follows",
     "sourceName": "Native physical interface study",

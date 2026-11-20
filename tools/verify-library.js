@@ -53,12 +53,13 @@ const {demos}=require('./load-registry')();
    if(d.source)check(await page.locator('.source-link').count()===1,id+' source credit');
    check(await page.locator('.detail-stage').evaluate(s=>Math.abs(s._root.getBoundingClientRect().height-s._root.offsetHeight*s._ctx.scale)<2),id+' declared geometry');
    await page.getByRole('tab',{name:'Single file',exact:true}).click();await page.locator('#copy-source').click();await page.waitForFunction(()=>document.querySelector('#copy-source')?.textContent.includes('Copied'));
-   const code=await page.evaluate(()=>navigator.clipboard.readText());check(code.startsWith('<!DOCTYPE html>'),id+' copied document');check(!code.includes('{{asset:'),id+' resolved assets');
+   // Match concrete asset names; a portable resolver may retain its generic template helper.
+   const code=await page.evaluate(()=>navigator.clipboard.readText());check(code.startsWith('<!DOCTYPE html>'),id+' copied document');check(!/\{\{asset:[\w-]+\}\}/.test(code),id+' resolved assets');
    if(d.cat==='DRAMS')check(code.includes('DRAMS by 1042 Studio')&&!/<iframe/i.test(code),id+' native source attribution');
    exports.push({id,rootClass:d.rootClass,code});
   }
   const standalone=await context.newPage(),exportErrors=[];standalone.on('pageerror',e=>exportErrors.push(e.message));await standalone.route('**/*',route=>route.abort());
-  for(const item of exports){await standalone.goto('about:blank');await standalone.setContent(item.code);await standalone.evaluate(()=>document.fonts.ready);await standalone.waitForTimeout(40);check(await standalone.locator('.'+item.rootClass).count()===1,item.id+' offline root');check(await standalone.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)),item.id+' offline images');}
+  for(const item of exports){await standalone.goto('about:blank');await standalone.setContent(item.code);await standalone.evaluate(()=>document.fonts.ready);await standalone.waitForTimeout(40);check(await standalone.locator('.demo-stage').evaluate((stage,C)=>{const roots=[...stage.querySelectorAll('.'+C)].filter(root=>!root.parentElement.closest('.'+C));return roots.length===1&&stage._root===roots[0]&&stage.dataset.bootError!=='true';},item.rootClass),item.id+' offline root');check(await standalone.locator('img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)),item.id+' offline images');}
   check(!exportErrors.length,'Offline export errors: '+exportErrors.join(';'));await standalone.close();console.log('PASS: '+exports.length+' offline exports');
   await open('showcase-circular-gallery');await page.getByRole('button',{name:'Next artwork'}).click();check(await page.locator('.detail-stage [data-index="1"]').count()===1,'Gallery next');
   await open('showcase-elastic-slider');await page.getByRole('slider',{name:'Volume'}).fill('90');check(await page.locator('.detail-stage output').textContent()==='90','Native slider');

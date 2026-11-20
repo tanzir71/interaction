@@ -1289,3 +1289,22 @@ Visual remediation reaches 307/399. Another 92 existing demos (20 Skeuomorph
 and 72 Collections) and all 121 new/extension components remain, alongside
 Pro seams and the final audits. The objective remains active. Verification
 runs locally; direct commits/pushes preserve disabled Actions and the $0 limit.
+
+## Skeuomorph controls — 20 Nov 2026
+
+Soft Focus Switch, Desk Rocker and Satin Fader now have exact native v4
+previews from nine unchanged SVGs, with complete original full interactions.
+The eleven focused groups pass 31,517 checks across original fixtures,
+168 layouts, independent 60/120/240Hz motion, actual input and touch scrolling,
+painted pixels, independent holds, cleanup and 24 fresh offline exports.
+Focus and Rocker retain their exact sparse geometry through written fill
+exceptions. Native defaults are on/on/60; full keeps off/off/72. Glyph raster
+fringes and the CPU4 timing findings remain documented for the final audit.
+
+Visual remediation reaches 310/399. Another 89 existing demos (17 Skeuomorph
+and 72 Collections) and all 121 new/extension components remain, alongside
+Pro seams and final audits. The global fit diagnostic records three overflow,
+zero horizontal-scroll, 34 tiny-text and 33 low-fill findings; all 93 exceptions
+validate. Stage debt is 87 and motion debt is 43. See
+`docs/remediation-progress.md` for verification and timing scope. Verification
+runs locally; direct commits/pushes preserve disabled Actions and the $0 limit.

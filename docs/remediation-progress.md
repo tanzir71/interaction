@@ -1,21 +1,91 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 307 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 310 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos and all six Sound demos.
-The remaining work includes 92 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and three Skeuomorph controls.
+The remaining work includes 89 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the three retired generated photo keys in 3 remaining demos.
-None of the 307 remediated native compositions retains those references.
+None of the 310 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 307 native compositions. The unfinished groups still account for
-5 overflow findings, zero horizontal-scroll findings, 37 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 91 documented
+among these 310 native compositions. The unfinished groups still account for
+3 overflow findings, zero horizontal-scroll findings, 34 tiny-text findings and
+33 low-fill findings; findings can overlap within a demo. All 93 documented
 Figma fill exceptions validate.
+
+## Three Skeuomorph controls
+
+Soft Focus Switch, Desk Rocker and Satin Fader now follow tiles `170:1558`,
+`170:1584` and `170:1635`. Each native plane is 240×168px at (66,20) in the
+372×264px reference stage; complete original interactions and copy remain in
+400×480px full compositions. All nine supplied SVGs retain their exact bytes
+and intrinsic painted dimensions. The 323 unrelated modules, 396 unrelated
+metadata/catalog records, 116 prior private source files and eleven frozen
+reference releases remain unchanged. Existing photo/font payloads, provenance
+and portable aliases are unchanged. These three controls construct no audio.
+
+Focus retains three 44px transport keys and the supplied 16px icons. Native
+Pause and Restore select the original notifications-paused state; Play resumes.
+Its 80ms press and 250ms release preserve interrupted poses. Rocker retains
+its 60×84px housing, two 48×36px plates, tight original I/O glyphs and 8px pilot.
+Its 350ms toggle has the specified 55% overshoot and 80% settle, with 150ms
+material/pilot fades. Retargeting preserves visible layers while old ghosts
+retire. Both native switches start on as authored; full retains the original
+off defaults. Exact sparse geometry is documented in the two fill exceptions;
+overflow, horizontal-scroll and typography gates still apply.
+
+Fader retains its 200×6px track, 120×6px initial fill and original 32×38px thumb
+with its 56×62px shadow export. Native starts/resets at 60; full keeps 72,
+the original integer range, 165px vertical travel and brightness law. Actual
+pointer motion follows directly; release velocity drives the mass 1, stiffness
+380, damping 32 spring without changing the source value. Native vertical
+touch pans the page. Reduced motion uses 150ms opacity feedback and direct
+positions. Shared shell actions own Toggle and Reset.
+
+The eleven groups in `tools/verify-skeuo-controls.js` pass 31,517 checks.
+Twenty-four emitted-kernel bindings cover all twelve unchanged original runs,
+5,064 state samples and 712 complete DOM/model checkpoints. Verification
+includes 168 native/full layouts, 36 motion stories at 60/120/240Hz, independent
+RK4 spring samples, interrupted reversals, actual keys/mouse/moving touch,
+native form behavior, independent caller/viewport holds, controlled document
+visibility, early cleanup, cold routes, LiveTiles and 24 fresh network-blocked
+exports. Controlled visibility signals are not an OS visibility measurement.
+
+All Fader pixels across four values, DPR1/2 and normal/reduced motion cover
+4,435,200 channels with maximum difference 2 from original SVG composites.
+Glyph/icon/pilot colors are checked at peak alpha coverage; weaker raster
+fringes are measured separately, with maximum RGB difference 18. Original
+payloads and effective geometry have independent checks. Glyph fringes are
+not claimed byte-exact, and reference PNGs are verification data only.
+
+All three previews pass the fit gates. This batch removes two overflow
+findings, three tiny-text findings and three chrome/control debts. Stage debt
+is 87 and motion debt is 43, with no new violations. Registry generation
+validates all 1,205 artifacts. The library suite passes 651 checks, all 399
+previews and 97 offline exports. Stage runtime, all nineteen lifecycle/shell
+tests, eight CLI/MCP tests and sixteen fit-geometry checks pass locally.
+The broad fit diagnostic still exits 1 for the unfinished groups above.
+Its asset check now detects concrete tokens, allowing the kernel's literal
+template helper while still rejecting unresolved named assets. Export checks
+require one mounted outer root and permit nested material hosts with its class.
+
+The 24 isolated eight-second stories in
+`docs/performance/skeuo-controls-2026-11-20.json` record source hashes and CDP
+traces for native/full, desktop DPR1 and mobile DPR2 on CPU1/4. CPU1 holds
+60fps without slow intervals or long tasks. CPU4 native records 57.4–60.0fps,
+sixteen intervals above 25ms and three long tasks; full records 58.0–59.9fps,
+twenty-one slow intervals and five long tasks. Two native and one full first
+paints exceed 300ms, with maxima 332.7ms and 314.1ms. These findings and all
+earlier timing tails remain open; measurement does not pass the final timing
+gate. No cause is inferred from the frame-rate variation.
+
+Seventeen Skeuomorph demos and all seventy-two Collections remain before the
+121 new/extensions, Pro seams and final audits. Direct commits/pushes preserve
+disabled GitHub Actions and the previously verified $0 stop-at-limit policy.
 
 ## Six Sound instruments
 

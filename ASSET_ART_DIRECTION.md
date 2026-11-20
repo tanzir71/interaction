@@ -920,3 +920,27 @@ Its full composition replaces the retired generated photograph with the
 already credited Sea source: 1600px in detail and 800px in portable exports.
 Existing photo/font files, provenance and portable asset aliases are unchanged.
 No Figma screenshot is used as product artwork.
+
+## Skeuomorph controls
+
+Soft Focus Switch, Desk Rocker and Satin Fader follow tiles `170:1558`,
+`170:1584` and `170:1635`. Their 240×168px native planes sit at (66,20) in the
+372×264px reference stage. `tools/fixtures/skeuo-controls-artwork.json` binds
+all nine unchanged SVG payloads, exact slots, parent materials and palette.
+Figma Dock groups belong to the shared shell and are excluded from demo art.
+
+Focus keeps three 44×44px keys at (116,82), (168,82) and (220,82), with their
+original 16px transport icons. Their logical union is 148×44px and captured
+shadow union 172×68px. Rocker keeps its 60×84px housing at (156,62), two
+48×36px plates and original 8px pilot at (182,160), including its 24px glow.
+The tight I/O SVG roots remain 2×11px and 10×11px at their original fractional
+paint origins. Both sparse controls have written fill exceptions; no other
+fit gate is exempt. RGB transfer changes live state without editing source
+paths or alpha.
+
+Fader keeps its 200×6px track at (86,100), 120×6px fill and 32×38px thumb at
+(190,84). The complete thumb shadow export remains 56×62px at (178,80),
+including all three grooves. Full views retain their complete original
+400×480px compositions. Existing photos, fonts, provenance and portable
+asset aliases are unchanged. Reference PNG samples are verification data;
+no Figma screenshot is product artwork.

@@ -909,6 +909,26 @@
         164,
         59
       ]
+    },
+    "neumorphic-buttons": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 geometry. Three 44×44px keys at (116,82), (168,82), (220,82) form a 148×44px logical union. Their captured shadows have a 172×68px painted union, about 11.9% of the 372×264px reference stage. Preserve the supplied 16px transport icons and original full focus switch. Only low fill is exempt; overflow, scroll and typography gates remain.",
+      "figmaNode": "170:1558",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=170-1558",
+      "selector": ".d-neumo-native-keys",
+      "designSize": [
+        148,
+        44
+      ]
+    },
+    "mechanical-switch": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 geometry. The housing is 60×84px at (156,62); its two 48×36px plates, original I/O legends and 8px pilot at (182,160) remain exact. Housing shadow plus the 24×24px pilot glow have an 84×118px painted union, about 10.1% of the 372×264px reference. Preserve complete original full rocker behavior. Only low fill is exempt; overflow, scroll and typography gates remain.",
+      "figmaNode": "170:1584",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=170-1584",
+      "selector": ".d-mech-native-rocker",
+      "designSize": [
+        60,
+        84
+      ]
     }
   }
 }

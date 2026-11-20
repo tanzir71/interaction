@@ -599,3 +599,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with `node tools/profile-sound.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`. Each story first activates a
   real context through trusted input. Measurements leave final timing gates open.
+- `node tools/verify-skeuo-controls.js http://127.0.0.1:4173` covers v4
+  Soft Focus Switch, Desk Rocker and Satin Fader: nine unchanged original SVGs,
+  twelve complete original fixtures, exact native materials and full behavior.
+  It checks actual pixels, 168 layouts, native forms, keys/mouse/moving touch
+  and scrolling, independent spring/toggle samples at 60/120/240Hz, interrupted
+  retargeting, queued intent, independent holds, cleanup, cold routes, LiveTiles
+  and 24 fresh offline exports. Native defaults are on/on/60; full retains
+  off/off/72. The shell owns Toggle/Reset. Focus and Rocker have written sparse
+  fill exceptions. Glyph antialiasing fringes are measured separately from peak
+  color coverage; do not claim byte-exact fringes. These controls create no audio.
+  Record isolated timing with `node tools/profile-skeuo-controls.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain findings for the final audit.

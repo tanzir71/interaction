@@ -11427,17 +11427,25 @@ INTRX.meta({
     ]
   },
   "neumorphic-buttons": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11445,21 +11453,33 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "mechanical-switch": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11467,8 +11487,12 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "rotary-knob": {
     "designSize": "sm",
@@ -11493,17 +11517,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "brushed-metal-slider": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      480
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "useCases": [
       "physical",
@@ -11511,8 +11543,12 @@ INTRX.meta({
       "accessible"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "paper-stack-cards": {
     "designSize": "sm",
