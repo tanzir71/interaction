@@ -21108,7 +21108,14 @@
     ],
     "tier": "free",
     "desc": "Every image column owns a stable Rec.709 brightness ordering. Hover bends the row-sampling map toward dark-to-bright vertical streams, while leave reverses to the byte-exact source without cross-fading colors.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -21116,16 +21123,26 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/pixel-sort",
-    "thumb": "full",
-    "module": "js/demos.raster.pixel-sort.js?v=b663fc1255",
+    "thumb": "hero",
+    "module": "js/demos.raster.pixel-sort.js?v=e3278e0ff8",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/pixel-sort.json?v=f2d62bc590",
+    "sourcePreview": "registry/p/pixel-sort.json?v=72e20b4e4a",
     "assetRefs": {
-      "atlantic-shore": "assets/images/atlantic-shore.webp"
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-embers": "assets/images/embers-800.webp"
     },
-    "rootClass": "d-psort",
-    "controls": [],
+    "rootClass": "d-image-sort-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Lock sorted"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -21133,7 +21150,35 @@
     },
     "hint": "Columns sort into streaks below the horizon",
     "sourceName": "Seen on: generative-art portfolios, experimental fashion, music and digital-culture sites",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "embers",
+        "asset": "photo-embers",
+        "photoId": "5w2hjEJ06b0",
+        "imageId": "photo-1762202742459-4fcdc4beaab4",
+        "photographer": "Alican Leblebici",
+        "url": "https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-embers": "assets/images/embers.webp"
+    }
   },
   {
     "id": "noise-grain-overlay",
@@ -21198,7 +21243,14 @@
     ],
     "tier": "free",
     "desc": "Two independently sampled images exchange whole six-pixel tiles through a generated 8×8 Bayer threshold field. Click position leads the ordered front while near-threshold cells briefly contract into a crisp mosaic lattice.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      432
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -21206,17 +21258,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/threshold-mosaic-transition",
-    "thumb": "full",
-    "module": "js/demos.raster.mosaic.js?v=81de97038a",
+    "thumb": "hero",
+    "module": "js/demos.raster.mosaic.js?v=f5b12ff831",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/threshold-mosaic-transition.json?v=39413e5baa",
+    "sourcePreview": "registry/p/threshold-mosaic-transition.json?v=e23015b492",
     "assetRefs": {
-      "limestone-pavilion": "assets/images/limestone-pavilion.webp",
-      "atlantic-shore": "assets/images/atlantic-shore.webp"
+      "photo-archGrid": "assets/images/archGrid-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-dusk": "assets/images/dusk-800.webp"
     },
-    "rootClass": "d-mosaic",
-    "controls": [],
+    "rootClass": "d-image-mosaic-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Switch to B"
+      },
+      {
+        "action": "restore",
+        "label": "Restore A"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -21224,7 +21286,47 @@
     },
     "hint": "Tiles flip from one image to the next",
     "sourceName": "Seen on: image-led studios, fashion portfolios, campaign transitions and art-direction showcases",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "archGrid",
+        "asset": "photo-archGrid",
+        "photoId": "MPWbGMrZ6eo",
+        "imageId": "photo-1504625709867-b4e45e3bb9dd",
+        "photographer": "Christophe Laurenceau",
+        "url": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "dusk",
+        "asset": "photo-dusk",
+        "photoId": "JgOeRuGD_Y4",
+        "imageId": "photo-1477346611705-65d1883cee1e",
+        "photographer": "JOHN TOWNER",
+        "url": "https://unsplash.com/photos/aerial-photo-of-brown-moutains-JgOeRuGD_Y4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-archGrid": "assets/images/archGrid.webp",
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-dusk": "assets/images/dusk.webp"
+    }
   },
   {
     "id": "bitmap-font-marquee",
@@ -21287,7 +21389,14 @@
     ],
     "tier": "free",
     "desc": "Two adjacent-time broadcast buffers are woven one row at a time and swap parity on a measured field cadence. Hover raises restrained field flicker and subpixel line jitter while reduced motion keeps a static interlaced composite.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -21295,16 +21404,26 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/interlace-flicker",
-    "thumb": "full",
-    "module": "js/demos.raster.interlace.js?v=4bac64f6b5",
+    "thumb": "hero",
+    "module": "js/demos.raster.interlace.js?v=b45e831a83",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/interlace-flicker.json?v=60daab0bdd",
+    "sourcePreview": "registry/p/interlace-flicker.json?v=4f9c558a17",
     "assetRefs": {
-      "limestone-pavilion": "assets/images/limestone-pavilion.webp"
+      "photo-archGrid": "assets/images/archGrid-800.webp",
+      "photo-forestBlue": "assets/images/forestBlue-800.webp"
     },
-    "rootClass": "d-interlace",
-    "controls": [],
+    "rootClass": "d-image-field-v4",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Lock high field"
+      },
+      {
+        "action": "restore",
+        "label": "Restore field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -21312,7 +21431,35 @@
     },
     "hint": "Alternate fields flicker as intensity rises",
     "sourceName": "Seen on: broadcast graphics, video archives, motion portfolios and analog-media projects",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "archGrid",
+        "asset": "photo-archGrid",
+        "photoId": "MPWbGMrZ6eo",
+        "imageId": "photo-1504625709867-b4e45e3bb9dd",
+        "photographer": "Christophe Laurenceau",
+        "url": "https://unsplash.com/photos/architectural-photo-of-building-MPWbGMrZ6eo",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "forestBlue",
+        "asset": "photo-forestBlue",
+        "photoId": "2aSpCOPNyO0",
+        "imageId": "photo-1630695230041-8909e3204778",
+        "photographer": "Taylor Wright",
+        "url": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-archGrid": "assets/images/archGrid.webp",
+      "photo-forestBlue": "assets/images/forestBlue.webp"
+    }
   },
   {
     "id": "posterize-hover",
@@ -21332,7 +21479,14 @@
     ],
     "tier": "free",
     "desc": "A measured cursor lens collapses each RGB channel to an exact two- or three-level palette in its core. Full source bytes remain untouched outside, with only a narrow smooth annulus bridging the color-depth boundary.",
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -21340,16 +21494,30 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/posterize-hover",
-    "thumb": "full",
-    "module": "js/demos.raster.posterize.js?v=23d108c855",
+    "thumb": "hero",
+    "module": "js/demos.raster.posterize.js?v=684f110a5b",
     "assetBundle": "js/demo-assets.js?v=dd35f8196e",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/posterize-hover.json?v=90e0bda310",
+    "sourcePreview": "registry/p/posterize-hover.json?v=52f5080378",
     "assetRefs": {
-      "coastal-stack": "assets/images/coastal-stack.webp"
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-silk": "assets/images/silk-800.webp"
     },
-    "rootClass": "d-poster",
-    "controls": [],
+    "rootClass": "d-image-poster-v4",
+    "controls": [
+      {
+        "action": "levels",
+        "label": "Use 2 levels"
+      },
+      {
+        "action": "toggle",
+        "label": "Pin lens"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -21357,7 +21525,35 @@
     },
     "hint": "The lens crushes colour into a few flat levels",
     "sourceName": "Seen on: image experiments, digital fashion, creative-development and photography portfolios",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "silk",
+        "asset": "photo-silk",
+        "photoId": "JTKKRK05NAM",
+        "imageId": "photo-1638376776402-9a4b75fe21bb",
+        "photographer": "Milad Fakurian",
+        "url": "https://unsplash.com/photos/a-black-and-white-abstract-background-with-wavy-lines-JTKKRK05NAM",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-silk": "assets/images/silk.webp"
+    }
   },
   {
     "id": "chromatic-type",

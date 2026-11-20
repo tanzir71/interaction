@@ -1,0 +1,4141 @@
+{
+  "recordedAt": "2026-11-20T00:21:31.492Z",
+  "localDate": "2026-11-20",
+  "timeZone": "Asia/Dhaka",
+  "cases": 32,
+  "timingGatePassed": false,
+  "sourceHashes": {
+    "js/demos.raster.pixel-sort.js": "e3278e0ff8eb0db0f19fc2c9d604aa5f77462023a2df5cbfae6466f47f616dba",
+    "js/demos.raster.mosaic.js": "f5b12ff831d1644e5d10251f7e23634f30a378d1a0116ec40bfd11ab1553904b",
+    "js/demos.raster.interlace.js": "b45e831a83ded6198dd4ff70649d6aa74fdfa4e0c3870ec7a61205dbbe364c59",
+    "js/demos.raster.posterize.js": "684f110a5b3dc5cadcdb9da2992c1e896c0aee3a48f893b4d9ba5cd973009348",
+    "tools/fixtures/raster-processing-artwork.json": "3723ad39b5cab896d2dab3836164a77cdefd4464ae23ef5402440dfd68b98e8e",
+    "tools/fixtures/raster-processing-original-models.json": "b248fa83db259edecfb10382ccdda420d25d362966b1b42bbaf58e054f2b88af",
+    "tools/verification/raster-processing-harness.js": "c47d104892a3455874639b58491aab8f5119a6b99c26f0e7d3f4a803ed2f0c6f",
+    "tools/verification/raster-processing-original.js": "057c04f207a95ad63d994eaa7f2880db539143061aedf5db4194322ac9c1af23",
+    "tools/verification/raster-processing-normalizer.js": "4dda6c8f04a80ef07c70b2eff071dea3ee3572fe7c70968b36384bfad132f7a3",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "0e519a566a61053ecac480dc455c83cfd44ceebb530e2f3e8b87bb65877435ad",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "registry/index.json": "00d44a6363df994af43d65881052408ca11c51948b37f487aa000d9b2aa2ded1",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-raster-processing.js": "2fa8e19a606c173be1d82ed7190cd299f1f9457f3febe470e352de45464efb4b",
+    "assets/components/raster-processing/169-2657.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2658.svg": "2068e0b1f72c098a3582ddd6367a96a90958739c0c651fe6e3b10d089e8cfb5a",
+    "assets/components/raster-processing/169-2659.svg": "67ee3c052b5536cad343580f4bfd69ca3cb7f589ed276a6605e9f384c633dcd4",
+    "assets/components/raster-processing/169-2660.svg": "263cbd7f91250d9e50460c23889ff1c1f252771c52f7cc5ea0c922e0f87dd84b",
+    "assets/components/raster-processing/169-2661.svg": "75891e7a94844330afecd464de6bd34f5428f9ac653f52530cd6a590f057551a",
+    "assets/components/raster-processing/169-2662.svg": "5cc8b81f6be1b812777c0ef0c15a92efe5d7c4436a72ccaee3eeca9e56138719",
+    "assets/components/raster-processing/169-2663.svg": "9b0fa086a3b7a0dc33ca4431be31978efa5096b7740ae4a7e2ff9cb1b11a3b76",
+    "assets/components/raster-processing/169-2664.svg": "ae0ad02491213b885998b1397ac687395881483662582c0b8974af029d745d13",
+    "assets/components/raster-processing/169-2665.svg": "9c4670fec882af90cbbdd4fcf5ba043c515225fb2aaa0195ddfc140442fb2eac",
+    "assets/components/raster-processing/169-2666.svg": "450c0ec74e5c7faac22653150ce06cf25a9f40833d34064cf7a701d288ecf834",
+    "assets/components/raster-processing/169-2667.svg": "d422a3c93e238fad939cffd1ece1b0b1a0e614848b8227211afcbfba32d78dbb",
+    "assets/components/raster-processing/169-2668.svg": "97e5c8c91845ac88f5e74a67a399e4fbb4d0a93435924b752f387d2cdf1e06a2",
+    "assets/components/raster-processing/169-2669.svg": "d8139b20dbf2d07a3f218c678f4505f392125ddb946bbe2b5de03780317953ba",
+    "assets/components/raster-processing/169-2670.svg": "9376a97b00e77c6c030de0136b585982eb0858e08564e88cc8dd2f7da2f2ce72",
+    "assets/components/raster-processing/169-2671.svg": "05f9ba56296fa1831791aaa97d2bcde9028966dee42a92fa3f0fbc4e229b3c51",
+    "assets/components/raster-processing/169-2672.svg": "e5fe5f190f9f11b0a5bbcb7aed82e3215fb313af93598233780f5ae7642503db",
+    "assets/components/raster-processing/169-2673.svg": "a42f1f32120ea2e121d6d4ccd44d162b9bf07516b975d115969a03ba9d7ff4b8",
+    "assets/components/raster-processing/169-2674.svg": "4dda8b03c289a05fe725c036faa71251aefa5c2060a3ce3e729d1eb9f3568aac",
+    "assets/components/raster-processing/169-2675.svg": "fdb3c720fa6a255457cc2549352a37108f92a2e56c447b585d57fa146c7f2103",
+    "assets/components/raster-processing/169-2676.svg": "d18d1458c6b9a50bc8cf8559a087f4881370e5cd201a57f3f0956f1b9370f919",
+    "assets/components/raster-processing/169-2677.svg": "7effac7fa00305c2278532dc3dceb12ba701e40162ed807d4544d7f5495403d0",
+    "assets/components/raster-processing/169-2678.svg": "76c8ca039d5bb8ad0a9dc8084dc8ea0814ce0a747c91b9403af323f81f46a184",
+    "assets/components/raster-processing/169-2679.svg": "61e612754bbc4dc5f16e59836a2b80e6565c4afe708dde5964114507eff9940d",
+    "assets/components/raster-processing/169-2680.svg": "9dc51418e5fbde9a980fb5f6dd4478a8435fe56b6da25352b43eee06dd3270df",
+    "assets/components/raster-processing/169-2681.svg": "a0820c0961009634e12eefd6fed7dbac3fc2a9c1adfc7f44329ea4b3515a151c",
+    "assets/components/raster-processing/169-2682.svg": "15316fb0e426f3ed340032a7c1caa255a1490f185ff5680e10ce6830f4b1ef4c",
+    "assets/components/raster-processing/169-2956.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2957.svg": "b7f4c2219707105e9204b63879c7b980d7b3847266a2d57a39c78931fa8fb7c7",
+    "assets/components/raster-processing/169-2958.svg": "b014c4639e099c5a3ee23b139639beb6e2618c949f8980dff667b24a199232ac",
+    "assets/components/raster-processing/169-2959.svg": "dd314d7875a8d8000ca26040f9599a70c518f178ef6b12aa25e1d96cda1f2df4",
+    "assets/components/raster-processing/169-2899.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2900.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2901.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2902.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2903.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2904.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2905.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2906.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2907.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2908.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2909.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2910.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2911.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2912.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2913.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2914.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2915.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2916.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2917.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2918.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2919.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2920.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2921.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2922.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2923.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2924.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2925.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2926.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2927.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2928.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2929.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2930.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2931.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2932.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2933.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2934.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2935.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2936.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2937.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/images/ocean.webp": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb",
+    "assets/images/ocean-800.webp": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9",
+    "assets/images/embers.webp": "a8064cff488aa1732bf6c790f0274ff2f2aa57bfb67508d77da69465002e06ad",
+    "assets/images/embers-800.webp": "a84a40b35819166ce98421c1cecd13118698fec6fe116f7f9cec6eec8517651e",
+    "assets/images/archGrid.webp": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f",
+    "assets/images/archGrid-800.webp": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde",
+    "assets/images/dusk.webp": "81eb61fc306d41b4b18fbf9f3527f007948db0d30bd5e155339724aa285df576",
+    "assets/images/dusk-800.webp": "98df3def7d6cae157b8a98510469cb2eb039b02beee9d1fcccdd2355dd1fefe9",
+    "assets/images/forestBlue.webp": "edb6aa5fc94ca1fba67d8050de39d03034bed500313f15f855286b2b12eff961",
+    "assets/images/forestBlue-800.webp": "1061619b273f696f81d6f6267e6bedcc954515209b56ea5faaaf30e608f97d9e",
+    "assets/images/silk.webp": "a63845b54d3a11791af6f4da979a3d32e1ac25c6ecce87e1163e4b355837eb66",
+    "assets/images/silk-800.webp": "a5991b9c970ea08cd0fbd58d8b4f2a90121e9e4203c09bae46717f4da1e37bb0",
+    "assets/images/atlantic-shore.webp": "2c5f2bb09430f7f034361edbf35d353faece6b6644dbba20fdcf2e37651252c9",
+    "assets/images/limestone-pavilion.webp": "725ec11fb11897600b5ad908e3bcb566ceae646bf29316f4b72607f9d72b9fb8",
+    "assets/images/coastal-stack.webp": "7b80eff846a8a21b5a2fdeba9f3d5dd960a4384bb8268195f8b6d09be35a586d"
+  },
+  "sourceReports": [
+    {
+      "file": ".artifacts/raster-processing/performance-cpu1-1795133750515.json",
+      "sha256": "7366948ae8cccddcd52cd96c47dcc9d51274f0184e430ef007ad8cf3beb3abf2"
+    },
+    {
+      "file": ".artifacts/raster-processing/performance-cpu4-1795133929671.json",
+      "sha256": "a81b6916a84ed53ada9e7869b737120c8da381a743b9c760de8275ed756e8acd"
+    }
+  ],
+  "summary": [
+    {
+      "cpu": 1,
+      "mode": "thumb",
+      "cases": 8,
+      "fps": [
+        60.002250084378154,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        19.30000000447035,
+        45.899999998509884
+      ],
+      "readinessMS": [
+        37.29999999701977,
+        74.5
+      ],
+      "maxP95MS": 16.799999999999727,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 1,
+      "mode": "full",
+      "cases": 8,
+      "fps": [
+        60.00225008437816,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        20,
+        29.100000001490116
+      ],
+      "readinessMS": [
+        42.80000000447035,
+        96.60000000149012
+      ],
+      "maxP95MS": 16.799999999999727,
+      "slowCases": 0,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "thumb",
+      "cases": 8,
+      "fps": [
+        57.38236614939374,
+        60.00300015000751
+      ],
+      "firstPaintMS": [
+        22.099999994039536,
+        185
+      ],
+      "readinessMS": [
+        160,
+        307.3999999985099
+      ],
+      "maxP95MS": 16.800000000000182,
+      "slowCases": 4,
+      "slowIntervals": 37,
+      "longTasks": 2,
+      "firstPaintOver300MS": 0
+    },
+    {
+      "cpu": 4,
+      "mode": "full",
+      "cases": 8,
+      "fps": [
+        37.376401615060566,
+        60.00274440826816
+      ],
+      "firstPaintMS": [
+        99.39999999850988,
+        204.20000000298023
+      ],
+      "readinessMS": [
+        221.39999999850988,
+        657.2000000029802
+      ],
+      "maxP95MS": 83.19999999999993,
+      "slowCases": 5,
+      "slowIntervals": 290,
+      "longTasks": 46,
+      "firstPaintOver300MS": 0
+    }
+  ],
+  "results": [
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 61.400000005960464,
+        "firstPaint": 40.70000000298023
+      },
+      "motion": {
+        "duration": 8001,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 200.60000000149012
+          },
+          {
+            "name": "input",
+            "at": 400.6000000014901
+          },
+          {
+            "name": "release",
+            "at": 1800.5000000014902
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.50000000149
+          },
+          {
+            "name": "settle",
+            "at": 3600.50000000149
+          },
+          {
+            "name": "leave",
+            "at": 5000.50000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "focusX": 0.5147451401220919,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5016.666666666669
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-thumb-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "c2580db2910ff12da02329563974196c582f8113adfae9cec47f5e9c4cc58d9b",
+        "events": 24076
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 64.40000000596046,
+        "firstPaint": 19.30000000447035
+      },
+      "motion": {
+        "duration": 8012.89999999851,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.70000000298023
+          },
+          {
+            "name": "input",
+            "at": 412.70000000298023
+          },
+          {
+            "name": "release",
+            "at": 1812.6000000029803
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.6000000029803
+          },
+          {
+            "name": "settle",
+            "at": 3612.5000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5012.40000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-thumb-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "2e3c2b0fd8d98ec33f870f3699e37eb91a5e37d91f644db5646a00e62ef8df94",
+        "events": 17707
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 51.69999999552965,
+        "firstPaint": 29
+      },
+      "motion": {
+        "duration": 8013.89999999851,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.1000000029802
+          },
+          {
+            "name": "input",
+            "at": 413.1000000029802
+          },
+          {
+            "name": "release",
+            "at": 1813.0000000029802
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.0000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3613.0000000029804
+          },
+          {
+            "name": "leave",
+            "at": 5012.90000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "parity": 1,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-thumb-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "66b7edd1a598f2dd540c8cab5fba374cc8b0889f53268c121738c8145150d9ee",
+        "events": 18522
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 37.29999999701977,
+        "firstPaint": 29.599999994039536
+      },
+      "motion": {
+        "duration": 8011.5,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.29999999552967
+          },
+          {
+            "name": "input",
+            "at": 411.2999999955297
+          },
+          {
+            "name": "release",
+            "at": 1811.2999999955296
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.2999999955296
+          },
+          {
+            "name": "settle",
+            "at": 3611.1999999955297
+          },
+          {
+            "name": "leave",
+            "at": 5011.099999995529
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "levels": 2,
+          "target": {
+            "x": 0.5104737374670616,
+            "y": 0.39945902623884716
+          },
+          "current": {
+            "x": 0.5104737374670618,
+            "y": 0.39945902623884727
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-thumb-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "d25e04963c0ebe9d825840571085f0c934de1297d8486e30423dfbf78006e929",
+        "events": 25121
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 74.5,
+        "firstPaint": 45.899999998509884
+      },
+      "motion": {
+        "duration": 8004.19999999553,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 203.59999999701978
+          },
+          {
+            "name": "input",
+            "at": 403.5999999970197
+          },
+          {
+            "name": "release",
+            "at": 1803.4999999970198
+          },
+          {
+            "name": "interrupt",
+            "at": 2403.4999999970196
+          },
+          {
+            "name": "settle",
+            "at": 3603.4999999970196
+          },
+          {
+            "name": "leave",
+            "at": 5003.39999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "focusX": 0.513548147623651,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5016.666666666669
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-thumb-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "d07b23cfe693f95db2ae5c2ffb84f20a62e6c4dbbc9c70a0eca482d91419ec20",
+        "events": 24127
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 68,
+        "firstPaint": 35
+      },
+      "motion": {
+        "duration": 8013.5,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.89999999850988
+          },
+          {
+            "name": "input",
+            "at": 412.8999999985099
+          },
+          {
+            "name": "release",
+            "at": 1812.79999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.79999999851
+          },
+          {
+            "name": "settle",
+            "at": 3612.69999999851
+          },
+          {
+            "name": "leave",
+            "at": 5012.59999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-thumb-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "c1942f8e5965c06f18fe64f067c89b39ef4c04a6554bafe39668139321118418",
+        "events": 17647
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 57.399999998509884,
+        "firstPaint": 25.700000002980232
+      },
+      "motion": {
+        "duration": 8012.5,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 210.90000000447037
+          },
+          {
+            "name": "input",
+            "at": 410.90000000447037
+          },
+          {
+            "name": "release",
+            "at": 1810.8000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2410.9000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3610.8000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5010.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "parity": 1,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-thumb-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "59b38398ddcca0710c326e8bd6e352645046e967d07637aae53af15bad6337c1",
+        "events": 18570
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 48.29999999701977,
+        "firstPaint": 29.799999997019768
+      },
+      "motion": {
+        "duration": 8015.19999999553,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.3999999970198
+          },
+          {
+            "name": "input",
+            "at": 413.3999999970198
+          },
+          {
+            "name": "release",
+            "at": 1813.2999999970198
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.19999999702
+          },
+          {
+            "name": "settle",
+            "at": 3613.19999999702
+          },
+          {
+            "name": "leave",
+            "at": 5013.199999997019
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "levels": 2,
+          "target": {
+            "x": 0.5096747535520003,
+            "y": 0.39912718461233565
+          },
+          "current": {
+            "x": 0.5096747535520005,
+            "y": 0.39912718461233576
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-thumb-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "02b6b649eb25dcdb24946f02c0c3e5389bb78ec5880ec46d6dc69401f3972f30",
+        "events": 25191
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 88.60000000149012,
+        "firstPaint": 29
+      },
+      "motion": {
+        "duration": 8012.70000000298,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.80000000298025
+          },
+          {
+            "name": "input",
+            "at": 411.80000000298025
+          },
+          {
+            "name": "release",
+            "at": 1811.8000000029801
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.80000000298
+          },
+          {
+            "name": "settle",
+            "at": 3611.7000000029802
+          },
+          {
+            "name": "leave",
+            "at": 5011.70000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "focusX": 0.5102340593039917,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-full-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "8a6f3e96be4c88b2e39e7c1a036eb54a3f8bfa8cc8c3d3ffeea47af5c509cb09",
+        "events": 17797
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 92.20000000298023,
+        "firstPaint": 29.100000001490116
+      },
+      "motion": {
+        "duration": 8017.30000000447,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 200.00000000447034
+          },
+          {
+            "name": "input",
+            "at": 400.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1816.6000000044703
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.50000000447
+          },
+          {
+            "name": "settle",
+            "at": 3616.6000000044705
+          },
+          {
+            "name": "leave",
+            "at": 5016.50000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-full-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "dfad06118a63a8b84e88696ef83ce53cd8ac279b41b2ce73175d1d42c8085146",
+        "events": 17194
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 42.80000000447035,
+        "firstPaint": 23.30000000447035
+      },
+      "motion": {
+        "duration": 8014.29999999702,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.59999999850987
+          },
+          {
+            "name": "input",
+            "at": 413.69999999850984
+          },
+          {
+            "name": "release",
+            "at": 1813.4999999985098
+          },
+          {
+            "name": "interrupt",
+            "at": 2413.5999999985097
+          },
+          {
+            "name": "settle",
+            "at": 3613.49999999851
+          },
+          {
+            "name": "leave",
+            "at": 5013.39999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "parity": 0,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-full-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "972c94a4c1c12b457c45910e8ad4118e951bcf9aecece299166fbb2992451b63",
+        "events": 19713
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 61.600000001490116,
+        "firstPaint": 22
+      },
+      "motion": {
+        "duration": 8014.5,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 213.00000000447034
+          },
+          {
+            "name": "input",
+            "at": 413.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1813.0000000044704
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.9000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3612.8000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5012.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "levels": 2,
+          "target": {
+            "x": 0.5097946113168604,
+            "y": 0.39917690362592045
+          },
+          "current": {
+            "x": 0.5097946113168607,
+            "y": 0.39917690362592056
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-full-desktop-cpu1-1795133750515-trace.json",
+        "sha256": "81e19798012fdaffeb1a1c0ef5a64835be4c90516ce086e2da536867159ffe8a",
+        "events": 23653
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 96.60000000149012,
+        "firstPaint": 24.200000002980232
+      },
+      "motion": {
+        "duration": 8012.0999999940395,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.6999999985099
+          },
+          {
+            "name": "input",
+            "at": 411.79999999850986
+          },
+          {
+            "name": "release",
+            "at": 1811.6999999985098
+          },
+          {
+            "name": "interrupt",
+            "at": 2411.69999999851
+          },
+          {
+            "name": "settle",
+            "at": 3611.69999999851
+          },
+          {
+            "name": "leave",
+            "at": 5011.59999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "focusX": 0.5103139536803022,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-full-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "483df659bf1d898763b7a42092338370f93fe817ec00b3c679e352789ed3244c",
+        "events": 17842
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 87.89999999850988,
+        "firstPaint": 26.899999998509884
+      },
+      "motion": {
+        "duration": 8006.69999999553,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 206.1999999985099
+          },
+          {
+            "name": "input",
+            "at": 406.19999999850984
+          },
+          {
+            "name": "release",
+            "at": 1806.09999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2406.0999999985097
+          },
+          {
+            "name": "settle",
+            "at": 3605.99999999851
+          },
+          {
+            "name": "leave",
+            "at": 5005.99999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3849.9999999999873
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-full-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "46ae907435d090a7ed1b953f912cc4cc74779abd1ecbe5e287de84dc5a0c7cf1",
+        "events": 17184
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 44.399999998509884,
+        "firstPaint": 20
+      },
+      "motion": {
+        "duration": 8012.39999999851,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.29999999552967
+          },
+          {
+            "name": "input",
+            "at": 412.3999999955297
+          },
+          {
+            "name": "release",
+            "at": 1812.2999999955296
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.2999999955296
+          },
+          {
+            "name": "settle",
+            "at": 3612.1999999955297
+          },
+          {
+            "name": "leave",
+            "at": 5012.099999995529
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "parity": 0,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8000.000000000056
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-full-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "5132a18160a0151b42e414aeb6da23d519eec289dd20ec86719ccb238de649eb",
+        "events": 19719
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 58.79999999701977,
+        "firstPaint": 23.19999999552965
+      },
+      "motion": {
+        "duration": 8013.20000000298,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 212.20000000149014
+          },
+          {
+            "name": "input",
+            "at": 412.20000000149014
+          },
+          {
+            "name": "release",
+            "at": 1812.20000000149
+          },
+          {
+            "name": "interrupt",
+            "at": 2412.10000000149
+          },
+          {
+            "name": "settle",
+            "at": 3612.10000000149
+          },
+          {
+            "name": "leave",
+            "at": 5012.00000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "levels": 2,
+          "target": {
+            "x": 0.5101142146765766,
+            "y": 0.3993095864629976
+          },
+          "current": {
+            "x": 0.5101142146765768,
+            "y": 0.3993095864629977
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-full-mobile-cpu1-1795133750515-trace.json",
+        "sha256": "7e27f90493a8b604d07091f43e4ef11436d61027c09f8ee6f10e7ca942593128",
+        "events": 23729
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 307.3999999985099,
+        "firstPaint": 185
+      },
+      "motion": {
+        "duration": 8018.9000000059605,
+        "frames": 481,
+        "fps": 60.00274440826814,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 216.20000000149014
+          },
+          {
+            "name": "input",
+            "at": 416.20000000149014
+          },
+          {
+            "name": "release",
+            "at": 1816.1000000014901
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.10000000149
+          },
+          {
+            "name": "settle",
+            "at": 3616.00000000149
+          },
+          {
+            "name": "leave",
+            "at": 5016.00000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "focusX": 0.5085559188769634,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5050.000000000003
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-thumb-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "fb1cac1feb3d212d6f76439de66227747071010a0e1629d6e35989402b92dd6e",
+        "events": 31621
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 227.19999999552965,
+        "firstPaint": 94.5
+      },
+      "motion": {
+        "duration": 8007.5999999940395,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 206.19999999850984
+          },
+          {
+            "name": "input",
+            "at": 406.19999999850984
+          },
+          {
+            "name": "release",
+            "at": 1806.0999999985097
+          },
+          {
+            "name": "interrupt",
+            "at": 2406.0999999985097
+          },
+          {
+            "name": "settle",
+            "at": 3606.0999999985097
+          },
+          {
+            "name": "leave",
+            "at": 5006.09999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-thumb-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "6493a633375fad14ee55008be70c074652e7630506b3320ae81aabd647f6316e",
+        "events": 19277
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 189.29999999701977,
+        "firstPaint": 106.39999999850988
+      },
+      "motion": {
+        "duration": 8020.5,
+        "frames": 480,
+        "fps": 59.87725163414999,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 14,
+            "ms": 33.299999999999955
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 200.10000000149012
+          },
+          {
+            "name": "input",
+            "at": 400.1000000014901
+          },
+          {
+            "name": "release",
+            "at": 1800.0000000014902
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.00000000149
+          },
+          {
+            "name": "settle",
+            "at": 3616.50000000149
+          },
+          {
+            "name": "leave",
+            "at": 5016.50000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 1,
+          "parity": 1,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-thumb-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "cf4fa86ac9732e029fc162ba9a579e58d2a88d0752f5f19ebedac9d58d591d46",
+        "events": 18794
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 160,
+        "firstPaint": 95.29999999701977
+      },
+      "motion": {
+        "duration": 8011.5,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.6000000029802
+          },
+          {
+            "name": "input",
+            "at": 409.6000000029802
+          },
+          {
+            "name": "release",
+            "at": 1809.5000000029804
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.5000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3609.40000000298
+          },
+          {
+            "name": "leave",
+            "at": 5009.40000000298
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "levels": 2,
+          "target": {
+            "x": 0.5111926800708497,
+            "y": 0.39975844976891856
+          },
+          "current": {
+            "x": 0.51119268007085,
+            "y": 0.39975844976891867
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5050.000000000003
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-thumb-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "1a19f25a6ab50155d2185aeb9b5235a04c73172da1e575fbec71f18a87823971",
+        "events": 25437
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 287.79999999701977,
+        "firstPaint": 170.39999999850988
+      },
+      "motion": {
+        "duration": 8007,
+        "frames": 476,
+        "fps": 59.50223133367501,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 402,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 418,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 441,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 473,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 205.09999999552963
+          },
+          {
+            "name": "input",
+            "at": 405.09999999552963
+          },
+          {
+            "name": "release",
+            "at": 1804.9999999955298
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.99999999553
+          },
+          {
+            "name": "settle",
+            "at": 3604.99999999553
+          },
+          {
+            "name": "leave",
+            "at": 5004.8999999955295
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "focusX": 0.5129494657807601,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5033.333333333336
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-thumb-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "4470354153586455c2d6fb45eb391448a2404926630a1eeb51772cafead253bc",
+        "events": 31365
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 249.89999999850988,
+        "firstPaint": 22.099999994039536
+      },
+      "motion": {
+        "duration": 8002.89999999851,
+        "frames": 462,
+        "fps": 57.75216570621399,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 28,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 30,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 32,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 41,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 53,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 64,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 69,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 75,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 101,
+            "ms": 50
+          },
+          {
+            "frame": 103,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 135,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 143,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 144,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 166,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 213,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 384,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1819.2999999970198,
+            "duration": 58
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.29999999403958
+          },
+          {
+            "name": "input",
+            "at": 401.2999999940396
+          },
+          {
+            "name": "release",
+            "at": 1801.2999999940394
+          },
+          {
+            "name": "interrupt",
+            "at": 2401.2999999940394
+          },
+          {
+            "name": "settle",
+            "at": 3601.0999999940395
+          },
+          {
+            "name": "leave",
+            "at": 5001.0999999940395
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-thumb-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "423b3d643e1f6ebc1bdac7b2cb85479258270efb4db05216cec84d69ccd52946",
+        "events": 18819
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 213.5,
+        "firstPaint": 105.80000000447035
+      },
+      "motion": {
+        "duration": 8021.20000000298,
+        "frames": 460,
+        "fps": 57.38236614939374,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 14,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 15,
+            "ms": 66.60000000000002
+          },
+          {
+            "frame": 22,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 36,
+            "ms": 33.5
+          },
+          {
+            "frame": 53,
+            "ms": 50
+          },
+          {
+            "frame": 67,
+            "ms": 50
+          },
+          {
+            "frame": 69,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 79,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 84,
+            "ms": 50
+          },
+          {
+            "frame": 98,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 125,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 154,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 165,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 170,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 181,
+            "ms": 50
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1232.2999999970198,
+            "duration": 59
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 214.10000000149012
+          },
+          {
+            "name": "input",
+            "at": 414.1000000014901
+          },
+          {
+            "name": "release",
+            "at": 1814.1000000014901
+          },
+          {
+            "name": "interrupt",
+            "at": 2414.00000000149
+          },
+          {
+            "name": "settle",
+            "at": 3614.00000000149
+          },
+          {
+            "name": "leave",
+            "at": 5013.90000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 200,
+          "height": 150,
+          "dpr": 2,
+          "parity": 1,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 7966.666666666722
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-thumb-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "4234bcffa9f03638012e1529e19aeb4712664828e34aa62fdafeb851296638c2",
+        "events": 19159
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 170.29999999701977,
+        "firstPaint": 100.60000000149012
+      },
+      "motion": {
+        "duration": 8005.5,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.10000000447036
+          },
+          {
+            "name": "input",
+            "at": 404.0000000044704
+          },
+          {
+            "name": "release",
+            "at": 1804.0000000044702
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.00000000447
+          },
+          {
+            "name": "settle",
+            "at": 3603.9000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5003.900000004471
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 200,
+          "rows": 150,
+          "levels": 2,
+          "target": {
+            "x": 0.513348600288261,
+            "y": 0.40066105273578423
+          },
+          "current": {
+            "x": 0.5133486002882612,
+            "y": 0.40066105273578434
+          },
+          "targetAmount": 0,
+          "amount": 5.1001484242470675e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 5050.000000000003
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-thumb-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "75778edeb0cd8c35e2b338546e26b6f54bdda3a91d34047278f7dda42ce3d6f0",
+        "events": 32908
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 499.1000000014901,
+        "firstPaint": 148.60000000149012
+      },
+      "motion": {
+        "duration": 8011.29999999702,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 209.79999999999995
+          },
+          {
+            "name": "input",
+            "at": 409.79999999999995
+          },
+          {
+            "name": "release",
+            "at": 1809.6999999999998
+          },
+          {
+            "name": "interrupt",
+            "at": 2409.7
+          },
+          {
+            "name": "settle",
+            "at": 3609.7
+          },
+          {
+            "name": "leave",
+            "at": 5009.6
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "focusX": 0.5110728661260401,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5050.000000000003
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-full-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "f086a486045f451bc783b86f36cb486c1b15ea7bad266c6be4640c411a3cb13e",
+        "events": 18813
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 445.8999999985099,
+        "firstPaint": 118.69999999552965
+      },
+      "motion": {
+        "duration": 8011,
+        "frames": 460,
+        "fps": 57.502156330862405,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 46,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 48,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 55,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 58,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 143,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 159,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 160,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 170,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 171,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 174,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 175,
+            "ms": 33.5
+          },
+          {
+            "frame": 176,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 181,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 182,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 192,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 194,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 198,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 200,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 206,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 212,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 208.9999999955296
+          },
+          {
+            "name": "input",
+            "at": 408.9999999955296
+          },
+          {
+            "name": "release",
+            "at": 1808.8999999955295
+          },
+          {
+            "name": "interrupt",
+            "at": 2408.8999999955295
+          },
+          {
+            "name": "settle",
+            "at": 3608.8999999955295
+          },
+          {
+            "name": "leave",
+            "at": 5008.79999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3866.666666666654
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-full-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "342d9d4553cb5c048d9c194cc7071da69b88e35712f9a78cca005b3fdb1f8908",
+        "events": 18825
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 221.39999999850988,
+        "firstPaint": 99.39999999850988
+      },
+      "motion": {
+        "duration": 8022,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 216.20000000149014
+          },
+          {
+            "name": "input",
+            "at": 416.20000000149014
+          },
+          {
+            "name": "release",
+            "at": 1816.1000000014901
+          },
+          {
+            "name": "interrupt",
+            "at": 2416.10000000149
+          },
+          {
+            "name": "settle",
+            "at": 3616.00000000149
+          },
+          {
+            "name": "leave",
+            "at": 5016.00000000149
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 1,
+          "parity": 1,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 8033.33333333339
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-full-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "56e9f9aa4f88481065a063ff568786de7edcf80745a00d58e70adb5c1c487eac",
+        "events": 20855
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 301.09999999403954,
+        "firstPaint": 117.69999999552965
+      },
+      "motion": {
+        "duration": 8012.5999999940395,
+        "frames": 299,
+        "fps": 37.376401615060566,
+        "p95": 83.19999999999993,
+        "gaps": [
+          {
+            "frame": 1,
+            "ms": 33.30000000000001
+          },
+          {
+            "frame": 2,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 12,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 13,
+            "ms": 50
+          },
+          {
+            "frame": 14,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 15,
+            "ms": 83.19999999999993
+          },
+          {
+            "frame": 16,
+            "ms": 50.10000000000002
+          },
+          {
+            "frame": 17,
+            "ms": 100
+          },
+          {
+            "frame": 18,
+            "ms": 50.000000000000114
+          },
+          {
+            "frame": 19,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 20,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 21,
+            "ms": 50
+          },
+          {
+            "frame": 22,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 23,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 24,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 25,
+            "ms": 50
+          },
+          {
+            "frame": 27,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 28,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 29,
+            "ms": 50.100000000000136
+          },
+          {
+            "frame": 30,
+            "ms": 116.59999999999991
+          },
+          {
+            "frame": 31,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 32,
+            "ms": 116.59999999999991
+          },
+          {
+            "frame": 33,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 34,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 35,
+            "ms": 50
+          },
+          {
+            "frame": 36,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 37,
+            "ms": 50
+          },
+          {
+            "frame": 38,
+            "ms": 83.29999999999973
+          },
+          {
+            "frame": 39,
+            "ms": 50
+          },
+          {
+            "frame": 40,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 41,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 42,
+            "ms": 116.59999999999991
+          },
+          {
+            "frame": 44,
+            "ms": 50
+          },
+          {
+            "frame": 45,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 46,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 47,
+            "ms": 50
+          },
+          {
+            "frame": 48,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 49,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 50,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 52,
+            "ms": 50
+          },
+          {
+            "frame": 53,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 55,
+            "ms": 50
+          },
+          {
+            "frame": 56,
+            "ms": 50
+          },
+          {
+            "frame": 57,
+            "ms": 100
+          },
+          {
+            "frame": 58,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 59,
+            "ms": 50
+          },
+          {
+            "frame": 63,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 64,
+            "ms": 100.09999999999991
+          },
+          {
+            "frame": 65,
+            "ms": 150
+          },
+          {
+            "frame": 66,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 67,
+            "ms": 133.4000000000001
+          },
+          {
+            "frame": 68,
+            "ms": 50
+          },
+          {
+            "frame": 69,
+            "ms": 50
+          },
+          {
+            "frame": 70,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 71,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 72,
+            "ms": 50
+          },
+          {
+            "frame": 73,
+            "ms": 50
+          },
+          {
+            "frame": 74,
+            "ms": 50
+          },
+          {
+            "frame": 76,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 77,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 78,
+            "ms": 66.59999999999945
+          },
+          {
+            "frame": 79,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 80,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 81,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 82,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 83,
+            "ms": 83.30000000000018
+          },
+          {
+            "frame": 84,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 85,
+            "ms": 83.29999999999927
+          },
+          {
+            "frame": 86,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 87,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 89,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 90,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 92,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 93,
+            "ms": 50
+          },
+          {
+            "frame": 94,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 96,
+            "ms": 50
+          },
+          {
+            "frame": 97,
+            "ms": 49.900000000000546
+          },
+          {
+            "frame": 122,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 362.3999999985099,
+            "duration": 76
+          },
+          {
+            "at": 439.29999999701977,
+            "duration": 56
+          },
+          {
+            "at": 496.3999999985099,
+            "duration": 83
+          },
+          {
+            "at": 580.2999999970198,
+            "duration": 55
+          },
+          {
+            "at": 637.6999999955297,
+            "duration": 74
+          },
+          {
+            "at": 764.3999999985099,
+            "duration": 61
+          },
+          {
+            "at": 1066.1999999955297,
+            "duration": 56
+          },
+          {
+            "at": 1124.2999999970198,
+            "duration": 111
+          },
+          {
+            "at": 1236.5,
+            "duration": 85
+          },
+          {
+            "at": 1322.5999999940395,
+            "duration": 113
+          },
+          {
+            "at": 1553.1999999955297,
+            "duration": 78
+          },
+          {
+            "at": 1631.7999999970198,
+            "duration": 51
+          },
+          {
+            "at": 1684.0999999940395,
+            "duration": 79
+          },
+          {
+            "at": 1763.8999999985099,
+            "duration": 53
+          },
+          {
+            "at": 1817.8999999985099,
+            "duration": 81
+          },
+          {
+            "at": 1941.0999999940395,
+            "duration": 106
+          },
+          {
+            "at": 2183.1999999955297,
+            "duration": 55
+          },
+          {
+            "at": 2239.0999999940395,
+            "duration": 71
+          },
+          {
+            "at": 2549.5,
+            "duration": 52
+          },
+          {
+            "at": 2601.5999999940395,
+            "duration": 105
+          },
+          {
+            "at": 2874.5,
+            "duration": 94
+          },
+          {
+            "at": 2969.5999999940395,
+            "duration": 144
+          },
+          {
+            "at": 3114.2999999970198,
+            "duration": 71
+          },
+          {
+            "at": 3186.89999999851,
+            "duration": 127
+          },
+          {
+            "at": 3314.6999999955297,
+            "duration": 63
+          },
+          {
+            "at": 3555.5999999940395,
+            "duration": 51
+          },
+          {
+            "at": 3666.5,
+            "duration": 62
+          },
+          {
+            "at": 3773,
+            "duration": 67
+          },
+          {
+            "at": 3947.5,
+            "duration": 56
+          },
+          {
+            "at": 4004.6999999955297,
+            "duration": 78
+          },
+          {
+            "at": 4125.5,
+            "duration": 75
+          },
+          {
+            "at": 4584.39999999851,
+            "duration": 57
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 211.8999999955297
+          },
+          {
+            "name": "input",
+            "at": 428.4999999955296
+          },
+          {
+            "name": "release",
+            "at": 1811.7999999955296
+          },
+          {
+            "name": "interrupt",
+            "at": 2445.0999999955297
+          },
+          {
+            "name": "settle",
+            "at": 3645.0999999955297
+          },
+          {
+            "name": "leave",
+            "at": 5011.69999999553
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "levels": 2,
+          "target": {
+            "x": 0.5301234574592759,
+            "y": 0.40793231855794176
+          },
+          "current": {
+            "x": 0.5301234574592761,
+            "y": 0.4079323185579419
+          },
+          "targetAmount": 0,
+          "amount": 1.7039554567054485e-17,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 4166.666666666653
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-full-desktop-cpu4-1795133929671-trace.json",
+        "sha256": "1300449a593b9c52489082033539f9e0a4acd1e1dcea8baf90cdad321dbc9894",
+        "events": 19438
+      }
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 625.2000000029802,
+        "firstPaint": 171.90000000596046
+      },
+      "motion": {
+        "duration": 8005.89999999851,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "enter",
+            "at": 204.1000000029802
+          },
+          {
+            "name": "input",
+            "at": 404.1000000029803
+          },
+          {
+            "name": "release",
+            "at": 1804.0000000029804
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.0000000029804
+          },
+          {
+            "name": "settle",
+            "at": 3603.90000000298
+          },
+          {
+            "name": "leave",
+            "at": 5003.800000002981
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "focusX": 0.5133486002888558,
+          "targetProgress": 0,
+          "progress": 0,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastDraw": 5050.000000000003
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-sort-full-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "e0a9fdc35ccd1f3a5edaee4d0535e9388da53d17ccc2d911a2d136b4ae621c09",
+        "events": 19249
+      }
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 657.2000000029802,
+        "firstPaint": 204.20000000298023
+      },
+      "motion": {
+        "duration": 8003.80000000447,
+        "frames": 418,
+        "fps": 52.251959448479326,
+        "p95": 33.40000000000009,
+        "gaps": [
+          {
+            "frame": 26,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 27,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 28,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 29,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 30,
+            "ms": 50
+          },
+          {
+            "frame": 31,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 32,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 33,
+            "ms": 49.899999999999864
+          },
+          {
+            "frame": 34,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 35,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 36,
+            "ms": 50
+          },
+          {
+            "frame": 37,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 38,
+            "ms": 50
+          },
+          {
+            "frame": 39,
+            "ms": 66.70000000000005
+          },
+          {
+            "frame": 40,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 41,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 42,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 43,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 44,
+            "ms": 50
+          },
+          {
+            "frame": 45,
+            "ms": 50
+          },
+          {
+            "frame": 46,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 47,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 48,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 49,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 50,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 52,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 53,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 54,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 56,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 57,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 58,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 59,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 60,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 64,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 65,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 95,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 96,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 97,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 98,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 99,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 100,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 115,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 119,
+            "ms": 50
+          },
+          {
+            "frame": 121,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 123,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 604.8000000044703,
+            "duration": 74
+          },
+          {
+            "at": 680,
+            "duration": 80
+          },
+          {
+            "at": 1003.6000000014901,
+            "duration": 69
+          },
+          {
+            "at": 1253.1000000014901,
+            "duration": 59
+          },
+          {
+            "at": 1765.6000000014901,
+            "duration": 57
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 201.0000000044704
+          },
+          {
+            "name": "input",
+            "at": 400.90000000447026
+          },
+          {
+            "name": "release",
+            "at": 1817.5000000044702
+          },
+          {
+            "name": "interrupt",
+            "at": 2400.9000000044703
+          },
+          {
+            "name": "settle",
+            "at": 3600.8000000044703
+          },
+          {
+            "name": "leave",
+            "at": 5000.80000000447
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "origin": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "target": 0,
+          "progress": 0,
+          "dirty": false,
+          "lastDraw": 3783.333333333321
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-mosaic-full-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "50bd4203c78418f6f6e3799c61f80c1e7eada2877908241faca2a7cd2e540927",
+        "events": 17721
+      }
+    },
+    {
+      "kind": "field",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 327.3999999985099,
+        "firstPaint": 140.10000000149012
+      },
+      "motion": {
+        "duration": 8015.5999999940395,
+        "frames": 393,
+        "fps": 49.12745637281864,
+        "p95": 33.399999999999864,
+        "gaps": [
+          {
+            "frame": 2,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 3,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 4,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 7,
+            "ms": 33.5
+          },
+          {
+            "frame": 10,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 13,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 19,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 28,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 53,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 61,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 64,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 65,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 72,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 77,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 78,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 80,
+            "ms": 50
+          },
+          {
+            "frame": 81,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 82,
+            "ms": 50
+          },
+          {
+            "frame": 83,
+            "ms": 116.70000000000027
+          },
+          {
+            "frame": 85,
+            "ms": 49.90000000000009
+          },
+          {
+            "frame": 86,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 87,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 88,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 90,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 93,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 94,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 95,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 96,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 97,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 98,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 101,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 102,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 105,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 106,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 107,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 108,
+            "ms": 50
+          },
+          {
+            "frame": 109,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 113,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 114,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 117,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 118,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 119,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 124,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 129,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 134,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 137,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 138,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 141,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 143,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 145,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 146,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 149,
+            "ms": 50
+          },
+          {
+            "frame": 151,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 152,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 156,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 158,
+            "ms": 50
+          },
+          {
+            "frame": 159,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 160,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 161,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 162,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 164,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 166,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 168,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 172,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 174,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 187,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 200,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 203,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 274,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 275,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 280,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 361,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 364,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 1574.6999999955297,
+            "duration": 57
+          },
+          {
+            "at": 1720.1999999955297,
+            "duration": 107
+          },
+          {
+            "at": 1902.3999999985099,
+            "duration": 77
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 207.69999999850984
+          },
+          {
+            "name": "input",
+            "at": 407.69999999850984
+          },
+          {
+            "name": "release",
+            "at": 1824.29999999851
+          },
+          {
+            "name": "interrupt",
+            "at": 2424.29999999851
+          },
+          {
+            "name": "settle",
+            "at": 3624.19999999851
+          },
+          {
+            "name": "leave",
+            "at": 5007.49999999851
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "width": 368,
+          "height": 268,
+          "dpr": 2,
+          "parity": 0,
+          "targetIntensity": 0.18,
+          "intensity": 0.18000000000000008,
+          "hovering": false,
+          "locked": false,
+          "dirty": false,
+          "lastField": 7933.3333333333885
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-field-full-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "934e76ad999d9390286aa6a23bdddf30f3723e5c646636983520a0587d894970",
+        "events": 22600
+      }
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 316.1000000014901,
+        "firstPaint": 118.19999999552965
+      },
+      "motion": {
+        "duration": 8007.10000000149,
+        "frames": 390,
+        "fps": 48.75182819355725,
+        "p95": 33.40000000000009,
+        "gaps": [
+          {
+            "frame": 2,
+            "ms": 50
+          },
+          {
+            "frame": 13,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 14,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 15,
+            "ms": 83.40000000000009
+          },
+          {
+            "frame": 16,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 17,
+            "ms": 83.39999999999998
+          },
+          {
+            "frame": 18,
+            "ms": 33.30000000000007
+          },
+          {
+            "frame": 19,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 20,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 21,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 22,
+            "ms": 50
+          },
+          {
+            "frame": 23,
+            "ms": 83.29999999999995
+          },
+          {
+            "frame": 24,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 25,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 26,
+            "ms": 66.59999999999991
+          },
+          {
+            "frame": 27,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 28,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 29,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 30,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 31,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 32,
+            "ms": 33.5
+          },
+          {
+            "frame": 34,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 35,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 40,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 41,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 44,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 45,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 50,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 51,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 52,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 53,
+            "ms": 33.20000000000027
+          },
+          {
+            "frame": 54,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 56,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 58,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 59,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 60,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 61,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 64,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 65,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 66,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 69,
+            "ms": 33.19999999999982
+          },
+          {
+            "frame": 70,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 73,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 76,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 79,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 86,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 87,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 90,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 91,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 94,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 95,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 98,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 99,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 104,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 106,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 108,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 109,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 112,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 115,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 120,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 143,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 144,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 147,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 148,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 151,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 156,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 157,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 162,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 163,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 166,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 169,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 170,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 175,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 178,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 22,
+            "duration": 65
+          },
+          {
+            "at": 319.70000000298023,
+            "duration": 83
+          },
+          {
+            "at": 403.29999999701977,
+            "duration": 83
+          },
+          {
+            "at": 487.1000000014901,
+            "duration": 81
+          },
+          {
+            "at": 752.2000000029802,
+            "duration": 71
+          },
+          {
+            "at": 900.2000000029802,
+            "duration": 62
+          }
+        ],
+        "events": [
+          {
+            "name": "enter",
+            "at": 205.19999999701975
+          },
+          {
+            "name": "input",
+            "at": 471.79999999701977
+          },
+          {
+            "name": "release",
+            "at": 1805.09999999702
+          },
+          {
+            "name": "interrupt",
+            "at": 2404.9999999970196
+          },
+          {
+            "name": "settle",
+            "at": 3604.9999999970196
+          },
+          {
+            "name": "leave",
+            "at": 5004.99999999702
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "columns": 368,
+          "rows": 268,
+          "levels": 2,
+          "target": {
+            "x": 0.4995985309887667,
+            "y": 0.39502396292106706
+          },
+          "current": {
+            "x": 0.49959853098876683,
+            "y": 0.3950239629210672
+          },
+          "targetAmount": 0,
+          "amount": 5.100148494239357e-18,
+          "hovering": false,
+          "pinned": false,
+          "dirty": false,
+          "lastDraw": 4883.333333333333
+        },
+        "held": false
+      },
+      "trace": {
+        "file": "profile-poster-full-mobile-cpu4-1795133929671-trace.json",
+        "sha256": "48e6cd67feef1d2c279da66a751f53fd8db145b2f13f720022f9ab1a9aa6c2b9",
+        "events": 23540
+      }
+    }
+  ],
+  "findings": [
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 60.00274440826814,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 307.3999999985099
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 59.87725163414999,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 1,
+      "longTasks": 0,
+      "readinessMS": 189.29999999701977
+    },
+    {
+      "kind": "sort",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 59.50223133367501,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 4,
+      "longTasks": 0,
+      "readinessMS": 287.79999999701977
+    },
+    {
+      "kind": "mosaic",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 57.75216570621399,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 17,
+      "longTasks": 1,
+      "readinessMS": 249.89999999850988
+    },
+    {
+      "kind": "field",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 57.38236614939374,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 15,
+      "longTasks": 1,
+      "readinessMS": 213.5
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 60.00225008437816,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 499.1000000014901
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 57.502156330862405,
+      "p95MS": 16.800000000000182,
+      "slowIntervals": 20,
+      "longTasks": 0,
+      "readinessMS": 445.8999999985099
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "fps": 37.376401615060566,
+      "p95MS": 83.19999999999993,
+      "slowIntervals": 78,
+      "longTasks": 32,
+      "readinessMS": 301.09999999403954
+    },
+    {
+      "kind": "sort",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 60.002250084378154,
+      "p95MS": 16.700000000000728,
+      "slowIntervals": 0,
+      "longTasks": 0,
+      "readinessMS": 625.2000000029802
+    },
+    {
+      "kind": "mosaic",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 52.251959448479326,
+      "p95MS": 33.40000000000009,
+      "slowIntervals": 45,
+      "longTasks": 5,
+      "readinessMS": 657.2000000029802
+    },
+    {
+      "kind": "field",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 49.12745637281864,
+      "p95MS": 33.399999999999864,
+      "slowIntervals": 73,
+      "longTasks": 3,
+      "readinessMS": 327.3999999985099
+    },
+    {
+      "kind": "poster",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "fps": 48.75182819355725,
+      "p95MS": 33.40000000000009,
+      "slowIntervals": 74,
+      "longTasks": 6,
+      "readinessMS": 316.1000000014901
+    }
+  ],
+  "scope": "Isolated emitted native/full photographic processing scenes, desktop DPR1 and mobile DPR2, CPU1/4. Eight-second interrupted input stories record actual scheduler RAF intervals, long tasks, FCP/readiness and CDP layout/paint/frame traces. All original source render caps remain intact; scheduler FPS does not imply a different source render cadence. Fonts are prepared before mounting. No model snapshots or pixel readbacks occur per frame. Physical input is verified separately. Measurements exclude public route/module transfer and leave final timing gates open.",
+  "gitSourceHashes": {
+    "js/demos.raster.pixel-sort.js": "e3278e0ff8eb0db0f19fc2c9d604aa5f77462023a2df5cbfae6466f47f616dba",
+    "js/demos.raster.mosaic.js": "f5b12ff831d1644e5d10251f7e23634f30a378d1a0116ec40bfd11ab1553904b",
+    "js/demos.raster.interlace.js": "b45e831a83ded6198dd4ff70649d6aa74fdfa4e0c3870ec7a61205dbbe364c59",
+    "js/demos.raster.posterize.js": "684f110a5b3dc5cadcdb9da2992c1e896c0aee3a48f893b4d9ba5cd973009348",
+    "tools/fixtures/raster-processing-artwork.json": "3723ad39b5cab896d2dab3836164a77cdefd4464ae23ef5402440dfd68b98e8e",
+    "tools/fixtures/raster-processing-original-models.json": "b248fa83db259edecfb10382ccdda420d25d362966b1b42bbaf58e054f2b88af",
+    "tools/verification/raster-processing-harness.js": "c47d104892a3455874639b58491aab8f5119a6b99c26f0e7d3f4a803ed2f0c6f",
+    "tools/verification/raster-processing-original.js": "057c04f207a95ad63d994eaa7f2880db539143061aedf5db4194322ac9c1af23",
+    "tools/verification/raster-processing-normalizer.js": "4dda6c8f04a80ef07c70b2eff071dea3ee3572fe7c70968b36384bfad132f7a3",
+    "tools/load-registry.js": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091",
+    "assets/photo-credits.json": "20c35cf2bdd06b878d69528ddc10113d46b3912295f922120ebeb351c5735659",
+    "assets/demo-assets.json": "c066d31ced4c4bdb5db61d344c353d94c38457a97f060a6290d2f26c9e7472ac",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/registry.js": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700",
+    "js/shell/router.js": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f",
+    "js/shell/views/detail.js": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28",
+    "js/demo-assets.js": "dd35f8196eed766a039d5868b08776d799fec3f107a545b0c63c473cd2401414",
+    "js/meta.stage.js": "0e519a566a61053ecac480dc455c83cfd44ceebb530e2f3e8b87bb65877435ad",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "registry/index.json": "00d44a6363df994af43d65881052408ca11c51948b37f487aa000d9b2aa2ded1",
+    "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-raster-processing.js": "2fa8e19a606c173be1d82ed7190cd299f1f9457f3febe470e352de45464efb4b",
+    "assets/components/raster-processing/169-2657.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2658.svg": "2068e0b1f72c098a3582ddd6367a96a90958739c0c651fe6e3b10d089e8cfb5a",
+    "assets/components/raster-processing/169-2659.svg": "67ee3c052b5536cad343580f4bfd69ca3cb7f589ed276a6605e9f384c633dcd4",
+    "assets/components/raster-processing/169-2660.svg": "263cbd7f91250d9e50460c23889ff1c1f252771c52f7cc5ea0c922e0f87dd84b",
+    "assets/components/raster-processing/169-2661.svg": "75891e7a94844330afecd464de6bd34f5428f9ac653f52530cd6a590f057551a",
+    "assets/components/raster-processing/169-2662.svg": "5cc8b81f6be1b812777c0ef0c15a92efe5d7c4436a72ccaee3eeca9e56138719",
+    "assets/components/raster-processing/169-2663.svg": "9b0fa086a3b7a0dc33ca4431be31978efa5096b7740ae4a7e2ff9cb1b11a3b76",
+    "assets/components/raster-processing/169-2664.svg": "ae0ad02491213b885998b1397ac687395881483662582c0b8974af029d745d13",
+    "assets/components/raster-processing/169-2665.svg": "9c4670fec882af90cbbdd4fcf5ba043c515225fb2aaa0195ddfc140442fb2eac",
+    "assets/components/raster-processing/169-2666.svg": "450c0ec74e5c7faac22653150ce06cf25a9f40833d34064cf7a701d288ecf834",
+    "assets/components/raster-processing/169-2667.svg": "d422a3c93e238fad939cffd1ece1b0b1a0e614848b8227211afcbfba32d78dbb",
+    "assets/components/raster-processing/169-2668.svg": "97e5c8c91845ac88f5e74a67a399e4fbb4d0a93435924b752f387d2cdf1e06a2",
+    "assets/components/raster-processing/169-2669.svg": "d8139b20dbf2d07a3f218c678f4505f392125ddb946bbe2b5de03780317953ba",
+    "assets/components/raster-processing/169-2670.svg": "9376a97b00e77c6c030de0136b585982eb0858e08564e88cc8dd2f7da2f2ce72",
+    "assets/components/raster-processing/169-2671.svg": "05f9ba56296fa1831791aaa97d2bcde9028966dee42a92fa3f0fbc4e229b3c51",
+    "assets/components/raster-processing/169-2672.svg": "e5fe5f190f9f11b0a5bbcb7aed82e3215fb313af93598233780f5ae7642503db",
+    "assets/components/raster-processing/169-2673.svg": "a42f1f32120ea2e121d6d4ccd44d162b9bf07516b975d115969a03ba9d7ff4b8",
+    "assets/components/raster-processing/169-2674.svg": "4dda8b03c289a05fe725c036faa71251aefa5c2060a3ce3e729d1eb9f3568aac",
+    "assets/components/raster-processing/169-2675.svg": "fdb3c720fa6a255457cc2549352a37108f92a2e56c447b585d57fa146c7f2103",
+    "assets/components/raster-processing/169-2676.svg": "d18d1458c6b9a50bc8cf8559a087f4881370e5cd201a57f3f0956f1b9370f919",
+    "assets/components/raster-processing/169-2677.svg": "7effac7fa00305c2278532dc3dceb12ba701e40162ed807d4544d7f5495403d0",
+    "assets/components/raster-processing/169-2678.svg": "76c8ca039d5bb8ad0a9dc8084dc8ea0814ce0a747c91b9403af323f81f46a184",
+    "assets/components/raster-processing/169-2679.svg": "61e612754bbc4dc5f16e59836a2b80e6565c4afe708dde5964114507eff9940d",
+    "assets/components/raster-processing/169-2680.svg": "9dc51418e5fbde9a980fb5f6dd4478a8435fe56b6da25352b43eee06dd3270df",
+    "assets/components/raster-processing/169-2681.svg": "a0820c0961009634e12eefd6fed7dbac3fc2a9c1adfc7f44329ea4b3515a151c",
+    "assets/components/raster-processing/169-2682.svg": "15316fb0e426f3ed340032a7c1caa255a1490f185ff5680e10ce6830f4b1ef4c",
+    "assets/components/raster-processing/169-2956.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2957.svg": "b7f4c2219707105e9204b63879c7b980d7b3847266a2d57a39c78931fa8fb7c7",
+    "assets/components/raster-processing/169-2958.svg": "b014c4639e099c5a3ee23b139639beb6e2618c949f8980dff667b24a199232ac",
+    "assets/components/raster-processing/169-2959.svg": "dd314d7875a8d8000ca26040f9599a70c518f178ef6b12aa25e1d96cda1f2df4",
+    "assets/components/raster-processing/169-2899.svg": "aa6029f9766b9b211a320ad40a34f57235f80a40190c4b8c51f3c143791e5c58",
+    "assets/components/raster-processing/169-2900.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2901.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2902.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2903.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2904.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2905.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2906.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2907.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2908.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2909.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2910.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2911.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2912.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2913.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2914.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2915.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2916.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2917.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2918.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2919.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2920.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2921.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2922.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2923.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2924.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2925.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2926.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2927.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2928.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2929.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2930.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2931.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2932.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2933.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2934.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2935.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2936.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/components/raster-processing/169-2937.svg": "b8d9c7c66f70713a728122a6b1cc4ce26bb63b905254b0bc9360e86ecb107580",
+    "assets/images/ocean.webp": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb",
+    "assets/images/ocean-800.webp": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9",
+    "assets/images/embers.webp": "a8064cff488aa1732bf6c790f0274ff2f2aa57bfb67508d77da69465002e06ad",
+    "assets/images/embers-800.webp": "a84a40b35819166ce98421c1cecd13118698fec6fe116f7f9cec6eec8517651e",
+    "assets/images/archGrid.webp": "94d0482726403fe57ec0302743d068d36ad6b51c7ebcec4292816ece1a0a702f",
+    "assets/images/archGrid-800.webp": "99210ad993a94775b3870e8a1a07ed34d6f58c71a529d4105af15a295c9bdbde",
+    "assets/images/dusk.webp": "81eb61fc306d41b4b18fbf9f3527f007948db0d30bd5e155339724aa285df576",
+    "assets/images/dusk-800.webp": "98df3def7d6cae157b8a98510469cb2eb039b02beee9d1fcccdd2355dd1fefe9",
+    "assets/images/forestBlue.webp": "edb6aa5fc94ca1fba67d8050de39d03034bed500313f15f855286b2b12eff961",
+    "assets/images/forestBlue-800.webp": "1061619b273f696f81d6f6267e6bedcc954515209b56ea5faaaf30e608f97d9e",
+    "assets/images/silk.webp": "a63845b54d3a11791af6f4da979a3d32e1ac25c6ecce87e1163e4b355837eb66",
+    "assets/images/silk-800.webp": "a5991b9c970ea08cd0fbd58d8b4f2a90121e9e4203c09bae46717f4da1e37bb0",
+    "assets/images/atlantic-shore.webp": "2c5f2bb09430f7f034361edbf35d353faece6b6644dbba20fdcf2e37651252c9",
+    "assets/images/limestone-pavilion.webp": "725ec11fb11897600b5ad908e3bcb566ceae646bf29316f4b72607f9d72b9fb8",
+    "assets/images/coastal-stack.webp": "7b80eff846a8a21b5a2fdeba9f3d5dd960a4384bb8268195f8b6d09be35a586d"
+  },
+  "checkoutLineEndings": {
+    "policy": "Measured source hashes bind actual checkout bytes. Only these unchanged UTF-8 files differ from their Git blobs by CRLF to LF normalization. Every new or changed payload must match the Git index exactly before publication.",
+    "normalized": [
+      {
+        "file": "css/style.css",
+        "measuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "gitSHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903"
+      },
+      {
+        "file": "css/fonts.css",
+        "measuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "gitSHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9"
+      },
+      {
+        "file": "js/demo-runtime.js",
+        "measuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "gitSHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a"
+      },
+      {
+        "file": "js/shell/stage.js",
+        "measuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "gitSHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0"
+      },
+      {
+        "file": "js/shell/registry.js",
+        "measuredSHA256": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+        "gitSHA256": "20920717c44b0d3f62b8bb7850d348e9c4571853a5011d591788495d47ffb700"
+      },
+      {
+        "file": "js/shell/router.js",
+        "measuredSHA256": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+        "gitSHA256": "e90f0db41d969d5acc1e2b3db8954a23138853b67ad4244f1dc56b249c595e8f"
+      },
+      {
+        "file": "js/shell/views/detail.js",
+        "measuredSHA256": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+        "gitSHA256": "f1596d3fcf89114a4506b8852585a40fc71a3e5e07ed4cd7cfad1e119afe4a28"
+      },
+      {
+        "file": "js/shell/export.js",
+        "measuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "gitSHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635"
+      },
+      {
+        "file": "tools/load-registry.js",
+        "measuredSHA256": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+        "gitSHA256": "ba85f879795143475a5ff5c90662eea468d41d490d15ab99b8dfca7a37a9c091"
+      }
+    ]
+  }
+}

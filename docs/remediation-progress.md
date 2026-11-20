@@ -1,21 +1,74 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 284 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 288 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus twenty-two Raster & Glitch demos.
-The remaining work includes 115 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus twenty-six Raster & Glitch demos.
+The remaining work includes 111 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
-inventory finds the three retired generated photo keys in 10 remaining demos.
-None of the 284 remediated native compositions retains those references.
+inventory finds the three retired generated photo keys in 6 remaining demos.
+None of the 288 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 284 native compositions. The unfinished groups still account for
+among these 288 native compositions. The unfinished groups still account for
 14 overflow findings, zero horizontal-scroll findings, 46 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 89 documented
 Figma fill exceptions validate.
+
+## Pixel Sort, Threshold Mosaic, Interlace Field and Posterize Lens
+
+The four native compositions follow tiles `169:2642`, `169:2824`,
+`169:2884` and `169:2941`. Their 200×150px frames keep all 69 original
+SVG payloads, intrinsic dimensions and layer order. Pixel Sort keeps the
+embers photo above the exact y=80 horizon and all 25 gradient columns below it.
+Mosaic starts with the 21 supplied dusk crops over ocean, then uses the complete
+8×6 photographic Bayer field on press or keyboard input; hovering preserves
+the reference still. Interlace retains the forestBlue crop and all 38 scanlines.
+Posterize retains silk and its three exact illustrated rings before activation.
+
+Full views preserve the complete original stable luminance sort, 6px mosaic
+and every typed tile buffer, alternating photographic row fields and jitter,
+and two/three-level RGB quantizer with the original feathered lens. Native
+views project these models through the v4 artwork and approved photo slots.
+The full composition is 400×400px, or 400×432px for Mosaic's two complete
+credits, with all source cameras accessible. This removes retired generated
+photos from four more demos; six runtime references remain elsewhere.
+
+The ten groups in `tools/verify-raster-processing.js` cover 64 emitted
+engine cases, 76,864 original scalar states, 6,240 complete typed-model
+checkpoints and 866,511,360 original Canvas channels. Separate literal-source
+engines verify 9,600,000 actual native photographic channels, including the
+sort horizon, every live photo tile, source-row compositing and quantization.
+The fixtures commit complete typed buffers by SHA-256, type and length; the
+runner recomputes those identities and complete model digests. Historical
+buffers created only by the retired cleanup leak remain recorded and are not
+reproduced by the owned runtime.
+
+Browser checks cover 96 native and 96 full layouts, 48 complete eight-second
+stories at 60/120/240Hz, physical mouse/keys/moving touch, vertical scrolling,
+independent caller/viewport holds, paused themes, deferred Restore priority,
+interrupted 150ms feedback, startup disposal, real LiveTiles/routes and 32
+fresh network-blocked exports. Context-state notification tests do not claim
+literal GPU reset coverage. The other 395 catalog entries remain unchanged.
+
+The phase checks pass all 399 lazy previews, 97 catalog offline exports,
+19 runtime/shell tests and eight CLI/MCP tests. Stage control debt falls to
+108 entries; motion debt remains at 51. The global fit counts remain those
+listed above, with no findings in the four updated native compositions.
+
+The [32 source-bound timing measurements](performance/raster-processing-2026-11-20.json)
+record desktop DPR1 and mobile DPR2 at CPU1 and CPU4. CPU1 native and full
+scenes remain near 60fps. CPU4 native scenes span
+57.4–60.0fps and full scenes 37.4–60.0fps. The report retains all
+slow intervals, long tasks and readiness measurements for the final audit.
+Full desktop Posterize records 37.4fps, an 83.2ms p95 interval and 32 long
+tasks. CPU4 full readiness spans 221–657ms; these remain audit findings.
+Across both CPU rates, isolated first paints span
+19.3–204.2ms. Fonts are prepared before
+mount; route/module transfer is excluded. All original source render caps
+remain intact. These measurements leave the final timing gates open.
 
 ## Datamosh, CRT Receiver and VHS Tracking
 

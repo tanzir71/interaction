@@ -10837,13 +10837,25 @@ INTRX.meta({
     ]
   },
   "pixel-sort": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Lock sorted"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10855,8 +10867,12 @@ INTRX.meta({
       "luminance"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "noise-grain-overlay": {
     "designSize": "bleed",
@@ -10881,13 +10897,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "threshold-mosaic-transition": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      432
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Switch to B"
+      },
+      {
+        "action": "restore",
+        "label": "Restore A"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10899,8 +10927,12 @@ INTRX.meta({
       "image-transition"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "bitmap-font-marquee": {
     "designSize": "bleed",
@@ -10925,13 +10957,25 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "interlace-flicker": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Lock high field"
+      },
+      {
+        "action": "restore",
+        "label": "Restore field"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10943,17 +10987,37 @@ INTRX.meta({
       "broadcast"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "posterize-hover": {
-    "designSize": "bleed",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "levels",
+        "label": "Use 2 levels"
+      },
+      {
+        "action": "toggle",
+        "label": "Pin lens"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -10965,8 +11029,12 @@ INTRX.meta({
       "color-depth"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      240,
+      168
+    ]
   },
   "chromatic-type": {
     "designSize": "md",

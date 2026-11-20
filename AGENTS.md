@@ -515,3 +515,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   tracking rows. Record isolated native/full timing with
   `node tools/profile-raster-film.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
   the reports retain the original 32ms paint cap and leave final timing gates open.
+- `node tools/verify-raster-processing.js http://127.0.0.1:4173` covers v4
+  Pixel Sort, Threshold Mosaic, Interlace Field and Posterize Lens: all 69
+  unchanged SVGs, 76,864 original states, 6,240 complete typed-model checkpoints
+  and every original pixel plane. It checks actual photographic projections,
+  the exact sort horizon, all 21 initial mosaic crops and live Bayer tiles,
+  alternating field rows and complete RGB quantization; physical input and
+  vertical touch scrolling, 96 native and 96 full layouts, 60/120/240Hz stories,
+  independent holds, paused themes, queued intent, interrupted reduced feedback,
+  startup disposal, LiveTiles/routes and 32 fresh offline exports. Full models
+  retain the original complete sort, 6px mosaic, row fields and lens buffers.
+  Record isolated native/full timing with `node tools/profile-raster-processing.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave final timing
+  gates open. Context-state notifications do not claim literal GPU reset tests.
