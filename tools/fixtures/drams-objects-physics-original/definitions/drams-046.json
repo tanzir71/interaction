@@ -1,0 +1,43 @@
+{
+  "id": "drams-046",
+  "title": "Pendulum",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-046",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 046, Pendulum, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Drag a suspended ball and release. Arrow keys add a swing.",
+  "source": {
+    "name": "DRAMS / Pendulum",
+    "url": "https://drams.framer.website/drams/046"
+  },
+  "html": "<div class=\"d-drams-046\"><div class=\"control cradle\" tabindex=\"0\" role=\"application\" aria-label=\"Three pendulum balls. Drag and release one, or use arrow keys.\"><div class=\"pendulum\" data-ball=\"0\"><span class=\"pin\"></span><i class=\"wire\"></i><button class=\"sphere bob\" aria-label=\"Swing pendulum 1\"></button></div><div class=\"pendulum\" data-ball=\"1\"><span class=\"pin\"></span><i class=\"wire\"></i><button class=\"sphere bob\" aria-label=\"Swing pendulum 2\"></button></div><div class=\"pendulum\" data-ball=\"2\"><span class=\"pin\"></span><i class=\"wire\"></i><button class=\"sphere bob\" aria-label=\"Swing pendulum 3\"></button></div></div><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-046{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-046 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-046 button{font:inherit;cursor:pointer} .d-drams-046 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-046 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-046 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-046 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-046 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-046 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-046 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-046 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-046 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-046 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-046 .cradle{width:220px;height:170px;position:relative}.d-drams-046 .pendulum{position:absolute;left:55px;top:26px;height:88px;width:1px;transform-origin:0 0}.d-drams-046 .pendulum:nth-child(2){left:110px}.d-drams-046 .pendulum:nth-child(3){left:165px}.d-drams-046 .pin{position:absolute;width:12px;height:12px;left:-6px;top:-6px;border-radius:50%;background:#ededed;z-index:2}.d-drams-046 .wire{position:absolute;width:1px;height:88px;left:0;top:0;background:#dedede}.d-drams-046 .bob{position:absolute;left:-27px;top:61px;width:54px;height:54px;border:0;padding:0;cursor:grab}.d-drams-046 .bob:after{left:24px;top:24px}.d-drams-046 .pendulum:nth-child(2) .bob:after{display:none}",
+  "js": "const field=root.querySelector('.control'),arms=[...root.querySelectorAll('.pendulum')],balls=[...root.querySelectorAll('.bob')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const angles=[0,0,0],vel=[0,0,0];let drag=-1,raf=0,last=0;function paint(source){arms.forEach((el,i)=>el.style.transform='rotate('+angles[i]+'deg)');root.dataset.angles=angles.map(v=>v.toFixed(2)).join(',');root.dataset.source=source}function loop(now){if(!root.isConnected)return;const dt=Math.min(.025,(now-last)/1000||.016);last=now;let energy=0;for(let i=0;i<3;i++){if(i===drag)continue;vel[i]+=-Math.sin(angles[i]*Math.PI/180)*1200*dt;vel[i]*=.994;angles[i]+=vel[i]*dt;energy+=Math.abs(angles[i])+Math.abs(vel[i]);}for(let i=0;i<2;i++)if(angles[i]<angles[i+1]-1){const v=vel[i];vel[i]=vel[i+1]*.9;vel[i+1]=v*.9}paint('swing');if(energy>.1||drag>=0)raf=requestAnimationFrame(loop);else{raf=0;angles.fill(0);paint('rest')}}function start(){if(!raf){last=performance.now();raf=requestAnimationFrame(loop)}}balls.forEach((ball,i)=>{ball.addEventListener('pointerdown',e=>{drag=i;ball.setPointerCapture(e.pointerId);field.focus({preventScroll:true});vel[i]=0;root.dataset.dragging=String(i)});ball.addEventListener('pointermove',e=>{if(drag!==i)return;const b=field.getBoundingClientRect(),x=b.x+55+i*55,y=b.y+26;angles[i]=Math.max(-65,Math.min(65,-Math.atan2(e.clientX-x,e.clientY-y)*180/Math.PI));paint('drag')});function end(){if(drag!==i)return;drag=-1;root.dataset.dragging='-1';if(reduce){angles.fill(0);paint('rest')}else start()}ball.addEventListener('pointerup',end);ball.addEventListener('pointercancel',end);ball.addEventListener('click',()=>{if(Math.abs(angles[i])<2){angles[i]=i===2?-38:38;start()}})});field.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' ','Home'].includes(e.key)){e.preventDefault();angles.fill(0);vel.fill(0);if(e.key!=='Home')angles[e.key==='ArrowRight'?2:0]=e.key==='ArrowRight'?-40:40;paint('keyboard');if(!reduce)start()}});paint('initial');return()=>cancelAnimationFrame(raf);",
+  "prompt": "Recreate the Pendulum composition from https://drams.framer.website/drams/046 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Drag a suspended ball and release. Arrow keys add a swing.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "drag",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": true,
+    "aria": "application"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

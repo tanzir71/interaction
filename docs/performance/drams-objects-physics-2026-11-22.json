@@ -1,0 +1,5149 @@
+{
+  "at": "2026-11-21T20:37:29.235Z",
+  "sourceCommit": "8e1bda6bc834b18bfbf57913f031a0c287e05f39",
+  "sourceModuleSHA256": "1a432b593ebe71530a4da221b83bc2629873d538a3b3f8c42687ebc0a04ff88e",
+  "sourceHashes": {
+    "tools/verification/drams-objects-physics-evidence.js": "0f5fa933825d7d9329a33a6335e3a4cb9fe7ec8ed1478b204f621ecdd8e2236c",
+    "tools/verify-drams-objects-physics.js": "460b3ab730d7266d569a940898df65e9dab5a303a3eaab9f93a90af9efd0b54a",
+    "tools/fixtures/drams-objects-physics-artwork.json": "8086a1868c72821d7f4f6b0db5d58cbbe154c12c26ff809c655b133801f85cd8",
+    "tools/fixtures/drams-objects-physics-original-models.json": "62fcd679fccf1d879f2ed903c13c3f0ad0e7164dd5037d8048be72045f755b09",
+    "js/demos.drams.dials.js": "1a432b593ebe71530a4da221b83bc2629873d538a3b3f8c42687ebc0a04ff88e",
+    "js/meta.stage.js": "951b9fce8eea66acbf393ea556aa2d27647bfe06069b34a0838fdb46a19d29dd",
+    "registry/index.json": "9ecbfc9081b0eca4100858f0c40930ea11de43f9a110ec523a39a75e711d831d",
+    "registry/c/drams-046.json": "405e796649c95a978b85a22029d34c9d5eaa6ebb6785e80c4897b43e790d893f",
+    "registry/c/drams-047.json": "2ae96b3b20b9659aa79602a596c482bb1e3e806f18e6bcec1fde78c0d88a34ae",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/components/drams-objects-physics/89-901.svg": "12c18faaded74f90e6b837c77f9b2f9ac08cadd63329b6746659b273ae727021",
+    "assets/components/drams-objects-physics/89-902.svg": "90f9081e5403be3dba99d1ff772ef2086f31e087ccf99ad2f8a11ad33d6f38d7",
+    "assets/components/drams-objects-physics/89-903.svg": "90f9081e5403be3dba99d1ff772ef2086f31e087ccf99ad2f8a11ad33d6f38d7",
+    "assets/components/drams-objects-physics/89-904.svg": "b91e1085f193d8df27ac79324d0e99a96a9d3c7e79b0d529dcb7854c8bce3acc",
+    "assets/components/drams-objects-physics/89-905.svg": "1955c135ffa150579c90da5dc4a84fb1e8baad8a7ada409d5e1c3df4fbaecb30",
+    "assets/components/drams-objects-physics/89-906.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-907.svg": "d0d61851e8c69866b6eb12ccf3b0beaaf808f910b7a051f8699c5531c4adfedf",
+    "assets/components/drams-objects-physics/89-908.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-909.svg": "f06dafcb439172ed7a5913c5cda6ae5f019157b8ca68bd27f313a10303201ae5",
+    "assets/components/drams-objects-physics/89-910.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-927.svg": "85a285af8b85778632baa3c2e95d3f3f99a04c17b76b102e1b96ac54bf46ec9a",
+    "assets/components/drams-objects-physics/89-928.svg": "aaf54f96f7a39c24eecca2eb5775e838a3da138412dfd944c9d42e16f3c12cbd",
+    "assets/components/drams-objects-physics/89-929.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-931.svg": "a4a6411931d5e6b9b5e42da19e6b3cdcd27b313c6a29d38f3fabc11bb42d7cfa",
+    "assets/components/drams-objects-physics/89-932.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-934.svg": "33944f9f23ddc092f69db8efacda312586b656b9d7f6f817b9f7579f2865be1d",
+    "assets/components/drams-objects-physics/89-935.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-937.svg": "3cc2f09ae057535ab102590dcb3c4c86c61f1e9ccab36656c863c2439917fcdc",
+    "assets/components/drams-objects-physics/89-938.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "assets/components/drams-objects-physics/89-939.svg": "5a1d0fd21b1a58bbd0faee4984e723dfc5bd21eed6dfe9540fed1819d3cee20b",
+    "assets/components/drams-objects-physics/89-940.svg": "eceb926d68802f46de9ef760c494b70b0653cec3b61827f1214216d4c7f1fffb",
+    "assets/components/drams-objects-physics/89-941.svg": "783474505acaf33f0689301acba460a5d25194e08aa99cda113ca9c276f96d05",
+    "tools/fixtures/drams-objects-physics-original/definitions/drams-046.json": "00e3be99f46ebe323160d64aed10a2ad32518fa46a75c3a36714ccfdce97163c",
+    "tools/fixtures/drams-objects-physics-original/definitions/drams-047.json": "b6952f5e17c1d29c1bc26986f750f8e9cd3cfb7c528f16e93029de2407ddb04e",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-60hz.json.gz": "0db67a09b98eba593e1b6ef0a2fe690333914e3d95ff9fd241d0975f3945d2ff",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-120hz.json.gz": "ad0501710877c576aa6404149fb67122f2cb72dc6e7e8b13c92ba9781d4ed35e",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-240hz.json.gz": "a417f08d20148185df98e40b17118292f437c0c85ca98daaf9b60bbccc7cd142",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-60hz-reduced.json.gz": "17f24c671f96833010e1b004ddb7495a22ad93ccf779049955a5e4c9ada97108",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-120hz-reduced.json.gz": "4f6cc7f20250c3c6c0cff424e577d31a1dcbde90da795f46e925f2ed7063ce2d",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-300x320-240hz-reduced.json.gz": "ad6279db8debf43eb8026802466f75ba324bda6accec4ae7ab0cc69dcaaa9262",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-60hz.json.gz": "17fc33faaf8174900613a7ebeb4c89927035139a3e271ce4e9c53a36f04f93d5",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-120hz.json.gz": "67b4370cfb574607f2c6144618cfeef4764c5f96529f51279a8193aa264fc26c",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-240hz.json.gz": "c885c48d401ad44a02c804c3bcd7a624d43ccf6ec4b9605e094a9dcfb741c39e",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-60hz-reduced.json.gz": "784f70f9128fc49f3dba5e4d8466e96284c526965f0c4c33ba5f49a5339838f6",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-120hz-reduced.json.gz": "5d8ae0a22396153c2c9ff9c342830ff8ea67a0926b7174e08b73520a9341fade",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-046-368x320-240hz-reduced.json.gz": "54c61b6c4d9f5b4963f0a29a00fd27a4aa55b549f584a9822fa56841618e8ca8",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-60hz.json.gz": "e4a2d96ad02a3c47fab879fd55e983e47a03ca0b1e9ce02a6c9590c7af39c060",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-120hz.json.gz": "9f3e84469d35446e8013a0776990193d547548886a4885f8e44c66d94f6dba1f",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-240hz.json.gz": "66698064e532c5dd2b7a08a8fd3d356b441f8e4280a07958650547ff9d0629d5",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-60hz-reduced.json.gz": "31289b3dd64b028ab4a8c93a542dea2ba08c8bee1e91fe5ea880893b9c4f5665",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-120hz-reduced.json.gz": "ba8756c0867a57f548f0988d073073a3924609a41df2d2cddaae14cf43d312f9",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-300x320-240hz-reduced.json.gz": "f0c80fba5bdcc29e16ae2da34772bd9f398cd3db3ddc099b111f34e57277b231",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-60hz.json.gz": "2ad14f07a742a7b0af6da392a5ea39a89ac2167f249643c34fac1c4a82c88a10",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-120hz.json.gz": "d8ae79cbdcf781fcc7ebc80bd536c97bfee8cb9302fe2c93732befc26a33c645",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-240hz.json.gz": "0175d76f7b201dfb0cbf87d4e23badc0a224bd8cb93c1a7d60fa96d13a9f9674",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-60hz-reduced.json.gz": "f56053a936d6cc3d21dbedb0f94723f430e7bdadbbc825e020be8b64d219a734",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-120hz-reduced.json.gz": "2faa6ce207d5f42cc0049f6f1425835b6b8a116f711f8a5fabf288b1a9449219",
+    "tools/fixtures/drams-objects-physics-original/raw-fixtures/drams-047-368x320-240hz-reduced.json.gz": "16594299efbc74bb326f2116e8e440c287a6ee4fcc8a7614c0c6fb04646ecf6e",
+    "tools/verification/drams-objects-physics-assets.js": "8878bb0e48f246391035a7ec0a8572bec824dea3bb7c9fd357406af0a9d41288",
+    "tools/verification/drams-objects-physics-cancel-paint.js": "a9960b765518d4096a7b7e409a432edbe79c54783fef07c0e5b356f6aa8f1a0c",
+    "tools/verification/drams-objects-physics-clock-view.js": "7e5058b39c09e524a2ac5fde5780ec13072a5ed9a5fe16d4f546706db7b6056c",
+    "tools/verification/drams-objects-physics-concurrent.js": "448a21c41ad3653c29ee3940af371d67a7d10115dd11262128890d1859ada6b4",
+    "tools/verification/drams-objects-physics-factories.js": "7f83a84f740973d95016e3a04163af8c006ad1e1d6a6dfac7710125e271f1554",
+    "tools/verification/drams-objects-physics-focus.js": "e9000c8e47aab1db6e8da9f73860d87520ad087285cd15c667feb58e7777c15e",
+    "tools/verification/drams-objects-physics-harness.js": "a351c1847ef5171db285b27c4b22b672e5df57139476801be2aa25a6a1a5ead5",
+    "tools/verification/drams-objects-physics-inputs.js": "840cf14f37f5714dcf7320981e4756ae8f8bc923701fc1cc37ff43bf885595c0",
+    "tools/verification/drams-objects-physics-keys.js": "46a41628b19b60d819d415234d9402f99918ebe2bc8ebe0d492c57fa6092324e",
+    "tools/verification/drams-objects-physics-layout.js": "c6e255d0696ef1dc3cb434e5e206b32eb552f8ed7627161df921f32cb16bd505",
+    "tools/verification/drams-objects-physics-lifecycle.js": "1a0e46bbe7b78c61aa9343251362ca27798d860410ef552e5d07ae69d6784db6",
+    "tools/verification/drams-objects-physics-models.js": "af0f5bda7b2de257025009c3d580279464a611b318330fda8bfff2751ab00dc1",
+    "tools/verification/drams-objects-physics-motion-oracle.js": "decf7373bf1b64ae86dca2801184ad800677c65d844779ffdf58071fd60b1da5",
+    "tools/verification/drams-objects-physics-motion.js": "e9b046b74a686dceba726142be38a1404ebf207fcf44cfdbaf94729590a4138b",
+    "tools/verification/drams-objects-physics-multitouch.js": "43fc6ef7f5e966f9892313c44df92ecffb1a5154ee09dfba4d500bf778a5fde9",
+    "tools/verification/drams-objects-physics-portable.js": "28b209c24ec79aac92057e80e107f3c3b7306e0e9a7763d1de1301eb94156e02",
+    "tools/verification/drams-objects-physics-press-ownership.js": "4828fadddd5c416ecf450c0a3d44cb0a61ad9088b2467b2231ce372c692d60e2",
+    "tools/verification/drams-objects-physics-press.js": "81c08b91670a9260a23699b92d810c9b3d40fbd2b64f348f65e24972d05a4c64",
+    "tools/verification/drams-objects-physics-projection.js": "27866ab80a001dd0222d02516ecf025b46492d621b512f1d7ae0463bfdc8397f",
+    "tools/verification/drams-objects-physics-real-interrupt.js": "e97b86151f43d892eeadef505b92f2b9e4af7f08727843ed18840f809a041468",
+    "tools/verification/drams-objects-physics-reduced-grab.js": "f663b9ca8a7cd29b6f45821de4b5c883a2354936d530c2fec04ca766556cbbb5",
+    "tools/verification/drams-objects-physics-retarget.js": "e0ae5039b1bcd0ee75c9a73db22df284fd1f40fd7eeba4cf7274209f9a5f4064",
+    "tools/verification/drams-objects-physics-routes.js": "c63c9ad4a9ae183f824dc44dd28ea95bedd12360b194b045b8e0271adfc65783",
+    "tools/verification/drams-objects-physics-script-timing.js": "edc08aabc565cb9bfb3337898b6826a740720b6ea2ed138f1bd020af815d2efc",
+    "tools/verification/drams-objects-physics-shadows.js": "a611efc0036b20dfa767529ce5d80f6aabbe74f288b6139adbb6ae6d6766c6c0",
+    "tools/verification/drams-objects-physics-smoke.js": "5b813cd7d0afea0c4b6bb7a9349c445262b305c721c55bd087f1b6695ea98707",
+    "tools/verification/drams-objects-physics-source.js": "aa49d186b5fe4de26cff34a2981c9021ad2298e52713079af40bc6ff6aa863b8",
+    "tools/verification/drams-objects-physics-starts.js": "c6e0c0d72f538e89556946669844787c7b05b0ee81f539c4f66615b0f9b88c2b",
+    "tools/verification/drams-objects-physics-startup.js": "d33c3382bd43c58e94c95a139b23ce12553b92e50a8b9106f63f27616139a300",
+    "tools/verification/drams-objects-physics-stress.js": "8737b44de76b950920d758939cf2de39ef507a324d4a81d0e7d6545a6f93adaf",
+    "tools/verification/drams-objects-physics-touch.js": "9cd7ed19f967500f991e2f9416c946cd84a9dd859fea55d3384bf44b649087f0",
+    "tools/profile-drams-objects-physics.js": "b8081193b9aa530a1b5371d5e438a17b7b0a100ed8c04f9851ea818be9153811"
+  },
+  "complete": true,
+  "cases": 16,
+  "timingGatePassed": false,
+  "ranges": [
+    {
+      "cpu": 1,
+      "cases": 8,
+      "fps": {
+        "min": 59.87848029661882,
+        "max": 60.002893085550426
+      },
+      "maxP95": 16.799999999999727,
+      "gaps": 1,
+      "longTasks": 0,
+      "firstPaintMS": {
+        "min": 37.218,
+        "max": 62.322
+      },
+      "maxReadyMS": 124
+    },
+    {
+      "cpu": 4,
+      "cases": 8,
+      "fps": {
+        "min": 40.28423004255128,
+        "max": 52.035354164073205
+      },
+      "maxP95": 66.60000000000036,
+      "gaps": 469,
+      "longTasks": 103,
+      "firstPaintMS": {
+        "min": 293.003,
+        "max": 535.466
+      },
+      "maxReadyMS": 709.5
+    }
+  ],
+  "environment": {
+    "at": "2026-11-21T20:31:03.750Z",
+    "ownHeavyTestsStopped": true,
+    "stoppedHandles": [
+      24391,
+      57055
+    ],
+    "cliTests": 8,
+    "otherApplicationsControlled": false,
+    "scope": "All own emitted verification,required phase,CLI,fit and integrity checks ended before the corrected-source timing run. Local static servers remain running. Other applications are uncontrolled;all timing outliers remain recorded."
+  },
+  "attempts": [
+    {
+      "file": ".artifacts/drams-objects-physics/performance-cpu1-1795293067372.json",
+      "sha256": "9731ff9b5e54595de681fe9fecb8668cee784bc38b63f8fe781b8fed7459bdf2",
+      "parameters": {
+        "cpu": 1,
+        "ids": [
+          "drams-046",
+          "drams-047"
+        ],
+        "modes": [
+          "thumb",
+          "full"
+        ]
+      },
+      "results": [
+        {
+          "kind": "pendulum",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 60.30000000447035,
+            "firstContentfulPaint": 55.30000000447035,
+            "firstPaint": 39.743,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8017.29999999702,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 182.5000000014901
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 615.8000000014902
+              },
+              {
+                "name": "reset",
+                "at": 965.8000000014902
+              },
+              {
+                "name": "dock",
+                "at": 1315.8000000014902
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1432.40000000149
+              },
+              {
+                "name": "hold",
+                "at": 2015.80000000149
+              },
+              {
+                "name": "queued-reset",
+                "at": 2315.70000000149
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2515.70000000149
+              },
+              {
+                "name": "resume",
+                "at": 3015.70000000149
+              },
+              {
+                "name": "second-dock",
+                "at": 3815.60000000149
+              },
+              {
+                "name": "retarget",
+                "at": 4115.7000000014905
+              },
+              {
+                "name": "final-impulse",
+                "at": 5015.60000000149
+              },
+              {
+                "name": "final-reset",
+                "at": 5515.60000000149
+              },
+              {
+                "name": "final-dock",
+                "at": 6215.60000000149
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6515.60000000149
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                0.7689916319367585,
+                0.8383626010847245,
+                -19.19439869768959
+              ],
+              "vel": [
+                17.36020778945828,
+                16.5079514656903,
+                11.509178022963079
+              ],
+              "drag": -1,
+              "raf": 272,
+              "last": 7066.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 425,
+              "frames": 271,
+              "events": 24,
+              "skipped": 153,
+              "time": 7077.10000000149,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7077.10000000149,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-thumb-desktop-cpu1-1795293067372-trace.json",
+            "sha256": "b94a1f73b5eeb2d22283a38cf07c3819a0fcbd8e0a094dc01ca85e35bfca3f3e",
+            "events": 21007
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 124,
+            "firstContentfulPaint": 61.900000005960464,
+            "firstPaint": 43.712,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8005.70000000298,
+            "frames": 481,
+            "fps": 60.00274440826815,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 188.20000000447044
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 604.8000000044703
+              },
+              {
+                "name": "reset",
+                "at": 954.8000000044703
+              },
+              {
+                "name": "dock",
+                "at": 1304.8000000044703
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1421.5000000044702
+              },
+              {
+                "name": "hold",
+                "at": 2004.8000000044703
+              },
+              {
+                "name": "queued-reset",
+                "at": 2304.8000000044703
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2504.7000000044704
+              },
+              {
+                "name": "resume",
+                "at": 3004.70000000447
+              },
+              {
+                "name": "second-dock",
+                "at": 3804.70000000447
+              },
+              {
+                "name": "retarget",
+                "at": 4104.70000000447
+              },
+              {
+                "name": "final-impulse",
+                "at": 5004.6000000044705
+              },
+              {
+                "name": "final-reset",
+                "at": 5504.6000000044705
+              },
+              {
+                "name": "final-dock",
+                "at": 6204.6000000044705
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6504.6000000044705
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668750000000008,
+                -17.378472222222392,
+                -5.359791666666644
+              ],
+              "v": [
+                -9.262500000000458,
+                154.37499999999963,
+                -96.36249999999956
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 296,
+              "last": 7133.333333333333
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 429,
+              "frames": 295,
+              "events": 14,
+              "skipped": 133,
+              "time": 7140.399999991059,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7140.399999991059,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6550
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-thumb-desktop-cpu1-1795293067372-trace.json",
+            "sha256": "ecf340cff2ca857d7138f9e5b7a541d4ef8e260e16f57ee2489dbfa36d42af82",
+            "events": 21611
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 61.100000001490116,
+            "firstContentfulPaint": 56.100000001490116,
+            "firstPaint": 42.654,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8015.80000000447,
+            "frames": 480,
+            "fps": 60.002250084378154,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 196.5000000044704
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 613.2000000044703
+              },
+              {
+                "name": "reset",
+                "at": 963.2000000044704
+              },
+              {
+                "name": "dock",
+                "at": 1313.2000000044704
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1429.8000000044703
+              },
+              {
+                "name": "hold",
+                "at": 2013.2000000044704
+              },
+              {
+                "name": "queued-reset",
+                "at": 2313.1000000044705
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2513.1000000044705
+              },
+              {
+                "name": "resume",
+                "at": 3013.1000000044705
+              },
+              {
+                "name": "second-dock",
+                "at": 3813.1000000044705
+              },
+              {
+                "name": "retarget",
+                "at": 4113.00000000447
+              },
+              {
+                "name": "final-impulse",
+                "at": 5013.00000000447
+              },
+              {
+                "name": "final-reset",
+                "at": 5513.00000000447
+              },
+              {
+                "name": "final-dock",
+                "at": 6213.00000000447
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6513.00000000447
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                0.7690093205605655,
+                0.8355082185135752,
+                -19.195146965039733
+              ],
+              "vel": [
+                17.360433058769775,
+                16.508888975997053,
+                11.47101369346712
+              ],
+              "drag": -1,
+              "raf": 271,
+              "last": 7050
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 424,
+              "frames": 270,
+              "events": 24,
+              "skipped": 153,
+              "time": 7060.5,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7060.5,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-thumb-mobile-cpu1-1795293067372-trace.json",
+            "sha256": "6b9ee60f0c770676054b170acc5a6850e5792b43e39d71d7bf29766812f5350a",
+            "events": 21841
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 55.29999999701977,
+            "firstContentfulPaint": null,
+            "firstPaint": 44.486,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8004.20000000298,
+            "frames": 480,
+            "fps": 60.00225008437817,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 185.70000000298023
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 602.4000000029803
+              },
+              {
+                "name": "reset",
+                "at": 952.4000000029803
+              },
+              {
+                "name": "dock",
+                "at": 1302.4000000029803
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1435.7000000029802
+              },
+              {
+                "name": "hold",
+                "at": 2002.3000000029801
+              },
+              {
+                "name": "queued-reset",
+                "at": 2302.30000000298
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2502.30000000298
+              },
+              {
+                "name": "resume",
+                "at": 3002.30000000298
+              },
+              {
+                "name": "second-dock",
+                "at": 3802.3000000029806
+              },
+              {
+                "name": "retarget",
+                "at": 4102.300000002981
+              },
+              {
+                "name": "final-impulse",
+                "at": 5002.20000000298
+              },
+              {
+                "name": "final-reset",
+                "at": 5502.20000000298
+              },
+              {
+                "name": "final-dock",
+                "at": 6202.20000000298
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6502.20000000298
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668749999999935,
+                -17.378472222222385,
+                -5.359791666666679
+              ],
+              "v": [
+                -9.262499999999447,
+                154.3749999999996,
+                -96.36250000000025
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 298,
+              "last": 7050
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 424,
+              "frames": 297,
+              "events": 14,
+              "skipped": 126,
+              "time": 7066.000000007451,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7066.000000007451,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6466.666666666667
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-thumb-mobile-cpu1-1795293067372-trace.json",
+            "sha256": "3305a7d2bad6239d022ea7b58d933aaf3aa44675cf0411fa34dc7be551387daf",
+            "events": 21614
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 50.099999994039536,
+            "firstContentfulPaint": null,
+            "firstPaint": 40.712,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8018,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 183.20000000447033
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 616.5000000044704
+              },
+              {
+                "name": "reset",
+                "at": 966.5000000044704
+              },
+              {
+                "name": "dock",
+                "at": 1316.5000000044704
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1433.1000000044703
+              },
+              {
+                "name": "hold",
+                "at": 2016.5000000044702
+              },
+              {
+                "name": "queued-reset",
+                "at": 2316.4000000044703
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2516.4000000044703
+              },
+              {
+                "name": "resume",
+                "at": 3016.50000000447
+              },
+              {
+                "name": "second-dock",
+                "at": 3816.4000000044707
+              },
+              {
+                "name": "retarget",
+                "at": 4116.30000000447
+              },
+              {
+                "name": "final-impulse",
+                "at": 5016.30000000447
+              },
+              {
+                "name": "final-reset",
+                "at": 5516.30000000447
+              },
+              {
+                "name": "final-dock",
+                "at": 6216.30000000447
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6516.30000000447
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                0.7690356781777133,
+                0.8312264143698973,
+                -19.196263106415834
+              ],
+              "vel": [
+                17.360768680192088,
+                16.510289756179613,
+                11.413766837148897
+              ],
+              "drag": -1,
+              "raf": 272,
+              "last": 7050
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 424,
+              "frames": 271,
+              "events": 24,
+              "skipped": 152,
+              "time": 7057.4000000059605,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7057.4000000059605,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-full-desktop-cpu1-1795293067372-trace.json",
+            "sha256": "1d5b09ccbf01f41d27227e3d68e8e1d67f29340a1dec43793b456944bb2d82fa",
+            "events": 21996
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 43.400000005960464,
+            "firstContentfulPaint": null,
+            "firstPaint": 37.218,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8012.70000000298,
+            "frames": 481,
+            "fps": 60.0019959083878,
+            "p95": 16.799999999999727,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 194.6999999985099
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 611.3999999985099
+              },
+              {
+                "name": "reset",
+                "at": 961.29999999851
+              },
+              {
+                "name": "dock",
+                "at": 1311.3999999985099
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1427.8999999985099
+              },
+              {
+                "name": "hold",
+                "at": 2011.29999999851
+              },
+              {
+                "name": "queued-reset",
+                "at": 2311.29999999851
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2511.29999999851
+              },
+              {
+                "name": "resume",
+                "at": 3011.19999999851
+              },
+              {
+                "name": "second-dock",
+                "at": 3811.19999999851
+              },
+              {
+                "name": "retarget",
+                "at": 4111.19999999851
+              },
+              {
+                "name": "final-impulse",
+                "at": 5011.19999999851
+              },
+              {
+                "name": "final-reset",
+                "at": 5511.19999999851
+              },
+              {
+                "name": "final-dock",
+                "at": 6211.09999999851
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6511.09999999851
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668750000000008,
+                -17.378472222222392,
+                -5.359791666666644
+              ],
+              "v": [
+                -9.262500000000458,
+                154.37499999999963,
+                -96.36249999999956
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 296,
+              "last": 7033.333333333333
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 423,
+              "frames": 295,
+              "events": 14,
+              "skipped": 127,
+              "time": 7046.30000000447,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7046.30000000447,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6450
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-full-desktop-cpu1-1795293067372-trace.json",
+            "sha256": "c2a1b74bbeccfc1ec3e1e37b471461f2f3d0f552a386c15cc8f0c3688f60f074",
+            "events": 22748
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 64.40000000596046,
+            "firstContentfulPaint": null,
+            "firstPaint": 52.016,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8017.5,
+            "frames": 481,
+            "fps": 59.87848029661882,
+            "p95": 16.700000000000728,
+            "gaps": [
+              {
+                "frame": 340,
+                "ms": 33.400000000000546
+              }
+            ],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 182.90000000298022
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 616.2000000029802
+              },
+              {
+                "name": "reset",
+                "at": 966.2000000029802
+              },
+              {
+                "name": "dock",
+                "at": 1316.2000000029802
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1432.9000000029803
+              },
+              {
+                "name": "hold",
+                "at": 2016.2000000029802
+              },
+              {
+                "name": "queued-reset",
+                "at": 2316.1000000029803
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2516.1000000029803
+              },
+              {
+                "name": "resume",
+                "at": 3016.1000000029803
+              },
+              {
+                "name": "second-dock",
+                "at": 3816.0000000029804
+              },
+              {
+                "name": "retarget",
+                "at": 4116.10000000298
+              },
+              {
+                "name": "final-impulse",
+                "at": 5016.00000000298
+              },
+              {
+                "name": "final-reset",
+                "at": 5516.00000000298
+              },
+              {
+                "name": "final-dock",
+                "at": 6216.00000000298
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6516.00000000298
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                0.017262960438689495,
+                -0.8062498607084193,
+                -19.344886158999582
+              ],
+              "vel": [
+                9.42450969225529,
+                10.904656162559995,
+                9.659360339556692
+              ],
+              "drag": -1,
+              "raf": 272,
+              "last": 7066.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 425,
+              "frames": 271,
+              "events": 23,
+              "skipped": 153,
+              "time": 7072.29999999702,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7072.29999999702,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-full-mobile-cpu1-1795293067372-trace.json",
+            "sha256": "6bf2bfac581acf80c69e1d61128839f84b66c2eb0c218e955a55205fb151ff97",
+            "events": 22992
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 73.30000000447035,
+            "firstContentfulPaint": null,
+            "firstPaint": 62.322,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8013.5,
+            "frames": 482,
+            "fps": 60.002893085550426,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 195.29999999999995
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 612
+              },
+              {
+                "name": "reset",
+                "at": 962
+              },
+              {
+                "name": "dock",
+                "at": 1311.9
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1428.7
+              },
+              {
+                "name": "hold",
+                "at": 2011.9
+              },
+              {
+                "name": "queued-reset",
+                "at": 2311.9
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2512
+              },
+              {
+                "name": "resume",
+                "at": 3011.9
+              },
+              {
+                "name": "second-dock",
+                "at": 3811.8999999999996
+              },
+              {
+                "name": "retarget",
+                "at": 4111.9
+              },
+              {
+                "name": "final-impulse",
+                "at": 5011.9
+              },
+              {
+                "name": "final-reset",
+                "at": 5511.8
+              },
+              {
+                "name": "final-dock",
+                "at": 6211.8
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6511.8
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668750000000042,
+                -17.378472222222,
+                -5.359791666666675
+              ],
+              "v": [
+                -9.262500000000086,
+                154.37500000000063,
+                -96.36250000000018
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 296,
+              "last": 7066.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 425,
+              "frames": 295,
+              "events": 14,
+              "skipped": 129,
+              "time": 7067.39999999851,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7067.39999999851,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6483.333333333333
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-full-mobile-cpu1-1795293067372-trace.json",
+            "sha256": "01eeaa21dad7c4b29981385146f967ea2ab78f7cb9fb26269dca0d63e5d8e03e",
+            "events": 23661
+          }
+        }
+      ]
+    },
+    {
+      "file": ".artifacts/drams-objects-physics/performance-cpu4-1795293152560.json",
+      "sha256": "52c05f427b21f0f27bc1e484e180ad6aabbab1e9216cb3ed46d39c7cc9723e37",
+      "parameters": {
+        "cpu": 4,
+        "ids": [
+          "drams-046",
+          "drams-047"
+        ],
+        "modes": [
+          "thumb",
+          "full"
+        ]
+      },
+      "results": [
+        {
+          "kind": "pendulum",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 584.5999999940395,
+            "firstContentfulPaint": 565.0999999940395,
+            "firstPaint": 535.466,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8007.29999999702,
+            "frames": 378,
+            "fps": 46.958668421115405,
+            "p95": 49.899999999999636,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 66.63200000000006
+              },
+              {
+                "frame": 12,
+                "ms": 50
+              },
+              {
+                "frame": 78,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 80,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 81,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 82,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 83,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 84,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 85,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 86,
+                "ms": 50
+              },
+              {
+                "frame": 87,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 91,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 92,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 94,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 96,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 97,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 167,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 170,
+                "ms": 66.60000000000036
+              },
+              {
+                "frame": 171,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 183,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 184,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 185,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 187,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 189,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 191,
+                "ms": 33.20000000000073
+              },
+              {
+                "frame": 193,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 194,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 196,
+                "ms": 50
+              },
+              {
+                "frame": 197,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 211,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 219,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 266,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 273,
+                "ms": 49.899999999999636
+              },
+              {
+                "frame": 275,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 276,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 277,
+                "ms": 49.899999999999636
+              },
+              {
+                "frame": 278,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 281,
+                "ms": 50
+              },
+              {
+                "frame": 282,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 333,
+                "ms": 133.19999999999982
+              },
+              {
+                "frame": 334,
+                "ms": 216.69999999999982
+              },
+              {
+                "frame": 335,
+                "ms": 50
+              },
+              {
+                "frame": 336,
+                "ms": 50
+              },
+              {
+                "frame": 337,
+                "ms": 100
+              },
+              {
+                "frame": 338,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 341,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 342,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 343,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 345,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 346,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 354,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 355,
+                "ms": 116.70000000000073
+              },
+              {
+                "frame": 357,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 358,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 359,
+                "ms": 66.70000000000073
+              },
+              {
+                "frame": 366,
+                "ms": 66.60000000000036
+              },
+              {
+                "frame": 367,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 372,
+                "ms": 33.29999999999927
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 1480.1999999955297,
+                "duration": 85
+              },
+              {
+                "at": 1626.8999999985099,
+                "duration": 53
+              },
+              {
+                "at": 5323.79999999702,
+                "duration": 59
+              },
+              {
+                "at": 5463.10000000149,
+                "duration": 57
+              },
+              {
+                "at": 6368.5,
+                "duration": 139
+              },
+              {
+                "at": 6507.89999999851,
+                "duration": 225
+              },
+              {
+                "at": 6780.39999999851,
+                "duration": 50
+              },
+              {
+                "at": 6832.10000000149,
+                "duration": 92
+              },
+              {
+                "at": 7335.60000000149,
+                "duration": 123
+              },
+              {
+                "at": 7541.29999999702,
+                "duration": 61
+              },
+              {
+                "at": 7702.10000000149,
+                "duration": 83
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 184.79999999552956
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 601.4999999955296
+              },
+              {
+                "name": "reset",
+                "at": 951.3999999955297
+              },
+              {
+                "name": "dock",
+                "at": 1301.4999999955298
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1434.7999999955296
+              },
+              {
+                "name": "hold",
+                "at": 2001.4999999955298
+              },
+              {
+                "name": "queued-reset",
+                "at": 2301.3999999955295
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2501.49999999553
+              },
+              {
+                "name": "resume",
+                "at": 3001.3999999955295
+              },
+              {
+                "name": "second-dock",
+                "at": 3801.29999999553
+              },
+              {
+                "name": "retarget",
+                "at": 4101.29999999553
+              },
+              {
+                "name": "final-impulse",
+                "at": 5001.29999999553
+              },
+              {
+                "name": "final-reset",
+                "at": 5501.29999999553
+              },
+              {
+                "name": "final-dock",
+                "at": 6201.29999999553
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6501.19999999553
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                -2.1240730227587292,
+                -1.9984393550077149,
+                -16.038421871104624
+              ],
+              "vel": [
+                15.478311984747258,
+                14.837614341975037,
+                -53.62681836372118
+              ],
+              "drag": -1,
+              "raf": 259,
+              "last": 7216.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 434,
+              "frames": 258,
+              "events": 23,
+              "skipped": 175,
+              "time": 7229.0999999940395,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7229.0999999940395,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-thumb-desktop-cpu4-1795293152560-trace.json",
+            "sha256": "1915b4c2793cf88efb9553ca6b1d674a6df79ca53a46ccf38fce30c50c3fe58f",
+            "events": 19553
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 593.8000000044703,
+            "firstContentfulPaint": 524.2000000029802,
+            "firstPaint": 482.582,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8043.60000000149,
+            "frames": 333,
+            "fps": 40.28423004255128,
+            "p95": 50,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 266.5620000000001
+              },
+              {
+                "frame": 13,
+                "ms": 83.40000000000009
+              },
+              {
+                "frame": 14,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 15,
+                "ms": 33.399999999999864
+              },
+              {
+                "frame": 20,
+                "ms": 50
+              },
+              {
+                "frame": 21,
+                "ms": 50
+              },
+              {
+                "frame": 22,
+                "ms": 33.399999999999864
+              },
+              {
+                "frame": 23,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 25,
+                "ms": 166.5999999999999
+              },
+              {
+                "frame": 26,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 27,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 28,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 29,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 30,
+                "ms": 66.59999999999991
+              },
+              {
+                "frame": 31,
+                "ms": 49.90000000000009
+              },
+              {
+                "frame": 53,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 55,
+                "ms": 100
+              },
+              {
+                "frame": 115,
+                "ms": 50.09999999999991
+              },
+              {
+                "frame": 143,
+                "ms": 166.70000000000073
+              },
+              {
+                "frame": 146,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 148,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 151,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 152,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 154,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 156,
+                "ms": 50
+              },
+              {
+                "frame": 157,
+                "ms": 50
+              },
+              {
+                "frame": 158,
+                "ms": 50
+              },
+              {
+                "frame": 159,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 160,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 161,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 163,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 165,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 166,
+                "ms": 50
+              },
+              {
+                "frame": 167,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 168,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 169,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 171,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 172,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 173,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 175,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 177,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 228,
+                "ms": 116.60000000000036
+              },
+              {
+                "frame": 231,
+                "ms": 50
+              },
+              {
+                "frame": 232,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 233,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 234,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 238,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 239,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 240,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 241,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 242,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 286,
+                "ms": 50
+              },
+              {
+                "frame": 288,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 289,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 290,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 291,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 293,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 294,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 295,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 297,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 300,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 301,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 303,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 304,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 306,
+                "ms": 33.20000000000073
+              },
+              {
+                "frame": 307,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 308,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 309,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 310,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 311,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 312,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 314,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 315,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 316,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 318,
+                "ms": 50
+              },
+              {
+                "frame": 319,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 320,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 321,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 322,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 324,
+                "ms": 66.69999999999891
+              },
+              {
+                "frame": 325,
+                "ms": 66.60000000000036
+              },
+              {
+                "frame": 326,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 327,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 329,
+                "ms": 50
+              },
+              {
+                "frame": 330,
+                "ms": 116.69999999999891
+              },
+              {
+                "frame": 331,
+                "ms": 83.30000000000109
+              },
+              {
+                "frame": 332,
+                "ms": 83.39999999999964
+              },
+              {
+                "frame": 333,
+                "ms": 33.29999999999927
+              }
+            ],
+            "longTasks": [
+              {
+                "at": -332.6000000014901,
+                "duration": 334
+              },
+              {
+                "at": 219.70000000298023,
+                "duration": 73
+              },
+              {
+                "at": 426.5,
+                "duration": 52
+              },
+              {
+                "at": 609.3999999985099,
+                "duration": 176
+              },
+              {
+                "at": 917.2999999970198,
+                "duration": 66
+              },
+              {
+                "at": 984.7999999970198,
+                "duration": 51
+              },
+              {
+                "at": 1429.3999999985099,
+                "duration": 99
+              },
+              {
+                "at": 2508.7999999970198,
+                "duration": 60
+              },
+              {
+                "at": 3010.60000000149,
+                "duration": 169
+              },
+              {
+                "at": 3521.5,
+                "duration": 53
+              },
+              {
+                "at": 3813.89999999851,
+                "duration": 58
+              },
+              {
+                "at": 5008.29999999702,
+                "duration": 117
+              },
+              {
+                "at": 5217.20000000298,
+                "duration": 53
+              },
+              {
+                "at": 5512.89999999851,
+                "duration": 58
+              },
+              {
+                "at": 6529.60000000149,
+                "duration": 76
+              },
+              {
+                "at": 7457.39999999851,
+                "duration": 52
+              },
+              {
+                "at": 7512.5,
+                "duration": 75
+              },
+              {
+                "at": 7712.10000000149,
+                "duration": 127
+              },
+              {
+                "at": 7840.60000000149,
+                "duration": 85
+              },
+              {
+                "at": 7928.5,
+                "duration": 79
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 190.90000000149007
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 607.70000000149
+              },
+              {
+                "name": "reset",
+                "at": 974.3000000014899
+              },
+              {
+                "name": "dock",
+                "at": 1307.6000000014901
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1424.30000000149
+              },
+              {
+                "name": "hold",
+                "at": 2007.5000000014902
+              },
+              {
+                "name": "queued-reset",
+                "at": 2307.60000000149
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2507.50000000149
+              },
+              {
+                "name": "resume",
+                "at": 3007.5000000014898
+              },
+              {
+                "name": "second-dock",
+                "at": 3807.5000000014898
+              },
+              {
+                "name": "retarget",
+                "at": 4124.2000000014905
+              },
+              {
+                "name": "final-impulse",
+                "at": 5007.50000000149
+              },
+              {
+                "name": "final-reset",
+                "at": 5507.40000000149
+              },
+              {
+                "name": "final-dock",
+                "at": 6207.40000000149
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6524.10000000149
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668750000000042,
+                -17.378472222222,
+                -5.359791666666675
+              ],
+              "v": [
+                -9.262500000000086,
+                154.37500000000063,
+                -96.36250000000018
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 302,
+              "last": 7616.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 458,
+              "frames": 301,
+              "events": 14,
+              "skipped": 156,
+              "time": 7628.0999999940395,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7628.0999999940395,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 7033.333333333333
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-thumb-desktop-cpu4-1795293152560-trace.json",
+            "sha256": "c1af907410320804bf4b2362bd25e4f60b318a5f065e1d4d9270a2569a59f8b4",
+            "events": 17609
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 370.29999999701977,
+            "firstContentfulPaint": 346.3999999985099,
+            "firstPaint": 310.214,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8018.20000000298,
+            "frames": 415,
+            "fps": 51.768873808692184,
+            "p95": 33.399999999999636,
+            "gaps": [
+              {
+                "frame": 36,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 38,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 98,
+                "ms": 50
+              },
+              {
+                "frame": 183,
+                "ms": 50
+              },
+              {
+                "frame": 184,
+                "ms": 150
+              },
+              {
+                "frame": 185,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 188,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 189,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 200,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 222,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 223,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 224,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 225,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 226,
+                "ms": 50
+              },
+              {
+                "frame": 239,
+                "ms": 50
+              },
+              {
+                "frame": 280,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 281,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 284,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 285,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 286,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 289,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 291,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 294,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 296,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 297,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 298,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 361,
+                "ms": 50
+              },
+              {
+                "frame": 362,
+                "ms": 116.60000000000036
+              },
+              {
+                "frame": 363,
+                "ms": 50
+              },
+              {
+                "frame": 364,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 367,
+                "ms": 50
+              },
+              {
+                "frame": 371,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 380,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 381,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 382,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 383,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 388,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 393,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 396,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 397,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 400,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 407,
+                "ms": 33.20000000000073
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 1644,
+                "duration": 55
+              },
+              {
+                "at": 3148.60000000149,
+                "duration": 158
+              },
+              {
+                "at": 5538.5,
+                "duration": 83
+              },
+              {
+                "at": 6684.10000000149,
+                "duration": 53
+              },
+              {
+                "at": 6744.79999999702,
+                "duration": 115
+              },
+              {
+                "at": 6963.70000000298,
+                "duration": 55
+              },
+              {
+                "at": 7235.5,
+                "duration": 56
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 193.20000000149014
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 609.9000000014901
+              },
+              {
+                "name": "reset",
+                "at": 959.9000000014901
+              },
+              {
+                "name": "dock",
+                "at": 1309.90000000149
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1426.5000000014902
+              },
+              {
+                "name": "hold",
+                "at": 2009.80000000149
+              },
+              {
+                "name": "queued-reset",
+                "at": 2309.80000000149
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2509.80000000149
+              },
+              {
+                "name": "resume",
+                "at": 3009.80000000149
+              },
+              {
+                "name": "second-dock",
+                "at": 3809.7000000014905
+              },
+              {
+                "name": "retarget",
+                "at": 4126.40000000149
+              },
+              {
+                "name": "final-impulse",
+                "at": 5009.7000000014905
+              },
+              {
+                "name": "final-reset",
+                "at": 5526.40000000149
+              },
+              {
+                "name": "final-dock",
+                "at": 6209.7000000014905
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6509.7000000014905
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                -1.3618781852844628,
+                0.16967715507588327,
+                -19.571191064949197
+              ],
+              "vel": [
+                2.308408930976566,
+                2.521459174432659,
+                6.194034212651713
+              ],
+              "drag": -1,
+              "raf": 275,
+              "last": 7166.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 431,
+              "frames": 274,
+              "events": 24,
+              "skipped": 156,
+              "time": 7181.79999999702,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7181.79999999702,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-thumb-mobile-cpu4-1795293152560-trace.json",
+            "sha256": "a565f3b5cb47289d10690b8d7775ffe386237c0100bf0c2cef3eba07eac3b71b",
+            "events": 21348
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 709.5,
+            "firstContentfulPaint": 640.7999999970198,
+            "firstPaint": 509.085,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8027.80000000447,
+            "frames": 355,
+            "fps": 44.101570264360966,
+            "p95": 50.100000000000364,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 13,
+                "ms": 183.20000000000005
+              },
+              {
+                "frame": 15,
+                "ms": 66.70000000000005
+              },
+              {
+                "frame": 16,
+                "ms": 66.70000000000005
+              },
+              {
+                "frame": 23,
+                "ms": 200
+              },
+              {
+                "frame": 24,
+                "ms": 49.90000000000009
+              },
+              {
+                "frame": 28,
+                "ms": 50
+              },
+              {
+                "frame": 29,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 30,
+                "ms": 66.59999999999991
+              },
+              {
+                "frame": 50,
+                "ms": 66.59999999999991
+              },
+              {
+                "frame": 52,
+                "ms": 50
+              },
+              {
+                "frame": 57,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 62,
+                "ms": 50.09999999999991
+              },
+              {
+                "frame": 64,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 65,
+                "ms": 100
+              },
+              {
+                "frame": 66,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 68,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 69,
+                "ms": 83.29999999999973
+              },
+              {
+                "frame": 122,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 123,
+                "ms": 50
+              },
+              {
+                "frame": 126,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 127,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 131,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 133,
+                "ms": 50
+              },
+              {
+                "frame": 134,
+                "ms": 66.70000000000073
+              },
+              {
+                "frame": 150,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 151,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 152,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 153,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 159,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 164,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 165,
+                "ms": 49.900000000000546
+              },
+              {
+                "frame": 217,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 221,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 222,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 227,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 239,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 240,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 278,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 294,
+                "ms": 50
+              },
+              {
+                "frame": 297,
+                "ms": 100
+              },
+              {
+                "frame": 300,
+                "ms": 50
+              },
+              {
+                "frame": 301,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 304,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 311,
+                "ms": 83.29999999999927
+              },
+              {
+                "frame": 312,
+                "ms": 83.40000000000146
+              },
+              {
+                "frame": 313,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 314,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 318,
+                "ms": 33.400000000001455
+              },
+              {
+                "frame": 320,
+                "ms": 49.899999999999636
+              },
+              {
+                "frame": 322,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 325,
+                "ms": 50
+              },
+              {
+                "frame": 331,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 332,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 334,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 337,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 346,
+                "ms": 33.400000000001455
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 181.10000000149012,
+                "duration": 194
+              },
+              {
+                "at": 457.30000000447035,
+                "duration": 57
+              },
+              {
+                "at": 628.1000000014901,
+                "duration": 200
+              },
+              {
+                "at": 977.3000000044703,
+                "duration": 85
+              },
+              {
+                "at": 1062.6000000014901,
+                "duration": 61
+              },
+              {
+                "at": 1433.8000000044703,
+                "duration": 74
+              },
+              {
+                "at": 1733.8000000044703,
+                "duration": 54
+              },
+              {
+                "at": 1895.8000000044703,
+                "duration": 50
+              },
+              {
+                "at": 2019.5,
+                "duration": 95
+              },
+              {
+                "at": 3018.7000000029802,
+                "duration": 52
+              },
+              {
+                "at": 3264.8000000044703,
+                "duration": 64
+              },
+              {
+                "at": 3329.9000000059605,
+                "duration": 51
+              },
+              {
+                "at": 3633.9000000059605,
+                "duration": 95
+              },
+              {
+                "at": 3730,
+                "duration": 60
+              },
+              {
+                "at": 3945.5,
+                "duration": 73
+              },
+              {
+                "at": 6436.10000000149,
+                "duration": 56
+              },
+              {
+                "at": 6527.80000000447,
+                "duration": 92
+              },
+              {
+                "at": 6912.70000000298,
+                "duration": 79
+              },
+              {
+                "at": 6992.4000000059605,
+                "duration": 78
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 180.40000000298028
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 613.7000000029802
+              },
+              {
+                "name": "reset",
+                "at": 963.7000000029802
+              },
+              {
+                "name": "dock",
+                "at": 1313.7000000029802
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1430.3000000029801
+              },
+              {
+                "name": "hold",
+                "at": 2013.6000000029803
+              },
+              {
+                "name": "queued-reset",
+                "at": 2313.6000000029803
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2513.6000000029803
+              },
+              {
+                "name": "resume",
+                "at": 3013.60000000298
+              },
+              {
+                "name": "second-dock",
+                "at": 3813.5000000029804
+              },
+              {
+                "name": "retarget",
+                "at": 4113.60000000298
+              },
+              {
+                "name": "final-impulse",
+                "at": 5013.50000000298
+              },
+              {
+                "name": "final-reset",
+                "at": 5530.20000000298
+              },
+              {
+                "name": "final-dock",
+                "at": 6213.40000000298
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6513.50000000298
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -8.663958333333298,
+                -24.5555555555557,
+                -5.52500000000002
+              ],
+              "v": [
+                -41.76249999999944,
+                121.87499999999959,
+                180.375
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 301,
+              "last": 7500
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 451,
+              "frames": 300,
+              "events": 14,
+              "skipped": 150,
+              "time": 7516.5999999940395,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7516.5999999940395,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6966.666666666667
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-thumb-mobile-cpu4-1795293152560-trace.json",
+            "sha256": "a31303ea6daaa20d2cedcc77faac86dbbc95bb0e61068012da0b7bfcaab044b2",
+            "events": 19290
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 472.30000000447035,
+            "firstContentfulPaint": 447.6000000014901,
+            "firstPaint": 421.155,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8029.29999999702,
+            "frames": 344,
+            "fps": 42.823236386007665,
+            "p95": 66.60000000000036,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 49.922000000000025
+              },
+              {
+                "frame": 3,
+                "ms": 33.399999999999864
+              },
+              {
+                "frame": 12,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 14,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 22,
+                "ms": 66.70000000000005
+              },
+              {
+                "frame": 23,
+                "ms": 116.60000000000014
+              },
+              {
+                "frame": 24,
+                "ms": 50.09999999999991
+              },
+              {
+                "frame": 25,
+                "ms": 66.59999999999991
+              },
+              {
+                "frame": 26,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 75,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 78,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 90,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 91,
+                "ms": 33.20000000000027
+              },
+              {
+                "frame": 93,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 114,
+                "ms": 50
+              },
+              {
+                "frame": 141,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 153,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 154,
+                "ms": 50
+              },
+              {
+                "frame": 155,
+                "ms": 116.69999999999982
+              },
+              {
+                "frame": 156,
+                "ms": 50
+              },
+              {
+                "frame": 157,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 160,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 161,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 162,
+                "ms": 66.59999999999945
+              },
+              {
+                "frame": 168,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 170,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 174,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 175,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 177,
+                "ms": 66.70000000000073
+              },
+              {
+                "frame": 179,
+                "ms": 50
+              },
+              {
+                "frame": 180,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 182,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 184,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 185,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 191,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 192,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 233,
+                "ms": 50
+              },
+              {
+                "frame": 235,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 236,
+                "ms": 50
+              },
+              {
+                "frame": 238,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 243,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 244,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 248,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 249,
+                "ms": 83.29999999999927
+              },
+              {
+                "frame": 254,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 257,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 289,
+                "ms": 99.89999999999964
+              },
+              {
+                "frame": 290,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 291,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 295,
+                "ms": 83.39999999999964
+              },
+              {
+                "frame": 296,
+                "ms": 50
+              },
+              {
+                "frame": 297,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 303,
+                "ms": 116.69999999999982
+              },
+              {
+                "frame": 304,
+                "ms": 66.60000000000036
+              },
+              {
+                "frame": 305,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 306,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 309,
+                "ms": 83.29999999999927
+              },
+              {
+                "frame": 310,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 315,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 318,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 324,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 325,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 330,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 331,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 333,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 335,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 337,
+                "ms": 33.20000000000073
+              },
+              {
+                "frame": 340,
+                "ms": 83.39999999999964
+              },
+              {
+                "frame": 343,
+                "ms": 33.400000000001455
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 411.5,
+                "duration": 74
+              },
+              {
+                "at": 487,
+                "duration": 103
+              },
+              {
+                "at": 641.2999999970198,
+                "duration": 69
+              },
+              {
+                "at": 1913.2999999970198,
+                "duration": 60
+              },
+              {
+                "at": 2303,
+                "duration": 61
+              },
+              {
+                "at": 3002.5,
+                "duration": 56
+              },
+              {
+                "at": 3097.5999999940395,
+                "duration": 111
+              },
+              {
+                "at": 3359,
+                "duration": 89
+              },
+              {
+                "at": 3448.7999999970198,
+                "duration": 61
+              },
+              {
+                "at": 3814.7999999970198,
+                "duration": 56
+              },
+              {
+                "at": 3896.6999999955297,
+                "duration": 53
+              },
+              {
+                "at": 3989.89999999851,
+                "duration": 87
+              },
+              {
+                "at": 4126.69999999553,
+                "duration": 64
+              },
+              {
+                "at": 5002.0999999940395,
+                "duration": 54
+              },
+              {
+                "at": 5434.19999999553,
+                "duration": 73
+              },
+              {
+                "at": 5653.0999999940395,
+                "duration": 54
+              },
+              {
+                "at": 6218.5999999940395,
+                "duration": 109
+              },
+              {
+                "at": 6327.5999999940395,
+                "duration": 92
+              },
+              {
+                "at": 6501.89999999851,
+                "duration": 92
+              },
+              {
+                "at": 6594.79999999702,
+                "duration": 52
+              },
+              {
+                "at": 6649.0999999940395,
+                "duration": 84
+              },
+              {
+                "at": 6809.5999999940395,
+                "duration": 126
+              },
+              {
+                "at": 7845.69999999553,
+                "duration": 75
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 184.59999999552974
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 634.6999999955297
+              },
+              {
+                "name": "reset",
+                "at": 951.1999999955297
+              },
+              {
+                "name": "dock",
+                "at": 1301.1999999955297
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1434.5999999955297
+              },
+              {
+                "name": "hold",
+                "at": 2001.1999999955297
+              },
+              {
+                "name": "queued-reset",
+                "at": 2301.1999999955297
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2501.1999999955297
+              },
+              {
+                "name": "resume",
+                "at": 3001.1999999955297
+              },
+              {
+                "name": "second-dock",
+                "at": 3801.0999999955293
+              },
+              {
+                "name": "retarget",
+                "at": 4117.79999999553
+              },
+              {
+                "name": "final-impulse",
+                "at": 5001.099999995529
+              },
+              {
+                "name": "final-reset",
+                "at": 5501.099999995529
+              },
+              {
+                "name": "final-dock",
+                "at": 6200.99999999553
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6500.99999999553
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                1.527678082096895,
+                0.23816230108022007,
+                -19.103476352175505
+              ],
+              "vel": [
+                16.623407667459023,
+                13.896354608484769,
+                14.04301544448038
+              ],
+              "drag": -1,
+              "raf": 273,
+              "last": 7316.666666666667
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 440,
+              "frames": 272,
+              "events": 24,
+              "skipped": 167,
+              "time": 7328.20000000298,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7328.20000000298,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-full-desktop-cpu4-1795293152560-trace.json",
+            "sha256": "2d69909953ffa39aeb7f204dbcadb9253a41c4c4dd0f5b320382ed6bced087c1",
+            "events": 18428
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 374.3999999985099,
+            "firstContentfulPaint": 335.8999999985099,
+            "firstPaint": 304.134,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8018.60000000149,
+            "frames": 372,
+            "fps": 46.21376350230758,
+            "p95": 33.400000000000546,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 49.950000000000045
+              },
+              {
+                "frame": 13,
+                "ms": 133.30000000000007
+              },
+              {
+                "frame": 14,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 16,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 20,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 22,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 23,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 31,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 33,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 37,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 73,
+                "ms": 250
+              },
+              {
+                "frame": 74,
+                "ms": 50.09999999999991
+              },
+              {
+                "frame": 77,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 84,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 87,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 88,
+                "ms": 50
+              },
+              {
+                "frame": 108,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 151,
+                "ms": 50
+              },
+              {
+                "frame": 152,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 153,
+                "ms": 49.899999999999636
+              },
+              {
+                "frame": 157,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 158,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 163,
+                "ms": 150
+              },
+              {
+                "frame": 165,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 170,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 176,
+                "ms": 50
+              },
+              {
+                "frame": 179,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 180,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 187,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 189,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 190,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 244,
+                "ms": 66.70000000000073
+              },
+              {
+                "frame": 252,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 256,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 257,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 258,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 259,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 261,
+                "ms": 83.39999999999964
+              },
+              {
+                "frame": 262,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 302,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 305,
+                "ms": 83.30000000000018
+              },
+              {
+                "frame": 306,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 312,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 320,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 322,
+                "ms": 50
+              },
+              {
+                "frame": 325,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 329,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 330,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 334,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 335,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 340,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 344,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 345,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 349,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 352,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 358,
+                "ms": 50
+              },
+              {
+                "frame": 360,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 361,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 362,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 365,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 367,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 368,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 372,
+                "ms": 33.30000000000109
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 185.30000000447035,
+                "duration": 139
+              },
+              {
+                "at": 1449.1000000014901,
+                "duration": 257
+              },
+              {
+                "at": 3433.4000000059605,
+                "duration": 138
+              },
+              {
+                "at": 3804.10000000149,
+                "duration": 50
+              },
+              {
+                "at": 5058.70000000298,
+                "duration": 64
+              },
+              {
+                "at": 5423.30000000447,
+                "duration": 51
+              },
+              {
+                "at": 5500,
+                "duration": 78
+              },
+              {
+                "at": 5581.10000000149,
+                "duration": 83
+              },
+              {
+                "at": 6390.70000000298,
+                "duration": 72
+              },
+              {
+                "at": 7311.4000000059605,
+                "duration": 57
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 183.70000000447033
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 600.3000000044703
+              },
+              {
+                "name": "reset",
+                "at": 950.4000000044703
+              },
+              {
+                "name": "dock",
+                "at": 1300.3000000044703
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1433.6000000044705
+              },
+              {
+                "name": "hold",
+                "at": 2000.3000000044703
+              },
+              {
+                "name": "queued-reset",
+                "at": 2300.2000000044704
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2500.3000000044703
+              },
+              {
+                "name": "resume",
+                "at": 3000.3000000044703
+              },
+              {
+                "name": "second-dock",
+                "at": 3800.20000000447
+              },
+              {
+                "name": "retarget",
+                "at": 4100.20000000447
+              },
+              {
+                "name": "final-impulse",
+                "at": 5000.1000000044705
+              },
+              {
+                "name": "final-reset",
+                "at": 5566.80000000447
+              },
+              {
+                "name": "final-dock",
+                "at": 6200.20000000447
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6500.1000000044705
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.668750000000008,
+                -17.378472222222392,
+                -5.359791666666644
+              ],
+              "v": [
+                -9.262500000000458,
+                154.37499999999963,
+                -96.36249999999956
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 304,
+              "last": 7333.333333333333
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 441,
+              "frames": 303,
+              "events": 14,
+              "skipped": 137,
+              "time": 7339.19999999553,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7339.19999999553,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6750
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-full-desktop-cpu4-1795293152560-trace.json",
+            "sha256": "50ca1a1f7d550da915cdeed30bb81390ed18d9a635cc58071304604b5b84ea1d",
+            "events": 20421
+          }
+        },
+        {
+          "kind": "pendulum",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 420,
+            "firstContentfulPaint": 407.1000000014901,
+            "firstPaint": 386.222,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8012.80000000447,
+            "frames": 416,
+            "fps": 51.78638117764223,
+            "p95": 33.399999999999636,
+            "gaps": [
+              {
+                "frame": 1,
+                "ms": 33.39999999999998
+              },
+              {
+                "frame": 13,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 14,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 20,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 40,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 41,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 42,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 46,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 52,
+                "ms": 50
+              },
+              {
+                "frame": 78,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 79,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 93,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 98,
+                "ms": 50
+              },
+              {
+                "frame": 128,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 167,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 168,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 169,
+                "ms": 49.90000000000009
+              },
+              {
+                "frame": 175,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 180,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 181,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 190,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 192,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 193,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 203,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 204,
+                "ms": 116.60000000000036
+              },
+              {
+                "frame": 205,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 206,
+                "ms": 50.099999999999454
+              },
+              {
+                "frame": 207,
+                "ms": 50
+              },
+              {
+                "frame": 209,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 269,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 340,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 352,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 353,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 356,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 357,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 366,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 367,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 368,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 370,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 371,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 378,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 381,
+                "ms": 50
+              },
+              {
+                "frame": 386,
+                "ms": 50
+              },
+              {
+                "frame": 388,
+                "ms": 33.19999999999891
+              },
+              {
+                "frame": 391,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 401,
+                "ms": 50
+              },
+              {
+                "frame": 402,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 403,
+                "ms": 33.400000000001455
+              },
+              {
+                "frame": 405,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 406,
+                "ms": 50.100000000000364
+              },
+              {
+                "frame": 407,
+                "ms": 33.29999999999927
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 3077.4000000059605,
+                "duration": 50
+              },
+              {
+                "at": 3818.60000000149,
+                "duration": 109
+              },
+              {
+                "at": 4019.2000000029802,
+                "duration": 51
+              },
+              {
+                "at": 7295.5,
+                "duration": 55
+              },
+              {
+                "at": 7777.80000000447,
+                "duration": 62
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 191.90000000447026
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 608.6000000044703
+              },
+              {
+                "name": "reset",
+                "at": 958.6000000044703
+              },
+              {
+                "name": "dock",
+                "at": 1308.6000000044705
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1425.2000000044704
+              },
+              {
+                "name": "hold",
+                "at": 2008.5000000044702
+              },
+              {
+                "name": "queued-reset",
+                "at": 2308.6000000044705
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2508.50000000447
+              },
+              {
+                "name": "resume",
+                "at": 3008.50000000447
+              },
+              {
+                "name": "second-dock",
+                "at": 3808.50000000447
+              },
+              {
+                "name": "retarget",
+                "at": 4108.50000000447
+              },
+              {
+                "name": "final-impulse",
+                "at": 5008.400000004471
+              },
+              {
+                "name": "final-reset",
+                "at": 5508.400000004471
+              },
+              {
+                "name": "final-dock",
+                "at": 6208.400000004471
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6508.30000000447
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angles": [
+                0.7698260553844023,
+                0.681204212060545,
+                -19.230598248823032
+              ],
+              "vel": [
+                17.37080506929503,
+                16.55517034768769,
+                9.409896159152439
+              ],
+              "drag": -1,
+              "raf": 271,
+              "last": 7250
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 436,
+              "frames": 270,
+              "events": 23,
+              "skipped": 165,
+              "time": 7259.80000000447,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7259.80000000447,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": null
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-pendulum-full-mobile-cpu4-1795293152560-trace.json",
+            "sha256": "27f1147fc3e590c329313e5c230c3b55f4cd816240edad360f75cc25252c8577",
+            "events": 23395
+          }
+        },
+        {
+          "kind": "bounce",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 308.69999999552965,
+            "firstContentfulPaint": null,
+            "firstPaint": 293.003,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8032.29999999702,
+            "frames": 418,
+            "fps": 52.035354164073205,
+            "p95": 33.399999999999636,
+            "gaps": [
+              {
+                "frame": 2,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 13,
+                "ms": 66.60000000000002
+              },
+              {
+                "frame": 14,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 15,
+                "ms": 33.39999999999998
+              },
+              {
+                "frame": 18,
+                "ms": 33.299999999999955
+              },
+              {
+                "frame": 26,
+                "ms": 33.399999999999864
+              },
+              {
+                "frame": 30,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 31,
+                "ms": 100
+              },
+              {
+                "frame": 34,
+                "ms": 33.399999999999864
+              },
+              {
+                "frame": 37,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 44,
+                "ms": 50
+              },
+              {
+                "frame": 67,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 69,
+                "ms": 133.19999999999982
+              },
+              {
+                "frame": 72,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 74,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 77,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 92,
+                "ms": 50
+              },
+              {
+                "frame": 154,
+                "ms": 33.29999999999973
+              },
+              {
+                "frame": 157,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 159,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 172,
+                "ms": 33.40000000000009
+              },
+              {
+                "frame": 180,
+                "ms": 49.899999999999636
+              },
+              {
+                "frame": 195,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 198,
+                "ms": 33.19999999999982
+              },
+              {
+                "frame": 203,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 207,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 260,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 262,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 283,
+                "ms": 33.399999999999636
+              },
+              {
+                "frame": 345,
+                "ms": 66.60000000000036
+              },
+              {
+                "frame": 358,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 386,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 387,
+                "ms": 33.30000000000018
+              },
+              {
+                "frame": 389,
+                "ms": 33.400000000000546
+              },
+              {
+                "frame": 391,
+                "ms": 66.69999999999982
+              },
+              {
+                "frame": 398,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 400,
+                "ms": 33.20000000000073
+              },
+              {
+                "frame": 411,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 414,
+                "ms": 33.29999999999927
+              },
+              {
+                "frame": 415,
+                "ms": 33.30000000000109
+              },
+              {
+                "frame": 417,
+                "ms": 33.30000000000109
+              }
+            ],
+            "longTasks": [
+              {
+                "at": 191.5,
+                "duration": 81
+              },
+              {
+                "at": 628.2999999970198,
+                "duration": 105
+              },
+              {
+                "at": 1434.8999999985099,
+                "duration": 125
+              },
+              {
+                "at": 1609,
+                "duration": 54
+              },
+              {
+                "at": 3575.2999999970198,
+                "duration": 59
+              },
+              {
+                "at": 5008.70000000298,
+                "duration": 76
+              },
+              {
+                "at": 6508,
+                "duration": 71
+              },
+              {
+                "at": 7402.60000000149,
+                "duration": 65
+              }
+            ],
+            "events": [
+              {
+                "name": "first-impulse",
+                "at": 191.10000000000002
+              },
+              {
+                "name": "reverse-impulse",
+                "at": 624.4000000000001
+              },
+              {
+                "name": "reset",
+                "at": 957.7
+              },
+              {
+                "name": "dock",
+                "at": 1307.6
+              },
+              {
+                "name": "interrupt-dock",
+                "at": 1424.4
+              },
+              {
+                "name": "hold",
+                "at": 2007.6
+              },
+              {
+                "name": "queued-reset",
+                "at": 2307.6
+              },
+              {
+                "name": "queued-impulse",
+                "at": 2507.6
+              },
+              {
+                "name": "resume",
+                "at": 3007.6
+              },
+              {
+                "name": "second-dock",
+                "at": 3807.5
+              },
+              {
+                "name": "retarget",
+                "at": 4107.5
+              },
+              {
+                "name": "final-impulse",
+                "at": 5007.5
+              },
+              {
+                "name": "final-reset",
+                "at": 5507.5
+              },
+              {
+                "name": "final-dock",
+                "at": 6207.5
+              },
+              {
+                "name": "finish-impulse",
+                "at": 6507.5
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "y": [
+                -9.642569444444456,
+                -14.625000000000123,
+                -6.78527777777777
+              ],
+              "v": [
+                1.5708333333330717,
+                165.20833333333317,
+                -85.52916666666603
+              ],
+              "drag": -1,
+              "startY": 0,
+              "origin": 0,
+              "raf": 299,
+              "last": 7250
+            },
+            "clock": {
+              "dead": false,
+              "hz": 60,
+              "stepFrames": true,
+              "next": 436,
+              "frames": 298,
+              "events": 14,
+              "skipped": 137,
+              "time": 7251.19999999553,
+              "pending": 1
+            },
+            "hostFrame": true,
+            "feedback": {
+              "dead": false,
+              "time": 7251.19999999553,
+              "ghosts": 0,
+              "alpha": 1,
+              "fade": false,
+              "presses": [
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                },
+                {
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "fresh": {
+                "value": 0,
+                "segment": null
+              },
+              "impact": {
+                "value": 0,
+                "at": 6650
+              },
+              "offsets": [
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                },
+                {
+                  "value": 0,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "physicalPresses": [],
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-bounce-full-mobile-cpu4-1795293152560-trace.json",
+            "sha256": "fb9beebc3d1d80794aa8701128f38dabc35d311ab85b67fa4c04675bdf0a1213",
+            "events": 23794
+          }
+        }
+      ]
+    }
+  ],
+  "earlierAttempt": {
+    "archive": "real-clock-v1",
+    "manifestSHA256": "13bcd494386f9b1d4456729b6e903755f709e9b58489c0fd5c2693bdeba8c588",
+    "files": 121,
+    "complete": false,
+    "error": "Monotone simulation time required",
+    "traceAvailable": false,
+    "resolution": "Dock cancellation now reuses the cached event time. Key,pointer and virtual pressure owners release independently. Sixteen actual-clock interruption and eight ownership regressions precede the replacement measurements."
+  },
+  "scope": "Sixteen isolated current-source CPU1/4 native/full desktopDPR1/compactDPR2 eight-second stories retain every trace digest,gap,long task,readiness and first trace Paint. Fonts are prepared before mount and route transfer is excluded. Own heavy test jobs stopped before timing;other applications are not controlled. The earlier failed profiling log/source archive is retained explicitly. Measurements are evidence for the final audit;they do not pass cold-route,Lighthouse or final timing gates."
+}

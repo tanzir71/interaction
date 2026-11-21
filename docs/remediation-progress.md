@@ -1,20 +1,34 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 352 of the 399 existing demos:
+Native v4 compositions are remediated for 354 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the twenty-five DRAMS Collections demos.
-The remaining work includes 47 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the twenty-seven DRAMS Collections demos.
+The remaining work includes 45 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 352 remediated native compositions retains those references.
+None of the 354 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 352 native compositions. The unfinished groups still account for
+among these 354 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-15 low-fill findings; findings can overlap within a demo. All 119 documented
+14 low-fill findings; findings can overlap within a demo. All 119 documented
 Figma fill exceptions validate.
+
+## Pendulum and Bouncin' Ball
+
+The pair matches v4 tiles `89:888` and `89:914`. All 22 supplied SVGs retain their exact bytes, intrinsic roots, shadows, slots and inherited alpha on the 324×168 native plane at reference origin 24,20. Pendulum keeps the 180×8 beam, three exact cables, 28px orange spheres and authored raised right sphere. Bouncin' Ball keeps the 260×2 floor, two resting spheres, airborne middle sphere, 0.1/0.2 trail parents and 48×18 impact ellipse in its unchanged 64×34 export root. Neither composition requires an additional sparse-fill exception.
+
+Full views preserve the complete original three-body controllers, materials and displayed copy in 400×584 with a 368×320 source plane. Pendulum retains all angle/velocity states, 1200 gravity, .994 per-frame damping, sequential .9 neighbor transfer, ±65° dragging and original tap/global-key impulses. Bounce retains all unbounded height/velocity histories, 650 gravity, .65 restitution, 20 stop threshold, relative −65..0 pull, −220 tap and −210/−250/−230 global impulses. Unchanged normal source programs step at canonical 60Hz independently of 60/120/240Hz paint. Native Enter/Space uses the original physical activation of its own body; full retains original parent shortcuts. Every generator prompt names its individual native geometry, exact assets, complete copy, models and controls.
+
+The first raised native bounce grab rebases its source coordinate to −65 while retaining a −57 view offset. Normal release returns that offset with 380/32/1. Reduced motion holds the semantic source pose while leaving scheduled original RAF callbacks dormant, so hidden simulation cannot move the next grab target. All reduced pose and offset changes use 150ms retained fades, including lost capture. Invertible native/full cameras include actual original shadow scale and blur support plus 44px physical targets at extreme heights. Stable inputs stay outside retained paint. Focus follows the current target on every fading plane; when material falls below 20px, retained 44px focus geometry outside the camera world remains visible. Actual focus pixels meet 3:1 contrast in both themes. Compact full copy stays at least 11.1px.
+
+The emitted-source verifier passes 27 groups and 2,100,692 checks. Twenty-four immutable captures preserve 29,592 unrounded source frames, 1,800 complete DOM/form/focus checkpoints and 336 trusted input samples. Actual emitted factories retain signed zero, source RAF schedules and original models. Coverage also includes all native SVG callsites and parent alpha, 88 layouts, 24 independent six-second renderer stories, 72 canonical pressure cases, 200 exact composite boundaries, 16 lost-capture paint boundaries, 32 focus/theme cases, real mouse/keys/single and multiple touch, independent holds and listener cleanup, 32 cold starts/early disposals, eight concurrent-instance stories, 28,800 rapid intents, 16 fresh network-blocked exports and eight desktop/mobile routed detail/LiveTiles cases. Sixteen actual-clock interruption cases add 0.3ms clock-read latency to expose stale event timestamps. Eight ownership stories verify independent key, pointer and virtual pressure, including field blur and shared keyboard/pointer holds. Dock cancellation reuses the original caller time, and each release clears only its own owner. Synthetic stress/profile input is separate from trusted physical-input checks. Shared Stage thumbnail Tab order is retained; no manual touch activation fallback is added.
+
+Required local phase and CLI/MCP checks pass. All 354 remediated native compositions pass every fit gate. The 45 unfinished demos account for 15 tiny-text and 14 low-fill findings; boot failures, missing sizes, overflow, horizontal scroll and invalid exceptions remain zero. Stage debt falls 46→44; motion debt stays 23. Ten shared-file siblings, 325 other modules, 397 other metadata records and 387 unrelated catalog entries remain unchanged. Prior provenance retains 295 helpers, 126 private inputs, 1,006 publication files, 610 archived originals and 222+184 accepted snapshot files.
+
+The [isolated physics report](performance/drams-objects-physics-2026-11-22.json) retains all 16 CPU 1/4 native/full, desktop DPR 1 and compact DPR 2 cases. CPU 1 records 59.88–60.00fps, one gap above 25ms and no long tasks; first trace Paint spans 37.22–62.32ms, with maximum readiness 124ms. CPU 4 records 40.28–52.04fps, 469 gaps and 103 long tasks; first trace Paint spans 293.00–535.47ms, with maximum readiness 709.5ms. These CPU 4 samples miss the final frame and paint targets and remain open for optimization. Fonts were prepared before mount, own heavy tests had stopped, and other applications were not controlled. Every completed trace and the earlier failed-clock source/log archive are retained. Cold-route, Lighthouse and final site-wide timing gates remain open. Actions stays disabled; workflows and billing settings remain unchanged, including the account-wide $0 stop limit.
 
 ## Plus Minus Knob, Round On/Off Knob and Crankin’ Ball
 

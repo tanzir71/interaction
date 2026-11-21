@@ -1,0 +1,43 @@
+{
+  "id": "drams-047",
+  "title": "Bouncin' Ball",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-047",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 047, Bouncin' Ball, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Click a ball or pull it up and release. Space bounces all three.",
+  "source": {
+    "name": "DRAMS / Bouncin' Ball",
+    "url": "https://drams.framer.website/drams/047"
+  },
+  "html": "<div class=\"d-drams-047\"><div class=\"control bounce-field\" tabindex=\"0\" role=\"application\" aria-label=\"Three bouncing balls. Click or drag a ball; Space bounces all.\"><span class=\"shadow\" style=\"--i:0\"></span><button class=\"sphere bounce-ball\" style=\"--i:0\" data-ball=\"0\" aria-label=\"Bounce ball 1\"></button><span class=\"shadow\" style=\"--i:1\"></span><button class=\"sphere bounce-ball\" style=\"--i:1\" data-ball=\"1\" aria-label=\"Bounce ball 2\"></button><span class=\"shadow\" style=\"--i:2\"></span><button class=\"sphere bounce-ball\" style=\"--i:2\" data-ball=\"2\" aria-label=\"Bounce ball 3\"></button></div><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-047{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-047 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-047 button{font:inherit;cursor:pointer} .d-drams-047 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-047 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-047 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-047 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-047 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-047 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-047 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-047 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-047 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-047 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-047 .bounce-field{position:relative;width:224px;height:188px}.d-drams-047 .bounce-ball{position:absolute;left:calc(12px + var(--i)*74px);top:67px;width:54px;height:54px;border:0;padding:0;cursor:grab;box-shadow:inset 1px 2px 3px #fff8}.d-drams-047 .bounce-ball:after{left:24px;top:24px}.d-drams-047 .shadow{position:absolute;left:calc(16px + var(--i)*74px);top:116px;width:46px;height:12px;border-radius:50%;background:#00000016;filter:blur(4px);transform-origin:center}",
+  "js": "const field=root.querySelector('.control'),balls=[...root.querySelectorAll('.bounce-ball')],shadows=[...root.querySelectorAll('.shadow')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,y=[0,0,0],v=[0,0,0];let drag=-1,startY=0,origin=0,raf=0,last=0;function paint(source){balls.forEach((b,i)=>{b.style.transform='translateY('+y[i]+'px)';shadows[i].style.transform='scale('+(1+y[i]/240)+')';shadows[i].style.opacity=String(Math.max(.15,1+y[i]/100))});root.dataset.positions=y.map(n=>n.toFixed(2)).join(',');root.dataset.source=source}function loop(now){if(!root.isConnected)return;let dt=Math.min(.025,(now-last)/1000||.016);last=now;let active=false;for(let i=0;i<3;i++){if(i===drag)continue;if(y[i]||v[i]){v[i]+=650*dt;y[i]+=v[i]*dt;if(y[i]>=0){y[i]=0;v[i]=-v[i]*.65;if(Math.abs(v[i])<20)v[i]=0}if(y[i]||v[i])active=true}}paint('bounce');if(active||drag>=0)raf=requestAnimationFrame(loop);else raf=0}function start(){if(!raf){last=performance.now();raf=requestAnimationFrame(loop)}}balls.forEach((b,i)=>{b.addEventListener('pointerdown',e=>{drag=i;startY=e.clientY;origin=y[i];v[i]=0;b.setPointerCapture(e.pointerId);field.focus({preventScroll:true})});b.addEventListener('pointermove',e=>{if(drag===i){y[i]=Math.max(-65,Math.min(0,origin+e.clientY-startY));paint('drag')}});b.addEventListener('pointerup',()=>{drag=-1;if(reduce){y[i]=0;paint('rest')}else{if(y[i]>-2)v[i]=-220;start()}});b.addEventListener('pointercancel',()=>{drag=-1;start()})});field.addEventListener('keydown',e=>{if(e.key===' '||e.key==='Enter'){e.preventDefault();if(!reduce){v[0]=-210;v[1]=-250;v[2]=-230;start()}}else if(e.key==='Home'){e.preventDefault();y.fill(0);v.fill(0);paint('reset')}});paint('initial');return()=>cancelAnimationFrame(raf);",
+  "prompt": "Recreate the Bouncin' Ball composition from https://drams.framer.website/drams/047 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Click a ball or pull it up and release. Space bounces all three.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "press",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": true,
+    "aria": "application"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

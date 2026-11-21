@@ -882,3 +882,29 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with `node tools/profile-drams-rotary.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain all outliers and leave
   cold-route, Lighthouse and final site-wide timing gates open.
+
+- `node tools/verify-drams-objects-physics.js http://127.0.0.1:4173` covers v4
+  Pendulum and Bouncin' Ball. Preserve all 22 supplied SVG roots/slots, captured
+  trail alpha, 24 original captures and complete three-body source programs.
+  Native seeds are the raised right pendulum and y[0,-122,0]; full starts at
+  original zero poses and retains all original materials, controls and copy.
+  Normal source integration runs at canonical 60Hz, independent of paint.
+  Reduced hosts leave source RAF callbacks dormant and retain semantic poses
+  with 150ms fades; include view-offset removal when deciding to retain paint.
+  The first raised native bounce grab rebases y to -65 with a -57 view offset;
+  normal release returns that offset with 380/32/1. Keep the invertible camera's
+  scaled shadow/blur support and 44px input bounds, even at unbounded heights.
+  Stable inputs stay outside retained paint. Update focus on every fading
+  plane; use retained 44px focus geometry outside the camera world when the
+  material shrinks below 20px. Thumbnail Tab order remains Stage-owned.
+  The verifier checks original models, actual emitted clock/projection,
+  renderer/pressure/pixels, native mouse/keys/single and multiple touch,
+  independent holds, queued intent, listeners, startup, concurrency, stress,
+  offline exports and desktop/mobile routes/LiveTiles. It also checks actual
+  clock interruption and independent press owners. Pass the
+  cached event time through Dock cancellation; a second ctx.now read can move
+  ahead of the pending input. Keyup/blur, pointer release and virtual release
+  clear only their own pressure owners.
+  Record isolated timing with
+  `node tools/profile-drams-objects-physics.js http://127.0.0.1:4173
+  --cpu=1` or `--cpu=4`; preserve all traces and keep final timing gates open.
