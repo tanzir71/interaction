@@ -10,7 +10,7 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
   `designSize` remains the complete composition used by detail and exports.
 
 ## Rules
-- Work in the order of Handoff 3 `9. Per the owner's instruction on 15 Nov 2026,
+- Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
   commit and push phases directly; do not open PRs.
 - Owner instruction, 17 Nov 2026: keep GitHub Actions disabled for this
   repository. Run verification locally; commit and push without starting or
@@ -39,7 +39,7 @@ node tools/verify-stage.js            # from Phase 1
 node tools/build-registry.js --check  # from Phase 2
 node tools/verify-library.js http://127.0.0.1:4173
 node tools/audit-stage-fit.js http://127.0.0.1:4173
-node tools/verify-motion.js           # baseline mode until `5b is done, then --strict
+node tools/verify-motion.js           # baseline mode until §5b is done, then --strict
 ```
 
 ## Stage migration (Phase 1)
