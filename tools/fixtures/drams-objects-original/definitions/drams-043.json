@@ -1,0 +1,25 @@
+{
+  "file": "js/demos.drams.sliders.js",
+  "id": "drams-043",
+  "title": "Rollin' Search",
+  "rootClass": "d-drams-043",
+  "html": "<div class=\"d-drams-043\"><form class=\"search-shell\" role=\"search\"><label class=\"sr\" for=\"drams-search-field\">Search query</label><input id=\"drams-search-field\" type=\"search\" placeholder=\"Search\" tabindex=\"-1\" autocomplete=\"off\"><button type=\"button\" aria-label=\"Open search\" aria-expanded=\"false\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"6.5\"/><path d=\"m15 15 5 5\"/></svg></button><span class=\"sr\" role=\"status\"></span></form></div>",
+  "css": ".d-drams-043{width:100%;height:320px;display:grid;place-items:center;position:relative;background:#fff;color:#555;font:400 12px \"Inter\",system-ui,sans-serif;overflow:hidden}.d-drams-043 *{box-sizing:border-box}.d-drams-043 button,.d-drams-043 input{font:inherit}.d-drams-043 [role=slider],.d-drams-043 button{touch-action:none;-webkit-tap-highlight-color:transparent}.d-drams-043 :is(button,input,[role=slider]):focus-visible{outline:2px solid #bd5b2a;outline-offset:7px}.d-drams-043 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(prefers-reduced-motion:reduce){.d-drams-043 *{animation:none!important;transition:none!important}}.d-drams-043 .search-shell{position:relative;width:44px;height:44px;border-radius:24px;background:#f3f3f3;box-shadow:inset 0 1px 2px #00000005;transition:width .5s cubic-bezier(.22,1,.36,1)}.d-drams-043 .search-shell[data-open=true]{width:180px}.d-drams-043 .search-shell input{width:calc(100% - 43px);height:44px;padding:0;border:0;background:transparent;color:#5d5d5d;outline:0;font:400 13px \"Inter\",sans-serif;opacity:0;transition:opacity .2s .1s}.d-drams-043 .search-shell[data-open=true] input{padding:0 0 0 17px;opacity:1}.d-drams-043 .search-shell input::-webkit-search-cancel-button{display:none}.d-drams-043 .search-shell button{position:absolute;right:0;top:0;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:linear-gradient(135deg,#ff914f,#fa742b 50%,#e6601d);box-shadow:inset 1px 1px 2px #ffb67a,1px 2px 3px #00000012,5px 10px 15px #00000015;cursor:pointer}.d-drams-043 .search-shell svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;transition:transform .5s cubic-bezier(.22,1,.36,1)}.d-drams-043 .search-shell[data-open=true] svg{transform:rotate(360deg)}",
+  "js": "const form=root.querySelector('form'),button=form.querySelector('button'),input=form.querySelector('input'),status=form.querySelector('[role=status]');const fieldId='drams-search-'+Math.random().toString(36).slice(2);input.id=fieldId;form.querySelector('label').htmlFor=fieldId;let open=false;function set(next){open=next;form.dataset.open=String(open);root.dataset.open=String(open);button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Search':'Open search');input.tabIndex=open?0:-1;if(open)input.focus({preventScroll:true});else button.focus({preventScroll:true})}function submit(){if(!open){set(true);return}if(!input.value.trim()){input.focus();return}root.dataset.query=input.value.trim();status.textContent='Search entered: '+input.value.trim();button.setAttribute('aria-label','Search entered: '+input.value.trim());}button.addEventListener('click',submit);form.addEventListener('submit',e=>{e.preventDefault();submit()});form.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();set(false)}});root.dataset.open='false';",
+  "prompt": "Build a self-contained, accessible native HTML/CSS/JavaScript interpretation of Rollin' Search from https://drams.framer.website/drams/043. Credit DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). A small orange search orb rolls to the right as a pale search field expands from it. Type a query and press Enter; Escape folds it away. Use a white 320px stage, soft neutral contact shadows, subtle physical edge highlights and orange details. click to open, enter a query, and press Escape to close. Preserve pointer and keyboard operation, reduced-motion support and the distinct geometry of this component. No hosted Framer embed or external runtime dependency.",
+  "source": {
+    "name": "DRAMS · 1042 Studio / Rollin' Search",
+    "url": "https://drams.framer.website/drams/043"
+  },
+  "tags": [
+    "DRAMS",
+    "skeuomorphic",
+    "native",
+    "search",
+    "input",
+    "button"
+  ],
+  "desc": "A small orange search orb rolls to the right as a pale search field expands from it. Type a query and press Enter; Escape folds it away.",
+  "seen": "Native interpretation of DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp).",
+  "hint": "click to open, enter a query, and press Escape to close"
+}

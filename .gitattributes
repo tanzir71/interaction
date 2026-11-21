@@ -136,3 +136,10 @@ tools/verify-drams-volumes.js -text
 tools/profile-drams-volumes.js -text
 
 tools/profile-drams-volume-render.js -text
+
+assets/components/drams-objects/*.svg -text
+tools/fixtures/drams-objects-*.json -text
+tools/fixtures/drams-objects-original/**/*.json -text
+tools/verification/drams-objects-*.js -text
+tools/verify-drams-objects.js -text
+tools/profile-drams-objects.js -text

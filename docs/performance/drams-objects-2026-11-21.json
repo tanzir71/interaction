@@ -1,0 +1,3640 @@
+{
+  "at": "2026-11-21T09:02:26.131Z",
+  "ids": [
+    "drams-010",
+    "drams-043",
+    "drams-044"
+  ],
+  "sourceBaseCommit": "3b15ce909b656576609b2f34011554b5dba53d1d",
+  "tool": "tools/profile-drams-objects.js",
+  "sourceHashes": {
+    "tools/fixtures/drams-objects-artwork.json": "7548b4548d58c06a83cdbecde7efc3b9d35f61db0c4b42aaff241094a599f993",
+    "tools/fixtures/drams-objects-original-models.json": "f6b99ab73dbbb046b7fd082268f3368deb5be7044a28ea7c4cdf49c9fb6ba265",
+    "js/demos.drams.sliders.js": "84541fd55b1d7c447596804decad09b3a65939112ab30f3a0470bb73d06832e7",
+    "js/meta.stage.js": "66dedef93a70d8228f10392b5e20b8e68944e5970553a4738268ef0b4ee042a5",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "tools/stage-fit-bounds.js": "b13aa0359ebfc805038c00d656e58682440c39ba024c4972027900a072c0c194",
+    "assets/components/drams-objects/89-459.svg": "4d520ae6fee5a8789b3bd9ac7ecd2cde4ba792cedb63571534640fbb56b5978f",
+    "assets/components/drams-objects/89-462.svg": "2d43b89e60c5cd0ae311d60614fc219403334e957bdd75c27813870767b8fda7",
+    "assets/components/drams-objects/89-463.svg": "00caa05cc99fc76116d39aadd1120c96879829ed2e30f6b6f0fc168f96d0bac8",
+    "assets/components/drams-objects/177-652.svg": "f53fd3c39365ec41ec3178f211d7c0fe6851cd24e37948d76d79fa7285f07e4a",
+    "assets/components/drams-objects/89-480.svg": "ed6bf4adbcb12519099f5817c44ba9549547b803c87f833c5358926d8ed5dfd3",
+    "assets/components/drams-objects/89-481.svg": "6936568e8ae97aa91a40a3808910a7d63f196eb6cfb0e215e6ba19192a4a7455",
+    "assets/components/drams-objects/89-482.svg": "1a0e05171e661600f3b9f77d059a06ea8466209061a7520894cb0f3e7c231c15",
+    "assets/components/drams-objects/89-483.svg": "dfac67245398933ebab26d81b0062f341847967af3a5a2297675273afa3e40ae",
+    "assets/components/drams-objects/89-484.svg": "fe9637285e2eb7a991f7d85c62410404d774198e42d8669fdf9f4bb6517eb5a4",
+    "assets/components/drams-objects/89-485.svg": "9195756c2f4b035b4b323c70c81231fc98bc643911be613dc0bf702f57799149",
+    "assets/components/drams-objects/177-823.svg": "a2f24fa845cabd8ee5542b12d88f8b70571b56962f5141dd4c860cd7d8da9c67",
+    "assets/components/drams-objects/177-824.svg": "3adac191daa6eefe53a602618e182f891ef96a213c344ec7fda908520883b95b",
+    "assets/components/drams-objects/177-825.svg": "639cabef17304711fef569ecc45d9c89100cdb52dad93cbae702ea8d741e1bcb",
+    "assets/components/drams-objects/177-826.svg": "6cad2ec0abc608b18c12b39ccdb6ceeb32c4e9714bb0a8eeb08dff96df019c2a",
+    "assets/components/drams-objects/177-827.svg": "7c4d06b8da04c6946a64f68aaf57cfa6729a15b024341507d368a942380a38fb",
+    "assets/components/drams-objects/177-828.svg": "167d7dfc15de5072ff2398e7661f1fb28dda5ba74d58aee0fb8467fd5c01c96e",
+    "assets/components/drams-objects/177-829.svg": "e1eb0ecd4026ddcbfad2b8c0516f7586cfebd9f4b52207c1b91c9efded8a2e4a",
+    "assets/components/drams-objects/177-830.svg": "63e5e2f4377aa8aee634ec15877cb85cb6785259025a72e261a2c7fc46153ec1",
+    "tools/fixtures/drams-objects-original/definitions/drams-010.json": "650de45d781d68ecbff39d640ef9e26d73fdc881ce54415eb6914e4cb026bc71",
+    "tools/fixtures/drams-objects-original/definitions/drams-043.json": "85f258b5c2fc5eba1a145179efaa59f93c77134e26157eb186fe17458529ace2",
+    "tools/fixtures/drams-objects-original/definitions/drams-044.json": "d746200d5d909ab6eac989f684a9940d8389c8afbffabd24ae07167c01b1cd04",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-300x320.json.gz": "53958815458b2a8635fabee855e526d1426cf767f9e55d28016c5e9458a556d6",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-300x320-reduced.json.gz": "885c324eef3051abac0ce6fa87955f10b85fcded638d977c9fcac602c687f7ca",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-368x320.json.gz": "f3ee35694849092eec2630fa368a68b0c3a7e9bb0756941100b4b0f2df94fe2f",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-368x320-reduced.json.gz": "4127e6ccd78814139486c8c0686f04a55b7025a3b858327bf82b487198dd994c",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-300x320.json.gz": "29b3685ad739aa62de9836e3bcfff7cabb65a20548beb486680c964bda51e197",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-300x320-reduced.json.gz": "9b1be8b4ebe063a088614ae8cfac0edac1ebe9d6c63d790266b6605260b34978",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-368x320.json.gz": "34db3e19c70e68ea648bb730b3fd4c5569d18b282a6e7b62bc072cd5a1f7e84a",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-368x320-reduced.json.gz": "86034a581381c585d8d60679b905e1a2241ced491889884d8b3be790af7daae0",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-300x320.json.gz": "9395f0b2e82d8e3d6aeb0c2f485d07170cd8eae63dff08e2bb652c1fe6f4d2c1",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-300x320-reduced.json.gz": "ac42cc223a3beae6a92fb1de872f3d83ddaaa67f50bf7607761bf1fc560eee1b",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-368x320.json.gz": "713e65233290e544a6a033e1e1f1a4c966e04f7709a3efcd1c7ecb6d0803b3de",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-368x320-reduced.json.gz": "5845c514a679b1e6eb916ee16bd0c9c974da042e43be509b06c9f6664c22fcc4",
+    "tools/verification/drams-objects-evidence.js": "005977d3659fb7e6a9bec7ba7e56c8bac740e8e2b1d7050e21ec85d2b743e4b3",
+    "tools/verification/drams-objects-focus-probe.js": "adf15568bcc40ace459a477e0bb3a85d667ef5bd0ccb6e1b447209e29b416be8",
+    "tools/verification/drams-objects-full-document.js": "a80d7d2086cdaced92620b82cc2357a6d386a940d283ae36de84a5fb0e48adec",
+    "tools/verification/drams-objects-full-editing.js": "4a2d33705e18b09f44f5924cd3e53e27d83375dd5abeb29df26d873c0b84c676",
+    "tools/verification/drams-objects-full-layout.js": "aef445f31afa6a9b91311608bd7591ffa4b3a55ed4b852acd4044aac09cd4362",
+    "tools/verification/drams-objects-full-lifecycle.js": "6c32d176ddf8c400bd760ce6baf99f2894a81d17cf472cf62e167e875f0daf96",
+    "tools/verification/drams-objects-full-motion.js": "5ff2b42f8d31395f932ac2fcdb2515e2df66f09d90a3d3aeb68719805f5403ae",
+    "tools/verification/drams-objects-full-mouse.js": "1121de2d3d960461a6affada31fcf009853e6924257755f5b323b876fd658488",
+    "tools/verification/drams-objects-full-portable.js": "b899d708c984378813d32766a2e9387c26facfa112ac5a99d61c534e76eace31",
+    "tools/verification/drams-objects-full-retarget.js": "62d0b8c88b516e78c61fe9a218861cf0b82aafd9c4a52bc198cf0d9b5964c64c",
+    "tools/verification/drams-objects-full-smoke.js": "41763d4a7ea4fac54381f92dafaf800260224278513e087e068d8e75054f6c5b",
+    "tools/verification/drams-objects-full-startup.js": "a904e675bf20940e277a648b8bb12e2b5f9fce46dcf6f6dcab78df86d00f2a6c",
+    "tools/verification/drams-objects-full-stories.js": "f313e5d5a367b3197e12bed293164b399a27e191c46b1f7557b4f376af42563a",
+    "tools/verification/drams-objects-full-stress.js": "f578c7f3055affdcc4667f0659f970f237e1caa00fee21532479f88ad778da38",
+    "tools/verification/drams-objects-full-themes.js": "e6b5eae1660825123e13f7e07c488462a0cd3b4b059901d5308749008329997c",
+    "tools/verification/drams-objects-full-touch.js": "8660bdbfd5f3a7948640f8618f361a8134855f1de641d8af035bf349904eb26e",
+    "tools/verification/drams-objects-harness.js": "c5637f1028a57311380c89a0d4b2fcef3f6e87f6f1577a59d4ef4c0790a6df52",
+    "tools/verification/drams-objects-models.js": "d9435607180595bb7126ec6540adcc8dc9838d63b7a787230a765146fcd1121f",
+    "tools/verification/drams-objects-native-assets.js": "596de376f697dd791ee26ee7c0d2553c66e0cda8da4576b29e3abb248b49640d",
+    "tools/verification/drams-objects-native-document.js": "511aa0f276b91b5e20cfddb562ddf5f39b99c161b80381f03e4a6bb07533b86f",
+    "tools/verification/drams-objects-native-editing.js": "83b20623bb058f83982a291592211c28409cc8933933e70f000b7362bcdeaf5f",
+    "tools/verification/drams-objects-native-inputs.js": "8458b307ef6359e8b5451d79c364f7f7dc4b4f2d8ca0e791d276fe55d10c79c4",
+    "tools/verification/drams-objects-native-layout.js": "84618414faba1ab6bf7390194d79543da6c5aef77ecba7765286b4e12e92403a",
+    "tools/verification/drams-objects-native-lifecycle.js": "c294ea4282526bf9850aee4c6b9d0c9f2210dd6916df2063970f5d6125a7e3a8",
+    "tools/verification/drams-objects-native-motion.js": "5fafcb10aace89ef50edfec82fd15b31fe5a7f25ee1024b8362257a22fa5080d",
+    "tools/verification/drams-objects-native-portable.js": "81f43955ff15c300eb1fcdef8d41bd548300c2b1f8a951dcd379644cbf4b9877",
+    "tools/verification/drams-objects-native-retarget.js": "a1d870a8de6b3e26536188a3bcdd34dae6b2b10a081e1f3ef669129826d2b736",
+    "tools/verification/drams-objects-native-stories.js": "fb66c0b921ac5ecb6c2a1c028a2eed3e2d1a55e62ce5e1c06ba3ef87ecb067a6",
+    "tools/verification/drams-objects-native-stress.js": "3c1650c745fc4bae7723caa9fbf9083246e14da3479ca825e738b52bdbf5e089",
+    "tools/verification/drams-objects-native-themes.js": "1985d3e656af0a9d163f17ff9a3610d28ab0bb6c939ee3d8b80b946e9f903a15",
+    "tools/verification/drams-objects-routes.js": "e2cc58b4d80ff01472e04f816bde26336f7df124bbde44dc7df73ff5c938f5fc",
+    "tools/verification/drams-objects-short-focus-probe.js": "26702800ab10c6a7047408efa09f6bd1a8013a4b8a8613412023972dd126b1f2",
+    "tools/verification/drams-objects-short-layout.js": "8f12d09cdfb253368c457f1808e92a64b639dc221d899d7000e7e179f9fd8d82",
+    "tools/verification/drams-objects-short-retarget.js": "af6a02aba5574dd5246977d6ac0c9a3f756dcb667f27403bbb22297cb36c8c23",
+    "tools/verification/drams-objects-source.js": "b21c1fd3bd72735bae40a0e266ac1bf7f805ae0dfa67835a36fa3df871ae7f91",
+    "tools/profile-drams-objects.js": "0d0ffc037769441d0a4db9cec5c467f40040e0dc7474e4ebcaafe422ab816b3f"
+  },
+  "parameters": {
+    "cpu": [
+      1,
+      4
+    ],
+    "modes": [
+      "thumb",
+      "full"
+    ],
+    "viewports": [
+      "desktop DPR1",
+      "compact DPR2"
+    ],
+    "storySeconds": 8,
+    "fontsPreparedBeforeMount": true,
+    "routeTransferExcluded": true
+  },
+  "runs": [
+    {
+      "file": ".artifacts/drams-objects/performance-cpu1-1795251303887.json",
+      "sha256": "be3092ad86f16a1a353b0878739816b6b686b4007b8589211c2c7669b52ea56a",
+      "cpu": 1
+    },
+    {
+      "file": ".artifacts/drams-objects/performance-cpu4-1795251423637.json",
+      "sha256": "90b6fd22babbc0068346118c50b273750746b0bbf423b444c743874a7ae14a75",
+      "cpu": 4
+    }
+  ],
+  "summary": {
+    "cpu1": {
+      "cases": 12,
+      "fps": [
+        60.00150003750093,
+        60.00349292682319
+      ],
+      "gaps": 0,
+      "longTasks": 0,
+      "firstPaint": [
+        22.441,
+        42.436
+      ],
+      "maxReady": 79.09999999403954,
+      "worstP95": 16.799999999999727
+    },
+    "cpu4": {
+      "cases": 12,
+      "fps": [
+        59.37722664599922,
+        60.0030001500075
+      ],
+      "gaps": 7,
+      "longTasks": 2,
+      "firstPaint": [
+        108.372,
+        196.199
+      ],
+      "maxReady": 216.90000000596046,
+      "worstP95": 16.799999999999727
+    }
+  },
+  "results": [
+    {
+      "kind": "surprise",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 31.600000023841858,
+        "firstContentfulPaint": null,
+        "firstPaint": 22.441,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8017.800000011921,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 183.59999998807905
+          },
+          {
+            "name": "reverse",
+            "at": 600.2999999880791
+          },
+          {
+            "name": "type-submit",
+            "at": 950.3999999880791
+          },
+          {
+            "name": "press",
+            "at": 1300.199999988079
+          },
+          {
+            "name": "release",
+            "at": 1433.5999999880792
+          },
+          {
+            "name": "hold",
+            "at": 2000.299999988079
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2300.299999988079
+          },
+          {
+            "name": "queued-input",
+            "at": 2500.299999988079
+          },
+          {
+            "name": "resume",
+            "at": 3000.299999988079
+          },
+          {
+            "name": "dock",
+            "at": 3800.099999988079
+          },
+          {
+            "name": "interrupt",
+            "at": 4100.099999988079
+          },
+          {
+            "name": "final-toggle",
+            "at": 5000.199999988079
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5500.199999988079
+          },
+          {
+            "name": "finish",
+            "at": 6200.099999988079
+          },
+          {
+            "name": "return",
+            "at": 6516.699999988079
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6013.100000023842,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6013.100000023842
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3245.5000000298023
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-thumb-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "28f2bd96eda43a402bddd349e4366d954131fbdf49fc1b89d49acedc9f25467f",
+        "events": 19615
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 79.09999999403954,
+        "firstContentfulPaint": 63.19999998807907,
+        "firstPaint": 42.436,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8008.5999999940395,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 189.7999999880791
+          },
+          {
+            "name": "reverse",
+            "at": 606.3999999880791
+          },
+          {
+            "name": "type-submit",
+            "at": 956.3999999880791
+          },
+          {
+            "name": "press",
+            "at": 1306.3999999880791
+          },
+          {
+            "name": "release",
+            "at": 1423.0999999880792
+          },
+          {
+            "name": "hold",
+            "at": 2006.399999988079
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2306.399999988079
+          },
+          {
+            "name": "queued-input",
+            "at": 2506.299999988079
+          },
+          {
+            "name": "resume",
+            "at": 3006.399999988079
+          },
+          {
+            "name": "dock",
+            "at": 3806.2999999880794
+          },
+          {
+            "name": "interrupt",
+            "at": 4106.299999988079
+          },
+          {
+            "name": "final-toggle",
+            "at": 5006.299999988079
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5506.199999988079
+          },
+          {
+            "name": "finish",
+            "at": 6206.199999988079
+          },
+          {
+            "name": "return",
+            "at": 6506.199999988079
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query",
+          "value": "profile query held"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5849.5,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5849.5
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3450.7999999821186
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5749.699999988079
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-thumb-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "d8398e076b1d08888138af2403fd3b5eda3714835e1c5084e51617dcc5d10d77",
+        "events": 15913
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 37.19999998807907,
+        "firstContentfulPaint": null,
+        "firstPaint": 29.228,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.199999988079,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 182.30000000596044
+          },
+          {
+            "name": "reverse",
+            "at": 615.7000000059604
+          },
+          {
+            "name": "type-submit",
+            "at": 965.7000000059604
+          },
+          {
+            "name": "press",
+            "at": 1315.6000000059605
+          },
+          {
+            "name": "release",
+            "at": 1432.3000000059606
+          },
+          {
+            "name": "hold",
+            "at": 2015.6000000059603
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2315.6000000059603
+          },
+          {
+            "name": "queued-input",
+            "at": 2515.6000000059603
+          },
+          {
+            "name": "resume",
+            "at": 3015.5000000059604
+          },
+          {
+            "name": "dock",
+            "at": 3815.6000000059603
+          },
+          {
+            "name": "interrupt",
+            "at": 4115.500000005961
+          },
+          {
+            "name": "final-toggle",
+            "at": 5015.500000005961
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5515.4000000059605
+          },
+          {
+            "name": "finish",
+            "at": 6215.4000000059605
+          },
+          {
+            "name": "return",
+            "at": 6515.4000000059605
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6333.699999988079,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6333.699999988079
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3267
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            },
+            "circle": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5950.299999982119
+            },
+            "parts": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5701
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-thumb-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "29a9f7a17a8d14d0f4520e9c379b60fa1e295c9d6a17762d9a55a0b9cf488b6c",
+        "events": 19663
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 36.599999994039536,
+        "firstContentfulPaint": null,
+        "firstPaint": 27.078,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8013.200000017881,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 195.10000000000002
+          },
+          {
+            "name": "reverse",
+            "at": 611.8
+          },
+          {
+            "name": "type-submit",
+            "at": 961.8
+          },
+          {
+            "name": "press",
+            "at": 1311.8
+          },
+          {
+            "name": "release",
+            "at": 1428.4
+          },
+          {
+            "name": "hold",
+            "at": 2011.6999999999998
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2311.8
+          },
+          {
+            "name": "queued-input",
+            "at": 2511.7
+          },
+          {
+            "name": "resume",
+            "at": 3011.7
+          },
+          {
+            "name": "dock",
+            "at": 3811.6
+          },
+          {
+            "name": "interrupt",
+            "at": 4111.6
+          },
+          {
+            "name": "final-toggle",
+            "at": 5011.7
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5511.6
+          },
+          {
+            "name": "finish",
+            "at": 6211.6
+          },
+          {
+            "name": "return",
+            "at": 6511.5
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6027,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6027
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3259.199999988079
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-thumb-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "4f6ca3ee3a29d455efbea3d91b1c1b7545950f83aa4f7baa8487ba4953063c55",
+        "events": 19634
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 46.5,
+        "firstContentfulPaint": null,
+        "firstPaint": 37.813,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.700000017881,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 182.2000000178814
+          },
+          {
+            "name": "reverse",
+            "at": 615.5000000178813
+          },
+          {
+            "name": "type-submit",
+            "at": 965.5000000178813
+          },
+          {
+            "name": "press",
+            "at": 1315.5000000178813
+          },
+          {
+            "name": "release",
+            "at": 1432.1000000178815
+          },
+          {
+            "name": "hold",
+            "at": 2015.4000000178812
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2315.400000017881
+          },
+          {
+            "name": "queued-input",
+            "at": 2515.400000017881
+          },
+          {
+            "name": "resume",
+            "at": 3015.400000017881
+          },
+          {
+            "name": "dock",
+            "at": 3815.400000017881
+          },
+          {
+            "name": "interrupt",
+            "at": 4115.300000017882
+          },
+          {
+            "name": "final-toggle",
+            "at": 5015.300000017882
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5515.300000017882
+          },
+          {
+            "name": "finish",
+            "at": 6215.300000017882
+          },
+          {
+            "name": "return",
+            "at": 6515.300000017882
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query",
+          "value": "profile query held"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5804.0999999940395,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5804.0999999940395
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3270.0999999940395
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5703.4000000059605
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-thumb-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "9bc2979cfcdb8e128945ac8e4b4a38878ab8011157a933e983a66c7160d9604c",
+        "events": 15877
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 41.30000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 31.58,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8008.9000000059605,
+        "frames": 481,
+        "fps": 60.00349292682319,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 191.60000000000002
+          },
+          {
+            "name": "reverse",
+            "at": 608.2
+          },
+          {
+            "name": "type-submit",
+            "at": 958.3
+          },
+          {
+            "name": "press",
+            "at": 1308.3
+          },
+          {
+            "name": "release",
+            "at": 1424.9
+          },
+          {
+            "name": "hold",
+            "at": 2008.1999999999998
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2308.2
+          },
+          {
+            "name": "queued-input",
+            "at": 2508.2
+          },
+          {
+            "name": "resume",
+            "at": 3008.2
+          },
+          {
+            "name": "dock",
+            "at": 3808.1000000000004
+          },
+          {
+            "name": "interrupt",
+            "at": 4108.2
+          },
+          {
+            "name": "final-toggle",
+            "at": 5008.1
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5508.1
+          },
+          {
+            "name": "finish",
+            "at": 6208
+          },
+          {
+            "name": "return",
+            "at": 6508
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6331.300000011921,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6331.300000011921
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3264.699999988079
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            },
+            "circle": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5948.0999999940395
+            },
+            "parts": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5697.699999988079
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-thumb-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "3c97f4a290c65b79969f44a3b4395894d69710276b767056d2bb0a5c3404c275",
+        "events": 19653
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 35.5,
+        "firstContentfulPaint": null,
+        "firstPaint": 29.168,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8017.0999999940395,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 182.60000000000002
+          },
+          {
+            "name": "reverse",
+            "at": 616
+          },
+          {
+            "name": "type-submit",
+            "at": 965.9000000000001
+          },
+          {
+            "name": "press",
+            "at": 1315.9
+          },
+          {
+            "name": "release",
+            "at": 1432.6
+          },
+          {
+            "name": "hold",
+            "at": 2015.8000000000002
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2315.8
+          },
+          {
+            "name": "queued-input",
+            "at": 2515.9
+          },
+          {
+            "name": "resume",
+            "at": 3015.8
+          },
+          {
+            "name": "dock",
+            "at": 3815.8
+          },
+          {
+            "name": "interrupt",
+            "at": 4115.8
+          },
+          {
+            "name": "final-toggle",
+            "at": 5015.8
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5515.7
+          },
+          {
+            "name": "finish",
+            "at": 6215.7
+          },
+          {
+            "name": "return",
+            "at": 6515.6
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "revealed": "true",
+          "pressed": "true",
+          "tilt": "0deg"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6518.699999988079,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6018.0999999940395
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6518.699999988079
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3251.5
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-full-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "329ba06f1d72216aecb55441dbc084fc219c26e8515f606a79e47cc38b01e249",
+        "events": 20916
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 48.19999998807907,
+        "firstContentfulPaint": null,
+        "firstPaint": 40.981,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8017.5,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 183.10000001192094
+          },
+          {
+            "name": "reverse",
+            "at": 616.500000011921
+          },
+          {
+            "name": "type-submit",
+            "at": 966.500000011921
+          },
+          {
+            "name": "press",
+            "at": 1316.4000000119208
+          },
+          {
+            "name": "release",
+            "at": 1433.1000000119209
+          },
+          {
+            "name": "hold",
+            "at": 2016.4000000119208
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2316.400000011921
+          },
+          {
+            "name": "queued-input",
+            "at": 2516.400000011921
+          },
+          {
+            "name": "resume",
+            "at": 3016.400000011921
+          },
+          {
+            "name": "dock",
+            "at": 3816.300000011921
+          },
+          {
+            "name": "interrupt",
+            "at": 4116.400000011921
+          },
+          {
+            "name": "final-toggle",
+            "at": 5016.300000011921
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5516.300000011921
+          },
+          {
+            "name": "finish",
+            "at": 6216.300000011921
+          },
+          {
+            "name": "return",
+            "at": 6516.200000011921
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query held",
+          "value": "profile query held",
+          "status": "Search entered: profile query held",
+          "expanded": "false",
+          "label": "Open search",
+          "tabIndex": -1,
+          "fieldId": "drams-search-5i843gt9a6f"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5793.900000035763,
+          "logical": false,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5793.900000035763
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3394.7000000178814
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5693.400000035763
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-full-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "aba3a9aa1d9b91ceb3ed4317bfc6fef57ef3a895e649ca0c9e9e754579e1087f",
+        "events": 17084
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 34.29999998211861,
+        "firstContentfulPaint": null,
+        "firstPaint": 28.453,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8005.300000011921,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 187.60000000000002
+          },
+          {
+            "name": "reverse",
+            "at": 604.3
+          },
+          {
+            "name": "type-submit",
+            "at": 954.2
+          },
+          {
+            "name": "press",
+            "at": 1304.3
+          },
+          {
+            "name": "release",
+            "at": 1420.9
+          },
+          {
+            "name": "hold",
+            "at": 2004.1999999999998
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2304.2
+          },
+          {
+            "name": "queued-input",
+            "at": 2504.2
+          },
+          {
+            "name": "resume",
+            "at": 3004.2
+          },
+          {
+            "name": "dock",
+            "at": 3804.2
+          },
+          {
+            "name": "interrupt",
+            "at": 4104.1
+          },
+          {
+            "name": "final-toggle",
+            "at": 5004.1
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5504.1
+          },
+          {
+            "name": "finish",
+            "at": 6204
+          },
+          {
+            "name": "return",
+            "at": 6504.1
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "popped": "true",
+          "pressed": "true"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6308.299999982119,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6308.299999982119
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3241.7999999821186
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5924.5999999940395
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-full-desktop-cpu1-1795251303887-trace.json",
+        "sha256": "2746931547645c0d086059162372ab11036c582ada5c4730fa39b9eedbef3ce7",
+        "events": 19655
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 43.400000005960464,
+        "firstContentfulPaint": null,
+        "firstPaint": 36.935,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8003.5999999940395,
+        "frames": 480,
+        "fps": 60.00150003750093,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 186.59999998211862
+          },
+          {
+            "name": "reverse",
+            "at": 603.1999999821186
+          },
+          {
+            "name": "type-submit",
+            "at": 953.1999999821187
+          },
+          {
+            "name": "press",
+            "at": 1303.1999999821187
+          },
+          {
+            "name": "release",
+            "at": 1436.5999999821186
+          },
+          {
+            "name": "hold",
+            "at": 2003.1999999821187
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2303.1999999821187
+          },
+          {
+            "name": "queued-input",
+            "at": 2503.099999982119
+          },
+          {
+            "name": "resume",
+            "at": 3003.099999982119
+          },
+          {
+            "name": "dock",
+            "at": 3803.099999982119
+          },
+          {
+            "name": "interrupt",
+            "at": 4103.099999982119
+          },
+          {
+            "name": "final-toggle",
+            "at": 5002.999999982118
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5502.999999982118
+          },
+          {
+            "name": "finish",
+            "at": 6203.099999982119
+          },
+          {
+            "name": "return",
+            "at": 6502.999999982118
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "revealed": "true",
+          "pressed": "true",
+          "tilt": "0deg"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6508.0999999940395,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6007.799999982119
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6508.0999999940395
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3240.699999988079
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-full-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "e8bc7fc216481f258111865b9fc251f89b2d1b36023cc4cea21f7bd6b18bea8f",
+        "events": 20827
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 41.69999998807907,
+        "firstContentfulPaint": null,
+        "firstPaint": 36.314,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8004.9000000059605,
+        "frames": 480,
+        "fps": 60.00225008437817,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 187.10000001788137
+          },
+          {
+            "name": "reverse",
+            "at": 603.8000000178814
+          },
+          {
+            "name": "type-submit",
+            "at": 953.8000000178813
+          },
+          {
+            "name": "press",
+            "at": 1303.7000000178814
+          },
+          {
+            "name": "release",
+            "at": 1420.4000000178814
+          },
+          {
+            "name": "hold",
+            "at": 2003.7000000178814
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2303.7000000178814
+          },
+          {
+            "name": "queued-input",
+            "at": 2503.7000000178814
+          },
+          {
+            "name": "resume",
+            "at": 3003.6000000178815
+          },
+          {
+            "name": "dock",
+            "at": 3803.6000000178815
+          },
+          {
+            "name": "interrupt",
+            "at": 4103.600000017881
+          },
+          {
+            "name": "final-toggle",
+            "at": 5003.600000017881
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5503.500000017882
+          },
+          {
+            "name": "finish",
+            "at": 6203.500000017882
+          },
+          {
+            "name": "return",
+            "at": 6503.500000017882
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query held",
+          "value": "profile query held",
+          "status": "Search entered: profile query held",
+          "expanded": "false",
+          "label": "Open search",
+          "tabIndex": -1,
+          "fieldId": "drams-search-dbwitlfw87u"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5775.800000011921,
+          "logical": false,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5775.800000011921
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3376.0999999940395
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5676.5
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-full-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "ddd13b8a80f1fdcbb6699bf519775ee604ef3f9109e34dfca74cdaae4f3dc80b",
+        "events": 17251
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 37.39999997615814,
+        "firstContentfulPaint": null,
+        "firstPaint": 32.531,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8004.300000011921,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 187.39999999999998
+          },
+          {
+            "name": "reverse",
+            "at": 604
+          },
+          {
+            "name": "type-submit",
+            "at": 954
+          },
+          {
+            "name": "press",
+            "at": 1303.9
+          },
+          {
+            "name": "release",
+            "at": 1420.7
+          },
+          {
+            "name": "hold",
+            "at": 2004
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2303.9
+          },
+          {
+            "name": "queued-input",
+            "at": 2503.9
+          },
+          {
+            "name": "resume",
+            "at": 3003.9
+          },
+          {
+            "name": "dock",
+            "at": 3803.9
+          },
+          {
+            "name": "interrupt",
+            "at": 4103.8
+          },
+          {
+            "name": "final-toggle",
+            "at": 5003.8
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5503.8
+          },
+          {
+            "name": "finish",
+            "at": 6203.8
+          },
+          {
+            "name": "return",
+            "at": 6503.7
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "popped": "true",
+          "pressed": "true"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6307.300000011921,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6307.300000011921
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3240.300000011921
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5907.5
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-full-mobile-cpu1-1795251303887-trace.json",
+        "sha256": "1e21bf2224ca7f78457244585b417a32906dd8806dfd01ba8e5419f37b48292f",
+        "events": 19121
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 162,
+        "firstContentfulPaint": null,
+        "firstPaint": 129.468,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8007.0999999940395,
+        "frames": 480,
+        "fps": 60.002250084378154,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 188.29999999999995
+          },
+          {
+            "name": "reverse",
+            "at": 605
+          },
+          {
+            "name": "type-submit",
+            "at": 955
+          },
+          {
+            "name": "press",
+            "at": 1305
+          },
+          {
+            "name": "release",
+            "at": 1421.6
+          },
+          {
+            "name": "hold",
+            "at": 2004.9
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2304.9
+          },
+          {
+            "name": "queued-input",
+            "at": 2504.9
+          },
+          {
+            "name": "resume",
+            "at": 3004.9
+          },
+          {
+            "name": "dock",
+            "at": 3804.8999999999996
+          },
+          {
+            "name": "interrupt",
+            "at": 4104.8
+          },
+          {
+            "name": "final-toggle",
+            "at": 5004.8
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5504.8
+          },
+          {
+            "name": "finish",
+            "at": 6204.8
+          },
+          {
+            "name": "return",
+            "at": 6504.7
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6116.100000023842,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6116.100000023842
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3482.600000023842
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-thumb-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "bee9ed92027eec432cda2582e3bf36e5349e5357402e98564134b7951fd4d673",
+        "events": 19664
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 149.30000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 134.479,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8003.799999982119,
+        "frames": 481,
+        "fps": 60.00274440826814,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 184.8999999940395
+          },
+          {
+            "name": "reverse",
+            "at": 601.5999999940395
+          },
+          {
+            "name": "type-submit",
+            "at": 951.5999999940395
+          },
+          {
+            "name": "press",
+            "at": 1301.5999999940395
+          },
+          {
+            "name": "release",
+            "at": 1434.8999999940395
+          },
+          {
+            "name": "hold",
+            "at": 2001.5999999940395
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2301.4999999940396
+          },
+          {
+            "name": "queued-input",
+            "at": 2501.4999999940396
+          },
+          {
+            "name": "resume",
+            "at": 3001.5999999940395
+          },
+          {
+            "name": "dock",
+            "at": 3801.499999994039
+          },
+          {
+            "name": "interrupt",
+            "at": 4101.499999994039
+          },
+          {
+            "name": "final-toggle",
+            "at": 5001.39999999404
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5501.39999999404
+          },
+          {
+            "name": "finish",
+            "at": 6201.39999999404
+          },
+          {
+            "name": "return",
+            "at": 6501.39999999404
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query",
+          "value": "profile query held"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5865.600000023842,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5865.600000023842
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3466.100000023842
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5766.9000000059605
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-thumb-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "c1d021ff257f61ca2bfdba662a2318a0aaf57e40140a562da63db1c5d16ad728",
+        "events": 17709
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 140.60000002384186,
+        "firstContentfulPaint": 127.60000002384186,
+        "firstPaint": 108.372,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8006.5999999940395,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 188.90000001192095
+          },
+          {
+            "name": "reverse",
+            "at": 605.6000000119209
+          },
+          {
+            "name": "type-submit",
+            "at": 955.500000011921
+          },
+          {
+            "name": "press",
+            "at": 1305.500000011921
+          },
+          {
+            "name": "release",
+            "at": 1422.200000011921
+          },
+          {
+            "name": "hold",
+            "at": 2005.5000000119207
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2305.5000000119207
+          },
+          {
+            "name": "queued-input",
+            "at": 2505.400000011921
+          },
+          {
+            "name": "resume",
+            "at": 3005.5000000119207
+          },
+          {
+            "name": "dock",
+            "at": 3805.4000000119213
+          },
+          {
+            "name": "interrupt",
+            "at": 4105.400000011921
+          },
+          {
+            "name": "final-toggle",
+            "at": 5005.300000011921
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5505.400000011921
+          },
+          {
+            "name": "finish",
+            "at": 6205.300000011921
+          },
+          {
+            "name": "return",
+            "at": 6505.300000011921
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6405.5,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6405.5
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3472.5
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            },
+            "circle": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6022.5999999940395
+            },
+            "parts": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5771.9000000059605
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-thumb-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "57fae590aa9d70a9da4c4c042e143fe3453a732aa90e15983d72f36e26a8b17f",
+        "events": 21305
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 139,
+        "firstContentfulPaint": 134.2999999821186,
+        "firstPaint": 109.909,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8017.199999988079,
+        "frames": 480,
+        "fps": 60.0030001500075,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 182.4999999821186
+          },
+          {
+            "name": "reverse",
+            "at": 615.7999999821186
+          },
+          {
+            "name": "type-submit",
+            "at": 965.7999999821186
+          },
+          {
+            "name": "press",
+            "at": 1315.7999999821186
+          },
+          {
+            "name": "release",
+            "at": 1432.4999999821187
+          },
+          {
+            "name": "hold",
+            "at": 2015.7999999821186
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2315.7999999821186
+          },
+          {
+            "name": "queued-input",
+            "at": 2515.6999999821187
+          },
+          {
+            "name": "resume",
+            "at": 3015.6999999821187
+          },
+          {
+            "name": "dock",
+            "at": 3815.6999999821182
+          },
+          {
+            "name": "interrupt",
+            "at": 4115.699999982118
+          },
+          {
+            "name": "final-toggle",
+            "at": 5015.599999982119
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5515.599999982119
+          },
+          {
+            "name": "finish",
+            "at": 6215.599999982119
+          },
+          {
+            "name": "return",
+            "at": 6515.599999982119
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6097,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6097
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3464.5
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-thumb-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "770df134c0d3c55d79b77423c3ef073d550db2e6c6b43d6f726e2fc4258cf579",
+        "events": 19694
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 180.69999998807907,
+        "firstContentfulPaint": null,
+        "firstPaint": 157.29,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8009.0999999940395,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 190.80000001192093
+          },
+          {
+            "name": "reverse",
+            "at": 607.400000011921
+          },
+          {
+            "name": "type-submit",
+            "at": 957.4000000119208
+          },
+          {
+            "name": "press",
+            "at": 1307.4000000119208
+          },
+          {
+            "name": "release",
+            "at": 1424.000000011921
+          },
+          {
+            "name": "hold",
+            "at": 2007.4000000119208
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2307.400000011921
+          },
+          {
+            "name": "queued-input",
+            "at": 2507.300000011921
+          },
+          {
+            "name": "resume",
+            "at": 3007.300000011921
+          },
+          {
+            "name": "dock",
+            "at": 3807.300000011921
+          },
+          {
+            "name": "interrupt",
+            "at": 4107.300000011921
+          },
+          {
+            "name": "final-toggle",
+            "at": 5007.200000011921
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5507.300000011921
+          },
+          {
+            "name": "finish",
+            "at": 6207.200000011921
+          },
+          {
+            "name": "return",
+            "at": 6507.200000011921
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query",
+          "value": "profile query held"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5886.199999988079,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5886.199999988079
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3486.699999988079
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5786.299999982119
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-thumb-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "383926500b25421cb19ed30bec13b594a72f20a51130748816ce62ada42b29f0",
+        "events": 17799
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 193.59999999403954,
+        "firstContentfulPaint": 179,
+        "firstPaint": 155.801,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8003,
+        "frames": 479,
+        "fps": 59.87799389969499,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 290,
+            "ms": 33.400000000000546
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 185.0000000059605
+          },
+          {
+            "name": "reverse",
+            "at": 601.7000000059604
+          },
+          {
+            "name": "type-submit",
+            "at": 951.7000000059604
+          },
+          {
+            "name": "press",
+            "at": 1301.6000000059605
+          },
+          {
+            "name": "release",
+            "at": 1434.9000000059605
+          },
+          {
+            "name": "hold",
+            "at": 2001.5000000059604
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2301.6000000059603
+          },
+          {
+            "name": "queued-input",
+            "at": 2501.6000000059603
+          },
+          {
+            "name": "resume",
+            "at": 3001.5000000059604
+          },
+          {
+            "name": "dock",
+            "at": 3801.500000005961
+          },
+          {
+            "name": "interrupt",
+            "at": 4101.500000005961
+          },
+          {
+            "name": "final-toggle",
+            "at": 5001.500000005961
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5501.4000000059605
+          },
+          {
+            "name": "finish",
+            "at": 6201.4000000059605
+          },
+          {
+            "name": "return",
+            "at": 6501.4000000059605
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "",
+          "value": null
+        },
+        "motion": {
+          "dead": false,
+          "time": 6435.800000011921,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "liveAlpha": 1,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6435.800000011921
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3518.9000000059605
+            },
+            "input": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 0
+            },
+            "circle": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6053.200000017881
+            },
+            "parts": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5819.800000011921
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-thumb-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "731ebc3133601326369ce67a233eb075d102136f97247a6715ececd16328d2ec",
+        "events": 23180
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 200,
+        "firstContentfulPaint": null,
+        "firstPaint": 168.446,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8002.5,
+        "frames": 479,
+        "fps": 60.00175370470118,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 183.79999999403958
+          },
+          {
+            "name": "reverse",
+            "at": 600.3999999940395
+          },
+          {
+            "name": "type-submit",
+            "at": 950.4999999940396
+          },
+          {
+            "name": "press",
+            "at": 1300.3999999940395
+          },
+          {
+            "name": "release",
+            "at": 1433.7999999940396
+          },
+          {
+            "name": "hold",
+            "at": 2000.3999999940397
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2300.3999999940397
+          },
+          {
+            "name": "queued-input",
+            "at": 2500.3999999940397
+          },
+          {
+            "name": "resume",
+            "at": 3000.3999999940397
+          },
+          {
+            "name": "dock",
+            "at": 3800.2999999940394
+          },
+          {
+            "name": "interrupt",
+            "at": 4100.299999994039
+          },
+          {
+            "name": "final-toggle",
+            "at": 5000.299999994039
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5500.19999999404
+          },
+          {
+            "name": "finish",
+            "at": 6200.19999999404
+          },
+          {
+            "name": "return",
+            "at": 6500.19999999404
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "revealed": "true",
+          "pressed": "true",
+          "tilt": "0deg"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6572.299999982119,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6072.299999982119
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6572.299999982119
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3457.699999988079
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-full-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "a12e1e977c8b823a210ca9a925d48635f63011ea683f7e87c10155afd6d1c6f5",
+        "events": 24289
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 198.5,
+        "firstContentfulPaint": 195.10000002384186,
+        "firstPaint": 179.01,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8015,
+        "frames": 475,
+        "fps": 59.37722664599922,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 11,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 57,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 179,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 244,
+            "ms": 50.099999999999454
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4115.9000000059605,
+            "duration": 50
+          }
+        ],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 180.60000002384186
+          },
+          {
+            "name": "reverse",
+            "at": 613.9000000238418
+          },
+          {
+            "name": "type-submit",
+            "at": 963.8000000238419
+          },
+          {
+            "name": "press",
+            "at": 1313.800000023842
+          },
+          {
+            "name": "release",
+            "at": 1430.500000023842
+          },
+          {
+            "name": "hold",
+            "at": 2013.8000000238417
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2313.8000000238417
+          },
+          {
+            "name": "queued-input",
+            "at": 2513.8000000238417
+          },
+          {
+            "name": "resume",
+            "at": 3013.8000000238417
+          },
+          {
+            "name": "dock",
+            "at": 3813.700000023842
+          },
+          {
+            "name": "interrupt",
+            "at": 4113.700000023842
+          },
+          {
+            "name": "final-toggle",
+            "at": 5013.700000023842
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5513.700000023842
+          },
+          {
+            "name": "finish",
+            "at": 6213.600000023842
+          },
+          {
+            "name": "return",
+            "at": 6513.600000023842
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query held",
+          "value": "profile query held",
+          "status": "Search entered: profile query held",
+          "expanded": "false",
+          "label": "Open search",
+          "tabIndex": -1,
+          "fieldId": "drams-search-p2qwzts7s"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5837.5999999940395,
+          "logical": false,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5837.5999999940395
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3453.7999999821186
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5736.799999982119
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-full-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "9f8dfce822ad6e377ac9c0fa892f89475c8b6806d54f116979685d28551e4061",
+        "events": 19334
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 139.09999999403954,
+        "firstContentfulPaint": null,
+        "firstPaint": 121.82,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8009.9000000059605,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 192.40000001788138
+          },
+          {
+            "name": "reverse",
+            "at": 609.1000000178814
+          },
+          {
+            "name": "type-submit",
+            "at": 959.0000000178813
+          },
+          {
+            "name": "press",
+            "at": 1309.0000000178813
+          },
+          {
+            "name": "release",
+            "at": 1425.8000000178813
+          },
+          {
+            "name": "hold",
+            "at": 2009.0000000178816
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2309.0000000178816
+          },
+          {
+            "name": "queued-input",
+            "at": 2509.0000000178816
+          },
+          {
+            "name": "resume",
+            "at": 3009.0000000178816
+          },
+          {
+            "name": "dock",
+            "at": 3809.0000000178816
+          },
+          {
+            "name": "interrupt",
+            "at": 4109.000000017882
+          },
+          {
+            "name": "final-toggle",
+            "at": 5008.900000017881
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5508.900000017881
+          },
+          {
+            "name": "finish",
+            "at": 6208.900000017881
+          },
+          {
+            "name": "return",
+            "at": 6508.900000017881
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "popped": "true",
+          "pressed": "true"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6350.699999988079,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6350.699999988079
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3417.0999999940395
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5966.899999976158
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-full-desktop-cpu4-1795251423637-trace.json",
+        "sha256": "aa5c486463b281ab2cee967392b3425e2a89ce22d98e32d3fd446ffbed2055be",
+        "events": 20980
+      }
+    },
+    {
+      "kind": "surprise",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 199.30000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 178.289,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8012.4000000059605,
+        "frames": 481,
+        "fps": 60.0019959083878,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 194.99999998807903
+          },
+          {
+            "name": "reverse",
+            "at": 611.499999988079
+          },
+          {
+            "name": "type-submit",
+            "at": 961.499999988079
+          },
+          {
+            "name": "press",
+            "at": 1311.499999988079
+          },
+          {
+            "name": "release",
+            "at": 1428.199999988079
+          },
+          {
+            "name": "hold",
+            "at": 2011.4999999880793
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2311.4999999880793
+          },
+          {
+            "name": "queued-input",
+            "at": 2511.4999999880793
+          },
+          {
+            "name": "resume",
+            "at": 3011.4999999880793
+          },
+          {
+            "name": "dock",
+            "at": 3811.399999988079
+          },
+          {
+            "name": "interrupt",
+            "at": 4111.399999988079
+          },
+          {
+            "name": "final-toggle",
+            "at": 5011.399999988079
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5511.399999988079
+          },
+          {
+            "name": "finish",
+            "at": 6211.399999988079
+          },
+          {
+            "name": "return",
+            "at": 6511.299999988079
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "revealed": "true",
+          "pressed": "true",
+          "tilt": "0deg"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6575.000000029802,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6074.600000023842
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 6575.000000029802
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3442.0000000298023
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-surprise-full-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "216243decaf27f66f3b5333173eee318dfe808252bed498f7b004f725838ba6c",
+        "events": 22188
+      }
+    },
+    {
+      "kind": "search",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 216.90000000596046,
+        "firstContentfulPaint": 210.59999999403954,
+        "firstPaint": 196.199,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8016.5999999940395,
+        "frames": 477,
+        "fps": 59.626490662266555,
+        "p95": 16.799999999999272,
+        "gaps": [
+          {
+            "frame": 58,
+            "ms": 50
+          },
+          {
+            "frame": 245,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 966,
+            "duration": 56
+          }
+        ],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 182.10000000000002
+          },
+          {
+            "name": "reverse",
+            "at": 615.4
+          },
+          {
+            "name": "type-submit",
+            "at": 965.4000000000001
+          },
+          {
+            "name": "press",
+            "at": 1315.4
+          },
+          {
+            "name": "release",
+            "at": 1432
+          },
+          {
+            "name": "hold",
+            "at": 2015.3000000000002
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2315.3
+          },
+          {
+            "name": "queued-input",
+            "at": 2515.3
+          },
+          {
+            "name": "resume",
+            "at": 3015.3
+          },
+          {
+            "name": "dock",
+            "at": 3815.3
+          },
+          {
+            "name": "interrupt",
+            "at": 4115.3
+          },
+          {
+            "name": "final-toggle",
+            "at": 5015.2
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5515.2
+          },
+          {
+            "name": "finish",
+            "at": 6215.2
+          },
+          {
+            "name": "return",
+            "at": 6515.2
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "open": false,
+          "query": "profile query held",
+          "value": "profile query held",
+          "status": "Search entered: profile query held",
+          "expanded": "false",
+          "label": "Open search",
+          "tabIndex": -1,
+          "fieldId": "drams-search-c6uiipmdc59"
+        },
+        "motion": {
+          "dead": false,
+          "time": 5856,
+          "logical": false,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 3,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5856
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3339.2999999821186
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 5755
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-search-full-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "636b3b348e72ada7619dc24d5d04c9b8b258e9894fdb4ccf51c1aa06cea746db",
+        "events": 19088
+      }
+    },
+    {
+      "kind": "pop",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 208.19999998807907,
+        "firstContentfulPaint": 201.40000000596046,
+        "firstPaint": 190.283,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8004.4000000059605,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "first-toggle",
+            "at": 187
+          },
+          {
+            "name": "reverse",
+            "at": 603.7
+          },
+          {
+            "name": "type-submit",
+            "at": 953.7
+          },
+          {
+            "name": "press",
+            "at": 1303.7
+          },
+          {
+            "name": "release",
+            "at": 1420.4
+          },
+          {
+            "name": "hold",
+            "at": 2003.6
+          },
+          {
+            "name": "queued-toggle",
+            "at": 2303.6
+          },
+          {
+            "name": "queued-input",
+            "at": 2503.6
+          },
+          {
+            "name": "resume",
+            "at": 3003.6
+          },
+          {
+            "name": "dock",
+            "at": 3803.6000000000004
+          },
+          {
+            "name": "interrupt",
+            "at": 4103.6
+          },
+          {
+            "name": "final-toggle",
+            "at": 5003.5
+          },
+          {
+            "name": "pointer-follow",
+            "at": 5503.5
+          },
+          {
+            "name": "finish",
+            "at": 6203.5
+          },
+          {
+            "name": "return",
+            "at": 6503.4
+          }
+        ],
+        "storyComplete": true,
+        "source": {
+          "popped": "true",
+          "pressed": "true"
+        },
+        "motion": {
+          "dead": false,
+          "time": 6367.0999999940395,
+          "logical": true,
+          "liveAlpha": 1,
+          "ghosts": 0,
+          "samplers": 2,
+          "fade": false,
+          "tracks": {
+            "state": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 6367.0999999940395
+            },
+            "tilt": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "press": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 3432.7999999821186
+            },
+            "input": {
+              "kind": "hold",
+              "x": 0,
+              "v": 0,
+              "to": 0,
+              "at": 0
+            },
+            "alpha": {
+              "kind": "hold",
+              "x": 1,
+              "v": 0,
+              "to": 1,
+              "at": 5982.399999976158
+            }
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-pop-full-mobile-cpu4-1795251423637-trace.json",
+        "sha256": "6d0d74cfa1004f5d3860f66751c49f252f41ead400466dff278f586936e0b023",
+        "events": 20065
+      }
+    }
+  ],
+  "timingGatePassed": false,
+  "siteWidePerformanceAuditOpen": true,
+  "scope": "24 fresh isolated emitted-source normal-motion stories. Actual RAF intervals,long tasks,readiness and first trace Paint after mount are recorded with source-boundCDP traces. Each15-event story covers reversible state,pressure,typing/submission,caller-held queued input,Dock intent and interruption. Synthetic profile events are separate from the physical-input tests. These prepared-font local measurements do not close cold-route,Lighthouse or site-wide timing gates.",
+  "repositorySourceHashes": {
+    "tools/fixtures/drams-objects-artwork.json": "7548b4548d58c06a83cdbecde7efc3b9d35f61db0c4b42aaff241094a599f993",
+    "tools/fixtures/drams-objects-original-models.json": "f6b99ab73dbbb046b7fd082268f3368deb5be7044a28ea7c4cdf49c9fb6ba265",
+    "js/demos.drams.sliders.js": "84541fd55b1d7c447596804decad09b3a65939112ab30f3a0470bb73d06832e7",
+    "js/meta.stage.js": "66dedef93a70d8228f10392b5e20b8e68944e5970553a4738268ef0b4ee042a5",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "tools/stage-fit-bounds.js": "b13aa0359ebfc805038c00d656e58682440c39ba024c4972027900a072c0c194",
+    "assets/components/drams-objects/89-459.svg": "4d520ae6fee5a8789b3bd9ac7ecd2cde4ba792cedb63571534640fbb56b5978f",
+    "assets/components/drams-objects/89-462.svg": "2d43b89e60c5cd0ae311d60614fc219403334e957bdd75c27813870767b8fda7",
+    "assets/components/drams-objects/89-463.svg": "00caa05cc99fc76116d39aadd1120c96879829ed2e30f6b6f0fc168f96d0bac8",
+    "assets/components/drams-objects/177-652.svg": "f53fd3c39365ec41ec3178f211d7c0fe6851cd24e37948d76d79fa7285f07e4a",
+    "assets/components/drams-objects/89-480.svg": "ed6bf4adbcb12519099f5817c44ba9549547b803c87f833c5358926d8ed5dfd3",
+    "assets/components/drams-objects/89-481.svg": "6936568e8ae97aa91a40a3808910a7d63f196eb6cfb0e215e6ba19192a4a7455",
+    "assets/components/drams-objects/89-482.svg": "1a0e05171e661600f3b9f77d059a06ea8466209061a7520894cb0f3e7c231c15",
+    "assets/components/drams-objects/89-483.svg": "dfac67245398933ebab26d81b0062f341847967af3a5a2297675273afa3e40ae",
+    "assets/components/drams-objects/89-484.svg": "fe9637285e2eb7a991f7d85c62410404d774198e42d8669fdf9f4bb6517eb5a4",
+    "assets/components/drams-objects/89-485.svg": "9195756c2f4b035b4b323c70c81231fc98bc643911be613dc0bf702f57799149",
+    "assets/components/drams-objects/177-823.svg": "a2f24fa845cabd8ee5542b12d88f8b70571b56962f5141dd4c860cd7d8da9c67",
+    "assets/components/drams-objects/177-824.svg": "3adac191daa6eefe53a602618e182f891ef96a213c344ec7fda908520883b95b",
+    "assets/components/drams-objects/177-825.svg": "639cabef17304711fef569ecc45d9c89100cdb52dad93cbae702ea8d741e1bcb",
+    "assets/components/drams-objects/177-826.svg": "6cad2ec0abc608b18c12b39ccdb6ceeb32c4e9714bb0a8eeb08dff96df019c2a",
+    "assets/components/drams-objects/177-827.svg": "7c4d06b8da04c6946a64f68aaf57cfa6729a15b024341507d368a942380a38fb",
+    "assets/components/drams-objects/177-828.svg": "167d7dfc15de5072ff2398e7661f1fb28dda5ba74d58aee0fb8467fd5c01c96e",
+    "assets/components/drams-objects/177-829.svg": "e1eb0ecd4026ddcbfad2b8c0516f7586cfebd9f4b52207c1b91c9efded8a2e4a",
+    "assets/components/drams-objects/177-830.svg": "63e5e2f4377aa8aee634ec15877cb85cb6785259025a72e261a2c7fc46153ec1",
+    "tools/fixtures/drams-objects-original/definitions/drams-010.json": "650de45d781d68ecbff39d640ef9e26d73fdc881ce54415eb6914e4cb026bc71",
+    "tools/fixtures/drams-objects-original/definitions/drams-043.json": "85f258b5c2fc5eba1a145179efaa59f93c77134e26157eb186fe17458529ace2",
+    "tools/fixtures/drams-objects-original/definitions/drams-044.json": "d746200d5d909ab6eac989f684a9940d8389c8afbffabd24ae07167c01b1cd04",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-300x320.json.gz": "53958815458b2a8635fabee855e526d1426cf767f9e55d28016c5e9458a556d6",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-300x320-reduced.json.gz": "885c324eef3051abac0ce6fa87955f10b85fcded638d977c9fcac602c687f7ca",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-368x320.json.gz": "f3ee35694849092eec2630fa368a68b0c3a7e9bb0756941100b4b0f2df94fe2f",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-010-368x320-reduced.json.gz": "4127e6ccd78814139486c8c0686f04a55b7025a3b858327bf82b487198dd994c",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-300x320.json.gz": "29b3685ad739aa62de9836e3bcfff7cabb65a20548beb486680c964bda51e197",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-300x320-reduced.json.gz": "9b1be8b4ebe063a088614ae8cfac0edac1ebe9d6c63d790266b6605260b34978",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-368x320.json.gz": "34db3e19c70e68ea648bb730b3fd4c5569d18b282a6e7b62bc072cd5a1f7e84a",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-043-368x320-reduced.json.gz": "86034a581381c585d8d60679b905e1a2241ced491889884d8b3be790af7daae0",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-300x320.json.gz": "9395f0b2e82d8e3d6aeb0c2f485d07170cd8eae63dff08e2bb652c1fe6f4d2c1",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-300x320-reduced.json.gz": "ac42cc223a3beae6a92fb1de872f3d83ddaaa67f50bf7607761bf1fc560eee1b",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-368x320.json.gz": "713e65233290e544a6a033e1e1f1a4c966e04f7709a3efcd1c7ecb6d0803b3de",
+    "tools/fixtures/drams-objects-original/raw-fixtures/drams-044-368x320-reduced.json.gz": "5845c514a679b1e6eb916ee16bd0c9c974da042e43be509b06c9f6664c22fcc4",
+    "tools/verification/drams-objects-evidence.js": "005977d3659fb7e6a9bec7ba7e56c8bac740e8e2b1d7050e21ec85d2b743e4b3",
+    "tools/verification/drams-objects-focus-probe.js": "adf15568bcc40ace459a477e0bb3a85d667ef5bd0ccb6e1b447209e29b416be8",
+    "tools/verification/drams-objects-full-document.js": "a80d7d2086cdaced92620b82cc2357a6d386a940d283ae36de84a5fb0e48adec",
+    "tools/verification/drams-objects-full-editing.js": "4a2d33705e18b09f44f5924cd3e53e27d83375dd5abeb29df26d873c0b84c676",
+    "tools/verification/drams-objects-full-layout.js": "aef445f31afa6a9b91311608bd7591ffa4b3a55ed4b852acd4044aac09cd4362",
+    "tools/verification/drams-objects-full-lifecycle.js": "6c32d176ddf8c400bd760ce6baf99f2894a81d17cf472cf62e167e875f0daf96",
+    "tools/verification/drams-objects-full-motion.js": "5ff2b42f8d31395f932ac2fcdb2515e2df66f09d90a3d3aeb68719805f5403ae",
+    "tools/verification/drams-objects-full-mouse.js": "1121de2d3d960461a6affada31fcf009853e6924257755f5b323b876fd658488",
+    "tools/verification/drams-objects-full-portable.js": "b899d708c984378813d32766a2e9387c26facfa112ac5a99d61c534e76eace31",
+    "tools/verification/drams-objects-full-retarget.js": "62d0b8c88b516e78c61fe9a218861cf0b82aafd9c4a52bc198cf0d9b5964c64c",
+    "tools/verification/drams-objects-full-smoke.js": "41763d4a7ea4fac54381f92dafaf800260224278513e087e068d8e75054f6c5b",
+    "tools/verification/drams-objects-full-startup.js": "a904e675bf20940e277a648b8bb12e2b5f9fce46dcf6f6dcab78df86d00f2a6c",
+    "tools/verification/drams-objects-full-stories.js": "f313e5d5a367b3197e12bed293164b399a27e191c46b1f7557b4f376af42563a",
+    "tools/verification/drams-objects-full-stress.js": "f578c7f3055affdcc4667f0659f970f237e1caa00fee21532479f88ad778da38",
+    "tools/verification/drams-objects-full-themes.js": "e6b5eae1660825123e13f7e07c488462a0cd3b4b059901d5308749008329997c",
+    "tools/verification/drams-objects-full-touch.js": "8660bdbfd5f3a7948640f8618f361a8134855f1de641d8af035bf349904eb26e",
+    "tools/verification/drams-objects-harness.js": "c5637f1028a57311380c89a0d4b2fcef3f6e87f6f1577a59d4ef4c0790a6df52",
+    "tools/verification/drams-objects-models.js": "d9435607180595bb7126ec6540adcc8dc9838d63b7a787230a765146fcd1121f",
+    "tools/verification/drams-objects-native-assets.js": "596de376f697dd791ee26ee7c0d2553c66e0cda8da4576b29e3abb248b49640d",
+    "tools/verification/drams-objects-native-document.js": "511aa0f276b91b5e20cfddb562ddf5f39b99c161b80381f03e4a6bb07533b86f",
+    "tools/verification/drams-objects-native-editing.js": "83b20623bb058f83982a291592211c28409cc8933933e70f000b7362bcdeaf5f",
+    "tools/verification/drams-objects-native-inputs.js": "8458b307ef6359e8b5451d79c364f7f7dc4b4f2d8ca0e791d276fe55d10c79c4",
+    "tools/verification/drams-objects-native-layout.js": "84618414faba1ab6bf7390194d79543da6c5aef77ecba7765286b4e12e92403a",
+    "tools/verification/drams-objects-native-lifecycle.js": "c294ea4282526bf9850aee4c6b9d0c9f2210dd6916df2063970f5d6125a7e3a8",
+    "tools/verification/drams-objects-native-motion.js": "5fafcb10aace89ef50edfec82fd15b31fe5a7f25ee1024b8362257a22fa5080d",
+    "tools/verification/drams-objects-native-portable.js": "81f43955ff15c300eb1fcdef8d41bd548300c2b1f8a951dcd379644cbf4b9877",
+    "tools/verification/drams-objects-native-retarget.js": "a1d870a8de6b3e26536188a3bcdd34dae6b2b10a081e1f3ef669129826d2b736",
+    "tools/verification/drams-objects-native-stories.js": "fb66c0b921ac5ecb6c2a1c028a2eed3e2d1a55e62ce5e1c06ba3ef87ecb067a6",
+    "tools/verification/drams-objects-native-stress.js": "3c1650c745fc4bae7723caa9fbf9083246e14da3479ca825e738b52bdbf5e089",
+    "tools/verification/drams-objects-native-themes.js": "1985d3e656af0a9d163f17ff9a3610d28ab0bb6c939ee3d8b80b946e9f903a15",
+    "tools/verification/drams-objects-routes.js": "e2cc58b4d80ff01472e04f816bde26336f7df124bbde44dc7df73ff5c938f5fc",
+    "tools/verification/drams-objects-short-focus-probe.js": "26702800ab10c6a7047408efa09f6bd1a8013a4b8a8613412023972dd126b1f2",
+    "tools/verification/drams-objects-short-layout.js": "8f12d09cdfb253368c457f1808e92a64b639dc221d899d7000e7e179f9fd8d82",
+    "tools/verification/drams-objects-short-retarget.js": "af6a02aba5574dd5246977d6ac0c9a3f756dcb667f27403bbb22297cb36c8c23",
+    "tools/verification/drams-objects-source.js": "b21c1fd3bd72735bae40a0e266ac1bf7f805ae0dfa67835a36fa3df871ae7f91",
+    "tools/profile-drams-objects.js": "0d0ffc037769441d0a4db9cec5c467f40040e0dc7474e4ebcaafe422ab816b3f"
+  },
+  "checkoutLineEndingDifferences": [
+    {
+      "file": "js/demo-runtime.js",
+      "localMeasuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "repositorySHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "js/shell/stage.js",
+      "localMeasuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "repositorySHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "js/shell/export.js",
+      "localMeasuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+      "repositorySHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "css/style.css",
+      "localMeasuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "repositorySHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "css/fonts.css",
+      "localMeasuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "repositorySHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+      "normalization": "CRLF to LF only"
+    }
+  ],
+  "sourceNote": "Measured local source hashes are preserved. Five unchanged baseline runtime/shell/style checkout files use CRLF while Git stores LF; normalizing only CRLF to LF produces exact repository bytes. Every changed behavior/timing input is byte-identical to its staged object."
+}

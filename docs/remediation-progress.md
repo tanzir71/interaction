@@ -1,20 +1,32 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 339 of the 399 existing demos:
+Native v4 compositions are remediated for 342 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the first twelve DRAMS Collections demos.
-The remaining work includes 60 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the fifteen DRAMS Collections demos.
+The remaining work includes 57 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 339 remediated native compositions retains those references.
+None of the 342 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 339 native compositions. The unfinished groups still account for
+among these 342 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 16 tiny-text findings and
-22 low-fill findings; findings can overlap within a demo. All 110 documented
+20 low-fill findings; findings can overlap within a demo. All 112 documented
 Figma fill exceptions validate.
+
+## Rollin' Ball Surprise, Rollin' Search and Ball Pop
+
+The three object controls match v4 tiles `89:446`, `89:467` and `89:491` on a 324×168 native plane at reference origin 24,20. Seventeen supplied leaf SVGs keep their bytes, roots and exact slots. Surprise retains its lifted 60px orange sphere, glint, 100×42 recessed bowl and hidden dot. Search retains the 280×48 capsule, 40px orb, icon, glint, supplied label and caret. The complete capsule export remains a reference; its captured fill, stroke, radius and shadows form the editable primitive. Pop retains all eight supplied wedges at the reference peak and reforms into a procedural 60px sphere using canonical 400/150ms swaps. The two documented sparse exceptions preserve Figma geometry.
+
+Full views keep the complete original controllers, copy and virtual geometry. Short full stages use the available text width and adapt the control only where vertical fitting limits it. Descriptions, controls, status, guides and the shared Dock have measured gaps, with 44px minimum targets and 11.1px optical type. Stable inputs sit outside retained paint. Native Search preserves browser editing, selection, undo/redo and ordered held submission: a queued submission records its earlier value even when the user edits again before resume. Captured leave and window blur release pressure and capture; blurred clicks cancel. Caller/document/full-viewport holds, unstarted Dock cancellation and cleanup retain their separate ownership.
+
+The emitted-source verifier passes 30 groups and 89,968 checks: twelve frozen original captures; 264 native, regular-full and short-full layouts; 108 interrupted paint boundaries; 36 complete six-second stories; physical mouse, keys and touch; actual focus/contrast; 21,600 rapid retargets; twelve cold route/LiveTiles cases; and 24 fresh blocked-network exports. Retarget comparisons retain exact body, artwork and shadow pixels. Immediate readout/query ink and editing-caret changes use measured masks under 3% of the stage; normal Search focus is verified separately, and an independent focus-only probe bounds its clipped-input edge variation.
+
+The 399-demo fit diagnostic has zero boot failures, missing sizes, overflow or horizontal scroll. All 342 remediated compositions pass; 16 tiny-text and 20 low-fill findings remain among the 57 unfinished Collections demos. All 112 sparse exceptions validate. Static chrome/control debt is 56 and motion debt 32. Required local checks, 19 runtime/shell tests, eight CLI/MCP tests and sixteen fit-geometry checks retain this documented baseline. Twelve optimized shared-file siblings, 325 other modules, 396 metadata records, 150 frozen helper sources, the 222-file accepted full-view snapshot, 442 prior publication files and 610 original archived files remain unchanged.
+
+The 24 isolated prepared-font timing stories record 60fps with no gaps or long tasks at normal speed. CPU 4 runs record 59.38–60fps, seven gaps and two long tasks. First trace Paint is 22.441–42.436ms normally and 108.372–196.199ms throttled; maximum readiness is 79.1/216.9ms. Source hashes, complete case results and trace digests are in `docs/performance/drams-objects-2026-11-21.json`. Route transfer is excluded; cold-route, Lighthouse and final site-wide timing gates remain open.
 
 ## Volume render invalidation follow-up
 

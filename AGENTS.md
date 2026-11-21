@@ -807,3 +807,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   all 16 emitted-source groups. Record new timing with
   `node tools/profile-drams-volume-render.js http://127.0.0.1:4173 --cpu=1`
   or `--cpu=4`; preserve the earlier performance report and keep final gates open.
+
+- `node tools/verify-drams-objects.js http://127.0.0.1:4173` covers v4
+  Rollin' Ball Surprise, Rollin' Search and Ball Pop: seventeen unchanged leaf
+  SVGs, one captured editable-capsule primitive and twelve original fixtures.
+  Thirty groups cover 264 native/full/short layouts, 108 interrupted paint
+  boundaries, 36 complete stories, actual mouse/keys/touch, native editing and
+  undo, ordered held submission, 21,600 rapid retargets, twelve cold routes and
+  LiveTiles cases, independent holds, focus/contrast, cleanup and 24 fresh
+  offline exports. Full retains complete original virtual models and copy.
+  Short stages expand text within the available Stage width and adapt optical
+  control size only enough to preserve nonoverlap and 44px minimum targets.
+  Keep proxies aligned and outside retained paint; never synchronize attached
+  hidden input values, which can split native undo groups. Clip both supplied
+  native query/caret artwork and the stable input inside the morphing capsule.
+  Retarget masks cover only measured immediate semantic ink/caret changes;
+  normal Search focus and its bounded native clip-edge raster have separate
+  proofs. Captured leave/window blur must release pressure and capture, cancel
+  blurred clicks, and preserve held source clocks. Pop's dynamic 60px reformed
+  sphere uses 400/150ms swaps beneath the exact eight-wedge reference. Keep the
+  two sparse-fill exceptions and all twelve optimized shared-file siblings.
+  Record isolated timing with `node tools/profile-drams-objects.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; prepared-font measurements leave
+  cold-route, Lighthouse and final site-wide gates open.

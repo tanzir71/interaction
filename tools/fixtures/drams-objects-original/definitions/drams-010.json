@@ -1,0 +1,24 @@
+{
+  "file": "js/demos.drams.sliders.js",
+  "id": "drams-010",
+  "title": "Rollin' Ball Surprise",
+  "rootClass": "d-drams-010",
+  "html": "<div class=\"d-drams-010\"><button class=\"orb-base\" aria-label=\"Roll the ball to reveal its surprise\" aria-pressed=\"false\"><span class=\"orb\"><i class=\"shine\"></i><i class=\"eye one\"></i><i class=\"eye two\"></i></span></button></div>",
+  "css": ".d-drams-010{width:100%;height:320px;display:grid;place-items:center;position:relative;background:#fff;color:#555;font:400 12px \"Inter\",system-ui,sans-serif;overflow:hidden}.d-drams-010 *{box-sizing:border-box}.d-drams-010 button,.d-drams-010 input{font:inherit}.d-drams-010 [role=slider],.d-drams-010 button{touch-action:none;-webkit-tap-highlight-color:transparent}.d-drams-010 :is(button,input,[role=slider]):focus-visible{outline:2px solid #bd5b2a;outline-offset:7px}.d-drams-010 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(prefers-reduced-motion:reduce){.d-drams-010 *{animation:none!important;transition:none!important}}.d-drams-010 .orb-base{border:1px solid #f2f2f2;width:136px;height:136px;padding:9px;border-radius:30px;background:linear-gradient(135deg,#fdfdfd,#f8f8f8 50%,#dfdfdf);box-shadow:inset 0 1px 1px #fff,1px 2px 2px #00000017,17px 29px 38px #0000000d;cursor:pointer}.d-drams-010 .orb{position:relative;display:block;width:116px;height:116px;border-radius:50%;border:6px solid #e8e8e6;background:radial-gradient(ellipse at 27% 19%,#fff 0%,#f0f0ef 25%,#ccc 66%,#b8b8b5 100%);box-shadow:inset 0 0 1px #fff,1px 2px 1px #fff,3px 4px 9px #00000008;transform:rotate(var(--tilt,0deg));transition:transform .5s cubic-bezier(.2,.8,.2,1)}.d-drams-010 .shine{position:absolute;left:21px;top:18px;width:17px;height:10px;background:#ffffffdf;transform:rotate(-43deg);clip-path:polygon(0 0,90% 0,100% 100%,10% 100%)}.d-drams-010 .eye{width:6px;height:6px;border-radius:50%;position:absolute;left:49px;top:49px;background:#f06c22;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .4s}.d-drams-010 .two{opacity:0}.d-drams-010 [aria-pressed=true] .one{transform:translate(-7px,-47px);width:4px;height:4px}.d-drams-010 [aria-pressed=true] .two{opacity:1;transform:translate(6px,-47px);width:4px;height:4px}",
+  "js": "const button=root.querySelector('button');button.addEventListener('click',()=>{const active=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(active));root.dataset.revealed=String(active)});button.addEventListener('pointermove',e=>{const rect=button.getBoundingClientRect();button.style.setProperty('--tilt',((e.clientX-rect.left)/rect.width-.5)*16+'deg')});button.addEventListener('pointerleave',()=>button.style.setProperty('--tilt','0deg'));root.dataset.revealed='false';",
+  "prompt": "Build a self-contained, accessible native HTML/CSS/JavaScript interpretation of Rollin' Ball Surprise from https://drams.framer.website/drams/010. Credit DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp). A glossy ball sits in a rounded square recess. A small orange dot rolls to the top and becomes two tiny eyes when pressed. Use a white 320px stage, soft neutral contact shadows, subtle physical edge highlights and orange details. move over the ball; click or press Space to reveal and hide the surprise. Preserve pointer and keyboard operation, reduced-motion support and the distinct geometry of this component. No hosted Framer embed or external runtime dependency.",
+  "source": {
+    "name": "DRAMS · 1042 Studio / Rollin' Ball Surprise",
+    "url": "https://drams.framer.website/drams/010"
+  },
+  "tags": [
+    "DRAMS",
+    "skeuomorphic",
+    "native",
+    "button",
+    "hover"
+  ],
+  "desc": "A glossy ball sits in a rounded square recess. A small orange dot rolls to the top and becomes two tiny eyes when pressed.",
+  "seen": "Native interpretation of DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp).",
+  "hint": "move over the ball; click or press Space to reveal and hide the surprise"
+}
