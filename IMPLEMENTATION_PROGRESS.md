@@ -1629,3 +1629,18 @@ CPU 4: 59.13–60.00 fps, 13 intervals above 25 ms, 1 long tasks; first trace Pa
 Fonts are prepared before mounting; route transfer is excluded. Recorded
 findings leave final library timing gates open. GitHub Actions stays disabled
 and the account-wide $0 stop limit is preserved.
+
+## Empty, Hidden and Visible Track Volume
+
+Empty Track Volume, Hidden Track Volume and Visible Track Volume match v4 tiles 89:281, 89:301 and 89:322. All eight supplied SVGs retain their exact bytes and intrinsic roots. Their 324×168 native planes preserve reference origin 24,20 inside 372×264. Empty retains the 16×160 groove and 40 px head at centre 186,92. Hidden retains the faint 1×161 exported guide, 48 px head and attached 3×12 marker at the same centre. Visible retains the 14×160 groove, 14×90 orange fill and 40×32 cap at centre 186,100. Stable original lower-cap pixels and a continuous 100 px orange span verify fill growth without seams.
+
+The three native cameras map values 0/100 to centres 170/50, 166/54 and 174/46 px. Their 120/112/128 px input travels preserve the literal upward delta + 0.35×rightward delta law. Full compositions retain all original rotary models and copy, initial value 0, original 270-degree arcs and seven Empty calibration ticks. Source knob paths are 0.8, 0.0 and 0.1; their body widths are 106/64/64 px. Full inputs stay outside retained paint, with focus copied to the live plane. Direct dragging has no transition; release carries pointer velocity into the 380/32/1 spring with 0.55 rubber-banding. Reduced changes retain actual paint and use the canonical 150 ms opacity fade.
+
+`node tools/verify-drams-volumes.js http://127.0.0.1:4173` passes 16 groups and 97,948 checks. These include twelve independent original captures, 180 layouts, 72 physical drags, moving touch, eighteen complete full-model stories, 60/120/240 Hz renderer equivalence, independent caller/document/viewport holds, queued intent, twelve cold route/LiveTiles cases and 24 fresh network-blocked exports. All 72 whole-control retarget comparisons are byte-identical, including arcs, shadows, markers and focus rings; no pixels are excluded. A further 21,600 rapid inputs preserve original values, retain only one analytic segment, drain source instrumentation after each render and keep fade layers bounded (47 maximum at 10 ms cadence), then settle with no retained layers or idle frame. Cleanup releases all owned resources.
+
+All 339 remediated native compositions pass their fit gates. The full 399-demo diagnostic reports zero overflow and horizontal scroll, 16 tiny-text findings and 22 low-fill findings among 60 unfinished Collections demos; all 110 documented sparse exceptions validate. The new three exceptions preserve exact Figma sizing and leave overflow, scroll and optical-text gates mandatory. Static stage debt is 59 and motion debt 34, with no new violations. Required local checks, 19 runtime/shell tests, eight CLI/MCP tests and sixteen fit-geometry checks pass. Twelve shared-file siblings, 325 unrelated modules, 138 frozen helper sources, 375 prior publication evidence files and 610 original archived files remain unchanged.
+
+[Isolated timing report](performance/drams-volumes-2026-11-21.json) records 24 eight-second native/full CPU 1/4 desktop DPR 1 and compact DPR 2 stories.
+CPU 1: 60.00–60.00 fps, 0 intervals above 25 ms, 0 long tasks; first trace Paint 19.8–28.5 ms, maximum readiness 60.0 ms.
+CPU 4: 53.14–60.00 fps, 119 intervals above 25 ms, 13 long tasks; first trace Paint 57.7–379.2 ms, maximum readiness 394.1 ms.
+Fonts are prepared before mounting; route transfer is excluded. Measurements leave final library timing gates open. GitHub Actions remains disabled and the account-wide $0 stop limit is preserved.

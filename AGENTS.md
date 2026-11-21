@@ -782,3 +782,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   all 12 shared-file siblings. Keep Dot/Volume sparse-fill exceptions.
   Record isolated timing with `node tools/profile-drams-detents.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; final timing gates remain open.
+
+- `node tools/verify-drams-volumes.js http://127.0.0.1:4173` covers v4
+  Empty, Hidden and Visible Track Volume: eight exact SVG layers, twelve frozen
+  original captures, 180 layouts, 72 whole-control byte-identical retargets,
+  72 physical drags, eighteen full stories, twelve cold routes/LiveTiles,
+  moving touch and 24 fresh offline exports. Preserve their 120/112/128 px
+  native travel cameras, faint 1×161 Hidden guide, fixed fill cap and complete
+  original relative rotary laws, arcs, copy and full initial value 0. Source
+  knob paths are 0.8/0.0/0.1. Keep full inputs outside retained paint and write
+  view variables to the live plane. Drain source style instrumentation after
+  render, retain one analytic segment and prune invisible fade planes; 21,600
+  rapid inputs verify bounded storage, complete settling and cleanup. Preserve
+  the three sparse-fill exceptions and all twelve shared-file siblings.
+  Record isolated timing with `node tools/profile-drams-volumes.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; final timing gates remain open.

@@ -13214,17 +13214,25 @@ INTRX.meta({
     ]
   },
   "drams-012": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "useCases": [
       "DRAMS",
@@ -13233,21 +13241,33 @@ INTRX.meta({
       "dial"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-034": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "useCases": [
       "DRAMS",
@@ -13256,21 +13276,33 @@ INTRX.meta({
       "dial"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-040": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      520
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "useCases": [
       "DRAMS",
@@ -13279,8 +13311,12 @@ INTRX.meta({
       "dial"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-010": {
     "designSize": "sm",

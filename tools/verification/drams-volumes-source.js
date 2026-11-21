@@ -1,0 +1,7 @@
+/* Read the actual published factories; frozen raw fixtures remain independent. */
+const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto'),manifest=require('../fixtures/drams-volumes-original-models.json'),registry=require('../load-registry')(),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+const definition=id=>manifest.definitions.find(d=>d.id===id).definition,config=id=>manifest.definitions.find(d=>d.id===id).config;
+function source(id,name,next){const program=registry.demos.find(d=>d.id===id).js,prefix='const '+name+'=',start=program.indexOf(prefix),end=program.indexOf(next?';const '+next+'=':';return (function mountDrams',start+prefix.length);assert(start>=0&&end>start,'Published factory '+id+' '+name);return program.slice(start+prefix.length,end);}
+function factory(id){const s=source(id,'createKernel','createSourceGeometry'),d=manifest.definitions.find(d=>d.id===id);assert.equal(hash(s),d.referenceFactorySHA256);assert(s.includes(d.definition.js),'Literal original controller '+id);return s;}
+const names=[['createSourceGeometry','createDramsModel'],['createDramsModel','createSkeuoMirror'],['createDramsMotion',null]],functions={};for(const[name,next]of names){const strings=manifest.definitions.map(d=>source(d.id,name,next));assert(strings.every(s=>s===strings[0]),'Shared published '+name);functions[name]=eval('('+strings[0]+')');}
+module.exports={manifest,definition,config,factory,hash,...functions};
