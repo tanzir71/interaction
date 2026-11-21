@@ -1,0 +1,43 @@
+{
+  "id": "drams-017",
+  "title": "Round On/Off Knob",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-017",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 017, Round On/Off Knob, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Turn the switch with a click, Space or arrow keys.",
+  "source": {
+    "name": "DRAMS / Round On/Off Knob",
+    "url": "https://drams.framer.website/drams/017"
+  },
+  "html": "<div class=\"d-drams-017\"><button class=\"control onoff\" type=\"button\" role=\"switch\" aria-checked=\"false\" aria-label=\"Round on off knob\"><span class=\"ring\"></span><span class=\"disc handle\"><i></i></span></button><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-017{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-017 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-017 button{font:inherit;cursor:pointer} .d-drams-017 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-017 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-017 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-017 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-017 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-017 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-017 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-017 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-017 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-017 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-017 .onoff{width:156px;height:156px;padding:0;border:7px solid #f1f1f1;border-radius:50%;background:linear-gradient(110deg,#f9f9f9,#eee);box-shadow:inset 0 0 0 2px #333}.d-drams-017 .onoff .handle{left:calc(50% - 16px);right:auto;top:-2px;bottom:-2px;width:32px;border-radius:3px;background:linear-gradient(90deg,#fff,#ececec 75%);box-shadow:12px 8px 11px #0003,0 4px 3px #0003;transform-origin:center;transition:transform .38s cubic-bezier(.2,.8,.25,1)}.d-drams-017 .handle:after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:8px;background:#111;border-radius:2px}.d-drams-017 .handle i{position:absolute;left:12px;top:15px;width:8px;height:8px;background:#777;border-radius:50%}.d-drams-017 .onoff[aria-checked=true] .handle{transform:rotate(90deg)}.d-drams-017 .onoff[aria-checked=true] .handle i{background:#f36c2d}",
+  "js": "const button=root.querySelector('button');let down=null,on=false;function set(v,source){on=v;button.setAttribute('aria-checked',String(on));root.dataset.on=String(on);root.dataset.source=source;root.querySelector('.sr').textContent=on?'On':'Off'}button.addEventListener('click',()=>set(!on,'click'));button.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowUp'){e.preventDefault();set(true,'keyboard')}else if(e.key==='ArrowLeft'||e.key==='ArrowDown'){e.preventDefault();set(false,'keyboard')}});set(false,'initial');",
+  "prompt": "Recreate the Round On/Off Knob composition from https://drams.framer.website/drams/017 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Turn the switch with a click, Space or arrow keys.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "press",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": false,
+    "aria": "switch"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

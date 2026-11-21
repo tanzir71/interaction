@@ -1,0 +1,4085 @@
+{
+  "at": "2026-11-21T16:51:51.855Z",
+  "ids": [
+    "drams-016",
+    "drams-017",
+    "drams-038"
+  ],
+  "sourceBaseCommit": "ad0db730acdc5886c0939e6c11d2b7668c3c8930",
+  "tool": "tools/profile-drams-rotary.js",
+  "sourceHashes": {
+    "tools/verification/drams-rotary-evidence.js": "2158ca98757db110a232390349bcd2e01d40144fe485ebf09fd4de803fa6c47d",
+    "tools/verify-drams-rotary.js": "e12eb9796b7dc1e01a3ad36a335c2806a31ee42882c166dbf5b8db27679fa98d",
+    "tools/fixtures/drams-rotary-artwork.json": "67b34b9b94fe8ff3e19a859340625b45996b25ecdc2ec01a04957c0f89687b0d",
+    "tools/fixtures/drams-rotary-original-models.json": "f5fcfc27fe09b9ee370dbfd5fc55cb3d380105c1f06f793b1da037b8a1148d0f",
+    "js/demos.drams.dials.js": "1a94b69dfa947431c802951f6967464608cc4538baf6fef339d6fe27647b5a6d",
+    "js/meta.stage.js": "981c27b204fe23a6a9c66467637cd578acd6825db2fbd6ef57a81573db75a3c9",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/components/drams-rotary/89-837.svg": "1161945c5ae1fe82c945683d9d3f5249a33e3fac60be7ab1d6f8327f7fe85a3b",
+    "assets/components/drams-rotary/89-838.svg": "e055211bf8f29ce59f47b0ce593da7b730a1403307acda385b140fc02ca4ae2d",
+    "assets/components/drams-rotary/89-839.svg": "c860652ff0b9e1196383cd0a32ae611c71d7fbc962ab75727f66ac2beba4e28d",
+    "assets/components/drams-rotary/89-840.svg": "6fa14c3793345b4ed55e257cf3ff4d88833141949b2d562e6f86d0814655f8e4",
+    "assets/components/drams-rotary/89-859.svg": "875686ce3a34e6a94f5bac7b8235486220be1dcc53c7f07a358a055b1508123e",
+    "assets/components/drams-rotary/89-860.svg": "af73c7e7de8ae38b6e787244f21a6093a7377b1c27e7bde9a5c535645d8d05bf",
+    "assets/components/drams-rotary/89-861.svg": "520541c1c3adf171e39fcb526c1581788ed43080e365a4aae820048803a70c5b",
+    "assets/components/drams-rotary/89-862.svg": "8a1257b904a03d4e9ce6624cf66113dd03e6a660ed4d014a40afb72bb2d99022",
+    "assets/components/drams-rotary/89-863.svg": "f1f1a7c63533048a28b436c1cd64cfe7e48e8df14f8448183d4450baac73f604",
+    "assets/components/drams-rotary/89-880.svg": "e80b52920e87afc6d964d7585d1eaf7b3ffc23f990816874eb3c8d9fcebf6dc2",
+    "assets/components/drams-rotary/89-881.svg": "aef1d35e82c24bc332237f98645f3b6a6b343b2ae820aca168234025c27dc24e",
+    "assets/components/drams-rotary/89-882.svg": "5271d2e3e0004c9b76386cdc82be27bc508dc9ca824b0fbae1489cd58f243c7d",
+    "assets/components/drams-rotary/89-883.svg": "e22c1a4cdd17c76965273c6641d9674845accf4a4ca8e1bae6656f90c42021d0",
+    "assets/components/drams-rotary/89-884.svg": "8bf164b3f30536bcf6575ff0e05bafda833195433c05424727fa4bd0fc28f8dc",
+    "tools/fixtures/drams-rotary-original/definitions/drams-016.json": "924bf750abb4f234f6b8e615d9a86b78be1737e60b4e635cda54ac234826771e",
+    "tools/fixtures/drams-rotary-original/definitions/drams-017.json": "fccc9849abe5a65cf0f754d2da0d2662785c4e0828fa8661b430d0b5c1734fe3",
+    "tools/fixtures/drams-rotary-original/definitions/drams-038.json": "4e601c7478083a2025c29f60705d779433ffc39a50c1d340bf08703ec83616f6",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320.json.gz": "406262c416b3e795b336fe3478881d0c68d6d3f743cca4205fbb93d02f1795cc",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320-reduced.json.gz": "e9fc2a2d4b58b13b380b5220c41db1e44bdaee42a4257fdb0e9b47ade5c38b3a",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320.json.gz": "0dc89cf261728ac5f5e6e8da4411aaad786f6488e627eb5f535ec2dc0d4dbb4a",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320-reduced.json.gz": "bc5c20f42ffb9e6a6bfc4bc09f662dce052fb4b6a5bd140b1a1eae8f8f7d3fa5",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320.json.gz": "e0a3f1ea4dc419378fa15831067a2accaec22d0e6b3c88101305da2f9077dde8",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320-reduced.json.gz": "9c40965d4a735a3d02b1635a8c49a2d9a5e9ff43660e6d101bf0673b2c08d0d1",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320.json.gz": "c4791503e85c3e983c872da1caf48f875a85932769397208df79e8e25e7e349d",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320-reduced.json.gz": "b37bbcace3e5c05a4948d31878d96baa2234b6465b78eb788628103946bf8bcd",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320.json.gz": "2b00969ede6857608be5c0496404c1293be214b097fc42b3ade89bedc6322c1c",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320-reduced.json.gz": "6eabadfdedb24c2cdd7defe80c699a44960200f3a62890e43ce3b1849bc9094c",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320.json.gz": "f126eb6153f59285906266547e2a824d0fbde97311fd7fba42a08375c64458e1",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320-reduced.json.gz": "4c7bcc5266af67487b6a186a5afe0b810a4e9df0e77a6ccb96a3b49b14e4028a",
+    "tools/fixtures/drams-rotary-original/signed-zero-original.json": "2ddc72a85f8f6a53c4cdde9a457eacb2122600ee67466f126470a44614adff6a",
+    "tools/fixtures/drams-rotary-original/crank-state-original.json": "9d34c9deb008fbc204d2e11d8191387b7e02e56f5bef1c52ab5f1aff1b1800e1",
+    "tools/verification/drams-rotary-assets.js": "c9852fdc8806230966481d721f83c1d2e79c1624c65bd7657a9772022141d41c",
+    "tools/verification/drams-rotary-harness.js": "ea199f1b754001bc935d29f80081e90140ec20b67567591e926baed432d36ec9",
+    "tools/verification/drams-rotary-inputs.js": "ddc50dbd4c8a8190f5b9e76195d66f02075cac2a7e9fa6d7f8a7abc642d1b411",
+    "tools/verification/drams-rotary-instances.js": "dd7bf45a8352f030b5be209802f98320e0a48c7d73898f39fc88a859f88d0067",
+    "tools/verification/drams-rotary-layout.js": "7b15cb205ba146ea9fa79738888309e261eec4fd10dcc09c072433f08b7c6a0d",
+    "tools/verification/drams-rotary-lifecycle.js": "0e05cabdc368db2681de728e525be8d49fc437069e631e789b331291c95da4eb",
+    "tools/verification/drams-rotary-models.js": "3758e4826dafa99fd7e1724eb0324ea55a68a6c8d335a2817324cc665c3b5fc6",
+    "tools/verification/drams-rotary-motion.js": "09927685cbaf6e0f040644ee7ea133bff594f18c9368ec1b3a2fea344378f9bd",
+    "tools/verification/drams-rotary-portable.js": "2a4ee44f31f10d361e6a683a51ff18bdbdd176fcce8661012c63b76919a86790",
+    "tools/verification/drams-rotary-press.js": "99b61528dc4e128e1658152e6a03e7ad24cd44639caabd81c8abf6a44683f497",
+    "tools/verification/drams-rotary-retarget.js": "d028af37405bf2183d9491d99e193bae54e21cd9768c6c5ced9a9eedc982e041",
+    "tools/verification/drams-rotary-routes.js": "33e60728e6df50b78af8441f90a3d6d18d87362f8120a9692175e8fd29ee465d",
+    "tools/verification/drams-rotary-smoke.js": "08c0ad5d0e8e35a5bac55f8a85f740bc80c601721fb471d0e62559dd4f20a548",
+    "tools/verification/drams-rotary-source.js": "9ef2ca1af961d4844f0f1fd11f66d41ccb61d971ce71cdf238c2fe8a0eb71d21",
+    "tools/verification/drams-rotary-startup.js": "46579b460920a07696c2e40124e895f358d2369f671618e679618a279b86853f",
+    "tools/verification/drams-rotary-stress.js": "561103afc2f149b414fb07fe41eccc46f0ec8fe24d300f1df2114f9c606e651c",
+    "tools/verification/drams-rotary-themes.js": "ec46e9e722adab6c28c278bfe7faabbb5bc353dcb618d889cec234b643e50bec",
+    "tools/verification/drams-rotary-touch.js": "565f7cae48d2086cdf690a826a5ad6bd73721ae8d2406519b02f0d220a904c5b",
+    "tools/profile-drams-rotary.js": "d0584320eec58a76acce44d719df069461734c3843c5fd9ed1ac9a386d33d358"
+  },
+  "repositorySourceHashes": {
+    "tools/verification/drams-rotary-evidence.js": "2158ca98757db110a232390349bcd2e01d40144fe485ebf09fd4de803fa6c47d",
+    "tools/verify-drams-rotary.js": "e12eb9796b7dc1e01a3ad36a335c2806a31ee42882c166dbf5b8db27679fa98d",
+    "tools/fixtures/drams-rotary-artwork.json": "67b34b9b94fe8ff3e19a859340625b45996b25ecdc2ec01a04957c0f89687b0d",
+    "tools/fixtures/drams-rotary-original-models.json": "f5fcfc27fe09b9ee370dbfd5fc55cb3d380105c1f06f793b1da037b8a1148d0f",
+    "js/demos.drams.dials.js": "1a94b69dfa947431c802951f6967464608cc4538baf6fef339d6fe27647b5a6d",
+    "js/meta.stage.js": "981c27b204fe23a6a9c66467637cd578acd6825db2fbd6ef57a81573db75a3c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+    "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/components/drams-rotary/89-837.svg": "1161945c5ae1fe82c945683d9d3f5249a33e3fac60be7ab1d6f8327f7fe85a3b",
+    "assets/components/drams-rotary/89-838.svg": "e055211bf8f29ce59f47b0ce593da7b730a1403307acda385b140fc02ca4ae2d",
+    "assets/components/drams-rotary/89-839.svg": "c860652ff0b9e1196383cd0a32ae611c71d7fbc962ab75727f66ac2beba4e28d",
+    "assets/components/drams-rotary/89-840.svg": "6fa14c3793345b4ed55e257cf3ff4d88833141949b2d562e6f86d0814655f8e4",
+    "assets/components/drams-rotary/89-859.svg": "875686ce3a34e6a94f5bac7b8235486220be1dcc53c7f07a358a055b1508123e",
+    "assets/components/drams-rotary/89-860.svg": "af73c7e7de8ae38b6e787244f21a6093a7377b1c27e7bde9a5c535645d8d05bf",
+    "assets/components/drams-rotary/89-861.svg": "520541c1c3adf171e39fcb526c1581788ed43080e365a4aae820048803a70c5b",
+    "assets/components/drams-rotary/89-862.svg": "8a1257b904a03d4e9ce6624cf66113dd03e6a660ed4d014a40afb72bb2d99022",
+    "assets/components/drams-rotary/89-863.svg": "f1f1a7c63533048a28b436c1cd64cfe7e48e8df14f8448183d4450baac73f604",
+    "assets/components/drams-rotary/89-880.svg": "e80b52920e87afc6d964d7585d1eaf7b3ffc23f990816874eb3c8d9fcebf6dc2",
+    "assets/components/drams-rotary/89-881.svg": "aef1d35e82c24bc332237f98645f3b6a6b343b2ae820aca168234025c27dc24e",
+    "assets/components/drams-rotary/89-882.svg": "5271d2e3e0004c9b76386cdc82be27bc508dc9ca824b0fbae1489cd58f243c7d",
+    "assets/components/drams-rotary/89-883.svg": "e22c1a4cdd17c76965273c6641d9674845accf4a4ca8e1bae6656f90c42021d0",
+    "assets/components/drams-rotary/89-884.svg": "8bf164b3f30536bcf6575ff0e05bafda833195433c05424727fa4bd0fc28f8dc",
+    "tools/fixtures/drams-rotary-original/definitions/drams-016.json": "924bf750abb4f234f6b8e615d9a86b78be1737e60b4e635cda54ac234826771e",
+    "tools/fixtures/drams-rotary-original/definitions/drams-017.json": "fccc9849abe5a65cf0f754d2da0d2662785c4e0828fa8661b430d0b5c1734fe3",
+    "tools/fixtures/drams-rotary-original/definitions/drams-038.json": "4e601c7478083a2025c29f60705d779433ffc39a50c1d340bf08703ec83616f6",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320.json.gz": "406262c416b3e795b336fe3478881d0c68d6d3f743cca4205fbb93d02f1795cc",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320-reduced.json.gz": "e9fc2a2d4b58b13b380b5220c41db1e44bdaee42a4257fdb0e9b47ade5c38b3a",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320.json.gz": "0dc89cf261728ac5f5e6e8da4411aaad786f6488e627eb5f535ec2dc0d4dbb4a",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320-reduced.json.gz": "bc5c20f42ffb9e6a6bfc4bc09f662dce052fb4b6a5bd140b1a1eae8f8f7d3fa5",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320.json.gz": "e0a3f1ea4dc419378fa15831067a2accaec22d0e6b3c88101305da2f9077dde8",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320-reduced.json.gz": "9c40965d4a735a3d02b1635a8c49a2d9a5e9ff43660e6d101bf0673b2c08d0d1",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320.json.gz": "c4791503e85c3e983c872da1caf48f875a85932769397208df79e8e25e7e349d",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320-reduced.json.gz": "b37bbcace3e5c05a4948d31878d96baa2234b6465b78eb788628103946bf8bcd",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320.json.gz": "2b00969ede6857608be5c0496404c1293be214b097fc42b3ade89bedc6322c1c",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320-reduced.json.gz": "6eabadfdedb24c2cdd7defe80c699a44960200f3a62890e43ce3b1849bc9094c",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320.json.gz": "f126eb6153f59285906266547e2a824d0fbde97311fd7fba42a08375c64458e1",
+    "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320-reduced.json.gz": "4c7bcc5266af67487b6a186a5afe0b810a4e9df0e77a6ccb96a3b49b14e4028a",
+    "tools/fixtures/drams-rotary-original/signed-zero-original.json": "2ddc72a85f8f6a53c4cdde9a457eacb2122600ee67466f126470a44614adff6a",
+    "tools/fixtures/drams-rotary-original/crank-state-original.json": "9d34c9deb008fbc204d2e11d8191387b7e02e56f5bef1c52ab5f1aff1b1800e1",
+    "tools/verification/drams-rotary-assets.js": "c9852fdc8806230966481d721f83c1d2e79c1624c65bd7657a9772022141d41c",
+    "tools/verification/drams-rotary-harness.js": "ea199f1b754001bc935d29f80081e90140ec20b67567591e926baed432d36ec9",
+    "tools/verification/drams-rotary-inputs.js": "ddc50dbd4c8a8190f5b9e76195d66f02075cac2a7e9fa6d7f8a7abc642d1b411",
+    "tools/verification/drams-rotary-instances.js": "dd7bf45a8352f030b5be209802f98320e0a48c7d73898f39fc88a859f88d0067",
+    "tools/verification/drams-rotary-layout.js": "7b15cb205ba146ea9fa79738888309e261eec4fd10dcc09c072433f08b7c6a0d",
+    "tools/verification/drams-rotary-lifecycle.js": "0e05cabdc368db2681de728e525be8d49fc437069e631e789b331291c95da4eb",
+    "tools/verification/drams-rotary-models.js": "3758e4826dafa99fd7e1724eb0324ea55a68a6c8d335a2817324cc665c3b5fc6",
+    "tools/verification/drams-rotary-motion.js": "09927685cbaf6e0f040644ee7ea133bff594f18c9368ec1b3a2fea344378f9bd",
+    "tools/verification/drams-rotary-portable.js": "2a4ee44f31f10d361e6a683a51ff18bdbdd176fcce8661012c63b76919a86790",
+    "tools/verification/drams-rotary-press.js": "99b61528dc4e128e1658152e6a03e7ad24cd44639caabd81c8abf6a44683f497",
+    "tools/verification/drams-rotary-retarget.js": "d028af37405bf2183d9491d99e193bae54e21cd9768c6c5ced9a9eedc982e041",
+    "tools/verification/drams-rotary-routes.js": "33e60728e6df50b78af8441f90a3d6d18d87362f8120a9692175e8fd29ee465d",
+    "tools/verification/drams-rotary-smoke.js": "08c0ad5d0e8e35a5bac55f8a85f740bc80c601721fb471d0e62559dd4f20a548",
+    "tools/verification/drams-rotary-source.js": "9ef2ca1af961d4844f0f1fd11f66d41ccb61d971ce71cdf238c2fe8a0eb71d21",
+    "tools/verification/drams-rotary-startup.js": "46579b460920a07696c2e40124e895f358d2369f671618e679618a279b86853f",
+    "tools/verification/drams-rotary-stress.js": "561103afc2f149b414fb07fe41eccc46f0ec8fe24d300f1df2114f9c606e651c",
+    "tools/verification/drams-rotary-themes.js": "ec46e9e722adab6c28c278bfe7faabbb5bc353dcb618d889cec234b643e50bec",
+    "tools/verification/drams-rotary-touch.js": "565f7cae48d2086cdf690a826a5ad6bd73721ae8d2406519b02f0d220a904c5b",
+    "tools/profile-drams-rotary.js": "d0584320eec58a76acce44d719df069461734c3843c5fd9ed1ac9a386d33d358"
+  },
+  "checkoutLineEndingDifferences": [
+    {
+      "file": "js/demo-runtime.js",
+      "localMeasuredSHA256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "repositorySHA256": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "js/shell/stage.js",
+      "localMeasuredSHA256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "repositorySHA256": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "js/shell/export.js",
+      "localMeasuredSHA256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+      "repositorySHA256": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "css/style.css",
+      "localMeasuredSHA256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "repositorySHA256": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+      "normalization": "CRLF to LF only"
+    },
+    {
+      "file": "css/fonts.css",
+      "localMeasuredSHA256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "repositorySHA256": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+      "normalization": "CRLF to LF only"
+    }
+  ],
+  "summary": [
+    {
+      "cpu": 1,
+      "cases": 12,
+      "fps": {
+        "min": 60.001995908387805,
+        "max": 60.0030001500075
+      },
+      "gapsAbove25MS": 0,
+      "longTasks": 0,
+      "firstTracePaintMS": {
+        "min": 13.328,
+        "max": 36.034
+      },
+      "maxReadyMS": 40.400000002235174
+    },
+    {
+      "cpu": 4,
+      "cases": 12,
+      "fps": {
+        "min": 59.753252747526915,
+        "max": 60.003193517160156
+      },
+      "gapsAbove25MS": 2,
+      "longTasks": 0,
+      "firstTracePaintMS": {
+        "min": 90.08,
+        "max": 160.586
+      },
+      "maxReadyMS": 176.60000000149012
+    }
+  ],
+  "runs": [
+    {
+      "file": ".artifacts/drams-rotary/performance-cpu1-1795279673501.json",
+      "sha256": "9e566c98ad1845a4abf90294a3cabd72d7930da028037e6fd63b4e36beefb09c",
+      "at": "2026-11-21T16:49:39.811Z",
+      "cpu": 1,
+      "parameters": {
+        "cpu": 1,
+        "ids": [
+          "drams-016",
+          "drams-017",
+          "drams-038"
+        ],
+        "modes": [
+          "thumb",
+          "full"
+        ]
+      },
+      "sourceHashes": {
+        "tools/verification/drams-rotary-evidence.js": "2158ca98757db110a232390349bcd2e01d40144fe485ebf09fd4de803fa6c47d",
+        "tools/verify-drams-rotary.js": "e12eb9796b7dc1e01a3ad36a335c2806a31ee42882c166dbf5b8db27679fa98d",
+        "tools/fixtures/drams-rotary-artwork.json": "67b34b9b94fe8ff3e19a859340625b45996b25ecdc2ec01a04957c0f89687b0d",
+        "tools/fixtures/drams-rotary-original-models.json": "f5fcfc27fe09b9ee370dbfd5fc55cb3d380105c1f06f793b1da037b8a1148d0f",
+        "js/demos.drams.dials.js": "1a94b69dfa947431c802951f6967464608cc4538baf6fef339d6fe27647b5a6d",
+        "js/meta.stage.js": "981c27b204fe23a6a9c66467637cd578acd6825db2fbd6ef57a81573db75a3c9",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+        "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+        "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/components/drams-rotary/89-837.svg": "1161945c5ae1fe82c945683d9d3f5249a33e3fac60be7ab1d6f8327f7fe85a3b",
+        "assets/components/drams-rotary/89-838.svg": "e055211bf8f29ce59f47b0ce593da7b730a1403307acda385b140fc02ca4ae2d",
+        "assets/components/drams-rotary/89-839.svg": "c860652ff0b9e1196383cd0a32ae611c71d7fbc962ab75727f66ac2beba4e28d",
+        "assets/components/drams-rotary/89-840.svg": "6fa14c3793345b4ed55e257cf3ff4d88833141949b2d562e6f86d0814655f8e4",
+        "assets/components/drams-rotary/89-859.svg": "875686ce3a34e6a94f5bac7b8235486220be1dcc53c7f07a358a055b1508123e",
+        "assets/components/drams-rotary/89-860.svg": "af73c7e7de8ae38b6e787244f21a6093a7377b1c27e7bde9a5c535645d8d05bf",
+        "assets/components/drams-rotary/89-861.svg": "520541c1c3adf171e39fcb526c1581788ed43080e365a4aae820048803a70c5b",
+        "assets/components/drams-rotary/89-862.svg": "8a1257b904a03d4e9ce6624cf66113dd03e6a660ed4d014a40afb72bb2d99022",
+        "assets/components/drams-rotary/89-863.svg": "f1f1a7c63533048a28b436c1cd64cfe7e48e8df14f8448183d4450baac73f604",
+        "assets/components/drams-rotary/89-880.svg": "e80b52920e87afc6d964d7585d1eaf7b3ffc23f990816874eb3c8d9fcebf6dc2",
+        "assets/components/drams-rotary/89-881.svg": "aef1d35e82c24bc332237f98645f3b6a6b343b2ae820aca168234025c27dc24e",
+        "assets/components/drams-rotary/89-882.svg": "5271d2e3e0004c9b76386cdc82be27bc508dc9ca824b0fbae1489cd58f243c7d",
+        "assets/components/drams-rotary/89-883.svg": "e22c1a4cdd17c76965273c6641d9674845accf4a4ca8e1bae6656f90c42021d0",
+        "assets/components/drams-rotary/89-884.svg": "8bf164b3f30536bcf6575ff0e05bafda833195433c05424727fa4bd0fc28f8dc",
+        "tools/fixtures/drams-rotary-original/definitions/drams-016.json": "924bf750abb4f234f6b8e615d9a86b78be1737e60b4e635cda54ac234826771e",
+        "tools/fixtures/drams-rotary-original/definitions/drams-017.json": "fccc9849abe5a65cf0f754d2da0d2662785c4e0828fa8661b430d0b5c1734fe3",
+        "tools/fixtures/drams-rotary-original/definitions/drams-038.json": "4e601c7478083a2025c29f60705d779433ffc39a50c1d340bf08703ec83616f6",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320.json.gz": "406262c416b3e795b336fe3478881d0c68d6d3f743cca4205fbb93d02f1795cc",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320-reduced.json.gz": "e9fc2a2d4b58b13b380b5220c41db1e44bdaee42a4257fdb0e9b47ade5c38b3a",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320.json.gz": "0dc89cf261728ac5f5e6e8da4411aaad786f6488e627eb5f535ec2dc0d4dbb4a",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320-reduced.json.gz": "bc5c20f42ffb9e6a6bfc4bc09f662dce052fb4b6a5bd140b1a1eae8f8f7d3fa5",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320.json.gz": "e0a3f1ea4dc419378fa15831067a2accaec22d0e6b3c88101305da2f9077dde8",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320-reduced.json.gz": "9c40965d4a735a3d02b1635a8c49a2d9a5e9ff43660e6d101bf0673b2c08d0d1",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320.json.gz": "c4791503e85c3e983c872da1caf48f875a85932769397208df79e8e25e7e349d",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320-reduced.json.gz": "b37bbcace3e5c05a4948d31878d96baa2234b6465b78eb788628103946bf8bcd",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320.json.gz": "2b00969ede6857608be5c0496404c1293be214b097fc42b3ade89bedc6322c1c",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320-reduced.json.gz": "6eabadfdedb24c2cdd7defe80c699a44960200f3a62890e43ce3b1849bc9094c",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320.json.gz": "f126eb6153f59285906266547e2a824d0fbde97311fd7fba42a08375c64458e1",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320-reduced.json.gz": "4c7bcc5266af67487b6a186a5afe0b810a4e9df0e77a6ccb96a3b49b14e4028a",
+        "tools/fixtures/drams-rotary-original/signed-zero-original.json": "2ddc72a85f8f6a53c4cdde9a457eacb2122600ee67466f126470a44614adff6a",
+        "tools/fixtures/drams-rotary-original/crank-state-original.json": "9d34c9deb008fbc204d2e11d8191387b7e02e56f5bef1c52ab5f1aff1b1800e1",
+        "tools/verification/drams-rotary-assets.js": "c9852fdc8806230966481d721f83c1d2e79c1624c65bd7657a9772022141d41c",
+        "tools/verification/drams-rotary-harness.js": "ea199f1b754001bc935d29f80081e90140ec20b67567591e926baed432d36ec9",
+        "tools/verification/drams-rotary-inputs.js": "ddc50dbd4c8a8190f5b9e76195d66f02075cac2a7e9fa6d7f8a7abc642d1b411",
+        "tools/verification/drams-rotary-instances.js": "dd7bf45a8352f030b5be209802f98320e0a48c7d73898f39fc88a859f88d0067",
+        "tools/verification/drams-rotary-layout.js": "7b15cb205ba146ea9fa79738888309e261eec4fd10dcc09c072433f08b7c6a0d",
+        "tools/verification/drams-rotary-lifecycle.js": "0e05cabdc368db2681de728e525be8d49fc437069e631e789b331291c95da4eb",
+        "tools/verification/drams-rotary-models.js": "3758e4826dafa99fd7e1724eb0324ea55a68a6c8d335a2817324cc665c3b5fc6",
+        "tools/verification/drams-rotary-motion.js": "09927685cbaf6e0f040644ee7ea133bff594f18c9368ec1b3a2fea344378f9bd",
+        "tools/verification/drams-rotary-portable.js": "2a4ee44f31f10d361e6a683a51ff18bdbdd176fcce8661012c63b76919a86790",
+        "tools/verification/drams-rotary-press.js": "99b61528dc4e128e1658152e6a03e7ad24cd44639caabd81c8abf6a44683f497",
+        "tools/verification/drams-rotary-retarget.js": "d028af37405bf2183d9491d99e193bae54e21cd9768c6c5ced9a9eedc982e041",
+        "tools/verification/drams-rotary-routes.js": "33e60728e6df50b78af8441f90a3d6d18d87362f8120a9692175e8fd29ee465d",
+        "tools/verification/drams-rotary-smoke.js": "08c0ad5d0e8e35a5bac55f8a85f740bc80c601721fb471d0e62559dd4f20a548",
+        "tools/verification/drams-rotary-source.js": "9ef2ca1af961d4844f0f1fd11f66d41ccb61d971ce71cdf238c2fe8a0eb71d21",
+        "tools/verification/drams-rotary-startup.js": "46579b460920a07696c2e40124e895f358d2369f671618e679618a279b86853f",
+        "tools/verification/drams-rotary-stress.js": "561103afc2f149b414fb07fe41eccc46f0ec8fe24d300f1df2114f9c606e651c",
+        "tools/verification/drams-rotary-themes.js": "ec46e9e722adab6c28c278bfe7faabbb5bc353dcb618d889cec234b643e50bec",
+        "tools/verification/drams-rotary-touch.js": "565f7cae48d2086cdf690a826a5ad6bd73721ae8d2406519b02f0d220a904c5b",
+        "tools/profile-drams-rotary.js": "d0584320eec58a76acce44d719df069461734c3843c5fd9ed1ac9a386d33d358"
+      },
+      "summary": {
+        "cases": 12,
+        "fps": {
+          "min": 60.001995908387805,
+          "max": 60.0030001500075
+        },
+        "gapsAbove25MS": 0,
+        "longTasks": 0,
+        "firstTracePaintMS": {
+          "min": 13.328,
+          "max": 36.034
+        },
+        "maxReadyMS": 40.400000002235174
+      },
+      "results": [
+        {
+          "kind": "plus",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 18.100000001490116,
+            "firstContentfulPaint": null,
+            "firstPaint": 13.328,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8010.199999999255,
+            "frames": 480,
+            "fps": 60.00225008437817,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 192.5
+              },
+              {
+                "name": "reverse-home",
+                "at": 609.2
+              },
+              {
+                "name": "step",
+                "at": 959.2
+              },
+              {
+                "name": "dock-drag",
+                "at": 1309.1
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1425.7
+              },
+              {
+                "name": "hold",
+                "at": 2009.1
+              },
+              {
+                "name": "queued-end",
+                "at": 2309.1
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2509.1
+              },
+              {
+                "name": "resume",
+                "at": 3009.1
+              },
+              {
+                "name": "second-drag",
+                "at": 3809
+              },
+              {
+                "name": "retarget",
+                "at": 4109.1
+              },
+              {
+                "name": "final-end",
+                "at": 5009
+              },
+              {
+                "name": "final-home",
+                "at": 5509
+              },
+              {
+                "name": "finish-step",
+                "at": 6208.9
+              },
+              {
+                "name": "return-end",
+                "at": 6508.9
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 162,
+              "startY": 92,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6623.699999999255,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6623.699999999255,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-thumb-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "883cd2d7479f7abf1c4e7d86ab41f329b6e094e0ab792171a11d8caf0d118816",
+            "events": 19483
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 23,
+              "totalMS": 4.667,
+              "maxMS": 1.816
+            },
+            "UpdateLayoutTree": {
+              "count": 345,
+              "totalMS": 19.693,
+              "maxMS": 0.491
+            },
+            "Paint": {
+              "count": 16,
+              "totalMS": 2.74,
+              "maxMS": 0.821
+            },
+            "FunctionCall": {
+              "count": 841,
+              "totalMS": 64.487,
+              "maxMS": 0.588
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 19.300000000745058,
+            "firstContentfulPaint": null,
+            "firstPaint": 14.555,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8008.300000000745,
+            "frames": 480,
+            "fps": 60.00225008437816,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 191.09999999925492
+              },
+              {
+                "name": "reverse-home",
+                "at": 607.6999999992549
+              },
+              {
+                "name": "step",
+                "at": 957.7999999992549
+              },
+              {
+                "name": "dock-drag",
+                "at": 1307.699999999255
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1424.399999999255
+              },
+              {
+                "name": "hold",
+                "at": 2007.699999999255
+              },
+              {
+                "name": "queued-end",
+                "at": 2307.699999999255
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2507.599999999255
+              },
+              {
+                "name": "resume",
+                "at": 3007.599999999255
+              },
+              {
+                "name": "second-drag",
+                "at": 3807.599999999255
+              },
+              {
+                "name": "retarget",
+                "at": 4107.599999999255
+              },
+              {
+                "name": "final-end",
+                "at": 5007.499999999255
+              },
+              {
+                "name": "final-home",
+                "at": 5507.599999999255
+              },
+              {
+                "name": "finish-step",
+                "at": 6207.499999999255
+              },
+              {
+                "name": "return-end",
+                "at": 6507.499999999255
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6287.89999999851,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6287.89999999851,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-thumb-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "6c7e438e8fdee00f1cd9881ee0723d1231f199c997c93a1cd596c2f4ee7ab4dc",
+            "events": 18663
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 21,
+              "totalMS": 3.698,
+              "maxMS": 1.743
+            },
+            "UpdateLayoutTree": {
+              "count": 313,
+              "totalMS": 35.95,
+              "maxMS": 0.582
+            },
+            "Paint": {
+              "count": 25,
+              "totalMS": 3.701,
+              "maxMS": 0.875
+            },
+            "FunctionCall": {
+              "count": 783,
+              "totalMS": 66.368,
+              "maxMS": 0.718
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 24.899999998509884,
+            "firstContentfulPaint": null,
+            "firstPaint": 19.038,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8016.39999999851,
+            "frames": 481,
+            "fps": 60.00274440826815,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 182.89999999776484
+              },
+              {
+                "name": "reverse-home",
+                "at": 616.2999999977649
+              },
+              {
+                "name": "step",
+                "at": 966.2999999977649
+              },
+              {
+                "name": "dock-drag",
+                "at": 1316.1999999977647
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1432.7999999977649
+              },
+              {
+                "name": "hold",
+                "at": 2016.1999999977647
+              },
+              {
+                "name": "queued-end",
+                "at": 2316.1999999977647
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2516.1999999977647
+              },
+              {
+                "name": "resume",
+                "at": 3016.1999999977647
+              },
+              {
+                "name": "second-drag",
+                "at": 3816.099999997765
+              },
+              {
+                "name": "retarget",
+                "at": 4116.099999997765
+              },
+              {
+                "name": "final-end",
+                "at": 5016.099999997765
+              },
+              {
+                "name": "final-home",
+                "at": 5515.9999999977645
+              },
+              {
+                "name": "finish-step",
+                "at": 6215.9999999977645
+              },
+              {
+                "name": "return-end",
+                "at": 6515.9999999977645
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": -179.34010247607708
+            },
+            "motion": {
+              "dead": false,
+              "time": 6632,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6632,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-thumb-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "ab1426597b6331e457736a3b8e8939c7bc2966ecb688d637a2a5956e6268bae2",
+            "events": 21379
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 381,
+              "totalMS": 30.702,
+              "maxMS": 1.991
+            },
+            "UpdateLayoutTree": {
+              "count": 380,
+              "totalMS": 26.013,
+              "maxMS": 0.543
+            },
+            "Paint": {
+              "count": 556,
+              "totalMS": 16.14,
+              "maxMS": 1.141
+            },
+            "FunctionCall": {
+              "count": 872,
+              "totalMS": 103.775,
+              "maxMS": 2.437
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 22.100000001490116,
+            "firstContentfulPaint": null,
+            "firstPaint": 16.369,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8016.300000000745,
+            "frames": 481,
+            "fps": 60.001995908387805,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 182.20000000074504
+              },
+              {
+                "name": "reverse-home",
+                "at": 615.5000000007451
+              },
+              {
+                "name": "step",
+                "at": 965.5000000007451
+              },
+              {
+                "name": "dock-drag",
+                "at": 1315.500000000745
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1432.100000000745
+              },
+              {
+                "name": "hold",
+                "at": 2015.5000000007449
+              },
+              {
+                "name": "queued-end",
+                "at": 2315.500000000745
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2515.400000000745
+              },
+              {
+                "name": "resume",
+                "at": 3015.400000000745
+              },
+              {
+                "name": "second-drag",
+                "at": 3815.400000000745
+              },
+              {
+                "name": "retarget",
+                "at": 4115.400000000745
+              },
+              {
+                "name": "final-end",
+                "at": 5015.300000000745
+              },
+              {
+                "name": "final-home",
+                "at": 5515.300000000745
+              },
+              {
+                "name": "finish-step",
+                "at": 6215.300000000745
+              },
+              {
+                "name": "return-end",
+                "at": 6515.300000000745
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 162,
+              "startY": 92,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6632.599999997765,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6632.599999997765,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-thumb-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "d66775d7ca978ad5a9874fbf1b4974caaaa52b012bc335589ab442903bb072c2",
+            "events": 20174
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 23,
+              "totalMS": 5.877,
+              "maxMS": 1.739
+            },
+            "UpdateLayoutTree": {
+              "count": 373,
+              "totalMS": 25.495,
+              "maxMS": 0.623
+            },
+            "Paint": {
+              "count": 16,
+              "totalMS": 3.011,
+              "maxMS": 0.855
+            },
+            "FunctionCall": {
+              "count": 870,
+              "totalMS": 79.003,
+              "maxMS": 0.576
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 36.29999999701977,
+            "firstContentfulPaint": null,
+            "firstPaint": 29.378,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8012.89999999851,
+            "frames": 481,
+            "fps": 60.00223542631775,
+            "p95": 16.799999999999727,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 195.69999999776485
+              },
+              {
+                "name": "reverse-home",
+                "at": 612.2999999977649
+              },
+              {
+                "name": "step",
+                "at": 962.2999999977649
+              },
+              {
+                "name": "dock-drag",
+                "at": 1312.3999999977648
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1428.8999999977648
+              },
+              {
+                "name": "hold",
+                "at": 2012.2999999977646
+              },
+              {
+                "name": "queued-end",
+                "at": 2312.2999999977646
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2512.1999999977647
+              },
+              {
+                "name": "resume",
+                "at": 3012.2999999977646
+              },
+              {
+                "name": "second-drag",
+                "at": 3812.2999999977646
+              },
+              {
+                "name": "retarget",
+                "at": 4112.199999997765
+              },
+              {
+                "name": "final-end",
+                "at": 5012.099999997765
+              },
+              {
+                "name": "final-home",
+                "at": 5512.199999997765
+              },
+              {
+                "name": "finish-step",
+                "at": 6212.099999997765
+              },
+              {
+                "name": "return-end",
+                "at": 6512.199999997765
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6300.500000003725,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6300.500000003725,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-thumb-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "0eddeb80850cf995782e5a75796019c169b17f1e58bbfcc574ae3d5249c78bd8",
+            "events": 18514
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 21,
+              "totalMS": 7.479,
+              "maxMS": 2.715
+            },
+            "UpdateLayoutTree": {
+              "count": 305,
+              "totalMS": 42.276,
+              "maxMS": 1.143
+            },
+            "Paint": {
+              "count": 25,
+              "totalMS": 6.314,
+              "maxMS": 1.622
+            },
+            "FunctionCall": {
+              "count": 776,
+              "totalMS": 73.075,
+              "maxMS": 0.837
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 22.5,
+            "firstContentfulPaint": null,
+            "firstPaint": 17.368,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8011.5,
+            "frames": 480,
+            "fps": 60.00225008437816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 194.40000000074508
+              },
+              {
+                "name": "reverse-home",
+                "at": 611.0000000007451
+              },
+              {
+                "name": "step",
+                "at": 961.0000000007451
+              },
+              {
+                "name": "dock-drag",
+                "at": 1311.100000000745
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1427.7000000007451
+              },
+              {
+                "name": "hold",
+                "at": 2011.0000000007449
+              },
+              {
+                "name": "queued-end",
+                "at": 2310.900000000745
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2511.000000000745
+              },
+              {
+                "name": "resume",
+                "at": 3011.000000000745
+              },
+              {
+                "name": "second-drag",
+                "at": 3810.900000000745
+              },
+              {
+                "name": "retarget",
+                "at": 4110.900000000745
+              },
+              {
+                "name": "final-end",
+                "at": 5010.900000000745
+              },
+              {
+                "name": "final-home",
+                "at": 5510.900000000745
+              },
+              {
+                "name": "finish-step",
+                "at": 6210.800000000745
+              },
+              {
+                "name": "return-end",
+                "at": 6510.800000000745
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": -179.34009752994754
+            },
+            "motion": {
+              "dead": false,
+              "time": 6624.5,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6624.5,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-thumb-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "3721b82fe723c43d1f3021c4e2248b92af12ce3b405c0795a402ad346b18e498",
+            "events": 21298
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 382,
+              "totalMS": 31.221,
+              "maxMS": 1.792
+            },
+            "UpdateLayoutTree": {
+              "count": 379,
+              "totalMS": 26.439,
+              "maxMS": 0.793
+            },
+            "Paint": {
+              "count": 551,
+              "totalMS": 15.763,
+              "maxMS": 1.204
+            },
+            "FunctionCall": {
+              "count": 870,
+              "totalMS": 105.599,
+              "maxMS": 2.671
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 39.5,
+            "firstContentfulPaint": null,
+            "firstPaint": 34.741,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8014.89999999851,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 180.99999999925495
+              },
+              {
+                "name": "reverse-home",
+                "at": 614.299999999255
+              },
+              {
+                "name": "step",
+                "at": 964.2999999992549
+              },
+              {
+                "name": "dock-drag",
+                "at": 1314.2999999992549
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1430.999999999255
+              },
+              {
+                "name": "hold",
+                "at": 2014.199999999255
+              },
+              {
+                "name": "queued-end",
+                "at": 2314.199999999255
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2514.299999999255
+              },
+              {
+                "name": "resume",
+                "at": 3014.199999999255
+              },
+              {
+                "name": "second-drag",
+                "at": 3814.199999999255
+              },
+              {
+                "name": "retarget",
+                "at": 4114.199999999255
+              },
+              {
+                "name": "final-end",
+                "at": 5014.099999999255
+              },
+              {
+                "name": "final-home",
+                "at": 5514.099999999255
+              },
+              {
+                "name": "finish-step",
+                "at": 6214.099999999255
+              },
+              {
+                "name": "return-end",
+                "at": 6514.099999999255
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 184,
+              "startY": 160,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6634.5,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6634.5,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-full-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "511ccd1d94da73506f84e9eb2d45b20564cc661545bb57badc9c45c21ae837c2",
+            "events": 21109
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 14,
+              "totalMS": 19.447,
+              "maxMS": 7.788
+            },
+            "UpdateLayoutTree": {
+              "count": 369,
+              "totalMS": 48.253,
+              "maxMS": 1.181
+            },
+            "Paint": {
+              "count": 27,
+              "totalMS": 2.412,
+              "maxMS": 0.534
+            },
+            "FunctionCall": {
+              "count": 883,
+              "totalMS": 89.3,
+              "maxMS": 1.239
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 22.299999997019768,
+            "firstContentfulPaint": null,
+            "firstPaint": 21.352,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8005.60000000149,
+            "frames": 480,
+            "fps": 60.00225008437817,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 187.89999999850988
+              },
+              {
+                "name": "reverse-home",
+                "at": 604.4999999985099
+              },
+              {
+                "name": "step",
+                "at": 954.4999999985098
+              },
+              {
+                "name": "dock-drag",
+                "at": 1304.59999999851
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1421.1999999985098
+              },
+              {
+                "name": "hold",
+                "at": 2004.4999999985098
+              },
+              {
+                "name": "queued-end",
+                "at": 2304.49999999851
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2504.49999999851
+              },
+              {
+                "name": "resume",
+                "at": 3004.49999999851
+              },
+              {
+                "name": "second-drag",
+                "at": 3804.49999999851
+              },
+              {
+                "name": "retarget",
+                "at": 4104.39999999851
+              },
+              {
+                "name": "final-end",
+                "at": 5004.39999999851
+              },
+              {
+                "name": "final-home",
+                "at": 5504.2999999985095
+              },
+              {
+                "name": "finish-step",
+                "at": 6204.39999999851
+              },
+              {
+                "name": "return-end",
+                "at": 6504.2999999985095
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6285,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6285,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-full-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "5080b853a806ad4bddbb114e9c3419c587e238bd77d246d0aea36029410726ba",
+            "events": 20077
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 11,
+              "totalMS": 9.094,
+              "maxMS": 2.815
+            },
+            "UpdateLayoutTree": {
+              "count": 325,
+              "totalMS": 73.431,
+              "maxMS": 0.846
+            },
+            "Paint": {
+              "count": 171,
+              "totalMS": 6.912,
+              "maxMS": 0.316
+            },
+            "FunctionCall": {
+              "count": 814,
+              "totalMS": 83.23,
+              "maxMS": 1.036
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 1,
+          "dpr": 1,
+          "startup": {
+            "ready": 23.300000000745058,
+            "firstContentfulPaint": null,
+            "firstPaint": 19.654,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8002.599999997765,
+            "frames": 480,
+            "fps": 60.00225008437816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 185
+              },
+              {
+                "name": "reverse-home",
+                "at": 601.7
+              },
+              {
+                "name": "step",
+                "at": 951.5999999999999
+              },
+              {
+                "name": "dock-drag",
+                "at": 1301.7
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1435
+              },
+              {
+                "name": "hold",
+                "at": 2001.6999999999998
+              },
+              {
+                "name": "queued-end",
+                "at": 2301.6
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2501.7
+              },
+              {
+                "name": "resume",
+                "at": 3001.6
+              },
+              {
+                "name": "second-drag",
+                "at": 3801.6
+              },
+              {
+                "name": "retarget",
+                "at": 4101.6
+              },
+              {
+                "name": "final-end",
+                "at": 5001.5
+              },
+              {
+                "name": "final-home",
+                "at": 5501.5
+              },
+              {
+                "name": "finish-step",
+                "at": 6201.4
+              },
+              {
+                "name": "return-end",
+                "at": 6501.5
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": 36.00001707374723
+            },
+            "motion": {
+              "dead": false,
+              "time": 6617.599999997765,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6617.599999997765,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-full-desktop-cpu1-1795279673501-trace.json",
+            "sha256": "13057c3c77a0328c6acbd780f218517b0d5aa22ba10002c5f0c7ffe6d776ba69",
+            "events": 22247
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 368,
+              "totalMS": 39.222,
+              "maxMS": 2.692
+            },
+            "UpdateLayoutTree": {
+              "count": 373,
+              "totalMS": 45.914,
+              "maxMS": 0.649
+            },
+            "Paint": {
+              "count": 567,
+              "totalMS": 12.837,
+              "maxMS": 0.28
+            },
+            "FunctionCall": {
+              "count": 886,
+              "totalMS": 116.822,
+              "maxMS": 3.585
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 40.400000002235174,
+            "firstContentfulPaint": null,
+            "firstPaint": 36.034,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8005.20000000298,
+            "frames": 480,
+            "fps": 60.00225008437816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 186.90000000149013
+              },
+              {
+                "name": "reverse-home",
+                "at": 603.7000000014901
+              },
+              {
+                "name": "step",
+                "at": 953.6000000014901
+              },
+              {
+                "name": "dock-drag",
+                "at": 1303.6000000014901
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1420.3000000014902
+              },
+              {
+                "name": "hold",
+                "at": 2003.5000000014902
+              },
+              {
+                "name": "queued-end",
+                "at": 2303.60000000149
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2503.50000000149
+              },
+              {
+                "name": "resume",
+                "at": 3003.60000000149
+              },
+              {
+                "name": "second-drag",
+                "at": 3803.50000000149
+              },
+              {
+                "name": "retarget",
+                "at": 4103.50000000149
+              },
+              {
+                "name": "final-end",
+                "at": 5003.40000000149
+              },
+              {
+                "name": "final-home",
+                "at": 5503.40000000149
+              },
+              {
+                "name": "finish-step",
+                "at": 6203.40000000149
+              },
+              {
+                "name": "return-end",
+                "at": 6503.40000000149
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 184,
+              "startY": 160,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6626.000000003725,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6626.000000003725,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-full-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "228b851b745b3dda8a36f2be285e9781687c781570894bb69d979867c55a8370",
+            "events": 21079
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 23,
+              "totalMS": 19.353,
+              "maxMS": 6.765
+            },
+            "UpdateLayoutTree": {
+              "count": 379,
+              "totalMS": 51.974,
+              "maxMS": 0.883
+            },
+            "Paint": {
+              "count": 27,
+              "totalMS": 1.898,
+              "maxMS": 0.358
+            },
+            "FunctionCall": {
+              "count": 881,
+              "totalMS": 90.487,
+              "maxMS": 2.246
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 24.800000000745058,
+            "firstContentfulPaint": null,
+            "firstPaint": 20.487,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8010.10000000149,
+            "frames": 480,
+            "fps": 60.00225008437816,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 192.39999999999998
+              },
+              {
+                "name": "reverse-home",
+                "at": 609
+              },
+              {
+                "name": "step",
+                "at": 959
+              },
+              {
+                "name": "dock-drag",
+                "at": 1309
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1425.6
+              },
+              {
+                "name": "hold",
+                "at": 2008.9
+              },
+              {
+                "name": "queued-end",
+                "at": 2308.9
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2508.9
+              },
+              {
+                "name": "resume",
+                "at": 3008.9
+              },
+              {
+                "name": "second-drag",
+                "at": 3808.9
+              },
+              {
+                "name": "retarget",
+                "at": 4108.9
+              },
+              {
+                "name": "final-end",
+                "at": 5008.8
+              },
+              {
+                "name": "final-home",
+                "at": 5508.8
+              },
+              {
+                "name": "finish-step",
+                "at": 6208.8
+              },
+              {
+                "name": "return-end",
+                "at": 6508.8
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6288.800000000745,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6288.800000000745,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-full-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "328a92138a534f3b104c380133ca0f55e98a40653874e50fad247f4c2c8178df",
+            "events": 20281
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 19,
+              "totalMS": 9.653,
+              "maxMS": 2.654
+            },
+            "UpdateLayoutTree": {
+              "count": 342,
+              "totalMS": 72.338,
+              "maxMS": 0.663
+            },
+            "Paint": {
+              "count": 169,
+              "totalMS": 6.582,
+              "maxMS": 0.33
+            },
+            "FunctionCall": {
+              "count": 822,
+              "totalMS": 81.93,
+              "maxMS": 0.897
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 1,
+          "dpr": 2,
+          "startup": {
+            "ready": 36.899999998509884,
+            "firstContentfulPaint": null,
+            "firstPaint": 32.053,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8010.599999997765,
+            "frames": 480,
+            "fps": 60.0030001500075,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 193.60000000074507
+              },
+              {
+                "name": "reverse-home",
+                "at": 610.200000000745
+              },
+              {
+                "name": "step",
+                "at": 960.2000000007451
+              },
+              {
+                "name": "dock-drag",
+                "at": 1310.2000000007451
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1426.900000000745
+              },
+              {
+                "name": "hold",
+                "at": 2010.1000000007452
+              },
+              {
+                "name": "queued-end",
+                "at": 2310.200000000745
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2510.1000000007452
+              },
+              {
+                "name": "resume",
+                "at": 3010.200000000745
+              },
+              {
+                "name": "second-drag",
+                "at": 3810.1000000007452
+              },
+              {
+                "name": "retarget",
+                "at": 4110.100000000745
+              },
+              {
+                "name": "final-end",
+                "at": 5010.100000000745
+              },
+              {
+                "name": "final-home",
+                "at": 5510.000000000745
+              },
+              {
+                "name": "finish-step",
+                "at": 6210.000000000745
+              },
+              {
+                "name": "return-end",
+                "at": 6510.000000000745
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": 36.00002276164792
+            },
+            "motion": {
+              "dead": false,
+              "time": 6629.300000000745,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6629.300000000745,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-full-mobile-cpu1-1795279673501-trace.json",
+            "sha256": "0140916022c790647e821a61e3dbd695989b57694ef08eefc9af1fd192cbb5e0",
+            "events": 22292
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 378,
+              "totalMS": 48.236,
+              "maxMS": 4.08
+            },
+            "UpdateLayoutTree": {
+              "count": 383,
+              "totalMS": 56.757,
+              "maxMS": 1.423
+            },
+            "Paint": {
+              "count": 553,
+              "totalMS": 15.114,
+              "maxMS": 0.493
+            },
+            "FunctionCall": {
+              "count": 886,
+              "totalMS": 132.081,
+              "maxMS": 4.028
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": ".artifacts/drams-rotary/performance-cpu4-1795279780491.json",
+      "sha256": "abc4342e55a7158247dbf0273dd1be4da99b4a9e84ab7f66bb532f32dc3ee6b0",
+      "at": "2026-11-21T16:51:28.954Z",
+      "cpu": 4,
+      "parameters": {
+        "cpu": 4,
+        "ids": [
+          "drams-016",
+          "drams-017",
+          "drams-038"
+        ],
+        "modes": [
+          "thumb",
+          "full"
+        ]
+      },
+      "sourceHashes": {
+        "tools/verification/drams-rotary-evidence.js": "2158ca98757db110a232390349bcd2e01d40144fe485ebf09fd4de803fa6c47d",
+        "tools/verify-drams-rotary.js": "e12eb9796b7dc1e01a3ad36a335c2806a31ee42882c166dbf5b8db27679fa98d",
+        "tools/fixtures/drams-rotary-artwork.json": "67b34b9b94fe8ff3e19a859340625b45996b25ecdc2ec01a04957c0f89687b0d",
+        "tools/fixtures/drams-rotary-original-models.json": "f5fcfc27fe09b9ee370dbfd5fc55cb3d380105c1f06f793b1da037b8a1148d0f",
+        "js/demos.drams.dials.js": "1a94b69dfa947431c802951f6967464608cc4538baf6fef339d6fe27647b5a6d",
+        "js/meta.stage.js": "981c27b204fe23a6a9c66467637cd578acd6825db2fbd6ef57a81573db75a3c9",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+        "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+        "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+        "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/components/drams-rotary/89-837.svg": "1161945c5ae1fe82c945683d9d3f5249a33e3fac60be7ab1d6f8327f7fe85a3b",
+        "assets/components/drams-rotary/89-838.svg": "e055211bf8f29ce59f47b0ce593da7b730a1403307acda385b140fc02ca4ae2d",
+        "assets/components/drams-rotary/89-839.svg": "c860652ff0b9e1196383cd0a32ae611c71d7fbc962ab75727f66ac2beba4e28d",
+        "assets/components/drams-rotary/89-840.svg": "6fa14c3793345b4ed55e257cf3ff4d88833141949b2d562e6f86d0814655f8e4",
+        "assets/components/drams-rotary/89-859.svg": "875686ce3a34e6a94f5bac7b8235486220be1dcc53c7f07a358a055b1508123e",
+        "assets/components/drams-rotary/89-860.svg": "af73c7e7de8ae38b6e787244f21a6093a7377b1c27e7bde9a5c535645d8d05bf",
+        "assets/components/drams-rotary/89-861.svg": "520541c1c3adf171e39fcb526c1581788ed43080e365a4aae820048803a70c5b",
+        "assets/components/drams-rotary/89-862.svg": "8a1257b904a03d4e9ce6624cf66113dd03e6a660ed4d014a40afb72bb2d99022",
+        "assets/components/drams-rotary/89-863.svg": "f1f1a7c63533048a28b436c1cd64cfe7e48e8df14f8448183d4450baac73f604",
+        "assets/components/drams-rotary/89-880.svg": "e80b52920e87afc6d964d7585d1eaf7b3ffc23f990816874eb3c8d9fcebf6dc2",
+        "assets/components/drams-rotary/89-881.svg": "aef1d35e82c24bc332237f98645f3b6a6b343b2ae820aca168234025c27dc24e",
+        "assets/components/drams-rotary/89-882.svg": "5271d2e3e0004c9b76386cdc82be27bc508dc9ca824b0fbae1489cd58f243c7d",
+        "assets/components/drams-rotary/89-883.svg": "e22c1a4cdd17c76965273c6641d9674845accf4a4ca8e1bae6656f90c42021d0",
+        "assets/components/drams-rotary/89-884.svg": "8bf164b3f30536bcf6575ff0e05bafda833195433c05424727fa4bd0fc28f8dc",
+        "tools/fixtures/drams-rotary-original/definitions/drams-016.json": "924bf750abb4f234f6b8e615d9a86b78be1737e60b4e635cda54ac234826771e",
+        "tools/fixtures/drams-rotary-original/definitions/drams-017.json": "fccc9849abe5a65cf0f754d2da0d2662785c4e0828fa8661b430d0b5c1734fe3",
+        "tools/fixtures/drams-rotary-original/definitions/drams-038.json": "4e601c7478083a2025c29f60705d779433ffc39a50c1d340bf08703ec83616f6",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320.json.gz": "406262c416b3e795b336fe3478881d0c68d6d3f743cca4205fbb93d02f1795cc",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-300x320-reduced.json.gz": "e9fc2a2d4b58b13b380b5220c41db1e44bdaee42a4257fdb0e9b47ade5c38b3a",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320.json.gz": "0dc89cf261728ac5f5e6e8da4411aaad786f6488e627eb5f535ec2dc0d4dbb4a",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-016-368x320-reduced.json.gz": "bc5c20f42ffb9e6a6bfc4bc09f662dce052fb4b6a5bd140b1a1eae8f8f7d3fa5",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320.json.gz": "e0a3f1ea4dc419378fa15831067a2accaec22d0e6b3c88101305da2f9077dde8",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-300x320-reduced.json.gz": "9c40965d4a735a3d02b1635a8c49a2d9a5e9ff43660e6d101bf0673b2c08d0d1",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320.json.gz": "c4791503e85c3e983c872da1caf48f875a85932769397208df79e8e25e7e349d",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-017-368x320-reduced.json.gz": "b37bbcace3e5c05a4948d31878d96baa2234b6465b78eb788628103946bf8bcd",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320.json.gz": "2b00969ede6857608be5c0496404c1293be214b097fc42b3ade89bedc6322c1c",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-300x320-reduced.json.gz": "6eabadfdedb24c2cdd7defe80c699a44960200f3a62890e43ce3b1849bc9094c",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320.json.gz": "f126eb6153f59285906266547e2a824d0fbde97311fd7fba42a08375c64458e1",
+        "tools/fixtures/drams-rotary-original/raw-fixtures/drams-038-368x320-reduced.json.gz": "4c7bcc5266af67487b6a186a5afe0b810a4e9df0e77a6ccb96a3b49b14e4028a",
+        "tools/fixtures/drams-rotary-original/signed-zero-original.json": "2ddc72a85f8f6a53c4cdde9a457eacb2122600ee67466f126470a44614adff6a",
+        "tools/fixtures/drams-rotary-original/crank-state-original.json": "9d34c9deb008fbc204d2e11d8191387b7e02e56f5bef1c52ab5f1aff1b1800e1",
+        "tools/verification/drams-rotary-assets.js": "c9852fdc8806230966481d721f83c1d2e79c1624c65bd7657a9772022141d41c",
+        "tools/verification/drams-rotary-harness.js": "ea199f1b754001bc935d29f80081e90140ec20b67567591e926baed432d36ec9",
+        "tools/verification/drams-rotary-inputs.js": "ddc50dbd4c8a8190f5b9e76195d66f02075cac2a7e9fa6d7f8a7abc642d1b411",
+        "tools/verification/drams-rotary-instances.js": "dd7bf45a8352f030b5be209802f98320e0a48c7d73898f39fc88a859f88d0067",
+        "tools/verification/drams-rotary-layout.js": "7b15cb205ba146ea9fa79738888309e261eec4fd10dcc09c072433f08b7c6a0d",
+        "tools/verification/drams-rotary-lifecycle.js": "0e05cabdc368db2681de728e525be8d49fc437069e631e789b331291c95da4eb",
+        "tools/verification/drams-rotary-models.js": "3758e4826dafa99fd7e1724eb0324ea55a68a6c8d335a2817324cc665c3b5fc6",
+        "tools/verification/drams-rotary-motion.js": "09927685cbaf6e0f040644ee7ea133bff594f18c9368ec1b3a2fea344378f9bd",
+        "tools/verification/drams-rotary-portable.js": "2a4ee44f31f10d361e6a683a51ff18bdbdd176fcce8661012c63b76919a86790",
+        "tools/verification/drams-rotary-press.js": "99b61528dc4e128e1658152e6a03e7ad24cd44639caabd81c8abf6a44683f497",
+        "tools/verification/drams-rotary-retarget.js": "d028af37405bf2183d9491d99e193bae54e21cd9768c6c5ced9a9eedc982e041",
+        "tools/verification/drams-rotary-routes.js": "33e60728e6df50b78af8441f90a3d6d18d87362f8120a9692175e8fd29ee465d",
+        "tools/verification/drams-rotary-smoke.js": "08c0ad5d0e8e35a5bac55f8a85f740bc80c601721fb471d0e62559dd4f20a548",
+        "tools/verification/drams-rotary-source.js": "9ef2ca1af961d4844f0f1fd11f66d41ccb61d971ce71cdf238c2fe8a0eb71d21",
+        "tools/verification/drams-rotary-startup.js": "46579b460920a07696c2e40124e895f358d2369f671618e679618a279b86853f",
+        "tools/verification/drams-rotary-stress.js": "561103afc2f149b414fb07fe41eccc46f0ec8fe24d300f1df2114f9c606e651c",
+        "tools/verification/drams-rotary-themes.js": "ec46e9e722adab6c28c278bfe7faabbb5bc353dcb618d889cec234b643e50bec",
+        "tools/verification/drams-rotary-touch.js": "565f7cae48d2086cdf690a826a5ad6bd73721ae8d2406519b02f0d220a904c5b",
+        "tools/profile-drams-rotary.js": "d0584320eec58a76acce44d719df069461734c3843c5fd9ed1ac9a386d33d358"
+      },
+      "summary": {
+        "cases": 12,
+        "fps": {
+          "min": 59.753252747526915,
+          "max": 60.003193517160156
+        },
+        "gapsAbove25MS": 2,
+        "longTasks": 0,
+        "firstTracePaintMS": {
+          "min": 90.08,
+          "max": 160.586
+        },
+        "maxReadyMS": 176.60000000149012
+      },
+      "results": [
+        {
+          "kind": "plus",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 133.69999999925494,
+            "firstContentfulPaint": null,
+            "firstPaint": 111.546,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8014.60000000149,
+            "frames": 482,
+            "fps": 60.00248972986431,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 195.899999999255
+              },
+              {
+                "name": "reverse-home",
+                "at": 612.4999999992549
+              },
+              {
+                "name": "step",
+                "at": 962.4999999992549
+              },
+              {
+                "name": "dock-drag",
+                "at": 1312.499999999255
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1429.199999999255
+              },
+              {
+                "name": "hold",
+                "at": 2012.4999999992551
+              },
+              {
+                "name": "queued-end",
+                "at": 2312.499999999255
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2512.499999999255
+              },
+              {
+                "name": "resume",
+                "at": 3012.3999999992548
+              },
+              {
+                "name": "second-drag",
+                "at": 3812.3999999992548
+              },
+              {
+                "name": "retarget",
+                "at": 4112.499999999255
+              },
+              {
+                "name": "final-end",
+                "at": 5012.399999999255
+              },
+              {
+                "name": "final-home",
+                "at": 5512.399999999255
+              },
+              {
+                "name": "finish-step",
+                "at": 6212.399999999255
+              },
+              {
+                "name": "return-end",
+                "at": 6512.399999999255
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 162,
+              "startY": 92,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6678.39999999851,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6678.39999999851,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-thumb-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "13b7f08717beb19018b42e7961a97aa439ed6287ae8f0bebfff64a8830aa04d6",
+            "events": 20284
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 23,
+              "totalMS": 34.128,
+              "maxMS": 14.823
+            },
+            "UpdateLayoutTree": {
+              "count": 374,
+              "totalMS": 137.141,
+              "maxMS": 4.378
+            },
+            "Paint": {
+              "count": 22,
+              "totalMS": 22.104,
+              "maxMS": 6.575
+            },
+            "FunctionCall": {
+              "count": 870,
+              "totalMS": 456.197,
+              "maxMS": 3.115
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 115.39999999850988,
+            "firstContentfulPaint": null,
+            "firstPaint": 97.389,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8002.5,
+            "frames": 481,
+            "fps": 60.00244500607509,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 185.00000000298024
+              },
+              {
+                "name": "reverse-home",
+                "at": 601.6000000029802
+              },
+              {
+                "name": "step",
+                "at": 951.6000000029803
+              },
+              {
+                "name": "dock-drag",
+                "at": 1301.6000000029803
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1434.9000000029803
+              },
+              {
+                "name": "hold",
+                "at": 2001.6000000029803
+              },
+              {
+                "name": "queued-end",
+                "at": 2301.5000000029804
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2501.5000000029804
+              },
+              {
+                "name": "resume",
+                "at": 3001.5000000029804
+              },
+              {
+                "name": "second-drag",
+                "at": 3801.40000000298
+              },
+              {
+                "name": "retarget",
+                "at": 4101.50000000298
+              },
+              {
+                "name": "final-end",
+                "at": 5001.40000000298
+              },
+              {
+                "name": "final-home",
+                "at": 5501.40000000298
+              },
+              {
+                "name": "finish-step",
+                "at": 6201.40000000298
+              },
+              {
+                "name": "return-end",
+                "at": 6501.300000002981
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6317.400000002235,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6317.400000002235,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-thumb-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "ed2379a91b221fdd0cf69991532b47c2e63376937c0db750c57d988282b88b84",
+            "events": 18897
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 21,
+              "totalMS": 24.296,
+              "maxMS": 13.194
+            },
+            "UpdateLayoutTree": {
+              "count": 319,
+              "totalMS": 224.478,
+              "maxMS": 5.087
+            },
+            "Paint": {
+              "count": 29,
+              "totalMS": 23.703,
+              "maxMS": 5.415
+            },
+            "FunctionCall": {
+              "count": 788,
+              "totalMS": 375.505,
+              "maxMS": 5.106
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "thumb",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 110.89999999850988,
+            "firstContentfulPaint": null,
+            "firstPaint": 91.925,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8005.89999999851,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.799999999999955,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 187.60000000000002
+              },
+              {
+                "name": "reverse-home",
+                "at": 604.3
+              },
+              {
+                "name": "step",
+                "at": 954.2
+              },
+              {
+                "name": "dock-drag",
+                "at": 1304.2
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1420.9
+              },
+              {
+                "name": "hold",
+                "at": 2004.3000000000002
+              },
+              {
+                "name": "queued-end",
+                "at": 2304.2
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2504.2
+              },
+              {
+                "name": "resume",
+                "at": 3004.1
+              },
+              {
+                "name": "second-drag",
+                "at": 3804.1
+              },
+              {
+                "name": "retarget",
+                "at": 4104.1
+              },
+              {
+                "name": "final-end",
+                "at": 5004.1
+              },
+              {
+                "name": "final-home",
+                "at": 5504
+              },
+              {
+                "name": "finish-step",
+                "at": 6204.1
+              },
+              {
+                "name": "return-end",
+                "at": 6504.1
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": -179.3400427318957
+            },
+            "motion": {
+              "dead": false,
+              "time": 6671.79999999702,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6671.79999999702,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-thumb-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "6b7bca83cd36351edb1c56c0537286df5416d7c940c3addf5cc003b585f4d6c1",
+            "events": 25071
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 381,
+              "totalMS": 159.413,
+              "maxMS": 11.047
+            },
+            "UpdateLayoutTree": {
+              "count": 382,
+              "totalMS": 129.118,
+              "maxMS": 3.105
+            },
+            "Paint": {
+              "count": 579,
+              "totalMS": 90.473,
+              "maxMS": 7.463
+            },
+            "FunctionCall": {
+              "count": 872,
+              "totalMS": 571.706,
+              "maxMS": 13.831
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 115.80000000074506,
+            "firstContentfulPaint": 114,
+            "firstPaint": 95.451,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8001.800000000745,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 184.29999999850986
+              },
+              {
+                "name": "reverse-home",
+                "at": 600.9999999985099
+              },
+              {
+                "name": "step",
+                "at": 950.9999999985098
+              },
+              {
+                "name": "dock-drag",
+                "at": 1300.8999999985099
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1434.29999999851
+              },
+              {
+                "name": "hold",
+                "at": 2000.8999999985099
+              },
+              {
+                "name": "queued-end",
+                "at": 2300.89999999851
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2500.89999999851
+              },
+              {
+                "name": "resume",
+                "at": 3000.89999999851
+              },
+              {
+                "name": "second-drag",
+                "at": 3800.79999999851
+              },
+              {
+                "name": "retarget",
+                "at": 4100.89999999851
+              },
+              {
+                "name": "final-end",
+                "at": 5000.7999999985095
+              },
+              {
+                "name": "final-home",
+                "at": 5500.7999999985095
+              },
+              {
+                "name": "finish-step",
+                "at": 6200.7999999985095
+              },
+              {
+                "name": "return-end",
+                "at": 6500.7999999985095
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 162,
+              "startY": 92,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6648.800000000745,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6648.800000000745,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-thumb-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "5d522b005edad91a5c18c4d4c66561b8bc17f87213c1a2851e87c1a082a57998",
+            "events": 20229
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 23,
+              "totalMS": 34.175,
+              "maxMS": 11.842
+            },
+            "UpdateLayoutTree": {
+              "count": 373,
+              "totalMS": 122.665,
+              "maxMS": 4.15
+            },
+            "Paint": {
+              "count": 22,
+              "totalMS": 22.334,
+              "maxMS": 6.921
+            },
+            "FunctionCall": {
+              "count": 869,
+              "totalMS": 395.587,
+              "maxMS": 3.086
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 150.59999999776483,
+            "firstContentfulPaint": 145.59999999776483,
+            "firstPaint": 126.424,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8015.39999999851,
+            "frames": 482,
+            "fps": 60.00269887658018,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 180.89999999776484
+              },
+              {
+                "name": "reverse-home",
+                "at": 614.1999999977648
+              },
+              {
+                "name": "step",
+                "at": 964.1999999977647
+              },
+              {
+                "name": "dock-drag",
+                "at": 1314.1999999977647
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1430.8999999977648
+              },
+              {
+                "name": "hold",
+                "at": 2014.1999999977647
+              },
+              {
+                "name": "queued-end",
+                "at": 2314.099999997765
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2514.1999999977647
+              },
+              {
+                "name": "resume",
+                "at": 3014.099999997765
+              },
+              {
+                "name": "second-drag",
+                "at": 3814.099999997765
+              },
+              {
+                "name": "retarget",
+                "at": 4114.099999997765
+              },
+              {
+                "name": "final-end",
+                "at": 5013.9999999977645
+              },
+              {
+                "name": "final-home",
+                "at": 5513.9999999977645
+              },
+              {
+                "name": "finish-step",
+                "at": 6213.9999999977645
+              },
+              {
+                "name": "return-end",
+                "at": 6513.9999999977645
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6339.39999999851,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6339.39999999851,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-thumb-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "91c791da99d5568b7ebd6ab41afe7cec187e499edd37a6e23b88a9dfa5810ff3",
+            "events": 18878
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 21,
+              "totalMS": 32.516,
+              "maxMS": 12.819
+            },
+            "UpdateLayoutTree": {
+              "count": 318,
+              "totalMS": 225.297,
+              "maxMS": 4.58
+            },
+            "Paint": {
+              "count": 29,
+              "totalMS": 29.095,
+              "maxMS": 6.987
+            },
+            "FunctionCall": {
+              "count": 788,
+              "totalMS": 365.667,
+              "maxMS": 4.721
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "thumb",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 106,
+            "firstContentfulPaint": null,
+            "firstPaint": 90.08,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8011.300000000745,
+            "frames": 481,
+            "fps": 60.00274440826815,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 193.50000000298024
+              },
+              {
+                "name": "reverse-home",
+                "at": 610.2000000029802
+              },
+              {
+                "name": "step",
+                "at": 960.1000000029803
+              },
+              {
+                "name": "dock-drag",
+                "at": 1310.1000000029803
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1426.8000000029801
+              },
+              {
+                "name": "hold",
+                "at": 2010.1000000029803
+              },
+              {
+                "name": "queued-end",
+                "at": 2310.1000000029803
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2510.1000000029803
+              },
+              {
+                "name": "resume",
+                "at": 3010.1000000029803
+              },
+              {
+                "name": "second-drag",
+                "at": 3810.0000000029804
+              },
+              {
+                "name": "retarget",
+                "at": 4110.00000000298
+              },
+              {
+                "name": "final-end",
+                "at": 5009.90000000298
+              },
+              {
+                "name": "final-home",
+                "at": 5509.90000000298
+              },
+              {
+                "name": "finish-step",
+                "at": 6209.90000000298
+              },
+              {
+                "name": "return-end",
+                "at": 6509.90000000298
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": -179.34006708508363
+            },
+            "motion": {
+              "dead": false,
+              "time": 6674.099999997765,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6674.099999997765,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-thumb-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "96883841a5a8963475d35e1ee9564c8a781754ce93ece8502dd661e15eedc743",
+            "events": 25030
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 383,
+              "totalMS": 153.999,
+              "maxMS": 10.352
+            },
+            "UpdateLayoutTree": {
+              "count": 380,
+              "totalMS": 122.764,
+              "maxMS": 3.862
+            },
+            "Paint": {
+              "count": 567,
+              "totalMS": 80.771,
+              "maxMS": 5.862
+            },
+            "FunctionCall": {
+              "count": 872,
+              "totalMS": 536.167,
+              "maxMS": 19.328
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 152.19999999925494,
+            "firstContentfulPaint": null,
+            "firstPaint": 140.665,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8001.400000002235,
+            "frames": 480,
+            "fps": 60.00225008437817,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 183.90000000149013
+              },
+              {
+                "name": "reverse-home",
+                "at": 600.6000000014901
+              },
+              {
+                "name": "step",
+                "at": 950.70000000149
+              },
+              {
+                "name": "dock-drag",
+                "at": 1300.70000000149
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1433.90000000149
+              },
+              {
+                "name": "hold",
+                "at": 2000.6000000014901
+              },
+              {
+                "name": "queued-end",
+                "at": 2300.60000000149
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2500.60000000149
+              },
+              {
+                "name": "resume",
+                "at": 3000.50000000149
+              },
+              {
+                "name": "second-drag",
+                "at": 3800.50000000149
+              },
+              {
+                "name": "retarget",
+                "at": 4100.50000000149
+              },
+              {
+                "name": "final-end",
+                "at": 5000.40000000149
+              },
+              {
+                "name": "final-home",
+                "at": 5500.40000000149
+              },
+              {
+                "name": "finish-step",
+                "at": 6200.40000000149
+              },
+              {
+                "name": "return-end",
+                "at": 6500.40000000149
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 184,
+              "startY": 160,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6664.89999999851,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6664.89999999851,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-full-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "b68936947eccc4e69a6802507fb08244cc38bb0d9dd445b00076fecda7d83ebe",
+            "events": 21061
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 15,
+              "totalMS": 83.787,
+              "maxMS": 30.62
+            },
+            "UpdateLayoutTree": {
+              "count": 367,
+              "totalMS": 235.351,
+              "maxMS": 5.915
+            },
+            "Paint": {
+              "count": 33,
+              "totalMS": 9.94,
+              "maxMS": 1.45
+            },
+            "FunctionCall": {
+              "count": 879,
+              "totalMS": 431.272,
+              "maxMS": 5.175
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 136.60000000149012,
+            "firstContentfulPaint": null,
+            "firstPaint": 117.566,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8008.10000000149,
+            "frames": 480,
+            "fps": 60.003000150007516,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 190.70000000298023
+              },
+              {
+                "name": "reverse-home",
+                "at": 607.3000000029803
+              },
+              {
+                "name": "step",
+                "at": 957.4000000029803
+              },
+              {
+                "name": "dock-drag",
+                "at": 1307.3000000029801
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1424.0000000029802
+              },
+              {
+                "name": "hold",
+                "at": 2007.3000000029801
+              },
+              {
+                "name": "queued-end",
+                "at": 2307.30000000298
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2507.30000000298
+              },
+              {
+                "name": "resume",
+                "at": 3007.30000000298
+              },
+              {
+                "name": "second-drag",
+                "at": 3807.2000000029802
+              },
+              {
+                "name": "retarget",
+                "at": 4107.20000000298
+              },
+              {
+                "name": "final-end",
+                "at": 5007.10000000298
+              },
+              {
+                "name": "final-home",
+                "at": 5507.20000000298
+              },
+              {
+                "name": "finish-step",
+                "at": 6207.10000000298
+              },
+              {
+                "name": "return-end",
+                "at": 6507.10000000298
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6341.60000000149,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6341.60000000149,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-full-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "630dd71be31a3b05f9eb4af179b83a44e8a0535ccd0d912637709b28865132fe",
+            "events": 20423
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 12,
+              "totalMS": 58.338,
+              "maxMS": 15.838
+            },
+            "UpdateLayoutTree": {
+              "count": 338,
+              "totalMS": 406.484,
+              "maxMS": 4.4
+            },
+            "Paint": {
+              "count": 178,
+              "totalMS": 44.005,
+              "maxMS": 2.683
+            },
+            "FunctionCall": {
+              "count": 826,
+              "totalMS": 441.555,
+              "maxMS": 6.272
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "full",
+          "mobile": false,
+          "cpu": 4,
+          "dpr": 1,
+          "startup": {
+            "ready": 121,
+            "firstContentfulPaint": null,
+            "firstPaint": 109.161,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8004.199999999255,
+            "frames": 481,
+            "fps": 60.00274440826816,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 185.79999999925496
+              },
+              {
+                "name": "reverse-home",
+                "at": 602.399999999255
+              },
+              {
+                "name": "step",
+                "at": 952.399999999255
+              },
+              {
+                "name": "dock-drag",
+                "at": 1302.399999999255
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1435.7999999992549
+              },
+              {
+                "name": "hold",
+                "at": 2002.3999999992548
+              },
+              {
+                "name": "queued-end",
+                "at": 2302.3999999992548
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2502.3999999992548
+              },
+              {
+                "name": "resume",
+                "at": 3002.299999999255
+              },
+              {
+                "name": "second-drag",
+                "at": 3802.299999999255
+              },
+              {
+                "name": "retarget",
+                "at": 4102.399999999255
+              },
+              {
+                "name": "final-end",
+                "at": 5002.199999999255
+              },
+              {
+                "name": "final-home",
+                "at": 5502.299999999255
+              },
+              {
+                "name": "finish-step",
+                "at": 6202.199999999255
+              },
+              {
+                "name": "return-end",
+                "at": 6502.199999999255
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": 36.00019177110497
+            },
+            "motion": {
+              "dead": false,
+              "time": 6670,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6670,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-full-desktop-cpu4-1795279780491-trace.json",
+            "sha256": "398178de0a2047b0ce85e9f8ae3642063c3c50eb5afdb3e6de396d107a59f243",
+            "events": 26783
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 369,
+              "totalMS": 202.426,
+              "maxMS": 14.772
+            },
+            "UpdateLayoutTree": {
+              "count": 374,
+              "totalMS": 229.467,
+              "maxMS": 4.758
+            },
+            "Paint": {
+              "count": 595,
+              "totalMS": 77.217,
+              "maxMS": 1.82
+            },
+            "FunctionCall": {
+              "count": 888,
+              "totalMS": 628.139,
+              "maxMS": 19.97
+            }
+          }
+        },
+        {
+          "kind": "plus",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 176.60000000149012,
+            "firstContentfulPaint": null,
+            "firstPaint": 160.586,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8009.10000000149,
+            "frames": 481,
+            "fps": 60.001995908387805,
+            "p95": 16.700000000000728,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 190.90000000223517
+              },
+              {
+                "name": "reverse-home",
+                "at": 607.6000000022352
+              },
+              {
+                "name": "step",
+                "at": 957.6000000022352
+              },
+              {
+                "name": "dock-drag",
+                "at": 1307.6000000022352
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1424.2000000022351
+              },
+              {
+                "name": "hold",
+                "at": 2007.500000002235
+              },
+              {
+                "name": "queued-end",
+                "at": 2307.500000002235
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2507.500000002235
+              },
+              {
+                "name": "resume",
+                "at": 3007.500000002235
+              },
+              {
+                "name": "second-drag",
+                "at": 3807.5000000022355
+              },
+              {
+                "name": "retarget",
+                "at": 4107.400000002235
+              },
+              {
+                "name": "final-end",
+                "at": 5007.400000002235
+              },
+              {
+                "name": "final-home",
+                "at": 5507.400000002235
+              },
+              {
+                "name": "finish-step",
+                "at": 6207.400000002235
+              },
+              {
+                "name": "return-end",
+                "at": 6507.400000002235
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "value": 12,
+              "down": false,
+              "startX": 184,
+              "startY": 160,
+              "startValue": -12
+            },
+            "motion": {
+              "dead": false,
+              "time": 6698.199999999255,
+              "x": [
+                120
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                120
+              ],
+              "paint": [
+                120
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6698.199999999255,
+                "x": 120,
+                "v": 0,
+                "to": 120
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-plus-full-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "2cc51bfed50835b6204bb06092e3c66b94d031562efca0fde1fb4916902c565b",
+            "events": 21197
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 24,
+              "totalMS": 90.184,
+              "maxMS": 34.92
+            },
+            "UpdateLayoutTree": {
+              "count": 381,
+              "totalMS": 252.443,
+              "maxMS": 3.679
+            },
+            "Paint": {
+              "count": 33,
+              "totalMS": 11.022,
+              "maxMS": 1.853
+            },
+            "FunctionCall": {
+              "count": 882,
+              "totalMS": 442.449,
+              "maxMS": 12.643
+            }
+          }
+        },
+        {
+          "kind": "switch",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 174.80000000074506,
+            "firstContentfulPaint": null,
+            "firstPaint": 156.914,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8002.300000000745,
+            "frames": 481,
+            "fps": 60.003193517160156,
+            "p95": 16.799999999999272,
+            "gaps": [],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 184.70000000074504
+              },
+              {
+                "name": "reverse-home",
+                "at": 601.4000000007451
+              },
+              {
+                "name": "step",
+                "at": 951.400000000745
+              },
+              {
+                "name": "dock-drag",
+                "at": 1301.400000000745
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1434.7000000007451
+              },
+              {
+                "name": "hold",
+                "at": 2001.300000000745
+              },
+              {
+                "name": "queued-end",
+                "at": 2301.300000000745
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2501.300000000745
+              },
+              {
+                "name": "resume",
+                "at": 3001.200000000745
+              },
+              {
+                "name": "second-drag",
+                "at": 3801.300000000745
+              },
+              {
+                "name": "retarget",
+                "at": 4101.200000000745
+              },
+              {
+                "name": "final-end",
+                "at": 5001.200000000745
+              },
+              {
+                "name": "final-home",
+                "at": 5501.100000000745
+              },
+              {
+                "name": "finish-step",
+                "at": 6201.100000000745
+              },
+              {
+                "name": "return-end",
+                "at": 6501.200000000745
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "on": true,
+              "down": null
+            },
+            "motion": {
+              "dead": false,
+              "time": 6346.699999999255,
+              "x": [
+                90
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                90
+              ],
+              "paint": [
+                90
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 1,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6346.699999999255,
+                "x": 90,
+                "v": 0,
+                "to": 90
+              },
+              "presses": [
+                {
+                  "key": "main",
+                  "value": 1,
+                  "segment": null
+                }
+              ],
+              "samplers": 2
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-switch-full-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "079c6acf5fff47c36b7bdd4185d0f0f8588cc7ea2416381650bcc62ddbe3aa99",
+            "events": 20489
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 20,
+              "totalMS": 64.146,
+              "maxMS": 15.907
+            },
+            "UpdateLayoutTree": {
+              "count": 347,
+              "totalMS": 433.843,
+              "maxMS": 5.105
+            },
+            "Paint": {
+              "count": 182,
+              "totalMS": 46.808,
+              "maxMS": 3.557
+            },
+            "FunctionCall": {
+              "count": 827,
+              "totalMS": 447.066,
+              "maxMS": 10.157
+            }
+          }
+        },
+        {
+          "kind": "crank",
+          "mode": "full",
+          "mobile": true,
+          "cpu": 4,
+          "dpr": 2,
+          "startup": {
+            "ready": 113.89999999850988,
+            "firstContentfulPaint": null,
+            "firstPaint": 103.321,
+            "firstPaintMetric": "first trace Paint after mount"
+          },
+          "audioConstructed": 0,
+          "motion": {
+            "duration": 8016.5,
+            "frames": 479,
+            "fps": 59.753252747526915,
+            "p95": 16.799999999999272,
+            "gaps": [
+              {
+                "frame": 12,
+                "ms": 33.30000000000001
+              },
+              {
+                "frame": 301,
+                "ms": 33.399999999999636
+              }
+            ],
+            "longTasks": [],
+            "events": [
+              {
+                "name": "first-end",
+                "at": 182.2
+              },
+              {
+                "name": "reverse-home",
+                "at": 615.5
+              },
+              {
+                "name": "step",
+                "at": 965.5
+              },
+              {
+                "name": "dock-drag",
+                "at": 1315.4
+              },
+              {
+                "name": "interrupt-drag",
+                "at": 1432.2
+              },
+              {
+                "name": "hold",
+                "at": 2015.4
+              },
+              {
+                "name": "queued-end",
+                "at": 2315.4
+              },
+              {
+                "name": "queued-wrap",
+                "at": 2515.4
+              },
+              {
+                "name": "resume",
+                "at": 3015.4
+              },
+              {
+                "name": "second-drag",
+                "at": 3815.3
+              },
+              {
+                "name": "retarget",
+                "at": 4115.4
+              },
+              {
+                "name": "final-end",
+                "at": 5015.3
+              },
+              {
+                "name": "final-home",
+                "at": 5515.3
+              },
+              {
+                "name": "finish-step",
+                "at": 6215.3
+              },
+              {
+                "name": "return-end",
+                "at": 6515.3
+              }
+            ],
+            "storyComplete": true,
+            "source": {
+              "angle": 375,
+              "down": false,
+              "lastAngle": 36.00020535350665
+            },
+            "motion": {
+              "dead": false,
+              "time": 6684.20000000298,
+              "x": [
+                375
+              ],
+              "v": [
+                0
+              ],
+              "target": [
+                375
+              ],
+              "paint": [
+                375
+              ],
+              "drag": false,
+              "ghosts": 0,
+              "fade": false,
+              "liveAlpha": 1,
+              "color": 0,
+              "colorSegment": null,
+              "segment": {
+                "kind": "hold",
+                "at": 6684.20000000298,
+                "x": 375,
+                "v": 0,
+                "to": 375
+              },
+              "presses": [],
+              "samplers": 0
+            },
+            "held": false,
+            "audioCalls": 0
+          },
+          "trace": {
+            "file": "profile-crank-full-mobile-cpu4-1795279780491-trace.json",
+            "sha256": "4cf84c532d88cac891f4006559bd6eb00e438014932b8f049aacd58c9fe286d4",
+            "events": 26777
+          },
+          "traceMetrics": {
+            "Layout": {
+              "count": 379,
+              "totalMS": 214.243,
+              "maxMS": 12.67
+            },
+            "UpdateLayoutTree": {
+              "count": 385,
+              "totalMS": 255.181,
+              "maxMS": 7.333
+            },
+            "Paint": {
+              "count": 583,
+              "totalMS": 77.586,
+              "maxMS": 1.42
+            },
+            "FunctionCall": {
+              "count": 885,
+              "totalMS": 676.936,
+              "maxMS": 29.492
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "traces": 24,
+  "timingGatePassed": false,
+  "siteWidePerformanceAuditOpen": true,
+  "scope": "Twenty-four isolated browser cases measure three emitted rotary controls across native/full,desktopDPR1 and compactDPR2,CPU1/4. Each eight-second normal-clock story includes scalar,binary and unbounded crank motion,reversals,Dock drags,caller holds and queued intent. All current-source RAF gaps,long tasks,readiness,first trace Paint and CDP trace digests are retained without filtering. Own heavy verification jobs had stopped;other applications were not controlled. Fonts are prepared before mounting and route transfer is excluded. Physical input is verified separately. These measurements leave final cold-route,Lighthouse and full520 timing gates open."
+}

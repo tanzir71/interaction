@@ -1,20 +1,34 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 349 of the 399 existing demos:
+Native v4 compositions are remediated for 352 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the twenty-two DRAMS Collections demos.
-The remaining work includes 50 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the twenty-five DRAMS Collections demos.
+The remaining work includes 47 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 349 remediated native compositions retains those references.
+None of the 352 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 349 native compositions. The unfinished groups still account for
+among these 352 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-16 low-fill findings; findings can overlap within a demo. All 117 documented
+15 low-fill findings; findings can overlap within a demo. All 119 documented
 Figma fill exceptions validate.
+
+## Plus Minus Knob, Round On/Off Knob and Crankin’ Ball
+
+The three controls match v4 tiles `89:824`, `89:846` and `89:867`. Fourteen unchanged supplied SVGs retain exact intrinsic roots, shadows and slots on the 324×168 native plane at reference origin 24,20. Plus Minus keeps its 90px plate, authored indicator and both glyphs. On/Off keeps its 84px plate, fixed body lighting, supplied OFF/ON labels and lit 8px LED; its native reference starts on. The two documented sparse-fill exceptions preserve these exact sizes. Crank keeps the 140px dashed orbit,20px pivot, supplied arm,30px ball and 9.6×6 glint. Its ball offset(55,−39) and arm tip(54,−40) retain the one-pixel reference difference.
+
+Full views retain the complete original controllers and displayed copy in 400×584 with a 368×320 source plane. Plus Minus retains all five calibration labels, both original step buttons, −12..12 integer rounding/clamping,10 degrees per unit and diagonal drag gain. On/Off retains its 156px housing,32px handle, false full initial state,0/90 degree endpoints and native button activation. Crank retains its 174px controller,73×12 arm,54px sphere, unbounded signed rotation and seam handling,15 degree keys, Home zero, one-decimal readout and modulo ARIA. Unrounded source variables supply geometry. Stable 44px physical targets, at least 11.1px optical text and measured content gaps remain readable in compact full views. Each generator prompt describes its individual native geometry, controls, assets and complete original model.
+
+The emitted verifier passes sixteen groups and 227,199 checks. Twelve immutable captures retain 4,332 original states and 732 complete DOM checkpoints,60 trusted switch keys and 48 trusted step activations. Two supplemental original DOM replays preserve signed-zero bits and the complete unrounded crank history independently of serialized telemetry. Further coverage includes 132 layouts,18 independent six-second RK4 renderer stories at 60/120/240Hz,36 canonical press cases,320 exact interrupted-paint boundaries, actual LED rasters, real mouse/keys/touch,43,200 rapid intents,10,800 held Dock actions, independent caller/document/viewport holds,48 cold paused starts and early disposals,72 focus/theme cases, four concurrent-instance cases,24 fresh network-blocked exports and twelve routed detail/LiveTiles cases. Normal motion uses 380/32/1 release,80ms press and 250ms release feedback; reduced motion retains 150ms fades. Physical press ownership is separate from virtual Dock feedback, so document holds and unrelated instance pointer releases preserve the scripted phase. All eight final screenshots were reviewed.
+
+Required local phase checks, CLI/MCP tests and generated-output checks pass at the documented baseline. All 352 completed native compositions pass every fit gate;47 unfinished demos account for 15 small-text and 15 low-fill findings. Boot failures, missing sizes, overflow, horizontal scroll and invalid exceptions remain zero. Stage debt falls 49→46 and motion debt 26→23 without baseline growth. Nine shared-file siblings,325 other modules,396 other metadata records,251 frozen prior helpers,62 prior private inputs,851 prior publication files,610 archived originals and 222+184 accepted snapshot files remain unchanged.
+
+Controlled Chromium touch diagnostics reproduce a canceled first tap after a CDP drag in both the literal original and candidate when mobile viewport metadata is enabled. Tests retain that evidence, verify every trusted generated click applies once and require the following fresh tap to activate. No manual touch fallback was added. The cause below application event semantics remains unproven; final physical-device/mobile audit remains open.
+
+The [isolated timing report](performance/drams-rotary-2026-11-21.json) retains all 24 CPU 1/4 native/full, desktop DPR 1 and compact DPR 2 cases and trace digests. CPU 1 records 60.00–60.00fps, 0 gaps above 25ms and 0 long tasks; first trace Paint spans 13.33–36.03ms, with maximum readiness 40.40ms. CPU 4 records 59.75–60.00fps, 2 gaps above 25ms and 0 long tasks; first trace Paint spans 90.08–160.59ms, with maximum readiness 176.60ms. Fonts are prepared before mount; route transfer is excluded. Own heavy tests had stopped, other applications are not controlled, and all outliers remain recorded. Cold-route, Lighthouse and final site-wide timing gates remain open. Actions stays disabled; workflows and billing settings remain unchanged, including the account-wide $0 stop limit.
 
 ## 3-Way Knob, Round Knob Slider and Joypad
 

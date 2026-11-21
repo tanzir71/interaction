@@ -865,3 +865,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with `node tools/profile-drams-knobs.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; preserve all trace findings and
   leave cold-route, Lighthouse and final site-wide timing gates open.
+
+- `node tools/verify-drams-rotary.js http://127.0.0.1:4173` covers v4 Plus
+  Minus Knob, Round On/Off Knob and Crankin’ Ball. Sixteen groups preserve 14
+  exact supplied SVGs, twelve original captures, two supplemental DOM replays,
+  complete full copy, unrounded signed/unbounded models and native activation.
+  Keep native 0/on/0 seeds,90px/84px plates, the 140px orbit and exact 55,-39 ball
+  pose. Full retains original−12..12 rounding/gain, off initial state and crank
+  seam/modulo models. Source variables must supply geometry. Stable 44px inputs
+  stay outside retained paint; physical presses must not release virtual Dock
+  feedback. Preserve 132 layouts,36 press cases,320 pixel boundaries, independent
+  holds, actual listener cleanup, concurrent instances and 24 offline exports.
+  Exact-size Plus/On-Off fill exceptions change only the low-fill gate. Keep
+  the controlled canceled-first-CDP-tap diagnostic for final mobile audit;
+  native browser clicks apply exactly once, with no manual touch fallback.
+  Record isolated timing with `node tools/profile-drams-rotary.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; retain all outliers and leave
+  cold-route, Lighthouse and final site-wide timing gates open.

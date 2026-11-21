@@ -25956,7 +25956,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-008",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-008.json?v=a11ad421e3",
@@ -26011,7 +26011,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-011",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-011.json?v=cdfd5921a2",
@@ -26066,7 +26066,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-013",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-013.json?v=9ccc439393",
@@ -26121,7 +26121,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-015",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-015.json?v=8453f35f42",
@@ -26159,8 +26159,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 016, Plus Minus Knob, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "Turn toward minus or plus",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26168,18 +26175,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-016",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-016.json?v=0d3ea0205f",
+    "sourcePreview": "registry/p/drams-016.json?v=44a357e2ad",
     "assetRefs": {},
     "rootClass": "d-drams-016",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "slider"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Turn toward minus or plus",
     "sourceName": "DRAMS / Plus Minus Knob",
@@ -26202,8 +26214,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 017, Round On/Off Knob, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "Turn the knob between off and on",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26211,18 +26230,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-017",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-017.json?v=fa0227fdc9",
+    "sourcePreview": "registry/p/drams-017.json?v=5678ed04f0",
     "assetRefs": {},
     "rootClass": "d-drams-017",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "switch"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Turn the knob between off and on",
     "sourceName": "DRAMS / Round On/Off Knob",
@@ -26262,7 +26286,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-019",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-019.json?v=499fedeb29",
@@ -26317,7 +26341,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-025",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-025.json?v=e44790035c",
@@ -26372,7 +26396,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-032",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-032.json?v=69d593a6d2",
@@ -26410,8 +26434,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 038, Crankin' Ball, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "Wind the ball around its pivot",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26419,18 +26450,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-038",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-038.json?v=587354fb40",
+    "sourcePreview": "registry/p/drams-038.json?v=d1c03d6661",
     "assetRefs": {},
     "rootClass": "d-drams-038",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "slider"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Wind the ball around its pivot",
     "sourceName": "DRAMS / Crankin' Ball",
@@ -26463,7 +26499,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-046",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-046.json?v=916ebe58b7",
@@ -26506,7 +26542,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-047",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
+    "module": "js/demos.drams.dials.js?v=6a35cfc06e",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-047.json?v=bb05334507",
