@@ -23159,7 +23159,7 @@
   },
   {
     "id": "vinyl-player-card",
-    "title": "Direct-drive Turntable",
+    "title": "Turntable",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "press",
@@ -23174,8 +23174,15 @@
       "turntable"
     ],
     "tier": "free",
-    "desc": "A compact powder-coated turntable models the platter, concentric record grooves, offset tonearm and cartridge. Starting playback lowers the arm onto the record; cueing lifts it and stops the record, while a physical speed selector changes rotation.",
-    "designSize": "sm",
+    "desc": "Start the platter; switch between 33 and 45",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23183,18 +23190,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/vinyl-player-card",
-    "thumb": "full",
-    "module": "js/demos.skeuo.vinyl-player-card.js?v=70d7da1ca6",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.vinyl-player-card.js?v=1b15da4e80",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/vinyl-player-card.json?v=efce19e59f",
+    "sourcePreview": "registry/p/vinyl-player-card.json?v=e4c5bce07c",
     "assetRefs": {},
     "rootClass": "d-hardware-vinyl-player-card",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Press"
+      },
+      {
+        "action": "speed",
+        "label": "33⅓ RPM"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "status"
+      "aria": "region"
     },
     "hint": "Start the platter; switch between 33 and 45",
     "sourceName": "Seen on: Adi's Figma music players and the vinyl-player genre",
@@ -23202,7 +23218,7 @@
   },
   {
     "id": "foil-trading-card",
-    "title": "Satin Foil Membership",
+    "title": "Satin Foil Card",
     "category": "Skeuomorph",
     "group": "Visual FX",
     "trigger": "hover",
@@ -23217,8 +23233,15 @@
       "collectible"
     ],
     "tier": "free",
-    "desc": "A softly rounded graphite membership card uses an engraved emblem, fine microtexture and a low-opacity foil layer that tracks the light. Pointer tilt and keyboard lighting reveal restrained blue, bronze and sage reflections across a single realistic surface.",
-    "designSize": "sm",
+    "desc": "Light rakes the foil; Home resets the angle",
+    "designSize": [
+      400,
+      480
+    ],
+    "thumbDesignSize": [
+      240,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23226,22 +23249,45 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/foil-trading-card",
-    "thumb": "full",
-    "module": "js/demos.skeuo.foil-trading-card.js?v=b95723d0d8",
+    "thumb": "hero",
+    "module": "js/demos.skeuo.foil-trading-card.js?v=f7af9ee621",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/foil-trading-card.json?v=e7a07745c5",
-    "assetRefs": {},
+    "sourcePreview": "registry/p/foil-trading-card.json?v=022140accf",
+    "assetRefs": {
+      "photo-portraitC1": "assets/images/portraitC1-800.webp"
+    },
     "rootClass": "d-hardware-foil-trading-card",
-    "controls": [],
+    "controls": [
+      {
+        "action": "move",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "hint": "Light rakes the foil; Home resets the angle",
     "sourceName": "Seen on: Pokémon-holo CSS experiments and trading-card collect UIs",
-    "isNew": false
+    "isNew": false,
+    "photoCredits": [
+      {
+        "key": "portraitC1",
+        "asset": "photo-portraitC1",
+        "photoId": "TfjOwcrMj5I",
+        "imageId": "photo-1610659128929-fa69328744e2",
+        "photographer": "Carlos Garcia Hansen",
+        "url": "https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-portraitC1": "assets/images/portraitC1.webp"
+    }
   },
   {
     "id": "mac-window",

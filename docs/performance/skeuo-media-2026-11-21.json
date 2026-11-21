@@ -1,0 +1,2277 @@
+{
+  "at": "2026-11-21T00:17:29.718Z",
+  "cases": 16,
+  "sourceHashes": {
+    "js/demos.skeuo.vinyl-player-card.js": "1b15da4e8006c5d02988e5874fd18bd394d32559d14b5873a9809c2439cfe6c6",
+    "js/demos.skeuo.foil-trading-card.js": "f7af9ee621320028c7f2404c8a15d090128aaab6b1fb7691799b60093b83862f",
+    "tools/fixtures/skeuo-media-artwork.json": "046a50e6e13b250c7e7ca2cfdc44392cfbad328ac2a2949ced937cf2342682b6",
+    "tools/fixtures/skeuo-media-original-models.json": "545eb6e4df3e7f2d00f9a6254caeb61afaadaba35151a830716199c7886f89bb",
+    "tools/fixtures/skeuo-media-original/fixtures/foil-trading-card-300x320.pool.json.gz": "daeedc15f61b2b2d44e88727de9334dc27aca6b6f13debfe859a58ed14963379",
+    "tools/fixtures/skeuo-media-original/fixtures/foil-trading-card-300x320-reduced.pool.json.gz": "b450ae5df507a11d057dd87c50adda05f78ef10c8ea278505bfd93323e8db45d",
+    "tools/fixtures/skeuo-media-original/fixtures/foil-trading-card-368x320.pool.json.gz": "aaf49ebdcd9a92862ad030cec36d760c6a2ab909a677622f400dcf2fa8278219",
+    "tools/fixtures/skeuo-media-original/fixtures/foil-trading-card-368x320-reduced.pool.json.gz": "29ac72370f3a9d70a2ded427ab4c9645869aa84a47f9c4c58a6766eba041ab92",
+    "tools/fixtures/skeuo-media-original/fixtures/vinyl-player-card-300x320.pool.json.gz": "ec98830e2d47f36ca697ab88bad455140f3d001d83693fbf324b86c93fae7227",
+    "tools/fixtures/skeuo-media-original/fixtures/vinyl-player-card-300x320-reduced.pool.json.gz": "e7108072db32207ca8932641361d97cf6a6803fe2851ad954578326e2dc71e56",
+    "tools/fixtures/skeuo-media-original/fixtures/vinyl-player-card-368x320.pool.json.gz": "6ee84250dde3b81da7adcb55a69e1431c44575c781b4c2c2f0e3c5994b523d52",
+    "tools/fixtures/skeuo-media-original/fixtures/vinyl-player-card-368x320-reduced.pool.json.gz": "8f747b6ae05250a5633811542748a3a34afb18013213511a9f215a9cc4ce84bd",
+    "tools/verification/skeuo-original/unpack-fixture.cjs": "433509767c008d99ba999fa4e472dc17ff4818c8489e6668c236e1f63691e72f",
+    "tools/verification/skeuo-original/source-function.cjs": "c84919e01d4a5942431dabf47c65fa9a2c978d2762ab9fa5be49a59f682ff3d4",
+    "tools/verification/skeuo-original/coordinate-policy.cjs": "3941eb8967ff002077f94a4012c675d96b722c5bd7639a6f5eb1728606fccb76",
+    "tools/verification/sound-original/snapshot.cjs": "ee99497d7e62a8c3d36b48c323e4d24b34e1232c9358e99b52039a48e99fc725",
+    "tools/verification/sound-original/audio-recorder.cjs": "67a0ad2be47c76821c8abfd791448232adee4557e24f9f4ba5d32feeb13a324f",
+    "tools/verification/skeuo-devices-original/reference-compare.cjs": "77aa71835ed7345528f1a0850995899efef1069eb07f209130dc9a2afa2fd7af",
+    "tools/verification/skeuo-devices-original/native-pcm.cjs": "6f83de30dfa1233d7725d1e4d938c770b8aa1af4ea9aebdafeedb6d88fddc992",
+    "tools/fixtures/skeuo-devices-pcm-policy.json": "64124a527aa219295c9c4ec3525157b18cdc383bd59b8a2fec515b0bd443a863",
+    "assets/components/skeuo-media/172-858.svg": "57847f2e685194cb63b4b3f7b07e337d903462c88527c452750a5ab692a6a3bc",
+    "assets/components/skeuo-media/172-859.svg": "362eb5ceff5f45417f084670f74cd1b36019aa625e0a2d330a9e84ed9a245c93",
+    "assets/components/skeuo-media/172-860.svg": "c3c352f1ed55548d67b30c7c685b6e0b10d7ce7e3500a6eafcb4add17cb9c257",
+    "assets/components/skeuo-media/172-861.svg": "4e83af8f2a55800b617dbb3b7147da44456e128ab01a5a3f64fad65f81956cef",
+    "assets/components/skeuo-media/172-862.svg": "ca5c46b801723ba9ab282b7f8d4b5a798e223c73534fe9293854239b430a30f6",
+    "assets/components/skeuo-media/172-863.svg": "4d5671344ac7fd254a077fc5abbdf833225b4d6f0f5c61b870844102bd203d2e",
+    "assets/components/skeuo-media/172-864.svg": "af4c5b3436a32267b5fc141841b8ade5c6ed8caea972926d95e15ca5e64927a0",
+    "assets/components/skeuo-media/172-865.svg": "98a2f9b1b7a268c206d94702a2f19c463d190d92174a2d1cc7cd1e0ee9bef9bc",
+    "assets/components/skeuo-media/172-866.svg": "66cbc38ab096f3db82b7dad9c0c13143ba85602e37db2a2a759628fcd3ca6771",
+    "assets/components/skeuo-media/170-2056.svg": "8473e9b08fb0b79fc4442a460f4b107736d075ad0535f65cb8c69ff8d6f7979f",
+    "tools/verification/skeuo-media-harness.js": "2e19564af17528816e8a66b2557ed9b420ceed24b25f085af93ab6ec475dad14",
+    "tools/verification/skeuo-media-geometry-policy.js": "978b4efa57c94c91df0cd1bd9af8d191f8ceae36804701ef0b332164d4526154",
+    "assets/images/portraitC1-800.webp": "34be04d85d970fa4b336f07905689d61d594396c452a3a2c375c79e5f4f01d3c",
+    "assets/images/portraitC1.webp": "45a6166cf58d244d67e110b13f9f76e2fc3b2c850a4a6376ee3c170b1a6dee8f",
+    "tools/verification/sound-png.js": "cdf14c0b25508c0cd9f31be0b7219e7b95548d0924e08279b517d622a4446cc5",
+    "js/demo-assets.js": "00b614b7579eb960bd03d819bd317d1d4d9a77911ad526b67bf9e05557ceae7c",
+    "tools/stage-fit-bounds.js": "b13aa0359ebfc805038c00d656e58682440c39ba024c4972027900a072c0c194",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "assets/photo-credits.json": "72ca83f271f4ab8a269d885b8a42ddcf57ba095cb470300b96ba1c95e2ed139c",
+    "assets/demo-assets.json": "0249247f5896b7081ac2a2c3edc6dec29aac5386e7b1a140d585b8a5ded8380b",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/registry.js": "7f9329724013592b64302af54744e35f4824714ccb1a05c885ef9fb00455143b",
+    "js/shell/router.js": "a05c158206c34a9325648020d02526b84c7749ce720a20d4c7d2acebb4967a59",
+    "js/shell/views/detail.js": "9ce6f2b623a8a52507c897b8e5018c4bea533a1f7479a09036da0e74f8ef903b",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/meta.stage.js": "e8e47c2f24b08859882bd7c66b693aa60af986232c0ee2342e32c58f64d9859d",
+    "js/export-data.js": "188e9637319eec3a27cc0f1dfd65a7b9c5b9f77577f59956cbc3f06032e72082",
+    "registry/index.json": "2bea7992e79d23d7928361337256090e424f9d623925884d7e79e41985fd876a",
+    "tools/profile-skeuo-media.js": "6bd8ec671250cae66794bc3706fb829aa9a70484276eb27b235952215b8d4494"
+  },
+  "timingGatePassed": false,
+  "summary": [
+    {
+      "cpu": 1,
+      "fps": [
+        60.00124742718144,
+        60.00274440826816
+      ],
+      "firstPaint": [
+        31.8,
+        53.971
+      ],
+      "maxReady": 82.69999998807907,
+      "slowIntervals": 0,
+      "longTasks": 0
+    },
+    {
+      "cpu": 4,
+      "fps": [
+        56.752128204807676,
+        60.003000150007516
+      ],
+      "firstPaint": [
+        95.317,
+        358.914
+      ],
+      "maxReady": 491.59999999403954,
+      "slowIntervals": 42,
+      "longTasks": 5
+    }
+  ],
+  "results": [
+    {
+      "kind": "vinyl",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 70,
+        "firstContentfulPaint": null,
+        "firstPaint": 49.654,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8010.5999999940395,
+        "frames": 481,
+        "fps": 60.001995908387805,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 193.19999999403956
+          },
+          {
+            "name": "release",
+            "at": 309.8999999940395
+          },
+          {
+            "name": "press-again",
+            "at": 1009.8999999940395
+          },
+          {
+            "name": "release-again",
+            "at": 1509.8999999940395
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2193.1999999940394
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.8999999940397
+          },
+          {
+            "name": "hold",
+            "at": 2409.7999999940394
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.7999999940394
+          },
+          {
+            "name": "resume",
+            "at": 4009.69999999404
+          },
+          {
+            "name": "second-press",
+            "at": 4309.799999994039
+          },
+          {
+            "name": "second-release",
+            "at": 4426.499999994039
+          },
+          {
+            "name": "last-press",
+            "at": 5709.69999999404
+          },
+          {
+            "name": "last-release",
+            "at": 5826.299999994039
+          },
+          {
+            "name": "finish",
+            "at": 7009.69999999404
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 335.3670067520447,
+          "playing": false,
+          "fast": false,
+          "arm": 0,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-thumb-desktop-cpu1-1795219992303-trace.json",
+        "sha256": "f80cea57f13b9ba9380ee7c6ba3e5ccb2e25647345e3c123528cba43da32c24d",
+        "events": 22680
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 61.89999997615814,
+        "firstContentfulPaint": 52.69999998807907,
+        "firstPaint": 32.152,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8013.0999999940395,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 195.79999999999995
+          },
+          {
+            "name": "release",
+            "at": 312.5
+          },
+          {
+            "name": "press-again",
+            "at": 1012.4000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1512.4
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2195.7
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2312.4
+          },
+          {
+            "name": "hold",
+            "at": 2412.4
+          },
+          {
+            "name": "queued-action",
+            "at": 3612.3
+          },
+          {
+            "name": "resume",
+            "at": 4012.3
+          },
+          {
+            "name": "second-press",
+            "at": 4312.3
+          },
+          {
+            "name": "second-release",
+            "at": 4429
+          },
+          {
+            "name": "last-press",
+            "at": 5712.2
+          },
+          {
+            "name": "last-release",
+            "at": 5828.9
+          },
+          {
+            "name": "finish",
+            "at": 7012.2
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.2999999999761147,
+            "y": 0.2500000002627384,
+            "rx": -2.8662370255005953e-9,
+            "ry": -3.8216496633936003e-10,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-thumb-desktop-cpu1-1795219992303-trace.json",
+        "sha256": "8f6a4c6380d95aae4565c77fafb862af362c0a9c9893dd456f9b918233438085",
+        "events": 19040
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 47.099999994039536,
+        "firstContentfulPaint": null,
+        "firstPaint": 39.695,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8003,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 185.8
+          },
+          {
+            "name": "release",
+            "at": 302.5
+          },
+          {
+            "name": "press-again",
+            "at": 1002.4000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1502.4
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2185.8
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2302.4
+          },
+          {
+            "name": "hold",
+            "at": 2402.4
+          },
+          {
+            "name": "queued-action",
+            "at": 3602.4
+          },
+          {
+            "name": "resume",
+            "at": 4002.3
+          },
+          {
+            "name": "second-press",
+            "at": 4302.4
+          },
+          {
+            "name": "second-release",
+            "at": 4435.7
+          },
+          {
+            "name": "last-press",
+            "at": 5702.3
+          },
+          {
+            "name": "last-release",
+            "at": 5835.6
+          },
+          {
+            "name": "finish",
+            "at": 7002.2
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 341.5612753265214,
+          "playing": false,
+          "fast": false,
+          "arm": 0,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-thumb-mobile-cpu1-1795219992303-trace.json",
+        "sha256": "108c4172c9fd53bbfc51506df60b9319afd508317fca371371f6e52b4353ae42",
+        "events": 21204
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 67.2999999821186,
+        "firstContentfulPaint": 55.099999994039536,
+        "firstPaint": 34.762,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8007,
+        "frames": 480,
+        "fps": 60.00150003750093,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 189.29999999999995
+          },
+          {
+            "name": "release",
+            "at": 305.9
+          },
+          {
+            "name": "press-again",
+            "at": 1005.9000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1505.9
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2189.2
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2305.9
+          },
+          {
+            "name": "hold",
+            "at": 2405.9
+          },
+          {
+            "name": "queued-action",
+            "at": 3605.8
+          },
+          {
+            "name": "resume",
+            "at": 4005.8
+          },
+          {
+            "name": "second-press",
+            "at": 4305.8
+          },
+          {
+            "name": "second-release",
+            "at": 4422.4
+          },
+          {
+            "name": "last-press",
+            "at": 5705.8
+          },
+          {
+            "name": "last-release",
+            "at": 5822.3
+          },
+          {
+            "name": "finish",
+            "at": 7005.6
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.29999999999954763,
+            "y": 0.2500000000049757,
+            "rx": -5.4280135941553453e-11,
+            "ry": -7.2373218529264705e-12,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-thumb-mobile-cpu1-1795219992303-trace.json",
+        "sha256": "c599af55b707b343a9de19b3a8120d436210bfe9e67e66123cfab6814f6d49d8",
+        "events": 20202
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 82.69999998807907,
+        "firstContentfulPaint": 62.19999998807907,
+        "firstPaint": 44.137,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8010.399999976158,
+        "frames": 481,
+        "fps": 60.00274440826816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 192.69999998211858
+          },
+          {
+            "name": "release",
+            "at": 309.49999998211865
+          },
+          {
+            "name": "press-again",
+            "at": 1009.2999999821186
+          },
+          {
+            "name": "release-again",
+            "at": 1509.3999999821185
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2192.6999999821187
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.3999999821185
+          },
+          {
+            "name": "hold",
+            "at": 2409.2999999821186
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.2999999821186
+          },
+          {
+            "name": "resume",
+            "at": 4009.1999999821182
+          },
+          {
+            "name": "second-press",
+            "at": 4309.299999982119
+          },
+          {
+            "name": "second-release",
+            "at": 4425.899999982119
+          },
+          {
+            "name": "last-press",
+            "at": 5709.299999982119
+          },
+          {
+            "name": "last-release",
+            "at": 5825.799999982119
+          },
+          {
+            "name": "finish",
+            "at": 7009.099999982119
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 335.31809452124673,
+          "playing": false,
+          "fast": false,
+          "arm": -8,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-full-desktop-cpu1-1795219992303-trace.json",
+        "sha256": "c23e541a963f0ebf63aa65cdd32ba944355fcae776c138a49b752eca84c0c332",
+        "events": 18814
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 1,
+      "dpr": 1,
+      "startup": {
+        "ready": 38.30000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 32.061,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8003.300000011921,
+        "frames": 480,
+        "fps": 60.00225008437816,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 184.5000000059605
+          },
+          {
+            "name": "release",
+            "at": 301.1000000059605
+          },
+          {
+            "name": "press-again",
+            "at": 1001.1000000059605
+          },
+          {
+            "name": "release-again",
+            "at": 1501.1000000059605
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2184.4000000059605
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2301.0000000059604
+          },
+          {
+            "name": "hold",
+            "at": 2401.0000000059604
+          },
+          {
+            "name": "queued-action",
+            "at": 3601.0000000059604
+          },
+          {
+            "name": "resume",
+            "at": 4001.000000005961
+          },
+          {
+            "name": "second-press",
+            "at": 4301.000000005961
+          },
+          {
+            "name": "second-release",
+            "at": 4434.30000000596
+          },
+          {
+            "name": "last-press",
+            "at": 5700.9000000059605
+          },
+          {
+            "name": "last-release",
+            "at": 5834.30000000596
+          },
+          {
+            "name": "finish",
+            "at": 7000.9000000059605
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.3,
+            "y": 0.25,
+            "rx": 3,
+            "ry": -3.2,
+            "alpha": 0
+          },
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-full-desktop-cpu1-1795219992303-trace.json",
+        "sha256": "d51f9c538777bde10e0709c8d9be85f60c47e3c304770bf1551e7bd3730b610f",
+        "events": 20375
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 67.2999999821186,
+        "firstContentfulPaint": null,
+        "firstPaint": 53.971,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8005.4000000059605,
+        "frames": 481,
+        "fps": 60.0019959083878,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 188.00000001788135
+          },
+          {
+            "name": "release",
+            "at": 304.7000000178814
+          },
+          {
+            "name": "press-again",
+            "at": 1004.6000000178815
+          },
+          {
+            "name": "release-again",
+            "at": 1504.6000000178815
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2187.900000017881
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2304.5000000178816
+          },
+          {
+            "name": "hold",
+            "at": 2404.6000000178815
+          },
+          {
+            "name": "queued-action",
+            "at": 3604.5000000178816
+          },
+          {
+            "name": "resume",
+            "at": 4004.400000017881
+          },
+          {
+            "name": "second-press",
+            "at": 4304.500000017882
+          },
+          {
+            "name": "second-release",
+            "at": 4421.100000017881
+          },
+          {
+            "name": "last-press",
+            "at": 5704.400000017881
+          },
+          {
+            "name": "last-release",
+            "at": 5821.100000017881
+          },
+          {
+            "name": "finish",
+            "at": 7004.300000017882
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 335.27999999153377,
+          "playing": false,
+          "fast": false,
+          "arm": -8,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-full-mobile-cpu1-1795219992303-trace.json",
+        "sha256": "021608e582b8c5c2225227c91f8ea2ee7e4080a2f07000bd368f8f8f9123fd48",
+        "events": 18845
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 1,
+      "dpr": 2,
+      "startup": {
+        "ready": 50.30000001192093,
+        "firstContentfulPaint": null,
+        "firstPaint": 31.8,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8010.199999988079,
+        "frames": 481,
+        "fps": 60.00124742718144,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 192.20000000000005
+          },
+          {
+            "name": "release",
+            "at": 308.9
+          },
+          {
+            "name": "press-again",
+            "at": 1008.9000000000001
+          },
+          {
+            "name": "release-again",
+            "at": 1508.8000000000002
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2192.1
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2308.7
+          },
+          {
+            "name": "hold",
+            "at": 2408.8
+          },
+          {
+            "name": "queued-action",
+            "at": 3608.7
+          },
+          {
+            "name": "resume",
+            "at": 4008.7
+          },
+          {
+            "name": "second-press",
+            "at": 4308.7
+          },
+          {
+            "name": "second-release",
+            "at": 4425.4
+          },
+          {
+            "name": "last-press",
+            "at": 5708.6
+          },
+          {
+            "name": "last-release",
+            "at": 5825.3
+          },
+          {
+            "name": "finish",
+            "at": 7008.5
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.3,
+            "y": 0.25,
+            "rx": 3,
+            "ry": -3.2,
+            "alpha": 0
+          },
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-full-mobile-cpu1-1795219992303-trace.json",
+        "sha256": "d909177b7bd5a52fc56d1e8fdc39f7375e34e067ff7fe7601abfa392808d81d4",
+        "events": 20117
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 271.5,
+        "firstContentfulPaint": null,
+        "firstPaint": 234.199,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8015.299999982119,
+        "frames": 477,
+        "fps": 59.62723602135081,
+        "p95": 16.799999999999955,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 265,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 406,
+            "ms": 33.399999999999636
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 181.20000000596042
+          },
+          {
+            "name": "release",
+            "at": 314.40000000596046
+          },
+          {
+            "name": "press-again",
+            "at": 1014.5000000059604
+          },
+          {
+            "name": "release-again",
+            "at": 1514.4000000059605
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2181.0000000059604
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2314.4000000059605
+          },
+          {
+            "name": "hold",
+            "at": 2414.4000000059605
+          },
+          {
+            "name": "queued-action",
+            "at": 3614.30000000596
+          },
+          {
+            "name": "resume",
+            "at": 4014.4000000059605
+          },
+          {
+            "name": "second-press",
+            "at": 4314.30000000596
+          },
+          {
+            "name": "second-release",
+            "at": 4431.000000005961
+          },
+          {
+            "name": "last-press",
+            "at": 5714.30000000596
+          },
+          {
+            "name": "last-release",
+            "at": 5830.9000000059605
+          },
+          {
+            "name": "finish",
+            "at": 7014.200000005961
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 346.9433908537332,
+          "playing": false,
+          "fast": false,
+          "arm": 0,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-thumb-desktop-cpu4-1795220125943-trace.json",
+        "sha256": "7eba6147a174305c9a0b092662d069d4625a40cab515a4cbd2fe234a0f4c03b6",
+        "events": 22901
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "thumb",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 134.40000000596046,
+        "firstContentfulPaint": 114,
+        "firstPaint": 95.317,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8011.699999988079,
+        "frames": 454,
+        "fps": 56.752128204807676,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 68,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 73,
+            "ms": 50
+          },
+          {
+            "frame": 77,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 217,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 235,
+            "ms": 133.39999999999964
+          },
+          {
+            "frame": 244,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 340,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 341,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 343,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 344,
+            "ms": 50
+          },
+          {
+            "frame": 345,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 347,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 351,
+            "ms": 50.100000000000364
+          },
+          {
+            "frame": 401,
+            "ms": 50
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4012,
+            "duration": 143
+          },
+          {
+            "at": 6023.699999988079,
+            "duration": 65
+          },
+          {
+            "at": 7059.5,
+            "duration": 63
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 192.49999998807903
+          },
+          {
+            "name": "release",
+            "at": 309.19999998807907
+          },
+          {
+            "name": "press-again",
+            "at": 1009.0999999880792
+          },
+          {
+            "name": "release-again",
+            "at": 1509.0999999880792
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2192.399999988079
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2309.199999988079
+          },
+          {
+            "name": "hold",
+            "at": 2409.099999988079
+          },
+          {
+            "name": "queued-action",
+            "at": 3609.0999999880787
+          },
+          {
+            "name": "resume",
+            "at": 4008.9999999880793
+          },
+          {
+            "name": "second-press",
+            "at": 4308.999999988079
+          },
+          {
+            "name": "second-release",
+            "at": 4425.699999988079
+          },
+          {
+            "name": "last-press",
+            "at": 5708.999999988079
+          },
+          {
+            "name": "last-release",
+            "at": 5825.699999988079
+          },
+          {
+            "name": "finish",
+            "at": 7008.899999988079
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.2999999999761147,
+            "y": 0.2500000002627384,
+            "rx": -2.8662370255005953e-9,
+            "ry": -3.8216496633936003e-10,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-thumb-desktop-cpu4-1795220125943-trace.json",
+        "sha256": "54d18c795b947d8103d34e5f00525b85ef23d50d4e29b6fe24306a0f36daf007",
+        "events": 21387
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 491.59999999403954,
+        "firstContentfulPaint": 416.59999999403954,
+        "firstPaint": 322.345,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8009.0999999940395,
+        "frames": 461,
+        "fps": 57.507827800855765,
+        "p95": 16.800000000000182,
+        "gaps": [
+          {
+            "frame": 13,
+            "ms": 33.399999999999864
+          },
+          {
+            "frame": 20,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 23,
+            "ms": 33.299999999999955
+          },
+          {
+            "frame": 54,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 55,
+            "ms": 33.29999999999973
+          },
+          {
+            "frame": 130,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 140,
+            "ms": 33.40000000000009
+          },
+          {
+            "frame": 202,
+            "ms": 49.899999999999636
+          },
+          {
+            "frame": 234,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 235,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 236,
+            "ms": 33.29999999999927
+          },
+          {
+            "frame": 242,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 244,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 246,
+            "ms": 33.400000000000546
+          },
+          {
+            "frame": 252,
+            "ms": 66.69999999999982
+          },
+          {
+            "frame": 356,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 397,
+            "ms": 33.29999999999927
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4425.199999988079,
+            "duration": 75
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 190.29999999403958
+          },
+          {
+            "name": "release",
+            "at": 306.9999999940396
+          },
+          {
+            "name": "press-again",
+            "at": 1006.9999999940396
+          },
+          {
+            "name": "release-again",
+            "at": 1506.8999999940397
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2190.1999999940394
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2306.8999999940397
+          },
+          {
+            "name": "hold",
+            "at": 2406.7999999940394
+          },
+          {
+            "name": "queued-action",
+            "at": 3606.7999999940394
+          },
+          {
+            "name": "resume",
+            "at": 4006.7999999940394
+          },
+          {
+            "name": "second-press",
+            "at": 4306.799999994039
+          },
+          {
+            "name": "second-release",
+            "at": 4423.39999999404
+          },
+          {
+            "name": "last-press",
+            "at": 5706.799999994039
+          },
+          {
+            "name": "last-release",
+            "at": 5823.39999999404
+          },
+          {
+            "name": "finish",
+            "at": 7006.69999999404
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 340.6894523594534,
+          "playing": false,
+          "fast": false,
+          "arm": 0,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-thumb-mobile-cpu4-1795220125943-trace.json",
+        "sha256": "3423b0a547ecb9ca91d13428324f4726d2bb33e9d9051257d1ae2535ac6182de",
+        "events": 22181
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "thumb",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 138,
+        "firstContentfulPaint": null,
+        "firstPaint": 123.687,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8011.800000011921,
+        "frames": 477,
+        "fps": 59.627236021350804,
+        "p95": 16.700000000000728,
+        "gaps": [
+          {
+            "frame": 266,
+            "ms": 66.59999999999945
+          }
+        ],
+        "longTasks": [
+          {
+            "at": 4439.300000011921,
+            "duration": 63
+          }
+        ],
+        "events": [
+          {
+            "name": "press",
+            "at": 191.79999999403958
+          },
+          {
+            "name": "release",
+            "at": 308.3999999940395
+          },
+          {
+            "name": "press-again",
+            "at": 1008.3999999940395
+          },
+          {
+            "name": "release-again",
+            "at": 1508.2999999940396
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2191.6999999940394
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2308.3999999940397
+          },
+          {
+            "name": "hold",
+            "at": 2408.2999999940394
+          },
+          {
+            "name": "queued-action",
+            "at": 3608.2999999940394
+          },
+          {
+            "name": "resume",
+            "at": 4008.19999999404
+          },
+          {
+            "name": "second-press",
+            "at": 4308.19999999404
+          },
+          {
+            "name": "second-release",
+            "at": 4424.89999999404
+          },
+          {
+            "name": "last-press",
+            "at": 5708.19999999404
+          },
+          {
+            "name": "last-release",
+            "at": 5824.89999999404
+          },
+          {
+            "name": "finish",
+            "at": 7008.0999999940395
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.29999999868265054,
+            "y": 0.25000001449084397,
+            "rx": -1.5808193420951966e-7,
+            "ry": -2.1077591227935955e-8,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-thumb-mobile-cpu4-1795220125943-trace.json",
+        "sha256": "aba3c9a9c86447f04ef2bffef6103521d3bc7158d6983bce5786b01ad93e695d",
+        "events": 21680
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 387.2999999821186,
+        "firstContentfulPaint": null,
+        "firstPaint": 358.914,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8013.4000000059605,
+        "frames": 480,
+        "fps": 60.003000150007516,
+        "p95": 16.799999999999727,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 194.2000000178814
+          },
+          {
+            "name": "release",
+            "at": 310.8000000178814
+          },
+          {
+            "name": "press-again",
+            "at": 1010.8000000178813
+          },
+          {
+            "name": "release-again",
+            "at": 1510.8000000178813
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2194.1000000178815
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2310.7000000178814
+          },
+          {
+            "name": "hold",
+            "at": 2410.7000000178814
+          },
+          {
+            "name": "queued-action",
+            "at": 3610.7000000178814
+          },
+          {
+            "name": "resume",
+            "at": 4010.7000000178814
+          },
+          {
+            "name": "second-press",
+            "at": 4310.600000017881
+          },
+          {
+            "name": "second-release",
+            "at": 4427.300000017882
+          },
+          {
+            "name": "last-press",
+            "at": 5710.600000017881
+          },
+          {
+            "name": "last-release",
+            "at": 5827.300000017882
+          },
+          {
+            "name": "finish",
+            "at": 7010.500000017882
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 336.6821755439468,
+          "playing": false,
+          "fast": false,
+          "arm": -8,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-full-desktop-cpu4-1795220125943-trace.json",
+        "sha256": "70b3fe0a6f916b44a934d2dc2880a1c2080158316203d0bb6b0d86078d17bbab",
+        "events": 22779
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "full",
+      "mobile": false,
+      "cpu": 4,
+      "dpr": 1,
+      "startup": {
+        "ready": 224.7999999821186,
+        "firstContentfulPaint": null,
+        "firstPaint": 199.792,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8008.0999999940395,
+        "frames": 474,
+        "fps": 59.25222195832344,
+        "p95": 16.799999999999727,
+        "gaps": [
+          {
+            "frame": 12,
+            "ms": 33.39999999999998
+          },
+          {
+            "frame": 90,
+            "ms": 33.200000000000045
+          },
+          {
+            "frame": 348,
+            "ms": 33.30000000000018
+          },
+          {
+            "frame": 349,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 447,
+            "ms": 33.399999999999636
+          },
+          {
+            "frame": 452,
+            "ms": 33.30000000000018
+          }
+        ],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 188.29999997615812
+          },
+          {
+            "name": "release",
+            "at": 304.99999997615816
+          },
+          {
+            "name": "press-again",
+            "at": 1004.8999999761581
+          },
+          {
+            "name": "release-again",
+            "at": 1504.999999976158
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2188.2999999761582
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2304.999999976158
+          },
+          {
+            "name": "hold",
+            "at": 2404.899999976158
+          },
+          {
+            "name": "queued-action",
+            "at": 3604.899999976158
+          },
+          {
+            "name": "resume",
+            "at": 4004.799999976158
+          },
+          {
+            "name": "second-press",
+            "at": 4304.899999976158
+          },
+          {
+            "name": "second-release",
+            "at": 4421.4999999761585
+          },
+          {
+            "name": "last-press",
+            "at": 5704.799999976158
+          },
+          {
+            "name": "last-release",
+            "at": 5821.399999976158
+          },
+          {
+            "name": "finish",
+            "at": 7004.699999976158
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.2999999983036466,
+            "y": 0.2500000186598872,
+            "rx": 2.9999997760813533,
+            "ry": -3.2000000271416544,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-full-desktop-cpu4-1795220125943-trace.json",
+        "sha256": "8b8fa0b494a8d898984a82bb2730ed2b4154c613de38e468cb1ab9a801fbd4b3",
+        "events": 24605
+      }
+    },
+    {
+      "kind": "vinyl",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 368.7999999821186,
+        "firstContentfulPaint": 351.19999998807907,
+        "firstPaint": 331.732,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8012.700000017881,
+        "frames": 481,
+        "fps": 60.00274440826815,
+        "p95": 16.700000000000728,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 194.7000000119209
+          },
+          {
+            "name": "release",
+            "at": 311.40000001192095
+          },
+          {
+            "name": "press-again",
+            "at": 1011.3000000119209
+          },
+          {
+            "name": "release-again",
+            "at": 1511.300000011921
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2194.600000011921
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2311.300000011921
+          },
+          {
+            "name": "hold",
+            "at": 2411.200000011921
+          },
+          {
+            "name": "queued-action",
+            "at": 3611.300000011921
+          },
+          {
+            "name": "resume",
+            "at": 4011.2000000119206
+          },
+          {
+            "name": "second-press",
+            "at": 4311.200000011921
+          },
+          {
+            "name": "second-release",
+            "at": 4427.900000011921
+          },
+          {
+            "name": "last-press",
+            "at": 5711.100000011921
+          },
+          {
+            "name": "last-release",
+            "at": 5827.800000011921
+          },
+          {
+            "name": "finish",
+            "at": 7011.000000011921
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "playing": false,
+          "fast": false
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "phase": 335.3372092991064,
+          "playing": false,
+          "fast": false,
+          "arm": -8,
+          "active": false,
+          "frames": 0,
+          "effects": 0,
+          "ghosts": 0,
+          "cue": {
+            "dead": false,
+            "ready": true,
+            "value": 0,
+            "metrics": [
+              {
+                "x": 0,
+                "width": 24.656226249247442
+              },
+              {
+                "x": 36.65621468994581,
+                "width": 15.249985310054184
+              }
+            ],
+            "observed": true
+          },
+          "tokens": {
+            "enter": 350,
+            "exit": 250,
+            "reduced": 150,
+            "indicator": 250,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)",
+            "settle": "cubic-bezier(0.34, 1.25, 0.64, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-vinyl-full-mobile-cpu4-1795220125943-trace.json",
+        "sha256": "e1ee4decb130549aca85f2e8780d8936f6d0bd472c103adcf0dc55d387bbbde3",
+        "events": 21256
+      }
+    },
+    {
+      "kind": "foil",
+      "mode": "full",
+      "mobile": true,
+      "cpu": 4,
+      "dpr": 2,
+      "startup": {
+        "ready": 215.69999998807907,
+        "firstContentfulPaint": null,
+        "firstPaint": 191.2,
+        "firstPaintMetric": "first trace Paint after mount"
+      },
+      "audioConstructed": 0,
+      "motion": {
+        "duration": 8004.0999999940395,
+        "frames": 480,
+        "fps": 60.00300015000751,
+        "p95": 16.799999999999272,
+        "gaps": [],
+        "longTasks": [],
+        "events": [
+          {
+            "name": "press",
+            "at": 184.09999999403954
+          },
+          {
+            "name": "release",
+            "at": 300.69999999403956
+          },
+          {
+            "name": "press-again",
+            "at": 1000.6999999940394
+          },
+          {
+            "name": "release-again",
+            "at": 1500.6999999940394
+          },
+          {
+            "name": "interrupt-press",
+            "at": 2183.9999999940396
+          },
+          {
+            "name": "interrupt-release",
+            "at": 2300.5999999940395
+          },
+          {
+            "name": "hold",
+            "at": 2400.5999999940395
+          },
+          {
+            "name": "queued-action",
+            "at": 3600.5999999940395
+          },
+          {
+            "name": "resume",
+            "at": 4000.5999999940395
+          },
+          {
+            "name": "second-press",
+            "at": 4300.5999999940395
+          },
+          {
+            "name": "second-release",
+            "at": 4433.89999999404
+          },
+          {
+            "name": "last-press",
+            "at": 5700.499999994039
+          },
+          {
+            "name": "last-release",
+            "at": 5833.89999999404
+          },
+          {
+            "name": "finish",
+            "at": 7000.39999999404
+          }
+        ],
+        "cycles": 12,
+        "storyComplete": true,
+        "source": {
+          "x": 0.3,
+          "y": 0.25
+        },
+        "motion": {
+          "dead": false,
+          "ready": true,
+          "serial": 12,
+          "flat": false,
+          "pose": {
+            "x": 0.2999999998892855,
+            "y": 0.2500000012178597,
+            "rx": 2.999999985385683,
+            "ry": -3.2000000017714325,
+            "alpha": 0
+          },
+          "active": true,
+          "frames": 1,
+          "effects": 1,
+          "ghosts": 0,
+          "tokens": {
+            "follow": 400,
+            "return": 1000,
+            "glare": 300,
+            "exit": 250,
+            "reduced": 150,
+            "out": "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        },
+        "held": false,
+        "audioCalls": 0
+      },
+      "trace": {
+        "file": "profile-foil-full-mobile-cpu4-1795220125943-trace.json",
+        "sha256": "16d027fdc1bd08682ac4736e0ff6710279c989704e36ecf0cf552fe9d554ee8a",
+        "events": 23293
+      }
+    }
+  ],
+  "runs": [
+    {
+      "file": ".artifacts/skeuo-media/performance-cpu1-1795219992303.json",
+      "sha256": "dd9dc2d136dcd42e627c974a6dc1fa0ed6c33bc4dda3a35038d2c7a749d29349"
+    },
+    {
+      "file": ".artifacts/skeuo-media/performance-cpu4-1795220125943.json",
+      "sha256": "796da083940cb72d4ccbfa63701f56510a82cb416195fce846e90d34be0d1048"
+    }
+  ],
+  "scope": "16 isolated eight-second native/full media stories, CPU1/4, desktopDPR1/mobileDPR2. Actual frames, long tasks, startup and trace hashes are recorded; fonts are prepared before mounting, source state is read at endpoints and route transfer is excluded. DOM input exercises both platter rates, arm/light/glare retargeting, rate indicators, caller holds and queued actions. Both visual models remain silent. Physical input, source equivalence and optical geometry are verified separately. Raw reports and traces remain local artifacts. Measurement does not pass a final timing gate; all prior tails remain open."
+}

@@ -1074,3 +1074,24 @@ Portable exports keep complete licence comments. Browser posters capture
 initial native states. Full views retain all original content and models.
 Retarget geometry is exact; the explicitly bounded full-normal material
 compositing finding is at most one RGB level in one pixel, not an SVG change.
+
+
+### Turntable and Satin Foil Card
+
+Tiles172:845 and170:2039 retain exact docked240×168 native planes at reference
+66,20. Ten unchanged Figma SVGs live under`assets/components/skeuo-media/`;
+the artwork manifest binds source bytes,intrinsic roots and render bounds,
+including the ceiled43×82 tonearm. Native cartridge/card/photo/rim/bar
+primitives keep their exact captured geometry and materials. The original
+multicolor gradient remains functional foil artwork. No screenshot is product
+art; private browser/Figma raster metrics do not claim PNG identity.
+
+PortraitC1 reuses verified Carlos Garcia Hansen photoTfjOwcrMj5I,
+photo-1610659128929-fa69328744e2. Its captured Figma image hash is
+012dee060cf908063353308214532bb23833e411. Existing800×533 and1600×1067 files,
+both hashes and provenance remain bound in the artwork manifest. Native and
+portable output use800px; full detail uses1600px behind the complete original
+eleven-ellipse emblem. Full responsive rows protect all membership copy.
+No photo,font,credit or alias files change. Portable headers preserve the
+photographer credit and Unsplash licence. Posters capture initial native
+states. Native reference geometry is unchanged; full original models remain.

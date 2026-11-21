@@ -703,3 +703,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   one RGB level in one pixel; source and geometry remain exact. Record isolated
   timing with `node tools/profile-skeuo-devices.js http://127.0.0.1:4173
   --cpu=1` or `--cpu=4`; measurements leave timing gates open.
+- `node tools/verify-skeuo-media.js http://127.0.0.1:4173` covers v4
+  Turntable and Satin Foil Card: ten unchanged supplied SVGs and eight complete
+  original fixtures. Its sixteen groups cover canonical platter/arm/foil/glare
+  and rate-indicator motion, 128 moving layouts, 72 byte-identical painted
+  retargets, physical focus/keys/scaled mouse/moving touch, real scrolling and
+  capture release, independent holds and early cleanup, 24 original-model
+  stories, complete membership copy/emblem, approved portrait resolution,
+  cold routes/LiveTiles and 16 fresh network-blocked exports. Native starts
+  retain exact stopped/flat Figma geometry. Full retains both original models;
+  its responsive foil grid reserves header/photo/member rows. Rate labels and
+  markers live inside the Stage-owned speed action; measure their local
+  geometry independently of the shared button's press scale, including font
+  resizing while held. Preserve focused source buttons during retained-arm
+  reconciliation. Both demos stay silent. Reuse portraitC1 at 800px for native
+  and portable views and 1600px for full detail, with complete attribution.
+  Record isolated timing with `node tools/profile-skeuo-media.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave gates open.

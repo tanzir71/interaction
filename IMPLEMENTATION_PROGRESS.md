@@ -1515,3 +1515,29 @@ records 24 isolated CPU1/4 stories with real trusted inaudible synth audio;
 timing gates remain open. Two Skeuomorph demos, 72 Collections, 121 new/extensions,
 Pro seams and final audits remain. Direct commit/push; Actions disabled;
 previously verified account-wide$0 stop limit preserved.
+
+
+## Phase 4 — Turntable and Satin Foil Card
+
+Two native v4 media demos complete all twenty existing Skeuomorph demos.
+Ten unchanged supplied SVGs and eight complete frozen original fixtures retain
+the exact native artwork and full original models/content. Canonical platter,
+arm,foil/glare and Stage-owned speed-indicator motion preserves source values
+and current paint through interruptions. Retained layers preserve keyboard
+focus; local speed metrics exclude shared press scale. Full foil reserves
+header/photo/member rows so compact readable text cannot overlap its portrait.
+Approved portraitC1/provenance remains unchanged at800/1600px.
+
+Sixteen groups pass 59,794 checks, including128 moving layouts,72 exact painted
+retargets,physical input/touch/capture,independent holds,24 six-second original
+stories,8 cold route/LiveTiles cases and16 fresh offline exports. All327/399
+remediated native compositions pass fit. Unfinished Collections retain
+17 tiny-text/33 low-fill findings; zero overflow/sideways-scroll,
+100 valid fill exceptions,stage debt71 and motion debt39. Required local checks,
+19 runtime/shell,8 CLI/MCP and16 fit-geometry checks pass.
+
+The [timing report](docs/performance/skeuo-media-2026-11-21.json) records16 isolated
+CPU1/4 cases. CPU1: 60.0–60.0 fps, 0 intervals above25ms, 0 long tasks; first trace Paint 31.8–54.0ms and maximum readiness 82.7ms.
+CPU4: 56.8–60.0 fps, 42 intervals above25ms, 5 long tasks; first trace Paint 95.3–358.9ms and maximum readiness 491.6ms. Final timing gates remain open. Remaining:72 Collections,
+121 new/extensions,Pro seams and final audits. Direct commit/push; Actions
+disabled; previously verified account-wide$0 stop limit preserved.

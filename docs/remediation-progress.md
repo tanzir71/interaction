@@ -1,21 +1,78 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 325 of the 399 existing demos: Interface (89),
+The native v4 stage compositions are remediated for 327 of the 399 existing demos: Interface (89),
 Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
 demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and eighteen Skeuomorph demos.
-The remaining work includes 74 existing demos, 121 new or extension components,
+all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and all twenty Skeuomorph demos.
+The remaining work includes 72 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 325 remediated native compositions retains those references.
+None of the 327 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 325 native compositions. The unfinished groups still account for
-0 overflow findings, zero horizontal-scroll findings, 19 tiny-text findings and
+among these 327 native compositions. The unfinished groups still account for
+0 overflow findings, zero horizontal-scroll findings, 17 tiny-text findings and
 33 low-fill findings; findings can overlap within a demo. All 100 documented
 Figma fill exceptions validate.
+
+## Turntable and Satin Foil Card
+
+Tiles `172:845` and `170:2039` complete all twenty existing Skeuomorph
+demos. Both exact native compositions use240×168 planes at reference(66,20).
+Ten supplied SVGs retain their original bytes, intrinsic roots and render
+bounds, including the ceiled43×82 tonearm. The cartridge,120×160 foil card,
+100×100 portrait/rim and text bars keep captured primitive geometry/materials.
+The supplied multicolor gradient is functional foil artwork. No screenshot
+is product artwork; browser/Figma PNG differences remain diagnostic.
+
+Full retains both original programs and all content: STILL/01, original
+play/cue/rate state, complete membership copy and eleven-ellipse emblem.
+Native starts stopped and flat; source defaults remain unchanged. Full foil
+uses a responsive grid to reserve header/photo/member rows instead of allowing
+enlarged compact text to overlap the portrait. Verified Carlos Garcia Hansen
+portraitC1 files and provenance are reused unchanged:800px native/portable,
+1600px full detail. Exports include attribution and the Unsplash licence.
+
+Platter motion retains literal1800/1333ms periods and continuous phase through
+speed changes, pauses and restarts. Tonearm uses350ms settle entering and250ms
+ease-out returning; reduced feedback retains arm layers through150ms fades.
+Retained-arm reconciliation preserves focused source buttons. Stable native
+arm layers protect compact compositing. The Stage-owned speed action contains
+33⅓/45 labels and a250ms sliding indicator, or150ms fixed-marker fades.
+Metrics exclude the shared button's press scale, including font resizing while
+held. Numerical width checks include one CSS layout unit plus serialization
+precision. Shared press feedback remains independent of the owned indicator.
+
+Fine-pointer foil uses1000px perspective,400ms follow,1000ms return,300ms/.32
+glare in and250ms out. Coarse/reduced feedback stays flat and cross-fades150ms.
+Native calibration preserves the exact reference pose without changing source
+light values, click reversal, arrow steps/clamps or Home/leave. Native easing
+samples use a1000ms span to avoid precision loss at a1ms sampler duration.
+Every tested painted retarget preserves all current pixels. Both demos stay
+silent; unexpected AudioContext construction fails verification.
+
+Sixteen public groups pass 59,794 checks: eight complete frozen original
+fixtures bound to both factories,128 moving layouts,72 painted retargets,
+actual keys/scaled mouse/moving touch/scroll and capture cleanup, physical
+focus and themes, independent caller/document/full-viewport holds,24 six-second
+original-model stories,8 cold route/LiveTiles cases and16 fresh network-blocked
+exports. All327 remediated native compositions pass fit. The complete399
+diagnostic retains 17 tiny-text and 33 low-fill findings,
+all in unfinished Collections, with zero overflow/sideways-scroll and100 valid
+fill exceptions. Stage debt71; static motion debt39, without new violations.
+Required local checks plus19 runtime/shell,8 CLI/MCP and16 fit-geometry checks
+pass. No GitHub workflow runs are started.
+
+[Isolated timing report](performance/skeuo-media-2026-11-21.json):16 eight-second
+CPU1/4 native/full desktopDPR1/mobileDPR2 stories record actual frame intervals,
+long tasks, startup and bound CDP traces. CPU1: 60.0–60.0 fps, 0 intervals above25ms, 0 long tasks; first trace Paint 31.8–54.0ms and maximum readiness 82.7ms.
+CPU4: 56.8–60.0 fps, 42 intervals above25ms, 5 long tasks; first trace Paint 95.3–358.9ms and maximum readiness 491.6ms.
+These are measurements; final timing gates and all previous tails remain open.
+The remaining scope is72 Collections,121 new/extensions,Pro seams and final
+audits. Commit/push directly; Actions disabled; the previously verified
+account-wide$0 stop limit is preserved.
 
 ## Sealed Letter, Pocket Synth and Activity Capsule
 
