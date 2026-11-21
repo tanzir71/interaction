@@ -1,20 +1,83 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 354 of the 399 existing demos:
+Native v4 compositions are remediated for 358 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the twenty-seven DRAMS Collections demos.
-The remaining work includes 45 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the thirty-one DRAMS Collections demos.
+The remaining work includes 41 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 354 remediated native compositions retains those references.
+None of the 358 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 354 native compositions. The unfinished groups still account for
+among these 358 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-14 low-fill findings; findings can overlap within a demo. All 119 documented
+10 low-fill findings; findings can overlap within a demo. All 122 documented
 Figma fill exceptions validate.
+
+## I/O, LED, Standard and Slurp switches
+
+The native previews match v4 tiles `90:604`, `90:688`, `90:933` and `90:994`.
+Their artwork differs from the older manifest descriptions: I/O has a 120×120
+housing and an 80×80 vertical recess with a 68×36 rocker; LED has a 120×100
+housing, an 80×40 recess, a 34×32 cap and an 8px green indicator; Standard uses
+a 92×46 dark rail and 38px cap; Slurp uses the supplied 96×28 orange vector
+inside a 120×44 recess. Six unchanged supplied SVGs retain their intrinsic
+roots and render offsets, while seven primitive frames use their captured
+fills, borders and shadows. Native starts on. The three documented fill
+exceptions preserve LED, Standard and Slurp at their exact Figma sizes; LED's
+catalog fill is 10.6% after fitting into the narrower 335×264 stage.
+
+Full views retain the complete original 79×40 controllers, 34px caps, 39px
+travel, materials and displayed copy in a 400×584 composition with a 368×320
+source plane. Full starts off. Each original event program remains unchanged
+inside a small adapter for the live button. Direction resolves on release
+from dominant horizontal displacement versus upward displacement; ties use
+the latter and the threshold stays strictly greater than 12 source pixels.
+Repeated assignments, cancellation coordinates and the next-click drag latch
+remain intact. Input coordinates restore source precision after Stage zoom.
+The controllers have no idle simulation loop. Each refreshed prompt describes
+its own v4 geometry, supplied artwork, controls and complete original model.
+
+Normal travel takes 350ms, reaches its one-pixel overshoot at 55% and settles
+by 80%. Press and release use 80/250ms feedback; reduced motion uses 150ms
+retained fades and opacity feedback. Interrupted transitions retain current
+paint, including pressure opacity. Pending Web Animation pauses resolve at
+their sampled currentTime so a caller hold cannot advance one frame. Stable
+inputs stay outside retained paint, preserve native Enter/Space and arrow/Home/
+End behavior, and keep 44px physical targets. Compact full copy remains at
+least 11.2px. Shared Stage owns Dock actions and thumbnail Tab order.
+
+The emitted verifier passes eleven groups and 2,470 checks, including 96
+immutable original histories with 680 reference states, exact native slots,
+32 layouts, actual mouse/keys/touch, interrupted paint, caller/viewport/document
+holds, independent press owners, cleanup and sixteen fresh network-blocked
+exports. Eight actual desktop/mobile detail routes also pass captured dragging
+outside the control followed by native Enter; the tanziro.com footer link is
+verified. All four native posters are refreshed. Required local registry,
+generated-output, library, runtime, Stage and CLI checks pass at the documented
+baseline: 651 library checks, all 399 previews and 97 offline exports. The
+global fit command still exits 1 for the 41 unfinished demos, with no findings
+in the 358 completed previews. Stage debt falls 44→40 and motion debt 23→19.
+Fifteen shared-file siblings, 325 other modules, 395 metadata records, 380
+unrelated catalog rows, five protected shared files, 372 earlier helpers,
+211 earlier private inputs, 1,380 publication files and 222+184 accepted
+snapshot files remain unchanged.
+
+The [isolated timing report](performance/drams-switches-core-2026-11-21.json)
+retains all 32 eight-second native/full, desktop DPR 1 and compact DPR 2 stories.
+CPU 1 records 60.00fps, zero gaps above 25ms and zero long tasks; first trace
+Paint spans 8.37–20.26ms and readiness stays within 18.9ms. CPU 4 records
+58.75–59.88fps, 20 gaps and 16 long tasks; first trace Paint spans 44.72–99.92ms
+and readiness stays within 92ms. All traces and outliers remain preserved.
+The earlier 32 measurements also remain archived. Newline cleanup left all
+399 loaded definitions byte-identical; it was not a performance optimization.
+Subsequent profiler runs retain their traces in unique run directories.
+Fonts were prepared before mounting, own heavy checks had stopped and other
+applications were not controlled. These measurements leave final timing,
+cold-route and Lighthouse gates open. Actions remains disabled; workflow and
+billing settings stay unchanged, including the account-wide $0 stop limit.
 
 ## Pendulum and Bouncin' Ball
 

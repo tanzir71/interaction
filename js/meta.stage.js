@@ -13964,13 +13964,21 @@ INTRX.meta({
     ]
   },
   "drams-001": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -13983,9 +13991,13 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Switch the power"
+    "caption": "Switch the power",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-006": {
     "designSize": "sm",
@@ -14057,13 +14069,21 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "drams-018": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -14076,8 +14096,12 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-023": {
     "designSize": "sm",
@@ -14310,13 +14334,21 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "drams-037": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -14329,8 +14361,12 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-039": {
     "designSize": "sm",
@@ -14379,13 +14415,21 @@ INTRX.meta({
     "addedAt": "2026-11"
   },
   "drams-042": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -14398,7 +14442,11 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   }
 });

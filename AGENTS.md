@@ -908,3 +908,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with
   `node tools/profile-drams-objects-physics.js http://127.0.0.1:4173
   --cpu=1` or `--cpu=4`; preserve all traces and keep final timing gates open.
+
+- `node tools/verify-drams-switches-core.js http://127.0.0.1:4173` covers v4
+  I/O, LED, Standard and Slurp switches. Keep the vertical 120px I/O housing,
+  green LED housing, 92px dark Standard rail and unchanged orange Slurp vector;
+  older 79px manifest descriptions describe the retained full controls.
+  Six exact SVGs and seven captured primitive frames supply native artwork.
+  Native starts on; full starts off and preserves the complete original event
+  program, materials and copy. Direction resolves on release from dominant dx
+  versus upward dy, ties use dy, and the threshold is strictly greater than
+  12 source pixels. Preserve repeated assignments, cancellation coordinates
+  and the next-click drag latch. Restore source coordinates through Stage zoom.
+  Keep 44px physical targets, readable compact copy and Stage-owned Dock/Tab
+  order. Normal travel reaches its one-pixel overshoot at 55% of 350ms and
+  settles by 80%; reduced motion retains 150ms fades and opacity press feedback.
+  Resolve pending Web Animation pauses at their sampled currentTime, so a hold
+  cannot advance one paint. Queue semantic intent while held, preserve separate
+  key/pointer/virtual owners and clean up captures, listeners and retained paint.
+  The verifier checks frozen original histories, exact native slots, actual
+  input, interrupted paint, caller/viewport/document holds and offline exports.
+  Record isolated timing with `node tools/profile-drams-switches-core.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; keep final timing gates open.

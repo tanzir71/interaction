@@ -1,0 +1,1512 @@
+{
+  "at": "2026-11-21T22:12:15.793Z",
+  "sourceFile": "js/demos.drams.switches.js",
+  "sourceSHA256": "584afacce630405709bf0d6c7778a8181e671c4332d4241bfa963cd95a169a81",
+  "harnessSHA256": "8a1e22cfd22efb32a2856691493e1e32786de59e47d0339595317239fd3e6d89",
+  "inputs": {
+    "tools/verification/drams-switches-core-harness.js": "8a443bdbcbce4fd73f76f0f7b00c253303070dc202e1e8e981b068de43ba5cdf",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c"
+  },
+  "runId": "2026-11-21T22-12-15-790Z-584afacce630",
+  "notes": [
+    "Actual 8000ms emitted native/full stories; synthetic profile input is separate from trusted verifier input.",
+    "Geist, Geist Mono and Inter fonts prepared before mount; first trace Paint includes mounting and native image decoding.",
+    "Own heavy checks stopped; other applications not controlled. Every completed trace and timing outlier is retained.",
+    "Frame timings record findings; cold-route, Lighthouse and site-wide timing gates remain open."
+  ],
+  "cases": [
+    {
+      "name": "drams-001-thumb-desktop-dpr1-cpu1",
+      "id": "drams-001",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 11.5,
+      "frames": 481,
+      "elapsed": 8016.234,
+      "fps": 60.00323842841913,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "57e435f9848c3114f68b4380f2f61a5e6428cbe7f84446451ce714f24ceaca97",
+      "firstPaintMs": 12.474,
+      "firstPaintDurationMs": 0.629
+    },
+    {
+      "name": "drams-001-thumb-compact-dpr2-cpu1",
+      "id": "drams-001",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.400000005960464,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "fc17558d882880d8cfb0a8430cb962cef410e7a2dfdeaa181a0ba8d32bedbfb4",
+      "firstPaintMs": 11.215,
+      "firstPaintDurationMs": 0.369
+    },
+    {
+      "name": "drams-001-full-desktop-dpr1-cpu1",
+      "id": "drams-001",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 7.5999999940395355,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "a4c8bcd7952043b840cf68b0d7ee74f73edbc50cc1498a9681f3421b2e8fbf81",
+      "firstPaintMs": 8.37,
+      "firstPaintDurationMs": 0.198
+    },
+    {
+      "name": "drams-001-full-compact-dpr2-cpu1",
+      "id": "drams-001",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.100000001490116,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "10f0e4ac7fe58964ccadb028e57f900f2ecb2dc3d808f92669528d1975d65d65",
+      "firstPaintMs": 10.9,
+      "firstPaintDurationMs": 0.42
+    },
+    {
+      "name": "drams-018-thumb-desktop-dpr1-cpu1",
+      "id": "drams-018",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 13.299999997019768,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "e79885e66d31b4fcddbef1c28830cf5089de446adf0270c0e9fee5874c4533aa",
+      "firstPaintMs": 14.265,
+      "firstPaintDurationMs": 0.741
+    },
+    {
+      "name": "drams-018-thumb-compact-dpr2-cpu1",
+      "id": "drams-018",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 11.299999997019768,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "f5f1d5bed051dad3cc91646bd2f34ec5a46eaf91b7f81c88465ddf20f9401873",
+      "firstPaintMs": 11.964,
+      "firstPaintDurationMs": 0.491
+    },
+    {
+      "name": "drams-018-full-desktop-dpr1-cpu1",
+      "id": "drams-018",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 13.299999997019768,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "d336d7140fb21d0e1a731439c66b7e3c2c2fd52e3fd2eb93941c71dd8ec79dbc",
+      "firstPaintMs": 14.493,
+      "firstPaintDurationMs": 0.41
+    },
+    {
+      "name": "drams-018-full-compact-dpr2-cpu1",
+      "id": "drams-018",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 9.600000001490116,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "5914dcd5ea477adffa112b8424d56ab9949f714e904853c26ce726f9aacd6361",
+      "firstPaintMs": 10.235,
+      "firstPaintDurationMs": 0.23
+    },
+    {
+      "name": "drams-037-thumb-desktop-dpr1-cpu1",
+      "id": "drams-037",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 11.899999998509884,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "b7ecfc610e8d989669eb4b1ef42109e2aeb00f7e5d9c185fb2db625beac9c83d",
+      "firstPaintMs": 12.889,
+      "firstPaintDurationMs": 0.827
+    },
+    {
+      "name": "drams-037-thumb-compact-dpr2-cpu1",
+      "id": "drams-037",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.399999998509884,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "d0f797b3b612d1f60354bfbe44a182a54c2c7373660ec282d2db90d5b154cb42",
+      "firstPaintMs": 11.41,
+      "firstPaintDurationMs": 0.481
+    },
+    {
+      "name": "drams-037-full-desktop-dpr1-cpu1",
+      "id": "drams-037",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 8.5,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "e99b8780739c32a5c2cb5ac8beb844247f3af4c973df60d6eca11952c36c2540",
+      "firstPaintMs": 9.282,
+      "firstPaintDurationMs": 0.266
+    },
+    {
+      "name": "drams-037-full-compact-dpr2-cpu1",
+      "id": "drams-037",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 11.700000002980232,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "23f8d52277e181a727da5db664678d92ac98b72230a8d4a51dafdb0920840e0d",
+      "firstPaintMs": 12.327,
+      "firstPaintDurationMs": 0.407
+    },
+    {
+      "name": "drams-042-thumb-desktop-dpr1-cpu1",
+      "id": "drams-042",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 10.5,
+      "frames": 481,
+      "elapsed": 8016.334000000001,
+      "fps": 60.00248991621356,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "cecdadfd15653c16f5791edb6eb1f334764597b60cab4a9d5bb11fb6194fe306",
+      "firstPaintMs": 11.326,
+      "firstPaintDurationMs": 0.46
+    },
+    {
+      "name": "drams-042-thumb-compact-dpr2-cpu1",
+      "id": "drams-042",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.599999994039536,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "805087d7b41a7d1a510eaad0efcfe64e3a791c7202197dabd9bb32fcf47eeba5",
+      "firstPaintMs": 11.723,
+      "firstPaintDurationMs": 0.559
+    },
+    {
+      "name": "drams-042-full-desktop-dpr1-cpu1",
+      "id": "drams-042",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 9,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "3789d0823790b8a0cd3c598de8511a8a6b67c01a3e3322c5badd67492b25722d",
+      "firstPaintMs": 14.473,
+      "firstPaintDurationMs": 0.21
+    },
+    {
+      "name": "drams-042-full-compact-dpr2-cpu1",
+      "id": "drams-042",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 18.899999998509884,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "52b3db2e42cb0531a2522db3f8aaeb4e240f727a9d64ae6565e839a9e3e8d749",
+      "firstPaintMs": 20.259,
+      "firstPaintDurationMs": 0.357
+    },
+    {
+      "name": "drams-001-thumb-desktop-dpr1-cpu4",
+      "id": "drams-001",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 92,
+      "frames": 471,
+      "elapsed": 8016.400000000001,
+      "fps": 58.75455316600968,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "max": 100,
+      "gapsOver25ms": 4,
+      "longTasks": [
+        {
+          "start": 93.29999999701977,
+          "duration": 102
+        },
+        {
+          "start": 3719.10000000149,
+          "duration": 55
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "7bdf99bfa11ca4d5e2efa530cd23c4756f4eba9f47618ee96c6dc37beeb4b49f",
+      "firstPaintMs": 99.917,
+      "firstPaintDurationMs": 3.702
+    },
+    {
+      "name": "drams-001-thumb-compact-dpr2-cpu4",
+      "id": "drams-001",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 70.70000000298023,
+      "frames": 477,
+      "elapsed": 8016.234,
+      "fps": 59.504250998660964,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 83.234,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 100.89999999850988,
+          "duration": 79
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "73a92920b62a23792311ae961f2f1c34ea177bb92f776437ee78d706084f9250",
+      "firstPaintMs": 76.535,
+      "firstPaintDurationMs": 2.465
+    },
+    {
+      "name": "drams-001-full-desktop-dpr1-cpu4",
+      "id": "drams-001",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 56.30000000447035,
+      "frames": 479,
+      "elapsed": 8016.3,
+      "fps": 59.753252747526915,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 49.900000000000006,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 95.29999999701977,
+          "duration": 64
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "c423f6f0f9a5885c104802753848e5027069d92c110a1fc55e01eda2f732b4e5",
+      "firstPaintMs": 62.309,
+      "firstPaintDurationMs": 1.626
+    },
+    {
+      "name": "drams-001-full-compact-dpr2-cpu4",
+      "id": "drams-001",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 60.899999998509884,
+      "frames": 478,
+      "elapsed": 8016.3,
+      "fps": 59.628506917156294,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 66.6,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 80.10000000149012,
+          "duration": 69
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-001-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "d16ed931b57e6f0f4734fb560f023f3a450e0343e5142fadbb9872e3400ed763",
+      "firstPaintMs": 65.576,
+      "firstPaintDurationMs": 1.05
+    },
+    {
+      "name": "drams-018-thumb-desktop-dpr1-cpu4",
+      "id": "drams-018",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 61.20000000298023,
+      "frames": 478,
+      "elapsed": 8016.3,
+      "fps": 59.628506917156294,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 66.69999999999999,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 77.20000000298023,
+          "duration": 71
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "630b303df6ddb2fd211280b24db8122ee83ead89e677114e99587bc03693589f",
+      "firstPaintMs": 66.469,
+      "firstPaintDurationMs": 3.086
+    },
+    {
+      "name": "drams-018-thumb-compact-dpr2-cpu4",
+      "id": "drams-018",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 87.20000000298023,
+      "frames": 475,
+      "elapsed": 8016.4,
+      "fps": 59.253530262960936,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 100,
+      "gapsOver25ms": 2,
+      "longTasks": [
+        {
+          "start": 110.5,
+          "duration": 96
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "d7667e748cf3c8ff1e87d76857bfb453f08abd5c606cdfeb3bb86df2f8e3af19",
+      "firstPaintMs": 96.338,
+      "firstPaintDurationMs": 5.94
+    },
+    {
+      "name": "drams-018-full-desktop-dpr1-cpu4",
+      "id": "drams-018",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 46.29999999701977,
+      "frames": 480,
+      "elapsed": 8016.4,
+      "fps": 59.87725163414999,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 33.400000000000006,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 79.5,
+          "duration": 54
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "0d40d036d863c6ccb4eb6890ebc68461dca5cf37e033727e8b1d6b5f8469029b",
+      "firstPaintMs": 49.584,
+      "firstPaintDurationMs": 1.04
+    },
+    {
+      "name": "drams-018-full-compact-dpr2-cpu4",
+      "id": "drams-018",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 57.79999999701977,
+      "frames": 478,
+      "elapsed": 8016.434,
+      "fps": 59.62751018719795,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 66.73400000000001,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 83.39999999850988,
+          "duration": 65
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "LED power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-018-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "5165285ffe22f9a7b460185e140d4b14816f93a55337863921f950cd232cf2f7",
+      "firstPaintMs": 62.366,
+      "firstPaintDurationMs": 1.048
+    },
+    {
+      "name": "drams-037-thumb-desktop-dpr1-cpu4",
+      "id": "drams-037",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 69.60000000149012,
+      "frames": 478,
+      "elapsed": 8016.4,
+      "fps": 59.62776308567437,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 66.60000000000001,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 87,
+          "duration": 77
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "e50767c6d2c13e6a9f6ef5986a03f38e03892301ffca2c5e15fb31d6457827e4",
+      "firstPaintMs": 74.556,
+      "firstPaintDurationMs": 2.752
+    },
+    {
+      "name": "drams-037-thumb-compact-dpr2-cpu4",
+      "id": "drams-037",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 46.70000000298023,
+      "frames": 480,
+      "elapsed": 8016.4,
+      "fps": 59.87725163414999,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 33.400000000000006,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 73.60000000149012,
+          "duration": 53
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "1a893e315810b8784639e1ff846adcda2ecb44bf8f3ff2900475f8a161587d8a",
+      "firstPaintMs": 50.374,
+      "firstPaintDurationMs": 1.832
+    },
+    {
+      "name": "drams-037-full-desktop-dpr1-cpu4",
+      "id": "drams-037",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 41.100000001490116,
+      "frames": 479,
+      "elapsed": 8016.334000000001,
+      "fps": 59.752999313651344,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 50.034000000000006,
+      "gapsOver25ms": 1,
+      "longTasks": [],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "9ff2997747a9f21bb0fd46cda73c4e30046422c308deb573978327680e28c5a1",
+      "firstPaintMs": 44.722,
+      "firstPaintDurationMs": 1.224
+    },
+    {
+      "name": "drams-037-full-compact-dpr2-cpu4",
+      "id": "drams-037",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 48.19999999552965,
+      "frames": 479,
+      "elapsed": 8016.4,
+      "fps": 59.75250735991218,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 50,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 76.79999999701977,
+          "duration": 55
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Standard power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-037-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "97361fb36abe1af5128f2b6fd2e08c3067cfa53c6ed369e6eb3b451b593a4cf2",
+      "firstPaintMs": 51.403,
+      "firstPaintDurationMs": 1
+    },
+    {
+      "name": "drams-042-thumb-desktop-dpr1-cpu4",
+      "id": "drams-042",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 59.19999999552965,
+      "frames": 478,
+      "elapsed": 8016.299999999999,
+      "fps": 59.6285069171563,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 66.6,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 98.29999999701977,
+          "duration": 67
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "6fd5222eae67e5527e94de982a7ebcefd6e2c9524eaa6ff0173628338eb4f62d",
+      "firstPaintMs": 63.54,
+      "firstPaintDurationMs": 2.224
+    },
+    {
+      "name": "drams-042-thumb-compact-dpr2-cpu4",
+      "id": "drams-042",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 58,
+      "frames": 479,
+      "elapsed": 8016.400000000001,
+      "fps": 59.75250735991217,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "max": 50,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 77.5,
+          "duration": 65
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": true,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "f02f26fe58fdaaa64b25a6c5fe0cd68d537198daaa8653a051628e1fa49cc41b",
+      "firstPaintMs": 61.798,
+      "firstPaintDurationMs": 1.85
+    },
+    {
+      "name": "drams-042-full-desktop-dpr1-cpu4",
+      "id": "drams-042",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 44.5,
+      "frames": 479,
+      "elapsed": 8016.3,
+      "fps": 59.753252747526915,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 50,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 76.60000000149012,
+          "duration": 51
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "6614d4cde3d793198609c3a0133b90d9f488724603550edec6b0aaaaf6c54d91",
+      "firstPaintMs": 48.31,
+      "firstPaintDurationMs": 1.175
+    },
+    {
+      "name": "drams-042-full-compact-dpr2-cpu4",
+      "id": "drams-042",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 49.100000001490116,
+      "frames": 479,
+      "elapsed": 8016.334,
+      "fps": 59.75299931365135,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 49.934,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 78.5,
+          "duration": 56
+        }
+      ],
+      "events": 16,
+      "state": {
+        "dead": false,
+        "native": false,
+        "held": false,
+        "model": {
+          "checked": false,
+          "classes": [],
+          "data": {
+            "values": "0",
+            "value": "0",
+            "state": "off",
+            "source": "keyboard",
+            "changes": "16"
+          },
+          "status": "Slurp power off"
+        },
+        "queue": 0,
+        "pointers": [],
+        "keys": [],
+        "virtual": false,
+        "animations": 0,
+        "retained": 0
+      },
+      "trace": ".artifacts/drams-switches-core/profiles/2026-11-21T22-12-15-790Z-584afacce630/drams-042-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "f9ac4e8beb769758a8fa973d473b5cfcf1007a687f7526bf1f57bc875c9eae08",
+      "firstPaintMs": 52.802,
+      "firstPaintDurationMs": 0.855
+    }
+  ],
+  "browser": "140.0.7339.16",
+  "finished": "2026-11-21T22:16:53.340Z",
+  "sourceStable": true
+}
