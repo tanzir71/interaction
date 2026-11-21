@@ -10,7 +10,7 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
   `designSize` remains the complete composition used by detail and exports.
 
 ## Rules
-- Work in the order of Handoff 3 §9. Per the owner's instruction on 15 Nov 2026,
+- Work in the order of Handoff 3 `9. Per the owner's instruction on 15 Nov 2026,
   commit and push phases directly; do not open PRs.
 - Owner instruction, 17 Nov 2026: keep GitHub Actions disabled for this
   repository. Run verification locally; commit and push without starting or
@@ -39,7 +39,7 @@ node tools/verify-stage.js            # from Phase 1
 node tools/build-registry.js --check  # from Phase 2
 node tools/verify-library.js http://127.0.0.1:4173
 node tools/audit-stage-fit.js http://127.0.0.1:4173
-node tools/verify-motion.js           # baseline mode until §5b is done, then --strict
+node tools/verify-motion.js           # baseline mode until `5b is done, then --strict
 ```
 
 ## Stage migration (Phase 1)
@@ -797,3 +797,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   the three sparse-fill exceptions and all twelve shared-file siblings.
   Record isolated timing with `node tools/profile-drams-volumes.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; final timing gates remain open.
+
+- Published Empty/Hidden/Visible volume renderers scope the full view-angle
+  property to the current live rotor and guard unchanged readout/theme writes.
+  Preserve this optimization when extending their host: inheriting the view
+  property through the complete original scene invalidates static arc/tick
+  styles on every frame. The historical batch helpers remain frozen. The
+  renderer follow-up preserves 144 whole-stage baseline/candidate frames and
+  all 16 emitted-source groups. Record new timing with
+  `node tools/profile-drams-volume-render.js http://127.0.0.1:4173 --cpu=1`
+  or `--cpu=4`; preserve the earlier performance report and keep final gates open.

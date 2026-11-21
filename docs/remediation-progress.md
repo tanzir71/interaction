@@ -16,6 +16,19 @@ among these 339 native compositions. The unfinished groups still account for
 22 low-fill findings; findings can overlap within a demo. All 110 documented
 Figma fill exceptions validate.
 
+## Volume render invalidation follow-up
+
+Empty, Hidden and Visible Track Volume keep the same pixels and source behavior while their full renderers perform less style and layout work. The view angle is scoped to the current rotor instead of inherited by the entire source scene; the unused full-plane progress variable is no longer written. Readout text and the scene-theme attribute update only when their values change. Native geometry, SVG bytes, original controllers, motion equations, focus and all twelve shared-file siblings remain unchanged.
+
+Paired private CPU 4 full-view experiments kept one run per variant. The original control recorded 52.38/54.38 fps with 88 combined gaps on desktop/compact views. Guarding unchanged readout text reduced repeated layouts from 238/252 to 13/13, while its 48 remaining gaps still tracked inherited style work. Scoping the rotor property and guarding the theme attribute then recorded 59.88/59.88 fps with two combined gaps and no long tasks. Main-thread UpdateLayoutTree time fell from 2,666.7/2,416.1 ms to 364.8/371.6 ms. These exploratory runs supplement the preserved historical measurements.
+
+All 144 baseline/candidate whole-stage comparison frames are byte-identical, with complete original model DOM/state and analytic motion unchanged. The actual emitted-source verifier again passes all 16 groups and 97,948 checks, including 72 exact retarget boundaries, physical mouse/moving touch, 24 fresh offline exports, 18 full-model stories, independent holds, queued input and 21,600 rapid retargets. Required local checks, the full fit diagnostic, 19 runtime/shell tests, eight CLI/MCP tests and sixteen fit-geometry checks pass at the same documented baseline. All 339 remediated compositions still pass their fit gates; 60 existing demos and 121 new/extensions remain, with Pro seams and final audits open. The next three object controls have twelve frozen original captures and 11,616 source-equivalence checks prepared; their native artwork remains pending Figma access.
+
+[New emitted-source measurements](performance/drams-volume-render-2026-11-21.json) retain 24 eight-second CPU 1/4 native/full desktop DPR 1 and compact DPR 2 stories after this change.
+CPU 1: 60.00–60.00 fps, 0 intervals above 25 ms, 0 long tasks; first trace Paint 13.5–21.3 ms, maximum readiness 25.4 ms.
+CPU 4: 59.50–60.00 fps, 2 intervals above 25 ms, 1 long tasks; first trace Paint 66.6–141.1 ms, maximum readiness 189.4 ms.
+The [historical baseline](performance/drams-volumes-2026-11-21.json), including its 53.14 fps tail, 119 throttled gaps, thirteen long tasks and 379.2 ms first trace Paint maximum, remains unchanged. Fonts are prepared before mounting and route transfer is excluded. Final library timing gates remain open. GitHub Actions stays disabled; the account-wide $0 stop limit is preserved.
+
 ## Empty, Hidden and Visible Track Volume
 
 Empty Track Volume, Hidden Track Volume and Visible Track Volume match v4 tiles 89:281, 89:301 and 89:322. All eight supplied SVGs retain their exact bytes and intrinsic roots. Their 324×168 native planes preserve reference origin 24,20 inside 372×264. Empty retains the 16×160 groove and 40 px head at centre 186,92. Hidden retains the faint 1×161 exported guide, 48 px head and attached 3×12 marker at the same centre. Visible retains the 14×160 groove, 14×90 orange fill and 40×32 cap at centre 186,100. Stable original lower-cap pixels and a continuous 100 px orange span verify fill growth without seams.
