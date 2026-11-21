@@ -1,0 +1,43 @@
+{
+  "id": "drams-032",
+  "title": "Hollin' Volume",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-032",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 032, Hollin' Volume, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Drag the control, use arrow keys, Home or End.",
+  "source": {
+    "name": "DRAMS / Hollin' Volume",
+    "url": "https://drams.framer.website/drams/032"
+  },
+  "html": "<div class=\"d-drams-032\"><div class=\"hole-frame\"><div class=\"numbers\" aria-hidden=\"true\"><span style=\"left:80px;top:8px\">0</span><span style=\"left:116px;top:17.646170927520416px\">5</span><span style=\"left:142.35382907247958px;top:43.99999999999999px\">10</span><span style=\"left:152px;top:80px\">15</span><span style=\"left:142.35382907247958px;top:115.99999999999999px\">20</span><span style=\"left:116px;top:142.35382907247958px\">25</span><span style=\"left:80.00000000000001px;top:152px\">30</span><span style=\"left:43.99999999999999px;top:142.35382907247958px\">35</span><span style=\"left:17.64617092752043px;top:116.00000000000003px\">40</span><span style=\"left:8px;top:80.00000000000001px\">45</span><span style=\"left:17.646170927520423px;top:43.99999999999999px\">50</span><span style=\"left:43.99999999999997px;top:17.646170927520437px\">55</span></div><div class=\"control\" role=\"slider\" tabindex=\"0\" aria-label=\"Hollin volume\" aria-valuemin=\"0\" aria-valuemax=\"55\"><div class=\"disc white-disc\"><i class=\"hole\">0</i></div></div></div><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-032{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-032 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-032 button{font:inherit;cursor:pointer} .d-drams-032 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-032 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-032 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-032 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-032 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-032 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-032 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-032 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-032 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-032 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-032 .hole-frame{position:relative;width:160px;height:160px}.d-drams-032 .control{position:absolute;left:28px;top:28px;width:104px;height:104px;border-radius:50%}.d-drams-032 .disc{box-shadow:inset 1px 1px 2px #fff,3px 4px 8px #0003}.d-drams-032 .hole{position:absolute;left:9px;top:42px;width:20px;height:20px;display:grid;place-items:center;border-radius:50%;font-style:normal;font-size:7px;color:#fff;background:linear-gradient(140deg,#ff7c37,#f3510e);box-shadow:inset 0 1px 3px #ad360940}.d-drams-032 .numbers{opacity:0;transition:opacity .18s}.d-drams-032 .hole-frame:hover .numbers,.d-drams-032 .hole-frame:focus-within .numbers{opacity:1}.d-drams-032 .numbers span{position:absolute;font-size:10px;transform:translate(-50%,-50%);color:#888}",
+  "js": "const control=root.querySelector('.control'),disc=root.querySelector('.disc'),status=root.querySelector('.sr');const controller=new AbortController(),opts={signal:controller.signal};let value=0,down=false,startY=0,startX=0,startValue=value;const min=0,max=55,step=5;function set(v,source){value=Math.max(min,Math.min(max,Math.round(v/step)*step));const angle=value*360/60;disc.style.transform='rotate('+angle+'deg)';control.setAttribute('aria-valuenow',value);control.setAttribute('aria-valuetext',value+'');root.dataset.value=String(value);root.dataset.angle=String(angle);root.dataset.source=source;status.textContent=\"Hollin' Volume\"+': '+value+'';root.querySelectorAll('[data-tick]').forEach(t=>t.setAttribute('data-active',Number(t.dataset.tick)===value?'true':'false'))}control.addEventListener('pointerdown',e=>{if(e.button!==0)return;down=true;startX=e.clientX;startY=e.clientY;startValue=value;control.setPointerCapture(e.pointerId);control.focus({preventScroll:true});root.dataset.dragging='true'},opts);control.addEventListener('pointermove',e=>{if(down)set(startValue+((e.clientX-startX)-(e.clientY-startY))*(max-min)/150,'drag')},opts);function release(e){if(!down)return;down=false;root.dataset.dragging='false';if(control.hasPointerCapture(e.pointerId))control.releasePointerCapture(e.pointerId)}control.addEventListener('pointerup',release,opts);control.addEventListener('pointercancel',release,opts);control.addEventListener('keydown',e=>{if(['ArrowUp','ArrowRight','ArrowDown','ArrowLeft','Home','End',' '].includes(e.key)){e.preventDefault();set(e.key==='Home'?min:e.key==='End'?max:e.key===' '?value>=max?min:value+step:value+(['ArrowUp','ArrowRight'].includes(e.key)?step:-step),'keyboard')}},opts);root.querySelectorAll('[data-value]').forEach(b=>b.addEventListener('click',()=>set(Number(b.dataset.value),'select'),opts));root.querySelectorAll('[data-delta]').forEach(b=>b.addEventListener('click',()=>set(value+Number(b.dataset.delta),'button'),opts));set(value,'initial');return()=>controller.abort();",
+  "prompt": "Recreate the Hollin' Volume composition from https://drams.framer.website/drams/032 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Drag the control, use arrow keys, Home or End.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "drag",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": false,
+    "aria": "slider"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

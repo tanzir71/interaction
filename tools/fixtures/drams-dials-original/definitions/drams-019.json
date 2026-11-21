@@ -1,0 +1,43 @@
+{
+  "id": "drams-019",
+  "title": "Line Volume",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-019",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 019, Line Volume, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Drag the control, use arrow keys, Home or End.",
+  "source": {
+    "name": "DRAMS / Line Volume",
+    "url": "https://drams.framer.website/drams/019"
+  },
+  "html": "<div class=\"d-drams-019\"><div class=\"line-frame\"><div class=\"control\" role=\"slider\" tabindex=\"0\" aria-label=\"Line volume\" aria-valuemin=\"0\" aria-valuemax=\"100\"><div class=\"disc white-disc\"><i></i></div></div></div><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-019{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-019 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-019 button{font:inherit;cursor:pointer} .d-drams-019 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-019 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-019 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-019 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-019 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-019 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-019 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-019 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-019 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-019 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-019 .line-frame{width:114px;height:114px;border-radius:50%;background:#f6f6f6;padding:13px}.d-drams-019 .control{width:88px;height:88px;border-radius:50%}.d-drams-019 .disc{box-shadow:inset 0 1px 2px #fff,7px 9px 12px #0003}.d-drams-019 .disc i{position:absolute;left:calc(50% - 2px);top:4px;width:4px;height:36px;border-radius:3px;background:#ff6420}",
+  "js": "const control=root.querySelector('.control'),disc=root.querySelector('.disc'),status=root.querySelector('.sr');const controller=new AbortController(),opts={signal:controller.signal};let value=50,down=false,startY=0,startX=0,startValue=value;const min=0,max=100,step=1;function set(v,source){value=Math.max(min,Math.min(max,Math.round(v/step)*step));const angle=-135+value*2.7;disc.style.transform='rotate('+angle+'deg)';control.setAttribute('aria-valuenow',value);control.setAttribute('aria-valuetext',value+'%');root.dataset.value=String(value);root.dataset.angle=String(angle);root.dataset.source=source;status.textContent=\"Line Volume\"+': '+value+'%';root.querySelectorAll('[data-tick]').forEach(t=>t.setAttribute('data-active',Number(t.dataset.tick)===value?'true':'false'))}control.addEventListener('pointerdown',e=>{if(e.button!==0)return;down=true;startX=e.clientX;startY=e.clientY;startValue=value;control.setPointerCapture(e.pointerId);control.focus({preventScroll:true});root.dataset.dragging='true'},opts);control.addEventListener('pointermove',e=>{if(down)set(startValue+((e.clientX-startX)-(e.clientY-startY))*(max-min)/150,'drag')},opts);function release(e){if(!down)return;down=false;root.dataset.dragging='false';if(control.hasPointerCapture(e.pointerId))control.releasePointerCapture(e.pointerId)}control.addEventListener('pointerup',release,opts);control.addEventListener('pointercancel',release,opts);control.addEventListener('keydown',e=>{if(['ArrowUp','ArrowRight','ArrowDown','ArrowLeft','Home','End',' '].includes(e.key)){e.preventDefault();set(e.key==='Home'?min:e.key==='End'?max:e.key===' '?value>=max?min:value+step:value+(['ArrowUp','ArrowRight'].includes(e.key)?step:-step),'keyboard')}},opts);root.querySelectorAll('[data-value]').forEach(b=>b.addEventListener('click',()=>set(Number(b.dataset.value),'select'),opts));root.querySelectorAll('[data-delta]').forEach(b=>b.addEventListener('click',()=>set(value+Number(b.dataset.delta),'button'),opts));set(value,'initial');return()=>controller.abort();",
+  "prompt": "Recreate the Line Volume composition from https://drams.framer.website/drams/019 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Drag the control, use arrow keys, Home or End.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "drag",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": false,
+    "aria": "slider"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

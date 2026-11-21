@@ -1,20 +1,34 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 342 of the 399 existing demos:
+Native v4 compositions are remediated for 346 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the fifteen DRAMS Collections demos.
-The remaining work includes 57 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the nineteen DRAMS Collections demos.
+The remaining work includes 53 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 342 remediated native compositions retains those references.
+None of the 346 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 342 native compositions. The unfinished groups still account for
-0 overflow findings, zero horizontal-scroll findings, 16 tiny-text findings and
-20 low-fill findings; findings can overlap within a demo. All 112 documented
+among these 346 native compositions. The unfinished groups still account for
+0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
+18 low-fill findings; findings can overlap within a demo. All 116 documented
 Figma fill exceptions validate.
+
+## Dark, Line, Fingerin' and Hollin' Volume
+
+The four volume controls match v4 tiles `89:343`, `89:364`, `89:386` and `89:413`. Eleven supplied SVGs retain their exact bytes, roots, materials and slots on a 324×168 native plane at reference origin 24,20. Dark keeps its 10×160 rail, 48px puck and 4×24 orange indicator. Line keeps its 1×161 hairline, 40×6 handle and supplied −12 dB caption; only the caption wrapper scales enough to render at least 11.1px, and actual local-font values replace it after editing. The zero-opacity Figma fill stays absent. Finger keeps the 10×170 rail and 36×78 grip with all seven ridges. Hollin keeps its 48×176 plate, all ten holes and the 24px orange peg with its captured six-pixel horizontal offset. Four documented sparse exceptions preserve exact artwork sizing.
+
+Full views keep every original rotary controller, dataset and displayed copy in a 400×584 composition with a complete 368×320 virtual source plane. Initial values remain 0/50/75/0; the original relative `(dx − dy) × range / 150` law, rounding, ranges and calibration geometry stay intact. Hollin keeps all twelve labels and its original 0 glyph. Its scaled 160px plate defines the physical hover boundary; focus and dragging also reveal labels. Short scenes preserve gaps between headings, controls, readout, guide and shared Dock, with 44px minimum physical targets and at least 11.1px type. Each generator prompt describes its own v4 geometry, controls, supplied assets and complete full model.
+
+The emitted-source verifier passes 14 groups and 221,989 checks: sixteen frozen original captures, 5,776 source states, 976 complete model checkpoints, 864 layouts, 320 measured interrupted paint boundaries, 24 six-second 60/120/240Hz renderer stories, real mouse/keys/touch, 57,600 rapid retargets, 14,400 held Dock actions, independent holds, inert cleanup, 32 fresh blocked-network exports and sixteen cold route/LiveTiles cases. Four further cases compare physical Hollin hover/focus endpoints against its literal original CSS. Immediate semantic ink masks remain below 3% of the stage; all other retarget pixels are exact. Ten complete accepted native, short-full and focus screenshots remain pixel-identical after guarding unchanged text and attribute writes.
+
+Required local checks pass at the documented baseline: 651 library checks with 399 lazy previews and 97 offline exports, 19 runtime/shell tests, eight CLI/MCP tests, sixteen fit-geometry checks and Stage runtime input/hold/cleanup checks. All 346 completed native fits pass; the remaining 53 demos account for 15 tiny-text and 18 low-fill findings, with zero boot failures, missing sizes, overflow, horizontal scroll or invalid exceptions. Static stage debt is 52 and motion debt 28. Eight shared-file siblings, 325 other modules, 395 other metadata records, 165 frozen helpers, the 222-file prior full-view snapshot, 622 prior publication files and 610 original archived files remain unchanged. The accepted dial baseline also preserves 184 files, including all 32 original timing traces.
+
+Guarding unchanged view writes removes repeated layout and paint work. In the compact Finger thumbnail at CPU 4, Layout events fall from 340 to 18 and total layout time from 686.7 to 40.5ms; full desktop Line falls from 380 to 15 layouts. The [isolated timing report](performance/drams-dials-2026-11-21.json) preserves all 32 baseline and 32 current cases with all 64 trace digests. Current CPU 1 runs record 59.88–60.00fps, one gap above 25ms and no long tasks. CPU 4 improves from 54.00–60.00fps, 108 gaps and 35 long tasks to 59.13–60.13fps, ten gaps and one long task. The remaining slowest case is compact full Hollin, with six gaps. Current first trace Paint ranges are 12.616–43.098ms normally and 77.198–245.666ms throttled; maximum readiness is 52.3/280.1ms. Fonts are prepared before mount and route transfer is excluded; these measurements leave cold-route, Lighthouse and final site-wide timing gates open. GitHub Actions remains disabled and the account-wide $0 stop limit is preserved.
+
+The shared light-stage background and Dock still need their final shell treatment, and older generator prompts need a complete audit. These are recorded in [final audit follow-ups](final-audit-followups.md). The full 520-component handoff, remaining Collections, new and extension components, Pro seams and final performance audits remain open.
 
 ## Rollin' Ball Surprise, Rollin' Search and Ball Pop
 

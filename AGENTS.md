@@ -830,3 +830,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Record isolated timing with `node tools/profile-drams-objects.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; prepared-font measurements leave
   cold-route, Lighthouse and final site-wide gates open.
+
+- `node tools/verify-drams-dials.js http://127.0.0.1:4173` covers v4 Dark,
+  Line, Fingerin' and Hollin' Volume. Fourteen groups retain eleven exact SVGs,
+  sixteen original captures, 864 layouts, 320 measured paint boundaries,
+  24 independent six-second renderer stories, physical mouse/keys/touch,
+  57,600 rapid retargets, independent holds, 32 fresh offline exports and
+  sixteen cold route/LiveTiles cases. Native uses a 324×168 plane at reference
+  origin 24,20; full keeps all original rotary models and copy in 400×584 with
+  a 368×320 source plane. Keep the native Line caption at least 11.1px, all seven
+  Finger ridges, ten native Hollin holes and all twelve original full labels.
+  Hollin's physical hover boundary is its scaled 160px square plate; empty
+  scene hover must not reveal labels, while focus and dragging do. Skip writes
+  of unchanged text and attributes; preserve the original controller programs.
+  Keep source inputs outside retained paint, minimum 44px physical targets,
+  compact focus against its actual material and all eight shared-file siblings.
+  Preserve four documented sparse-fill exceptions. Record isolated timing with
+  `node tools/profile-drams-dials.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
+  preserve the pre-optimization measurements and leave final timing gates open.

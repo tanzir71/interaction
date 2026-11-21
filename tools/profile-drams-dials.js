@@ -1,0 +1,47 @@
+const H={...require('./verification/drams-dials-harness'),...require('./verification/drams-dials-evidence')},fs=require('node:fs'),assert=require('node:assert/strict'),path=require('node:path'),dir=H.dir,hash=H.hash;H.configs=H.A.configs;H.demos=new Map(H.configs.map(c=>[c.id,H.A.demo(c)]));H.hashes=script=>H.sources(script);H.rejectAudio=()=>{window.audioCalls=0;window.AudioContext=window.webkitAudioContext=function(){audioCalls++;throw Error('Unexpected dial audio');};};
+const rate=Number(process.argv.find(a=>a.startsWith('--cpu='))?.slice(6)||4),selected=process.argv.find(a=>a.startsWith('--ids='))?.slice(6).split(','),modes=(process.argv.find(a=>a.startsWith('--modes='))?.slice(8)||'thumb,full').split(','),tag=Date.now();
+assert([1,4].includes(rate));assert(modes.every(m=>['thumb','full'].includes(m)));
+
+async function story({C,mode,kind}){
+ const stage=document.querySelector('#drams-dials-profile'),root=stage._root,field=root.querySelector('[role=slider]'),intervals=[],events=[],longTasks=[],fired=new Set();field.focus({preventScroll:true});const start=performance.now();let previous=null;const observer=new PerformanceObserver(list=>longTasks.push(...list.getEntries().map(e=>({at:e.startTime-start,duration:e.duration}))));observer.observe({type:'longtask'});
+ const key=key=>field.dispatchEvent(new KeyboardEvent('keydown',{key,bubbles:true,cancelable:true})),dock=()=>stage.querySelector('.stage-dock button').click(),once=(name,at,t,job)=>{if(t>=at&&!fired.has(name)){fired.add(name);job();events.push({name,at:t});}};
+ await new Promise(resolve=>requestAnimationFrame(function frame(now){if(previous!==null)intervals.push(now-previous);previous=now;const t=now-start;once('first-end',180,t,()=>key('End'));once('reverse-home',600,t,()=>key('Home'));once('step',950,t,()=>key('ArrowRight'));once('dock-drag',1300,t,dock);once('interrupt-drag',1420,t,()=>key('Home'));once('hold',2000,t,()=>stage._runtime.suspend());once('queued-end',2300,t,()=>key('End'));once('queued-wrap',2500,t,()=>key(' '));once('resume',3000,t,()=>stage._runtime.resume());once('second-drag',3800,t,dock);once('retarget',4100,t,()=>key('ArrowUp'));once('final-end',5000,t,()=>key('End'));once('final-home',5500,t,()=>key('Home'));once('finish-step',6200,t,()=>key('ArrowRight'));once('return-end',6500,t,()=>key('End'));if(t>=8000)resolve();else requestAnimationFrame(frame);}));
+ const end=performance.now();observer.disconnect();const sum=intervals.reduce((a,b)=>a+b,0),sorted=intervals.slice().sort((a,b)=>a-b),value=readDialProfile();return{duration:end-start,frames:intervals.length,fps:intervals.length/sum*1000,p95:sorted[Math.ceil(sorted.length*.95)-1],gaps:intervals.flatMap((ms,i)=>ms>25?[{frame:i+1,ms}]:[]),longTasks,events,storyComplete:fired.size===15,source:value.state,motion:value.motion,held:value.held,audioCalls};
+}
+
+(async()=>{
+ const sourceHashes=H.hashes(__filename),results=[],scenes=H.configs.filter(c=>!selected||selected.includes(c.id)||selected.includes(c.kind));assert(scenes.length);
+ fs.writeFileSync(dir+'/profile-blank.html','<!doctype html><base href="/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><body></body>');
+ for(const mode of modes)for(const mobile of[false,true])for(const c of scenes){
+  const cacheFile=dir+'/profile-result-'+c.kind+'-'+mode+'-'+(mobile?'mobile':'desktop')+'-cpu'+rate+'.json',cached=fs.existsSync(cacheFile)?JSON.parse(fs.readFileSync(cacheFile)):null;
+  if(process.argv.includes('--reuse')&&cached&&JSON.stringify(cached.sourceHashes)===JSON.stringify(sourceHashes)){assert.deepEqual(H.hashes(__filename),sourceHashes);results.push(cached.result);console.log('CHECK current timing '+c.kind+' '+mode+' '+mobile+' CPU'+rate);continue;}
+  const browser=await H.chromium.launch({headless:true}),context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1000,height:900},deviceScaleFactor:mobile?2:1,reducedMotion:'no-preference'}),page=await context.newPage(),errors=[];
+  await context.addInitScript(H.rejectAudio);page.on('pageerror',e=>errors.push(e.message));
+  try{
+   await page.goto(H.base+'/.artifacts/drams-dials/profile-blank.html');for(const f of['css/style.css','css/fonts.css'])await page.addStyleTag({url:H.base+'/'+f});
+   await page.evaluate(assets=>window.INTRX={resolveAssets:v=>v.replace(/\{\{asset:([\w-]+)\}\}/g,(_,n)=>'/'+assets[n])},JSON.parse(fs.readFileSync('assets/demo-assets.json')));
+   for(const f of['js/demo-runtime.js','js/shell/stage.js'])await page.addScriptTag({url:H.base+'/'+f});
+   await page.evaluate(()=>Promise.all([document.fonts.load('400 17.5px "Geist Mono"'),document.fonts.load('500 17.5px Geist'),document.fonts.load('500 13.5px Inter')]));
+   const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setCPUThrottlingRate',{rate});const trace=[];cdp.on('Tracing.dataCollected',e=>trace.push(...e.value));
+   await cdp.send('Tracing.start',{categories:'devtools.timeline,blink.user_timing,disabled-by-default-devtools.timeline.frame',transferMode:'ReportEvents'});
+   await page.evaluate(({demo,width,height,mode})=>{
+    window.dialProfileStart=performance.now();performance.mark('dial-mount');document.body.innerHTML='<div id="drams-dials-profile" class="demo-stage stage" style="position:relative;width:'+width+'px;height:'+height+'px"></div>';
+    INTRX.mountStage(demo,document.querySelector('#drams-dials-profile'),mode);window.readDialProfile=(full=false)=>{const r=document.querySelector('#drams-dials-profile')._root;return r.__DialsInspect(full);};
+   },{demo:H.demos.get(c.id),width:mode==='thumb'?mobile?328:372:mobile?328:650,height:mode==='thumb'?264:mobile?420:660,mode});
+   await page.waitForFunction(()=>{if(document.querySelector('#drams-dials-profile').dataset.bootError==='true')throw Error('Media profile boot failed');return readDialProfile().ready;});
+   const startup=await page.evaluate(()=>({ready:performance.now()-dialProfileStart,firstContentfulPaint:performance.getEntriesByName('first-contentful-paint')[0]?.startTime-dialProfileStart}));
+   assert.equal(await page.evaluate(()=>audioCalls),0);await page.evaluate(()=>Promise.all([...document.images].map(n=>n.decode())));
+   const motion=await page.evaluate(story,{kind:c.kind,C:c.C,mode});assert(motion.storyComplete);assert.equal(motion.held,false);assert.equal(motion.audioCalls,0);
+   await page.evaluate(()=>document.querySelector('#drams-dials-profile')._runtime.dispose());await page.waitForFunction(()=>{const v=readDialProfile();return v.dead&&v.motion.samplers===0&&v.motion.ghosts===0&&!v.frame&&v.capture===null;});assert.deepEqual(errors,[]);
+   const stopped=new Promise(resolve=>cdp.once('Tracing.tracingComplete',resolve));await cdp.send('Tracing.end');await stopped;
+   const file='profile-'+c.kind+'-'+mode+'-'+(mobile?'mobile':'desktop')+'-cpu'+rate+'-'+tag+'-trace.json';fs.writeFileSync(dir+'/'+file,JSON.stringify({traceEvents:trace}));
+   const mark=trace.find(e=>e.name==='dial-mount'),paint=trace.find(e=>e.name==='Paint'&&e.ts>=mark?.ts);assert(mark&&paint,'Browser trace includes first paint after the mount mark');startup.firstPaint=(paint.ts-mark.ts)/1000;startup.firstPaintMetric='first trace Paint after mount';startup.firstContentfulPaint=Number.isFinite(startup.firstContentfulPaint)&&startup.firstContentfulPaint>=0?startup.firstContentfulPaint:null;
+   const result={kind:c.kind,mode,mobile,cpu:rate,dpr:mobile?2:1,startup,audioConstructed:motion.audioCalls,motion,trace:{file,sha256:hash(fs.readFileSync(dir+'/'+file)),events:trace.length}};
+   results.push(result);fs.writeFileSync(cacheFile,JSON.stringify({at:new Date().toISOString(),sourceHashes,result}));
+   console.log(c.kind+' '+mode+' '+(mobile?'mobile':'desktop')+' / '+motion.fps.toFixed(2)+'fps / '+motion.gaps.length+' gaps / '+startup.firstPaint.toFixed(1)+'ms first trace Paint');
+   fs.writeFileSync(dir+'/profile-progress-cpu'+rate+'.json',JSON.stringify({at:new Date().toISOString(),cases:results.length,total:modes.length*2*scenes.length,last:c.kind+' '+mode+' '+mobile}));
+  }finally{await browser.close();}
+ }
+ assert.deepEqual(H.hashes(__filename),sourceHashes);
+ fs.writeFileSync(dir+'/performance-cpu'+rate+'-'+tag+'.json',JSON.stringify({at:new Date().toISOString(),sourceHashes,parameters:{cpu:rate,ids:selected||scenes.map(c=>c.id),modes},results,complete:true,timingGatePassed:false,scope:'Isolated emitted native/full dial controls atCPU1/4,desktopDPR1 and compactDPR2. Eight-second normal-clock stories exercise full range,step/wrap,reversals,complete Dock drags,caller-held ordered input and interrupted source gestures. Actual RAF intervals,long tasks,readiness and first trace Paint after mount are recorded with boundCDP traces; fonts are prepared before mounting. Synthetic profile events are separate from physical-input verification. All scenes stay silent. Route transfer is excluded,and these measurements do not pass final timing gates.'},null,2)+'\n');
+})().catch(e=>{console.error(e.stack?.slice(0,3000));process.exitCode=1;});
