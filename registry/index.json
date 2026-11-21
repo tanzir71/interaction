@@ -24826,7 +24826,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-003",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-003.json?v=22c5bc3203",
@@ -24884,7 +24884,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-004",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-004.json?v=a29b9cf088",
@@ -24942,7 +24942,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-005",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-005.json?v=47ae4febc4",
@@ -25000,7 +25000,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-009",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-009.json?v=8c7c9f9b4c",
@@ -25058,7 +25058,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-020",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-020.json?v=15b41e0cbc",
@@ -25116,7 +25116,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-021",
     "thumb": "hero",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-021.json?v=564ffb8e38",
@@ -25157,8 +25157,15 @@
       "slider"
     ],
     "tier": "free",
-    "desc": "An orange spherical thumb moves between six numbered positions inside a shallow channel.",
-    "designSize": "sm",
+    "desc": "Six stops; the ball drops into one",
+    "designSize": [
+      400,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25166,18 +25173,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-022",
-    "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "thumb": "hero",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-022.json?v=9a60666f4c",
+    "sourcePreview": "registry/p/drams-022.json?v=5d8a05780d",
     "assetRefs": {},
     "rootClass": "d-drams-022",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "hint": "Six stops; the ball drops into one",
     "sourceName": "DRAMS · 1042 Studio / Rollin' Dot Slider",
@@ -25203,8 +25215,15 @@
       "slider"
     ],
     "tier": "free",
-    "desc": "An orange numbered ball rolls between three recessed stops, keeping the selected step in its centre.",
-    "designSize": "sm",
+    "desc": "Three deep wells; the ball hops between them",
+    "designSize": [
+      400,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25212,18 +25231,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-045",
-    "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "thumb": "hero",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-045.json?v=7cb987f998",
+    "sourcePreview": "registry/p/drams-045.json?v=20a3986ef5",
     "assetRefs": {},
     "rootClass": "d-drams-045",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "hint": "Three deep wells; the ball hops between them",
     "sourceName": "DRAMS · 1042 Studio / Rollin' Stepper",
@@ -25250,8 +25274,15 @@
       "dial"
     ],
     "tier": "free",
-    "desc": "A white rotary volume knob inside a broad shallow bezel, with a small orange position marker.",
-    "designSize": "sm",
+    "desc": "A classic fader with a ribbed cap",
+    "designSize": [
+      400,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25259,18 +25290,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-002",
-    "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "thumb": "hero",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-002.json?v=661c5e564b",
+    "sourcePreview": "registry/p/drams-002.json?v=001334b105",
     "assetRefs": {},
     "rootClass": "d-drams-002",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "region"
     },
     "hint": "A classic fader with a ribbed cap",
     "sourceName": "DRAMS · 1042 Studio / Standard Volume",
@@ -25307,7 +25343,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-012",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-012.json?v=255436e6f8",
@@ -25354,7 +25390,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-034",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-034.json?v=e5ca702e76",
@@ -25401,7 +25437,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-040",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-040.json?v=aaccda2ef9",
@@ -25447,7 +25483,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-010",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-010.json?v=cb28b93d67",
@@ -25494,7 +25530,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-043",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-043.json?v=1817cae14a",
@@ -25540,7 +25576,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-044",
     "thumb": "full",
-    "module": "js/demos.drams.sliders.js?v=8683e58c7d",
+    "module": "js/demos.drams.sliders.js?v=463a6c53c5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-044.json?v=22723f75ad",

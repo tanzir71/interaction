@@ -761,3 +761,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   documented sparse-fill exceptions and all 12 shared-file siblings unchanged.
   Record isolated timing with `node tools/profile-drams-rails.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; timing gates remain open.
+
+- `node tools/verify-drams-detents.js http://127.0.0.1:4173` covers v4
+  Rollin’ Dot Slider, Rollin’ Stepper and Standard Volume. Fifteen groups cover
+  36 unchanged product SVGs, nine references and 12 independent source fixtures;
+  180 layouts, 72 physical drags, 18 full source stories, 12 cold route/LiveTiles
+  cases and 24 fresh offline exports. Keep six/three original detents and
+  Volume’s upward delta + 0.35×rightward delta law. Source thumb paths are 0.2/0.2/0.1, not a shared index.
+  Native Dot/Stepper start at supplied mid-flight checkpoints; reduced stays
+  still until input. Native Stepper hops use the 380/32/1 two-axis spring and
+  exact 80/40 ms history with parent alpha 1/12 and 1/6 once. Scale all six source
+  label SVGs around their captured anchors to at least 11.1 px optical size;
+  preserve their roots and the mandatory text gate. Volume’s 100/130 camera
+  maps values 0/100 to centres 175/45; preserve the 99 px reference cap and stable
+  lower-cap pixels. Full inputs stay outside actual retained paint so focus
+  and capture survive every fade. Always write view variables to the live
+  plane. Immediate semantic numeral/color changes exclude only measured
+  glyph bounds plus 2 px AA, under 8% crop; reduced full paint stays fully exact.
+  Preserve complete original controllers/copy, full Volume’s initial 50 and
+  all 12 shared-file siblings. Keep Dot/Volume sparse-fill exceptions.
+  Record isolated timing with `node tools/profile-drams-detents.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; final timing gates remain open.

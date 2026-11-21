@@ -1,20 +1,89 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 333 of the 399 existing demos:
+Native v4 compositions are remediated for 336 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the first six DRAMS Collections demos.
-The remaining work includes 66 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the first nine DRAMS Collections demos.
+The remaining work includes 63 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 333 remediated native compositions retains those references.
+None of the 336 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 333 native compositions. The unfinished groups still account for
-0 overflow findings, zero horizontal-scroll findings, 17 tiny-text findings and
-27 low-fill findings; findings can overlap within a demo. All 105 documented
+among these 336 native compositions. The unfinished groups still account for
+0 overflow findings, zero horizontal-scroll findings, 16 tiny-text findings and
+24 low-fill findings; findings can overlap within a demo. All 107 documented
 Figma fill exceptions validate.
+
+## Detents and Standard Volume
+
+Rollin’ Dot Slider, Rollin’ Stepper and Standard Volume match tiles 89:184,
+89:217 and 89:246. All 36 product SVGs and 9 independent parent/well/rib references
+retain their exact bytes. Native 324×168 compositions preserve origin 24,20 in
+372×264; no screenshot is product artwork.
+
+Dot retains its 260×12 groove, six 6 px stops, 24 px ball and independent glint.
+Its source value 60 reports position 4 of 6. The supplied 210,112 checkpoint
+settles to 211,115 in normal motion; reduced starts still until input. Six
+unchanged 10 px-em label SVGs scale around their captured anchors to at least
+11.1 px optical size. After input, the captured neutral active/inactive palette
+tracks the actual stop. This optical correction does not exempt text from
+the minimum-size gate.
+
+Stepper keeps the 240×64 three-well plate and three supplied 40 px head/glint
+pairs. Reference 256,110 approaches the third well at 272,112. Two afterimages
+retain parent alpha 1/12 and 1/6 once, with 80/40 ms histories and a 450/150 px/s
+authored prehistory. Native inter-well changes launch a bounded vertical
+impulse through the same analytic 380/32/1 spring; interrupted flights carry
+both velocity components. Full keeps the original flat three-stop model.
+
+Volume’s native 10×160 groove, eleven ticks, 44×30 ribbed cap and 6×72 orange
+fill retain every supplied layer, including the complete 60×46 cap shadow.
+Value 0 maps to centre 175 px and 100 to 45 px; seed 58.461538 preserves 99 px.
+The explicit 100/130 input camera retains the original upward delta + 0.35×rightward delta law.
+An immutable lower-cap raster, cropped interior and translated upper cap
+keep the fill’s corner radii intact. Actual cap pixels and a 108 px orange
+span verify growth without seams. Full preserves the original 114 px bezel,
+76 px rotary knob, 5 px orange marker, initial 50 and complete angle law.
+
+All original controllers, copy, keys, clamps, six/three detents and relative
+drag state remain literal. Captured source body paths are 0.2 for Dot/Stepper
+and 0.1 for Volume. Full inputs preserve their original labels, focus and
+capture outside the paint; painted source controls are inert. Full and native
+reduced changes retain the actual painted node while a clone becomes live.
+View variables always target the live plane. Stable glyph layers protect
+font rasterization, and unselectable full fields prevent native text dragging
+from cancelling a gesture. Normal releases carry measured velocity into the
+380/32/1 spring, with 0.55 rubber-banding; reduced changes use 150 ms opacity.
+
+`node tools/verify-drams-detents.js http://127.0.0.1:4173` passes 15 groups and
+78,109 checks: twelve independent source fixtures, 180 layouts, 72 physical
+drags, moving touch, 18 complete source stories, independent two-axis clocks at
+60/120/240 Hz, 12 cold route/LiveTiles cases and 24 fresh offline exports.
+All 72 retarget boundaries preserve painted bodies and focus. Immediate
+source numerals and native stop-color feedback exclude only their measured
+glyph bounds plus 2 px antialias margin, under 8% of a crop. Reduced full crops
+remain completely byte-identical. Caller, document and viewport holds, queued
+intent, idle scheduling, capture and early cleanup also pass.
+
+All 336 remediated native compositions pass the 399-demo fit audit. Remaining
+findings are 16 tiny-text and 24 low-fill cases among 63 unfinished Collections
+demos. There is zero overflow or horizontal scroll; all 107 documented sparse
+exceptions validate. Dot and Volume retain written exact-geometry fill
+exceptions. Static stage debt is 62 and motion debt 37, with no new violations.
+Local required checks, 19 runtime/shell tests, 8 CLI/MCP tests and 16 fit-geometry
+checks pass. Twelve sibling registrations, 325 unrelated modules, 131 frozen
+helpers, 349 prior publication evidence files and 610 original archive files
+are preserved.
+
+[Isolated timing report](performance/drams-detents-2026-11-21.json) records 24
+eight-second CPU 1/4 native/full desktop DPR 1 and compact DPR 2 stories.
+CPU 1: 60.00–60.00 fps, 0 intervals above 25 ms, 0 long tasks; first trace Paint 15.8–32.9 ms and maximum readiness 52.4 ms.
+CPU 4: 59.13–60.00 fps, 13 intervals above 25 ms, 1 long tasks; first trace Paint 92.6–269.5 ms and maximum readiness 328.0 ms.
+Fonts are prepared before mounting; route transfer is excluded. Recorded
+findings leave final library timing gates open. GitHub Actions stays disabled
+and the account-wide $0 stop limit is preserved.
 
 ## Square, Trackin’ and Long Rollin’ sliders
 
