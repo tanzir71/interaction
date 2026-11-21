@@ -744,3 +744,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   twelve untouched siblings; only their generated module URL/hash may change.
   Record isolated timing with `node tools/profile-drams-sliders.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave gates open.
+
+- `node tools/verify-drams-rails.js http://127.0.0.1:4173` covers v4
+  Square, Trackin’ and Long Rollin’ sliders. Fifteen groups preserve 42 supplied
+  product SVGs, one stripe reference and 12 independent original DOM/CSS fixtures.
+  They cover 180 layouts, 72 exact painted retargets, 48 real elastic-edge drags,
+  moving touch, 18 complete full source stories, 12 cold route/LiveTiles cases
+  and 24 fresh offline exports. Fixed 2 px/5 px fill caps retain stable original
+  left-cap pixels while only the interior grows and the right cap translates.
+  Long’s six delayed marks sample head history at 258/218/178/138/98/58 ms;
+  keep baked SVG alpha once, and roll the supplied glint without its shadow.
+  Reduced motion fades the retained still without animated trails. All three
+  original full programs stay continuous and have fixed input widths.
+  Native 324×168 fitting at reference 24,20 preserves exact Figma geometry;
+  full 400×520 retains complete 368×320 source models and copy. Keep their
+  documented sparse-fill exceptions and all 12 shared-file siblings unchanged.
+  Record isolated timing with `node tools/profile-drams-rails.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; timing gates remain open.

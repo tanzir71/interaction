@@ -1541,3 +1541,22 @@ CPU1/4 cases. CPU1: 60.0–60.0 fps, 0 intervals above25ms, 0 long tasks; first 
 CPU4: 56.8–60.0 fps, 42 intervals above25ms, 5 long tasks; first trace Paint 95.3–358.9ms and maximum readiness 491.6ms. Final timing gates remain open. Remaining:72 Collections,
 121 new/extensions,Pro seams and final audits. Direct commit/push; Actions
 disabled; previously verified account-wide$0 stop limit preserved.
+
+## Square, Trackin’ and Long Rollin’ sliders — 21 Nov2026
+
+Tiles `89:93`, `89:113` and `89:159` complete the next three Collections demos. All 42 supplied product SVGs retain their exact bytes, intrinsic roots, shadows and slots; one independent stripe SVG remains a verification reference. Native 324×168 compositions preserve reference origin 24,20 in 372×264. Explicit continuous camera mappings place the heads at 212/225/282 px for source values 61.818182/67.256637/83.802817. No screenshot is product artwork.
+
+Square retains its 260×14 rail, 150×14 orange fill and 40 px square head with the included stripe. Trackin’ keeps the 260×10 rail, 168×10 fill, 27 ticks and 34 px head. Their 2 px/5 px end caps never stretch: stable original left-cap images, clipped interiors and translated original right caps preserve the material while fill grows. Independent checks compare unchanged cap pixels and an unbroken painted orange span.
+
+Long Rollin’ retains its 312×10 groove, six 6 px trail marks and 28 px ball with a 44 px shadow root. Delays 258/218/178/138/98/58 ms sample the analytic head history; a 500 px/s authored prehistory reproduces every supplied initial trail position. The baked 0.10/0.22/0.34/0.46/0.58/0.70 SVG alpha is preserved. The glint rolls independently of the contact shadow. Reduced input fades the retained still to its destination over 150 ms, without moving trails.
+
+Full 400×520 compositions preserve all original copy and continuous controllers in 368×320: the 46×38 square head, 96×40 gripped pill with five etched stripes, and 44 px white ball with 4 px orange dot. Original clamps, keys, Page steps, pointer rules and roll/hue state remain literal. These three controls have fixed original input widths. Actual dragging follows input directly with 0.55 rubber-banding; release carries pointer velocity into the 380/32/1 spring. Caller, full viewport and controlled document holds preserve independent source/view clocks, queued intent, focus and capture cleanup.
+
+`node tools/verify-drams-rails.js http://127.0.0.1:4173` passes 15 groups and 73,806 checks: twelve independent lossless source fixtures, 180 layouts, 72 byte-identical painted retargets, 48 physical elastic-edge drags, moving touch and scrolling, 18 full six-second source stories, independent cap/trail paint at 60/120/240 Hz, paused startup/intent priority, 12 cold route/LiveTiles cases and 24 fresh network-blocked exports.
+
+All 333 remediated native compositions pass the current 399-demo fit audit. Remaining findings are 17 tiny-text and 27 low-fill cases among 66 unfinished Collections demos. There is zero overflow or horizontal scroll; all 105 documented sparse-fill exceptions validate. Static stage debt is 65 and motion debt 38, with no new violations. Local required checks, 19 runtime/shell tests, 8 CLI/MCP tests and 16 fit-geometry checks pass. Twelve sibling registrations, 325 unrelated modules, 124 frozen helpers, 323 prior publication evidence files and 610 original release archive files are preserved.
+
+[Isolated timing report](performance/drams-rails-2026-11-21.json) records 24 eight-second CPU 1/4 native/full desktop DPR 1 and compact DPR 2 stories.
+CPU 1: 60.00–60.00 fps, 0 intervals above 25 ms, 0 long tasks; first trace Paint 13.4–24.2 ms and maximum readiness 30.5 ms.
+CPU 4: 59.13–60.00 fps, 14 intervals above 25 ms, 2 long tasks; first trace Paint 40.5–274.0 ms and maximum readiness 329.1 ms.
+Fonts are prepared before mounting; route transfer is excluded. Measurements retain observed findings and leave final library timing gates open. GitHub Actions remains disabled and the account-wide $0 stop limit is preserved.
