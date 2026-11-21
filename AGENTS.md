@@ -720,3 +720,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and portable views and 1600px for full detail, with complete attribution.
   Record isolated timing with `node tools/profile-skeuo-media.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave gates open.
+- `node tools/verify-drams-sliders.js http://127.0.0.1:4173` covers v4
+  Dirty Rollin' Slider, Dimpled Slider and Dynamic Slider. Fourteen groups cover
+  26 unchanged product SVG layers, three whole-ball references, twenty frozen
+  original fixtures, 180 layouts, independent 380/32 release at 60/120/240Hz,
+  72 byte-identical painted retargets,48 physical elastic-edge drags, pressure
+  and translation agreement, real mouse/moving touch and scrolling,
+  independent caller/viewport holds and controlled document signals, queued
+  intent, capture and early cleanup, eighteen full
+  source stories, twelve cold route/LiveTiles cases and 24 fresh offline exports.
+  Native uses a 324×168 plane at reference (24,20); full preserves complete
+  original copy and continuous models in 400×520 with a 368×320 source plane.
+  Dirty's explicit camera maps values 0/62/100 to centres 70/204/302. Native
+  Dimpled activates the original nine-step branch and preserves the supplied
+  235px mid-flight checkpoint; normal startup settles to 247px, while reduced
+  startup stays still until input. Dynamic keeps byte-unchanged curves inside
+  tightly bounded masks. Its original 300ms scale/reversal law supplies only
+  unpainted input geometry; visible pressure uses canonical 80/250ms motion.
+  Reduced native fades retain the actual painted node; full retains stable
+  source field identity and explicitly copies focus appearance. Promote focus
+  rings and retained paint consistently to protect compact raster continuity.
+  Preserve Dirty/Dynamic sparse-fill exceptions. The shared source file has
+  twelve untouched siblings; only their generated module URL/hash may change.
+  Record isolated timing with `node tools/profile-drams-sliders.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; measurements leave gates open.

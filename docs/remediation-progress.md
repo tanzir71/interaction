@@ -1,21 +1,92 @@
 # Visual remediation progress
 
-The native v4 stage compositions are remediated for 327 of the 399 existing demos: Interface (89),
-Data & AI (30), all twenty-two Scroll demos, and all twenty-three Text & Type
-demos plus all ten SVG & Line demos and all twelve 3D & Perspective demos in Motion,
-all fifty-three Pointer & Physics demos, and all twenty-three Image & WebGL demos, plus all twenty-nine Raster & Glitch demos, all ten Ambient demos, all six Sound demos and all twenty Skeuomorph demos.
-The remaining work includes 72 existing demos, 121 new or extension components,
+Native v4 compositions are remediated for 330 of the 399 existing demos:
+all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
+Visual FX (88) demos, plus the first three DRAMS Collections demos.
+The remaining work includes 69 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 327 remediated native compositions retains those references.
+None of the 330 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 327 native compositions. The unfinished groups still account for
+among these 330 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 17 tiny-text findings and
-33 low-fill findings; findings can overlap within a demo. All 100 documented
+30 low-fill findings; findings can overlap within a demo. All 102 documented
 Figma fill exceptions validate.
+
+## DRAMS sliders
+
+Dirty Rollin' Slider, Dimpled Slider and Dynamic Slider match v4 tiles
+`89:4`, `89:47` and `89:74`. Native compositions use a 324×168 plane at
+reference (24, 20) inside 372×264. All 26 product SVG layers retain their exact
+bytes, intrinsic roots, masks, shadows and render slots. Three whole-ball SVGs
+remain verification references; body/highlight layers allow rolling without
+rotating the contact shadow. No screenshot is product artwork.
+
+Dirty preserves the 260×12 groove, three 28px balls, fourteen ticks and value 62.
+Its explicit camera maps 0/62/100 to centres 70/204/302 so the captured value,
+ARIA and supplied geometry agree. Afterimages use 80/40ms source history
+samples. Dimpled keeps the 280×52 nine-well plate and 44px white head. Its
+235px supplied centre is a mid-flight checkpoint: native seed 75 activates the
+original nine-step branch and reports position 7 of 9. Normal startup settles
+to 247px; reduced startup stays still until input. A queued user action can
+supersede that settle without leaving an idle frame loop.
+
+Dynamic preserves both supplied curved SVGs and the 30px head. Two tightly
+bounded masks and affine wrapper transforms move the crest, with their join
+under the opaque head. Intrinsic SVG roots are unchanged. Empty decoration
+wrappers are omitted and unpainted input overlays are explicitly transparent;
+these invisible elements cannot inflate the fit measurement.
+
+Full 400×520 compositions retain every original controller and complete copy
+in a 368×320 source plane, including the two-tone rolling ball, embossed 96px
+grip and 92px capsule. All full sliders stay continuous. Original clamps,
+keys, Page steps, roll/hue laws and the Dynamic animated-width/reversal law
+remain literal. Its 300ms input geometry is unpainted and separate from the
+canonical 80/250ms visible pressure. Translation precedes pressure scaling,
+so squeezing the capsule never multiplies its travel. Full and native views
+apply 0.55 rubber-banding beyond their value bounds; release carries measured
+pointer velocity into a spring with stiffness 380, damping 32 and mass 1.
+
+Reduced changes retain 150ms opacity feedback. Native retains the actual
+painted node when replacing the live plane; full keeps the focused field and
+copies focus appearance into retained layers. Consistently promoted paint
+and focus rings preserve compact compositing at every tested retarget.
+Later physical input cancels an unstarted queued Drag demonstration, while
+a later explicit Drag still plays. Source/view clocks respect caller and
+viewport holds; separate controlled document-signal checks preserve caller
+priority. Those controlled signals do not claim operating-system visibility.
+
+`node tools/verify-drams-sliders.js http://127.0.0.1:4173` passes 14 groups
+and 73,964 checks: twenty unchanged lossless original fixtures, independent
+60/120/240Hz spring samples, 180 layouts, 72 byte-identical painted retargets,
+48 physical elastic-edge drags including unclipped 3% excess, actual pressure
+and translation geometry, moving touch and outside scrolling, paused startup,
+intent priority, capture/early cleanup, eighteen complete full source stories,
+twelve cold route/LiveTiles cases and 24 fresh network-blocked exports.
+
+All 330 remediated native compositions pass the current fit audit of 399 demos.
+Its remaining 17 tiny-text and 30 low-fill findings belong to the 69 unfinished
+Collections demos. There is zero overflow or horizontal scroll and 102 valid
+documented fill exceptions. Dirty/Dynamic retain written exact-geometry
+exceptions; other gates remain mandatory. Static stage debt is 68 and motion
+debt 38, with no new violations. Local required checks, 19 runtime/shell tests,
+8 CLI/MCP tests and 16 fit-geometry checks pass. All twelve sibling definitions
+in the shared slider file are unchanged; only their generated module URL/hash
+changes. The other 325 modules, 116 frozen earlier helpers, 298 prior publication
+evidence files and 610 original release archive files are preserved.
+
+[Isolated timing report](performance/drams-sliders-2026-11-21.json): 24 eight-second
+CPU 1/4 native/full desktop DPR 1 and compact DPR 2 stories bind the final source
+and CDP traces. CPU 1: 60.00–60.00 fps, 0 intervals above 25ms, 0 long tasks; first trace Paint 13.6–21.4ms and maximum readiness 27.4ms.
+CPU 4: 60.00–60.00 fps, 0 intervals above 25ms, 0 long tasks; first trace Paint 70.0–123.3ms and maximum readiness 148.4ms.
+Fonts are prepared before mounting; route transfer is excluded. The earlier
+private CPU 1 baseline predates final elastic/startup changes and is excluded.
+Measurements retain their findings and do not pass final library timing gates.
+GitHub Actions stays disabled and the existing account-wide $0 stop limit is
+unchanged. Direct commits and pushes do not start workflows.
 
 ## Turntable and Satin Foil Card
 
