@@ -848,3 +848,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Preserve four documented sparse-fill exceptions. Record isolated timing with
   `node tools/profile-drams-dials.js http://127.0.0.1:4173 --cpu=1` or `--cpu=4`;
   preserve the pre-optimization measurements and leave final timing gates open.
+
+- `node tools/verify-drams-knobs.js http://127.0.0.1:4173` covers v4 3-Way
+  Knob, Round Knob Slider and Joypad. Sixteen groups retain fifteen exact SVGs,
+  twelve original captures, 132 layouts, 240 exact paint boundaries, eighteen
+  independent six-second renderer stories, physical mouse/keys/touch, 43,200
+  rapid retargets, independent holds, 24 fresh offline exports and twelve cold
+  route/LiveTiles cases. Keep native MID, the authored arc pose and 58% label,
+  and Joypad's (28,-20) offset. Full preserves the original 0/1/2 rotary model,
+  real linear range and complete 12px circular joystick with any-keyup release.
+  Rounded status telemetry must never supply joystick geometry. Preserve the
+  exact source programs, current-rectangle input transport, native range keys,
+  arm stroke width, stable input outside retained paint, 44px physical targets,
+  11.1px optical type and the documented 3-Way sparse-fill exception. Visible
+  focus belongs to retained paint; suppress duplicate global input outlines.
+  Record isolated timing with `node tools/profile-drams-knobs.js
+  http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; preserve all trace findings and
+  leave cold-route, Lighthouse and final site-wide timing gates open.

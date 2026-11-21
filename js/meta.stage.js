@@ -13590,17 +13590,25 @@ INTRX.meta({
     ]
   },
   "drams-011": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "slider"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "drams",
@@ -13608,21 +13616,33 @@ INTRX.meta({
       "native"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-013": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "drams",
@@ -13630,21 +13650,33 @@ INTRX.meta({
       "native"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-015": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "application"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "useCases": [
       "drams",
@@ -13652,8 +13684,12 @@ INTRX.meta({
       "native"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-016": {
     "designSize": "sm",

@@ -1,20 +1,32 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 346 of the 399 existing demos:
+Native v4 compositions are remediated for 349 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the nineteen DRAMS Collections demos.
-The remaining work includes 53 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the twenty-two DRAMS Collections demos.
+The remaining work includes 50 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 346 remediated native compositions retains those references.
+None of the 349 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 346 native compositions. The unfinished groups still account for
+among these 349 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-18 low-fill findings; findings can overlap within a demo. All 116 documented
+16 low-fill findings; findings can overlap within a demo. All 117 documented
 Figma fill exceptions validate.
+
+## 3-Way Knob, Round Knob Slider and Joypad
+
+The three controls match v4 tiles `89:761`, `89:782` and `89:803`. Fifteen supplied SVGs keep their exact bytes, intrinsic roots, shadows and slots on the 324×168 native plane at reference origin 24,20. The 3-Way Knob keeps its 84px pale plate, thin orange indicator, all three labels and initial MID detent. Its documented sparse-fill exception preserves that exact size. Round keeps the 180px arc, orange knob, glint and 58% caption. The authored knob angle and displayed percentage have different linear proportions; a monotone native camera passes through the captured 0, 58 and 100 anchors while preserving both reference geometry and copy. Joypad retains its 140px base, exact (28,−20) cap offset and supplied arm, including the tip two pixels left of the cap center. Arm transforms preserve its transverse stroke width.
+
+Full views retain every original controller and displayed title, description and calibration in a 400×584 composition with a complete 368×320 source plane. The three-way model keeps its original integer detents and relative diagonal drag law. Round remains a real native range input with its original linear travel and browser Home, End, arrow and Page keys. Joypad retains the original current-rectangle input law, 0.45 gain, circular 12px limit and release on any keyup; unrounded source styles supply its motion targets. Native, full and short views preserve 44px physical targets, at least 11.1px type, and gaps between headings, controls, readouts, guides and shared Dock. Each generator prompt describes its own native geometry, assets, controls and complete original model.
+
+The emitted verifier passes sixteen groups and 175,178 checks: twelve immutable original captures, 4,332 source states, 732 complete DOM checkpoints, sixty trusted browser range keys, 132 layouts, eighteen independent RK4 renderer stories at 60/120/240Hz, 240 exact interrupted-paint boundaries, real mouse/keys/touch, 43,200 rapid retargets, 10,800 held Dock actions, independent holds, 48 cold paused starts and early disposals, 36 focus/theme cases, 24 fresh network-blocked exports and twelve cold route/LiveTiles cases. Reduced motion retains paint for 150ms fades; normal release uses the canonical 380/32/1 spring. Removing a duplicate global input outline keeps visible focus continuous during reduced-motion joystick transitions. All eight final native, short-full and focus screenshots were reviewed.
+
+Required local phase checks pass at the documented baseline: 651 library checks, all 399 lazy previews, 97 offline exports, nineteen runtime/shell tests, eight CLI/MCP tests, sixteen fit-geometry checks and Stage runtime checks. All 349 completed native compositions pass fit; the fifty unfinished demos account for fifteen small-text and sixteen low-fill findings, with zero boot failures, missing sizes, overflow, horizontal scroll or invalid exceptions. Static stage debt falls to 49 and motion debt to 26 without adding baseline entries. The remaining Joypad curve string belongs to its unchanged, unpainted original model; actual painted source transitions are disabled and the renderer uses canonical motion. Nine shared-file siblings, 325 other modules, 396 other metadata records, 207 frozen helpers, 698 prior publication files, 610 archived originals and the earlier 222- and 184-file accepted snapshots remain unchanged.
+
+The [isolated timing report](performance/drams-knobs-2026-11-21.json) preserves all 24 CPU 1/4 cases and trace digests across native/full, desktop DPR 1 and compact DPR 2. CPU 1 records 60.00–60.00fps, 0 gaps above 25ms and 0 long tasks; first trace Paint spans 16.11–38.79ms, with maximum readiness 45.20ms. CPU 4 records 59.63–60.00fps, 2 gaps above 25ms and 1 long tasks; first trace Paint spans 121.36–195.75ms, with maximum readiness 227.50ms. Fonts are prepared before mount and route transfer is excluded. Other applications are not controlled, and every measured outlier is retained. These measurements leave cold-route, Lighthouse and final site-wide timing gates open. GitHub Actions stays disabled; no workflows or billing settings change, and the account-wide $0 stop limit remains preserved.
 
 ## Dark, Line, Fingerin' and Hollin' Volume
 

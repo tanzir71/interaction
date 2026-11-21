@@ -1,0 +1,43 @@
+{
+  "id": "drams-015",
+  "title": "Joypad Controller",
+  "cat": "DRAMS",
+  "rootClass": "d-drams-015",
+  "tags": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "libs": [],
+  "desc": "A native, accessible recreation of DRAMS 015, Joypad Controller, with its original physical composition and direct manipulation.",
+  "seen": "Seen on: DRAMS by Framer",
+  "hint": "Drag the joypad; release to spring back. Arrow keys work too.",
+  "source": {
+    "name": "DRAMS / Joypad Controller",
+    "url": "https://drams.framer.website/drams/015"
+  },
+  "html": "<div class=\"d-drams-015\"><div class=\"joy-base\"><div class=\"joy-rim\"><div class=\"control joy-disc\" role=\"application\" tabindex=\"0\" aria-label=\"Joypad controller. Drag in any direction, or use arrow keys.\"><i class=\"up\"></i><i class=\"right\"></i><i class=\"down\"></i><i class=\"left\"></i></div></div></div><span class=\"sr\" aria-live=\"polite\"></span></div>",
+  "css": ".d-drams-015{position:relative;display:grid;place-items:center;width:100%;height:320px;overflow:hidden;box-sizing:border-box;background:#fff;color:#515151;font:400 12px/1.3 Inter,system-ui,sans-serif;isolation:isolate;font-variant-numeric:tabular-nums} .d-drams-015 *{box-sizing:border-box;font-family:inherit;font-variant-numeric:tabular-nums} .d-drams-015 button{font:inherit;cursor:pointer} .d-drams-015 .control{position:relative;outline:none;touch-action:none;user-select:none} .d-drams-015 .control:focus-visible{outline:2px solid #fa651f66;outline-offset:10px;border-radius:50%} .d-drams-015 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)} .d-drams-015 .disc{position:absolute;border-radius:50%;inset:0;will-change:transform} .d-drams-015 .white-disc{background:linear-gradient(145deg,#f8f8f8,#e6e6e6);box-shadow:inset 1px 2px 3px #fff,inset -1px -2px 3px #d9d9d9,9px 12px 15px #00000026,2px 3px 3px #0000001a} .d-drams-015 .orange-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fb641f} .d-drams-015 .mark{position:absolute;left:50%;top:50%;font-size:13px;line-height:1;color:#555;transform:translate(-50%,-50%)} .d-drams-015 .sphere{border-radius:50%;background:radial-gradient(circle at 31% 23%,#fff 0%,#f5f5f5 17%,#dfdfdf 47%,#a4a4a4 93%);box-shadow:inset 1px 2px 3px #fff7,0 9px 12px #00000016} .d-drams-015 .sphere:after{content:'';position:absolute;left:45%;top:45%;width:6px;height:6px;border-radius:50%;background:#ff651f} .d-drams-015 button:focus-visible{outline:2px solid #fa651f66;outline-offset:5px}\n.d-drams-015 .joy-base{width:104px;height:104px;border-radius:50%;background:#d8d8d8;padding:12px}.d-drams-015 .joy-rim{width:80px;height:80px;border-radius:50%;padding:11px;background:linear-gradient(140deg,#fff 6%,#ccc 30%,#333 72%,#111);border:2px solid #777;box-shadow:inset 0 2px 2px #fff8,6px 7px 12px #0003}.d-drams-015 .joy-disc{width:54px;height:54px;border-radius:50%;border:4px solid #f0f0f0;background:linear-gradient(140deg,#fafafa,#e5e5e5);box-shadow:inset 0 2px 3px #cfcfcf,1px 1px 5px #0002;transform:translate(var(--x,0px),var(--y,0px));transition:transform .16s cubic-bezier(.2,1.7,.5,1);cursor:grab}.d-drams-015 .joy-disc i{position:absolute;width:4px;height:4px;border-radius:50%;background:#ddd;box-shadow:inset 0 1px 1px #fff}.d-drams-015 .up{left:21px;top:4px}.d-drams-015 .down{left:21px;bottom:4px}.d-drams-015 .left{top:21px;left:4px}.d-drams-015 .right{top:21px;right:4px}",
+  "js": "const control=root.querySelector('.control'),status=root.querySelector('.sr');let down=false,rect;function set(x,y,source){const length=Math.hypot(x,y),scale=length>12?12/length:1;x*=scale;y*=scale;control.style.setProperty('--x',x+'px');control.style.setProperty('--y',y+'px');root.dataset.x=x.toFixed(2);root.dataset.y=y.toFixed(2);root.dataset.source=source;status.textContent='Joystick '+(x<0?'left':x>0?'right':'center')+' '+(y<0?'up':y>0?'down':'center')}control.addEventListener('pointerdown',e=>{down=true;rect=control.getBoundingClientRect();control.setPointerCapture(e.pointerId);control.focus({preventScroll:true});control.style.transition='none'});control.addEventListener('pointermove',e=>{if(down)set((e.clientX-rect.left-rect.width/2)*.45,(e.clientY-rect.top-rect.height/2)*.45,'drag')});function release(){down=false;control.style.transition='transform .24s cubic-bezier(.2,1.7,.5,1)';set(0,0,'spring')}control.addEventListener('pointerup',release);control.addEventListener('pointercancel',release);control.addEventListener('keydown',e=>{const direction={ArrowLeft:[-12,0],ArrowRight:[12,0],ArrowUp:[0,-12],ArrowDown:[0,12]};if(direction[e.key]){e.preventDefault();set(...direction[e.key],'keyboard')}});control.addEventListener('keyup',release);set(0,0,'initial');",
+  "prompt": "Recreate the Joypad Controller composition from https://drams.framer.website/drams/015 as standalone HTML, CSS and JavaScript in a native 300 by 320 white stage. Preserve its proportions, gentle physical materials, interaction states and keyboard access. Use locally bundled Inter for labels and tabular numerical values. Drag the joypad; release to spring back. Arrow keys work too.",
+  "designSize": "sm",
+  "stage": {
+    "theme": "light",
+    "overflow": "clip"
+  },
+  "trigger": "drag",
+  "controls": [],
+  "a11y": {
+    "keyboard": true,
+    "reducedMotion": false,
+    "aria": "application"
+  },
+  "useCases": [
+    "drams",
+    "tactile",
+    "native"
+  ],
+  "tier": "free",
+  "thumb": "full",
+  "addedAt": "2026-11"
+}

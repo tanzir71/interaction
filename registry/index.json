@@ -25956,7 +25956,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-008",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-008.json?v=a11ad421e3",
@@ -25994,8 +25994,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 011, 3-Way Knob, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "Click through low, mid and high",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26003,18 +26010,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-011",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-011.json?v=d19d369d15",
+    "sourcePreview": "registry/p/drams-011.json?v=cdfd5921a2",
     "assetRefs": {},
     "rootClass": "d-drams-011",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "slider"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Click through low, mid and high",
     "sourceName": "DRAMS / 3-Way Knob",
@@ -26037,8 +26049,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 013, Round Knob Slider, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "The orange knob travels its arc",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26046,18 +26065,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-013",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-013.json?v=99c9a5a32f",
+    "sourcePreview": "registry/p/drams-013.json?v=9ccc439393",
     "assetRefs": {},
     "rootClass": "d-drams-013",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "The orange knob travels its arc",
     "sourceName": "DRAMS / Round Knob Slider",
@@ -26065,7 +26089,7 @@
   },
   {
     "id": "drams-015",
-    "title": "Joypad Controller",
+    "title": "Joypad",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "drag",
@@ -26080,8 +26104,15 @@
       "native"
     ],
     "tier": "free",
-    "desc": "A native, accessible recreation of DRAMS 015, Joypad Controller, with its original physical composition and direct manipulation.",
-    "designSize": "sm",
+    "desc": "Push the stick; release and it springs home",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -26089,18 +26120,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-015",
-    "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "thumb": "hero",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-015.json?v=75420f6599",
+    "sourcePreview": "registry/p/drams-015.json?v=8453f35f42",
     "assetRefs": {},
     "rootClass": "d-drams-015",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": "application"
+      "reducedMotion": true,
+      "aria": "region"
     },
     "hint": "Push the stick; release and it springs home",
     "sourceName": "DRAMS / Joypad Controller",
@@ -26133,7 +26169,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-016",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-016.json?v=0d3ea0205f",
@@ -26176,7 +26212,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-017",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-017.json?v=fa0227fdc9",
@@ -26226,7 +26262,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-019",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-019.json?v=499fedeb29",
@@ -26281,7 +26317,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-025",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-025.json?v=e44790035c",
@@ -26336,7 +26372,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-032",
     "thumb": "hero",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-032.json?v=69d593a6d2",
@@ -26384,7 +26420,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-038",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-038.json?v=587354fb40",
@@ -26427,7 +26463,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-046",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-046.json?v=916ebe58b7",
@@ -26470,7 +26506,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-047",
     "thumb": "full",
-    "module": "js/demos.drams.dials.js?v=282bb2e1b3",
+    "module": "js/demos.drams.dials.js?v=8c4dcf9ffd",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/drams-047.json?v=bb05334507",
