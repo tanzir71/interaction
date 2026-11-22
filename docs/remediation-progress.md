@@ -1,19 +1,86 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 373 of the 399 existing demos:
+Native v4 compositions are remediated for 379 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus forty-six DRAMS Collections demos.
-The remaining work includes 26 existing demos, 121 new or extension components,
-Pro seams, and the final audit. Earlier phase sections below retain their
-historical counts and measurements.
+Visual FX (88) demos, plus all fifty-two DRAMS Collections demos.
+The remaining work includes twenty existing Collections demos, 121 new or
+extension components, Pro seams, and the final audit. Earlier phase sections
+below retain their historical counts and measurements.
 
 Photography replacement and performance tails remain open. The retired generated
 photo keys remain in one unfinished demo, showcase-circular-gallery; none of the
-373 remediated native compositions retains those references. The current fit
+379 remediated native compositions retains those references. The current fit
 audit boots all 399 demos with zero overflow, horizontal-scroll or low-fill
-findings. Its 15 tiny-text findings belong to unfinished demos; all 130 documented
-Figma fill exceptions validate. Stage and motion baselines contain 25 and 10
-remaining debts respectively; neither baseline grows.
+findings. Its ten tiny-text findings belong to unfinished demos; all 130 documented
+Figma fill exceptions validate. Stage and motion baselines contain nineteen and
+seven remaining debts respectively; neither baseline grows. No reduced-motion
+baseline entries remain.
+
+## Six remaining DRAMS devices
+
+Pocket Keys, Rover Shell, Clock Radio, Electric Shaver, Rotary Radio and Digital
+Rotary Radio now use their exact v4 native compositions. All 227 captured nodes
+retain hierarchy, material, opacity and clipping: 27 primitive frames, eight text
+nodes and 192 supplied unchanged SVGs. The 324×168 native plane keeps reference
+origin 24,20 inside the 372×264 shared Stage. Each original full composition keeps
+its literal controller program, complete copy and original datasets in a readable
+400×584 composition with a 368×320 source plane.
+
+Native and full states deliberately differ. Native Pocket Keys uses four keys
+and three voice selectors; all twelve note/voice combinations remain functional
+in both views. Rover uses the supplied perforated disc, ring and index around
+their captured pivot; full retains the complete original segmented sphere.
+Native Clock starts at 07:30, while full keeps the real-time analog instrument,
+sixty ticks, three hands, date and all four station presets. Native Shaver keeps
+its supplied foil, ten bars and ready indicator; full retains the original
+particle field, all source birth/velocity/life fixtures and gesture-gated tone.
+Native Rotary keeps its exact scale and dial, while full preserves the original
+fan/slotted speaker and labels. Native Digital seeds value 52 and power on through
+the original callbacks without producing audio; full keeps standby, all five
+station bands, level bars and its clock. Full source values, unrounded tuning,
+clamps, wrapping and cancellation remain unchanged.
+
+Fixed 60Hz source integration preserves the original Rover decay and particle
+recurrences independently of paint refresh. Source clocks, timers and audio follow
+runtime holds; caller, viewport and hidden-document holds remain independent.
+Trusted input gates real WebAudio, and holds/disposal release audio resources.
+Stable physical targets remain at least 44px, use nearest-control routing when
+overlapping, and avoid cross-control button release. Vertical drag rebases each
+delta against the current clamped value so reversing an overshoot responds
+immediately. Keyboard retargeting works during a grab. Canonical pressure uses
+80ms press-in, 380/32/1 release and 250ms scale feedback; reduced motion uses
+150ms retained fades and still poses. Native/full Canvas and complete SVG particle
+fallbacks agree in geometry, alpha and pigment. Compact text has an optical floor;
+the clock brand, date and station keep readable margins without changing model
+hands or numeral centers. There is no idle simulation RAF loop.
+
+The emitted-source verifier passes 72 independent original replays at 60/120/240Hz,
+comparing 69,192 states from 24 immutable captures with 600 source input events.
+Native geometry covers 24 layouts and 7,884 assertions. Forty-eight normal/reduced,
+native/full mouse/touch cases exercise real input and all note/voice combinations.
+Six runtime groups add 2,032 checks for actual spring/pressure paint, dense input,
+clamp reversals, compact copy/themes, independent holds, graphics loss/recovery,
+cleanup and 24 fresh network-blocked exports with native remounts. All six native
+posters and twelve real desktop/mobile detail routes are refreshed and verified;
+the footer links to https://tanziro.com/.
+
+The current-source [six-device timing report](performance/drams-devices-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. CPU 1 records 59.63–60.00fps, 10 intervals above 25ms and 4 long tasks; first trace Paint spans 23.85–67.94ms and maximum readiness is 66.10ms. CPU 4 records 57.26–59.25fps, 38 intervals above 25ms and 24 long tasks; first trace Paint spans 106.42–365.54ms and maximum readiness is 355.10ms. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. All traces and outliers are retained. These measurements leave cold-route, Lighthouse and site-wide timing gates open.
+
+Required local checks pass at the documented baseline: registry/generated output,
+651 library checks with all 399 previews and 97 catalog exports, Stage runtime,
+nineteen runtime/shell tests, sixteen fit-geometry checks and eight CLI/MCP tests.
+All 379 completed previews pass fit; the remaining twenty Collections account
+for the ten small-text findings. Stage debt falls 25→19 and motion debt 10→7.
+All 325 other modules, 393 metadata rows, 393 unrelated catalog rows and five
+protected shared inputs remain unchanged. All 430 prior helpers, 296 prior private
+inputs, 2,266 prior publication files and the 222+184 accepted snapshots remain
+hash-verified. Original fixtures, prototype failures, source-precision diagnostics,
+keyboard/Dock/clamp corrections and every timing outlier remain preserved.
+
+All fifty-two existing DRAMS demos are complete. Sixteen Showcase and four Framer
+demos remain among the existing library; all 121 new/extension components, Pro
+seams and final audits remain open. Commit directly to main; keep Actions disabled
+and preserve the account's $0 stop-at-limit budget.
 
 ## Six remaining switch banks
 

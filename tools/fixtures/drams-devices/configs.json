@@ -1,0 +1,993 @@
+[
+  {
+    "id": "drams-036",
+    "title": "Pocket Keys",
+    "tile": "89:516",
+    "stageId": "89:528",
+    "kind": "keys",
+    "C": "d-drams-036",
+    "full": [
+      {
+        "target": ".op-voice:0",
+        "role": "button",
+        "label": "Voice 1",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "voice": 0
+      },
+      {
+        "target": ".op-voice:1",
+        "role": "button",
+        "label": "Voice 2",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "voice": 1
+      },
+      {
+        "target": ".op-voice:2",
+        "role": "button",
+        "label": "Voice 3",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "voice": 2
+      },
+      {
+        "target": ".op-key:0",
+        "role": "button",
+        "label": "Play C, keyboard A",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "note": 0
+      },
+      {
+        "target": ".op-key:1",
+        "role": "button",
+        "label": "Play E, keyboard S",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "note": 1
+      },
+      {
+        "target": ".op-key:2",
+        "role": "button",
+        "label": "Play G, keyboard D",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "note": 2
+      },
+      {
+        "target": ".op-key:3",
+        "role": "button",
+        "label": "Play C octave, keyboard F",
+        "button": true,
+        "dial": false,
+        "orbit": false,
+        "note": 3
+      }
+    ],
+    "native": [
+      {
+        "target": ".op-voice:0",
+        "nodes": [
+          "89:538"
+        ],
+        "hit": [
+          44,
+          46,
+          8,
+          8
+        ],
+        "voice": 0,
+        "label": "Voice 1",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-voice:1",
+        "nodes": [
+          "89:539"
+        ],
+        "hit": [
+          58,
+          46,
+          8,
+          8
+        ],
+        "voice": 1,
+        "label": "Voice 2",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-voice:2",
+        "nodes": [
+          "89:540"
+        ],
+        "hit": [
+          72,
+          46,
+          8,
+          8
+        ],
+        "voice": 2,
+        "label": "Voice 3",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-key:0",
+        "nodes": [
+          "89:530"
+        ],
+        "hit": [
+          38,
+          70,
+          56,
+          64
+        ],
+        "note": 0,
+        "label": "Play C, keyboard A",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-key:1",
+        "nodes": [
+          "89:532"
+        ],
+        "hit": [
+          102,
+          70,
+          56,
+          64
+        ],
+        "note": 1,
+        "label": "Play E, keyboard S",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-key:2",
+        "nodes": [
+          "89:534"
+        ],
+        "hit": [
+          166,
+          70,
+          56,
+          64
+        ],
+        "note": 2,
+        "label": "Play G, keyboard D",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".op-key:3",
+        "nodes": [
+          "89:536"
+        ],
+        "hit": [
+          230,
+          70,
+          56,
+          64
+        ],
+        "note": 3,
+        "label": "Play C octave, keyboard F",
+        "role": "button",
+        "button": true
+      }
+    ],
+    "nativeDialSeed": 0,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  },
+  {
+    "id": "drams-048",
+    "title": "Rover Shell",
+    "tile": "89:550",
+    "stageId": "122:9570",
+    "kind": "rover",
+    "C": "d-drams-048",
+    "full": [
+      {
+        "target": ".r2-orbit",
+        "role": "slider",
+        "label": "Droid rotation",
+        "button": false,
+        "dial": false,
+        "orbit": true
+      }
+    ],
+    "native": [
+      {
+        "target": ".r2-orbit",
+        "role": "slider",
+        "nodes": [
+          "122:9572",
+          "122:9573",
+          "122:9574",
+          "122:9575",
+          "122:9576",
+          "122:9577",
+          "122:9578",
+          "122:9579",
+          "122:9580",
+          "122:9581",
+          "122:9582",
+          "122:9583",
+          "122:9584",
+          "122:9585",
+          "122:9586",
+          "122:9587",
+          "122:9588",
+          "122:9589",
+          "122:9590",
+          "122:9591",
+          "122:9592",
+          "122:9593",
+          "122:9594",
+          "122:9595",
+          "122:9596",
+          "122:9597",
+          "122:9598",
+          "122:9599",
+          "122:9600",
+          "122:9601",
+          "122:9602",
+          "122:9603",
+          "122:9604",
+          "122:9605",
+          "122:9606",
+          "122:9607",
+          "122:9608",
+          "122:9609",
+          "122:9610",
+          "122:9611",
+          "122:9612",
+          "122:9613",
+          "122:9614",
+          "122:9615",
+          "122:9616",
+          "122:9617",
+          "122:9618",
+          "122:9619",
+          "122:9620",
+          "122:9621",
+          "122:9622",
+          "122:9623",
+          "122:9624",
+          "122:9625",
+          "122:9626",
+          "122:9627",
+          "122:9628",
+          "122:9629",
+          "122:9630",
+          "122:9631",
+          "122:9632",
+          "122:9633",
+          "122:9634",
+          "122:9635",
+          "122:9636",
+          "122:9637",
+          "122:9638",
+          "122:9639",
+          "122:9640",
+          "122:9641",
+          "122:9642",
+          "122:9643",
+          "122:9644",
+          "122:9645",
+          "122:9646",
+          "122:9647",
+          "122:9648",
+          "122:9649",
+          "122:9650",
+          "122:9651",
+          "122:9652",
+          "122:9653",
+          "122:9654",
+          "122:9655",
+          "122:9656",
+          "122:9657",
+          "122:9658",
+          "122:9659",
+          "122:9660",
+          "122:9661",
+          "122:9662",
+          "122:9663",
+          "122:9664",
+          "122:9665"
+        ],
+        "hit": [
+          92,
+          20,
+          140,
+          140
+        ],
+        "orbit": true,
+        "origin": [
+          162,
+          90
+        ],
+        "label": "Droid rotation",
+        "button": false
+      }
+    ],
+    "nativeDialSeed": 0,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  },
+  {
+    "id": "drams-050",
+    "title": "Clock Radio",
+    "tile": "89:575",
+    "stageId": "89:587",
+    "kind": "clock",
+    "C": "d-drams-050",
+    "full": [
+      {
+        "target": ".cr-power",
+        "role": "button",
+        "label": "Radio power",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      },
+      {
+        "target": ".cr-prev",
+        "role": "button",
+        "label": "Previous station",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      },
+      {
+        "target": ".cr-next",
+        "role": "button",
+        "label": "Next station",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      }
+    ],
+    "native": [
+      {
+        "target": ".cr-prev",
+        "nodes": [
+          "89:621"
+        ],
+        "hit": [
+          48,
+          116,
+          36,
+          28
+        ],
+        "label": "Previous station",
+        "role": "button",
+        "button": true
+      },
+      {
+        "target": ".cr-next",
+        "nodes": [
+          "89:622"
+        ],
+        "hit": [
+          244,
+          116,
+          36,
+          28
+        ],
+        "label": "Next station",
+        "role": "button",
+        "button": true
+      }
+    ],
+    "power": ".cr-power",
+    "nativeDialSeed": 0,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  },
+  {
+    "id": "drams-051",
+    "title": "Electric Shaver",
+    "tile": "89:628",
+    "stageId": "89:640",
+    "kind": "shaver",
+    "C": "d-drams-051",
+    "full": [
+      {
+        "target": ".shaver",
+        "role": "button",
+        "label": "Electric shaver power",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      }
+    ],
+    "native": [
+      {
+        "target": ".shaver",
+        "nodes": [
+          "89:653"
+        ],
+        "hit": [
+          152,
+          92,
+          20,
+          40
+        ],
+        "label": "Electric shaver power",
+        "role": "button",
+        "button": true
+      }
+    ],
+    "power": ".shaver",
+    "nativeDialSeed": 0,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  },
+  {
+    "id": "drams-052",
+    "title": "Rotary Radio",
+    "tile": "89:658",
+    "stageId": "89:670",
+    "kind": "radio",
+    "C": "d-drams-052",
+    "full": [
+      {
+        "target": ".rr-power",
+        "role": "button",
+        "label": "Radio power",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      },
+      {
+        "target": ".rr-knob",
+        "role": "slider",
+        "label": "Radio tuning",
+        "button": false,
+        "dial": true,
+        "orbit": false
+      }
+    ],
+    "native": [
+      {
+        "target": ".rr-knob",
+        "role": "slider",
+        "button": true,
+        "nodes": [
+          "89:716",
+          "89:717"
+        ],
+        "hit": [
+          214,
+          50,
+          84,
+          84
+        ],
+        "dial": true,
+        "origin": [
+          244,
+          76
+        ],
+        "label": "Radio tuning"
+      }
+    ],
+    "power": ".rr-power",
+    "nativeDialSeed": 40,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  },
+  {
+    "id": "drams-053",
+    "title": "Digital Rotary Radio",
+    "tile": "89:721",
+    "stageId": "89:733",
+    "kind": "encoder",
+    "C": "d-drams-053",
+    "full": [
+      {
+        "target": ".dr-power",
+        "role": "button",
+        "label": "Radio power",
+        "button": true,
+        "dial": false,
+        "orbit": false
+      },
+      {
+        "target": ".dr-dial",
+        "role": "slider",
+        "label": "Station selector",
+        "button": false,
+        "dial": true,
+        "orbit": false
+      }
+    ],
+    "native": [
+      {
+        "target": ".dr-dial",
+        "role": "slider",
+        "button": true,
+        "nodes": [
+          "89:756",
+          "89:757"
+        ],
+        "hit": [
+          220,
+          56,
+          72,
+          72
+        ],
+        "dial": true,
+        "origin": [
+          244,
+          76
+        ],
+        "label": "Station selector"
+      }
+    ],
+    "power": ".dr-power",
+    "nativeDialSeed": 52,
+    "nativeVoiceAssets": [
+      {
+        "id": "89:538",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#FA7319\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:538",
+          "file": "89-538.svg",
+          "sha256": "bc90452e0f36799c769fb98117b336b11c4e49126cae38f359cf847b95ed8b69",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1370,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:539",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:539",
+          "file": "89-539.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1384,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      },
+      {
+        "id": "89:540",
+        "svg": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"4\" cy=\"4\" r=\"4\" fill=\"#2A2A28\" fill-opacity=\"0.25\"/>\n</svg>\n",
+        "asset": {
+          "id": "89:540",
+          "file": "89-540.svg",
+          "sha256": "3d0e15f18166e4deb2b7f12921528aa6df6a48adedcc71469abf65c31b1d41c8",
+          "root": "<svg width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">",
+          "width": 8,
+          "height": 8,
+          "bounds": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "render": {
+            "x": 1398,
+            "y": 3142,
+            "width": 8,
+            "height": 8
+          },
+          "parent": "89:529"
+        }
+      }
+    ]
+  }
+]

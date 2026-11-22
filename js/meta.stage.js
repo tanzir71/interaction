@@ -13424,17 +13424,25 @@ INTRX.meta({
     ]
   },
   "drams-036": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drams",
@@ -13442,17 +13450,29 @@ INTRX.meta({
       "interactive"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-048": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -13464,43 +13484,33 @@ INTRX.meta({
       "interactive"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-050": {
-    "designSize": "sm",
-    "stage": {
-      "theme": "light",
-      "overflow": "clip"
-    },
-    "trigger": "press",
-    "controls": [],
-    "a11y": {
-      "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
-    },
-    "useCases": [
-      "drams",
-      "hardware",
-      "interactive"
+    "designSize": [
+      400,
+      584
     ],
-    "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
-  },
-  "drams-051": {
-    "designSize": "sm",
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drams",
@@ -13508,20 +13518,66 @@ INTRX.meta({
       "interactive"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
+  },
+  "drams-051": {
+    "designSize": [
+      400,
+      584
+    ],
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "group"
+    },
+    "useCases": [
+      "drams",
+      "hardware",
+      "interactive"
+    ],
+    "tier": "free",
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-052": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
+      "reducedMotion": true,
       "aria": "slider"
     },
     "useCases": [
@@ -13530,20 +13586,32 @@ INTRX.meta({
       "interactive"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-053": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "turn",
+        "label": "Turn"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
+      "reducedMotion": true,
       "aria": "slider"
     },
     "useCases": [
@@ -13552,8 +13620,12 @@ INTRX.meta({
       "interactive"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-008": {
     "designSize": [

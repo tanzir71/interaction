@@ -966,3 +966,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   holds, cleanup, themes, compact text and 24 fresh offline exports/native remounts.
   Record timing with `node tools/profile-drams-switches-banks.js
   http://127.0.0.1:4173 --cpu=1,4`; preserve every trace and leave final gates open.
+
+- `node tools/verify-drams-devices.js http://127.0.0.1:4173` covers v4
+  Pocket Keys, Rover Shell, Clock Radio, Electric Shaver, Rotary Radio and Digital
+  Rotary Radio. Preserve all 227 native nodes, 192 supplied SVGs, 24 immutable
+  captures, complete literal original programs and independent native/full seeds.
+  Native Clock starts at 07:30; native Digital starts at 52/on without audio; full keeps
+  real clock/standby, complete station/note fixtures and original particle fields.
+  Source integration stays at 60Hz; paint can run at 60/120/240Hz. Keep exact unrounded
+  input transport, incremental clamp reversal, keyboard retargeting while held,
+  44px nearest-control targets and cross-release suppression. Source event
+  rebubbling must not recurse into host activation. Caller, viewport and document
+  holds freeze clocks and queue intent independently; real audio is trusted-input
+  gated and closes on disposal. Preserve canonical pressure/release, reduced
+  retained fades, readable compact clock labels and complete Canvas/SVG particle
+  alpha/aspect recovery. Tests cover 69,192 source states, 7,884 native geometry
+  checks, 48 physical-input cases, 2,032 runtime checks and 24 fresh offline exports
+  with native remounts. Record timing with `node tools/profile-drams-devices.js
+  http://127.0.0.1:4173 --cpu=1,4`; retain every trace and leave final gates open.

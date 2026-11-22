@@ -25666,7 +25666,7 @@
   },
   {
     "id": "drams-036",
-    "title": "DRAMS · OP1",
+    "title": "Pocket Keys",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "press",
@@ -25682,7 +25682,14 @@
     ],
     "tier": "free",
     "desc": "A compact seven-key tactile cluster with three tonal selectors and four playable notes. The native version includes keyboard performance and gesture-gated audio.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25690,18 +25697,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-036",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-036.json?v=0431a1c62e",
+    "sourcePreview": "registry/p/drams-036.json?v=99984d0cca",
     "assetRefs": {},
     "rootClass": "d-drams-036",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Play"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "A S D F play notes; 1 to 3 picks the voice",
     "sourceName": "DRAMS / OP1",
@@ -25709,7 +25721,7 @@
   },
   {
     "id": "drams-048",
-    "title": "DRAMS · R2D2",
+    "title": "Rover Shell",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "drag",
@@ -25725,7 +25737,14 @@
     ],
     "tier": "free",
     "desc": "A softly lit spherical droid control with segmented radial panels, a rotating shell and inertial drag.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25733,14 +25752,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-048",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-048.json?v=1c37a01ab8",
+    "sourcePreview": "registry/p/drams-048.json?v=e212054cc2",
     "assetRefs": {},
     "rootClass": "d-drams-048",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -25752,7 +25776,7 @@
   },
   {
     "id": "drams-050",
-    "title": "DRAMS · Digital Clock Radio",
+    "title": "Clock Radio",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "press",
@@ -25768,7 +25792,14 @@
     ],
     "tier": "free",
     "desc": "A small satin clock radio with working analog hands, station presets and a physical power control.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25776,18 +25807,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-050",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-050.json?v=09a1c57ef6",
+    "sourcePreview": "registry/p/drams-050.json?v=7a9b57eb93",
     "assetRefs": {},
     "rootClass": "d-drams-050",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
-      "aria": null
+      "reducedMotion": true,
+      "aria": "group"
     },
     "hint": "Power on; corner keys change the station",
     "sourceName": "DRAMS / Digital Clock Radio",
@@ -25795,7 +25831,7 @@
   },
   {
     "id": "drams-051",
-    "title": "DRAMS · Braun Electric Shaver",
+    "title": "Electric Shaver",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "press",
@@ -25811,7 +25847,14 @@
     ],
     "tier": "free",
     "desc": "A native foil-shaver material study with a working power state, fine cutter detail and restrained moving-hair feedback.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25819,18 +25862,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-051",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-051.json?v=314ed94e1a",
+    "sourcePreview": "registry/p/drams-051.json?v=68852e6b91",
     "assetRefs": {},
     "rootClass": "d-drams-051",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "Switch the shaver on; press again to stop",
     "sourceName": "DRAMS / Braun Electric Shaver",
@@ -25838,7 +25886,7 @@
   },
   {
     "id": "drams-052",
-    "title": "DRAMS · Rotary Radio",
+    "title": "Rotary Radio",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "drag",
@@ -25854,7 +25902,14 @@
     ],
     "tier": "free",
     "desc": "A fan-scale radio with a recessed slotted speaker, rotating tuning dial and physical top power switch.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25862,17 +25917,22 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-052",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-052.json?v=75d71172a8",
+    "sourcePreview": "registry/p/drams-052.json?v=5892257dab",
     "assetRefs": {},
     "rootClass": "d-drams-052",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
+      "reducedMotion": true,
       "aria": "slider"
     },
     "hint": "Turn the dial to tune across the band",
@@ -25881,7 +25941,7 @@
   },
   {
     "id": "drams-053",
-    "title": "DRAMS · Digital Rotary Radio",
+    "title": "Digital Rotary Radio",
     "category": "DRAMS",
     "group": "Collections",
     "trigger": "drag",
@@ -25897,7 +25957,14 @@
     ],
     "tier": "free",
     "desc": "A tall perforated radio with a stepped encoder, station selection, a physical power key and a small built-in clock.",
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
@@ -25905,17 +25972,22 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/drams-053",
-    "thumb": "full",
-    "module": "js/demos.drams.devices.js?v=950eeb42b8",
+    "thumb": "hero",
+    "module": "js/demos.drams.devices.js?v=1c09f16e62",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/drams-053.json?v=0dcc08e67c",
+    "sourcePreview": "registry/p/drams-053.json?v=43fd133a33",
     "assetRefs": {},
     "rootClass": "d-drams-053",
-    "controls": [],
+    "controls": [
+      {
+        "action": "turn",
+        "label": "Turn"
+      }
+    ],
     "a11y": {
       "keyboard": true,
-      "reducedMotion": false,
+      "reducedMotion": true,
       "aria": "slider"
     },
     "hint": "The encoder steps through stations",

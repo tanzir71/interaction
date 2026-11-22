@@ -1,0 +1,1171 @@
+{
+  "at": "2026-11-22T02:35:30.182Z",
+  "base": "00ae5976305f3647f71c7c2b3c3dc294892b4193",
+  "producerSHA256": "4daac3a20e7967b2c3ece46756b45e6382a9f061784f6cf29f45cb7e0ec0034a",
+  "originalDefinitionsSHA256": "895d18a8ca52fc6b93ef067c7e1c68f290eda9143247608ca61e114c264fb77f",
+  "sourceSHA256": "20087ae45c3d438b12451286771f77bf6105c2ed2ef588dd95cf7d4c93eefa81",
+  "expressions": {
+    "drams-036": "({voice,voices:voices.map(b=>b.getAttribute(\"aria-pressed\")),keys:keys.map(b=>b.classList.contains(\"is-down\")),status:live.textContent})",
+    "drams-048": "({angle,velocity,drag,lastX,spin:shell.style.getPropertyValue(\"--spin\"),value:control.getAttribute(\"aria-valuenow\"),status:live.textContent})",
+    "drams-050": "({on,preset,pressed:power.getAttribute(\"aria-pressed\"),station:station.textContent,status:root.querySelector(\"[aria-live]\").textContent,hour:root.querySelector(\".cr-hour\").style.transform,minute:root.querySelector(\".cr-minute\").style.transform,second:root.querySelector(\".cr-second\").style.transform,date:root.querySelector(\"time\").textContent})",
+    "drams-051": "({on,last,particles:particles.map(p=>({...p})),pressed:button.getAttribute(\"aria-pressed\"),status:root.querySelector(\"[aria-live]\").textContent})",
+    "drams-052": "({on,frequency,pressed:power.getAttribute(\"aria-pressed\"),value:dial.getAttribute(\"aria-valuenow\"),valueText:dial.getAttribute(\"aria-valuetext\"),turn:dial.style.getPropertyValue(\"--turn\"),output:out.textContent,status:root.querySelector(\"[aria-live]\").textContent})",
+    "drams-053": "({on,station,pressed:power.getAttribute(\"aria-pressed\"),value:dial.getAttribute(\"aria-valuenow\"),valueText:dial.getAttribute(\"aria-valuetext\"),turn:dial.style.getPropertyValue(\"--turn\"),output:output.textContent,levels:levels.map(n=>n.classList.contains(\"active\")),clock:root.querySelector(\"time\").textContent,status:root.querySelector(\"[aria-live]\").textContent})"
+  },
+  "cases": [
+    {
+      "key": "drams-036-300-normal",
+      "id": "drams-036",
+      "width": 300,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-036-300-normal.json.gz",
+      "sha256": "d8dfc797273eb74e7caa93d1467c2b9f59b44a7943800eaf83d66fb1fd1d7565",
+      "rawSHA256": "ca0b22643f17aae833b2e3caaa69cf16cde2ca96785a5d9f75fee9f3c76d0e82",
+      "bytes": 5650,
+      "states": 481,
+      "events": 31,
+      "initial": {
+        "voice": 0,
+        "voices": [
+          "true",
+          "false",
+          "false"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "Voice1 ready"
+      },
+      "final": {
+        "voice": 2,
+        "voices": [
+          "false",
+          "false",
+          "true"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "C played"
+      }
+    },
+    {
+      "key": "drams-036-300-reduced",
+      "id": "drams-036",
+      "width": 300,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-036-300-reduced.json.gz",
+      "sha256": "0024bb4b7476554c02ddb30aaf241979ebd9fc855778c919d7f868aea0180998",
+      "rawSHA256": "93ad2e6a848e7a5a41729a4fd96d00337818d957be937cdad9dc4a5ec2295d59",
+      "bytes": 5690,
+      "states": 481,
+      "events": 31,
+      "initial": {
+        "voice": 0,
+        "voices": [
+          "true",
+          "false",
+          "false"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "Voice1 ready"
+      },
+      "final": {
+        "voice": 2,
+        "voices": [
+          "false",
+          "false",
+          "true"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "C played"
+      }
+    },
+    {
+      "key": "drams-036-368-normal",
+      "id": "drams-036",
+      "width": 368,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-036-368-normal.json.gz",
+      "sha256": "5647e44b525bede928d08cad8e241e30b464291f78c3f210d0c7e4a1fc45dddd",
+      "rawSHA256": "6a867c57bb5c48deddaea26f98a5e639ef64926120ee98658bd245c7a2cc03bd",
+      "bytes": 5650,
+      "states": 481,
+      "events": 31,
+      "initial": {
+        "voice": 0,
+        "voices": [
+          "true",
+          "false",
+          "false"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "Voice1 ready"
+      },
+      "final": {
+        "voice": 2,
+        "voices": [
+          "false",
+          "false",
+          "true"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "C played"
+      }
+    },
+    {
+      "key": "drams-036-368-reduced",
+      "id": "drams-036",
+      "width": 368,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-036-368-reduced.json.gz",
+      "sha256": "1d630aebb87d36936946d34b416770175dfcafaa645cbbb832f412fef2370554",
+      "rawSHA256": "e425ffa139061baffc60d18871cef226929b24ca5057569c21c4fb611d607b9c",
+      "bytes": 5689,
+      "states": 481,
+      "events": 31,
+      "initial": {
+        "voice": 0,
+        "voices": [
+          "true",
+          "false",
+          "false"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "Voice1 ready"
+      },
+      "final": {
+        "voice": 2,
+        "voices": [
+          "false",
+          "false",
+          "true"
+        ],
+        "keys": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "status": "C played"
+      }
+    },
+    {
+      "key": "drams-048-300-normal",
+      "id": "drams-048",
+      "width": 300,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-048-300-normal.json.gz",
+      "sha256": "d174df240fbdff13805193f8df8f4e7e9f1fb05faf41b10c67d71074fd14ca17",
+      "rawSHA256": "1047a46b77092bb5c528a1a34c6c33eb429c7dd184de61601362df6cc837f619",
+      "bytes": 10115,
+      "states": 481,
+      "events": 16,
+      "initial": {
+        "angle": 0,
+        "velocity": 0,
+        "drag": false,
+        "lastX": 0,
+        "spin": "0deg",
+        "value": "0",
+        "status": "Droid centered"
+      },
+      "final": {
+        "angle": -4085.512564635348,
+        "velocity": 0,
+        "drag": false,
+        "lastX": -240,
+        "spin": "-4085.512564635348deg",
+        "value": "234",
+        "status": "Rotation 72 degrees"
+      }
+    },
+    {
+      "key": "drams-048-300-reduced",
+      "id": "drams-048",
+      "width": 300,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-048-300-reduced.json.gz",
+      "sha256": "9b87b6aac8fd02522acf6e7bf47700d11602473ff2f8cde40f61f8cf1af40489",
+      "rawSHA256": "1a388383d813f1dd7e9e231668afc5b2b18cd64246075bb6a1ed9e17d8c152e0",
+      "bytes": 4216,
+      "states": 481,
+      "events": 16,
+      "initial": {
+        "angle": 0,
+        "velocity": 0,
+        "drag": false,
+        "lastX": 0,
+        "spin": "0deg",
+        "value": "0",
+        "status": "Droid centered"
+      },
+      "final": {
+        "angle": -273,
+        "velocity": 0,
+        "drag": false,
+        "lastX": -240,
+        "spin": "-273deg",
+        "value": "87",
+        "status": "Rotation 72 degrees"
+      }
+    },
+    {
+      "key": "drams-048-368-normal",
+      "id": "drams-048",
+      "width": 368,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-048-368-normal.json.gz",
+      "sha256": "0d6282868b42e43bbd2f4360d3f56423a0810f859600d18d19144380c6994ce1",
+      "rawSHA256": "f521cac78f22be8cf6735261f8051df3350e5d5b879e9d9b0a86fcbaac0d037d",
+      "bytes": 10112,
+      "states": 481,
+      "events": 16,
+      "initial": {
+        "angle": 0,
+        "velocity": 0,
+        "drag": false,
+        "lastX": 0,
+        "spin": "0deg",
+        "value": "0",
+        "status": "Droid centered"
+      },
+      "final": {
+        "angle": -4085.512564635348,
+        "velocity": 0,
+        "drag": false,
+        "lastX": -240,
+        "spin": "-4085.512564635348deg",
+        "value": "234",
+        "status": "Rotation 72 degrees"
+      }
+    },
+    {
+      "key": "drams-048-368-reduced",
+      "id": "drams-048",
+      "width": 368,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-048-368-reduced.json.gz",
+      "sha256": "939d336187c12b20bda9fbf64498ba386400c3ecc945532345783ce9f61c75d6",
+      "rawSHA256": "571d8a39f0ca235c1414df02cd3b5b195eeca34e489d156393b2626cd2b72dfd",
+      "bytes": 4214,
+      "states": 481,
+      "events": 16,
+      "initial": {
+        "angle": 0,
+        "velocity": 0,
+        "drag": false,
+        "lastX": 0,
+        "spin": "0deg",
+        "value": "0",
+        "status": "Droid centered"
+      },
+      "final": {
+        "angle": -273,
+        "velocity": 0,
+        "drag": false,
+        "lastX": -240,
+        "spin": "-273deg",
+        "value": "87",
+        "status": "Rotation 72 degrees"
+      }
+    },
+    {
+      "key": "drams-050-300-normal",
+      "id": "drams-050",
+      "width": 300,
+      "reduced": false,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-050-300-normal.json.gz",
+      "sha256": "d0bd86d0b1c2c4e64d9501a54c32b7006aff664792ee3f25532da5e53b99e3f8",
+      "rawSHA256": "1fee1857f298e72fc399ad71af8ecc57de95baebdf5e94c071ed6de5a1f2cbb7",
+      "bytes": 13726,
+      "states": 1921,
+      "events": 16,
+      "initial": {
+        "on": false,
+        "preset": 0,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(359.5deg)",
+        "minute": "rotate(358.4deg)",
+        "second": "rotate(264deg)",
+        "date": "22 Nov"
+      },
+      "final": {
+        "on": false,
+        "preset": 3,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(0deg)",
+        "minute": "rotate(1.6deg)",
+        "second": "rotate(96deg)",
+        "date": "23 Nov"
+      }
+    },
+    {
+      "key": "drams-050-300-reduced",
+      "id": "drams-050",
+      "width": 300,
+      "reduced": true,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-050-300-reduced.json.gz",
+      "sha256": "d269971520a464b2268e92c084b7d0ab7ce4239c7a2fcfd2543537df1f849499",
+      "rawSHA256": "c281f324d8f9d64974d62c7411c2650b782f9c3756acb848c35ca4a9e5bd3a97",
+      "bytes": 13730,
+      "states": 1921,
+      "events": 16,
+      "initial": {
+        "on": false,
+        "preset": 0,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(359.5deg)",
+        "minute": "rotate(358.4deg)",
+        "second": "rotate(264deg)",
+        "date": "22 Nov"
+      },
+      "final": {
+        "on": false,
+        "preset": 3,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(0deg)",
+        "minute": "rotate(1.6deg)",
+        "second": "rotate(96deg)",
+        "date": "23 Nov"
+      }
+    },
+    {
+      "key": "drams-050-368-normal",
+      "id": "drams-050",
+      "width": 368,
+      "reduced": false,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-050-368-normal.json.gz",
+      "sha256": "d8b09c0be142310e73c199b5feff5bef2837e62fdec94f9cfd81b77d2dc9b842",
+      "rawSHA256": "bc4baf619634ea2aa3d43a941adac41e2851a75bdff25b2ffd0d68f5227cb7cf",
+      "bytes": 13726,
+      "states": 1921,
+      "events": 16,
+      "initial": {
+        "on": false,
+        "preset": 0,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(359.5deg)",
+        "minute": "rotate(358.4deg)",
+        "second": "rotate(264deg)",
+        "date": "22 Nov"
+      },
+      "final": {
+        "on": false,
+        "preset": 3,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(0deg)",
+        "minute": "rotate(1.6deg)",
+        "second": "rotate(96deg)",
+        "date": "23 Nov"
+      }
+    },
+    {
+      "key": "drams-050-368-reduced",
+      "id": "drams-050",
+      "width": 368,
+      "reduced": true,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-050-368-reduced.json.gz",
+      "sha256": "3387e83b3443044093fc3564b36c18db6510340f4064bfbfc5bd4d894f62c6c9",
+      "rawSHA256": "dc9fef420ad7d515efb6c3afa5b452d314542804f5ec49148e811ea26aeb083a",
+      "bytes": 13729,
+      "states": 1921,
+      "events": 16,
+      "initial": {
+        "on": false,
+        "preset": 0,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(359.5deg)",
+        "minute": "rotate(358.4deg)",
+        "second": "rotate(264deg)",
+        "date": "22 Nov"
+      },
+      "final": {
+        "on": false,
+        "preset": 3,
+        "pressed": "false",
+        "station": "Radio off",
+        "status": "Radio off",
+        "hour": "rotate(0deg)",
+        "minute": "rotate(1.6deg)",
+        "second": "rotate(96deg)",
+        "date": "23 Nov"
+      }
+    },
+    {
+      "key": "drams-051-300-normal",
+      "id": "drams-051",
+      "width": 300,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-051-300-normal.json.gz",
+      "sha256": "097b67564aa947a78c1e1e6faf43c26c3f7b5b859e8f69201c612a1b2c90012f",
+      "rawSHA256": "5c167ffe1d48c990ae28b7922b30ea0ef2a918b7cbe961c4c9a13fc3d96bdbc8",
+      "bytes": 250273,
+      "states": 481,
+      "events": 9,
+      "initial": {
+        "on": false,
+        "last": 0,
+        "particles": [],
+        "pressed": "false",
+        "status": "Shaver off"
+      },
+      "final": {
+        "on": true,
+        "last": 8000,
+        "particles": [
+          {
+            "x": 150.6909064622596,
+            "y": 104.42452328503136,
+            "dx": -0.10778324212878942,
+            "dy": 2.2852554508857432,
+            "life": 4
+          },
+          {
+            "x": 121.70727237686515,
+            "y": 62.054006142355476,
+            "dx": -0.589223638176918,
+            "dy": 1.7644396279379713,
+            "life": 9
+          },
+          {
+            "x": 84.42401782982051,
+            "y": 5.6837919034993885,
+            "dx": -0.6024163947440684,
+            "dy": 1.0304510686453423,
+            "life": 14
+          },
+          {
+            "x": 138.54051711503416,
+            "y": 65.37004765179009,
+            "dx": 0.07345894817262888,
+            "dy": 1.6494450327381487,
+            "life": 19
+          },
+          {
+            "x": 225.93119071796536,
+            "y": 37.47949397470801,
+            "dx": 0.7509012753143907,
+            "dy": 1.209072289140895,
+            "life": 24
+          },
+          {
+            "x": 135.21054984489456,
+            "y": 63.563223049417175,
+            "dx": 0.11179862963035703,
+            "dy": 1.4792003246396783,
+            "life": 29
+          },
+          {
+            "x": 204.4127187039703,
+            "y": 42.36745323501526,
+            "dx": 0.4067933140322566,
+            "dy": 1.087158382348717,
+            "life": 34
+          },
+          {
+            "x": 153.14710216829553,
+            "y": 17.586810929886965,
+            "dx": 0.49756442895159125,
+            "dy": 0.5864231299981473,
+            "life": 39
+          },
+          {
+            "x": 223.4527042573318,
+            "y": 22.854960586503125,
+            "dx": 0.9679736960679293,
+            "dy": 0.5484814390446991,
+            "life": 44
+          },
+          {
+            "x": 124.0079621784389,
+            "y": 16.437095255590947,
+            "dx": -0.4621237004175782,
+            "dy": 0.2911195148155089,
+            "life": 49
+          },
+          {
+            "x": 167.6579382000491,
+            "y": 3.4342996244318207,
+            "dx": 0.20250791078433394,
+            "dy": -0.14631957338191667,
+            "life": 54
+          },
+          {
+            "x": 194.5971489623189,
+            "y": 28.327667376073077,
+            "dx": 0.9725943459197879,
+            "dy": 0.25518700917251436,
+            "life": 59
+          },
+          {
+            "x": 143.7800130425021,
+            "y": 33.807676379755144,
+            "dx": 0.571496662683785,
+            "dy": 0.2532687883265323,
+            "life": 64
+          },
+          {
+            "x": 149.78051428264007,
+            "y": 32.72612320221961,
+            "dx": -0.19777401769533753,
+            "dy": 0.06729429684579441,
+            "life": 69
+          },
+          {
+            "x": 164.00428330991417,
+            "y": 29.7838651863858,
+            "dx": -0.46810698928311467,
+            "dy": -0.22812056975439146,
+            "life": 74
+          },
+          {
+            "x": 153.40164930699393,
+            "y": 22.423614724678895,
+            "dx": 0.7705068276263773,
+            "dy": -0.832923108348624,
+            "life": 79
+          },
+          {
+            "x": 152.314743405208,
+            "y": 28.850797810405474,
+            "dx": 0.33962764171883464,
+            "dy": -0.8993251368496576,
+            "life": 84
+          },
+          {
+            "x": 147.91037424560636,
+            "y": 28.808483275305466,
+            "dx": 0.6234824014827609,
+            "dy": -1.5346833386085936,
+            "life": 89
+          },
+          {
+            "x": 172.6481514768675,
+            "y": 38.20797221744432,
+            "dx": -0.8611032138578594,
+            "dy": -1.5095046304259454,
+            "life": 94
+          },
+          {
+            "x": 136.12197670526803,
+            "y": 46.57651901617646,
+            "dx": 0.44640771485865116,
+            "dy": -1.388480983823538,
+            "life": 99
+          }
+        ],
+        "pressed": "true",
+        "status": "Shaver running"
+      }
+    },
+    {
+      "key": "drams-051-300-reduced",
+      "id": "drams-051",
+      "width": 300,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-051-300-reduced.json.gz",
+      "sha256": "83bb1ff5d99243c1f54c301e457054ebbccb5d581e2d0156448d5152204beba7",
+      "rawSHA256": "fa7e64224df3a6d4cb2ffd7601010a16fd320b3ddded2f2b9d2a2aaf6bf7289d",
+      "bytes": 4104,
+      "states": 481,
+      "events": 9,
+      "initial": {
+        "on": false,
+        "last": 0,
+        "particles": [],
+        "pressed": "false",
+        "status": "Shaver off"
+      },
+      "final": {
+        "on": true,
+        "last": 0,
+        "particles": [],
+        "pressed": "true",
+        "status": "Shaver running"
+      }
+    },
+    {
+      "key": "drams-051-368-normal",
+      "id": "drams-051",
+      "width": 368,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-051-368-normal.json.gz",
+      "sha256": "462e1cdef5999d31f1d5e9b2fafe1ac2e1ad9b297e6a1711a6572d6e698a2c3b",
+      "rawSHA256": "4cb34a7dc44f9e5edf63cb76b334a8447c2815f2da9994385f031f6cd96ceec0",
+      "bytes": 250301,
+      "states": 481,
+      "events": 9,
+      "initial": {
+        "on": false,
+        "last": 0,
+        "particles": [],
+        "pressed": "false",
+        "status": "Shaver off"
+      },
+      "final": {
+        "on": true,
+        "last": 8000,
+        "particles": [
+          {
+            "x": 150.6909064622596,
+            "y": 104.42452328503136,
+            "dx": -0.10778324212878942,
+            "dy": 2.2852554508857432,
+            "life": 4
+          },
+          {
+            "x": 121.70727237686515,
+            "y": 62.054006142355476,
+            "dx": -0.589223638176918,
+            "dy": 1.7644396279379713,
+            "life": 9
+          },
+          {
+            "x": 84.42401782982051,
+            "y": 5.6837919034993885,
+            "dx": -0.6024163947440684,
+            "dy": 1.0304510686453423,
+            "life": 14
+          },
+          {
+            "x": 138.54051711503416,
+            "y": 65.37004765179009,
+            "dx": 0.07345894817262888,
+            "dy": 1.6494450327381487,
+            "life": 19
+          },
+          {
+            "x": 225.93119071796536,
+            "y": 37.47949397470801,
+            "dx": 0.7509012753143907,
+            "dy": 1.209072289140895,
+            "life": 24
+          },
+          {
+            "x": 135.21054984489456,
+            "y": 63.563223049417175,
+            "dx": 0.11179862963035703,
+            "dy": 1.4792003246396783,
+            "life": 29
+          },
+          {
+            "x": 204.4127187039703,
+            "y": 42.36745323501526,
+            "dx": 0.4067933140322566,
+            "dy": 1.087158382348717,
+            "life": 34
+          },
+          {
+            "x": 153.14710216829553,
+            "y": 17.586810929886965,
+            "dx": 0.49756442895159125,
+            "dy": 0.5864231299981473,
+            "life": 39
+          },
+          {
+            "x": 223.4527042573318,
+            "y": 22.854960586503125,
+            "dx": 0.9679736960679293,
+            "dy": 0.5484814390446991,
+            "life": 44
+          },
+          {
+            "x": 124.0079621784389,
+            "y": 16.437095255590947,
+            "dx": -0.4621237004175782,
+            "dy": 0.2911195148155089,
+            "life": 49
+          },
+          {
+            "x": 167.6579382000491,
+            "y": 3.4342996244318207,
+            "dx": 0.20250791078433394,
+            "dy": -0.14631957338191667,
+            "life": 54
+          },
+          {
+            "x": 194.5971489623189,
+            "y": 28.327667376073077,
+            "dx": 0.9725943459197879,
+            "dy": 0.25518700917251436,
+            "life": 59
+          },
+          {
+            "x": 143.7800130425021,
+            "y": 33.807676379755144,
+            "dx": 0.571496662683785,
+            "dy": 0.2532687883265323,
+            "life": 64
+          },
+          {
+            "x": 149.78051428264007,
+            "y": 32.72612320221961,
+            "dx": -0.19777401769533753,
+            "dy": 0.06729429684579441,
+            "life": 69
+          },
+          {
+            "x": 164.00428330991417,
+            "y": 29.7838651863858,
+            "dx": -0.46810698928311467,
+            "dy": -0.22812056975439146,
+            "life": 74
+          },
+          {
+            "x": 153.40164930699393,
+            "y": 22.423614724678895,
+            "dx": 0.7705068276263773,
+            "dy": -0.832923108348624,
+            "life": 79
+          },
+          {
+            "x": 152.314743405208,
+            "y": 28.850797810405474,
+            "dx": 0.33962764171883464,
+            "dy": -0.8993251368496576,
+            "life": 84
+          },
+          {
+            "x": 147.91037424560636,
+            "y": 28.808483275305466,
+            "dx": 0.6234824014827609,
+            "dy": -1.5346833386085936,
+            "life": 89
+          },
+          {
+            "x": 172.6481514768675,
+            "y": 38.20797221744432,
+            "dx": -0.8611032138578594,
+            "dy": -1.5095046304259454,
+            "life": 94
+          },
+          {
+            "x": 136.12197670526803,
+            "y": 46.57651901617646,
+            "dx": 0.44640771485865116,
+            "dy": -1.388480983823538,
+            "life": 99
+          }
+        ],
+        "pressed": "true",
+        "status": "Shaver running"
+      }
+    },
+    {
+      "key": "drams-051-368-reduced",
+      "id": "drams-051",
+      "width": 368,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-051-368-reduced.json.gz",
+      "sha256": "354c1388436e7e53d288cd83afcac1b34a657f2b45ad487e099afaa71b00af50",
+      "rawSHA256": "c9174f2db1d3e1605ed78f7bfc6fea3a5fe2844f6e5fcc6d3f8c19c4808137c0",
+      "bytes": 4112,
+      "states": 481,
+      "events": 9,
+      "initial": {
+        "on": false,
+        "last": 0,
+        "particles": [],
+        "pressed": "false",
+        "status": "Shaver off"
+      },
+      "final": {
+        "on": true,
+        "last": 0,
+        "particles": [],
+        "pressed": "true",
+        "status": "Shaver running"
+      }
+    },
+    {
+      "key": "drams-052-300-normal",
+      "id": "drams-052",
+      "width": 300,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-052-300-normal.json.gz",
+      "sha256": "961261612bc57deaca6e0da6a8440238818d2678de7a5a77d4d61944fb8b6674",
+      "rawSHA256": "32dc44a5747e689b5c40bc1e68264ce2666fa0698be1dca36b7102d7a5c29d81",
+      "bytes": 5867,
+      "states": 481,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "frequency": 96,
+        "pressed": "false",
+        "value": "40",
+        "valueText": "96.0 FM",
+        "turn": "-27deg",
+        "output": "96.0 FM",
+        "status": "Radio off, 96.0 FM"
+      },
+      "final": {
+        "on": true,
+        "frequency": 108,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "108.0 FM",
+        "turn": "135deg",
+        "output": "108.0 FM",
+        "status": "Tuned to 108.0 FM"
+      }
+    },
+    {
+      "key": "drams-052-300-reduced",
+      "id": "drams-052",
+      "width": 300,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-052-300-reduced.json.gz",
+      "sha256": "864e455f3f3b967911bc25b4ed0b056b2cf1e03f471ea696b5cc53eb34952c64",
+      "rawSHA256": "9d2add0e719b3f55782a7606dbde52b37b53bc4ee5f86a98269778054657172a",
+      "bytes": 5870,
+      "states": 481,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "frequency": 96,
+        "pressed": "false",
+        "value": "40",
+        "valueText": "96.0 FM",
+        "turn": "-27deg",
+        "output": "96.0 FM",
+        "status": "Radio off, 96.0 FM"
+      },
+      "final": {
+        "on": true,
+        "frequency": 108,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "108.0 FM",
+        "turn": "135deg",
+        "output": "108.0 FM",
+        "status": "Tuned to 108.0 FM"
+      }
+    },
+    {
+      "key": "drams-052-368-normal",
+      "id": "drams-052",
+      "width": 368,
+      "reduced": false,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-052-368-normal.json.gz",
+      "sha256": "29525b76c09ceace5c3dbd572d150763cf7c2d95b72f8326d57fae7a3455fa11",
+      "rawSHA256": "83aee3fb1eb5d0e8233c6b9eb97aa9c0fdc295bc9813ad1b7f2f7afafd0b6524",
+      "bytes": 5874,
+      "states": 481,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "frequency": 96,
+        "pressed": "false",
+        "value": "40",
+        "valueText": "96.0 FM",
+        "turn": "-27deg",
+        "output": "96.0 FM",
+        "status": "Radio off, 96.0 FM"
+      },
+      "final": {
+        "on": true,
+        "frequency": 108,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "108.0 FM",
+        "turn": "135deg",
+        "output": "108.0 FM",
+        "status": "Tuned to 108.0 FM"
+      }
+    },
+    {
+      "key": "drams-052-368-reduced",
+      "id": "drams-052",
+      "width": 368,
+      "reduced": true,
+      "duration": 8000,
+      "file": "raw-fixtures/drams-052-368-reduced.json.gz",
+      "sha256": "4bb1438502ae0e1b8494bd3a799808fc2878d106c5cb2fc6ec6ee005a2a24a45",
+      "rawSHA256": "5d96fd1c969b19cd2ce6208eaa7d01e2f7f7c5118ca53bd1cb539409dd0c5e23",
+      "bytes": 5877,
+      "states": 481,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "frequency": 96,
+        "pressed": "false",
+        "value": "40",
+        "valueText": "96.0 FM",
+        "turn": "-27deg",
+        "output": "96.0 FM",
+        "status": "Radio off, 96.0 FM"
+      },
+      "final": {
+        "on": true,
+        "frequency": 108,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "108.0 FM",
+        "turn": "135deg",
+        "output": "108.0 FM",
+        "status": "Tuned to 108.0 FM"
+      }
+    },
+    {
+      "key": "drams-053-300-normal",
+      "id": "drams-053",
+      "width": 300,
+      "reduced": false,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-053-300-normal.json.gz",
+      "sha256": "dbcd2eb49f51a13c80f3e97429abec8c89e8b8500cf5a641630c578c2ba752ad",
+      "rawSHA256": "d3616fe37d61a40ebbbe2c0934f0ca40e57fad5475ed3b1ab6613e61e1b4318c",
+      "bytes": 15382,
+      "states": 1921,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "station": 0,
+        "pressed": "false",
+        "value": "0",
+        "valueText": "Quiet FM",
+        "turn": "-135deg",
+        "output": "Standby",
+        "levels": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "clock": "23:59",
+        "status": "Radio in standby"
+      },
+      "final": {
+        "on": true,
+        "station": 4,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "Jazz FM",
+        "turn": "135deg",
+        "output": "Jazz FM",
+        "levels": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "clock": "00:00",
+        "status": "Playing Jazz FM"
+      }
+    },
+    {
+      "key": "drams-053-300-reduced",
+      "id": "drams-053",
+      "width": 300,
+      "reduced": true,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-053-300-reduced.json.gz",
+      "sha256": "a75871385ba080eb8beb836028b5826f6b7eb2ab5d1114535ce1236aa21aa21c",
+      "rawSHA256": "8cb04dbcb694adc7d2157a411fc1c5166d4cde4024ad8adc77a01282e266a2bc",
+      "bytes": 15386,
+      "states": 1921,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "station": 0,
+        "pressed": "false",
+        "value": "0",
+        "valueText": "Quiet FM",
+        "turn": "-135deg",
+        "output": "Standby",
+        "levels": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "clock": "23:59",
+        "status": "Radio in standby"
+      },
+      "final": {
+        "on": true,
+        "station": 4,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "Jazz FM",
+        "turn": "135deg",
+        "output": "Jazz FM",
+        "levels": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "clock": "00:00",
+        "status": "Playing Jazz FM"
+      }
+    },
+    {
+      "key": "drams-053-368-normal",
+      "id": "drams-053",
+      "width": 368,
+      "reduced": false,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-053-368-normal.json.gz",
+      "sha256": "f17380d9b5ea272f9e70e52b1f31dad28b832cc4f17b7fa44eaee184e1652e7b",
+      "rawSHA256": "acce38bf1dc52fc0b9c83eed0c8df64b0e514d515ef7f3c54f9ac6eab1bb44d6",
+      "bytes": 15387,
+      "states": 1921,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "station": 0,
+        "pressed": "false",
+        "value": "0",
+        "valueText": "Quiet FM",
+        "turn": "-135deg",
+        "output": "Standby",
+        "levels": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "clock": "23:59",
+        "status": "Radio in standby"
+      },
+      "final": {
+        "on": true,
+        "station": 4,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "Jazz FM",
+        "turn": "135deg",
+        "output": "Jazz FM",
+        "levels": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "clock": "00:00",
+        "status": "Playing Jazz FM"
+      }
+    },
+    {
+      "key": "drams-053-368-reduced",
+      "id": "drams-053",
+      "width": 368,
+      "reduced": true,
+      "duration": 32000,
+      "file": "raw-fixtures/drams-053-368-reduced.json.gz",
+      "sha256": "2ae6e2fd4648547e8f9daff851637cc66cfed3d6c0005f50d2b244e6bc167d20",
+      "rawSHA256": "eb003225b7f4dde530a58b7b8f3e486dbb4708b4f1bd9c4025a75ab2f62bb39a",
+      "bytes": 15390,
+      "states": 1921,
+      "events": 39,
+      "initial": {
+        "on": false,
+        "station": 0,
+        "pressed": "false",
+        "value": "0",
+        "valueText": "Quiet FM",
+        "turn": "-135deg",
+        "output": "Standby",
+        "levels": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "clock": "23:59",
+        "status": "Radio in standby"
+      },
+      "final": {
+        "on": true,
+        "station": 4,
+        "pressed": "true",
+        "value": "100",
+        "valueText": "Jazz FM",
+        "turn": "135deg",
+        "output": "Jazz FM",
+        "levels": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "clock": "00:00",
+        "status": "Playing Jazz FM"
+      }
+    }
+  ]
+}
