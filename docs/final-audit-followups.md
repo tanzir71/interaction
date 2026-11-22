@@ -3,8 +3,11 @@
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
 All 399 existing native compositions now follow their v4 references. The 121 new
-or extension components and Pro seams remain. Both strict static audits now pass;
-legacy aliases and the shared theme corrections remain before expansion. Punch
+or extension components and Pro seams remain. Both strict static audits now pass.
+Active legacy aliases are retired and the shared Stage/Dock correction is
+implemented in `css/foundations.css` and the portable exporter extension. Resolve
+the optional Lenis runtime in Smooth Scroll and native Mask Reveal's aperture
+timing before expansion; preserve the complete original models and copy. Punch
 Card's sixth key is an intrinsic formatting command, validated by exact markup
 and its Figma 170:1830 slot. It clears all sixteen formatting combinations while
 the source clock advances normally. Preserve the six-key interaction and the
@@ -65,9 +68,22 @@ Paint event as proof that all photographs were visible.
 
 The [final Showcase timing report](performance/showcase-final-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. Path, Range and Story each complete one six-second Dock replay; Gallery, Cards and Mask receive six interrupted actions. CPU 1 records 59.88–60.00fps, 2 intervals above 25ms and 0 long tasks; first trace Paint spans 10.49–42.65ms and maximum readiness is 222.40ms. CPU 4 records 59.00–60.00fps, 17 intervals above 25ms and 12 long tasks; first trace Paint spans 50.80–158.88ms and maximum readiness is 219.10ms. The slowest sample is showcase-orbital-path-full-compact-dpr2-cpu4 at 59.00fps. No prepared-font sample exceeds 300ms first trace Paint. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. Every trace and outlier is retained, including the fixture document-base and photo-filter diagnostics. Decoded photos assert 1600px full or 800px thumbnail resolution. These observations leave cold-route, Lighthouse and site-wide timing gates open. Preserve actual-clock card interruption and Story replay, independent scroll/capture ownership, canonical source clocks and the original full models during the final audit.
 
-The shared light-stage background still uses the legacy `#F4F4F2`. The v4 Kit uses a neutral `#F4F4F4` base with a white upper glow. The captured [Dark Volume tile](https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=89-343) has pixels (245,245,245) at (60,50) and (244,244,244) at (60,200); the three subsequent knob tiles have the same samples and their Kit metadata confirms the base and glow. The earlier flat `#F5F5F5` note inferred too much from one upper pixel. Reproduce the neutral base and glow in shared stages and portable exports during the final shell pass. Preserve the frozen v1 runtime, stage, exporter, style and font inputs; use a new stylesheet and exporter extension for the correction. The supplied component SVGs remain unchanged.
+The shared light-stage correction now uses the Figma Kit's neutral `#F4F4F4`
+base, 14px corner and 420×260px white glow at −36,−170. Exact Kit fixtures verify
+neutral upper/lower pixels 245/244. The earlier flat `#F5F5F5` note inferred too
+much from one upper pixel. The new active stylesheet and generated exporter
+extension preserve all five frozen v1 inputs and the unchanged source SVG. Stage
+palettes are isolated from the page theme. Preserve this separation during the
+final theme/accessibility audit.
 
-The shared light-stage Dock also needs its v4 Kit treatment. The reference uses a dark filled pill with light text; current previews use a light pill with dark text. Check the supplied 53×28 px Drag reference and label typography when applying the shared theme correction. Component demos must continue to use the shared Dock.
+The shared Dock now matches the dark filled Kit pill: `#2A2A2A`, `#FAFAFA` text,
+6% white stroke, 12px blur and 12/16px Geist Medium. The Drag fixture measures
+53×28px through whole-pixel intrinsic sizing where supported; other engines keep
+native automatic sizing. Component demos continue to use the shared Dock. The
+portable Kit's light-theme accent label now has 7.10:1 contrast against orange,
+replacing the previous 2.79:1 white label and matching the shell's existing dark
+label override. These shared checks do not replace the full final
+component contrast, keyboard or motion audits.
 
 Review every remediated generator prompt against its own v4 geometry, controls and approved assets, while retaining the complete original models, datasets and displayed copy. The four volume-dial prompts and the three subsequent knob prompts now describe their individual native assets, geometry, controls and complete original compositions.
 

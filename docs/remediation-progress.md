@@ -13,6 +13,49 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Shared foundations, Stage palettes and portable styling
+
+The site now loads `css/foundations.css`; `css/style.css` remains the unchanged
+v1 reference used by historical model captures. Active global compatibility
+aliases are retired. The one surviving `--radius` reference is Duotone's scoped
+mask parameter, which retains its original geometry and model. All 326 demo
+modules, 399 metadata records, displayed copy, generator prompts and complete
+portable HTML/JavaScript parts remain unchanged.
+
+The current Figma Kit confirms a `#F4F4F4` light Stage with a 14px corner and the
+existing 420×260px white radial glow at −36,−170. Its upper/lower sample pixels
+are neutral 245 and 244. Dock buttons use opaque `#2A2A2A`, `#FAFAFA` labels,
+a 6% white inside stroke, 12px background blur and 12/16px Geist Medium. The
+actual Drag instance is 53×28px. Supported engines round the intrinsic hug to
+whole pixels; native automatic sizing remains the fallback. Label metrics stay
+unchanged. Stage palettes now follow their own metadata independently of the page
+theme, keeping dark previews dark when the shell switches to light.
+
+`js/shell/export.shared.js` extends the frozen exporter through the generated
+export bundle and supports both script load orders. Portable files include the
+same Stage palettes, Dock and inline glow. Canonical LF serialization keeps SVG
+payloads and generated output deterministic across Windows/Linux without editing
+the original SVG or any of the five frozen shared inputs. Public fixture hashes
+normalize text line endings; private preservation checks still bind the original
+raw workspace bytes. Every component's portable parts and complete executable
+script bodies are compared with the preceding published version.
+
+The portable Kit's orange accent button now keeps the shell's existing dark
+label in either page theme. This raises the portable light-theme text contrast
+from 2.79:1 to 7.10:1 while preserving the fill.
+Shared-style verification covers 1,644 native/full mounts, eight exact Kit
+fixtures, both page themes, reduced/normal representatives and 48 fresh offline
+exports. All 399 posters are refreshed from native implementations. The required
+strict audits, registry generation, lifecycle/CLI checks, 12 entry-layout checks,
+399-preview/97-export library check and fit audit remain publication gates.
+
+Two existing-library follow-ups remain before expansion: replace Smooth Scroll's
+optional Lenis runtime while preserving its complete interaction model, and
+resolve the known native Mask Reveal aperture timing. The 121 new/extension
+components, Pro seams and final recipe, accessibility and performance audits
+remain in scope. Earlier timing reports describe their recorded styles; they do
+not establish acceptance for the current active stylesheet.
+
 ## Existing-library control and motion audit boundaries
 
 Both strict static audits now pass across all 399 existing demos. Punch Card's

@@ -4,6 +4,10 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
 
 ## Repo in one minute
 - Zero-build static site. `index.html` loads `css/`, `js/demo-runtime.js` and the plain scripts in `js/shell/`. The shell fetches `registry/index.json`, then lazily loads each demo's module and dependencies.
+- Active shared styles live in `css/foundations.css`. Keep `css/style.css`,
+  `css/fonts.css`, the runtime, stage and base exporter unchanged as frozen v1
+  inputs. `js/shell/export.shared.js` is embedded in generated export data and
+  extends the base exporter in either script load order.
 - A demo is one `INTRX.register({ id, title, cat, rootClass, tags, libs, desc, seen, hint, html, css, js, prompt })` object. All classes are prefixed with `rootClass`.
 - Stage metadata (`designSize`, `stage`, `trigger`, `controls`, `a11y`, `tier`) lives in `js/meta.stage.js`. `js/registry-files.json` is the ordered source-module manifest used by Node tooling; add new modules there.
 - A `thumb: 'hero'` demo may declare `thumbDesignSize` for its compact plane.
@@ -1069,3 +1073,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   `node tools/verify-remediation-exports.js` checks 24 fresh network-blocked full
   exports at 390px. These supplement the original component suites and final
   motion/performance audits; they do not replace them.
+- `node tools/verify-foundations.js http://127.0.0.1:4173` checks 1,644 declared
+  native/full stage mounts across page themes and motion settings, plus eight
+  exact Stage/Dock fixtures. Preserve the neutral 244 base, white glow at
+  −36,−170, 14px light corner, 53×28 Drag and opaque dark Dock. Keep Stage palettes
+  independent of the page theme. Global legacy aliases stay retired; Duotone's
+  scoped mask-radius variable retains its original meaning.
+- `node tools/verify-foundation-exports.js` checks 48 fresh network-blocked full
+  exports at 390px. Run `node --test tools/export.shared.test.js` when changing
+  the shared exporter or compiler. Normalize embedded SVG text to LF for
+  deterministic output; do not edit original assets. Refresh all native posters
+  when shared Stage/Dock visuals change. Final theme/contrast/performance audits
+  remain separate acceptance work.

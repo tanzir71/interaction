@@ -44,7 +44,8 @@ prompt. On touch screens, hover and drag previews require tap-to-play.
 
 ```text
 index.html                static entry and ordered shell scripts
-css/style.css             semantic tokens, shared kit, stages and shell layouts
+css/foundations.css       semantic tokens, shared kit, stages and shell layouts
+css/style.css             frozen v1 reference for preserved component fixtures
 css/fonts.css             locally hosted shell and demo fonts
 js/demo-runtime.js        timers, frames, cleanup, suspension and speed
 js/shell/                 registry, exporter, stages, router, palette and UI

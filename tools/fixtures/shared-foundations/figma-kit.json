@@ -1,0 +1,420 @@
+{
+  "fileKey": "OpP74UYjFHRU5q9OBPhoSY",
+  "nodes": [
+    {
+      "id": "8:45",
+      "name": "DockButton",
+      "type": "COMPONENT",
+      "width": 65,
+      "height": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.16470588743686676,
+            "g": 0.16470588743686676,
+            "b": 0.16470588743686676
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:34"
+            }
+          }
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.05999999865889549,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:49"
+            }
+          }
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 999,
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 12,
+          "boundVariables": {},
+          "blurType": "NORMAL"
+        }
+      ],
+      "layoutMode": "HORIZONTAL",
+      "paddingLeft": 12,
+      "paddingRight": 12,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "children": [
+        {
+          "id": "8:46",
+          "name": "Label",
+          "type": "TEXT",
+          "width": 39,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "8:46",
+      "name": "Label",
+      "type": "TEXT",
+      "width": 39,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.9803921580314636,
+            "g": 0.9803921580314636,
+            "b": 0.9803921580314636
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:38"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "OUTSIDE",
+      "effects": [],
+      "characters": "Replay",
+      "fontName": {
+        "family": "Geist",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "id": "8:62",
+      "name": "Stage",
+      "type": "FRAME",
+      "x": 7,
+      "y": 7,
+      "width": 346,
+      "height": 263,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.95686274766922,
+            "g": 0.95686274766922,
+            "b": 0.95686274766922
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:33"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 14,
+      "effects": [],
+      "opacity": 1,
+      "clipsContent": true,
+      "layoutMode": "NONE",
+      "paddingLeft": 0,
+      "paddingRight": 0,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "children": [
+        {
+          "id": "8:63",
+          "name": "Stage glow",
+          "type": "ELLIPSE",
+          "width": 420,
+          "height": 260
+        }
+      ]
+    },
+    {
+      "id": "8:63",
+      "name": "Stage glow",
+      "type": "ELLIPSE",
+      "x": -36,
+      "y": -170,
+      "width": 420,
+      "height": 260,
+      "fills": [
+        {
+          "type": "GRADIENT_RADIAL",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.699999988079071
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 0,
+      "effects": [],
+      "opacity": 1
+    },
+    {
+      "id": "187:4482",
+      "name": "DockButton",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "width": 53,
+      "height": 28,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.16470588743686676,
+            "g": 0.16470588743686676,
+            "b": 0.16470588743686676
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:34"
+            }
+          }
+        }
+      ],
+      "strokes": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 0.05999999865889549,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:49"
+            }
+          }
+        }
+      ],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 999,
+      "effects": [
+        {
+          "type": "BACKGROUND_BLUR",
+          "visible": true,
+          "radius": 12,
+          "boundVariables": {},
+          "blurType": "NORMAL"
+        }
+      ],
+      "opacity": 1,
+      "clipsContent": false,
+      "layoutMode": "HORIZONTAL",
+      "paddingLeft": 12,
+      "paddingRight": 12,
+      "paddingTop": 0,
+      "paddingBottom": 0,
+      "children": [
+        {
+          "id": "I187:4482;8:46",
+          "name": "Label",
+          "type": "TEXT",
+          "width": 27,
+          "height": 16
+        }
+      ]
+    },
+    {
+      "id": "I187:4482;8:46",
+      "name": "Label",
+      "type": "TEXT",
+      "x": 13,
+      "y": 6,
+      "width": 27,
+      "height": 16,
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.9803921580314636,
+            "g": 0.9803921580314636,
+            "b": 0.9803921580314636
+          },
+          "boundVariables": {
+            "color": {
+              "type": "VARIABLE_ALIAS",
+              "id": "VariableID:7:38"
+            }
+          }
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "OUTSIDE",
+      "effects": [],
+      "opacity": 1,
+      "characters": "Drag",
+      "fontName": {
+        "family": "Geist",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      }
+    },
+    {
+      "id": "I89:344;8:63",
+      "name": "Stage glow",
+      "type": "ELLIPSE",
+      "x": -36,
+      "y": -170,
+      "width": 420,
+      "height": 260,
+      "fills": [
+        {
+          "type": "GRADIENT_RADIAL",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "gradientStops": [
+            {
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0.699999988079071
+              },
+              "position": 0,
+              "boundVariables": {}
+            },
+            {
+              "color": {
+                "r": 1,
+                "g": 1,
+                "b": 1,
+                "a": 0
+              },
+              "position": 1,
+              "boundVariables": {}
+            }
+          ],
+          "gradientTransform": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "strokeAlign": "INSIDE",
+      "cornerRadius": 0,
+      "effects": [],
+      "opacity": 1
+    }
+  ],
+  "glowAsset": {
+    "file": "assets/kit/stage-glow.svg",
+    "sha256": "9b5128d4d60ad53fa04f470965b58ad9d8a57a99e111c001732e1c76a3c13121"
+  },
+  "frozenInputs": {
+    "css/style.css": "5f6952188c55713f2721ac0bac8906c824e33a2759119ff9a5f086e02dfaa903",
+    "css/fonts.css": "7db63953478948356f3dfcca9b3cb6fc6363f20232c89d0bd255f5a8eb3671c9",
+    "js/demo-runtime.js": "721e8220b89308e34e6f6f2d77dfc90ca27232bb6baf6d49a7b7bc2f6b47178a",
+    "js/shell/stage.js": "da360a3ce907dbdf93cb3ba813d78634f488d4e90f7888d9ec9686889ad978f0",
+    "js/shell/export.js": "8ded168a9a9c0ec1ead953ce17fa95a95fbc369c3217412291d583f1a50c6635"
+  },
+  "scope": "Exact existing v4 light Stage, white radial glow and main/Drag DockButton materials. The existing SVG remains unchanged; no Figma screenshot is product artwork.",
+  "hashFormat": "SHA-256 of UTF-8 text normalized to LF. Private preservation guards additionally bind the untouched raw workspace bytes."
+}
