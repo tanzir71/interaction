@@ -14070,13 +14070,21 @@ INTRX.meta({
     ]
   },
   "drams-014": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "drag",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -14089,8 +14097,12 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-018": {
     "designSize": [
@@ -14303,13 +14315,21 @@ INTRX.meta({
     ]
   },
   "drams-027": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -14322,21 +14342,33 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-029": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "group"
     },
     "useCases": [
       "DRAMS",
@@ -14345,21 +14377,33 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-031": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "group"
     },
     "useCases": [
       "DRAMS",
@@ -14368,21 +14412,33 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-033": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "group"
     },
     "useCases": [
       "DRAMS",
@@ -14391,8 +14447,12 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-035": {
     "designSize": [
@@ -14500,17 +14560,25 @@ INTRX.meta({
     ]
   },
   "drams-041": {
-    "designSize": "sm",
+    "designSize": [
+      400,
+      584
+    ],
     "stage": {
       "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "action": "press",
+        "label": "Press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "switch"
+      "aria": "group"
     },
     "useCases": [
       "DRAMS",
@@ -14519,8 +14587,12 @@ INTRX.meta({
       "switch"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-042": {
     "designSize": [

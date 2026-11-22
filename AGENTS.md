@@ -946,3 +946,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   offline exports. Record current timing with
   `node tools/profile-drams-switches-objects.js http://127.0.0.1:4173 --cpu=1,4`;
   preserve every trace and leave final timing gates open.
+
+- `node tools/verify-drams-switches-banks.js http://127.0.0.1:4173` covers
+  3-Way Switch, Pushin' 5'ers, Triple Light Switch, Fidget Poppin', Triple Push
+  Buttons and Triple Switch. Preserve all 54 native nodes, 21 supplied SVGs,
+  complete original full programs and each composition's independent seeds.
+  Native Pushin' has five latches versus the full five-option radio group;
+  native Fidget has fifteen bubbles versus all six original full domes.
+  Native Triple Switch is horizontal/stacked; full keeps its vertical tracks.
+  Keep exact slot-specific SVGs, intrinsic padding, direct cached live image
+  references, canonical release motion, queued input and independent holds.
+  Minimum 44px targets resolve overlapping trusted input by nearest control;
+  preserve browser key activation, radio roving focus and cross-release
+  suppression without capturing radio pointers or blocking Stage bubbling.
+  Keep compact full captions centered with one constrained grid column and
+  test actual 314/344px stages. 3-Way's sparse exception changes only fill;
+  A/B/C keep their centers and 11.6px optical floor. Tests compare original
+  states/geometry, RK4 motion and painted transforms, physical keys/mouse/touch,
+  holds, cleanup, themes, compact text and 24 fresh offline exports/native remounts.
+  Record timing with `node tools/profile-drams-switches-banks.js
+  http://127.0.0.1:4173 --cpu=1,4`; preserve every trace and leave final gates open.

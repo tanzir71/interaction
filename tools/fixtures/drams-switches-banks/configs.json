@@ -1,0 +1,2134 @@
+[
+  {
+    "id": "drams-014",
+    "tile": "90:666",
+    "stageId": "90:678",
+    "kind": "slider",
+    "seeds": [
+      1
+    ],
+    "groups": [
+      {
+        "parent": "90:678",
+        "nodes": [
+          "90:679",
+          "90:680",
+          "90:682",
+          "90:683",
+          "90:684"
+        ],
+        "hit": [
+          62,
+          70,
+          200,
+          70
+        ],
+        "axis": 0,
+        "distance": 128,
+        "channels": [
+          {
+            "node": "90:680",
+            "off": [
+              -64,
+              0
+            ],
+            "on": [
+              64,
+              0
+            ],
+            "press": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-014",
+    "full": {
+      "kind": "slider",
+      "controls": [
+        {
+          "label": "Three way switch",
+          "role": "slider",
+          "initial": 1,
+          "hit": [
+            110,
+            121,
+            148,
+            78
+          ],
+          "logicalRect": [
+            110,
+            121,
+            148,
+            78
+          ],
+          "channels": [
+            {
+              "path": "0.2",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                100,
+                0
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                100,
+                0
+              ]
+            }
+          ],
+          "axis": 0,
+          "distance": 100
+        }
+      ]
+    }
+  },
+  {
+    "id": "drams-027",
+    "tile": "90:802",
+    "stageId": "90:814",
+    "kind": "latch",
+    "seeds": [
+      false,
+      true,
+      false,
+      true,
+      false
+    ],
+    "groups": [
+      {
+        "parent": "90:815",
+        "nodes": [
+          "90:816"
+        ],
+        "hit": [
+          36,
+          72,
+          44,
+          40
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:816",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:816",
+            "off": "90:816",
+            "on": "90:818"
+          },
+          {
+            "node": "90:817",
+            "off": "90:817",
+            "on": "90:819"
+          }
+        ]
+      },
+      {
+        "parent": "90:815",
+        "nodes": [
+          "90:818"
+        ],
+        "hit": [
+          88,
+          72,
+          44,
+          40
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:818",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:818",
+            "off": "90:816",
+            "on": "90:818"
+          },
+          {
+            "node": "90:819",
+            "off": "90:817",
+            "on": "90:819"
+          }
+        ]
+      },
+      {
+        "parent": "90:815",
+        "nodes": [
+          "90:820"
+        ],
+        "hit": [
+          140,
+          72,
+          44,
+          40
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:820",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:820",
+            "off": "90:816",
+            "on": "90:818"
+          },
+          {
+            "node": "90:821",
+            "off": "90:817",
+            "on": "90:819"
+          }
+        ]
+      },
+      {
+        "parent": "90:815",
+        "nodes": [
+          "90:822"
+        ],
+        "hit": [
+          192,
+          72,
+          44,
+          40
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:822",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:822",
+            "off": "90:816",
+            "on": "90:818"
+          },
+          {
+            "node": "90:823",
+            "off": "90:817",
+            "on": "90:819"
+          }
+        ]
+      },
+      {
+        "parent": "90:815",
+        "nodes": [
+          "90:824"
+        ],
+        "hit": [
+          244,
+          72,
+          44,
+          40
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:824",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:824",
+            "off": "90:816",
+            "on": "90:818"
+          },
+          {
+            "node": "90:825",
+            "off": "90:817",
+            "on": "90:819"
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-027",
+    "full": {
+      "kind": "radio",
+      "groupLabel": "Five push selectors",
+      "controls": [
+        {
+          "label": "Select 1",
+          "role": "radio",
+          "initial": true,
+          "hit": [
+            89,
+            136,
+            38,
+            48
+          ],
+          "logicalRect": [
+            89,
+            136,
+            38,
+            43
+          ],
+          "channels": [
+            {
+              "path": "0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                5
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                5
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 5
+        },
+        {
+          "label": "Select 2",
+          "role": "radio",
+          "initial": false,
+          "hit": [
+            127,
+            136,
+            38,
+            48
+          ],
+          "logicalRect": [
+            127,
+            136,
+            38,
+            43
+          ],
+          "channels": [
+            {
+              "path": "1",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                5
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                5
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 5
+        },
+        {
+          "label": "Select 3",
+          "role": "radio",
+          "initial": false,
+          "hit": [
+            165,
+            136,
+            38,
+            48
+          ],
+          "logicalRect": [
+            165,
+            136,
+            38,
+            43
+          ],
+          "channels": [
+            {
+              "path": "2",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                5
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                5
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 5
+        },
+        {
+          "label": "Select 4",
+          "role": "radio",
+          "initial": false,
+          "hit": [
+            203,
+            136,
+            38,
+            48
+          ],
+          "logicalRect": [
+            203,
+            136,
+            38,
+            43
+          ],
+          "channels": [
+            {
+              "path": "3",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                5
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                5
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 5
+        },
+        {
+          "label": "Select 5",
+          "role": "radio",
+          "initial": false,
+          "hit": [
+            241,
+            136,
+            38,
+            48
+          ],
+          "logicalRect": [
+            241,
+            136,
+            38,
+            43
+          ],
+          "channels": [
+            {
+              "path": "4",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                5
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                5
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 5
+        }
+      ]
+    }
+  },
+  {
+    "id": "drams-029",
+    "tile": "90:829",
+    "stageId": "90:841",
+    "kind": "switch",
+    "seeds": [
+      false,
+      true,
+      false
+    ],
+    "groups": [
+      {
+        "parent": "90:842",
+        "nodes": [
+          "90:843",
+          "90:849"
+        ],
+        "hit": [
+          80,
+          52,
+          44,
+          80
+        ],
+        "axis": 1,
+        "distance": -34,
+        "channels": [
+          {
+            "node": "90:844",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              -34
+            ],
+            "press": [
+              0,
+              1
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:849",
+            "off": "90:849",
+            "on": "90:850"
+          }
+        ]
+      },
+      {
+        "parent": "90:842",
+        "nodes": [
+          "90:845",
+          "90:850"
+        ],
+        "hit": [
+          140,
+          52,
+          44,
+          80
+        ],
+        "axis": 1,
+        "distance": -34,
+        "channels": [
+          {
+            "node": "90:846",
+            "off": [
+              0,
+              34
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              1
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:850",
+            "off": "90:849",
+            "on": "90:850"
+          }
+        ]
+      },
+      {
+        "parent": "90:842",
+        "nodes": [
+          "90:847",
+          "90:851"
+        ],
+        "hit": [
+          200,
+          52,
+          44,
+          80
+        ],
+        "axis": 1,
+        "distance": -34,
+        "channels": [
+          {
+            "node": "90:848",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              -34
+            ],
+            "press": [
+              0,
+              1
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:851",
+            "off": "90:849",
+            "on": "90:850"
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-029",
+    "full": {
+      "kind": "switch",
+      "controls": [
+        {
+          "label": "Light 1",
+          "role": "switch",
+          "initial": true,
+          "hit": [
+            92,
+            94,
+            61.328125,
+            132
+          ],
+          "logicalRect": [
+            92,
+            94,
+            61.328125,
+            132
+          ],
+          "channels": [
+            {
+              "path": "0.0",
+              "off": [
+                0,
+                -13
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                -13
+              ],
+              "pressedOn": [
+                0,
+                0
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 13
+        },
+        {
+          "label": "Light 2",
+          "role": "switch",
+          "initial": true,
+          "hit": [
+            153.328125,
+            94,
+            61.328125,
+            132
+          ],
+          "logicalRect": [
+            153.328125,
+            94,
+            61.328125,
+            132
+          ],
+          "channels": [
+            {
+              "path": "1.0",
+              "off": [
+                0,
+                -13
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                -13
+              ],
+              "pressedOn": [
+                0,
+                0
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 13
+        },
+        {
+          "label": "Light 3",
+          "role": "switch",
+          "initial": true,
+          "hit": [
+            214.65625,
+            94,
+            61.328125,
+            132
+          ],
+          "logicalRect": [
+            214.65625,
+            94,
+            61.328125,
+            132
+          ],
+          "channels": [
+            {
+              "path": "2.0",
+              "off": [
+                0,
+                -13
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                -13
+              ],
+              "pressedOn": [
+                0,
+                0
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 13
+        }
+      ]
+    }
+  },
+  {
+    "id": "drams-031",
+    "tile": "90:855",
+    "stageId": "90:867",
+    "kind": "switch",
+    "seeds": [
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    "groups": [
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:869"
+        ],
+        "hit": [
+          68,
+          38,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:869",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:869",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:870"
+        ],
+        "hit": [
+          108,
+          38,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:870",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:870",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:871"
+        ],
+        "hit": [
+          148,
+          38,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:871",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:871",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:872"
+        ],
+        "hit": [
+          188,
+          38,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:872",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:872",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:873"
+        ],
+        "hit": [
+          228,
+          38,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:873",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:873",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:874"
+        ],
+        "hit": [
+          68,
+          80,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:874",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:874",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:875"
+        ],
+        "hit": [
+          108,
+          80,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:875",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:875",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:876"
+        ],
+        "hit": [
+          148,
+          80,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:876",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:876",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:877"
+        ],
+        "hit": [
+          188,
+          80,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:877",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:877",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:878"
+        ],
+        "hit": [
+          228,
+          80,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:878",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:878",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:879"
+        ],
+        "hit": [
+          68,
+          122,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:879",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:879",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:880"
+        ],
+        "hit": [
+          108,
+          122,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:880",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:880",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:881"
+        ],
+        "hit": [
+          148,
+          122,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:881",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:881",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:882"
+        ],
+        "hit": [
+          188,
+          122,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:882",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:882",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      },
+      {
+        "parent": "90:868",
+        "nodes": [
+          "90:883"
+        ],
+        "hit": [
+          228,
+          122,
+          34,
+          34
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:883",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              2
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:883",
+            "off": "90:869",
+            "on": "90:870"
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-031",
+    "full": {
+      "kind": "switch",
+      "controls": [
+        {
+          "label": "Pop 1",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            94,
+            104,
+            44,
+            44
+          ],
+          "logicalRect": [
+            94,
+            104,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "0.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        },
+        {
+          "label": "Pop 2",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            162,
+            104,
+            44,
+            44
+          ],
+          "logicalRect": [
+            162,
+            104,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "1.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        },
+        {
+          "label": "Pop 3",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            230,
+            104,
+            44,
+            44
+          ],
+          "logicalRect": [
+            230,
+            104,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "2.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        },
+        {
+          "label": "Pop 4",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            94,
+            172,
+            44,
+            44
+          ],
+          "logicalRect": [
+            94,
+            172,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "3.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        },
+        {
+          "label": "Pop 5",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            162,
+            172,
+            44,
+            44
+          ],
+          "logicalRect": [
+            162,
+            172,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "4.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        },
+        {
+          "label": "Pop 6",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            230,
+            172,
+            44,
+            44
+          ],
+          "logicalRect": [
+            230,
+            172,
+            44,
+            44
+          ],
+          "channels": [
+            {
+              "path": "5.0",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                2
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                2
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "drams-033",
+    "tile": "90:887",
+    "stageId": "90:899",
+    "kind": "switch",
+    "seeds": [
+      false,
+      true,
+      false
+    ],
+    "groups": [
+      {
+        "parent": "90:900",
+        "nodes": [
+          "90:901"
+        ],
+        "hit": [
+          66,
+          64,
+          56,
+          56
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:901",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:901",
+            "off": "90:901",
+            "on": "90:902"
+          }
+        ]
+      },
+      {
+        "parent": "90:900",
+        "nodes": [
+          "90:902"
+        ],
+        "hit": [
+          134,
+          64,
+          56,
+          56
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:902",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:902",
+            "off": "90:901",
+            "on": "90:902"
+          }
+        ]
+      },
+      {
+        "parent": "90:900",
+        "nodes": [
+          "90:903"
+        ],
+        "hit": [
+          202,
+          64,
+          56,
+          56
+        ],
+        "axis": null,
+        "distance": 0,
+        "channels": [
+          {
+            "node": "90:903",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              3
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "node": "90:903",
+            "off": "90:901",
+            "on": "90:902"
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-033",
+    "full": {
+      "kind": "switch",
+      "controls": [
+        {
+          "label": "Orange push button",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            78,
+            134,
+            44,
+            52
+          ],
+          "logicalRect": [
+            78,
+            134,
+            44,
+            52
+          ],
+          "channels": [
+            {
+              "path": "0.1",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                3
+              ],
+              "pressedOn": [
+                0,
+                3
+              ]
+            }
+          ],
+          "axis": null,
+          "distance": 0
+        },
+        {
+          "label": "White push button",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            162,
+            134,
+            44,
+            52
+          ],
+          "logicalRect": [
+            162,
+            134,
+            44,
+            52
+          ],
+          "channels": [
+            {
+              "path": "1.1",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                3
+              ],
+              "pressedOn": [
+                0,
+                3
+              ]
+            }
+          ],
+          "axis": null,
+          "distance": 0
+        },
+        {
+          "label": "Dark push button",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            246,
+            134,
+            44,
+            52
+          ],
+          "logicalRect": [
+            246,
+            134,
+            44,
+            52
+          ],
+          "channels": [
+            {
+              "path": "2.1",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                0
+              ],
+              "pressedOff": [
+                0,
+                3
+              ],
+              "pressedOn": [
+                0,
+                3
+              ]
+            }
+          ],
+          "axis": null,
+          "distance": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "drams-041",
+    "tile": "90:971",
+    "stageId": "90:983",
+    "kind": "switch",
+    "seeds": [
+      true,
+      false,
+      false
+    ],
+    "groups": [
+      {
+        "parent": "90:984",
+        "nodes": [
+          "90:985"
+        ],
+        "hit": [
+          124,
+          30,
+          76,
+          36
+        ],
+        "axis": 0,
+        "distance": 38,
+        "channels": [
+          {
+            "node": "90:986",
+            "off": [
+              -38,
+              0
+            ],
+            "on": [
+              0,
+              0
+            ],
+            "press": [
+              0,
+              0
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:985",
+            "off": "90:987",
+            "on": "90:985"
+          }
+        ]
+      },
+      {
+        "parent": "90:984",
+        "nodes": [
+          "90:987"
+        ],
+        "hit": [
+          124,
+          78,
+          76,
+          36
+        ],
+        "axis": 0,
+        "distance": 38,
+        "channels": [
+          {
+            "node": "90:988",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              38,
+              0
+            ],
+            "press": [
+              0,
+              0
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:987",
+            "off": "90:987",
+            "on": "90:985"
+          }
+        ]
+      },
+      {
+        "parent": "90:984",
+        "nodes": [
+          "90:989"
+        ],
+        "hit": [
+          124,
+          126,
+          76,
+          36
+        ],
+        "axis": 0,
+        "distance": 38,
+        "channels": [
+          {
+            "node": "90:990",
+            "off": [
+              0,
+              0
+            ],
+            "on": [
+              38,
+              0
+            ],
+            "press": [
+              0,
+              0
+            ]
+          }
+        ],
+        "materials": [
+          {
+            "node": "90:989",
+            "off": "90:987",
+            "on": "90:985"
+          }
+        ]
+      }
+    ],
+    "rootClass": "d-drams-041",
+    "full": {
+      "kind": "switch",
+      "controls": [
+        {
+          "label": "Vertical switch 1",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            76,
+            90,
+            40,
+            140
+          ],
+          "logicalRect": [
+            76,
+            90,
+            40,
+            140
+          ],
+          "channels": [
+            {
+              "path": "0.2",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                -60
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                -60
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": -60
+        },
+        {
+          "label": "Vertical switch 2",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            164,
+            90,
+            40,
+            140
+          ],
+          "logicalRect": [
+            164,
+            90,
+            40,
+            140
+          ],
+          "channels": [
+            {
+              "path": "1.2",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                -60
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                -60
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": -60
+        },
+        {
+          "label": "Vertical switch 3",
+          "role": "switch",
+          "initial": false,
+          "hit": [
+            252,
+            90,
+            40,
+            140
+          ],
+          "logicalRect": [
+            252,
+            90,
+            40,
+            140
+          ],
+          "channels": [
+            {
+              "path": "2.2",
+              "off": [
+                0,
+                0
+              ],
+              "on": [
+                0,
+                -60
+              ],
+              "pressedOff": [
+                0,
+                0
+              ],
+              "pressedOn": [
+                0,
+                -60
+              ]
+            }
+          ],
+          "axis": 1,
+          "distance": -60
+        }
+      ]
+    }
+  }
+]

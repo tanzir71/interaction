@@ -1,0 +1,272 @@
+[
+  {
+    "id": "drams-014",
+    "title": "3-Way Switch",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-014",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / 3-Way Switch",
+      "url": "https://drams.framer.website/drams/014"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-014\" aria-label=\"3-Way Switch\"><div class=\"d-drams-014-object\"><button class=\"three\" role=\"slider\" aria-label=\"Three way switch\" aria-valuemin=\"0\" aria-valuemax=\"2\" aria-valuenow=\"1\"><span class=\"marks\"><i></i><i></i><i></i></span><span class=\"case\"><i class=\"slot\"></i></span><span class=\"handle\"><i></i></span></button></div><span class=\"d-drams-014-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-014{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-014 *{box-sizing:border-box}.d-drams-014-object{position:relative;flex:none}.d-drams-014 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-014 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-014-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-014 .three{width:148px;height:78px;display:block;--position:1}.d-drams-014 .marks{position:absolute;left:16px;right:16px;top:0;display:flex;justify-content:space-between}.d-drams-014 .marks i{width:11px;height:11px;border-radius:0 0 6px 6px;background:#eee}.d-drams-014 .marks i.active{background:#ff6322}.d-drams-014 .case{position:absolute;inset:17px 0 0;border-radius:22px;background:#f2f1f0;padding:8px}.d-drams-014 .slot{position:absolute;inset:8px;border-radius:14px;background:linear-gradient(90deg,#ef580f 0%,#da4d0b calc(var(--position)*38% + 7%),#dbdbd9 calc(var(--position)*38% + 7%),#e9e9e7 100%);box-shadow:inset 0 3px 4px #0004,inset 0 -4px 5px #0001}.d-drams-014 .handle{position:absolute;left:8px;top:17px;width:28px;height:49px;border-radius:15px;background:linear-gradient(90deg,#fff,#f5f5f3 70%,#e3e3e0);box-shadow:inset 0 -5px 1px #cececc,3px 6px 8px #0003;transform:translateX(calc(var(--position)*50px));transition:transform .45s cubic-bezier(.2,.85,.2,1.15)}.d-drams-014 .handle>i{position:absolute;left:13px;top:5px;width:4px;height:16px;border-radius:3px;background:#ff6020}@media(prefers-reduced-motion:reduce){.d-drams-014 *,.d-drams-014 *:before,.d-drams-014 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-014 button:focus-visible{outline:1px solid #858585;outline-offset:5px}.d-drams-014 button{border-radius:30px}",
+    "js": "const b=root.querySelector('[role=slider]'),status=root.querySelector('[aria-live]');let value=1,changes=0;function set(n,s){value=Math.max(0,Math.min(2,n));b.style.setProperty('--position',value);b.setAttribute('aria-valuenow',value);b.setAttribute('aria-valuetext',['Left','Center','Right'][value]);root.dataset.value=String(value);root.dataset.source=s;root.dataset.changes=String(changes);status.textContent=['Left','Center','Right'][value]+' position';[...b.querySelectorAll('.marks i')].forEach((n,i)=>n.classList.toggle('active',i===value))}b.addEventListener('click',e=>{changes++;const r=b.getBoundingClientRect();set(e.detail===0?(value+1)%3:Math.round((e.clientX-r.left)/r.width*2),'click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(e.key==='Home'?0:e.key==='End'?2:value+(e.key==='ArrowRight'?1:-1),'keyboard')});let dragging=false;b.addEventListener('pointerdown',e=>{dragging=true;b.setPointerCapture(e.pointerId)});b.addEventListener('pointermove',e=>{if(!dragging)return;const r=b.getBoundingClientRect();set(Math.round((e.clientX-r.left)/r.width*2),'drag')});b.addEventListener('pointerup',()=>dragging=false);b.addEventListener('pointercancel',()=>dragging=false);set(1,'initial');return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS 3-Way Switch from https://drams.framer.website/drams/014. A 148px recessed trough, three top markers and a 28×49 raised pinch handle. Orange tracks left, center or right selection, using clicks, drag and keyboard. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "A 148px recessed trough, three top markers and a 28×49 raised pinch handle",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "slider"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "drams-027",
+    "title": "Pushin' 5'ers",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-027",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / Pushin' 5'ers",
+      "url": "https://drams.framer.website/drams/027"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-027\" aria-label=\"Pushin' 5'ers\"><div class=\"d-drams-027-object\"><div class=\"bank\" role=\"radiogroup\" aria-label=\"Five push selectors\"><button class=\"key\" role=\"radio\" aria-checked=\"true\" aria-label=\"Select 1\"><i></i></button><button class=\"key\" role=\"radio\" aria-checked=\"false\" aria-label=\"Select 2\"><i></i></button><button class=\"key\" role=\"radio\" aria-checked=\"false\" aria-label=\"Select 3\"><i></i></button><button class=\"key\" role=\"radio\" aria-checked=\"false\" aria-label=\"Select 4\"><i></i></button><button class=\"key\" role=\"radio\" aria-checked=\"false\" aria-label=\"Select 5\"><i></i></button></div></div><span class=\"d-drams-027-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-027{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-027 *{box-sizing:border-box}.d-drams-027-object{position:relative;flex:none}.d-drams-027 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-027 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-027-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-027 .bank{display:flex;gap:0;width:190px;height:48px;border-radius:23px;background:#aaa;box-shadow:0 2px 1px #444,0 5px 7px #0002;padding-bottom:5px}.d-drams-027 .key{height:43px;width:38px;background:linear-gradient(170deg,#f4f4f3,#dcdcd9);box-shadow:inset 0 1px #fff5;transition:transform .2s,box-shadow .2s}.d-drams-027 .key:first-child{border-radius:23px 0 0 23px}.d-drams-027 .key:last-child{border-radius:0 23px 23px 0}.d-drams-027 .key:before{content:\"\";position:absolute;left:7px;top:6px;width:26px;height:26px;border-radius:50%;background:linear-gradient(#dfdfdc,#eaeae8)}.d-drams-027 .key>i{position:absolute;left:16px;top:16px;width:6px;height:6px;border-radius:50%;background:#c7c7c5}.d-drams-027 .key.is-on{transform:translateY(5px);box-shadow:inset 0 -3px #dededb;background:#eee}.d-drams-027 .key.is-on>i{background:#ff621e}@media(prefers-reduced-motion:reduce){.d-drams-027 *,.d-drams-027 *:before,.d-drams-027 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-027 button:focus-visible{outline:1px solid #858585;outline-offset:5px}.d-drams-027 button:focus-visible{outline-offset:0;border-radius:22px}",
+    "js": "const buttons=[...root.querySelectorAll('[role=radio]')],status=root.querySelector('[aria-live]');let selected=0,changes=0;function set(i,s){selected=(i+buttons.length)%buttons.length;buttons.forEach((b,n)=>{b.setAttribute('aria-checked',String(n===selected));b.tabIndex=n===selected?0:-1;b.classList.toggle('is-on',n===selected)});root.dataset.value=String(selected+1);root.dataset.source=s;root.dataset.changes=String(changes);status.textContent='Button '+(selected+1)+' selected'}buttons.forEach((b,i)=>{b.addEventListener('click',()=>{changes++;set(i,'click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(e.key==='Home'?0:e.key==='End'?buttons.length-1:selected+(e.key==='ArrowRight'?1:-1),'keyboard');buttons[selected].focus()})});set(0,'initial');return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS Pushin' 5'ers from https://drams.framer.website/drams/027. Five adjacent 38px keys share a rounded base. Exactly one latches lower and illuminates its dot; another selection releases the previous key. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "Five adjacent 38px keys share a rounded base",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "radiogroup"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "drams-029",
+    "title": "Triple Light Switch",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-029",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / Triple Light Switch",
+      "url": "https://drams.framer.website/drams/029"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-029\" aria-label=\"Triple Light Switch\"><div class=\"d-drams-029-object\"><div class=\"walls\"><button class=\"wall\" role=\"switch\" aria-checked=\"true\" aria-label=\"Light 1\"><i></i></button><button class=\"wall\" role=\"switch\" aria-checked=\"true\" aria-label=\"Light 2\"><i></i></button><button class=\"wall\" role=\"switch\" aria-checked=\"true\" aria-label=\"Light 3\"><i></i></button></div></div><span class=\"d-drams-029-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-029{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-029 *{box-sizing:border-box}.d-drams-029-object{position:relative;flex:none}.d-drams-029 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-029 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-029-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-029 .walls{display:flex;width:196px;height:144px;padding:6px;border-radius:18px;background:#eee;box-shadow:inset 0 2px 2px #fff,inset 0 0 2px 2px #ddd}.d-drams-029 .wall{width:62px;height:132px;flex:1;border:1px solid #d3d3d1;background:linear-gradient(#f8f8f7,#f5f5f3 85%,#aaa 94%,#bbb);box-shadow:0 4px 6px #0002;transition:background .25s,box-shadow .25s}.d-drams-029 .wall:first-child{border-radius:12px 0 0 12px}.d-drams-029 .wall:last-child{border-radius:0 12px 12px 0}.d-drams-029 .wall.is-on{background:linear-gradient(#ddd,#eee 6%,#fff 10%,#eee 13%,#eaeae8);box-shadow:none}.d-drams-029 .wall>i{position:absolute;top:24px;left:calc(50% - 3px);width:6px;height:6px;border-radius:50%;background:#ccc;transition:transform .25s,background .25s}.d-drams-029 .wall:not(.is-on)>i{transform:translateY(-13px)}.d-drams-029 .wall.is-on>i{background:#ff621e}@media(prefers-reduced-motion:reduce){.d-drams-029 *,.d-drams-029 *:before,.d-drams-029 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-029 button:focus-visible{outline:1px solid #858585;outline-offset:5px}",
+    "js": "const buttons=[...root.querySelectorAll('[role=switch]')],status=root.querySelector('[aria-live]');let changes=0;function set(b,v,s){b.setAttribute('aria-checked',String(v));b.classList.toggle('is-on',v);root.dataset.values=buttons.map(x=>x.getAttribute('aria-checked')==='true'?1:0).join(',');root.dataset.value=String(buttons.filter(x=>x.getAttribute('aria-checked')==='true').length);root.dataset.state=v?'on':'off';root.dataset.source=s;root.dataset.changes=String(changes);status.textContent=b.getAttribute('aria-label')+(v?' on':' off')}buttons.forEach((b,i)=>{set(b,([true,true,true])[i]||false,'initial');let x=0,y=0,dragged=false;b.addEventListener('pointerdown',e=>{x=e.clientX;y=e.clientY;dragged=false;b.classList.add('is-pressed');b.setPointerCapture(e.pointerId)});b.addEventListener('pointerup',e=>{b.classList.remove('is-pressed');const dx=e.clientX-x,dy=y-e.clientY,v=Math.abs(dx)>Math.abs(dy)?dx:dy;if(Math.abs(v)>12){dragged=true;changes++;set(b,v>0,'drag')}});b.addEventListener('pointercancel',()=>b.classList.remove('is-pressed'));b.addEventListener('click',()=>{if(dragged){dragged=false;return}changes++;set(b,b.getAttribute('aria-checked')!=='true','click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(b,['ArrowRight','ArrowUp','End'].includes(e.key),'keyboard')})});return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS Triple Light Switch from https://drams.framer.website/drams/029. Three independent tall rockers share a 196×144 wall plate. Orange LEDs mark flat engaged rockers; releasing one raises its lower bevel and moves its LED upward. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "Three independent tall rockers share a 196×144 wall plate",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "switch"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "drams-031",
+    "title": "Fidget Poppin'",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-031",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / Fidget Poppin'",
+      "url": "https://drams.framer.website/drams/031"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-031\" aria-label=\"Fidget Poppin'\"><div class=\"d-drams-031-object\"><div class=\"pops\"><button class=\"pop dotted\" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 1\"><i></i></button><button class=\"pop \" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 2\"><i></i></button><button class=\"pop dotted\" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 3\"><i></i></button><button class=\"pop \" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 4\"><i></i></button><button class=\"pop dotted\" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 5\"><i></i></button><button class=\"pop \" role=\"switch\" aria-checked=\"false\" aria-label=\"Pop 6\"><i></i></button></div></div><span class=\"d-drams-031-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-031{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-031 *{box-sizing:border-box}.d-drams-031-object{position:relative;flex:none}.d-drams-031 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-031 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-031-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-031 .pops{display:grid;grid-template-columns:repeat(3,44px);grid-template-rows:repeat(2,44px);gap:24px;padding:16px;width:212px;height:144px;border-radius:12px;background:#eee}.d-drams-031 .pop{width:44px;height:44px;border-radius:50%;background:radial-gradient(ellipse at 35% 21%,#d5d5d3,#ececea 60%,#e9e9e7);box-shadow:inset 0 -2px 2px #fff,1px 2px 2px #0004,4px 8px 11px #0001;transition:background .23s,box-shadow .23s}.d-drams-031 .pop.is-on{background:radial-gradient(ellipse at 60% 75%,#eee,#d8d8d6 62%,#b9b9b6);box-shadow:inset 1px 2px 4px #0002,inset -1px -1px 2px #fff}.d-drams-031 .dotted>i{position:absolute;left:19px;top:19px;width:6px;height:6px;border-radius:50%;background:#ff6824;transition:transform .23s}.d-drams-031 .is-on>i{transform:translateY(2px)}@media(prefers-reduced-motion:reduce){.d-drams-031 *,.d-drams-031 *:before,.d-drams-031 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-031 button:focus-visible{outline:1px solid #858585;outline-offset:5px}",
+    "js": "const buttons=[...root.querySelectorAll('[role=switch]')],status=root.querySelector('[aria-live]');let changes=0;function set(b,v,s){b.setAttribute('aria-checked',String(v));b.classList.toggle('is-on',v);root.dataset.values=buttons.map(x=>x.getAttribute('aria-checked')==='true'?1:0).join(',');root.dataset.value=String(buttons.filter(x=>x.getAttribute('aria-checked')==='true').length);root.dataset.state=v?'on':'off';root.dataset.source=s;root.dataset.changes=String(changes);status.textContent=b.getAttribute('aria-label')+(v?' on':' off')}buttons.forEach((b,i)=>{set(b,([false,false,false,false,false,false])[i]||false,'initial');let x=0,y=0,dragged=false;b.addEventListener('pointerdown',e=>{x=e.clientX;y=e.clientY;dragged=false;b.classList.add('is-pressed');b.setPointerCapture(e.pointerId)});b.addEventListener('pointerup',e=>{b.classList.remove('is-pressed');const dx=e.clientX-x,dy=y-e.clientY,v=Math.abs(dx)>Math.abs(dy)?dx:dy;if(Math.abs(v)>12){dragged=true;changes++;set(b,v>0,'drag')}});b.addEventListener('pointercancel',()=>b.classList.remove('is-pressed'));b.addEventListener('click',()=>{if(dragged){dragged=false;return}changes++;set(b,b.getAttribute('aria-checked')!=='true','click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(b,['ArrowRight','ArrowUp','End'].includes(e.key),'keyboard')})});return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS Fidget Poppin' from https://drams.framer.website/drams/031. Six independent 44px domes in a 212×144 fidget pad. Alternate domes have orange center marks; clicking changes each raised dome into a shaded concavity. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "Six independent 44px domes in a 212×144 fidget pad",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "switch"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "drams-033",
+    "title": "Triple Push Buttons",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-033",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / Triple Push Buttons",
+      "url": "https://drams.framer.website/drams/033"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-033\" aria-label=\"Triple Push Buttons\"><div class=\"d-drams-033-object\"><div class=\"push-bank\"><button class=\"small-push tone-0\" role=\"switch\" aria-checked=\"false\" aria-label=\"Orange push button\"><i class=\"led\"></i><span class=\"face\"></span></button><button class=\"small-push tone-1\" role=\"switch\" aria-checked=\"false\" aria-label=\"White push button\"><i class=\"led\"></i><span class=\"face\"></span></button><button class=\"small-push tone-2\" role=\"switch\" aria-checked=\"false\" aria-label=\"Dark push button\"><i class=\"led\"></i><span class=\"face\"></span></button></div></div><span class=\"d-drams-033-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-033{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-033 *{box-sizing:border-box}.d-drams-033-object{position:relative;flex:none}.d-drams-033 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-033 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-033-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-033 .push-bank{display:flex;gap:40px;width:212px}.d-drams-033 .small-push{width:44px;height:52px;border-radius:50%;--face:radial-gradient(ellipse at 40% 25%,#ff7940,#fb5b16 55%,#dc4408);--side:#793418}.d-drams-033 .tone-1{--face:radial-gradient(ellipse at 36% 20%,#e0e0dd,#f4f4f2 63%,#d4d4d0);--side:#393937}.d-drams-033 .tone-2{--face:radial-gradient(ellipse at 30% 20%,#555,#282828 55%,#191919);--side:#090909}.d-drams-033 .face{position:absolute;left:2px;bottom:3px;width:40px;height:40px;border-radius:50%;background:var(--face);box-shadow:inset 0 1px 2px #fff9,inset 0 -1px 2px #fff5,0 2px 1px var(--side),0 4px 1px #222,5px 9px 11px #0003;transition:transform .14s,box-shadow .14s}.d-drams-033 .led{position:absolute;left:19px;top:0;width:6px;height:6px;border-radius:50%;background:#ccc}.d-drams-033 .is-on .led{background:#ff6423}.d-drams-033 .is-pressed .face{transform:translateY(3px);box-shadow:inset 0 1px 2px #fff9,0 1px 1px var(--side),2px 4px 7px #0002}@media(prefers-reduced-motion:reduce){.d-drams-033 *,.d-drams-033 *:before,.d-drams-033 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-033 button:focus-visible{outline:1px solid #858585;outline-offset:5px}",
+    "js": "const buttons=[...root.querySelectorAll('[role=switch]')],status=root.querySelector('[aria-live]');let changes=0;function set(b,v,s){b.setAttribute('aria-checked',String(v));b.classList.toggle('is-on',v);root.dataset.values=buttons.map(x=>x.getAttribute('aria-checked')==='true'?1:0).join(',');root.dataset.value=String(buttons.filter(x=>x.getAttribute('aria-checked')==='true').length);root.dataset.state=v?'on':'off';root.dataset.source=s;root.dataset.changes=String(changes);status.textContent=b.getAttribute('aria-label')+(v?' on':' off')}buttons.forEach((b,i)=>{set(b,([false,false,false])[i]||false,'initial');let x=0,y=0,dragged=false;b.addEventListener('pointerdown',e=>{x=e.clientX;y=e.clientY;dragged=false;b.classList.add('is-pressed');b.setPointerCapture(e.pointerId)});b.addEventListener('pointerup',e=>{b.classList.remove('is-pressed');const dx=e.clientX-x,dy=y-e.clientY,v=Math.abs(dx)>Math.abs(dy)?dx:dy;if(Math.abs(v)>12){dragged=true;changes++;set(b,v>0,'drag')}});b.addEventListener('pointercancel',()=>b.classList.remove('is-pressed'));b.addEventListener('click',()=>{if(dragged){dragged=false;return}changes++;set(b,b.getAttribute('aria-checked')!=='true','click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(b,['ArrowRight','ArrowUp','End'].includes(e.key),'keyboard')})});return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS Triple Push Buttons from https://drams.framer.website/drams/033. Three separated 40px push buttons use orange, pale alloy and graphite materials, independent top LEDs, dark sidewalls and momentary press travel. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "Three separated 40px push buttons use orange, pale alloy and graphite materials, independent top LEDs, dark sidewalls and momentary press travel",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "switch"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "drams-041",
+    "title": "Triple Switch",
+    "cat": "DRAMS",
+    "rootClass": "d-drams-041",
+    "tags": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "libs": [],
+    "source": {
+      "name": "DRAMS / Triple Switch",
+      "url": "https://drams.framer.website/drams/041"
+    },
+    "hint": "click, drag, or use arrow keys to change the control",
+    "html": "<div class=\"d-drams-041\" aria-label=\"Triple Switch\"><div class=\"d-drams-041-object\"><div class=\"verticals\"><button class=\"vertical\" role=\"switch\" aria-checked=\"false\" aria-label=\"Vertical switch 1\"><i class=\"led\"></i><span class=\"line\"></span><span class=\"handle\"><i></i><i></i></span></button><button class=\"vertical\" role=\"switch\" aria-checked=\"false\" aria-label=\"Vertical switch 2\"><i class=\"led\"></i><span class=\"line\"></span><span class=\"handle\"><i></i><i></i></span></button><button class=\"vertical\" role=\"switch\" aria-checked=\"false\" aria-label=\"Vertical switch 3\"><i class=\"led\"></i><span class=\"line\"></span><span class=\"handle\"><i></i><i></i></span></button></div></div><span class=\"d-drams-041-status\" aria-live=\"polite\"></span></div>",
+    "css": ".d-drams-041{width:100%;height:320px;min-height:320px;display:grid;place-items:center;background:#fff;position:relative;overflow:hidden;color:#333;font-family:\"Inter\",system-ui,sans-serif;box-sizing:border-box}.d-drams-041 *{box-sizing:border-box}.d-drams-041-object{position:relative;flex:none}.d-drams-041 button{appearance:none;border:0;padding:0;margin:0;background:none;position:relative;cursor:pointer;touch-action:none;color:inherit;font:400 12px \"Inter\",system-ui,sans-serif;outline:none}.d-drams-041 button:focus-visible{outline:2px solid #ff884e;outline-offset:8px}.d-drams-041-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.d-drams-041 .verticals{display:flex;gap:48px;width:216px;height:140px}.d-drams-041 .vertical{width:40px;height:140px;display:block}.d-drams-041 .led{position:absolute;left:17px;top:0;width:6px;height:6px;border-radius:50%;background:#ccc;transition:background .3s}.d-drams-041 .line{position:absolute;left:17px;top:20px;width:6px;height:120px;border-radius:4px;background:#eee}.d-drams-041 .handle{position:absolute;left:0;top:72px;width:40px;height:68px;border-radius:24px;background:linear-gradient(90deg,#f8f8f7,#e6e6e2);box-shadow:inset 0 1px #fff,1px 3px 3px #0003,5px 9px 12px #0002;transition:transform .5s cubic-bezier(.2,.85,.3,1.12)}.d-drams-041 .handle>i{position:absolute;left:4px;width:32px;height:27px;border-radius:50%;background:#e6e6e3}.d-drams-041 .handle>i:first-child{top:5px;background:linear-gradient(#e1e1df,#ededeb)}.d-drams-041 .handle>i:last-child{bottom:5px;background:linear-gradient(#ccc,#e8e8e5)}.d-drams-041 .is-on .handle{transform:translateY(-60px)}.d-drams-041 .is-on .led{background:#ff621e}@media(prefers-reduced-motion:reduce){.d-drams-041 *,.d-drams-041 *:before,.d-drams-041 *:after{transition:none!important;animation:none!important}}\n/* Current control composition. */\n.d-drams-041 button:focus-visible{outline:1px solid #858585;outline-offset:5px}.d-drams-041 button{border-radius:30px}",
+    "js": "const buttons=[...root.querySelectorAll('[role=switch]')],status=root.querySelector('[aria-live]');let changes=0;function set(b,v,s){b.setAttribute('aria-checked',String(v));b.classList.toggle('is-on',v);root.dataset.values=buttons.map(x=>x.getAttribute('aria-checked')==='true'?1:0).join(',');root.dataset.value=String(buttons.filter(x=>x.getAttribute('aria-checked')==='true').length);root.dataset.state=v?'on':'off';root.dataset.source=s;root.dataset.changes=String(changes);status.textContent=b.getAttribute('aria-label')+(v?' on':' off')}buttons.forEach((b,i)=>{set(b,([false,false,false])[i]||false,'initial');let x=0,y=0,dragged=false;b.addEventListener('pointerdown',e=>{x=e.clientX;y=e.clientY;dragged=false;b.classList.add('is-pressed');b.setPointerCapture(e.pointerId)});b.addEventListener('pointerup',e=>{b.classList.remove('is-pressed');const dx=e.clientX-x,dy=y-e.clientY,v=Math.abs(dx)>Math.abs(dy)?dx:dy;if(Math.abs(v)>12){dragged=true;changes++;set(b,v>0,'drag')}});b.addEventListener('pointercancel',()=>b.classList.remove('is-pressed'));b.addEventListener('click',()=>{if(dragged){dragged=false;return}changes++;set(b,b.getAttribute('aria-checked')!=='true','click')});b.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();changes++;set(b,['ArrowRight','ArrowUp','End'].includes(e.key),'keyboard')})});return()=>{};",
+    "prompt": "Build an original native, copyable HTML/CSS/JS interpretation of DRAMS Triple Switch from https://drams.framer.website/drams/041. Three independent vertical pinch switches: a 40×68 double-dimple grip on each thin 120px track, spaced 48px apart. Sliding upward lights its top LED. Center the original physical proportions in a white 300×320 field. Use physically coherent, gentle gradients, a contact shadow and orange only in the observed active state. Avoid decorative headings. Include actual button or slider semantics, keyboard and pointer control, visible focus, live state, reduced-motion support and cleanup. Do not embed the original Framer component.",
+    "desc": "Three independent vertical pinch switches: a 40×68 double-dimple grip on each thin 120px track, spaced 48px apart",
+    "seen": "Reference: DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)",
+    "designSize": "sm",
+    "stage": {
+      "theme": "light",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "switch"
+    },
+    "useCases": [
+      "DRAMS",
+      "native",
+      "skeuomorphic",
+      "switch"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  }
+]

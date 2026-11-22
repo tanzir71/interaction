@@ -1,20 +1,74 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 367 of the 399 existing demos:
+Native v4 compositions are remediated for 373 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the forty DRAMS Collections demos.
-The remaining work includes 32 existing demos, 121 new or extension components,
-Pro seams, and the final audit.
+Visual FX (88) demos, plus forty-six DRAMS Collections demos.
+The remaining work includes 26 existing demos, 121 new or extension components,
+Pro seams, and the final audit. Earlier phase sections below retain their
+historical counts and measurements.
 
-Photography replacement and performance tails remain open. A current asset
-inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 367 remediated native compositions retains those references.
+Photography replacement and performance tails remain open. The retired generated
+photo keys remain in one unfinished demo, showcase-circular-gallery; none of the
+373 remediated native compositions retains those references. The current fit
+audit boots all 399 demos with zero overflow, horizontal-scroll or low-fill
+findings. Its 15 tiny-text findings belong to unfinished demos; all 130 documented
+Figma fill exceptions validate. Stage and motion baselines contain 25 and 10
+remaining debts respectively; neither baseline grows.
 
-The current full fit audit boots all 399 demos and reports no gate violations
-among these 367 native compositions. The unfinished groups still account for
-0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-3 low-fill findings; findings can overlap within a demo. All 129 documented
-Figma fill exceptions validate.
+## Six remaining switch banks
+
+3-Way Switch, Pushin' 5'ers, Triple Light Switch, Fidget Poppin', Triple Push
+Buttons and Triple Switch now match their individual v4 tiles. All 54 captured
+native nodes preserve their hierarchy, opacity, clipping and materials; all 21
+supplied SVGs retain exact bytes, intrinsic roots and render offsets. The native
+324×168 plane retains origin 24,20. 3-Way Switch keeps its 200×28 rail and 72×44
+cap with a documented sparse-fill exception. A/B/C retain their anchors and use
+Geist Mono Medium with an 11.6px optical floor.
+
+Native and full models retain their intentional differences. Native Pushin'
+has five independent latches with keys 2 and 4 down; full keeps the exclusive
+five-option radio group, first selected, wrapping keys and roving focus. Native
+Fidget has fifteen supplied bubbles, with indices 1,7,8,12 down; full retains
+all six original domes and dotted textures. Native Triple Light and Triple Push
+start off/on/off, while their full models start all on and all off respectively.
+Native Triple Switch stacks three horizontal toggles, only the first on; full
+keeps all three vertical tracks, initially off. Full 3-Way retains its initial
+middle value, 100px handle travel and rounded relative click bands; native travel
+is 128px. Complete original programs, copy, datasets, cancellation and click
+latches remain present in the emitted definitions and portable source.
+
+Each control has independent state, pressure and feedback channels: canonical
+380/32/1 release springs, 80ms press-in, 250ms scale return, direct pointer follow,
+0.55 rubber banding and at most eight source pixels of overrun. Reduced motion
+uses 150ms opacity feedback and retained paint. Stable 44px physical targets can
+overlap at compact scales; trusted events resolve to the nearest painted control
+without blocking Stage bubbling. The full radio group never captures, and release
+over another logical key cannot activate it. Held input is queued; independent
+caller, full-preview viewport and document holds freeze paint and clear safely.
+Native visibility remains owned by LiveTiles. There is no idle simulation loop.
+
+The public verifier replays 2,192 immutable original states and checks 150 native
+and original full geometry scenes with 30,712 assertions. It covers 24 physical
+input and 16 dense mouse/touch cases, plus 130,655
+motion/lifecycle/type/export assertions, including independent RK4 and actual
+renderer samples at 60/120/240Hz, interruptions, deferred input, hold ownership,
+cleanup and 24 fresh network-blocked exports with native remounts. All six native
+posters and twelve real desktop/mobile detail routes are refreshed and verified;
+the footer links to https://tanziro.com/. Compact details additionally cover
+344px and 314px stages: a constrained grid column prevents enlarged readable
+captions from shifting the complete composition sideways.
+
+The current-source [six-switch timing report](performance/drams-switches-banks-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. CPU 1 records 59.75–60.00fps, 5 intervals above 25ms and 2 long tasks; first trace Paint spans 16.09–59.05ms and maximum readiness is 56.00ms. CPU 4 records 54.76–59.63fps, 99 intervals above 25ms and 33 long tasks; first trace Paint spans 68.92–516.42ms and maximum readiness is 510.20ms. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. All traces and outliers are retained. These measurements leave cold-route, Lighthouse and site-wide timing gates open.
+
+All thirteen existing shared-file siblings, 325 other modules, 393 metadata rows,
+380 unrelated catalog rows and five protected shared inputs remain unchanged.
+All 403 prior helpers, 263 prior private inputs, 1,991 prior publication files
+and the 222+184 accepted snapshots remain hash-verified. Original captures,
+prototype failures, compact-grid findings and all timing outliers are preserved.
+The remaining 26 existing demos comprise six DRAMS devices and twenty other
+Collections; all 121 new/extension components, Pro seams and final audits remain
+open. Commits go directly to main; Actions remain disabled and the account's
+$0 stop-at-limit budget is preserved.
 
 ## Nine physical switches and the release-spring correction
 
