@@ -120,6 +120,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The first six new Agent & AI UI components are original implementations under
+  the Stage contract. `node tools/verify-agents-new.js http://127.0.0.1:4173`
+  checks their 66 native layers, all unchanged supplied SVGs, complete local
+  datasets, input, reduced motion and holds. Also run
+  `node tools/verify-agents-new-input.js`, `node tools/verify-agents-new-clocks.js`
+  `node tools/verify-agents-new-exports.js` and `node tools/verify-agents-new-pixels.js`.
+  These cover real moving touch,
+  independent capture/key owners, actual 60/120/240Hz Canvas output, disposal,
+  compact text, pointer travel into citations and twelve fresh offline full/native
+  exports, exact mosaic edge cells, software recovery pixels and complete
+  long-held voice bounds. Keep 16/8/4 logical-pixel diffusion cells, absolute voice phase
+  boundaries, native action feedback and finite reduced state timers. Retained
+  paint is inert, preserves Canvas pixels and is removed after 150ms. New Pro
+  candidates stay free until the seams phase and the owner's flag choice.
 - `node tools/verify-agents.js http://127.0.0.1:4173` covers the remediated
   deploy pipeline, workflow graph, streaming response and thinking drawer.
   It checks original operational fixtures, scaled dragging, cycle rejection,

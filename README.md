@@ -10,7 +10,8 @@ package dependencies.
 
 Handoff 3 is in progress. The [implementation ledger](IMPLEMENTATION_PROGRESS.md)
 records completed phases, verification evidence and remaining design gates.
-The current catalog contains 399 demos; the supplied v4 design covers 520.
+The [generated catalog](registry/index.json) is the source of truth for current
+component counts. The supplied v4 design covers 520.
 
 ## Run locally
 

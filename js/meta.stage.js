@@ -1,5 +1,4 @@
-/* Stage defaults for the existing library. Inline demo fields override these values.
-   Trigger and theme values follow the v4 manifest; compositions are remediated in Phase 4. */
+/* Stage defaults; inline demo fields override their own defaults. */
 INTRX.meta({
   "lenis-smooth-scroll": {
     "designSize": [
@@ -14948,5 +14947,202 @@ INTRX.meta({
       324,
       168
     ]
+  },
+  "agent-prompt-composer": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "type",
+    "controls": [
+      {
+        "action": "attach",
+        "label": "Attach"
+      },
+      {
+        "action": "send",
+        "label": "Send"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "composer"
+    ],
+    "addedAt": "2026-11"
+  },
+  "agent-voice-orb": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "hold",
+        "label": "Hold"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "voice"
+    ],
+    "addedAt": "2026-11"
+  },
+  "agent-approval-card": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "approval"
+    ],
+    "addedAt": "2026-11"
+  },
+  "agent-image-gen-reveal": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "image"
+    ],
+    "addedAt": "2026-11"
+  },
+  "agent-task-checklist": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "tasks"
+    ],
+    "addedAt": "2026-11"
+  },
+  "agent-citation-chips": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent UI",
+      "native",
+      "citations"
+    ],
+    "addedAt": "2026-11"
   }
 });

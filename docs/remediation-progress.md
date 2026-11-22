@@ -3,15 +3,55 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. The 121 new or extension components,
-Pro seams and final audits remain. Earlier sections retain historical counts.
+sixteen Showcase and four Framer compositions. Six new Agent & AI UI components
+bring the catalog to 405; 115 new or extension components, Pro seams and final
+audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 399 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 405 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 134
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Six new Agent & AI UI components
+
+Prompt Composer, Voice Orb, Tool Approval Card, Image Generation Reveal, Agent
+Task Checklist and Citation Hover Chips implement the first new-component
+category. The native views retain 66 captured Figma layers, eleven unchanged SVG
+files in twelve reference slots, and the approved dusk/cityTeal photographs.
+Full citations also retain the approved archGrid photograph. All three photo
+credits and their 800/1600px hashes remain unchanged. Existing category placement
+and the New view come from the generated catalog; the retired `CAT_ORDER`
+mechanism is no longer used by the routed shell. Pro candidates remain free.
+
+Composer keeps six text rows, removable sample/real-file chips, the three-model
+keyboard menu, Cmd/Ctrl+Enter, cancellation and its 2.4-second generation ring.
+Voice keeps independent pointer/key owners and capture cancellation. Its original
+hashed simplex field deforms 128 samples; absolute listening/thinking/speaking
+boundaries agree across refresh rates. Finite reduced-motion timers preserve the
+same state sequence. The Canvas and SVG fallback share the same silhouette, with
+padding that contains the full bounded field and shadow.
+
+Approval never executes a command. It resolves into a 40px receipt with a drawn
+check, or three short shake cycles and a struck command; Reset cancels pending
+motion. The image reveal keeps all five visual states over 4.8 seconds. Mosaic
+cells measure 16/8/4 logical pixels, including partial edge cells; immutable
+passes are cached. The checklist keeps all five steps, 300-degree spinners,
+drawn checks, canonical shimmer and expandable completed history. Replay cancels
+retained check animations. Citation previews keep complete local records, an
+80ms entry delay, 150ms entrance, 50ms exit, two-line snippets, spring placement,
+horizontal clamping and pointer travel across the gap. Touch focus does not
+immediately close the selected source.
+
+Native controls show their actual state changes. Reduced motion retains inert
+old paint for 150ms fades, including Canvas pixels. Repeated changes move the
+existing retained layers instead of recursively cloning them. Disposal clears
+captures, timers, frames, observers, animations, retained nodes and Canvas buffers.
+Prompts describe each component's own geometry, controls, model and assets.
+All 326 prior modules, 399 prior sidecar records and seven protected shared files
+remain unchanged. Final cold-route, accessibility and performance gates remain
+open alongside the rest of the 520-component handoff.
 
 ## Smooth Scroll dependency removal and native Mask Reveal timing
 

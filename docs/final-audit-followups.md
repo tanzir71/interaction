@@ -2,8 +2,9 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
-All 399 existing native compositions now follow their v4 references. The 121 new
-or extension components and Pro seams remain. Both strict static audits now pass.
+All 399 existing native compositions now follow their v4 references. Six new
+Agent & AI UI components bring the catalog to 405; 115 new or extension
+components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
