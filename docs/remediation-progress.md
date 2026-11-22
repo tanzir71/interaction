@@ -1,17 +1,95 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 395 of the 399 existing demos:
+Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, all fifty-two DRAMS and all sixteen Showcase Collections
-compositions. Four existing Framer demos, 121 new or extension components,
-Pro seams and the final audit remain. Earlier sections retain historical counts.
+Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
+sixteen Showcase and four Framer compositions. The 121 new or extension components,
+Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
 JavaScript. The fit audit boots all 399 demos with zero overflow, horizontal-scroll
-or low-fill findings. Its four tiny-text findings belong to unfinished Framer
-demos; all 133
+or low-fill findings. It has no tiny-text findings; all 134
 documented Figma fill exceptions validate. Stage and motion baselines contain
-four and five remaining debts respectively. Reduced-motion baseline debt is zero.
+one and five remaining debts respectively. Reduced-motion baseline debt is zero.
+
+## Four Framer compositions and painted stage fill
+
+Formatted Metric, Rolling Balance, Focus Countdown and Revenue Summary now follow
+their exact v4 native references. Twenty-two native slots preserve eight text
+nodes, twelve Frame/Rectangle primitives and two unchanged supplied SVGs on the
+324×168 plane at 24,20 inside the shared 372×264 Stage. The active countdown export
+retains its 115×116px intrinsic size and 1.02734375px paint offset inside the
+116px reference box. Its live ring derives from the supplied full-ring texture,
+with the exact reference tone. Posters are rendered from the implementation.
+
+The complete 400×400 full views retain the original composition copy and models.
+Metric keeps currency, percentage and grouped-number presets, editable From/To
+fields, constraints, negative counts, 1200ms quartic scalar easing and the original
+30% one-shot entry trigger. Early user input wins over delayed visibility; entry
+waits behind caller, viewport and document holds. Balance keeps 12480.25, +250.00
+receipts, −120.50 payments, cent rounding, the zero floor, USD/EUR/GBP labels and
+all original digit sequences and source timing. Focus keeps all three completed
+20/45/60-second timelines, deadline arithmetic, pause/resume and reset to the
+selected duration. Revenue retains all three complete financial records, every
+seven-point series, interpolated totals/orders/averages and original sample
+accounting. Its line/area chart remains available in full view.
+
+Native tells the supplied story without replacing full data: Metric begins at
+$84,210; Balance at $2,486 with its +12.00 badge; Focus at 18:00 with 72% of its
+ring; Revenue at $84.2k with all seven supplied bars. Shared Press supplies the
+primary action. Balance also exposes Replay and Focus exposes Reset in the shared
+dock, preserving their original stateful actions within its two-control limit.
+Native artwork keeps its reference geometry; transparent touch targets stay large
+enough for physical use. Compact full labels and action glyphs stay at least 11px.
+
+Only changed numeric glyphs fade. The visible balance uses 1.2em 3D drums, 100ms
+anticipation, 130ms steps, 740ms landing and 90ms stagger capped at 300ms. New input
+preserves the actually painted rotation, lift and scale. Scalar source integration
+stays at 60Hz; event timestamps use microsecond precision without rounding numeric
+input or pointer coordinates. The format and period indicators use the same held
+clock. Reduced motion retains actual paint in inert 150ms opacity feedback; native
+and full light stages use local neutral palettes and readable semantic colors.
+Animated glyph layers stay outside the accessibility tree, while original numeric
+content remains accessible and completion/sample messages use a polite live region.
+
+Eight source-bound groups compare 105,888 source states in 48 cases, 792 geometry
+checks across 24 layouts, 32 real-input cases, sixteen independent hold cases,
+48 complete motion stories, nine runtime/observer regressions and sixteen light
+theme cases. Sixteen fresh network-blocked exports retain full models, fonts and
+native remounts. The actual dev site passes sixteen desktop/390px/375px/360px routes,
+including compact type and the tanziro.com footer. All four native posters refresh.
+
+The fit audit now excludes empty transparent leaf hit areas from painted fill;
+their original bounds still participate in overflow and typography checks. It
+continues to count real backgrounds, borders, text, intrinsic media, shadows and
+pseudo-element artwork. Twenty-four browser boundary checks cover native masks,
+root clipping, scroll/zoom and transparent/painted hit targets. The corrected audit
+finds zero overflow, horizontal scroll, tiny text or low fill across all 399 demos.
+Rolling Balance's exact 147×84px painted composition measures 11.5% at the audited
+347×264 size, so the owner's documented exception brings the valid list to 134.
+
+All 325 other modules, 395 metadata rows, 395 unrelated catalog rows and five
+protected runtime/style inputs remain unchanged. Preservation also covers 611
+prior helpers, 1,086 private inputs, 4,973 publication files, 222 full snapshots,
+184 accepted dial snapshots and seventy immutable current capture inputs. Both
+original capture sets remain preserved; the complete-timer set contains 35,296
+states in sixteen cases. Earlier diagnostics and source-bound reports are retained.
+
+The 32 recorded eight-second native/full stories span desktop DPR 1 and compact
+DPR 2 at CPU 1 and CPU 4. CPU 1 averaged 56.4–60.0fps, with forty gaps over 25ms
+and no long tasks across sixteen cases. CPU 4 averaged 22.0–59.6fps, with 1,235
+gaps and 332 long tasks. Compact full Rolling Balance was slowest at 22.0fps;
+its per-frame drum work needs attention in the final performance audit. First
+trace paint ranged from 6.3–19.2ms at CPU 1 and 36.2–164.6ms at CPU 4. Prepared
+font/image readiness ranged from 5.5–17.4ms and 34.4–106.3ms respectively. The
+source-bound report is `docs/performance/framer-data-2026-11-22.json`; all traces
+and outliers are retained. Prepared component mounts do not establish cold-route,
+Lighthouse or final site-wide timing acceptance.
+
+Native visual remediation now reaches 399/520 of the complete handoff. Remaining
+existing-library cleanup includes Punch Card's local Reset debt, five motion-audit
+debts, legacy aliases and the shared/final audit follow-ups. Complete those before
+adding the 121 new or extension components, then finish Pro seams and final gates.
 
 ## Six Showcase paths, photographs and controls
 

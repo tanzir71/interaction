@@ -1,5 +1,5 @@
 /* Exercise actual browser clipping; root/stage masking cannot hide overflow. */
-const assert=require('node:assert/strict'),bounds=require('./stage-fit-bounds'),surface=require('./stage-fit-surface');
+const assert=require('node:assert/strict'),bounds=require('./stage-fit-bounds'),surface=require('./stage-fit-surface'),ink=require('./stage-fit-ink');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 (async()=>{const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH||undefined});try{const page=await browser.newPage({viewport:{width:800,height:700}});await page.setContent('<style>*{box-sizing:border-box}body{margin:0}.stage{position:relative;left:20px;top:20px;width:400px;height:300px;overflow:hidden}.root{position:relative;width:400px;height:300px;overflow:visible}.mask{position:absolute;left:40px;top:30px;width:100px;height:80px;overflow:clip}.leaf{position:absolute;left:53px;top:-87px;width:220px;height:220px;background:#777}</style><div class="stage"><div class="root"><div class="mask"><div class="leaf"></div></div></div></div>');await page.addScriptTag({content:'window.measure='+bounds.toString()});let checks=0;const check=(value,label)=>{assert.ok(value,label);checks++;};const read=()=>page.evaluate(()=>{const root=document.querySelector('.root'),leaf=document.querySelector('.leaf'),mask=document.querySelector('.mask'),stage=document.querySelector('.stage');return{visible:measure(leaf,root),leaf:leaf.getBoundingClientRect().toJSON(),mask:mask.getBoundingClientRect().toJSON(),stage:stage.getBoundingClientRect().toJSON()};});
 let r=await read();check(r.visible.top===r.mask.top&&r.visible.bottom===r.mask.bottom&&r.visible.right===r.mask.right,'Native mask intersects the oversized circle rectangle');check(r.leaf.width===220&&r.leaf.height===220,'Measuring a mask preserves intrinsic artwork dimensions');
@@ -20,4 +20,14 @@ await page.locator('#frame').evaluate(n=>n.style.background='transparent');check
 await page.locator('#frame').evaluate(n=>n.style.border='1px solid #777');check((await painted()).surface,'Visible non-leaf control borders contribute fill');
 await page.locator('#frame').evaluate(n=>n.style.borderColor='transparent');check(!(await painted()).surface,'Transparent borders do not manufacture fill');
 await page.locator('#frame').evaluate(n=>n.style.backgroundImage='linear-gradient(#171717,#222)');check((await painted()).surface,'Painted gradient frames contribute fill');
+await page.addScriptTag({content:'window.hasInk='+ink.toString()});
+await page.setContent('<style>body{margin:0}#hit:before{content:none}</style><button id="hit" aria-label="Receive payment" style="position:absolute;left:380px;top:20px;width:204px;height:150px;background:transparent;border:0;color:transparent"></button>');
+const hit=()=>page.locator('#hit').evaluate(n=>({ink:hasInk(n,getComputedStyle(n),paintedSurface),bounds:measure(n,document.body)}));
+r=await hit();check(!r.ink&&r.bounds.width===204&&r.bounds.height===150,'Empty transparent leaf hit targets supply no fill');check(r.bounds.right>400,'Unpainted hit targets retain their original overflow geometry');
+await page.locator('#hit').evaluate(n=>n.textContent='Receive');check(!(await hit()).ink,'Transparent text does not manufacture fill');
+await page.locator('#hit').evaluate(n=>n.style.color='#f1f1f1');check((await hit()).ink,'Visible button text contributes painted fill');
+await page.locator('#hit').evaluate(n=>{n.textContent='';n.style.background='#222';});check((await hit()).ink,'A painted empty button retains its visible surface');
+await page.locator('#hit').evaluate(n=>{n.style.background='transparent';n.style.boxShadow='0 4px 12px rgba(0,0,0,.3)';});check((await hit()).ink,'Visible shadow artwork contributes painted fill');
+await page.locator('#hit').evaluate(n=>n.style.boxShadow='0 4px 12px rgba(0,0,0,0)');check(!(await hit()).ink,'Transparent shadows do not manufacture fill');
+await page.addStyleTag({content:'#hit:before{content:"";display:block;width:20px;height:20px;background:#f1f1f1}'});check((await hit()).ink,'Painted pseudo-element artwork remains part of fill');
 console.log('PASS: '+checks+' native-mask, painted-surface, per-axis, scroll, zoom and acceptance-boundary checks');}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

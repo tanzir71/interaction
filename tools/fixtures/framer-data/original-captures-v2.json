@@ -1,0 +1,901 @@
+{
+  "at": "2026-11-22T11:21:08.275Z",
+  "sourceSHA256": "c3bd2b53221d487b84ad46e4066aca34fc05e23e3fd9f9253b2d3dd8fb517929",
+  "programSHA256": "53e13b542a0facce848bfb8dff424bc22341ea10064a70a7cb24b90bece25260",
+  "producerSHA256": "bc0f9460a25c1f55e15f8989851909338c349cd4e9f5fca04c48991b23f5a429",
+  "cases": [
+    {
+      "id": "framer-formatted-metric",
+      "kind": "metric",
+      "width": 320,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": "select",
+          "type": "change",
+          "value": "percent"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "12.4"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-2.3"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 1500,
+          "target": "select",
+          "type": "change",
+          "value": "number"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "9000"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-1234"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 2500,
+          "target": "select",
+          "type": "change",
+          "value": "currency"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-formatted-metric-320-normal.json.gz",
+      "sha256": "d700d839f6f62db370b7fb689b6dc47cdfe6b22f91e1297191604fa0b3bdf3cd",
+      "states": 361
+    },
+    {
+      "id": "framer-formatted-metric",
+      "kind": "metric",
+      "width": 320,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": "select",
+          "type": "change",
+          "value": "percent"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "12.4"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-2.3"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 1500,
+          "target": "select",
+          "type": "change",
+          "value": "number"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "9000"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-1234"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 2500,
+          "target": "select",
+          "type": "change",
+          "value": "currency"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-formatted-metric-320-reduced.json.gz",
+      "sha256": "b3fe28e9889b12e2099428bb59d003b9e94e3e4a6284c2ca7601c8944a4fbeeb",
+      "states": 361
+    },
+    {
+      "id": "framer-formatted-metric",
+      "kind": "metric",
+      "width": 400,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": "select",
+          "type": "change",
+          "value": "percent"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "12.4"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-2.3"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 1500,
+          "target": "select",
+          "type": "change",
+          "value": "number"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "9000"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-1234"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 2500,
+          "target": "select",
+          "type": "change",
+          "value": "currency"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-formatted-metric-400-normal.json.gz",
+      "sha256": "d700d839f6f62db370b7fb689b6dc47cdfe6b22f91e1297191604fa0b3bdf3cd",
+      "states": 361
+    },
+    {
+      "id": "framer-formatted-metric",
+      "kind": "metric",
+      "width": 400,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": "select",
+          "type": "change",
+          "value": "percent"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "12.4"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-2.3"
+        },
+        {
+          "at": 750,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 1500,
+          "target": "select",
+          "type": "change",
+          "value": "number"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-from",
+          "type": "set",
+          "value": "9000"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-to",
+          "type": "set",
+          "value": "-1234"
+        },
+        {
+          "at": 2200,
+          "target": ".d-framer-metric-replay",
+          "type": "click"
+        },
+        {
+          "at": 2500,
+          "target": "select",
+          "type": "change",
+          "value": "currency"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-formatted-metric-400-reduced.json.gz",
+      "sha256": "b3fe28e9889b12e2099428bb59d003b9e94e3e4a6284c2ca7601c8944a4fbeeb",
+      "states": 361
+    },
+    {
+      "id": "framer-rolling-balance",
+      "kind": "balance",
+      "width": 320,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 500,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 650,
+          "target": "select",
+          "type": "change",
+          "value": "EUR"
+        },
+        {
+          "at": 950,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 1100,
+          "target": "select",
+          "type": "change",
+          "value": "GBP"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-balance-replay",
+          "type": "click"
+        },
+        {
+          "at": 2300,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 3200,
+          "target": "select",
+          "type": "change",
+          "value": "USD"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-rolling-balance-320-normal.json.gz",
+      "sha256": "67bd5422768168737d8cb30b7b9cdc15a187954c79959c42ffe1fbd22e26e168",
+      "states": 361
+    },
+    {
+      "id": "framer-rolling-balance",
+      "kind": "balance",
+      "width": 320,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 500,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 650,
+          "target": "select",
+          "type": "change",
+          "value": "EUR"
+        },
+        {
+          "at": 950,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 1100,
+          "target": "select",
+          "type": "change",
+          "value": "GBP"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-balance-replay",
+          "type": "click"
+        },
+        {
+          "at": 2300,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 3200,
+          "target": "select",
+          "type": "change",
+          "value": "USD"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-rolling-balance-320-reduced.json.gz",
+      "sha256": "954e16c98d84ae74466fafbdd88e1e24606ca8dd0e63457d7a70ec0987f4d771",
+      "states": 361
+    },
+    {
+      "id": "framer-rolling-balance",
+      "kind": "balance",
+      "width": 400,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 500,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 650,
+          "target": "select",
+          "type": "change",
+          "value": "EUR"
+        },
+        {
+          "at": 950,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 1100,
+          "target": "select",
+          "type": "change",
+          "value": "GBP"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-balance-replay",
+          "type": "click"
+        },
+        {
+          "at": 2300,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 3200,
+          "target": "select",
+          "type": "change",
+          "value": "USD"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-rolling-balance-400-normal.json.gz",
+      "sha256": "67bd5422768168737d8cb30b7b9cdc15a187954c79959c42ffe1fbd22e26e168",
+      "states": 361
+    },
+    {
+      "id": "framer-rolling-balance",
+      "kind": "balance",
+      "width": 400,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 500,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 650,
+          "target": "select",
+          "type": "change",
+          "value": "EUR"
+        },
+        {
+          "at": 950,
+          "target": ".d-framer-balance-add",
+          "type": "click"
+        },
+        {
+          "at": 1100,
+          "target": "select",
+          "type": "change",
+          "value": "GBP"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-balance-replay",
+          "type": "click"
+        },
+        {
+          "at": 2300,
+          "target": ".d-framer-balance-spend",
+          "type": "click"
+        },
+        {
+          "at": 3200,
+          "target": "select",
+          "type": "change",
+          "value": "USD"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-rolling-balance-400-reduced.json.gz",
+      "sha256": "954e16c98d84ae74466fafbdd88e1e24606ca8dd0e63457d7a70ec0987f4d771",
+      "states": 361
+    },
+    {
+      "id": "framer-focus-countdown",
+      "kind": "focus",
+      "width": 320,
+      "reduced": false,
+      "events": [
+        {
+          "at": 0,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 1250,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 22000,
+          "target": "[data-seconds=\"45\"]",
+          "type": "click"
+        },
+        {
+          "at": 22100,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 68000,
+          "target": ".d-framer-focus-reset",
+          "type": "click"
+        },
+        {
+          "at": 68100,
+          "target": "[data-seconds=\"60\"]",
+          "type": "click"
+        },
+        {
+          "at": 68200,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-focus-countdown-320-normal.json.gz",
+      "sha256": "f921dcc85765dd8f4319111ddbb6971b2ff50998cf4b6397678ae76d25b22c31",
+      "states": 7741
+    },
+    {
+      "id": "framer-focus-countdown",
+      "kind": "focus",
+      "width": 320,
+      "reduced": true,
+      "events": [
+        {
+          "at": 0,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 1250,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 22000,
+          "target": "[data-seconds=\"45\"]",
+          "type": "click"
+        },
+        {
+          "at": 22100,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 68000,
+          "target": ".d-framer-focus-reset",
+          "type": "click"
+        },
+        {
+          "at": 68100,
+          "target": "[data-seconds=\"60\"]",
+          "type": "click"
+        },
+        {
+          "at": 68200,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-focus-countdown-320-reduced.json.gz",
+      "sha256": "6ba7ff5be052dfbdd1ea8d60b4a387db1bce7707c955dbf16aa042a4e6aa91a7",
+      "states": 7741
+    },
+    {
+      "id": "framer-focus-countdown",
+      "kind": "focus",
+      "width": 400,
+      "reduced": false,
+      "events": [
+        {
+          "at": 0,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 1250,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 22000,
+          "target": "[data-seconds=\"45\"]",
+          "type": "click"
+        },
+        {
+          "at": 22100,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 68000,
+          "target": ".d-framer-focus-reset",
+          "type": "click"
+        },
+        {
+          "at": 68100,
+          "target": "[data-seconds=\"60\"]",
+          "type": "click"
+        },
+        {
+          "at": 68200,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-focus-countdown-400-normal.json.gz",
+      "sha256": "f921dcc85765dd8f4319111ddbb6971b2ff50998cf4b6397678ae76d25b22c31",
+      "states": 7741
+    },
+    {
+      "id": "framer-focus-countdown",
+      "kind": "focus",
+      "width": 400,
+      "reduced": true,
+      "events": [
+        {
+          "at": 0,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 1250,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 2000,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 22000,
+          "target": "[data-seconds=\"45\"]",
+          "type": "click"
+        },
+        {
+          "at": 22100,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        },
+        {
+          "at": 68000,
+          "target": ".d-framer-focus-reset",
+          "type": "click"
+        },
+        {
+          "at": 68100,
+          "target": "[data-seconds=\"60\"]",
+          "type": "click"
+        },
+        {
+          "at": 68200,
+          "target": ".d-framer-focus-toggle",
+          "type": "click"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-focus-countdown-400-reduced.json.gz",
+      "sha256": "6ba7ff5be052dfbdd1ea8d60b4a387db1bce7707c955dbf16aa042a4e6aa91a7",
+      "states": 7741
+    },
+    {
+      "id": "framer-financial-trend",
+      "kind": "finance",
+      "width": 320,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": "[data-period=\"week\"]",
+          "type": "click"
+        },
+        {
+          "at": 550,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 1000,
+          "target": "[data-period=\"month\"]",
+          "type": "click"
+        },
+        {
+          "at": 1400,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "Home"
+        },
+        {
+          "at": 1550,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "ArrowRight"
+        },
+        {
+          "at": 1800,
+          "target": ".d-framer-finance-chart",
+          "type": "pointermove",
+          "fraction": 0.75
+        },
+        {
+          "at": 2000,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 3500,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "End"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-financial-trend-320-normal.json.gz",
+      "sha256": "22a6c1ec093df0cb359be685a35aed6c6970e2a3061c50e840ca56da6f0c7507",
+      "states": 361
+    },
+    {
+      "id": "framer-financial-trend",
+      "kind": "finance",
+      "width": 320,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": "[data-period=\"week\"]",
+          "type": "click"
+        },
+        {
+          "at": 550,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 1000,
+          "target": "[data-period=\"month\"]",
+          "type": "click"
+        },
+        {
+          "at": 1400,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "Home"
+        },
+        {
+          "at": 1550,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "ArrowRight"
+        },
+        {
+          "at": 1800,
+          "target": ".d-framer-finance-chart",
+          "type": "pointermove",
+          "fraction": 0.75
+        },
+        {
+          "at": 2000,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 3500,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "End"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-financial-trend-320-reduced.json.gz",
+      "sha256": "5eea76f789f9b6a2493a8f96f71fcd66b53b7e72b2f3ccad7f46e237be09d899",
+      "states": 361
+    },
+    {
+      "id": "framer-financial-trend",
+      "kind": "finance",
+      "width": 400,
+      "reduced": false,
+      "events": [
+        {
+          "at": 250,
+          "target": "[data-period=\"week\"]",
+          "type": "click"
+        },
+        {
+          "at": 550,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 1000,
+          "target": "[data-period=\"month\"]",
+          "type": "click"
+        },
+        {
+          "at": 1400,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "Home"
+        },
+        {
+          "at": 1550,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "ArrowRight"
+        },
+        {
+          "at": 1800,
+          "target": ".d-framer-finance-chart",
+          "type": "pointermove",
+          "fraction": 0.75
+        },
+        {
+          "at": 2000,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 3500,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "End"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-financial-trend-400-normal.json.gz",
+      "sha256": "22a6c1ec093df0cb359be685a35aed6c6970e2a3061c50e840ca56da6f0c7507",
+      "states": 361
+    },
+    {
+      "id": "framer-financial-trend",
+      "kind": "finance",
+      "width": 400,
+      "reduced": true,
+      "events": [
+        {
+          "at": 250,
+          "target": "[data-period=\"week\"]",
+          "type": "click"
+        },
+        {
+          "at": 550,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 1000,
+          "target": "[data-period=\"month\"]",
+          "type": "click"
+        },
+        {
+          "at": 1400,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "Home"
+        },
+        {
+          "at": 1550,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "ArrowRight"
+        },
+        {
+          "at": 1800,
+          "target": ".d-framer-finance-chart",
+          "type": "pointermove",
+          "fraction": 0.75
+        },
+        {
+          "at": 2000,
+          "target": "[data-period=\"year\"]",
+          "type": "click"
+        },
+        {
+          "at": 3500,
+          "target": ".d-framer-finance-chart",
+          "type": "keydown",
+          "key": "End"
+        }
+      ],
+      "file": "raw-fixtures-v2/framer-financial-trend-400-reduced.json.gz",
+      "sha256": "5eea76f789f9b6a2493a8f96f71fcd66b53b7e72b2f3ccad7f46e237be09d899",
+      "states": 361
+    }
+  ],
+  "states": 35296
+}

@@ -12999,17 +12999,25 @@ INTRX.meta({
     ]
   },
   "framer-formatted-metric": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "counter",
@@ -13018,21 +13026,37 @@ INTRX.meta({
       "Framer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "framer-rolling-balance": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "odometer",
@@ -13041,21 +13065,37 @@ INTRX.meta({
       "Framer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "framer-focus-countdown": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "countdown",
@@ -13064,21 +13104,33 @@ INTRX.meta({
       "Framer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "framer-financial-trend": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "press",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "group"
     },
     "useCases": [
       "metrics",
@@ -13087,8 +13139,12 @@ INTRX.meta({
       "Framer"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "drams-003": {
     "designSize": [

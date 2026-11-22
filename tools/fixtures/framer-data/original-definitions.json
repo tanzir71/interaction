@@ -1,0 +1,182 @@
+[
+  {
+    "id": "framer-formatted-metric",
+    "title": "Formatted Metric Counter",
+    "cat": "Framer Collection",
+    "rootClass": "d-framer-metric",
+    "tags": [
+      "counter",
+      "formatting",
+      "decimals",
+      "Framer"
+    ],
+    "libs": [],
+    "source": {
+      "name": "Framer · Count Motion Pro",
+      "url": "https://www.framer.com/marketplace/components/count-motion-pro/"
+    },
+    "desc": "A configurable metric with currency, percentage and grouped-number formats. Set a start and target value, then replay a count in either direction.",
+    "seen": "Reference: Framer Count Motion Pro — formatting, affixes, decimals, direction and viewport triggers",
+    "hint": "choose a format, edit either value, then replay the count",
+    "html": "<div class=\"d-framer-metric\"><header><h3>Revenue</h3><select aria-label=\"Number format\"><option value=\"currency\">Currency</option><option value=\"percent\">Percent</option><option value=\"number\">Number</option></select></header><div class=\"d-framer-metric-main\"><div class=\"d-framer-metric-value\" aria-hidden=\"true\">$24,580.60</div><p>Revenue from completed invoices.</p></div><div class=\"d-framer-metric-fields\"><label>From<input class=\"d-framer-metric-from\" type=\"number\" value=\"12000\" step=\"0.01\" min=\"-999999\" max=\"9999999\"></label><label>To<input class=\"d-framer-metric-to\" type=\"number\" value=\"24580.6\" step=\"0.01\" min=\"-999999\" max=\"9999999\"></label></div><button class=\"d-framer-metric-replay\" type=\"button\">Replay count <span aria-hidden=\"true\">↻</span></button><p class=\"d-framer-metric-status\" aria-live=\"polite\"></p></div>",
+    "css": ".d-framer-metric{width:100%;height:320px;box-sizing:border-box;padding:24px 20px;background:#0b0c0e;color:#eeeff1;font-family:\"Inter\",system-ui,sans-serif;display:flex;flex-direction:column;gap:20px;container-type:inline-size}.d-framer-metric *{box-sizing:border-box}.d-framer-metric header{display:flex;align-items:center;justify-content:space-between;gap:12px}.d-framer-metric h3{margin:0;font:500 15px/1.4 \"Inter\",system-ui,sans-serif}.d-framer-metric select{max-width:108px;padding:6px 8px;border:1px solid #30333a;border-radius:6px;color:#b9bec7;background:#181a1f;font:400 11px \"Inter\",system-ui,sans-serif}.d-framer-metric-main{padding:3px 0 5px}.d-framer-metric-value{font:400 36px/1.1 \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;white-space:nowrap}.d-framer-metric-value.is-long{font-size:28px}.d-framer-metric-main p{margin:10px 0 0;font:400 11px/1.4 \"Inter\",system-ui,sans-serif;color:#9198a3}.d-framer-metric-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.d-framer-metric-fields label{font:400 11px \"Inter\",system-ui,sans-serif;color:#9299a4;display:flex;flex-direction:column;gap:7px;min-width:0}.d-framer-metric-fields input{width:100%;min-width:0;height:36px;border:1px solid #30333a;border-radius:6px;padding:0 9px;color:#dddfe3;background:#17191d;font:400 13px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-metric-replay{margin-top:auto;display:flex;align-items:center;justify-content:space-between;height:37px;min-height:37px;border:1px solid #373b43;border-radius:7px;padding:0 12px;color:#e2e5e9;background:#202329;font:450 12px \"Inter\",system-ui,sans-serif;cursor:pointer}.d-framer-metric-replay:hover{background:#2c3037}.d-framer-metric :is(button,input,select):focus-visible{outline:2px solid #aeb9ca;outline-offset:3px}.d-framer-metric-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}",
+    "js": "const output=root.querySelector('.d-framer-metric-value'),format=root.querySelector('select'),fromInput=root.querySelector('.d-framer-metric-from'),toInput=root.querySelector('.d-framer-metric-to'),status=root.querySelector('.d-framer-metric-status'),title=root.querySelector('h3'),description=root.querySelector('.d-framer-metric-main p');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let raf=0;function display(value){const kind=format.value;const text=kind==='currency'?new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(value):new Intl.NumberFormat('en-US',{minimumFractionDigits:kind==='percent'?1:0,maximumFractionDigits:kind==='percent'?1:0}).format(value)+(kind==='percent'?'%':'');output.textContent=text;output.classList.toggle('is-long',text.length>12);root.dataset.value=value.toFixed(kind==='currency'?2:kind==='percent'?1:0)}function play(){if(!fromInput.reportValidity()||!toInput.reportValidity())return;cancelAnimationFrame(raf);const from=Number(fromInput.value),to=Number(toInput.value),start=performance.now();root.dataset.from=String(from);root.dataset.to=String(to);root.dataset.format=format.value;root.dataset.direction=to>=from?'up':'down';root.dataset.phase='counting';function frame(now){const p=reduce?1:Math.min(1,(now-start)/1200),eased=1-Math.pow(1-p,4);display(from+(to-from)*eased);if(p<1)raf=requestAnimationFrame(frame);else{root.dataset.phase='complete';status.textContent=title.textContent+': '+output.textContent}}raf=requestAnimationFrame(frame)}format.addEventListener('change',()=>{const settings={currency:['Revenue','Revenue from completed invoices.',12000,24580.6],percent:['Conversion rate','Visitors who became customers.',1.2,3.8],number:['Active customers','Accounts active in the last 30 days.',840,1248]}[format.value];title.textContent=settings[0];description.textContent=settings[1];fromInput.value=settings[2];toInput.value=settings[3];play()});root.querySelector('.d-framer-metric-replay').addEventListener('click',play);const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){play();observer.disconnect()}},{threshold:.3});observer.observe(root);return()=>{cancelAnimationFrame(raf);observer.disconnect()};",
+    "prompt": "Build an original formatted metric counter at 300×320px. Use Inter 400 tabular numerals with normal letter spacing; render a 36px featured value, 15px metric title and 11–13px labels/controls. A currency/percent/number select changes the format and useful metric preset. Two native numeric inputs define From and To; Replay animates between them in either direction over 1.2 seconds with quartic ease-out. Use Intl.NumberFormat for grouping and currency; show two currency decimals, one percentage decimal, and grouped integer counts. Preserve minus signs and affixes. Trigger once on viewport entry and announce completion only. Reduced motion renders the final value immediately. Cleanup cancels the frame/observer. Expose value,from,to,format,direction,phase data attributes. Keep one uncluttered charcoal composition, gentle border contrast and full keyboard access.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": null
+    },
+    "useCases": [
+      "counter",
+      "formatting",
+      "decimals",
+      "Framer"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "framer-rolling-balance",
+    "title": "Rolling Account Balance",
+    "cat": "Framer Collection",
+    "rootClass": "d-framer-balance",
+    "tags": [
+      "odometer",
+      "finance",
+      "digits",
+      "Framer"
+    ],
+    "libs": [],
+    "source": {
+      "name": "Framer · Smooth Digit Counter",
+      "url": "https://www.framer.com/marketplace/components/smooth-digit-counter/"
+    },
+    "desc": "An account balance whose digits roll independently upward or downward when a payment arrives or money is spent. Currency and decimal punctuation stay still.",
+    "seen": "Reference: Framer Smooth Digit Counter — independent digits, direction, affixes and decimal support",
+    "hint": "receive or spend money, change the currency label, or replay the balance",
+    "html": "<div class=\"d-framer-balance\"><header><span>Available balance</span><select aria-label=\"Display currency\"><option value=\"USD\">USD</option><option value=\"EUR\">EUR</option><option value=\"GBP\">GBP</option></select></header><div class=\"d-framer-balance-amount\" aria-hidden=\"true\"></div><p class=\"d-framer-balance-note\">Ready for your next move.</p><div class=\"d-framer-balance-actions\"><button class=\"d-framer-balance-add\" type=\"button\"><span class=\"d-framer-balance-icon\" aria-hidden=\"true\">↙</span><span>Receive payment<small>+250.00</small></span><span aria-hidden=\"true\">+</span></button><button class=\"d-framer-balance-spend\" type=\"button\"><span class=\"d-framer-balance-icon\" aria-hidden=\"true\">↗</span><span>Pay an invoice<small>−120.50</small></span><span aria-hidden=\"true\">−</span></button></div><button class=\"d-framer-balance-replay\" type=\"button\">Replay balance <span aria-hidden=\"true\">↻</span></button><p class=\"d-framer-balance-status\" aria-live=\"polite\"></p></div>",
+    "css": ".d-framer-balance{width:100%;height:320px;box-sizing:border-box;padding:22px 20px;background:#0b0c0e;color:#f0f1f3;font-family:\"Inter\",system-ui,sans-serif}.d-framer-balance *{box-sizing:border-box}.d-framer-balance header{display:flex;align-items:center;justify-content:space-between;font:400 12px \"Inter\",system-ui,sans-serif;color:#a2a9b3}.d-framer-balance select{color:#aeb7c3;background:#171a20;border:1px solid #303642;border-radius:5px;padding:5px;font:400 10px \"Inter\",system-ui,sans-serif}.d-framer-balance-amount{height:46px;margin-top:17px;display:flex;align-items:center;font:400 34px/46px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;white-space:nowrap}.d-framer-balance-digit{height:46px;width:.65em;overflow:hidden;display:inline-block;position:relative}.d-framer-balance-track{display:block;will-change:transform}.d-framer-balance-track span{display:block;height:46px;text-align:center;font:400 34px/46px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-balance-affix{display:inline-block;line-height:46px;color:#bdc4cf}.d-framer-balance-note{margin:5px 0 17px;font:400 11px/1.4 \"Inter\",system-ui,sans-serif;color:#858f9d}.d-framer-balance-actions{display:grid;gap:7px}.d-framer-balance-actions button{display:flex;align-items:center;gap:10px;height:49px;width:100%;padding:0 10px;border:1px solid #262c35;border-radius:8px;background:#14181e;color:#d7dce3;font:400 11px \"Inter\",system-ui,sans-serif;text-align:left;cursor:pointer}.d-framer-balance-actions button>span:last-child{margin-left:auto;font-size:17px;color:#8590a1}.d-framer-balance-icon{display:flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:7px;background:#252c35;color:#c5cfdd;font-size:16px}.d-framer-balance-actions small{display:block;margin-top:4px;color:#8996a7;font:400 10px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-balance-actions button:hover{background:#1e252f}.d-framer-balance-replay{display:flex;justify-content:space-between;align-items:center;width:100%;height:30px;margin-top:12px;padding:0 2px;border:0;background:none;color:#8995a5;font:400 11px \"Inter\",system-ui,sans-serif;cursor:pointer}.d-framer-balance :is(button,select):focus-visible{outline:2px solid #aeb9ca;outline-offset:3px}.d-framer-balance-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}",
+    "js": "const amount=root.querySelector('.d-framer-balance-amount'),status=root.querySelector('.d-framer-balance-status'),note=root.querySelector('.d-framer-balance-note'),currency=root.querySelector('select'),reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let value=12480.25,displayed=value,animations=[],token=0;function format(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:currency.value,minimumFractionDigits:2,maximumFractionDigits:2}).format(n)}function render(next,replay=false){const previous=replay?0:displayed,from=format(previous),to=format(next),direction=next>=previous?1:-1;animations.forEach(a=>a.cancel());animations=[];const active=++token;amount.replaceChildren();const oldDigits=from.replace(/\\D/g,'').padStart(to.replace(/\\D/g,'').length,'0');let digitIndex=0;const promises=[];for(const char of to){if(!/\\d/.test(char)){const span=document.createElement('span');span.className='d-framer-balance-affix';span.textContent=char;amount.append(span);continue}const start=Number(oldDigits[digitIndex]||0),end=Number(char),distance=(direction>0?(end-start+10)%10:(start-end+10)%10)+10,sequence=Array.from({length:distance+1},(_,i)=>(start+direction*i+100)%10);if(direction<0)sequence.reverse();const window=document.createElement('span');window.className='d-framer-balance-digit';const track=document.createElement('span');track.className='d-framer-balance-track';for(const digit of sequence){const cell=document.createElement('span');cell.textContent=digit;track.append(cell)}window.append(track);amount.append(window);const y0=direction>0?0:-distance*46,y1=direction>0?-distance*46:0;track.style.transform='translateY('+y1+'px)';if(!reduce){const animation=track.animate([{transform:'translateY('+y0+'px)'},{transform:'translateY('+y1+'px)'}],{duration:650+digitIndex*45,easing:'cubic-bezier(.22,1,.36,1)',fill:'both'});animations.push(animation);promises.push(animation.finished.catch(()=>{}))}digitIndex++}displayed=next;root.dataset.value=next.toFixed(2);root.dataset.direction=direction>0?'up':'down';root.dataset.phase=reduce?'settled':'rolling';root.dataset.currency=currency.value;Promise.all(promises).then(()=>{if(active!==token)return;root.dataset.phase='settled';status.textContent='Available balance '+to})}root.querySelector('.d-framer-balance-add').addEventListener('click',()=>{value=Math.round((value+250)*100)/100;note.textContent='Payment received.';render(value)});root.querySelector('.d-framer-balance-spend').addEventListener('click',()=>{value=Math.max(0,Math.round((value-120.5)*100)/100);note.textContent='Invoice paid.';render(value)});root.querySelector('.d-framer-balance-replay').addEventListener('click',()=>render(value,true));currency.addEventListener('change',()=>render(value));render(value,true);return()=>{token++;animations.forEach(a=>a.cancel())};",
+    "prompt": "Build an original account-balance odometer at 300×320px. Show Available balance, a compact currency selector, and a 34px Inter400 tabular value with stationary currency/decimal punctuation. Every column clips one46px row. Received payment adds250.00; invoice payment subtracts120.50. Roll each digit independently upward for increases and downward for decreases, using a short extra turn, eased650ms plus45ms stagger. Reverse tracks for downward motion. Preserve two decimals and grouping. Changing USD/EUR/GBP changes presentation only, without conversion or network data. Replay starts from zero while retaining the current balance. Cancel previous animations on interruption, announce settled values, provide keyboard controls and immediate reduced-motion results. Use quiet blue-charcoal surfaces and useful action rows.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "intentional"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": null
+    },
+    "useCases": [
+      "odometer",
+      "finance",
+      "digits",
+      "Framer"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "framer-focus-countdown",
+    "title": "Focus Countdown Ring",
+    "cat": "Framer Collection",
+    "rootClass": "d-framer-focus",
+    "tags": [
+      "countdown",
+      "progress",
+      "timer",
+      "Framer"
+    ],
+    "libs": [],
+    "source": {
+      "name": "Framer · Count Motion Pro",
+      "url": "https://www.framer.com/marketplace/components/count-motion-pro/"
+    },
+    "desc": "A short focus timer with a readable countdown and circular progress track. Choose a duration, start or pause, and reset without timing drift.",
+    "seen": "Reference: Framer counter controls and countdown compositions",
+    "hint": "choose a session length, start the timer, then pause or reset it",
+    "html": "<div class=\"d-framer-focus\"><header><h3>A moment of focus</h3><p>One thing at a time.</p></header><div class=\"d-framer-focus-presets\" aria-label=\"Session duration\"><button type=\"button\" data-seconds=\"20\" aria-pressed=\"true\">20 sec</button><button type=\"button\" data-seconds=\"45\" aria-pressed=\"false\">45 sec</button><button type=\"button\" data-seconds=\"60\" aria-pressed=\"false\">1 min</button></div><div class=\"d-framer-focus-dial\"><svg viewBox=\"0 0 160 160\" aria-hidden=\"true\"><circle cx=\"80\" cy=\"80\" r=\"69\"></circle><circle class=\"d-framer-focus-progress\" cx=\"80\" cy=\"80\" r=\"69\"></circle></svg><div><strong>00:20</strong><span>ready to begin</span></div></div><div class=\"d-framer-focus-actions\"><button class=\"d-framer-focus-toggle\" type=\"button\">Start session</button><button class=\"d-framer-focus-reset\" type=\"button\">Reset</button></div><p class=\"d-framer-focus-status\" aria-live=\"polite\"></p></div>",
+    "css": ".d-framer-focus{width:100%;height:320px;box-sizing:border-box;padding:20px;background:#0b0c0e;color:#eaecee;font-family:\"Inter\",system-ui,sans-serif;display:flex;flex-direction:column;align-items:center}.d-framer-focus header{text-align:center}.d-framer-focus h3{margin:0;font:450 16px/1.4 \"Inter\",system-ui,sans-serif}.d-framer-focus header p{margin:5px 0 0;font:400 11px/1.4 \"Inter\",system-ui,sans-serif;color:#8c949e}.d-framer-focus-presets{display:flex;gap:4px;margin-top:15px;padding:3px;background:#171a1e;border:1px solid #262c33;border-radius:7px}.d-framer-focus-presets button{padding:5px 11px;border:0;border-radius:4px;background:none;color:#858f9c;font:400 10px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;cursor:pointer}.d-framer-focus-presets button[aria-pressed=\"true\"]{background:#30363f;color:#e4e9ef}.d-framer-focus-dial{width:154px;height:154px;position:relative;margin:7px auto}.d-framer-focus-dial svg{display:block;width:100%;height:100%;transform:rotate(-90deg)}.d-framer-focus-dial circle{fill:none;stroke:#252b32;stroke-width:4}.d-framer-focus-dial circle.d-framer-focus-progress{stroke:#bdc8d7;stroke-linecap:round;stroke-dasharray:433.54;stroke-dashoffset:0}.d-framer-focus-dial>div{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px}.d-framer-focus-dial strong{font:400 31px/1 \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-focus-dial span{font:400 10px/1.3 \"Inter\",system-ui,sans-serif;color:#848f9e}.d-framer-focus-actions{width:100%;display:grid;grid-template-columns:1fr auto;gap:9px;margin-top:auto}.d-framer-focus-actions button{height:35px;padding:0 14px;border:1px solid #333b47;border-radius:6px;color:#d3dbe6;background:#222a35;font:450 11px \"Inter\",system-ui,sans-serif;cursor:pointer}.d-framer-focus-actions .d-framer-focus-reset{background:transparent;color:#8591a1;border-color:#2b333e}.d-framer-focus button:hover{color:#fff}.d-framer-focus button:focus-visible{outline:2px solid #aeb9ca;outline-offset:3px}.d-framer-focus-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}",
+    "js": "const digits=root.querySelector('.d-framer-focus-dial strong'),label=root.querySelector('.d-framer-focus-dial span'),progress=root.querySelector('.d-framer-focus-progress'),toggle=root.querySelector('.d-framer-focus-toggle'),status=root.querySelector('.d-framer-focus-status'),presets=[...root.querySelectorAll('.d-framer-focus-presets button')];let duration=20,remaining=20,running=false,deadline=0,raf=0;const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;function render(){const seconds=Math.max(0,Math.ceil(remaining));digits.textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');progress.style.strokeDashoffset=String(433.54*(1-(reduce?seconds:remaining)/duration));root.dataset.remaining=remaining.toFixed(2);root.dataset.duration=String(duration);root.dataset.state=running?'running':remaining===0?'complete':remaining===duration?'ready':'paused';label.textContent=running?'time remaining':remaining===0?'session complete':remaining===duration?'ready to begin':'paused';toggle.textContent=running?'Pause':remaining===0?'Start again':remaining===duration?'Start session':'Continue';toggle.setAttribute('aria-pressed',String(running))}function frame(now){remaining=Math.max(0,(deadline-now)/1000);if(remaining===0){running=false;status.textContent='Focus session complete.'}render();if(running)raf=requestAnimationFrame(frame)}function reset(next=duration){cancelAnimationFrame(raf);running=false;duration=next;remaining=next;presets.forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.seconds)===duration)));render();status.textContent=duration+' second session ready.'}toggle.addEventListener('click',()=>{if(running){remaining=Math.max(0,(deadline-performance.now())/1000);running=false;cancelAnimationFrame(raf);status.textContent='Session paused.';render()}else{if(remaining===0)remaining=duration;running=true;deadline=performance.now()+remaining*1000;status.textContent='Focus session started.';render();raf=requestAnimationFrame(frame)}});root.querySelector('.d-framer-focus-reset').addEventListener('click',()=>reset());presets.forEach(button=>button.addEventListener('click',()=>reset(Number(button.dataset.seconds))));reset();return()=>cancelAnimationFrame(raf);",
+    "prompt": "Build a native300×320px focus countdown with20,45 and60second presets. Use a154px circular track with4px muted stroke and clean31px Inter400 tabular time display. Keep the heading16px and supporting labels10–11px. Start/Pause/Continue share one button; Reset returns to the chosen duration, and a completed timer can restart. Compute remaining time from a performance.now deadline so delayed frames do not drift. Pausing stores exact remaining time; preset changes stop the previous run. Show MM:SS and derive stroke-dashoffset from remaining/duration. Expose remaining,duration,state and announce user actions/completion. Reduced motion keeps the real timer but updates its ring in whole-second steps. Use original vanilla HTML/CSS/JS, no network, restrained charcoal-blue material and locally bundled Inter numbers with normal weight and tracking.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": null
+    },
+    "useCases": [
+      "countdown",
+      "progress",
+      "timer",
+      "Framer"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "framer-financial-trend",
+    "title": "Revenue Period Summary",
+    "cat": "Framer Collection",
+    "rootClass": "d-framer-finance",
+    "tags": [
+      "metrics",
+      "financial",
+      "chart",
+      "Framer"
+    ],
+    "libs": [],
+    "source": {
+      "name": "Framer · AnimatedStats",
+      "url": "https://www.framer.com/marketplace/components/animatedstats/"
+    },
+    "desc": "A revenue summary whose total, chart, transaction count and average order animate together when the selected period changes. Inspect chart samples with pointer or keyboard.",
+    "seen": "Reference: Framer AnimatedStats — responsive statistic hierarchy, labels, affixes and synchronized reveals",
+    "hint": "switch Week, Month or Year, then inspect revenue samples with the chart",
+    "html": "<div class=\"d-framer-finance\"><header><h3>Net revenue</h3><span>Sample data</span></header><div class=\"d-framer-finance-total\">$24,860.00</div><p class=\"d-framer-finance-change\">↑12.4% <span>vs. previous month</span></p><div class=\"d-framer-finance-chart\" tabindex=\"0\" role=\"slider\" aria-label=\"Inspect revenue sample\" aria-valuemin=\"1\" aria-valuemax=\"7\" aria-valuenow=\"7\"><svg viewBox=\"0 0 260 82\" aria-hidden=\"true\"><defs><linearGradient id=\"d-framer-finance-fade\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop stop-color=\"#a7b5c9\" stop-opacity=\".15\"></stop><stop offset=\"1\" stop-color=\"#a7b5c9\" stop-opacity=\"0\"></stop></linearGradient></defs><path class=\"d-framer-finance-area\"></path><path class=\"d-framer-finance-line\"></path><circle class=\"d-framer-finance-dot\" r=\"3\"></circle></svg><span class=\"d-framer-finance-sample\"></span></div><div class=\"d-framer-finance-tabs\" aria-label=\"Revenue period\"><button type=\"button\" data-period=\"week\" aria-pressed=\"false\">Week</button><button type=\"button\" data-period=\"month\" aria-pressed=\"true\">Month</button><button type=\"button\" data-period=\"year\" aria-pressed=\"false\">Year</button></div><div class=\"d-framer-finance-stats\"><div><span>Transactions</span><strong class=\"d-framer-finance-orders\">248</strong></div><div><span>Average order</span><strong class=\"d-framer-finance-average\">$100.24</strong></div></div><p class=\"d-framer-finance-status\" aria-live=\"polite\"></p></div>",
+    "css": ".d-framer-finance{width:100%;height:320px;box-sizing:border-box;padding:22px 20px;background:#0b0c0e;color:#eaedf1;font-family:\"Inter\",system-ui,sans-serif}.d-framer-finance header{display:flex;justify-content:space-between;align-items:center}.d-framer-finance h3{margin:0;font:450 13px/1.4 \"Inter\",system-ui,sans-serif;color:#b0b8c3}.d-framer-finance header>span{font:400 9px \"Inter\",system-ui,sans-serif;color:#687586}.d-framer-finance-total{margin-top:15px;font:400 33px/1.1 \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;white-space:nowrap}.d-framer-finance-change{margin:8px 0 7px;color:#92b4a1;font:400 10px/1.4 \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-finance-change span{color:#768292;margin-left:5px}.d-framer-finance[data-negative=\"true\"] .d-framer-finance-change{color:#ca9b96}.d-framer-finance-chart{height:78px;position:relative;outline:none;cursor:crosshair}.d-framer-finance-chart svg{width:100%;height:100%;display:block;overflow:visible}.d-framer-finance-area{fill:url(#d-framer-finance-fade)}.d-framer-finance-line{fill:none;stroke:#aebbd0;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.d-framer-finance-dot{fill:#d1d8e3;stroke:#0b0c0e;stroke-width:2;opacity:0}.d-framer-finance-sample{position:absolute;right:0;top:2px;color:#ccd5e2;background:#151b24;border-radius:4px;padding:3px 5px;font:400 10px \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;opacity:0}.d-framer-finance-chart.is-inspecting .d-framer-finance-dot,.d-framer-finance-chart.is-inspecting .d-framer-finance-sample{opacity:1}.d-framer-finance-tabs{display:flex;justify-content:center;gap:3px;padding:3px;border:1px solid #242d39;border-radius:6px;background:#151b23;margin:5px 0 14px}.d-framer-finance-tabs button{flex:1;border:0;border-radius:4px;padding:6px 8px;background:none;color:#7f8d9f;font:400 10px \"Inter\",system-ui,sans-serif;cursor:pointer}.d-framer-finance-tabs button[aria-pressed=\"true\"]{background:#2a3442;color:#dce2eb}.d-framer-finance-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:13px;border-top:1px solid #252d38}.d-framer-finance-stats span{display:block;color:#7f8b9b;font:400 10px \"Inter\",system-ui,sans-serif}.d-framer-finance-stats strong{display:block;margin-top:6px;color:#c8d0dc;font:400 18px/1 \"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-framer-finance :is(button,.d-framer-finance-chart):focus-visible{outline:2px solid #aeb9ca;outline-offset:3px}.d-framer-finance-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}",
+    "js": "const sets={week:{total:5480.5,change:-3.2,orders:58,values:[36,42,33,54,47,58,52]},month:{total:24860,change:12.4,orders:248,values:[22,37,31,53,48,65,78]},year:{total:186240.75,change:28.6,orders:1820,values:[17,31,41,35,62,70,91]}};const total=root.querySelector('.d-framer-finance-total'),change=root.querySelector('.d-framer-finance-change'),orders=root.querySelector('.d-framer-finance-orders'),average=root.querySelector('.d-framer-finance-average'),line=root.querySelector('.d-framer-finance-line'),area=root.querySelector('.d-framer-finance-area'),chart=root.querySelector('.d-framer-finance-chart'),dot=root.querySelector('.d-framer-finance-dot'),sample=root.querySelector('.d-framer-finance-sample'),status=root.querySelector('.d-framer-finance-status'),buttons=[...root.querySelectorAll('[data-period]')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let state={...sets.month,values:sets.month.values.slice()},period='month',raf=0,index=6;const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(n);function point(i){return[5+i*250/6,75-state.values[i]*.65]}function render(){total.textContent=money(state.total);orders.textContent=Math.round(state.orders).toLocaleString('en-US');average.textContent=money(state.total/Math.max(1,state.orders));const points=state.values.map((_,i)=>point(i)),path=points.map((p,i)=>(i?'L':'M')+p.join(' ')).join(' ');line.setAttribute('d',path);area.setAttribute('d',path+'L255 80L5 80Z');root.dataset.total=state.total.toFixed(2);root.dataset.orders=String(Math.round(state.orders))}function select(next){cancelAnimationFrame(raf);chart.classList.remove('is-inspecting');const from={...state,values:state.values.slice()},target=sets[next],start=performance.now();period=next;root.dataset.period=period;root.dataset.negative=String(target.change<0);root.dataset.phase='transitioning';change.innerHTML=(target.change>=0?'↑':'↓')+Math.abs(target.change).toFixed(1)+'% <span>vs. previous '+period+'</span>';buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.period===period)));function frame(now){const p=reduce?1:Math.min(1,(now-start)/900),e=1-Math.pow(1-p,3);state={total:from.total+(target.total-from.total)*e,orders:from.orders+(target.orders-from.orders)*e,values:from.values.map((v,i)=>v+(target.values[i]-v)*e)};render();if(p<1)raf=requestAnimationFrame(frame);else{root.dataset.phase='complete';status.textContent=period+' net revenue '+money(target.total)+', '+target.orders+' transactions'}}raf=requestAnimationFrame(frame)}function inspect(i){index=Math.max(0,Math.min(6,i));const[x,y]=point(index);dot.setAttribute('cx',x);dot.setAttribute('cy',y);sample.textContent='Sample '+(index+1)+': '+money(sets[period].total*sets[period].values[index]/sets[period].values.reduce((a,b)=>a+b,0));chart.classList.add('is-inspecting');chart.setAttribute('aria-valuenow',String(index+1));chart.setAttribute('aria-valuetext',sample.textContent);root.dataset.sample=String(index+1)}chart.addEventListener('pointermove',event=>{const b=chart.getBoundingClientRect();inspect(Math.round((event.clientX-b.left)/b.width*6))});chart.addEventListener('pointerleave',()=>chart.classList.remove('is-inspecting'));chart.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();inspect(event.key==='Home'?0:event.key==='End'?6:index+(event.key==='ArrowRight'?1:-1))});buttons.forEach(button=>button.addEventListener('click',()=>select(button.dataset.period)));select('month');return()=>cancelAnimationFrame(raf);",
+    "prompt": "Build an original revenue-summary card at300×320px using explicit sample data. Give Net revenue a33px Inter400 tabular value, a signed change/comparison period, a restrained seven-point line/area chart, Week/Month/Year buttons, and18px supporting values for transactions and average order. Every number uses normal Inter proportions, zero tracking and localized currency with two decimals. Switching periods animates financial values and chart points together from the current interpolated state over900ms. Week has a negative comparison, month/year positive; retain restrained semantic red/green. The chart supports nearest-sample pointer inspection plus Arrow/Home/End with slider semantics. Expose period,total,orders,phase,sample and announce completed changes only. Use immediate reduced-motion rendering and cancel the frame on cleanup. No external financial data or network request.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "slider"
+    },
+    "useCases": [
+      "metrics",
+      "financial",
+      "chart",
+      "Framer"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  }
+]

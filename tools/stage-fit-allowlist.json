@@ -1329,6 +1329,16 @@
         90,
         8
       ]
+    },
+    "framer-rolling-balance": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 geometry instead of enlarging it for the 12% fill heuristic. The 372×264 reference has a 147×57px $2,486 text slot at 112.5,66 and a 60×22px +12.00 badge at 156,128. Their painted bounding composition is 147×84px; it measures 11.5% in the 347×264 audited tile. The transparent 204×150px pointer target supplies no painted fill. Keep all reference sizes and the compact 11px optical floor. This exception changes only low fill; overflow, horizontal scroll and text gates remain enforced.",
+      "figmaNode": "177:831",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=177-831",
+      "selector": ".d-framer-balance [data-native-node=\"177:845\"]",
+      "designSize": [
+        147,
+        57
+      ]
     }
   }
 }

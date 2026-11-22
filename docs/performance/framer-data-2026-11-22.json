@@ -1,0 +1,5400 @@
+{
+  "at": "2026-11-22T13:12:41.434Z",
+  "sourceFile": "js/demos.framer-data.js",
+  "sourceSHA256": "d844d0e012986f3acb4893bc8a937215f6fd45f361051aa08846be5e4d29d2ad",
+  "harnessSHA256": "f74cb552af8b8e4f79ae7dcb02888221c95ac57b1da61d3b4d18d552ac48acbf",
+  "runId": "2026-11-22T13-12-41-427Z-d844d0e01298",
+  "inputs": {
+    "tools/verification/framer-data-harness.js": "94275ede42c9d4b7a87da404f0a7ce98b1a0fd57e08f51fd7cee44c83d417921",
+    "tools/fixtures/framer-data/rig.html": "6c6bff1358961a2ee31a41415734e19a8e985e95d433fecba8a29bafb8f186fc",
+    "tools/fixtures/framer-data/configs.json": "61065ad5f78a5887feb197ff56e521ddacf44633b84f16abf48b779cf0eefe84",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "js/registry-files.json": "e1131afdf80eee0f959371eea3afd533f01d7c568c2cd9deb0c042ee7c476314",
+    "js/meta.stage.js": "7f0645399eecf996cb39461923a334b5ae003e8f4d401adb88660e867e1a7982",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+    "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+    "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+    "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+    "assets/components/framer-data/175-1503.svg": "3713b7dd4efe74aa617a585725bda8f2cbe45b6e803020a90db50e2c0b50d47c",
+    "assets/components/framer-data/175-1504.svg": "21cd5bb76c433bf73fc79a1222cc38ee0c10029a114487b133de4460599259bc"
+  },
+  "ids": [
+    "framer-formatted-metric",
+    "framer-rolling-balance",
+    "framer-focus-countdown",
+    "framer-financial-trend"
+  ],
+  "notes": [
+    "Actual eight-second native/full stories at desktop DPR 1 and compact DPR 2, with CPU 1 and CPU 4.",
+    "Metric receives four counts. Balance receives a payment followed by a complete replay. Focus runs for six seconds and is paused deliberately. Finance visits Year, Week and Month.",
+    "Compact stages use 347px native and 344px full widths. Local Geist, Geist Mono and Inter fonts are prepared before mounting.",
+    "The trace spans mounting and decoding. First trace Paint can precede complete readiness; readiness includes decoded SVG images and fonts.",
+    "Own heavy checks stopped; other applications not controlled. Synthetic profiling input is separate from trusted input verification. Every trace and outlier is retained.",
+    "These observations do not prove cold-route, Lighthouse or site-wide timing gates."
+  ],
+  "cases": [
+    {
+      "name": "framer-formatted-metric-thumb-desktop-dpr1-cpu1",
+      "id": "framer-formatted-metric",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 8.099999994039536,
+      "frames": 481,
+      "elapsed": 8016.434000000001,
+      "fps": 60.00174142268244,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.80000000000109,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 4,
+      "nodes": 29,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6009.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6009.9000000059605,
+          "index": 360,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "from": "0",
+              "to": "84210",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete",
+              "value": "84210.00"
+            },
+            "value": "$84,210.00",
+            "format": "currency",
+            "from": "0",
+            "to": "84210",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $84,210.00",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "ddde31397492068df5877fb1677a902f615c96b183865269e652f681b5b2bc5a",
+      "firstPaintMs": 9.93,
+      "firstPaintDurationMs": 0.166
+    },
+    {
+      "name": "framer-formatted-metric-thumb-compact-dpr2-cpu1",
+      "id": "framer-formatted-metric",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 9.400000005960464,
+      "frames": 481,
+      "elapsed": 8016.400000000001,
+      "fps": 60.0019959083878,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 4,
+      "nodes": 29,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6021.70000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6021.70000000298,
+          "index": 361,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "from": "0",
+              "to": "84210",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete",
+              "value": "84210.00"
+            },
+            "value": "$84,210.00",
+            "format": "currency",
+            "from": "0",
+            "to": "84210",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $84,210.00",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "e2e8f7f5163bdd2139ce7d8f92d7f53a535e18bee54d582047a3d2d550c39ad4",
+      "firstPaintMs": 10.037,
+      "firstPaintDurationMs": 0.078
+    },
+    {
+      "name": "framer-formatted-metric-full-desktop-dpr1-cpu1",
+      "id": "framer-formatted-metric",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 7.0999999940395355,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 4,
+      "nodes": 30,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6043.5,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6043.5,
+          "index": 362,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "value": "24580.60",
+              "from": "12000",
+              "to": "24580.6",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete"
+            },
+            "value": "$24,580.60",
+            "format": "currency",
+            "from": "12000",
+            "to": "24580.6",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $24,580.60",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "546f0368a4980e460affa2e3aafa6fdadce18b5d818eb58e72a35209afc8e68c",
+      "firstPaintMs": 7.845,
+      "firstPaintDurationMs": 0.394
+    },
+    {
+      "name": "framer-formatted-metric-full-compact-dpr2-cpu1",
+      "id": "framer-formatted-metric",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.200000002980232,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 4,
+      "nodes": 30,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6062.899999991059,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6062.899999991059,
+          "index": 363,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "value": "24580.60",
+              "from": "12000",
+              "to": "24580.6",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete"
+            },
+            "value": "$24,580.60",
+            "format": "currency",
+            "from": "12000",
+            "to": "24580.6",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $24,580.60",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "8b5b3317a5dc50de7a584d43f506c6e170b24d9c90acc48721961ad6f842fb6d",
+      "firstPaintMs": 10.789,
+      "firstPaintDurationMs": 0.128
+    },
+    {
+      "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu1",
+      "id": "framer-rolling-balance",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 7.299999997019768,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 127,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7313.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7313.9000000059605,
+          "index": 438,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 25,
+          "methods": 120,
+          "state": {
+            "data": {
+              "value": "2736.00",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 2736,
+            "displayed": 2736,
+            "token": 4,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $2,736.00",
+            "text": "$0123456789012,0123456789012345670123456789012301234567890123456.0123456789001234567890",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "end": "translateY(-736px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "57df317c5f11a920c73e722093a04fd470723fbd45fbc22c5bca123e3ab3602a",
+      "firstPaintMs": 8.002,
+      "firstPaintDurationMs": 0.08
+    },
+    {
+      "name": "framer-rolling-balance-thumb-compact-dpr2-cpu1",
+      "id": "framer-rolling-balance",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.900000005960464,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 127,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7310.100000008941,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7310.100000008941,
+          "index": 438,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 25,
+          "methods": 120,
+          "state": {
+            "data": {
+              "value": "2736.00",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 2736,
+            "displayed": 2736,
+            "token": 4,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $2,736.00",
+            "text": "$0123456789012,0123456789012345670123456789012301234567890123456.0123456789001234567890",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "end": "translateY(-736px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "16b9443ad39d1f93e5fe5ed756c325ae0c8ae48552c6dc6b553d12de53547e83",
+      "firstPaintMs": 12.041,
+      "firstPaintDurationMs": 0.077
+    },
+    {
+      "name": "framer-rolling-balance-full-desktop-dpr1-cpu1",
+      "id": "framer-rolling-balance",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 7.799999997019768,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 143,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7353.699999988079,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7353.699999988079,
+          "index": 441,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 21,
+          "methods": 135,
+          "state": {
+            "data": {
+              "value": "12730.25",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 12730.25,
+            "displayed": 12730.25,
+            "token": 3,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $12,730.25",
+            "text": "$0123456789010123456789012,0123456789012345670123456789012301234567890.01234567890120123456789012345",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1"
+                ],
+                "end": "translateY(-506px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ],
+                "end": "translateY(-690px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "d163d2f6bb7217d628ffc2df22331d837bdb85fb09ae02e3b4fb5022d297adfa",
+      "firstPaintMs": 13.056,
+      "firstPaintDurationMs": 1.083
+    },
+    {
+      "name": "framer-rolling-balance-full-compact-dpr2-cpu1",
+      "id": "framer-rolling-balance",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 12.700000002980232,
+      "frames": 480,
+      "elapsed": 8016.299999999999,
+      "fps": 59.877998577897536,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 33.399999999999636,
+      "gapsOver25ms": 1,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 143,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7346.29999999702,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7346.29999999702,
+          "index": 440,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 21,
+          "methods": 135,
+          "state": {
+            "data": {
+              "value": "12730.25",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 12730.25,
+            "displayed": 12730.25,
+            "token": 3,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $12,730.25",
+            "text": "$0123456789010123456789012,0123456789012345670123456789012301234567890.01234567890120123456789012345",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1"
+                ],
+                "end": "translateY(-506px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ],
+                "end": "translateY(-690px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "6b5dfc9ac9d6b8a42f7b1463761551e60ae9ce6edcb879049db865bd32fd56e3",
+      "firstPaintMs": 18.863,
+      "firstPaintDurationMs": 1.934
+    },
+    {
+      "name": "framer-focus-countdown-thumb-desktop-dpr1-cpu1",
+      "id": "framer-focus-countdown",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 6.9000000059604645,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 34,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6139.899999991059,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": true,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6139.899999991059,
+          "index": 368,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "1074.00",
+              "duration": "1500",
+              "state": "paused"
+            },
+            "duration": 1500,
+            "remaining": 1074.0002,
+            "running": false,
+            "deadline": 1080123.2,
+            "digits": "17:55",
+            "label": "paused",
+            "offset": "123.125",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "false"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "fda8911fc913075b604ad7196f2d204fa8fa524ca11cb5bf09091daeb1a96048",
+      "firstPaintMs": 11.872,
+      "firstPaintDurationMs": 0.16
+    },
+    {
+      "name": "framer-focus-countdown-thumb-compact-dpr2-cpu1",
+      "id": "framer-focus-countdown",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 8.899999991059303,
+      "frames": 481,
+      "elapsed": 8016.334,
+      "fps": 60.00248991621357,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 34,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6357.70000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": true,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6357.70000000298,
+          "index": 381,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "1073.98",
+              "duration": "1500",
+              "state": "paused"
+            },
+            "duration": 1500,
+            "remaining": 1073.983,
+            "running": false,
+            "deadline": 1080090.8,
+            "digits": "17:54",
+            "label": "paused",
+            "offset": "123.13",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "false"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "d1aa5fcbd24e68aafe9c3f663c2d3c1e09b6ea4d14b9331051a4af251fe92e0d",
+      "firstPaintMs": 9.779,
+      "firstPaintDurationMs": 0.15
+    },
+    {
+      "name": "framer-focus-countdown-full-desktop-dpr1-cpu1",
+      "id": "framer-focus-countdown",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 5.5,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 26,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6364.70000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6364.70000000298,
+          "index": 381,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "14.00",
+              "duration": "20",
+              "state": "paused"
+            },
+            "duration": 20,
+            "remaining": 13.999899999999998,
+            "running": false,
+            "deadline": 20113.6,
+            "digits": "00:14",
+            "label": "paused",
+            "offset": "130.064",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "true"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "7852fc2222b7e2b37740dfac0d595869cdbeb02e7e2aecff1cfbdec102d16a0f",
+      "firstPaintMs": 6.325,
+      "firstPaintDurationMs": 0.204
+    },
+    {
+      "name": "framer-focus-countdown-full-compact-dpr2-cpu1",
+      "id": "framer-focus-countdown",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 10.400000005960464,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 2,
+      "nodes": 26,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6375.70000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6375.70000000298,
+          "index": 382,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "13.98",
+              "duration": "20",
+              "state": "paused"
+            },
+            "duration": 20,
+            "remaining": 13.9833,
+            "running": false,
+            "deadline": 20093.1,
+            "digits": "00:14",
+            "label": "paused",
+            "offset": "130.424",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "true"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "84208367b949ded4672fd2015c344c7f7d6300ce7bbee906c8ba2f9e47a441d7",
+      "firstPaintMs": 11.235,
+      "firstPaintDurationMs": 0.138
+    },
+    {
+      "name": "framer-financial-trend-thumb-desktop-dpr1-cpu1",
+      "id": "framer-financial-trend",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 8.799999997019768,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 3,
+      "nodes": 42,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5201.699999988079,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5201.699999988079,
+          "index": 312,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "73541475b607dbb53c2bbd055a74267e6e4b69cc321b309bb3f3f1a32534ab5c",
+      "firstPaintMs": 9.456,
+      "firstPaintDurationMs": 0.075
+    },
+    {
+      "name": "framer-financial-trend-thumb-compact-dpr2-cpu1",
+      "id": "framer-financial-trend",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 13.5,
+      "frames": 481,
+      "elapsed": 8016.400000000001,
+      "fps": 60.0019959083878,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 3,
+      "nodes": 42,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5233.100000008941,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5233.100000008941,
+          "index": 313,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "6b225aa6fd5fc816d147d50ea4a588e58ca18889fed330efd4dd8d2b5391e834",
+      "firstPaintMs": 14.116,
+      "firstPaintDurationMs": 0.076
+    },
+    {
+      "name": "framer-financial-trend-full-desktop-dpr1-cpu1",
+      "id": "framer-financial-trend",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "readyMs": 7.600000008940697,
+      "frames": 470,
+      "elapsed": 8016.4,
+      "fps": 58.62980889177187,
+      "median": 16.699999999999818,
+      "p95": 16.80000000000001,
+      "max": 33.400000000000546,
+      "gapsOver25ms": 11,
+      "longTasks": [],
+      "events": 3,
+      "nodes": 46,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5277.100000008941,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 3,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5277.100000008941,
+          "index": 316,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "34c42e978908df2ea4f2b1801ce222e6a4ac06c35eb40ca14657044eb9736d17",
+      "firstPaintMs": 9.066,
+      "firstPaintDurationMs": 0.24
+    },
+    {
+      "name": "framer-financial-trend-full-compact-dpr2-cpu1",
+      "id": "framer-financial-trend",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "readyMs": 17.400000005960464,
+      "frames": 452,
+      "elapsed": 8016.3,
+      "fps": 56.385115327520175,
+      "median": 16.699999999999818,
+      "p95": 33.299999999999955,
+      "max": 50,
+      "gapsOver25ms": 28,
+      "longTasks": [],
+      "events": 3,
+      "nodes": 46,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5279.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 3,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5279.9000000059605,
+          "index": 316,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "2cea30eff4353aaed76bfc235dca3c780ac5cc2a13fe4293ad24bcf28ffc8006",
+      "firstPaintMs": 19.216,
+      "firstPaintDurationMs": 0.193
+    },
+    {
+      "name": "framer-formatted-metric-thumb-desktop-dpr1-cpu4",
+      "id": "framer-formatted-metric",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 34.400000005960464,
+      "frames": 344,
+      "elapsed": 8016.4,
+      "fps": 42.912030337807494,
+      "median": 16.699999999999818,
+      "p95": 50,
+      "max": 83.40000000000009,
+      "gapsOver25ms": 107,
+      "longTasks": [
+        {
+          "start": 1231.2999999970198,
+          "duration": 62
+        },
+        {
+          "start": 2531.1000000089407,
+          "duration": 54
+        },
+        {
+          "start": 2585.6000000089407,
+          "duration": 84
+        },
+        {
+          "start": 2671.6000000089407,
+          "duration": 56
+        },
+        {
+          "start": 2737.7000000029802,
+          "duration": 52
+        },
+        {
+          "start": 2939.5,
+          "duration": 54
+        },
+        {
+          "start": 3788.1000000089407,
+          "duration": 50
+        },
+        {
+          "start": 5833.600000008941,
+          "duration": 62
+        }
+      ],
+      "events": 4,
+      "nodes": 29,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5997.600000008941,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5997.600000008941,
+          "index": 359,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "from": "0",
+              "to": "84210",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete",
+              "value": "84210.00"
+            },
+            "value": "$84,210.00",
+            "format": "currency",
+            "from": "0",
+            "to": "84210",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $84,210.00",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "deffdc269e940228cd86de13495b5b3e1ad1a1e3fe7c4c4dbd5d4bad99fd7a6b",
+      "firstPaintMs": 36.194,
+      "firstPaintDurationMs": 0.163
+    },
+    {
+      "name": "framer-formatted-metric-thumb-compact-dpr2-cpu4",
+      "id": "framer-formatted-metric",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 97.09999999403954,
+      "frames": 334,
+      "elapsed": 8016.368,
+      "fps": 41.664753913492994,
+      "median": 16.699999999999818,
+      "p95": 50,
+      "max": 99.96800000000002,
+      "gapsOver25ms": 112,
+      "longTasks": [
+        {
+          "start": 185.1000000089407,
+          "duration": 117
+        },
+        {
+          "start": 948.7999999970198,
+          "duration": 64
+        },
+        {
+          "start": 2290.7999999970198,
+          "duration": 51
+        },
+        {
+          "start": 2559.4000000059605,
+          "duration": 72
+        },
+        {
+          "start": 3691.2000000029802,
+          "duration": 50
+        },
+        {
+          "start": 4468.70000000298,
+          "duration": 68
+        },
+        {
+          "start": 4956.79999999702,
+          "duration": 55
+        },
+        {
+          "start": 5045,
+          "duration": 79
+        },
+        {
+          "start": 5125.5,
+          "duration": 52
+        }
+      ],
+      "events": 4,
+      "nodes": 29,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5938.70000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5938.70000000298,
+          "index": 356,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "from": "0",
+              "to": "84210",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete",
+              "value": "84210.00"
+            },
+            "value": "$84,210.00",
+            "format": "currency",
+            "from": "0",
+            "to": "84210",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $84,210.00",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "3521f1b9897f70b40ceec5087da73bc276a596601200b44446c0e9c0ea7802ba",
+      "firstPaintMs": 102.97,
+      "firstPaintDurationMs": 0.432
+    },
+    {
+      "name": "framer-formatted-metric-full-desktop-dpr1-cpu4",
+      "id": "framer-formatted-metric",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 53.19999998807907,
+      "frames": 295,
+      "elapsed": 8016.299999999999,
+      "fps": 36.800019959332865,
+      "median": 16.700000000000045,
+      "p95": 50.09999999999991,
+      "max": 100,
+      "gapsOver25ms": 120,
+      "longTasks": [
+        {
+          "start": 245.20000000298023,
+          "duration": 73
+        },
+        {
+          "start": 446.1000000089407,
+          "duration": 71
+        },
+        {
+          "start": 1015,
+          "duration": 59
+        },
+        {
+          "start": 1241.6000000089407,
+          "duration": 56
+        },
+        {
+          "start": 2029.4000000059605,
+          "duration": 64
+        },
+        {
+          "start": 2130.1000000089407,
+          "duration": 51
+        },
+        {
+          "start": 3002.6000000089407,
+          "duration": 71
+        },
+        {
+          "start": 3529.6000000089407,
+          "duration": 58
+        },
+        {
+          "start": 3589.1000000089407,
+          "duration": 55
+        },
+        {
+          "start": 3647,
+          "duration": 63
+        },
+        {
+          "start": 3716.1000000089407,
+          "duration": 61
+        },
+        {
+          "start": 4011.2000000029802,
+          "duration": 56
+        },
+        {
+          "start": 4105.100000008941,
+          "duration": 51
+        },
+        {
+          "start": 4157.29999999702,
+          "duration": 50
+        },
+        {
+          "start": 5195.100000008941,
+          "duration": 55
+        },
+        {
+          "start": 5250.70000000298,
+          "duration": 53
+        },
+        {
+          "start": 5402,
+          "duration": 50
+        },
+        {
+          "start": 5454,
+          "duration": 50
+        },
+        {
+          "start": 5910.79999999702,
+          "duration": 89
+        }
+      ],
+      "events": 4,
+      "nodes": 30,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5995.20000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5995.20000000298,
+          "index": 359,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "value": "24580.60",
+              "from": "12000",
+              "to": "24580.6",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete"
+            },
+            "value": "$24,580.60",
+            "format": "currency",
+            "from": "12000",
+            "to": "24580.6",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $24,580.60",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "721e58733d1d74b3b52736a54b9aa9e9b0e1252836ee3b40ee662124fc5c7fb4",
+      "firstPaintMs": 58.248,
+      "firstPaintDurationMs": 1.229
+    },
+    {
+      "name": "framer-formatted-metric-full-compact-dpr2-cpu4",
+      "id": "framer-formatted-metric",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 70.5,
+      "frames": 271,
+      "elapsed": 8016.4,
+      "fps": 33.805698318447185,
+      "median": 16.69999999999999,
+      "p95": 66.59999999999945,
+      "max": 166.69999999999982,
+      "gapsOver25ms": 112,
+      "longTasks": [
+        {
+          "start": 160.1000000089407,
+          "duration": 101
+        },
+        {
+          "start": 694,
+          "duration": 53
+        },
+        {
+          "start": 748.5,
+          "duration": 56
+        },
+        {
+          "start": 806.2000000029802,
+          "duration": 84
+        },
+        {
+          "start": 891.8000000119209,
+          "duration": 82
+        },
+        {
+          "start": 974.5,
+          "duration": 82
+        },
+        {
+          "start": 1099.800000011921,
+          "duration": 60
+        },
+        {
+          "start": 1266.1000000089407,
+          "duration": 148
+        },
+        {
+          "start": 1414.4000000059605,
+          "duration": 118
+        },
+        {
+          "start": 1533.5,
+          "duration": 110
+        },
+        {
+          "start": 1969.9000000059605,
+          "duration": 50
+        },
+        {
+          "start": 2105.6000000089407,
+          "duration": 53
+        },
+        {
+          "start": 2159.9000000059605,
+          "duration": 53
+        },
+        {
+          "start": 2510.800000011921,
+          "duration": 50
+        },
+        {
+          "start": 3591.300000011921,
+          "duration": 52
+        },
+        {
+          "start": 3688.7000000029802,
+          "duration": 56
+        },
+        {
+          "start": 3746.9000000059605,
+          "duration": 53
+        },
+        {
+          "start": 3889.4000000059605,
+          "duration": 56
+        },
+        {
+          "start": 4003.4000000059605,
+          "duration": 51
+        },
+        {
+          "start": 4189.9000000059605,
+          "duration": 71
+        },
+        {
+          "start": 4261.9000000059605,
+          "duration": 59
+        },
+        {
+          "start": 5163.5,
+          "duration": 59
+        },
+        {
+          "start": 5224.300000011921,
+          "duration": 58
+        },
+        {
+          "start": 5461.4000000059605,
+          "duration": 57
+        },
+        {
+          "start": 5521.600000008941,
+          "duration": 56
+        },
+        {
+          "start": 5579.70000000298,
+          "duration": 52
+        },
+        {
+          "start": 5632.800000011921,
+          "duration": 64
+        },
+        {
+          "start": 5742.20000000298,
+          "duration": 54
+        },
+        {
+          "start": 5797.800000011921,
+          "duration": 63
+        },
+        {
+          "start": 5862.600000008941,
+          "duration": 50
+        }
+      ],
+      "events": 4,
+      "nodes": 30,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "metric",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5992.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5992.9000000059605,
+          "index": 359,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 16,
+          "state": {
+            "data": {
+              "value": "24580.60",
+              "from": "12000",
+              "to": "24580.6",
+              "format": "currency",
+              "direction": "up",
+              "phase": "complete"
+            },
+            "value": "$24,580.60",
+            "format": "currency",
+            "from": "12000",
+            "to": "24580.6",
+            "title": "Revenue",
+            "description": "Revenue from completed invoices.",
+            "status": "Revenue: $24,580.60",
+            "long": false
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-formatted-metric-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "a48dd641ac3242f4a13de080fdd16d0409eafc61c87548a024c39ff75d78ffcc",
+      "firstPaintMs": 75.172,
+      "firstPaintDurationMs": 0.654
+    },
+    {
+      "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu4",
+      "id": "framer-rolling-balance",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 62.599999994039536,
+      "frames": 277,
+      "elapsed": 8016.234,
+      "fps": 34.554879510752805,
+      "median": 33.29999999999973,
+      "p95": 50.099999999999454,
+      "max": 116.69999999999982,
+      "gapsOver25ms": 150,
+      "longTasks": [
+        {
+          "start": 147.09999999403954,
+          "duration": 76
+        },
+        {
+          "start": 252.79999999701977,
+          "duration": 76
+        },
+        {
+          "start": 329.29999999701977,
+          "duration": 61
+        },
+        {
+          "start": 477.29999999701977,
+          "duration": 60
+        },
+        {
+          "start": 4486.0999999940395,
+          "duration": 57
+        },
+        {
+          "start": 5179,
+          "duration": 59
+        },
+        {
+          "start": 5276.29999999702,
+          "duration": 75
+        },
+        {
+          "start": 5779.79999999702,
+          "duration": 55
+        },
+        {
+          "start": 6237,
+          "duration": 51
+        },
+        {
+          "start": 6707.5999999940395,
+          "duration": 56
+        },
+        {
+          "start": 7272.79999999702,
+          "duration": 52
+        },
+        {
+          "start": 7367.4000000059605,
+          "duration": 54
+        },
+        {
+          "start": 7422.70000000298,
+          "duration": 116
+        }
+      ],
+      "events": 2,
+      "nodes": 127,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7350.899999991059,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7350.899999991059,
+          "index": 441,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 25,
+          "methods": 120,
+          "state": {
+            "data": {
+              "value": "2736.00",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 2736,
+            "displayed": 2736,
+            "token": 4,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $2,736.00",
+            "text": "$0123456789012,0123456789012345670123456789012301234567890123456.0123456789001234567890",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "end": "translateY(-736px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "0e561d4f2c1538aa9ecd18dff629e62cdb2c379ad3a7387baa5c3e6d6eeb4321",
+      "firstPaintMs": 63.836,
+      "firstPaintDurationMs": 0.109
+    },
+    {
+      "name": "framer-rolling-balance-thumb-compact-dpr2-cpu4",
+      "id": "framer-rolling-balance",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 81.79999999701977,
+      "frames": 291,
+      "elapsed": 8016.334000000001,
+      "fps": 36.3008826728028,
+      "median": 33.29999999999927,
+      "p95": 50,
+      "max": 116.63400000000001,
+      "gapsOver25ms": 154,
+      "longTasks": [
+        {
+          "start": 141.79999999701977,
+          "duration": 113
+        },
+        {
+          "start": 1035.7999999970198,
+          "duration": 53
+        },
+        {
+          "start": 2766.9000000059605,
+          "duration": 53
+        },
+        {
+          "start": 2822.4000000059605,
+          "duration": 55
+        },
+        {
+          "start": 2879.1000000089407,
+          "duration": 51
+        },
+        {
+          "start": 4706.79999999702,
+          "duration": 56
+        },
+        {
+          "start": 4765.100000008941,
+          "duration": 56
+        },
+        {
+          "start": 4823.4000000059605,
+          "duration": 55
+        },
+        {
+          "start": 4973,
+          "duration": 59
+        },
+        {
+          "start": 5380.79999999702,
+          "duration": 103
+        },
+        {
+          "start": 5878.5,
+          "duration": 58
+        },
+        {
+          "start": 6323.20000000298,
+          "duration": 51
+        },
+        {
+          "start": 6777.4000000059605,
+          "duration": 50
+        }
+      ],
+      "events": 2,
+      "nodes": 127,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7220.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7220.9000000059605,
+          "index": 433,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 25,
+          "methods": 120,
+          "state": {
+            "data": {
+              "value": "2736.00",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 2736,
+            "displayed": 2736,
+            "token": 4,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $2,736.00",
+            "text": "$0123456789012,0123456789012345670123456789012301234567890123456.0123456789001234567890",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6"
+                ],
+                "end": "translateY(-736px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "c671d9c404d81c80420f7a10d082afc8aca34970e0e8877b2628202575e254b6",
+      "firstPaintMs": 88.273,
+      "firstPaintDurationMs": 0.429
+    },
+    {
+      "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+      "id": "framer-rolling-balance",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 58.1000000089407,
+      "frames": 201,
+      "elapsed": 8016.400000000001,
+      "fps": 25.073599121800306,
+      "median": 49.899999999999636,
+      "p95": 66.80000000000018,
+      "max": 133.3,
+      "gapsOver25ms": 122,
+      "longTasks": [
+        {
+          "start": 269,
+          "duration": 75
+        },
+        {
+          "start": 392.79999999701977,
+          "duration": 78
+        },
+        {
+          "start": 472.79999999701977,
+          "duration": 60
+        },
+        {
+          "start": 624.2999999970198,
+          "duration": 55
+        },
+        {
+          "start": 808.5,
+          "duration": 51
+        },
+        {
+          "start": 910.4000000059605,
+          "duration": 50
+        },
+        {
+          "start": 1006.7000000029802,
+          "duration": 55
+        },
+        {
+          "start": 1062.5,
+          "duration": 64
+        },
+        {
+          "start": 1128.2999999970198,
+          "duration": 54
+        },
+        {
+          "start": 1495.5,
+          "duration": 57
+        },
+        {
+          "start": 2110.5999999940395,
+          "duration": 54
+        },
+        {
+          "start": 2317,
+          "duration": 50
+        },
+        {
+          "start": 2412.7999999970198,
+          "duration": 51
+        },
+        {
+          "start": 2516.0999999940395,
+          "duration": 63
+        },
+        {
+          "start": 2580.2000000029802,
+          "duration": 57
+        },
+        {
+          "start": 2641.5,
+          "duration": 53
+        },
+        {
+          "start": 2738,
+          "duration": 57
+        },
+        {
+          "start": 2796.2000000029802,
+          "duration": 70
+        },
+        {
+          "start": 3088.5999999940395,
+          "duration": 54
+        },
+        {
+          "start": 3143.7000000029802,
+          "duration": 52
+        },
+        {
+          "start": 3197.4000000059605,
+          "duration": 60
+        },
+        {
+          "start": 3258.4000000059605,
+          "duration": 67
+        },
+        {
+          "start": 3327.0999999940395,
+          "duration": 55
+        },
+        {
+          "start": 3383.7999999970198,
+          "duration": 62
+        },
+        {
+          "start": 3447.7999999970198,
+          "duration": 78
+        },
+        {
+          "start": 3527.7000000029802,
+          "duration": 50
+        },
+        {
+          "start": 3579.2999999970198,
+          "duration": 51
+        },
+        {
+          "start": 3637.2999999970198,
+          "duration": 56
+        },
+        {
+          "start": 4371.20000000298,
+          "duration": 66
+        },
+        {
+          "start": 4437.5999999940395,
+          "duration": 50
+        },
+        {
+          "start": 4489,
+          "duration": 58
+        },
+        {
+          "start": 4548.29999999702,
+          "duration": 75
+        },
+        {
+          "start": 4625.5999999940395,
+          "duration": 53
+        },
+        {
+          "start": 4680.20000000298,
+          "duration": 66
+        },
+        {
+          "start": 4882.79999999702,
+          "duration": 51
+        },
+        {
+          "start": 4935,
+          "duration": 67
+        },
+        {
+          "start": 5003.70000000298,
+          "duration": 56
+        },
+        {
+          "start": 5060.4000000059605,
+          "duration": 54
+        },
+        {
+          "start": 5121.0999999940395,
+          "duration": 68
+        },
+        {
+          "start": 5190.4000000059605,
+          "duration": 67
+        },
+        {
+          "start": 5259.0999999940395,
+          "duration": 59
+        },
+        {
+          "start": 5364.20000000298,
+          "duration": 63
+        },
+        {
+          "start": 5604.4000000059605,
+          "duration": 54
+        },
+        {
+          "start": 5700.70000000298,
+          "duration": 51
+        },
+        {
+          "start": 5752.79999999702,
+          "duration": 63
+        },
+        {
+          "start": 5817.5,
+          "duration": 64
+        },
+        {
+          "start": 5883.20000000298,
+          "duration": 70
+        },
+        {
+          "start": 5957.20000000298,
+          "duration": 57
+        },
+        {
+          "start": 6015.20000000298,
+          "duration": 50
+        },
+        {
+          "start": 6151.5999999940395,
+          "duration": 58
+        },
+        {
+          "start": 6210.5,
+          "duration": 90
+        },
+        {
+          "start": 6303.0999999940395,
+          "duration": 74
+        },
+        {
+          "start": 6378.0999999940395,
+          "duration": 76
+        },
+        {
+          "start": 6462.70000000298,
+          "duration": 65
+        },
+        {
+          "start": 6528.79999999702,
+          "duration": 51
+        },
+        {
+          "start": 6634.5,
+          "duration": 55
+        },
+        {
+          "start": 6690.29999999702,
+          "duration": 54
+        },
+        {
+          "start": 6746.0999999940395,
+          "duration": 101
+        },
+        {
+          "start": 6848.5,
+          "duration": 69
+        },
+        {
+          "start": 6918.4000000059605,
+          "duration": 68
+        },
+        {
+          "start": 6993,
+          "duration": 55
+        },
+        {
+          "start": 7049.5999999940395,
+          "duration": 60
+        },
+        {
+          "start": 7113.5999999940395,
+          "duration": 60
+        },
+        {
+          "start": 7175.4000000059605,
+          "duration": 72
+        },
+        {
+          "start": 7248.29999999702,
+          "duration": 78
+        },
+        {
+          "start": 7387.5,
+          "duration": 54
+        },
+        {
+          "start": 7496.5999999940395,
+          "duration": 60
+        },
+        {
+          "start": 7558.20000000298,
+          "duration": 55
+        }
+      ],
+      "events": 2,
+      "nodes": 143,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7314.5999999940395,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7314.5999999940395,
+          "index": 438,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 21,
+          "methods": 135,
+          "state": {
+            "data": {
+              "value": "12730.25",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 12730.25,
+            "displayed": 12730.25,
+            "token": 3,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $12,730.25",
+            "text": "$0123456789010123456789012,0123456789012345670123456789012301234567890.01234567890120123456789012345",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1"
+                ],
+                "end": "translateY(-506px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ],
+                "end": "translateY(-690px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "492f58269187333a8f4620ef2db07df6dde84ca1457149133a97e1062ab119b2",
+      "firstPaintMs": 95.908,
+      "firstPaintDurationMs": 7.122
+    },
+    {
+      "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+      "id": "framer-rolling-balance",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 102.5,
+      "frames": 176,
+      "elapsed": 8016.4,
+      "fps": 21.954992265854997,
+      "median": 49.90000000000009,
+      "p95": 100,
+      "max": 200.00000000000003,
+      "gapsOver25ms": 101,
+      "longTasks": [
+        {
+          "start": 264.20000000298023,
+          "duration": 125
+        },
+        {
+          "start": 389.70000000298023,
+          "duration": 73
+        },
+        {
+          "start": 466.20000000298023,
+          "duration": 119
+        },
+        {
+          "start": 586.6000000089407,
+          "duration": 62
+        },
+        {
+          "start": 650.2000000029802,
+          "duration": 73
+        },
+        {
+          "start": 723.7000000029802,
+          "duration": 57
+        },
+        {
+          "start": 782.2000000029802,
+          "duration": 66
+        },
+        {
+          "start": 899.6000000089407,
+          "duration": 51
+        },
+        {
+          "start": 951.4000000059605,
+          "duration": 52
+        },
+        {
+          "start": 1054.5,
+          "duration": 68
+        },
+        {
+          "start": 1123.7000000029802,
+          "duration": 74
+        },
+        {
+          "start": 1199.800000011921,
+          "duration": 55
+        },
+        {
+          "start": 1256.4000000059605,
+          "duration": 64
+        },
+        {
+          "start": 1379.2000000029802,
+          "duration": 65
+        },
+        {
+          "start": 1446.300000011921,
+          "duration": 53
+        },
+        {
+          "start": 1505.5,
+          "duration": 121
+        },
+        {
+          "start": 1628.1000000089407,
+          "duration": 99
+        },
+        {
+          "start": 1729.300000011921,
+          "duration": 108
+        },
+        {
+          "start": 1838.6000000089407,
+          "duration": 88
+        },
+        {
+          "start": 1928.5,
+          "duration": 65
+        },
+        {
+          "start": 2000.2000000029802,
+          "duration": 63
+        },
+        {
+          "start": 2065.6000000089407,
+          "duration": 54
+        },
+        {
+          "start": 2121.7000000029802,
+          "duration": 50
+        },
+        {
+          "start": 2304,
+          "duration": 53
+        },
+        {
+          "start": 2492,
+          "duration": 58
+        },
+        {
+          "start": 2676.7000000029802,
+          "duration": 55
+        },
+        {
+          "start": 2733,
+          "duration": 62
+        },
+        {
+          "start": 2837.7000000029802,
+          "duration": 55
+        },
+        {
+          "start": 2893.9000000059605,
+          "duration": 57
+        },
+        {
+          "start": 2957.6000000089407,
+          "duration": 75
+        },
+        {
+          "start": 3033.5,
+          "duration": 75
+        },
+        {
+          "start": 3113.1000000089407,
+          "duration": 57
+        },
+        {
+          "start": 3171.7000000029802,
+          "duration": 70
+        },
+        {
+          "start": 3243.6000000089407,
+          "duration": 106
+        },
+        {
+          "start": 3352.300000011921,
+          "duration": 97
+        },
+        {
+          "start": 3460,
+          "duration": 146
+        },
+        {
+          "start": 3609.1000000089407,
+          "duration": 78
+        },
+        {
+          "start": 3688.5,
+          "duration": 61
+        },
+        {
+          "start": 4411,
+          "duration": 59
+        },
+        {
+          "start": 4470.9000000059605,
+          "duration": 61
+        },
+        {
+          "start": 4533,
+          "duration": 63
+        },
+        {
+          "start": 4597.20000000298,
+          "duration": 64
+        },
+        {
+          "start": 4748.600000008941,
+          "duration": 62
+        },
+        {
+          "start": 4811.800000011921,
+          "duration": 51
+        },
+        {
+          "start": 4864.5,
+          "duration": 60
+        },
+        {
+          "start": 4925,
+          "duration": 54
+        },
+        {
+          "start": 4980.9000000059605,
+          "duration": 56
+        },
+        {
+          "start": 5038.300000011921,
+          "duration": 53
+        },
+        {
+          "start": 5092.600000008941,
+          "duration": 50
+        },
+        {
+          "start": 5190.300000011921,
+          "duration": 53
+        },
+        {
+          "start": 5250.20000000298,
+          "duration": 55
+        },
+        {
+          "start": 5306.800000011921,
+          "duration": 53
+        },
+        {
+          "start": 5367.20000000298,
+          "duration": 75
+        },
+        {
+          "start": 5452.300000011921,
+          "duration": 58
+        },
+        {
+          "start": 5612.600000008941,
+          "duration": 62
+        },
+        {
+          "start": 5677.9000000059605,
+          "duration": 60
+        },
+        {
+          "start": 5745.100000008941,
+          "duration": 82
+        },
+        {
+          "start": 5829.5,
+          "duration": 95
+        },
+        {
+          "start": 5928.4000000059605,
+          "duration": 63
+        },
+        {
+          "start": 6043.300000011921,
+          "duration": 65
+        },
+        {
+          "start": 6109,
+          "duration": 62
+        },
+        {
+          "start": 6172.300000011921,
+          "duration": 55
+        },
+        {
+          "start": 6228.70000000298,
+          "duration": 54
+        },
+        {
+          "start": 6290.5,
+          "duration": 57
+        },
+        {
+          "start": 6402.800000011921,
+          "duration": 61
+        },
+        {
+          "start": 6464.9000000059605,
+          "duration": 87
+        },
+        {
+          "start": 6553.9000000059605,
+          "duration": 61
+        },
+        {
+          "start": 6616,
+          "duration": 71
+        },
+        {
+          "start": 6688.300000011921,
+          "duration": 79
+        },
+        {
+          "start": 6768.5,
+          "duration": 104
+        },
+        {
+          "start": 6874,
+          "duration": 106
+        },
+        {
+          "start": 6980.9000000059605,
+          "duration": 63
+        },
+        {
+          "start": 7054,
+          "duration": 71
+        },
+        {
+          "start": 7126.300000011921,
+          "duration": 61
+        },
+        {
+          "start": 7196.300000011921,
+          "duration": 58
+        },
+        {
+          "start": 7255.9000000059605,
+          "duration": 63
+        },
+        {
+          "start": 7375.5,
+          "duration": 51
+        },
+        {
+          "start": 7428.70000000298,
+          "duration": 51
+        },
+        {
+          "start": 7481.300000011921,
+          "duration": 68
+        },
+        {
+          "start": 7550.9000000059605,
+          "duration": 81
+        }
+      ],
+      "events": 2,
+      "nodes": 143,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "balance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 7286,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 0,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 7286,
+          "index": 437,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 21,
+          "methods": 135,
+          "state": {
+            "data": {
+              "value": "12730.25",
+              "direction": "up",
+              "phase": "settled",
+              "currency": "USD"
+            },
+            "value": 12730.25,
+            "displayed": 12730.25,
+            "token": 3,
+            "currency": "USD",
+            "note": "Payment received.",
+            "status": "Available balance $12,730.25",
+            "text": "$0123456789010123456789012,0123456789012345670123456789012301234567890.01234567890120123456789012345",
+            "affixes": [
+              "$",
+              ",",
+              "."
+            ],
+            "reels": [
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1"
+                ],
+                "end": "translateY(-506px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ],
+                "end": "translateY(-782px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3"
+                ],
+                "end": "translateY(-598px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0"
+                ],
+                "end": "translateY(-460px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "end": "translateY(-552px)"
+              },
+              {
+                "digits": [
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "0",
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ],
+                "end": "translateY(-690px)"
+              }
+            ]
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-rolling-balance-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "3fbc89445138cf0253805ba03443eb990edacda57a0d59fecf4183edf817a590",
+      "firstPaintMs": 164.595,
+      "firstPaintDurationMs": 8.495
+    },
+    {
+      "name": "framer-focus-countdown-thumb-desktop-dpr1-cpu4",
+      "id": "framer-focus-countdown",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 51.400000005960464,
+      "frames": 471,
+      "elapsed": 8016.299999999999,
+      "fps": 58.75528610456196,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 66.6,
+      "gapsOver25ms": 8,
+      "longTasks": [
+        {
+          "start": 156.19999998807907,
+          "duration": 75
+        }
+      ],
+      "events": 2,
+      "nodes": 34,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6323.20000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": true,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6323.20000000298,
+          "index": 379,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "1074.00",
+              "duration": "1500",
+              "state": "paused"
+            },
+            "duration": 1500,
+            "remaining": 1073.9991,
+            "running": false,
+            "deadline": 1080061.1,
+            "digits": "17:54",
+            "label": "paused",
+            "offset": "123.126",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "false"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "cfec97afff6f02c5272e8b586796076560fd4d60c6d10c0ddf8a9cd75b95ca03",
+      "firstPaintMs": 60.683,
+      "firstPaintDurationMs": 1.457
+    },
+    {
+      "name": "framer-focus-countdown-thumb-compact-dpr2-cpu4",
+      "id": "framer-focus-countdown",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 80.40000000596046,
+      "frames": 467,
+      "elapsed": 8016.333999999999,
+      "fps": 58.25605569827805,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 100,
+      "gapsOver25ms": 6,
+      "longTasks": [
+        {
+          "start": 165.79999999701977,
+          "duration": 105
+        },
+        {
+          "start": 3597.7000000029802,
+          "duration": 80
+        }
+      ],
+      "events": 2,
+      "nodes": 34,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6047.4000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": true,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6047.4000000059605,
+          "index": 362,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "1074.01",
+              "duration": "1500",
+              "state": "paused"
+            },
+            "duration": 1500,
+            "remaining": 1074.0133999999998,
+            "running": false,
+            "deadline": 1080045.9,
+            "digits": "17:55",
+            "label": "paused",
+            "offset": "123.121",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "false"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "abadce5c79d2f2efed759bf258b1c86337b4b3f275c155b1592cba898b49517e",
+      "firstPaintMs": 82.5,
+      "firstPaintDurationMs": 0.334
+    },
+    {
+      "name": "framer-focus-countdown-full-desktop-dpr1-cpu4",
+      "id": "framer-focus-countdown",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 61.6000000089407,
+      "frames": 472,
+      "elapsed": 8016.334,
+      "fps": 58.879782204683586,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000068,
+      "max": 66.70000000000027,
+      "gapsOver25ms": 5,
+      "longTasks": [
+        {
+          "start": 149.5,
+          "duration": 73
+        },
+        {
+          "start": 3284.8999999910593,
+          "duration": 73
+        }
+      ],
+      "events": 2,
+      "nodes": 26,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6339.4000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6339.4000000059605,
+          "index": 380,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "14.00",
+              "duration": "20",
+              "state": "paused"
+            },
+            "duration": 20,
+            "remaining": 13.996399999999998,
+            "running": false,
+            "deadline": 20076.6,
+            "digits": "00:14",
+            "label": "paused",
+            "offset": "130.14",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "true"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "60a7968074b77670c1a81b7f89c78bd845d37cb4361463af325539caf06ce3bc",
+      "firstPaintMs": 70.946,
+      "firstPaintDurationMs": 1.753
+    },
+    {
+      "name": "framer-focus-countdown-full-compact-dpr2-cpu4",
+      "id": "framer-focus-countdown",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 55.900000005960464,
+      "frames": 478,
+      "elapsed": 8016.334,
+      "fps": 59.62825401237024,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 66.63399999999999,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 133.79999999701977,
+          "duration": 72
+        }
+      ],
+      "events": 2,
+      "nodes": 26,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "focus",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 6310.5,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 6310.5,
+          "index": 378,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 18,
+          "state": {
+            "data": {
+              "remaining": "13.97",
+              "duration": "20",
+              "state": "paused"
+            },
+            "duration": 20,
+            "remaining": 13.9714,
+            "running": false,
+            "deadline": 20047,
+            "digits": "00:14",
+            "label": "paused",
+            "offset": "130.682",
+            "toggle": "Continue",
+            "pressed": "false",
+            "presets": [
+              {
+                "seconds": "20",
+                "pressed": "true"
+              },
+              {
+                "seconds": "45",
+                "pressed": "false"
+              },
+              {
+                "seconds": "60",
+                "pressed": "false"
+              }
+            ],
+            "status": "Session paused."
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-focus-countdown-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "46e797a1570308d915942832121276afe38147cda98731f393d671d216e97bcd",
+      "firstPaintMs": 59.394,
+      "firstPaintDurationMs": 0.612
+    },
+    {
+      "name": "framer-financial-trend-thumb-desktop-dpr1-cpu4",
+      "id": "framer-financial-trend",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 75.79999999701977,
+      "frames": 416,
+      "elapsed": 8016.400000000001,
+      "fps": 51.89361808292999,
+      "median": 16.699999999999818,
+      "p95": 33.39999999999998,
+      "max": 83.30000000000001,
+      "gapsOver25ms": 53,
+      "longTasks": [
+        {
+          "start": 166.3999999910593,
+          "duration": 95
+        },
+        {
+          "start": 4555.5,
+          "duration": 55
+        },
+        {
+          "start": 4613,
+          "duration": 54
+        }
+      ],
+      "events": 3,
+      "nodes": 42,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5151.20000000298,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5151.20000000298,
+          "index": 309,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "9b7b69041712b77bfd80c2b68463c657a92378d57d215ae2730b9bed1c80d222",
+      "firstPaintMs": 82.244,
+      "firstPaintDurationMs": 1.008
+    },
+    {
+      "name": "framer-financial-trend-thumb-compact-dpr2-cpu4",
+      "id": "framer-financial-trend",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 106.29999999701977,
+      "frames": 404,
+      "elapsed": 8016.400000000001,
+      "fps": 50.39668679207624,
+      "median": 16.699999999999818,
+      "p95": 33.400000000000034,
+      "max": 116.69999999999999,
+      "gapsOver25ms": 61,
+      "longTasks": [
+        {
+          "start": 194.70000000298023,
+          "duration": 125
+        },
+        {
+          "start": 4698.29999999702,
+          "duration": 54
+        },
+        {
+          "start": 5195.79999999702,
+          "duration": 52
+        }
+      ],
+      "events": 3,
+      "nodes": 42,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5111.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 1,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5111.9000000059605,
+          "index": 306,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "2865cc99c9be9c4901b5be276b0fa209b890627c05f25536a698cc41724d7484",
+      "firstPaintMs": 112.397,
+      "firstPaintDurationMs": 0.824
+    },
+    {
+      "name": "framer-financial-trend-full-desktop-dpr1-cpu4",
+      "id": "framer-financial-trend",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "readyMs": 66,
+      "frames": 340,
+      "elapsed": 8016.4,
+      "fps": 42.41305324085625,
+      "median": 16.699999999999818,
+      "p95": 66.60000000000036,
+      "max": 83.40000000000009,
+      "gapsOver25ms": 61,
+      "longTasks": [
+        {
+          "start": 183.90000000596046,
+          "duration": 72
+        },
+        {
+          "start": 316.40000000596046,
+          "duration": 69
+        },
+        {
+          "start": 386.90000000596046,
+          "duration": 59
+        },
+        {
+          "start": 594,
+          "duration": 69
+        },
+        {
+          "start": 665.4000000059605,
+          "duration": 94
+        },
+        {
+          "start": 761.7999999970198,
+          "duration": 71
+        },
+        {
+          "start": 833.5999999940395,
+          "duration": 57
+        },
+        {
+          "start": 892.4000000059605,
+          "duration": 66
+        },
+        {
+          "start": 959.4000000059605,
+          "duration": 55
+        },
+        {
+          "start": 1015.7999999970198,
+          "duration": 55
+        },
+        {
+          "start": 1071.2000000029802,
+          "duration": 59
+        },
+        {
+          "start": 1132,
+          "duration": 55
+        },
+        {
+          "start": 1234,
+          "duration": 50
+        },
+        {
+          "start": 2339.0999999940395,
+          "duration": 54
+        },
+        {
+          "start": 2437.0999999940395,
+          "duration": 56
+        },
+        {
+          "start": 2493.9000000059605,
+          "duration": 50
+        },
+        {
+          "start": 2591.5999999940395,
+          "duration": 51
+        },
+        {
+          "start": 2643.2999999970198,
+          "duration": 55
+        },
+        {
+          "start": 2699.9000000059605,
+          "duration": 55
+        },
+        {
+          "start": 2756.7999999970198,
+          "duration": 68
+        },
+        {
+          "start": 2826.9000000059605,
+          "duration": 70
+        },
+        {
+          "start": 2898.5,
+          "duration": 62
+        },
+        {
+          "start": 2961.9000000059605,
+          "duration": 64
+        },
+        {
+          "start": 3027.4000000059605,
+          "duration": 59
+        },
+        {
+          "start": 3087.5999999940395,
+          "duration": 55
+        },
+        {
+          "start": 3144.2000000029802,
+          "duration": 75
+        },
+        {
+          "start": 3221,
+          "duration": 68
+        },
+        {
+          "start": 4421.9000000059605,
+          "duration": 50
+        },
+        {
+          "start": 4472.9000000059605,
+          "duration": 50
+        },
+        {
+          "start": 4524.20000000298,
+          "duration": 52
+        },
+        {
+          "start": 4577.5,
+          "duration": 56
+        },
+        {
+          "start": 4635.5,
+          "duration": 74
+        },
+        {
+          "start": 4711,
+          "duration": 75
+        },
+        {
+          "start": 4787.5,
+          "duration": 65
+        },
+        {
+          "start": 4853.9000000059605,
+          "duration": 81
+        },
+        {
+          "start": 4936.4000000059605,
+          "duration": 81
+        },
+        {
+          "start": 5018.70000000298,
+          "duration": 57
+        },
+        {
+          "start": 5077.0999999940395,
+          "duration": 63
+        }
+      ],
+      "events": 3,
+      "nodes": 46,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5265.9000000059605,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 3,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5265.9000000059605,
+          "index": 315,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "76f0f189556300068de9550fededd1e815a64f635ae3e0942bc0f8de08b47fbc",
+      "firstPaintMs": 79.559,
+      "firstPaintDurationMs": 0.991
+    },
+    {
+      "name": "framer-financial-trend-full-compact-dpr2-cpu4",
+      "id": "framer-financial-trend",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "readyMs": 75.40000000596046,
+      "frames": 339,
+      "elapsed": 8016.4,
+      "fps": 42.28830896661844,
+      "median": 16.699999999999818,
+      "p95": 66.60000000000036,
+      "max": 100.1,
+      "gapsOver25ms": 62,
+      "longTasks": [
+        {
+          "start": 167.19999998807907,
+          "duration": 98
+        },
+        {
+          "start": 357,
+          "duration": 52
+        },
+        {
+          "start": 496.19999998807907,
+          "duration": 50
+        },
+        {
+          "start": 547.7999999970198,
+          "duration": 64
+        },
+        {
+          "start": 613.5,
+          "duration": 55
+        },
+        {
+          "start": 669.5999999940395,
+          "duration": 81
+        },
+        {
+          "start": 752.8999999910593,
+          "duration": 62
+        },
+        {
+          "start": 862.6999999880791,
+          "duration": 52
+        },
+        {
+          "start": 915.8999999910593,
+          "duration": 68
+        },
+        {
+          "start": 985.5999999940395,
+          "duration": 53
+        },
+        {
+          "start": 1039.699999988079,
+          "duration": 55
+        },
+        {
+          "start": 1096.699999988079,
+          "duration": 50
+        },
+        {
+          "start": 1147.5,
+          "duration": 59
+        },
+        {
+          "start": 1207.3999999910593,
+          "duration": 59
+        },
+        {
+          "start": 2402.0999999940395,
+          "duration": 54
+        },
+        {
+          "start": 2552.5999999940395,
+          "duration": 58
+        },
+        {
+          "start": 2612.0999999940395,
+          "duration": 72
+        },
+        {
+          "start": 2685.3999999910593,
+          "duration": 70
+        },
+        {
+          "start": 2757.5,
+          "duration": 65
+        },
+        {
+          "start": 2823.699999988079,
+          "duration": 69
+        },
+        {
+          "start": 2893.8999999910593,
+          "duration": 50
+        },
+        {
+          "start": 2945.199999988079,
+          "duration": 54
+        },
+        {
+          "start": 2999.699999988079,
+          "duration": 52
+        },
+        {
+          "start": 3053.3999999910593,
+          "duration": 58
+        },
+        {
+          "start": 3112.5,
+          "duration": 57
+        },
+        {
+          "start": 3171.0999999940395,
+          "duration": 62
+        },
+        {
+          "start": 3283.0999999940395,
+          "duration": 64
+        },
+        {
+          "start": 4379.899999991059,
+          "duration": 54
+        },
+        {
+          "start": 4434.79999999702,
+          "duration": 62
+        },
+        {
+          "start": 4498.29999999702,
+          "duration": 50
+        },
+        {
+          "start": 4549.0999999940395,
+          "duration": 61
+        },
+        {
+          "start": 4611.79999999702,
+          "duration": 62
+        },
+        {
+          "start": 4675,
+          "duration": 63
+        },
+        {
+          "start": 4739.5,
+          "duration": 64
+        },
+        {
+          "start": 4805.0999999940395,
+          "duration": 57
+        },
+        {
+          "start": 4863.29999999702,
+          "duration": 64
+        },
+        {
+          "start": 4928.79999999702,
+          "duration": 66
+        },
+        {
+          "start": 4995.899999991059,
+          "duration": 57
+        },
+        {
+          "start": 5054.5999999940395,
+          "duration": 51
+        },
+        {
+          "start": 5107.399999991059,
+          "duration": 60
+        },
+        {
+          "start": 5168.5,
+          "duration": 58
+        },
+        {
+          "start": 5227.5,
+          "duration": 55
+        }
+      ],
+      "events": 3,
+      "nodes": 46,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "finance",
+        "reduced": false,
+        "held": false,
+        "frame": false,
+        "queue": 0,
+        "retained": false,
+        "time": 5243.79999999702,
+        "interacted": true,
+        "entryPending": false,
+        "motion": {
+          "pending": false,
+          "fields": 3,
+          "drum": false,
+          "progress": false,
+          "tracks": []
+        },
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "time": 5243.79999999702,
+          "index": 314,
+          "pending": 0,
+          "animations": 0,
+          "animationSerial": 0,
+          "methods": 27,
+          "state": {
+            "data": {
+              "period": "month",
+              "negative": "false",
+              "phase": "complete",
+              "total": "24860.00",
+              "orders": "248"
+            },
+            "state": {
+              "total": 24860,
+              "orders": 248,
+              "values": [
+                22,
+                37,
+                31,
+                53,
+                48,
+                65,
+                78
+              ]
+            },
+            "period": "month",
+            "index": 6,
+            "sets": {
+              "week": {
+                "total": 5480.5,
+                "change": -3.2,
+                "orders": 58,
+                "values": [
+                  36,
+                  42,
+                  33,
+                  54,
+                  47,
+                  58,
+                  52
+                ]
+              },
+              "month": {
+                "total": 24860,
+                "change": 12.4,
+                "orders": 248,
+                "values": [
+                  22,
+                  37,
+                  31,
+                  53,
+                  48,
+                  65,
+                  78
+                ]
+              },
+              "year": {
+                "total": 186240.75,
+                "change": 28.6,
+                "orders": 1820,
+                "values": [
+                  17,
+                  31,
+                  41,
+                  35,
+                  62,
+                  70,
+                  91
+                ]
+              }
+            },
+            "total": "$24,860.00",
+            "orders": "248",
+            "average": "$100.24",
+            "path": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997",
+            "area": "M5 60.7 L46.666666666666664 50.95 L88.33333333333333 54.849999999999994 L130 40.55 L171.66666666666666 43.8 L213.33333333333334 32.75 L255 24.299999999999997L255 80L5 80Z",
+            "point": [
+              null,
+              null
+            ],
+            "sample": "",
+            "inspecting": false,
+            "aria": [
+              "7",
+              null
+            ],
+            "buttons": [
+              {
+                "period": "week",
+                "pressed": "false"
+              },
+              {
+                "period": "month",
+                "pressed": "true"
+              },
+              {
+                "period": "year",
+                "pressed": "false"
+              }
+            ],
+            "change": "↑12.4% <span>vs. previous month</span>",
+            "status": "month net revenue $24,860.00, 248 transactions"
+          }
+        }
+      },
+      "trace": ".artifacts/framer-data/profiles/2026-11-22T13-12-41-427Z-d844d0e01298/framer-financial-trend-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "edd4bb12005dc187babb5320c0f5ef92bd45342e23c0df5a0b7fa3e64781d47b",
+      "firstPaintMs": 87.78,
+      "firstPaintDurationMs": 1.219
+    }
+  ],
+  "browser": "140.0.7339.16",
+  "finished": "2026-11-22T13:17:52.266Z",
+  "sourceStable": true
+}

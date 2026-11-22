@@ -1,0 +1,13 @@
+const assert=require('assert/strict');
+function instrumentOriginal(d){
+ const kind={'framer-formatted-metric':'metric','framer-rolling-balance':'balance','framer-focus-countdown':'focus','framer-financial-trend':'finance'}[d.id];assert(kind);
+ const bodies={
+ metric:`return {data:{...root.dataset},value:output.textContent,format:format.value,from:fromInput.value,to:toInput.value,title:title.textContent,description:description.textContent,status:status.textContent,long:output.classList.contains('is-long')};`,
+ balance:`return {data:{...root.dataset},value,displayed,token,currency:currency.value,note:note.textContent,status:status.textContent,text:amount.textContent,affixes:[...amount.querySelectorAll('.d-framer-balance-affix')].map(n=>n.textContent),reels:[...amount.querySelectorAll('.d-framer-balance-track')].map(n=>({digits:[...n.children].map(c=>c.textContent),end:n.style.transform}))};`,
+ focus:`return {data:{...root.dataset},duration,remaining,running,deadline,digits:digits.textContent,label:label.textContent,offset:progress.style.strokeDashoffset,toggle:toggle.textContent,pressed:toggle.getAttribute('aria-pressed'),presets:presets.map(b=>({seconds:b.dataset.seconds,pressed:b.getAttribute('aria-pressed')})),status:status.textContent};`,
+ finance:`return {data:{...root.dataset},state:{...state,values:state.values.slice()},period,index,sets,total:total.textContent,orders:orders.textContent,average:average.textContent,path:line.getAttribute('d'),area:area.getAttribute('d'),point:[dot.getAttribute('cx'),dot.getAttribute('cy')],sample:sample.textContent,inspecting:chart.classList.contains('is-inspecting'),aria:[chart.getAttribute('aria-valuenow'),chart.getAttribute('aria-valuetext')],buttons:buttons.map(b=>({period:b.dataset.period,pressed:b.getAttribute('aria-pressed')})),change:change.innerHTML,status:status.textContent};`
+ };
+ const extras={metric:`seed(){fromInput.value=0;toInput.value=84210;display(84210);},renderInitial(){display(Number(toInput.value));}`,balance:`seed(){animations.forEach(a=>a.cancel());value=2486;displayed=value;render(value);},renderInitial(){}`,focus:`seed(){reset(1500);remaining=1080;render();},renderInitial(){render();}`,finance:`seed(){cancelAnimationFrame(raf);state={...sets.month,total:84200,values:[35,50,42,62,55,78,100]};render();},renderInitial(){render();}`};
+ const at=d.js.lastIndexOf('return()=>');assert(at>0,d.id+' cleanup');const injected=`root.__Original={read(){${bodies[kind]}},${extras[kind]}};\n`,instrumented=d.js.slice(0,at)+injected+d.js.slice(at);return{kind,instrumented,insertionAt:at,injected};
+}
+module.exports=instrumentOriginal;

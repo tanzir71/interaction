@@ -2,6 +2,31 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+All 399 existing native compositions now follow their v4 references. The 121 new
+or extension components and Pro seams remain. Before expansion, finish the local
+Reset debt in Punch Card, the five remaining motion-audit entries and legacy
+aliases. The corrected fit audit excludes empty transparent leaf hit areas while
+retaining their overflow/text checks. It now passes all 399 demos with 134 valid
+reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
+composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
+boundary regressions when changing measurement rules.
+
+The four Framer prompts now describe their native geometry and complete original
+full models. Preserve the original 30% one-shot entry threshold, early-intent
+priority, selected-duration reset, complete currency/financial records, actual
+painted interruption poses, local light palettes and accessible numeric content.
+The format indicator uses the component clock because a real-clock regression
+found a pending CSS transition advancing after Pause. Keep that regression along
+with the actual drum matrices and changed-digit checks in the final motion audit.
+
+The 32 source-bound Framer profiles in
+`docs/performance/framer-data-2026-11-22.json` average 56.4–60.0fps at CPU 1 and
+22.0–59.6fps at CPU 4. Compact full Rolling Balance is the slowest case at
+22.0fps; investigate its repeated drum construction/paint work. CPU 4 records
+1,235 gaps over 25ms and 332 long tasks across sixteen cases; retain every trace
+and outlier. CPU 1 records forty gaps and no long tasks. Prepared mount paint
+and readiness observations do not satisfy cold-route or Lighthouse gates.
+
 The six final Showcase compositions complete the sixteen-demo collection and
 bring existing visual remediation to 395/399. Four Framer demos, 121 new or
 extension components and Pro seams remain. Native Mask Reveal currently applies

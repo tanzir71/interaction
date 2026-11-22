@@ -24931,7 +24931,7 @@
   },
   {
     "id": "framer-formatted-metric",
-    "title": "Formatted Metric Counter",
+    "title": "Formatted Metric",
     "category": "Framer Collection",
     "group": "Collections",
     "trigger": "press",
@@ -24949,7 +24949,14 @@
     ],
     "tier": "free",
     "desc": "A configurable metric with currency, percentage and grouped-number formats. Set a start and target value, then replay a count in either direction.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24957,18 +24964,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/framer-formatted-metric",
-    "thumb": "full",
-    "module": "js/demos.framer-data.js?v=dba7228a65",
+    "thumb": "hero",
+    "module": "js/demos.framer-data.js?v=7d4414e55d",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/framer-formatted-metric.json?v=c2ac6595a9",
+    "sourcePreview": "registry/p/framer-formatted-metric.json?v=5c6477e97c",
     "assetRefs": {},
     "rootClass": "d-framer-metric",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "Switch format; the number re-flows and replays",
     "sourceName": "Framer · Count Motion Pro",
@@ -24976,7 +24988,7 @@
   },
   {
     "id": "framer-rolling-balance",
-    "title": "Rolling Account Balance",
+    "title": "Rolling Balance",
     "category": "Framer Collection",
     "group": "Collections",
     "trigger": "press",
@@ -24994,26 +25006,42 @@
     ],
     "tier": "free",
     "desc": "An account balance whose digits roll independently upward or downward when a payment arrives or money is spent. Currency and decimal punctuation stay still.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/framer-rolling-balance",
-    "thumb": "full",
-    "module": "js/demos.framer-data.js?v=dba7228a65",
+    "thumb": "hero",
+    "module": "js/demos.framer-data.js?v=7d4414e55d",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/framer-rolling-balance.json?v=0ca7e1010d",
+    "sourcePreview": "registry/p/framer-rolling-balance.json?v=08d1dceb69",
     "assetRefs": {},
     "rootClass": "d-framer-balance",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "Receive or spend; digits roll to the new total",
     "sourceName": "Framer · Smooth Digit Counter",
@@ -25021,7 +25049,7 @@
   },
   {
     "id": "framer-focus-countdown",
-    "title": "Focus Countdown Ring",
+    "title": "Focus Countdown",
     "category": "Framer Collection",
     "group": "Collections",
     "trigger": "press",
@@ -25039,7 +25067,14 @@
     ],
     "tier": "free",
     "desc": "A short focus timer with a readable countdown and circular progress track. Choose a duration, start or pause, and reset without timing drift.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -25047,18 +25082,27 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/framer-focus-countdown",
-    "thumb": "full",
-    "module": "js/demos.framer-data.js?v=dba7228a65",
+    "thumb": "hero",
+    "module": "js/demos.framer-data.js?v=7d4414e55d",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/framer-focus-countdown.json?v=4217233d16",
+    "sourcePreview": "registry/p/framer-focus-countdown.json?v=150ab213f8",
     "assetRefs": {},
     "rootClass": "d-framer-focus",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      },
+      {
+        "label": "Reset",
+        "action": "reset"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "hint": "Start a session; the ring drains to zero",
     "sourceName": "Framer · Count Motion Pro",
@@ -25066,7 +25110,7 @@
   },
   {
     "id": "framer-financial-trend",
-    "title": "Revenue Period Summary",
+    "title": "Revenue Summary",
     "category": "Framer Collection",
     "group": "Collections",
     "trigger": "press",
@@ -25084,7 +25128,14 @@
     ],
     "tier": "free",
     "desc": "A revenue summary whose total, chart, transaction count and average order animate together when the selected period changes. Inspect chart samples with pointer or keyboard.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -25092,18 +25143,23 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/framer-financial-trend",
-    "thumb": "full",
-    "module": "js/demos.framer-data.js?v=dba7228a65",
+    "thumb": "hero",
+    "module": "js/demos.framer-data.js?v=7d4414e55d",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/framer-financial-trend.json?v=e4de93efbc",
+    "sourcePreview": "registry/p/framer-financial-trend.json?v=d19c9610e7",
     "assetRefs": {},
     "rootClass": "d-framer-finance",
-    "controls": [],
+    "controls": [
+      {
+        "label": "Press",
+        "action": "press"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": "slider"
+      "aria": "group"
     },
     "hint": "Switch period; bars and total morph together",
     "sourceName": "Framer · AnimatedStats",

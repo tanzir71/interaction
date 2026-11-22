@@ -1033,3 +1033,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   with `node tools/profile-showcase-final.js http://127.0.0.1:4173 --cpu=1,4`;
   keep the actual site-root document base, assert decoded photo sizes and preserve
   every trace. Final motion, cold-route and Lighthouse gates remain open.
+
+- `node tools/verify-framer-data.js http://127.0.0.1:4173` covers v4 Formatted
+  Metric, Rolling Balance, Focus Countdown and Revenue Summary. Preserve 22 native
+  slots, two unchanged supplied SVGs and the active arc's 1.02734375px paint offset.
+  Full keeps all original presets, currency/cent arithmetic, digit sequences,
+  20/45/60-second sessions, financial records, chart samples and copy. Tests compare
+  105,888 source states, exact geometry, native keys/mouse/moving touch, actual
+  painted drum interruption, changed-digit fades, the 30% one-shot observer,
+  queued intent, independent holds, light stages, readable compact type and
+  sixteen fresh offline exports/native remounts. Balance Replay and selected-
+  duration Focus Reset live in the shared Dock. Record observations with
+  `node tools/profile-framer-data.js http://127.0.0.1:4173 --cpu=1,4`; preserve
+  every trace and leave final cold-route/Lighthouse gates open.
+- `tools/stage-fit-ink.js` excludes empty transparent leaf targets from fill while
+  retaining their geometry for overflow/text gates. Intrinsic media, visible text,
+  surfaces, shadows and pseudo-elements still count. Run the 24 browser boundary
+  checks in `tools/verify-stage-fit-geometry.js` after changing these rules.

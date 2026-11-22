@@ -11,6 +11,7 @@ const fs = require('node:fs');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const stageFitBounds=require('./stage-fit-bounds');
 const paintedStageSurface=require('./stage-fit-surface');
+const stageFitInk=require('./stage-fit-ink');
 const lowFillExceptions=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 
 const GATES = {
@@ -29,6 +30,7 @@ const GATES = {
   await page.goto(url.replace(/\/#.*$/,'').replace(/\/$/,'')+'/#/library', { waitUntil: 'networkidle' });
   await page.addScriptTag({content:'window.INTRXStageFitBounds='+stageFitBounds.toString()+';'});
   await page.addScriptTag({content:'window.INTRXPaintedStageSurface='+paintedStageSurface.toString()+';'});
+  await page.addScriptTag({content:'window.INTRXStageFitInk='+stageFitInk.toString()+';'});
   while(await page.locator('#show-more').isVisible())await page.locator('#show-more').click();
 
   const results = await page.evaluate(async exceptions => {
@@ -77,8 +79,12 @@ const GATES = {
         const b = window.INTRXStageFitBounds(el,root);
         if (!b) continue;
         if (b.width < 1 || b.height < 1) continue;
-        painted++;
-        top = Math.min(top, b.top); left = Math.min(left, b.left); right = Math.max(right, b.right); bottom = Math.max(bottom, b.bottom);
+        // Invisible leaf hit targets must not enlarge the painted composition.
+        // Their original bounds still participate in overflow and text checks.
+        if(window.INTRXStageFitInk(el,cs,window.INTRXPaintedStageSurface)){
+          painted++;
+          top = Math.min(top, b.top); left = Math.min(left, b.left); right = Math.max(right, b.right); bottom = Math.max(bottom, b.bottom);
+        }
         // Keep overflow and typography gates on the original leaf geometry.
         if (!leaf) continue;
         leaves++;
