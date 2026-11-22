@@ -13,6 +13,36 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Smooth Scroll dependency removal and native Mask Reveal timing
+
+All 399 published demos now declare no runtime libraries. Smooth Scroll keeps
+its four sections, original copy, 240×168 native plane, exact document/bars/thumb
+and six-second story. Its local driver retains the former dependency's .12
+exponential smoothing, distinct wheel/programmatic target accounting, rounded
+wheel destinations, line/page units, clamps, retargeting, resize and stop/start
+behavior. Twenty-four independent pre-change black-box captures contain 7,752
+frames at 60/120/240Hz; 55,104 comparisons differ by at most 1.71e−12. No library
+source was copied into the site. Normal portable exports now retain smoothing
+without a network connection; reduced motion stays native.
+
+Native Mask Reveal preserves the exact 76px reference aperture diameter and
+stationary approved 200×150 photograph. Press toggles radius 38↔76px over 350ms
+with the canonical ease-out curve. Inverse photo compensation keeps the crop
+fixed while transforms change the aperture; reversals begin at the visible
+radius. The component clock freezes caller/document/viewport holds and resumes
+queued input. Reduced motion changes geometry immediately with the existing
+150ms retained-opacity feedback. The complete original full 65/130px model,
+copy and pointer/key semantics remain unchanged, as do all fifteen Showcase
+siblings and seven protected shared files.
+
+The new aperture checks compare actual paint with the browser's own easing at
+60/120/240Hz, stationary photo geometry, repeated reversals, actual-clock holds,
+queued input and fresh offline normal/reduced exports. Existing scroll and all
+seven final Showcase verification groups remain required. Mobile endpoint
+checks measure the browser's actual maximum scroll position: CSS zoom may make
+it fractional and slightly smaller than the rounded layout-height difference.
+The 121 new/extension components, Pro seams and final acceptance remain open.
+
 ## Shared foundations, Stage palettes and portable styling
 
 The site now loads `css/foundations.css`; `css/style.css` remains the unchanged
@@ -49,12 +79,11 @@ exports. All 399 posters are refreshed from native implementations. The required
 strict audits, registry generation, lifecycle/CLI checks, 12 entry-layout checks,
 399-preview/97-export library check and fit audit remain publication gates.
 
-Two existing-library follow-ups remain before expansion: replace Smooth Scroll's
-optional Lenis runtime while preserving its complete interaction model, and
-resolve the known native Mask Reveal aperture timing. The 121 new/extension
-components, Pro seams and final recipe, accessibility and performance audits
-remain in scope. Earlier timing reports describe their recorded styles; they do
-not establish acceptance for the current active stylesheet.
+The subsequent dependency/motion follow-up replaces Smooth Scroll's optional
+Lenis runtime and resolves native Mask Reveal's aperture timing. The 121
+new/extension components, Pro seams and final recipe, accessibility and performance
+audits remain in scope. Earlier timing reports describe their recorded styles;
+they do not establish acceptance for the current active stylesheet.
 
 ## Existing-library control and motion audit boundaries
 

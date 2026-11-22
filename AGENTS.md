@@ -170,6 +170,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Smooth Scroll and Stagger Reveal demos: original copy and observer semantics,
   exact v4 layers, native wheel/keys/touch, interrupted reveals, six-second
   stories, runtime holds, compact typography and offline exports.
+- `node tools/verification/smooth-driver-models.js` compares Smooth Scroll's
+  local driver with 7,752 independently captured original Lenis 1.1.14 frames at
+  60/120/240Hz. Preserve wheel/programmatic target differences, rounding, clamps,
+  retargeting, stop/start and resize behavior. The site has no runtime libraries.
+  `node tools/verify-scroll-mask.js http://127.0.0.1:4173` checks native Mask
+  Reveal's interruptible 350ms aperture, fixed photo crop, equivalent clocks,
+  held/queued input, reduced feedback and fresh offline smoothing/mask exports.
+  Native Mask uses 38/76px radii; full retains its original 65/130px model.
 - `node tools/verify-scroll-core.js http://127.0.0.1:4173` covers Parallax,
   Horizontal Scroll, Sticky Stack, Reading Progress, Velocity Skew and Scroll
   Zoom. It compares the original numeric models and complete datasets, all

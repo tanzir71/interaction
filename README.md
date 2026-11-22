@@ -60,8 +60,8 @@ assets/posters/           native static frames for search and related results
 packages/intrx/           CLI/MCP package; the only npm dependencies
 ```
 
-The shell fetches the lightweight catalog, then loads source modules and
-GSAP/ScrollTrigger/Lenis only when needed. At most six desktop previews or one
+The shell fetches the lightweight catalog, then loads source modules on demand.
+All published demos run without runtime libraries. At most six desktop previews or one
 touch preview runs at once. Demos are isolated by class prefixes and receive the
 shared [stage context](docs/stage-contract.md). Hash routes work on static hosts;
 legacy component/category links redirect to their current routes.

@@ -6,8 +6,10 @@ All 399 existing native compositions now follow their v4 references. The 121 new
 or extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
-the optional Lenis runtime in Smooth Scroll and native Mask Reveal's aperture
-timing before expansion; preserve the complete original models and copy. Punch
+the final recipe, accessibility and performance findings before acceptance.
+Smooth Scroll's dependency removal and native Mask Reveal's aperture timing are
+implemented with independent source captures, interruption and offline coverage;
+preserve their complete original models and copy. Punch
 Card's sixth key is an intrinsic formatting command, validated by exact markup
 and its Figma 170:1830 slot. It clears all sixteen formatting combinations while
 the source clock advances normally. Preserve the six-key interaction and the
