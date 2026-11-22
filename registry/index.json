@@ -23935,7 +23935,14 @@
     ],
     "tier": "free",
     "desc": "A precise dot lattice yields around the pointer with damped spring inertia. Click emits a radial impulse; each dot returns to its original position.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23943,14 +23950,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-dot-field",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-dot-field.json?v=96482d1fb3",
+    "sourcePreview": "registry/p/showcase-dot-field.json?v=6619f0d21d",
     "assetRefs": {},
-    "rootClass": "d-show-dot-field",
-    "controls": [],
+    "rootClass": "d-showcase-dots",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -23978,7 +23990,14 @@
     ],
     "tier": "free",
     "desc": "Thirty-six fine filaments bend as a continuous field around the pointer. A Gaussian falloff keeps the edges quiet while the center feels elastic.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -23986,14 +24005,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-threads",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-threads.json?v=63960aac2c",
+    "sourcePreview": "registry/p/showcase-threads.json?v=a7f505c449",
     "assetRefs": {},
-    "rootClass": "d-show-threads",
-    "controls": [],
+    "rootClass": "d-showcase-threads",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24021,7 +24045,14 @@
     ],
     "tier": "free",
     "desc": "A small pile of dimensional spheres responds to pointer collisions, gravity, and impulse. Pairwise collision resolution separates the bodies, while damping keeps the motion controlled.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24029,14 +24060,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ballpit",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-ballpit.json?v=26f02b5004",
+    "sourcePreview": "registry/p/showcase-ballpit.json?v=f5a0dc62fe",
     "assetRefs": {},
-    "rootClass": "d-show-ballpit",
-    "controls": [],
+    "rootClass": "d-showcase-balls",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24064,7 +24100,14 @@
     ],
     "tier": "free",
     "desc": "A continuous wire lattice ripples outward from the pointer. Distance-based sine displacement and exponential falloff create the impression of a flexible mesh without WebGL.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24072,14 +24115,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ripple-grid",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-ripple-grid.json?v=f4f4ff1953",
+    "sourcePreview": "registry/p/showcase-ripple-grid.json?v=c941f65530",
     "assetRefs": {},
-    "rootClass": "d-show-ripple-grid",
-    "controls": [],
+    "rootClass": "d-showcase-ripple",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24107,7 +24155,14 @@
     ],
     "tier": "free",
     "desc": "A grid of short needles rotates toward a local attractor. Proximity controls line length and contrast, turning a simple angle calculation into a tactile magnetic field.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24115,14 +24170,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-magnet-lines",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-magnet-lines.json?v=9a7ba30376",
+    "sourcePreview": "registry/p/showcase-magnet-lines.json?v=b89de5da38",
     "assetRefs": {},
-    "rootClass": "d-show-magnet-lines",
-    "controls": [],
+    "rootClass": "d-showcase-magnets",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24150,7 +24210,14 @@
     ],
     "tier": "free",
     "desc": "A quantized pointer trail leaves crisp square cells that fade at independent rates. Stamps overlap naturally, with no DOM elements created during pointer movement.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24158,14 +24225,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-pixel-trail",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-pixel-trail.json?v=69f6e3204c",
+    "sourcePreview": "registry/p/showcase-pixel-trail.json?v=3fe1ce7fe0",
     "assetRefs": {},
-    "rootClass": "d-show-pixel-trail",
-    "controls": [],
+    "rootClass": "d-showcase-pixels",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Draw"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24202,7 +24274,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ribbons",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-ribbons.json?v=1f4eac1530",
@@ -24245,7 +24317,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-mesh-surface",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-mesh-surface.json?v=3c35ac5a9a",
@@ -24288,7 +24360,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-warp-tunnel",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-warp-tunnel.json?v=a6ffc6b0e5",
@@ -24331,7 +24403,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-converging-paths",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-converging-paths.json?v=51a7987d2c",
@@ -24374,7 +24446,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-orbital-path",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-orbital-path.json?v=77dd31a469",
@@ -24417,7 +24489,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-mask-reveal",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-mask-reveal.json?v=dbbeb569ac",
@@ -24460,7 +24532,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-circular-gallery",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-circular-gallery.json?v=a423c0646b",
@@ -24507,7 +24579,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-card-swap",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-card-swap.json?v=069bbfcf74",
@@ -24550,7 +24622,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-tracing-story",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-tracing-story.json?v=a3a69af55f",
@@ -24593,7 +24665,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-elastic-slider",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=afe1e183c1",
+    "module": "js/demos.showcase.js?v=c1e9f078b5",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-elastic-slider.json?v=98ea839b92",

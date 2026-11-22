@@ -1,0 +1,276 @@
+{
+  "at": "2026-11-22T04:17:21.567Z",
+  "producerSHA256": "5bcca5fd3333af63df1cbf3458a0ed5aa46f5c0150662574305c58cf8b713b37",
+  "originalDefinitionsSHA256": "4f5c3e9902c3722a3a8d0c8be43fc302eeecd1f56088107fb34e28e3042118dd",
+  "sourceModuleSHA256": "cc167aa572dff2912812e542ba5df0afa9d4675d0c08e5f6242d22d3ad538b69",
+  "notes": [
+    "Unmodified original controller statements; added closure readers only. Native browser Canvas draws, original input transport, exact60Hz RAF and original double initial draw.",
+    "All360 frames and24 original events retained per case; nine complete Canvas paint/pixel witnesses. Signed zero is serialized explicitly."
+  ],
+  "cases": [
+    {
+      "key": "showcase-dot-field-400-normal",
+      "id": "showcase-dot-field",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-dot-field-400-normal.json.gz",
+      "sha256": "e6ceada3f67f38d3e580cad2cb8e8e8baaf4a5db13bbdd5dcb11b26543549557",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-dot-field-400-reduced",
+      "id": "showcase-dot-field",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-dot-field-400-reduced.json.gz",
+      "sha256": "0271fa94e9117d4ac796658a22d05e2eca909e3c6ef18048fec05ec67802a8e0",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-dot-field-320-normal",
+      "id": "showcase-dot-field",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-dot-field-320-normal.json.gz",
+      "sha256": "2f432e3d7c7101db4e555d765c54d23323fc1749e33d9085d200c21896ba2b32",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-dot-field-320-reduced",
+      "id": "showcase-dot-field",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-dot-field-320-reduced.json.gz",
+      "sha256": "4e3ce30a140aa8b0f14d6b37dddcf4d22c13235ac280b11b5e1ef102a8621c01",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-threads-400-normal",
+      "id": "showcase-threads",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-threads-400-normal.json.gz",
+      "sha256": "a4575214c73375d17d305e77363f15af47a77f1e8efa5f421de7eeb4a0cdb0b8",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-threads-400-reduced",
+      "id": "showcase-threads",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-threads-400-reduced.json.gz",
+      "sha256": "b661e565f5b2c73980c1ba399e067ffc90d78ca5f78b2d69a76c133169d77cc5",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-threads-320-normal",
+      "id": "showcase-threads",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-threads-320-normal.json.gz",
+      "sha256": "af1251d7f94bf7311d7ccfe1f05dd3098691952eb500a1c17df79198af7342c7",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-threads-320-reduced",
+      "id": "showcase-threads",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-threads-320-reduced.json.gz",
+      "sha256": "83808d5b3d2ff37fd4b13eac96da75495b5a10ade647f4b6a066805c497931f3",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ballpit-400-normal",
+      "id": "showcase-ballpit",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-ballpit-400-normal.json.gz",
+      "sha256": "b77c4ee0bc0b925fb5320fd8c2eec03c3719719e3b107af0cafe2a5fb74c4375",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ballpit-400-reduced",
+      "id": "showcase-ballpit",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-ballpit-400-reduced.json.gz",
+      "sha256": "e1a9a807b97ace9d3131048f6b3b29066ddb18d4b1e48af3dab57cb116942df4",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ballpit-320-normal",
+      "id": "showcase-ballpit",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-ballpit-320-normal.json.gz",
+      "sha256": "30f46f599c28284b7aabf233346c5ab2b9e9ecc41a1aaa204dfe08085769933f",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ballpit-320-reduced",
+      "id": "showcase-ballpit",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-ballpit-320-reduced.json.gz",
+      "sha256": "76709ad7e907a6cb72014f94755275a3fdcdffc391c5181d70506f19632faaaa",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ripple-grid-400-normal",
+      "id": "showcase-ripple-grid",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-ripple-grid-400-normal.json.gz",
+      "sha256": "e7ea2ae35d9509b6692315dbcb8306180c7a013a1845cde285c2900919ca2b3b",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ripple-grid-400-reduced",
+      "id": "showcase-ripple-grid",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-ripple-grid-400-reduced.json.gz",
+      "sha256": "e1e40f3e5592166ea97038c6ac682ee46a8a518473503a62727da482c2cfb7af",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ripple-grid-320-normal",
+      "id": "showcase-ripple-grid",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-ripple-grid-320-normal.json.gz",
+      "sha256": "fd9c1d375845fb0938317633921ab8d7578fedfb94a60dcb9c990496e1a5dab0",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ripple-grid-320-reduced",
+      "id": "showcase-ripple-grid",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-ripple-grid-320-reduced.json.gz",
+      "sha256": "f3fea96b7d3aea9c5597112ca205c8627e67ae5a233d0ed24e8a2f61c404b191",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-magnet-lines-400-normal",
+      "id": "showcase-magnet-lines",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-magnet-lines-400-normal.json.gz",
+      "sha256": "8c0987bda2d9f6604e130d35875dbc2c86cb392cd5d286e972ed5e477febfe9d",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-magnet-lines-400-reduced",
+      "id": "showcase-magnet-lines",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-magnet-lines-400-reduced.json.gz",
+      "sha256": "a2f860a0ce6bb30898bfab6442bcf3e254baf8513f6d2520c06b6eeffa413e4e",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-magnet-lines-320-normal",
+      "id": "showcase-magnet-lines",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-magnet-lines-320-normal.json.gz",
+      "sha256": "56635c62931d7db01b37dbbfa400f53051b38b2122a6c517514cf247da808877",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-magnet-lines-320-reduced",
+      "id": "showcase-magnet-lines",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-magnet-lines-320-reduced.json.gz",
+      "sha256": "5afa360cd81191dc722d5b6ee05da763b75f8306aa67b0f0d03a3e680f5eb167",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-pixel-trail-400-normal",
+      "id": "showcase-pixel-trail",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-pixel-trail-400-normal.json.gz",
+      "sha256": "8a1efe5852edabfbadd6f6ec2252b3fbe06f5f4cbc1ace82ca96491986c4884e",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-pixel-trail-400-reduced",
+      "id": "showcase-pixel-trail",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-pixel-trail-400-reduced.json.gz",
+      "sha256": "479c7613e45e55d7b910bf83c8d34290643ca1c758332a6f263de4f432c75f1a",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-pixel-trail-320-normal",
+      "id": "showcase-pixel-trail",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures/showcase-pixel-trail-320-normal.json.gz",
+      "sha256": "39fdb2e2037d038db9ffeb359f4f4ba4cf74bb197d8ebb9ff0f12c5aae2020a4",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-pixel-trail-320-reduced",
+      "id": "showcase-pixel-trail",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures/showcase-pixel-trail-320-reduced.json.gz",
+      "sha256": "db94f5949be304503a495d4fe4931ee46054316b0df08fdfed416a300613ff45",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    }
+  ]
+}

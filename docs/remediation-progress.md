@@ -1,20 +1,92 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 379 of the 399 existing demos:
+Native v4 compositions are remediated for 385 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus all fifty-two DRAMS Collections demos.
-The remaining work includes twenty existing Collections demos, 121 new or
-extension components, Pro seams, and the final audit. Earlier phase sections
-below retain their historical counts and measurements.
+Visual FX (88) demos, all fifty-two DRAMS Collections demos, and six Showcase
+fields. Fourteen existing Collections demos, 121 new or extension components,
+Pro seams and the final audit remain. Earlier sections retain historical counts.
 
 Photography replacement and performance tails remain open. The retired generated
 photo keys remain in one unfinished demo, showcase-circular-gallery; none of the
-379 remediated native compositions retains those references. The current fit
-audit boots all 399 demos with zero overflow, horizontal-scroll or low-fill
-findings. Its ten tiny-text findings belong to unfinished demos; all 130 documented
-Figma fill exceptions validate. Stage and motion baselines contain nineteen and
-seven remaining debts respectively; neither baseline grows. No reduced-motion
-baseline entries remain.
+385 remediated native compositions retains those references. The fit audit boots
+all 399 demos with zero overflow, horizontal-scroll or low-fill findings. Its ten
+tiny-text findings belong to unfinished demos; all 131 documented Figma fill
+exceptions validate. Stage and motion baselines contain thirteen and seven
+remaining debts respectively; neither grows. Reduced-motion baseline debt is zero.
+
+## Six Showcase fields
+
+Inertial Dot Field, Reactive Threads, Tactile Ballpit, Ripple Grid, Magnetic Line
+Field and Fading Pixel Trail now use their exact v4 native compositions. All 474
+captured nodes retain hierarchy, material, opacity and clipping: 296 supplied SVGs
+and 178 primitive Frames. Every SVG keeps its original bytes, intrinsic root and
+render offsets. The 324×168 native plane retains reference origin 24,20 inside the
+372×264 shared Stage. Cursor shadows preserve offset 0,4, blur 10 and spread−2.
+
+Native and full compositions retain their intentional differences. Native Dots
+has 152 circles and a supplied pointer, Threads has eight supplied filaments,
+Ballpit has 42 supplied spheres, Ripple has 153 primitive squares, Magnets has 90
+needles and its 8px accent point, and Pixels has 22 supplied 7px blocks. Full retains
+the original responsive lattice, all 36 filaments, all 16 collision bodies, the
+complete wire grid, complete needle field and original 16px-cell Map. Their literal
+original model statements, copy, input semantics and datasets remain present.
+Native camera/seed calibration adapts those models to the reference composition;
+full defaults remain unchanged in the 400×320 composition.
+
+Source integration stays at 60Hz independently of paint refresh. All pointer and
+keyboard transport preserves unrounded source values. Native filaments deform the
+original SVG textures through the original Gaussian field; Canvas and SVG use the
+same clipped image columns. Each supplied texture is rasterized once per DPR;
+clipped draws include both adjacent source columns for identical filtering.
+Twelve complete DPR 1/2 pixel comparisons preserve every premultiplied channel.
+Magnetic length changes scale along each needle's own
+axis, preserving the original atan2 direction and stroke normal. Native pixel
+lifetimes retain the original Map semantics. Its exact 191×63 reference span falls
+to 11.2% fill in the 347×264 audited tile, so its documented exception preserves the
+22 original 7×7 anchors while changing only the low-fill gate.
+
+The whole field provides a stable physical target above 44px. Real moving touch
+and native vertical page scrolling coexist; cancellation releases capture.
+Caller, full-preview viewport and hidden-document holds remain independent, and
+input queues while held. Reduced motion renders still states with 150ms retained
+opacity feedback. Interrupted SVG fades remap complete references within each
+layer; cleanup cancels frames, timers, animations, listeners, observers and capture.
+Paused native and full starts paint complete initial compositions before any
+animation frame, including fresh software-only contexts.
+
+The emitted-source verifier replays 24 immutable original captures at 60/120/240Hz:
+72 cases compare 25,992 states, 1,728 input checkpoints and 648 complete Canvas command
+witnesses with exact browser equality. A further 216 original-palette pixel
+checkpoints exercise the actual emitted painter. Geometry checks cover 24 layouts
+and 17,118 assertions. Forty-eight mouse/touch cases and 24 independent hold cases
+cover the real input path. Nine renderer/runtime groups add 4,586 checks for native
+equations, actual texture sampling, equivalent clocks, Canvas/SVG raster recovery,
+fresh no-Canvas fields, interrupted software fades, moving touch, page scrolling
+and 48 paused native/full starts, lossless cached SVG textures at DPR 1/2 and
+pixel-identical source-neighborhood clips. Twenty-four fresh network-blocked exports retain
+full source content and remount native previews. All six posters and twelve real
+desktop/mobile detail routes are refreshed; the footer links to https://tanziro.com/.
+
+The current-source [Showcase field timing report](performance/showcase-fields-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. CPU 1 records 54.51–60.00fps, 58 intervals above 25ms and 5 long tasks; first trace Paint spans 6.76–111.37ms and maximum readiness is 99.00ms. CPU 4 records 8.61–59.75fps, 508 intervals above 25ms and 184 long tasks; first trace Paint spans 46.76–1145.63ms and maximum readiness is 1053.20ms. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. Every trace and outlier is retained. These measurements leave cold-route, Lighthouse and site-wide timing gates open. Native Threads improved from 25.89/23.73fps to 59.88/54.51fps on CPU 1 desktop/compact, and from 3.77/3.46fps to 10.41/8.61fps on CPU 4. The original 48 baseline traces and both cache-only diagnostic runs and the cropped-texture diagnostic run remain preserved alongside the final 48 stories. The cache and bounded source neighborhoods retain exact SVG payloads and pixel filtering.
+
+Required local checks pass at the documented baseline: registry/generated output,
+651 library checks with 399 previews and 97 catalog exports, Stage runtime, nineteen
+runtime/shell tests, sixteen fit-geometry checks and eight CLI/MCP tests. All 385
+completed native previews pass fit; the fourteen unfinished demos account for ten
+small-text findings. Stage debt falls 19→13, motion debt stays 7, and the exact-size
+Pixel exception brings the validated fill list 130→131.
+
+All ten shared-file siblings, 325 other modules, 393 metadata rows, 383 unrelated
+catalog rows and five protected shared inputs remain unchanged. All 471 prior
+helpers, 546 prior private inputs, 2,969 publication files and 222+184 accepted snapshots
+remain hash-verified. The 358 original capture inputs/producers remain immutable.
+Earlier candidates, rendering/selector findings, aborted pre-fix verification and
+every timing outlier are preserved. The reconstructed diagnostic source exactly
+matches its previously recorded hash and is labeled as a reconstruction.
+
+Ten Showcase and four Framer demos remain among the existing library, followed by
+all 121 new/extension components, Pro seams and final audits. Commit directly to
+main; keep Actions disabled and preserve the account's $0 stop-at-limit budget.
 
 ## Six remaining DRAMS devices
 

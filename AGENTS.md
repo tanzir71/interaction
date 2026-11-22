@@ -984,3 +984,22 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   checks, 48 physical-input cases, 2,032 runtime checks and 24 fresh offline exports
   with native remounts. Record timing with `node tools/profile-drams-devices.js
   http://127.0.0.1:4173 --cpu=1,4`; retain every trace and leave final gates open.
+
+- `node tools/verify-showcase-fields.js http://127.0.0.1:4173` covers v4
+  Inertial Dot Field, Reactive Threads, Tactile Ballpit, Ripple Grid, Magnetic Line
+  Field and Fading Pixel Trail. Preserve all 474 native nodes, 296 supplied SVGs,
+  24 immutable captures and complete original full model statements/datasets.
+  Native has 152 dots, 8 filaments, 42 balls, 153 squares, 90 needles and 22 blocks;
+  full retains complete original grids, 36 filaments and 16 collision bodies.
+  Keep fixed 60Hz integration, unrounded input, source-clock idle phases and exact
+  native anchors. Threads sample original SVGs with matching Canvas/SVG clips;
+  needle length scales in its own axis, preserving atan2 direction and stroke.
+  Retained SVG references match complete IDs and remain local to their layer.
+  Both native and full paint initial states while paused, before animation.
+  Preserve real mouse/keys/moving touch, vertical scrolling, independent holds,
+  queued intent, reduced 150ms fades, graphics recovery, cleanup and 24 fresh
+  offline exports/native remounts. Tests compare 25,992 source states, 648 command
+  witnesses, 216 source pixel checkpoints, 17,118 native geometry checks and 4,586
+  renderer/runtime checks. Pixel's sparse exception changes only the fill gate.
+  Record timing with `node tools/profile-showcase-fields.js
+  http://127.0.0.1:4173 --cpu=1,4`; retain every trace and leave final gates open.
