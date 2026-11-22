@@ -120,6 +120,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The five new Buttons & Micro components are original implementations under
+  the Stage contract. Run `node tools/verify-micro-new.js`,
+  `node tools/verify-micro-new-input.js`, `node tools/verify-micro-new-clocks.js`
+  `node tools/verify-micro-new-exports.js` and `node tools/verify-micro-new-holds.js`
+  against the local 4173 server.
+  These cover 85 exact native layers and sixteen unchanged SVG slots, all
+  original local content, half-star input, held confirmation, changed digits,
+  moving touch, compact text/physical controls, caller/document/viewport holds, cleanup, thirty
+  six-second 60/120/240Hz renderer stories and ten fresh offline full/native
+  exports. Keep the same raster and curl path for reverse Undo; filter bounded
+  phase surfaces rather than every patch. Press intent waits through holds and
+  unrelated window releases must not queue work. Touch release activation
+  consumes a following compatibility click once. Reduced motion retains 150ms
+  old-paint fades. The clock fixture advances WAAPI and source frames together;
+  these functional stories do not replace final performance measurements.
 - The first six new Agent & AI UI components are original implementations under
   the Stage contract. `node tools/verify-agents-new.js http://127.0.0.1:4173`
   checks their 66 native layers, all unchanged supplied SVGs, complete local

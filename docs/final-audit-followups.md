@@ -2,12 +2,18 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
-All 399 existing native compositions now follow their v4 references. Six new
-Agent & AI UI components bring the catalog to 405; 115 new or extension
+All 399 existing native compositions now follow their v4 references. Eleven new
+Agent & AI UI and Buttons & Micro components bring the catalog to 410; 110 new or extension
 components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The five new micro components have source-bound geometry, input, touch,
+reduced-motion, offline and actual-renderer clock coverage. Keep the same-pixel
+smoke reversal, bounded phase blur surfaces, 600ms hold cancellation, unchanged
+counter digits, touch click de-duplication and static reduced shimmer. Their
+60/120/240Hz stories establish model and paint agreement; they do not establish
+the final frame-time, cold-route or Lighthouse budgets.
 Smooth Scroll's dependency removal and native Mask Reveal's aperture timing are
 implemented with independent source captures, interruption and offline coverage;
 preserve their complete original models and copy. Punch
@@ -30,7 +36,7 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 399 demos with 134 valid
+retaining their overflow/text checks. It now passes all 410 demos with 139 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.

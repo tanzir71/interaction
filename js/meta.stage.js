@@ -15144,5 +15144,164 @@ INTRX.meta({
       "citations"
     ],
     "addedAt": "2026-11"
+  },
+  "micro-smoke-delete": {
+    "designSize": [
+      400,
+      440
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "delete",
+        "label": "Delete"
+      },
+      {
+        "action": "undo",
+        "label": "Undo"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Buttons & Micro",
+      "smoke",
+      "accessible feedback"
+    ],
+    "addedAt": "2026-11"
+  },
+  "micro-inline-confirm": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Buttons & Micro",
+      "confirm",
+      "accessible feedback"
+    ],
+    "addedAt": "2026-11"
+  },
+  "micro-star-rating": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Buttons & Micro",
+      "stars",
+      "accessible feedback"
+    ],
+    "addedAt": "2026-11"
+  },
+  "micro-reaction-bar": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Buttons & Micro",
+      "reaction",
+      "accessible feedback"
+    ],
+    "addedAt": "2026-11"
+  },
+  "micro-shimmer-status": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Buttons & Micro",
+      "shimmer",
+      "accessible feedback"
+    ],
+    "addedAt": "2026-11"
   }
 });

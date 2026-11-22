@@ -1,0 +1,3214 @@
+[
+  {
+    "id": "micro-smoke-delete",
+    "C": "d-new-micro-smoke",
+    "stageId": "180:659",
+    "rows": [
+      {
+        "id": "180:660",
+        "parent": "180:659",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 86,
+        "y": 78,
+        "width": 200,
+        "height": 48,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.10980392247438431,
+              "g": 0.10980392247438431,
+              "b": 0.10980392247438431
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 12,
+        "topLeftRadius": 12,
+        "topRightRadius": 12,
+        "bottomLeftRadius": 12,
+        "bottomRightRadius": 12,
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "clipsContent": true
+      },
+      {
+        "id": "180:661",
+        "parent": "180:660",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 14,
+        "y": 15,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:662",
+        "parent": "180:661",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 3,
+        "y": 1.5,
+        "width": 12,
+        "height": 15,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7000000476837158,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:663",
+        "parent": "180:661",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 10.5,
+        "y": 1.5,
+        "width": 4.5,
+        "height": 4.5,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7000000476837158,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:664",
+        "parent": "180:660",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 42,
+        "y": 20.5,
+        "width": 70,
+        "height": 7,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.18000000715255737,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 3.5,
+        "topLeftRadius": 3.5,
+        "topRightRadius": 3.5,
+        "bottomLeftRadius": 3.5,
+        "bottomRightRadius": 3.5,
+        "effects": [],
+        "clipsContent": false
+      },
+      {
+        "id": "180:665",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 120,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:666",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 128,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:667",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 136,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2800000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:668",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 144,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:669",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 152,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20999999344348907,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:670",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:671",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 168,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:672",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 176,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:673",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07000000029802322,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:674",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 192,
+        "y": 8,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.029999999329447746,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:675",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 120,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:676",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 128,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:677",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 136,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2800000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:678",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 144,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:679",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 152,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20999999344348907,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:680",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:681",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 168,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:682",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 176,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:683",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07000000029802322,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:684",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 192,
+        "y": 17,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.029999999329447746,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:685",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 120,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:686",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 128,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:687",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 136,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2800000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:688",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 144,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:689",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 152,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20999999344348907,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:690",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:691",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 168,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:692",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 176,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:693",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07000000029802322,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:694",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 192,
+        "y": 26,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.029999999329447746,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:695",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 120,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:696",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 128,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:697",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 136,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2800000011920929,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:698",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 144,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:699",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 152,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20999999344348907,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:700",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:701",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 168,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:702",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 176,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:703",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.07000000029802322,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:704",
+        "parent": "180:660",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 192,
+        "y": 35,
+        "width": 2.4000000953674316,
+        "height": 2.4000000953674316,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.029999999329447746,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      }
+    ],
+    "assetCalls": [
+      {
+        "id": "180:661",
+        "file": "file.svg",
+        "name": "file",
+        "key": "new-micro-file",
+        "width": 18,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d43b8f8607b6c85bab916642677d95808780eb00be6486f0ff864d82661b3cff"
+      }
+    ],
+    "controls": [
+      {
+        "action": "delete",
+        "label": "Delete"
+      },
+      {
+        "action": "undo",
+        "label": "Undo"
+      }
+    ]
+  },
+  {
+    "id": "micro-inline-confirm",
+    "C": "d-new-micro-confirm",
+    "stageId": "182:404",
+    "rows": [
+      {
+        "id": "182:405",
+        "parent": "182:404",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 114,
+        "y": 80,
+        "width": 144,
+        "height": 40,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9490196108818054,
+              "g": 0.4274509847164154,
+              "b": 0.4274509847164154
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.25,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9490196108818054,
+              "g": 0.4274509847164154,
+              "b": 0.4274509847164154
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 20,
+        "topLeftRadius": 20,
+        "topRightRadius": 20,
+        "bottomLeftRadius": 20,
+        "bottomRightRadius": 20,
+        "effects": [],
+        "clipsContent": false
+      },
+      {
+        "id": "182:406",
+        "parent": "182:405",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 14,
+        "y": 12,
+        "width": 16,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.25,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9490196108818054,
+              "g": 0.4274509847164154,
+              "b": 0.4274509847164154
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.600000023841858,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "182:407",
+        "parent": "182:405",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 16.520000457763672,
+        "y": 12,
+        "width": 13.470000267028809,
+        "height": 15.989999771118164,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9490196108818054,
+              "g": 0.4274509847164154,
+              "b": 0.4274509847164154
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.600000023841858,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "182:408",
+        "parent": "182:405",
+        "name": "Hold to delete",
+        "type": "TEXT",
+        "x": 40,
+        "y": 11,
+        "width": 87,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9490196108818054,
+              "g": 0.4274509847164154,
+              "b": 0.4274509847164154
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "effects": [],
+        "characters": "Hold to delete",
+        "fontSize": 13,
+        "fontName": {
+          "family": "Inter",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500,
+            "slnt": 0
+          }
+        },
+        "fontWeight": 500,
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": -0.3199999928474426
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textDecoration": "NONE"
+      }
+    ],
+    "assetCalls": [
+      {
+        "id": "182:407",
+        "file": "hold-ring.svg",
+        "name": "hold-ring",
+        "key": "new-micro-hold-ring",
+        "width": 16,
+        "height": 18,
+        "offsetX": -0.800048828125,
+        "offsetY": -0.800048828125,
+        "sha256": "ba1f73921fd130b15025ff7d228f7a0af2991521e0f183fca1f5071b75605ab7"
+      }
+    ],
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ]
+  },
+  {
+    "id": "micro-star-rating",
+    "C": "d-new-micro-stars",
+    "stageId": "180:740",
+    "rows": [
+      {
+        "id": "180:741",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 114,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:742",
+        "parent": "180:741",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:743",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 114,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:744",
+        "parent": "180:743",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:745",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 144,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:746",
+        "parent": "180:745",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:747",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 144,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:748",
+        "parent": "180:747",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:749",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 174,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:750",
+        "parent": "180:749",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:751",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 174,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:752",
+        "parent": "180:751",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:753",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 204,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:754",
+        "parent": "180:753",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:755",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 204,
+        "y": 86,
+        "width": 12,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:756",
+        "parent": "180:755",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 0,
+        "y": 0,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:757",
+        "parent": "180:756",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:758",
+        "parent": "180:740",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 234,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "180:759",
+        "parent": "180:758",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.5,
+        "y": 2.5,
+        "width": 19,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.5,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      }
+    ],
+    "assetCalls": [
+      {
+        "id": "180:741",
+        "file": "star-outline.svg",
+        "name": "star-outline",
+        "key": "new-micro-star-outline",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ed76af9f00910c11197725a6710daec2208ea91665e46cd991deb0a51115c318"
+      },
+      {
+        "id": "180:743",
+        "file": "star-fill.svg",
+        "name": "star-fill",
+        "key": "new-micro-star-fill",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "901a5f2283b2b9fb4aaaa07988b73b0aac36ae144da31d22952057e518de49cb"
+      },
+      {
+        "id": "180:745",
+        "file": "star-outline.svg",
+        "name": "star-outline",
+        "key": "new-micro-star-outline",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ed76af9f00910c11197725a6710daec2208ea91665e46cd991deb0a51115c318"
+      },
+      {
+        "id": "180:747",
+        "file": "star-fill.svg",
+        "name": "star-fill",
+        "key": "new-micro-star-fill",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "901a5f2283b2b9fb4aaaa07988b73b0aac36ae144da31d22952057e518de49cb"
+      },
+      {
+        "id": "180:749",
+        "file": "star-outline.svg",
+        "name": "star-outline",
+        "key": "new-micro-star-outline",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ed76af9f00910c11197725a6710daec2208ea91665e46cd991deb0a51115c318"
+      },
+      {
+        "id": "180:751",
+        "file": "star-fill.svg",
+        "name": "star-fill",
+        "key": "new-micro-star-fill",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "901a5f2283b2b9fb4aaaa07988b73b0aac36ae144da31d22952057e518de49cb"
+      },
+      {
+        "id": "180:753",
+        "file": "star-outline.svg",
+        "name": "star-outline",
+        "key": "new-micro-star-outline",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ed76af9f00910c11197725a6710daec2208ea91665e46cd991deb0a51115c318"
+      },
+      {
+        "id": "180:756",
+        "file": "star-half.svg",
+        "name": "star-half",
+        "key": "new-micro-star-half",
+        "width": 12,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "084f457b0d438375be438431fe3518660c1e9b7f7400dbe563c3e613e9d4beca"
+      },
+      {
+        "id": "180:758",
+        "file": "star-outline.svg",
+        "name": "star-outline",
+        "key": "new-micro-star-outline",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ed76af9f00910c11197725a6710daec2208ea91665e46cd991deb0a51115c318"
+      }
+    ],
+    "controls": []
+  },
+  {
+    "id": "micro-reaction-bar",
+    "C": "d-new-micro-reaction",
+    "stageId": "181:686",
+    "rows": [
+      {
+        "id": "181:687",
+        "parent": "181:686",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 106,
+        "y": 92,
+        "width": 160,
+        "height": 44,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.10980392247438431,
+              "g": 0.10980392247438431,
+              "b": 0.10980392247438431
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10999999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 22,
+        "topLeftRadius": 22,
+        "topRightRadius": 22,
+        "bottomLeftRadius": 22,
+        "bottomRightRadius": 22,
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "clipsContent": false
+      },
+      {
+        "id": "181:688",
+        "parent": "181:687",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 16,
+        "y": 13,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "181:689",
+        "parent": "181:688",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 1.5,
+        "y": 2.25,
+        "width": 15,
+        "height": 13.5,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7000000476837158,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "181:690",
+        "parent": "181:687",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 46,
+        "y": 13,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "181:691",
+        "parent": "181:690",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 1.875,
+        "y": 1.875,
+        "width": 14.25,
+        "height": 13.5,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7000000476837158,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "181:692",
+        "parent": "181:687",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 112,
+        "y": 13,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "181:693",
+        "parent": "181:692",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 3,
+        "y": 4.5,
+        "width": 12,
+        "height": 8.25,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 2,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "181:694",
+        "parent": "181:687",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 136,
+        "y": 13,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "181:695",
+        "parent": "181:694",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 2.25,
+        "y": 1.5,
+        "width": 13.5,
+        "height": 15.038603782653809,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.6117647290229797,
+              "g": 0.6117647290229797,
+              "b": 0.6117647290229797
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7000000476837158,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "181:696",
+        "parent": "181:686",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 166,
+        "y": 74,
+        "width": 40,
+        "height": 40,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.14901961386203766,
+              "g": 0.14901961386203766,
+              "b": 0.14901961386203766
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10999999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      },
+      {
+        "id": "181:697",
+        "parent": "181:686",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 174,
+        "y": 82,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "effects": [],
+        "clipsContent": true
+      },
+      {
+        "id": "181:698",
+        "parent": "181:697",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 3,
+        "y": 2,
+        "width": 18,
+        "height": 20,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokeWeight": 1.7999999523162842,
+        "strokeAlign": "CENTER",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "181:699",
+        "parent": "181:686",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 160,
+        "y": 46,
+        "width": 52,
+        "height": 20,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 6,
+        "topLeftRadius": 6,
+        "topRightRadius": 6,
+        "bottomLeftRadius": 6,
+        "bottomRightRadius": 6,
+        "effects": [],
+        "clipsContent": false
+      },
+      {
+        "id": "181:700",
+        "parent": "181:699",
+        "name": "Spark",
+        "type": "TEXT",
+        "x": 10.5,
+        "y": 3,
+        "width": 31,
+        "height": 13,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.06666667014360428,
+              "g": 0.06666667014360428,
+              "b": 0.06666667014360428
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "effects": [],
+        "characters": "Spark",
+        "fontSize": 11,
+        "fontName": {
+          "family": "Inter",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500,
+            "slnt": 0
+          }
+        },
+        "fontWeight": 500,
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0.47999998927116394
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textDecoration": "NONE"
+      }
+    ],
+    "assetCalls": [
+      {
+        "id": "181:688",
+        "file": "reaction-love.svg",
+        "name": "reaction-love",
+        "key": "new-micro-reaction-love",
+        "width": 18,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "d62f4a97d70f0e27e08696b0b7415b34bbbcab5ef37cb4b8933dd5c78a2bea0c"
+      },
+      {
+        "id": "181:690",
+        "file": "reaction-star.svg",
+        "name": "reaction-star",
+        "key": "new-micro-reaction-star",
+        "width": 18,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "e9530ae6da85ed83251a53556abfb69f587e3065c4c8b19355bfa719b1eeaf33"
+      },
+      {
+        "id": "181:692",
+        "file": "reaction-check.svg",
+        "name": "reaction-check",
+        "key": "new-micro-reaction-check",
+        "width": 18,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "5d6a9d35733201457efca175147570388d4cf923f62e70362968838589e80095"
+      },
+      {
+        "id": "181:694",
+        "file": "reaction-bell.svg",
+        "name": "reaction-bell",
+        "key": "new-micro-reaction-bell",
+        "width": 18,
+        "height": 18,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "75991005e86fa9877a55f9db8ddd83592f0837894460ee71dcb1dd3a7a6b307f"
+      },
+      {
+        "id": "181:697",
+        "file": "reaction-spark.svg",
+        "name": "reaction-spark",
+        "key": "new-micro-reaction-spark",
+        "width": 24,
+        "height": 24,
+        "offsetX": 0,
+        "offsetY": 0,
+        "sha256": "ea346fbf57e48d33892be354c5aa3ae33af1c95dd131784260563448b1b54706"
+      }
+    ],
+    "controls": []
+  },
+  {
+    "id": "micro-shimmer-status",
+    "C": "d-new-micro-shimmer",
+    "stageId": "180:775",
+    "rows": [
+      {
+        "id": "180:776",
+        "parent": "180:775",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 112,
+        "y": 95,
+        "width": 8,
+        "height": 8,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "cornerRadius": 0,
+        "effects": []
+      },
+      {
+        "id": "180:777",
+        "parent": "180:775",
+        "name": "Reading 4 files",
+        "type": "TEXT",
+        "x": 130,
+        "y": 90,
+        "width": 105,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "GRADIENT_LINEAR",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "gradientStops": [
+              {
+                "color": {
+                  "r": 0.5411764979362488,
+                  "g": 0.5411764979362488,
+                  "b": 0.5411764979362488,
+                  "a": 1
+                },
+                "position": 0,
+                "boundVariables": {}
+              },
+              {
+                "color": {
+                  "r": 0.7058823704719543,
+                  "g": 0.7058823704719543,
+                  "b": 0.7058823704719543,
+                  "a": 1
+                },
+                "position": 0.5,
+                "boundVariables": {}
+              },
+              {
+                "color": {
+                  "r": 0.5411764979362488,
+                  "g": 0.5411764979362488,
+                  "b": 0.5411764979362488,
+                  "a": 1
+                },
+                "position": 1,
+                "boundVariables": {}
+              }
+            ],
+            "gradientTransform": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "effects": [],
+        "characters": "Reading 4 files",
+        "fontSize": 15,
+        "fontName": {
+          "family": "Inter",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500,
+            "slnt": 0
+          }
+        },
+        "fontWeight": 500,
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": -0.8799999952316284
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "180:778",
+        "parent": "180:775",
+        "name": "12s",
+        "type": "TEXT",
+        "x": 260,
+        "y": 92,
+        "width": 22,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.4156862795352936,
+              "g": 0.4156862795352936,
+              "b": 0.4156862795352936
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "effects": [],
+        "characters": "12s",
+        "fontSize": 12,
+        "fontName": {
+          "family": "Geist Mono",
+          "style": "Regular",
+          "variationSettings": {
+            "wght": 400
+          }
+        },
+        "fontWeight": 400,
+        "lineHeight": {
+          "unit": "AUTO"
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textDecoration": "NONE"
+      }
+    ],
+    "assetCalls": [],
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next"
+      }
+    ]
+  }
+]

@@ -3,16 +3,61 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. Six new Agent & AI UI components
-bring the catalog to 405; 115 new or extension components, Pro seams and final
+sixteen Showcase and four Framer compositions. Eleven new Agent & AI UI and
+Buttons & Micro components bring the catalog to 410; 110 new or extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 405 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 134
+JavaScript. The fit audit boots all 410 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 139
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Five new Buttons & Micro components
+
+Smoke Delete, Inline Confirm, Spring Star Rating, Reaction Bar and Shimmer Status
+implement the second new-component category. Their native compositions retain
+85 captured Figma layers and sixteen supplied SVG slots using ten unchanged
+files, including the original cropped half star and partial-ring stroke offsets.
+All five preserve their exact sparse reference size; each exception records its
+geometry in the fit allowlist. Overflow, scrolling and the 11px text floor still
+gate. The New view now contains eleven components.
+
+Smoke Delete rasterizes the actual file-row surfaces, SVG, text and sizes. Its
+original bounded curl field follows the canonical 400ms dissolve with a 40ms
+stagger capped at 300ms. Nine bounded phase layers apply the shared blur instead
+of filtering thousands of individual patches. Undo reverses the same retained
+raster field, including interrupted deletions; siblings use 350ms FLIP reflow.
+All three file records remain in the full composition.
+
+Inline Confirm expands into the three-file question, Cancel and a deliberate
+600ms hold. Early release, movement outside, cancellation, blur and Escape keep
+the files. Keyboard and pointer owners, completion timers and captures clear on
+Reset and disposal. Native mode retains the exact red hold pill and original
+ring artwork. No filesystem operation occurs.
+
+Rating preserves the complete 0–5 model in half steps, real pointer/touch input,
+Arrow/Home/End keys, canonical Like pop and eight 2.5px sparks travelling 20px.
+Reaction keeps all five supplied glyphs, names and independent counters, bounded
+1.35 pointer magnification, a 400ms curved flight and changed-digit-only 250ms
+number fades. Touch release recovers from suppressed compatibility clicks and
+consumes the follow-up click once. Hover magnification stays off touch input.
+
+Shimmer retains Reading 4 files, the elapsed label and all four status phrases.
+The band traverses its 400% background over 2000ms; Next uses a 400ms text swap
+with a 50ms incoming delay. Reduced motion preserves stills and 150ms old-paint
+fades. Press intent waits through holds; unrelated window releases queue no work.
+
+Five focused suites cover exact geometry, complete content, real keyboard and
+moving touch, 44px full-view targets, 390/375/360px text, interruption, independent
+caller/document/viewport holds, disposal, ten fresh network-blocked full/native exports and thirty actual
+six-second renderer stories at 60/120/240Hz. The clock harness advances WAAPI and
+source frames together; independent math checks the painted curl, blur, sparks,
+flights and shimmer. Reverse smoke pixels match the retained field exactly.
+These are functional and numerical checks; final performance gates remain open.
+All 332 previous modules, 405 previous sidecar records and seven shared inputs
+remain unchanged.
 
 ## Six new Agent & AI UI components
 

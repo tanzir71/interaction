@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 405 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 410 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -101,6 +101,11 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Directional Fill](https://intrx.vercel.app/#/c/hover-fill-button): hover · The light layer floods from the closest entry edge and retreats toward the exit. Both text layers stay aligned through reversals, with native focus, press and activation feedback. · registry: /registry/c/hover-fill-button.json
 - [Page Transition](https://intrx.vercel.app/#/c/page-transition): press · A four-page local navigator uses mirrored 350ms page slides and a narrow curtain. Rapid navigation retargets from the displayed screen while the persistent frame stays in place. · registry: /registry/c/page-transition.json
 - [Logo Marquee](https://intrx.vercel.app/#/c/logo-marquee): ambient · Two rows of original neutral marks travel in opposite directions behind soft edge masks. The complete original artwork is repeated and clipped by row without extracting any paths. · registry: /registry/c/logo-marquee.json
+- [Smoke Delete](https://intrx.vercel.app/#/c/micro-smoke-delete): press · Delete a file row into a rasterized curl field. Its siblings close the gap, and Undo restores the complete row. · registry: /registry/c/micro-smoke-delete.json
+- [Inline Confirm](https://intrx.vercel.app/#/c/micro-inline-confirm): press · Expand Delete in place, then hold to confirm all three local example files. Releasing early cancels the hold. · registry: /registry/c/micro-inline-confirm.json
+- [Spring Star Rating](https://intrx.vercel.app/#/c/micro-star-rating): hover · Preview five supplied stars in half steps, then commit a rating with a short pop and eight sparks. Arrow keys adjust by half a star. · registry: /registry/c/micro-star-rating.json
+- [Reaction Bar](https://intrx.vercel.app/#/c/micro-reaction-bar): hover · Five supplied SVG reactions magnify beneath the pointer. Choose one to fly it into a local counter; keyboard and touch offer the same choices. · registry: /registry/c/micro-reaction-bar.json
+- [Shimmer Status](https://intrx.vercel.app/#/c/micro-shimmer-status): ambient · A text-clipped luminance band sweeps a local status line. Next changes the phrase with an interruptible text swap. · registry: /registry/c/micro-shimmer-status.json
 
 ## Motion
 
