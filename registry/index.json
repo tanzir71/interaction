@@ -23951,7 +23951,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-dot-field",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-dot-field.json?v=6619f0d21d",
@@ -24006,7 +24006,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-threads",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-threads.json?v=a7f505c449",
@@ -24061,7 +24061,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ballpit",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-ballpit.json?v=f5a0dc62fe",
@@ -24116,7 +24116,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ripple-grid",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-ripple-grid.json?v=c941f65530",
@@ -24171,7 +24171,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-magnet-lines",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-magnet-lines.json?v=b89de5da38",
@@ -24226,7 +24226,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-pixel-trail",
     "thumb": "hero",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-pixel-trail.json?v=3fe1ce7fe0",
@@ -24265,7 +24265,14 @@
     ],
     "tier": "free",
     "desc": "Five trailing lines follow a chain of damped positions. Each strand uses a slightly different response, creating a layered ribbon that stretches during quick movements and settles smoothly.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24273,14 +24280,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-ribbons",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-ribbons.json?v=1f4eac1530",
+    "sourcePreview": "registry/p/showcase-ribbons.json?v=4c8a0d9852",
     "assetRefs": {},
-    "rootClass": "d-show-ribbons",
-    "controls": [],
+    "rootClass": "d-showcase-ribbons",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24308,7 +24320,14 @@
     ],
     "tier": "free",
     "desc": "A sculptural contour surface folds in response to pointer position. This lightweight Canvas 2D study translates the reference’s material movement into fine orange and graphite linework rather than reproducing its shader.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24316,14 +24335,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-mesh-surface",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-mesh-surface.json?v=3c35ac5a9a",
+    "sourcePreview": "registry/p/showcase-mesh-surface.json?v=c07aec2e8e",
     "assetRefs": {},
-    "rootClass": "d-show-mesh-surface",
-    "controls": [],
+    "rootClass": "d-showcase-mesh",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24351,7 +24375,14 @@
     ],
     "tier": "free",
     "desc": "Nested wire rectangles travel out of a shared vanishing point. Pointer position shifts the perspective, while a brief click impulse changes the speed of the tunnel.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
@@ -24359,14 +24390,19 @@
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-warp-tunnel",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-warp-tunnel.json?v=a6ffc6b0e5",
+    "sourcePreview": "registry/p/showcase-warp-tunnel.json?v=8b02b4fcc6",
     "assetRefs": {},
-    "rootClass": "d-show-warp-tunnel",
-    "controls": [],
+    "rootClass": "d-showcase-warp",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
@@ -24394,26 +24430,38 @@
     ],
     "tier": "free",
     "desc": "Five independently drawn SVG paths converge into a single signal. A local scroll container maps progress to normalized stroke lengths, keeping the effect usable inside a component preview.",
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "clip"
+      "overflow": "scroll"
     },
     "libs": [],
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-converging-paths",
-    "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "thumb": "hero",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
-    "sourcePreview": "registry/p/showcase-converging-paths.json?v=51a7987d2c",
+    "sourcePreview": "registry/p/showcase-converging-paths.json?v=43c50a5c41",
     "assetRefs": {},
-    "rootClass": "d-show-converging-paths",
-    "controls": [],
+    "rootClass": "d-showcase-paths",
+    "controls": [
+      {
+        "action": "play",
+        "label": "Scroll"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "region"
     },
     "hint": "Signals travel and converge on one point",
     "sourceName": "Aceternity / Google Gemini Effect",
@@ -24446,7 +24494,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-orbital-path",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-orbital-path.json?v=77dd31a469",
@@ -24489,7 +24537,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-mask-reveal",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-mask-reveal.json?v=dbbeb569ac",
@@ -24532,7 +24580,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-circular-gallery",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-circular-gallery.json?v=a423c0646b",
@@ -24579,7 +24627,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-card-swap",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-card-swap.json?v=069bbfcf74",
@@ -24622,7 +24670,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-tracing-story",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-tracing-story.json?v=a3a69af55f",
@@ -24665,7 +24713,7 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/showcase-elastic-slider",
     "thumb": "full",
-    "module": "js/demos.showcase.js?v=c1e9f078b5",
+    "module": "js/demos.showcase.js?v=9341dba588",
     "assetBundle": "js/demo-assets.js?v=00b614b757",
     "exportBundle": "js/export-data.js?v=188e963731",
     "sourcePreview": "registry/p/showcase-elastic-slider.json?v=98ea839b92",

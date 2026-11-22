@@ -1,0 +1,144 @@
+{
+  "at": "2026-11-22T06:54:08.957Z",
+  "producerSHA256": "c8870d2e008b7d9d10ef556dcba51b5d51e91febaa2b19c2ca823a05f610fba5",
+  "originalDefinitionsSHA256": "40f72d6132284640c445f02734742e0ebdc3ea7fc13370f8052cad731f40fab4",
+  "sourceModuleSHA256": "c1e9f078b5123a005ed2bf699addc428c7b21ea97caaa40fb362375ac540e582",
+  "notes": [
+    "Unmodified original controller statements; added closure readers only. Native browser Canvas draws, original input transport, exact60Hz RAF and original double initial draw.",
+    "All360 frames and24 original events retained per case; nine complete Canvas paint/pixel witnesses. State and command signed zeros are serialized before browser transfer and gzip."
+  ],
+  "cases": [
+    {
+      "key": "showcase-ribbons-400-normal",
+      "id": "showcase-ribbons",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-ribbons-400-normal.json.gz",
+      "sha256": "1e4114fb7cd7f7abe791d0644daebc1000eafb92f0a60d61d58d211aa55418b3",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ribbons-400-reduced",
+      "id": "showcase-ribbons",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-ribbons-400-reduced.json.gz",
+      "sha256": "4f72ca3ee7e8fdeaad716c8222b44f39f2617456dda115af1753c3d7e0925f68",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ribbons-320-normal",
+      "id": "showcase-ribbons",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-ribbons-320-normal.json.gz",
+      "sha256": "fca5eb99110d85b512f4def1550e60b7771eeb06a898238aa21e936ee0c781ee",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-ribbons-320-reduced",
+      "id": "showcase-ribbons",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-ribbons-320-reduced.json.gz",
+      "sha256": "0ca68b678fa41c0ac039bcdee9fc8d4a890be6e46251b31e69eb1d1938b95799",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-mesh-surface-400-normal",
+      "id": "showcase-mesh-surface",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-mesh-surface-400-normal.json.gz",
+      "sha256": "5aa111690623bd509066f7e1eb19d69c741dc1cc9460f29528e422dc4cb9967b",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-mesh-surface-400-reduced",
+      "id": "showcase-mesh-surface",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-mesh-surface-400-reduced.json.gz",
+      "sha256": "468e6e60f72e0ad956b260d518524426e976ea8bdae2f1aaccf346c542fb5478",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-mesh-surface-320-normal",
+      "id": "showcase-mesh-surface",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-mesh-surface-320-normal.json.gz",
+      "sha256": "de79406a0f1ac394f8c7f2cd253463ea5f3360934d1c6a400f275bbb2abd90d6",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-mesh-surface-320-reduced",
+      "id": "showcase-mesh-surface",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-mesh-surface-320-reduced.json.gz",
+      "sha256": "00e49709b509958575be6da5ba1c077da6f7ff8c0c6ac4e0c3fdd5e61f5a1064",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-warp-tunnel-400-normal",
+      "id": "showcase-warp-tunnel",
+      "width": 400,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-warp-tunnel-400-normal.json.gz",
+      "sha256": "dbc68c73d0f87b2a185219e21a54466f1fbf8984df2391d3fd9c7faa930f329d",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-warp-tunnel-400-reduced",
+      "id": "showcase-warp-tunnel",
+      "width": 400,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-warp-tunnel-400-reduced.json.gz",
+      "sha256": "2f54019c19cb9f94d72d48887829559c5680a0a8a46d4cb0dfacf9770c78206f",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-warp-tunnel-320-normal",
+      "id": "showcase-warp-tunnel",
+      "width": 320,
+      "reduced": false,
+      "file": "raw-fixtures-v2/showcase-warp-tunnel-320-normal.json.gz",
+      "sha256": "825db7f2fc8760b58b17d3201c11d4ad245e8c790fbd542766be04b1f43ada0b",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    },
+    {
+      "key": "showcase-warp-tunnel-320-reduced",
+      "id": "showcase-warp-tunnel",
+      "width": 320,
+      "reduced": true,
+      "file": "raw-fixtures-v2/showcase-warp-tunnel-320-reduced.json.gz",
+      "sha256": "774e2453ee9dbe28781dcc02ef8f6d3cb223816731523b94ffed39044603ebf7",
+      "states": 361,
+      "events": 24,
+      "witnesses": 9
+    }
+  ]
+}

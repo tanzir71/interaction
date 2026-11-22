@@ -1003,3 +1003,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   renderer/runtime checks. Pixel's sparse exception changes only the fill gate.
   Record timing with `node tools/profile-showcase-fields.js
   http://127.0.0.1:4173 --cpu=1,4`; retain every trace and leave final gates open.
+
+- `node tools/verify-showcase-spatial.js http://127.0.0.1:4173` covers v4
+  Ribbons, Mesh Surface, Warp Tunnel and Converging Paths. Preserve 40 native
+  slots, 33 supplied SVGs, seven Frame primitives and exact fractional paint
+  offsets. Full retains all five 30-point strands, 48×101 surface samples,
+  eighteen Warp frames/six rays and five complete C/S paths. Keep fixed 60Hz
+  source integration, original texture deformation, native keys/wheel/moving
+  touch, interrupted scroll ownership, queued Home, fractional End precision,
+  independent holds, reduced fades, cleanup and complete Canvas/SVG fallback.
+  Tests compare 12,996 source states, 324 command witnesses, 108 original pixels,
+  exact native geometry, compact full typography, 32 physical-input cases,
+  sixteen hold cases, actual graphics recovery and sixteen offline exports.
+  Full Paths labels remain at least 11px on the actual 360px detail route.
+  Record timing with `node tools/profile-showcase-spatial.js
+  http://127.0.0.1:4173 --cpu=1,4`; retain all traces and final timing findings.

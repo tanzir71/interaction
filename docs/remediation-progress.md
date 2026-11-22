@@ -1,18 +1,74 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 385 of the 399 existing demos:
+Native v4 compositions are remediated for 389 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, all fifty-two DRAMS Collections demos, and six Showcase
-fields. Fourteen existing Collections demos, 121 new or extension components,
+Visual FX (88) demos, all fifty-two DRAMS Collections demos, and ten Showcase
+compositions. Ten existing Collections demos, 121 new or extension components,
 Pro seams and the final audit remain. Earlier sections retain historical counts.
 
-Photography replacement and performance tails remain open. The retired generated
-photo keys remain in one unfinished demo, showcase-circular-gallery; none of the
-385 remediated native compositions retains those references. The fit audit boots
-all 399 demos with zero overflow, horizontal-scroll or low-fill findings. Its ten
-tiny-text findings belong to unfinished demos; all 131 documented Figma fill
-exceptions validate. Stage and motion baselines contain thirteen and seven
-remaining debts respectively; neither grows. Reduced-motion baseline debt is zero.
+The retired generated photo keys remain in the unfinished showcase-circular-gallery;
+none of the 389 remediated native compositions retains those references. The fit
+audit boots all 399 demos with zero overflow, horizontal-scroll or low-fill
+findings. Its 9 tiny-text findings belong to unfinished demos; all 131
+documented Figma fill exceptions validate. Stage and motion baselines contain
+nine and seven remaining debts respectively. Reduced-motion baseline debt is zero.
+
+## Four Showcase surfaces and routes
+
+Ribbons, Mesh Surface, Warp Tunnel and Converging Paths now use their exact v4
+native compositions. Forty native slots retain 33 unchanged supplied SVGs and
+seven Warp Frame primitives on the 324×168 plane at reference origin 24,20 inside
+the shared 372×264 Stage. Fractional render offsets use individual CSS translate
+so the browser preserves their subpixel paint placement. Supplied vector bytes,
+intrinsic dimensions, opacity, strokes, Frame radii and initial geometry remain
+unchanged. Previews and posters are rendered from the implementation.
+
+Native Ribbons has three supplied arc textures, Mesh has seven supplied ellipse
+textures and its 8px point, Warp has six outlined frames and its filled target,
+and Paths has ten supplied curves, ten endpoints and its two central circles.
+The full compositions retain all five original 30-point strands, all 48×101 Mesh
+samples, all eighteen squared-depth Warp frames and six rays, and all five complete
+original C/S paths with their ten base/reveal layers. Original model statements,
+datasets and copy remain present; source integration stays at 60Hz independently
+of the renderer. Native texture deformation samples the original model and keeps
+complete Canvas and SVG fallbacks. Full Paths uses the complete 680px scroll
+range and a padded SVG viewport that includes the original −20/520 endpoints.
+
+Real pointer, wheel, keys and moving touch remain available. Caller, viewport
+and document holds stay independent and queue deliberate input. Late browser
+scroll notifications cannot cancel replay or override queued Home. New key
+commands retarget native smooth scrolling; reduced motion uses immediate scroll
+and 150ms retained opacity feedback. Compact endpoints allow one rendered pixel
+of browser scroll precision while requiring the original 100% label and all five
+completed reveals. Full Paths labels use 18px type, preserving at least 11.25px
+on the actual 360px detail route. Native Figma geometry is unchanged.
+
+The emitted-source verifier compares 12,996 exact source states, 864 input
+checkpoints, 324 complete command witnesses and 108 original-palette pixel
+checkpoints. It also checks the complete original scroll program, 669 scroll
+assertions, 24 native geometries, six compact full layouts, 32 physical-input
+cases, sixteen independent hold cases and eighteen graphics recovery/fallback
+cases. All sixteen fresh network-blocked exports retain their complete full
+models and can remount their native compositions. The actual dev site passes
+sixteen desktop/390px/375px/360px routes and preserves its tanziro.com footer link.
+The library check now targets the visible scroll region when a demo supplies
+separate native and full viewports.
+
+Original capture version 1 preserved signed zeros in state but lost them in
+serialized drawing commands. Version 2 restores 250 signed command zeros without
+changing any of the original 4,332 states, 288 input checkpoints or 108 pixel
+hashes. Both producers, capture sets and diagnostics remain preserved. This phase
+also preserves 515 prior helpers, 907 private inputs, 4,027 publication files,
+222 full snapshots and 184 accepted dial snapshots. The twelve other Showcase
+definitions, 325 other modules, 395 metadata rows and five shared runtime/style
+inputs remain unchanged. Baseline removal covers exactly this phase's four demos.
+
+The [Showcase surface timing report](performance/showcase-spatial-2026-11-22.json) retains all 32 native/full desktop DPR 1 and compact DPR 2 stories. Mesh runs for twelve seconds to include its complete original breathing phase; the other scenes run for eight seconds, including a complete six-second Paths replay. CPU 1 records 59.13–60.00fps, 19 intervals above 25ms and 5 long tasks; first trace Paint spans 8.38–61.07ms and maximum readiness is 48.10ms. CPU 4 records 30.38–59.88fps, 347 intervals above 25ms and 21 long tasks; first trace Paint spans 36.08–208.46ms and maximum readiness is 179.30ms. Fonts were prepared before mounting and own heavy checks had stopped; other applications were not controlled. Every trace and outlier is retained. The slowest sample is showcase-mesh-surface-full-compact-dpr2-cpu4 at 30.38fps; investigate its retained trace during the final performance pass. These are component observations; cold-route, Lighthouse and site-wide performance gates remain open.
+
+Remaining existing demos are Orbital Path, Mask Reveal, Circular Gallery, Card
+Swap, Tracing Story, Elastic Slider, Formatted Metric, Rolling Balance, Focus
+Countdown and Financial Trend. Continue remediation before adding the 121 new
+or extension components, then finish Pro seams and the final audits.
 
 ## Six Showcase fields
 

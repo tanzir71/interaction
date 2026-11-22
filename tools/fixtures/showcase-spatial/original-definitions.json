@@ -1,0 +1,174 @@
+[
+  {
+    "id": "showcase-ribbons",
+    "title": "Elastic Ribbons",
+    "cat": "Interactive Showcase",
+    "rootClass": "d-show-ribbons",
+    "tags": [
+      "canvas",
+      "pointer",
+      "spring"
+    ],
+    "libs": [],
+    "hint": "Move in wide arcs · the ribbons follow",
+    "desc": "Five trailing lines follow a chain of damped positions. Each strand uses a slightly different response, creating a layered ribbon that stretches during quick movements and settles smoothly.",
+    "seen": "An original vanilla implementation inspired by React Bits / Ribbons.",
+    "source": {
+      "name": "React Bits / Ribbons",
+      "url": "https://reactbits.dev/animations/ribbons"
+    },
+    "html": "<div class=\"d-show-ribbons\" tabindex=\"0\" role=\"region\" aria-label=\"Elastic Ribbons. Arrow keys move the pointer; Enter activates the effect.\"><canvas aria-hidden=\"true\"></canvas><div class=\"d-show-ribbons-meta\"><span>INTERACTION STUDY</span><b>SPRING</b></div></div>",
+    "css": ".d-show-ribbons{position:relative;width:100%;height:320px;overflow:hidden;background:#0a0a0b;color:#ececef;font-family:\"Inter\",system-ui,sans-serif;isolation:isolate;container-type:inline-size}.d-show-ribbons *{box-sizing:border-box}.d-show-ribbons:focus-visible{outline:1px solid #fa7319;outline-offset:-5px}.d-show-ribbons canvas{display:block;width:100%;height:100%}.d-show-ribbons .d-show-ribbons-meta{position:absolute;inset:18px 20px auto;display:flex;justify-content:space-between;pointer-events:none;font:8px/1.4 \"Inter\",system-ui,sans-serif;letter-spacing:0.06em;color:#727279;z-index:3}.d-show-ribbons .d-show-ribbons-meta b{font-weight:400;color:#fa7319}.d-show-ribbons button{font:inherit;cursor:pointer}.d-show-ribbons button:focus-visible,.d-show-ribbons input:focus-visible{outline:2px solid #fa7319;outline-offset:4px}@media(prefers-reduced-motion:reduce){.d-show-ribbons *, .d-show-ribbons *:before{animation:none!important;transition:none!important}}.d-show-ribbons{touch-action:pan-y}\n/* Refined type, spacing and quiet interaction controls. */\n.d-show-ribbons{font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-show-ribbons :is(button,input,select){font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-show-ribbons button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-show-ribbons-meta{display:none}.d-show-ribbons button{font:400 11px \"Inter\",system-ui,sans-serif;letter-spacing:0;border-radius:5px;border-color:#ffffff1c}.d-show-ribbons [class$=\"-readout\"]{font-family:\"Inter\",system-ui,sans-serif;font-weight:400;letter-spacing:0;font-variant-numeric:tabular-nums}.d-show-ribbons .d-show-ribbons-meta{display:none}",
+    "js": "return (function canvasRuntime(root, factory) {\n    const canvas = root.querySelector('canvas'), ctx = canvas.getContext('2d');\n    if (!ctx) { root.textContent = 'Canvas is unavailable in this browser.'; return; }\n    const media = matchMedia('(prefers-reduced-motion: reduce)');\n    const api = { ctx, w: 400, h: 320, x: 220, y: 164, down: false, active: false, inside: false, reduced: media.matches };\n    let disposed = false, visible = true, frame = 0, last = 0, elapsed = 0;\n    const scene = factory(api);\n    const draw = dt => { ctx.clearRect(0,0,api.w,api.h); scene.draw(elapsed,dt); };\n    const tick = now => {\n      if (disposed || !root.isConnected) return;\n      const dt = Math.min((now - (last || now))/1000, .032); last = now;\n      if (visible && !document.hidden) { elapsed += dt; draw(dt); }\n      if (!api.reduced) frame = requestAnimationFrame(tick);\n    };\n    const resize = () => {\n      api.w = root.clientWidth; api.h = root.clientHeight;\n      const dpr = Math.min(devicePixelRatio || 1,2);\n      canvas.width = Math.round(api.w*dpr); canvas.height = Math.round(api.h*dpr);\n      ctx.setTransform(dpr,0,0,dpr,0,0);\n      if (scene.resize) scene.resize();\n      draw(0);\n    };\n    const locate = e => {\n      const box = root.getBoundingClientRect();\n      api.x = (e.clientX-box.left)*api.w/box.width; api.y = (e.clientY-box.top)*api.h/box.height;\n      api.active = true; api.inside = true; root.dataset.interacted = 'true';\n    };\n    const move = e => { locate(e); if(scene.move)scene.move(); if(api.reduced)draw(0); };\n    const down = e => { locate(e); api.down=true; root.setPointerCapture(e.pointerId); if(scene.down)scene.down(); if(api.reduced)draw(0); };\n    const up = () => { api.down=false; if(scene.up)scene.up(); if(api.reduced)draw(0); };\n    const key = e => {\n      if (!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' ','Enter'].includes(e.key)) return;\n      e.preventDefault(); api.active = true; api.inside = true; root.dataset.interacted = 'true';\n      if(e.key==='ArrowLeft')api.x-=20; if(e.key==='ArrowRight')api.x+=20;\n      if(e.key==='ArrowUp')api.y-=20; if(e.key==='ArrowDown')api.y+=20;\n      api.x=Math.max(0,Math.min(api.w,api.x)); api.y=Math.max(0,Math.min(api.h,api.y));\n      if(e.key===' '||e.key==='Enter'){ if(scene.down)scene.down(); }\n      if(scene.move)scene.move(); draw(0);\n    };\n    root.addEventListener('pointermove',move); root.addEventListener('pointerdown',down);\n    root.addEventListener('pointerup',up); root.addEventListener('pointercancel',up);\n    root.addEventListener('pointerleave',()=>{if(!api.down){api.inside=false;if(api.reduced)draw(0);}});\n    root.addEventListener('lostpointercapture',up); root.addEventListener('keydown',key);\n    const observer=new ResizeObserver(resize); observer.observe(root);\n    const viewport=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}); viewport.observe(root);\n    const change=()=>{api.reduced=media.matches;cancelAnimationFrame(frame);last=0;draw(0);if(!api.reduced)frame=requestAnimationFrame(tick);};\n    media.addEventListener('change',change); resize(); change();\n    return ()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();viewport.disconnect();media.removeEventListener('change',change);};\n  })(root, function(a){const strands=Array.from({length:5},()=>Array.from({length:30},()=>({x:200,y:170})));return{draw(t,dt){const c=a.ctx,px=a.active?a.x:a.w*.5+Math.cos(t*.8)*a.w*.24,py=a.active?a.y:170+Math.sin(t*1.6)*65;\n    strands.forEach((points,j)=>{points.forEach((p,i)=>{if(a.reduced){p.x=px-i*5;p.y=py+Math.sin(i*.15+j*.2)*22+j*4;return;}const target=i?points[i-1]:{x:px,y:py+j*3},factor=1-Math.pow(1-(.35-j*.035),Math.max(dt*60,.01));p.x+=(target.x-p.x)*factor;p.y+=(target.y-p.y)*factor;});c.beginPath();points.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.strokeStyle=j===0?'#fa7319':'rgba(190,190,200,'+(.6-j*.09)+')';c.lineWidth=2-j*.25;c.lineCap='round';c.stroke();});\n  }};});",
+    "prompt": "Build a self-contained Elastic Ribbons interaction. Five trailing lines follow a chain of damped positions. Each strand uses a slightly different response, creating a layered ribbon that stretches during quick movements and settles smoothly. Use a 320px-high near-black stage, a disciplined grayscale palette with #fa7319 as the only accent, and crisp 1px linework. Move in wide arcs · the ribbons follow. Support Pointer Events, proportional local coordinates, arrow-key navigation and Enter activation. Cap canvas DPR at 2 and delta time at 32ms; resize using ResizeObserver. Stop rendering when offscreen, and cancel animation frames and disconnect observers on unmount. Respect live prefers-reduced-motion changes with a representative static state and direct input updates. Keep HTML, CSS, and JavaScript standalone with no network dependencies.\n\nUse the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
+    },
+    "useCases": [
+      "canvas",
+      "pointer",
+      "spring"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "showcase-mesh-surface",
+    "title": "Contour Mesh Surface",
+    "cat": "Interactive Showcase",
+    "rootClass": "d-show-mesh-surface",
+    "tags": [
+      "canvas",
+      "pointer",
+      "surface"
+    ],
+    "libs": [],
+    "hint": "Move to reshape the material",
+    "desc": "A sculptural contour surface folds in response to pointer position. This lightweight Canvas 2D study translates the reference’s material movement into fine orange and graphite linework rather than reproducing its shader.",
+    "seen": "An original vanilla implementation inspired by Paper Shaders / Mesh Gradient.",
+    "source": {
+      "name": "Paper Shaders / Mesh Gradient",
+      "url": "https://shaders.paper.design"
+    },
+    "html": "<div class=\"d-show-mesh-surface\" tabindex=\"0\" role=\"region\" aria-label=\"Contour Mesh Surface. Arrow keys move the pointer; Enter activates the effect.\"><canvas aria-hidden=\"true\"></canvas><div class=\"d-show-mesh-surface-meta\"><span>INTERACTION STUDY</span><b>SURFACE</b></div></div>",
+    "css": ".d-show-mesh-surface{position:relative;width:100%;height:320px;overflow:hidden;background:#0a0a0b;color:#ececef;font-family:\"Inter\",system-ui,sans-serif;isolation:isolate;container-type:inline-size}.d-show-mesh-surface *{box-sizing:border-box}.d-show-mesh-surface:focus-visible{outline:1px solid #fa7319;outline-offset:-5px}.d-show-mesh-surface canvas{display:block;width:100%;height:100%}.d-show-mesh-surface .d-show-mesh-surface-meta{position:absolute;inset:18px 20px auto;display:flex;justify-content:space-between;pointer-events:none;font:8px/1.4 \"Inter\",system-ui,sans-serif;letter-spacing:0.06em;color:#727279;z-index:3}.d-show-mesh-surface .d-show-mesh-surface-meta b{font-weight:400;color:#fa7319}.d-show-mesh-surface button{font:inherit;cursor:pointer}.d-show-mesh-surface button:focus-visible,.d-show-mesh-surface input:focus-visible{outline:2px solid #fa7319;outline-offset:4px}@media(prefers-reduced-motion:reduce){.d-show-mesh-surface *, .d-show-mesh-surface *:before{animation:none!important;transition:none!important}}.d-show-mesh-surface{touch-action:pan-y}\n/* Refined type, spacing and quiet interaction controls. */\n.d-show-mesh-surface{font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-show-mesh-surface :is(button,input,select){font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-show-mesh-surface button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-show-mesh-surface-meta{display:none}.d-show-mesh-surface button{font:400 11px \"Inter\",system-ui,sans-serif;letter-spacing:0;border-radius:5px;border-color:#ffffff1c}.d-show-mesh-surface [class$=\"-readout\"]{font-family:\"Inter\",system-ui,sans-serif;font-weight:400;letter-spacing:0;font-variant-numeric:tabular-nums}.d-show-mesh-surface .d-show-mesh-surface-meta{display:none}",
+    "js": "return (function canvasRuntime(root, factory) {\n    const canvas = root.querySelector('canvas'), ctx = canvas.getContext('2d');\n    if (!ctx) { root.textContent = 'Canvas is unavailable in this browser.'; return; }\n    const media = matchMedia('(prefers-reduced-motion: reduce)');\n    const api = { ctx, w: 400, h: 320, x: 220, y: 164, down: false, active: false, inside: false, reduced: media.matches };\n    let disposed = false, visible = true, frame = 0, last = 0, elapsed = 0;\n    const scene = factory(api);\n    const draw = dt => { ctx.clearRect(0,0,api.w,api.h); scene.draw(elapsed,dt); };\n    const tick = now => {\n      if (disposed || !root.isConnected) return;\n      const dt = Math.min((now - (last || now))/1000, .032); last = now;\n      if (visible && !document.hidden) { elapsed += dt; draw(dt); }\n      if (!api.reduced) frame = requestAnimationFrame(tick);\n    };\n    const resize = () => {\n      api.w = root.clientWidth; api.h = root.clientHeight;\n      const dpr = Math.min(devicePixelRatio || 1,2);\n      canvas.width = Math.round(api.w*dpr); canvas.height = Math.round(api.h*dpr);\n      ctx.setTransform(dpr,0,0,dpr,0,0);\n      if (scene.resize) scene.resize();\n      draw(0);\n    };\n    const locate = e => {\n      const box = root.getBoundingClientRect();\n      api.x = (e.clientX-box.left)*api.w/box.width; api.y = (e.clientY-box.top)*api.h/box.height;\n      api.active = true; api.inside = true; root.dataset.interacted = 'true';\n    };\n    const move = e => { locate(e); if(scene.move)scene.move(); if(api.reduced)draw(0); };\n    const down = e => { locate(e); api.down=true; root.setPointerCapture(e.pointerId); if(scene.down)scene.down(); if(api.reduced)draw(0); };\n    const up = () => { api.down=false; if(scene.up)scene.up(); if(api.reduced)draw(0); };\n    const key = e => {\n      if (!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' ','Enter'].includes(e.key)) return;\n      e.preventDefault(); api.active = true; api.inside = true; root.dataset.interacted = 'true';\n      if(e.key==='ArrowLeft')api.x-=20; if(e.key==='ArrowRight')api.x+=20;\n      if(e.key==='ArrowUp')api.y-=20; if(e.key==='ArrowDown')api.y+=20;\n      api.x=Math.max(0,Math.min(api.w,api.x)); api.y=Math.max(0,Math.min(api.h,api.y));\n      if(e.key===' '||e.key==='Enter'){ if(scene.down)scene.down(); }\n      if(scene.move)scene.move(); draw(0);\n    };\n    root.addEventListener('pointermove',move); root.addEventListener('pointerdown',down);\n    root.addEventListener('pointerup',up); root.addEventListener('pointercancel',up);\n    root.addEventListener('pointerleave',()=>{if(!api.down){api.inside=false;if(api.reduced)draw(0);}});\n    root.addEventListener('lostpointercapture',up); root.addEventListener('keydown',key);\n    const observer=new ResizeObserver(resize); observer.observe(root);\n    const viewport=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}); viewport.observe(root);\n    const change=()=>{api.reduced=media.matches;cancelAnimationFrame(frame);last=0;draw(0);if(!api.reduced)frame=requestAnimationFrame(tick);};\n    media.addEventListener('change',change); resize(); change();\n    return ()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();viewport.disconnect();media.removeEventListener('change',change);};\n  })(root, function(a){return{draw(t){const c=a.ctx,px=a.active?a.x:a.w*.5,py=a.active?a.y:165;c.save();c.translate(a.w/2,170);const sx=(px/a.w-.5)*1.5,sy=(py/a.h-.5)*1.3;\n    for(let j=0;j<48;j++){const v=j/47*Math.PI;c.beginPath();for(let i=0;i<=100;i++){const u=i/100*Math.PI*2,r=80+Math.sin(u*3+v*2+t*.55)*10;const x=Math.cos(u)*Math.sin(v)*r,y=Math.cos(v)*83+Math.sin(u)*Math.sin(v)*23;const xx=x+Math.sin(v*2)*sx*24,yy=y+Math.cos(u)*sy*18;i?c.lineTo(xx,yy):c.moveTo(xx,yy);}c.strokeStyle=j>17&&j<26?'rgba(250,115,25,.8)':'rgba(180,180,189,.35)';c.lineWidth=.75;c.stroke();}c.restore();\n  }};});",
+    "prompt": "Build a self-contained Contour Mesh Surface interaction. A sculptural contour surface folds in response to pointer position. This lightweight Canvas 2D study translates the reference’s material movement into fine orange and graphite linework rather than reproducing its shader. Use a 320px-high near-black stage, a disciplined grayscale palette with #fa7319 as the only accent, and crisp 1px linework. Move to reshape the material. Support Pointer Events, proportional local coordinates, arrow-key navigation and Enter activation. Cap canvas DPR at 2 and delta time at 32ms; resize using ResizeObserver. Stop rendering when offscreen, and cancel animation frames and disconnect observers on unmount. Respect live prefers-reduced-motion changes with a representative static state and direct input updates. Keep HTML, CSS, and JavaScript standalone with no network dependencies.\n\nUse the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
+    },
+    "useCases": [
+      "canvas",
+      "pointer",
+      "surface"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "showcase-warp-tunnel",
+    "title": "Perspective Warp",
+    "cat": "Interactive Showcase",
+    "rootClass": "d-show-warp-tunnel",
+    "tags": [
+      "canvas",
+      "pointer",
+      "depth"
+    ],
+    "libs": [],
+    "hint": "Move the vanishing point · click to accelerate",
+    "desc": "Nested wire rectangles travel out of a shared vanishing point. Pointer position shifts the perspective, while a brief click impulse changes the speed of the tunnel.",
+    "seen": "An original vanilla implementation inspired by Magic UI / Warp Background.",
+    "source": {
+      "name": "Magic UI / Warp Background",
+      "url": "https://magicui.design/docs/components/warp-background"
+    },
+    "html": "<div class=\"d-show-warp-tunnel\" tabindex=\"0\" role=\"region\" aria-label=\"Perspective Warp. Arrow keys move the pointer; Enter activates the effect.\"><canvas aria-hidden=\"true\"></canvas><div class=\"d-show-warp-tunnel-meta\"><span>INTERACTION STUDY</span><b>DEPTH</b></div></div>",
+    "css": ".d-show-warp-tunnel{position:relative;width:100%;height:320px;overflow:hidden;background:#0a0a0b;color:#ececef;font-family:\"Inter\",system-ui,sans-serif;isolation:isolate;container-type:inline-size}.d-show-warp-tunnel *{box-sizing:border-box}.d-show-warp-tunnel:focus-visible{outline:1px solid #fa7319;outline-offset:-5px}.d-show-warp-tunnel canvas{display:block;width:100%;height:100%}.d-show-warp-tunnel .d-show-warp-tunnel-meta{position:absolute;inset:18px 20px auto;display:flex;justify-content:space-between;pointer-events:none;font:8px/1.4 \"Inter\",system-ui,sans-serif;letter-spacing:0.06em;color:#727279;z-index:3}.d-show-warp-tunnel .d-show-warp-tunnel-meta b{font-weight:400;color:#fa7319}.d-show-warp-tunnel button{font:inherit;cursor:pointer}.d-show-warp-tunnel button:focus-visible,.d-show-warp-tunnel input:focus-visible{outline:2px solid #fa7319;outline-offset:4px}@media(prefers-reduced-motion:reduce){.d-show-warp-tunnel *, .d-show-warp-tunnel *:before{animation:none!important;transition:none!important}}.d-show-warp-tunnel{touch-action:pan-y}\n/* Refined type, spacing and quiet interaction controls. */\n.d-show-warp-tunnel{font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-show-warp-tunnel :is(button,input,select){font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-show-warp-tunnel button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-show-warp-tunnel-meta{display:none}.d-show-warp-tunnel button{font:400 11px \"Inter\",system-ui,sans-serif;letter-spacing:0;border-radius:5px;border-color:#ffffff1c}.d-show-warp-tunnel [class$=\"-readout\"]{font-family:\"Inter\",system-ui,sans-serif;font-weight:400;letter-spacing:0;font-variant-numeric:tabular-nums}.d-show-warp-tunnel .d-show-warp-tunnel-meta{display:none}",
+    "js": "return (function canvasRuntime(root, factory) {\n    const canvas = root.querySelector('canvas'), ctx = canvas.getContext('2d');\n    if (!ctx) { root.textContent = 'Canvas is unavailable in this browser.'; return; }\n    const media = matchMedia('(prefers-reduced-motion: reduce)');\n    const api = { ctx, w: 400, h: 320, x: 220, y: 164, down: false, active: false, inside: false, reduced: media.matches };\n    let disposed = false, visible = true, frame = 0, last = 0, elapsed = 0;\n    const scene = factory(api);\n    const draw = dt => { ctx.clearRect(0,0,api.w,api.h); scene.draw(elapsed,dt); };\n    const tick = now => {\n      if (disposed || !root.isConnected) return;\n      const dt = Math.min((now - (last || now))/1000, .032); last = now;\n      if (visible && !document.hidden) { elapsed += dt; draw(dt); }\n      if (!api.reduced) frame = requestAnimationFrame(tick);\n    };\n    const resize = () => {\n      api.w = root.clientWidth; api.h = root.clientHeight;\n      const dpr = Math.min(devicePixelRatio || 1,2);\n      canvas.width = Math.round(api.w*dpr); canvas.height = Math.round(api.h*dpr);\n      ctx.setTransform(dpr,0,0,dpr,0,0);\n      if (scene.resize) scene.resize();\n      draw(0);\n    };\n    const locate = e => {\n      const box = root.getBoundingClientRect();\n      api.x = (e.clientX-box.left)*api.w/box.width; api.y = (e.clientY-box.top)*api.h/box.height;\n      api.active = true; api.inside = true; root.dataset.interacted = 'true';\n    };\n    const move = e => { locate(e); if(scene.move)scene.move(); if(api.reduced)draw(0); };\n    const down = e => { locate(e); api.down=true; root.setPointerCapture(e.pointerId); if(scene.down)scene.down(); if(api.reduced)draw(0); };\n    const up = () => { api.down=false; if(scene.up)scene.up(); if(api.reduced)draw(0); };\n    const key = e => {\n      if (!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' ','Enter'].includes(e.key)) return;\n      e.preventDefault(); api.active = true; api.inside = true; root.dataset.interacted = 'true';\n      if(e.key==='ArrowLeft')api.x-=20; if(e.key==='ArrowRight')api.x+=20;\n      if(e.key==='ArrowUp')api.y-=20; if(e.key==='ArrowDown')api.y+=20;\n      api.x=Math.max(0,Math.min(api.w,api.x)); api.y=Math.max(0,Math.min(api.h,api.y));\n      if(e.key===' '||e.key==='Enter'){ if(scene.down)scene.down(); }\n      if(scene.move)scene.move(); draw(0);\n    };\n    root.addEventListener('pointermove',move); root.addEventListener('pointerdown',down);\n    root.addEventListener('pointerup',up); root.addEventListener('pointercancel',up);\n    root.addEventListener('pointerleave',()=>{if(!api.down){api.inside=false;if(api.reduced)draw(0);}});\n    root.addEventListener('lostpointercapture',up); root.addEventListener('keydown',key);\n    const observer=new ResizeObserver(resize); observer.observe(root);\n    const viewport=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}); viewport.observe(root);\n    const change=()=>{api.reduced=media.matches;cancelAnimationFrame(frame);last=0;draw(0);if(!api.reduced)frame=requestAnimationFrame(tick);};\n    media.addEventListener('change',change); resize(); change();\n    return ()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();viewport.disconnect();media.removeEventListener('change',change);};\n  })(root, function(a){let boost=0;return{down(){boost=1;},draw(t,dt){boost=Math.max(0,boost-dt*.4);const c=a.ctx,cx=a.active?a.x:a.w*.5,cy=a.active?a.y:166;for(let i=0;i<18;i++){const z=((i/18+t*(.025+boost*.05))%1),s=z*z,w=a.w*s*1.7,h=a.h*s*1.4;c.strokeStyle=i%4===0?'rgba(250,115,25,'+(s*.7)+')':'rgba(150,150,160,'+(s*.38)+')';c.lineWidth=.8;c.strokeRect(cx-w/2,cy-h/2,w,h);}c.strokeStyle='#2c2c31';[[0,0],[a.w,0],[0,a.h],[a.w,a.h],[0,a.h/2],[a.w,a.h/2]].forEach(p=>{c.beginPath();c.moveTo(cx,cy);c.lineTo(...p);c.stroke();});c.fillStyle='#fa7319';c.fillRect(cx-2,cy-2,4,4);\n  }};});",
+    "prompt": "Build a self-contained Perspective Warp interaction. Nested wire rectangles travel out of a shared vanishing point. Pointer position shifts the perspective, while a brief click impulse changes the speed of the tunnel. Use a 320px-high near-black stage, a disciplined grayscale palette with #fa7319 as the only accent, and crisp 1px linework. Move the vanishing point · click to accelerate. Support Pointer Events, proportional local coordinates, arrow-key navigation and Enter activation. Cap canvas DPR at 2 and delta time at 32ms; resize using ResizeObserver. Stop rendering when offscreen, and cancel animation frames and disconnect observers on unmount. Respect live prefers-reduced-motion changes with a representative static state and direct input updates. Keep HTML, CSS, and JavaScript standalone with no network dependencies.\n\nUse the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "region"
+    },
+    "useCases": [
+      "canvas",
+      "pointer",
+      "depth"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  },
+  {
+    "id": "showcase-converging-paths",
+    "title": "Converging Paths",
+    "cat": "Interactive Showcase",
+    "rootClass": "d-show-converging-paths",
+    "tags": [
+      "svg",
+      "scroll",
+      "path"
+    ],
+    "libs": [],
+    "hint": "Scroll inside the canvas · trace the signal",
+    "desc": "Five independently drawn SVG paths converge into a single signal. A local scroll container maps progress to normalized stroke lengths, keeping the effect usable inside a component preview.",
+    "source": {
+      "name": "Aceternity / Google Gemini Effect",
+      "url": "https://ui.aceternity.com/components/google-gemini-effect"
+    },
+    "seen": "Original vanilla study inspired by Aceternity / Google Gemini Effect.",
+    "html": "<div class=\"d-show-converging-paths\"><div class=\"d-show-converging-paths-scroll\" tabindex=\"0\" aria-label=\"Scroll to draw converging paths\"><div class=\"d-show-converging-paths-track\"><div class=\"d-show-converging-paths-sticky\"><div class=\"d-show-converging-paths-meta\"><span>FIVE INPUTS / ONE SIGNAL</span><b class=\"d-show-converging-paths-value\">0%</b></div><svg viewBox=\"0 0 500 260\" aria-label=\"Five paths converge into one output\"></svg><span class=\"d-show-converging-paths-label\">Everything, connected.</span></div></div></div></div>",
+    "css": ".d-show-converging-paths{position:relative;width:100%;height:320px;overflow:hidden;background:#0a0a0b;color:#ececef;font-family:\"Inter\",system-ui,sans-serif;isolation:isolate;container-type:inline-size}.d-show-converging-paths *{box-sizing:border-box}.d-show-converging-paths:focus-visible{outline:1px solid #fa7319;outline-offset:-5px}.d-show-converging-paths canvas{display:block;width:100%;height:100%}.d-show-converging-paths .d-show-converging-paths-meta{position:absolute;inset:18px 20px auto;display:flex;justify-content:space-between;pointer-events:none;font:8px/1.4 \"Inter\",system-ui,sans-serif;letter-spacing:0.06em;color:#727279;z-index:3}.d-show-converging-paths .d-show-converging-paths-meta b{font-weight:400;color:#fa7319}.d-show-converging-paths button{font:inherit;cursor:pointer}.d-show-converging-paths button:focus-visible,.d-show-converging-paths input:focus-visible{outline:2px solid #fa7319;outline-offset:4px}@media(prefers-reduced-motion:reduce){.d-show-converging-paths *, .d-show-converging-paths *:before{animation:none!important;transition:none!important}}.d-show-converging-paths-scroll{height:320px;overflow-y:auto;overscroll-behavior:contain}.d-show-converging-paths-track{height:1000px}.d-show-converging-paths-sticky{position:sticky;top:0;height:320px}.d-show-converging-paths svg{position:absolute;inset:45px 0 0;width:100%;height:230px;overflow:visible}.d-show-converging-paths-label{position:absolute;bottom:27px;left:0;right:0;text-align:center;font-size:11px;color:#909097}\n/* Refined type, spacing and quiet interaction controls. */\n.d-show-converging-paths{font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-show-converging-paths :is(button,input,select){font-family:\"Inter\",system-ui,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0}.d-show-converging-paths button:focus-visible{outline:2px solid #9ead9e;outline-offset:3px}.d-show-converging-paths-meta{display:none}.d-show-converging-paths button{font:400 11px \"Inter\",system-ui,sans-serif;letter-spacing:0;border-radius:5px;border-color:#ffffff1c}.d-show-converging-paths [class$=\"-readout\"]{font-family:\"Inter\",system-ui,sans-serif;font-weight:400;letter-spacing:0;font-variant-numeric:tabular-nums}.d-show-converging-paths .d-show-converging-paths-meta{display:none}",
+    "js": "return (function(root){const svg=root.querySelector('svg'),scroller=root.querySelector('[tabindex]'),ns='http://www.w3.org/2000/svg',paths=[];for(let i=0;i<5;i++){const y=30+i*50,d='M -20 '+y+' C 120 '+y+' 125 130 255 130 S 400 130 520 130';['#25252a',i===2?'#fa7319':'#c5c5ce'].forEach((color,j)=>{const path=document.createElementNS(ns,'path');path.setAttribute('d',d);path.setAttribute('fill','none');path.setAttribute('stroke',color);path.setAttribute('stroke-width',j?1.5:1);path.setAttribute('pathLength','1');if(j){path.style.strokeDasharray='1';paths.push(path);}svg.appendChild(path);});}\n      const update=()=>{const progress=scroller.scrollTop/(scroller.scrollHeight-scroller.clientHeight);root.dataset.progress=progress.toFixed(3);paths.forEach((p,i)=>p.style.strokeDashoffset=String(1-Math.min(1,.12+progress*1.2-i*.025)));root.querySelector('[class$=\"-value\"]').textContent=Math.round(progress*100)+'%';};scroller.addEventListener('scroll',update,{passive:true});update();})(root);",
+    "prompt": "Create Converging Paths as a self-contained, responsive web interaction. Five independently drawn SVG paths converge into a single signal. A local scroll container maps progress to normalized stroke lengths, keeping the effect usable inside a component preview. Interaction: Scroll inside the canvas · trace the signal. Use the Pointer Events API and keyboard-accessible native controls. Keep the stage 320px tall, near-black #0a0a0b with subtle graphite structural edges, Inter interface type with regular Inter measurements, and a single #fa7319 accent. Use deliberate negative space and smooth damped motion, with broad realistic material lighting and gentle gradient falloffs. Respect prefers-reduced-motion, provide a static initial composition, scope every selector to the root, clean up observers and animation frames on removal, and include HTML, CSS and JavaScript in a copyable standalone document.\n\nUse the final composition: regular Inter for interface text and all numerical values with tabular-nums; keep labels in sentence case, normal tracking, and weights 400–500. Remove decorative engineering headers, preserve functional controls and accessible status. Keep the native 320px stage and a restrained palette with subtle borders. Any deliberate Newsreader editorial text in the source remains editorial, not UI.",
+    "designSize": "md",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "scroll",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": null
+    },
+    "useCases": [
+      "svg",
+      "scroll",
+      "path"
+    ],
+    "tier": "free",
+    "thumb": "full",
+    "addedAt": "2026-11"
+  }
+]
