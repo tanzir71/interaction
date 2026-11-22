@@ -120,6 +120,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The four new Forms & Inputs components use `tools/verify-forms-new.js`,
+  `tools/verify-forms-new-models.js`, `tools/verify-forms-new-input.js`,
+  `tools/verify-forms-new-clocks.js`, `tools/verify-forms-new-exports.js` and
+  `tools/verify-forms-new-holds.js` against the local 4173 server. Preserve all
+  81 captured native layers and 46 supplied SVG slots using nine unchanged files.
+  Native Upload retains its exact licensed Dusk photograph; its full sample uses
+  approved v2 forestDark. Keep both credits and 800/1600px hashes unchanged.
+  Full models retain twelve hours, sixty minutes, AM/PM, the complete 0–100
+  precision range and real file input/drop. The native picker first paints its
+  supplied five-minute stencil, then uses the full one-minute model after input.
+  Slide and Precision retain their documented sparse reference sizes. Compact
+  gradient labels must paint every glyph at 11px or more. Use absolute spring
+  settle/inertia boundaries and source-clock upload entrance/check paint; reduced
+  milestone timers must re-arm after an early wake. Tests cover actual scaled
+  mouse/keys/moving touch, 24 six-second 60/120/240Hz renderer stories, eight fresh
+  offline full/native contexts, independent holds, ordered intents, early timers,
+  Blob retirement, decode generations, capture and disposal. The catalog is 421;
+  99 new/extensions, Pro seams and final acceptance remain.
 - The seven new Layout & UI components use `tools/verify-layout-new.js`,
   `tools/verify-layout-new-input.js`, `tools/verify-layout-new-clocks.js`,
   `tools/verify-layout-new-exports.js`, `tools/verify-layout-new-holds.js` and

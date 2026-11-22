@@ -2,8 +2,9 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
-All 399 existing native compositions now follow their v4 references. Eighteen new
-Agent & AI UI, Buttons & Micro and Layout & UI components bring the catalog to 417; 103 new or extension
+All 399 existing native compositions now follow their v4 references. Twenty-two
+new Agent & AI UI, Buttons & Micro, Layout & UI and Forms & Inputs components
+bring the catalog to 421; 99 new or extension
 components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
@@ -41,10 +42,21 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 417 demos with 141 valid
+retaining their overflow/text checks. It now passes all 421 demos with 143 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
+
+The four Forms additions preserve all 81 native layers, 46 original SVG slots
+and complete hour/minute/precision/file models. Keep the native Dusk/full
+forestDark distinction, exact sparse controls, complete compact gradient glyphs,
+analytical spring and finite inertia boundaries, and source-clock upload entrance
+and success checks. The early-timer regression prevents reduced progress from
+stalling when a wake precedes its deadline by a fraction of a millisecond. Preserve
+real file input, stale decode rejection, held Blob retirement, independent pause
+owners, moving touch and eight fresh offline contexts. Twenty-four six-second
+renderer stories establish equal-time model and paint agreement; final timing,
+cold-route, theme/contrast and accessibility budgets remain separate work.
 
 The four Framer prompts now describe their native geometry and complete original
 full models. Preserve the original 30% one-shot entry threshold, early-intent

@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 417 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 421 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -113,6 +113,10 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Onboarding Checklist](https://intrx.vercel.app/#/c/ui-onboarding-checklist): press · Five local setup steps share a measured progress ring, drawn checks and a changing CTA. Complete the list to reveal its success state. · registry: /registry/c/ui-onboarding-checklist.json
 - [Inverse Tabs](https://intrx.vercel.app/#/c/ui-inverse-tabs): press · Design, Motion, Code and Ship share a moving light indicator. Difference blending inverts each letter as the pill passes beneath it. · registry: /registry/c/ui-inverse-tabs.json
 - [Selection Action Bar](https://intrx.vercel.app/#/c/ui-selection-bar): press · Select six local example items to reveal a floating action bar with a live count. Copy their names or remove the selected local rows. · registry: /registry/c/ui-selection-bar.json
+- [Slide to Confirm](https://intrx.vercel.app/#/c/form-slide-to-confirm): drag · Drag the thumb with bounded rubber-banding. Releasing beyond 80% confirms; earlier release returns. Arrow keys advance, End confirms, and Reset clears the local state. · registry: /registry/c/form-slide-to-confirm.json
+- [Picker Wheel](https://intrx.vercel.app/#/c/form-picker-wheel): drag · Three cylindrical wheels retain twelve hours, all sixty minutes and AM/PM. Drag with 0.92-per-60Hz-frame momentum, scroll or use Arrow/Home/End keys; every release snaps with the same spring. · registry: /registry/c/form-picker-wheel.json
+- [Precision Scrubber](https://intrx.vercel.app/#/c/form-precision-scrubber): drag · A 0–100 scrubber preserves 55.6 and its exact native lifted-knob camera. Horizontal sensitivity is ×1 near the track, ×0.5 at 40px and ×0.1 at 100px; keys and Shift provide direct fine adjustment. · registry: /registry/c/form-precision-scrubber.json
+- [Upload Dropzone](https://intrx.vercel.app/#/c/form-dropzone-morph): drag · A native file input or real drop creates a local file card. The zone inhales on dragover, morphs with a 350ms settle, advances measured progress updates and resolves into a drawn check. Replacing files cancels the old generation. · registry: /registry/c/form-dropzone-morph.json
 
 ## Motion
 

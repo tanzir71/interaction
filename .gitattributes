@@ -1,5 +1,7 @@
 # Figma artwork is embedded byte-for-byte in portable exports.
 assets/components/*.svg -text
+# Include nested component groups so their original SVG hashes survive checkout.
+assets/components/**/*.svg -text
 assets/components/raster-studies/*.svg -text
 assets/components/raster-simulations/*.svg -text
 tools/verification/raster-simulations-original.js -text

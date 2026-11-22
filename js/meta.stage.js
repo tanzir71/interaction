@@ -15523,5 +15523,127 @@ INTRX.meta({
       "accessible interactions"
     ],
     "addedAt": "2026-11"
+  },
+  "form-slide-to-confirm": {
+    "designSize": [
+      400,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "slide",
+      "accessible input"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-picker-wheel": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "picker",
+      "accessible input"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-precision-scrubber": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "precision",
+      "accessible input"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-dropzone-morph": {
+    "designSize": [
+      400,
+      420
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "simulate",
+        "label": "Simulate drop"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "upload",
+      "accessible input"
+    ],
+    "addedAt": "2026-11"
   }
 });

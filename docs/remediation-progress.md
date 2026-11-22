@@ -3,16 +3,65 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. Eighteen new Agent & AI UI,
-Buttons & Micro and Layout & UI components bring the catalog to 417; 103 new or extension components, Pro seams and final
+sixteen Showcase and four Framer compositions. Twenty-two new Agent & AI UI,
+Buttons & Micro, Layout & UI and Forms & Inputs components bring the catalog to
+421; 99 new or extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 417 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 141
+JavaScript. The fit audit boots all 421 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 143
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Four new Forms & Inputs components
+
+Slide to Confirm, Picker Wheel, Precision Scrubber and Upload Dropzone implement
+the fourth new-component group. Their native views retain 81 captured Figma
+layers and 46 supplied SVG instances using nine unchanged files, including the
+original fractional arrow, cursor, guide and tick offsets. Native Upload retains
+its exact licensed Dusk photograph; the full sample uses approved v2 forestDark.
+Both existing photo credits and their 800/1600px hashes remain unchanged.
+
+Slide preserves the supplied 76/172 native checkpoint, exact 220×48 track and
+40px thumb. Full starts empty. Release strictly beyond 80% confirms; earlier
+release returns with the measured velocity and 380/32/1 spring. Reset returns
+either view to zero; Replay restores its reference. Compact gradient text keeps
+the complete label at the 11px floor without changing its native frame. A finite
+source-clock check follows the actual spring settle deadline.
+
+Picker retains all twelve hours, sixty minutes and AM/PM. Its native first paint
+uses the supplied 15/20/25/30/35 stencil; input enters the complete one-minute
+cylinder. The 0.92-per-60Hz inertia hands off at an exact threshold or finite
+AM/PM boundary, then springs to a row. Five recycled rows keep projected glyphs
+readable. Drag, wheel, Arrow/Home/End and cross-column keys retain ordered intent
+through Pause; reduced rows remain flat.
+
+Precision retains the complete 0–100 value, 55.6 reference, forty-one supplied
+ticks and lifted native knob. The native camera maps 55.6 to its exact 110px
+fill; full uses a linear rail. Vertical distance selects ×1/×0.5/×0.1 at the
+40/100px thresholds. The active badge and dashed guide follow actual input;
+release carries velocity while preserving the semantic value. Shift keys use
+0.1 steps. Both sparse controls have written reference-size fill exceptions.
+
+Upload accepts real local files through native input or drop and preserves
+complete safe filenames. Dragover inhales the zone, the panel settles over 350ms,
+and four measured progress milestones resolve into a drawn check. Entrance,
+progress and completion use the component clock, so Pause freezes every painted
+layer. Reduced motion uses finite milestone timers that re-arm after an early
+wake. Replacement generations reject stale decodes, old Blob URLs retire after
+their retained paint, and disposal releases all previews, timers and captures.
+
+Six focused suites cover independent numerical models, exact native artwork,
+real mouse/keys/moving touch and file choosers, 390/375/360px full typography,
+44px full controls, 24 actual six-second renderer stories at 60/120/240Hz, eight
+fresh network-blocked full/native exports, independent caller/document/viewport
+and LiveTiles holds, queued releases, decode races and cleanup. Four refreshed
+posters and sixteen desktop/mobile dark/light dev routes retain the TanZiRo
+footer link. All 344 previous modules, 417 previous metadata records and seven
+shared inputs remain unchanged. Final performance and accessibility gates remain
+open for the complete 520-component handoff.
 
 ## Seven new Layout & UI components
 
