@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The six final Showcase compositions complete the sixteen-demo collection and
+bring existing visual remediation to 395/399. Four Framer demos, 121 new or
+extension components and Pro seams remain. Native Mask Reveal currently applies
+its aperture radius change immediately; review that transition against the
+prescribed motion recipe in the final motion pass. Preserve the exact 76px
+reference aperture, stationary photo crop, original full 65/130px model,
+interruptibility and independent holds when refining it. The profiler's first
+attempt exposed its fixture-relative full-photo base; the fixture now uses the
+actual site root and asserts 1600px full/800px thumbnail photo resolution. Both
+diagnostic runs and their traces remain retained.
+
+The first trace Paint can precede complete photographic readiness. The report's
+readiness measurement includes image decoding and font completion; use both
+fields when investigating cold detail loads rather than treating the first
+Paint event as proof that all photographs were visible.
+
+<!-- showcase-final-performance -->
+
+The [final Showcase timing report](performance/showcase-final-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. Path, Range and Story each complete one six-second Dock replay; Gallery, Cards and Mask receive six interrupted actions. CPU 1 records 59.88–60.00fps, 2 intervals above 25ms and 0 long tasks; first trace Paint spans 10.49–42.65ms and maximum readiness is 222.40ms. CPU 4 records 59.00–60.00fps, 17 intervals above 25ms and 12 long tasks; first trace Paint spans 50.80–158.88ms and maximum readiness is 219.10ms. The slowest sample is showcase-orbital-path-full-compact-dpr2-cpu4 at 59.00fps. No prepared-font sample exceeds 300ms first trace Paint. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. Every trace and outlier is retained, including the fixture document-base and photo-filter diagnostics. Decoded photos assert 1600px full or 800px thumbnail resolution. These observations leave cold-route, Lighthouse and site-wide timing gates open. Preserve actual-clock card interruption and Story replay, independent scroll/capture ownership, canonical source clocks and the original full models during the final audit.
+
 The shared light-stage background still uses the legacy `#F4F4F2`. The v4 Kit uses a neutral `#F4F4F4` base with a white upper glow. The captured [Dark Volume tile](https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=89-343) has pixels (245,245,245) at (60,50) and (244,244,244) at (60,200); the three subsequent knob tiles have the same samples and their Kit metadata confirms the base and glow. The earlier flat `#F5F5F5` note inferred too much from one upper pixel. Reproduce the neutral base and glow in shared stages and portable exports during the final shell pass. Preserve the frozen v1 runtime, stage, exporter, style and font inputs; use a new stylesheet and exporter extension for the correction. The supplied component SVGs remain unchanged.
 
 The shared light-stage Dock also needs its v4 Kit treatment. The reference uses a dark filled pill with light text; current previews use a light pill with dark text. Check the supplied 53×28 px Drag reference and label typography when applying the shared theme correction. Component demos must continue to use the shared Dock.

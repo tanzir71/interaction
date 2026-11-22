@@ -1,0 +1,4245 @@
+{
+  "at": "2026-11-22T10:57:38.854Z",
+  "sourceFile": "js/demos.showcase.js",
+  "sourceSHA256": "2cf16447a5394a9acd6d83ece10d831acfc269b1580f3b5123bca24c872baabd",
+  "harnessSHA256": "95996a54e28adf551eaa5a08d83e5941ed519576332c34355ef26a1cc4f9b723",
+  "runId": "2026-11-22T10-57-38-840Z-2cf16447a539",
+  "inputs": {
+    "tools/verification/showcase-final-harness.js": "2288717aa7376552489562ea83893b545a8f1602a72065cae582f66e6c53b7ed",
+    "tools/fixtures/showcase-final/rig.html": "7aec6eb2e53ccd12a3e01279b68c2fdcbc971f250af48b1674f159dcacad5200",
+    "tools/fixtures/showcase-final/configs.json": "56f3af5e421bae20f68deb39b1b222f2ff756e6c8ca0247122008c9bb467d46b",
+    "tools/load-registry.js": "3d9a5b9c609adb1bd8f6b5c401e4e249934d9c4d5fd80e872837a370271b9efb",
+    "js/registry-files.json": "e1131afdf80eee0f959371eea3afd533f01d7c568c2cd9deb0c042ee7c476314",
+    "js/meta.stage.js": "746072cc3fcde66e70774f668b86ff1866b6ef2da4141f470b72dcd33dd139d3",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "assets/photo-credits.json": "72ca83f271f4ab8a269d885b8a42ddcf57ba095cb470300b96ba1c95e2ed139c",
+    "assets/demo-assets.json": "0249247f5896b7081ac2a2c3edc6dec29aac5386e7b1a140d585b8a5ded8380b",
+    "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+    "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+    "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+    "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+    "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+    "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+    "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+    "assets/images/cityNight.webp": "a71c690d4ac18dfc307b6d7359914b0e49b6bc374bb1e169b4d7444b59371995",
+    "assets/images/cityNight-800.webp": "b3c751386ba8699adf8cf48a2da5e4a45bca28330056e6fa48aa9f053d3e6229",
+    "assets/images/ocean.webp": "327be856692ceb6cc9d6417a4c62b47bbb89e0d835b0c664edbd5fdca76415fb",
+    "assets/images/ocean-800.webp": "56282e0ccb7ddeabed24dbe2e627f86b3d48dae25ae6a6c90244d3b1a9b245e9",
+    "assets/images/forestDark.webp": "b633345a713a8c8e548c779b4376a71110ab9abd080efee88e4b9910da7cb176",
+    "assets/images/forestDark-800.webp": "153327d19d550da4c4531fcd150bb391cbb7d4b7c98984c6ea289230c56a5dd5",
+    "assets/images/cityTeal.webp": "ce35cf5a5a093a096e0c5f9bd06fb042d39cbb33f4155da6653714f32a4a6bdc",
+    "assets/images/cityTeal-800.webp": "dff6a935070ba084a5b74106e1ad2214c975b3ae2ae2872ad60571844597de88",
+    "assets/images/forestBlue.webp": "edb6aa5fc94ca1fba67d8050de39d03034bed500313f15f855286b2b12eff961",
+    "assets/images/forestBlue-800.webp": "1061619b273f696f81d6f6267e6bedcc954515209b56ea5faaaf30e608f97d9e"
+  },
+  "ids": [
+    "showcase-orbital-path",
+    "showcase-mask-reveal",
+    "showcase-circular-gallery",
+    "showcase-card-swap",
+    "showcase-tracing-story",
+    "showcase-elastic-slider"
+  ],
+  "notes": [
+    "Actual eight-second native/full stories at desktop DPR 1 and compact DPR 2, with CPU 1 and CPU 4.",
+    "Path, Range and Story receive one complete six-second Dock replay. Range includes original resistance and an analytic 380/32 release. Cards, Gallery and Mask receive six interrupted Dock actions.",
+    "Compact thumbnails use 347px stages; compact full views use the actual 344px detail width. Full photographic sources use verified 1600px files; thumbnails use 800px.",
+    "The fixture document base matches the site root so fullAssetRefs resolves like an actual detail route. All decoded photos assert 1600px full or 800px thumb.",
+    "Geist, Geist Mono and Inter fonts prepared before mounting. First trace Paint includes mounting and photographic decoding.",
+    "Own heavy checks stopped; other applications not controlled. Every trace and outlier is retained. Synthetic profiling input is separate from trusted input verification.",
+    "These component observations do not prove cold-route, Lighthouse or site-wide timing gates."
+  ],
+  "cases": [
+    {
+      "name": "showcase-orbital-path-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-orbital-path",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 11.399999991059303,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 368,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 1,
+              "x": 252,
+              "y": 79.99999999999999
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "f40353fdafbbc40f576bf5507d17e7a9a1177d36567b87d2d760137c77fb313d",
+      "firstPaintMs": 12.339,
+      "firstPaintDurationMs": 0.943
+    },
+    {
+      "name": "showcase-orbital-path-thumb-compact-dpr2-cpu1",
+      "id": "showcase-orbital-path",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 19.599999994039536,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 368,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 1,
+              "x": 252,
+              "y": 79.99999999999999
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "c9612389decf8224d40af26a71bef2d9f879883e609b53f5a3e014b8288925ac",
+      "firstPaintMs": 21.401,
+      "firstPaintDurationMs": 2.029
+    },
+    {
+      "name": "showcase-orbital-path-full-desktop-dpr1-cpu1",
+      "id": "showcase-orbital-path",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 15.300000011920929,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "059f6053eea1bf8595b3ba4479f34a8f6dd52150bedb401123cc94ed6ef7ff42",
+      "firstPaintMs": 17.541,
+      "firstPaintDurationMs": 0.446
+    },
+    {
+      "name": "showcase-orbital-path-full-compact-dpr2-cpu1",
+      "id": "showcase-orbital-path",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 15.100000008940697,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 368,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "0712bd9b1fe0ff9eb25a53de5ef0cd88709e3411c95f01bf619a5b4b2e303d2c",
+      "firstPaintMs": 16.458,
+      "firstPaintDurationMs": 0.213
+    },
+    {
+      "name": "showcase-mask-reveal-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-mask-reveal",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 26.799999997019768,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 248,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "50%",
+            "pressed": "false"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "x": 100,
+              "y": 75,
+              "r": 38,
+              "pressed": "false"
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "a414b1cf9c49248486844496ae1d10c735cd6c4ac075b1bb1a4e2605300cfc64",
+      "firstPaintMs": 10.487,
+      "firstPaintDurationMs": 0.374
+    },
+    {
+      "name": "showcase-mask-reveal-thumb-compact-dpr2-cpu1",
+      "id": "showcase-mask-reveal",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 36.1000000089407,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 248,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "50%",
+            "pressed": "false"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "x": 100,
+              "y": 75,
+              "r": 38,
+              "pressed": "false"
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "202ab14791d77c928d160951ef4412abdba7fb5d164c0b8532480ede7f1a85c1",
+      "firstPaintMs": 16.273,
+      "firstPaintDurationMs": 0.83
+    },
+    {
+      "name": "showcase-mask-reveal-full-desktop-dpr1-cpu1",
+      "id": "showcase-mask-reveal",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 71.09999999403954,
+      "frames": 481,
+      "elapsed": 8016.400000000001,
+      "fps": 60.0019959083878,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 16.80000000000109,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 251,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "",
+            "pressed": "false"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "9568412f0f58a1048cd2fb34d9f98e92e287a5868e7566ba2c710c72c6113482",
+      "firstPaintMs": 15.656,
+      "firstPaintDurationMs": 0.351
+    },
+    {
+      "name": "showcase-mask-reveal-full-compact-dpr2-cpu1",
+      "id": "showcase-mask-reveal",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 57,
+      "frames": 481,
+      "elapsed": 8016.268,
+      "fps": 60.002983932173926,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 249,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "",
+            "pressed": "false"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "12e17028150c9eebd14053f6697fe87d8c545171f77cc510226d189dcbce0e49",
+      "firstPaintMs": 14.432,
+      "firstPaintDurationMs": 0.226
+    },
+    {
+      "name": "showcase-circular-gallery-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-circular-gallery",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 46.29999999701977,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 298,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.999052814156625,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 293,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "i": 0,
+              "d": 1.0009471858433754,
+              "x": 224.05683115060253,
+              "y": 43.02652120361451,
+              "w": 63.986739398192746,
+              "h": 85.98105628313249,
+              "opacity": 0.5497158442469874
+            },
+            {
+              "i": 1,
+              "d": 2.0009471858433754,
+              "x": 284.05683115060253,
+              "y": 71.02652120361451,
+              "w": 49.986739398192746,
+              "h": 65.98105628313249,
+              "opacity": 0.24971584424698745
+            },
+            {
+              "i": 2,
+              "d": 3.0009471858433754,
+              "x": 344.05683115060253,
+              "y": 99.02652120361451,
+              "w": 35.986739398192746,
+              "h": 45.98105628313249,
+              "opacity": 0
+            },
+            {
+              "i": 3,
+              "d": -2.9990528141566246,
+              "x": -19.943168849397466,
+              "y": 98.97347879638549,
+              "w": 36.013260601807254,
+              "h": 46.01894371686751,
+              "opacity": 0
+            },
+            {
+              "i": 4,
+              "d": -1.9990528141566237,
+              "x": 40.05683115060258,
+              "y": 70.97347879638546,
+              "w": 50.01326060180727,
+              "h": 66.01894371686753,
+              "opacity": 0.25028415575301294
+            },
+            {
+              "i": 5,
+              "d": -0.9990528141566237,
+              "x": 100.05872552228934,
+              "y": 42.98200346897585,
+              "w": 64.01894371686753,
+              "h": 86.02462683192778,
+              "opacity": 0.5504262336295194
+            },
+            {
+              "i": 6,
+              "d": 0.0009471858433762748,
+              "x": 162.05872552228934,
+              "y": 24.01799653102415,
+              "w": 83.98105628313247,
+              "h": 111.97537316807222,
+              "opacity": 0.9995737663704807
+            }
+          ],
+          "galleryCards": 7
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "1384e900b83f2d7b244023d6c1efaac37d59308445690543f975dcb00448197d",
+      "firstPaintMs": 12.438,
+      "firstPaintDurationMs": 0.428
+    },
+    {
+      "name": "showcase-circular-gallery-thumb-compact-dpr2-cpu1",
+      "id": "showcase-circular-gallery",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 53.29999999701977,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 298,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.9990528141564665,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "i": 0,
+              "d": 1.0009471858435335,
+              "x": 224.05683115061203,
+              "y": 43.02652120361894,
+              "w": 63.98673939819053,
+              "h": 85.98105628312933,
+              "opacity": 0.54971584424694
+            },
+            {
+              "i": 1,
+              "d": 2.0009471858435335,
+              "x": 284.056831150612,
+              "y": 71.02652120361894,
+              "w": 49.98673939819053,
+              "h": 65.98105628312933,
+              "opacity": 0.24971584424694
+            },
+            {
+              "i": 2,
+              "d": 3.0009471858435335,
+              "x": 344.056831150612,
+              "y": 99.02652120361894,
+              "w": 35.98673939819053,
+              "h": 45.981056283129334,
+              "opacity": 0
+            },
+            {
+              "i": 3,
+              "d": -2.9990528141564665,
+              "x": -19.943168849387973,
+              "y": 98.97347879638106,
+              "w": 36.01326060180947,
+              "h": 46.018943716870666,
+              "opacity": 0
+            },
+            {
+              "i": 4,
+              "d": -1.9990528141564674,
+              "x": 40.056831150611956,
+              "y": 70.97347879638109,
+              "w": 50.013260601809456,
+              "h": 66.01894371687065,
+              "opacity": 0.25028415575305984
+            },
+            {
+              "i": 5,
+              "d": -0.9990528141564674,
+              "x": 100.05872552229903,
+              "y": 42.98200346897288,
+              "w": 64.01894371687065,
+              "h": 86.02462683193184,
+              "opacity": 0.5504262336295896
+            },
+            {
+              "i": 6,
+              "d": 0.0009471858435325942,
+              "x": 162.05872552229903,
+              "y": 24.01799653102712,
+              "w": 83.98105628312935,
+              "h": 111.97537316806816,
+              "opacity": 0.9995737663704103
+            }
+          ],
+          "galleryCards": 7
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "c856b8f81f10ae84ee71ae1061131af9d6bd0eb9519204a5a1aa2f1f04ced824",
+      "firstPaintMs": 15.049,
+      "firstPaintDurationMs": 0.321
+    },
+    {
+      "name": "showcase-circular-gallery-full-desktop-dpr1-cpu1",
+      "id": "showcase-circular-gallery",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 132.5,
+      "frames": 481,
+      "elapsed": 8016.400000000001,
+      "fps": 60.0019959083878,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 304,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.999052948069216,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137323px, 0.0132587px) rotate(0.0066293deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "1d9adc201a2314145d9f74e06fefc8307cb0b36da9c7c0bcad4beb0c99d9a5df",
+      "firstPaintMs": 15.381,
+      "firstPaintDurationMs": 0.303
+    },
+    {
+      "name": "showcase-circular-gallery-full-compact-dpr2-cpu1",
+      "id": "showcase-circular-gallery",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 222.40000000596046,
+      "frames": 481,
+      "elapsed": 8016.340000000001,
+      "fps": 60.002445006075085,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.80000000000109,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 308,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.999052660401162,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 292,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137364px, 0.0132627px) rotate(0.0066313deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "aa3047b254e5031545e1001fc19c106edc542ca470cfcc2041c54098bac66431",
+      "firstPaintMs": 18.301,
+      "firstPaintDurationMs": 0.57
+    },
+    {
+      "name": "showcase-card-swap-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-card-swap",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 30,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 248,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "index": 0,
+              "dx": 0
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "9852f9de3cce52e3d5ab4ff7b0ac2fbd5f48b5027059439f9268a45ce81e18c4",
+      "firstPaintMs": 14.742,
+      "firstPaintDurationMs": 0.372
+    },
+    {
+      "name": "showcase-card-swap-thumb-compact-dpr2-cpu1",
+      "id": "showcase-card-swap",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 24.099999994039536,
+      "frames": 481,
+      "elapsed": 8016.400000000001,
+      "fps": 60.0019959083878,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 248,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "index": 0,
+              "dx": 0
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "eaa7e5c45fa82f9d5da3e9a761fdee9d77059ca0131ff5a9b1678adc3479c4de",
+      "firstPaintMs": 12.841,
+      "firstPaintDurationMs": 0.264
+    },
+    {
+      "name": "showcase-card-swap-full-desktop-dpr1-cpu1",
+      "id": "showcase-card-swap",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 75.40000000596046,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 251,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "335cb224d835742fba914d65e7149d5625d6ab086edc6aa93bc7fdab606cb397",
+      "firstPaintMs": 23.05,
+      "firstPaintDurationMs": 0.582
+    },
+    {
+      "name": "showcase-card-swap-full-compact-dpr2-cpu1",
+      "id": "showcase-card-swap",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 77.79999999701977,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 252,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "15aa9e9ce5787149d8390441af1424aa101b2c1587f542141232892fbaf16dc0",
+      "firstPaintMs": 24.168,
+      "firstPaintDurationMs": 0.513
+    },
+    {
+      "name": "showcase-tracing-story-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-tracing-story",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 15.200000002980232,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505,
+            "height": 320,
+            "range": 505,
+            "progress": "100%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "progress": 1,
+              "chapter": 2
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "662036e94ca7edd05181914a4e18216509faa4e68bfd2f39e9cccb8f5fb11897",
+      "firstPaintMs": 18.192,
+      "firstPaintDurationMs": 1.279
+    },
+    {
+      "name": "showcase-tracing-story-thumb-compact-dpr2-cpu1",
+      "id": "showcase-tracing-story",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 18.400000005960464,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 504.96319580078125,
+            "height": 320,
+            "range": 505,
+            "progress": "99.99358659498763%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "progress": 0.9999271203975867,
+              "chapter": 2
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "34c1b4bb6edba1fd7500b223919903faf53f08257bb0ed79b822916c4e965613",
+      "firstPaintMs": 22.346,
+      "firstPaintDurationMs": 1.436
+    },
+    {
+      "name": "showcase-tracing-story-full-desktop-dpr1-cpu1",
+      "id": "showcase-tracing-story",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 41.099999994039536,
+      "frames": 480,
+      "elapsed": 8016.299999999999,
+      "fps": 59.877998577897536,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 33.30000000000001,
+      "gapsOver25ms": 1,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505,
+            "height": 320,
+            "range": 505,
+            "progress": "100%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "d5b38490ae525c98ac927992c408df7dd0edf0e07659e6c308bce4b6b6db5c86",
+      "firstPaintMs": 42.647,
+      "firstPaintDurationMs": 0.294
+    },
+    {
+      "name": "showcase-tracing-story-full-compact-dpr2-cpu1",
+      "id": "showcase-tracing-story",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 36.6000000089407,
+      "frames": 480,
+      "elapsed": 8016.3,
+      "fps": 59.877998577897536,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 33.29999999999998,
+      "gapsOver25ms": 1,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505.71429443359375,
+            "height": 320,
+            "range": 505,
+            "progress": "100.12447110922031%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "661fa00062e5190dfd95b9ba2eda1f7eb565b653c8e43bd2346a5942177b3159",
+      "firstPaintMs": 37.86,
+      "firstPaintDurationMs": 0.385
+    },
+    {
+      "name": "showcase-elastic-slider-thumb-desktop-dpr1-cpu1",
+      "id": "showcase-elastic-slider",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 10.399999991059303,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 100,
+              "stretch": 0,
+              "x": 252
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-thumb-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "d08bd172e812663c5b38f3377a0ce28401e4b1351d97f5de232c60e1892ffc65",
+      "firstPaintMs": 12.306,
+      "firstPaintDurationMs": 1.256
+    },
+    {
+      "name": "showcase-elastic-slider-thumb-compact-dpr2-cpu1",
+      "id": "showcase-elastic-slider",
+      "mode": "thumb",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 17.899999991059303,
+      "frames": 481,
+      "elapsed": 8016.334000000001,
+      "fps": 60.00248991621356,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 100,
+              "stretch": 0,
+              "x": 252
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-thumb-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "e0e3cc363c3454526f99632fd59dc58de76415f9b2cf6a0a1cffea6c0c8e51cd",
+      "firstPaintMs": 19.728,
+      "firstPaintDurationMs": 1.12
+    },
+    {
+      "name": "showcase-elastic-slider-full-desktop-dpr1-cpu1",
+      "id": "showcase-elastic-slider",
+      "mode": "full",
+      "cpu": 1,
+      "compact": false,
+      "photos": [],
+      "readyMs": 20.100000008940697,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-full-desktop-dpr1-cpu1.trace.json.gz",
+      "traceSHA256": "bf6afd564e54a02fa51f99be17f3bca4bcba3ecdbb880fe99ce350c45042d4de",
+      "firstPaintMs": 21.321,
+      "firstPaintDurationMs": 0.381
+    },
+    {
+      "name": "showcase-elastic-slider-full-compact-dpr2-cpu1",
+      "id": "showcase-elastic-slider",
+      "mode": "full",
+      "cpu": 1,
+      "compact": true,
+      "photos": [],
+      "readyMs": 23.099999994039536,
+      "frames": 481,
+      "elapsed": 8016.4,
+      "fps": 60.001995908387805,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-full-compact-dpr2-cpu1.trace.json.gz",
+      "traceSHA256": "6c1db343cf0037074c88bb417ff444ab644237632487e25d775e7c278e518f3d",
+      "firstPaintMs": 24.71,
+      "firstPaintDurationMs": 0.442
+    },
+    {
+      "name": "showcase-orbital-path-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-orbital-path",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 86,
+      "frames": 476,
+      "elapsed": 8016.4,
+      "fps": 59.37827453719875,
+      "median": 16.699999999999818,
+      "p95": 16.800000000000182,
+      "max": 99.99999999999999,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 105.20000000298023,
+          "duration": 96
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 1,
+              "x": 252,
+              "y": 79.99999999999999
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "f00fed46635b459f1a2a6de2be5c534b30d3a4bb3e8251dba55880755000ed33",
+      "firstPaintMs": 94.091,
+      "firstPaintDurationMs": 6.092
+    },
+    {
+      "name": "showcase-orbital-path-thumb-compact-dpr2-cpu4",
+      "id": "showcase-orbital-path",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 83.70000000298023,
+      "frames": 476,
+      "elapsed": 8016.3,
+      "fps": 59.37901525641505,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 83.30000000000001,
+      "gapsOver25ms": 2,
+      "longTasks": [
+        {
+          "start": 123.09999999403954,
+          "duration": 95
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 1,
+              "x": 252,
+              "y": 79.99999999999999
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "7adea1a24ff227a123b36c86c762f88e56850e895f98a12a5cc1c9f10796de06",
+      "firstPaintMs": 91.489,
+      "firstPaintDurationMs": 6.995
+    },
+    {
+      "name": "showcase-orbital-path-full-desktop-dpr1-cpu4",
+      "id": "showcase-orbital-path",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 89.59999999403954,
+      "frames": 476,
+      "elapsed": 8016.2339999999995,
+      "fps": 59.37950414122143,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 99.93400000000001,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 100.09999999403954,
+          "duration": 101
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "dc3c163a4bedc095be040e8e3b3ad8783748a2010290c66175961ce6afd7cdc6",
+      "firstPaintMs": 98.746,
+      "firstPaintDurationMs": 1.851
+    },
+    {
+      "name": "showcase-orbital-path-full-compact-dpr2-cpu4",
+      "id": "showcase-orbital-path",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 141.59999999403954,
+      "frames": 473,
+      "elapsed": 8016.3,
+      "fps": 59.004777765303196,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 149.9,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 128.29999999701977,
+          "duration": 152
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "path",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 368,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "length": 903.02197265625,
+            "value": 100,
+            "x": 280,
+            "y": 140,
+            "output": "100%",
+            "position": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-orbital-path-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "979f7df11c4251470641ced040f4abce4b8330d49bc3e2cc50abba5c2ed23d88",
+      "firstPaintMs": 148.713,
+      "firstPaintDurationMs": 1.64
+    },
+    {
+      "name": "showcase-mask-reveal-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-mask-reveal",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 71.20000000298023,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 250,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "50%",
+            "pressed": "false"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "x": 100,
+              "y": 75,
+              "r": 38,
+              "pressed": "false"
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "3ef90a6e295eb3a90a1babdfc1aa309c7bc69edfddae1c46bb70c1855dfcd7e2",
+      "firstPaintMs": 62.394,
+      "firstPaintDurationMs": 3.149
+    },
+    {
+      "name": "showcase-mask-reveal-thumb-compact-dpr2-cpu4",
+      "id": "showcase-mask-reveal",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 81.20000000298023,
+      "frames": 481,
+      "elapsed": 8016.300000000001,
+      "fps": 60.00274440826814,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 251,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "50%",
+            "pressed": "false"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "x": 100,
+              "y": 75,
+              "r": 38,
+              "pressed": "false"
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "8f98eefb5891c48928d63f337249179638f6372a05f9c6e46fbdd5dfa8a787f1",
+      "firstPaintMs": 72.147,
+      "firstPaintDurationMs": 3.833
+    },
+    {
+      "name": "showcase-mask-reveal-full-desktop-dpr1-cpu4",
+      "id": "showcase-mask-reveal",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 130.69999998807907,
+      "frames": 481,
+      "elapsed": 8016.306,
+      "fps": 60.002699497748715,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 252,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "",
+            "pressed": "false"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "d58ad9a4dd3be406c95c3e942f1d900a37204096f2eb9dc8355d5b0be2d6008b",
+      "firstPaintMs": 104.437,
+      "firstPaintDurationMs": 1.828
+    },
+    {
+      "name": "showcase-mask-reveal-full-compact-dpr2-cpu4",
+      "id": "showcase-mask-reveal",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 149.70000000298023,
+      "frames": 481,
+      "elapsed": 8016.34,
+      "fps": 60.00244500607509,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "mask",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 253,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "x": "",
+            "y": "",
+            "pressed": "false"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-mask-reveal-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "193708d02e1100a794ba9bf4257ad6e2e4ccf29c4eb75e3e672b3008e13140bf",
+      "firstPaintMs": 122.625,
+      "firstPaintDurationMs": 1.599
+    },
+    {
+      "name": "showcase-circular-gallery-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-circular-gallery",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 96.3999999910593,
+      "frames": 481,
+      "elapsed": 8016.338,
+      "fps": 60.002459976113784,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 300,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.9990528141564665,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "i": 0,
+              "d": 1.0009471858435335,
+              "x": 224.05683115061203,
+              "y": 43.02652120361894,
+              "w": 63.98673939819053,
+              "h": 85.98105628312933,
+              "opacity": 0.54971584424694
+            },
+            {
+              "i": 1,
+              "d": 2.0009471858435335,
+              "x": 284.056831150612,
+              "y": 71.02652120361894,
+              "w": 49.98673939819053,
+              "h": 65.98105628312933,
+              "opacity": 0.24971584424694
+            },
+            {
+              "i": 2,
+              "d": 3.0009471858435335,
+              "x": 344.056831150612,
+              "y": 99.02652120361894,
+              "w": 35.98673939819053,
+              "h": 45.981056283129334,
+              "opacity": 0
+            },
+            {
+              "i": 3,
+              "d": -2.9990528141564665,
+              "x": -19.943168849387973,
+              "y": 98.97347879638106,
+              "w": 36.01326060180947,
+              "h": 46.018943716870666,
+              "opacity": 0
+            },
+            {
+              "i": 4,
+              "d": -1.9990528141564674,
+              "x": 40.056831150611956,
+              "y": 70.97347879638109,
+              "w": 50.013260601809456,
+              "h": 66.01894371687065,
+              "opacity": 0.25028415575305984
+            },
+            {
+              "i": 5,
+              "d": -0.9990528141564674,
+              "x": 100.05872552229903,
+              "y": 42.98200346897288,
+              "w": 64.01894371687065,
+              "h": 86.02462683193184,
+              "opacity": 0.5504262336295896
+            },
+            {
+              "i": 6,
+              "d": 0.0009471858435325942,
+              "x": 162.05872552229903,
+              "y": 24.01799653102712,
+              "w": 83.98105628312935,
+              "h": 111.97537316806816,
+              "opacity": 0.9995737663704103
+            }
+          ],
+          "galleryCards": 7
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "dedd9a3500caf82031babb5207f45bf587b881f0b03b2e22eaeeecb9d83501b1",
+      "firstPaintMs": 74.479,
+      "firstPaintDurationMs": 1.906
+    },
+    {
+      "name": "showcase-circular-gallery-thumb-compact-dpr2-cpu4",
+      "id": "showcase-circular-gallery",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean-800.webp",
+          "width": 800
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 103.20000000298023,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 300,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.9990528141564665,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "i": 0,
+              "d": 1.0009471858435335,
+              "x": 224.05683115061203,
+              "y": 43.02652120361894,
+              "w": 63.98673939819053,
+              "h": 85.98105628312933,
+              "opacity": 0.54971584424694
+            },
+            {
+              "i": 1,
+              "d": 2.0009471858435335,
+              "x": 284.056831150612,
+              "y": 71.02652120361894,
+              "w": 49.98673939819053,
+              "h": 65.98105628312933,
+              "opacity": 0.24971584424694
+            },
+            {
+              "i": 2,
+              "d": 3.0009471858435335,
+              "x": 344.056831150612,
+              "y": 99.02652120361894,
+              "w": 35.98673939819053,
+              "h": 45.981056283129334,
+              "opacity": 0
+            },
+            {
+              "i": 3,
+              "d": -2.9990528141564665,
+              "x": -19.943168849387973,
+              "y": 98.97347879638106,
+              "w": 36.01326060180947,
+              "h": 46.018943716870666,
+              "opacity": 0
+            },
+            {
+              "i": 4,
+              "d": -1.9990528141564674,
+              "x": 40.056831150611956,
+              "y": 70.97347879638109,
+              "w": 50.013260601809456,
+              "h": 66.01894371687065,
+              "opacity": 0.25028415575305984
+            },
+            {
+              "i": 5,
+              "d": -0.9990528141564674,
+              "x": 100.05872552229903,
+              "y": 42.98200346897288,
+              "w": 64.01894371687065,
+              "h": 86.02462683193184,
+              "opacity": 0.5504262336295896
+            },
+            {
+              "i": 6,
+              "d": 0.0009471858435325942,
+              "x": 162.05872552229903,
+              "y": 24.01799653102712,
+              "w": 83.98105628312935,
+              "h": 111.97537316806816,
+              "opacity": 0.9995737663704103
+            }
+          ],
+          "galleryCards": 7
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "cd523fb4eb40165bced189a9e749f0d0003332920df69a15e8d98b98a168e300",
+      "firstPaintMs": 89.779,
+      "firstPaintDurationMs": 3.718
+    },
+    {
+      "name": "showcase-circular-gallery-full-desktop-dpr1-cpu4",
+      "id": "showcase-circular-gallery",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 204.79999999701977,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 306,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.9990528141564665,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "bca63f82b3a9138ca2caa8bd878506bccc600ffab7b5dcb6f9411f9b0c6cb456",
+      "firstPaintMs": 70.796,
+      "firstPaintDurationMs": 1.388
+    },
+    {
+      "name": "showcase-circular-gallery-full-compact-dpr2-cpu4",
+      "id": "showcase-circular-gallery",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityTeal.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestBlue.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/cityNight.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/ocean.webp",
+          "width": 1600
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 219.09999999403954,
+      "frames": 481,
+      "elapsed": 8016.342,
+      "fps": 60.002430036043876,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "gallery",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 307,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "target": 6,
+            "current": 5.9990528141564665,
+            "dragging": false,
+            "start": 0,
+            "origin": 0,
+            "disposed": false,
+            "frame": 294,
+            "poses": [
+              {
+                "transform": "translate(145.137px, 14.0133px) rotate(7.00663deg)",
+                "opacity": "0.799811",
+                "z": "9"
+              },
+              {
+                "transform": "translate(290.137px, 28.0133px) rotate(14.0066deg)",
+                "opacity": "0.599811",
+                "z": "8"
+              },
+              {
+                "transform": "translate(435.137px, 42.0133px) rotate(21.0066deg)",
+                "opacity": "0.399811",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-434.863px, 41.9867px) rotate(-20.9934deg)",
+                "opacity": "0.400189",
+                "z": "7"
+              },
+              {
+                "transform": "translate(-289.863px, 27.9867px) rotate(-13.9934deg)",
+                "opacity": "0.600189",
+                "z": "8"
+              },
+              {
+                "transform": "translate(-144.863px, 13.9867px) rotate(-6.99337deg)",
+                "opacity": "0.800189",
+                "z": "9"
+              },
+              {
+                "transform": "translate(0.137342px, 0.0132606px) rotate(0.0066303deg)",
+                "opacity": "0.999811",
+                "z": "10"
+              }
+            ],
+            "index": "6",
+            "output": "07 / 07"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-circular-gallery-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "520edd800ba88f2468374e894a0e17a07a117ddbf04cd20178beb151cb6f0176",
+      "firstPaintMs": 110.643,
+      "firstPaintDurationMs": 2.931
+    },
+    {
+      "name": "showcase-card-swap-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-card-swap",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 88.20000000298023,
+      "frames": 481,
+      "elapsed": 8016.334000000001,
+      "fps": 60.00248991621356,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 250,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "index": 0,
+              "dx": 0
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "165e619838291a66612fae54e1b1c18a3c216463cdae0fd4266dc787a21df342",
+      "firstPaintMs": 71.035,
+      "firstPaintDurationMs": 1.279
+    },
+    {
+      "name": "showcase-card-swap-thumb-compact-dpr2-cpu4",
+      "id": "showcase-card-swap",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark-800.webp",
+          "width": 800
+        }
+      ],
+      "readyMs": 64.79999999701977,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 250,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "index": 0,
+              "dx": 0
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "badc0d3409fe982f164b839c8169d43b3d6dc3713e0968697eeaf545434e0bba",
+      "firstPaintMs": 50.797,
+      "firstPaintDurationMs": 0.805
+    },
+    {
+      "name": "showcase-card-swap-full-desktop-dpr1-cpu4",
+      "id": "showcase-card-swap",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 114.09999999403954,
+      "frames": 481,
+      "elapsed": 8016.299999999999,
+      "fps": 60.00274440826816,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 252,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "066876fa1fc440204b48ae7f39a7f591fe16c418aeae25a56b7205170fe8298f",
+      "firstPaintMs": 76.615,
+      "firstPaintDurationMs": 1.818
+    },
+    {
+      "name": "showcase-card-swap-full-compact-dpr2-cpu4",
+      "id": "showcase-card-swap",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [
+        {
+          "src": "http://127.0.0.1:4173/assets/images/forestDark.webp",
+          "width": 1600
+        }
+      ],
+      "readyMs": 133.79999999701977,
+      "frames": 481,
+      "elapsed": 8016.3,
+      "fps": 60.00274440826815,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 16.800000000000182,
+      "gapsOver25ms": 0,
+      "longTasks": [],
+      "events": 6,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "cards",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 253,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "index": 0,
+            "start": 0,
+            "dx": 0,
+            "active": -1,
+            "poses": [
+              {
+                "transform": "translate(0px, 0px) rotate(0deg)",
+                "z": "3",
+                "front": "true"
+              },
+              {
+                "transform": "translate(7px, -8px) rotate(4deg)",
+                "z": "2",
+                "front": "false"
+              },
+              {
+                "transform": "translate(14px, -16px) rotate(8deg)",
+                "z": "1",
+                "front": "false"
+              }
+            ],
+            "output": "01 / 03"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-card-swap-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "32452056acc7406803fb02238021fe6549d3dd9829e34a36e7506fd76b34772e",
+      "firstPaintMs": 97.95,
+      "firstPaintDurationMs": 3.159
+    },
+    {
+      "name": "showcase-tracing-story-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-tracing-story",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 66.59999999403954,
+      "frames": 477,
+      "elapsed": 8016.299999999999,
+      "fps": 59.50376108678568,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 66.6,
+      "gapsOver25ms": 2,
+      "longTasks": [
+        {
+          "start": 97.5,
+          "duration": 75
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505,
+            "height": 320,
+            "range": 505,
+            "progress": "100%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "progress": 1,
+              "chapter": 2
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "84bee767eeafb4435f197e1d8c48fc60ea8e4dd56fe6ef6780733e3b6098faf6",
+      "firstPaintMs": 77.5,
+      "firstPaintDurationMs": 5.119
+    },
+    {
+      "name": "showcase-tracing-story-thumb-compact-dpr2-cpu4",
+      "id": "showcase-tracing-story",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 74.19999998807907,
+      "frames": 477,
+      "elapsed": 8016.334000000001,
+      "fps": 59.503508711089125,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 83.234,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 100.40000000596046,
+          "duration": 83
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 366,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 504.96319580078125,
+            "height": 320,
+            "range": 505,
+            "progress": "99.99358659498763%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "progress": 0.9999271203975867,
+              "chapter": 2
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "682b432f3135591f127fb36c67094b374406d71723a47835e3f05f42abfb372e",
+      "firstPaintMs": 85.217,
+      "firstPaintDurationMs": 4.282
+    },
+    {
+      "name": "showcase-tracing-story-full-desktop-dpr1-cpu4",
+      "id": "showcase-tracing-story",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 149.69999998807907,
+      "frames": 473,
+      "elapsed": 8016.299999999999,
+      "fps": 59.0047777653032,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999727,
+      "max": 149.9,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 93.30000001192093,
+          "duration": 158
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 369,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505,
+            "height": 320,
+            "range": 505,
+            "progress": "100%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "c86c345c665a0638c239a32e653976d5645fcac8e2faf8513d4ae3b9cf7b95a2",
+      "firstPaintMs": 155.923,
+      "firstPaintDurationMs": 1.225
+    },
+    {
+      "name": "showcase-tracing-story-full-compact-dpr2-cpu4",
+      "id": "showcase-tracing-story",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 153.59999999403954,
+      "frames": 473,
+      "elapsed": 8016.268,
+      "fps": 59.00501330544338,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 149.96800000000002,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 92.29999999701977,
+          "duration": 164
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "story",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 369,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "top": 505.71429443359375,
+            "height": 320,
+            "range": 505,
+            "progress": "100.12447110922031%",
+            "chapter": "2",
+            "number": "03",
+            "title": "Respond.",
+            "symbol": "↗"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-tracing-story-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "ea0684396e1f6a45b73c562348b0c12a368132acfdd4c269c854ad3eb305ba65",
+      "firstPaintMs": 158.88,
+      "firstPaintDurationMs": 1.189
+    },
+    {
+      "name": "showcase-elastic-slider-thumb-desktop-dpr1-cpu4",
+      "id": "showcase-elastic-slider",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 60.79999999701977,
+      "frames": 478,
+      "elapsed": 8016.400000000001,
+      "fps": 59.62776308567437,
+      "median": 16.699999999999818,
+      "p95": 16.80000000000001,
+      "max": 66.69999999999999,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 93.19999998807907,
+          "duration": 70
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 365,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 100,
+              "stretch": 0,
+              "x": 252
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-thumb-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "d1f4c621439692d3b524fa922a3272765bbfa1d22e15206aee8bd4b04759b871",
+      "firstPaintMs": 67.365,
+      "firstPaintDurationMs": 3.863
+    },
+    {
+      "name": "showcase-elastic-slider-thumb-compact-dpr2-cpu4",
+      "id": "showcase-elastic-slider",
+      "mode": "thumb",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 63.8999999910593,
+      "frames": 478,
+      "elapsed": 8016.299999999999,
+      "fps": 59.6285069171563,
+      "median": 16.699999999999818,
+      "p95": 16.700000000000728,
+      "max": 66.6,
+      "gapsOver25ms": 1,
+      "longTasks": [
+        {
+          "start": 119.59999999403954,
+          "duration": 72
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": true,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 365,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        },
+        "renderer": {
+          "dead": false,
+          "poses": [
+            {
+              "value": 100,
+              "stretch": 0,
+              "x": 252
+            }
+          ],
+          "galleryCards": 0
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-thumb-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "e4cfcc77cf4ed0542b4fe8ef7f3e4dce370e199a37e138fb01f63ca91e337cf6",
+      "firstPaintMs": 69.586,
+      "firstPaintDurationMs": 3.873
+    },
+    {
+      "name": "showcase-elastic-slider-full-desktop-dpr1-cpu4",
+      "id": "showcase-elastic-slider",
+      "mode": "full",
+      "cpu": 4,
+      "compact": false,
+      "photos": [],
+      "readyMs": 85.90000000596046,
+      "frames": 475,
+      "elapsed": 8016.3,
+      "fps": 59.25426942604443,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999272,
+      "max": 83.29999999999998,
+      "gapsOver25ms": 3,
+      "longTasks": [
+        {
+          "start": 100.29999999701977,
+          "duration": 94
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 365,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-full-desktop-dpr1-cpu4.trace.json.gz",
+      "traceSHA256": "a0ecf2e8e60539575bc3411560356ebc96183f07a64a4d4f20e26c37e1859e5e",
+      "firstPaintMs": 91.818,
+      "firstPaintDurationMs": 1.055
+    },
+    {
+      "name": "showcase-elastic-slider-full-compact-dpr2-cpu4",
+      "id": "showcase-elastic-slider",
+      "mode": "full",
+      "cpu": 4,
+      "compact": true,
+      "photos": [],
+      "readyMs": 116.6000000089407,
+      "frames": 474,
+      "elapsed": 8016.3,
+      "fps": 59.12952359567382,
+      "median": 16.699999999999818,
+      "p95": 16.799999999999955,
+      "max": 116.59999999999997,
+      "gapsOver25ms": 2,
+      "longTasks": [
+        {
+          "start": 135.20000000298023,
+          "duration": 127
+        }
+      ],
+      "events": 1,
+      "state": {
+        "dead": false,
+        "native": false,
+        "kind": "range",
+        "demoStory": false,
+        "held": false,
+        "reduced": false,
+        "interacted": true,
+        "preview": false,
+        "frame": false,
+        "queue": 0,
+        "captures": [],
+        "retained": 0,
+        "timers": 0,
+        "auto": false,
+        "spring": false,
+        "stretch": 0,
+        "model": {
+          "dead": false,
+          "reduced": false,
+          "index": 367,
+          "pending": 0,
+          "logicalCaptures": [],
+          "state": {
+            "down": false,
+            "bounds": {
+              "left": 80,
+              "top": 194,
+              "width": 240,
+              "height": 36
+            },
+            "value": 100,
+            "stretch": "0px",
+            "fill": "100%",
+            "thumb": "100%",
+            "output": "100"
+          }
+        }
+      },
+      "trace": ".artifacts/showcase-final/profiles/2026-11-22T10-57-38-840Z-2cf16447a539/showcase-elastic-slider-full-compact-dpr2-cpu4.trace.json.gz",
+      "traceSHA256": "d19e52c5eea2590d8ec45ee2e992de29f230be98282bba3fd1e28f33dd208514",
+      "firstPaintMs": 126.298,
+      "firstPaintDurationMs": 3.3
+    }
+  ],
+  "browser": "140.0.7339.16",
+  "finished": "2026-11-22T11:04:52.131Z",
+  "sourceStable": true
+}

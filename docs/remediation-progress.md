@@ -1,17 +1,88 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 389 of the 399 existing demos:
+Native v4 compositions are remediated for 395 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, all fifty-two DRAMS Collections demos, and ten Showcase
-compositions. Ten existing Collections demos, 121 new or extension components,
+Visual FX (88) demos, all fifty-two DRAMS and all sixteen Showcase Collections
+compositions. Four existing Framer demos, 121 new or extension components,
 Pro seams and the final audit remain. Earlier sections retain historical counts.
 
-The retired generated photo keys remain in the unfinished showcase-circular-gallery;
-none of the 389 remediated native compositions retains those references. The fit
-audit boots all 399 demos with zero overflow, horizontal-scroll or low-fill
-findings. Its 9 tiny-text findings belong to unfinished demos; all 131
+The retired generated photo keys are absent from registered demo HTML, CSS and
+JavaScript. The fit audit boots all 399 demos with zero overflow, horizontal-scroll
+or low-fill findings. Its four tiny-text findings belong to unfinished Framer
+demos; all 133
 documented Figma fill exceptions validate. Stage and motion baselines contain
-nine and seven remaining debts respectively. Reduced-motion baseline debt is zero.
+four and five remaining debts respectively. Reduced-motion baseline debt is zero.
+
+## Six Showcase paths, photographs and controls
+
+Path Follower, Mask Reveal, Circular Gallery, Toss & Stack, Tracing Story and
+Elastic Slider now use their exact v4 native compositions. The 324×168 plane at
+24,20 in the shared 372×264 Stage contains 49 native slots: eleven unchanged
+supplied SVGs, seven photographic slots, thirty primitive Frames and one text
+slot. Native geometry, nested clipping, fractional paint offsets, strokes,
+shadows and opacity retain the captured reference values. Posters come from the
+implementation. The exact sparse Story and Range compositions have documented
+fill exceptions; text, overflow and horizontal-scroll gates still apply.
+
+The full 400×320 compositions retain their original programs, datasets and copy.
+Path keeps its complete multi-C/S route, measured length and point sampling.
+Mask keeps both original headlines, pointer percentages, five-point arrow steps
+and 65/130px aperture. Gallery keeps all seven STUDY captions, modulo-seven wrap,
+145px drag divisor, .13 source lerp, 14px vertical offsets and seven-degree
+rotation. Cards retain all three interaction cards, their complete descriptions,
+seven/−eight-pixel stack offsets, four-degree rotations and 55px throw threshold.
+Story keeps all three chapters, complete body copy, symbols, 275px chapter heights
+and original chapter/progress formulas. Range keeps its initial 64, clamp/round
+and square-root overpull model, with the specified 380/32 release spring.
+
+The retired gallery photos now use approved forestDark, cityNight and ocean
+assets; native slots also use forestBlue and cityTeal. Photo provenance and both
+local file hashes remain unchanged. Detail resolves 1600px sources before
+JavaScript creates Gallery images. Thumbnails and portable exports use credited
+800px sources. Full captions and controls remain at least 11px on actual
+390/375/360px detail routes. The library verifier matches the primary source
+credit by its exact URL, allowing the separate photographic credit links.
+
+Source integration stays at 60Hz independently of renderer refresh. Dock Path,
+Range and Story replays run for six seconds; Range includes overpull, release
+velocity and analytic recoil. Explicit Story replay begins at zero and holds at
+the completed third chapter. Untouched native previews retain their telling
+reference still. Real scaled pointer, keys, moving touch, captured drags and
+vertical page scrolling remain available. Interrupted card dragging starts at
+the actual painted pose. Caller, viewport and document holds freeze state
+independently, queue deliberate input and preserve native input values.
+Reduced-motion feedback retains the actual displayed paint in an inert 150ms
+opacity layer; cleanup releases capture, listeners, frames, timers and animations.
+
+Seven emitted-source verification groups compare 25,992 original source states
+across 72 normal/reduced 60/120/240Hz cases, 2,107 geometry checks in 54 layouts,
+48 physical-input cases, 28 hold cases, 36 complete renderer stories and four
+actual-clock interruption/replay cases. Twenty-four fresh network-blocked exports
+retain complete full models, local fonts and native remounts. The actual dev site
+passes 24 desktop/390px/375px/360px routes, including full-photo resolution, text
+size and the tanziro.com footer. All six native posters are refreshed.
+
+Required local checks pass at the documented baseline: 399 previews, 97 catalog
+exports and 651 library checks; nineteen runtime/shell tests; sixteen fit-geometry
+checks; eight CLI/MCP tests; Stage runtime, registry and generated-output checks.
+The fit audit's only four text findings belong to the unfinished Framer demos.
+Stage debts fall 9→4 and motion debts 7→5 without growing either baseline.
+
+The other ten Showcase definitions, 325 modules, 393 metadata rows, 383 unrelated
+catalog rows and five protected runtime/style inputs remain unchanged. Preservation
+also covers 555 prior helpers, 1,006 private inputs, 4,464 publication files,
+222 full snapshots, 184 accepted dial snapshots and 77 immutable current capture
+inputs. Earlier diagnostic sources and failed profiling attempts remain archived.
+
+<!-- showcase-final-performance -->
+
+The [final Showcase timing report](performance/showcase-final-2026-11-22.json) retains all 48 eight-second native/full desktop DPR 1 and compact DPR 2 stories. Path, Range and Story each complete one six-second Dock replay; Gallery, Cards and Mask receive six interrupted actions. CPU 1 records 59.88–60.00fps, 2 intervals above 25ms and 0 long tasks; first trace Paint spans 10.49–42.65ms and maximum readiness is 222.40ms. CPU 4 records 59.00–60.00fps, 17 intervals above 25ms and 12 long tasks; first trace Paint spans 50.80–158.88ms and maximum readiness is 219.10ms. The slowest sample is showcase-orbital-path-full-compact-dpr2-cpu4 at 59.00fps. No prepared-font sample exceeds 300ms first trace Paint. Fonts were prepared before mounting; own heavy checks had stopped and other applications were not controlled. Every trace and outlier is retained, including the fixture document-base and photo-filter diagnostics. Decoded photos assert 1600px full or 800px thumbnail resolution. These observations leave cold-route, Lighthouse and site-wide timing gates open. Preserve actual-clock card interruption and Story replay, independent scroll/capture ownership, canonical source clocks and the original full models during the final audit.
+
+Remaining existing demos are Formatted Metric, Rolling Balance, Focus Countdown
+and Financial Trend. Continue remediation before the 121 new or extension
+components, then finish Pro seams and the final audits. Native Mask aperture
+radius easing remains an explicit final motion-audit refinement; passing source
+model checks does not declare that audit complete.
 
 ## Four Showcase surfaces and routes
 

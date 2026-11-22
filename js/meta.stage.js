@@ -12794,17 +12794,25 @@ INTRX.meta({
     ]
   },
   "showcase-orbital-path": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Scrub"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "svg",
@@ -12812,21 +12820,33 @@ INTRX.meta({
       "drag"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "showcase-mask-reveal": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "hover",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Move"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "pointer",
@@ -12834,21 +12854,33 @@ INTRX.meta({
       "type"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "showcase-circular-gallery": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
-      "overflow": "intentional"
+      "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -12856,22 +12888,34 @@ INTRX.meta({
       "inertia"
     ],
     "tier": "free",
-    "thumb": "full",
+    "thumb": "hero",
     "addedAt": "2026-11",
-    "caption": "Move through the gallery"
+    "caption": "Move through the gallery",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "showcase-card-swap": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -12879,21 +12923,33 @@ INTRX.meta({
       "spring"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "showcase-tracing-story": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "scroll"
     },
     "trigger": "scroll",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Scroll"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "scroll",
@@ -12901,21 +12957,33 @@ INTRX.meta({
       "path"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "showcase-elastic-slider": {
-    "designSize": "md",
+    "designSize": [
+      400,
+      320
+    ],
     "stage": {
       "theme": "dark",
       "overflow": "clip"
     },
     "trigger": "drag",
-    "controls": [],
+    "controls": [
+      {
+        "action": "play",
+        "label": "Drag"
+      }
+    ],
     "a11y": {
       "keyboard": true,
       "reducedMotion": true,
-      "aria": null
+      "aria": "group"
     },
     "useCases": [
       "drag",
@@ -12923,8 +12991,12 @@ INTRX.meta({
       "spring"
     ],
     "tier": "free",
-    "thumb": "full",
-    "addedAt": "2026-11"
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "thumbDesignSize": [
+      324,
+      168
+    ]
   },
   "framer-formatted-metric": {
     "designSize": "md",

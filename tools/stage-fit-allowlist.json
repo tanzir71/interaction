@@ -1309,6 +1309,26 @@
         7,
         7
       ]
+    },
+    "showcase-elastic-slider": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 geometry instead of enlarging it to satisfy 12% fill. The 372×264 reference contains a 180×6px rail, 24×6px tail, an 18px thumb with its supplied shadow SVG, and an 11px 100 label. Preserve positions, supplied SVG dimensions, materials and the compact optical text floor. This exception affects only low fill; overflow, horizontal scroll and text gates still apply.",
+      "figmaNode": "175:1447",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=175-1447",
+      "selector": ".d-show-elastic-slider [data-native-node=\"175:1460\"]",
+      "designSize": [
+        180,
+        6
+      ]
+    },
+    "showcase-tracing-story": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 geometry instead of enlarging it to satisfy 12% fill. The 372×264 reference has a 130px thin rail, its 65px active segment, three 12px supplied dots and six primitive text bars, including the 90×8px first bar. Preserve every native slot and its material. This exception affects only low fill; overflow, horizontal scroll and text gates still apply.",
+      "figmaNode": "175:1420",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=175-1420",
+      "selector": ".d-show-tracing-story [data-native-node=\"175:1436\"]",
+      "designSize": [
+        90,
+        8
+      ]
     }
   }
 }

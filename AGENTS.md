@@ -1018,3 +1018,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Full Paths labels remain at least 11px on the actual 360px detail route.
   Record timing with `node tools/profile-showcase-spatial.js
   http://127.0.0.1:4173 --cpu=1,4`; retain all traces and final timing findings.
+
+- `node tools/verify-showcase-final.js http://127.0.0.1:4173` covers v4 Path
+  Follower, Mask Reveal, Circular Gallery, Toss & Stack, Tracing Story and Elastic
+  Slider. Preserve 49 native slots, eleven unchanged supplied SVGs, seven approved
+  photo slots, thirty Frames and exact native type. Full retains the complete
+  original paths, seven gallery records, three cards, three chapters, copy and
+  clamp/overpull models. Tests compare 25,992 source states, 2,107 geometry checks,
+  actual keys/mouse/moving touch, interrupted card capture and Story replay,
+  independent holds, queued input, reduced retained paint, equivalent clocks,
+  readable compact full type and 24 fresh offline exports/native remounts. Detail
+  photos resolve at 1600px before creation; tile/export photos stay at 800px.
+  Story and Range sparse exceptions change only the fill gate. Record observations
+  with `node tools/profile-showcase-final.js http://127.0.0.1:4173 --cpu=1,4`;
+  keep the actual site-root document base, assert decoded photo sizes and preserve
+  every trace. Final motion, cold-route and Lighthouse gates remain open.
