@@ -920,8 +920,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   12 source pixels. Preserve repeated assignments, cancellation coordinates
   and the next-click drag latch. Restore source coordinates through Stage zoom.
   Keep 44px physical targets, readable compact copy and Stage-owned Dock/Tab
-  order. Normal travel reaches its one-pixel overshoot at 55% of 350ms and
-  settles by 80%; reduced motion retains 150ms fades and opacity press feedback.
+  order. Normal travel uses the canonical 380/32/1 release spring; reduced motion
+  retains 150ms fades and opacity press feedback.
   Resolve pending Web Animation pauses at their sampled currentTime, so a hold
   cannot advance one paint. Queue semantic intent while held, preserve separate
   key/pointer/virtual owners and clean up captures, listeners and retained paint.
@@ -929,3 +929,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   input, interrupted paint, caller/viewport/document holds and offline exports.
   Record isolated timing with `node tools/profile-drams-switches-core.js
   http://127.0.0.1:4173 --cpu=1` or `--cpu=4`; keep final timing gates open.
+
+- `node tools/verify-drams-switches-objects.js http://127.0.0.1:4173` covers
+  nine additional physical switches and the release-spring correction for I/O,
+  LED, Standard and Slurp. Preserve all 22 new SVG bytes, 36 new native nodes,
+  the prior 13 native nodes and every original full program/endpoint/press pose.
+  Normal motion uses 380/32/1 with 80ms press feedback, direct drag, 0.55 rubber
+  banding and an eight-source-pixel overrun cap. Preserve release position and
+  velocity, the strict 12px source threshold, dominant-direction/tie behavior,
+  cancellation coordinates and the click latch. Resume held pointer movement
+  without inventing release velocity. Keep the native reference seeds, full
+  Coloured's true seed, all complete copy and stable 44px input targets. CLICK
+  retains its center with an 11.6px optical floor; seven sparse-fill exceptions
+  change only the fill gate. The verifier covers frozen original histories,
+  full geometry, independent RK4 motion, actual input, holds, cleanup and 52
+  offline exports. Record current timing with
+  `node tools/profile-drams-switches-objects.js http://127.0.0.1:4173 --cpu=1,4`;
+  preserve every trace and leave final timing gates open.

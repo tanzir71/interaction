@@ -1,0 +1,1661 @@
+[
+  {
+    "id": "drams-001",
+    "stageId": "90:617",
+    "tile": "90:604",
+    "kind": "io",
+    "plate": "90:618",
+    "rail": "90:619",
+    "off": [
+      0,
+      38
+    ],
+    "hit": [
+      122,
+      52,
+      80,
+      80
+    ],
+    "action": "drag",
+    "label": "Drag",
+    "assets": [
+      "90:621",
+      "90:622"
+    ],
+    "rootClass": "d-drams-001",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      122,
+      52,
+      80,
+      80
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 1,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-switch-mover]",
+        "off": [
+          0,
+          38,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          38,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "cap",
+    "legacy": true,
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          39,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          39,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      144.5,
+      140,
+      79,
+      40
+    ],
+    "fullInitial": false
+  },
+  {
+    "id": "drams-006",
+    "tile": "90:626",
+    "stageId": "90:638",
+    "kind": "push",
+    "nativeReferenceOn": false,
+    "nativeHit": [
+      102,
+      32,
+      120,
+      120
+    ],
+    "nativePrimary": "face",
+    "nativeAxis": null,
+    "groups": [
+      {
+        "id": "face",
+        "parent": "90:638",
+        "nodes": [
+          "90:641",
+          "90:642"
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "face",
+        "selector": "[data-switch-group=\"face\"]",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          4,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "face",
+    "rootClass": "d-drams-006",
+    "fullChannels": [
+      {
+        "id": "2",
+        "path": "2",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          4,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          4,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "2",
+    "fullAxis": null,
+    "fullHit": [
+      130,
+      94,
+      108,
+      132
+    ],
+    "fullInitial": false,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-007",
+    "tile": "90:646",
+    "stageId": "90:658",
+    "kind": "concave",
+    "nativeReferenceOn": false,
+    "nativeHit": [
+      92,
+      42,
+      140,
+      100
+    ],
+    "nativePrimary": "face",
+    "nativeAxis": null,
+    "nativeChannels": [
+      {
+        "id": "face",
+        "selector": "[data-native-node=\"90:661\"]",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          18
+        ],
+        "pressedOff": [
+          0,
+          1,
+          0,
+          6
+        ],
+        "pressedOn": [
+          0,
+          1,
+          0,
+          24
+        ],
+        "pivot": [
+          50,
+          30
+        ],
+        "perspective": true
+      }
+    ],
+    "fullPrimaryClass": "rim",
+    "rootClass": "d-drams-007",
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "1.0.0",
+        "path": "1.0.0",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          -19,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          -19,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": null,
+    "fullHit": [
+      130,
+      93,
+      108,
+      135
+    ],
+    "fullInitial": false,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-018",
+    "stageId": "90:700",
+    "tile": "90:688",
+    "kind": "led",
+    "plate": "90:701",
+    "rail": "90:702",
+    "off": [
+      -38,
+      0
+    ],
+    "hit": [
+      122,
+      70,
+      80,
+      44
+    ],
+    "action": "press",
+    "label": "Press",
+    "assets": [
+      "90:703",
+      "90:704"
+    ],
+    "rootClass": "d-drams-018",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      122,
+      70,
+      80,
+      44
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 0,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-switch-mover]",
+        "off": [
+          -38,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -38,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "cap",
+    "legacy": true,
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          39,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          39,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      144.5,
+      140,
+      79,
+      40
+    ],
+    "fullInitial": false
+  },
+  {
+    "id": "drams-023",
+    "tile": "90:708",
+    "stageId": "90:720",
+    "kind": "square",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      116,
+      66,
+      92,
+      52
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 0,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-native-node=\"90:722\"]",
+        "off": [
+          -40,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -40,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "grip",
+    "rootClass": "d-drams-023",
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          66,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          66,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      131,
+      140,
+      106,
+      40
+    ],
+    "fullInitial": false,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-024",
+    "tile": "90:727",
+    "stageId": "90:739",
+    "kind": "colored",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      116,
+      70,
+      92,
+      46
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 0,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-native-node=\"90:741\"]",
+        "off": [
+          -44,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -44,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "cap",
+    "rootClass": "d-drams-024",
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          39,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          39,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      144.5,
+      140,
+      79,
+      40
+    ],
+    "fullInitial": true,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-026",
+    "tile": "90:745",
+    "stageId": "90:757",
+    "kind": "pinch-track",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      87,
+      76,
+      150,
+      32
+    ],
+    "nativePrimary": "ball",
+    "nativeAxis": 0,
+    "groups": [
+      {
+        "id": "ball",
+        "parent": "90:757",
+        "nodes": [
+          "90:759",
+          "90:760"
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "ball",
+        "selector": "[data-switch-group=\"ball\"]",
+        "off": [
+          -88,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -88,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "pinch-cap",
+    "rootClass": "d-drams-026",
+    "fullChannels": [
+      {
+        "id": "2",
+        "path": "2",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          44,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          44,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "2",
+    "fullAxis": 0,
+    "fullHit": [
+      114.5,
+      136,
+      139,
+      48
+    ],
+    "fullInitial": false,
+    "action": "drag",
+    "label": "Drag"
+  },
+  {
+    "id": "drams-028",
+    "tile": "90:764",
+    "stageId": "90:776",
+    "kind": "pinch-long",
+    "nativeReferenceOn": false,
+    "nativeHit": [
+      28.5,
+      77,
+      267,
+      30
+    ],
+    "nativePrimary": "ball",
+    "nativeAxis": 0,
+    "groups": [
+      {
+        "id": "ball",
+        "parent": "90:776",
+        "nodes": [
+          "90:778",
+          "90:779"
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "ball",
+        "selector": "[data-switch-group=\"ball\"]",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          42,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          42,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "pinch-cap",
+    "rootClass": "d-drams-028",
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          58,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          58,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      85,
+      136,
+      198,
+      48
+    ],
+    "fullInitial": false,
+    "action": "drag",
+    "label": "Drag"
+  },
+  {
+    "id": "drams-030",
+    "tile": "90:783",
+    "stageId": "90:795",
+    "kind": "pinch-short",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      117,
+      77,
+      90,
+      30
+    ],
+    "nativePrimary": "ball",
+    "nativeAxis": 0,
+    "groups": [
+      {
+        "id": "ball",
+        "parent": "90:795",
+        "nodes": [
+          "90:797",
+          "90:798"
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "ball",
+        "selector": "[data-switch-group=\"ball\"]",
+        "off": [
+          -50,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -50,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "pinch-cap",
+    "rootClass": "d-drams-030",
+    "fullChannels": [
+      {
+        "id": "3",
+        "path": "3",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          43,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          43,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "3",
+    "fullAxis": 0,
+    "fullHit": [
+      119.5,
+      136,
+      129,
+      48
+    ],
+    "fullInitial": false,
+    "action": "drag",
+    "label": "Drag"
+  },
+  {
+    "id": "drams-035",
+    "tile": "90:907",
+    "stageId": "90:919",
+    "kind": "roll-dot",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      102,
+      70,
+      120,
+      44
+    ],
+    "nativePrimary": "ball",
+    "nativeAxis": 0,
+    "orbits": [
+      {
+        "id": "90:923",
+        "center": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "90:926",
+        "center": [
+          16,
+          16
+        ]
+      },
+      {
+        "id": "90:929",
+        "center": [
+          16,
+          16
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "trail-1",
+        "selector": "[data-native-node=\"90:921\"]",
+        "off": [
+          -4,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -4,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "trail-2",
+        "selector": "[data-native-node=\"90:924\"]",
+        "off": [
+          -36,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -36,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "ball",
+        "selector": "[data-native-node=\"90:927\"]",
+        "off": [
+          -68,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -68,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "orbit-90:923",
+        "selector": "[data-switch-orbit=\"90:923\"]",
+        "off": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "glint-90:923",
+        "selector": "[data-native-node=\"90:923\"]",
+        "off": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "orbit-90:926",
+        "selector": "[data-switch-orbit=\"90:926\"]",
+        "off": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "glint-90:926",
+        "selector": "[data-native-node=\"90:926\"]",
+        "off": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "orbit-90:929",
+        "selector": "[data-switch-orbit=\"90:929\"]",
+        "off": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "glint-90:929",
+        "selector": "[data-native-node=\"90:929\"]",
+        "off": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "ball",
+    "rootClass": "d-drams-035",
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          44,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          44,
+          0,
+          180,
+          0
+        ]
+      },
+      {
+        "id": "1.0",
+        "path": "1.0",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          -180,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      135,
+      133,
+      98,
+      54
+    ],
+    "fullInitial": false,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-037",
+    "stageId": "90:945",
+    "tile": "90:933",
+    "kind": "standard",
+    "rail": "90:946",
+    "off": [
+      -44,
+      0
+    ],
+    "hit": [
+      116,
+      70,
+      92,
+      46
+    ],
+    "action": "press",
+    "label": "Press",
+    "assets": [
+      "90:947"
+    ],
+    "rootClass": "d-drams-037",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      116,
+      70,
+      92,
+      46
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 0,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-switch-mover]",
+        "off": [
+          -44,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -44,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "cap",
+    "legacy": true,
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          39,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          39,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      144.5,
+      140,
+      79,
+      40
+    ],
+    "fullInitial": false
+  },
+  {
+    "id": "drams-039",
+    "tile": "90:951",
+    "stageId": "90:963",
+    "kind": "roll",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      68,
+      68,
+      188,
+      46
+    ],
+    "nativePrimary": "ball",
+    "nativeAxis": 0,
+    "groups": [
+      {
+        "id": "ball",
+        "parent": "90:963",
+        "nodes": [
+          "90:966",
+          "90:967"
+        ]
+      }
+    ],
+    "orbits": [
+      {
+        "id": "90:967",
+        "center": [
+          233,
+          91
+        ]
+      }
+    ],
+    "nativeChannels": [
+      {
+        "id": "ball",
+        "selector": "[data-switch-group=\"ball\"]",
+        "off": [
+          -142,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -142,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "orbit",
+        "selector": "[data-switch-orbit=\"90:967\"]",
+        "off": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          -180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "glint",
+        "selector": "[data-native-node=\"90:967\"]",
+        "off": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "sphere",
+    "rootClass": "d-drams-039",
+    "fullChannels": [
+      {
+        "id": "0.0",
+        "path": "0.0",
+        "off": [
+          -86,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -86,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "0.1",
+        "path": "0.1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          44,
+          0,
+          180,
+          0
+        ],
+        "pressedOn": [
+          44,
+          0,
+          180,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "0.1",
+    "fullAxis": 0,
+    "fullHit": [
+      129,
+      127,
+      110,
+      66
+    ],
+    "fullInitial": false,
+    "action": "press",
+    "label": "Press"
+  },
+  {
+    "id": "drams-042",
+    "stageId": "90:1006",
+    "tile": "90:994",
+    "kind": "slurp",
+    "rail": "90:1007",
+    "off": [
+      -4,
+      0
+    ],
+    "hit": [
+      102,
+      70,
+      120,
+      44
+    ],
+    "action": "press",
+    "label": "Press",
+    "assets": [
+      "90:1008"
+    ],
+    "rootClass": "d-drams-042",
+    "nativeReferenceOn": true,
+    "nativeHit": [
+      102,
+      70,
+      120,
+      44
+    ],
+    "nativePrimary": "cap",
+    "nativeAxis": 0,
+    "nativeChannels": [
+      {
+        "id": "cap",
+        "selector": "[data-switch-mover]",
+        "off": [
+          -4,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          -4,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimaryClass": "cap",
+    "legacy": true,
+    "fullChannels": [
+      {
+        "id": "1",
+        "path": "1",
+        "off": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "pressedOff": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "on": [
+          39,
+          0,
+          0,
+          0
+        ],
+        "pressedOn": [
+          39,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "fullPrimary": "1",
+    "fullAxis": 0,
+    "fullHit": [
+      132.5,
+      140,
+      79,
+      40
+    ],
+    "fullInitial": false
+  }
+]

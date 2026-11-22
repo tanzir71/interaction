@@ -1,20 +1,74 @@
 # Visual remediation progress
 
-Native v4 compositions are remediated for 358 of the 399 existing demos:
+Native v4 compositions are remediated for 367 of the 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
-Visual FX (88) demos, plus the thirty-one DRAMS Collections demos.
-The remaining work includes 41 existing demos, 121 new or extension components,
+Visual FX (88) demos, plus the forty DRAMS Collections demos.
+The remaining work includes 32 existing demos, 121 new or extension components,
 Pro seams, and the final audit.
 
 Photography replacement and performance tails remain open. A current asset
 inventory finds the retired generated photo keys in 1 remaining demo.
-None of the 358 remediated native compositions retains those references.
+None of the 367 remediated native compositions retains those references.
 
 The current full fit audit boots all 399 demos and reports no gate violations
-among these 358 native compositions. The unfinished groups still account for
+among these 367 native compositions. The unfinished groups still account for
 0 overflow findings, zero horizontal-scroll findings, 15 tiny-text findings and
-10 low-fill findings; findings can overlap within a demo. All 122 documented
+3 low-fill findings; findings can overlap within a demo. All 129 documented
 Figma fill exceptions validate.
+
+## Nine physical switches and the release-spring correction
+
+Pushin' Click, Concaved, Square, Coloured, Pinchin' Track, Long Pinchin',
+Pinchin', Rollin' Dot and Rollin' Switch now use their individual v4 tiles.
+Their 22 supplied SVGs remain byte-for-byte unchanged, with 13 captured
+primitive frames and one live CLICK label. All 36 new nodes preserve their
+source hierarchy, opacity, clipping, render offsets and intrinsic SVG roots.
+The native plane remains 324×168 at reference origin 24,20. Square, Coloured,
+the three pinch controls and the two rolling controls have documented exact-size
+fill exceptions. These exceptions change only the low-fill gate. CLICK retains
+its copy and reference center while its original 10px font is enlarged to an
+11.6px optical floor; the font-size gate takes precedence over that text size.
+
+The four previously published I/O, LED, Standard and Slurp switches also receive
+a motion correction. Their recipes specify Press → Drag + release, so the
+previous generic Toggle timeline was wrong for these controls. All thirteen
+now use the canonical 380/32/1 release spring, 80ms press feedback and direct
+pointer follow, with 0.55 rubber banding and at most eight source pixels of
+painted overrun. Retargeting preserves position and velocity. Held movement
+resumes at the latest pointer position with zero invented release velocity.
+There is no idle animation loop. Reduced motion uses 150ms retained fades and
+opacity feedback, while native controls remain at least 44 physical pixels.
+
+Full compositions preserve every complete original program, material, label,
+press pose and off/on endpoint. Coloured retains its original true initial
+value; the other twelve full controls start false. Native controls keep the
+supplied reference states, including false for Pushin', Concaved and Long
+Pinchin'. Dominant-direction release, strict 12px threshold, repeated
+assignments, cancellation coordinates and the next-click latch remain intact.
+Generator prompts describe each native control and its complete original model.
+
+The emitted verifier passes thirteen groups and 119,585 checks. It compares
+312 immutable histories with 2,210 original
+reference states in normal and reduced motion. It checks all 49 native nodes,
+all 52 original full endpoint/press scenes, independent RK4 spring histories
+at 60/120/240Hz, real mouse/keys/touch, direct drag, independent holds, retained
+paint, cleanup and 52 fresh network-blocked portable exports. All thirteen
+native posters are refreshed; 26 actual desktop/mobile detail routes and the
+tanziro.com footer link also pass. The previous four-switch verifier passes
+eleven groups and 29,762 checks with the corrected spring renderer. The Stage and motion baselines fall to
+31 and 12 remaining debts. The full library fit audit reports no findings
+among the 367 completed previews; all 129 fill exceptions validate. The
+15 text findings and three low-fill findings belong to unfinished demos.
+
+The current-source [timing report](performance/drams-switches-objects-2026-11-21.json) retains all 104 eight-second native/full, desktop DPR 1 and compact DPR 2 stories. CPU 1 records 59.88–60.00fps, 2 intervals above 25ms and 0 long tasks; first trace Paint spans 11.15–32.51ms and maximum readiness is 31.20ms. CPU 4 records 56.14–59.63fps, 96 intervals above 25ms and 56 long tasks; first trace Paint spans 71.53–367.87ms and maximum readiness is 345.80ms. Fonts were prepared before mounting, own heavy checks had stopped and other applications were not controlled. Every trace and outlier is retained; these measurements leave final cold-route, Lighthouse and site-wide timing gates open. The older four-switch measurements remain historical evidence from before the spring correction.
+
+Six shared-file siblings, 325 other modules, 386 metadata records, 380 unrelated
+catalog rows and five protected shared files are unchanged. All 387 prior
+helpers, 227 prior private inputs, 1,637 prior publication files and the
+222+184 accepted snapshots remain hash-verified. Historical captures, failed
+checks and touch diagnostics are retained. Final site-wide performance,
+photography, neutral light-stage/Dock, cold-route and Lighthouse work remains
+open, alongside 32 existing demos and 121 new/extension components.
 
 ## I/O, LED, Standard and Slurp switches
 
@@ -40,8 +94,8 @@ remain intact. Input coordinates restore source precision after Stage zoom.
 The controllers have no idle simulation loop. Each refreshed prompt describes
 its own v4 geometry, supplied artwork, controls and complete original model.
 
-Normal travel takes 350ms, reaches its one-pixel overshoot at 55% and settles
-by 80%. Press and release use 80/250ms feedback; reduced motion uses 150ms
+The earlier 350ms Toggle travel was replaced by the release-spring correction
+described above. Press and release use 80/250ms feedback; reduced motion uses 150ms
 retained fades and opacity feedback. Interrupted transitions retain current
 paint, including pressure opacity. Pending Web Animation pauses resolve at
 their sampled currentTime so a caller hold cannot advance one frame. Stable
@@ -49,7 +103,7 @@ inputs stay outside retained paint, preserve native Enter/Space and arrow/Home/
 End behavior, and keep 44px physical targets. Compact full copy remains at
 least 11.2px. Shared Stage owns Dock actions and thumbnail Tab order.
 
-The emitted verifier passes eleven groups and 2,470 checks, including 96
+The previous emitted verifier passed eleven groups and 2,470 checks, including 96
 immutable original histories with 680 reference states, exact native slots,
 32 layouts, actual mouse/keys/touch, interrupted paint, caller/viewport/document
 holds, independent press owners, cleanup and sixteen fresh network-blocked
@@ -57,15 +111,15 @@ exports. Eight actual desktop/mobile detail routes also pass captured dragging
 outside the control followed by native Enter; the tanziro.com footer link is
 verified. All four native posters are refreshed. Required local registry,
 generated-output, library, runtime, Stage and CLI checks pass at the documented
-baseline: 651 library checks, all 399 previews and 97 offline exports. The
-global fit command still exits 1 for the 41 unfinished demos, with no findings
+baseline: 651 library checks, all 399 previews and 97 offline exports. At that checkpoint, the
+global fit command exited 1 for the 41 then-unfinished demos, with no findings
 in the 358 completed previews. Stage debt falls 44→40 and motion debt 23→19.
 Fifteen shared-file siblings, 325 other modules, 395 metadata records, 380
 unrelated catalog rows, five protected shared files, 372 earlier helpers,
 211 earlier private inputs, 1,380 publication files and 222+184 accepted
 snapshot files remain unchanged.
 
-The [isolated timing report](performance/drams-switches-core-2026-11-21.json)
+The pre-spring [timing report](performance/drams-switches-core-2026-11-21.json)
 retains all 32 eight-second native/full, desktop DPR 1 and compact DPR 2 stories.
 CPU 1 records 60.00fps, zero gaps above 25ms and zero long tasks; first trace
 Paint spans 8.37–20.26ms and readiness stays within 18.9ms. CPU 4 records
