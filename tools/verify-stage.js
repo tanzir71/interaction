@@ -3,9 +3,12 @@
    explicitly until Phase 4; --strict requires all that debt to be resolved. */
 const fs=require('node:fs');
 const path=require('node:path');
+const componentControls=require('./stage-component-controls');
+const componentControlPolicy=JSON.parse(fs.readFileSync(path.join(__dirname,'stage-component-controls.json'),'utf8'));
 const {demos,metadata}=require('./load-registry')();
 const presets=new Set(['sm','md','lg','bleed']);
 const errors=[],debt={};
+errors.push(...componentControls.validate(demos,componentControlPolicy));
 const allowlist=JSON.parse(fs.readFileSync(path.join(__dirname,'stage-allowlist.json'),'utf8'));
 const fitAllowlist=JSON.parse(fs.readFileSync(path.join(__dirname,'stage-fit-allowlist.json'),'utf8')).lowFill;
 for(const [id,reason]of Object.entries(allowlist))if(typeof reason!=='string'||!reason.trim())errors.push(id+': root exception needs a written reason');
@@ -29,7 +32,7 @@ for(const d of demos){
  if(!/^\d{4}-\d{2}$/.test(d.addedAt))errors.push(d.id+': invalid addedAt');
  for(const match of d.html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi)){
   const label=match[1].replace(/<[^>]*>/g,'').trim();
-  if(/^(replay|reset|animate|restart|play again)$/i.test(label))issues.push('own-control: '+label);
+  if(/^(replay|reset|animate|restart|play again)$/i.test(label)&&!componentControls.intrinsicControl(d.id,match[0],componentControlPolicy))issues.push('own-control: '+label);
  }
  const root=d.rootClass.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
  const rules=[...d.css.matchAll(new RegExp('(?:^|})\\s*\\.'+root+'\\s*\\{([^}]*)\\}','g'))];

@@ -20,7 +20,6 @@
 'use strict';
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
@@ -28,44 +27,19 @@ const rootArg = args.indexOf('--root');
 const ROOT = path.resolve(rootArg > -1 ? args[rootArg + 1] : '.');
 const BASELINE = path.join(ROOT, 'tools', 'motion-baseline.json');
 
-// Named curves from MOTION_SYSTEM.md (normalised: no spaces, leading zeros dropped).
-const SYS_CURVES = new Set([
-  'cubic-bezier(.22,1,.36,1)',   // --ease-out
-  'cubic-bezier(.4,0,.2,1)',     // --ease-close
-  'cubic-bezier(.34,1.36,.64,1)',// --ease-pop
-  'cubic-bezier(.34,1.25,.64,1)',// --ease-settle
-  'cubic-bezier(.34,1.35,.64,1)',// --ease-bounce
-  'cubic-bezier(.34,1.96,.64,1)',// --ease-pop-strong
-  'cubic-bezier(.35,-.02,.43,1)',// --ease-step
-]);
-// Durations on the scale, plus the derived values the recipes use (stagger offsets, exits at ~60%).
-const SYS_DUR = new Set([40, 50, 80, 100, 130, 150, 160, 180, 200, 250, 260, 280, 300, 350, 400, 455, 500, 600, 740]);
-const norm = (s) => s.replace(/\s/g, '').replace(/(^|[,(])0\./g, '$1.');
-
-function loadDemos() { return require('./load-registry')(ROOT).demos; }
-
-function audit(d) {
-  const src = `${d.css || ''}\n${d.js || ''}`;
-  const out = [];
-  const curves = [...new Set((src.match(/cubic-bezier\([^)]*\)/g) || []).map(norm))];
-  for (const c of curves) if (!SYS_CURVES.has(c)) out.push(`curve ${c}`);
-  const durs = [...new Set((src.match(/\b\d*\.?\d+m?s\b/g) || [])
-    .filter((x) => /\d(ms|s)$/.test(x))
-    .map((x) => (x.endsWith('ms') ? parseFloat(x) : Math.round(parseFloat(x) * 1000)))
-    .filter((v) => v >= 40 && v < 1000))];
-  for (const v of durs) if (!SYS_DUR.has(v)) out.push(`duration ${v}ms`);
-  if (!/prefers-reduced-motion|reducedMotion|matchMedia\(['"]\(prefers/.test(src)) out.push('reduced no reduced-motion path');
-  if (/transition[^;{}]*\blinear\b/.test(src)) out.push('linear linear easing on a UI transition');
-  return out;
-}
+const {audit}=require('./motion-audit');
+const modelPolicy=JSON.parse(fs.readFileSync(path.join(ROOT,'tools','motion-models.json'),'utf8')).models;
+function loadDemos(){return require('./load-registry')(ROOT).demos;}
 
 const demos = loadDemos();
+for(const entry of modelPolicy)if(!demos.some(d=>d.id===entry.id))throw Error('Unknown motion model '+entry.id);
 const now = {};
-for (const d of demos) { const v = audit(d); if (v.length) now[d.id] = v; }
+for (const d of demos) { const v = audit(d,modelPolicy); if (v.length) now[d.id] = v; }
 const ids = Object.keys(now).sort();
 const count = (k) => ids.filter((id) => now[id].some((v) => v.startsWith(k))).length;
 console.log(`verify-motion: ${demos.length} demos, ${ids.length} with violations ` +
   `(curve ${count('curve')}, duration ${count('duration')}, reduced-motion ${count('reduced')}, linear ${count('linear')})`);
+console.log(`  ${modelPolicy.length} immutable virtual models (${modelPolicy.reduce((n,r)=>n+r.occurrences,0)} function bodies); complete CSS and visible renderer code checked`);
 
 if (flag('--update-baseline')) {
   fs.mkdirSync(path.dirname(BASELINE), { recursive: true });

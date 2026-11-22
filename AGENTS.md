@@ -1050,3 +1050,22 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   retaining their geometry for overflow/text gates. Intrinsic media, visible text,
   surfaces, shadows and pseudo-elements still count. Run the 24 browser boundary
   checks in `tools/verify-stage-fit-geometry.js` after changing these rules.
+
+- Stage and motion baselines are empty. Run both static audits with `--strict`
+  locally; keep GitHub Actions disabled. `tools/motion-models.json` binds seven
+  exact virtual model bodies in four demos. Their original code must remain
+  unchanged; complete CSS and visible renderer code stay audited. Fractional
+  seconds must retain their decimal point. Continuous source-loop frequencies
+  and bounded 40ms animation staggers do not exempt UI transition durations.
+- `tools/stage-component-controls.json` records Punch Card's intrinsic formatting
+  Reset command and Figma 170:1830 geometry. Preserve all six native caps and the
+  full keyboard. Exact markup/hash validation prevents a driver or changed button
+  from inheriting that classification. All other demo replay/reset drivers remain
+  shared Dock actions. Run `node --test tools/motion-audit.test.js
+  tools/stage-component-controls.test.js` after changing either audit boundary.
+- `node tools/verify-remediation-scope.js http://127.0.0.1:4173` checks 72
+  native/full dark/light normal/reduced stories, actual painted timing, hidden
+  model isolation, 128 formatting states and monotonic intrinsic Reset clocks.
+  `node tools/verify-remediation-exports.js` checks 24 fresh network-blocked full
+  exports at 390px. These supplement the original component suites and final
+  motion/performance audits; they do not replace them.

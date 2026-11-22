@@ -1,0 +1,37 @@
+{
+  "models": [
+    {
+      "id": "terminal-window",
+      "functionName": "createTerminalCore",
+      "occurrences": 2,
+      "sha256": "afbb7dc78b1e0c227865f14cf0ddf6644c32a549dfa480343445d881c2274d2a",
+      "bytes": 39304,
+      "reason": "The complete original terminal runs in a zero-size, visibility:hidden, inert closed-shadow host at left:-10000px. Only semantic state feeds the separate canonical visible renderer."
+    },
+    {
+      "id": "flip-clock",
+      "functionName": "createSkeuoKernel",
+      "occurrences": 2,
+      "sha256": "1c61cc712f13a434816cb734052873ee2d09727cfba373b7740e8166438ef6c7",
+      "bytes": 26119,
+      "reason": "The complete original virtual model owns a detached holder and virtual animation clock. The separate visible presentation disables original transitions and paints canonical motion."
+    },
+    {
+      "id": "slot-machine-reel",
+      "functionName": "createSkeuoKernel",
+      "occurrences": 2,
+      "sha256": "f90616b0ce75c302f5702f0295b368d35d6cb6f0b933e77b46d63c0728e95e16",
+      "bytes": 28531,
+      "reason": "The complete original virtual model owns a detached holder and virtual animation clock. The separate visible presentation disables original transitions and paints canonical motion."
+    },
+    {
+      "id": "drams-015",
+      "functionName": "createSkeuoKernel",
+      "occurrences": 1,
+      "sha256": "b2afd27104fb619664ae5cce41394635a934f07b27f951a3acbd4ccbeff21659",
+      "bytes": 23422,
+      "reason": "The complete original virtual model owns a detached holder and virtual animation clock. The separate visible presentation disables original transitions and paints canonical motion."
+    }
+  ],
+  "scope": "Only these exact virtual model function bodies are excluded from literal timing checks. Complete CSS and all visible renderer code remain audited. The browser scope verifier checks actual native/full painted motion, model isolation and canonical overrides. Source/hash or occurrence changes fail closed."
+}

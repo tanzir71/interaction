@@ -9,8 +9,52 @@ Pro seams and final audits remain. Earlier sections retain historical counts.
 The retired generated photo keys are absent from registered demo HTML, CSS and
 JavaScript. The fit audit boots all 399 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 134
-documented Figma fill exceptions validate. Stage and motion baselines contain
-one and five remaining debts respectively. Reduced-motion baseline debt is zero.
+documented Figma fill exceptions validate. Stage and motion baselines are now
+empty; their strict static checks pass. Final recipe, accessibility, theme and
+performance acceptance remains open.
+
+## Existing-library control and motion audit boundaries
+
+Both strict static audits now pass across all 399 existing demos. Punch Card's
+remaining Reset match was the original keyboard's formatting command, rather
+than a demo driver. Preserve the six native caps, including the supplied sixth
+40×40px slot at Figma 170:1830, and the complete original full keyboard. The
+command clears bold, italic, uppercase and alignment without rewinding the model
+clock. `tools/stage-component-controls.json` records the exact button hash and
+design reason; changed, duplicated or undocumented commands fail validation.
+Other demo Replay/Reset drivers remain owned by the shared Dock.
+
+The motion auditor now distinguishes four immutable virtual models from their
+visible presentations. Seven exact function bodies retain the original terminal,
+split-flap timer, mechanical counter and Joypad programs. Any source or occurrence
+change fails their hash guard. The complete CSS and surrounding renderer code
+remain audited; mutations before or after a model do not gain an exemption.
+The terminal model's closed-shadow host remains inert, hidden and zero-size.
+Visible drums, lid and Joypad poses retain their canonical presentation code.
+
+The audit also reads fractional seconds correctly: `.55s` means 550ms. Continuous
+loop frequencies retain their original periods, while UI durations still gate;
+40ms animation stagger offsets are capped at 300ms. Thirteen CSS declarations
+were corrected across five demos: obsolete counter/lid/letter/fold/tonearm
+transitions were removed, the counter cap uses the quick token and default curve,
+and drawer metadata uses its 50ms entry delay. All original JavaScript, markup,
+prompts, copy and models remain unchanged, as do 321 other modules, all 399
+metadata records and the five protected shared files.
+
+Eight audit-boundary unit tests cover changed/duplicated model bodies, renderer
+and CSS regressions, fractional durations and intrinsic-command validation.
+`node tools/verify-remediation-scope.js http://127.0.0.1:4173` checks 72 native/full
+dark/light normal/reduced browser stories, 128 complete formatting states, exact
+sixth-cap geometry, monotonic Reset clocks and actual painted timing. Another
+24 fresh full exports work offline at 390px in both themes and motion settings.
+The required local registry, lifecycle, CLI/MCP, library, stage-runtime and fit
+checks remain part of publication. Static audit completion does not establish
+the complete final recipe, accessibility or performance gates.
+
+Legacy aliases and the shared neutral light-stage/Dock corrections remain ahead
+of expansion, followed by all 121 new/extension components, Pro seams and final
+acceptance. GitHub Actions stays disabled; the account's $0 stop-at-limit budget
+is unchanged.
 
 ## Four Framer compositions and painted stage fill
 
@@ -86,9 +130,10 @@ source-bound report is `docs/performance/framer-data-2026-11-22.json`; all trace
 and outliers are retained. Prepared component mounts do not establish cold-route,
 Lighthouse or final site-wide timing acceptance.
 
-Native visual remediation now reaches 399/520 of the complete handoff. Remaining
-existing-library cleanup includes Punch Card's local Reset debt, five motion-audit
-debts, legacy aliases and the shared/final audit follow-ups. Complete those before
+Native visual remediation now reaches 399/520 of the complete handoff. This batch
+left Punch Card's Reset classification and five literal motion-audit entries;
+the subsequent audit-boundary pass above resolves those. Legacy aliases and the
+shared/final audit follow-ups remain. Complete the shared cleanup before
 adding the 121 new or extension components, then finish Pro seams and final gates.
 
 ## Six Showcase paths, photographs and controls

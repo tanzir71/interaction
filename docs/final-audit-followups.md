@@ -3,9 +3,27 @@
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
 All 399 existing native compositions now follow their v4 references. The 121 new
-or extension components and Pro seams remain. Before expansion, finish the local
-Reset debt in Punch Card, the five remaining motion-audit entries and legacy
-aliases. The corrected fit audit excludes empty transparent leaf hit areas while
+or extension components and Pro seams remain. Both strict static audits now pass;
+legacy aliases and the shared theme corrections remain before expansion. Punch
+Card's sixth key is an intrinsic formatting command, validated by exact markup
+and its Figma 170:1830 slot. It clears all sixteen formatting combinations while
+the source clock advances normally. Preserve the six-key interaction and the
+complete original full note. Changed or duplicate markup fails the command
+contract rather than silently inheriting a general Reset exemption.
+
+The motion checker now excludes only seven exact hash-checked virtual model
+function bodies in four demos. All CSS and visible renderer code still gate.
+The terminal's original closed-shadow model stays inert, hidden and zero-size;
+the drum and Joypad presentations suppress the unpainted source transitions.
+Fractional seconds now retain their decimal point. Continuous loop periods and
+bounded 40ms animation staggers are treated separately from UI durations. Keep
+the eight mutation/unit tests, 72 browser scope stories, 128 formatting states
+and 24 fresh offline exports when changing these boundaries. Thirteen CSS
+declarations across five demos were corrected without changing their programs,
+markup, copy or prompts. These static and focused browser checks supplement the
+full final motion audit; they do not prove every component's recipe or timing.
+
+The corrected fit audit excludes empty transparent leaf hit areas while
 retaining their overflow/text checks. It now passes all 399 demos with 134 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
@@ -53,7 +71,7 @@ The shared light-stage Dock also needs its v4 Kit treatment. The reference uses 
 
 Review every remediated generator prompt against its own v4 geometry, controls and approved assets, while retaining the complete original models, datasets and displayed copy. The four volume-dial prompts and the three subsequent knob prompts now describe their individual native assets, geometry, controls and complete original compositions.
 
-The motion audit still reports the legacy curve string inside Joypad’s unchanged virtual source program. Its source CSS transitions are disabled before paint; the visible renderer uses the canonical spring and reduced-motion fades, with independent numerical and pixel checks. The final strict audit should distinguish unpainted model styles from transitions that can reach the screen while continuing to flag actual noncanonical motion.
+The earlier literal motion audit reported the legacy curve inside Joypad’s unchanged virtual source program. Its source CSS transitions are disabled before paint; the visible renderer uses the canonical spring and reduced-motion fades, with independent numerical and pixel checks. The strict audit now distinguishes that exact hash-checked virtual model from the complete CSS and visible renderer. Preserve this boundary and its browser checks during the final motion audit.
 
 The [Pendulum/Bouncin' Ball timing report](performance/drams-objects-physics-2026-11-22.json) retains all sixteen current-source cases. CPU 1 records 59.88–60.00fps, one gap and no long tasks. CPU 4 records 40.28–52.04fps, 469 gaps and 103 long tasks, with first trace Paint up to 535.47ms and readiness up to 709.5ms. These stress samples miss the final frame/paint targets; investigate the recorded JavaScript, style/layout and paint work during the final performance pass. The earlier timing attempt exposed a real event-time bug, now fixed and covered by sixteen actual-clock interruptions and eight independent press-owner stories. Keep real-clock interruption coverage in the final motion audit; virtual clocks alone did not expose that failure. All earlier source/log evidence and completed replacement traces remain preserved.
 
