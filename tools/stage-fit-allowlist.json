@@ -1389,6 +1389,26 @@
         105,
         18
       ]
+    },
+    "ui-avatar-stack": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve the exact sparse v4 geometry. Five 36px portraits at 44px pitch and the 80×24 name bubble retains its captured size in the 372×264 Stage. The first portrait measures the repeated avatar slot. Only low fill is exempt; overflow, scrolling and the 11px optical text floor still gate.",
+      "figmaNode": "180:811",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=180-811",
+      "selector": ".d-new-layout-avatars-native-art [data-native-node=\"180:828\"]",
+      "designSize": [
+        36,
+        36
+      ]
+    },
+    "ui-inverse-tabs": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve the exact sparse v4 geometry. The single 260×40 tab rail retains its captured size in the 372×264 Stage. Only low fill is exempt; overflow, scrolling and the 11px optical text floor still gate.",
+      "figmaNode": "182:439",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=182-439",
+      "selector": ".d-new-layout-tabs-native-art [data-native-node=\"182:452\"]",
+      "designSize": [
+        260,
+        40
+      ]
     }
   }
 }

@@ -120,6 +120,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The seven new Layout & UI components use `tools/verify-layout-new.js`,
+  `tools/verify-layout-new-input.js`, `tools/verify-layout-new-clocks.js`,
+  `tools/verify-layout-new-exports.js`, `tools/verify-layout-new-holds.js` and
+  `tools/verify-layout-new-hover.js`
+  against the local 4173 server. Preserve 93 exact native layers, 23 unchanged
+  SVG slots, nine approved photo slots and the complete three/thirteen/three/
+  five/five/four/six record models. Tests cover 42 six-second 60/120/240Hz
+  renderer stories, fourteen fresh offline full/native contexts, actual native
+  touch/keys/wheel, compact glyph/icon clearance, scrolled tooltip anchors,
+  independent holds, queued checkbox/clipboard intent, capture and disposal.
+  Folder follows Handoff 3 section 7's Layout & UI placement while the supplied
+  manifest category remains unchanged. Avatar/Tabs exceptions change only fill.
+  Keep prior phase private helpers, inputs and archived publication evidence
+  frozen; use new phase helpers for further work.
 - The five new Buttons & Micro components are original implementations under
   the Stage contract. Run `node tools/verify-micro-new.js`,
   `node tools/verify-micro-new-input.js`, `node tools/verify-micro-new-clocks.js`

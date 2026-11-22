@@ -3,16 +3,68 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. Eleven new Agent & AI UI and
-Buttons & Micro components bring the catalog to 410; 110 new or extension components, Pro seams and final
+sixteen Showcase and four Framer compositions. Eighteen new Agent & AI UI,
+Buttons & Micro and Layout & UI components bring the catalog to 417; 103 new or extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 410 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 139
+JavaScript. The fit audit boots all 417 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 141
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Seven new Layout & UI components
+
+Folder Peek, Avatar Stack Spread, Link Preview, Card Fan, Onboarding Checklist,
+Inverse Tabs and Selection Action Bar implement the third new-component group.
+They preserve 93 captured native Figma layers, 23 supplied SVG slots using
+nineteen unchanged files, and nine native photograph slots using six already
+approved v2 photographs. Detail uses the 1600px originals; tiles and portable
+exports use the licensed 800px files. No new runtime library is introduced.
+
+Folder follows Handoff 3 §7's Layout & UI placement. Its manifest entry remains
+unchanged under Buttons & Micro; this category discrepancy is documented rather
+than rewriting the supplied manifest. The v4 tile remains the visual source.
+The New view now contains eighteen entries. Avatar and Tabs have written
+reference-size exceptions for their five 36px portraits/80×24 bubble and
+260×40 rail; overflow, scrolling and optical text continue to gate.
+
+Full Folder retains three complete local document records, a 3-up open grid,
+keyboard navigation and a −14° perspective flap with 40ms sheet staggers.
+Avatar retains all thirteen example collaborators, accessible expansion and
+collapse, canonical depth/spread and a tooltip anchored to the actual portrait
+through native scrolling. Native mode paints one tooltip and keeps expansion
+reachable after the final profile. Link Preview retains all three local notes,
+exact photograph crops, interrupted image crossfades, 160ms pointer following,
+bounded velocity tilt and pinned-touch dismissal.
+
+Card Fan preserves five unique records through interrupted Deal operations,
+native drag/capture, measured release velocity and analytic 380/32/1 springs.
+Reduced Deal commits immediately. The checklist retains five native checkbox
+steps in full, a measured ring, the next accent/spinner, drawn checks, success
+and review. Its compact reference intentionally paints the supplied four-row
+checkpoint while retaining the complete five-step model.
+
+Tabs uses actual difference compositing during the indicator's 250ms slide,
+four complete panels, native Arrow/Home/End and shared Next. Selection retains
+all six local rows, reversible pop-in/exit, changed-digit-only counts, copy and
+local removal. Compact optical text clears the original icon slots; overlapping
+hit regions resolve physical intent by the nearer icon. A delayed clipboard
+failure waits through Pause before exposing its fallback, and disposal rejects
+late responses. Replay restores removed local examples.
+
+Six focused suites pass 4,607 checks, fourteen fresh network-blocked full/native
+exports and 42 actual six-second renderer stories at 60/120/240Hz. They cover
+exact artwork, independent projective/stagger/spring paint, complete copy/data,
+physical desktop hover, keyboard/moving touch/wheel,
+390/375/360px full typography, active compact labels and targets, interruption,
+independent full-viewport/LiveTiles/caller/document holds, queued checkbox and
+clipboard intent, capture release and disposal. These are functional and
+numerical checks; final timing, contrast and accessibility audits remain open.
+All 337 previous modules, 410 previous sidecar records and seven shared inputs
+remain unchanged. Seven refreshed posters and 28 desktop/mobile dark/light dev
+routes retain the TanZiRo footer link.
 
 ## Five new Buttons & Micro components
 

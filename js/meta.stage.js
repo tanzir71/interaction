@@ -15303,5 +15303,225 @@ INTRX.meta({
       "accessible feedback"
     ],
     "addedAt": "2026-11"
+  },
+  "ui-folder-peek": {
+    "designSize": [
+      400,
+      440
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "folder",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-avatar-stack": {
+    "designSize": [
+      400,
+      360
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "avatars",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-link-preview": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "preview",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-card-fan": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "deal",
+        "label": "Deal"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "fan",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-onboarding-checklist": {
+    "designSize": [
+      400,
+      440
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Complete next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "onboarding",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-inverse-tabs": {
+    "designSize": [
+      400,
+      360
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "tabs",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-selection-bar": {
+    "designSize": [
+      400,
+      440
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "all",
+        "label": "Select all"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Layout & UI",
+      "selection",
+      "accessible interactions"
+    ],
+    "addedAt": "2026-11"
   }
 });
