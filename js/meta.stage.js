@@ -17303,5 +17303,180 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "gallery-coverflow": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next cover"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Galleries & Sliders",
+      "cover",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "gallery-bookshelf": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next book"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Galleries & Sliders",
+      "books",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "gallery-apple-cards": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next story"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Galleries & Sliders",
+      "stories",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "gallery-testimonials": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next quote"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Galleries & Sliders",
+      "quotes",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "gallery-photo-stack": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle lightbox"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Galleries & Sliders",
+      "stack",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

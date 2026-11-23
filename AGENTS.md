@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first fifty extensions are implemented;
-  the catalog is 479. Forty-one extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first fifty-five extensions are implemented;
+  the catalog is 484. Thirty-six extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The five Gallery extensions use `tools/verify-gallery-ext.js`,
+  `tools/verify-gallery-ext-models.js`, `tools/verify-gallery-ext-input.js`,
+  `tools/verify-gallery-ext-clocks.js`, `tools/verify-gallery-ext-exports.js`,
+  `tools/verify-gallery-ext-holds.js`, `tools/verify-gallery-ext-touch.js` and
+  `tools/verify-gallery-ext-interaction.js` against the local 4173 server.
+  Preserve all 93 exact native layers and 18 photograph slots using fifteen
+  original local images. Native Dusk keeps its exact reference; the full first
+  print uses approved forestDark. Keep all 800/1600px hashes and credits. Complete
+  models retain five covers, eleven books, six two-paragraph stories, three
+  complete quotes and five prints. Drag carries actual source velocity into
+  analytical 380/32/1 springs; full covers keep their real mirrored reflections.
+  Book hinge/tilt, bounded photo blends, exact 4800ms quote deadlines, complete
+  scrollable articles, current-pose shared-image FLIP and visible modal focus
+  remain intact. Native paint follows the shared Stage zoom and original 24,20
+  offset. Hit order follows artwork depth; touch never acquires hover motion.
+  Eight suites pass 68,775 checks, including independent numerical integration,
+  30 six-second 60/120/240Hz renderer stories, ten fresh network-blocked full/native
+  contexts, twenty independent hold stories, actual moving touch and page scroll.
+  No new fill or overflow exceptions are added. The catalog is 484; 36 extensions,
+  Pro seams and final audits remain. Keep earlier private helpers, inputs and
+  archived publication evidence frozen.
 - The twelve Layout & UI extensions use `tools/verify-layout-ext.js`,
   `tools/verify-layout-ext-models.js`, `tools/verify-layout-ext-input.js`,
   `tools/verify-layout-ext-clocks.js`, `tools/verify-layout-ext-exports.js`,
@@ -184,7 +205,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   suites pass 141,861 checks, including independent RK4/cubic/lag models, 72
   six-second 60/120/240Hz renderer stories, 24 fresh network-blocked full/native
   contexts, 48 independent hold stories, actual moving touch and capture cleanup.
-  The catalog is 479; 41 extensions, Pro seams and final audits remain. Keep
+  This group brought the catalog to 479; later counts appear above. Keep
   earlier private helpers, inputs and archived publication evidence frozen.
 - The eight Visual FX extensions use `tools/verify-fx-ext.js`,
   `tools/verify-fx-ext-models.js`, `tools/verify-fx-ext-input.js`,

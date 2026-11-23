@@ -7,14 +7,48 @@ sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
-it to 479; 41 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
+it to 479. Five Gallery extensions bring it to 484; 36 extension components,
+Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 479 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 484 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 157
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Five Gallery extensions
+
+Coverflow, Bookshelf, Story Cards, Animated Testimonials and Photo Stack Lightbox
+add five original implementations with 93 exact native layers and eighteen photo
+slots using fifteen unchanged local photographs. Native Dusk retains its exact
+licensed reference; the full first print uses approved v2 forestDark. Every
+800/1600px file hash and attribution stays unchanged. No new artwork export,
+runtime dependency, fill exception or overflow exemption is introduced.
+
+Complete models include five reflected 3D covers, eleven books and all cover copy,
+six original two-paragraph articles, three complete fictional quotes and five
+prints. Drag follows the real pointer and carries measured velocity into an
+analytical 380/32/1 spring. Book covers turn on their spine hinge; touch reveals
+them without pointer tilt. Shared-image dialogs use transform FLIP, current-pose
+reversals, scrollable complete content, trapped visible focus and source-card
+return. The source-fixed quote deadline is 4800ms, with early timer re-arming and
+generation guards. Photo blending conserves opacity and bounds layers by the
+actual collection. Hit order follows visible stack depth. Reduced motion keeps
+150ms inert old paint and deliberate input without automatic playback.
+
+Eight suites pass 68,775 checks, including independent numerical spring
+integration, exact timer boundaries, thirty six-second 60/120/240Hz renderer
+stories, ten fresh network-blocked full/native contexts and twenty independent
+caller/document/viewport hold stories. Physical mouse, moving touch, native keys,
+vertical page scroll, compact articles and focus return are verified. Twenty real
+desktop/mobile dark/light routes retain the tanziro.com footer; five native
+posters are refreshed. All 406 earlier modules, 479 metadata records, seven
+protected shared files and prior private publication evidence stay unchanged.
+All thirteen required commands pass, including the 484-demo fit audit with 157
+valid reference exceptions. GitHub Actions remains disabled. The remaining 36
+extensions, Pro seams and final recipe, accessibility, contrast, performance,
+cold-route and Lighthouse acceptance remain open.
 
 ## Twelve Layout & UI extensions
 

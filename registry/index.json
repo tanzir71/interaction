@@ -32833,5 +32833,578 @@
     "hint": "Paint free time across the week; blocks snap to 30 min",
     "sourceName": "Seen on: beUI Availability Scheduler and BoardUI Calendar patterns",
     "isNew": true
+  },
+  {
+    "id": "gallery-coverflow",
+    "title": "Coverflow",
+    "category": "Galleries & Sliders",
+    "group": "Interface",
+    "trigger": "drag",
+    "tags": [
+      "gallery",
+      "extension",
+      "cover",
+      "drag"
+    ],
+    "useCases": [
+      "Galleries & Sliders",
+      "cover",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Drag five approved covers through a reflected 3D arc. Release velocity carries into the nearest cover; keys and touch keep the same five-item model.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/gallery-coverflow",
+    "thumb": "hero",
+    "module": "js/demos.galleryext.gallery-coverflow.js?v=36c7c978e6",
+    "assetBundle": "js/demo-assets.js?v=f9c7dc0f9d",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/gallery-coverflow.json?v=8e77de04e1",
+    "assetRefs": {
+      "photo-chrome": "assets/images/chrome-800.webp",
+      "photo-embers": "assets/images/embers-800.webp",
+      "photo-fluidBlue": "assets/images/fluidBlue-800.webp",
+      "photo-magnolia": "assets/images/magnolia-800.webp",
+      "photo-silk": "assets/images/silk-800.webp"
+    },
+    "rootClass": "d-ext-gallery-cover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next cover"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Covers swing in 3D and snap to the centre",
+    "sourceName": "Seen on: Originkit Coverflow Drag pattern",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "chrome",
+        "asset": "photo-chrome",
+        "photoId": "sC2Twgvu3lg",
+        "imageId": "photo-1759583545970-0106ff47353f",
+        "photographer": "Rohit Choudhari",
+        "url": "https://unsplash.com/photos/abstract-glass-structure-with-iridescent-light-reflections-sC2Twgvu3lg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "embers",
+        "asset": "photo-embers",
+        "photoId": "5w2hjEJ06b0",
+        "imageId": "photo-1762202742459-4fcdc4beaab4",
+        "photographer": "Alican Leblebici",
+        "url": "https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "fluidBlue",
+        "asset": "photo-fluidBlue",
+        "photoId": "prMn9KINLtI",
+        "imageId": "photo-1597773150796-e5c14ebecbf5",
+        "photographer": "Pawel Czerwinski",
+        "url": "https://unsplash.com/photos/blue-and-black-abstract-painting-prMn9KINLtI",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-20"
+      },
+      {
+        "key": "magnolia",
+        "asset": "photo-magnolia",
+        "photoId": "J4gm_1GKfAA",
+        "imageId": "photo-1518343161123-c7e9ab4dc4da",
+        "photographer": "Annie Spratt",
+        "url": "https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      },
+      {
+        "key": "silk",
+        "asset": "photo-silk",
+        "photoId": "JTKKRK05NAM",
+        "imageId": "photo-1638376776402-9a4b75fe21bb",
+        "photographer": "Milad Fakurian",
+        "url": "https://unsplash.com/photos/a-black-and-white-abstract-background-with-wavy-lines-JTKKRK05NAM",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-chrome": "assets/images/chrome.webp",
+      "photo-embers": "assets/images/embers.webp",
+      "photo-fluidBlue": "assets/images/fluidBlue.webp",
+      "photo-magnolia": "assets/images/magnolia.webp",
+      "photo-silk": "assets/images/silk.webp"
+    }
+  },
+  {
+    "id": "gallery-bookshelf",
+    "title": "Bookshelf",
+    "category": "Galleries & Sliders",
+    "group": "Interface",
+    "trigger": "hover",
+    "tags": [
+      "gallery",
+      "extension",
+      "books",
+      "hover"
+    ],
+    "useCases": [
+      "Galleries & Sliders",
+      "books",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Eleven complete books pull forward and turn to show their covers. Native hover, focus, touch and Arrow keys reveal the same local collection.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/gallery-bookshelf",
+    "thumb": "hero",
+    "module": "js/demos.galleryext.gallery-bookshelf.js?v=5cb0bf72a3",
+    "assetBundle": "js/demo-assets.js?v=f9c7dc0f9d",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/gallery-bookshelf.json?v=df151465e5",
+    "assetRefs": {
+      "photo-magnolia": "assets/images/magnolia-800.webp"
+    },
+    "rootClass": "d-ext-gallery-books",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next book"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A book slides out and turns to show its cover",
+    "sourceName": "Seen on: Originkit Bookshelf and bencho Album Shelf patterns",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "magnolia",
+        "asset": "photo-magnolia",
+        "photoId": "J4gm_1GKfAA",
+        "imageId": "photo-1518343161123-c7e9ab4dc4da",
+        "photographer": "Annie Spratt",
+        "url": "https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-magnolia": "assets/images/magnolia.webp"
+    }
+  },
+  {
+    "id": "gallery-apple-cards",
+    "title": "Story Cards",
+    "category": "Galleries & Sliders",
+    "group": "Interface",
+    "trigger": "drag",
+    "tags": [
+      "gallery",
+      "extension",
+      "stories",
+      "drag"
+    ],
+    "useCases": [
+      "Galleries & Sliders",
+      "stories",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Six tall photo stories scroll and snap. Choose a card to open its complete local article with a shared image, visible focus and a return to the same card.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/gallery-apple-cards",
+    "thumb": "hero",
+    "module": "js/demos.galleryext.gallery-apple-cards.js?v=07de2302e7",
+    "assetBundle": "js/demo-assets.js?v=f9c7dc0f9d",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/gallery-apple-cards.json?v=bf13c680ce",
+    "assetRefs": {
+      "photo-cityNight": "assets/images/cityNight-800.webp",
+      "photo-aurora": "assets/images/aurora-800.webp",
+      "photo-milkyway": "assets/images/milkyway-800.webp",
+      "photo-forestBlue": "assets/images/forestBlue-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-magnolia": "assets/images/magnolia-800.webp"
+    },
+    "rootClass": "d-ext-gallery-stories",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next story"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Tall cards scroll; one click opens the full story",
+    "sourceName": "Seen on: Aceternity Apple Cards Carousel pattern",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "cityNight",
+        "asset": "photo-cityNight",
+        "photoId": "zd8v_Ig3ndg",
+        "imageId": "photo-1603793510575-a8cf24361baa",
+        "photographer": "Polina Kuzovkova",
+        "url": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "aurora",
+        "asset": "photo-aurora",
+        "photoId": "62V7ntlKgL8",
+        "imageId": "photo-1483347756197-71ef80e95f73",
+        "photographer": "Vincent Guth",
+        "url": "https://unsplash.com/photos/silhouette-of-trees-near-aurora-borealis-at-night-62V7ntlKgL8",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "milkyway",
+        "asset": "photo-milkyway",
+        "photoId": "9wH624ALFQA",
+        "imageId": "photo-1515705576963-95cad62945b6",
+        "photographer": "Dns Dgn",
+        "url": "https://unsplash.com/photos/milky-way-on-mountains-9wH624ALFQA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "forestBlue",
+        "asset": "photo-forestBlue",
+        "photoId": "2aSpCOPNyO0",
+        "imageId": "photo-1630695230041-8909e3204778",
+        "photographer": "Taylor Wright",
+        "url": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "magnolia",
+        "asset": "photo-magnolia",
+        "photoId": "J4gm_1GKfAA",
+        "imageId": "photo-1518343161123-c7e9ab4dc4da",
+        "photographer": "Annie Spratt",
+        "url": "https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-cityNight": "assets/images/cityNight.webp",
+      "photo-aurora": "assets/images/aurora.webp",
+      "photo-milkyway": "assets/images/milkyway.webp",
+      "photo-forestBlue": "assets/images/forestBlue.webp",
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-magnolia": "assets/images/magnolia.webp"
+    }
+  },
+  {
+    "id": "gallery-testimonials",
+    "title": "Animated Testimonials",
+    "category": "Galleries & Sliders",
+    "group": "Interface",
+    "trigger": "ambient",
+    "tags": [
+      "gallery",
+      "extension",
+      "quotes",
+      "ambient"
+    ],
+    "useCases": [
+      "Galleries & Sliders",
+      "quotes",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Three portraits rotate while complete local quotes resolve word by word. The source clock, manual navigation and reduced motion keep every person and word available.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/gallery-testimonials",
+    "thumb": "hero",
+    "module": "js/demos.galleryext.gallery-testimonials.js?v=c223b38a7f",
+    "assetBundle": "js/demo-assets.js?v=f9c7dc0f9d",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/gallery-testimonials.json?v=b703df86dc",
+    "assetRefs": {
+      "photo-portraitC2": "assets/images/portraitC2-800.webp",
+      "photo-portraitC3": "assets/images/portraitC3-800.webp",
+      "photo-portraitC1": "assets/images/portraitC1-800.webp"
+    },
+    "rootClass": "d-ext-gallery-quotes",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next quote"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Portraits rotate while the quote reveals word by word",
+    "sourceName": "Seen on: Aceternity Animated Testimonials pattern",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "portraitC2",
+        "asset": "photo-portraitC2",
+        "photoId": "nB4Tyxrv0CU",
+        "imageId": "photo-1741211699653-5e90542f9cda",
+        "photographer": "Miguel Angel Avila",
+        "url": "https://unsplash.com/photos/mans-back-and-profile-against-black-background-nB4Tyxrv0CU",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      },
+      {
+        "key": "portraitC3",
+        "asset": "photo-portraitC3",
+        "photoId": "V5tNnQfTges",
+        "imageId": "photo-1641147039950-c5dbc9ab6c53",
+        "photographer": "Sylvester Sabo",
+        "url": "https://unsplash.com/photos/a-woman-with-dark-makeup-and-red-lipstick-V5tNnQfTges",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-19"
+      },
+      {
+        "key": "portraitC1",
+        "asset": "photo-portraitC1",
+        "photoId": "TfjOwcrMj5I",
+        "imageId": "photo-1610659128929-fa69328744e2",
+        "photographer": "Carlos Garcia Hansen",
+        "url": "https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-portraitC2": "assets/images/portraitC2.webp",
+      "photo-portraitC3": "assets/images/portraitC3.webp",
+      "photo-portraitC1": "assets/images/portraitC1.webp"
+    }
+  },
+  {
+    "id": "gallery-photo-stack",
+    "title": "Photo Stack Lightbox",
+    "category": "Galleries & Sliders",
+    "group": "Interface",
+    "trigger": "press",
+    "tags": [
+      "gallery",
+      "extension",
+      "stack",
+      "press"
+    ],
+    "useCases": [
+      "Galleries & Sliders",
+      "stack",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Five prints fan out and expand into a shared-image lightbox. The native view keeps its exact reference photograph; the full view uses approved v2 photography.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/gallery-photo-stack",
+    "thumb": "hero",
+    "module": "js/demos.galleryext.gallery-photo-stack.js?v=eda2196d26",
+    "assetBundle": "js/demo-assets.js?v=f9c7dc0f9d",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/gallery-photo-stack.json?v=e87cb5b7c3",
+    "assetRefs": {
+      "photo-forestBlue": "assets/images/forestBlue-800.webp",
+      "photo-dusk": "assets/images/dusk-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-cityTeal": "assets/images/cityTeal-800.webp",
+      "photo-milkyway": "assets/images/milkyway-800.webp",
+      "photo-forestDark": "assets/images/forestDark-800.webp"
+    },
+    "rootClass": "d-ext-gallery-stack",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle lightbox"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "The stack fans out, then one print opens full",
+    "sourceName": "Seen on: Originkit Photo Stack Lightbox pattern",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "forestBlue",
+        "asset": "photo-forestBlue",
+        "photoId": "2aSpCOPNyO0",
+        "imageId": "photo-1630695230041-8909e3204778",
+        "photographer": "Taylor Wright",
+        "url": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "dusk",
+        "asset": "photo-dusk",
+        "photoId": "JgOeRuGD_Y4",
+        "imageId": "photo-1477346611705-65d1883cee1e",
+        "photographer": "JOHN TOWNER",
+        "url": "https://unsplash.com/photos/aerial-photo-of-brown-moutains-JgOeRuGD_Y4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "cityTeal",
+        "asset": "photo-cityTeal",
+        "photoId": "cXU6tNxhub0",
+        "imageId": "photo-1493514789931-586cb221d7a7",
+        "photographer": "Andre Benz",
+        "url": "https://unsplash.com/photos/aerial-photography-of-city-skyline-during-night-time-cXU6tNxhub0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "milkyway",
+        "asset": "photo-milkyway",
+        "photoId": "9wH624ALFQA",
+        "imageId": "photo-1515705576963-95cad62945b6",
+        "photographer": "Dns Dgn",
+        "url": "https://unsplash.com/photos/milky-way-on-mountains-9wH624ALFQA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "forestDark",
+        "asset": "photo-forestDark",
+        "photoId": "1L71sPT5XKc",
+        "imageId": "photo-1483982258113-b72862e6cff6",
+        "photographer": "Rosie Sun",
+        "url": "https://unsplash.com/photos/photography-of-forest-1L71sPT5XKc",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-forestBlue": "assets/images/forestBlue.webp",
+      "photo-dusk": "assets/images/dusk.webp",
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-cityTeal": "assets/images/cityTeal.webp",
+      "photo-milkyway": "assets/images/milkyway.webp",
+      "photo-forestDark": "assets/images/forestDark.webp"
+    }
   }
 ]
