@@ -11,7 +11,7 @@ it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
 extensions to 508. Three Scroll extensions bring it to 511 and two Cursor
-extensions to 513 and three Play extensions to 516; 4 extension components and Pro seams remain. Both strict static audits now pass.
+extensions to 513 and three Play extensions to 516 and Piano Keys to 517; 3 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -288,3 +288,11 @@ The [Showcase surface timing report](performance/showcase-spatial-2026-11-22.jso
 The six Data & Numbers extensions preserve 112 exact layers, 31 original text copies and 56 unchanged SVG slots using thirty files. Their complete datasets, timezone dates, quarter-hour input, current-pose reversals, physical spring releases, exact tooltip deadlines, independent holds and offline exports pass focused checks. No fit exceptions are added. Equal-source renderer equivalence and functional SVG checks are not final frame-rate, contrast, cold-route or Lighthouse acceptance. Keep the earlier Outline vertically displaced Sweep review open.
 
 The four loader extensions preserve 61 exact native layers, five original labels, thirteen unchanged SVG slots and the approved archGrid photo/crop/credits. Complete build timelines, 24 equal-source renderer stories, eight offline contexts, sixteen independent hold stories, actual touch/scroll and actual photographic/continuous-ray pixels pass focused checks. Preserve the paused-before-first-frame Trace glow regression, analytic SVG pathLength calibration, early-wake deadlines and finite completion holds. Matrix’s new 82×82 Figma exception changes only low fill. These functional checks do not close final frame-rate, contrast, cold-route or Lighthouse gates; earlier performance findings and Outline Sweep review remain open.
+
+Piano Keys retains all fourteen exact primitive layers, twelve playable notes,
+actual four-partial PCM and silent first paint. Preserve fresh-gesture audio
+creation, per-note resume generations, native multi-owner keys and touch
+Glissando, finite source-clock feedback, compact glyph counter-scaling and
+complete audio/capture disposal during the final audit. Its six refresh-rate
+stories and actual waveform comparisons establish function, leaving final
+frame-time, audio accessibility, contrast and cold-route gates open.

@@ -35777,5 +35777,60 @@
     "hint": "The coin spins up, wobbles and lands",
     "sourceName": "Seen on: bencho Coin pattern family",
     "isNew": true
+  },
+  {
+    "id": "sound-piano-keys",
+    "title": "Piano Keys",
+    "category": "Sound & Haptics",
+    "group": "Visual FX",
+    "trigger": "press",
+    "tags": [
+      "piano",
+      "keyboard",
+      "webaudio",
+      "extension"
+    ],
+    "useCases": [
+      "Sound & Haptics",
+      "instrument",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Play one chromatic octave with a mouse, keyboard or touch. Each key presses into its bed while a ripple marks the note. The full instrument labels every note and supports chords.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      244,
+      176
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/sound-piano-keys",
+    "thumb": "hero",
+    "module": "js/demos.soundext.sound-piano-keys.js?v=6ee80f9eec",
+    "assetBundle": "js/demo-assets.js?v=7ee45a6e07",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/sound-piano-keys.json?v=6a1bc0e6ab",
+    "assetRefs": {},
+    "rootClass": "d-ext-sound-piano",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Play"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Click or type to play; a ripple marks the note",
+    "sourceName": "Seen on: bencho Piano pattern family",
+    "isNew": true
   }
 ]

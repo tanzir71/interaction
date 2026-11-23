@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first eighty-seven extensions are implemented;
-  the catalog is 516. Four extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first eighty-eight extensions are implemented;
+  the catalog is 517. Three extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -1508,3 +1508,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   deterministic output; do not edit original assets. Refresh all native posters
   when shared Stage/Dock visuals change. Final theme/contrast/performance audits
   remain separate acceptance work.
+
+- The Piano Keys extension uses `tools/verify-sound-ext.js`,
+  `tools/verify-sound-ext-audio.js`, `tools/verify-sound-ext-input.js`,
+  `tools/verify-sound-ext-clocks.js`, `tools/verify-sound-ext-exports.js`,
+  `tools/verify-sound-ext-holds.js`, `tools/verify-sound-ext-touch.js` and
+  `tools/verify-sound-ext-pixels.js` against the local 4173 server. Preserve
+  all fourteen exact Figma primitive layers, the silent E-key reference and
+  separately classified three-layer Play Dock. Full keeps twelve chromatic
+  C4—B4 notes, all note/shortcut labels, chords, recent twelve-note history
+  and native moving-touch glissando. Keep the four sine partials, 4ms attack,
+  2.8s decay, 180ms release and equal temperament; tests compare actual browser
+  PCM with independent numerical samples for all twelve notes. Audio requires
+  a fresh trusted gesture. Per-note and context generations reject expired
+  resumes; all nodes stop/disconnect on hold and disposal. M toggles explicit
+  mute. Source-clock Press retains 80ms/.97 and 250ms soft-pop release; compact
+  labels counter-scale during presses. Six six-second 60/120/240Hz renderer
+  stories, four hold stories, four native-touch stories and two fresh blocked-
+  network full/native contexts supplement the actual input/raster checks.
+  No new SVGs, photos or fill exceptions. Earlier private phase inputs and
+  publication archives stay frozen; final performance/a11y audits remain open.

@@ -18602,5 +18602,40 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "sound-piano-keys": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Play"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      176
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Sound & Haptics",
+      "instrument",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

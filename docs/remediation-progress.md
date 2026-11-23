@@ -10,15 +10,47 @@ extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve L
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
-it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516; 4 extension components,
+it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516 and Piano Keys to 517; 3 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 516 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 517 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 162
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Piano Keys extension
+
+The playable one-octave piano retains all fourteen exact native primitives
+and the silent highlighted E-key/ripple reference. The shared Play Dock stays
+outside the art. Its full composition includes all twelve C4—B4 labels,
+keyboard shortcuts, simultaneous chords and twelve recent note records.
+Native pointer and touch capture support glissando across white and black
+keys; independent pointer and keyboard owners cannot release each other.
+
+Four local sine partials synthesize each equal-tempered note with a 4ms
+attack, 2.8s decay and 180ms release. A .065 master keeps the complete octave
+bounded. Actual OfflineAudioContext PCM matches independent numerical samples
+for all twelve notes. Sound starts from a current trusted gesture; generation
+checks discard expired resumes. Caller/document/viewport holds cut and
+disconnect voices. A new gesture resumes sound; old queued input stays silent.
+M preserves explicit mute independently. Disposal closes the audio context.
+
+Eight focused suites pass 373,314 recorded assertions. These include six
+six-second 60/120/240Hz renderer stories, four physical input stories, four
+native touch stories, four hold stories, four compact raster stories and two
+fresh network-blocked full/native export contexts. Compact note labels remain
+at least 11px during the Press recipe. Reduced motion keeps still keys and
+inert 150ms old-paint fades. No SVGs, photographs or new fill exceptions are
+needed. All previous 443 source modules, 516 metadata entries, seven protected
+shared inputs and prior private publication evidence remain unchanged.
+
+The catalog is 517/520. Three Skeuomorph extensions, Pro seams and final
+recipe, accessibility, contrast, cold-route, Lighthouse and performance audits
+remain. Earlier timing findings remain open; functional clock tests do not
+prove frame-time acceptance. GitHub Actions remain disabled and the existing
+$0 account budget with stop-at-limit remains untouched.
 
 ## Three Play & Easter Eggs extensions
 
