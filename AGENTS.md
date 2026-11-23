@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first eighty-eight extensions are implemented;
-  the catalog is 517. Three extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and all ninety-one extensions are implemented;
+  the catalog is 520. Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -1528,3 +1528,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   network full/native contexts supplement the actual input/raster checks.
   No new SVGs, photos or fill exceptions. Earlier private phase inputs and
   publication archives stay frozen; final performance/a11y audits remain open.
+
+- The final three Skeuomorph extensions use `tools/verify-skeuo-ext.js`,
+  `tools/verify-skeuo-ext-models.js`, `tools/verify-skeuo-ext-input.js`,
+  `tools/verify-skeuo-ext-clocks.js`, `tools/verify-skeuo-ext-exports.js`,
+  `tools/verify-skeuo-ext-holds.js`, `tools/verify-skeuo-ext-touch.js` and
+  `tools/verify-skeuo-ext-pixels.js` against the local 4173 server. Preserve
+  all 32 exact native art layers, nine shared Dock layers, three unchanged
+  SVG files/slots and the approved portraitC1 slot with both original photo
+  hashes and attribution. Native Wallet preserves the exact blue/violet v4
+  card materials. Ticket keeps all eight bars, partial paper tearing and
+  analytical 170/26/1 return; Lanyard uses all nineteen actual Verlet points,
+  sixteen rope segments, two fixed anchors and rigid badge constraints at
+  1/240s with 32 solver passes. Preserve gravity720, damping2.4, actual release
+  momentum and the absolute eight-second settle boundary. Wallet keeps three
+  complete card records, native listbox keys, drag selection, press ownership,
+  interrupted 170/26/1 springs and the bounded 500ms sheen. Compact complete
+  histories clear instructions and every visible glyph stays≥11px. Eighteen
+  six-second 60/120/240Hz renderer stories, four nine-second deadline stories,
+  twelve actual input/hold/touch/pixel stories per suite and six fresh blocked-
+  network full/native export contexts supplement independent solver fixtures.
+  No new fit exceptions. All 520 components are implemented; Pro seams and
+  final acceptance remain. Earlier private helpers, inputs and publication
+  evidence remain frozen. Functional clocks do not replace performance audits.

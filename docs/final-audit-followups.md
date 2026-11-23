@@ -11,7 +11,7 @@ it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
 extensions to 508. Three Scroll extensions bring it to 511 and two Cursor
-extensions to 513 and three Play extensions to 516 and Piano Keys to 517; 3 extension components and Pro seams remain. Both strict static audits now pass.
+extensions to 513 and three Play extensions to 516 and Piano Keys to 517. The three Skeuomorph extensions complete all 520 components; Pro seams and final acceptance remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -296,3 +296,12 @@ Glissando, finite source-clock feedback, compact glyph counter-scaling and
 complete audio/capture disposal during the final audit. Its six refresh-rate
 stories and actual waveform comparisons establish function, leaving final
 frame-time, audio accessibility, contrast and cold-route gates open.
+
+All three final Skeuomorph extensions retain their exact native artwork and
+complete material models. Preserve partial paper progress/current-pose grabs,
+real nineteen-point Verlet rope/rigid-body constraints and absolute settling,
+all three Wallet records with inherited spring velocity and native listbox
+ownership, exact SVG/photo slots, compact complete histories and full cleanup.
+The independent solver, eighteen refresh-rate stories and four late-frame
+settling stories establish function. Final recipe, contrast, accessibility,
+CPU-throttled timing, cold-route and Lighthouse acceptance remain open.

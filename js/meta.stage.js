@@ -18637,5 +18637,110 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "skeuo-tear-ticket": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Drag"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Skeuomorph",
+      "ticket",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "skeuo-lanyard-badge": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Drag"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      200
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Skeuomorph",
+      "lanyard",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "skeuo-wallet-cards": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Press"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      180
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Skeuomorph",
+      "wallet",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

@@ -10,15 +10,58 @@ extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve L
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
-it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516 and Piano Keys to 517; 3 extension components,
+it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516 and Piano Keys to 517. The three Skeuomorph extensions complete all 520 components;
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 517 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 520 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 162
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Final three Skeuomorph extensions
+
+Tear-Off Ticket, Swinging Lanyard and Wallet Cards complete the 91 extensions
+and all 520 components. Their native references retain 32 exact artwork
+layers, nine separately classified shared Dock layers and three original SVG
+slots with unchanged bytes and intrinsic sizes. The lanyard preserves the
+approved Carlos Garcia Hansen portraitC1 photograph, 800px in native/export
+and 1600px in local detail, with both original hashes and attribution. Wallet
+keeps the exact v4 blue/violet card gradients, neutral pocket and shadows.
+
+Ticket preserves the complete eight-bar stencil and all four content bars.
+Partial pulls reveal 24 paper-edge segments and retain tear progress. A full
+tear separates the stub, preserving grab offsets and current motion before
+its analytical 170/26/1 return. Canceled pulls return without healing paper.
+Its complete five-record history stays readable at compact widths.
+
+The badge moves on a real nineteen-point Verlet model: two fixed anchors,
+eight segments per strap and a rigid badge triangle. All 32 weighted solver
+passes run at 1/240s with gravity720 and exponential damping2.4. Physical
+release momentum survives the final pointer-up event. Both actual rope paths
+use every simulated point. The eight-second settling boundary is absolute,
+so a late nine-second frame matches continuous60Hz exactly. An independent
+flat-array solver agrees across four complete 2,400-frame stories.
+
+Wallet retains Studio1042, Transit2086 and Archive3197, current-velocity
+170/26/1 springs, drag lift/tuck, canceled selections and a clipped 500ms
+sheen. Native listbox keys and held Space/Enter mirror actual pointer input.
+All full labels remain≥11px through fitting and Press. Compact histories and
+instructions have separate reserved rows. Reduced motion keeps still feedback
+and inert 150ms retained paint; captures, listeners, observers and frames retire.
+
+Eight focused suites pass 9,314,831 recorded assertions. Eighteen six-second
+60/120/240Hz renderer stories, four late-frame deadline stories, twelve native
+input stories, twelve hold stories, twelve moving-touch stories, twelve raster
+stories and six fresh network-blocked full/native contexts cover the models.
+All 444 prior source modules, 517 prior metadata entries and seven protected
+shared files remain unchanged. No new fill exception is needed.
+
+All thirteen required local checks pass for 520 demos. GitHub Actions remain
+disabled; the existing account $0 stop-at-limit setting stays untouched. Pro
+seams and final motion, accessibility, theme/contrast, cold-route, Lighthouse
+and performance audits remain open. Earlier timing findings remain open.
 
 ## Piano Keys extension
 
