@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first seventy-two extensions are implemented;
-  the catalog is 501. Nineteen extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first seventy-six extensions are implemented;
+  the catalog is 505. Fifteen extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,28 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The four loader extensions use `tools/verify-loaders-ext.js`,
+  `tools/verify-loaders-ext-models.js`, `tools/verify-loaders-ext-input.js`,
+  `tools/verify-loaders-ext-clocks.js`, `tools/verify-loaders-ext-exports.js`,
+  `tools/verify-loaders-ext-holds.js`, `tools/verify-loaders-ext-touch.js` and
+  `tools/verify-loaders-ext-pixels.js` against the local 4173 server. Preserve
+  all 61 captured native layers, five exact text copies and thirteen SVG slots
+  using twelve unchanged supplied files, including both ring arcs and all five
+  dashed blue outlines. Blueprint retains the exact approved archGrid photo,
+  crop, 800/1600px hashes and credit. Its one-second live scanner checkpoint
+  reproduces y118 with all outlines and the original photo fully visible.
+  Full models retain every build step, all twenty-five matrix dots, the complete
+  photographic card and the entire analytic rounded route. Keep 1800ms step
+  milestones, the 1500ms success hold, current-pose icon handoff, fixed diagonal
+  and perimeter clocks, SVG pathLength calibration and actual geometric head
+  pixels. Paused native/full Trace must paint only its original reference glow
+  before the first frame. Finite completion holds stop painting; early timers
+  re-arm absolute deadlines. Matrix's documented 82×82 sparse exception changes
+  only low fill. Checks cover 24 six-second 60/120/240Hz renderer stories, eight
+  fresh offline full/native contexts, sixteen independent hold stories, actual
+  moving touch/page scroll, complete long build timelines, calibrated SVG paint
+  and original photographic pixels. The catalog is 505; 15 extensions, Pro seams
+  and final audits remain. Keep earlier private helpers, inputs and evidence frozen.
 - The six Data & Numbers extensions use `tools/verify-data-ext.js`,
   `tools/verify-data-ext-models.js`, `tools/verify-data-ext-input.js`,
   `tools/verify-data-ext-clocks.js`, `tools/verify-data-ext-exports.js`,
@@ -186,8 +208,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   renderer stories, twelve fresh offline full/native contexts, twenty-four
   independent hold stories, isolated real touch/vertical scroll, physical mouse,
   tooltip early wakes and actual SVG/clip/hand rendering. No fill or overflow
-  exceptions are added. The catalog is 501; 19 extensions, Pro seams and final
-  audits remain. Keep earlier private helpers, inputs and evidence frozen.
+  exceptions are added. This group brought the catalog to 501; later counts
+  appear above. Keep earlier private helpers, inputs and evidence frozen.
 - The six Text & Type extensions use `tools/verify-type-ext.js`,
   `tools/verify-type-ext-models.js`, `tools/verify-type-ext-input.js`,
   `tools/verify-type-ext-clocks.js`, `tools/verify-type-ext-exports.js`,

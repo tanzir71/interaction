@@ -9,15 +9,46 @@ the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Input
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
-extensions bring it to 501; 19 extension components,
+extensions bring it to 501. Four loader extensions bring it to 505; 15 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 501 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 158
+JavaScript. The fit audit boots all 505 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 159
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Four loader extensions
+
+Multi-step Loader, Matrix Dot Loader, Blueprint Loader and Trace Loader add four
+original implementations. They preserve all 61 captured native layers, five
+original labels and thirteen SVG slots using twelve unchanged original files.
+The Blueprint retains its supplied dashed wireframe geometry and
+the exact approved archGrid photograph, original crop, attribution and 800/1600px
+file hashes. Its one-second live checkpoint matches the supplied y118 scanner,
+complete dashed outlines and photographic reference. The preview begins at this
+captured checkpoint; Replay exercises the entire reveal.
+
+The complete models retain all five build steps, every matrix dot, the complete
+photographic card and a constant-distance rounded route. Source deadlines,
+1800ms step milestones and the 1500ms success hold retain the complete sequence.
+Replay and keyboard reversals retarget current paint. SVG author pathLength
+calibrates dash positions to the analytic route; actual screenshots verify the
+light at its geometric head. A paused-before-first-frame regression now prevents
+an extra full-view glow. Reduced motion keeps deliberate stills and bounded inert
+150ms old-paint feedback. Completion holds stop painting between source events.
+Initial slider values and keyboard End stay accessible; the final credit label
+and its physical touch target remain centered on the visible pill.
+
+Eight suites pass 5,582,519 recorded assertions, including twenty-four six-second
+60/120/240Hz renderer stories, eight fresh network-blocked full/native contexts,
+sixteen independent hold stories, isolated actual moving touch/page scroll,
+complete build timelines, exact milestone checks and actual SVG/photo rendering.
+All thirteen required local checks pass; the full fit audit boots 505 demos
+without findings and validates all 159 sparse-fill exceptions. The single new
+exception preserves Matrix's exact 82×82 reference and changes only low fill.
+Final recipe, contrast, accessibility and performance acceptance remains open.
 
 ## Six Data & Numbers extensions
 

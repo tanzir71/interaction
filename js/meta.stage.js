@@ -18077,5 +18077,145 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "loader-multi-step": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      348,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Loaders & Progress",
+      "steps",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "loader-matrix-dots": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      96
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Loaders & Progress",
+      "matrix",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "loader-blueprint": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      184
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Loaders & Progress",
+      "blueprint",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "loader-trace": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Loaders & Progress",
+      "trace",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

@@ -1579,6 +1579,16 @@
         80,
         8
       ]
+    },
+    "loader-matrix-dots": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact v4 Figma geometry for sparse controls. The twenty-five 10×10 dots have 18px pitch and an 82×82 combined reference bound, from 141,45 to 223,127, in a 372×264 Stage (about 6.8% fill). Preserve the native dot sizes and captured diagonal intensities. This changes only the low-fill gate; overflow, horizontal scrolling and the optical type floor remain required.",
+      "figmaNode": "143:986",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=143-986",
+      "selector": ".d-ext-loader-matrix-native-node[data-native-node=\"143:987\"]",
+      "designSize": [
+        10,
+        10
+      ]
     }
   }
 }
