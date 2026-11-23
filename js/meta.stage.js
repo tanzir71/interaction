@@ -16923,5 +16923,385 @@ INTRX.meta({
     "origin": "extension",
     "isNew": true,
     "addedAt": "2026-11"
+  },
+  "ui-bloom-menu": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "bloom",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-file-tree": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "tree",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-evervault-card": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "cipher",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-wobble-card": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "wobble",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-draggable-cards": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "restack",
+        "label": "Restack"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "cards",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-timeline-progress": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "scroll",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "timeline",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-kanban-board": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "kanban",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-morphing-modal": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "modal",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-feedback-widget": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "feedback",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-realtime-cursors": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next state"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "cursors",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-data-table-expand": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "sort",
+        "label": "Sort"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "table",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ui-availability-scheduler": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      216
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Layout & UI",
+      "week",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

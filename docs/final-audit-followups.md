@@ -6,8 +6,8 @@ All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
 extensions brought it to 439. Ten Buttons & Micro and ten Forms & Inputs
-extensions brought it to 459. Eight Visual FX extensions bring it to 467;
-53 extension components and Pro seams remain. Both strict static audits now pass.
+extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
+it to 479; 41 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -44,10 +44,21 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 467 demos with 156 valid
+retaining their overflow/text checks. It now passes all 479 demos with 157 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
+
+The twelve Layout & UI extensions preserve 206 native layers, 42 supplied SVG
+slots using 27 unchanged files and four original approved photographs. Keep
+complete trees, glyphs, photo cards, timeline entries, tasks, project/note data,
+collaborator paths/comments, table records and all 336 half-hour cells. Their eight
+suites pass 141,861 checks, including 72 actual renderer stories, 24 fresh offline
+contexts, 48 hold stories and independent motion models. Exact native geometry,
+physical mouse/touch, velocity-carrying drops, visible compact focus, early finite
+timers and retained reduced paint establish functional behavior. They do not
+establish final frame-time, accessibility, cold-route or Lighthouse budgets.
+Earlier private helpers, inputs and publication evidence remain frozen.
 
 The eight Visual FX extensions preserve 882 native layers, 24 supplied SVG slots
 using 23 unchanged files and both original Black Hole alpha masks. Keep complete

@@ -6,15 +6,52 @@ Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
 sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
-extensions bring it to 459. Eight Visual FX extensions bring it to 467;
-53 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
+extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
+it to 479; 41 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 467 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 156
+JavaScript. The fit audit boots all 479 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 157
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Twelve Layout & UI extensions
+
+Bloom Menu, File Tree, Encrypted Card, Wobble Card, Draggable Cards, Timeline
+Progress, Kanban Board, Morphing Modal, Feedback Widget, Realtime Cursors,
+Expanding Table and Availability Painter add twelve original implementations.
+They retain all 206 captured native layers, 42 original vector slots using 27
+unchanged SVG files and four approved cityNight, aurora, forestBlue and cityTeal
+photo slots. Original 800/1600px photographs, hashes and credits remain unchanged.
+Both [3,3] dashed placeholders retain their captured stroke treatment. The shared
+Stage zoom fits the native plane; no new overflow or bleed exemptions are used.
+Feedback's exact five-star reference adds one documented low-fill exception.
+
+Complete models include the twelve-node explorer, twelve complete glyph rows,
+three photo cards, four timeline records, nine unique task cards, Northwind's
+full project, actual local ratings and notes, Maya/Omar paths and comments, six
+sortable projects and seven days of forty-eight half-hour slots. Cards and Kanban
+drops carry actual source velocity into 380/32/1 springs. Stable ancestor capture,
+rollback, measured FLIP, current-pose menu reversals and complete native input
+remain intact. Actual fractional scroll endpoints reach the final timeline entry.
+The native feedback editor morphs from its original stars and retains every note;
+completion uses a finite 1500ms deadline. Modal focus stays visible in its own
+scroll viewport and returns after closing. Table DOM and sort state agree.
+
+Eight focused suites pass 141,861 checks, including independent RK4, cubic and lag
+models, 72 actual six-second 60/120/240Hz renderer stories, 24 fresh network-blocked
+full/native export contexts and 48 independent hold stories. Real mouse and moving
+touch cover velocity, capture cancellation, task transfers, snapped painting and
+vertical page scrolling. Tests retain complete held notes, ordered checkboxes,
+early timer re-arming, exact reduced milestones and inert 150ms old paint.
+Forty-eight real desktop/mobile dark/light routes retain the tanziro.com footer;
+twelve native posters are refreshed. All 394 previous modules, 467 metadata
+records, seven protected shared files and prior private publication evidence stay
+unchanged. All thirteen required local commands pass, including the 479-demo fit
+audit with 157 valid reference exceptions. GitHub Actions stays disabled. The
+remaining 41 extensions, Pro seams and final accessibility, performance, contrast,
+cold-route and Lighthouse acceptance remain open.
 
 ## Eight Visual FX extensions
 

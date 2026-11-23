@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first thirty-eight extensions are implemented;
-  the catalog is 467. Fifty-three extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first fifty extensions are implemented;
+  the catalog is 479. Forty-one extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The twelve Layout & UI extensions use `tools/verify-layout-ext.js`,
+  `tools/verify-layout-ext-models.js`, `tools/verify-layout-ext-input.js`,
+  `tools/verify-layout-ext-clocks.js`, `tools/verify-layout-ext-exports.js`,
+  `tools/verify-layout-ext-holds.js`, `tools/verify-layout-ext-pointer.js` and
+  `tools/verify-layout-ext-interaction.js` against the local 4173 server. Preserve
+  all 206 native layers, 42 supplied SVG slots using 27 unchanged files, four
+  approved photo slots and both captured [3,3] dashed placeholders. Full models
+  retain twelve tree nodes, twelve complete glyph rows, three photo cards, four
+  timeline entries, nine tasks, the complete Northwind project and local note,
+  both collaborators and every comment, six projects and all 336 half-hour cells.
+  Use the Stage zoom on the 324×216 native plane with its original 24,20 offset.
+  Keep current-pose menu reversals, actual fractional scroll endpoints, stable
+  ancestor capture, carried 380/32 drop springs, rollback, visible dialog focus
+  and ordered checkbox/text intent. Native Feedback morphs from its exact stars;
+  completion holds exactly 1500ms and re-arms early timers. Only its low-fill
+  exception is new; overflow, scroll and optical gates remain active. Eight
+  suites pass 141,861 checks, including independent RK4/cubic/lag models, 72
+  six-second 60/120/240Hz renderer stories, 24 fresh network-blocked full/native
+  contexts, 48 independent hold stories, actual moving touch and capture cleanup.
+  The catalog is 479; 41 extensions, Pro seams and final audits remain. Keep
+  earlier private helpers, inputs and archived publication evidence frozen.
 - The eight Visual FX extensions use `tools/verify-fx-ext.js`,
   `tools/verify-fx-ext-models.js`, `tools/verify-fx-ext-input.js`,
   `tools/verify-fx-ext-clocks.js`, `tools/verify-fx-ext-exports.js`,
@@ -186,7 +207,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   six-second 60/120/240Hz renderer stories, sixteen fresh network-blocked
   full/native export contexts, real moving touch and wheel, complete local
   models, exact native masks, independent holds and retained old GPU pixels.
-  The catalog is 467; 53 extensions, Pro seams and final audits remain. Keep
+  This group brought the catalog to 467; later counts appear above. Keep
   earlier private helpers, inputs and publication evidence frozen.
 - The ten Forms & Inputs extensions use `tools/verify-forms-ext.js`,
   `tools/verify-forms-ext-models.js`, `tools/verify-forms-ext-input.js`,
