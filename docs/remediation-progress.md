@@ -8,14 +8,50 @@ Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX comp
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
-bring it to 489; 31 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
+bring it to 489. Six Text & Type extensions bring it to 495; 25 extension components,
+Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 489 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 495 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 158
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Six Text & Type extensions
+
+Text Reveal Card, Squiggly Text, Outline Fill, Container Text Flip, Caesar Cipher
+and Foggy Word add six original implementations. All 66 captured layers and 31
+original text copies are preserved. Outline reuses the original cursor SVG
+without changing its bytes, intrinsic size or bleed offsets; no source assets are added.
+Four transparent full-stage mask groups are represented as zero-layout definition
+groups with captured reference boxes. Their visible circular and rounded masks
+retain the exact Figma geometry, while the other 62 native boxes retain their
+captured dimensions and positions. This does not exempt root or Stage clipping.
+
+Complete full models retain both reveal lines, the ten Wavelength glyphs, MOTION's
+gradient aperture, all four flip words, all 26 letters in each of six ROT3 drums
+and the continuous Clarity brush path. Current-pose reversals, measured pill
+widths, analytical followers, source-time SVG turbulence and finite squared fog
+recovery retain the same state at equal source times. Drum anticipation, letter
+steps and landing use the specified 100/130/740ms phases, capped staggering and
+an exact 1.03 scale peak. Projected drum neighbors remain at least 11px through
+anticipation and rotation, with static font layout and transform compensation.
+Keyboard, scaled pointer and moving touch use the same
+models; vertical page scroll remains native. Held native and Dock intentions
+reserve their order, and reduced feedback retains one inert 150ms composition.
+
+Eight suites pass 458,185 recorded checks, including 36 six-second renderer
+stories at 60/120/240Hz, twelve fresh network-blocked full/native contexts,
+twenty-four independent pause-owner stories and actual SVG filter/mask pixel
+checks. All thirteen required local checks pass; the full fit audit boots 495
+demos with zero findings and the same 158 valid Figma fill exceptions. Twenty-four
+desktop/mobile dark/light development routes include the tanziro.com footer.
+Six native posters are refreshed. All 416 earlier source modules, 489 earlier
+metadata entries, seven protected shared inputs and prior publication evidence
+remain unchanged. There are no new fill or overflow exceptions. This brings the
+catalog to 495; 25 extensions, Pro seams and final audits remain. These functional
+stories do not close final performance, accessibility or cold-route acceptance.
 
 ## Five Navigation extensions
 

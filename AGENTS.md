@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first sixty extensions are implemented;
-  the catalog is 489. Thirty-one extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first sixty-six extensions are implemented;
+  the catalog is 495. Twenty-five extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,30 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The six Text & Type extensions use `tools/verify-type-ext.js`,
+  `tools/verify-type-ext-models.js`, `tools/verify-type-ext-input.js`,
+  `tools/verify-type-ext-clocks.js`, `tools/verify-type-ext-exports.js`,
+  `tools/verify-type-ext-holds.js`, `tools/verify-type-ext-touch.js` and
+  `tools/verify-type-ext-pixels.js` against the local 4173 server. Preserve all
+  66 captured layers, 31 original text copies and the single unchanged cursor
+  SVG reused from nav-ext. Four transparent 372×264 mask groups are flattened
+  into zero-layout definitions with captured reference boxes; all painted mask
+  geometry remains exact. Full models retain both complete reveal lines, every
+  Wavelength glyph, the original MOTION aperture, four complete flip words,
+  all 156 alphabet faces and the complete continuous Clarity brush path.
+  Keep analytical 0.18 followers, source-time turbulence and sweeps, current-pose
+  text reversals, natural-width pill type, 100/130/740ms drums with 90ms stagger
+  capped at 300ms, the exact 1.03 landing peak and bounded 2500ms fog recovery.
+  Drum glyph floors include actual projection and anticipation; keep font layout
+  constant through motion and use transforms for optical compensation.
+  Prospective native/Dock intent remains ordered through holds; retained reduced
+  paint is inert and bounded to one composition. All eight suites pass
+  458,185 checks across 36 six-second 60/120/240Hz renderer stories, twelve fresh
+  network-blocked full/native contexts, twenty-four independent hold stories,
+  actual moving touch/page scroll and real SVG filter/mask pixels. No new source assets,
+  runtime dependencies, fill exceptions or overflow exceptions are added.
+  The catalog is 495; 25 extensions, Pro seams and final audits remain. Keep
+  earlier private helpers, inputs and archived publication evidence frozen.
 - The five Navigation extensions use `tools/verify-nav-ext.js`,
   `tools/verify-nav-ext-models.js`, `tools/verify-nav-ext-input.js`,
   `tools/verify-nav-ext-clocks.js`, `tools/verify-nav-ext-exports.js`,
@@ -184,8 +208,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   30px arrows and 80×8 indicator. Eight suites pass 81,389 checks, including 30
   six-second 60/120/240Hz renderer stories, ten fresh network-blocked full/native
   contexts, twenty independent hold stories, real scaled mouse, moving touch,
-  actual glyph ink and vertical page scroll. The catalog is 489; 31 extensions,
-  Pro seams and final audits remain. Keep earlier private helpers, inputs and
+  actual glyph ink and vertical page scroll. This group brought the catalog
+  to 489; later counts appear above. Keep earlier private helpers, inputs and
   archived publication evidence frozen.
 - The five Gallery extensions use `tools/verify-gallery-ext.js`,
   `tools/verify-gallery-ext-models.js`, `tools/verify-gallery-ext-input.js`,

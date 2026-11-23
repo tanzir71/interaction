@@ -8,10 +8,22 @@ and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
 extensions brought it to 439. Ten Buttons & Micro and ten Forms & Inputs
 extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
-bring it to 489; 31 extension components and Pro seams remain. Both strict static audits now pass.
+bring it to 489. Six Text & Type extensions bring it to 495; 25 extension components
+and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The six Text & Type extensions retain 66 captured layers and 31 original text
+copies, with one reused unchanged SVG. Four transparent full-stage mask groups
+keep their reference boxes as zero-layout definitions; all visible masks remain
+exact. Preserve complete copy, analytical followers, natural-width flip text,
+all 156 drum faces and bounded continuous fog paths. Thirty-six equal-time
+renderer stories, twelve offline contexts, twenty-four hold stories and actual
+mask/filter pixels verify behavior. They do not close the final performance,
+contrast, cold-route or Lighthouse gates. No new fit exceptions are added.
+Include vertically displaced pointer states when auditing Outline Fill's Dock
+sweep; it currently starts on the reference horizontal row. Preserve the tested
+horizontal sweep reversal and all three drum pose channels during that review.
 The five Navigation extensions retain 56 exact native layers and twelve original
 SVG slots using eleven unchanged files. Preserve complete page/destination/pane/
 article models, elastic-edge reversal, the real page reel, source-fixed distance

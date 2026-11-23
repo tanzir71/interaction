@@ -17653,5 +17653,215 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "text-reveal-card": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "swap",
+        "label": "Swap text"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "reveal",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "text-squiggle-wave": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "ripple",
+        "label": "Ripple"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "wave",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "text-gradient-outline": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "sweep",
+        "label": "Sweep fill"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      176
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "outline",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "text-container-flip": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next word"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "flip",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "text-caesar-cipher": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle cipher"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      192
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "cipher",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "text-fog-wipe": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "clear",
+        "label": "Clear fog"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      176
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Text & Type",
+      "fog",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

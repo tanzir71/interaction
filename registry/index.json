@@ -33698,5 +33698,337 @@
     "hint": "Tick lines grow into labels near the pointer",
     "sourceName": "Seen on: bencho Line sidebar pattern",
     "isNew": true
+  },
+  {
+    "id": "text-reveal-card",
+    "title": "Text Reveal Card",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "hover",
+    "tags": [
+      "text",
+      "extension",
+      "reveal",
+      "hover"
+    ],
+    "useCases": [
+      "Text & Type",
+      "reveal",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "A moving seam reveals one complete line beneath another. The original chemistry and business copy stays fixed while the wipe, glow and bounded edge sparks follow deliberate input.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-reveal-card",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-reveal-card.js?v=85812004b2",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-reveal-card.json?v=d580ab88d3",
+    "assetRefs": {},
+    "rootClass": "d-ext-type-reveal",
+    "controls": [
+      {
+        "action": "swap",
+        "label": "Swap text"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Wipe the top line away to read what sits beneath",
+    "sourceName": "Seen on: Aceternity Text Reveal Card pattern",
+    "isNew": true
+  },
+  {
+    "id": "text-squiggle-wave",
+    "title": "Squiggly Text",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "hover",
+    "tags": [
+      "text",
+      "extension",
+      "wave",
+      "hover"
+    ],
+    "useCases": [
+      "Text & Type",
+      "wave",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Wavelength keeps its ten original glyphs and telling wave. Hover and deliberate input add a seeded SVG turbulence field that flows on the source clock and returns to the exact resting composition.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-squiggle-wave",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-squiggle-wave.js?v=9a981784cc",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-squiggle-wave.json?v=9b420c786d",
+    "assetRefs": {},
+    "rootClass": "d-ext-type-wave",
+    "controls": [
+      {
+        "action": "ripple",
+        "label": "Ripple"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Turbulence ripples through the letters",
+    "sourceName": "Seen on: Aceternity Squiggly Text and Originkit Bloom Wave Text patterns",
+    "isNew": true
+  },
+  {
+    "id": "text-gradient-outline",
+    "title": "Outline Fill",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "hover",
+    "tags": [
+      "text",
+      "extension",
+      "outline",
+      "hover"
+    ],
+    "useCases": [
+      "Text & Type",
+      "outline",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "The exact MOTION outline retains its pale gradient and circular aperture. Mouse, touch and keys move the same source-clock fill and original cursor artwork.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      176
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-gradient-outline",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-gradient-outline.js?v=d43fa24fdb",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-gradient-outline.json?v=dd2a8284e6",
+    "assetRefs": {
+      "svg-nav-ext-3": "assets/components/nav-ext/nav-ext-3.svg"
+    },
+    "rootClass": "d-ext-type-outline",
+    "controls": [
+      {
+        "action": "sweep",
+        "label": "Sweep fill"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Fill floods the outlined word under the pointer",
+    "sourceName": "Seen on: Aceternity Text Hover Effect pattern",
+    "isNew": true
+  },
+  {
+    "id": "text-container-flip",
+    "title": "Container Text Flip",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "ambient",
+    "tags": [
+      "text",
+      "extension",
+      "flip",
+      "ambient"
+    ],
+    "useCases": [
+      "Text & Type",
+      "flip",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Make your interface feel sharper, faster, clearer or calmer. The complete words trade places while a measured FLIP surface fits their natural widths without stretching the type.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-container-flip",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-container-flip.js?v=fcd407f2d9",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-container-flip.json?v=76f10b0458",
+    "assetRefs": {},
+    "rootClass": "d-ext-type-flip",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next word"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "The pill resizes to fit each new word",
+    "sourceName": "Seen on: Aceternity Container Text Flip and Layout Text Flip patterns",
+    "isNew": true
+  },
+  {
+    "id": "text-caesar-cipher",
+    "title": "Caesar Cipher",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "hover",
+    "tags": [
+      "text",
+      "extension",
+      "cipher",
+      "hover"
+    ],
+    "useCases": [
+      "Text & Type",
+      "cipher",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Six complete alphabet drums turn GHFRGH into DECODE with the original three-letter Caesar shift. Anticipation, per-letter steps, settlement and native input retain all twenty-six letters in every reel.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      192
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-caesar-cipher",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-caesar-cipher.js?v=9e5fe7835a",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-caesar-cipher.json?v=66e1587434",
+    "assetRefs": {},
+    "rootClass": "d-ext-type-cipher",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle cipher"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Letters roll through the alphabet to decode",
+    "sourceName": "Seen on: ReverseUI Caesar Cipher pattern",
+    "isNew": true
+  },
+  {
+    "id": "text-fog-wipe",
+    "title": "Foggy Word",
+    "category": "Text & Type",
+    "group": "Motion",
+    "trigger": "hover",
+    "tags": [
+      "text",
+      "extension",
+      "fog",
+      "hover"
+    ],
+    "useCases": [
+      "Text & Type",
+      "fog",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Clarity keeps its original blurred word, crisp capsule and border. Continuous brush segments clear a bounded mask; the fog recovers from source time while keys and touch reach the same word.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      176
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/text-fog-wipe",
+    "thumb": "hero",
+    "module": "js/demos.typeext.text-fog-wipe.js?v=99c3b1d3eb",
+    "assetBundle": "js/demo-assets.js?v=d252028ea5",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/text-fog-wipe.json?v=4ccb8a9137",
+    "assetRefs": {},
+    "rootClass": "d-ext-type-fog",
+    "controls": [
+      {
+        "action": "clear",
+        "label": "Clear fog"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Your path clears the fog; it slowly rolls back",
+    "sourceName": "Seen on: bencho Foggy word pattern",
+    "isNew": true
   }
 ]
