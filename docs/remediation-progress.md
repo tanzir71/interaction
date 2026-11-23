@@ -3,17 +3,67 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. Twenty-two new Agent & AI UI,
-Buttons & Micro, Layout & UI and Forms & Inputs components bring the catalog to
-421; 99 new or extension components, Pro seams and final
+sixteen Showcase and four Framer compositions. Twenty-six new Agent & AI UI,
+Buttons & Micro, Layout & UI, Forms & Inputs and Data/Navigation components bring
+the catalog to 425; 95 new or extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 421 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 143
+JavaScript. The fit audit boots all 425 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 144
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Four new Data and Navigation components
+
+Activity Rings, Candlestick Crosshair, Sankey Flow and Condensing Pill Nav
+implement the fifth new-component group. Their native views retain 48 captured
+Figma layers and 24 SVG slots using 21 unchanged files. Cropped ring roots remain
+95×107 and 42×82 at their exact fractional offsets; the new overshoot reuses those
+original arc assets. Nav retains the approved forestDark image in its exact
+200×120 native slot, with unchanged photo credit and 800/1600px hashes.
+
+Rings keeps three complete Move, Exercise and Stand goals, 82%/64%/46% native
+arcs, tabular counts and glowing tips. Replay uses a 350ms fill to the requested
+1.04 peak, a 150ms landing and 40ms ring offsets. A paused first paint retains
+the supplied native reference; reduced motion paints a still and retains old
+paint for its opacity fade. One-shot startup yields to earlier user intent.
+
+Candlestick keeps all ten supplied native candle bodies and its exact 104.2
+reference axis. Full retains 32 complete illustrative OHLC/volume sessions,
+Canvas rendering, a measured price axis and complete SVG fallback. Arrow,
+Home/End and Page keys reach every record. Moving touch supports horizontal
+selection while vertical gestures retain page scrolling. Crosshairs use the
+equivalent 0.18-per-60Hz follower. Tooltip delay and fade use exact source
+deadlines, 150ms entry, 50ms exit and 160ms anchor travel. Compact prices expose
+every glyph at the 11px floor; a written exception preserves the sparse chart.
+
+Sankey retains all six original native curves, three source frames and two
+outcome frames. Full conserves every one of 155 visits across its six ribbons.
+The canonical reveal uses 400ms paths with 40ms offsets. Native masks cover the
+entire exported paint rectangle, preserving thick strokes and rounded caps
+outside the vector’s centreline bounds. Hover, focus and touch isolate related
+flows; others fade to 15%. Keyboard intent takes priority over a prior touch pin.
+
+Nav preserves all three complete local sections and uses real browser scroll.
+Its bar follows the 120px threshold with equivalent 0.12-per-60Hz smoothing,
+radius and blur. Full targets remain 44 physical pixels. The six-second Scroll
+story uses a fixed source schedule; native input cancels it, and local links
+leave the shell route intact. Actual fractional offsets under stage zoom drive
+the model. Its native checkpoint calibrates to the browser pixel grid, queued
+scroll restores once, and reduced retained pages keep their original scroll.
+
+Six focused suites pass 7,041 checks, 24 actual six-second 60/120/240Hz renderer
+stories and eight fresh network-blocked full/native contexts. They cover exact
+artwork, independent followers and data conservation, actual Canvas pixels,
+live SVG stroke/mask output, physical mouse/keys/moving touch/wheel, compact type,
+independent caller/document/full-viewport/LiveTiles holds, queued gestures,
+fallback/recovery events and disposal. These checks leave final frame-time,
+cold-route, accessibility and theme acceptance open. Four refreshed posters and
+sixteen desktop/mobile dark/light dev routes retain the TanZiRo footer link.
+All 348 earlier modules, 421 earlier sidecar records and seven shared inputs
+remain unchanged. Pro candidates remain free until the owner launches.
 
 ## Four new Forms & Inputs components
 

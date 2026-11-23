@@ -15645,5 +15645,132 @@ INTRX.meta({
       "accessible input"
     ],
     "addedAt": "2026-11"
+  },
+  "data-activity-rings": {
+    "designSize": [
+      400,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Data & Numbers",
+      "rings",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-candlestick-crosshair": {
+    "designSize": [
+      640,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Data & Numbers",
+      "candles",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-sankey-flow": {
+    "designSize": [
+      640,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Data & Numbers",
+      "sankey",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "nav-pill-condense": {
+    "designSize": [
+      600,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "scroll",
+    "controls": [
+      {
+        "action": "scroll",
+        "label": "Scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Navigation & Menus",
+      "nav",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

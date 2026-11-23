@@ -2,9 +2,9 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
-All 399 existing native compositions now follow their v4 references. Twenty-two
-new Agent & AI UI, Buttons & Micro, Layout & UI and Forms & Inputs components
-bring the catalog to 421; 99 new or extension
+All 399 existing native compositions now follow their v4 references. Twenty-six
+new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs and Data/Navigation
+components bring the catalog to 425; 95 new or extension
 components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
@@ -42,7 +42,7 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 421 demos with 143 valid
+retaining their overflow/text checks. It now passes all 425 demos with 144 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
@@ -57,6 +57,18 @@ real file input, stale decode rejection, held Blob retirement, independent pause
 owners, moving touch and eight fresh offline contexts. Twenty-four six-second
 renderer stories establish equal-time model and paint agreement; final timing,
 cold-route, theme/contrast and accessibility budgets remain separate work.
+
+The Data/Navigation additions retain all 48 native layers, 24 original SVG slots
+and the approved forestDark photograph. Keep exact cropped arc roots and their
+unchanged overshoot copies; mask native ribbons at their full paint bounds,
+including stroke bleed. Preserve all three goals, 32 full and ten native OHLC
+records, six conserved flows and complete local page copy. Fractional browser
+scroll under stage zoom drives Nav’s actual state; its calibrated native
+checkpoint and retained old-page offsets have separate regressions. Tooltip
+deadlines, native gesture ordering, Canvas fallback/recovery events, 24 equal-time
+renderer stories and eight fresh offline contexts are covered. Actual Canvas
+pixel agreement at different virtual refresh rates does not establish the final
+CPU frame-time, cold-route, accessibility or Lighthouse budgets.
 
 The four Framer prompts now describe their native geometry and complete original
 full models. Preserve the original 30% one-shot entry threshold, early-intent

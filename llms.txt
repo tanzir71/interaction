@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 421 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 425 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -117,6 +117,7 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Picker Wheel](https://intrx.vercel.app/#/c/form-picker-wheel): drag · Three cylindrical wheels retain twelve hours, all sixty minutes and AM/PM. Drag with 0.92-per-60Hz-frame momentum, scroll or use Arrow/Home/End keys; every release snaps with the same spring. · registry: /registry/c/form-picker-wheel.json
 - [Precision Scrubber](https://intrx.vercel.app/#/c/form-precision-scrubber): drag · A 0–100 scrubber preserves 55.6 and its exact native lifted-knob camera. Horizontal sensitivity is ×1 near the track, ×0.5 at 40px and ×0.1 at 100px; keys and Shift provide direct fine adjustment. · registry: /registry/c/form-precision-scrubber.json
 - [Upload Dropzone](https://intrx.vercel.app/#/c/form-dropzone-morph): drag · A native file input or real drop creates a local file card. The zone inhales on dragover, morphs with a 350ms settle, advances measured progress updates and resolves into a drawn check. Replacing files cancels the old generation. · registry: /registry/c/form-dropzone-morph.json
+- [Condensing Pill Nav](https://intrx.vercel.app/#/c/nav-pill-condense): scroll · Scroll a local editorial page to turn its wide navigation into a floating pill after 120px. Width, radius and blur follow the same source clock; native links and input stay inside the example page. · registry: /registry/c/nav-pill-condense.json
 
 ## Motion
 
@@ -282,6 +283,9 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Image Generation Reveal](https://intrx.vercel.app/#/c/agent-image-gen-reveal): ambient · A licensed mountain photograph resolves through noise, sixteen-, eight- and four-pixel passes, then a sharp image in 4.8 seconds. · registry: /registry/c/agent-image-gen-reveal.json
 - [Agent Task Checklist](https://intrx.vercel.app/#/c/agent-task-checklist): ambient · Five local tasks advance through a 300-degree spinner, drawn checks and a collapsible completed-task summary. · registry: /registry/c/agent-task-checklist.json
 - [Citation Hover Chips](https://intrx.vercel.app/#/c/agent-citation-chips): hover · Three inline sources open a clamped, spring-positioned preview by mouse, focus or touch. Source records are local examples. · registry: /registry/c/agent-citation-chips.json
+- [Activity Rings](https://intrx.vercel.app/#/c/data-activity-rings): ambient · Three activity rings reveal today’s goals with a measured overshoot and glowing tips. The complete counts use tabular numerals; Replay starts a fresh finite fill. · registry: /registry/c/data-activity-rings.json
+- [Candlestick Crosshair](https://intrx.vercel.app/#/c/data-candlestick-crosshair): hover · A snapping crosshair explores thirty-two illustrative OHLC sessions with volume, a price axis and an anchored tooltip. Pointer, touch and Arrow/Home/End keys retain the complete data. · registry: /registry/c/data-candlestick-crosshair.json
+- [Sankey Flow](https://intrx.vercel.app/#/c/data-sankey-flow): ambient · Six flows connect three sources with two outcomes. A finite left-to-right reveal introduces the diagram; hover, focus or touch isolates related flows while the complete totals remain available. · registry: /registry/c/data-sankey-flow.json
 
 ## Visual FX
 

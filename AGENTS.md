@@ -120,6 +120,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The four new Data/Navigation components use `tools/verify-data-nav-new.js`,
+  `tools/verify-data-nav-new-models.js`, `tools/verify-data-nav-new-input.js`,
+  `tools/verify-data-nav-new-clocks.js`, `tools/verify-data-nav-new-exports.js`
+  and `tools/verify-data-nav-new-holds.js` against the local 4173 server. Preserve
+  all 48 native layers, 24 supplied SVG slots using 21 unchanged files, and the
+  approved forestDark photo with its 800/1600px hashes and attribution. Native
+  ring arcs include cropped 95×107 and 42×82 SVG roots; preserve their offsets.
+  Ring overshoot reuses the original arc assets. Sankey reveal masks cover the
+  full exported paint bounds, including stroke bleed and rounded caps. Full views
+  keep all three goals, 32 OHLC sessions/volumes, six conserved flows and three
+  complete local page sections; native Candles retains its ten supplied bodies.
+  Keep 11px optical prices and the documented sparse chart exception. Nav reads
+  actual fractional browser scroll offsets under stage zoom, calibrates its
+  initial reference checkpoint, and retains old page scroll positions during
+  reduced fades. Tests cover actual input, Canvas fallback/recovery events,
+  exact tooltip deadlines, 24 equal-time 60/120/240Hz renderer stories, eight
+  fresh offline full/native contexts, independent holds, queued scroll/touch and
+  disposal. The catalog is 425; 95 additions, Pro seams and final audits remain.
 - The four new Forms & Inputs components use `tools/verify-forms-new.js`,
   `tools/verify-forms-new-models.js`, `tools/verify-forms-new-input.js`,
   `tools/verify-forms-new-clocks.js`, `tools/verify-forms-new-exports.js` and
@@ -136,8 +154,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   milestone timers must re-arm after an early wake. Tests cover actual scaled
   mouse/keys/moving touch, 24 six-second 60/120/240Hz renderer stories, eight fresh
   offline full/native contexts, independent holds, ordered intents, early timers,
-  Blob retirement, decode generations, capture and disposal. The catalog is 421;
-  99 new/extensions, Pro seams and final acceptance remain.
+  Blob retirement, decode generations, capture and disposal.
 - The seven new Layout & UI components use `tools/verify-layout-new.js`,
   `tools/verify-layout-new-input.js`, `tools/verify-layout-new-clocks.js`,
   `tools/verify-layout-new-exports.js`, `tools/verify-layout-new-holds.js` and
