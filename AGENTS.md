@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first seventy-nine extensions are implemented;
-  the catalog is 508. Twelve extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first eighty-two extensions are implemented;
+  the catalog is 511. Nine extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,30 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The three Scroll extensions use `tools/verify-scroll-ext.js`,
+  `tools/verify-scroll-ext-models.js`, `tools/verify-scroll-ext-input.js`,
+  `tools/verify-scroll-ext-clocks.js`, `tools/verify-scroll-ext-exports.js`,
+  `tools/verify-scroll-ext-holds.js`, `tools/verify-scroll-ext-touch.js` and
+  `tools/verify-scroll-ext-pixels.js` against the local 4173 server. Preserve
+  67 exact native artwork layers and eighteen original photo slots. The nine
+  captured Dock layers, including three Scroll labels, belong to shared shell
+  controls and remain classified separately in the native fixture. All eleven
+  photo asset pairs retain their 800/1600px hashes and credits. Columns keeps
+  licensed Dusk natively and approved forestDark in full; each actual image gets
+  its actual photographer, including Rosie Sun for the full forest replacement.
+  Sticky keeps all three complete chapters and photographic states; Hero all
+  eight works; Columns all nine. Use actual calibrated fractional browser scroll,
+  source-time 0.12 followers, pinned scenes and pure progress-bound row/column
+  transforms. Native's complete six-second cosine story starts at the exact 40%
+  reference. Full Replay drives actual scroll and stops after its complete 6s
+  story. Sticky's chapter thresholds use exact analytic source timestamps;
+  current-pose photo/radius/text channels retain their complete named timings.
+  Tests cover eighteen six-second 60/120/240Hz stories, six fresh network-blocked
+  full/native contexts, twelve independent hold stories, actual moving touch,
+  queued physical scroll, complete rendered photo coverage, full native endpoints,
+  exact source resolutions and actual CSS transforms. No assets, fill exceptions
+  or overflow exceptions are added. Keep earlier private helpers, inputs and
+  archived publication evidence frozen.
 - The three 3D & Perspective extensions use `tools/verify-perspective-ext.js`,
   `tools/verify-perspective-ext-models.js`, `tools/verify-perspective-ext-input.js`,
   `tools/verify-perspective-ext-clocks.js`, `tools/verify-perspective-ext-exports.js`,

@@ -10,10 +10,21 @@ extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
-extensions to 508; 12 extension components and Pro seams remain. Both strict static audits now pass.
+extensions to 508. Three Scroll extensions bring it to 511; 9 extension
+components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The three Scroll extensions preserve 67 native artwork layers, eighteen exact
+photo slots and all eleven verified 800/1600px photo pairs. Keep the nine Dock
+layers classified as shared shell controls. Preserve the complete three/eight/
+nine-record models, actual fractional scroll calibration, 0.12 source followers,
+analytic chapter thresholds, current-pose panel transitions and full rendered
+photo coverage. Keep Columns' native Dusk/full forestDark distinction and actual
+photographer attribution. Eighteen equivalent-clock stories, six offline contexts,
+twelve hold stories and real touch/scroll/renderer checks establish functional
+behavior; final timing, accessibility, contrast, cold-route and Lighthouse gates
+remain open. No fit exceptions are added. Earlier findings remain open below.
 The three 3D & Perspective extensions retain 54 captured native layers, two
 unchanged SVG files and thirteen exact native photo slots, plus approved full
 forestDark for Marquee's licensed native Dusk exception. Preserve both asset

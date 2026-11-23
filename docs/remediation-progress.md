@@ -10,15 +10,55 @@ extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve L
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
-it to 508; 12 extension components,
+it to 508. Three Scroll extensions bring it to 511; 9 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 508 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 511 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 159
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Three Scroll extensions
+
+Sticky Scroll Reveal, Hero Parallax and Parallax Columns add three original
+implementations. They preserve all 67 captured native artwork layers and eighteen
+exact photo slots, plus their original clipping, borders and gradient geometry.
+The nine captured Dock layers, including the three Scroll labels, are shared
+shell controls and remain explicitly classified outside demo artwork. No SVG or
+photo files are added. All eleven original native/full photo pairs retain their
+hashes, source resolutions and credits. Columns preserves its licensed native
+Dusk reference; full uses approved forestDark and attributes that actual image
+to Rosie Sun. Native and portable images use 800px files; full uses 1600px files
+resolved before image creation.
+
+Full Sticky keeps all three complete chapters in a real scroll region beside a
+sticky photographic panel. Radius, photo fades/moves/blur and text stagger keep
+the complete named timings and retarget their actual current pose. Exact analytic
+chapter timestamps preserve interruptions and refresh-rate equivalence, including
+long source-clock jumps. Hero keeps eight complete works in opposed rows and a
+pinned heading with scroll-bound perspective. Columns keeps nine complete works,
+with outer columns rising while the middle falls. Every photo card becomes fully
+visible over the rendered story. The native six-second cosine story begins at
+the exact 40% reference; full finite Replay drives actual browser scroll through
+the complete range and stops. Manual progress uses measured fractional native
+scroll offsets and the source-time 0.12 follower. Reduced motion keeps complete
+stills, deliberate state jumps and bounded inert 150ms old-paint feedback.
+
+Eight suites pass 4,763,955 recorded assertions, including eighteen six-second
+60/120/240Hz renderer stories, six fresh network-blocked full/native contexts,
+twelve independent hold stories, actual moving touch and physical queued scroll,
+real Home/End endpoints, complete copy/photo models, actual image resolution,
+correct native/full attribution, CSS transforms and rendered photo coverage.
+All thirteen required local checks pass. The fit audit boots 511 demos with no
+findings and all 159 existing sparse exceptions valid; this group adds none.
+Twelve desktop/mobile detail routes pass in both themes with the tanziro.com
+footer. Three static posters come from the native DOM composition. All 435 prior
+source modules, 508 metadata entries, seven protected shared inputs and earlier
+private publication records remain unchanged. GitHub Actions remains disabled;
+the account-wide $0 stop-at-limit setting is preserved. Nine extensions, Pro
+seams and final acceptance remain open.
 
 ## Three 3D & Perspective extensions
 

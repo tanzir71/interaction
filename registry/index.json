@@ -35010,5 +35010,458 @@
     "fullAssetRefs": {
       "photo-interiorDark": "assets/images/interiorDark.webp"
     }
+  },
+  {
+    "id": "scroll-sticky-reveal",
+    "title": "Sticky Scroll Reveal",
+    "category": "Scroll",
+    "group": "Motion",
+    "trigger": "scroll",
+    "tags": [
+      "scroll",
+      "extension",
+      "sticky",
+      "scroll"
+    ],
+    "useCases": [
+      "Scroll",
+      "sticky",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Three complete chapters pass a sticky photographic panel. Native keeps the exact aurora and skeleton reference; full scrolls the text beside current-pose photographic swaps, with keyboard and touch access.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "scroll"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/scroll-sticky-reveal",
+    "thumb": "hero",
+    "module": "js/demos.scrollext.scroll-sticky-reveal.js?v=b51f5ec915",
+    "assetBundle": "js/demo-assets.js?v=f94fcaaba6",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/scroll-sticky-reveal.json?v=2b1b6b060a",
+    "assetRefs": {
+      "photo-aurora": "assets/images/aurora-800.webp",
+      "photo-cityNight": "assets/images/cityNight-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp"
+    },
+    "rootClass": "d-ext-scroll-sticky",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Text scrolls past while the panel swaps beside it",
+    "sourceName": "Seen on: Aceternity Sticky Scroll Reveal pattern family",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "aurora",
+        "asset": "photo-aurora",
+        "photoId": "62V7ntlKgL8",
+        "imageId": "photo-1483347756197-71ef80e95f73",
+        "photographer": "Vincent Guth",
+        "url": "https://unsplash.com/photos/silhouette-of-trees-near-aurora-borealis-at-night-62V7ntlKgL8",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "cityNight",
+        "asset": "photo-cityNight",
+        "photoId": "zd8v_Ig3ndg",
+        "imageId": "photo-1603793510575-a8cf24361baa",
+        "photographer": "Polina Kuzovkova",
+        "url": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-aurora": "assets/images/aurora.webp",
+      "photo-cityNight": "assets/images/cityNight.webp",
+      "photo-ocean": "assets/images/ocean.webp"
+    }
+  },
+  {
+    "id": "scroll-hero-parallax",
+    "title": "Hero Parallax",
+    "category": "Scroll",
+    "group": "Motion",
+    "trigger": "scroll",
+    "tags": [
+      "scroll",
+      "extension",
+      "hero",
+      "scroll"
+    ],
+    "useCases": [
+      "Scroll",
+      "hero",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Eight complete photographic works move in opposed rows while the heading stays pinned. Native retains every exact photo, crop and edge fade; full adds a scroll-bound perspective wall with real browser progress.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      372,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "scroll"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/scroll-hero-parallax",
+    "thumb": "hero",
+    "module": "js/demos.scrollext.scroll-hero-parallax.js?v=de23f72bca",
+    "assetBundle": "js/demo-assets.js?v=f94fcaaba6",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/scroll-hero-parallax.json?v=0c3bbb0a8a",
+    "assetRefs": {
+      "photo-cityNight": "assets/images/cityNight-800.webp",
+      "photo-silk": "assets/images/silk-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-forestBlue": "assets/images/forestBlue-800.webp",
+      "photo-embers": "assets/images/embers-800.webp",
+      "photo-chrome": "assets/images/chrome-800.webp",
+      "photo-aurora": "assets/images/aurora-800.webp",
+      "photo-milkyway": "assets/images/milkyway-800.webp"
+    },
+    "rootClass": "d-ext-scroll-hero",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Rows of tilted work slide at different speeds",
+    "sourceName": "Seen on: Aceternity Hero Parallax pattern family",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "cityNight",
+        "asset": "photo-cityNight",
+        "photoId": "zd8v_Ig3ndg",
+        "imageId": "photo-1603793510575-a8cf24361baa",
+        "photographer": "Polina Kuzovkova",
+        "url": "https://unsplash.com/photos/aerial-view-of-city-buildings-during-night-time-zd8v_Ig3ndg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "silk",
+        "asset": "photo-silk",
+        "photoId": "JTKKRK05NAM",
+        "imageId": "photo-1638376776402-9a4b75fe21bb",
+        "photographer": "Milad Fakurian",
+        "url": "https://unsplash.com/photos/a-black-and-white-abstract-background-with-wavy-lines-JTKKRK05NAM",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "forestBlue",
+        "asset": "photo-forestBlue",
+        "photoId": "2aSpCOPNyO0",
+        "imageId": "photo-1630695230041-8909e3204778",
+        "photographer": "Taylor Wright",
+        "url": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "embers",
+        "asset": "photo-embers",
+        "photoId": "5w2hjEJ06b0",
+        "imageId": "photo-1762202742459-4fcdc4beaab4",
+        "photographer": "Alican Leblebici",
+        "url": "https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "chrome",
+        "asset": "photo-chrome",
+        "photoId": "sC2Twgvu3lg",
+        "imageId": "photo-1759583545970-0106ff47353f",
+        "photographer": "Rohit Choudhari",
+        "url": "https://unsplash.com/photos/abstract-glass-structure-with-iridescent-light-reflections-sC2Twgvu3lg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "aurora",
+        "asset": "photo-aurora",
+        "photoId": "62V7ntlKgL8",
+        "imageId": "photo-1483347756197-71ef80e95f73",
+        "photographer": "Vincent Guth",
+        "url": "https://unsplash.com/photos/silhouette-of-trees-near-aurora-borealis-at-night-62V7ntlKgL8",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "milkyway",
+        "asset": "photo-milkyway",
+        "photoId": "9wH624ALFQA",
+        "imageId": "photo-1515705576963-95cad62945b6",
+        "photographer": "Dns Dgn",
+        "url": "https://unsplash.com/photos/milky-way-on-mountains-9wH624ALFQA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-cityNight": "assets/images/cityNight.webp",
+      "photo-silk": "assets/images/silk.webp",
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-forestBlue": "assets/images/forestBlue.webp",
+      "photo-embers": "assets/images/embers.webp",
+      "photo-chrome": "assets/images/chrome.webp",
+      "photo-aurora": "assets/images/aurora.webp",
+      "photo-milkyway": "assets/images/milkyway.webp"
+    }
+  },
+  {
+    "id": "scroll-parallax-columns",
+    "title": "Parallax Columns",
+    "category": "Scroll",
+    "group": "Motion",
+    "trigger": "scroll",
+    "tags": [
+      "scroll",
+      "extension",
+      "columns",
+      "scroll"
+    ],
+    "useCases": [
+      "Scroll",
+      "columns",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Nine complete photographic works travel through three columns. The outer columns rise while the middle falls; exact native clips and fades remain, while full uses approved v2 photography and actual fractional scroll.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      372,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "scroll"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/scroll-parallax-columns",
+    "thumb": "hero",
+    "module": "js/demos.scrollext.scroll-parallax-columns.js?v=5675616382",
+    "assetBundle": "js/demo-assets.js?v=f94fcaaba6",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/scroll-parallax-columns.json?v=4c8a85223a",
+    "assetRefs": {
+      "photo-cityTeal": "assets/images/cityTeal-800.webp",
+      "photo-dusk": "assets/images/dusk-800.webp",
+      "photo-silk": "assets/images/silk-800.webp",
+      "photo-aurora": "assets/images/aurora-800.webp",
+      "photo-ocean": "assets/images/ocean-800.webp",
+      "photo-embers": "assets/images/embers-800.webp",
+      "photo-forestBlue": "assets/images/forestBlue-800.webp",
+      "photo-chrome": "assets/images/chrome-800.webp",
+      "photo-milkyway": "assets/images/milkyway-800.webp",
+      "photo-forestDark": "assets/images/forestDark-800.webp"
+    },
+    "rootClass": "d-ext-scroll-columns",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Outer columns rise while the middle one falls",
+    "sourceName": "Seen on: Aceternity Parallax Scroll pattern family",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "cityTeal",
+        "asset": "photo-cityTeal",
+        "photoId": "cXU6tNxhub0",
+        "imageId": "photo-1493514789931-586cb221d7a7",
+        "photographer": "Andre Benz",
+        "url": "https://unsplash.com/photos/aerial-photography-of-city-skyline-during-night-time-cXU6tNxhub0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "dusk",
+        "asset": "photo-dusk",
+        "photoId": "JgOeRuGD_Y4",
+        "imageId": "photo-1477346611705-65d1883cee1e",
+        "photographer": "JOHN TOWNER",
+        "url": "https://unsplash.com/photos/aerial-photo-of-brown-moutains-JgOeRuGD_Y4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "silk",
+        "asset": "photo-silk",
+        "photoId": "JTKKRK05NAM",
+        "imageId": "photo-1638376776402-9a4b75fe21bb",
+        "photographer": "Milad Fakurian",
+        "url": "https://unsplash.com/photos/a-black-and-white-abstract-background-with-wavy-lines-JTKKRK05NAM",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "aurora",
+        "asset": "photo-aurora",
+        "photoId": "62V7ntlKgL8",
+        "imageId": "photo-1483347756197-71ef80e95f73",
+        "photographer": "Vincent Guth",
+        "url": "https://unsplash.com/photos/silhouette-of-trees-near-aurora-borealis-at-night-62V7ntlKgL8",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "ocean",
+        "asset": "photo-ocean",
+        "photoId": "IgWNxx7paz4",
+        "imageId": "photo-1484387436194-cf7cb70800ce",
+        "photographer": "Michael Benz",
+        "url": "https://unsplash.com/photos/high-angle-photo-of-sea-with-waves-IgWNxx7paz4",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "embers",
+        "asset": "photo-embers",
+        "photoId": "5w2hjEJ06b0",
+        "imageId": "photo-1762202742459-4fcdc4beaab4",
+        "photographer": "Alican Leblebici",
+        "url": "https://unsplash.com/photos/glowing-hot-embers-and-coals-in-a-fire-5w2hjEJ06b0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "forestBlue",
+        "asset": "photo-forestBlue",
+        "photoId": "2aSpCOPNyO0",
+        "imageId": "photo-1630695230041-8909e3204778",
+        "photographer": "Taylor Wright",
+        "url": "https://unsplash.com/photos/bare-trees-on-forest-during-daytime-2aSpCOPNyO0",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      },
+      {
+        "key": "chrome",
+        "asset": "photo-chrome",
+        "photoId": "sC2Twgvu3lg",
+        "imageId": "photo-1759583545970-0106ff47353f",
+        "photographer": "Rohit Choudhari",
+        "url": "https://unsplash.com/photos/abstract-glass-structure-with-iridescent-light-reflections-sC2Twgvu3lg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "milkyway",
+        "asset": "photo-milkyway",
+        "photoId": "9wH624ALFQA",
+        "imageId": "photo-1515705576963-95cad62945b6",
+        "photographer": "Dns Dgn",
+        "url": "https://unsplash.com/photos/milky-way-on-mountains-9wH624ALFQA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      },
+      {
+        "key": "forestDark",
+        "asset": "photo-forestDark",
+        "photoId": "1L71sPT5XKc",
+        "imageId": "photo-1483982258113-b72862e6cff6",
+        "photographer": "Rosie Sun",
+        "url": "https://unsplash.com/photos/photography-of-forest-1L71sPT5XKc",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-15"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-cityTeal": "assets/images/cityTeal.webp",
+      "photo-dusk": "assets/images/dusk.webp",
+      "photo-silk": "assets/images/silk.webp",
+      "photo-aurora": "assets/images/aurora.webp",
+      "photo-ocean": "assets/images/ocean.webp",
+      "photo-embers": "assets/images/embers.webp",
+      "photo-forestBlue": "assets/images/forestBlue.webp",
+      "photo-chrome": "assets/images/chrome.webp",
+      "photo-milkyway": "assets/images/milkyway.webp",
+      "photo-forestDark": "assets/images/forestDark.webp"
+    }
   }
 ]
