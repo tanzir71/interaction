@@ -53,6 +53,10 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   const stage=touch.locator('#tile-cursor-drag-ghost .demo-stage');
   assert.ok(await stage.evaluate(s=>s.inert&&s.style.touchAction==='pan-y'),'touch drag starts suspended and allows page scrolling');
   await touch.locator('#tile-cursor-drag-ghost .stage-play').click();
+  await touch.waitForFunction(()=>{
+    const s=document.querySelector('#tile-cursor-drag-ghost .demo-stage');
+    return s?._runtime&&!s.inert&&!s._runtime.suspended;
+  });
   assert.ok(await stage.evaluate(s=>!s.inert&&!s._runtime.suspended&&s.style.touchAction==='none'),'touch interaction requires explicit play');
   assert.ok(await touch.evaluate(()=>[...document.querySelectorAll('[data-intrx-tile] .demo-stage')].filter(s=>s._runtime&&!s._runtime.suspended).length)<=1,'touch live preview cap');
   await touch.locator('#tile-cursor-drag-ghost .tile-details').focus();await touch.keyboard.press('Space');

@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 439 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 449 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -118,6 +118,16 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Precision Scrubber](https://intrx.vercel.app/#/c/form-precision-scrubber): drag · A 0–100 scrubber preserves 55.6 and its exact native lifted-knob camera. Horizontal sensitivity is ×1 near the track, ×0.5 at 40px and ×0.1 at 100px; keys and Shift provide direct fine adjustment. · registry: /registry/c/form-precision-scrubber.json
 - [Upload Dropzone](https://intrx.vercel.app/#/c/form-dropzone-morph): drag · A native file input or real drop creates a local file card. The zone inhales on dragover, morphs with a 350ms settle, advances measured progress updates and resolves into a drawn check. Replacing files cancels the old generation. · registry: /registry/c/form-dropzone-morph.json
 - [Condensing Pill Nav](https://intrx.vercel.app/#/c/nav-pill-condense): scroll · Scroll a local editorial page to turn its wide navigation into a floating pill after 120px. Width, radius and blur follow the same source clock; native links and input stay inside the example page. · registry: /registry/c/nav-pill-condense.json
+- [Stateful Button](https://intrx.vercel.app/#/c/micro-stateful-button): press · Save changes through idle, loading, success and error states. The label and width respond to each state, and completed feedback returns to idle after its full hold. · registry: /registry/c/micro-stateful-button.json
+- [Escape Button](https://intrx.vercel.app/#/c/micro-escape-button): hover · Choose Stay or try to catch Leave. A fine pointer gets five bounded dodges before the button settles; keyboard, touch and reduced motion keep a normal choice. · registry: /registry/c/micro-escape-button.json
+- [Hold to Pay](https://intrx.vercel.app/#/c/micro-hold-to-pay): press · Hold the pointer, Space or Enter for 900 milliseconds to complete the payment. Releasing early rewinds the sweep; cancellation, capture loss and pauses preserve the hold boundary. · registry: /registry/c/micro-hold-to-pay.json
+- [Share Pill](https://intrx.vercel.app/#/c/micro-share-pill): press · Open four share targets with staggered icons. Copy the link, prepare email or a message, or use the browser share sheet with a clipboard fallback and local toast feedback. · registry: /registry/c/micro-share-pill.json
+- [Icon Swap](https://intrx.vercel.app/#/c/micro-icon-swap): press · Toggle all three play/pause, copy/check and menu/close pairs. Their layered icons cross-rotate, scale and blur from the visible pose, including rapid reversals. · registry: /registry/c/micro-icon-swap.json
+- [Iridescent Edge](https://intrx.vercel.app/#/c/micro-rainbow-shine): hover · Move around a softly iridescent capsule to steer its border and glow. Keyboard steps remain available, and the highlight returns to rest when the pointer leaves. · registry: /registry/c/micro-rainbow-shine.json
+- [Award Badge](https://intrx.vercel.app/#/c/micro-award-badge): hover · Tilt the original laurel badge, sweep a specular highlight across its leaves and count up to first place. Native geometry, all twenty-four original SVG leaves and the product-of-the-day copy remain intact. · registry: /registry/c/micro-award-badge.json
+- [Holo Flip Badge](https://intrx.vercel.app/#/c/micro-holo-badge): press · Flip Ava Rhodes’s conference pass and inspect both sides. Pointer tilt shifts its original foil layers and glare; the approved portrait keeps its original crop and attribution. · registry: /registry/c/micro-holo-badge.json
+- [Peel Sticker](https://intrx.vercel.app/#/c/micro-peel-sticker): drag · Drag the printed corner to peel the INTRX sticker with its original curled paper artwork and shadow. Release past sixty percent to remove it, or return with a velocity-carrying spring; keyboard preview and cancellation remain available. · registry: /registry/c/micro-peel-sticker.json
+- [Action Swap](https://intrx.vercel.app/#/c/micro-action-swap): press · Follow and unfollow with an interruptible width morph, label entrance and paired plus/check feedback. The native preview starts in its exact Following reference state. · registry: /registry/c/micro-action-swap.json
 
 ## Motion
 

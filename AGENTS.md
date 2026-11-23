@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first ten extensions are implemented; the
-  catalog is 439. Eighty-one extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first twenty extensions are implemented; the
+  catalog is 449. Seventy-one extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -163,8 +163,29 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   stories at 60/120/240Hz, twenty fresh network-blocked full/native contexts,
   actual moving touch and scrolling, 44px targets, exact artwork/type, complete
   models and cleanup. Creator's sparse exception changes only the fill gate.
-  The catalog is 439; 81 extensions, Pro seams and final audits remain. Keep all
+  This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The ten Buttons & Micro extensions use `tools/verify-micro-ext.js`,
+  `tools/verify-micro-ext-models.js`, `tools/verify-micro-ext-input.js`,
+  `tools/verify-micro-ext-clocks.js`, `tools/verify-micro-ext-exports.js`,
+  `tools/verify-micro-ext-holds.js`, `tools/verify-micro-ext-touch.js` and
+  `tools/verify-micro-ext-async.js` against the local 4173 server. Preserve
+  all 92 native layers, 49 supplied SVG slots using 46 unchanged files and the
+  approved portraitC1 photograph with its original 800/1600px hashes and credit.
+  Full models keep both save outcomes and timed reset, five bounded dodges,
+  the exact 900ms hold, four real share targets, all three icon pairs, pointer
+  iridescence, original laurel, both conference-pass faces, velocity-carrying
+  paper peel and Follow/Following states. Spinner replaces the loading label;
+  results use 150ms outgoing and 500ms incoming icon transforms. Width/radius
+  use 350ms settle, with 250ms reset. Restore/Reset release physical capture
+  and key owners. Late clipboard/share work cannot restore stale or disposed
+  feedback; synchronous share failures retain clipboard fallback. Six sparse
+  exceptions change only fill. Tests cover 60 actual six-second renderer stories
+  at 60/120/240Hz, independent curves/RK4 springs and paper area, real moving
+  touch and keys, capture loss, independent holds, reduced retained paint,
+  compact type, disposal and twenty fresh offline full/native contexts.
+  The catalog is 449; 71 extensions, Pro seams and final audits remain. Keep
+  earlier private helpers, inputs and publication evidence frozen.
 - The four new Data/Navigation components use `tools/verify-data-nav-new.js`,
   `tools/verify-data-nav-new-models.js`, `tools/verify-data-nav-new-input.js`,
   `tools/verify-data-nav-new-clocks.js`, `tools/verify-data-nav-new-exports.js`

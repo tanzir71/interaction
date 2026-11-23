@@ -5,16 +5,47 @@ all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
 sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
-the catalog to 429. The first ten Agent & AI UI extensions bring it to 439;
-81 extension components, Pro seams and final
+the catalog to 429. Ten Agent & AI UI and ten Buttons & Micro extensions bring
+it to 449; 71 extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 439 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 145
+JavaScript. The fit audit boots all 449 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 151
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Ten Buttons & Micro extensions
+
+Stateful Button, Escape Button, Hold to Pay, Share Pill, Icon Swap,
+Iridescent Edge, Award Badge, Holo Flip Badge, Peel Sticker and Action Swap
+add ten original extension implementations. Native compositions preserve 92
+captured layers, 49 original SVG slots using 46 unchanged files and the approved
+portraitC1 photograph, including its 800/1600px hashes and attribution.
+
+Full views retain both saving outcomes and auto-reset, five bounded dodges,
+the complete 900ms payment hold, four share targets, all three icon pairs,
+pointer-driven iridescence, the laurel count/sweep, both conference-pass faces,
+the complete clipped paper model and Follow/Following states. Loading replaces
+the label with a spinner; completion cross-rotates and clears blur into the
+result. Width/radius use the named 350ms settle curve and faster 250ms reset.
+Reset/Restore release actual pointer capture and key ownership. Controlled
+clipboard/share promises test late rejection, paused completion, synchronous
+browser-share errors, fallback selection and disposal without stale side effects.
+
+Eight focused suites pass 5,466 checks, including independent easing and RK4
+spring comparisons, conserved paper area, 60 actual six-second renderer stories
+at 60/120/240Hz and twenty fresh network-blocked full/native export contexts.
+Real moving touch, mouse, keys, capture loss, page scrolling, independent holds,
+reduced-motion old-paint retirement and compact typography are covered. Forty
+actual dev routes retain the tanziro.com footer; ten native posters are refreshed.
+All 366 earlier modules, 439 metadata records and seven protected shared files
+remain unchanged. Six documented sparse reference exceptions waive only fill.
+Thirteen required local commands pass, including all 449 previews and the fit
+audit. The touch opt-in verifier waits for the lazy runtime to finish booting
+before inspecting it. GitHub Actions remains disabled. Final performance,
+accessibility, contrast and cold-route acceptance remains open.
 
 ## First ten Agent & AI UI extensions
 
