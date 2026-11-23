@@ -1619,6 +1619,16 @@
         72,
         72
       ]
+    },
+    "loader-multi-step": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 Figma geometry. The five-row status stencil spans (118,28) through (286,182) in the 372×264 Stage. Four 18×18 status marks, one 16×16 spinner and five 13/14px labels at x=146 have widths 112/117/140/97/113px, with captured row opacity .3/.6/1/.6/.3. Their sparse painted surfaces can fall below 12% after the 150ms retained reference fades; the current eight-leaf measurement is 11.2%. Keep the reference icons, type, 34px pitch and complete five-step model. This exception changes only the low-fill gate; overflow, horizontal scrolling and the 11px text floor remain required.",
+      "figmaNode": "143:955",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=143-955",
+      "selector": ".d-ext-loader-steps-native-node[data-native-node=\"143:956\"]",
+      "designSize": [
+        18,
+        18
+      ]
     }
   }
 }

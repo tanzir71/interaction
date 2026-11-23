@@ -11,14 +11,55 @@ it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
 it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516 and Piano Keys to 517. The three Skeuomorph extensions complete all 520 components;
-Pro seams and final audits remain. Earlier sections retain historical counts.
+Pro scaffolding is implemented; final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
 JavaScript. The fit audit boots all 520 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 162
+or low-fill findings. It has no tiny-text findings; all 163
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Pro source scaffolding
+
+The published 520-item catalog remains free. The owner launch flag is disabled;
+the two Figma candidates stay free. Isolated Pro builds promote only Liquid
+Glass Lens and Plasma Orb and cannot overwrite the published registry. Pricing
+keeps its SOON badge, with launch services outside this handoff.
+
+Pro detail pages keep the actual live preview, controls, notes and entire
+implementation prompt available. The source card shows neutral blurred
+placeholders, the unchanged original crown, Unlock with Pro and Copy prompt
+instead. All code tabs and copy paths honor the policy. Prompt text is complete
+and safely escaped; the prompt tab remains readable and copyable. A registry
+lock overrides stale free metadata without copying source or loading export
+bundles. An obsolete route response cannot alter the next page.
+
+The existing MCP/CLI source guards now have actual process-level tests for
+HTML, parts and framework-port requests, free prompts and component resources.
+The CLI prints the canonical upgrade URL and creates no output files for Pro.
+Three end-to-end suites pass 783 recorded assertions, including twelve actual
+responsive Pro detail routes at 1440/390/360px in both themes, real free export,
+pending clipboard intent, stale metadata and route disposal. Four policy tests
+and nine package tests pass. All 447 demo source modules, 520 sidecar metadata
+records and six frozen runtime/exporter/style inputs remain unchanged. The
+default generated registry and portable exports retain their existing bytes.
+
+The unchanged Multi-Step Loader has a new owner-authorized sparse-fill
+exception. Its five Figma rows retain 18px status marks, a 16px spinner,
+13/14px labels and 34px pitch. Earlier measurements included the transient
+150ms retained reference; the current measurement with eight leaves is 11.2%. Fresh Figma
+geometry agrees with the published fixture. The exception preserves exact
+reference sizing and changes only the low-fill gate; all other gates stay
+strict. There are now 163 validated exceptions. After this data-only change,
+Stage and the complete fit audit of 520 components were repeated. The other eleven
+passing checks retain their original logs and byte-identical relevant inputs.
+
+All thirteen required local checks pass. Pro scaffolding is implemented;
+full final acceptance remains open. Earlier CPU4 timing findings, cold-route,
+Lighthouse, complete recipe, accessibility and contrast audits remain open.
+GitHub Actions stay disabled and the account $0 stop-at-limit setting remains
+untouched. Details and local verification are in [Pro scaffolding](pro-scaffolding.md).
 
 ## Final three Skeuomorph extensions
 

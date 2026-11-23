@@ -142,7 +142,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
   All thirty new components and all ninety-one extensions are implemented;
-  the catalog is 520. Pro seams and final audits remain. Earlier phase counts below
+  the catalog is 520. Pro scaffolding is implemented; final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -1551,3 +1551,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   No new fit exceptions. All 520 components are implemented; Pro seams and
   final acceptance remain. Earlier private helpers, inputs and publication
   evidence remain frozen. Functional clocks do not replace performance audits.
+
+- Pro source policy lives in `js/shell/access.js`; keep its owner launch flag
+  disabled until the owner chooses launch. Both Figma candidates stay free in
+  the published 520-item catalog. Pro preview builds require an isolated
+  `--pro-preview --output .artifacts/...` directory. Never activate this flag,
+  take payments or change the Pricing SOON state as part of routine work.
+  Run `node --test tools/pro-policy.test.js`, `node tools/verify-pro-registry.js`,
+  `node tools/verify-pro.js http://127.0.0.1:4173` and
+  `node tools/verify-pro-access.js http://127.0.0.1:4173`; package tests include
+  actual CLI and MCP locked tools/resources. The shell locks every source tab
+  and copy path while preview, notes and complete prompts remain free. Respect
+  authoritative registry locks, pending clipboard intents and route generations.
+  Keep the original 19×15 crown SVG at its captured 22px-frame offsets. The
+  neutral badge and responsive source panel use shell styles, without changing
+  Stage materials, demo code or portable exports. See `docs/pro-scaffolding.md`.
+  These seams leave final motion, a11y, contrast, cold-route, Lighthouse and
+  performance acceptance open. Keep earlier private phase evidence frozen.
+
+- Multi-Step Loader keeps the exact five-row Figma 143:955 stencil. Its
+  18px status marks, 16px spinner and 13/14px labels on 34px pitch are covered
+  by `tools/stage-fit-allowlist.json` under the owner sparse-size clarification.
+  The native reference is unchanged. A 150ms retained reference can inflate
+  early measured fill; the eight-leaf measurement is 11.2%. This changes only
+  low fill, leaving overflow, horizontal scroll and the 11px text gate strict.

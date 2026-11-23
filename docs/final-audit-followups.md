@@ -11,7 +11,7 @@ it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
 extensions to 508. Three Scroll extensions bring it to 511 and two Cursor
-extensions to 513 and three Play extensions to 516 and Piano Keys to 517. The three Skeuomorph extensions complete all 520 components; Pro seams and final acceptance remain. Both strict static audits now pass.
+extensions to 513 and three Play extensions to 516 and Piano Keys to 517. The three Skeuomorph extensions complete all 520 components; Pro scaffolding is implemented and final acceptance remains. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -305,3 +305,15 @@ ownership, exact SVG/photo slots, compact complete histories and full cleanup.
 The independent solver, eighteen refresh-rate stories and four late-frame
 settling stories establish function. Final recipe, contrast, accessibility,
 CPU-throttled timing, cold-route and Lighthouse acceptance remain open.
+
+Pro source scaffolding is implemented with the owner launch flag disabled.
+Keep both candidates free and Pricing SOON until the owner chooses launch.
+Preserve complete free prompts, every source-copy guard, authoritative registry
+locks and route generations. The actual free-copy, locked UI, registry, CLI and
+MCP stories do not replace the final site-wide performance/a11y/contrast audits.
+
+Multi-Step Loader now has a documented sparse-fill exception matching fresh
+Figma 143:955 geometry. Its native/full model and source remain unchanged.
+Preserve the five complete build steps and the 150ms retained-reference fade;
+fill during that fade can differ from the settled eight-leaf measurement.
+All overflow, horizontal-scroll and type-size gates remain required.

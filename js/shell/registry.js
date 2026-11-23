@@ -15,6 +15,7 @@
     }
     Object.assign(demo,sidecar,demo._inlineMeta);
     ['stage','a11y'].forEach(key => { demo[key] = Object.assign({},sidecar[key],demo._inlineMeta[key]); });
+    if(R.access)demo.tier=R.access.tier(demo);
     return demo;
   };
   const register = R.register;
@@ -31,11 +32,11 @@
   };
   R.initCatalog=async()=>{
     const response=await fetch('registry/index.json',{cache:'no-cache'});if(!response.ok)throw Error('Could not load component catalog');
-    R.catalog=await response.json();R.byId=new Map(R.catalog.map(item=>[item.id,item]));
+    R.catalog=(await response.json()).map(item=>R.access?{...item,tier:R.access.tier(item)}:item);R.byId=new Map(R.catalog.map(item=>[item.id,item]));
     R.bundleUrls={assets:R.catalog[0]?.assetBundle||'js/demo-assets.js',export:R.catalog[0]?.exportBundle||'js/export-data.js'};
     const paths=Object.assign({},...R.catalog.map(item=>item.assetRefs));
     R.resolveAssets=value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!paths[name])throw Error('Unknown preview asset: '+name);return paths[name];});
-    R.meta(Object.fromEntries(R.catalog.map(item=>[item.id,{designSize:item.designSize,thumbDesignSize:item.thumbDesignSize,stage:item.stage,trigger:item.trigger,controls:item.controls,a11y:item.a11y,tier:item.tier,thumb:item.thumb,useCases:item.useCases,addedAt:item.addedAt,...(item.photoCredits?{photoCredits:item.photoCredits,fullAssetRefs:item.fullAssetRefs}:{})}])));
+    R.meta(Object.fromEntries(R.catalog.map(item=>[item.id,{designSize:item.designSize,thumbDesignSize:item.thumbDesignSize,stage:item.stage,trigger:item.trigger,controls:item.controls,a11y:item.a11y,tier:R.access?R.access.tier(item):item.tier,thumb:item.thumb,useCases:item.useCases,addedAt:item.addedAt,...(item.photoCredits?{photoCredits:item.photoCredits,fullAssetRefs:item.fullAssetRefs}:{})}])));
     return R.catalog;
   };
   const urls={gsap:'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js',scrolltrigger:'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js',lenis:'https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js'};
@@ -46,7 +47,7 @@
     for(const lib of demo.libs||[])if(urls[lib])await R.loadScript(urls[lib]);
     return demo;
   };
-  R.getCode=async demo=>{await Promise.all([R.loadScript(R.bundleUrls.assets),R.loadScript(R.bundleUrls.export)]);return R.buildCode(demo);};
+  R.getCode=async demo=>{if(R.access&&!R.access.canReadSource(demo))throw Error('Unlock with Pro to access source. The prompt is free.');await Promise.all([R.loadScript(R.bundleUrls.assets),R.loadScript(R.bundleUrls.export)]);return R.buildCode(demo);};
   R.rank=(items,query)=>{
     const words=query.toLowerCase().trim().split(/\s+/).filter(Boolean);
     const fuzzy=(text,word)=>{let pos=0;for(const c of text)if(c===word[pos])pos++;return pos===word.length;};

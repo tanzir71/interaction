@@ -4,6 +4,12 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),cryp
 const ROOT=path.resolve(__dirname,'..');process.chdir(ROOT);
 const {demos,context,filesById}=require('./load-registry')();
 const check=process.argv.includes('--check'),outputs=new Map(),VERSION='3.0.0',HOST='https://intrx.vercel.app';
+const outputIndex=process.argv.indexOf('--output'),outputPath=outputIndex<0?null:process.argv[outputIndex+1],previewPro=process.argv.includes('--pro-preview');
+if(outputIndex>=0&&(!outputPath||outputPath.startsWith('--')))throw Error('--output requires a directory');
+const outputRoot=outputPath?path.resolve(ROOT,outputPath):ROOT;
+if(outputPath&&(!outputRoot.startsWith(path.join(ROOT,'.artifacts')+path.sep)))throw Error('Alternate builds must stay inside the workspace .artifacts directory');
+if(previewPro&&!outputPath)throw Error('--pro-preview requires an isolated --output directory; the published flag stays off');
+if(previewPro){const policy=context.INTRX.access.create({enabled:true});for(const d of demos)d.tier=policy.tier(d);}
 const groups={Interface:['Buttons & Micro','Forms & Inputs','Navigation & Menus','Layout & UI','Loaders & Progress','Galleries & Sliders'],Motion:['Scroll','Text & Type','SVG & Line','3D & Perspective'],'Pointer & Physics':['Cursor','Physics','Liquid & Organic','Play & Easter Eggs'],'Data & AI':['Agent & AI UI','Data & Numbers','Maps & Geo','FUI & Terminal'],'Visual FX':['Image & WebGL','Raster & Glitch','Ambient','Skeuomorph','Sound & Haptics'],Collections:['Interactive Showcase','DRAMS','Framer Collection']};
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const json=value=>JSON.stringify(value,null,2)+'\n';
@@ -77,9 +83,9 @@ put('llms.txt',header+Object.keys(groups).map(group=>'\n## '+group+'\n\n'+index.
 put('llms-full.txt',header+categories.map(cat=>'\n## '+cat.name+'\n'+demos.filter(d=>d.cat===cat.name).map(d=>'\n### '+d.title+' (`'+d.id+'`)\n\n'+d.prompt.trim()+'\n').join('')).join(''));
 const stale=[];
 for(const [name,content]of outputs){
- const current=fs.existsSync(name)?fs.readFileSync(name,'utf8').replace(/\r\n/g,'\n'):null;
+ const target=path.join(outputRoot,name),current=fs.existsSync(target)?fs.readFileSync(target,'utf8').replace(/\r\n/g,'\n'):null;
  if(check){if(current!==content)stale.push(name);}
- else if(current!==content){fs.mkdirSync(path.dirname(name),{recursive:true});fs.writeFileSync(name,content);}
+ else if(current!==content){fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,content);}
 }
-for(const dir of ['registry/c','registry/p','r'])if(fs.existsSync(dir))for(const name of fs.readdirSync(dir)){const file=dir+'/'+name;if(name.endsWith('.json')&&!outputs.has(file)){if(check)stale.push(file+' (orphan)');else fs.unlinkSync(file);}}
+for(const dir of ['registry/c','registry/p','r']){const folder=path.join(outputRoot,dir);if(fs.existsSync(folder))for(const name of fs.readdirSync(folder)){const file=dir+'/'+name;if(name.endsWith('.json')&&!outputs.has(file)){if(check)stale.push(file+' (orphan)');else fs.unlinkSync(path.join(folder,name));}}}
 if(stale.length){console.error('Stale generated artifacts: '+stale.join(', '));process.exitCode=1;}else console.log((check?'Verified':'Built')+' '+outputs.size+' artifacts for '+demos.length+' components');

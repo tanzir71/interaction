@@ -10,6 +10,6 @@ module.exports = function loadRegistry(root = path.resolve(__dirname,'..')) {
   context.INTRX = { demos:[], register(demo) { this.demos.push(demo); }, fontFaces:{}, resolveAssets:value=>value };
   vm.createContext(context);
   const filesById={};
-  ['js/shell/registry.js',...files,'js/meta.stage.js'].forEach(file=>{const before=context.INTRX.demos.length;vm.runInContext(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n'),context,{filename:file});context.INTRX.demos.slice(before).forEach(d=>filesById[d.id]=file);});
+  ['js/shell/registry.js','js/shell/access.js',...files,'js/meta.stage.js'].forEach(file=>{const before=context.INTRX.demos.length;vm.runInContext(fs.readFileSync(path.join(root,file),'utf8').replace(/\r\n/g,'\n'),context,{filename:file});context.INTRX.demos.slice(before).forEach(d=>filesById[d.id]=file);});
   return { demos:context.INTRX.demos, metadata:context.INTRX.stageMeta, files, filesById, context };
 };
