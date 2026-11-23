@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first thirty extensions are implemented; the
-  catalog is 459. Sixty-one extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first thirty-eight extensions are implemented;
+  the catalog is 467. Fifty-three extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,29 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The eight Visual FX extensions use `tools/verify-fx-ext.js`,
+  `tools/verify-fx-ext-models.js`, `tools/verify-fx-ext-input.js`,
+  `tools/verify-fx-ext-clocks.js`, `tools/verify-fx-ext-exports.js`,
+  `tools/verify-fx-ext-holds.js`, `tools/verify-fx-ext-touch.js` and
+  `tools/verify-fx-ext-graphics.js` against the local 4173 server. Preserve all
+  882 native layers, 24 supplied SVG slots using 23 unchanged files and both
+  directly rehydrated Black Hole alpha masks. Native retains 64 vortex points,
+  135 matrix dots, five tunnel frames with sixteen streaks, 589 logo dots with
+  117 bright mark cells, five meteors and the complete grid/cursor composition.
+  Full keeps the analytical lensed field, 384 inward simplex particles, real
+  lamp scrolling, the 325-dot fragment shader, nine projective tunnel frames
+  with sixteen unchanged streaks, the continuous resolved logo, 256 seeded
+  meteor events and 180 skewed cells. Invert the actual grid transform; each
+  Arrow key moves one cell. Native ambient art stays at its exact checkpoint
+  before the first source frame. Black Hole retains every software/SVG field
+  sample; Dot Matrix retains complete Canvas/SVG fallback. Literal context
+  recovery respects caller holds, restores identical GPU pixels and deletes
+  all live graphics resources. Eight suites pass 27,195 checks, including 48 actual
+  six-second 60/120/240Hz renderer stories, sixteen fresh network-blocked
+  full/native export contexts, real moving touch and wheel, complete local
+  models, exact native masks, independent holds and retained old GPU pixels.
+  The catalog is 467; 53 extensions, Pro seams and final audits remain. Keep
+  earlier private helpers, inputs and publication evidence frozen.
 - The ten Forms & Inputs extensions use `tools/verify-forms-ext.js`,
   `tools/verify-forms-ext-models.js`, `tools/verify-forms-ext-input.js`,
   `tools/verify-forms-ext-clocks.js`, `tools/verify-forms-ext-exports.js`,
@@ -184,8 +207,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   previews. Eight suites cover 12,336 checks, 60 actual six-second 60/120/240Hz
   renderer stories, twenty fresh network-blocked full/native export contexts,
   graphics recovery, native input, independent holds, retained Canvas/range paint
-  and cleanup. The catalog is 459; 61 extensions, Pro seams and final audits
-  remain. Keep earlier private helpers, inputs and publication evidence frozen.
+  and cleanup. This group brought the catalog to 459; later counts appear above.
+  Keep earlier private helpers, inputs and publication evidence frozen.
 - The ten Buttons & Micro extensions use `tools/verify-micro-ext.js`,
   `tools/verify-micro-ext-models.js`, `tools/verify-micro-ext-input.js`,
   `tools/verify-micro-ext-clocks.js`, `tools/verify-micro-ext-exports.js`,

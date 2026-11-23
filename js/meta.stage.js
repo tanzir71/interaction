@@ -16739,5 +16739,189 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "fx-black-hole": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "hole",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-vortex": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "vortex",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-lamp": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "scroll",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "lamp",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-canvas-reveal": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Image & WebGL",
+      "dots",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-light-tunnel": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "tunnel",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-dithered-logo": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Raster & Glitch",
+      "dither",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-meteors": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "meteors",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
+  },
+  "fx-background-boxes": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "boxes",
+      "accessible"
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "addedAt": "2026-11"
   }
 });

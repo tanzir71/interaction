@@ -6,15 +6,46 @@ Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
 sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
-extensions bring it to 459; 61 extension components, Pro seams and final
-audits remain. Earlier sections retain historical counts.
+extensions bring it to 459. Eight Visual FX extensions bring it to 467;
+53 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 459 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 467 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 156
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Eight Visual FX extensions
+
+Black Hole, Vortex, Lamp Glow, Dot Matrix Reveal, Light Tunnel, Dithered Logo,
+Meteors and Background Boxes add eight original implementations. Their native
+compositions preserve 882 captured layers, 24 original vector slots using 23
+unchanged SVG files and both directly rehydrated Black Hole alpha masks. Query
+snapshots omit those mask flags; exact gradient alpha and ellipse clipping retain
+their original composition. No photography or new fill exceptions are introduced.
+
+Full views retain an analytical lensed field, 384 seeded inward particles with
+continuous simplex drift, native lamp scrolling, a 325-dot WebGL fragment shader,
+nine projective tunnel frames with sixteen unchanged streaks, the complete
+589-dot/117-cell mark, 256 seeded meteor events and 180 skewed cells. Actual
+inverse transforms select the painted grid cells; every Arrow key moves one
+cell. Native ambient art keeps its reference checkpoint before its first frame.
+WebGL, Canvas and SVG retain complete fields. Literal GPU loss/rebuild respects
+independent holds, restores identical pixels and explicitly deletes resources.
+
+Eight focused suites pass 27,195 checks, including independent simplex/schedule/
+dither/depth/RK4 models, 48 actual six-second 60/120/240Hz renderer stories,
+sixteen fresh network-blocked full/native contexts and 32 independent hold
+stories. Real moving touch, native scrolling, original alpha masks, graphics
+samples, all fourteen reduced retained-paint cases and cleanup are covered.
+Thirty-two actual desktop/mobile dark/light dev routes retain the tanziro.com
+footer, and eight native posters are refreshed. All 386 earlier modules, 459
+metadata records, seven protected shared files and earlier private evidence
+remain unchanged. All thirteen required local commands pass, including all 467
+previews and the full fit audit with 156 valid existing exceptions. GitHub Actions
+remains disabled. Final performance, accessibility, contrast and cold-route
+acceptance remains open.
 
 ## Ten Forms & Inputs extensions
 
