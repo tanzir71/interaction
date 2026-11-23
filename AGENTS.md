@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first seventy-six extensions are implemented;
-  the catalog is 505. Fifteen extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first seventy-nine extensions are implemented;
+  the catalog is 508. Twelve extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,28 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The three 3D & Perspective extensions use `tools/verify-perspective-ext.js`,
+  `tools/verify-perspective-ext-models.js`, `tools/verify-perspective-ext-input.js`,
+  `tools/verify-perspective-ext-clocks.js`, `tools/verify-perspective-ext-exports.js`,
+  `tools/verify-perspective-ext-holds.js`, `tools/verify-perspective-ext-touch.js`
+  and `tools/verify-perspective-ext-pixels.js` against the local 4173 server.
+  Preserve all 54 native layers, two unchanged original SVG slots, thirteen
+  exact native photographic slots and fourteen complete 800/1600px asset pairs
+  with their hashes and credits. Marquee keeps licensed Dusk in its native v4
+  reference; full replaces that slot with approved forestDark. Detail uses
+  1600px photos before cloning; native and portable exports use 800px files.
+  Pin retains current-pose 400ms follow, 1000ms return, 300ms glare and fixed
+  ring phases, with its original beam joined to actual perspective projection.
+  Marquee retains all twelve works, buffered repeated geometry and the complete
+  12000ms diagonal period. Scroll uses calibrated fractional browser offsets,
+  a 0.12 source-time follower, bottom hinge and interruptible six-second story.
+  Paused-before-first-frame native artwork remains exact; reduced motion keeps
+  flat deliberate stills with bounded inert 150ms old-paint feedback. Tests cover
+  eighteen six-second 60/120/240Hz renderer stories, six fresh offline full/native
+  contexts, twelve independent hold stories, actual moving touch/page scroll,
+  prospective keyboard input, native scroll endpoints and real projected joins
+  and wrap pixels. No fill or overflow exceptions are added. Earlier private
+  helpers, inputs and archived publication evidence remain frozen.
 - The four loader extensions use `tools/verify-loaders-ext.js`,
   `tools/verify-loaders-ext-models.js`, `tools/verify-loaders-ext-input.js`,
   `tools/verify-loaders-ext-clocks.js`, `tools/verify-loaders-ext-exports.js`,
@@ -185,8 +207,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   only low fill. Checks cover 24 six-second 60/120/240Hz renderer stories, eight
   fresh offline full/native contexts, sixteen independent hold stories, actual
   moving touch/page scroll, complete long build timelines, calibrated SVG paint
-  and original photographic pixels. The catalog is 505; 15 extensions, Pro seams
-  and final audits remain. Keep earlier private helpers, inputs and evidence frozen.
+  and original photographic pixels. This group brought the catalog to 505; later counts appear above. Keep earlier private helpers, inputs and evidence frozen.
 - The six Data & Numbers extensions use `tools/verify-data-ext.js`,
   `tools/verify-data-ext-models.js`, `tools/verify-data-ext-input.js`,
   `tools/verify-data-ext-clocks.js`, `tools/verify-data-ext-exports.js`,

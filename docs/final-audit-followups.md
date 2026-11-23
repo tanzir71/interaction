@@ -8,11 +8,22 @@ and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
 extensions brought it to 439. Ten Buttons & Micro and ten Forms & Inputs
 extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
-bring it to 489. Six Text & Type extensions bring it to 495; 25 extension components
-and Pro seams remain. Both strict static audits now pass.
+bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
+extensions bring it to 501, four loaders to 505 and three 3D & Perspective
+extensions to 508; 12 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The three 3D & Perspective extensions retain 54 captured native layers, two
+unchanged SVG files and thirteen exact native photo slots, plus approved full
+forestDark for Marquee's licensed native Dusk exception. Preserve both asset
+sizes, hashes and credits, perspective beam joins, the twelve-work periodic wall,
+actual fractional scroll calibration, 0.12 source-time smoothing, bottom hinge,
+interrupted replay and exact paused first paint. Eighteen equal-time renderer
+stories, six offline contexts, twelve hold stories and actual touch/scroll,
+projected-corner and seam pixel checks establish functional behavior. They do
+not close final performance, accessibility, contrast, cold-route or Lighthouse
+acceptance. No fit exceptions are added. All previous findings below remain open.
 The six Text & Type extensions retain 66 captured layers and 31 original text
 copies, with one reused unchanged SVG. Four transparent full-stage mask groups
 keep their reference boxes as zero-layout definitions; all visible masks remain

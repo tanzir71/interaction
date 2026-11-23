@@ -18217,5 +18217,110 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "3d-pin": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Pin"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "3D & Perspective",
+      "pin",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "3d-marquee-grid": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      372,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "3D & Perspective",
+      "marquee",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "3d-container-scroll": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "scroll"
+    },
+    "trigger": "scroll",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "3D & Perspective",
+      "scroll",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

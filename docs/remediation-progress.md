@@ -9,15 +9,51 @@ the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Input
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
-extensions bring it to 501. Four loader extensions bring it to 505; 15 extension components,
+extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
+it to 508; 12 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 505 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 508 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 159
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Three 3D & Perspective extensions
+
+3D Pin, 3D Marquee and Container Scroll Tilt add three original implementations.
+They preserve all 54 captured native layers, two unchanged supplied SVG files
+and thirteen exact native photographic slots. All fourteen native/full assets,
+including Marquee's existing native Dusk exception and approved full forestDark
+replacement, keep their verified 800/1600px hashes and credits. Detail photos
+resolve at 1600px before cloning; native and portable variants retain 800px.
+
+Pin follows and returns from its actual current pose, with independent press
+owners and a beam joined to the browser's projected card edge. Marquee keeps all
+twelve photographic works in buffered periodic geometry and moves one shared
+plane through its complete twelve-second diagonal cycle. Its measured repeated
+corners and actual rendered seam remain continuous at the wrap. Scroll retains
+the exact native device and photo, a bottom screen hinge and complete six-second
+story. Full progress reads calibrated fractional native browser scroll; a
+refresh-independent 0.12 follower preserves smooth retargeting. Replay drives
+actual scroll positions and deliberate input interrupts from visible progress.
+Paused first paints remain exact. Reduced motion keeps complete flat stills,
+meaningful input and bounded inert 150ms old-paint feedback. Touch leaves native
+vertical scrolling available and queued keyboard intentions remain ordered.
+
+Eight suites pass 3,396,887 recorded assertions, including eighteen six-second
+60/120/240Hz renderer stories, six fresh network-blocked full/native contexts,
+twelve independent hold stories, real moving touch, native scroll endpoints,
+complete photo models, actual perspective joins and photographic wrap pixels.
+All thirteen required local checks pass. The fit audit boots 508 demos with no
+findings and all 159 existing sparse exceptions valid; this group adds none.
+Twelve detail routes pass at desktop/mobile in dark/light themes, including the
+tanziro.com footer. Three static posters come from the native DOM composition.
+All 432 previous source modules, 505 prior metadata entries, seven protected
+shared inputs and earlier private publication records remain unchanged.
+GitHub Actions stays disabled; the account-wide $0 stop-at-limit setting is
+preserved. Twelve extensions, Pro seams and final acceptance remain open.
 
 ## Four loader extensions
 
