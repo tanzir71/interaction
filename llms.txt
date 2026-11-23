@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 449 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 459 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -128,6 +128,16 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Holo Flip Badge](https://intrx.vercel.app/#/c/micro-holo-badge): press · Flip Ava Rhodes’s conference pass and inspect both sides. Pointer tilt shifts its original foil layers and glare; the approved portrait keeps its original crop and attribution. · registry: /registry/c/micro-holo-badge.json
 - [Peel Sticker](https://intrx.vercel.app/#/c/micro-peel-sticker): drag · Drag the printed corner to peel the INTRX sticker with its original curled paper artwork and shadow. Release past sixty percent to remove it, or return with a velocity-carrying spring; keyboard preview and cancellation remain available. · registry: /registry/c/micro-peel-sticker.json
 - [Action Swap](https://intrx.vercel.app/#/c/micro-action-swap): press · Follow and unfollow with an interruptible width morph, label entrance and paired plus/check feedback. The native preview starts in its exact Following reference state. · registry: /registry/c/micro-action-swap.json
+- [Vanish Input](https://intrx.vercel.app/#/c/form-vanish-input): press · Type a question and submit it into a field of glyph particles. Placeholders cycle while idle; every submitted glyph drifts away before the field is ready again. · registry: /registry/c/form-vanish-input.json
+- [Gooey Search](https://intrx.vercel.app/#/c/form-gooey-search): press · Open a search field from its round icon through a soft connected shape. Type to filter all five local results, then choose a result or close with Escape. · registry: /registry/c/form-gooey-search.json
+- [Magnetic Select](https://intrx.vercel.app/#/c/form-magnetic-select): hover · Move between Monthly, Quarterly and Yearly. The highlight follows the pointer with a velocity-carrying spring, while click, touch and keyboard commit the selected interval. · registry: /registry/c/form-magnetic-select.json
+- [Assignee Picker](https://intrx.vercel.app/#/c/form-assignee-picker): press · Open the avatar stack and search all three people. Choose assignees with native checkboxes; their initial avatars fly between the list and the selected stack. · registry: /registry/c/form-assignee-picker.json
+- [Color Picker](https://intrx.vercel.app/#/c/form-color-picker): drag · Choose saturation and value in the field, drag the hue rail or enter a hex value. The preview chip morphs to the chosen color and keeps an eight-color history. · registry: /registry/c/form-color-picker.json
+- [Date Range](https://intrx.vercel.app/#/c/form-date-range): hover · Choose a start and end date or preview the range under the pointer. Browse complete calendar months, use the keyboard grid and apply all three local presets. · registry: /registry/c/form-date-range.json
+- [Multi Select](https://intrx.vercel.app/#/c/form-multi-select): press · Search eight options and turn choices into chips. Chips reflow from their current positions; Backspace removes the last choice when the search field is empty. · registry: /registry/c/form-multi-select.json
+- [Inline Edit](https://intrx.vercel.app/#/c/form-inline-edit): press · Edit Ava Rhodes’s name in place. Enter commits with a success flash, Escape restores the previous name, and Save or Cancel resolve from the current text pose. · registry: /registry/c/form-inline-edit.json
+- [Signature Pad](https://intrx.vercel.app/#/c/form-signature-pad): drag · Draw smooth pressure-weighted Catmull–Rom strokes with the pointer or pen. Undo, clear and create a complete PNG preview through the shared Dock; the native checkpoint keeps its licensed Allura signature. · registry: /registry/c/form-signature-pad.json
+- [Liquid Toggle](https://intrx.vercel.app/#/c/form-liquid-toggle): press · Switch a liquid knob across its track. Its connected lobes stretch, form a soft waist and settle from the current pose, including interrupted reversals and native keyboard input. · registry: /registry/c/form-liquid-toggle.json
 
 ## Motion
 

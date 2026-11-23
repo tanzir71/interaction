@@ -16441,5 +16441,303 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "form-vanish-input": {
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "submit",
+        "label": "Submit"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "vanish",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-gooey-search": {
+    "designSize": [
+      480,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "gooey",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-magnetic-select": {
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "magnetic",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-assignee-picker": {
+    "designSize": [
+      480,
+      440
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "assignee",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-color-picker": {
+    "designSize": [
+      480,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "color",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-date-range": {
+    "designSize": [
+      480,
+      560
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "date",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-multi-select": {
+    "designSize": [
+      480,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "multi",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-inline-edit": {
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "inline",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-signature-pad": {
+    "designSize": [
+      480,
+      400
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "undo",
+        "label": "Undo"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      },
+      {
+        "action": "export",
+        "label": "Export"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "signature",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "form-liquid-toggle": {
+    "designSize": [
+      480,
+      320
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Forms & Inputs",
+      "liquid",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

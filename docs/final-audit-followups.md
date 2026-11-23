@@ -5,8 +5,8 @@ The full 520-component handoff remains open. Per-component verification and prep
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
-extensions brought it to 439. Ten Buttons & Micro extensions bring it to 449;
-71 extension components and Pro seams remain. Both strict static audits now pass.
+extensions brought it to 439. Ten Buttons & Micro and ten Forms & Inputs
+extensions bring it to 459; 61 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -43,10 +43,19 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 449 demos with 151 valid
+retaining their overflow/text checks. It now passes all 459 demos with 156 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
+
+The ten Forms & Inputs extensions preserve 230 native layers and twelve SVG
+slots using ten unchanged files. Keep complete glyph/search/people/color/date/
+chip/edit/signature/liquid models, licensed Allura and the five fill exceptions.
+Their eight suites pass 12,336 checks, including 60 actual renderer stories and
+twenty fresh offline contexts. Native touch, held IME/paste, exact retained
+Canvas/range paint, graphics recovery and late font exports establish functional
+behavior; they do not establish final frame-time, cold-route or Lighthouse
+budgets. Earlier private helpers, inputs and publication evidence stay frozen.
 
 The ten Buttons & Micro extensions preserve 92 native layers, 49 supplied SVG
 slots using 46 unchanged files and the approved portraitC1 photograph. Keep both

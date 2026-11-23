@@ -5,16 +5,45 @@ all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
 sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
-the catalog to 429. Ten Agent & AI UI and ten Buttons & Micro extensions bring
-it to 449; 71 extension components, Pro seams and final
+the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
+extensions bring it to 459; 61 extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 449 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 151
+JavaScript. The fit audit boots all 459 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 156
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Ten Forms & Inputs extensions
+
+Vanish Input, Gooey Search, Magnetic Select, Assignee Picker, Color Picker,
+Date Range, Multi Select, Inline Edit, Signature Pad and Liquid Toggle add ten
+original implementations. Their initial compositions preserve 230 captured
+layers and twelve supplied SVG slots using ten unchanged files. Signature Pad
+retains the licensed Allura font and its complete embedded fallback.
+
+Full views keep complete local models: every submitted grapheme, five search
+results, all three intervals and people, HSV/hex input and eight-color history,
+six-week UTC calendars and three presets, eight selectable chip options, saved
+names, pressure-weighted Catmull strokes and interruptible connected liquid
+geometry. Native text editing keeps ordered selection, paste and IME intent
+through holds. Real touch input covers compatibility click suppression, focus
+after canceled drags, 24px active targets and capture cancellation. Canvas/SVG
+recovery preserves all source samples and actual signature pixels; asynchronous
+font exports reject stale and disposed results.
+
+Eight focused suites pass 12,336 checks, including independent color/calendar/spring/curve
+models, 60 actual six-second 60/120/240Hz renderer stories, twenty fresh offline
+full/native contexts, independent pause owners and exact retained Canvas/range
+paint. Forty actual desktop/mobile dark/light dev routes retain the tanziro.com
+footer, and ten native posters are refreshed. All 376 earlier modules, 449
+metadata records, seven protected shared files and prior private evidence remain
+unchanged. Five new documented reference exceptions waive only low fill. All
+thirteen required local commands pass, including all 459 previews and the full
+fit audit with 156 valid exceptions. GitHub Actions remains disabled. Final
+performance, accessibility, contrast and cold-route acceptance remains open.
 
 ## Ten Buttons & Micro extensions
 

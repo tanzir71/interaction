@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first twenty extensions are implemented; the
-  catalog is 449. Seventy-one extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first thirty extensions are implemented; the
+  catalog is 459. Sixty-one extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The ten Forms & Inputs extensions use `tools/verify-forms-ext.js`,
+  `tools/verify-forms-ext-models.js`, `tools/verify-forms-ext-input.js`,
+  `tools/verify-forms-ext-clocks.js`, `tools/verify-forms-ext-exports.js`,
+  `tools/verify-forms-ext-holds.js`, `tools/verify-forms-ext-touch.js`,
+  `tools/verify-forms-ext-async.js` against the local 4173 server. Preserve all
+  230 native layers, twelve supplied SVG slots using ten unchanged files and the
+  licensed Allura font. Full models retain every placeholder/glyph, five search
+  results, three intervals and people, the complete HSV gamut and eight-color
+  history, UTC six-week calendars and three presets, all eight chip options, saved
+  names, every pressure-weighted Catmull point and connected liquid paths. Keep
+  original reference copy and initial geometry. Five sparse exceptions waive only
+  fill. Active compact search results and dates retain 24px targets. Touch taps
+  focus the actual text field after canceled drags; compatibility mouse events
+  cannot repeat actions or steal focus. Held native edits preserve selection,
+  graphemes, clipboard and composition intent. Signature SVG fallback embeds the
+  complete licensed font; stale, aborted or disposed font requests cannot restore
+  previews. Eight suites cover 12,336 checks, 60 actual six-second 60/120/240Hz
+  renderer stories, twenty fresh network-blocked full/native export contexts,
+  graphics recovery, native input, independent holds, retained Canvas/range paint
+  and cleanup. The catalog is 459; 61 extensions, Pro seams and final audits
+  remain. Keep earlier private helpers, inputs and publication evidence frozen.
 - The ten Buttons & Micro extensions use `tools/verify-micro-ext.js`,
   `tools/verify-micro-ext-models.js`, `tools/verify-micro-ext-input.js`,
   `tools/verify-micro-ext-clocks.js`, `tools/verify-micro-ext-exports.js`,
@@ -184,7 +205,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   at 60/120/240Hz, independent curves/RK4 springs and paper area, real moving
   touch and keys, capture loss, independent holds, reduced retained paint,
   compact type, disposal and twenty fresh offline full/native contexts.
-  The catalog is 449; 71 extensions, Pro seams and final audits remain. Keep
+  This group brought the catalog to 449; later counts appear above. Keep
   earlier private helpers, inputs and publication evidence frozen.
 - The four new Data/Navigation components use `tools/verify-data-nav-new.js`,
   `tools/verify-data-nav-new-models.js`, `tools/verify-data-nav-new-input.js`,
