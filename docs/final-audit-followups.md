@@ -11,10 +11,21 @@ it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
 extensions to 508. Three Scroll extensions bring it to 511 and two Cursor
-extensions to 513; 7 extension components and Pro seams remain. Both strict static audits now pass.
+extensions to 513 and three Play extensions to 516; 4 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The three Play extensions retain 56 native artwork layers, the unchanged Coin
+SVG and nine separately classified Dock layers. Preserve the complete seeded
+Plinko contact/scheduling/settlement model and all seven multipliers, actual
+pulled-point Sling releases and all nineteen reference dots, and both real Coin
+faces with the connected 64-panel rim. Blur stays outside the 3D rotor. Keep
+independent press/capture owners, ordered held inputs, result accounting,
+readable histories and the full title/focus clearance. Eighteen equal-time
+renderer stories, six offline contexts, twelve hold stories and actual mouse,
+touch and raster checks establish functional behavior. The three sparse-size
+exceptions change only fill. Final frame-time, accessibility, contrast,
+cold-route and Lighthouse gates remain open; all earlier findings remain open.
 The two Cursor extensions retain twelve exact native artwork layers, the
 original View project copy, one unchanged reused SVG and three exact photo slots.
 Keep their six shared Move Dock layers classified separately. Preserve both

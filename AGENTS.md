@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first eighty-four extensions are implemented;
-  the catalog is 513. Seven extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first eighty-seven extensions are implemented;
+  the catalog is 516. Four extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,33 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The three Play & Easter Eggs extensions use `tools/verify-play-ext.js`,
+  `tools/verify-play-ext-models.js`, `tools/verify-play-ext-input.js`,
+  `tools/verify-play-ext-clocks.js`, `tools/verify-play-ext-exports.js`,
+  `tools/verify-play-ext-holds.js`, `tools/verify-play-ext-touch.js` and
+  `tools/verify-play-ext-pixels.js` against the local 4173 server. Preserve
+  56 exact native artwork layers and the one unchanged supplied Coin SVG at its
+  original 15×15 root and captured bleed. Classify the nine Press/Drag Dock
+  layers as shared shell controls. Plinko retains all twenty-one pegs, seven
+  multipliers, eight visible balls, ordered scheduling, actual collision/landing
+  times and complete spring tails. Prune old traces only after reporting results.
+  Sling retains all nineteen exact dots and its captured parabola; the loaded
+  (96,150) point uses anchor (118.5,103), gain 8 and gravity 752. Real release
+  begins at the painted pulled point. Full uses a 1.6× world clear of result text.
+  Coin uses two real faces, a connected 64-panel six-pixel rim, both bounces,
+  current-pose retargeting and actual random-bit result accounting. Blur only
+  the outer carrier, preserving the rotor's real 3D scene and visible edge.
+  Keep independent pointer/key owners, held random/aim intentions, physical 2px
+  focus rings and bounded handle geometry. Tests cover 2,000 seeded Plinko drops,
+  analytical free flight and 170/26/1 force equations, eighteen six-second
+  60/120/240Hz renderer stories, six fresh blocked-network full/native contexts,
+  twelve independent hold stories, actual scaled mouse and moving touch, literal
+  capture loss, late-click cancellation, simultaneous keys, page scrolling and
+  mid-capture disposal. Actual pixels cover ball projection and both coin faces,
+  the quarter-turn rim and retired blur. Keep all full result/history glyphs at
+  least 11px. The three documented sparse Figma exceptions change only low fill;
+  other gates still apply. Keep earlier private helpers, inputs and publication
+  evidence frozen. These functional checks leave final timing audits open.
 - The two Cursor extensions use `tools/verify-cursor-ext.js`,
   `tools/verify-cursor-ext-models.js`, `tools/verify-cursor-ext-input.js`,
   `tools/verify-cursor-ext-clocks.js`, `tools/verify-cursor-ext-exports.js`,

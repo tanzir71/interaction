@@ -1589,6 +1589,36 @@
         10,
         10
       ]
+    },
+    "play-plinko": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 Figma geometry. Twenty-one 4×4 pegs form six rows, with seven 20×14 slots and a 12×12 ball; the complete bounds run from (104,24) to (268,186), but their separated painted surfaces occupy only about 2–3% of the 372×264 reference Stage. This exception changes only the low-fill gate; overflow, horizontal scrolling and the 11px text floor remain required.",
+      "figmaNode": "147:1464",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=147-1464",
+      "selector": ".d-ext-play-plinko-native-node[data-native-node=\"147:1465\"]",
+      "designSize": [
+        4,
+        4
+      ]
+    },
+    "play-slingshot": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 Figma geometry. Nineteen 3×3 trajectory dots, an 18×18 ball at (87,141), a 24×24 target ring at (264,138), and its 8×8 center occupy only about 1–2% of the 372×264 reference Stage. Preserve the exact 180px launch-to-target separation and all captured dot positions. This exception changes only the low-fill gate; overflow, horizontal scrolling and the 11px text floor remain required.",
+      "figmaNode": "147:1509",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=147-1509",
+      "selector": ".d-ext-play-sling-native-node[data-native-node=\"147:1529\"]",
+      "designSize": [
+        18,
+        18
+      ]
+    },
+    "play-coin-flip": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve exact sparse v4 Figma geometry. The exact 72×72 coin at (150,62), its 56×56 inner rim and supplied symbol, and the 72×12 shadow at (150,166) occupy only about 5–6% of the 372×264 reference Stage. Keep the native coin diameter, rim and shadow geometry. This exception changes only the low-fill gate; overflow, horizontal scrolling and the 11px text floor remain required.",
+      "figmaNode": "147:1547",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=147-1547",
+      "selector": ".d-ext-play-coin-native-node[data-native-node=\"147:1549\"]",
+      "designSize": [
+        72,
+        72
+      ]
     }
   }
 }

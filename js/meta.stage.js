@@ -18497,5 +18497,110 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "play-plinko": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Press"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Play & Easter Eggs",
+      "plinko",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "play-slingshot": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Drag"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Play & Easter Eggs",
+      "sling",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "play-coin-flip": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Press"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      132,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Play & Easter Eggs",
+      "coin",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

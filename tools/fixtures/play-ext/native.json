@@ -1,0 +1,4872 @@
+[
+  {
+    "id": "play-plinko",
+    "C": "d-ext-play-plinko",
+    "key": "plinko",
+    "stageId": "147:1464",
+    "thumbW": 244,
+    "thumbH": 160,
+    "virtualMaskNodes": [],
+    "shellNodes": [
+      {
+        "parent": "147:1464",
+        "id": "187:6269",
+        "name": "Dock",
+        "type": "FRAME",
+        "x": 157,
+        "y": 224,
+        "width": 58,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": true,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            157
+          ],
+          [
+            0,
+            1,
+            224
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 211,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 211,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "187:6269",
+        "id": "187:6270",
+        "name": "DockButton",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 0,
+        "width": 58,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 999,
+        "topLeftRadius": 999,
+        "topRightRadius": 999,
+        "bottomLeftRadius": 999,
+        "bottomRightRadius": 999,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 211,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 211,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.16470588743686676,
+              "g": 0.16470588743686676,
+              "b": 0.16470588743686676
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:34"
+              }
+            }
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:49"
+              }
+            }
+          }
+        ],
+        "effects": [
+          {
+            "type": "BACKGROUND_BLUR",
+            "visible": true,
+            "radius": 12,
+            "boundVariables": {},
+            "blurType": "NORMAL"
+          }
+        ]
+      },
+      {
+        "parent": "187:6270",
+        "id": "I187:6270;8:46",
+        "name": "Label",
+        "type": "TEXT",
+        "x": 13,
+        "y": 6,
+        "width": 32,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            13
+          ],
+          [
+            0,
+            1,
+            6
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 224,
+          "y": 7634,
+          "width": 32,
+          "height": 16
+        },
+        "absoluteRenderBounds": {
+          "x": 225.03199768066406,
+          "y": 7637.47998046875,
+          "width": 30.127593994140625,
+          "height": 8.6640625
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.9803921580314636,
+              "b": 0.9803921580314636
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:38"
+              }
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "characters": "Press",
+        "fontName": {
+          "family": "Geist",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500
+          }
+        },
+        "fontSize": 12,
+        "fontWeight": 500,
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT"
+      }
+    ],
+    "model": {
+      "pegs": [
+        {
+          "id": "147:1465",
+          "x": 186,
+          "y": 50,
+          "r": 2
+        },
+        {
+          "id": "147:1466",
+          "x": 174,
+          "y": 70,
+          "r": 2
+        },
+        {
+          "id": "147:1467",
+          "x": 198,
+          "y": 70,
+          "r": 2
+        },
+        {
+          "id": "147:1468",
+          "x": 162,
+          "y": 90,
+          "r": 2
+        },
+        {
+          "id": "147:1469",
+          "x": 186,
+          "y": 90,
+          "r": 2
+        },
+        {
+          "id": "147:1470",
+          "x": 210,
+          "y": 90,
+          "r": 2
+        },
+        {
+          "id": "147:1471",
+          "x": 150,
+          "y": 110,
+          "r": 2
+        },
+        {
+          "id": "147:1472",
+          "x": 174,
+          "y": 110,
+          "r": 2
+        },
+        {
+          "id": "147:1473",
+          "x": 198,
+          "y": 110,
+          "r": 2
+        },
+        {
+          "id": "147:1474",
+          "x": 222,
+          "y": 110,
+          "r": 2
+        },
+        {
+          "id": "147:1475",
+          "x": 138,
+          "y": 130,
+          "r": 2
+        },
+        {
+          "id": "147:1476",
+          "x": 162,
+          "y": 130,
+          "r": 2
+        },
+        {
+          "id": "147:1477",
+          "x": 186,
+          "y": 130,
+          "r": 2
+        },
+        {
+          "id": "147:1478",
+          "x": 210,
+          "y": 130,
+          "r": 2
+        },
+        {
+          "id": "147:1479",
+          "x": 234,
+          "y": 130,
+          "r": 2
+        },
+        {
+          "id": "147:1480",
+          "x": 126,
+          "y": 150,
+          "r": 2
+        },
+        {
+          "id": "147:1481",
+          "x": 150,
+          "y": 150,
+          "r": 2
+        },
+        {
+          "id": "147:1482",
+          "x": 174,
+          "y": 150,
+          "r": 2
+        },
+        {
+          "id": "147:1483",
+          "x": 198,
+          "y": 150,
+          "r": 2
+        },
+        {
+          "id": "147:1484",
+          "x": 222,
+          "y": 150,
+          "r": 2
+        },
+        {
+          "id": "147:1485",
+          "x": 246,
+          "y": 150,
+          "r": 2
+        }
+      ],
+      "slots": [
+        {
+          "value": 2,
+          "label": "2×",
+          "id": "147:1486",
+          "x": 114
+        },
+        {
+          "value": 1,
+          "label": "1×",
+          "id": "147:1487",
+          "x": 138
+        },
+        {
+          "value": 0.5,
+          "label": "½×",
+          "id": "147:1488",
+          "x": 162
+        },
+        {
+          "value": 0.25,
+          "label": "¼×",
+          "id": "147:1489",
+          "x": 186
+        },
+        {
+          "value": 0.5,
+          "label": "½×",
+          "id": "147:1490",
+          "x": 210
+        },
+        {
+          "value": 1,
+          "label": "1×",
+          "id": "147:1491",
+          "x": 234
+        },
+        {
+          "value": 2,
+          "label": "2×",
+          "id": "147:1492",
+          "x": 258
+        }
+      ],
+      "ball": {
+        "x": 186,
+        "y": 30,
+        "r": 6
+      },
+      "gravity": 360,
+      "restitution": 0.62,
+      "step": 0.004166666666666667,
+      "maxBalls": 8,
+      "historyLimit": 8,
+      "seed": 271828
+    },
+    "rows": [
+      {
+        "parent": "147:1464",
+        "id": "147:1465",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 48,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            184
+          ],
+          [
+            0,
+            1,
+            48
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 238,
+          "y": 7452,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 238,
+          "y": 7452,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1466",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 172,
+        "y": 68,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            172
+          ],
+          [
+            0,
+            1,
+            68
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 226,
+          "y": 7472,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 226,
+          "y": 7472,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1467",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 196,
+        "y": 68,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            196
+          ],
+          [
+            0,
+            1,
+            68
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 250,
+          "y": 7472,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 250,
+          "y": 7472,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1468",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 88,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            160
+          ],
+          [
+            0,
+            1,
+            88
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 214,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 214,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1469",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 88,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            184
+          ],
+          [
+            0,
+            1,
+            88
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 238,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 238,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1470",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 208,
+        "y": 88,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            208
+          ],
+          [
+            0,
+            1,
+            88
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 262,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 262,
+          "y": 7492,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1471",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 148,
+        "y": 108,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            148
+          ],
+          [
+            0,
+            1,
+            108
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 202,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 202,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1472",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 172,
+        "y": 108,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            172
+          ],
+          [
+            0,
+            1,
+            108
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 226,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 226,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1473",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 196,
+        "y": 108,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            196
+          ],
+          [
+            0,
+            1,
+            108
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 250,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 250,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1474",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 220,
+        "y": 108,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            220
+          ],
+          [
+            0,
+            1,
+            108
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 274,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 274,
+          "y": 7512,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1475",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 136,
+        "y": 128,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            136
+          ],
+          [
+            0,
+            1,
+            128
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 190,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 190,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1476",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 160,
+        "y": 128,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            160
+          ],
+          [
+            0,
+            1,
+            128
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 214,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 214,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1477",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184,
+        "y": 128,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            184
+          ],
+          [
+            0,
+            1,
+            128
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 238,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 238,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1478",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 208,
+        "y": 128,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            208
+          ],
+          [
+            0,
+            1,
+            128
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 262,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 262,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1479",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 232,
+        "y": 128,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            232
+          ],
+          [
+            0,
+            1,
+            128
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 286,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 286,
+          "y": 7532,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1480",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 124,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            124
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 178,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 178,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1481",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 148,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            148
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 202,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 202,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1482",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 172,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            172
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 226,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 226,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1483",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 196,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            196
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 250,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 250,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1484",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 220,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            220
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 274,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 274,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1485",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 244,
+        "y": 148,
+        "width": 4,
+        "height": 4,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            244
+          ],
+          [
+            0,
+            1,
+            148
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 298,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "absoluteRenderBounds": {
+          "x": 298,
+          "y": 7552,
+          "width": 4,
+          "height": 4
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3499999940395355,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1486",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 104,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            104
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 158,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 158,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1487",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 128,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            128
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 182,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 182,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1488",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 152,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            152
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 206,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 206,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1489",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 176,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            176
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 230,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 230,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.30000001192092896,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1490",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 200,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            200
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 254,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 254,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1491",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 224,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            224
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 278,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 278,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1492",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 248,
+        "y": 172,
+        "width": 20,
+        "height": 14,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 4,
+        "topLeftRadius": 4,
+        "topRightRadius": 4,
+        "bottomLeftRadius": 4,
+        "bottomRightRadius": 4,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            248
+          ],
+          [
+            0,
+            1,
+            172
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 302,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "absoluteRenderBounds": {
+          "x": 302,
+          "y": 7576,
+          "width": 20,
+          "height": 14
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1464",
+        "id": "147:1493",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 180,
+        "y": 24,
+        "width": 12,
+        "height": 12,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            180
+          ],
+          [
+            0,
+            1,
+            24
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 234,
+          "y": 7428,
+          "width": 12,
+          "height": 12
+        },
+        "absoluteRenderBounds": {
+          "x": 222,
+          "y": 7424,
+          "width": 36,
+          "height": 36
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      }
+    ],
+    "assetCalls": [],
+    "photoCalls": [],
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Press"
+      }
+    ]
+  },
+  {
+    "id": "play-slingshot",
+    "C": "d-ext-play-sling",
+    "key": "sling",
+    "stageId": "147:1509",
+    "thumbW": 244,
+    "thumbH": 160,
+    "virtualMaskNodes": [],
+    "shellNodes": [
+      {
+        "parent": "147:1509",
+        "id": "187:6282",
+        "name": "Dock",
+        "type": "FRAME",
+        "x": 159.5,
+        "y": 224,
+        "width": 53,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": true,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            159.5
+          ],
+          [
+            0,
+            1,
+            224
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 629.5,
+          "y": 7628,
+          "width": 53,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 629.5,
+          "y": 7628,
+          "width": 53,
+          "height": 28
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "187:6282",
+        "id": "187:6283",
+        "name": "DockButton",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 0,
+        "width": 53,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 999,
+        "topLeftRadius": 999,
+        "topRightRadius": 999,
+        "bottomLeftRadius": 999,
+        "bottomRightRadius": 999,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 629.5,
+          "y": 7628,
+          "width": 53,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 629.5,
+          "y": 7628,
+          "width": 53,
+          "height": 28
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.16470588743686676,
+              "g": 0.16470588743686676,
+              "b": 0.16470588743686676
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:34"
+              }
+            }
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:49"
+              }
+            }
+          }
+        ],
+        "effects": [
+          {
+            "type": "BACKGROUND_BLUR",
+            "visible": true,
+            "radius": 12,
+            "boundVariables": {},
+            "blurType": "NORMAL"
+          }
+        ]
+      },
+      {
+        "parent": "187:6283",
+        "id": "I187:6283;8:46",
+        "name": "Label",
+        "type": "TEXT",
+        "x": 13,
+        "y": 6,
+        "width": 27,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            13
+          ],
+          [
+            0,
+            1,
+            6
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 642.5,
+          "y": 7634,
+          "width": 27,
+          "height": 16
+        },
+        "absoluteRenderBounds": {
+          "x": 643.531982421875,
+          "y": 7637.47998046875,
+          "width": 24.78167724609375,
+          "height": 10.4638671875
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.9803921580314636,
+              "b": 0.9803921580314636
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:38"
+              }
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "characters": "Drag",
+        "fontName": {
+          "family": "Geist",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500
+          }
+        },
+        "fontSize": 12,
+        "fontWeight": 500,
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT"
+      }
+    ],
+    "model": {
+      "origin": {
+        "x": 96,
+        "y": 150
+      },
+      "anchor": {
+        "x": 118.5,
+        "y": 103
+      },
+      "target": {
+        "x": 276,
+        "y": 150,
+        "r": 12
+      },
+      "ballRadius": 9,
+      "gravity": 752,
+      "gain": 8,
+      "pull": {
+        "x": -22.5,
+        "y": 47
+      },
+      "maxPull": 68,
+      "bounds": {
+        "left": 64,
+        "right": 308,
+        "top": 24,
+        "bottom": 216
+      },
+      "dots": [
+        {
+          "id": "147:1510",
+          "x": 105,
+          "y": 132.13999938964844,
+          "alpha": 0.47999998927116394
+        },
+        {
+          "id": "147:1511",
+          "x": 114,
+          "y": 116.16000366210938,
+          "alpha": 0.4699999988079071
+        },
+        {
+          "id": "147:1512",
+          "x": 123,
+          "y": 102.05999755859375,
+          "alpha": 0.44999998807907104
+        },
+        {
+          "id": "147:1513",
+          "x": 132,
+          "y": 89.83999633789062,
+          "alpha": 0.4300000071525574
+        },
+        {
+          "id": "147:1514",
+          "x": 141,
+          "y": 79.5,
+          "alpha": 0.4099999964237213
+        },
+        {
+          "id": "147:1515",
+          "x": 150,
+          "y": 71.04000091552734,
+          "alpha": 0.4000000059604645
+        },
+        {
+          "id": "147:1516",
+          "x": 159,
+          "y": 64.45999908447266,
+          "alpha": 0.3799999952316284
+        },
+        {
+          "id": "147:1517",
+          "x": 168,
+          "y": 59.7599983215332,
+          "alpha": 0.36000001430511475
+        },
+        {
+          "id": "147:1518",
+          "x": 177,
+          "y": 56.939998626708984,
+          "alpha": 0.3400000035762787
+        },
+        {
+          "id": "147:1519",
+          "x": 186,
+          "y": 56,
+          "alpha": 0.33000001311302185
+        },
+        {
+          "id": "147:1520",
+          "x": 195,
+          "y": 56.939998626708984,
+          "alpha": 0.3100000023841858
+        },
+        {
+          "id": "147:1521",
+          "x": 204,
+          "y": 59.7599983215332,
+          "alpha": 0.28999999165534973
+        },
+        {
+          "id": "147:1522",
+          "x": 213,
+          "y": 64.45999908447266,
+          "alpha": 0.27000001072883606
+        },
+        {
+          "id": "147:1523",
+          "x": 222,
+          "y": 71.04000091552734,
+          "alpha": 0.25999999046325684
+        },
+        {
+          "id": "147:1524",
+          "x": 231,
+          "y": 79.5,
+          "alpha": 0.23999999463558197
+        },
+        {
+          "id": "147:1525",
+          "x": 240,
+          "y": 89.83999633789062,
+          "alpha": 0.2199999988079071
+        },
+        {
+          "id": "147:1526",
+          "x": 249,
+          "y": 102.05999755859375,
+          "alpha": 0.20000000298023224
+        },
+        {
+          "id": "147:1527",
+          "x": 258,
+          "y": 116.16000366210938,
+          "alpha": 0.18000000715255737
+        },
+        {
+          "id": "147:1528",
+          "x": 267,
+          "y": 132.13999938964844,
+          "alpha": 0.17000000178813934
+        }
+      ],
+      "step": 0.004166666666666667,
+      "historyLimit": 8,
+      "spring": {
+        "stiffness": 170,
+        "damping": 26,
+        "mass": 1
+      }
+    },
+    "rows": [
+      {
+        "parent": "147:1509",
+        "id": "147:1510",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 103.5,
+        "y": 130.63999938964844,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            103.5
+          ],
+          [
+            0,
+            1,
+            130.63999938964844
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 573.5,
+          "y": 7534.64013671875,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 573.5,
+          "y": 7534.64013671875,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.47999998927116394,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1511",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 112.5,
+        "y": 114.66000366210938,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            112.5
+          ],
+          [
+            0,
+            1,
+            114.66000366210938
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 582.5,
+          "y": 7518.66015625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 582.5,
+          "y": 7518.66015625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4699999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1512",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 121.5,
+        "y": 100.55999755859375,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            121.5
+          ],
+          [
+            0,
+            1,
+            100.55999755859375
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 591.5,
+          "y": 7504.56005859375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 591.5,
+          "y": 7504.56005859375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.44999998807907104,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1513",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 130.5,
+        "y": 88.33999633789062,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            130.5
+          ],
+          [
+            0,
+            1,
+            88.33999633789062
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 600.5,
+          "y": 7492.33984375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 600.5,
+          "y": 7492.33984375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4300000071525574,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1514",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 139.5,
+        "y": 78,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            139.5
+          ],
+          [
+            0,
+            1,
+            78
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 609.5,
+          "y": 7482,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 609.5,
+          "y": 7482,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4099999964237213,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1515",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 148.5,
+        "y": 69.54000091552734,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            148.5
+          ],
+          [
+            0,
+            1,
+            69.54000091552734
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 618.5,
+          "y": 7473.5400390625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 618.5,
+          "y": 7473.5400390625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.4000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1516",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 157.5,
+        "y": 62.959999084472656,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            157.5
+          ],
+          [
+            0,
+            1,
+            62.959999084472656
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 627.5,
+          "y": 7466.9599609375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 627.5,
+          "y": 7466.9599609375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3799999952316284,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1517",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 166.5,
+        "y": 58.2599983215332,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            166.5
+          ],
+          [
+            0,
+            1,
+            58.2599983215332
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 636.5,
+          "y": 7462.259765625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 636.5,
+          "y": 7462.259765625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.36000001430511475,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1518",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 175.5,
+        "y": 55.439998626708984,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            175.5
+          ],
+          [
+            0,
+            1,
+            55.439998626708984
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 645.5,
+          "y": 7459.43994140625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 645.5,
+          "y": 7459.43994140625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3400000035762787,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1519",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 184.5,
+        "y": 54.5,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            184.5
+          ],
+          [
+            0,
+            1,
+            54.5
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 654.5,
+          "y": 7458.5,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 654.5,
+          "y": 7458.5,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.33000001311302185,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1520",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 193.5,
+        "y": 55.439998626708984,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            193.5
+          ],
+          [
+            0,
+            1,
+            55.439998626708984
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 663.5,
+          "y": 7459.43994140625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 663.5,
+          "y": 7459.43994140625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.3100000023841858,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1521",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 202.5,
+        "y": 58.2599983215332,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            202.5
+          ],
+          [
+            0,
+            1,
+            58.2599983215332
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 672.5,
+          "y": 7462.259765625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 672.5,
+          "y": 7462.259765625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.28999999165534973,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1522",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 211.5,
+        "y": 62.959999084472656,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            211.5
+          ],
+          [
+            0,
+            1,
+            62.959999084472656
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 681.5,
+          "y": 7466.9599609375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 681.5,
+          "y": 7466.9599609375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.27000001072883606,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1523",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 220.5,
+        "y": 69.54000091552734,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            220.5
+          ],
+          [
+            0,
+            1,
+            69.54000091552734
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 690.5,
+          "y": 7473.5400390625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 690.5,
+          "y": 7473.5400390625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.25999999046325684,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1524",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 229.5,
+        "y": 78,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            229.5
+          ],
+          [
+            0,
+            1,
+            78
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 699.5,
+          "y": 7482,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 699.5,
+          "y": 7482,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.23999999463558197,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1525",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 238.5,
+        "y": 88.33999633789062,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            238.5
+          ],
+          [
+            0,
+            1,
+            88.33999633789062
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 708.5,
+          "y": 7492.33984375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 708.5,
+          "y": 7492.33984375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.2199999988079071,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1526",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 247.5,
+        "y": 100.55999755859375,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            247.5
+          ],
+          [
+            0,
+            1,
+            100.55999755859375
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 717.5,
+          "y": 7504.56005859375,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 717.5,
+          "y": 7504.56005859375,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.20000000298023224,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1527",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 256.5,
+        "y": 114.66000366210938,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            256.5
+          ],
+          [
+            0,
+            1,
+            114.66000366210938
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 726.5,
+          "y": 7518.66015625,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 726.5,
+          "y": 7518.66015625,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.18000000715255737,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1528",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 265.5,
+        "y": 130.63999938964844,
+        "width": 3,
+        "height": 3,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            265.5
+          ],
+          [
+            0,
+            1,
+            130.63999938964844
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 735.5,
+          "y": 7534.64013671875,
+          "width": 3,
+          "height": 3
+        },
+        "absoluteRenderBounds": {
+          "x": 735.5,
+          "y": 7534.64013671875,
+          "width": 3,
+          "height": 3
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.17000000178813934,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1529",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 87,
+        "y": 141,
+        "width": 18,
+        "height": 18,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            87
+          ],
+          [
+            0,
+            1,
+            141
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 557,
+          "y": 7545,
+          "width": 18,
+          "height": 18
+        },
+        "absoluteRenderBounds": {
+          "x": 545,
+          "y": 7541,
+          "width": 42,
+          "height": 42
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.45098039507865906,
+              "b": 0.09803921729326248
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1530",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 264,
+        "y": 138,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1.5,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            264
+          ],
+          [
+            0,
+            1,
+            138
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 734,
+          "y": 7542,
+          "width": 24,
+          "height": 24
+        },
+        "absoluteRenderBounds": {
+          "x": 734,
+          "y": 7542,
+          "width": 24,
+          "height": 24
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.30000001192092896,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1509",
+        "id": "147:1531",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 272,
+        "y": 146,
+        "width": 8,
+        "height": 8,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            272
+          ],
+          [
+            0,
+            1,
+            146
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 742,
+          "y": 7550,
+          "width": 8,
+          "height": 8
+        },
+        "absoluteRenderBounds": {
+          "x": 742,
+          "y": 7550,
+          "width": 8,
+          "height": 8
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      }
+    ],
+    "assetCalls": [],
+    "photoCalls": [],
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Drag"
+      }
+    ]
+  },
+  {
+    "id": "play-coin-flip",
+    "C": "d-ext-play-coin",
+    "key": "coin",
+    "stageId": "147:1547",
+    "thumbW": 132,
+    "thumbH": 144,
+    "virtualMaskNodes": [],
+    "shellNodes": [
+      {
+        "parent": "147:1547",
+        "id": "187:6295",
+        "name": "Dock",
+        "type": "FRAME",
+        "x": 157,
+        "y": 224,
+        "width": 58,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": true,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            157
+          ],
+          [
+            0,
+            1,
+            224
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1043,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 1043,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "187:6295",
+        "id": "187:6296",
+        "name": "DockButton",
+        "type": "INSTANCE",
+        "x": 0,
+        "y": 0,
+        "width": 58,
+        "height": 28,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": false,
+        "cornerRadius": 999,
+        "topLeftRadius": 999,
+        "topRightRadius": 999,
+        "bottomLeftRadius": 999,
+        "bottomRightRadius": 999,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1043,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "absoluteRenderBounds": {
+          "x": 1043,
+          "y": 7628,
+          "width": 58,
+          "height": 28
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.16470588743686676,
+              "g": 0.16470588743686676,
+              "b": 0.16470588743686676
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:34"
+              }
+            }
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.05999999865889549,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:49"
+              }
+            }
+          }
+        ],
+        "effects": [
+          {
+            "type": "BACKGROUND_BLUR",
+            "visible": true,
+            "radius": 12,
+            "boundVariables": {},
+            "blurType": "NORMAL"
+          }
+        ]
+      },
+      {
+        "parent": "187:6296",
+        "id": "I187:6296;8:46",
+        "name": "Label",
+        "type": "TEXT",
+        "x": 13,
+        "y": 6,
+        "width": 32,
+        "height": 16,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "strokeWeight": 1,
+        "strokeAlign": "OUTSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            13
+          ],
+          [
+            0,
+            1,
+            6
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1056,
+          "y": 7634,
+          "width": 32,
+          "height": 16
+        },
+        "absoluteRenderBounds": {
+          "x": 1057.031982421875,
+          "y": 7637.47998046875,
+          "width": 30.1275634765625,
+          "height": 8.6640625
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9803921580314636,
+              "g": 0.9803921580314636,
+              "b": 0.9803921580314636
+            },
+            "boundVariables": {
+              "color": {
+                "type": "VARIABLE_ALIAS",
+                "id": "VariableID:7:38"
+              }
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "characters": "Press",
+        "fontName": {
+          "family": "Geist",
+          "style": "Medium",
+          "variationSettings": {
+            "wght": 500
+          }
+        },
+        "fontSize": 12,
+        "fontWeight": 500,
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "textAlignHorizontal": "LEFT",
+        "textAlignVertical": "TOP",
+        "textAutoResize": "WIDTH_AND_HEIGHT"
+      }
+    ],
+    "model": {
+      "center": {
+        "x": 186,
+        "y": 98
+      },
+      "diameter": 72,
+      "rim": 6,
+      "gravity": 700,
+      "maxRise": 32,
+      "restitution": 0.38,
+      "bounces": 2,
+      "turns": 3,
+      "historyLimit": 12,
+      "spring": {
+        "stiffness": 170,
+        "damping": 26,
+        "mass": 1
+      },
+      "heads": "Heads",
+      "tails": "Tails"
+    },
+    "rows": [
+      {
+        "parent": "147:1547",
+        "id": "147:1548",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 150,
+        "y": 166,
+        "width": 72,
+        "height": 12,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            150
+          ],
+          [
+            0,
+            1,
+            166
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1036,
+          "y": 7570,
+          "width": 72,
+          "height": 12
+        },
+        "absoluteRenderBounds": {
+          "x": 1030,
+          "y": 7564,
+          "width": 84,
+          "height": 24
+        },
+        "fills": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.5,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0
+            },
+            "boundVariables": {}
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "type": "LAYER_BLUR",
+            "visible": true,
+            "radius": 6,
+            "boundVariables": {},
+            "blurType": "NORMAL"
+          }
+        ],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1547",
+        "id": "147:1549",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 150,
+        "y": 62,
+        "width": 72,
+        "height": 72,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            150
+          ],
+          [
+            0,
+            1,
+            62
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1036,
+          "y": 7466,
+          "width": 72,
+          "height": 72
+        },
+        "absoluteRenderBounds": {
+          "x": 1024,
+          "y": 7462,
+          "width": 96,
+          "height": 96
+        },
+        "fills": [
+          {
+            "type": "GRADIENT_LINEAR",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "gradientStops": [
+              {
+                "color": {
+                  "r": 0.1882352977991104,
+                  "g": 0.1882352977991104,
+                  "b": 0.1882352977991104,
+                  "a": 1
+                },
+                "position": 0,
+                "boundVariables": {}
+              },
+              {
+                "color": {
+                  "r": 0.15294118225574493,
+                  "g": 0.15294118225574493,
+                  "b": 0.15294118225574493,
+                  "a": 1
+                },
+                "position": 1,
+                "boundVariables": {}
+              }
+            ],
+            "gradientTransform": [
+              [
+                -0.7071067690849304,
+                0.7071067690849304,
+                0.5
+              ],
+              [
+                -0.7071067690849304,
+                -0.7071067690849304,
+                1.2071068286895752
+              ]
+            ]
+          }
+        ],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.14000000059604645,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 20,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.18000000715255737
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1547",
+        "id": "147:1550",
+        "name": "Ellipse",
+        "type": "ELLIPSE",
+        "x": 158,
+        "y": 70,
+        "width": 56,
+        "height": 56,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            158
+          ],
+          [
+            0,
+            1,
+            70
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1044,
+          "y": 7474,
+          "width": 56,
+          "height": 56
+        },
+        "absoluteRenderBounds": {
+          "x": 1044,
+          "y": 7474,
+          "width": 56,
+          "height": 56
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 0.10000000149011612,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "boundVariables": {}
+          }
+        ],
+        "effects": [],
+        "arcData": {
+          "startingAngle": 0,
+          "endingAngle": 6.2831854820251465,
+          "innerRadius": 0
+        }
+      },
+      {
+        "parent": "147:1547",
+        "id": "147:1551",
+        "name": "Frame",
+        "type": "FRAME",
+        "x": 174,
+        "y": 86,
+        "width": 24,
+        "height": 24,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "clipsContent": true,
+        "cornerRadius": 0,
+        "topLeftRadius": 0,
+        "topRightRadius": 0,
+        "bottomLeftRadius": 0,
+        "bottomRightRadius": 0,
+        "strokeWeight": 1,
+        "strokeAlign": "INSIDE",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            174
+          ],
+          [
+            0,
+            1,
+            86
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1060,
+          "y": 7490,
+          "width": 24,
+          "height": 24
+        },
+        "absoluteRenderBounds": {
+          "x": 1060,
+          "y": 7490,
+          "width": 24,
+          "height": 24
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": []
+      },
+      {
+        "parent": "147:1551",
+        "id": "147:1552",
+        "name": "Vector",
+        "type": "VECTOR",
+        "x": 5.5,
+        "y": 3,
+        "width": 13,
+        "height": 13,
+        "rotation": 0,
+        "opacity": 1,
+        "visible": true,
+        "blendMode": "PASS_THROUGH",
+        "isMask": false,
+        "cornerRadius": 0,
+        "strokeWeight": 1.600000023841858,
+        "strokeAlign": "CENTER",
+        "dashPattern": [],
+        "relativeTransform": [
+          [
+            1,
+            0,
+            5.5
+          ],
+          [
+            0,
+            1,
+            3
+          ]
+        ],
+        "absoluteBoundingBox": {
+          "x": 1065.5,
+          "y": 7493,
+          "width": 13,
+          "height": 13
+        },
+        "absoluteRenderBounds": {
+          "x": 1064.699951171875,
+          "y": 7492.2001953125,
+          "width": 14.60009765625,
+          "height": 14.599609375
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "type": "SOLID",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "color": {
+              "r": 0.9450980424880981,
+              "g": 0.9450980424880981,
+              "b": 0.9450980424880981
+            },
+            "boundVariables": {}
+          }
+        ],
+        "effects": []
+      }
+    ],
+    "assetCalls": [
+      {
+        "key": "svg-play-ext-0",
+        "file": "play-ext-0.svg",
+        "path": "assets/components/play-ext/play-ext-0.svg",
+        "reused": false,
+        "sha256": "8fbcc67800251ee9193511d8a86378f41accf48d0c7702aa81e33e32ce559ebb",
+        "width": 15,
+        "height": 15,
+        "id": "147:1552",
+        "offsetX": -0.800048828125,
+        "offsetY": -0.7998046875,
+        "bakedOpacity": 1
+      }
+    ],
+    "photoCalls": [],
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Press"
+      }
+    ]
+  }
+]

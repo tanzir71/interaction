@@ -10,15 +10,76 @@ extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve L
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
-it to 508. Three Scroll extensions bring it to 511 and two Cursor extensions to 513; 7 extension components,
+it to 508. Three Scroll extensions bring it to 511, two Cursor extensions to 513, and three Play extensions to 516; 4 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 513 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 159
+JavaScript. The fit audit boots all 516 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 162
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Three Play & Easter Eggs extensions
+
+Plinko, Slingshot and Coin Flip add three original playable implementations.
+They preserve all 56 captured native artwork layers and the original Coin SVG,
+including its 15×15 root and captured bleed. The nine captured Press/Drag Dock
+layers are shared shell controls and remain explicitly classified outside demo
+artwork. The one original SVG file is added unchanged; no photography is added.
+The owner's existing sparse-size clarification covers all three native references.
+Their new allowlist entries document exact peg, slot, dot, coin and shadow sizes;
+overflow, horizontal scrolling and text gates continue to apply.
+
+Plinko keeps the complete six-row triangle, twenty-one pegs, seven multipliers,
+eight visible balls and ordered future slot scheduling. Its 240-step solver
+retains actual contacts, wall reflections, seeded start/micro-contact offsets,
+landing deadlines and analytical spring tails. Every landing records its result
+once; the eight-result window and complete counters stay available. The ready
+ball and post-input marker show the chosen aim, and the spoken percentage stays
+in sync with actual mouse and keyboard selection. Full caption/history rows stay
+clear of the physical keyboard outline. Completed
+traces are pruned after result reporting. Six-second renderer stories observe
+the real model; longer physical tails are verified through their actual endpoint.
+
+Slingshot keeps all nineteen captured dots on x=96+180t, y=150−376t+376t².
+The loaded point (96,150) and anchor (118.5,103) produce the complete reference
+launch with gain 8 and gravity 752. Real drag follows calibrated input directly;
+release starts at the literal painted pulled point. Grabbing a moving flight
+adopts the last paint, capture loss cancels, and the band and returned ball use
+the analytical 170/26/1 spring. Target/wall/floor contacts and the eight launch
+outcomes remain complete. Full scales the world by 1.6, keeping all flights
+clear of its status and history. Touch claims only the real physical handle.
+
+Coin Flip retains the exact front, rim, symbol and shadow before input. Two
+physical faces, sixty-four connected side panels and a six-pixel rim remain
+visible through actual quarter turns. Motion blur lives on the outer carrier;
+the rotor's 3D scene stays intact. Both bounces and the angular spring settle
+completely. Retargets preserve height, angle and tilt, completed results are
+reported before later input, and the full view retains both counts and twelve
+recent outcomes. Real crypto bits are sampled once per deliberate intention.
+Reduced activations and live preference changes reach complete states without
+advancing source time; the mutable Coin epoch and band/press clocks retire.
+The full coin and its focus ring stay clear of the title at maximum rise.
+
+Eight suites pass 50,813,307 recorded assertions. Coverage includes 2,000
+seeded physical drops reaching every peg and slot, independent parabola/gravity
+and spring equations, eighteen six-second 60/120/240Hz renderer stories, six
+fresh network-blocked full/native contexts, twelve independent hold stories,
+actual scaled mouse and moving touch, literal capture loss, next-touch recovery,
+simultaneous key owners, queued aim/random outcomes, real page scrolling and
+mid-capture disposal. Pixel checks verify actual moving balls, both coin faces,
+the connected edge at a quarter turn and completed blur retirement. Compact
+full captions and every history glyph remain at least 11px.
+
+All thirteen required local checks pass. The fit audit boots 516 demos with no
+findings and all 162 sparse exceptions valid. Twelve desktop/mobile detail
+routes pass in both website themes with the tanziro.com footer and their native
+dark stages. Three posters come from the native DOM. All 440 prior source
+modules, 513 metadata entries, seven protected shared inputs and earlier private
+records remain unchanged. Actions stays disabled and the account-wide $0
+stop-at-limit setting is preserved. Four extensions, Pro seams and final timing,
+accessibility, contrast, cold-route and Lighthouse acceptance remain open.
 
 ## Two Cursor extensions
 
