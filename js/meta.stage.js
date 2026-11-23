@@ -18427,5 +18427,75 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "cursor-following-label": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Move"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      244,
+      108
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Cursor",
+      "label",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "cursor-zoom-lens": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Move"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Cursor",
+      "lens",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

@@ -10,15 +10,59 @@ extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve L
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501. Four loader extensions bring it to 505. Three 3D & Perspective extensions bring
-it to 508. Three Scroll extensions bring it to 511; 9 extension components,
+it to 508. Three Scroll extensions bring it to 511 and two Cursor extensions to 513; 7 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 511 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 513 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 159
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Two Cursor extensions
+
+Following Label and Zoom Lens add two original implementations. They preserve
+all twelve captured native artwork layers, the complete original View project
+text, one unchanged supplied SVG reused from an earlier asset and three exact
+photographic slots. The six captured Move Dock layers are shared shell controls
+and remain explicitly classified outside demo artwork. No assets are added.
+Chrome and magnolia retain their verified 800/1600px hashes and credits; local
+full images resolve at 1600px before creation, native and portable use 800px.
+
+Following Label retains the exact 180×130 photograph, original pointer bleed,
+92×26 capsule and 12px Inter text at rest. Its complete local project opens
+through the real photograph button and retains category, year, description,
+role, focus and return guidance. Native Enter/Space, owned Escape and a second
+selection preserve the same disclosure. Fixed worst-case font layout with
+counter transforms keeps every glyph at least 11px during the entire pop;
+the painted capsule remains inside Stage and root bounds. Zoom Lens starts at
+its exact native 72px circular window and supplied 2× photographic stencil.
+Deliberate input activates the complete 2.5× model; full always uses 2.5×.
+Its bounded inspection center preserves the original crop and fills every edge.
+
+Both followers use the source-time 0.18 exponential and analytic convolution
+of all eight path checkpoints across a finite six-second Move story. Mouse
+coordinates use the actual scaled Stage; Home/End and Arrow keys cover the
+complete inspection range. Touch keeps vertical page scrolling available.
+Independent pointer/key owners, actual implicit-capture loss, canceled late
+clicks, next-touch recovery and mid-capture disposal are covered. Reduced/coarse
+input uses deliberate still changes with bounded inert 150ms old-paint feedback.
+Per-frame geometry updates use transforms and opacity.
+
+Eight suites pass 1,093,530 recorded assertions, including twelve six-second
+60/120/240Hz renderer stories, four fresh network-blocked full/native contexts,
+eight independent hold stories, physical scaled mouse, actual moving touch,
+queued coordinate/selection intentions, native keyboard behavior, readable pop
+glyphs, photographic sample pixels, exact lens matrices and physical 2px focus
+rings. All thirteen required local checks pass. The fit audit boots 513 demos
+with no findings and all 159 existing sparse exceptions valid; this pair adds
+none. Eight desktop/mobile detail routes pass in both themes with the tanziro.com
+footer. Two posters come from the native DOM. All 438 prior source modules,
+511 metadata entries, seven protected shared inputs and earlier private records
+remain unchanged. GitHub Actions stays disabled and the account-wide $0
+stop-at-limit setting is preserved. Seven extensions, Pro seams and final
+acceptance remain open.
 
 ## Three Scroll extensions
 

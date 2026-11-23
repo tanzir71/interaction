@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first eighty-two extensions are implemented;
-  the catalog is 511. Nine extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first eighty-four extensions are implemented;
+  the catalog is 513. Seven extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,28 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The two Cursor extensions use `tools/verify-cursor-ext.js`,
+  `tools/verify-cursor-ext-models.js`, `tools/verify-cursor-ext-input.js`,
+  `tools/verify-cursor-ext-clocks.js`, `tools/verify-cursor-ext-exports.js`,
+  `tools/verify-cursor-ext-holds.js`, `tools/verify-cursor-ext-touch.js` and
+  `tools/verify-cursor-ext-pixels.js` against the local 4173 server. Preserve
+  twelve exact native artwork layers, the original View project text, one
+  unchanged reused SVG and three exact chrome/magnolia photo slots. Classify the
+  six captured Move Dock layers as shared shell controls. Both verified photo
+  pairs keep their 800/1600px hashes and attribution; full resolves 1600px before
+  creation. Native Lens first paints its exact 2× stencil, then deliberate input
+  uses the complete 2.5× model. Full always uses 2.5×. Preserve actual source-time
+  0.18 followers, analytic eight-point six-second stories, current-pose retargeting,
+  complete inline project disclosure, native Enter/Space/Escape and independent
+  press owners. Counter-transform pop glyphs to stay at least 11px throughout;
+  clamp the painted capsule inside Stage/root bounds. Per-frame updates use
+  transforms and opacity. Tests cover twelve 60/120/240Hz renderer stories, four
+  fresh network-blocked full/native contexts, eight independent hold stories,
+  real scaled mouse and moving touch, actual implicit-capture loss, late click
+  cancellation, next-touch recovery, mid-capture disposal, photographic sampling
+  pixels, exact zoom matrices and physical 2px focus rings. No assets or fill
+  exceptions are added. Keep earlier private helpers, inputs and archived
+  publication evidence frozen.
 - The three Scroll extensions use `tools/verify-scroll-ext.js`,
   `tools/verify-scroll-ext-models.js`, `tools/verify-scroll-ext-input.js`,
   `tools/verify-scroll-ext-clocks.js`, `tools/verify-scroll-ext-exports.js`,

@@ -35463,5 +35463,152 @@
       "photo-milkyway": "assets/images/milkyway.webp",
       "photo-forestDark": "assets/images/forestDark.webp"
     }
+  },
+  {
+    "id": "cursor-following-label",
+    "title": "Following Label",
+    "category": "Cursor",
+    "group": "Pointer & Physics",
+    "trigger": "hover",
+    "tags": [
+      "cursor",
+      "extension",
+      "label",
+      "hover"
+    ],
+    "useCases": [
+      "Cursor",
+      "label",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "A project cue follows your pointer over a photographic card. Select the image to reveal the project details; keyboard and touch access keep the same content available.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      244,
+      108
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/cursor-following-label",
+    "thumb": "hero",
+    "module": "js/demos.cursorext.cursor-following-label.js?v=5ee9b07271",
+    "assetBundle": "js/demo-assets.js?v=f94fcaaba6",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/cursor-following-label.json?v=e022326b39",
+    "assetRefs": {
+      "photo-chrome": "assets/images/chrome-800.webp",
+      "svg-layout-ext-28": "assets/components/layout-ext/layout-ext-28.svg"
+    },
+    "rootClass": "d-ext-cursor-label",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Move"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A label rides along with the pointer",
+    "sourceName": "Seen on: Aceternity Following Pointer pattern family",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "chrome",
+        "asset": "photo-chrome",
+        "photoId": "sC2Twgvu3lg",
+        "imageId": "photo-1759583545970-0106ff47353f",
+        "photographer": "Rohit Choudhari",
+        "url": "https://unsplash.com/photos/abstract-glass-structure-with-iridescent-light-reflections-sC2Twgvu3lg",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-16"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-chrome": "assets/images/chrome.webp"
+    }
+  },
+  {
+    "id": "cursor-zoom-lens",
+    "title": "Zoom Lens",
+    "category": "Cursor",
+    "group": "Pointer & Physics",
+    "trigger": "hover",
+    "tags": [
+      "cursor",
+      "extension",
+      "lens",
+      "hover"
+    ],
+    "useCases": [
+      "Cursor",
+      "lens",
+      "accessible"
+    ],
+    "tier": "free",
+    "desc": "Inspect a photograph through a circular magnifier. Move the pointer, use the arrow keys or tap a detail to select the inspection point.",
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/cursor-zoom-lens",
+    "thumb": "hero",
+    "module": "js/demos.cursorext.cursor-zoom-lens.js?v=77a95bd6dd",
+    "assetBundle": "js/demo-assets.js?v=f94fcaaba6",
+    "exportBundle": "js/export-data.js?v=791041c730",
+    "sourcePreview": "registry/p/cursor-zoom-lens.json?v=628aadfd01",
+    "assetRefs": {
+      "photo-magnolia": "assets/images/magnolia-800.webp"
+    },
+    "rootClass": "d-ext-cursor-lens",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Move"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A magnifier follows the pointer over detail",
+    "sourceName": "Seen on: Aceternity Lens pattern family",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "magnolia",
+        "asset": "photo-magnolia",
+        "photoId": "J4gm_1GKfAA",
+        "imageId": "photo-1518343161123-c7e9ab4dc4da",
+        "photographer": "Annie Spratt",
+        "url": "https://unsplash.com/photos/purple-petaled-flowers-J4gm_1GKfAA",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-18"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-magnolia": "assets/images/magnolia.webp"
+    }
   }
 ]

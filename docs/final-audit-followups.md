@@ -10,11 +10,21 @@ extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
 bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
 extensions bring it to 501, four loaders to 505 and three 3D & Perspective
-extensions to 508. Three Scroll extensions bring it to 511; 9 extension
-components and Pro seams remain. Both strict static audits now pass.
+extensions to 508. Three Scroll extensions bring it to 511 and two Cursor
+extensions to 513; 7 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The two Cursor extensions retain twelve exact native artwork layers, the
+original View project copy, one unchanged reused SVG and three exact photo slots.
+Keep their six shared Move Dock layers classified separately. Preserve both
+verified photo pairs and the native 2× Lens stencil before its deliberate 2.5×
+model, complete inline project content, source-time 0.18 followers, analytic
+finite path stories, readable pop glyphs, actual scaled input and capture/click
+cancellation. Twelve equal-time renderer stories, four offline contexts, eight
+hold stories and actual photographic sampling pixels establish functional
+behavior. Final timing, accessibility, contrast, cold-route and Lighthouse gates
+remain open. No fit exceptions are added. All earlier findings remain open.
 The three Scroll extensions preserve 67 native artwork layers, eighteen exact
 photo slots and all eleven verified 800/1600px photo pairs. Keep the nine Dock
 layers classified as shared shell controls. Preserve the complete three/eight/
