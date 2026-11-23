@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first sixty-six extensions are implemented;
-  the catalog is 495. Twenty-five extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first seventy-two extensions are implemented;
+  the catalog is 501. Nineteen extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,29 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The six Data & Numbers extensions use `tools/verify-data-ext.js`,
+  `tools/verify-data-ext-models.js`, `tools/verify-data-ext-input.js`,
+  `tools/verify-data-ext-clocks.js`, `tools/verify-data-ext-exports.js`,
+  `tools/verify-data-ext-holds.js`, `tools/verify-data-ext-touch.js` and
+  `tools/verify-data-ext-pixels.js` against the local 4173 server. Preserve all
+  112 captured layers, 31 exact text copies and 56 supplied SVG slots using
+  30 unchanged files; 29 files are new and the cursor reuses nav-ext. Native
+  Treemap uses a 348×176 plane; the other five retain 324px width. Full models
+  retain all four conversion stages, six weighted categories, both complete
+  six-axis comparisons, thirteen monthly records, every market observation and
+  all twenty-four hours with quarter-hour endpoints in three real timezones.
+  Keep finite changed-digit fades, source-time counters and deadlines,
+  proportional squarification, captured radar vertices, unchanged chart SVGs,
+  quarter-pixel stroke sampling and measured tooltip delays. Original clock
+  hands rotate around their exact pivots; physical event-time velocity carries
+  into the 380/32 spring without a release jump. Reduced release snaps with
+  inert 150ms old-paint feedback. Daytime arcs illustrate 06:00–18:00; Reset time
+  returns the fixed captured UTC instant. Tests cover 36 six-second equivalent
+  renderer stories, twelve fresh offline full/native contexts, twenty-four
+  independent hold stories, isolated real touch/vertical scroll, physical mouse,
+  tooltip early wakes and actual SVG/clip/hand rendering. No fill or overflow
+  exceptions are added. The catalog is 501; 19 extensions, Pro seams and final
+  audits remain. Keep earlier private helpers, inputs and evidence frozen.
 - The six Text & Type extensions use `tools/verify-type-ext.js`,
   `tools/verify-type-ext-models.js`, `tools/verify-type-ext-input.js`,
   `tools/verify-type-ext-clocks.js`, `tools/verify-type-ext-exports.js`,
@@ -187,7 +210,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   network-blocked full/native contexts, twenty-four independent hold stories,
   actual moving touch/page scroll and real SVG filter/mask pixels. No new source assets,
   runtime dependencies, fill exceptions or overflow exceptions are added.
-  The catalog is 495; 25 extensions, Pro seams and final audits remain. Keep
+  This group brought the catalog to 495; later counts appear above. Keep
   earlier private helpers, inputs and archived publication evidence frozen.
 - The five Navigation extensions use `tools/verify-nav-ext.js`,
   `tools/verify-nav-ext-models.js`, `tools/verify-nav-ext-input.js`,

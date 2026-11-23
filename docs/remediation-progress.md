@@ -8,15 +8,48 @@ Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX comp
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
 it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
-bring it to 489. Six Text & Type extensions bring it to 495; 25 extension components,
+bring it to 489. Six Text & Type extensions bring it to 495. Six Data & Numbers
+extensions bring it to 501; 19 extension components,
 Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 495 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 501 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 158
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Six Data & Numbers extensions
+
+Funnel, Treemap, Radar Compare, Line Chart Tooltip, Prediction Market and World
+Clock add six original implementations. All 112 captured native layers and 31
+original text copies remain exact. Fifty-six SVG slots use thirty unchanged
+files, including twenty-nine new original exports and the existing cursor.
+No photography, runtime dependencies or fit exceptions are added.
+
+Full views preserve four complete conversion stages, all six category weights,
+both six-axis datasets, thirteen monthly values, every local market observation
+and a complete shared day with quarter-hour endpoints. London, Dubai and Tokyo
+retain independent timezone dates. Original clock hand SVGs rotate at captured
+pivots; daytime rings illustrate 06:00–18:00. Reset time returns the fixed Figma
+instant, 23 November 2026 at UTC 09:00.
+
+The original line and area SVGs stay unchanged. A quarter-pixel alpha-sampled
+lookup anchors the live crosshair to their rendered curve, with bounded edge
+tooltips and absolute 80ms entry / 300ms reentry deadlines. Radar coordinates,
+prices, changed digits and cursor followers reverse from current paint. Native
+Treemap keeps a 348px plane to accommodate its moving cursor without scroll.
+Physical mouse and touch release retain current clock hands and carry actual
+event-time velocity into the named spring. Reduced motion snaps deliberately
+with bounded inert 150ms old-paint feedback.
+
+Eight suites pass 8,302,619 recorded assertions, including thirty-six six-second
+60/120/240Hz renderer stories, twelve fresh network-blocked full/native contexts,
+twenty-four independent hold stories, actual isolated moving touch/page scroll,
+physical mouse, early tooltip wakes and source-to-renderer SVG/clip/hand checks.
+All thirteen required local checks pass. The complete fit audit boots 501 demos
+with zero findings and 158 valid existing sparse-fill exceptions. These checks
+leave final performance, accessibility, contrast and cold-route gates open.
 
 ## Six Text & Type extensions
 

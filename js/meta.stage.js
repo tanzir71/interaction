@@ -17863,5 +17863,219 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "data-funnel": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "funnel",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-treemap": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next tile"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      348,
+      176
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "treemap",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-radar-compare": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "toggle",
+        "label": "Toggle dataset"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "radar",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-line-tooltip": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "replay",
+        "label": "Replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "line",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-prediction-market": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "yes",
+        "label": "Trade Yes"
+      },
+      {
+        "action": "no",
+        "label": "Trade No"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "market",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "data-world-clock": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "action": "reset",
+        "label": "Reset time"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Data & Numbers",
+      "clock",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });
