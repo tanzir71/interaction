@@ -4,8 +4,8 @@ The full 520-component handoff remains open. Per-component verification and prep
 
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
-and Visual FX components bring the catalog to 429; 91 extension
-components and Pro seams remain. Both strict static audits now pass.
+and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
+extensions bring it to 439; 81 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
@@ -42,10 +42,19 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 429 demos with 144 valid
+retaining their overflow/text checks. It now passes all 439 demos with 145 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
+
+The first ten Agent & AI UI extensions preserve 105 native layers, seventeen
+original SVG slots, complete local models and all 72 wizard combinations. Keep
+source-time streaming, citations, changed-digit thresholds, 24-hour reset
+accounting, ordered held editing and Send/Stop intent, real paste/IME and stale
+clipboard retirement. Their eight suites cover 7,140 checks, 60 actual renderer
+stories and twenty fresh offline contexts. Preserve the 150ms inert retained
+paint and Creator's fill-only exception. These establish functional behavior;
+final frame-time, cold-route, accessibility and contrast budgets remain open.
 
 The four Visual FX additions retain all 46 native layers, eighteen original SVG
 slots using twelve unchanged files, and both approved ocean slots. Preserve the

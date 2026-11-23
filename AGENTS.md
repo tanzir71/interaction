@@ -141,9 +141,30 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components are implemented; the catalog is 429. Ninety-one
-  extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first ten extensions are implemented; the
+  catalog is 439. Eighty-one extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
+- The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
+  `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
+  `tools/verify-agent-ext-clocks.js`, `tools/verify-agent-ext-exports.js`,
+  `tools/verify-agent-ext-holds.js`, `tools/verify-agent-ext-touch.js` and
+  `tools/verify-agent-ext-async.js` against the local 4173 server. Preserve
+  all 105 captured native layers and seventeen SVG slots using fifteen unchanged
+  files. Full views retain five messages, three complete code tabs, complete tool
+  JSON, five activity steps, three note passages/contexts/responses, three verified
+  sources and the complete summary, both usage counters and 24-hour resets, five
+  completions, three agents/nine turns and all 72 role/tools/tone combinations.
+  Home/End and 5% meter keys adjust the actual displayed fractions; automatic
+  consumption and skipped reset periods remain accounted. Keep browser word/caret
+  editing, grapheme deletion, real paste and IME commits through independent holds.
+  Held Send/Stop/typing intents stay ordered. Old tab/disposed clipboard promises
+  cannot restore feedback or invoke fallback side effects. Reduced queued batches
+  retain one inert old composition for 150ms. Tests cover 60 six-second renderer
+  stories at 60/120/240Hz, twenty fresh network-blocked full/native contexts,
+  actual moving touch and scrolling, 44px targets, exact artwork/type, complete
+  models and cleanup. Creator's sparse exception changes only the fill gate.
+  The catalog is 439; 81 extensions, Pro seams and final audits remain. Keep all
+  prior phase private helpers, inputs and archived publication evidence frozen.
 - The four new Data/Navigation components use `tools/verify-data-nav-new.js`,
   `tools/verify-data-nav-new-models.js`, `tools/verify-data-nav-new-input.js`,
   `tools/verify-data-nav-new-clocks.js`, `tools/verify-data-nav-new-exports.js`

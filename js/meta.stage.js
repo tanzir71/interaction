@@ -15856,5 +15856,285 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "ai-message-stream": {
+    "designSize": [
+      600,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "stream",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-code-block": {
+    "designSize": [
+      640,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "code",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-tool-result": {
+    "designSize": [
+      560,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "tool",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-activity-feed": {
+    "designSize": [
+      520,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "activity",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-sidebar": {
+    "designSize": [
+      640,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "sidebar",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-web-search": {
+    "designSize": [
+      640,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "search",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-usage-limits": {
+    "designSize": [
+      480,
+      360
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "usage",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-autocomplete": {
+    "designSize": [
+      520,
+      280
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "type",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "autocomplete",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-multi-agent": {
+    "designSize": [
+      600,
+      480
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "multi",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "ai-agent-creator": {
+    "designSize": [
+      640,
+      520
+    ],
+    "thumbDesignSize": [
+      324,
+      168
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "useCases": [
+      "Agent & AI UI",
+      "creator",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });

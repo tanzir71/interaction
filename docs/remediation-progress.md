@@ -5,15 +5,53 @@ all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
 sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
-the catalog to 429; 91 extension components, Pro seams and final
+the catalog to 429. The first ten Agent & AI UI extensions bring it to 439;
+81 extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 429 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 144
+JavaScript. The fit audit boots all 439 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 145
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## First ten Agent & AI UI extensions
+
+Message Stream, Code Block, Tool Result, Activity Feed, AI Sidebar, Web Search,
+Usage Limits, Autocomplete, Multi-agent Chat and Agent Creator implement the
+first ten extension specifications. Their native views preserve 105 captured
+layers and seventeen original SVG slots using fifteen unchanged files. No
+reference-site code or assets are used.
+
+Full views retain the complete five-message conversation, three code examples,
+tool arguments and three search results, five activity steps, three original
+note passages and responses, three verified source URLs and complete summary,
+both usage counters and 24-hour resets, five completion sentences, nine turns
+between three agents, and every one of the 72 role/tools/tone combinations.
+Streaming uses source-time word arrivals; code tabs retain line highlights,
+copy feedback and expansion; history, local selection context, citations and
+wizard previews remain interactive. Usage keys move each actual displayed meter
+by 5%, including immediately after Home or End. Skipped reset periods count once.
+
+Native inputs retain ordered characters, selection, grapheme deletion, word
+navigation, real clipboard paste and IME commits while paused. Composer Send,
+Stop and subsequent drafts keep their order. Clipboard completion waits through
+holds, rejects older tab generations and retires before any disposed fallback.
+Reduced queued input retains one inert old composition, checked at the 75ms
+midpoint and removed after 150ms. The three exact 20px Creator caps keep their
+80px spacing; the documented exception waives only low fill.
+
+Eight focused suites pass 7,140 checks, including 60 actual six-second renderer
+stories at 60/120/240Hz, 72 wizard combinations and twenty fresh network-blocked
+export contexts with both full and native mounts. Physical touch covers moving
+taps, actual local/page scrolling, compatibility-click ownership, native inputs
+and 44px targets. Forty real dev routes cover desktop/mobile and dark/light
+themes with the tanziro.com footer. Ten native posters are refreshed. All 356
+previous modules, 429 metadata records and seven protected shared files remain
+unchanged. Thirteen required local commands pass; GitHub Actions stays disabled.
+These functional checks leave final cold-route, Lighthouse, accessibility,
+contrast and frame-time acceptance open.
 
 ## Four new Visual FX components
 
