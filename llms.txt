@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 425 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 429 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -377,6 +377,10 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Activity Capsule](https://intrx.vercel.app/#/c/dynamic-notch): press · The capsule expands into a live player · registry: /registry/c/dynamic-notch.json
 - [Turntable](https://intrx.vercel.app/#/c/vinyl-player-card): press · Start the platter; switch between 33 and 45 · registry: /registry/c/vinyl-player-card.json
 - [Satin Foil Card](https://intrx.vercel.app/#/c/foil-trading-card): hover · Light rakes the foil; Home resets the angle · registry: /registry/c/foil-trading-card.json
+- [Liquid Glass Lens](https://intrx.vercel.app/#/c/fx-liquid-glass): drag · Drag a refractive pill lens over the ocean. The WebGL shader derives its normal from a rounded-box signed distance field, separates colour channels by 1.5px and lights the rim; an SVG displacement lens remains available without WebGL. · registry: /registry/c/fx-liquid-glass.json
+- [Plasma Orb](https://intrx.vercel.app/#/c/fx-plasma-orb): ambient · A procedural plasma sphere combines four-octave flow noise, a Fresnel rim and a warm core. Move, touch or use the Arrow keys to bend the field; the source-clock renderer caps paint at sixty frames per second. · registry: /registry/c/fx-plasma-orb.json
+- [Beam Collision Grid](https://intrx.vercel.app/#/c/fx-beam-grid): ambient · Seeded beams fall along seven grid lines. Each impact emits twelve ballistic sparks and a floor flare; the complete deterministic schedule remains available through suspension and Canvas recovery. · registry: /registry/c/fx-beam-grid.json
+- [Particle Text Reveal](https://intrx.vercel.app/#/c/fx-particle-text): hover · Assemble is sampled into a complete field of glyph points. Noise settles into the word, a pointer scatters particles within sixty pixels, and a 170/26 spring returns each point home. Keyboard and touch reach the same field. · registry: /registry/c/fx-particle-text.json
 
 ## Collections
 

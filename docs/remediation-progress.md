@@ -3,17 +3,63 @@
 Native v4 compositions are remediated for all 399 existing demos:
 all Interface (89), Data & AI (30), Motion (67), Pointer & Physics (53), and
 Visual FX (88) demos, plus all seventy-two Collections demos: fifty-two DRAMS,
-sixteen Showcase and four Framer compositions. Twenty-six new Agent & AI UI,
-Buttons & Micro, Layout & UI, Forms & Inputs and Data/Navigation components bring
-the catalog to 425; 95 new or extension components, Pro seams and final
+sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
+Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
+the catalog to 429; 91 extension components, Pro seams and final
 audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 425 demos with zero overflow, horizontal-scroll
+JavaScript. The fit audit boots all 429 demos with zero overflow, horizontal-scroll
 or low-fill findings. It has no tiny-text findings; all 144
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Four new Visual FX components
+
+Liquid Glass Lens, Plasma Orb, Beam Collision Grid and Particle Text Reveal
+complete the thirty new components in Handoff 3 section 7. Their native views
+retain 46 captured layers, eighteen SVG slots using twelve unchanged files and
+both original ocean photo slots. Bleed stages retain the exact 372×264 coordinate
+plane; the existing shared bleed rule already cancels the vertical offset.
+Approved ocean photographs keep their original 800/1600px hashes and attribution.
+
+Full Liquid Glass uses a draggable 164×96 pill over the photograph. WebGL normals
+come from the rounded-box signed distance field, with 1.5px chromatic offsets and
+a specular rim. The native view keeps its 200×150 photo, exact 80px circular lens,
+260×195 zoom crop and both supplied rim SVGs. The SVG displacement fallback uses
+the same approved photograph. Drag carries release velocity into a 170/26/1
+spring; keyboard clamps and fine adjustments remain available after interruption.
+Held gestures keep their final position with zero velocity when source time did
+not advance; canceled capture stops momentum.
+
+Plasma combines four-octave flow noise, a warm core and Fresnel rim. Pointer,
+touch and keys bend the source-clock field with equivalent 0.08-per-60Hz following.
+Its native 112px sphere keeps the original clipped glow artwork at first paint;
+live WebGL has a complete mathematical software renderer. All 9,508 opaque native
+pixels agree byte-for-byte between the actual GPU and software paths in the
+recorded comparison. Actual context loss and restoration rebuild resources.
+
+Beams keeps seven native grid lines at 30px intervals, the supplied floor and
+seven original spark vectors. Full retains all 256 seeded events and repeats its
+complete schedule. Reduced full mode keeps a complete collision still. Each collision paints twelve ballistic sparks and a floor
+flare. The Canvas renderer and SVG fallback use the complete live command stream.
+Particle Text samples the complete Assemble word into 629 native or 961 full
+points. Every point returns through an analytical 170/26/1 spring step; the
+independent closed-form check covers complete assembly. The pointer scatters
+within 60px, and native rest restores the exact Geist word and sixteen dots.
+
+Six focused suites cover exact artwork and optical type, real scaled mouse,
+keys and moving touch, vertical page scrolling, graphics recovery, complete
+six-second stories at 60/120/240Hz, queued intent and independent caller,
+document, full-viewport and LiveTiles holds. Eight fresh network-blocked export
+contexts preserve the complete models, fonts, artwork and credit. Four native
+posters and sixteen desktop/mobile dark/light dev routes retain the TanZiRo
+footer link. All 352 earlier modules, 425 sidecar records and seven shared inputs
+remain unchanged. Candidates stay free until the Pro seams and owner launch.
+These functional checks leave final timing, cold-route, accessibility and theme
+acceptance open. Retained SVG fades keep independent clip/filter definitions,
+so a new lens position cannot move the old composition's mask during its fade.
 
 ## Four new Data and Navigation components
 

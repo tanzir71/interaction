@@ -2,9 +2,9 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
-All 399 existing native compositions now follow their v4 references. Twenty-six
-new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs and Data/Navigation
-components bring the catalog to 425; 95 new or extension
+All 399 existing native compositions now follow their v4 references. All thirty
+new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
+and Visual FX components bring the catalog to 429; 91 extension
 components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
@@ -42,10 +42,25 @@ markup, copy or prompts. These static and focused browser checks supplement the
 full final motion audit; they do not prove every component's recipe or timing.
 
 The corrected fit audit excludes empty transparent leaf hit areas while
-retaining their overflow/text checks. It now passes all 425 demos with 144 valid
+retaining their overflow/text checks. It now passes all 429 demos with 144 valid
 reference-size exceptions; Rolling Balance preserves its exact 147×84px painted
 composition rather than enlarging it past the 12% heuristic. Keep all 24 browser
 boundary regressions when changing measurement rules.
+
+The four Visual FX additions retain all 46 native layers, eighteen original SVG
+slots using twelve unchanged files, and both approved ocean slots. Preserve the
+native bleed origin, 30px beam spacing, exact glyph rest, SDF-normal refraction
+and 1.5px chromatic offset, complete fbm/software field, all 256 seeded events,
+twelve collision sparks and every sampled particle. Keep independent SVG
+definitions through retained fades and the complete reduced collision still.
+Held lens input must not invent velocity from zero elapsed source time; canceled
+capture must stop momentum.
+The analytical 170/26/1 step
+passes independent closed-form assembly checks. The native GPU/software plasma
+comparison matches all 9,508 opaque pixels byte-for-byte. Actual GPU loss/rebuild,
+moving touch, independent holds, eight fresh offline contexts and 24 equal-time
+renderer stories establish functional behavior. They leave final frame timing,
+cold-route, theme/contrast and accessibility acceptance open.
 
 The four Forms additions preserve all 81 native layers, 46 original SVG slots
 and complete hour/minute/precision/file models. Keep the native Dusk/full

@@ -120,6 +120,30 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and contours. It checks native keyboard/touch, replay interruption, virtual
   clocks, refresh-rate independence, adversarial contour equivalence, exact SVG
   slots, compact typography and complete offline exports.
+- The four new Visual FX components use `tools/verify-fx-new.js`,
+  `tools/verify-fx-new-models.js`, `tools/verify-fx-new-input.js`,
+  `tools/verify-fx-new-clocks.js`, `tools/verify-fx-new-exports.js` and
+  `tools/verify-fx-new-holds.js` against the local 4173 server. Preserve all
+  46 native layers, 18 original SVG slots using twelve unchanged files, and
+  both exact ocean photo slots with the original 800/1600px hashes and credit.
+  Bleed stages already cancel the shared vertical offset. Native beam lanes
+  keep their 30px spacing; native Particle Text restores its exact Geist word
+  and sixteen dots at rest. Full retains the SDF-normal refractive pill with
+  1.5px chromatic offsets and SVG displacement fallback, four-octave plasma
+  with equivalent software pixels, 256 seeded beam events with twelve sparks
+  per collision, and every sampled glyph point with 170/26/1 spring return.
+  Retained SVG fades own independent mask/filter IDs. Full reduced Beams keeps
+  a complete collision still rather than an empty pre-event field.
+  Held lens gestures preserve their complete final position without inventing
+  release velocity while source time is frozen. Lost capture cancels momentum.
+  Keep analytical per-step particle integration, fixed source clocks, actual
+  60fps paint caps, graphics resource recovery and independent pause owners.
+  Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
+  native keys and moving touch, vertical page scrolling, literal GPU context
+  loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
+  All thirty new components are implemented; the catalog is 429. Ninety-one
+  extensions, Pro seams and final audits remain. Earlier phase counts below
+  are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The four new Data/Navigation components use `tools/verify-data-nav-new.js`,
   `tools/verify-data-nav-new-models.js`, `tools/verify-data-nav-new-input.js`,
   `tools/verify-data-nav-new-clocks.js`, `tools/verify-data-nav-new-exports.js`
@@ -137,7 +161,7 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   reduced fades. Tests cover actual input, Canvas fallback/recovery events,
   exact tooltip deadlines, 24 equal-time 60/120/240Hz renderer stories, eight
   fresh offline full/native contexts, independent holds, queued scroll/touch and
-  disposal. The catalog is 425; 95 additions, Pro seams and final audits remain.
+  disposal. This group brought the catalog to 425; later counts appear above.
 - The four new Forms & Inputs components use `tools/verify-forms-new.js`,
   `tools/verify-forms-new-models.js`, `tools/verify-forms-new-input.js`,
   `tools/verify-forms-new-clocks.js`, `tools/verify-forms-new-exports.js` and

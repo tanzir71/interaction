@@ -15772,5 +15772,89 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "fx-liquid-glass": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Image & WebGL",
+      "glass",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "fx-plasma-orb": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "orb",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "fx-beam-grid": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Ambient",
+      "beams",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "fx-particle-text": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "useCases": [
+      "Raster & Glitch",
+      "particles",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });
