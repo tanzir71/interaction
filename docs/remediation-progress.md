@@ -20,6 +20,31 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Final shell accessibility pass
+
+The mobile search button now keeps a complete accessible name matching its
+visible catalog count. Install command Copy sits beside the tablist; only tabs
+belong inside it. Density changes update the two buttons without putting
+`aria-pressed` on the library grid. The setup strip is a named landmark, and
+source code and documentation tables can receive keyboard focus and scroll.
+
+Group counts retain their full text color. Shell accent labels, syntax colors
+and accessibility chips use contrasting inks in the light theme. These rules
+sit outside the portable Stage styles. Demo geometry, models, assets, metadata,
+frozen shared inputs and generated portable output remain unchanged.
+
+`node tools/verify-shell-accessibility.js http://127.0.0.1:4173` exercises
+actual keyboard search/focus restoration, command tabs/copy, density controls,
+native scrolling and computed text contrast at 1440/390/360px in both themes.
+It passes 287 assertions. Axe 4.14.1 reports zero automated violations across
+24 shell route/theme/width pages; its incomplete results remain manual-review
+work. Home transfers 327,607 bytes at 1440px and 337,749 bytes at 390px in both
+themes, including the document and response headers. This excludes demo-only
+Inter fonts and artwork while including demo JavaScript, shell/Kit assets and
+both Geist fonts. Visible shell text was checked for actual font-family use.
+All thirteen required local checks and three focused browser suites pass.
+The broader component, modal, recipe and performance audits remain open.
+
 ## Pro source scaffolding
 
 The published 520-item catalog remains free. The owner launch flag is disabled;

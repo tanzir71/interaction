@@ -2,6 +2,23 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The final shell accessibility pass repairs the unnamed mobile search trigger,
+Copy inside the install tablist, button-only ARIA on the library grid, missing
+keyboard access to scrollable source/tables, the setup landmark, faded group
+counts and low-contrast light-theme shell text. The dedicated shell verifier
+covers actual keyboard routes at 1440/390/360px in both themes. This does not
+close component-interior or modal audits, manual contrast review, pixel focus
+clipping, motion recipes or the earlier CPU4 timing findings.
+
+Initial Lighthouse 13.6 mobile measurements are unstable: Home ranged from
+65 to 100 and Elastic Tabs from 89 to 90 in exploratory default-throttling
+runs. A catalog-preload experiment did not establish an improvement and was
+removed. All reports and traces remain retained privately; these are findings,
+not accepted final scores. Keep both Lighthouse gates open until current-source
+repeat measurements support them. Transfer accounting must include the document
+and distinguish actual demo-only fonts from shell fonts; the first diagnostic
+incorrectly counted all Inter transfers as shell bytes.
+
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI

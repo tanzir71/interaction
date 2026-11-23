@@ -1575,3 +1575,12 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   The native reference is unchanged. A 150ms retained reference can inflate
   early measured fill; the eight-leaf measurement is 11.2%. This changes only
   low fill, leaving overflow, horizontal scroll and the 11px text gate strict.
+
+- Run `node tools/verify-shell-accessibility.js http://127.0.0.1:4173` after
+  changing shared shell names, tablists, density, source/table focus or text
+  colors. It uses actual keys, clipboard intent and scrolling at 1440/390/360px
+  in both themes. Keep the install Copy button outside the tablist, restrict
+  density listeners to buttons, and match the search name to its text and shortcut.
+  Light shell inks sit before the shared Stage marker so portable exports and
+  independent Stage palettes stay unchanged. This focused suite does not close
+  the remaining full accessibility, motion, Lighthouse or performance audits.

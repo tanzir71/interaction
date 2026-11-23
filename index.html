@@ -25,13 +25,13 @@ if (/^#\/c\/|^#(?!\/|cat-|top)[a-z0-9-]+$/.test(location.hash)) {
   const font=document.createElement('link');font.rel='preload';font.as='font';font.type='font/woff2';font.crossOrigin='anonymous';font.href='assets/fonts/inter-latin-variable.woff2';document.head.appendChild(font);
 }
 </script>
-<link rel="stylesheet" href="css/foundations.css?v=1">
+<link rel="stylesheet" href="css/foundations.css?v=2">
 <link rel="stylesheet" href="css/fonts.css?v=5">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230a0a0b'/><rect x='3' y='3' width='10' height='10' fill='none' stroke='%23fa7319' stroke-width='2'/></svg>">
 </head>
 <body>
 <a class="skip-link" href="#app">Skip to content</a>
-<div class="promo-strip">The INTRX MCP server is ready for your coding agent. <button id="promo-setup" class="btn btn--primary btn--sm">Set up →</button></div>
+<div class="promo-strip" role="region" aria-label="Agent setup">The INTRX MCP server is ready for your coding agent. <button id="promo-setup" class="btn btn--primary btn--sm">Set up →</button></div>
 <header class="site-header" id="site-header"></header>
 <main id="app" tabindex="-1" aria-busy="true"><div class="initial-loading" role="status">Loading the interaction library…</div></main>
 <div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
@@ -42,11 +42,11 @@ if (/^#\/c\/|^#(?!\/|cat-|top)[a-z0-9-]+$/.test(location.hash)) {
 <script src="js/shell/stage.js?v=5" defer></script>
 <script src="js/shell/router.js?v=4" defer></script>
 <script src="js/shell/ui.js?v=6" defer></script>
-<script src="js/shell/views/home.js?v=4" defer></script>
-<script src="js/shell/views/library.js?v=5" defer></script>
-<script src="js/shell/views/detail.js?v=7" defer></script>
-<script src="js/shell/views/docs.js?v=4" defer></script>
+<script src="js/shell/views/home.js?v=5" defer></script>
+<script src="js/shell/views/library.js?v=6" defer></script>
+<script src="js/shell/views/detail.js?v=8" defer></script>
+<script src="js/shell/views/docs.js?v=5" defer></script>
 <script src="js/shell/palette.js?v=4" defer></script>
-<script src="js/shell/main.js?v=4" defer></script>
+<script src="js/shell/main.js?v=5" defer></script>
 </body>
 </html>
