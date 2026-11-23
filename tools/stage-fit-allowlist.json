@@ -1569,6 +1569,16 @@
         22,
         22
       ]
+    },
+    "nav-pagination-morph": {
+      "reason": "Owner clarification, 15 Nov 2026: preserve the exact sparse v4 pagination geometry. Two 30×30 arrow buttons at 96,88 and 246,88 flank the original 80×8 five-page indicator at 146,99; their combined 180×30 reference bounds occupy about 5.5% of the 372×264 stage. The native canvas fits the original geometry without enlarging the controls. This exception changes only the low-fill gate.",
+      "figmaNode": "146:1241",
+      "figmaUrl": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=146-1241",
+      "selector": ".d-ext-nav-pages-native-node[data-native-node=\"146:1245\"]",
+      "designSize": [
+        80,
+        8
+      ]
     }
   }
 }

@@ -141,8 +141,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Tests cover 24 six-second 60/120/240Hz renderer stories, real scaled mouse,
   native keys and moving touch, vertical page scrolling, literal GPU context
   loss/rebuild, software/SVG fallback, cleanup and eight fresh offline contexts.
-  All thirty new components and the first fifty-five extensions are implemented;
-  the catalog is 484. Thirty-six extensions, Pro seams and final audits remain. Earlier phase counts below
+  All thirty new components and the first sixty extensions are implemented;
+  the catalog is 489. Thirty-one extensions, Pro seams and final audits remain. Earlier phase counts below
   are historical. Keep earlier private helpers, inputs and evidence frozen.
 - The first ten Agent & AI UI extensions use `tools/verify-agent-ext.js`,
   `tools/verify-agent-ext-models.js`, `tools/verify-agent-ext-input.js`,
@@ -165,6 +165,28 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   models and cleanup. Creator's sparse exception changes only the fill gate.
   This group brought the catalog to 439; later counts appear above. Keep all
   prior phase private helpers, inputs and archived publication evidence frozen.
+- The five Navigation extensions use `tools/verify-nav-ext.js`,
+  `tools/verify-nav-ext-models.js`, `tools/verify-nav-ext-input.js`,
+  `tools/verify-nav-ext-clocks.js`, `tools/verify-nav-ext-exports.js`,
+  `tools/verify-nav-ext-holds.js`, `tools/verify-nav-ext-touch.js` and
+  `tools/verify-nav-ext-pointer.js` against the local 4173 server. Preserve all
+  56 exact native layers and twelve original SVG slots using eleven unchanged
+  files. Full models retain fifteen projects across five pages, four portfolio
+  destinations, five documentation sections, five mobile panes and nine complete
+  articles. Keep 200/300ms elastic edges, the rolling page number, bounded original
+  scribble masks, fractional field calibration, source-time 0.18 followers and
+  finite analytical settling. Mobile keeps the small 1.03 pop, icon return and
+  shared masked notch. Sidebar labels share the 16px native row stencil after
+  input, retaining actual glyph clearance. Compact canvases are 324×144/144/192/
+  160/200; compensate centering and preserve the original artwork coordinates,
+  sizes and Stage zoom. Natural-width labels remain 11px without compressed type.
+  Only Pagination adds a documented low-fill exception for its exact sparse
+  30px arrows and 80×8 indicator. Eight suites pass 81,389 checks, including 30
+  six-second 60/120/240Hz renderer stories, ten fresh network-blocked full/native
+  contexts, twenty independent hold stories, real scaled mouse, moving touch,
+  actual glyph ink and vertical page scroll. The catalog is 489; 31 extensions,
+  Pro seams and final audits remain. Keep earlier private helpers, inputs and
+  archived publication evidence frozen.
 - The five Gallery extensions use `tools/verify-gallery-ext.js`,
   `tools/verify-gallery-ext-models.js`, `tools/verify-gallery-ext-input.js`,
   `tools/verify-gallery-ext-clocks.js`, `tools/verify-gallery-ext-exports.js`,
@@ -183,8 +205,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Eight suites pass 68,775 checks, including independent numerical integration,
   30 six-second 60/120/240Hz renderer stories, ten fresh network-blocked full/native
   contexts, twenty independent hold stories, actual moving touch and page scroll.
-  No new fill or overflow exceptions are added. The catalog is 484; 36 extensions,
-  Pro seams and final audits remain. Keep earlier private helpers, inputs and
+  No new fill or overflow exceptions were added. This group brought the catalog
+  to 484; later counts appear above. Keep earlier private helpers, inputs and
   archived publication evidence frozen.
 - The twelve Layout & UI extensions use `tools/verify-layout-ext.js`,
   `tools/verify-layout-ext-models.js`, `tools/verify-layout-ext-input.js`,

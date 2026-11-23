@@ -7,15 +7,53 @@ sixteen Showcase and four Framer compositions. All thirty new Agent & AI UI,
 Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation and Visual FX components bring
 the catalog to 429. Ten Agent & AI UI, ten Buttons & Micro and ten Forms & Inputs
 extensions bring it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
-it to 479. Five Gallery extensions bring it to 484; 36 extension components,
-Pro seams and final audits remain. Earlier sections retain historical counts.
+it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
+bring it to 489; 31 extension components, Pro seams and final audits remain. Earlier sections retain historical counts.
 
 The retired generated photo keys are absent from registered demo HTML, CSS and
-JavaScript. The fit audit boots all 484 demos with zero overflow, horizontal-scroll
-or low-fill findings. It has no tiny-text findings; all 157
+JavaScript. The fit audit boots all 489 demos with zero overflow, horizontal-scroll
+or low-fill findings. It has no tiny-text findings; all 158
 documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
+
+## Five Navigation extensions
+
+Pagination Morph, Scribble Underline, Proximity Nav, Mobile Tab Bar and Line
+Sidebar add five original implementations. They retain all 56 captured native
+layers and twelve exact SVG slots using eleven unchanged files, including both
+independent pagination arrows, the original scribble, both cursor slots and all
+mobile icons. There are no new photographs or runtime dependencies.
+
+Full models retain fifteen projects in five pages, four complete portfolio
+destinations, five documentation sections, five mobile panes with three records
+each and nine complete articles. Pagination uses interrupted 200/300ms elastic
+edges, native boundary disabling and a real rolling page number. The supplied
+scribble reveals and retracts through bounded masks. Distance fields use a
+source-time 0.18 follower with finite analytical settling and actual fractional
+browser-field calibration. Native sidebar glyphs share the 16px row stencil
+after input. Mobile icons rise, pop at no more than 1.03 and return while a true
+masked notch follows the shared position. Every full article remains scrollable.
+
+Compact canvases use 324×144/144/192/160/200 logical planes. Centering compensation
+preserves the original Figma coordinates and control sizes while fitting through
+the shared Stage zoom. Natural-width text stays at least 11px without compressed
+tracking. Pagination's exact sparse arrows and 80×8 indicator add one documented
+low-fill exception; text, overflow and horizontal-scroll gates stay active.
+
+Eight suites pass 81,389 checks, including independent curve/follower models,
+thirty six-second 60/120/240Hz renderer stories, ten fresh network-blocked full/
+native export contexts and twenty independent caller/document/viewport hold
+stories. Physical keys, mixed held buttons/Dock intent, scaled pointer targets,
+actual glyph ink clearance, moving touch, touch-click consumption, article access
+and vertical page scroll are verified. Twenty real desktop/mobile dark/light
+routes retain the tanziro.com footer; five native posters are refreshed. All 411
+earlier modules, 484 metadata records, seven protected shared inputs and prior
+private publication evidence stay unchanged. All thirteen required local commands
+pass, including the 489-demo fit audit with 158 valid reference exceptions.
+GitHub Actions stays disabled. The remaining 31 extensions, Pro seams and final
+recipe, accessibility, contrast, performance, cold-route and Lighthouse acceptance
+remain open.
 
 ## Five Gallery extensions
 

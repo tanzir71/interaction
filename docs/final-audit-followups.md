@@ -7,11 +7,21 @@ new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
 extensions brought it to 439. Ten Buttons & Micro and ten Forms & Inputs
 extensions brought it to 459. Eight Visual FX extensions bring it to 467. Twelve Layout & UI extensions bring
-it to 479. Five Gallery extensions bring it to 484; 36 extension components
-and Pro seams remain. Both strict static audits now pass.
+it to 479. Five Gallery extensions bring it to 484. Five Navigation extensions
+bring it to 489; 31 extension components and Pro seams remain. Both strict static audits now pass.
 Active legacy aliases are retired and the shared Stage/Dock correction is
 implemented in `css/foundations.css` and the portable exporter extension. Resolve
 the final recipe, accessibility and performance findings before acceptance.
+The five Navigation extensions retain 56 exact native layers and twelve original
+SVG slots using eleven unchanged files. Preserve complete page/destination/pane/
+article models, elastic-edge reversal, the real page reel, source-fixed distance
+followers, finite settling, fractional field calibration, shared notch and small
+pop. Keep native row-stencil glyph clearance, original artwork coordinates and
+shorter Stage canvases; do not replace these with inner scaling or compressed
+type. Pagination adds only the documented sparse-fill exception. Thirty equal-
+time renderer stories, ten fresh offline contexts, twenty independent hold
+stories and real input establish functional behavior; final timing, contrast,
+cold-route and Lighthouse acceptance remain open.
 The five Gallery extensions retain all 93 exact native layers, eighteen photo
 slots and complete five/eleven/six/three/five-record models. Preserve velocity
 carry, the native Dusk/full forestDark distinction, spine hinges, conserved photo

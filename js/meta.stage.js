@@ -17478,5 +17478,180 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "nav-pagination-morph": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next page"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Navigation & Menus",
+      "pages",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "nav-scribble-underline": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next link"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      144
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Navigation & Menus",
+      "scribble",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "nav-proximity-links": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next section"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      192
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Navigation & Menus",
+      "proximity",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "nav-mobile-tabbar": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next tab"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      160
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Navigation & Menus",
+      "tabs",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
+  },
+  "nav-line-sidebar": {
+    "designSize": [
+      640,
+      520
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "action": "next",
+        "label": "Next section"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "thumbDesignSize": [
+      324,
+      200
+    ],
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Navigation & Menus",
+      "lines",
+      "accessible"
+    ],
+    "addedAt": "2026-11"
   }
 });
