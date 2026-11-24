@@ -1837,3 +1837,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   rendering; no animation pose is normalized in the hold harness. Keep the
   original failures and all earlier private evidence frozen. Shared runtime,
   Stage, assets and native geometry remain unchanged; final audits stay open.
+
+- `node tools/verify-interactive-palettes.js http://127.0.0.1:4173` and
+  `node tools/verify-interactive-palette-states.js http://127.0.0.1:4173` cover
+  ten full previews: Theme Shift, Mesh, Autocomplete, Creator, Cipher, Timeline,
+  Cursors, Sound Kit, LED Display and Liquid. Preserve the original CSS prefix,
+  all HTML/metadata/native artwork and exact controller edit contracts. Theme
+  Shift keeps every original interpolated channel; full text keeps that ink
+  when readable and uses black/white only when required. Timeline exposes its
+  original reached state for a full-only optical floor; progress math and native
+  opacity stay exact. Contrast checks include ancestor opacity. Liquid retains
+  its white percentage with a 1.5 physical-pixel dark halo. Check its actual
+  paint at 0/68/100 and both widths. Cipher's twelve random glyph strings are
+  incidental artwork; retain their raw axe findings and exact original ink.
+  Keep Autocomplete's original word arrivals and distinguish transient fades
+  from settled text. Native comparisons remain exact same-instance CSS
+  roundtrips with GPU disabled; they do not certify default-GPU timing. Final
+  catalog accessibility, native ink preference, motion and performance remain
+  open. Earlier private inputs, helpers and evidence stay frozen.

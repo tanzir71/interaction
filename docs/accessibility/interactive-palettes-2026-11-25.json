@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-25",
+  "baseline": "f9901106f3fa344e6ecfa31aafceddfe6dabc194",
+  "scope": "Ten full-view contrast repairs. Original CSS is an exact prefix. All HTML, metadata, models, datasets, artwork and native factories remain intact. Two exact renderer edits expose timeline reach state and add contrast-aware full theme ink without changing the original theme interpolation.",
+  "repairs": [
+    "scroll-color-theme",
+    "gradient-mesh-drift",
+    "ai-autocomplete",
+    "ai-agent-creator",
+    "ui-evervault-card",
+    "ui-timeline-progress",
+    "ui-realtime-cursors",
+    "ui-sound-kit",
+    "led-segment-display",
+    "progress-blob-fill"
+  ],
+  "preservation": {
+    "components": 520,
+    "unchangedJS": 518,
+    "unchangedHTML": 520,
+    "unchangedMetadata": 520,
+    "unchangedDefinitions": 510,
+    "changed": [
+      "scroll-color-theme",
+      "gradient-mesh-drift",
+      "ai-autocomplete",
+      "ai-agent-creator",
+      "ui-evervault-card",
+      "ui-timeline-progress",
+      "ui-realtime-cursors",
+      "ui-sound-kit",
+      "led-segment-display",
+      "progress-blob-fill"
+    ],
+    "fullRendererContracts": [
+      {
+        "id": "scroll-color-theme",
+        "originalSHA256": "71f496cd7207e4e8aa8d982078783c866e2d15945481721a9248dcd72a80568e",
+        "currentSHA256": "9a3aad4048b50fc42f7369abff4e5144d3cc6aa6249900bd42f65eb8d00efe77",
+        "edits": [
+          {
+            "needle": "if(!thumb)for(const[k,v]of Object.entries(draw.colors))viewport.style.setProperty('--theme-'+k,v);",
+            "replacement": "if(!thumb){for(const[k,v]of Object.entries(draw.colors))viewport.style.setProperty('--theme-'+k,v);const luminance=color=>color.match(/[\\d.]+/g).slice(0,3).map(Number).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4;}).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0),readable=(ink,background)=>{const a=luminance(ink),b=luminance(background);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05)>=4.5?ink:(b+.05)/.05>=1.05/(b+.05)?'#000':'#fff';};for(const key of['ink','muted','accent'])viewport.style.setProperty('--theme-readable-'+key,readable(draw.colors[key],draw.colors.bg));viewport.style.setProperty('--theme-readable-surface-ink',readable(draw.colors.ink,draw.colors.surface));}"
+          }
+        ]
+      },
+      {
+        "id": "ui-timeline-progress",
+        "originalSHA256": "4bcc9d0c15e5e87056bb46c36085441d1055edf0a4432f6ad1559eb13d922860",
+        "currentSHA256": "810b92d1adeea2fac3c751447675ee858a465ce9e9db594d951fa9d706468303",
+        "edits": [
+          {
+            "needle": "[...content.querySelectorAll('article')].forEach((n,i)=>{n.style.opacity=states[i].reached?'1':'.3';",
+            "replacement": "[...content.querySelectorAll('article')].forEach((n,i)=>{const reached=String(states[i].reached);if(n.dataset.reached!==reached)n.dataset.reached=reached;n.style.opacity=states[i].reached?'1':'.3';"
+          }
+        ]
+      }
+    ],
+    "sharedRuntimeStageFoundationsExact": true
+  },
+  "verification": {
+    "palettes": {
+      "file": "verification-final/2026-11-24T22-29-39-733Z/report.json",
+      "sha256": "962a351eb885ef3fbd90d068ada2106f7f5a7957539d92117f5cf50bfa6140f7",
+      "layouts": 160,
+      "nativeExactCSSRoundtrips": 80,
+      "freshOfflineExports": 20,
+      "measuredText": 464,
+      "minContrast": 4.675583033207839,
+      "noAnimationPoseNormalization": true,
+      "nativeCSSOracleUsesDisabledGPU": true
+    },
+    "states": {
+      "file": "states-final/2026-11-24T22-34-12-114Z/report.json",
+      "sha256": "8155772e196492057993ac4ccb6db9bc3ed324ab06845320c302d87578997557",
+      "stories": 21,
+      "measuredText": 278,
+      "minContrast": 4.795893581026062,
+      "originalThemeModelSamples": 1001,
+      "renderedThemeStates": 601,
+      "renderedThemeText": 9015,
+      "minThemeContrast": 4.515727780258459,
+      "paintedHalos": 12,
+      "physicalHalo": "Eight zero-blur shadows, 1.5 CSS pixels after the actual Stage zoom; actual darkened pixels at 68/100 and both widths. Full percentage geometry and complete liquid model remain exact.",
+      "sound": "Physical enable/tick/mute in a browser launched with --mute-audio; synthesis source unchanged."
+    },
+    "required": {
+      "started": "2026-11-24T22:33:03.045Z",
+      "browser": "C:/Users/tanzir/AppData/Local/intrx-audit/chrome/158.0.8127.88/chrome-win64/chrome.exe",
+      "rows": [
+        {
+          "name": "registry",
+          "args": [
+            "tools/verify-registry.js"
+          ],
+          "exitCode": 0,
+          "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+        },
+        {
+          "name": "stage",
+          "args": [
+            "tools/verify-stage.js",
+            "--strict"
+          ],
+          "exitCode": 0,
+          "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+        },
+        {
+          "name": "generated",
+          "args": [
+            "tools/build-registry.js",
+            "--check"
+          ],
+          "exitCode": 0,
+          "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+        },
+        {
+          "name": "motion",
+          "args": [
+            "tools/verify-motion.js",
+            "--strict"
+          ],
+          "exitCode": 0,
+          "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+        },
+        {
+          "name": "library",
+          "args": [
+            "tools/verify-library.js",
+            "http://127.0.0.1:4173"
+          ],
+          "exitCode": 0,
+          "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+        },
+        {
+          "name": "fit",
+          "args": [
+            "tools/audit-stage-fit.js",
+            "http://127.0.0.1:4173"
+          ],
+          "exitCode": 0,
+          "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+        }
+      ],
+      "finished": "2026-11-24T22:48:29.507Z"
+    },
+    "packageTests": {
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "logSHA256": "cdbd77c9653c984ae4544425c48b80b97ee69d3bedb17b794bb38cded05fb2f2"
+    }
+  },
+  "axe": {
+    "before": {
+      "cases": 40,
+      "violations": 28,
+      "incomplete": 28,
+      "errors": 0,
+      "file": "before-axe/2026-11-24T22-08-20-631Z/report.json",
+      "sha256": "6b2946ae8aa420af2cbb383258771bbab2d65db9b0c9c4d7101329ec2b8fd962"
+    },
+    "after": {
+      "cases": 40,
+      "violations": 6,
+      "incomplete": 30,
+      "errors": 0,
+      "file": "after-axe-final/2026-11-24T22-30-57-745Z/report.json",
+      "sha256": "9296b6fc2fd867d5a524f3c9e7bb45c8038f660272245d6a387327c98c9b2606"
+    },
+    "classification": [
+      {
+        "id": "ui-evervault-card",
+        "cases": 4,
+        "assessment": "Review inference: twelve exact captured random glyph strings convey no readable message and are incidental artwork under SC 1.4.3. Keep their original dark base, seeded scrambling, masks and raw axe flags. Only full help text changes.",
+        "source": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "stringsSHA256": "9c3c43f2630fced1b9ff00933564206c06febdd98bb51e11c58ffd2343a1f711"
+      },
+      {
+        "id": "ai-autocomplete",
+        "cases": 2,
+        "assessment": "The initial normal-motion scan catches an original word arrival at low opacity. Preserve original timing, transform, blur, words and model. Both normal-motion settled stories measure every ghost word above 4.5 and accept the complete suggestion with real Tab input."
+      }
+    ],
+    "incomplete": "Thirty raw incomplete results remain archived for manual whole-catalog review; this bounded batch is not a blanket axe or WCAG pass."
+  },
+  "design": {
+    "native": "Original CSS is an exact prefix; full-only selectors match zero native nodes. All 520 HTML and metadata entries remain exact. No source asset, font, photo credit, design size, native poster or allowlist changes.",
+    "theme": "Preserve every original background/surface/ink/muted/accent interpolation and model result. Only additional full-view readable ink variables change failing painted text. Original ink is retained whenever it meets 4.5.",
+    "timeline": "Original progress lag, thresholds, complete articles, original inline opacity, transforms and native branch remain exact. The full renderer exposes reached state and CSS supplies a 0.6 optical opacity floor with theme-aware copy.",
+    "liquidReference": "https://www.w3.org/WAI/WCAG22/Techniques/general/G18"
+  },
+  "remaining": [
+    "Native Figma ink preference and broader catalog/manual/incomplete accessibility review.",
+    "Motion-recipe timing, literal background visibility, CPU4 frame rate, cold-route paint and Lighthouse acceptance.",
+    "Default-GPU pixel/readback variance is not certified by the explicit GPU-disabled native CSS roundtrip."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly. No PR. Preserve disabled GitHub Actions and the owner $0 stop budget.",
+    "fullGoalComplete": false
+  },
+  "compatibility": {
+    "at": "2026-11-24T22:42:07.786Z",
+    "file": "tools/verify-interface-palettes.js",
+    "sha256": "7bb417144508070ef7f4cb4e7f80839660ce1e9e5da0eb01048aeee18724a4ba",
+    "contracts": 12,
+    "passed": true,
+    "scope": "Executed the complete public source-contract block; unchanged eleven interface renderers retain their earlier evidence. Liquid actual layouts/native/export/halo paint are covered by this batch."
+  },
+  "visualReview": {
+    "file": "after-light-review.png",
+    "sources": {
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\scroll-color-theme-390-light-reduced-full.png": "11da8c75fe405c114fae98e9140b51002a37156deb73c639c9b63614e1f3a5ca",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\gradient-mesh-drift-390-light-reduced-full.png": "4d02d29c6cd25252f469c88557c2af3e06ffc2f3ddc3d4a24ad721ea18f4ad6c",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ai-autocomplete-390-light-reduced-full.png": "15c6ec6082d2ec025e96071f3c887aa8ad9b6012d2ba7c19fe26aeaa219e18d3",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ai-agent-creator-390-light-reduced-full.png": "73e4535cc33e44c83a394523b55f9e0b148137b179d4115ec2b0e6d79a9ca273",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ui-evervault-card-390-light-reduced-full.png": "6b5be85abcd0d8a7890f6d5219ff8b9c90ea8230705d9bb52bef3c67bb11dda4",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ui-timeline-progress-390-light-reduced-full.png": "a7e1636346277af34a5b0c8e36b302f65b657cb07ddde44c5a0a50c901ae3a57",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ui-realtime-cursors-390-light-reduced-full.png": "794e6ac62fb00500106ef65d5ace152aabf950a0c8060ea6441899a2e506a499",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\ui-sound-kit-390-light-reduced-full.png": "640d17613ade30b14f77d144599ac88227bf4a1309936391eaf8c52721c22cc2",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\led-segment-display-390-light-reduced-full.png": "b2748a73c8347309cf53a1bb2c168624f953ce25764a64768c820bafeb6406a9",
+      ".artifacts\\final-interactive-palettes-v10\\verification-final\\2026-11-24T22-29-39-733Z\\progress-blob-fill-390-light-reduced-full.png": "b667df73f82f33607151e00f0fa7036b2a70612f9c2a82e2372d88b8f654c8bf"
+    },
+    "assessment": "Reviewed all ten light full compositions, plus full-size Creator/Timeline and the completed Liquid percentage. Original composition bounds remain exact."
+  }
+}

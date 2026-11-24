@@ -12,7 +12,7 @@ const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:41
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/interface-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/interface-palettes-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/interface-palettes-before.json', 'tools/fixtures/interactive-palettes-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
 const report = {started:new Date().toISOString(), inputs, scope:'Twelve full interface palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review.', capture:'Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.', browserArgs:['--disable-gpu'], layouts:[], native:[], ink:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
@@ -22,7 +22,15 @@ for (const item of fixture.items) {
  assert.equal(hash(demo.js), item.jsSHA256, 'Unchanged controller '+demo.id);
  for (const [key, value] of Object.entries(item.definition)) if (key !== 'css') assert.deepEqual(JSON.parse(JSON.stringify(demo[key])), value, 'Unchanged '+demo.id+'.'+key);
  assert(demo.css.startsWith(item.definition.css), 'Original CSS remains an exact prefix');
- const suffix = demo.css.slice(item.definition.css.length).replace(/\/\*[\s\S]*?\*\//g, '').trim();
+ let phaseCSS=demo.css;
+ if(demo.id==='progress-blob-fill'){
+  // The later full-only percentage halo has its own exact contract and paint suite.
+  const optical=require('./fixtures/interactive-palettes-before.json').items.find(i=>i.definition.id===demo.id);
+  assert(demo.css.startsWith(optical.definition.css),'Exact accepted interface palette before the halo');
+  assert.equal(hash(demo.css.slice(optical.definition.css.length)),'300ce0a4388a8fcd18c361f8788e93c886b6230463dad78a5ed134f8642ec990','Only the recorded Liquid halo may follow the interface palette');
+  phaseCSS=optical.definition.css;
+ }
+ const suffix = phaseCSS.slice(item.definition.css.length).replace(/\/\*[\s\S]*?\*\//g, '').trim();
  const rules = [...suffix.matchAll(/([^{}]+)\{([^{}]*)\}/g)];
  assert.equal(rules.map(r=>r[0]).join(''), suffix);
  for (const [, selector, declarations] of rules) {
