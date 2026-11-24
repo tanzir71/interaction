@@ -1813,9 +1813,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   in each theme elsewhere in the run. Preserve those missing-field observations.
   Native PNG comparisons use the explicit GPU-disabled CSS roundtrip; default
   GPU behavior, primary AX names and timing remain separate checks. Do not
-  equate independent in-progress CSS transitions: full geometry uses explicit
-  animation time0 and records prior animation states. Diff's pre-existing CSS
-  initialization advancing under a source hold remains a separate motion issue.
+  change animation time in the palette harness: full geometry now uses the
+  actual runtime-held pose. The fixture accepts only the recorded Diff optical
+  revision, checked against its complete original factory and exact insertions.
   Do not
   introduce a pixel tolerance or alter earlier private evidence. Native ink,
   other states, manual incomplete findings and final acceptance remain open.
+
+- `node tools/verify-diff-holds.js http://127.0.0.1:4173` covers Diff Review's
+  local full-view initialization and newly created CSS transitions under holds.
+  Preserve its complete native program, CSS, HTML, original eight arrivals,
+  code, decisions and two-second outcome hold. Initial fitted rows settle before
+  their authored transitions are restored. Re-fits retain the original 12px/2px
+  initial stencil until the first source frame or applied decision/replay.
+  New running transitions created
+  during a runtime hold pause at creation; one runtime-owned wake job resumes
+  only live paused jobs, and cleanup cancels every owned job. Existing paused
+  transitions retain their current pose. Tests use actual first-frame samples,
+  physical decisions, mid-entrance pause, real viewport/caller ownership,
+  ordered held intents, disposal and fresh offline holds. Document visibility
+  coverage is explicitly instrumented because this headless browser kept all
+  background/minimized pages visible. Native PNG comparisons alone disable GPU
+  rendering; no animation pose is normalized in the hold harness. Keep the
+  original failures and all earlier private evidence frozen. Shared runtime,
+  Stage, assets and native geometry remain unchanged; final audits stay open.

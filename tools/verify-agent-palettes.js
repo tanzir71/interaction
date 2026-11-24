@@ -12,16 +12,21 @@ const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:41
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/agent-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/agent-palettes-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/agent-palettes-before.json', 'tools/fixtures/diff-hold-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
 const report = {started:new Date().toISOString(), inputs, scope:'Nine full terminal and agent palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review.', capture:'Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.', browserArgs:['--disable-gpu'], layouts:[], native:[], ink:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
 const checks = fixture.checks;
 report.scope+=' Dynamic Boot lines and Streaming markup may be absent before the held initial clock advances; absent fields are recorded, and every named field must render and pass in each theme elsewhere in this run.';
-report.scope+=' Full geometry uses explicit DOM animation time0 in both instances. Pre-normalization animation states remain recorded; CSS initialization under a production hold requires a separate motion fix.';
+report.scope+=' Full geometry uses the actual runtime-held pose without changing DOM animation time. The recorded Diff optical revision is checked against its original factory and exact insertions.';
 for (const item of fixture.items) {
  const demo = registry.demos.find(d => d.id === item.definition.id);
  assert.equal(hash(demo.js), item.jsSHA256, 'Unchanged controller '+demo.id);
+ if(item.controllerUpdate){
+  assert.equal(demo.id,'agent-diff-review','Only the recorded optical controller revision');
+  const contract=require('./fixtures/diff-hold-before.json');assert.equal(item.controllerUpdate.baselineSHA256,contract.jsSHA256);assert.equal(item.controllerUpdate.currentSHA256,item.jsSHA256);
+  let expected=contract.definition.js;for(const edit of contract.edits){assert.equal(expected.split(edit.needle).length,2);expected=expected.replace(edit.needle,edit.replacement);}assert.equal(demo.js,expected,'Complete original controller plus exact optical insertions');
+ }
  for (const [key, value] of Object.entries(item.definition)) if (key !== 'css') assert.deepEqual(JSON.parse(JSON.stringify(demo[key])), value, 'Unchanged '+demo.id+'.'+key);
  assert(demo.css.startsWith(item.definition.css), 'Original CSS remains an exact prefix');
  const suffix = demo.css.slice(item.definition.css.length).replace(/\/\*[\s\S]*?\*\//g, '').trim();
@@ -56,15 +61,7 @@ async function mount(browser, demo, {width, theme, reduced, mode}) {
  }, {data,width,mode});
  await page.evaluate(()=>document.fonts.ready);
  await page.evaluate(()=>Promise.all([...document.images].map(image=>image.decode())));
- const animationObservation=mode==='full'?await page.evaluate(()=>{
-  const stage=document.querySelector('.stage'),clock=stage._runtime.now();
-  const rows=stage._root.getAnimations({subtree:true}).map(animation=>{
-   const row={target:animation.effect?.target?.getAttribute('class'),playState:animation.playState,currentTime:animation.currentTime};
-   animation.pause();animation.currentTime=0;return row;
-  });
-  if(stage._runtime.now()!==clock)throw Error('Source clock advanced while normalizing the comparison pose');
-  return rows;
- }):[];
+ const animationObservation=mode==='full'?await page.evaluate(()=>document.querySelector('.stage')._root.getAnimations({subtree:true}).map(animation=>({target:animation.effect?.target?.getAttribute('class'),playState:animation.playState,currentTime:animation.currentTime}))):[];
  const geometry=await page.evaluate(()=>{
   const stage=document.querySelector('.stage'),root=stage._root,origin=root.getBoundingClientRect();
   return [...root.querySelectorAll('*')].map(n=>{const r=n.getBoundingClientRect(),s=getComputedStyle(n);return [n.tagName,r.x-origin.x,r.y-origin.y,r.width,r.height,s.fontFamily,s.fontSize,s.fontWeight,s.letterSpacing,s.lineHeight,s.transform];});
@@ -114,7 +111,7 @@ save();
     const prefix=[current.id,width,theme,reduced?'reduced':'normal',mode].join('-');
     try{if(mode==='thumb')nativeProof=await nativeDelta(before,current.css.slice(original.css.length),prefix);}finally{await before.close();}
     const after=await mount(browser,current,{width,theme,reduced,mode});try{
-     assert.deepEqual(after.geometry,before.geometry,'Exact layout '+JSON.stringify(spec));report.layouts.push({...spec,elements:after.geometry.length,exact:true,...(mode==='full'?{pose:'DOM animation time0 with source held; not a production-hold certificate',originalAnimations:before.animationObservation,currentAnimations:after.animationObservation}:{})});
+     assert.deepEqual(after.geometry,before.geometry,'Exact layout '+JSON.stringify(spec));report.layouts.push({...spec,elements:after.geometry.length,exact:true,...(mode==='full'?{pose:'Actual runtime-held pose; no animation seek',originalAnimations:before.animationObservation,currentAnimations:after.animationObservation}:{})});
      const png=await capture(after);fs.writeFileSync(path.join(output,prefix+'.png'),png);
      if(mode==='thumb')report.native.push({...spec,method:'same-instance CSS delta and restoration',...nativeProof,freshStartupSHA256:hash(png),exact:true});
      else {const result=await ink(after.page,current.id,theme);for(const row of result.rows)assert(row.ratio>=4.5,'Readable full ink '+prefix+' '+JSON.stringify(row));report.ink.push({...spec,...result});}

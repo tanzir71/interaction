@@ -1,0 +1,169 @@
+{
+  "date": "2026-11-25",
+  "baseline": "482dfd343c4659af89efb7ae16e13f4abb8df7c3",
+  "component": "agent-diff-review",
+  "problem": "At compact initialization, CSS transforms advanced while source time was held. Deliberate Accept under a caller hold also started27unmanaged CSS transitions. A held re-fit could retain an old device-space transform rather than the authored initial stencil.",
+  "change": "The full controller materializes its initial fitted rows before restoring their authored transitions. Before its first source frame or deliberate intent, new row transitions caused by re-fitting settle to the original twelve-pixel/two-pixel stencil. New running CSS transitions created under later runtime holds pause at their creation pose. One runtime-owned wake resumes only live paused jobs after all runtime holds release; cleanup cancels owned work. Existing paused poses retain their sampled ages.",
+  "scope": "A component-local full-view optical/lifecycle repair. The complete original model, native program, CSS, HTML, datasets, controls and shared runtime remain unchanged. This does not certify every final motion recipe, literal background-page visibility, CPU4 rendering, cold-route paint or whole-catalog acceptance.",
+  "preservation": {
+    "at": "2026-11-24T21:51:59.584Z",
+    "components": 520,
+    "unchangedDefinitions": 519,
+    "unchangedHTML": 520,
+    "unchangedCSS": 520,
+    "unchangedMetadata": 520,
+    "nativePrefixBytes": 3800,
+    "nativePrefixSHA256": "714487c50ed032c6da7df503004191b9bad8ed2be390276524e4f17df1f30f82",
+    "currentControllerSHA256": "46b36e7db778216117fd63a48a686e33faafb540c724b8bd8415d82de341c5e6",
+    "originalControllerSHA256": "4a68e795a4cc59191ac56ba6644808f5f1b3763cca4f5ca37e501172ae2d8515",
+    "opticalEdits": 6,
+    "inputs": {
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+      "js/demos.agent.agent-diff-review.js": "459ba849ef9e1b9939c9e3012f97c81c97acc4988c82dc27399d7062004ef2ef",
+      "tools/fixtures/diff-hold-before.json": "975965b8a613ef25618fe451b1dc5d37862ad4f87559188eb6e36d9ae91acac7"
+    }
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "checks": 482,
+    "stories": 29,
+    "storyKinds": {
+      "initial hold": 8,
+      "initial held re-fit": 4,
+      "physical held decision": 8,
+      "mid-entrance pause": 2,
+      "held playback speed": 3,
+      "actual viewport/caller ownership": 2,
+      "instrumented visibility/caller ownership": 1,
+      "ordered held intents": 1
+    },
+    "poseMethod": "Actual browser computed styles and geometry with the production runtime. The hold harness does not pause or seek CSS animations itself. It samples first-event paint through eight real frames, preserves source clocks/state/complete code, and verifies actual resumed motion. Reduced motion keeps its deliberate still.",
+    "initialRefit": "Four held widths:720,360,1440,390. Every row retains its original matrix(1,0,0,1,0,12) and blur(2px), with an unchanged held source clock and model.",
+    "playbackSpeeds": [
+      0.5,
+      2,
+      1
+    ],
+    "nativePixelCases": 8,
+    "nativePixelMethod": "Separate original/current native factory comparison with --disable-gpu. No pixel or numerical tolerance is added. The complete3800-byte native branch remains exact.",
+    "freshOfflineHolds": 2,
+    "visibility": "Real page scrolling covers viewport/caller ownership in both release orders. One document-visibility story explicitly instruments the visibility properties/events. Separate headless probes kept background and minimized pages visible; native background visibility is not certified here.",
+    "disposal": "Instrumented regular fixtures verify source-job release and inert late input. Fresh offline exports verify cleaned/aborted state, no running animation and inert late input; their internal source-job counter is not instrumented.",
+    "proofSHA256": "7fbfc1e5f2b639fcc637832456586fb496a41896b5e42207cc3c31baa58d5e49",
+    "requiredCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ],
+    "originalModels": {
+      "checks": 614,
+      "ids": [
+        "agent-diff-review",
+        "agent-knowledge-orbit",
+        "agent-context-compaction",
+        "agent-token-meter"
+      ],
+      "proofSHA256": "3bedf4de5697aa472ef3164a71d5ef049bd196b08fff9becb3da19f2d9409cb8",
+      "execution": {
+        "at": "2026-11-24T21:49:14.198Z",
+        "publicSource": "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-agent-models.js",
+        "publicSHA256": "c93b9b9e44c21e1b611904ed1c71bec64ccc5e702541e8bfc0f2b87ae829dc4c",
+        "executedSHA256": "465d211a95ccf1f92118c24ce209995f2f379ea8324de94d6cf852ca3ef6f58b",
+        "changes": [
+          "Route outputs to the new phase archive.",
+          "Select the explicitly recorded Chrome executable."
+        ],
+        "scope": "All assertions, original fixtures, coordinates, physical input and numeric/pixel bounds remain unchanged."
+      },
+      "scope": "The existing four-agent model verifier runs all original assertions, coordinates, fixtures and bounds unchanged. Its only execution adaptations route output to this phase and select Chrome explicitly. It covers full models, accounting, native input, artwork, compact layouts, lifecycle and offline exports."
+    },
+    "unitTests": 19,
+    "packageTests": 9,
+    "unitLogSHA256": "26a31cc66f3758ff9f5316af86efb1160590e5fe06c0ceb39fe4ff90dc2682e8",
+    "packageLogSHA256": "bb3c84648ee0db920ea1dcf600bccfef794c90ce83f8b345c3ffefe174f47878"
+  },
+  "paletteRegression": {
+    "layouts": 144,
+    "nativeCSSRoundtrips": 72,
+    "offlinePalettes": 18,
+    "textChecks": 7362,
+    "minimumTextRatio": 4.769571068087651,
+    "proofSHA256": "d8e34e3359be74b6dfc7c4528cd65979d95b11740a7ddd3a83fe8d003da2e7e6",
+    "scope": "The nine terminal/agent palettes now compare their actual runtime-held full poses. The earlier time-normalization workaround is removed. The fixture records this exact Diff optical controller revision and validates its original factory plus six reversible insertions. Other controller hashes, all CSS, HTML and native ink remain guarded."
+  },
+  "retainedDiagnostics": {
+    "baselineSHA256": "89bb274f439fab86478181ae201a45e57b8deac6b32dad47f78c894ff2af3ccc",
+    "firstFixSHA256": "9e13e10cbcf1a048dcf5fbd685ee2476a140a120326b3cf4a81cdd5ad0d66f12",
+    "heldRefitProbeSHA256": "ecf328479900c0cd4af8e802f3e56e940647d99a50bc323156eb278914afddd4",
+    "finalRefitProbeSHA256": "7dc7da450414e687686b71ce23c9b4a6455bd8637584910f16d30a64c6d945cc",
+    "visibilityProbeSHA256": "75b0b7b78f4f75504f17776fae70eaa2b2613872a49b813bddf4010e6ff92dd3",
+    "testCorrections": [
+      "Initial probe compared an observer-owned pending frame ID rather than only the semantic model; raw lifecycle fields remain recorded.",
+      "The new test first expected movement from reduced motion, then parsed CSS height with Number instead of parseFloat. Both failed attempts and their source versions remain retained.",
+      "The fresh offline fixture has no test-only pending-job counter. Offline disposal uses observable state/animation/input checks, while regular fixtures retain explicit job accounting."
+    ],
+    "initialFitRefinement": "The first fix held zoom-created transitions still but retained a device-space initial transform. The final source distinguishes the pre-source initial stencil from later interrupted/deliberate poses; the exact author-space stencil now passes across all four held widths.",
+    "noNumericOrPixelTolerance": true
+  },
+  "remaining": [
+    "Literal background-page visibility and the wider final motion-recipe audit.",
+    "Other palette/manual accessibility findings, native ink preference, photographic and filled-progress states.",
+    "Earlier default-GPU readback variance, CPU4 frame-rate findings, cold-route outliers and full performance acceptance."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly; no PR. Keep Actions disabled and preserve the owner $0 stop budget.",
+    "fullGoalComplete": false
+  }
+}

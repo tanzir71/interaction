@@ -2,6 +2,21 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Diff Review hold repair](motion/diff-holds-2026-11-25.json) fixes its compact
+initialization drift and CSS transitions created by deliberate input during a
+runtime hold. The local controller settles its fitted initial rows, owns new
+held transitions and resumes only live paused jobs when the runtime releases
+its holds. An initial held re-fit retains the original 12px offset and 2px blur;
+source frames and applied decisions/replays end that initialization rule.
+Existing interrupted poses, all original code/arrival/decision logic,
+the native program and shared runtime remain unchanged. The palette verifier
+now compares the actual runtime-held pose; its earlier explicit-time workaround
+and failed comparisons remain archived. Document visibility coverage in the new
+hold suite is explicitly instrumented; real viewport/caller ownership and
+physical keyboard stories are separate evidence. This scoped repair supersedes
+the Diff initialization finding below and leaves the final recipe, literal
+background visibility and performance audits open.
+
 The [terminal and agent palette pass](accessibility/agent-palettes-2026-11-25.json)
 corrects nine full compositions. Transparent copy follows Stage ink; the original
 dark Trading, Streaming and Diff panels keep their local palettes. Light-stage

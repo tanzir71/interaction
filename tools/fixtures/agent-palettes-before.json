@@ -1,6 +1,6 @@
 {
   "baseline": "d88e637f9147f7f6b405a0b3cf4d1d8456e5c5e3",
-  "scope": "Nine full terminal and agent palettes. All original controllers, HTML, geometry, assets, metadata and native artwork remain unchanged. New rules only alter full-view ink, including manual light-Stage findings obscured from axe by the Stage glow.",
+  "scope": "Nine full terminal and agent palettes. All original controllers, HTML, geometry, assets, metadata and native artwork remain unchanged. New rules only alter full-view ink, including manual light-Stage findings obscured from axe by the Stage glow. Diff Review uses the explicitly recorded optical hold revision, checked against its complete original factory and reversible insertions.",
   "checks": {
     "fui-terminal-boot": [
       {
@@ -717,7 +717,14 @@
           168
         ]
       },
-      "jsSHA256": "4a68e795a4cc59191ac56ba6644808f5f1b3763cca4f5ca37e501172ae2d8515"
+      "jsSHA256": "46b36e7db778216117fd63a48a686e33faafb540c724b8bd8415d82de341c5e6",
+      "controllerUpdate": {
+        "baselineSHA256": "4a68e795a4cc59191ac56ba6644808f5f1b3763cca4f5ca37e501172ae2d8515",
+        "currentSHA256": "46b36e7db778216117fd63a48a686e33faafb540c724b8bd8415d82de341c5e6",
+        "contract": "diff-hold-before.json",
+        "verification": "tools/verify-diff-holds.js",
+        "scope": "Recorded component-local initialization/held-CSS ownership additions; the complete native program, original full model, CSS, HTML and data remain unchanged."
+      }
     }
   ]
 }
