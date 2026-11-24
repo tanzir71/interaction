@@ -20,6 +20,40 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Component accessibility scan and form repairs
+
+The [initial component audit](accessibility/components-initial-2026-11-24.json)
+covers all 520 components in native/full views, both Stage palettes and both
+motion settings: 4,160 desktop cases with no page errors. Axe reports 726
+rule violations across 140 components and 1,945 incomplete results. These are
+findings for triage, not a site-wide accessibility pass. The stopped scan with
+an identity asset resolver is retained as invalid fixture diagnostics and is
+excluded from this evidence. The completed scan resolves local assets, uses
+catalog full-photo references and requires every supplied image to decode.
+
+Upload Dropzone now derives its spoken button name from its visible idle copy
+or complete file card. Signature Pad exposes its actual keyboard Canvas while
+keeping the sample lettering decorative. Date Range raises selectable
+adjacent-month dates from 2.79:1 to above 4.5:1. The 272-check regression uses a
+real file chooser, Tab, Space and Arrow keys at desktop/mobile widths in both
+themes and motion settings. The targeted 24-case scan has no automated
+violations, with eighteen incomplete results still requiring review. Full
+calendar weekday contrast and light-stage heading/help contrast remain open.
+
+All 24 rendered geometry checkpoints are identical. Twenty image crops match
+pixel for pixel, including all twelve native crops; four full calendar crops
+change only the intended date ink. The other 517 definitions, 444 modules,
+metadata, assets and six protected inputs remain unchanged. The native touch
+verifier now waits for the actual PointerEvent after CDP acknowledges a
+coalesced move; all 118 existing checks and numerical tolerances are retained.
+The final source-bound local verification is recorded in the linked report.
+
+The [Threads worker experiment](performance/threads-worker-2026-11-24.json)
+completed about 57–59 bitmaps per second with page CPU emulation at 4x, but
+worker throttling was not established and OffscreenCanvas changed clipped edge
+pixels. No Threads renderer change ships. Performance, remaining accessibility,
+motion recipes and final acceptance stay open.
+
 ## Converging Paths scroll reads
 
 Paths reads the actual scroll top and extent before its original SVG and

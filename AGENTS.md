@@ -1617,3 +1617,19 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   command streams and every RGBA channel must match that original execution
   exactly. Historical commands/pixel hashes remain immutable, and differences
   between browser backends are recorded without numeric or pixel tolerances.
+
+- `node tools/audit-component-accessibility.js http://127.0.0.1:4173 --axe=C:/path/to/axe.min.js`
+  scans initial component states using current Stage styles, decoded local
+  assets and catalog full-photo references. Playwright and axe remain external
+  audit dependencies. Use `--modes=full,thumb --motion=reduced,normal` for the
+  complete desktop matrix; `--ids=...`, `--width=390` and `--output=.artifacts/...`
+  select a focused fresh run. Preserve violations and incomplete results.
+  The baseline has 726 rule violations across 140 components; this is an open
+  triage list, not a conformance pass or a reason to suppress checks.
+  `node tools/verify-forms-accessibility.js http://127.0.0.1:4173` checks Upload's
+  visible name and real file chooser, selectable adjacent-month contrast and
+  Signature's actual Tab/Space/Arrow drawing. Keep sample lettering decorative,
+  the Canvas exposed and every native artwork layer unchanged. Full weekday
+  and light-stage heading/help contrast remain final-audit follow-ups. The
+  Forms new-input verifier awaits actual PointerEvent delivery after CDP touch
+  moves, keeping its existing models, numeric tolerances and 118 checks.

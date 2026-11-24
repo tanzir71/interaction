@@ -2,6 +2,37 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [initial component accessibility scan](accessibility/components-initial-2026-11-24.json)
+now covers all 520 components across native/full, dark/light and reduced/normal
+initial states: 4,160 cases, 726 rule violations across 140 components, 1,945
+incomplete results and no page errors. The source-bound report preserves every
+rule, affected condition and representative element. Triage thumbnail focus
+findings against the actual live/paused catalog contract; this fixture alone
+does not establish the complete catalog experience. The earlier stopped
+identity-resolver scan is invalid diagnostics, excluded from the report.
+
+Three initial form findings are repaired: Upload's visible text supplies its
+button name, Signature's real keyboard Canvas is exposed, and selectable
+adjacent-month dates exceed 4.5:1. The targeted scan clears the automated
+violations in 24 cases; 272 actual name/file-chooser/keyboard/contrast checks
+pass. Eighteen incomplete results remain. Manual review already confirms
+full-calendar weekday labels at 4.08:1 and an unreadable Upload heading on the
+light Stage. Repair these and audit light-stage heading/help text across the
+full compositions. Preserve the native reference geometry and artwork.
+
+Chrome 158 can acknowledge a touch move before delivering its PointerEvent.
+The old Precision assertion read 55.6 before delivery and 56.60000015 after
+delivery with the same production model. The verifier now awaits the actual
+event, retaining all 118 checks and original numerical tolerances. The failed
+run and both diagnostic observations remain archived.
+
+The [worker investigation](performance/threads-worker-2026-11-24.json) preserves
+completed-bitmap rates separately from source callbacks. Page CPU emulation
+does not independently establish worker throttling. Bitmap transport matches
+the original HTML Canvas pixels, but OffscreenCanvas clips differ at DPR 1/2;
+direct slices and alpha-mask variants also differ. No experiment is accepted,
+and native Threads' CPU4 finding remains open.
+
 The final shell accessibility pass repairs the unnamed mobile search trigger,
 Copy inside the install tablist, button-only ARIA on the library grid, missing
 keyboard access to scrollable source/tables, the setup landmark, faded group

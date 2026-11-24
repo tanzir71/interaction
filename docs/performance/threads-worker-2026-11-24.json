@@ -1,0 +1,177 @@
+{
+  "at": "2026-11-24T03:32:54.529Z",
+  "baselineCommit": "0bacfaaafd90a4bce78d7866c14c8a4468c5c129",
+  "status": "Unaccepted private experiment; no Threads source changes",
+  "scope": "In-memory worker prototype with complete native source model, unchanged source clocks and original six Dock actions. Actual completed worker bitmaps counted separately from main source RAF. Native antialiasing differs; not accepted.",
+  "workerSHA256": "2df94777bbf4fe15144c23d4376e7130f14616a7079d7af81019866337165c50",
+  "rows": [
+    {
+      "cpu": 1,
+      "dpr": 1,
+      "sourceFrames": 472,
+      "sourceFPS": 58.94105894105894,
+      "completedPaints": 469,
+      "completedPaintFPS": 58.587148383154464,
+      "paintMs": {
+        "median": 8.200000002980232,
+        "p95": 11.100000008940697,
+        "max": 19.100000008940697
+      },
+      "sourceDraws": 509,
+      "sourceElapsed": 8.43333333333326,
+      "events": 6,
+      "longTasks": []
+    },
+    {
+      "cpu": 1,
+      "dpr": 2,
+      "sourceFrames": 480,
+      "sourceFPS": 59.939311447159746,
+      "completedPaints": 479,
+      "completedPaintFPS": 59.717901627897255,
+      "paintMs": {
+        "median": 9.299999997019768,
+        "p95": 12.399999991059303,
+        "max": 19.399999991059303
+      },
+      "sourceDraws": 488,
+      "sourceElapsed": 8.083333333333265,
+      "events": 6,
+      "longTasks": []
+    },
+    {
+      "cpu": 4,
+      "dpr": 1,
+      "sourceFrames": 480,
+      "sourceFPS": 59.93856297295272,
+      "completedPaints": 461,
+      "completedPaintFPS": 57.47413663844846,
+      "paintMs": {
+        "median": 9.700000002980232,
+        "p95": 12.299999997019768,
+        "max": 18
+      },
+      "sourceDraws": 496,
+      "sourceElapsed": 8.2166666666666,
+      "events": 6,
+      "longTasks": []
+    },
+    {
+      "cpu": 4,
+      "dpr": 2,
+      "sourceFrames": 480,
+      "sourceFPS": 59.93781451743816,
+      "completedPaints": 473,
+      "completedPaintFPS": 58.98525368657835,
+      "paintMs": {
+        "median": 8.800000011920929,
+        "p95": 11.800000011920929,
+        "max": 14.799999997019768
+      },
+      "sourceDraws": 496,
+      "sourceElapsed": 8.2166666666666,
+      "events": 6,
+      "longTasks": []
+    }
+  ],
+  "throttleScope": "CPU emulation was applied to the page target. Worker throttling was not independently established; these rates do not prove a 4x worker CPU budget pass.",
+  "isolation": [
+    {
+      "dpr": 1,
+      "offscreen": false,
+      "type": "canvas",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 1,
+      "offscreen": false,
+      "type": "bitmap",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 1,
+      "offscreen": false,
+      "type": "offscreen-cache",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 1,
+      "offscreen": true,
+      "type": "canvas",
+      "changed": 3708,
+      "maxAlpha": 78,
+      "maxPremul": 78
+    },
+    {
+      "dpr": 1,
+      "offscreen": true,
+      "type": "bitmap",
+      "changed": 3708,
+      "maxAlpha": 78,
+      "maxPremul": 78
+    },
+    {
+      "dpr": 1,
+      "offscreen": true,
+      "type": "offscreen-cache",
+      "changed": 3708,
+      "maxAlpha": 78,
+      "maxPremul": 78
+    },
+    {
+      "dpr": 2,
+      "offscreen": false,
+      "type": "canvas",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 2,
+      "offscreen": false,
+      "type": "bitmap",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 2,
+      "offscreen": false,
+      "type": "offscreen-cache",
+      "changed": 0,
+      "maxAlpha": 0,
+      "maxPremul": 0
+    },
+    {
+      "dpr": 2,
+      "offscreen": true,
+      "type": "canvas",
+      "changed": 5775,
+      "maxAlpha": 43,
+      "maxPremul": 43
+    },
+    {
+      "dpr": 2,
+      "offscreen": true,
+      "type": "bitmap",
+      "changed": 5775,
+      "maxAlpha": 43,
+      "maxPremul": 43
+    },
+    {
+      "dpr": 2,
+      "offscreen": true,
+      "type": "offscreen-cache",
+      "changed": 5775,
+      "maxAlpha": 43,
+      "maxPremul": 43
+    }
+  ],
+  "remaining": "Offscreen clipping changes visible edge pixels. The original native renderer still misses the recorded CPU4 frame budget. Preserve every trial; no performance acceptance claimed."
+}
