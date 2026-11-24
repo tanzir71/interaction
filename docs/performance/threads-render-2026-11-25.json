@@ -1,0 +1,528 @@
+{
+  "date": "2026-11-25",
+  "timezone": "Asia/Dhaka",
+  "baseline": "7adc1c45e5830bfb47966b09c25c8a9eba5f7af2",
+  "change": "Native Reactive Threads defers pure hidden full-composition command generation until inspected. Full mode remains eager. The original native renderer, source factory, HTML, CSS and supplied textures are unchanged.",
+  "scope": "Verified removal of unused source drawing work, with exact source and pixel equivalence. No consistent frame-rate improvement established; the CPU4 60fps gate remains open.",
+  "preservation": {
+    "at": "2026-11-24T18:53:56.645Z",
+    "baseline": "7adc1c45e5830bfb47966b09c25c8a9eba5f7af2",
+    "components": 520,
+    "unchangedCompleteDefinitions": 519,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "changedFields": [
+      "showcase-threads.js",
+      "showcase-threads.prompt"
+    ],
+    "originalFactorySHA256": "8f67098c9c26c32bec5da8c8d565bcb07b178b6154f79101b697a5f849e5e644",
+    "scope": "Independent HEAD-source replay with only the changed module substituted from Git.519complete definitions,allCSS/HTML/metadata unchanged; original Threads factory byte-identical.",
+    "nativeRendererByteIdentical": true
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "modelChecks": 31202,
+    "modelStories": 12,
+    "work": {
+      "unobservedOriginalSourceDraws": 362,
+      "unobservedCurrentSourceDraws": 0,
+      "currentSourceDrawsAfterInspection": 1,
+      "logicalDraws": 362
+    },
+    "rendererStories": 16,
+    "paintCheckpoints": 164,
+    "comparedRGBABytes": 112810240,
+    "rendererProofSHA256": "691bdfb5c23606141476b1d353737b89086083c62e280fde80fad6e5cba66df8",
+    "exactRGBA": true,
+    "scope": "Eight six-second rendered stories, four reduced-motion deliberate paint cases and four original-timeline copied/direct readback cases. Independent native/full normal/reduced 60/120/240Hz source-model stories cover historical reads after prospective input, recorder styles, witnesses, clocks, draw/notification counts and disposal. Existing onDraw is a dirty notification and ignores its command argument; arbitrary external deferred payloads are not promised.",
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null
+      }
+    ],
+    "historical140": {
+      "reportSHA256": "bcc121247430daa5a32cbf3500ebcf155becddea85a4ce0a7953a79089fbebef",
+      "groups": [
+        "models",
+        "geometry",
+        "input",
+        "holds",
+        "runtime",
+        "exports"
+      ],
+      "scope": "Complete source-bound historical Showcase suite:72 model stories,24 native layouts,48 input cases,24 hold cases,nine runtime groups and24 fresh offline exports."
+    },
+    "current158": {
+      "rows": [
+        {
+          "name": "input",
+          "exitCode": 0,
+          "sourceSHA256": "0d583dfd3db17b11a514b8032d99c01e6dd5b6904d11752945c41831a0342de6",
+          "observerSHA256": "9d6429b2179655c33f81b3a318a9e9fea8883928f006631ef9eb5069080821bb",
+          "proofSHA256": "5b240885bb18baf1f8f7690523ab6303481725bc976205cf30307a6178611a9a"
+        },
+        {
+          "name": "holds",
+          "exitCode": 0,
+          "sourceSHA256": "0d583dfd3db17b11a514b8032d99c01e6dd5b6904d11752945c41831a0342de6",
+          "observerSHA256": "d2e6da8cf1a22a9ff9536f3bb60d3a40fba8e5aae30ba3f419d175c968a8fd87",
+          "proofSHA256": "7f3f25d4cac89a69cc2003daf5cf9319d94abb98c382e9c8d23a955dc6c4813b"
+        },
+        {
+          "name": "runtime",
+          "exitCode": 0,
+          "sourceSHA256": "0d583dfd3db17b11a514b8032d99c01e6dd5b6904d11752945c41831a0342de6",
+          "observerSHA256": "1fbaaf5196cc35b21fb22f6b8fc6ba49d390fe39a457eb4c2acdaa89aedaa000",
+          "proofSHA256": "40ad9c3629c83a6fbe5d031dc26df7ebd7d7e501b24077f82f0a6ba08ab957bb"
+        },
+        {
+          "name": "exports",
+          "exitCode": 0,
+          "sourceSHA256": "0d583dfd3db17b11a514b8032d99c01e6dd5b6904d11752945c41831a0342de6",
+          "observerSHA256": "77b41f8ff7c8f36adb5fc8c8d7ada7ac88e77636d436bb45f80096663431bcb2",
+          "proofSHA256": "850c5640966cfe4e31b02e5972632526f5fb04ca4f6095274297a4c50182426c"
+        }
+      ],
+      "engineEvidenceSHA256": "d5536cb4b813d70ec51524b4209ad30308e08830583670a49f4fcd84d5f9a950"
+    }
+  },
+  "timing": {
+    "trials": [
+      {
+        "name": "profile-original",
+        "reportSHA256": "7e51970ab70a6f6074b2b0df828effea7b72919cab6a466023fc71c2a4c9933f",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "original",
+          "jsSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "15d5d06cdf8449fb00f8a2a53b95f70d0bb17f8561b004ffe23f24688790a0b7",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 15.91742834048374,
+            "firstPaintMs": 331.4,
+            "readyMs": 130.09999999962747,
+            "p95": 100.20000000000073,
+            "traceSHA256": "4dfd6896a5ba7eba7b7300bd4e6bc28b4aa1c055eb5c89b36e44d654ef064e36"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 15.91742834048374,
+            "firstPaintMs": 183.608,
+            "readyMs": 143.5,
+            "p95": 100.40000000000009,
+            "traceSHA256": "33d5515dc48f15d0d14fb495b177b5533025dbad5f55eb54dc6e6d1c178f83ca"
+          }
+        ]
+      },
+      {
+        "name": "profile-path2d",
+        "reportSHA256": "fb8ab7ab2991a9dacad054f1170bd1c86b5d1c532112ca2fdff6bcaa3ae14f33",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "path2d",
+          "jsSHA256": "ef28ca8f410b6bf2dae60fb12b68f4aa1af0afa32a8a2d81d4dc65424b2351d4",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "15d5d06cdf8449fb00f8a2a53b95f70d0bb17f8561b004ffe23f24688790a0b7",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 19.979520990984238,
+            "firstPaintMs": 203.954,
+            "readyMs": 107.80000000074506,
+            "p95": 66.80000000000018,
+            "traceSHA256": "763b68ab10c34b97550835272949d04e63a6ac614e5a73bc0983e195a24ae4f2"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 18.442597415544117,
+            "firstPaintMs": 124.023,
+            "readyMs": 97.09999999962747,
+            "p95": 83.5,
+            "traceSHA256": "fb0001b690c04639c87a4d0029037a1cceb482c27a195a4a20e6dc459dfe1418"
+          }
+        ]
+      },
+      {
+        "name": "profile-cached",
+        "reportSHA256": "8e4d88487b8ef2607e65364886a29e3f08a672e8353e215066616bd7d4f44c31",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "cached",
+          "jsSHA256": "1d6f20d3e49cc6d389328ba57c77e2584c68c8e9da8151a2c660b1c6286388fa",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "85828761db81f63812cbcc07e8047a4fbb8b510a089d9fdf7de4881506b16672",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 14.70404984423676,
+            "firstPaintMs": 435.302,
+            "readyMs": 250.90000000037253,
+            "p95": 116.79999999999973,
+            "traceSHA256": "4847be6a247ebbf00bd01637d75bf6e233205868018ce7894e23e501abd5a251"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 15.577294535485077,
+            "firstPaintMs": 180.074,
+            "readyMs": 135.60000000149012,
+            "p95": 100,
+            "traceSHA256": "385de006ce7e38f52224da9dfc4933e6c68feb236d04b6a9343463a638527655"
+          }
+        ]
+      },
+      {
+        "name": "profile-fast",
+        "reportSHA256": "d02b71ec65a8a7ae276c9a084b0cf8d682584acd5662bba243d6360c42ad2664",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "fast",
+          "jsSHA256": "17b8f656bb7763f1b61d8d209c002ca286fff63b6c0436a35e3b153c918fb0af",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "be83ebe2fa69eed306b6c7323c56030ddf0f06db9932dfbdb91b32c2a126787b",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 16.50472183959396,
+            "firstPaintMs": 192.731,
+            "readyMs": 123.59999999962747,
+            "p95": 83.5,
+            "traceSHA256": "301fa2e41626c42d8aab469117217083ad882101459c25bd567d3ccac2d51859"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 14.360280712269926,
+            "firstPaintMs": 180.275,
+            "readyMs": 139.7000000011176,
+            "p95": 100.10000000000036,
+            "traceSHA256": "0503bb7e7a021dcc1c144d412767f5c59704794f6b15e4dad91a6e41f02fc387"
+          }
+        ]
+      },
+      {
+        "name": "profile-deferred-paths",
+        "reportSHA256": "07f5e11fdb948e894ecde8954cf1aaf8c4feb340b83b8f3c65f2f585b52953e8",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "deferredPaths",
+          "jsSHA256": "56cdf712bf7c943bd61e1e33563b8c372d1f5b9ddd0a29ac5646b14de832fbb2",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "781563215d8c500f36e1cfb4a7d6d1ccac68fcfe21596b12eff701fd6f111dfa",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 24.599785220149343,
+            "firstPaintMs": 189.066,
+            "readyMs": 85.69999999925494,
+            "p95": 50.20000000000073,
+            "traceSHA256": "88ae4703a86211d9d4dccb891132ab17c5bde185f2ca61d59d28ba093c5c5687"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 26.16855038692071,
+            "firstPaintMs": 91.508,
+            "readyMs": 77,
+            "p95": 50.100000000000364,
+            "traceSHA256": "9027942b05f97085297820c1b6e1576c734b3c45c40251ac610f75e8b97dc688"
+          }
+        ]
+      },
+      {
+        "name": "production-profiles",
+        "reportSHA256": "797fb2a680136c5ecd89a60cb21e12ac65f4296a4935a4ed6f7460bbcf6d0b6a",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "deferred-plus-Path2D-production-at-measurement",
+          "moduleSHA256": "9e41d14baff01edae0e1a0558c1fef1ad296daeaef0b6a7cdcffd325ebaf8b4b"
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 1,
+            "compact": false,
+            "fps": 56.94021277658459,
+            "firstPaintMs": 91.055,
+            "readyMs": 25.09999999962747,
+            "p95": 16.800000000000182,
+            "traceSHA256": "1e5784715dca343e6c114186f26819231ce83ad6954db59fe5f68d8d03425068"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 1,
+            "compact": true,
+            "fps": 59.81294407052683,
+            "firstPaintMs": 21.63,
+            "readyMs": 19.5,
+            "p95": 16.90000000000009,
+            "traceSHA256": "621301bebff312ae981da00b95143a6f8f250183b85a4eb1b64a62d12eb8ef5c"
+          },
+          {
+            "mode": "full",
+            "cpu": 1,
+            "compact": false,
+            "fps": 59.937814517438156,
+            "firstPaintMs": 25.73,
+            "readyMs": 21.90000000037253,
+            "p95": 16.800000000000182,
+            "traceSHA256": "99597e33d0a1106bd49bdd02ced522a6a91982af3a24892d8f8d594277bdf3b9"
+          },
+          {
+            "mode": "full",
+            "cpu": 1,
+            "compact": true,
+            "fps": 59.93931144715975,
+            "firstPaintMs": 25.767,
+            "readyMs": 22.200000001117587,
+            "p95": 16.90000000000009,
+            "traceSHA256": "b009c78178fa5d9c429ad48a7d9bfde4fa8211ab61a91e8ff479ff0adffda6c2"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 16.60797682375565,
+            "firstPaintMs": 103.219,
+            "readyMs": 95.09999999962747,
+            "p95": 100.09999999999991,
+            "traceSHA256": "dd219011227960a399d75a057e8de19d1b4131e10cdae35d1b9a922a06a2ab2f"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 14.579620929855823,
+            "firstPaintMs": 147.131,
+            "readyMs": 123.70000000111759,
+            "p95": 116.69999999999982,
+            "traceSHA256": "88fc72bb33437c631bbd9801d0b9c43fd5dade90d155ba8c7714f68a6a1bb65c"
+          },
+          {
+            "mode": "full",
+            "cpu": 4,
+            "compact": false,
+            "fps": 59.812944070526825,
+            "firstPaintMs": 262.949,
+            "readyMs": 243.7999999988824,
+            "p95": 16.800000000000182,
+            "traceSHA256": "2b3728ee1ee7981f95fb47a0f8bf4237d116200c29ef50b34ad6ad0722a56fd8"
+          },
+          {
+            "mode": "full",
+            "cpu": 4,
+            "compact": true,
+            "fps": 59.93931144715974,
+            "firstPaintMs": 255.359,
+            "readyMs": 216.09999999962747,
+            "p95": 16.800000000000182,
+            "traceSHA256": "055729387415f0e285aad3e26403294a8b456a7742b80ef48beff257b22820c3"
+          }
+        ]
+      },
+      {
+        "name": "paired-original-repeat",
+        "reportSHA256": "cc760fe2d5208da9a7996414f27415dcad775c6a3c71b57fe0e1c08e60c6a2d3",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "original",
+          "jsSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "15d5d06cdf8449fb00f8a2a53b95f70d0bb17f8561b004ffe23f24688790a0b7",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 17.07207656265577,
+            "firstPaintMs": 221.983,
+            "readyMs": 129.7999999988824,
+            "p95": 83.5,
+            "traceSHA256": "75911da37aa3d21792af3614d7ff7d49e1bb1765f5e61f1762c016019d13bd00"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 15.234574992819772,
+            "firstPaintMs": 157.965,
+            "readyMs": 120.80000000074506,
+            "p95": 116.69999999999982,
+            "traceSHA256": "39a9735fb8dc9600245151f26407e3893f180c0f5a424206b90eaf1fe974ef75"
+          }
+        ]
+      },
+      {
+        "name": "isolated-currentPaths",
+        "reportSHA256": "5ca334cd571877ff64cd4b677d5280109f2861baeb0da5ad6b7cbb678cc15922",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "currentPaths",
+          "jsSHA256": "f1a2ea69e45c72c350f7c92f2ca0be7e8f52074616c4f168397bfdee14b510ba",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "985e993c02b4165b22f413c643b16e374d0e14d5787202c086422fae7c8c67df",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 15.733676310827517,
+            "firstPaintMs": 302.999,
+            "readyMs": 151.80000000074506,
+            "p95": 100,
+            "traceSHA256": "d9e22e9ce116d849da4033ae43475282c4ea50f8f310f4f0ab27067442246c06"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 19.772430516694648,
+            "firstPaintMs": 132.726,
+            "readyMs": 114.80000000074506,
+            "p95": 66.80000000000018,
+            "traceSHA256": "f2da65074f0dff993cf7d6fef63ac6a22c451d13c938273c42639224f852342d"
+          }
+        ]
+      },
+      {
+        "name": "isolated-deferredOnly",
+        "reportSHA256": "3ed73a058cec93cf96e1c4c4a6aa00795de162027e084e264c071d9a617a5d70",
+        "browser": "158.0.8127.88",
+        "executedCandidate": {
+          "name": "deferredOnly",
+          "jsSHA256": "a49bc6ae0a645666749a50636e016f5dbe0f1cbe627792be1616c957527da32a",
+          "originalJSSHA256": "3e247866356e2f3d53a7cbb8a1f104f5deb9d552913a17a5fe518168f77a4713",
+          "driverSHA256": "985e993c02b4165b22f413c643b16e374d0e14d5787202c086422fae7c8c67df",
+          "scope": "Private in-memory candidate supplied to unchanged public profiler. Repository input hashes describe unchanged baseline files; candidate source hash above describes executed JavaScript. No production promotion or acceptance."
+        },
+        "cases": [
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": false,
+            "fps": 18.81619937694704,
+            "firstPaintMs": 231.912,
+            "readyMs": 120.89999999850988,
+            "p95": 83.5,
+            "traceSHA256": "8a8a63079b63874b834cf0ecec1581e8a5fb0205de6f0dea301bbb0124f77eff"
+          },
+          {
+            "mode": "thumb",
+            "cpu": 4,
+            "compact": true,
+            "fps": 16.87742768146337,
+            "firstPaintMs": 152.381,
+            "readyMs": 133.69999999925494,
+            "p95": 83.60000000000014,
+            "traceSHA256": "1ddf7ad5d51bf4bc76843357f80a8299e495f3de93d76e592f2e37ee8bef8839"
+          }
+        ]
+      }
+    ],
+    "conclusion": "Trials varied and do not establish an end-to-end FPS gain. The two final deferred-only native CPU4 samples are18.82 and16.88fps, below60. Other projects had active test jobs on this computer; these are contended measurements, not isolated benchmarks. Causation for the variation is not established. Clip-path and geometry-cache candidates were removed from production.",
+    "cpu4GatePassed": false
+  },
+  "oracleCorrections": {
+    "requestedGeometry": "Track requested Canvas transforms in double precision; getTransform exposes float32 translation. The existing1e-9 bound is unchanged.",
+    "pixels": "The former full-texture-versus-cropped-texture comparison also differed by four premultiplied channels on unchanged original JS in Chrome158. Its replacement independently executes the immutable original native renderer with original HTML, config and SVGs. Compare every premultiplied channel exactly using separate CPU readback copies; no tolerance was widened.",
+    "firstSourceFrame": "At120/240Hz sample the first actual60Hz source frame rather than requiring paint before the source frame exists."
+  },
+  "retainedExperiments": {
+    "cropOnly": "Rejected because pixels changed.",
+    "cachedGeometry": "Map and typed-array variants rejected after slower timing samples.",
+    "Path2D": "Original renderer restored because repeated FPS benefit was not established.",
+    "clipCalibration": "Opaque clip and phase-grid research retained privately; no approximate GPU compositor promoted."
+  },
+  "remaining": [
+    "Native Threads CPU4 performance.",
+    "Current-browser SVG held-raster review.",
+    "Remaining explicit motion, contrast, cold-route and mobile Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Commit and push main directly, without PRs. Keep GitHub Actions disabled and preserve owner zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

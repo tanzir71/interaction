@@ -236,6 +236,15 @@ accepted. Command-capture, cached-path and cached-math trials also remain
 unshipped because their measured native frame rates were worse. Preserve these
 trial sources, pixels, traces and outliers when continuing the investigation.
 
+The [Threads command-generation pass](performance/threads-render-2026-11-25.json)
+retains the complete original native renderer and defers only its pure hidden
+full-composition commands. A six-second unobserved source story avoids 362
+unused drawings and materializes one complete buffer when inspected. Independent
+original/current comparisons pass 31,202 source/command checks and 164 exact
+paint checkpoints. Repeated timing trials did not establish an FPS gain, so the
+clip-path and geometry-cache changes were removed. Preserve the trials and the
+open CPU4 timing finding; reduced work does not establish performance acceptance.
+
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI

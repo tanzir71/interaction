@@ -1754,3 +1754,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Anonymous word boundaries preserve the original text geometry and all CSS.
   Scoped label review does not establish whole-catalog accessibility or final
   motion/performance acceptance. Keep earlier private phase evidence frozen.
+
+- `node tools/verify-threads-render.js http://127.0.0.1:4173` compares the
+  current Threads model and renderer to its immutable local before-definition.
+  The native preview may defer its pure hidden full-drawing commands; preserve
+  source state, clocks, draw/notification counts, historical paint reads,
+  recorder styles, witnesses and disposal. Its existing `onDraw` hook is only
+  a dirty notification; this opt-in does not promise lazy payloads to arbitrary
+  external observers. Full mode keeps eager drawing. The complete original
+  native renderer keeps every column, neighborhood sample and SVG texture.
+  Dispose pending command snapshots. Runtime observers track requested Canvas
+  transforms in double precision: getTransform may expose float32 translation.
+  Keep the original1e-9geometry bound and exact RGBA/premultiplied comparisons.
+  Sample the first actual60Hz source frame at120/240Hz without advancing it
+  early. Current-browser renderer stories complement the historical model
+  suite; measured improvements do not close the remaining CPU4 timing gate.
