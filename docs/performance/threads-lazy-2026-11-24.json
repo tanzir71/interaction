@@ -1,0 +1,144 @@
+{
+  "at": "2026-11-24T13:23:56.596Z",
+  "baseCommit": "70529e1db9c5685db30c180e388b99cee3f4ecaf",
+  "id": "showcase-threads",
+  "decision": "Rejected for production: no meaningful resolution of the CPU4 frame-rate failure. The site is unchanged.",
+  "hypothesis": "Defer unobserved pure full-scene command construction while native Threads paints its supplied SVG textures. Keep source steps/inputs and observed command/witness buffers complete.",
+  "source": {
+    "beforeSHA256": "580fce118f14091470666d78f42b3fd926874e46a09c88229557bac1353664e4",
+    "variantSHA256": "a04fb94dd08cb9f53c93fdb4c3e9605205c807aa1b8336733888248a133157d0",
+    "operationsSHA256": "02fb28fa9e55599a5a9a331b5774092d7f768ea9deab675cf6b831c5c7a10760",
+    "publicProfilerSource": "tools/profile-final-showcase.js",
+    "publicProfilerSHA256": "6f225396a356e67648caa78bdf2d839faf388e249711e03616e971d1d7c11ec7",
+    "originalFactoryByteExact": true,
+    "productionSourceUnchanged": true
+  },
+  "correctness": {
+    "model": {
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-threads-lazy-v4/model-2026-11-24T13-07-26-904Z/report.json",
+      "sha256": "d3ab786a1f0aa45467f0d56e831fb7ad8fadf226df36a2afa6ab22a354ebf8ec",
+      "checks": 126336,
+      "cases": 48
+    },
+    "modelCases": 48,
+    "exactModelComparisons": 126336,
+    "browser": {
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-threads-lazy-v4/browser-2026-11-24T13-12-41-405Z/report.json",
+      "sha256": "83505524d4a55fba5bda7a43326e06548270cde3f3512367e33e75fe077d37fa",
+      "checks": 224,
+      "cases": 64
+    },
+    "browserSceneStates": 64,
+    "exactModelAndPixelComparisons": 224,
+    "numericOrPixelTolerancesAdded": false
+  },
+  "profiles": [
+    {
+      "label": "original",
+      "file": ".artifacts/final-threads-lazy-v4/profile-original/2026-11-24T13-18-58-016Z-0e00171a1035/report.json",
+      "sha256": "621f08b6828ec54d8321185186736b595d57be300c83442a3d211e8a3441fe37",
+      "browser": "158.0.8127.88",
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 19.896785425604676,
+          "firstPaintMs": 166.127,
+          "p95": 66.80000000000018,
+          "gapsOver25ms": 160,
+          "errors": [],
+          "traceSHA256": "b7c57b788ef79972a03ed513897ffc84526868ee22e43ed8939a524a8f0114d1"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 18.777591245414413,
+          "firstPaintMs": 163.022,
+          "p95": 66.80000000000018,
+          "gapsOver25ms": 151,
+          "errors": [],
+          "traceSHA256": "dadabfb1bd3034c9ccb142dbdd9a37750f79af156dc66eb7c070ca7d63a187df"
+        },
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu1",
+          "cpu": 1,
+          "compact": false,
+          "fps": 59.93856297295272,
+          "firstPaintMs": 25.012,
+          "p95": 16.800000000000182,
+          "gapsOver25ms": 0,
+          "errors": [],
+          "traceSHA256": "d082be7f92e999ba410326178ef47a57dfb335b5dedac7814530b9120df08e1a"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu1",
+          "cpu": 1,
+          "compact": true,
+          "fps": 59.93706608061535,
+          "firstPaintMs": 19.58,
+          "p95": 16.800000000000182,
+          "gapsOver25ms": 0,
+          "errors": [],
+          "traceSHA256": "24750f31512c652beb37926083abb9b3301dd05f9a18fcfc57fb2f8dd327c82a"
+        }
+      ]
+    },
+    {
+      "label": "prototype",
+      "file": ".artifacts/final-threads-lazy-v4/profile-prototype/2026-11-24T13-19-36-985Z-0e00171a1035/report.json",
+      "sha256": "f58ac4ff24f40c69a8b4c541cd43ae79944b726ca0af5ddbd48078f77cd3c062",
+      "browser": "158.0.8127.88",
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 20.186664340631268,
+          "firstPaintMs": 195.687,
+          "p95": 66.80000000000018,
+          "gapsOver25ms": 162,
+          "errors": [],
+          "traceSHA256": "44224a68168aa48bb8704a35451b870173977e07947b8361026387a5e8043898"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 20.187167441338833,
+          "firstPaintMs": 197.005,
+          "p95": 66.69999999999993,
+          "gapsOver25ms": 162,
+          "errors": [],
+          "traceSHA256": "dcc443b032b179828117a95c9475d87dd7286003560c7d7a83965e32f7218476"
+        },
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu1",
+          "cpu": 1,
+          "compact": false,
+          "fps": 59.938562972952724,
+          "firstPaintMs": 16.287,
+          "p95": 16.800000000000182,
+          "gapsOver25ms": 0,
+          "errors": [],
+          "traceSHA256": "e297aa2cad70a05df8e4c0fe7bd393089794481b916219e6598b94c4f08dbac1"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu1",
+          "cpu": 1,
+          "compact": true,
+          "fps": 59.938562972952724,
+          "firstPaintMs": 19.812,
+          "p95": 16.800000000000182,
+          "gapsOver25ms": 0,
+          "errors": [],
+          "traceSHA256": "77f7bc79f748ff5c23c875bc1e9c28dea4daadfbca833f285c9d6655b8a39d63"
+        }
+      ]
+    }
+  ],
+  "remaining": "CPU4 native cases remain about19–20fps; this does not pass the60fps motion requirement. CPU1 remains near the nominal60Hz display rate. These warm, prepared-font measurements do not certify cold-route paint or the other519components.",
+  "inference": "The small change from skipping hidden command construction suggests native strip rendering dominates this scene. The renderer still issues one clipped image draw per logical column,1776strips per paint. No per-function CPU attribution is claimed.",
+  "policy": "Keep every original/prototype input, scene image, command/model proof, raw trace and outlier. Earlier private phases stay frozen; no production code, assets, workflows, Actions or billing settings changed."
+}

@@ -1,0 +1,444 @@
+{
+  "at": "2026-11-24T15:23:30.762Z",
+  "productCommit": "70529e1db9c5685db30c180e388b99cee3f4ecaf",
+  "scope": "Verified test-observation and intentional semantic-oracle corrections after the49 naming repairs. No product/demo/model/CSS/asset changes. Broader regression and full accessibility/motion/performance acceptance remain open.",
+  "repairs": [
+    {
+      "file": "tools/verify-agents.js",
+      "sha256": "6d515b2650ac584e1f933587e75b3c20887e10bef0f256d5ed6eb956c0aa5ed4",
+      "change": "Await actual source-clock progress before asserting startup time. Original model/pause assertions remain.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/agents-corrected.log",
+        "sha256": "78c8224cbd26bf743a6f199216f4cc7c663dca0d2f7aebde2fef0de3d7bbf325"
+      }
+    },
+    {
+      "file": "tools/verification/sound-touch.js",
+      "sha256": "a8ac8adeaf896dff41bf7cc62a27c018e46d9cce1deff4a6cf5b7a2a971908fa",
+      "change": "Acknowledge actual pointer delivery before the original pacing and frequency/capture/release assertions. Original coordinates and0.01Hz bound remain.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/sound-touch-corrected.log",
+        "sha256": "03b6a51c11bcbce6e886fd240e6ca9ac6d6a7dde1b69fb396842741b6a37f7ef"
+      }
+    },
+    {
+      "file": "tools/verification/skeuo-instruments-stories.js",
+      "sha256": "a8cb8689562a73f7f732913b7cb31ca6d4d017e59d587143429347dae93aa2d3",
+      "change": "Add only the intentional Macro root role=group to the independent expected DOM. Preserve all original state, other DOM and strict numerical comparisons.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/skeuo-stories-corrected.log",
+        "sha256": "e74bda3a5ea4b7a0e7919826d1a8150218b2888cf32423e71a78afe95446c1eb"
+      }
+    },
+    {
+      "file": "tools/verification/skeuo-instruments-interruption.js",
+      "sha256": "c86acfff7caa52f96687b8e3b54ce72ec011a744c91ef6786d2a506f139b6c0a",
+      "change": "Observe strict six-identical-frame raster settling with bounded progress/failure captures. Preserve existing numerical and one-channel pixel bounds. The successful24-case execution needed at most15 captures, within the original18.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/skeuo-interruption-restored.log",
+        "sha256": "85ef82da3f135fc0595dc72f71f33b5db951827d605f9d835d7d6300dd5eecca"
+      }
+    },
+    {
+      "file": "tools/verification/showcase-final-holds.js",
+      "sha256": "47d3957f49c9a25709c04e805dc50c7214900e6c9dba05bc484325cdbfd7be01",
+      "change": "Await actual WAAPI pause readiness before the unchanged180ms model/paint hold assertions.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/showcase-final-resumed.log",
+        "sha256": "931eff7edfa25cdee96360c13bab48db18be21cc72659d4b06348949688cf9dd"
+      }
+    },
+    {
+      "file": "tools/verification/framer-data-holds.js",
+      "sha256": "1486f33bbb7af2bf27fbe96dcedf91276f1be894b8cb9c332edeef3432ac96ab",
+      "change": "Replace an assumed80ms offscreen delivery sleep with native intersection acknowledgement and a following frame. Preserve all original hold ownership/model/paint/time/queue/cleanup assertions.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/framer-data-resumed.log",
+        "sha256": "0b16cf1aff29724671f19fe95a4f09c541a9d4ecb5446e505373682c41045b5a"
+      }
+    }
+  ],
+  "ownerGates": {
+    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/owner-gates.json",
+    "sha256": "1ec909a6d049c501a3c4bd185fdebc9c9d3bea22d48383db6d68367ee1bd4e68",
+    "groups": 13,
+    "currentInputHashesExact": 471,
+    "scope": "Reuse of successful executions with every recorded command/source input and log hash revalidated; no rerun claimed."
+  },
+  "nameProofs": [
+    {
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/names-0.json",
+      "sha256": "b0af71513ff51744138efa5f9dd8a0bec3cbaf0448f33271983b3f021aca901d",
+      "browser": "158.0.8127.88",
+      "checks": 5409,
+      "actualTreeCases": 314,
+      "liveStories": 68,
+      "freshOfflineExports": 98,
+      "currentInputsRevalidated": true
+    },
+    {
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/names-1.json",
+      "sha256": "3788ee85c82dcfe9a871a3095ae707f8e4af6cb1a24c85e9239cfb9c639bc406",
+      "browser": "140.0.7339.16",
+      "checks": 5409,
+      "actualTreeCases": 314,
+      "liveStories": 68,
+      "freshOfflineExports": 98,
+      "currentInputsRevalidated": true
+    }
+  ],
+  "regressionAtPublication": {
+    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/regression-at-publication.json",
+    "sha256": "10ed6cf58c08b9a18cffad6afe94ca76e933271d4e4a057f29e45e5864e711ab",
+    "successfulGroups": 33,
+    "totalGroups": 63,
+    "passed": [
+      {
+        "name": "component-semantics",
+        "args": [
+          "tools/verify-component-semantics.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "5cab0c6204273e2859f26619852ad095c05007c722fffc21ea030c8f89f04d58"
+      },
+      {
+        "name": "scroll-effects",
+        "args": [
+          "tools/verify-scroll-effects.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "99c2130e03c8c571ad8abbb3f246374e0c8fddf3157bac6e2230fef6de6a01e1"
+      },
+      {
+        "name": "scroll-narratives",
+        "args": [
+          "tools/verify-scroll-narratives.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "ac2c4ea45d282c0364f69cbd74a329748ab3075fa99afa76790b4c4a6c99679b"
+      },
+      {
+        "name": "cursor-fields",
+        "args": [
+          "tools/verify-cursor-fields.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "d0c70d9cf9bb6312f95c39e63f73f67c22de9a98b6cbb9185084a57708af686b"
+      },
+      {
+        "name": "text-core",
+        "args": [
+          "tools/verify-text-core.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "d2e59ec666306774c2b4bebffc31af6d22109da33f1e1da511c3e1e503667016"
+      },
+      {
+        "name": "image-photos",
+        "args": [
+          "tools/verify-image-photos.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "b69bc10647ded20e17355cb059353a833856d9249c5dedd83e98dfeea19ef970"
+      },
+      {
+        "name": "physics-remaining",
+        "args": [
+          "tools/verify-physics-remaining.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "08f5830c40348c477ef9f5cbb45843abf0d59c5b4c5164337a49254ac4d2599f"
+      },
+      {
+        "name": "galleries-remaining",
+        "args": [
+          "tools/verify-galleries-remaining.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "ea351f5f34372d96329b86f7860d21f5314163c9989a547225a55988767062ac"
+      },
+      {
+        "name": "navigation",
+        "args": [
+          "tools/verify-navigation.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "00a36e68e7bfc5c2fc7422e10e7154dfd92ba25a76914b00a084184a6a739401"
+      },
+      {
+        "name": "maps",
+        "args": [
+          "tools/verify-maps.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "2b66b5169fe19d6e9ac43790308fe47b3455e22dfcbf1443bd035f0994f5e634"
+      },
+      {
+        "name": "map-models",
+        "args": [
+          "tools/verify-map-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "bd6ca22be87f717dc51f6fc2aa976d992d0e814cba9dbf54d667585ae27e8185"
+      },
+      {
+        "name": "fui-missions",
+        "args": [
+          "tools/verify-fui-missions.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "1955e22591e05e2ea4147f40eb63e659f42fcc1f0e4d8c34e550b0537c6e5e7c"
+      },
+      {
+        "name": "agents",
+        "args": [
+          "tools/verify-agents.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "78c8224cbd26bf743a6f199216f4cc7c663dca0d2f7aebde2fef0de3d7bbf325"
+      },
+      {
+        "name": "agent-models",
+        "args": [
+          "tools/verify-agent-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "f5aa6eade49f14f5463042ebd5680061a01c336f0adf058f19f2e87942398a01"
+      },
+      {
+        "name": "sound",
+        "args": [
+          "tools/verify-sound.js",
+          "http://127.0.0.1:4173",
+          "--check-evidence"
+        ],
+        "logSHA256": "aa199f75249b4e4eb4fd36ee038898872759fa498fa9e2864969f27e01c83345",
+        "scope": "All12 current-source Sound groups; first8successful scopes retained and last4fresh, then unmodified root--check-evidence validated every certificate."
+      },
+      {
+        "name": "play",
+        "args": [
+          "tools/verify-play.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "e28bc6a671ef75759f89a49600163721c271faf3ac4eb7712a17e38565f336eb"
+      },
+      {
+        "name": "layout-photos",
+        "args": [
+          "tools/verify-layout-photos.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "f5d9e50690cc5ccf5466f8308fa64a49b52ec78b791f23d7583a3938a8a79abf"
+      },
+      {
+        "name": "layout-controls",
+        "args": [
+          "tools/verify-layout-controls.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "8ce4430f5491bad667ff27ea62e78aa2511257fafdb6019d7d148d78b7fba204"
+      },
+      {
+        "name": "raster-core",
+        "args": [
+          "tools/verify-raster-core.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "8c09e09b1ccf26de0b5f95fed3852ac29ecbefb9163db9ceed4e3a2daf49aae7"
+      },
+      {
+        "name": "skeuo-instruments",
+        "args": [
+          "tools/verify-skeuo-instruments.js",
+          "http://127.0.0.1:4173",
+          "--check-evidence"
+        ],
+        "logSHA256": "c46bfac4e7d2b31fdb0013f8211444c2442e1f864b9306efbfe3386d83ffd7a8",
+        "browserScope": "Historical raw models140; current native/full UI and independent-original stories158."
+      },
+      {
+        "name": "showcase-final",
+        "args": [
+          "tools/verify-showcase-final.js",
+          "http://127.0.0.1:4173",
+          "--resume"
+        ],
+        "logSHA256": "931eff7edfa25cdee96360c13bab48db18be21cc72659d4b06348949688cf9dd",
+        "scope": "All7current-source groups; models/geometry/input retained by unmodified root scoped-resume, corrected pause-readiness hold and remaining groups fresh."
+      },
+      {
+        "name": "showcase-spatial",
+        "args": [
+          "tools/verify-showcase-spatial.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "ce289866b663edbdd6d41de78a4fc1426bec8a5e972a7bcc7ec50dea7674ffbd"
+      },
+      {
+        "name": "framer-data",
+        "args": [
+          "tools/verify-framer-data.js",
+          "http://127.0.0.1:4173",
+          "--resume"
+        ],
+        "logSHA256": "0b16cf1aff29724671f19fe95a4f09c541a9d4ecb5446e505373682c41045b5a",
+        "scope": "All8 current-source groups; models/geometry/input retained by unmodified root scoped resume; native offscreen acknowledgement repairs observational hold readiness; holds/motion/runtime/themes/exports fresh. All original assertion bounds retained."
+      },
+      {
+        "name": "drams-devices",
+        "args": [
+          "node",
+          "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/finish-drams-devices.cjs"
+        ],
+        "logSHA256": "7fa56e0e7d81c7c7c5a5006da1968a8062a99065de3e793baa6e27c1a3534394",
+        "scope": "Unmodified historical models in Chromium140; unmodified complete geometry/input/runtime and offline exports in Chrome158. This is an explicit composite of actual child commands, not a claim that the root command passed wholly in158."
+      },
+      {
+        "name": "forms-new",
+        "args": [
+          "tools/verify-forms-new.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "6eaf5402fff8b8cbd55d076c81f60703781c51735d17d91548ec90f5de83e0b3"
+      },
+      {
+        "name": "data-nav-new",
+        "args": [
+          "tools/verify-data-nav-new.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "daad24395ab13f18fef527d8d5e71a6ea4953bc3da363a848d25664c5ebb09d2"
+      },
+      {
+        "name": "forms-ext",
+        "args": [
+          "tools/verify-forms-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "627cb37a220d9d6456fb988b7d863d834b519c848be6d54075b39a5706b617cc"
+      },
+      {
+        "name": "agent-ext",
+        "args": [
+          "tools/verify-agent-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "a782acb8cb5592bef3af9a2e9f47000e6b7472e16018f0d1cc55fe06f172f6c2"
+      },
+      {
+        "name": "agents-new",
+        "args": [
+          "tools/verify-agents-new.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "ceb92fe4ab08765082ae4175a2f697cd6abe10f7123dd8e3f9e04fde74f4c0df"
+      },
+      {
+        "name": "exemplars",
+        "args": [
+          "tools/verify-exemplars.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "31960b37028f39cd1281cdc53419f59271025adb169a8703b5466f8a381c2f6d"
+      },
+      {
+        "name": "forms-themes",
+        "args": [
+          "tools/verify-forms-themes.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "10b2776329e0bc7213dab5f439722eae6d2d07684a344f1128d7cb05ed4b98f2"
+      },
+      {
+        "name": "micro-ext",
+        "args": [
+          "tools/verify-micro-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "31a6b32350529b618869005ab48bccaef3409892a7241210022bda179448cec2"
+      },
+      {
+        "name": "micro-ext-models",
+        "args": [
+          "tools/verify-micro-ext-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "1fc8468431648fcefe36d148ddd27a829dac657f412e52cf005efd4ae3b1f348"
+      }
+    ],
+    "remaining": [
+      "micro-ext-input",
+      "micro-ext-clocks",
+      "micro-ext-exports",
+      "micro-ext-holds",
+      "micro-ext-touch",
+      "micro-ext-async",
+      "gallery-ext",
+      "gallery-ext-models",
+      "gallery-ext-input",
+      "gallery-ext-clocks",
+      "gallery-ext-exports",
+      "gallery-ext-holds",
+      "gallery-ext-touch",
+      "gallery-ext-interaction",
+      "sound-ext",
+      "sound-ext-audio",
+      "sound-ext-input",
+      "sound-ext-clocks",
+      "sound-ext-exports",
+      "sound-ext-holds",
+      "sound-ext-touch",
+      "sound-ext-pixels",
+      "layout-ext",
+      "layout-ext-models",
+      "layout-ext-input",
+      "layout-ext-clocks",
+      "layout-ext-exports",
+      "layout-ext-holds",
+      "layout-ext-pointer",
+      "layout-ext-interaction"
+    ],
+    "failedCurrentRows": [],
+    "complete": false
+  },
+  "explicitBrowserScopes": [
+    {
+      "family": "skeuo-instruments",
+      "scope": "Historical raw models140; current native/full UI and independent-original stories158.",
+      "proof": ".artifacts/skeuo-instruments/results.json",
+      "proofSHA256": "5b4e342c05820a956c29d0a162322e68a75e19a1fc4bd31b6fe11be2621725d9"
+    },
+    {
+      "family": "drams-devices",
+      "scope": "Unmodified historical models in Chromium140; unmodified complete geometry/input/runtime and offline exports in Chrome158. This is an explicit composite of actual child commands, not a claim that the root command passed wholly in158.",
+      "browsers": [
+        {
+          "group": "models",
+          "browser": "140.0.7339.16"
+        },
+        {
+          "group": "geometry",
+          "browser": "158.0.8127.88"
+        },
+        {
+          "group": "input",
+          "browser": "158.0.8127.88"
+        },
+        {
+          "group": "runtime",
+          "browser": "158.0.8127.88"
+        }
+      ],
+      "proof": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/drams-devices-completion-2026-11-24T15-17-58-350Z/report.json",
+      "proofSHA256": "b0458d885fab87ff9f2c18eaffb7e5724566060c409eb5459725b946766b7ec5"
+    }
+  ],
+  "retainedFailures": "Original startup/delivery/raster/readiness failures, wrong-family selection and browser-specific raw-fixture differences remain in the private source-bound history. No original fixtures, models or numeric/pixel tolerances were changed.",
+  "remainingWork": [
+    "42 retained automated violations in each focused viewport scan:20 color-contrast,14 scroll-focus,8 label-name findings. The label findings include FUI primary headings and symbolic Punch keycap glyphs; they still require separate repair/manual applicability review.",
+    "Color-contrast incomplete results185desktop/189compact, plus the rest of the520-component catalog and manual keyboard/focus/screen-reader review.",
+    "Complete motion recipe review, cold detail paint and CPU4 frame-performance acceptance."
+  ],
+  "publicationPolicy": "Commit/push directly to main, no PRs. GitHub Actions remain disabled. No workflow or billing changes; preserve the owner account-wide$0 stop limit."
+}
