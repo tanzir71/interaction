@@ -1606,3 +1606,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   installed tooling. Run it alone; recording a sample does not pass a timing
   gate. Earlier private inputs/helpers/evidence remain frozen. Compare renderer
   changes with captured original pixels and retain every trial and outlier.
+
+- `node tools/verify-showcase-paths-render.js http://127.0.0.1:4173` checks
+  Paths' actual DOM reads during normal/reduced native/full stories in both
+  themes at desktop DPR 1 and compact DPR 2. Read actual scroll top and extent
+  before the original SVG/counter writes; retain fractional browser positions,
+  the complete original paths/copy, queued input and six-second replay.
+  The spatial model verifier also executes the immutable original factories
+  independently in the tested browser. States/clocks stay exact to captures;
+  command streams and every RGBA channel must match that original execution
+  exactly. Historical commands/pixel hashes remain immutable, and differences
+  between browser backends are recorded without numeric or pixel tolerances.

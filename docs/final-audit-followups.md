@@ -42,6 +42,23 @@ cold-route issue and the component CPU 4 findings below open. The 17 required
 and focused commands pass; these shell results do not complete site-wide
 motion, manual accessibility or performance acceptance.
 
+The [Paths read-order report](performance/paths-read-order-2026-11-24.json)
+records batching of actual scroll reads before the original SVG/counter writes.
+Each fresh full-view CPU 4 trace records zero Layout/style-update events inside
+JavaScript, down from 361 of each; layout continues in the normal rendering
+phase. All 48 component image/state checkpoints are unchanged. Both complete
+browser suites pass. A fresh baseline also reached 59.94fps, so retain the
+earlier intermittent 49.45fps sample without claiming a guaranteed frame-rate
+increase. Final presentation-rate, cold-route and site-wide acceptance remain
+open.
+
+Spatial model verification retains immutable captures and exact state/clock
+checks, then compares every command and RGBA channel to an independent run of
+the complete original factory in the tested browser. Historical differences
+are retained rather than rebaselined or accepted with a tolerance. Chrome 140
+has none; Chrome 158 has 66 command-witness and 24 pixel-hash differences while
+matching its independent original exactly. A one-pixel fault still fails.
+
 The [forty-case current Stage report](performance/showcase-current-stage-2026-11-24.json)
 retains native Threads at 18.65–21.14fps and full desktop Converging Paths at
 49.45fps with 50ms p95 intervals under CPU 4. Magnet Lines records four paints

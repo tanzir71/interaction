@@ -20,6 +20,48 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Converging Paths scroll reads
+
+Paths reads the actual scroll top and extent before its original SVG and
+counter writes. It retains the complete five-curve program, native signal
+positions, fractional browser scrolling, six-second replay, keyboard/touch
+input, reduced fades and independent holds. HTML, CSS, copy, prompts, assets,
+metadata and the other 519 registered definitions remain unchanged.
+The [read-order report](performance/paths-read-order-2026-11-24.json) retains
+the complete before/after traces, exact comparisons and all 18 local checks.
+
+The dedicated browser regression checks sixteen native/full stories across
+both themes, motion settings and desktop/compact DPRs. The unchanged old
+renderer fails this check; the updated renderer performs no geometry reads
+after the original paint. Forty-eight component image/state checkpoints are
+identical across complete normal-motion stories. The frozen shared Dock and
+Stage sources remain unchanged.
+
+The spatial model checks now execute the immutable original factories in an
+independent Canvas alongside the site model. Captured states and clocks still
+match exactly. Every original command and RGBA channel must match the original
+execution in that browser, without numeric or pixel tolerances. Historical
+captures remain unchanged, and differences between browser/backend versions
+are recorded. This avoids treating a backend's changed rasterization or
+transcendental result as a component change. The current Chrome 158 model check
+passes all 36 refresh-rate stories, 12,996 captured states and 108 pixel checks.
+
+The retained 49.45fps desktop sample is intermittent: a fresh unmodified
+baseline also records 59.94fps. The read-order regression proves removal of
+the synchronous work; it does not establish a whole-site frame-rate pass.
+Each fresh full-view CPU 4 trace moves from 361 Layout and 361 style-update
+events inside JavaScript to zero. Layout still runs in the normal rendering
+phase. The four post-change CPU 4 stories record 59.94fps, 16.8–16.9ms p95
+intervals and no intervals above 25ms. These are source frame callbacks, not
+independent compositor presentation measurements.
+Both complete seven-group browser suites pass, including sixteen offline
+exports per browser. Chrome 140 still matches all historical command/pixel
+captures. Chrome 158 records 66 historical command-witness differences and
+24 historical pixel-hash differences; all commands and RGBA channels match
+the independently executed original in that browser exactly. A deliberate
+single-pixel fault is rejected by the updated verifier.
+Final performance, recipe and manual accessibility acceptance remains open.
+
 ## Current Stage performance recheck
 
 The [current Stage report](performance/showcase-current-stage-2026-11-24.json)
