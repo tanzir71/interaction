@@ -11,6 +11,22 @@ Update/Reset checks preserve both signs of Price Tape feedback and its complete
 original values. Initial and settled axe findings remain separate. Exact
 thumbnail ink, photographic contrast and other components remain open.
 
+The [interface palette pass](accessibility/interface-palettes-2026-11-25.json)
+corrects twelve more full compositions, preserving their existing dark controls
+and using Stage ink for surrounding captions. Controller, HTML and metadata
+strings remain unchanged. The namespace check caught three Stage-first rules;
+the repaired selectors begin with their owning component and retain the same
+Stage condition and specificity. Keep the original failure and the stopped
+verification run. Native checks isolate the actual CSS delta on one paused
+instance, with exact style/state/pixel roundtrips in a GPU-disabled CSS comparison
+after a retained priming readback. Independent startup and priming captures remain separate because the
+unchanged original also exhibits capture variance. The failed first-read Swap
+comparison and its fifteen exact repeated controls remain archived. A priming
+readback alone did not resolve default-GPU variance; the three-pixel native Pill
+delta remains a failed diagnostic. Default-GPU pixel stability stays open.
+No pixel tolerance is introduced. Native gray ink and the liquid loader's
+filled readout require separate review; this caption repair does not close them.
+
 The [component semantics pass](accessibility/component-semantics-2026-11-24.json)
 repairs 33 components' roles, local landmarks and table/grid ownership. Both
 Chrome 158 and Chromium 140 pass 4,090 actual browser-tree, keyboard and fresh

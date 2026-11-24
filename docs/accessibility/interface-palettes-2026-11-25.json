@@ -1,0 +1,1309 @@
+{
+  "date": "2026-11-25",
+  "baseline": "6491654099cd623f1d2e05bbd5c9dc969fc9b89f",
+  "scope": "Twelve full interface palettes. Preserve existing dark controls, use Stage ink for surrounding labels, and retain all native artwork and original programs. This is a bounded palette repair, not a whole-catalog or all-state accessibility/motion/performance certificate. The exact native pixel comparison is explicitly GPU-disabled and does not certify default-GPU pixel stability.",
+  "repairs": [
+    "nav-active-pill",
+    "menu-image-peek",
+    "breadcrumb-collapse",
+    "tab-morph-content",
+    "toggle-day-night",
+    "badge-notification-pop",
+    "btn-polish-stages",
+    "progress-blob-fill",
+    "masonry-filter",
+    "swap-widget",
+    "table-image-idle",
+    "inertia-window-drag"
+  ],
+  "preservation": {
+    "at": "2026-11-24T20:18:53.379Z",
+    "components": 520,
+    "unchangedJS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": 520,
+    "unchangedDefinitions": 508,
+    "changedCSSAndPrompt": [
+      "inertia-window-drag",
+      "nav-active-pill",
+      "menu-image-peek",
+      "breadcrumb-collapse",
+      "tab-morph-content",
+      "toggle-day-night",
+      "badge-notification-pop",
+      "btn-polish-stages",
+      "progress-blob-fill",
+      "masonry-filter",
+      "swap-widget",
+      "table-image-idle"
+    ],
+    "inputs": {
+      "js/demos.physics.inertia-window-drag.js": "c00f219d4fa2e6916ef814b901c042f543998c3d6832460a0f356845c5e02403",
+      "js/demos.nav.nav-active-pill.js": "ecefb81f18018c57e294e6a6de3d710f9b66895e5e8d74b1f7e47e58caf9e475",
+      "js/demos.nav.menu-image-peek.js": "97596878bb1ace87ff6d712cca442dc5352a73671938d78dba615a0ab03f1724",
+      "js/demos.nav.breadcrumb-collapse.js": "269e9d278384c119a36422fbccda33a378e21d7a269e04a3c113b976401a0e50",
+      "js/demos.nav.tab-morph-content.js": "e04e143fbb6978885127d8e784a0fe08e505842b6d35afac88806a7ebc2e48a0",
+      "js/demos.micro.toggle-day-night.js": "83cd595985ab63f64e176584b481af1147ae25d21ab42ac6c93ef2a8be763b21",
+      "js/demos.micro.badge-notification-pop.js": "83d0a9220d705530b0e4cf4044adb41129229f96b1e7f4e9613a34097c756cc6",
+      "js/demos.micro.btn-polish-stages.js": "46bf9996da1889c6ac72abf15c5ca4fa3e001346080c05e21bdf0fa8b54167c5",
+      "js/demos.loaders.progress-blob-fill.js": "136c7d8498e938bb22f499dba4d850a023e57520b3893e35c9cf4e313c75e8ae",
+      "js/demos.layout.masonry-filter.js": "fa3d31b52ec7578b0a40ebdf057280da84ff05b3d88cfc51cc01d3080acb7685",
+      "js/demos.layout.swap-widget.js": "2a432ccd13cf7848db0a78a0d4dc1deccadbfccb42b5f9e0359d135394ab5f98",
+      "js/demos.layout.table-image-idle.js": "90715ff7172f8819c1841cb2fb7aa3c9bdb2761185752e3fe924d10d3890fd1d"
+    },
+    "scope": "Exact baseline replay. Full-view CSS changes are component-prefixed, full-mode color suffixes; original CSS remains an exact prefix. Existing models, datasets, assets, motion, geometry and metadata remain unchanged."
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "freshOriginalCurrentLayouts": 192,
+    "exactNativeCSSRoundtrips": 96,
+    "freshOfflinePalettes": 24,
+    "textColorChecks": 610,
+    "minimumTextRatio": 4.923193557249739,
+    "surfaceMethod": "Actual CSS foreground against the conservative244RGB light Stage,21RGB dark Stage, or documented opaque control surface. The selected well uses39RGB; table headers use conservative32RGB; the light notes panel uses221RGB. Samples are listed in the immutable fixture and omit photographic and filled-progress readouts.",
+    "nativeMethod": "Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.",
+    "proofSHA256": "f5e86da34bbc151ad83a635a5496105400810c823708423f8044d82a318e19ec",
+    "physicalFeedback": {
+      "stories": 6,
+      "proofSHA256": "93742707563a29cad7f7cc532bfa608466cce7af484cfaced0f602567cd39be8",
+      "scope": "Default-GPU browser: actual Enter on Swap/Reset and ordered up/down quote feedback in both themes with normal motion; badge increment/reset in both themes with normal and reduced motion. Original/current discrete intentions, resets, notification values and names match. Raw independent wall-clock price observations are retained without equating intermediate timelines."
+    },
+    "requiredCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ],
+    "browserArgs": [
+      "--disable-gpu"
+    ],
+    "packageTests": {
+      "at": "2026-11-24T20:50:09.559Z",
+      "command": "npm test --prefix packages/intrx",
+      "exitCode": 0,
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "logSHA256": "f23c2ddb2f19ffaf2f0c046bb42e952462b8007c87e0a0433959114208f9e981",
+      "inputs": {
+        "packages/intrx/LICENSE": "81566f7f88decc0e634d778727d133cc49a7f109378ec3c66bf0f00b60296fd9",
+        "packages/intrx/README.md": "9c25b8f25aa6b70d73f912b83023086ab20eff527c85ea06b9fcf9df56167bb5",
+        "packages/intrx/bin/intrx.js": "19063c4465731ebe851d19add8e038ca30c50d7017221843a5d3d8a050e9f50a",
+        "packages/intrx/package-lock.json": "1ebe463f1e3027f675a72b5a65dad05c7ef6746dcf5e0a41de007f641852f1cb",
+        "packages/intrx/package.json": "2489404e78b7526b72b962e744a093c4050d4be3e7bdbfde60d5d25f32c11545",
+        "packages/intrx/src/cli.js": "ef497c024fb173411109a02557882b6f11ee0ca01e1d2c11d927c9acccee9ddb",
+        "packages/intrx/src/mcp.js": "7a9a937644bd9647025fd3fb1c26ef6eeec4ce2ceaa37fea8ad3db5bab117426",
+        "packages/intrx/src/registry.js": "2de720d9e05adc192eebfe9bff6fcfb3470f7cd3e1db62f472e3e4cca3506449",
+        "packages/intrx/test/intrx.test.js": "412415adfc58c8d97be910055f87a4976466a455f61f81bf4411e95ecb7e35bf",
+        "packages/intrx/test/pro.test.js": "22b585c50fef84ba50e56d6246a1e10ae50826270213dceaee5c38fa28537453"
+      }
+    },
+    "primingDifferences": 0
+  },
+  "currentFullScan": {
+    "cases": 48,
+    "violations": 4,
+    "incomplete": 15,
+    "pageErrors": 0,
+    "contrastViolations": 0,
+    "proofSHA256": "0871cd72be2a8ebea90b8d67b29a90531c68d22cad076a8aebb3b1b11b49c115",
+    "retained": "Four label-content-name-mismatch cases refer to the image-table title/year word boundary already documented in the naming pass. Preserve all15 incomplete results; no names, roles or displayed words change here.",
+    "browser": "158.0.8127.88",
+    "defaultGPU": true
+  },
+  "diagnostics": {
+    "namespace": {
+      "at": "2026-11-24T19:58:32.681Z",
+      "finding": "The handoff2 namespace checker rejects Stage-first selectors in three components. Its rules and baseline remain unchanged.",
+      "repair": "Begin with the owning component class and test the same Stage ancestor through :is(.stage[data-mode=\"full\"] *). This retains selector matching and specificity.",
+      "retained": "The first192-layout/96-native/24-export proof and initial registry failure are retained separately. The known-invalid required-check coordinator34360 and its own child tree were stopped before the source repair. Fresh checks bind to the repaired source."
+    },
+    "captureObserver": {
+      "at": "2026-11-24T20:18:52.414Z",
+      "initialDifference": {
+        "width": 744,
+        "height": 528,
+        "pixels": 3,
+        "channels": 7,
+        "max": 3,
+        "bounds": [
+          242,
+          291,
+          242,
+          293
+        ],
+        "first": [
+          {
+            "x": 242,
+            "y": 291,
+            "old": [
+              218,
+              133,
+              76,
+              255
+            ],
+            "now": [
+              218,
+              134,
+              78,
+              255
+            ]
+          },
+          {
+            "x": 242,
+            "y": 292,
+            "old": [
+              216,
+              154,
+              113,
+              255
+            ],
+            "now": [
+              216,
+              156,
+              116,
+              255
+            ]
+          },
+          {
+            "x": 242,
+            "y": 293,
+            "old": [
+              214,
+              182,
+              161,
+              255
+            ],
+            "now": [
+              215,
+              183,
+              162,
+              255
+            ]
+          }
+        ]
+      },
+      "independentOriginalRepeat": {
+        "captures": 9,
+        "uniquePNG": 2,
+        "largestDifferentPixels": 23,
+        "maximumChannelDifference": 17
+      },
+      "computedStylesAndDiscreteStateExact": true,
+      "clockScope": "Runtime birth timestamps differ across fresh contexts; no source frame is advanced. They are recorded separately rather than equated.",
+      "newNativeSelectorMatches": 0,
+      "directCompositor": {
+        "browser": "158.0.8127.88",
+        "captures": 15,
+        "independentOriginalAndCurrent": true,
+        "uniquePNG": 1,
+        "sha256": "de0a3a4306fb705cae17f02472a221d7d3d1122c744accd1fecdc865c48ec7a4"
+      },
+      "correction": "Capture through direct CDP after two global compositor frames with the source held. Production code and all pixel/numeric tolerances are unchanged. Keep the first failed3-pixel comparison and the original-source variance. No claim about the internal cause of screenshot-path variance or cold-first-paint timing."
+    },
+    "additionalDirectStartupFailure": {
+      "width": 372,
+      "height": 264,
+      "pixels": 27,
+      "channels": 81,
+      "max": 1,
+      "bounds": [
+        135,
+        48,
+        234,
+        77
+      ],
+      "first": [
+        {
+          "x": 146,
+          "y": 48,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 138,
+          "y": 56,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 231,
+          "y": 56,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 137,
+          "y": 58,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 232,
+          "y": 58,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 136,
+          "y": 60,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 233,
+          "y": 60,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 136,
+          "y": 61,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 64,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 234,
+          "y": 64,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 65,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 66,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 144,
+          "y": 67,
+          "old": [
+            21,
+            21,
+            21,
+            255
+          ],
+          "now": [
+            20,
+            20,
+            20,
+            255
+          ]
+        },
+        {
+          "x": 144,
+          "y": 68,
+          "old": [
+            21,
+            21,
+            21,
+            255
+          ],
+          "now": [
+            20,
+            20,
+            20,
+            255
+          ]
+        },
+        {
+          "x": 144,
+          "y": 69,
+          "old": [
+            21,
+            21,
+            21,
+            255
+          ],
+          "now": [
+            20,
+            20,
+            20,
+            255
+          ]
+        },
+        {
+          "x": 144,
+          "y": 70,
+          "old": [
+            22,
+            22,
+            22,
+            255
+          ],
+          "now": [
+            21,
+            21,
+            21,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 71,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 72,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 135,
+          "y": 73,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        },
+        {
+          "x": 234,
+          "y": 73,
+          "old": [
+            23,
+            23,
+            23,
+            255
+          ],
+          "now": [
+            22,
+            22,
+            22,
+            255
+          ]
+        }
+      ],
+      "scope": "Independent original/current Tab Morph startup differed in27 pixels by at most one channel step, even through direct capture. It remains a failed diagnostic, not a passed cold-pixel comparison."
+    },
+    "controlledDelta": {
+      "proofSHA256": "6dc3d110ab1ccec2d0844e42dc7fde87a8f2bbd9f1c57d93b8fe9e766a26a1a1",
+      "scope": "Both original affected controls passed exact same-instance CSS application/removal with unchanged DOM, clock, complete computed styles and PNGs. Later default-GPU failures remain archived. The final96-case gate uses an explicitly GPU-disabled browser; no numeric or pixel tolerance is introduced."
+    },
+    "retainedRuns": [
+      "Initial namespace failure and canceled required-check coordinator.",
+      "Initial192-layout/96-native/24-export Stage-first-selector proof.",
+      "Three-pixel Polish and27-pixel Tab Morph separate-startup failures.",
+      "Immutable-original screenshot variance and fifteen matching direct compositor controls.",
+      "Same-instance Swap and primed Pill default-GPU failures, unmodified-source controls and unsuccessful priming trial.",
+      "One attempted Chromium140 launch failed because its older executable was absent; it produced no browser evidence."
+    ],
+    "noToleranceChange": true,
+    "noProductionRendererChange": true,
+    "observerCorrection": "The earlier direct-capture control stabilized fifteen Polish captures but did not establish general default-GPU determinism. Subsequent Tab, Swap and Pill failures remain failed diagnostics. Raw styleExact false fields compared serialized key order, rule inventory and independent clock births; deep equality separately established computed-property dictionaries and discrete state.",
+    "defaultGPUFailures": {
+      "swap": [
+        {
+          "capture": "delta",
+          "pixels": 692,
+          "max": 2,
+          "sample": [
+            {
+              "x": 208,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 210,
+              "y": 0,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 212,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 221,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 254,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 259,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 293,
+              "y": 0,
+              "before": [
+                246,
+                246,
+                246,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 316,
+              "y": 0,
+              "before": [
+                245,
+                245,
+                245,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            },
+            {
+              "x": 323,
+              "y": 0,
+              "before": [
+                246,
+                246,
+                246,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 344,
+              "y": 0,
+              "before": [
+                244,
+                244,
+                244,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 351,
+              "y": 0,
+              "before": [
+                245,
+                245,
+                245,
+                255
+              ],
+              "now": [
+                244,
+                244,
+                244,
+                255
+              ]
+            },
+            {
+              "x": 353,
+              "y": 0,
+              "before": [
+                244,
+                244,
+                244,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 208,
+              "y": 2,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 210,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 214,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 223,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 252,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 254,
+              "y": 2,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 286,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            },
+            {
+              "x": 295,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            }
+          ]
+        },
+        {
+          "capture": "restored",
+          "pixels": 692,
+          "max": 2,
+          "sample": [
+            {
+              "x": 208,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 210,
+              "y": 0,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 212,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 221,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 254,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 259,
+              "y": 0,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 293,
+              "y": 0,
+              "before": [
+                246,
+                246,
+                246,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 316,
+              "y": 0,
+              "before": [
+                245,
+                245,
+                245,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            },
+            {
+              "x": 323,
+              "y": 0,
+              "before": [
+                246,
+                246,
+                246,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 344,
+              "y": 0,
+              "before": [
+                244,
+                244,
+                244,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 351,
+              "y": 0,
+              "before": [
+                245,
+                245,
+                245,
+                255
+              ],
+              "now": [
+                244,
+                244,
+                244,
+                255
+              ]
+            },
+            {
+              "x": 353,
+              "y": 0,
+              "before": [
+                244,
+                244,
+                244,
+                255
+              ],
+              "now": [
+                245,
+                245,
+                245,
+                255
+              ]
+            },
+            {
+              "x": 208,
+              "y": 2,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                249,
+                249,
+                249,
+                255
+              ]
+            },
+            {
+              "x": 210,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 214,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 223,
+              "y": 2,
+              "before": [
+                249,
+                249,
+                249,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 252,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                248,
+                248,
+                248,
+                255
+              ]
+            },
+            {
+              "x": 254,
+              "y": 2,
+              "before": [
+                248,
+                248,
+                248,
+                255
+              ],
+              "now": [
+                247,
+                247,
+                247,
+                255
+              ]
+            },
+            {
+              "x": 286,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            },
+            {
+              "x": 295,
+              "y": 2,
+              "before": [
+                247,
+                247,
+                247,
+                255
+              ],
+              "now": [
+                246,
+                246,
+                246,
+                255
+              ]
+            }
+          ]
+        }
+      ],
+      "pillAfterPriming": [
+        {
+          "tag": "priming",
+          "pixels": 0,
+          "max": 0,
+          "bounds": null
+        },
+        {
+          "tag": "delta",
+          "pixels": 3,
+          "max": 1,
+          "bounds": [
+            192,
+            99,
+            198,
+            117
+          ]
+        },
+        {
+          "tag": "restored",
+          "pixels": 0,
+          "max": 0,
+          "bounds": null
+        }
+      ],
+      "scope": "Same-instance Swap changed692 pixels with maximum channel delta2; delta and restored images match. Primed Pill changed3 pixels with maximum channel delta1 and restoration matched baseline. These remain failed default-GPU diagnostics."
+    },
+    "controls": {
+      "swapRepeatedSHA256": "c18bfccafe7e6a172338367f3fe685ffb3448bb1654ea5d204c84ed0528a544f",
+      "gpuDisabledSHA256": "71de9dc14b2b50cba6207a6178c09b49b25544c011a860f47aa64d5c9cbda753",
+      "scope": "Fifteen unchanged/repeated Swap captures matched. Fifteen GPU-disabled captures across Swap, Pill and Tab matched. The final96-case zero-diff CSS roundtrip gate explicitly uses --disable-gpu; default-GPU runtime and timing audits remain separate."
+    }
+  },
+  "visualReview": {
+    "proof": "light-review.png",
+    "scope": "All twelve light full compositions reviewed at390px before final verification. Existing dark controls, approved photographs, copy, shapes and layout remain intact."
+  },
+  "posters": "Existing native posters retained: no native selector matches or computed styles change, original CSS remains an exact prefix, and the GPU-disabled native CSS delta is exact. Default-GPU readback variance is preserved separately. No assets or photo credits change.",
+  "remaining": [
+    "Owner preference for low-contrast native Figma ink. No fill-allowlist contrast exception is introduced.",
+    "Other component contrast and incomplete results, photographic states and the liquid loader filled readout.",
+    "Final named motion recipes, CPU4 rendering, untouched cold routes and Lighthouse acceptance.",
+    "Default-GPU screenshot readback variance. The scoped CSS comparison does not close this finding."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly; no PR. Keep Actions disabled and preserve owner zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

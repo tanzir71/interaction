@@ -1782,3 +1782,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   against the conservative light Kit surface; photographic captions and the
   remaining catalog require separate review. Initial axe findings stay archived
   beside settled observations. Native Figma ink and CPU4 timing remain open.
+
+- `node tools/verify-interface-palettes.js http://127.0.0.1:4173` covers twelve
+  full interface palettes: active pill, image menu, breadcrumb, morphing tabs,
+  day/night, notification badge, polish stages, liquid progress caption,
+  masonry, swap, image table and inertial notes. Preserve all original controller
+  hashes, HTML, metadata and native artwork. Keep each selector component-first;
+  `:is(.stage[data-mode="full"] *)` reads the Stage context at the original
+  specificity without adding namespace debt. Tests compare fresh layouts and
+  exports, then apply/remove the exact CSS suffix on one paused native instance.
+  Native clock, DOM, every computed style and PNG bytes must remain exact in
+  the GPU-disabled CSS comparison, and new rules must match zero native nodes.
+  Default-GPU readback differences remain open; this comparison does not replace
+  actual GPU behavior or timing checks. Direct CDP capture avoids capture
+  preparation changes. Retain one priming readback before the native baseline,
+  the observed startup/first-read pixel variance and its original-source controls.
+  Do not add a pixel tolerance or claim cold
+  GPU determinism. Check opaque control surfaces separately from Stage ink.
+  Native gray ink, filled-progress text, other states and final audits stay open.
