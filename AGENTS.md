@@ -1696,3 +1696,21 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   touch stories after scroll changes. Catalog/source-hash changes invalidate
   broad cached inputs: refresh affected checks or explicitly prove unchanged
   scoped dependencies while retaining original executed hashes and results.
+
+- `node tools/verify-component-names.js http://127.0.0.1:4173` checks actual
+  names and structured ownership for 49 repaired components, real keyboard and
+  ordered clipboard feedback, and 98 fresh network-blocked full/native exports.
+  Native Proximity, menu placeholders and accordion bars retain meaningful
+  names from their original content. Inactive native File Tree and Scheduler
+  expose activation buttons until their original contents open, then restore
+  tree/grid ownership and the actual active descendant. Keep all twelve files,
+  all 336 availability cells, three citation sources and full product records.
+  Citation tooltips use neutral containers. Visible indices and primary labels
+  lead accessible names; Copy/Retry/Copied feedback follows the existing async
+  ownership. Full Award/Peel, gallery captions and piano keys have nonpainting
+  DOM word boundaries outside original artwork text. Native geometry, complete
+  models, clocks, assets and all CSS remain unchanged. Preserve initial failed
+  pixel comparisons and independent original-render variance; calibrated full
+  Scheduler scroll comparisons do not certify untouched initial scroll paint.
+  Remaining contrast/name findings, manual review and final motion/performance
+  acceptance stay open. Earlier private helpers and evidence remain frozen.
