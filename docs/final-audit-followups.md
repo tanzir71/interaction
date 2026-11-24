@@ -2,6 +2,36 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [25 Nov shell investigation](performance/shell-cold-2026-11-25.json)
+retains 24 current-source cold/warm Elastic Tabs samples and their traces.
+One cold sample still exceeds 300ms at 328.2ms. Early JSON consumption, direct
+module priming and an identical static-header prototype did not establish a
+stable improvement; all three are reverted. Every production input and all
+520 complete definitions remain exact. The reusable cold profiler preserves
+the earlier font-ready heading/two-frame stage method and actual Back scroll.
+
+Six fresh default mobile Lighthouse runs score Home 100/79/78 and Elastic Tabs
+100/69/100. Keep their large unattributed tasks and all traces. A minimal
+static-page control scores 100 with 75ms blocking time; it does not establish
+the cause of the site findings. Earlier passing runs do not supersede these
+current failures. The complete Home request lists total 569,212 bytes. Excluding
+only two verified demo-only Inter font requests leaves 338,243 bytes; the
+document, every shell resource and demo JavaScript remain counted. Actual Home
+shell text uses Geist/Geist Mono, with all observed Inter declarations inside
+demo content. The allowed transfer budget passes; the Lighthouse and cold
+readiness gates remain open.
+
+The [interactive palette pass](accessibility/interactive-palettes-2026-11-25.json)
+repairs ten full previews, including the liquid percentage over orange fill.
+It retains 160 exact layouts, 80 exact native CSS roundtrips, 20 offline exports,
+601 rendered theme positions and 1,001 exact original theme-model samples.
+The actual percentage halo is checked at 0/68/100 and two widths. Four raw axe
+flags concern incidental Cipher glyphs; two catch original Autocomplete word
+arrivals, whose settled words pass separately. Thirty incomplete results and
+the broader manual/native-ink audit remain open. This supersedes the pending
+filled-percentage finding below without changing native artwork or shared
+runtime/Stage behavior.
+
 The [Diff Review hold repair](motion/diff-holds-2026-11-25.json) fixes its compact
 initialization drift and CSS transitions created by deliberate input during a
 runtime hold. The local controller settles its fitted initial rows, owns new

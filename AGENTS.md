@@ -1855,3 +1855,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   roundtrips with GPU disabled; they do not certify default-GPU timing. Final
   catalog accessibility, native ink preference, motion and performance remain
   open. Earlier private inputs, helpers and evidence stay frozen.
+
+- `tools/profile-shell-cold.js` records actual cold navigation and trusted warm
+  caption input, keeping the font-ready heading/two-frame Stage method, every
+  trace, all outliers and actual Back scroll. `tools/profile-shell-lighthouse.js`
+  retains all default mobile runs and raw transfer totals. Run performance
+  collection sequentially without other heavy own checks. Do not certify a
+  route from its best sample or count demo-only fonts as shell bytes without
+  checking actual font use. The 25 Nov investigation ships no production
+  changes; cold readiness and Lighthouse failures remain open alongside CPU4
+  motion timing. Keep rejected prototypes and prior evidence immutable.
+  Cold collection uses external `PLAYWRIGHT_MODULE` and
+  `INTRX_CHROME_EXECUTABLE`; Lighthouse uses `CHROME_PATH` and an external
+  `--lighthouse` CLI path. Neither adds site dependencies.

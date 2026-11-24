@@ -1,0 +1,1475 @@
+{
+  "date": "2026-11-25",
+  "baseline": "2fbc10a15702d71e63050b8f473d221ce8918595",
+  "scope": "Current-source shell acceptance investigation. All 520 complete component definitions and every production input remain exact; no trial is shipped. Public profilers retain complete cold/warm stories and every default mobile Lighthouse run. This report records failures, not a performance pass.",
+  "productionChanges": [],
+  "sourceHashes": {
+    "index.html": "ba1ea630103948325873422342bc1e0f1303e7b50aa2e8bdefa62f1f370717e5",
+    "js/shell/registry.js": "1f6fa601d446ea27369ed36b60b857541130ebc7eb70f9c63bec7213db31003d",
+    "js/shell/main.js": "31087f4fd7e920149aee1ffa258137cb0b0a9b7d3cecf3b06ac6acb2454db03f",
+    "js/shell/router.js": "ab7892c03fe554aa57c9e612b36925a1f3e3f79be6fdda207c8daef452122ab0",
+    "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "registry/index.json": "cae915d6ce03765f6636c668c72c064406d4b3006652e0f00eb8e45f374a9ee9"
+  },
+  "cold": {
+    "file": "before/2026-11-24T22-54-10-462Z/report.json",
+    "sha256": "e3889dcb3efe7de9f5694f0b69a23cfd4a1dfe042409cc9e6e981f478776602d",
+    "rows": [
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "cold",
+        "heading": 328.1000000014901,
+        "stage": 328.20000000298023,
+        "assetsReady": 539,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "warm",
+        "heading": 130.10000000149012,
+        "stage": 129.89999999850988,
+        "assetsReady": 156,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "cold",
+        "heading": 195.39999999850988,
+        "stage": 202.39999999850988,
+        "assetsReady": 232.5,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "warm",
+        "heading": 174.10000000149012,
+        "stage": 173.89999999850988,
+        "assetsReady": 206,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "cold",
+        "heading": 244.19999999925494,
+        "stage": 244.30000000074506,
+        "assetsReady": 273.69999999925494,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "warm",
+        "heading": 61,
+        "stage": 61,
+        "assetsReady": 73.10000000149012,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "cold",
+        "heading": 244.80000000074506,
+        "stage": 252.40000000223517,
+        "assetsReady": 280.9000000022352,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "warm",
+        "heading": 61.900000002235174,
+        "stage": 61.69999999925494,
+        "assetsReady": 73.30000000074506,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "cold",
+        "heading": 189.89999999850988,
+        "stage": 197.19999999925494,
+        "assetsReady": 228.59999999776483,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "warm",
+        "heading": 52.400000002235174,
+        "stage": 52.400000002235174,
+        "assetsReady": 63.5,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "cold",
+        "heading": 187.79999999701977,
+        "stage": 192.19999999925494,
+        "assetsReady": 222.89999999850988,
+        "errors": []
+      },
+      {
+        "width": 1440,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "warm",
+        "heading": 54.80000000074506,
+        "stage": 54.600000001490116,
+        "assetsReady": 73.80000000074506,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "cold",
+        "heading": 154.90000000223517,
+        "stage": 155,
+        "assetsReady": 182.10000000149012,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "warm",
+        "heading": 49.79999999701977,
+        "stage": 81.59999999776483,
+        "assetsReady": 107,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "cold",
+        "heading": 193,
+        "stage": 193,
+        "assetsReady": 220.60000000149012,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "warm",
+        "heading": 48.600000001490116,
+        "stage": 82.19999999925494,
+        "assetsReady": 108.80000000074506,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "cold",
+        "heading": 208.60000000149012,
+        "stage": 208.60000000149012,
+        "assetsReady": 231.60000000149012,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "warm",
+        "heading": 58.599999997764826,
+        "stage": 95,
+        "assetsReady": 117.39999999850988,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "cold",
+        "heading": 188.80000000074506,
+        "stage": 188.80000000074506,
+        "assetsReady": 219.89999999850988,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "warm",
+        "heading": 50.69999999925494,
+        "stage": 76.39999999850988,
+        "assetsReady": 109,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "cold",
+        "heading": 197.30000000074506,
+        "stage": 197.30000000074506,
+        "assetsReady": 227.80000000074506,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "warm",
+        "heading": 38.100000001490116,
+        "stage": 67.40000000223517,
+        "assetsReady": 91.80000000074506,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "cold",
+        "heading": 201.80000000074506,
+        "stage": 201.80000000074506,
+        "assetsReady": 231.19999999925494,
+        "errors": []
+      },
+      {
+        "width": 390,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "warm",
+        "heading": 44.899999998509884,
+        "stage": 75.69999999925494,
+        "assetsReady": 109.10000000149012,
+        "errors": []
+      }
+    ],
+    "exceeding300ms": [
+      {
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "cold",
+        "heading": 328.1000000014901,
+        "stage": 328.20000000298023,
+        "assetsReady": 539,
+        "errors": []
+      }
+    ],
+    "maxStageMs": 328.20000000298023,
+    "allRecordedPaintsUnder300": false
+  },
+  "trials": [
+    {
+      "change": "Early JSON body consumption",
+      "file": "early-read/2026-11-24T22-57-44-640Z/report.json",
+      "sha256": "8af3e0515cf2efa3caa7c090339d888a149a2fb2b83ab3b6aeb00700e55ea314",
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 305.6000000014901,
+          "stage": 305.6000000014901,
+          "assetsReady": 513.8000000007451,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 98.10000000149012,
+          "stage": 98,
+          "assetsReady": 123.39999999850988,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 374.5,
+          "stage": 659.6999999992549,
+          "assetsReady": 674.5,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 102.10000000149012,
+          "stage": 102,
+          "assetsReady": 114.20000000298023,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 410.30000000074506,
+          "stage": 410.30000000074506,
+          "assetsReady": 430.3999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 103.59999999776483,
+          "stage": 103.5,
+          "assetsReady": 128.5,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 497.69999999925494,
+          "stage": 497.69999999925494,
+          "assetsReady": 531.5999999977648,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 89.89999999850988,
+          "stage": 89.59999999776483,
+          "assetsReady": 123.39999999850988,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 379,
+          "stage": 379,
+          "assetsReady": 410.8999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 75.60000000149012,
+          "stage": 75.5,
+          "assetsReady": 93,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 529.1999999992549,
+          "stage": 529.1999999992549,
+          "assetsReady": 552,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 89.80000000074506,
+          "stage": 89.69999999925494,
+          "assetsReady": 118.60000000149012,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 490.30000000074506,
+          "stage": 630.5,
+          "assetsReady": 661.1999999992549,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 63.5,
+          "stage": 119.30000000074506,
+          "assetsReady": 140.5,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 269.8999999985099,
+          "stage": 270,
+          "assetsReady": 291.1000000014901,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 51.5,
+          "stage": 80.60000000149012,
+          "assetsReady": 112.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 261.5,
+          "stage": 261.5,
+          "assetsReady": 271.5999999977648,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 76.10000000149012,
+          "stage": 123.19999999925494,
+          "assetsReady": 145,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 383.3999999985099,
+          "stage": 370.30000000074506,
+          "assetsReady": 383.3999999985099,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 68.30000000074506,
+          "stage": 115.60000000149012,
+          "assetsReady": 136.70000000298023,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 225,
+          "stage": 225,
+          "assetsReady": 248.90000000223517,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 59.30000000074506,
+          "stage": 77,
+          "assetsReady": 105.5,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 253.69999999925494,
+          "stage": 238,
+          "assetsReady": 268.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 53.099999997764826,
+          "stage": 81.09999999776483,
+          "assetsReady": 108.19999999925494,
+          "errors": []
+        }
+      ],
+      "exceeding300ms": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 305.6000000014901,
+          "stage": 305.6000000014901,
+          "assetsReady": 513.8000000007451,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 374.5,
+          "stage": 659.6999999992549,
+          "assetsReady": 674.5,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 410.30000000074506,
+          "stage": 410.30000000074506,
+          "assetsReady": 430.3999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 497.69999999925494,
+          "stage": 497.69999999925494,
+          "assetsReady": 531.5999999977648,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 379,
+          "stage": 379,
+          "assetsReady": 410.8999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 529.1999999992549,
+          "stage": 529.1999999992549,
+          "assetsReady": 552,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 490.30000000074506,
+          "stage": 630.5,
+          "assetsReady": 661.1999999992549,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 383.3999999985099,
+          "stage": 370.30000000074506,
+          "assetsReady": 383.3999999985099,
+          "errors": []
+        }
+      ],
+      "maxStageMs": 659.6999999992549,
+      "allRecordedPaintsUnder300": false,
+      "accepted": false,
+      "assessment": "Did not establish a stable under-300ms result. Retain all measurements; these sequential trials do not establish statistical causation for each outlier."
+    },
+    {
+      "change": "Early JSON plus direct-module priming",
+      "file": "prime/2026-11-24T23-02-36-945Z/report.json",
+      "sha256": "80a3982c1f7d828fa1647afbf5feab0b3322b7390b6e3ee471659192e5e87246",
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 288.19999999925494,
+          "stage": 288.19999999925494,
+          "assetsReady": 339.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 381.1000000014901,
+          "stage": 381,
+          "assetsReady": 413.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 414.79999999701977,
+          "stage": 425.0999999977648,
+          "assetsReady": 455.3999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 77.90000000223517,
+          "stage": 77.80000000074506,
+          "assetsReady": 89.60000000149012,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 253.90000000223517,
+          "stage": 264.19999999925494,
+          "assetsReady": 297.6000000014901,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 70.59999999776483,
+          "stage": 70.39999999850988,
+          "assetsReady": 86.80000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 226.90000000223517,
+          "stage": 227,
+          "assetsReady": 245.30000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 63.5,
+          "stage": 63.29999999701977,
+          "assetsReady": 73.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 206.60000000149012,
+          "stage": 206.60000000149012,
+          "assetsReady": 230,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 60.80000000074506,
+          "stage": 60.599999997764826,
+          "assetsReady": 70.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 255.29999999701977,
+          "stage": 255.39999999850988,
+          "assetsReady": 279.79999999701977,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 66.5,
+          "stage": 66.39999999850988,
+          "assetsReady": 77.39999999850988,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 194.40000000223517,
+          "stage": 176.80000000074506,
+          "assetsReady": 210.90000000223517,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 51.80000000074506,
+          "stage": 75.5,
+          "assetsReady": 107,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 209.59999999776483,
+          "stage": 197.29999999701977,
+          "assetsReady": 223.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 38,
+          "stage": 64.80000000074506,
+          "assetsReady": 91.60000000149012,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 190.19999999925494,
+          "stage": 180.59999999776483,
+          "assetsReady": 206.89999999850988,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 45.5,
+          "stage": 84.60000000149012,
+          "assetsReady": 104,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 218,
+          "stage": 204.40000000223517,
+          "assetsReady": 229.5,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 49,
+          "stage": 87,
+          "assetsReady": 108.30000000074506,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 181.5,
+          "stage": 169.5,
+          "assetsReady": 198.09999999776483,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 48.5,
+          "stage": 78.79999999701977,
+          "assetsReady": 107.09999999776483,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 232.09999999776483,
+          "stage": 209.39999999850988,
+          "assetsReady": 232.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 47,
+          "stage": 80.80000000074506,
+          "assetsReady": 108.10000000149012,
+          "errors": []
+        }
+      ],
+      "exceeding300ms": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 381.1000000014901,
+          "stage": 381,
+          "assetsReady": 413.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 414.79999999701977,
+          "stage": 425.0999999977648,
+          "assetsReady": 455.3999999985099,
+          "errors": []
+        }
+      ],
+      "maxStageMs": 425.0999999977648,
+      "allRecordedPaintsUnder300": false,
+      "accepted": false,
+      "assessment": "Did not establish a stable under-300ms result. Retain all measurements; these sequential trials do not establish statistical causation for each outlier."
+    },
+    {
+      "change": "Identical static header plus early JSON/module priming",
+      "file": "static-header/2026-11-24T23-06-05-667Z/report.json",
+      "sha256": "800c75960415f3d11e97c788d6a6a0c350570476640ef2b187e345b118f2e173",
+      "rows": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 363.20000000298023,
+          "stage": 363.1000000014901,
+          "assetsReady": 426.20000000298023,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 338.30000000074506,
+          "stage": 338.19999999925494,
+          "assetsReady": 365.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 232.30000000074506,
+          "stage": 240.60000000149012,
+          "assetsReady": 266.3999999985099,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 75.10000000149012,
+          "stage": 74.89999999850988,
+          "assetsReady": 88.30000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 342.5,
+          "stage": 315.5,
+          "assetsReady": 342.5999999977648,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 199.79999999701977,
+          "stage": 199.69999999925494,
+          "assetsReady": 222.5,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 206.89999999850988,
+          "stage": 235.89999999850988,
+          "assetsReady": 263.80000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 55.600000001490116,
+          "stage": 55.5,
+          "assetsReady": 95.80000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 236.80000000074506,
+          "stage": 236.80000000074506,
+          "assetsReady": 257.80000000074506,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 55.399999998509884,
+          "stage": 55.30000000074506,
+          "assetsReady": 85,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 193.80000000074506,
+          "stage": 247.5,
+          "assetsReady": 270.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 71.19999999925494,
+          "stage": 71,
+          "assetsReady": 88.80000000074506,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 214.39999999850988,
+          "stage": 198.89999999850988,
+          "assetsReady": 231.09999999776483,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 35.599999997764826,
+          "stage": 56.79999999701977,
+          "assetsReady": 101.69999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 246.10000000149012,
+          "stage": 217,
+          "assetsReady": 246.10000000149012,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 39.19999999925494,
+          "stage": 57.29999999701977,
+          "assetsReady": 99.59999999776483,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 301.80000000074506,
+          "stage": 274.3999999985099,
+          "assetsReady": 301.8999999985099,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 33.70000000298023,
+          "stage": 56.900000002235174,
+          "assetsReady": 101.40000000223517,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 284.19999999925494,
+          "stage": 256.1000000014901,
+          "assetsReady": 284.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 43.30000000074506,
+          "stage": 65.90000000223517,
+          "assetsReady": 106.60000000149012,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 348.19999999925494,
+          "stage": 327.1000000014901,
+          "assetsReady": 348.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "warm",
+          "heading": 45.19999999925494,
+          "stage": 45,
+          "assetsReady": 63.29999999701977,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 232.19999999925494,
+          "stage": 211.30000000074506,
+          "assetsReady": 232.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 3,
+          "mode": "warm",
+          "heading": 51.600000001490116,
+          "stage": 75.10000000149012,
+          "assetsReady": 106.90000000223517,
+          "errors": []
+        }
+      ],
+      "exceeding300ms": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "cold",
+          "heading": 363.20000000298023,
+          "stage": 363.1000000014901,
+          "assetsReady": 426.20000000298023,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 1,
+          "mode": "warm",
+          "heading": 338.30000000074506,
+          "stage": 338.19999999925494,
+          "assetsReady": 365.19999999925494,
+          "errors": []
+        },
+        {
+          "width": 1440,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 342.5,
+          "stage": 315.5,
+          "assetsReady": 342.5999999977648,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "repeat": 3,
+          "mode": "cold",
+          "heading": 301.80000000074506,
+          "stage": 274.3999999985099,
+          "assetsReady": 301.8999999985099,
+          "errors": []
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "repeat": 2,
+          "mode": "cold",
+          "heading": 348.19999999925494,
+          "stage": 327.1000000014901,
+          "assetsReady": 348.19999999925494,
+          "errors": []
+        }
+      ],
+      "maxStageMs": 363.1000000014901,
+      "allRecordedPaintsUnder300": false,
+      "accepted": false,
+      "assessment": "Did not establish a stable under-300ms result. Retain all measurements; these sequential trials do not establish statistical causation for each outlier."
+    }
+  ],
+  "lighthouse": {
+    "file": "lighthouse/2026-11-24T23-09-46-884Z/report.json",
+    "sha256": "a183bb5577e1aa8f63e774880d5b636106919f14e5b020f13888329a0bb1c5f0",
+    "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+    "version": "13.6.0",
+    "runs": [
+      {
+        "id": "home",
+        "repeat": 1,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 903.1164000000001,
+          "largest-contentful-paint": 903.1164000000001,
+          "speed-index": 2417.5366968936014,
+          "total-blocking-time": 57,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 1929,
+        "warnings": []
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 1,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 903.1713,
+          "largest-contentful-paint": 903.1713,
+          "speed-index": 1547.6889486954105,
+          "total-blocking-time": 6,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 2032,
+        "warnings": []
+      },
+      {
+        "id": "home",
+        "repeat": 2,
+        "score": 0.79,
+        "metrics": {
+          "first-contentful-paint": 903.0374999999999,
+          "largest-contentful-paint": 903.0374999999999,
+          "speed-index": 2410.644081451368,
+          "total-blocking-time": 899.4624999999999,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 1438.5,
+        "warnings": []
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 2,
+        "score": 0.69,
+        "metrics": {
+          "first-contentful-paint": 913.6035999999999,
+          "largest-contentful-paint": 3695.4053999999987,
+          "speed-index": 2169.2839709585605,
+          "total-blocking-time": 859.9999999999995,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 1479,
+        "warnings": []
+      },
+      {
+        "id": "home",
+        "repeat": 3,
+        "score": 0.78,
+        "metrics": {
+          "first-contentful-paint": 919.9765,
+          "largest-contentful-paint": 919.9765,
+          "speed-index": 2910.3501345729537,
+          "total-blocking-time": 974.5117499999997,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 1643.5,
+        "warnings": []
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 3,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 992.0944,
+          "largest-contentful-paint": 992.0944,
+          "speed-index": 1539.7682447515588,
+          "total-blocking-time": 10,
+          "cumulative-layout-shift": 0
+        },
+        "benchmarkIndex": 1858,
+        "warnings": []
+      }
+    ],
+    "allScoresPass": false,
+    "unattributedFindings": "The second Home and Elastic runs contain large unattributed main-thread tasks. Keep their full traces. The minimal control does not establish the cause of the site findings."
+  },
+  "transferBudget": {
+    "scope": "Each complete pre-interaction Lighthouse Home request list includes its document. Exclude only the two observed Inter demo font requests; actual 412px Home inspection finds every Inter text declaration within .stage-content, with Geist/Geist Mono on shell text. All remaining transfers, including demo JavaScript, stay counted. This is more conservative than excluding all demo assets.",
+    "fontScope": {
+      "file": "font-scope.json",
+      "sha256": "f0cd6b7fc567169a0cb5655d976686961c140f5fe3d410bfac8c621b027b91f5",
+      "shellFamilies": [
+        "Geist",
+        "\"Geist Mono\""
+      ]
+    },
+    "samples": [
+      {
+        "repeat": 1,
+        "allTransfers": 569212,
+        "excludedDemoFonts": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedBytes": 230969,
+        "conservativeShellBytes": 338243,
+        "under400KB": true
+      },
+      {
+        "repeat": 2,
+        "allTransfers": 569212,
+        "excludedDemoFonts": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedBytes": 230969,
+        "conservativeShellBytes": 338243,
+        "under400KB": true
+      },
+      {
+        "repeat": 3,
+        "allTransfers": 569212,
+        "excludedDemoFonts": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedBytes": 230969,
+        "conservativeShellBytes": 338243,
+        "under400KB": true
+      }
+    ],
+    "passed": true
+  },
+  "control": {
+    "file": "control.json",
+    "sha256": "6ae3cd463d9024f115020d6684051230a9e14b552fd21ebf43b704b7d0a29c17",
+    "sourceSHA256": "007c4efe9a10636cb2bff6fa69f7c3cbe35eabd65ada2aee635ddb73a02e543d",
+    "scope": "Minimal local static page, default mobile Lighthouse settings; no scripts, styles or external assets. One diagnostic, not a replacement benchmark.",
+    "score": 1,
+    "TBT": 75,
+    "benchmarkIndex": 1412,
+    "longTasks": [
+      {
+        "url": "Unattributable",
+        "duration": 113,
+        "startTime": 601.16745
+      },
+      {
+        "url": "Unattributable",
+        "duration": 80,
+        "startTime": 714.16745
+      }
+    ]
+  },
+  "tools": {
+    "cold": {
+      "file": "tools/profile-shell-cold.js",
+      "sha256": "46b52c032de4a1c5db2768f255787e7b4a87f15907335a5553aa8aaac80e3113",
+      "measuredVersionSHA256": "064c2b464eb27ea66dc030989df6ef9704b46f82107f9021d235db31ddeba2c5",
+      "correction": "Move the external Playwright import after --help. Browser code and measurement logic remain exact."
+    },
+    "lighthouse": {
+      "file": "tools/profile-shell-lighthouse.js",
+      "sha256": "f68a19bfcc6f9215860b0cc9121b4bd9be10bb6d44856693a2a0c0bb8f46b038",
+      "measuredVersionSHA256": "f6981fcbd18458ad25ef813a34410b5ec08fd930e9976655b47dc1f60c5a2f89",
+      "correction": "Label the no-exclusions byte count explicitly. Do not veto the owner budget for permitted demo assets; Performance scores remain the CLI gate. All raw first-version results stay retained."
+    }
+  },
+  "verification": {
+    "required": {
+      "started": "2026-11-24T23:17:03.300Z",
+      "browser": "C:/Users/tanzir/AppData/Local/intrx-audit/chrome/158.0.8127.88/chrome-win64/chrome.exe",
+      "rows": [
+        {
+          "name": "registry",
+          "args": [
+            "tools/verify-registry.js"
+          ],
+          "exitCode": 0,
+          "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+        },
+        {
+          "name": "stage",
+          "args": [
+            "tools/verify-stage.js",
+            "--strict"
+          ],
+          "exitCode": 0,
+          "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+        },
+        {
+          "name": "generated",
+          "args": [
+            "tools/build-registry.js",
+            "--check"
+          ],
+          "exitCode": 0,
+          "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+        },
+        {
+          "name": "motion",
+          "args": [
+            "tools/verify-motion.js",
+            "--strict"
+          ],
+          "exitCode": 0,
+          "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+        },
+        {
+          "name": "library",
+          "args": [
+            "tools/verify-library.js",
+            "http://127.0.0.1:4173"
+          ],
+          "exitCode": 0,
+          "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+        },
+        {
+          "name": "fit",
+          "args": [
+            "tools/audit-stage-fit.js",
+            "http://127.0.0.1:4173"
+          ],
+          "exitCode": 0,
+          "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+        }
+      ],
+      "finished": "2026-11-24T23:26:43.738Z"
+    },
+    "package": {
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "logSHA256": "30516fd568073ca99c81ee179c4069e6c1ecfec304ef4bfb5085ae1437a3638e"
+    },
+    "syntaxAndHelp": true,
+    "unchangedCompleteDefinitions": 520,
+    "productionRestoredExactly": true
+  },
+  "remaining": [
+    "Cold detail readiness still exceeds 300ms in one of the 24 original-source samples.",
+    "Current mobile Lighthouse scores below 90 remain unresolved. Prior 100/100/100 results do not supersede these new findings.",
+    "Unattributed startup tasks, complete motion recipes, literal background visibility, native CPU4 frame rate and remaining manual accessibility/contrast acceptance."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly; no PR. Keep GitHub Actions disabled and preserve the owner $0 stop budget.",
+    "fullGoalComplete": false
+  }
+}
