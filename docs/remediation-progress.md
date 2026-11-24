@@ -20,6 +20,39 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Current Stage performance recheck
+
+The [current Stage report](performance/showcase-current-stage-2026-11-24.json)
+retains all forty CPU 4 native/full desktop/compact cases across the ten scenes.
+Native Threads records 18.65–21.14fps; full desktop Converging Paths records
+49.45fps with 50ms p95 intervals. Four Magnet Lines paints span 423.90–474.99ms;
+Dot Field's first native desktop paint records 317.00ms. All 159 long tasks and
+371 intervals above 25ms remain recorded, alongside the earlier interrupted run.
+These findings leave the final timing audit open.
+Frame rates here count source `requestAnimationFrame` intervals; compositor
+presentation rate still needs separate acceptance evidence.
+
+`tools/profile-final-showcase.js` measures all ten field/spatial Showcase scenes
+against the active `foundations.css`, using real source clocks, prepared fonts,
+native/full desktop DPR 1 and compact DPR 2 stages, and external browser tooling.
+Each run keeps its own source hashes, compressed traces, GPU inventory, readiness,
+frame intervals, initialization/story long tasks and disposal checks. Mesh runs
+for twelve seconds; the other scenes run for eight seconds with their original
+Dock actions. These measurements supplement the component input/model suites.
+
+The first eight current Chrome 158 Mesh samples record 59.27–59.94fps, including
+59.94fps in all four CPU 4 cases. Its full model remains 400×320 with 5,044
+paint commands. The prior 30.38fps compact CPU 4 sample remains archived. Browser
+and shared styling differ between these runs, so use the current measurements
+for this environment without attributing the difference to a component fix.
+
+Threads remains slow under CPU 4. A GPU prototype reached 56.94–58.82fps in its
+two native cases but changed texture edge pixels. Canvas command-capture,
+cached-path and cached-math trials did not improve the measured frame rate.
+All trials remain private evidence. Production models, artwork, assets,
+metadata, portable exports and all 447 demo modules remain unchanged. Final
+motion, accessibility, cold-route and performance acceptance remains open.
+
 ## Shell startup and pending interactions
 
 Catalog fetching starts in the document head while the shell scripts load.

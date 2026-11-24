@@ -1594,3 +1594,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   translucent 16px header blur; startup experiments are private evidence, not
   replacement artwork or accepted styles. Large hero text uses the existing
   darker orange token in light mode and must meet 3:1; ordinary text stays 4.5:1.
+
+- `node tools/profile-final-showcase.js http://127.0.0.1:4173 --cpu=1,4`
+  measures all ten Showcase field/spatial scenes with current foundations,
+  prepared fonts, actual clocks and native/full desktop DPR 1 and compact DPR 2
+  stages. Use `--ids=showcase-threads,showcase-magnet-lines` to isolate findings
+  and `--output=.artifacts/...` for a phase-owned archive. Mesh includes its full
+  twelve-second breath; Paths completes one six-second replay. Every run retains
+  source hashes, raw traces, initialization/story long tasks and disposal checks.
+  Set `PLAYWRIGHT_MODULE` and optionally `INTRX_CHROME_EXECUTABLE` to external
+  installed tooling. Run it alone; recording a sample does not pass a timing
+  gate. Earlier private inputs/helpers/evidence remain frozen. Compare renderer
+  changes with captured original pixels and retain every trial and outlier.

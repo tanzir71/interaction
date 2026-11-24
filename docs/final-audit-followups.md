@@ -42,6 +42,30 @@ cold-route issue and the component CPU 4 findings below open. The 17 required
 and focused commands pass; these shell results do not complete site-wide
 motion, manual accessibility or performance acceptance.
 
+The [forty-case current Stage report](performance/showcase-current-stage-2026-11-24.json)
+retains native Threads at 18.65–21.14fps and full desktop Converging Paths at
+49.45fps with 50ms p95 intervals under CPU 4. Magnet Lines records four paints
+at 423.90–474.99ms; Dot Field's first native desktop paint records 317.00ms.
+Keep all 159 long tasks, 371 intervals above 25ms and the earlier interrupted
+samples as investigation evidence. No component source changed in this pass.
+These rates measure source frame callbacks; they do not independently prove
+the compositor's presentation rate.
+
+The final Showcase profiler now loads active `foundations.css`, rather than
+the frozen v1 stylesheet used by older profile harnesses. Its source-bound
+Chrome 158 Mesh recheck records 59.27–59.94fps across eight twelve-second
+native/full desktop/compact CPU 1/4 stories; every CPU 4 case records 59.94fps.
+The full 400×320 model and 5,044 paint commands remain unchanged. Keep the older
+30.38fps sample and its trace as historical evidence. Browser and stylesheet
+differences limit direct comparisons. This recheck leaves cold-route, recipe,
+accessibility and site-wide timing acceptance open.
+
+Native Threads still misses the CPU 4 frame budget. A GPU prototype improved
+its measured rate to 56.94–58.82fps but changed texture edge pixels; it is not
+accepted. Command-capture, cached-path and cached-math trials also remain
+unshipped because their measured native frame rates were worse. Preserve these
+trial sources, pixels, traces and outliers when continuing the investigation.
+
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
