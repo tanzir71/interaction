@@ -2,6 +2,23 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [form palette pass](accessibility/forms-palettes-2026-11-24.json) repairs
+the confirmed full-calendar weekday and form light-stage text findings, adds
+zoom-correct full-view outlines, and fixes the native picker/color control
+semantics. All 520 original demo JavaScript strings remain unchanged. Its 1,746
+checks include both independent palettes, two widths, both motion settings and
+28 fresh offline full exports. All 384 initial form cases have no automated
+violations. Keep their incomplete results for manual review; this does not
+close the other categories or the complete accessibility audit.
+
+All 96 form geometry checkpoints match. Historical Slide/Color crops differ
+from current captures at 16 and 75 pixels. Three fresh independent
+original/current pairs for each match every channel, visible computed paint
+property and absolute rectangle exactly. The cause of the historical
+differences is unproven. Keep both sets and all failed comparisons; do not
+replace captures or accept a numeric/pixel tolerance. Default native artwork
+stays unchanged; only the alternate light Floating Label ink/cutout changes.
+
 The [initial component accessibility scan](accessibility/components-initial-2026-11-24.json)
 now covers all 520 components across native/full, dark/light and reduced/normal
 initial states: 4,160 cases, 726 rule violations across 140 components, 1,945
@@ -15,10 +32,11 @@ Three initial form findings are repaired: Upload's visible text supplies its
 button name, Signature's real keyboard Canvas is exposed, and selectable
 adjacent-month dates exceed 4.5:1. The targeted scan clears the automated
 violations in 24 cases; 272 actual name/file-chooser/keyboard/contrast checks
-pass. Eighteen incomplete results remain. Manual review already confirms
-full-calendar weekday labels at 4.08:1 and an unreadable Upload heading on the
-light Stage. Repair these and audit light-stage heading/help text across the
-full compositions. Preserve the native reference geometry and artwork.
+pass. Eighteen incomplete results remained at that checkpoint. The later form
+palette pass repairs the confirmed 4.08:1 weekday labels and unreadable Upload
+heading. Continue auditing light-stage heading/help text in other categories
+and the remaining incomplete form states. Preserve native reference geometry
+and artwork.
 
 Chrome 158 can acknowledge a touch move before delivering its PointerEvent.
 The old Precision assertion read 55.6 before delivery and 56.60000015 after

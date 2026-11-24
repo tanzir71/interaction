@@ -20,6 +20,39 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Form palettes and picker semantics
+
+The [form palette report](accessibility/forms-palettes-2026-11-24.json)
+repairs surrounding text in the four new forms and nine extensions, plus the
+alternate light Floating Label. Headings, help, readouts and the bare inline
+name follow the independent Stage palette; dark inner control surfaces retain
+their own ink. Live calendar weekday headings now exceed 4.5:1. The full Slide
+keeps the recipe's original `#7C7C7C` shimmer ink, 2000ms timing and 400% sweep;
+an approved `#101010` full track supplies sufficient contrast. Its native
+stencil is unchanged. Compact full-view outlines retain two physical pixels.
+
+Native picker columns use valid spinbutton elements with the original hit
+boxes and complete hour/minute/period models. Native saturation/brightness has
+an explicit name that survives replacement of its decorative children. The
+1,746-check verifier exercises independent shell/Stage palettes, desktop/mobile
+widths, both motion settings, actual native keys and 28 fresh offline exports.
+The two initial form matrices cover 384 desktop/mobile cases with no automated
+violations. Incomplete results remain manual review work.
+
+All 96 geometry comparisons match. Forty-six of 48 native crops match the stored
+images exactly; the light Floating Label ink intentionally changes, and an
+older Slide crop differs at sixteen pixels. Three fresh original/current pairs
+for Slide match every channel and computed paint property exactly. The same
+reference check resolves a 75-pixel, one-channel-step stored Color difference.
+The cause of those older capture differences is unproven; every image and
+strict-comparison failure is retained without tolerances or rebaselining.
+
+All 520 demo JavaScript strings, 506 other definitions, 433 other modules,
+metadata, assets and six protected shared inputs remain unchanged. The fourteen
+generator prompts now describe the palette and accessibility contracts. Other
+categories, manual contrast, motion recipes and performance acceptance remain
+open.
+
 ## Component accessibility scan and form repairs
 
 The [initial component audit](accessibility/components-initial-2026-11-24.json)
@@ -37,8 +70,9 @@ keeping the sample lettering decorative. Date Range raises selectable
 adjacent-month dates from 2.79:1 to above 4.5:1. The 272-check regression uses a
 real file chooser, Tab, Space and Arrow keys at desktop/mobile widths in both
 themes and motion settings. The targeted 24-case scan has no automated
-violations, with eighteen incomplete results still requiring review. Full
-calendar weekday contrast and light-stage heading/help contrast remain open.
+violations, with eighteen incomplete results still requiring review. The later
+form palette report above repairs the confirmed weekday and surrounding-copy
+contrast findings; its remaining incomplete results stay open.
 
 All 24 rendered geometry checkpoints are identical. Twenty image crops match
 pixel for pixel, including all twelve native crops; four full calendar crops

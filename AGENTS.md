@@ -1630,6 +1630,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   visible name and real file chooser, selectable adjacent-month contrast and
   Signature's actual Tab/Space/Arrow drawing. Keep sample lettering decorative,
   the Canvas exposed and every native artwork layer unchanged. Full weekday
-  and light-stage heading/help contrast remain final-audit follow-ups. The
+  and surrounding form palette repairs have a separate verifier below. The
   Forms new-input verifier awaits actual PointerEvent delivery after CDP touch
   moves, keeping its existing models, numeric tolerances and 118 checks.
+
+- `node tools/verify-forms-themes.js http://127.0.0.1:4173` checks surrounding
+  form text in independent shell/Stage palettes, both motion settings and
+  desktop/mobile widths, valid named native picker/color input and 28 fresh
+  offline full exports. Keep dark inner controls independent of surrounding
+  Stage text. Full Slide retains the original `#7C7C7C` shimmer recipe over an
+  approved `#101010` track; native art and all JavaScript models stay unchanged.
+  New/extension full-view outlines compensate Stage zoom to preserve two
+  physical pixels. The alternate light Floating Label uses neutral readable
+  ink and the neutral Stage cutout. Refresh affected prompts and generated
+  output. Initial form scans pass; incomplete results, other categories and
+  final acceptance still need review. Historical pixel differences stay
+  recorded; independent original renderings require exact channels and paint
+  properties without numeric tolerances.

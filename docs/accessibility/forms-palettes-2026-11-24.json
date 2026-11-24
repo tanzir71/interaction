@@ -1,0 +1,537 @@
+{
+  "at": "2026-11-24T04:33:38.941Z",
+  "baselineCommit": "5bd904df0e4c4ca18f8ec78ca099e400c0b0fb3f",
+  "scope": "Forms palette and initial semantic repairs; complete 520-component acceptance remains open.",
+  "changed": [
+    {
+      "id": "input-float-label",
+      "file": "js/demos.forms.input-float-label.js",
+      "sha256": "fe7fecd8e024de85ba4ebd6b71bcd89d8d4aca65ce21b49cf7fe673d972d2ce0",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-slide-to-confirm",
+      "file": "js/demos.forms.form-slide-to-confirm.js",
+      "sha256": "eb4ee68f3fec9c6a9a9b1f1b5775e4b643ae22e2d1628c76407670d2131fba6b",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-picker-wheel",
+      "file": "js/demos.forms.form-picker-wheel.js",
+      "sha256": "2b45ce37973e56ae92522fbeda9ec93cc58ffcf824cff818d5ac1b521dfbf511",
+      "fields": [
+        "html",
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-precision-scrubber",
+      "file": "js/demos.forms.form-precision-scrubber.js",
+      "sha256": "050a371fc82bd214ef62fb47363cbacd071cedaec83e1991569553568608fdd0",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-dropzone-morph",
+      "file": "js/demos.forms.form-dropzone-morph.js",
+      "sha256": "462e65691e3ef846f6ea5798390767ad84eb4918de68e54f20d3e3ff1c6404bb",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-vanish-input",
+      "file": "js/demos.formext.form-vanish-input.js",
+      "sha256": "290fd7f979f4c433ef3300f80e4886068c61eb677d72ece4bd7f7bfd9e1cc43a",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-gooey-search",
+      "file": "js/demos.formext.form-gooey-search.js",
+      "sha256": "a5c60547ebf317fcfbe2b04f45e87b0fcb1f694f1c60fc78d4b706b16f246671",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-magnetic-select",
+      "file": "js/demos.formext.form-magnetic-select.js",
+      "sha256": "50e9f055b5c3854d43cb55f6e928ea3ecc53bd55042dee6f9d1616b6691c7bb1",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-color-picker",
+      "file": "js/demos.formext.form-color-picker.js",
+      "sha256": "85b4daacc26cd7b30a959994e80b165d3abfb35040137a5a62601d31f4becd30",
+      "fields": [
+        "html",
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-date-range",
+      "file": "js/demos.formext.form-date-range.js",
+      "sha256": "6384d0294f49bbfad18db1466364403124fbf6a8a90c357238295ed9ebe4c1b9",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-multi-select",
+      "file": "js/demos.formext.form-multi-select.js",
+      "sha256": "fef480cad3b7082080540a240761724f223f5a30bb690a6230c28c4923096605",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-inline-edit",
+      "file": "js/demos.formext.form-inline-edit.js",
+      "sha256": "aa63b9ad5ad7112a06f9d211544556c7fc80d5b7b7c57436899b605cb1c3a564",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-signature-pad",
+      "file": "js/demos.formext.form-signature-pad.js",
+      "sha256": "9cbaa88a775ae9bc7bd975fabf87124f8debc09c464cb1d2798ce48736d9ae3d",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    },
+    {
+      "id": "form-liquid-toggle",
+      "file": "js/demos.formext.form-liquid-toggle.js",
+      "sha256": "031591968cbdbb93f913aac3648e13f3168a1403fc225234ee850f41ea3a2482",
+      "fields": [
+        "css",
+        "prompt"
+      ]
+    }
+  ],
+  "verification": {
+    "commands": [
+      {
+        "name": "verify-forms-themes",
+        "args": [
+          "tools/verify-forms-themes.js",
+          "http://127.0.0.1:4173",
+          "--output=.artifacts/final-forms-theme-v4/theme-proof-accepted"
+        ],
+        "exit": 0,
+        "reused": true,
+        "logSHA256": "703579d9ff232ae41828351089e8289c116a1af2372059d2eebf1a69694ae092"
+      },
+      {
+        "name": "verify-shell-accessibility",
+        "args": [
+          "tools/verify-shell-accessibility.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "ce0e5099b3de76c45322336dd405a7fa3ac0afc5df7e0546e320c40fc309857d"
+      },
+      {
+        "name": "verify-forms-accessibility",
+        "args": [
+          "tools/verify-forms-accessibility.js",
+          "http://127.0.0.1:4173",
+          "--output=C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-forms-theme-v4/form-accessibility"
+        ],
+        "exit": 0,
+        "logSHA256": "f809b5772f6db606020723ad438820d170e41e5e8e163e5504189917a5cc3624"
+      },
+      {
+        "name": "verify-forms-ext-async",
+        "args": [
+          "tools/verify-forms-ext-async.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "5690df23d4f75f5727418d43141f8edb3c785d701e7c53a3b2057731ce51e050"
+      },
+      {
+        "name": "verify-forms-ext-touch",
+        "args": [
+          "tools/verify-forms-ext-touch.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "b395d9d0f235e8e2038eae3ff02028f1bee6a81c577c2fd91208ee170725ab00"
+      },
+      {
+        "name": "verify-forms-ext-holds",
+        "args": [
+          "tools/verify-forms-ext-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "144f8d1f5b7a89262abad7792f3a4becfa1aaf712b1dc179e74460fd1661425d"
+      },
+      {
+        "name": "verify-forms-ext-exports",
+        "args": [
+          "tools/verify-forms-ext-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "2c1aa2334fffcddc9970e996c2d0e77e65feb2e572c64773102abdb9794e3b25"
+      },
+      {
+        "name": "verify-forms-ext-clocks",
+        "args": [
+          "tools/verify-forms-ext-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "e5235fbeae111da35ed73a1b8abce394558625e1a647eaa8c2e7848427565333"
+      },
+      {
+        "name": "verify-forms-ext-models",
+        "args": [
+          "tools/verify-forms-ext-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "5c75986f88e63ca710f27e7d8518e49de03a5a57277e2e755486bcca7ad9dae7"
+      },
+      {
+        "name": "verify-forms-ext-input",
+        "args": [
+          "tools/verify-forms-ext-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "7db32c927591f7ea93d5f1a6ac20d6591c4ff1f371822ab8130bace804d5d811"
+      },
+      {
+        "name": "verify-forms-ext",
+        "args": [
+          "tools/verify-forms-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "627cb37a220d9d6456fb988b7d863d834b519c848be6d54075b39a5706b617cc"
+      },
+      {
+        "name": "verify-forms-new-holds",
+        "args": [
+          "tools/verify-forms-new-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "8322b6c6258f41757f80363e89464f70c128711e74bf73ad14b05eb3534c963d"
+      },
+      {
+        "name": "verify-forms-new-exports",
+        "args": [
+          "tools/verify-forms-new-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "7eb16cac5282590923097434e128acc9ac8385c82928fe9c46708207a9b46e1d"
+      },
+      {
+        "name": "verify-forms-new-clocks",
+        "args": [
+          "tools/verify-forms-new-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "631bf69d87a656e17b0112b56f6a44ebfc9964d375323a241ec6ddbf49bdca1c"
+      },
+      {
+        "name": "verify-forms-new-models",
+        "args": [
+          "tools/verify-forms-new-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "ea0bd3eb098b9dacc95d4f4c7143ef6aa7ec2a097071c8f16e2154fb68896816"
+      },
+      {
+        "name": "verify-forms-new-input",
+        "args": [
+          "tools/verify-forms-new-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "692b3924759c708e6ea8c0a66903734e046f5b676fc254dad16518ce16a94fe3"
+      },
+      {
+        "name": "verify-forms-new",
+        "args": [
+          "tools/verify-forms-new.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "6eaf5402fff8b8cbd55d076c81f60703781c51735d17d91548ec90f5de83e0b3"
+      },
+      {
+        "name": "verify-forms",
+        "args": [
+          "tools/verify-forms.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "a46883ce40dc1eae7a678ca2c0363b1686f58fa855a521cd2314cbf9c10c0f4f"
+      },
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exit": 0,
+        "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exit": 0,
+        "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exit": 0,
+        "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exit": 0,
+        "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "shared-tests",
+        "args": [
+          "--test",
+          "tools/export.shared.test.js",
+          "tools/motion-audit.test.js",
+          "tools/stage-component-controls.test.js"
+        ],
+        "exit": 0,
+        "logSHA256": "2efefb855d46b5ef466e78e368887fab4f03225f961afef7fecae80622d34653"
+      },
+      {
+        "name": "lifecycle",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exit": 0,
+        "logSHA256": "96ac32a5965d3b16a67b8f787a7c5d0ed5fe1fe1b5d35c7014a245b682b7c29c"
+      },
+      {
+        "name": "fit-geometry",
+        "args": [
+          "tools/verify-stage-fit-geometry.js"
+        ],
+        "exit": 0,
+        "logSHA256": "7660495ac6237de93f851ec4c3f19394bfa73d940a58661961411135e589ec7c"
+      },
+      {
+        "name": "package-install",
+        "args": [
+          "ci",
+          "--prefix",
+          "packages/intrx"
+        ],
+        "exit": 0,
+        "logSHA256": "f165a7d4d226f44fae799d1071ae2751ec1fcc1eb0de8f7e870af2819737dc18"
+      },
+      {
+        "name": "package-tests",
+        "args": [
+          "test",
+          "--prefix",
+          "packages/intrx"
+        ],
+        "exit": 0,
+        "logSHA256": "a15f2811febeb694436a776e8ec8cc9f642d664556dbdaf490834ed79f67202c"
+      },
+      {
+        "name": "stage-runtime",
+        "args": [
+          "tools/verify-stage-runtime.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "aabbceded27b614d721c990fd14663dd6319e6ca3453181a06742605aff6115b"
+      },
+      {
+        "name": "entry-layout",
+        "args": [
+          "tools/verify-entry-layout.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "8be50ec39b49140bc5d3efe861613a34151bdf8820b97f0a32d474c867e0ac5e"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exit": 0,
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ],
+    "rawSHA256": "4a384d888deb6cf3627371fbd2c71d9f73b3fe175a4e86d9fb3096e2b8c318bd",
+    "source": {
+      "originalJSModels": 520,
+      "unchangedOtherDefinitions": 506,
+      "unchangedOtherModules": 433,
+      "protectedInputs": 6,
+      "metadataSHA256": "0c0c5c5f7aaee26c94bc2ef9192d58b7391e2503fd645b50a2b95bd86c19d1e6",
+      "assetsMapSHA256": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8"
+    },
+    "additionalBrowser": {
+      "browser": "140.0.7339.16",
+      "checks": 1746,
+      "offlineCases": 28,
+      "rawSHA256": "f00339fade6d17a8810cfc2c54eb9818c096b459553f14bc9e9ac36dd6b7da0d"
+    }
+  },
+  "contrast": {
+    "checks": 1746,
+    "browser": "158.0.8127.88",
+    "liveCases": 224,
+    "offlineCases": 28,
+    "widths": [
+      1440,
+      390
+    ],
+    "independentShellAndStagePalettes": true,
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "minimumMeasuredSurroundingTextRatio": 5.06799673699205,
+    "sourceScope": "Surrounding full UI text on solid backgrounds, settled floating labels, Slide gradient stops, light precision rail and keyboard focus, native named control input and portable palettes. Photographs, decorative art and complete transient states require separate review.",
+    "rawSHA256": "d0a7ff938a1c642c069056443e43117c4e97ce01e5e2e2cfd5512e154e9b8c4b",
+    "shimmer": "The original #7c7c7c recipe ink, 2000ms timing and 400% sweep are retained. The full Slide track uses approved neutral #101010 to clear 4.5:1; the native stencil is unchanged.",
+    "focus": "New/extension full-view outlines compensate Stage zoom. A compact Upload diagnostic changes from one physical pixel to two without changing geometry. The legacy Floating Label retains its original field focus mechanism.",
+    "minimumShimmerContrast": 4.558704958244416
+  },
+  "initialAudit": {
+    "axe": "4.14.1",
+    "before": {
+      "width": 390,
+      "cases": 192,
+      "violations": 10,
+      "incomplete": 114,
+      "pageErrors": 0,
+      "rawSHA256": "0e68fcdf99ab0beb38f8f03e311aa9773e6b358d1fbdab1d048a2ac7312ef2c1"
+    },
+    "after": [
+      {
+        "width": 390,
+        "cases": 192,
+        "violations": 0,
+        "incomplete": 109,
+        "pageErrors": 0,
+        "rawSHA256": "711e2837437b09cf636c62501b6e4f94af6d9ff39050a02864558f71bc0fefa1"
+      },
+      {
+        "width": 1440,
+        "cases": 192,
+        "violations": 0,
+        "incomplete": 108,
+        "pageErrors": 0,
+        "rawSHA256": "8e7b1013d63a83912f6b8dd18eaa25567eb566487d26a4e85ce616894e2a55f9"
+      }
+    ],
+    "scope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance."
+  },
+  "visual": {
+    "geometryCheckpoints": 96,
+    "geometry": "exact",
+    "storedCaptureExact": 78,
+    "nativeStoredCaptureExact": 46,
+    "intentionalNativeChange": "Alternate light Floating Label ink and neutral cutout. All default dark native compositions retain their original geometry, assets and source model.",
+    "historicalCaptureDifferences": [
+      {
+        "name": "form-slide-to-confirm-thumb-dark",
+        "id": "form-slide-to-confirm",
+        "mode": "thumb",
+        "theme": "dark",
+        "geometry": "exact",
+        "expectedUnchanged": true,
+        "independentOriginal": true,
+        "changed": 16,
+        "max": 11
+      },
+      {
+        "name": "form-color-picker-full-dark",
+        "id": "form-color-picker",
+        "mode": "full",
+        "theme": "dark",
+        "geometry": "exact",
+        "expectedUnchanged": true,
+        "independentOriginal": true,
+        "changed": 75,
+        "max": 1
+      }
+    ],
+    "independentOriginal": {
+      "cases": 6,
+      "perChannel": "exact, without tolerances",
+      "computedPaintProperties": "exact",
+      "absoluteRects": "exact",
+      "slideRawSHA256": "5499841ff9a53d6ee2437a3ddf79495355b53ada577b52e964811221b4eb67a7",
+      "colorRawSHA256": "66170009e079dc0a9779ec97d5ca351a4cdf12b242ad862be411c000b75a1110"
+    },
+    "rawSHA256": "6217dc6db158b9c7fe0e57391cb89ed85fefb7d2bd9a16bd6efea17450d8939b",
+    "note": "Stored Slide and Color captures differ by 16 pixels (max channel delta 11) and 75 pixels (max delta 1). Three fresh original/current pairs for each match every channel and computed paint property exactly. The cause of the older capture differences is unproven. Keep historical images and failed strict comparisons unchanged."
+  },
+  "limitations": [
+    "Initial form scans have no automated violations; their incomplete results remain manual review work.",
+    "This does not establish all photographic/decorative contrast, transient states, screen-reader behavior, motion recipes, cold-route timing or performance acceptance.",
+    "The original full-library baseline remains immutable; other component categories still require triage and remediation.",
+    "The abandoned #8c8c8c shimmer-ink trial and its explicitly stopped verification run remain archived. No such ink change ships."
+  ]
+}
