@@ -2,6 +2,15 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [full-view palette pass](accessibility/component-palettes-2026-11-25.json)
+corrects nine text, slider and data compositions in both Stage themes. All 520
+controllers and HTML definitions remain unchanged. The focused checks retain
+144 exact layouts, 72 exact native crops and 18 fresh offline palettes; 890
+listed text samples measure at least 5.22:1 against the Stage surface. Physical
+Update/Reset checks preserve both signs of Price Tape feedback and its complete
+original values. Initial and settled axe findings remain separate. Exact
+thumbnail ink, photographic contrast and other components remain open.
+
 The [component semantics pass](accessibility/component-semantics-2026-11-24.json)
 repairs 33 components' roles, local landmarks and table/grid ownership. Both
 Chrome 158 and Chromium 140 pass 4,090 actual browser-tree, keyboard and fresh
@@ -154,6 +163,12 @@ does not independently establish worker throttling. Bitmap transport matches
 the original HTML Canvas pixels, but OffscreenCanvas clips differ at DPR 1/2;
 direct slices and alpha-mask variants also differ. No experiment is accepted,
 and native Threads' CPU4 finding remains open.
+
+A bounded follow-up compares ordinary, detached/attached transferred and
+worker-owned canvases at one complete 1,776-column frame per DPR. Ordinary HTML
+Canvas texture transport remains exact, while every transferred surface still
+differs in raw RGBA at DPR1/2. Preserve this rejected probe; it establishes no
+timing or all-frame acceptance and introduces no production worker changes.
 
 The final shell accessibility pass repairs the unnamed mobile search trigger,
 Copy inside the install tablist, button-only ARIA on the library grid, missing

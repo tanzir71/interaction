@@ -1,0 +1,518 @@
+{
+  "baseline": "53a8b5d23bcb2fd7602654e0708bdf404a6180db",
+  "scope": "Full-only palette changes; JS hashes prove the original controller used by both versions. Original definition fields except JS/prompt are retained.",
+  "items": [
+    {
+      "definition": {
+        "id": "text-accordion-squeeze",
+        "title": "Accordion Type",
+        "cat": "Text & Type",
+        "rootClass": "d-typeaccordion",
+        "tags": [
+          "accordion",
+          "typography",
+          "navigation"
+        ],
+        "libs": [],
+        "desc": "A studio menu redistributes a fixed vertical space on hover, focus or selection. The active row opens naturally while the letterforms keep their proportions.",
+        "seen": "Seen on: project menus, editorial indexes, festival lineups, and oversized navigation systems",
+        "hint": "The hovered row opens; its neighbours squeeze",
+        "html": "<div class=\"d-typeaccordion\"><div class=\"d-typeaccordion-full\"><div class=\"d-typeaccordion-rows\"><button class=\"d-typeaccordion-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"01. Strategy. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-index\" aria-hidden=\"true\">01</span> <span class=\"d-typeaccordion-label\">Strategy</span></button><button class=\"d-typeaccordion-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"02. Identity. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-index\" aria-hidden=\"true\">02</span> <span class=\"d-typeaccordion-label\">Identity</span></button><button class=\"d-typeaccordion-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"03. Digital. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-index\" aria-hidden=\"true\">03</span> <span class=\"d-typeaccordion-label\">Digital</span></button><button class=\"d-typeaccordion-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"04. Objects. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-index\" aria-hidden=\"true\">04</span> <span class=\"d-typeaccordion-label\">Objects</span></button><i class=\"d-typeaccordion-rule\" aria-hidden=\"true\"></i><i class=\"d-typeaccordion-rule\" aria-hidden=\"true\"></i><i class=\"d-typeaccordion-rule\" aria-hidden=\"true\"></i><i class=\"d-typeaccordion-rule\" aria-hidden=\"true\"></i></div></div><div class=\"d-typeaccordion-native\"><div class=\"d-typeaccordion-native-group\"><button class=\"d-typeaccordion-native-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"Design. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-label\" data-figma-node=\"160:963\">Design</span></button><button class=\"d-typeaccordion-native-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"Engineering. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-label\" data-figma-node=\"160:964\">Engineering</span></button><button class=\"d-typeaccordion-native-row\" type=\"button\" aria-pressed=\"false\" aria-label=\"Research. Activate to select or clear this discipline.\"><span class=\"d-typeaccordion-label\" data-figma-node=\"160:965\">Research</span></button></div></div><span class=\"d-typeaccordion-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-typeaccordion{position:relative;width:100%;height:100%;color:#f1f1f1;font-family:Geist,Inter,system-ui,sans-serif}.d-typeaccordion *{box-sizing:border-box}.d-typeaccordion-full,.d-typeaccordion-native{position:absolute;inset:0;display:block}.d-typeaccordion[data-mode=\"thumb\"] .d-typeaccordion-full,.d-typeaccordion[data-mode=\"full\"] .d-typeaccordion-native{display:none}.d-typeaccordion-trigger{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:none;color:inherit;font:inherit;cursor:pointer;text-align:left}.d-typeaccordion-trigger:focus-visible,.d-typeaccordion-native-row:focus-visible,.d-typeaccordion-row:focus-visible{outline:2px solid var(--focus-ring,#ff8a3d);outline-offset:4px}.d-typeaccordion-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-typeaccordion-rows{position:absolute;left:24px;top:16px;width:432px;height:288px}.d-typeaccordion-row,.d-typeaccordion-native-row{position:absolute;left:0;width:100%;padding:0;border:0;background:none;color:#6a6a6a;text-align:left;cursor:pointer}.d-typeaccordion-row[data-active=\"true\"],.d-typeaccordion-native-row[data-active=\"true\"]{color:#f1f1f1}.d-typeaccordion-index{position:absolute;left:0;top:50%;transform:translateY(-50%);font:400 calc(11px*var(--optical))/1 Geist Mono,monospace;color:#6a6a6a}.d-typeaccordion-label{position:absolute;display:block;font-family:Geist,Inter,system-ui,sans-serif;font-weight:600;white-space:pre;transform-origin:50% 50%;pointer-events:none}.d-typeaccordion-rule{position:absolute;top:0;left:0;width:100%;height:1px;background:rgba(255,255,255,.09);pointer-events:none}.d-typeaccordion-native-group{position:absolute;left:38px;top:10px;width:164px;height:97px}.d-typeaccordion-native-row{width:164px}.d-typeaccordion-native-row:nth-child(1){top:0;height:21px}.d-typeaccordion-native-row:nth-child(2){top:30px;height:39px}.d-typeaccordion-native-row:nth-child(3){top:76px;height:21px}.d-typeaccordion-native-row .d-typeaccordion-label{font-size:16px;line-height:21px;letter-spacing:-.176px;left:50%;top:0}.d-typeaccordion-native-row:nth-child(1) .d-typeaccordion-label{width:53px;margin-left:-26.5px}.d-typeaccordion-native-row:nth-child(2) .d-typeaccordion-label{font-size:30px;line-height:39px;letter-spacing:-.819px;width:164px;margin-left:-82px}.d-typeaccordion-native-row:nth-child(3) .d-typeaccordion-label{width:71px;margin-left:-35.5px}",
+        "designSize": [
+          480,
+          320
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "hover",
+        "controls": [
+          {
+            "action": "activate",
+            "label": "Hover"
+          },
+          {
+            "action": "reset",
+            "label": "Reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "group"
+        },
+        "useCases": [
+          "accordion",
+          "typography",
+          "navigation"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          240,
+          136
+        ]
+      },
+      "jsSHA256": "2b36439335b494c053d6c4c7a112a13f191bbe6350bcfc5ec0b21e44ed77d08b"
+    },
+    {
+      "definition": {
+        "id": "text-underline-magic",
+        "title": "Magic Underline",
+        "cat": "Text & Type",
+        "rootClass": "d-magicline",
+        "tags": [
+          "underline",
+          "navigation",
+          "shared indicator"
+        ],
+        "libs": [],
+        "desc": "One measured underline draws beneath a navigation label, then hops between targets on a small arc. Mid-flight retargeting begins from its current geometry, so fast pointer movement remains continuous.",
+        "seen": "Seen on: portfolio navigation, editorial tabs, product headers, and compact project filters",
+        "hint": "The underline stretches to the hovered link",
+        "html": "<div class=\"d-magicline\"><div class=\"d-magicline-full\"><p class=\"d-magicline-brand\">NORTH / 02</p><nav class=\"d-magicline-nav\" aria-label=\"Editorial sections\"><button type=\"button\" aria-pressed=\"true\" data-active=\"true\">Work</button><button type=\"button\" aria-pressed=\"false\" data-active=\"false\">Studio</button><button type=\"button\" aria-pressed=\"false\" data-active=\"false\">Notes</button><button type=\"button\" aria-pressed=\"false\" data-active=\"false\">Contact</button><span class=\"d-magicline-indicator\" aria-hidden=\"true\"><i class=\"d-magicline-left\"></i><i class=\"d-magicline-bar\"></i><i class=\"d-magicline-right\"></i></span></nav><div class=\"d-magicline-copy\"><span>ONE ELEMENT</span><strong>Draw once.<br>Move everywhere.</strong></div></div><div class=\"d-magicline-native\"><nav class=\"d-magicline-native-nav\" aria-label=\"Sections\"><button type=\"button\" aria-pressed=\"false\" data-active=\"false\">Work</button><button type=\"button\" aria-pressed=\"true\" data-active=\"true\">Studio</button><button type=\"button\" aria-pressed=\"false\" data-active=\"false\">Contact</button><span class=\"d-magicline-native-indicator\" aria-hidden=\"true\"><i class=\"d-magicline-left\"></i><i class=\"d-magicline-bar\"></i><i class=\"d-magicline-right\"></i></span></nav></div><span class=\"d-magicline-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-magicline{position:relative;width:100%;height:100%;color:#f1f1f1;font-family:Inter,system-ui,sans-serif}.d-magicline *{box-sizing:border-box}.d-magicline-full,.d-magicline-native{position:absolute;inset:0;display:block}.d-magicline[data-mode=\"thumb\"] .d-magicline-full,.d-magicline[data-mode=\"full\"] .d-magicline-native{display:none}.d-magicline button{font:inherit;cursor:pointer;touch-action:manipulation}.d-magicline button:focus-visible,.d-magicline [tabindex]:focus-visible{outline:2px solid var(--focus-ring,#ff8a3d);outline-offset:4px}.d-magicline-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-magicline-brand{position:absolute;left:28px;top:24px;margin:0;font:500 calc(12px*var(--optical))/1.2 Inter,system-ui,sans-serif;color:#9c9c9c}.d-magicline-nav{position:absolute;left:28px;top:70px;width:424px;height:40px;display:flex;justify-content:space-between;align-items:flex-start}.d-magicline-nav button,.d-magicline-native-nav button{position:relative;padding:0;border:0;background:none;color:#6a6a6a;white-space:pre;transition:color var(--dur-fast,250ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}.d-magicline-nav button{font:500 max(16px,calc(11px*var(--optical)))/22px Inter,system-ui,sans-serif}.d-magicline-nav button[data-active=\"true\"],.d-magicline-native-nav button[data-active=\"true\"]{color:#f1f1f1}.d-magicline-indicator,.d-magicline-native-indicator{position:absolute;left:0;top:30px;width:46.4px;height:2px;transform-origin:0 50%;pointer-events:none}.d-magicline-left,.d-magicline-right{position:absolute;left:0;top:0;width:2px;height:2px;border-radius:1px;background:#f1f1f1}.d-magicline-bar{position:absolute;left:1px;top:0;width:1px;height:2px;background:#f1f1f1;transform-origin:0 50%}.d-magicline-copy{position:absolute;left:28px;top:150px;pointer-events:none}.d-magicline-copy>span{display:block;color:#9c9c9c;font:500 calc(11px*var(--optical))/1.2 Inter,system-ui,sans-serif;margin-bottom:18px}.d-magicline-copy strong{font:400 46px/1.04 Newsreader,Georgia,serif;letter-spacing:-.8px}.d-magicline-native-nav{position:absolute;left:46px;top:44px;width:181px;height:26px}.d-magicline-native-nav button{position:absolute;top:0;height:18px;font:500 15px/18px Inter,system-ui,sans-serif;letter-spacing:-.132px}.d-magicline-native-nav button:nth-child(1){left:0;width:37px}.d-magicline-native-nav button:nth-child(2){left:58px;width:46px}.d-magicline-native-nav button:nth-child(3){left:124px;width:57px}.d-magicline-native-indicator{top:24px}",
+        "designSize": [
+          480,
+          320
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "hover",
+        "controls": [
+          {
+            "action": "activate",
+            "label": "Hover"
+          },
+          {
+            "action": "reset",
+            "label": "Reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "group"
+        },
+        "useCases": [
+          "underline",
+          "navigation",
+          "shared indicator"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          240,
+          112
+        ]
+      },
+      "jsSHA256": "e9543f55fd3337bbf0b7a1555cbcc7b74432c2057f9464b350a5cac82fe88703"
+    },
+    {
+      "definition": {
+        "id": "text-numbers-slot",
+        "title": "Price Roll",
+        "cat": "Text & Type",
+        "rootClass": "d-numberslot",
+        "tags": [
+          "numbers",
+          "slot reels",
+          "odometer"
+        ],
+        "libs": [],
+        "desc": "Four digit columns roll independently toward each new value. Every reel takes its shortest forward distance plus extra full turns, lands on an exact digit, then normalizes invisibly for the next transition.",
+        "seen": "Seen on: statistic reveals, launch countdowns, pricing moments, and kinetic data displays",
+        "hint": "Digits roll when you switch the billing period",
+        "html": "<div class=\"d-numberslot\"><div class=\"d-numberslot-full\"><p class=\"d-numberslot-label\">Monthly orders</p><div class=\"d-numberslot-machine\" role=\"img\" aria-label=\"Current value 0427\"><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span></div><div class=\"d-numberslot-targets\" role=\"group\" aria-label=\"Order totals\"><button type=\"button\" aria-pressed=\"true\">427</button><button type=\"button\" aria-pressed=\"false\">1,984</button><button type=\"button\" aria-pressed=\"false\">2,026</button><button type=\"button\" aria-pressed=\"false\">7,315</button></div></div><div class=\"d-numberslot-native\"><div class=\"d-numberslot-native-period\" role=\"group\" aria-label=\"Billing period\"><i class=\"d-numberslot-native-pill\" aria-hidden=\"true\"></i><button type=\"button\" aria-pressed=\"false\"><span>Monthly</span></button><button type=\"button\" aria-pressed=\"true\"><span>Yearly</span></button></div><span class=\"d-numberslot-native-amount\"><span class=\"d-numberslot-native-dollar\" aria-hidden=\"true\">$</span><span class=\"d-numberslot-native-machine\" role=\"img\" aria-label=\"Price $19 per month, billed yearly\"><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span><span class=\"d-numberslot-window\" aria-hidden=\"true\"><span class=\"d-numberslot-wheel\"><span class=\"d-numberslot-face\" style=\"transform:rotateX(0deg) translateZ(1.8466em)\"><span>0</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(36deg) translateZ(1.8466em)\"><span>1</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(72deg) translateZ(1.8466em)\"><span>2</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(108deg) translateZ(1.8466em)\"><span>3</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(144deg) translateZ(1.8466em)\"><span>4</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(180deg) translateZ(1.8466em)\"><span>5</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(216deg) translateZ(1.8466em)\"><span>6</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(252deg) translateZ(1.8466em)\"><span>7</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(288deg) translateZ(1.8466em)\"><span>8</span></span><span class=\"d-numberslot-face\" style=\"transform:rotateX(324deg) translateZ(1.8466em)\"><span>9</span></span></span></span></span></span><span class=\"d-numberslot-native-suffix\">/mo</span><span class=\"d-numberslot-native-measure\" aria-hidden=\"true\">$19</span></div><span class=\"d-numberslot-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-numberslot{position:relative;width:100%;height:100%;color:#f1f1f1;font-family:Inter,system-ui,sans-serif}.d-numberslot *{box-sizing:border-box}.d-numberslot-full,.d-numberslot-native{position:absolute;inset:0;display:block}.d-numberslot[data-mode=\"thumb\"] .d-numberslot-full,.d-numberslot[data-mode=\"full\"] .d-numberslot-native{display:none}.d-numberslot button{font:inherit;cursor:pointer;touch-action:manipulation}.d-numberslot button:focus-visible,.d-numberslot [tabindex]:focus-visible{outline:2px solid var(--focus-ring,#ff8a3d);outline-offset:4px}.d-numberslot-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-numberslot-label{position:absolute;top:48px;left:20px;width:440px;text-align:center;color:#9c9c9c;font:500 calc(14px*var(--optical))/20px Inter,system-ui,sans-serif;margin:0}.d-numberslot-machine{position:absolute;left:170px;top:106px;width:140px;height:64.8px;font:400 54px/1.2 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;transform-origin:50% 50%}.d-numberslot-window{position:absolute;top:0;width:35px;height:1.2em;overflow:hidden;perspective:8em}.d-numberslot-machine .d-numberslot-window:nth-child(2){left:35px}.d-numberslot-machine .d-numberslot-window:nth-child(3){left:70px}.d-numberslot-machine .d-numberslot-window:nth-child(4){left:105px}.d-numberslot-wheel{position:absolute;inset:0;transform-style:preserve-3d;transform-origin:50% 50%;will-change:transform}.d-numberslot-face{position:absolute;inset:0;display:block;backface-visibility:hidden;transform-origin:50% 50%;text-align:center;line-height:1.2em}.d-numberslot-face>span{display:block;transform-origin:50% 50%}.d-numberslot-targets{position:absolute;left:24px;bottom:55px;width:432px;display:flex;gap:10px}.d-numberslot-targets button{flex:1;min-width:0;height:40px;padding:0;border:1px solid rgba(255,255,255,.09);border-radius:6px;background:none;color:#6a6a6a;font:500 calc(14px*var(--optical))/1.2 Inter,system-ui,sans-serif}.d-numberslot-targets button[aria-pressed=\"true\"]{background:#272727;color:#f1f1f1}.d-numberslot-native-period{position:absolute;left:44px;top:2px;width:152px;height:32px;border-radius:9px;background:#171717;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}.d-numberslot-native-pill{position:absolute;left:3px;top:3px;width:73px;height:26px;border-radius:7px;background:#272727;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 1px 2px rgba(0,0,0,.12),0 8px 20px rgba(0,0,0,.18);pointer-events:none}.d-numberslot-native-period button{position:absolute;top:3px;left:3px;width:73px;height:26px;padding:0;border:0;background:none;color:#6a6a6a;font:500 max(12.5px,calc(11px*var(--optical)))/15px Inter,system-ui,sans-serif;letter-spacing:-.0175px}.d-numberslot-native-period button:nth-of-type(2){left:76px}.d-numberslot-native-period button span{position:absolute;top:6px;left:12px;width:49px;height:15px;white-space:pre}.d-numberslot-native-period button:nth-of-type(2) span{left:15.5px;width:37px}.d-numberslot-native-period button[aria-pressed=\"true\"]{color:#f1f1f1}.d-numberslot-native-amount{position:absolute;left:83px;top:52px;width:74px;height:57px;font:600 44px/57px Geist,Inter,system-ui,sans-serif;letter-spacing:-1.2408px}.d-numberslot-native-dollar{position:absolute;left:0;top:0;height:57px}.d-numberslot-native-machine{position:absolute;top:2.1px;height:52.8px;font:inherit;line-height:1.2em;letter-spacing:inherit}.d-numberslot-native-machine .d-numberslot-window{width:24px;height:52.8px}.d-numberslot-native-suffix{position:absolute;left:165.6px;top:78px;width:24px;height:16px;color:#6a6a6a;font:400 max(13px,calc(11px*var(--optical)))/16px Inter,system-ui,sans-serif;letter-spacing:-.0416px;white-space:pre}.d-numberslot-native-measure{position:absolute;left:0;top:0;visibility:hidden;white-space:pre;font:600 44px/57px Geist,Inter,system-ui,sans-serif;letter-spacing:-1.2408px}@media(prefers-reduced-motion:reduce){.d-numberslot-wheel{will-change:auto}}",
+        "designSize": [
+          480,
+          320
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "press",
+        "controls": [
+          {
+            "action": "activate",
+            "label": "Next"
+          },
+          {
+            "action": "reset",
+            "label": "Reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "group"
+        },
+        "useCases": [
+          "numbers",
+          "slot reels",
+          "odometer"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          240,
+          120
+        ]
+      },
+      "jsSHA256": "25e8b348cb8fda34b4f3fa4012fa835c29165a45b6a274a2c21244c716ca0bf6"
+    },
+    {
+      "definition": {
+        "id": "text-highlighter-swipe",
+        "title": "Highlighter Swipe",
+        "cat": "Text & Type",
+        "rootClass": "d-highlighter",
+        "tags": [
+          "IntersectionObserver",
+          "marker",
+          "scroll"
+        ],
+        "libs": [],
+        "desc": "Four semantic key phrases receive irregular marker swipes when they become substantially visible in a local reading flow. Each phrase triggers once, then leaves observation until the sequence is replayed.",
+        "seen": "Seen on: manifestos, editorial essays, annotated case studies, and learning experiences",
+        "hint": "A marker swipes across the key phrase",
+        "html": "<div class=\"d-highlighter\"><div class=\"d-highlighter-full\"><div class=\"d-highlighter-scroll\" role=\"region\" tabindex=\"0\" aria-label=\"Scrollable article with automatic phrase highlights\"><article class=\"d-highlighter-article\"><header><span>NOTES ON INTERACTION / 07</span><h2>The interface should remember the hand.</h2></header><p>Useful movement begins with a simple promise: <mark>the surface will answer</mark> when someone acts upon it.</p><p>That answer does not need spectacle. Often the strongest response is <mark>small enough to feel inevitable</mark>, arriving exactly where attention already rests.</p><blockquote>Motion can describe a relationship before language has time to explain it.</blockquote><p>Timing matters because sequence matters. A transition should <mark>preserve the cause of change</mark> while revealing its result.</p><p>The final test is not novelty. It is whether the experience becomes <mark>easier to understand and trust</mark>.</p><footer>FIELD NOTE 07 / END</footer></article></div></div><div class=\"d-highlighter-native\"><div class=\"d-highlighter-native-scroll\" role=\"region\" tabindex=\"0\" aria-label=\"Scroll to reveal the highlighted sentence\"><span class=\"d-highlighter-native-marker\" aria-hidden=\"true\"></span><span class=\"d-highlighter-native-line\">Ship the part that</span><span class=\"d-highlighter-native-line\">matters most first.</span><span class=\"d-highlighter-native-line\">Then polish.</span></div></div><span class=\"d-highlighter-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-highlighter{position:relative;width:100%;height:100%;color:#f1f1f1;font-family:Inter,system-ui,sans-serif}.d-highlighter *{box-sizing:border-box}.d-highlighter-full,.d-highlighter-native{position:absolute;inset:0;display:block}.d-highlighter[data-mode=\"thumb\"] .d-highlighter-full,.d-highlighter[data-mode=\"full\"] .d-highlighter-native{display:none}.d-highlighter button{font:inherit;cursor:pointer;touch-action:manipulation}.d-highlighter button:focus-visible,.d-highlighter [tabindex]:focus-visible{outline:2px solid var(--focus-ring,#ff8a3d);outline-offset:4px}.d-highlighter-status{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.d-highlighter-scroll{position:absolute;left:24px;top:12px;width:432px;height:336px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#444 transparent;touch-action:pan-y}.d-highlighter-article{position:relative;isolation:isolate;padding:14px 16px 24px 4px;color:#a0a0a0;font:400 22px/1.45 Newsreader,Georgia,serif}.d-highlighter-article header,.d-highlighter-article p,.d-highlighter-article blockquote,.d-highlighter-article footer{position:relative;z-index:1;pointer-events:none}.d-highlighter-article header>span,.d-highlighter-article footer{font:500 calc(11px*var(--optical))/1.4 Inter,system-ui,sans-serif;color:#6a6a6a}.d-highlighter-article h2{margin:18px 0 30px;font:400 40px/1.04 Newsreader,Georgia,serif;letter-spacing:-.6px;color:#f1f1f1}.d-highlighter-article p{margin:0 0 26px}.d-highlighter-article blockquote{margin:28px 0;padding-left:16px;border-left:2px solid rgba(245,181,68,.28);color:#f1f1f1;font-size:24px}.d-highlighter-article mark{background:none;color:#f1f1f1;box-decoration-break:clone;-webkit-box-decoration-break:clone}.d-highlighter-ink{position:absolute;z-index:0;border-radius:3px;background:rgba(245,181,68,.28);clip-path:polygon(1% 9%,99% 0,100% 91%,0 100%);transform-origin:0 50%;pointer-events:none}.d-highlighter-native-scroll{position:absolute;inset:0;touch-action:none;cursor:ns-resize}.d-highlighter-native-line{position:absolute;left:30px;top:22px;width:139px;height:21px;color:#9c9c9c;font:500 17px/21px Inter,system-ui,sans-serif;letter-spacing:-.2176px;white-space:pre;pointer-events:none}.d-highlighter-native-line:nth-of-type(3){top:52px;width:146px;color:#f1f1f1}.d-highlighter-native-line:nth-of-type(4){top:82px;width:97px}.d-highlighter-native-marker{position:absolute;left:84px;top:50px;width:108px;height:26px;border-radius:4px;background:rgba(245,181,68,.28);transform-origin:0 50%;pointer-events:none}",
+        "designSize": [
+          480,
+          360
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "scroll"
+        },
+        "trigger": "scroll",
+        "controls": [
+          {
+            "action": "scroll",
+            "label": "Scroll"
+          },
+          {
+            "action": "reset",
+            "label": "Reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "group"
+        },
+        "useCases": [
+          "IntersectionObserver",
+          "marker",
+          "scroll"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          240,
+          136
+        ]
+      },
+      "jsSHA256": "77e743d7b4dce2b78d90d3f6fb2fe2850b33c6c81c2a886136ef89c514abe153"
+    },
+    {
+      "definition": {
+        "id": "slider-progress-fraction",
+        "title": "Fraction Slider",
+        "cat": "Galleries & Sliders",
+        "rootClass": "d-fraction-slider",
+        "tags": [
+          "slider",
+          "fraction counter",
+          "progress line"
+        ],
+        "libs": [],
+        "desc": "A five-frame photo sequence with shared segment navigation and an animated fraction.",
+        "seen": "Seen on: editorial case studies, architecture portfolios, campaign carousels, and product narratives",
+        "hint": "Press · Segments fill as slides advance",
+        "html": "<div class=\"d-fraction-slider\"><header class=\"d-fraction-slider-header\"><span>Fraction Slider</span><output class=\"d-fraction-slider-readout\">Five frames</output></header><div class=\"d-fraction-slider-field\" tabindex=\"0\" role=\"button\" aria-label=\"Five-slide sequence. Press or use arrows, Home and End.\"><article class=\"d-fraction-slider-slide\"><template class=\"d-fraction-slider-photo \" data-src=\"{{asset:photo-forestBlue}}\" data-photo=\"forestBlue\" draggable=\"false\"></template><div class=\"d-fraction-slider-caption\"><span>01 / BLUE FOREST</span><h3>Blue<br>hour</h3><small>FIELD ARCHIVE / 2026</small></div></article><article class=\"d-fraction-slider-slide\"><template class=\"d-fraction-slider-photo \" data-src=\"{{asset:photo-forestDark}}\" data-photo=\"forestDark\" draggable=\"false\"></template><div class=\"d-fraction-slider-caption\"><span>02 / DARK FOREST</span><h3>Deep<br>woods</h3><small>FIELD ARCHIVE / 2026</small></div></article><article class=\"d-fraction-slider-slide\"><template class=\"d-fraction-slider-photo \" data-src=\"{{asset:photo-cityNight}}\" data-photo=\"cityNight\" data-figma-node=\"185:1723\" draggable=\"false\"></template><div class=\"d-fraction-slider-caption\"><span>03 / CITY LIGHTS</span><h3>After<br>hours</h3><small>FIELD ARCHIVE / 2026</small></div></article><article class=\"d-fraction-slider-slide\"><template class=\"d-fraction-slider-photo \" data-src=\"{{asset:photo-ocean}}\" data-photo=\"ocean\" draggable=\"false\"></template><div class=\"d-fraction-slider-caption\"><span>04 / OCEAN</span><h3>Open<br>water</h3><small>FIELD ARCHIVE / 2026</small></div></article><article class=\"d-fraction-slider-slide\"><template class=\"d-fraction-slider-photo \" data-src=\"{{asset:photo-archGrid}}\" data-photo=\"archGrid\" draggable=\"false\"></template><div class=\"d-fraction-slider-caption\"><span>05 / ARCHITECTURE</span><h3>Light<br>and line</h3><small>FIELD ARCHIVE / 2026</small></div></article></div><div class=\"d-fraction-slider-segments\" role=\"group\" aria-label=\"Choose frame\"><button class=\"d-fraction-slider-segment\" type=\"button\" aria-label=\"Go to frame 1\"><i></i></button><button class=\"d-fraction-slider-segment\" type=\"button\" aria-label=\"Go to frame 2\"><i></i></button><button class=\"d-fraction-slider-segment\" type=\"button\" aria-label=\"Go to frame 3\"><i></i></button><button class=\"d-fraction-slider-segment\" type=\"button\" aria-label=\"Go to frame 4\"><i></i></button><button class=\"d-fraction-slider-segment\" type=\"button\" aria-label=\"Go to frame 5\"><i></i></button></div><output class=\"d-fraction-slider-counter\" aria-live=\"polite\"><span class=\"d-fraction-slider-digit\" aria-hidden=\"true\"></span><span class=\"d-fraction-slider-digit\" aria-hidden=\"true\"></span><span> / 05</span></output><span class=\"d-fraction-slider-status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-fraction-slider{position:relative;top:4px;color:#f1f1f1;font:400 16px/1.4 Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums;background:transparent}.d-fraction-slider *{box-sizing:border-box}.d-fraction-slider p,.d-fraction-slider h3{margin:0}.d-fraction-slider button{appearance:none;font:inherit;color:inherit;cursor:pointer;border:0;padding:0;background:none}.d-fraction-slider [tabindex]:focus-visible,.d-fraction-slider button:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-fraction-slider-header{position:absolute;left:0;right:0;top:0;height:22px;display:flex;align-items:center;justify-content:space-between;color:#a0a0a0;font-size:max(16px,calc(11.75px/var(--fit-scale,1)))}.d-fraction-slider-field{position:absolute;left:0;top:30px;width:100%;height:294px;outline:none;border-radius:14px;background:#0b0b0b;overflow:hidden}.d-fraction-slider-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;max-width:none}.d-fraction-slider-slide{position:absolute;inset:0;opacity:0;overflow:hidden}.d-fraction-slider-slide:first-child{opacity:1}.d-fraction-slider-asset{position:absolute;max-width:none;pointer-events:none;display:block}.d-fraction-slider[data-starting=\"true\"] *{transition:none!important;animation:none!important}.d-fraction-slider-status{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}.d-fraction-slider-caption{position:absolute;left:20px;right:20px;bottom:16px;color:#f1f1f1;text-shadow:0 1px 5px #000b;pointer-events:none}.d-fraction-slider-caption h3{font-size:30px;line-height:1.05;font-weight:500;margin:8px 0}.d-fraction-slider-caption span,.d-fraction-slider-caption small{font-size:max(16px,calc(11.75px/var(--fit-scale,1)));font-weight:400;font-style:normal}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-header,.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-caption{display:none}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-field{box-shadow:0 1px 2px #0000001f,0 8px 20px -8px #0000002e}.d-fraction-slider-field:after{content:'';position:absolute;inset:0;z-index:20;border-radius:inherit;box-shadow:inset 0 0 0 1px #ffffff14;pointer-events:none}@media(hover:hover){.d-fraction-slider button:hover{color:#f1f1f1}}@media(prefers-reduced-motion:reduce){.d-fraction-slider *,.d-fraction-slider *:before,.d-fraction-slider *:after{transition-property:opacity!important;transition-duration:var(--dur-quick)!important;animation:none!important;}}.d-fraction-slider-segments{position:absolute;left:0;top:332px;width:100%;display:flex;gap:4px;height:24px}.d-fraction-slider-segment{position:relative;flex:1;min-width:0;height:24px;outline-offset:2px}.d-fraction-slider-segment:before,.d-fraction-slider-segment>i{position:absolute;content:'';left:0;right:0;top:10px;height:3px;background:#ffffff1f;border-radius:2px}.d-fraction-slider-segment>i{background:#f1f1f1;transform-origin:left;transform:scaleX(0);transition:transform var(--dur-fast) var(--ease-out)}.d-fraction-slider-counter{position:absolute;right:0;top:358px;height:20px;display:flex;align-items:center;font-family:'Geist Mono',monospace;font-size:max(16px,calc(11.75px/var(--fit-scale,1)));line-height:1.2;color:#6a6a6a;white-space:pre}.d-fraction-slider-digit{position:relative;display:inline-block;width:.6em;height:1.2em;perspective:120px;overflow:hidden;flex:none}.d-fraction-slider-rotor{position:absolute;inset:0;display:block;transform:translateZ(-.6em);transform-style:preserve-3d;transform-origin:center}.d-fraction-slider-rotor>b{position:absolute;inset:0;display:block;font:inherit;backface-visibility:hidden;transform:translateZ(.6em)}.d-fraction-slider-rotor>b.d-fraction-slider-rotor-next{transform:rotateX(90deg) translateZ(.6em)}.d-fraction-slider-drum-neighbor{position:absolute;inset:0;display:block;font:inherit;font-style:normal;opacity:.17;filter:blur(2px);backface-visibility:hidden;pointer-events:none}.d-fraction-slider-drum-prev{transform:rotateX(-90deg) translateZ(.6em) scale(.7)}.d-fraction-slider-drum-following{transform:rotateX(180deg) translateZ(.6em) scale(.7)}.d-fraction-slider-digit-ghost{pointer-events:none}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-field{left:16px;top:4px;width:200px;height:130px}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-segments{left:16px;top:136px;width:201px;gap:4px}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-segment{width:37px;flex:none}.d-fraction-slider[data-mode=\"thumb\"] .d-fraction-slider-counter{left:182px;right:auto;top:156px;font-size:max(11.75px,calc(11.75px/var(--fit-scale,1)));height:14.1px}.d-fraction-slider[data-mode=\"thumb\"][data-compact=\"true\"] .d-fraction-slider-counter{left:auto;right:16px;height:1.2em}",
+        "designSize": [
+          440,
+          380
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "press",
+        "controls": [
+          {
+            "label": "Previous",
+            "action": "prev"
+          },
+          {
+            "label": "Next",
+            "action": "next"
+          },
+          {
+            "label": "Reset",
+            "action": "reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true
+        },
+        "useCases": [
+          "slider",
+          "fraction counter",
+          "progress line"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          232,
+          168
+        ]
+      },
+      "jsSHA256": "5d33d8106ec78cd938676abcb3d4e5c97c335a2c6a01566f5ef98b2ad6f5b37e"
+    },
+    {
+      "definition": {
+        "id": "chart-bars-race",
+        "title": "Bar Race",
+        "cat": "Data & Numbers",
+        "rootClass": "d-barrace-demo",
+        "tags": [
+          "chart",
+          "FLIP",
+          "ranking"
+        ],
+        "libs": [],
+        "desc": "Four ranked scores keep identity while changing datasets. Measured FLIP handles interrupted moves; only changed numeric digits fade.",
+        "seen": "Seen on: live rankings, campaign results, market comparisons, sports tables, and annual reports",
+        "hint": "Press · Bars overtake as the data races",
+        "html": "<div class=\"d-barrace-demo\"><div class=\"d-barrace-demo-full\"><p class=\"d-barrace-demo-caption\">Project scores · <span class=\"d-barrace-demo-period\">Q1 baseline</span></p><div class=\"d-barrace-demo-chart\" role=\"img\" aria-label=\"Ranked project scores\"><div class=\"d-barrace-demo-row\" data-name=\"Atlas\" style=\"--rank:0\"><span>01</span><b>Atlas</b><div class=\"d-barrace-demo-bar\"><i></i></div><strong class=\"d-barrace-demo-number\"></strong></div><div class=\"d-barrace-demo-row\" data-name=\"Field\" style=\"--rank:1\"><span>02</span><b>Field</b><div class=\"d-barrace-demo-bar\"><i></i></div><strong class=\"d-barrace-demo-number\"></strong></div><div class=\"d-barrace-demo-row\" data-name=\"Mono\" style=\"--rank:2\"><span>03</span><b>Mono</b><div class=\"d-barrace-demo-bar\"><i></i></div><strong class=\"d-barrace-demo-number\"></strong></div><div class=\"d-barrace-demo-row\" data-name=\"North\" style=\"--rank:3\"><span>04</span><b>North</b><div class=\"d-barrace-demo-bar\"><i></i></div><strong class=\"d-barrace-demo-number\"></strong></div></div></div><div class=\"d-barrace-demo-hero d-barrace-demo-chart-hero\" role=\"img\" aria-label=\"Ranked bars\"><div class=\"d-barrace-demo-hero-row\" data-name=\"Atlas\" style=\"--rank:0\"><i></i><b></b></div><div class=\"d-barrace-demo-hero-row\" data-name=\"Field\" style=\"--rank:1\"><i></i><b></b></div><div class=\"d-barrace-demo-hero-row\" data-name=\"Mono\" style=\"--rank:2\"><i></i><b></b></div><div class=\"d-barrace-demo-hero-row\" data-name=\"North\" style=\"--rank:3\"><i></i><b></b></div></div><span class=\"d-barrace-demo-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-barrace-demo{position:relative;top:4px;color:#f1f1f1;font:400 13px/18px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-barrace-demo *{box-sizing:border-box}.d-barrace-demo p,.d-barrace-demo h3{margin:0}.d-barrace-demo button{font:inherit;color:inherit;cursor:pointer}.d-barrace-demo button:focus-visible,.d-barrace-demo [tabindex]:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-barrace-demo-hero{display:none}.d-barrace-demo[data-mode=\"thumb\"] .d-barrace-demo-hero{display:block}.d-barrace-demo[data-mode=\"thumb\"] .d-barrace-demo-full{display:none}.d-barrace-demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:18px}.d-barrace-demo-asset{position:absolute;display:block;max-width:none}.d-barrace-demo[data-starting=\"true\"] *,.d-barrace-demo[data-starting=\"true\"] *::before{animation:none!important;transition:none!important}.d-barrace-demo-full{position:absolute;inset:0}.d-barrace-demo-caption{font-size:13px;color:#858585}.d-barrace-demo-number{display:inline-flex}.d-barrace-demo-run{position:relative;display:inline-flex;flex:none}.d-barrace-demo-face,.d-barrace-demo-old{display:inline-flex;flex:none}.d-barrace-demo-old{position:absolute;inset:0;font:inherit;pointer-events:none}.d-barrace-demo-old-digit{display:inline-block;min-width:1ch}.d-barrace-demo-old-digit>b{display:block;font:inherit}.d-barrace-demo-digit{position:relative;display:inline-block;min-width:1ch}.d-barrace-demo-digit>b,.d-barrace-demo-digit>i{display:block;font:inherit}.d-barrace-demo-digit>i{position:absolute;inset:0;pointer-events:none}.d-barrace-demo-tip{position:absolute;z-index:4;min-width:130px;padding:8px 10px;border-radius:6px;background:#272727;box-shadow:inset 0 0 0 1px #ffffff1c;opacity:0;visibility:hidden;transform:scale(.98);transform-origin:50% 100%;transition:opacity calc(var(--dur-quick)/3) var(--ease-close),transform calc(var(--dur-quick)/3) var(--ease-close),visibility calc(var(--dur-quick)/3)}.d-barrace-demo-tip[data-open=\"true\"]{opacity:1;visibility:visible;transform:none;transition-duration:var(--dur-quick);transition-timing-function:var(--ease-out)}.d-barrace-demo-tip b,.d-barrace-demo-tip span{display:block;font-size:13px;line-height:16px}.d-barrace-demo-tip span{color:#9c9c9c}.d-barrace-demo[data-mode=\"thumb\"] .d-barrace-demo-tip b,.d-barrace-demo[data-mode=\"thumb\"] .d-barrace-demo-tip span{font-size:max(13px,calc(11px/var(--fit-scale,1)));line-height:max(16px,calc(14px/var(--fit-scale,1)))}@media(prefers-reduced-motion:reduce){.d-barrace-demo-tip{transform:none!important}.d-barrace-demo *,.d-barrace-demo *::before{animation:none!important;transition-property:opacity!important;transition-duration:var(--dur-quick)!important;transition-delay:0s!important}}.d-barrace-demo-caption{position:absolute;left:8px;top:10px}.d-barrace-demo-chart{position:absolute;left:8px;top:48px;width:264px;height:156px}.d-barrace-demo-row{position:absolute;left:0;top:calc(var(--rank)*38px);width:264px;height:30px;display:grid;grid-template-columns:20px 44px 1fr 24px;gap:7px;align-items:center;font-size:13px}.d-barrace-demo-row>span{color:#666;font-size:13px}.d-barrace-demo-row>b,.d-barrace-demo-row>strong{font-size:13px;font-weight:500}.d-barrace-demo-bar{height:14px;position:relative}.d-barrace-demo-bar i{position:absolute;inset:0;background:#ffffff80;border-radius:4px;transform-origin:0 50%;transform:scaleX(var(--bar-scale,.84));transition:transform var(--dur-medium) var(--ease-out)}.d-barrace-demo-row:nth-child(2) .d-barrace-demo-bar i{background:#fa7319}.d-barrace-demo-row:nth-child(3) .d-barrace-demo-bar i{background:#ffffff4d}.d-barrace-demo-row:nth-child(4) .d-barrace-demo-bar i{background:#fff3}.d-barrace-demo-chart-hero{position:absolute;left:10px;top:13px;width:200px;height:98px}.d-barrace-demo-hero-row{position:absolute;left:0;top:calc(var(--rank)*28px);height:14px;width:200px}.d-barrace-demo-hero-row>i{position:absolute;left:0;top:3px;width:30px;height:7px;border-radius:3.5px;background:#ffffff24}.d-barrace-demo-hero-row>b{position:absolute;left:40px;top:0;width:160px;height:14px;border-radius:4px;background:#ffffff80;transform-origin:0 50%;transform:scaleX(var(--bar-scale,1));transition:transform var(--dur-medium) var(--ease-out)}.d-barrace-demo-hero-row:nth-child(2)>b{width:130px;background:#fa7319}.d-barrace-demo-hero-row:nth-child(3)>b{width:100px;background:#ffffff4d}.d-barrace-demo-hero-row:nth-child(4)>b{width:70px;background:#fff3}",
+        "designSize": [
+          280,
+          238
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "press",
+        "controls": [
+          {
+            "label": "Next period",
+            "action": "run"
+          },
+          {
+            "label": "Baseline",
+            "action": "baseline"
+          },
+          {
+            "label": "Reset",
+            "action": "reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "status"
+        },
+        "useCases": [
+          "chart",
+          "FLIP",
+          "ranking"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          220,
+          132
+        ]
+      },
+      "jsSHA256": "09f88bc6cbd522190288d8c4f93c0520a12e38496589ea829d5db52281d013b0"
+    },
+    {
+      "definition": {
+        "id": "sparkline-hover-scrub",
+        "title": "Sparkline Scrub",
+        "cat": "Data & Numbers",
+        "rootClass": "d-spark-demo",
+        "tags": [
+          "sparkline",
+          "crosshair",
+          "scrub"
+        ],
+        "libs": [],
+        "desc": "The nearest of twelve original monthly samples drives the crosshair and value bubble, with matching keyboard selection. A quiet price-line reference previews the interaction.",
+        "seen": "Seen on: financial summaries, analytics cards, fitness trends, usage dashboards, and compact KPI tables",
+        "hint": "Hover · Scrub the line; value and date follow",
+        "html": "<div class=\"d-spark-demo\"><div class=\"d-spark-demo-full\"><div class=\"d-spark-demo-head\"><span>Active sessions</span><strong>96,000</strong><b>+14.8%</b></div></div><svg class=\"d-spark-demo-svg d-spark-demo-full\" viewBox=\"0 0 520 190\" role=\"group\" aria-label=\"Monthly active sessions sparkline\"><path class=\"d-spark-demo-area\"></path><path class=\"d-spark-demo-line\"></path><line class=\"d-spark-demo-cross\" y1=\"15\" y2=\"166\"></line><circle class=\"d-spark-demo-dot\" r=\"5\"></circle><g class=\"d-spark-demo-bubble\"><rect width=\"122\" height=\"58\" rx=\"6\"></rect><text x=\"61\" y=\"24\" class=\"d-spark-demo-month\"></text><text x=\"61\" y=\"50\" class=\"d-spark-demo-value\"></text></g><rect class=\"d-spark-demo-hit\" x=\"20\" y=\"10\" width=\"480\" height=\"165\" tabindex=\"0\" role=\"slider\" aria-label=\"Monthly sample\" aria-valuemin=\"1\" aria-valuemax=\"12\" aria-valuenow=\"12\"></rect></svg><div class=\"d-spark-demo-full d-spark-demo-axis\"><span>JAN</span><span>APR</span><span>JUL</span><span>OCT</span><span>DEC</span></div><div class=\"d-spark-demo-hero d-spark-demo-reference\" tabindex=\"0\" role=\"slider\" aria-label=\"Scrub monthly samples\" aria-valuemin=\"1\" aria-valuemax=\"12\" aria-valuenow=\"12\"><img class=\"d-spark-demo-asset \" src=\"{{asset:data-spark-line}}\" alt=\"\" style=\"left:11.2px;top:67.2px;width:221.6px;height:39.4002px\"><img class=\"d-spark-demo-asset \" src=\"{{asset:data-spark-cross}}\" alt=\"\" style=\"left:151.5px;top:11.5px;width:1px;height:127px\"><img class=\"d-spark-demo-asset \" src=\"{{asset:data-spark-dot}}\" alt=\"\" style=\"left:145px;top:64.06px;width:14px;height:14px\"><div class=\"d-spark-demo-price\">$214.30</div></div><span class=\"d-spark-demo-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-spark-demo{position:relative;top:4px;color:#f1f1f1;font:400 13px/18px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-spark-demo *{box-sizing:border-box}.d-spark-demo p,.d-spark-demo h3{margin:0}.d-spark-demo button{font:inherit;color:inherit;cursor:pointer}.d-spark-demo button:focus-visible,.d-spark-demo [tabindex]:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-spark-demo-hero{display:none}.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-hero{display:block}.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-full{display:none}.d-spark-demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:18px}.d-spark-demo-asset{position:absolute;display:block;max-width:none}.d-spark-demo[data-starting=\"true\"] *,.d-spark-demo[data-starting=\"true\"] *::before{animation:none!important;transition:none!important}.d-spark-demo-full{position:absolute;inset:0}.d-spark-demo-caption{font-size:13px;color:#858585}.d-spark-demo-number{display:inline-flex}.d-spark-demo-run{position:relative;display:inline-flex;flex:none}.d-spark-demo-face,.d-spark-demo-old{display:inline-flex;flex:none}.d-spark-demo-old{position:absolute;inset:0;font:inherit;pointer-events:none}.d-spark-demo-old-digit{display:inline-block;min-width:1ch}.d-spark-demo-old-digit>b{display:block;font:inherit}.d-spark-demo-digit{position:relative;display:inline-block;min-width:1ch}.d-spark-demo-digit>b,.d-spark-demo-digit>i{display:block;font:inherit}.d-spark-demo-digit>i{position:absolute;inset:0;pointer-events:none}.d-spark-demo-tip{position:absolute;z-index:4;min-width:130px;padding:8px 10px;border-radius:6px;background:#272727;box-shadow:inset 0 0 0 1px #ffffff1c;opacity:0;visibility:hidden;transform:scale(.98);transform-origin:50% 100%;transition:opacity calc(var(--dur-quick)/3) var(--ease-close),transform calc(var(--dur-quick)/3) var(--ease-close),visibility calc(var(--dur-quick)/3)}.d-spark-demo-tip[data-open=\"true\"]{opacity:1;visibility:visible;transform:none;transition-duration:var(--dur-quick);transition-timing-function:var(--ease-out)}.d-spark-demo-tip b,.d-spark-demo-tip span{display:block;font-size:13px;line-height:16px}.d-spark-demo-tip span{color:#9c9c9c}.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-tip b,.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-tip span{font-size:max(13px,calc(11px/var(--fit-scale,1)));line-height:max(16px,calc(14px/var(--fit-scale,1)))}@media(prefers-reduced-motion:reduce){.d-spark-demo-tip{transform:none!important}.d-spark-demo *,.d-spark-demo *::before{animation:none!important;transition-property:opacity!important;transition-duration:var(--dur-quick)!important;transition-delay:0s!important}}.d-spark-demo-head{position:absolute;left:10px;top:18px;display:grid;grid-template-columns:1fr auto;gap:8px;width:260px}.d-spark-demo-head>span{font-size:13px;color:#858585;grid-column:1/-1}.d-spark-demo-head strong{font:500 27px/32px Inter,sans-serif;letter-spacing:-.6px}.d-spark-demo-head>b{font-size:13px;font-weight:400;color:#fa7319;align-self:end;padding-bottom:5px}.d-spark-demo-svg{position:absolute;left:10px;top:102px;width:260px;height:95px;overflow:visible}.d-spark-demo-line{fill:none;stroke:#ededed;stroke-width:3.2;stroke-linejoin:round;stroke-linecap:round}.d-spark-demo-area{fill:#ffffff05}.d-spark-demo-cross{stroke:#ffffff30;stroke-width:2}.d-spark-demo-dot{fill:#fa7319;stroke:#151515;stroke-width:4}.d-spark-demo-bubble rect{fill:#272727;stroke:#ffffff1c;stroke-width:2}.d-spark-demo-bubble text{fill:#f1f1f1;font:500 26px Inter,sans-serif;text-anchor:middle}.d-spark-demo-bubble .d-spark-demo-month{fill:#a3a3a3;font-size:26px}.d-spark-demo-hit{fill:transparent;cursor:crosshair;outline-offset:2px}.d-spark-demo-cross,.d-spark-demo-dot,.d-spark-demo-bubble{opacity:0;transition:opacity calc(var(--dur-quick)/3) var(--ease-close)}.d-spark-demo-is-active .d-spark-demo-cross,.d-spark-demo-is-active .d-spark-demo-dot,.d-spark-demo-is-active .d-spark-demo-bubble{opacity:1;transition-duration:var(--dur-quick);transition-delay:var(--dur-micro)}.d-spark-demo-axis{inset:auto 10px 15px;display:flex;justify-content:space-between;color:#777;font-size:13px}.d-spark-demo[data-optical=\"true\"] .d-spark-demo-price{left:auto;right:0}.d-spark-demo-reference{position:absolute;inset:0;cursor:crosshair}.d-spark-demo-price{position:absolute;left:162px;top:37.06px;width:max(64px,calc(64px/var(--fit-scale,1)));height:max(24px,calc(24px/var(--fit-scale,1)));padding:5px 9px;border-radius:6px;background:#272727;box-shadow:inset 0 0 0 1px #ffffff1c;font:500 max(11.5px,calc(11px/var(--fit-scale,1)))/normal Inter,sans-serif;letter-spacing:.0299px;white-space:nowrap}.d-spark-demo[data-mode=\"thumb\"].d-spark-demo-is-active .d-spark-demo-reference>*{visibility:hidden}.d-spark-demo[data-mode=\"thumb\"].d-spark-demo-is-active .d-spark-demo-svg{display:block;left:12px;top:62px;width:220px;height:80.385px}.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-bubble text{font-size:calc(28px/var(--fit-scale,1))}.d-spark-demo[data-mode=\"thumb\"] .d-spark-demo-bubble .d-spark-demo-month{font-size:calc(27px/var(--fit-scale,1))}",
+        "designSize": [
+          280,
+          238
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "hover",
+        "controls": [
+          {
+            "label": "September",
+            "action": "inspect"
+          },
+          {
+            "label": "Reset",
+            "action": "reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "status"
+        },
+        "useCases": [
+          "sparkline",
+          "crosshair",
+          "scrub"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          244,
+          160
+        ]
+      },
+      "jsSHA256": "a52ad1c67ec357b706c9ebc4f0169b0b28e73a204c94fc9fae24cfcc724d321c"
+    },
+    {
+      "definition": {
+        "id": "ticker-tape-prices",
+        "title": "Ticker Tape",
+        "cat": "Data & Numbers",
+        "rootClass": "d-ticker-demo",
+        "tags": [
+          "ticker",
+          "prices",
+          "flash"
+        ],
+        "libs": [],
+        "desc": "A seamless duplicated tape and complete five-instrument table keep the original deterministic price updates. The compact market reference uses signed colour feedback.",
+        "seen": "Seen on: market dashboards, crypto products, live auction displays, news headers, and event scoreboards",
+        "hint": "Ambient · Prices tick past and flash on change",
+        "html": "<div class=\"d-ticker-demo\"><div class=\"d-ticker-demo-full\"><div class=\"d-ticker-demo-board\"><div class=\"d-ticker-demo-track\"></div></div><div class=\"d-ticker-demo-table\"><div><span>Symbol</span><span>Price</span><span>Change</span></div><ul></ul></div></div><div class=\"d-ticker-demo-hero d-ticker-demo-market\"><div class=\"d-ticker-demo-market-track\"></div></div><span class=\"d-ticker-demo-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-ticker-demo{position:relative;top:4px;color:#f1f1f1;font:400 13px/18px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-ticker-demo *{box-sizing:border-box}.d-ticker-demo p,.d-ticker-demo h3{margin:0}.d-ticker-demo button{font:inherit;color:inherit;cursor:pointer}.d-ticker-demo button:focus-visible,.d-ticker-demo [tabindex]:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-ticker-demo-hero{display:none}.d-ticker-demo[data-mode=\"thumb\"] .d-ticker-demo-hero{display:block}.d-ticker-demo[data-mode=\"thumb\"] .d-ticker-demo-full{display:none}.d-ticker-demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:18px}.d-ticker-demo-asset{position:absolute;display:block;max-width:none}.d-ticker-demo[data-starting=\"true\"] *,.d-ticker-demo[data-starting=\"true\"] *::before{animation:none!important;transition:none!important}.d-ticker-demo-full{position:absolute;inset:0}.d-ticker-demo-caption{font-size:13px;color:#858585}.d-ticker-demo-number{display:inline-flex}.d-ticker-demo-run{position:relative;display:inline-flex;flex:none}.d-ticker-demo-face,.d-ticker-demo-old{display:inline-flex;flex:none}.d-ticker-demo-old{position:absolute;inset:0;font:inherit;pointer-events:none}.d-ticker-demo-old-digit{display:inline-block;min-width:1ch}.d-ticker-demo-old-digit>b{display:block;font:inherit}.d-ticker-demo-digit{position:relative;display:inline-block;min-width:1ch}.d-ticker-demo-digit>b,.d-ticker-demo-digit>i{display:block;font:inherit}.d-ticker-demo-digit>i{position:absolute;inset:0;pointer-events:none}.d-ticker-demo-tip{position:absolute;z-index:4;min-width:130px;padding:8px 10px;border-radius:6px;background:#272727;box-shadow:inset 0 0 0 1px #ffffff1c;opacity:0;visibility:hidden;transform:scale(.98);transform-origin:50% 100%;transition:opacity calc(var(--dur-quick)/3) var(--ease-close),transform calc(var(--dur-quick)/3) var(--ease-close),visibility calc(var(--dur-quick)/3)}.d-ticker-demo-tip[data-open=\"true\"]{opacity:1;visibility:visible;transform:none;transition-duration:var(--dur-quick);transition-timing-function:var(--ease-out)}.d-ticker-demo-tip b,.d-ticker-demo-tip span{display:block;font-size:13px;line-height:16px}.d-ticker-demo-tip span{color:#9c9c9c}.d-ticker-demo[data-mode=\"thumb\"] .d-ticker-demo-tip b,.d-ticker-demo[data-mode=\"thumb\"] .d-ticker-demo-tip span{font-size:max(13px,calc(11px/var(--fit-scale,1)));line-height:max(16px,calc(14px/var(--fit-scale,1)))}@media(prefers-reduced-motion:reduce){.d-ticker-demo-tip{transform:none!important}.d-ticker-demo *,.d-ticker-demo *::before{animation:none!important;transition-property:opacity!important;transition-duration:var(--dur-quick)!important;transition-delay:0s!important}}.d-ticker-demo{top:0}.d-ticker-demo-full{left:50%;top:50%;width:min(280px,calc(100% - 48px));height:246px;transform:translate(-50%,-58%)}.d-ticker-demo-board{position:absolute;top:0;left:0;width:100%;height:53px;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 40px,#000 calc(100% - 40px),transparent)}.d-ticker-demo-track{display:flex;width:max-content;animation:d-ticker-demo-tape 24s linear infinite}.d-ticker-demo-group{display:flex;flex:none;gap:12px;padding-right:12px}.d-ticker-demo-item{display:flex;flex-direction:column;flex:none;min-width:82px;gap:2px;font-size:13px;line-height:16px}.d-ticker-demo-item>b{color:#777;font-weight:500}.d-ticker-demo-item>strong{font-weight:500}.d-ticker-demo-item>span{display:none}.d-ticker-demo-table{position:absolute;left:0;right:0;top:72px;font-size:13px}.d-ticker-demo-table>div,.d-ticker-demo-table li{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}.d-ticker-demo-table>div{color:#777;margin-bottom:8px;font-size:13px}.d-ticker-demo-table ul{list-style:none;margin:0;padding:0;display:grid;gap:13px}.d-ticker-demo-table li>span:not(:first-child){text-align:right}.d-ticker-demo-table li>span:last-child{color:#9b9b9b}.d-ticker-demo-table li.d-ticker-demo-flash-up>span:not(:first-child){color:#3ecf8e}.d-ticker-demo-table li.d-ticker-demo-flash-down>span:not(:first-child){color:#f26d6d}.d-ticker-demo-market{position:absolute;left:0;top:0;width:100%;height:206px;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 50px,#000 calc(100% - 50px),transparent)}.d-ticker-demo-market-track{position:absolute;left:20px;top:82px;display:flex;width:max-content;animation:d-ticker-demo-tape 24s linear infinite;animation-delay:1.5s}.d-ticker-demo-market-group{display:flex;flex:none;gap:8px;padding-right:8px}.d-ticker-demo-quote{position:relative;flex:none;width:82px;height:44px;border-radius:10px;background:#1c1c1c;box-shadow:inset 0 0 0 1px #ffffff0f}.d-ticker-demo-quote>b{position:absolute;left:10px;top:7px;font:500 11px/normal Inter,sans-serif;letter-spacing:.0528px;color:#6a6a6a}.d-ticker-demo-quote>span{position:absolute;left:10px;top:22px;font:500 12.5px/normal 'Geist Mono',monospace;color:#3ecf8e}.d-ticker-demo-quote[data-sign=\"down\"]>span{color:#f26d6d}.d-ticker-demo-is-paused .d-ticker-demo-track,.d-ticker-demo-is-paused .d-ticker-demo-market-track{animation-play-state:paused}@keyframes d-ticker-demo-tape{to{transform:translateX(-50%)}}",
+        "designSize": "bleed",
+        "stage": {
+          "theme": "dark",
+          "overflow": "intentional"
+        },
+        "trigger": "ambient",
+        "controls": [
+          {
+            "label": "Update",
+            "action": "tick"
+          },
+          {
+            "label": "Pause tape",
+            "action": "toggle"
+          },
+          {
+            "label": "Reset",
+            "action": "reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "status"
+        },
+        "useCases": [
+          "ticker",
+          "prices",
+          "flash"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11"
+      },
+      "jsSHA256": "cb622159ab9a70c0b046e4d3f2f398b4ba74bc1f73abce637d97a1eaaa82ba93"
+    },
+    {
+      "definition": {
+        "id": "radar-sweep-blips",
+        "title": "Radar Sweep",
+        "cat": "Data & Numbers",
+        "rootClass": "d-radar-demo",
+        "tags": [
+          "radar",
+          "polar",
+          "decay"
+        ],
+        "libs": [],
+        "desc": "A green sweep reveals five polar targets and their exponential decay. The compact view retains the exact v4 radar rings, sector and three static reference blips.",
+        "seen": "Seen on: network monitoring, logistics maps, security dashboards, discovery tools, and spatial data stories",
+        "hint": "Ambient · The sweep lights blips as it passes",
+        "html": "<div class=\"d-radar-demo\"><div class=\"d-radar-demo-full\"><div class=\"d-radar-demo-scope\" role=\"img\" aria-label=\"Radar with five targets\"><i class=\"d-radar-demo-ring d-radar-demo-r1\"></i><i class=\"d-radar-demo-ring d-radar-demo-r2\"></i><i class=\"d-radar-demo-ring d-radar-demo-r3\"></i><div class=\"d-radar-demo-sweep\"></div><div class=\"d-radar-demo-blips\"></div></div><div class=\"d-radar-demo-list\"><span>Tracks</span><ol></ol></div></div><div class=\"d-radar-demo-hero d-radar-demo-reference\"><img class=\"d-radar-demo-asset \" src=\"{{asset:data-radar-inner}}\" alt=\"\" style=\"left:44px;top:44px;width:44px;height:44px\"><img class=\"d-radar-demo-asset \" src=\"{{asset:data-radar-middle}}\" alt=\"\" style=\"left:22px;top:22px;width:88px;height:88px\"><img class=\"d-radar-demo-asset \" src=\"{{asset:data-radar-outer}}\" alt=\"\" style=\"left:0;top:0;width:132px;height:132px\"><div class=\"d-radar-demo-beam\"><img class=\"d-radar-demo-asset \" src=\"{{asset:data-radar-sector}}\" alt=\"\" style=\"left:66px;top:0;width:45.1801px;height:66px\"><img class=\"d-radar-demo-asset \" src=\"{{asset:data-radar-ray}}\" alt=\"\" style=\"left:65.4px;top:-.6px;width:1.2px;height:67.2px\"></div><img class=\"d-radar-demo-asset d-radar-demo-return\" src=\"{{asset:data-radar-near}}\" alt=\"\" style=\"left:76px;top:24px;width:6px;height:6px\"><img class=\"d-radar-demo-asset d-radar-demo-return\" src=\"{{asset:data-radar-left}}\" alt=\"\" style=\"left:30px;top:84px;width:5px;height:5px\"><img class=\"d-radar-demo-asset d-radar-demo-return\" src=\"{{asset:data-radar-right}}\" alt=\"\" style=\"left:100px;top:92px;width:5px;height:5px\"></div><span class=\"d-radar-demo-status\" role=\"status\" aria-live=\"polite\"></span></div>",
+        "css": ".d-radar-demo{position:relative;top:4px;color:#f1f1f1;font:400 13px/18px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-radar-demo *{box-sizing:border-box}.d-radar-demo p,.d-radar-demo h3{margin:0}.d-radar-demo button{font:inherit;color:inherit;cursor:pointer}.d-radar-demo button:focus-visible,.d-radar-demo [tabindex]:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-radar-demo-hero{display:none}.d-radar-demo[data-mode=\"thumb\"] .d-radar-demo-hero{display:block}.d-radar-demo[data-mode=\"thumb\"] .d-radar-demo-full{display:none}.d-radar-demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:18px}.d-radar-demo-asset{position:absolute;display:block;max-width:none}.d-radar-demo[data-starting=\"true\"] *,.d-radar-demo[data-starting=\"true\"] *::before{animation:none!important;transition:none!important}.d-radar-demo-full{position:absolute;inset:0}.d-radar-demo-caption{font-size:13px;color:#858585}.d-radar-demo-number{display:inline-flex}.d-radar-demo-run{position:relative;display:inline-flex;flex:none}.d-radar-demo-face,.d-radar-demo-old{display:inline-flex;flex:none}.d-radar-demo-old{position:absolute;inset:0;font:inherit;pointer-events:none}.d-radar-demo-old-digit{display:inline-block;min-width:1ch}.d-radar-demo-old-digit>b{display:block;font:inherit}.d-radar-demo-digit{position:relative;display:inline-block;min-width:1ch}.d-radar-demo-digit>b,.d-radar-demo-digit>i{display:block;font:inherit}.d-radar-demo-digit>i{position:absolute;inset:0;pointer-events:none}.d-radar-demo-tip{position:absolute;z-index:4;min-width:130px;padding:8px 10px;border-radius:6px;background:#272727;box-shadow:inset 0 0 0 1px #ffffff1c;opacity:0;visibility:hidden;transform:scale(.98);transform-origin:50% 100%;transition:opacity calc(var(--dur-quick)/3) var(--ease-close),transform calc(var(--dur-quick)/3) var(--ease-close),visibility calc(var(--dur-quick)/3)}.d-radar-demo-tip[data-open=\"true\"]{opacity:1;visibility:visible;transform:none;transition-duration:var(--dur-quick);transition-timing-function:var(--ease-out)}.d-radar-demo-tip b,.d-radar-demo-tip span{display:block;font-size:13px;line-height:16px}.d-radar-demo-tip span{color:#9c9c9c}.d-radar-demo[data-mode=\"thumb\"] .d-radar-demo-tip b,.d-radar-demo[data-mode=\"thumb\"] .d-radar-demo-tip span{font-size:max(13px,calc(11px/var(--fit-scale,1)));line-height:max(16px,calc(14px/var(--fit-scale,1)))}@media(prefers-reduced-motion:reduce){.d-radar-demo-tip{transform:none!important}.d-radar-demo *,.d-radar-demo *::before{animation:none!important;transition-property:opacity!important;transition-duration:var(--dur-quick)!important;transition-delay:0s!important}}.d-radar-demo-scope{position:absolute;left:8px;top:30px;width:170px;height:170px;border:1px solid #ffffff1c;border-radius:50%;overflow:hidden}.d-radar-demo-ring{position:absolute;left:50%;top:50%;border:1px solid #ffffff1c;border-radius:50%;transform:translate(-50%,-50%)}.d-radar-demo-r1{width:50px;height:50px}.d-radar-demo-r2{width:108px;height:108px}.d-radar-demo-r3{width:168px;height:168px}.d-radar-demo-sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,rgba(62,207,142,.12),rgba(62,207,142,0) 42deg,transparent 42deg);transform:rotate(var(--angle,0deg))}.d-radar-demo-sweep::before{content:\"\";position:absolute;left:50%;top:0;width:1px;height:50%;background:#3ecf8e}.d-radar-demo-blip{position:absolute;left:50%;top:50%;width:5px;height:5px;border-radius:50%;background:#3ecf8e;transform:translate(calc(var(--x)*1px - 2.5px),calc(var(--y)*1px - 2.5px));opacity:var(--intensity,0)}.d-radar-demo-list{position:absolute;left:192px;top:35px;width:84px;font-size:13px}.d-radar-demo-list>span{color:#888}.d-radar-demo-list ol{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}.d-radar-demo-list li{display:flex;flex-direction:column;color:#666;line-height:15px}.d-radar-demo-list b{font-size:13px;font-weight:400}.d-radar-demo-list .d-radar-demo-is-active{color:#3ecf8e}.d-radar-demo-reference{position:absolute;left:24px;top:8px;width:132px;height:132px}.d-radar-demo-beam{position:absolute;inset:0;transform:rotate(var(--visual-angle,0deg));transform-origin:66px 66px}",
+        "designSize": [
+          280,
+          238
+        ],
+        "stage": {
+          "theme": "dark",
+          "overflow": "clip"
+        },
+        "trigger": "ambient",
+        "controls": [
+          {
+            "label": "Pause sweep",
+            "action": "toggle"
+          },
+          {
+            "label": "140°",
+            "action": "inspect"
+          },
+          {
+            "label": "Reset",
+            "action": "reset"
+          }
+        ],
+        "a11y": {
+          "keyboard": true,
+          "reducedMotion": true,
+          "aria": "status"
+        },
+        "useCases": [
+          "radar",
+          "polar",
+          "decay"
+        ],
+        "tier": "free",
+        "thumb": "hero",
+        "addedAt": "2026-11",
+        "thumbDesignSize": [
+          180,
+          160
+        ]
+      },
+      "jsSHA256": "e5f86f2bf43a9c919185dc8df8f59e770a12a2930712e754521d263a70a8e9a8"
+    }
+  ]
+}

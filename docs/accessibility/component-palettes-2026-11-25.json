@@ -1,0 +1,186 @@
+{
+  "date": "2026-11-25",
+  "baseline": "53a8b5d23bcb2fd7602654e0708bdf404a6180db",
+  "scope": "Nine full-view ink palettes and three alternate light chart palettes. Preserve exact native artwork and all original controller/model/dataset behavior. This is not a whole-catalog accessibility, motion or performance certificate.",
+  "repairs": [
+    "text-accordion-squeeze",
+    "text-underline-magic",
+    "text-numbers-slot",
+    "text-highlighter-swipe",
+    "slider-progress-fraction",
+    "chart-bars-race",
+    "sparkline-hover-scrub",
+    "ticker-tape-prices",
+    "radar-sweep-blips"
+  ],
+  "preservation": {
+    "at": "2026-11-24T19:35:30.373Z",
+    "components": 520,
+    "unchangedJS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": 520,
+    "unchangedDefinitions": 511,
+    "changedCSSAndPrompt": [
+      "text-accordion-squeeze",
+      "text-underline-magic",
+      "text-numbers-slot",
+      "text-highlighter-swipe",
+      "slider-progress-fraction",
+      "chart-bars-race",
+      "sparkline-hover-scrub",
+      "ticker-tape-prices",
+      "radar-sweep-blips"
+    ],
+    "inputs": {
+      "js/demos.text.accordion-squeeze.js": "982615cdc581f9bbc4c8ae778fa2e84382eb6aed103a26506a5cfdc7ffa07b12",
+      "js/demos.text.underline-magic.js": "a1cd9b32bde876e501fe536c4d4acd78547c215fbeb89a2ad7d2a776daed1ae6",
+      "js/demos.text.numbers-slot.js": "9dcc2e8c4096a41b2551765fc9c7ca4ab1428fc807b6f597a6da6c22bb2c5c0d",
+      "js/demos.text.highlighter-swipe.js": "1598070ca27bd4f1dffb39dd7aa18909aed4ad07853bada0cab4068ee095cb3c",
+      "js/demos.gallery.slider-progress-fraction.js": "cca02f10bee1ce5a39d22221fd9f78db5af68d80e8143f1f310d1909a31158d5",
+      "js/demos.data.chart-bars-race.js": "452fd66d83747147e95c98f2d2f91245ff6e9299889958f6237a9d32b52256cc",
+      "js/demos.data.sparkline-hover-scrub.js": "bc0611999a959268fc48c926688036a7968ca00e9781b2e63927f485476edc0a",
+      "js/demos.data.ticker-tape-prices.js": "3e70ae1824865c48085a916eb34582bbe67ee7085547d94075e2232e8a6bab2c",
+      "js/demos.data.radar-sweep-blips.js": "d4a3334e2d953e75fffb5aadbf0aca504459ecd27f97ff4cb37a4386f7e37c8a"
+    },
+    "scope": "Exact baseline replay. Nine CSS changes are full-mode color suffixes; original CSS remains an exact prefix. Existing models, datasets, assets, motion, geometry and metadata remain unchanged."
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "layoutComparisons": 144,
+    "exactNativeCrops": 72,
+    "freshOfflinePalettes": 18,
+    "textColorChecks": 890,
+    "minimumTextRatio": 5.220484150997109,
+    "lightChartMarkChecks": 45,
+    "minimumLightChartRatio": 3.223014511791165,
+    "method": "Compare actual foreground CSS colors to the Stage surface: dark21RGB; conservative light244RGB from the Kit glow. Samples exclude photographic captions, dark selected wells and tooltips. Geometry includes font metrics and transforms; native screenshots compare every PNG byte. Runtime is held before its first source frame for initial layout/art comparisons; offline exports run in fresh blocked-network contexts.",
+    "proofSHA256": "125c85ad2d776d9e5d4d1f31e825a9521b5106859db5891b4e3397519a29b36d",
+    "physicalFeedback": {
+      "stories": 8,
+      "proofSHA256": "49dcb9475b53920d43915f58aa4a2d5e4d16b8d318a5574485c7dbb8b93381fa",
+      "scope": "Actual Enter on Update and Reset at1440/390px, both themes and motion settings. Capture the actual update microtask, compare complete original/current prices, deltas and reset fields, and retain green/red feedback on both numeric columns."
+    },
+    "requiredCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ]
+  },
+  "auditTriage": {
+    "baselineCandidates": 53,
+    "initialScan": {
+      "cases": 212,
+      "violations": 106,
+      "incomplete": 96,
+      "pageErrors": 0
+    },
+    "initialProofSHA256": "2fd197a978e330df5f1576c78b3f7ec879a6f5d0dbf5786d09bb0a36932a1cb8",
+    "settledScope": "Additional settled reduced full-view scan. Wait350ms after decoded images/fonts, suspend runtime, then retain all axe findings. Earlier initial-state scans remain separate.",
+    "settledCases": 106,
+    "settledProofSHA256": "991bd747ed9292f975292190b7345d6ea0a6f7b68860a7dde35c0df9a6100e77",
+    "targetedFullBefore": {
+      "cases": 18,
+      "contrastViolations": 9,
+      "allRuleViolations": 11,
+      "incomplete": 11
+    },
+    "targetedReducedFullAfter": {
+      "cases": 18,
+      "contrastViolations": 0,
+      "allRuleViolations": 2,
+      "incomplete": 11
+    },
+    "currentFullScan": {
+      "cases": 36,
+      "contrastViolations": 0,
+      "allRuleViolations": 4,
+      "incomplete": 21
+    },
+    "currentFullScanMotions": [
+      "reduced",
+      "normal"
+    ],
+    "targetedInitialProofSHA256": "f879eb7f987ebc168a00a6d2a379e00f3340136e92d77caff67118f02513b27c",
+    "notes": [
+      "Initial-state and additional settled observations remain separate; no prior finding is overwritten or discarded.",
+      "The final current-source full scan covers both motion settings. Retain the earlier mixed-mode post-initial diagnostic scan separately; final palette, graph and native-art checks bind to the current source.",
+      "Retain Fraction Slider line-break/name and photographic incomplete findings for their documented manual scope. No name, role or displayed copy changes in this pass.",
+      "Native Figma gray ink remains unchanged; the owner preference is pending. No contrast exception is added to the fill-only allowlist."
+    ]
+  },
+  "visualReview": {
+    "reviewed": [
+      "Magic Underline light typography and underline",
+      "Highlighter light heading/body/meta",
+      "Price Tape light labels, values and edge mask",
+      "Fraction Slider light header/counter with original photograph/caption",
+      "Bar Race light bars and labels",
+      "Sparkline light curve",
+      "Radar light rings"
+    ],
+    "finding": "The first text-only pass left pale light-theme chart marks. Retain its diagnostic proof separately; the final graph refinement changes only colors and preserves all path, radius and layout values."
+  },
+  "additionalInvestigation": {
+    "scope": "Rejected attached/detached/transferred-worker Canvas experiment for Threads; no production change and no timing claim.",
+    "proofSHA256": "c5aba5883b04f1ab5547dd52c74c6c83a4ab7a35dc2f51b141c7ca0e3653c298"
+  },
+  "remaining": [
+    "Native Figma ink preference and remaining component contrast/incomplete findings.",
+    "Photographic and other untested states.",
+    "Final named motion recipes, CPU4 rendering and untouched cold-route/Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Direct main commit/push; no PRs. Keep GitHub Actions disabled and preserve owner zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

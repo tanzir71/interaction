@@ -1769,3 +1769,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Sample the first actual60Hz source frame at120/240Hz without advancing it
   early. Current-browser renderer stories complement the historical model
   suite; measured improvements do not close the remaining CPU4 timing gate.
+
+- `node tools/verify-component-palettes.js http://127.0.0.1:4173` covers the
+  full-view ink repairs for Accordion Type, Magic Underline, Number Slot,
+  Highlighter Swipe, Fraction Slider, Bar Race, Sparkline, Price Tape and Radar.
+  Keep their original controller hashes, HTML, geometry and native artwork.
+  Full-only palette selectors use Stage mode, which exists before first layout;
+  initialize readable ink without a transition from native colors. Preserve
+  dark tooltip/selected-well ink and both signs of live price feedback. Checks
+  cover 144 exact layouts, 72 exact native crops and 18 fresh offline palettes
+  at two widths, themes and motion settings. Listed Stage text is measured
+  against the conservative light Kit surface; photographic captions and the
+  remaining catalog require separate review. Initial axe findings stay archived
+  beside settled observations. Native Figma ink and CPU4 timing remain open.
