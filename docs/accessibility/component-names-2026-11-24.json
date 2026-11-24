@@ -286,8 +286,15 @@
   "remainingWork": [
     "42 retained automated violations in each focused viewport scan:20 color-contrast,14 scroll-focus,8 label-name findings. The label findings include FUI primary headings and symbolic Punch keycap glyphs; they still require separate repair/manual applicability review.",
     "Color-contrast incomplete results185desktop/189compact, plus the rest of the520-component catalog and manual keyboard/focus/screen-reader review.",
-    "The wider affected-family regression run is in progress and is not claimed as passed by this publication report.",
+    "The63affected-family regression groups are complete; see regressionFollowup. This does not close the remaining full-catalog/manual accessibility or motion/performance work.",
     "Complete motion recipe review, cold detail paint and CPU4 frame-performance acceptance."
   ],
-  "publicationPolicy": "Commit/push directly to main, no PRs. GitHub Actions remain disabled. No workflow or billing changes; preserve the owner account-wide$0 stop limit."
+  "publicationPolicy": "Commit/push directly to main, no PRs. GitHub Actions remain disabled. No workflow or billing changes; preserve the owner account-wide$0 stop limit.",
+  "regressionFollowup": {
+    "at": "2026-11-24T15:31:41.202Z",
+    "file": "docs/accessibility/component-names-regression-2026-11-24.json",
+    "successfulGroups": 63,
+    "complete": true,
+    "scope": "Explicit original-browser historical fixtures and current-browser native/full UI coverage are separated in the followup. Full accessibility, motion and performance acceptance remain open."
+  }
 }

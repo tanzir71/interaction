@@ -1714,3 +1714,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Scheduler scroll comparisons do not certify untouched initial scroll paint.
   Remaining contrast/name findings, manual review and final motion/performance
   acceptance stay open. Earlier private helpers and evidence remain frozen.
+
+- Accessibility regression observers wait for actual clock progress, native
+  pointer/viewport delivery and WAAPI pause readiness before the original
+  assertions. Keep every planned coordinate, model equation and pixel bound.
+  Macro's original-DOM oracle adds only the intentional root group role.
+  Raster settling still requires six identical captures; preserve failed runs.
+  Historical raw fixtures for Instruments and DRAMS devices use Chromium140;
+  current native/full UI checks use Chrome158, with explicit per-group engine
+  evidence. Do not recapture fixtures or relax numerical/pixel bounds to erase
+  browser differences. The63affected-family regression is complete; full
+  accessibility, motion and performance acceptance remain open.

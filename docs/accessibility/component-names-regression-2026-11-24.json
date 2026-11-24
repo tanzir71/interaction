@@ -1,14 +1,14 @@
 {
-  "at": "2026-11-24T15:23:30.762Z",
-  "productCommit": "70529e1db9c5685db30c180e388b99cee3f4ecaf",
-  "scope": "Verified test-observation and intentional semantic-oracle corrections after the49 naming repairs. No product/demo/model/CSS/asset changes. Broader regression and full accessibility/motion/performance acceptance remain open.",
+  "at": "2026-11-24T15:32:04.873Z",
+  "productCommit": "0daa59cf0113171df8fbf1be1bf34bebe1a52057",
+  "scope": "Verified test-observation and intentional semantic-oracle corrections after the49 naming repairs. No product/demo/model/CSS/asset changes. The affected-family regression is complete; full accessibility/motion/performance acceptance remain open.",
   "repairs": [
     {
       "file": "tools/verify-agents.js",
       "sha256": "6d515b2650ac584e1f933587e75b3c20887e10bef0f256d5ed6eb956c0aa5ed4",
       "change": "Await actual source-clock progress before asserting startup time. Original model/pause assertions remain.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/agents-corrected.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/agents-corrected.log",
         "sha256": "78c8224cbd26bf743a6f199216f4cc7c663dca0d2f7aebde2fef0de3d7bbf325"
       }
     },
@@ -17,7 +17,7 @@
       "sha256": "a8ac8adeaf896dff41bf7cc62a27c018e46d9cce1deff4a6cf5b7a2a971908fa",
       "change": "Acknowledge actual pointer delivery before the original pacing and frequency/capture/release assertions. Original coordinates and0.01Hz bound remain.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/sound-touch-corrected.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/sound-touch-corrected.log",
         "sha256": "03b6a51c11bcbce6e886fd240e6ca9ac6d6a7dde1b69fb396842741b6a37f7ef"
       }
     },
@@ -26,7 +26,7 @@
       "sha256": "a8cb8689562a73f7f732913b7cb31ca6d4d017e59d587143429347dae93aa2d3",
       "change": "Add only the intentional Macro root role=group to the independent expected DOM. Preserve all original state, other DOM and strict numerical comparisons.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/skeuo-stories-corrected.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/skeuo-stories-corrected.log",
         "sha256": "e74bda3a5ea4b7a0e7919826d1a8150218b2888cf32423e71a78afe95446c1eb"
       }
     },
@@ -35,7 +35,7 @@
       "sha256": "c86acfff7caa52f96687b8e3b54ce72ec011a744c91ef6786d2a506f139b6c0a",
       "change": "Observe strict six-identical-frame raster settling with bounded progress/failure captures. Preserve existing numerical and one-channel pixel bounds. The successful24-case execution needed at most15 captures, within the original18.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/skeuo-interruption-restored.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/skeuo-interruption-restored.log",
         "sha256": "85ef82da3f135fc0595dc72f71f33b5db951827d605f9d835d7d6300dd5eecca"
       }
     },
@@ -44,8 +44,17 @@
       "sha256": "47d3957f49c9a25709c04e805dc50c7214900e6c9dba05bc484325cdbfd7be01",
       "change": "Await actual WAAPI pause readiness before the unchanged180ms model/paint hold assertions.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/showcase-final-resumed.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/showcase-final-resumed.log",
         "sha256": "931eff7edfa25cdee96360c13bab48db18be21cc72659d4b06348949688cf9dd"
+      }
+    },
+    {
+      "file": "tools/verify-sound-ext-touch.js",
+      "sha256": "4b0a6766f2cc0715ef28b4cddbaef5dab7879059ba1cc5278e9c6d8e3d93f1eb",
+      "change": "Acknowledge all twelve actual native pointer moves before the next unchanged glissando coordinate; retain all40checks across4stories, capture loss, compatibility click, native scroll and disposal.",
+      "log": {
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/sound-ext-touch-corrected.log",
+        "sha256": "8b8ec51da0d9d02b5ba3ecece0d8e080fdc370821832667c72666845151f87b9"
       }
     },
     {
@@ -53,13 +62,13 @@
       "sha256": "1486f33bbb7af2bf27fbe96dcedf91276f1be894b8cb9c332edeef3432ac96ab",
       "change": "Replace an assumed80ms offscreen delivery sleep with native intersection acknowledgement and a following frame. Preserve all original hold ownership/model/paint/time/queue/cleanup assertions.",
       "log": {
-        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/framer-data-resumed.log",
+        "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/framer-data-resumed.log",
         "sha256": "0b16cf1aff29724671f19fe95a4f09c541a9d4ecb5446e505373682c41045b5a"
       }
     }
   ],
   "ownerGates": {
-    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/owner-gates.json",
+    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/owner-gates.json",
     "sha256": "1ec909a6d049c501a3c4bd185fdebc9c9d3bea22d48383db6d68367ee1bd4e68",
     "groups": 13,
     "currentInputHashesExact": 471,
@@ -67,7 +76,7 @@
   },
   "nameProofs": [
     {
-      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/names-0.json",
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/names-0.json",
       "sha256": "b0af71513ff51744138efa5f9dd8a0bec3cbaf0448f33271983b3f021aca901d",
       "browser": "158.0.8127.88",
       "checks": 5409,
@@ -77,7 +86,7 @@
       "currentInputsRevalidated": true
     },
     {
-      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/names-1.json",
+      "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/names-1.json",
       "sha256": "3788ee85c82dcfe9a871a3095ae707f8e4af6cb1a24c85e9239cfb9c639bc406",
       "browser": "140.0.7339.16",
       "checks": 5409,
@@ -88,9 +97,9 @@
     }
   ],
   "regressionAtPublication": {
-    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-23-30-427Z/regression-at-publication.json",
-    "sha256": "10ed6cf58c08b9a18cffad6afe94ca76e933271d4e4a057f29e45e5864e711ab",
-    "successfulGroups": 33,
+    "file": "C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-component-names-v4/verification-publication-2026-11-24T15-32-04-543Z/regression-at-publication.json",
+    "sha256": "c01c6099076307aebdcd806076bc2fc1a070c3a7d3e151d901b6dba81c5da7dc",
+    "successfulGroups": 63,
     "totalGroups": 63,
     "passed": [
       {
@@ -365,42 +374,252 @@
           "http://127.0.0.1:4173"
         ],
         "logSHA256": "1fc8468431648fcefe36d148ddd27a829dac657f412e52cf005efd4ae3b1f348"
+      },
+      {
+        "name": "micro-ext-input",
+        "args": [
+          "tools/verify-micro-ext-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "6f8b71f77b9f5bbe3daf8f1ff4824d2c3286e747a75c9395fb4a0c3529b16bf0"
+      },
+      {
+        "name": "micro-ext-clocks",
+        "args": [
+          "tools/verify-micro-ext-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "27f7e594fdf4a77b322076939e4522ef0f52730a93da2f8f73e41c8a1c93e683"
+      },
+      {
+        "name": "micro-ext-exports",
+        "args": [
+          "tools/verify-micro-ext-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "10f306a0879adea0bb7975b3b341d54f3d0e970b1c0041afa962cb0c729f2942"
+      },
+      {
+        "name": "micro-ext-holds",
+        "args": [
+          "tools/verify-micro-ext-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "fe06340738c0372dbd6e3341d1e890769331d04f4ddf2a97f95e07b22c7a26ab"
+      },
+      {
+        "name": "micro-ext-touch",
+        "args": [
+          "tools/verify-micro-ext-touch.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "b0dd939114c281ddfa6f0346bbd7f49a39abaf98ca5eaf34a183a401c20e582d"
+      },
+      {
+        "name": "micro-ext-async",
+        "args": [
+          "tools/verify-micro-ext-async.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "2e7f262b746ab4678bd23085ce615e374f474042b2750ae1308b18d6293a0d9e"
+      },
+      {
+        "name": "gallery-ext",
+        "args": [
+          "tools/verify-gallery-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "8860d77c81a0bc8fb0185ef5549f4ce847602ec9ea777f60b6d2dacd1f2777dd"
+      },
+      {
+        "name": "gallery-ext-models",
+        "args": [
+          "tools/verify-gallery-ext-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "abc20d944831d3fcee6330a8a09944e97e4c9b79c68f0232415877269ca79421"
+      },
+      {
+        "name": "gallery-ext-input",
+        "args": [
+          "tools/verify-gallery-ext-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "00122bc289ca2ea1c87ebe640819bcd339b4e76ffc78a8a957037aea197ea898"
+      },
+      {
+        "name": "gallery-ext-clocks",
+        "args": [
+          "tools/verify-gallery-ext-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "e91b203648a07103d0ecaffa5128a640f93ea3b72cb54bb2dbaab13e5a9fce01"
+      },
+      {
+        "name": "gallery-ext-exports",
+        "args": [
+          "tools/verify-gallery-ext-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "a8245ec4bdf913194da80e258e9eab65be3905dcbedd2b5e31866ae5c05bbc22"
+      },
+      {
+        "name": "gallery-ext-holds",
+        "args": [
+          "tools/verify-gallery-ext-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "27dffd9f6fd0f10611350c7c2cb9c187810c48805f0f99afa50cc52185dd19ef"
+      },
+      {
+        "name": "gallery-ext-touch",
+        "args": [
+          "tools/verify-gallery-ext-touch.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "9286ccfc0c9e8b78b8e4b4a46fd985e682de207a5651ecd633472e8873a6825c"
+      },
+      {
+        "name": "gallery-ext-interaction",
+        "args": [
+          "tools/verify-gallery-ext-interaction.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "268bad2f91b1f0a0c5c19d5273e2e7338cf937336e61124cc4d829128b9b2d2d"
+      },
+      {
+        "name": "sound-ext",
+        "args": [
+          "tools/verify-sound-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "747dc53410bdff54aa30e08fc047fca084bfb93cf2dd095a4c2e52a3b6a5457c"
+      },
+      {
+        "name": "sound-ext-audio",
+        "args": [
+          "tools/verify-sound-ext-audio.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "a37d45b44aa7080b83845fd1aeddef28dd891dec7c398c6de3d5a2895488466f"
+      },
+      {
+        "name": "sound-ext-input",
+        "args": [
+          "tools/verify-sound-ext-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "56c950705bd274a5206562530a030d2060aae6e40dc394d4efd0c56672d10a98"
+      },
+      {
+        "name": "sound-ext-clocks",
+        "args": [
+          "tools/verify-sound-ext-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "04ba0d8b461be7183cd7503cafb71ab9a484077b6822b387aae33e72c1ec362d"
+      },
+      {
+        "name": "sound-ext-exports",
+        "args": [
+          "tools/verify-sound-ext-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "727ade1330e4af97fd9bced05306d54c7a8e7610bca8fe6f24b91965ab55af2a"
+      },
+      {
+        "name": "sound-ext-holds",
+        "args": [
+          "tools/verify-sound-ext-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "5d9f7d3fddc5ae3f2d82f6138b9e8b9ea3dc64e0ff362c0ffd76f47398472da8"
+      },
+      {
+        "name": "sound-ext-pixels",
+        "args": [
+          "tools/verify-sound-ext-pixels.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "2271b4a84a37e685cdc6fc77684403f632a765db78c662dc4aab01f13aaf13ae"
+      },
+      {
+        "name": "layout-ext",
+        "args": [
+          "tools/verify-layout-ext.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "79815d2a973c1bb79c24f3dc588ff01eeae1484406b2ca070df3495b8075ff42"
+      },
+      {
+        "name": "layout-ext-models",
+        "args": [
+          "tools/verify-layout-ext-models.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "a5f067e82fd847305d90ee9ebb08e4b30563248d0b2239ab1aababd024c5b41c"
+      },
+      {
+        "name": "layout-ext-input",
+        "args": [
+          "tools/verify-layout-ext-input.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "5f14a741320c413a6266b067ef5e185ae3e83903ab082233cd35239495ffadbf"
+      },
+      {
+        "name": "layout-ext-clocks",
+        "args": [
+          "tools/verify-layout-ext-clocks.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "b468b8aa38acb910e362934eb56741ddc8342239f61ab672f09227b1480674f0"
+      },
+      {
+        "name": "layout-ext-exports",
+        "args": [
+          "tools/verify-layout-ext-exports.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "cbd39faaa5c4ad6df58414ebcc8d972f8991aa76ec6fbe81472ec165caf326f7"
+      },
+      {
+        "name": "layout-ext-holds",
+        "args": [
+          "tools/verify-layout-ext-holds.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "01c3410931d842ec6b1e001eae50ba6a5526029d4a36cf60208da8594df56c17"
+      },
+      {
+        "name": "layout-ext-pointer",
+        "args": [
+          "tools/verify-layout-ext-pointer.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "fa4261358ca879dd6656bc3840701b4b884b3ccc57643a7f2a289232df642880"
+      },
+      {
+        "name": "layout-ext-interaction",
+        "args": [
+          "tools/verify-layout-ext-interaction.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "9175545c19df7abd151707ad1263a6337ffb85fc72b0ed98b2d525e69c946d48"
+      },
+      {
+        "name": "sound-ext-touch",
+        "args": [
+          "tools/verify-sound-ext-touch.js",
+          "http://127.0.0.1:4173"
+        ],
+        "logSHA256": "8b8ec51da0d9d02b5ba3ecece0d8e080fdc370821832667c72666845151f87b9",
+        "scope": "Four fresh real native-touch stories/40unchanged assertions. Every original glissando point is acknowledged by actual browser pointermove delivery before the next point; capture loss, compatibility click, native page scrolling and mid-capture disposal remain tested."
       }
     ],
-    "remaining": [
-      "micro-ext-input",
-      "micro-ext-clocks",
-      "micro-ext-exports",
-      "micro-ext-holds",
-      "micro-ext-touch",
-      "micro-ext-async",
-      "gallery-ext",
-      "gallery-ext-models",
-      "gallery-ext-input",
-      "gallery-ext-clocks",
-      "gallery-ext-exports",
-      "gallery-ext-holds",
-      "gallery-ext-touch",
-      "gallery-ext-interaction",
-      "sound-ext",
-      "sound-ext-audio",
-      "sound-ext-input",
-      "sound-ext-clocks",
-      "sound-ext-exports",
-      "sound-ext-holds",
-      "sound-ext-touch",
-      "sound-ext-pixels",
-      "layout-ext",
-      "layout-ext-models",
-      "layout-ext-input",
-      "layout-ext-clocks",
-      "layout-ext-exports",
-      "layout-ext-holds",
-      "layout-ext-pointer",
-      "layout-ext-interaction"
-    ],
+    "remaining": [],
     "failedCurrentRows": [],
-    "complete": false
+    "complete": true
   },
   "explicitBrowserScopes": [
     {
