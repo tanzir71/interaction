@@ -1725,3 +1725,19 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   evidence. Do not recapture fixtures or relax numerical/pixel bounds to erase
   browser differences. The63affected-family regression is complete; full
   accessibility, motion and performance acceptance remain open.
+
+- `node tools/verify-primary-names.js http://127.0.0.1:4173` checks thirteen
+  further primary-name repairs, actual desktop/compact AX names,32real
+  normal/reduced keyboard stories and26fresh network-blocked exports.
+  Visible indices/captions and native fast/smooth belong in names; coincident
+  Glitch paint layers speak once. Target metrics have computed descriptions.
+  Anonymous inter-element word boundaries preserve supplied TEXT and geometry.
+  Wheel dataset checks read actual captions, not substrings of accessible names.
+  Image pixel oracles retain the existing CPU sampling context and read both
+  independent paint planes through separate copies; preserve exact pixel bounds.
+  Portable reveals wait for their actual source deadline/completion. Immutable
+  image model/render captures and the complete SVG reference suite use140;
+  current158 naming, image input/artwork/paint/exports are recorded separately.
+  Retain158SVG first-read/held raster differences for final renderer review;
+  do not claim them passed by using another engine. Broader name/contrast/manual
+  accessibility and motion/cold-route/Lighthouse/CPU4 acceptance remain open.

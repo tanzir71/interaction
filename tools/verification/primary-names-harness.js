@@ -1,0 +1,13 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),R=require('../load-registry')(),assets=require('../../assets/demo-assets.json'),catalog=require('../../registry/index.json');
+const base=(process.argv.find(v=>/^https?:/.test(v))||'http://127.0.0.1:4173').replace(/\/$/,'');
+async function mount(browser,d,{width=1440,mode='full',theme='dark',reduced=true}={}){
+ const context=await browser.newContext({viewport:{width,height:1000},deviceScaleFactor:width<600?2:1,reducedMotion:reduced?'reduce':'no-preference'}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(base+'/tools/fixtures/showcase-fields/rig.html');await page.evaluate(({base,assets,theme})=>{const b=document.createElement('base');b.href=base+'/';document.head.prepend(b);document.documentElement.dataset.theme=theme;window.INTRX={resolveAssets:v=>v.replace(/\{\{asset:([\w-]+)\}\}/g,(_,key)=>base+'/'+assets[key])};},{base,assets,theme});
+ for(const f of['css/foundations.css','css/fonts.css'])await page.addStyleTag({url:base+'/'+f});for(const f of['js/demo-runtime.js','js/shell/stage.js'])await page.addScriptTag({url:base+'/'+f});
+ const entry=catalog.find(e=>e.id===d.id);await page.evaluate(async({d,entry,width,mode,theme})=>{document.body.replaceChildren();Object.assign(document.body.style,{margin:'0',background:theme==='light'?'#fafafa':'#151515'});const s=document.createElement('div');s.className='demo-stage stage';Object.assign(s.style,{position:'relative',width:(mode==='thumb'?Math.min(372,width):Math.min(1000,width))+'px',height:(mode==='thumb'?264:width<600?600:720)+'px'});document.body.append(s);INTRX.mountStage({...d,stage:{...d.stage,theme},fullAssetRefs:entry.fullAssetRefs,photoCredits:entry.photoCredits},s,mode);await document.fonts.ready;await Promise.all([...s.querySelectorAll('img')].map(n=>n.decode()));await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(s.dataset.bootError)throw Error('Boot error');},{d,entry,width,mode,theme});
+ return{context,page,errors,async close(){assert.deepEqual(errors,[]);await context.close();}};
+}
+async function actualName(page,selector){const client=await page.context().newCDPSession(page);try{const doc=await client.send('DOM.getDocument'),node=await client.send('DOM.querySelector',{nodeId:doc.root.nodeId,selector}),ax=await client.send('Accessibility.getPartialAXTree',{nodeId:node.nodeId,fetchRelatives:false});return ax.nodes.find(n=>!n.ignored)?.name?.value;}finally{await client.detach();}}
+
+
+module.exports={mount,actualName,chromium,R};
