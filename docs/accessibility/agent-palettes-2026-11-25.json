@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-25",
+  "baseline": "d88e637f9147f7f6b405a0b3cf4d1d8456e5c5e3",
+  "scope": "Nine full terminal and agent palettes. All original controllers, HTML, metadata, geometry, datasets and native artwork remain unchanged. This bounded ink repair does not certify whole-catalog accessibility, photographic contrast, default-GPU pixels, production holds, motion recipes, cold routes or performance.",
+  "repairs": [
+    "fui-terminal-boot",
+    "fui-signal-scanner",
+    "fui-access-granted",
+    "fui-hex-dump",
+    "fui-trading-terminal",
+    "agent-deploy-pipeline",
+    "agent-context-compaction",
+    "agent-streaming-text",
+    "agent-diff-review"
+  ],
+  "preservation": {
+    "at": "2026-11-24T21:02:56.609Z",
+    "components": 520,
+    "unchangedJS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": 520,
+    "unchangedDefinitions": 511,
+    "changedCSSAndPrompt": [
+      "fui-terminal-boot",
+      "fui-signal-scanner",
+      "fui-access-granted",
+      "fui-hex-dump",
+      "fui-trading-terminal",
+      "agent-deploy-pipeline",
+      "agent-context-compaction",
+      "agent-streaming-text",
+      "agent-diff-review"
+    ],
+    "inputs": {
+      "js/demos.fui.fui-terminal-boot.js": "92bbdc6a25fca8c915807b46617ebdae12a9e1536165571942c0ceeda73fca5b",
+      "js/demos.fui.fui-signal-scanner.js": "f1e6eb7c827e863f0f04bbfd8251817d7899de722a488d305369d2a087a99cec",
+      "js/demos.fui.fui-access-granted.js": "967dbacb93815d7196a111561c74a923cf34c9c5bbc9c8880db66dc57ff8d8f6",
+      "js/demos.fui.fui-hex-dump.js": "4dbce99a9b6fb8d7fecb797844f79d131e01d56eaa7a2f2fac6f72f8af76d216",
+      "js/demos.fui.fui-trading-terminal.js": "3a01cec829bb58c2d9524a3d07a1fef7402a97cba7ba8c390e54025cfccc0002",
+      "js/demos.agent.agent-deploy-pipeline.js": "67246607f0b57f4de9b6b29d31cc3d60cf9d508b398bd62792b15b514a0c412a",
+      "js/demos.agent.agent-context-compaction.js": "4c7ace4166532cda867f098df4140b589d9762cfab08a55955cea9a11c525ae1",
+      "js/demos.agent.agent-streaming-text.js": "a364550c67eb1a13131a5f49b1cce6c318ebd6b49b779967df1aec55b202a6ea",
+      "js/demos.agent.agent-diff-review.js": "ef84da22db9b7601933a4fd4c5554a3c78510374dfcd14c82752cd8fee9a9f14"
+    },
+    "scope": "Exact baseline replay. Full-view CSS changes are component-prefixed, full-mode color suffixes; original CSS remains an exact prefix. Existing models, datasets, assets, motion, geometry and metadata remain unchanged."
+  },
+  "changes": [
+    "Transparent copy uses Stage ink, including light-Stage labels obscured from axe by the shared glow.",
+    "Existing dark Trading, Streaming and Diff panels keep their local palettes.",
+    "Light status text uses readable dark shades of the original green, red and orange. Hex proximity retains ordered shades and the selected-cell treatment.",
+    "All nine generator prompts retain their original geometry, controls and complete models while describing the full palette."
+  ],
+  "verification": {
+    "browser": "158.0.8127.88",
+    "browserArgs": [
+      "--disable-gpu"
+    ],
+    "scope": "Nine full terminal and agent palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review. Dynamic Boot lines and Streaming markup may be absent before the held initial clock advances; absent fields are recorded, and every named field must render and pass in each theme elsewhere in this run. Full geometry uses explicit DOM animation time0 in both instances. Pre-normalization animation states remain recorded; CSS initialization under a production hold requires a separate motion fix.",
+    "exactLayouts": 144,
+    "exactNativeCSSRoundtrips": 72,
+    "freshOfflinePalettes": 18,
+    "textColorChecks": 7362,
+    "minimumTextRatio": 4.769571068087651,
+    "surfaceMethod": "Nominal CSS foreground against conservative RGB244 light Stage, RGB21 dark Stage, or the documented opaque panel surfaces in the fixture. Does not certify every transition-opacity blend.",
+    "capture": "Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.",
+    "geometryPose": "Full geometry uses explicit DOM animation time0 while source time is held. Prior animation states remain in every full-layout row. Native CSS roundtrips retain their actual held source state and do not use this full-pose normalization.",
+    "absentDynamicFields": [
+      {
+        "id": "fui-terminal-boot",
+        "width": 1440,
+        "theme": "dark",
+        "reduced": false,
+        "missing": [
+          {
+            "selector": ".d-fui-boot-line span",
+            "reason": "Content has not rendered while source time is held"
+          },
+          {
+            "selector": ".d-fui-boot-line b",
+            "reason": "Content has not rendered while source time is held"
+          }
+        ]
+      },
+      {
+        "id": "fui-terminal-boot",
+        "width": 1440,
+        "theme": "light",
+        "reduced": false,
+        "missing": [
+          {
+            "selector": ".d-fui-boot-line span",
+            "reason": "Content has not rendered while source time is held"
+          },
+          {
+            "selector": ".d-fui-boot-line b",
+            "reason": "Content has not rendered while source time is held"
+          }
+        ]
+      },
+      {
+        "id": "fui-terminal-boot",
+        "width": 390,
+        "theme": "dark",
+        "reduced": false,
+        "missing": [
+          {
+            "selector": ".d-fui-boot-line span",
+            "reason": "Content has not rendered while source time is held"
+          },
+          {
+            "selector": ".d-fui-boot-line b",
+            "reason": "Content has not rendered while source time is held"
+          }
+        ]
+      },
+      {
+        "id": "fui-terminal-boot",
+        "width": 390,
+        "theme": "light",
+        "reduced": false,
+        "missing": [
+          {
+            "selector": ".d-fui-boot-line span",
+            "reason": "Content has not rendered while source time is held"
+          },
+          {
+            "selector": ".d-fui-boot-line b",
+            "reason": "Content has not rendered while source time is held"
+          }
+        ]
+      }
+    ],
+    "dynamicCoverage": "Every named field must render and pass in both themes somewhere in the focused run. Normal initial Boot and Streaming content can be absent while source time is held; actual normal completion is covered separately below.",
+    "proofSHA256": "f5a16bdf99a63d2967977ebbac5892641c0a9649b8163ccdd14c5ecdbe6f43c1",
+    "requiredCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "logSHA256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "logSHA256": "86f10a234606a7c5f16425898979105540aafc78b606373effaaef9e6bf7946b"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "logSHA256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ],
+    "packageTests": {
+      "command": "npm test --prefix packages/intrx",
+      "exitCode": 0,
+      "passed": 9,
+      "failed": 0,
+      "logSHA256": "b225a121b577c87953ed7f95742ac93ec3a77ace01a28ba91d85ac3fab3ef18e",
+      "inputs": {
+        "packages/intrx/LICENSE": "81566f7f88decc0e634d778727d133cc49a7f109378ec3c66bf0f00b60296fd9",
+        "packages/intrx/README.md": "9c25b8f25aa6b70d73f912b83023086ab20eff527c85ea06b9fcf9df56167bb5",
+        "packages/intrx/bin/intrx.js": "19063c4465731ebe851d19add8e038ca30c50d7017221843a5d3d8a050e9f50a",
+        "packages/intrx/package-lock.json": "1ebe463f1e3027f675a72b5a65dad05c7ef6746dcf5e0a41de007f641852f1cb",
+        "packages/intrx/package.json": "2489404e78b7526b72b962e744a093c4050d4be3e7bdbfde60d5d25f32c11545",
+        "packages/intrx/src/cli.js": "ef497c024fb173411109a02557882b6f11ee0ca01e1d2c11d927c9acccee9ddb",
+        "packages/intrx/src/mcp.js": "7a9a937644bd9647025fd3fb1c26ef6eeec4ce2ceaa37fea8ad3db5bab117426",
+        "packages/intrx/src/registry.js": "2de720d9e05adc192eebfe9bff6fcfb3470f7cd3e1db62f472e3e4cca3506449",
+        "packages/intrx/test/intrx.test.js": "412415adfc58c8d97be910055f87a4976466a455f61f81bf4411e95ecb7e35bf",
+        "packages/intrx/test/pro.test.js": "22b585c50fef84ba50e56d6246a1e10ae50826270213dceaee5c38fa28537453",
+        "registry/index.json": "863eea95bb1ebeb0b31a5410396b9b02fc4c127a71985d32878a1c4f6833b027"
+      }
+    }
+  },
+  "defaultGPU": {
+    "scan": {
+      "cases": 36,
+      "initialContrastViolations": 22,
+      "currentContrastViolations": 0,
+      "unchangedNameRuleFlags": 8,
+      "incomplete": 23,
+      "pageErrors": 0,
+      "beforeSHA256": "dd3e210073cd06ec4b39839950123cd1a3537f361b4937e5eace8f4b31b3c411",
+      "currentSHA256": "d0a85151addc28f4a94895d0ccd78400235c5efecffa83241ec39fe5f5b77cf7"
+    },
+    "primaryNames": {
+      "checks": 563,
+      "stories": 30,
+      "proofSHA256": "1fae61c100912c2e3febb4a001ced112a3d9381782fcdc2b1ddbd7aa4f352a80",
+      "scope": "The existing thirteen-component primary-name verifier checks actual desktop/compact AX names, normal/reduced keyboard input and26fresh offline full/native exports. It covers the Authorization and Trading primary controls implicated in the eight unchanged rich-panel name flags. This does not resolve every automated rich-content name interpretation or certify all nine components accessibility."
+    },
+    "conditionalInk": {
+      "stories": 8,
+      "observations": 16,
+      "colorChecks": 1408,
+      "minimumRatio": 5.220484150997109,
+      "proofSHA256": "cbad5026d713d6efa0c676ba6ddb6c03dca8e31b820c91b7ab3ae32fba98711d",
+      "harnessArchiveSHA256": "9988b5a2576ca6865dac9cb5f5d937455f9f2170f9d6a7afa1dfcad5ff169762",
+      "scope": "Physical full-view stories in both themes: complete fourteen-line Boot, four Authorization outcomes including the fourth denial, keyboard-selected Hex byte/ASCII twin and proximity field, and Pipeline TEST failure/retry boundary. The archived pre-normalization harness and current production inputs are checked separately."
+    }
+  },
+  "retainedDiagnostics": {
+    "initialMissingContent": "The first fixture incorrectly required dynamic Boot text at a held normal initial clock. The corrected test records absence and requires actual materialization in each theme; normal completion also passes the physical story.",
+    "footer": "The wider field gate caught Trading Market open retaining fixed gray on a light Stage. Full footer children now use Stage secondary ink.",
+    "environment": "The first required-check shell omitted external NODE_PATH. Registry/stage/generated/motion passed; library/fit could not import Playwright. The current six-command run uses the external installed package and passes.",
+    "imageDecode": {
+      "failedRun": "final-verification",
+      "passedLayoutsBeforeFailure": 82,
+      "error": "EncodingError: The source image cannot be decoded.",
+      "independentProbeCases": 32,
+      "independentProbeSHA256": "c203eeea56b8640c3315eb69cc619d58de6720d1f99b40503847d67c555d0b73",
+      "scope": "The Pipeline decode failure was not reproduced across32fresh original/current cases. The failed run remains retained. No assets, production renderer or decode assertions are changed."
+    },
+    "initialHold": {
+      "failedRun": "validated-verification",
+      "passedLayoutsBeforeFailure": 139,
+      "component": "agent-diff-review",
+      "case": "390px dark normal full",
+      "scope": "Original/current source clocks were held, but CSS transforms were sampled at different intermediate poses. The fixed-pose CSS comparison records pre-normalization animations and does not repair or certify the production hold. Keep this as a real motion follow-up."
+    },
+    "noNumericOrPixelTolerance": true,
+    "noProductionMotionOrRendererChange": true
+  },
+  "visualReview": {
+    "file": "light-review.png",
+    "sourcesSHA256": "4f07beac10fa4f9570aaee6f22228b10cfa4edffe34cae1eafd091f3742d98e1",
+    "scope": "All nine current light full compositions reviewed at390px, using the corrected footer captures for Trading and the source-bound current captures for the other eight. The initial unscaled DPR2 contact sheet is preserved as a diagnostic."
+  },
+  "assets": "No fonts, assets, photo credits, geometry or native selectors change. Existing native posters are retained with the exact scoped native CSS checks.",
+  "remaining": [
+    "Diff Review CSS initialization under a production source hold.",
+    "Eight unchanged rich-panel name-rule findings and23incomplete results remain archived alongside the scoped primary-name and manual field evidence.",
+    "Other component palettes, native Figma ink preference, photographic and filled-progress states.",
+    "Default-GPU readback variance from the earlier phase, final motion recipes, CPU4 frame rate, cold-route paint and remaining performance acceptance."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly; no PR. Keep GitHub Actions disabled and preserve the owner $0 stop budget.",
+    "fullGoalComplete": false
+  }
+}

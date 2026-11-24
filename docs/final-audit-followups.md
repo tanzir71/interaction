@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [terminal and agent palette pass](accessibility/agent-palettes-2026-11-25.json)
+corrects nine full compositions. Transparent copy follows Stage ink; the original
+dark Trading, Streaming and Diff panels keep their local palettes. Light-stage
+status text uses readable shades of its original colors, and Hex keeps ordered
+proximity shades and its selected-cell treatment. Manual light-stage review
+catches faint labels that axe cannot evaluate against the shared Stage glow.
+Keep the initial missing-content fixture failure, the trading footer finding
+and the required-check environment failure. Dynamic Boot and Streaming fields
+may be absent at a held initial clock; every named field must still render and
+pass in each theme elsewhere in the focused run. Native PNG checks explicitly
+disable GPU rendering and do not close the retained default-GPU variance.
+The eight unchanged axe accessible-name flags and all incomplete results remain
+archived with the separate primary-name/keyboard evidence. Original controllers,
+HTML, metadata, models, datasets and native artwork remain unchanged. Other
+component palettes, photographic states, native ink and final audits remain open.
+Full geometry comparisons use explicit DOM animation time0 and retain their
+earlier sampled animation states. The independent Diff captures exposed an
+existing CSS transition advancing while the source clock is held. Keep this
+production initialization/hold issue open; the palette comparison does not fix it.
+
 The [full-view palette pass](accessibility/component-palettes-2026-11-25.json)
 corrects nine text, slider and data compositions in both Stage themes. All 520
 controllers and HTML definitions remain unchanged. The focused checks retain

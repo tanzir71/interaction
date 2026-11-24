@@ -1800,3 +1800,22 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Do not add a pixel tolerance or claim cold
   GPU determinism. Check opaque control surfaces separately from Stage ink.
   Native gray ink, filled-progress text, other states and final audits stay open.
+
+- `node tools/verify-agent-palettes.js http://127.0.0.1:4173` covers nine full
+  terminal/agent palettes: Boot, Scanner, Authorization, Hex, Trading, Pipeline,
+  Compaction, Streaming and Diff. Keep original CSS as an exact prefix and all
+  controller, HTML, metadata, native artwork and geometry unchanged. Transparent
+  full-view copy follows Stage ink; existing dark panels keep their local ink.
+  Light status text uses readable shades of the original green/red/orange.
+  Hex proximity keeps its ordered shades and selected-cell treatment. The
+  verifier records absent dynamic Boot/Streaming fields before a held initial
+  clock produces content, then requires every named field to render and pass
+  in each theme elsewhere in the run. Preserve those missing-field observations.
+  Native PNG comparisons use the explicit GPU-disabled CSS roundtrip; default
+  GPU behavior, primary AX names and timing remain separate checks. Do not
+  equate independent in-progress CSS transitions: full geometry uses explicit
+  animation time0 and records prior animation states. Diff's pre-existing CSS
+  initialization advancing under a source hold remains a separate motion issue.
+  Do not
+  introduce a pixel tolerance or alter earlier private evidence. Native ink,
+  other states, manual incomplete findings and final acceptance remain open.
