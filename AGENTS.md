@@ -1741,3 +1741,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Retain158SVG first-read/held raster differences for final renderer review;
   do not claim them passed by using another engine. Broader name/contrast/manual
   accessibility and motion/cold-route/Lighthouse/CPU4 acceptance remain open.
+
+- `node tools/verify-remaining-names.js http://127.0.0.1:4173` checks thirteen
+  final primary-label repairs with actual desktop/compact names, normal/reduced
+  keyboard stories and fresh blocked-network full/native exports. Fraction names
+  follow the active caption; native scan/satellite names follow actual paint.
+  Thinking retains literal 4s/6s copy. Table rows retain original projects/years.
+  Full glass, lighter, note and foil names belong to presentation adapters;
+  keep their embedded original controllers, kernels and model markup unchanged.
+  Trading checks follow panel identity after reorder, and retained inert copies
+  stay outside control queries. Native lighter Dock names include visible Press.
+  Anonymous word boundaries preserve the original text geometry and all CSS.
+  Scoped label review does not establish whole-catalog accessibility or final
+  motion/performance acceptance. Keep earlier private phase evidence frozen.

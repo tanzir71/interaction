@@ -1,0 +1,306 @@
+{
+  "date": "2026-11-24",
+  "baseline": "fb03c927992cdff28fefc98a33fb6fa1942aee19",
+  "scope": "Thirteen remaining primary-label repairs and four scoped manual retentions. No composition, CSS, asset, interaction-model or timing changes. Does not establish whole-catalog WCAG or final motion/performance acceptance.",
+  "repairs": [
+    {
+      "id": "css3d-exploded-device",
+      "file": "js/demos.three.css3d-exploded-device.js"
+    },
+    {
+      "id": "slider-progress-fraction",
+      "file": "js/demos.gallery.slider-progress-fraction.js"
+    },
+    {
+      "id": "sidebar-rail-expand",
+      "file": "js/demos.nav.sidebar-rail-expand.js"
+    },
+    {
+      "id": "fui-status-dashboard",
+      "file": "js/demos.fui.js"
+    },
+    {
+      "id": "fui-access-granted",
+      "file": "js/demos.fui.fui-access-granted.js"
+    },
+    {
+      "id": "fui-orbital-tracker",
+      "file": "js/demos.fui.fui-orbital-tracker.js"
+    },
+    {
+      "id": "agent-thinking-drawer",
+      "file": "js/demos.agent.agent-thinking-drawer.js"
+    },
+    {
+      "id": "table-image-idle",
+      "file": "js/demos.layout.table-image-idle.js"
+    },
+    {
+      "id": "glass-refraction-card",
+      "file": "js/demos.skeuo.glass-card.js"
+    },
+    {
+      "id": "zippo-flame",
+      "file": "js/demos.skeuo.zippo.js"
+    },
+    {
+      "id": "torn-paper-edge",
+      "file": "js/demos.skeuo.torn-paper.js"
+    },
+    {
+      "id": "foil-trading-card",
+      "file": "js/demos.skeuo.foil-trading-card.js"
+    },
+    {
+      "id": "fui-trading-terminal",
+      "file": "js/demos.fui.fui-trading-terminal.js"
+    }
+  ],
+  "preservation": {
+    "at": "2026-11-24T17:38:07.168Z",
+    "components": 520,
+    "changed": 13,
+    "unchangedDefinitions": 507,
+    "unchangedJS": 509,
+    "unchangedCSS": 520,
+    "scope": "All definitions reconstruct exactly from fresh baseline plus recorded semantic operations. Full adapter edits preserve embedded original models/controllers/markup; all CSS exact; all JavaScript syntax checked."
+  },
+  "review": {
+    "at": "2026-11-24T17:33:19.553Z",
+    "evidence": [
+      "review.json",
+      "review-full.png",
+      "review-thumb.png"
+    ],
+    "scope": "Manual primary-label review of 17 candidates at compact full/native reduced initial states, plus live-name source inspection. This is not a full WCAG or all-state certificate.",
+    "retained": [
+      {
+        "id": "svg-blob-morph",
+        "reason": "The graphic has no painted primary word label. State A and Pointer lobe are surrounding state/instruction readouts; preserve the meaningful organic-shape action name."
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "reason": "The miniature report is scene content. Its five distinct legend buttons already derive complete visible labels; native layer controls name their positions. Preserve the meaningful scene name."
+      },
+      {
+        "id": "magnet-snap-grid",
+        "reason": "The actual primary Type/Color/Grid/Motion/Image/Export words are in existing names. Aa and the other samples are symbolic marks; indices use hidden sr nodes. Native modules have no painted words."
+      },
+      {
+        "id": "ui-draggable-cards",
+        "reason": "Each full caption already appears once in its owning button name. Native photos have no caption text. No primary-name repair is needed."
+      }
+    ],
+    "repaired": [
+      "css3d-exploded-device",
+      "slider-progress-fraction",
+      "sidebar-rail-expand",
+      "fui-status-dashboard",
+      "fui-access-granted",
+      "fui-orbital-tracker",
+      "agent-thinking-drawer",
+      "table-image-idle",
+      "glass-refraction-card",
+      "zippo-flame",
+      "torn-paper-edge",
+      "foil-trading-card",
+      "fui-trading-terminal"
+    ],
+    "additionalConfirmed": "Native Zippo Dock Press mismatch repaired; all four current theme/motion follow-up cases pass.",
+    "open": "Contrast, incomplete findings, other states and final motion/performance acceptance remain open."
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "checks": 563,
+    "initialCases": 52,
+    "keyboardStories": 30,
+    "freshOfflineExports": 26,
+    "sourceStable": true,
+    "proofSHA256": "15c768b0954c3ba3003600dcd788958982a68cf59a9703fab5f6397ac8203668",
+    "glyphLayouts": [
+      {
+        "id": "sidebar-rail-expand",
+        "width": 1440,
+        "mode": "full",
+        "exact": true,
+        "glyphs": 18
+      },
+      {
+        "id": "sidebar-rail-expand",
+        "width": 1440,
+        "mode": "thumb",
+        "exact": true,
+        "glyphs": 18
+      },
+      {
+        "id": "sidebar-rail-expand",
+        "width": 390,
+        "mode": "full",
+        "exact": true,
+        "glyphs": 18
+      },
+      {
+        "id": "sidebar-rail-expand",
+        "width": 390,
+        "mode": "thumb",
+        "exact": true,
+        "glyphs": 18
+      },
+      {
+        "id": "fui-status-dashboard",
+        "width": 1440,
+        "mode": "full",
+        "exact": true,
+        "glyphs": 31
+      },
+      {
+        "id": "fui-status-dashboard",
+        "width": 1440,
+        "mode": "thumb",
+        "exact": true,
+        "glyphs": 6
+      },
+      {
+        "id": "fui-status-dashboard",
+        "width": 390,
+        "mode": "full",
+        "exact": true,
+        "glyphs": 31
+      },
+      {
+        "id": "fui-status-dashboard",
+        "width": 390,
+        "mode": "thumb",
+        "exact": true,
+        "glyphs": 6
+      }
+    ],
+    "requiredCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null
+      }
+    ],
+    "requiredBrowserScope": "Library and stage-fit commands use their unchanged default external Chromium140 executable; focused naming and axe checks use Chrome158. Static command checks are browser-independent.",
+    "finalStaticCommands": [
+      "node tools/verify-registry.js",
+      "node tools/verify-stage.js --strict",
+      "node tools/build-registry.js --check",
+      "node tools/verify-motion.js --strict"
+    ],
+    "finalStaticResult": "All four passed again after the final native Dock name and registry rebuild.",
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "logSHA256": "00155502247a1aafbb99d1eb6d830324ed3b033ad92f0660d4e179cbac9ffcb4",
+      "scope": "Run overlapped the final native-only Zippo Dock name repair. The complete full-mode prefix and all CSS are byte-identical across that last delta; all other definitions are unchanged. Current native Zippo naming/input and offline exports are separately verified by the final focused suite. This is explicit scoped reuse, not a claim that every preview loaded one identical revision."
+    },
+    "stageFit": {
+      "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe",
+      "scope": "Executed after final native Dock repair and generated rebuild."
+    },
+    "retainedFailedVerifierAttempts": [
+      {
+        "proofSHA256": "b5886985dec38de8406129405f6ed6bfff87f1135f8cfbafb2fea355d7bd9664",
+        "error": "locator.evaluate: Error: strict mode violation: locator('.d-hardware-zippo-body') resolved to 2 elements:"
+      },
+      {
+        "proofSHA256": "12de4329ef021223c1b7500a060b30fb30c78400f8654943ce190a76128cbdb3",
+        "error": "locator.evaluate: Error: strict mode violation: locator('.d-hardware-foil-trading-card') resolved to 2 elements:"
+      },
+      {
+        "proofSHA256": "e4edd00594b0ec2215ac8a6b7b6352a1d4464369cd588a6b8c9cc56b5ee40525",
+        "error": "AssertionError [ERR_ASSERTION]: Actual reordered book name"
+      }
+    ],
+    "observerRepairs": [
+      "Exclude inert retained paint copies from actual control queries.",
+      "Read the outer Foil presentation owner rather than the identically named mirrored model root.",
+      "Follow original trading panel identity after reordering rather than its previous DOM index."
+    ]
+  },
+  "diagnostics": {
+    "initial390": {
+      "browser": "158.0.8127.88",
+      "cases": 104,
+      "violations": 50,
+      "incomplete": 48,
+      "pageErrors": 0,
+      "ruleCounts": {
+        "color-contrast": 18,
+        "label-content-name-mismatch": 32
+      },
+      "proofSHA256": "94316bf51b44cfb527bd3dfab60c2f499e0dae1dcac9a751247bb4904c4aa9ba",
+      "scope": "Pre-final-Dock-repair104-case scan. All violations/incomplete results retained; no broad green claim."
+    },
+    "nativeDockFollowup": {
+      "browser": "158.0.8127.88",
+      "cases": 4,
+      "violations": 0,
+      "incomplete": 0,
+      "pageErrors": 0,
+      "proofSHA256": "c9475d47a8ae2db2dec4d6a0a7189250eecf19a0317b36f1b045b07a67ec2463"
+    },
+    "manualNameReview": "Fraction line-break wording and adjacent table text are present in actual names with word boundaries. Other retained initial flags include secondary telemetry, panel metrics and both faces of a card. Primary labels were reviewed against captured actual paint; these interpretations do not certify every state or broader accessibility."
+  },
+  "remaining": [
+    "Contrast and incomplete-result review where required by the handoff.",
+    "Final named motion-recipe acceptance.",
+    "Untouched cold-route first paint and mobile Lighthouse budgets.",
+    "CPU4 rendering/performance findings, including native Threads and current Chrome158 SVG held-raster review."
+  ],
+  "publication": {
+    "policy": "Direct main commit/push; no PRs. Keep Actions disabled and preserve owner $0 stop budget.",
+    "fullGoalComplete": false
+  }
+}
