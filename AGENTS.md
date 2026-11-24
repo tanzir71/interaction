@@ -1584,3 +1584,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Light shell inks sit before the shared Stage marker so portable exports and
   independent Stage palettes stay unchanged. This focused suite does not close
   the remaining full accessibility, motion, Lighthouse or performance audits.
+
+- Run `node tools/verify-shell-loading.js http://127.0.0.1:4173` after changing
+  initial catalog fetching, the Home hero, shell intent handling or router startup.
+  Keep one catalog response, retain the existing heading during hydration and
+  preserve initial user scroll. Escape and navigation cancel queued actions;
+  static agent configuration remains available if catalog loading fails. Tests
+  cover 1440/390/375/360px, both themes and motion settings. Keep the original
+  translucent 16px header blur; startup experiments are private evidence, not
+  replacement artwork or accepted styles. Large hero text uses the existing
+  darker orange token in light mode and must meet 3:1; ordinary text stays 4.5:1.

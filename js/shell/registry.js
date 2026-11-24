@@ -31,7 +31,8 @@
     return scripts.get(url);
   };
   R.initCatalog=async()=>{
-    const response=await fetch('registry/index.json',{cache:'no-cache'});if(!response.ok)throw Error('Could not load component catalog');
+    const request=window.intrxCatalogRequest;delete window.intrxCatalogRequest;
+    const response=await(request||fetch('registry/index.json',{cache:'no-cache'}));if(!response.ok)throw Error('Could not load component catalog');
     R.catalog=(await response.json()).map(item=>R.access?{...item,tier:R.access.tier(item)}:item);R.byId=new Map(R.catalog.map(item=>[item.id,item]));
     R.bundleUrls={assets:R.catalog[0]?.assetBundle||'js/demo-assets.js',export:R.catalog[0]?.exportBundle||'js/export-data.js'};
     const paths=Object.assign({},...R.catalog.map(item=>item.assetRefs));

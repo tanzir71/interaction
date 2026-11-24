@@ -170,6 +170,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
 .promo-strip{height:36px;display:flex;align-items:center;justify-content:center;gap:18px;background:var(--bg-raised);font-size:12px}.promo-strip .btn{height:24px;font-size:11px}
 html[data-route]:not([data-route="home"]) .promo-strip{display:none}
 .site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;height:64px;padding:0 24px;border-bottom:1px solid var(--border-subtle);background:color-mix(in srgb,var(--bg-canvas) 88%,transparent);backdrop-filter:blur(16px)}
+.hero-loading{visibility:hidden}
 .brand{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:.06em}.brand-mark{position:relative;width:18px;height:18px;flex:none;border:2.5px solid var(--accent-default);border-radius:5px}.brand-mark:after{content:'';position:absolute;width:7px;height:7px;right:-3px;bottom:-3px;border-radius:2px;background:var(--accent-default)}
 .topnav{display:flex;align-items:center;gap:4px;white-space:nowrap}.topnav a{padding:6px 12px;border-radius:999px;color:var(--text-secondary);font-size:13px;display:flex;align-items:center;gap:5px}.topnav a:hover,.topnav a[aria-current="page"]{background:var(--bg-raised);color:var(--text-primary)}.topnav .badge--soon{font-size:9px;height:18px;padding:0 5px}.header-spacer{flex:1}
 .search-trigger{display:flex;align-items:center;gap:8px;height:36px;width:280px;padding:0 8px 0 12px;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:999px;color:var(--text-tertiary);font-size:12px;white-space:nowrap}.search-trigger>span:not(.shell-icon){flex:1;text-align:left}.search-trigger .kbd{font-size:10px}.github-pill{display:flex;align-items:center;gap:6px;border:1px solid var(--border-default);border-radius:999px;padding:6px 12px;font-size:12px}.site-header .icon-btn{border-color:var(--border-default)}
@@ -208,7 +209,8 @@ h1[tabindex]:focus-visible{outline:none}.mobile-triggers{display:none}
 html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
 
 /* Shell text uses darker inks on light surfaces; Stage palettes stay independent. */
-[data-theme="light"] :is(.eyebrow,.mobile-hero em,.badge--new,.docs-content a){color:#9a3e00}
+[data-theme="light"] :is(.eyebrow,.badge--new,.docs-content a){color:#9a3e00}
+[data-theme="light"] .home-hero em{color:var(--accent-hover)}
 [data-theme="light"] .code-runtime,[data-theme="light"] .syntax-keyword{color:#9a3e00}
 [data-theme="light"] .code-package{color:#235da1}
 [data-theme="light"] :is(.syntax-tag,.syntax-string){color:#27643b}

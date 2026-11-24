@@ -18,9 +18,9 @@
    document.querySelector('#app h1')?.focus({preventScroll:true});
    if(hash==='#/pricing')document.getElementById('pricing')?.scrollIntoView();
   },
-  start(handler){render=handler;history.scrollRestoration='manual';addEventListener('popstate',()=>this.go(location.hash,{restore:true,replace:true}));addEventListener('hashchange',()=>{if(location.hash!==current)this.go(location.hash,{restore:true,replace:true});});
+  start(handler){render=handler;positions.set(R.normalizeRoute(location.hash),scrollY);history.scrollRestoration='manual';addEventListener('popstate',()=>this.go(location.hash,{restore:true,replace:true}));addEventListener('hashchange',()=>{if(location.hash!==current)this.go(location.hash,{restore:true,replace:true});});
    document.addEventListener('click',event=>{const a=event.target.closest('a[href^="#/"]');if(a&&!event.ctrlKey&&!event.metaKey&&!event.shiftKey&&!event.altKey&&event.button===0){event.preventDefault();this.go(a.getAttribute('href'));}});
-   return this.go(location.hash,{replace:true});
+   return this.go(location.hash,{replace:true,restore:true});
   }
  };
 })();

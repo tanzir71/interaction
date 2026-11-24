@@ -15,11 +15,12 @@ async function contrast(page,selectors){
     return selectors.flatMap(selector=>[...document.querySelectorAll(selector)].filter(n=>n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden').map(node=>{
       const ancestors=[];for(let n=node;n;n=n.parentElement)ancestors.unshift(n);
       let background=[255,255,255],opacity=1;for(const n of ancestors){const style=getComputedStyle(n);background=over(rgba(style.backgroundColor),background);opacity*=Number(style.opacity);}
-      const foreground=rgba(getComputedStyle(node).color);foreground[3]*=opacity;const a=luminance(over(foreground,background)),b=luminance(background);
-      return {selector,text:node.textContent.trim().slice(0,70),ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};
+      const style=getComputedStyle(node),size=parseFloat(style.fontSize),large=size>=24||(size>=18.666&&Number(style.fontWeight)>=700);
+      const foreground=rgba(style.color);foreground[3]*=opacity;const a=luminance(over(foreground,background)),b=luminance(background);
+      return {selector,text:node.textContent.trim().slice(0,70),ratio:(Math.max(a,b)+.05)/(Math.min(a,b)+.05),minimum:large?3:4.5};
     }));
   },selectors);
-  for(const value of values)check(value.ratio>=4.5,'Shell text contrast '+JSON.stringify(value));return values;
+  for(const value of values)check(value.ratio>=value.minimum,'Shell text contrast '+JSON.stringify(value));return values;
 }
 async function focus(page,selector){
   await page.keyboard.press('Tab');await page.locator(selector).focus();
@@ -47,7 +48,7 @@ async function focus(page,selector){
         check(await list.locator('[data-command=bun]').getAttribute('aria-selected')==='true','Arrow key selects Bun command');
         await page.locator('#command-copy').click();check(await page.evaluate(()=>shellCopies.at(-1).startsWith('bunx ')),'Adjacent copy button copies selected command');
       }
-      const colors=await contrast(page,['.group-tabs button span','.eyebrow','.badge--new','.code-runtime','.code-package']);
+      const colors=await contrast(page,['.group-tabs button span','.eyebrow','.badge--new','.code-runtime','.code-package','.desktop-hero em','.mobile-hero em']);
       await page.goto(base+'/#/library',{waitUntil:'networkidle'});
       check(await page.locator('#library-grid').getAttribute('aria-pressed')===null,'Grid has no button-only ARIA attribute');
       await page.locator('button[data-density=rows]').click();

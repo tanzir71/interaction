@@ -20,6 +20,47 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Shell startup and pending interactions
+
+Catalog fetching starts in the document head while the shell scripts load.
+The registry consumes that response once. Home paints its actual responsive
+heading before the data arrives, then keeps that same heading node while counts
+and the rest of the page hydrate. The original mobile copy and header treatment
+remain intact. Pending data does not boot component modules or export bundles.
+
+Search, Browse and agent setup wait for the initial route to finish. The latest
+intent wins; Escape and navigation cancel stale intent. Dialogs restore focus to
+their original control. Agent configuration still works when catalog loading
+fails, with an available focus target if its original button was removed.
+The router retains user scrolling performed before initial hydration.
+
+`tools/verify-shell-loading.js` covers delayed data, complete catalog equality,
+retained heading identity, fixed heading/prose/action geometry, one catalog
+request, keyboard focus, ordered input, failed startup and initial scroll at
+1440/390/375/360px in both themes and motion settings. Component models,
+metadata, original artwork, photos and portable exports stay unchanged.
+
+The manual contrast review also found the large light-theme hero accent below
+3:1. Both responsive headings now use the existing darker orange hover token;
+ordinary shell text keeps its 4.5:1 requirement. The shell accessibility checker
+now checks the visible hero text with the appropriate large-text threshold.
+The full component timing, recipe and manual accessibility audits remain open.
+
+The [source-bound startup report](performance/shell-startup-2026-11-24.json)
+records three sequential fresh mobile Lighthouse runs per required route using
+Chrome 158 and Lighthouse 13.6.0. Home improves from 62/85/65 to 100/100/100;
+Elastic Tabs records 100/100/100, with zero layout shift on all six final runs.
+All 17 local verification commands pass, including 349 startup assertions and
+293 shell accessibility assertions. All 447 demo modules, six protected shared
+inputs and generated portable output remain unchanged.
+
+The 24 local cold/warm Elastic Tabs samples retain one 383.4ms cold heading/stage
+paint above the 300ms target. The other 23 heading/stage paints range from
+28.2ms to 230.6ms. These measurements cover the required exemplar only. The
+mobile Back check now compares the actual scroll position at pointer input:
+clicking its caption scrolls the tile into view before navigation. All original
+samples and the diagnostic are retained; no timing outlier was discarded.
+
 ## Final shell accessibility pass
 
 The mobile search button now keeps a complete accessible name matching its

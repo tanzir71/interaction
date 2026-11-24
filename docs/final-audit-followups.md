@@ -19,6 +19,29 @@ repeat measurements support them. Transfer accounting must include the document
 and distinguish actual demo-only fonts from shell fonts; the first diagnostic
 incorrectly counted all Inter transfers as shell bytes.
 
+The startup pass now fetches the catalog alongside the shell scripts and keeps
+Home's existing heading while the page hydrates. Pending shell actions preserve
+their order, cancellation and focus, including static agent setup after a failed
+catalog request. Initial user scroll survives hydration. The original header
+blur and translucency remain unchanged: lazy blur activation and an opaque
+header produced first-input or text-rendering changes and were rejected.
+
+The manual large-heading contrast finding is fixed with the existing light-theme
+orange hover token. The former `#FA7319` on `#FAFAFA` measured 2.67:1; the new
+large-text foreground measures 3.44:1. Both responsive headings are covered by
+the computed contrast check. Other manual scan results and full component
+accessibility remain open. Retain cold-start timing outliers and do not treat
+a best Lighthouse run as complete site-wide performance acceptance.
+
+The [current startup report](performance/shell-startup-2026-11-24.json) retains
+all six final mobile Lighthouse runs: Home and Elastic Tabs each score
+100/100/100 with zero layout shift. Earlier cold rendering outliers remain in
+the archived diagnostics. One of 24 local Elastic Tabs cold/warm samples still
+records 383.4ms heading/stage paint, exceeding the 300ms target. Keep this
+cold-route issue and the component CPU 4 findings below open. The 17 required
+and focused commands pass; these shell results do not complete site-wide
+motion, manual accessibility or performance acceptance.
+
 All 399 existing native compositions now follow their v4 references. All thirty
 new Agent & AI UI, Buttons & Micro, Layout & UI, Forms & Inputs, Data/Navigation
 and Visual FX components bring the catalog to 429. The first ten Agent & AI UI
