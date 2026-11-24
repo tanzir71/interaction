@@ -20,6 +20,111 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Component roles and ownership
+
+The [component semantics report](accessibility/component-semantics-2026-11-24.json)
+records repairs across 33 components. Local headers and content no longer
+introduce document landmarks; lists, tabs, dialogs and controls use valid roles.
+Interactive sparkline points remain exposed. The Context Meter exposes its
+percentage independently of its response button, preserving the original model.
+
+The heatmap retains all 42 cells in six rows and gains Arrow/Home/End navigation
+with one Tab stop. The compact hex preview retains all 24 bytes in four rows.
+The project table exposes its two sort headers, six records and checkboxes,
+active detail rows and separate selection status. All 336 half-hour scheduler
+cells remain in 48 rows; the active native window exposes eight rows and five
+days. Chromium 140 omitted `display:contents` rows after activation even after
+rendering. Zero-height block rows preserve ownership and the original positions.
+
+Actual browser-tree, keyboard and 66 fresh offline export checks pass 4,090
+assertions in each of Chrome 158 and Chromium 140. All 1,344 scheduler cell/model
+checkpoints match independent original execution exactly; native navigation
+paint, pointer/touch styles and hit geometry also match. Its listbox retains
+Enter activation, owned Space release/cancellation and native press feedback.
+Inactive terminal panels leave Tab order. Together with the three viewport
+scroll repairs below, this batch changes 36 components; 484 other definitions,
+411 other modules, six protected inputs, metadata, assets and embedded originals
+stay unchanged. Affected prompts and generated output are refreshed.
+
+Initial-state review remains open for generic-container names in five components
+and the native Scheduler's inactive grid with hidden rows. The passing active
+browser-tree checks do not resolve those incomplete audit results.
+
+Full Engraving, Lissajous and RGB viewports now allow vertical scroll chaining
+while retaining horizontal containment. An empty Engraving viewport previously
+trapped a real swipe despite accepting native scrolling; its page and inner
+offsets stayed at zero. Changing only vertical overscroll advances the page
+49px in the controlled case. All sixteen unmodified physical touch stories
+now pass 93 checks. These CSS/prompt repairs preserve all 520 pre-scroll-fix
+JavaScript programs and 517 other complete definitions exactly. Their source
+change requires fresh checks or explicit dependency revalidation before
+earlier results can support the final commit.
+
+Masonry keeps its eight original projects, native four-card limit and filtering
+and reflow models. Its controller and verifier now use the stable card class
+after the valid list-item markup change. The photo-layout suite retains all
+188 checks. Navigation key activation also preserves the original paint/action
+order: Enter presses before choosing; Space releases before choosing.
+
+The Data verifier captures actual created digit animations in the click's
+microtask. A controlled read at 561.2ms found them already ended despite two
+animations at creation and none on the unchanged prefix. The production tape
+source and timings remain unchanged, and all 203 assertions remain. Navigation
+awaits the actual native journal scroll threshold before its unchanged local
+scroll and page-position assertions; all 394 checks remain.
+
+The Raster field verifier now executes the byte-preserved original source and
+observation code in a separate browser context. Across 64 full/native cases,
+82,624 complete states and 480 full-view pixel checkpoints match exactly.
+All historical captures remain intact: 64 pixel hashes and eight Globe
+projection/paint hashes differ from the newer browser's original execution.
+The Globe's 704 captured core-state checkpoints still match exactly. Its
+derived projection uses a browser-dependent final bit in `Math.sin`; complete
+current-original projections and literal RGBA bytes require exact equality.
+The production hidden-paint verifier uses those same bound original references.
+No numerical or pixel tolerance is added.
+
+Native projection checks retain initial Canvas composition/readback differences
+before preparing both default canvases for coherent reads and repainting them.
+Every source field and projected primitive remains fixed during preparation.
+The complete independent geometry and sampled RGBA comparisons then require
+exact pixels. This observes the prepared readback state; it does not establish
+first-paint or performance acceptance for the untouched browser surfaces.
+
+Fire, Fluid and Type add 48 independent complete-engine cases: 34,608 states
+and 336 full-view pixel checkpoints match the separately executed originals
+exactly. All historical model, dataset, scheduler and draw-command digests
+remain exact; 48 historical startup pixel differences stay recorded. The
+original programs, captures, fonts and frozen engine identities remain intact.
+
+Portrait adds sixteen full/native engine cases, with 11,536 complete states and
+112 full-view pixel checkpoints matching independently executed originals.
+All frozen model, dataset, scheduler and paint digests remain exact; sixteen
+historical startup pixel differences are retained separately.
+
+The Play verifier retains a first Canvas readback that differed at 141 pixels
+by at most one RGB value, with no alpha change or intervening draw/resize.
+Subsequent reads, Pause and held source ticks require identical buffers.
+Its numerical, physical-input and complete painting assertions remain intact.
+The FUI artwork loop now checks the four instruments it actually mounts while
+retaining the shared fixture's complete SVG hash checks.
+
+Instrument projection references match their existing production Canvas
+pipelines: unread retained Engraving/Lissajous paint planes copy into separate
+readback displays; RGB keeps direct reads and its existing CPU photo sampler.
+All 24 cases pass across two DPRs, themes and motion settings, covering
+79,660,800 channels with zero observed error. Original equations and the
+existing one-channel compositing threshold remain unchanged. The numerical
+model command validates 64 source-bound cached cases; those stories were not
+freshly executed in this run. Their exact cache records and bindings are
+retained separately from the new projection results.
+
+The 264-case desktop matrix drops from 270 rule findings to 70, clearing all
+200 targeted role, landmark and ownership findings. Fresh desktop and mobile
+matrices each retain 70 other findings and 128 incomplete results, with no page
+errors. These remain open for contrast/name, thumbnail focus-contract and manual
+review; this phase does not establish complete accessibility or final acceptance.
+
 ## Form palettes and picker semantics
 
 The [form palette report](accessibility/forms-palettes-2026-11-24.json)

@@ -2,6 +2,110 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [component semantics pass](accessibility/component-semantics-2026-11-24.json)
+repairs 33 components' roles, local landmarks and table/grid ownership. Both
+Chrome 158 and Chromium 140 pass 4,090 actual browser-tree, keyboard and fresh
+offline export checks. Preserve the separate meter/button, complete six-record
+table, 42-cell heatmap, 24-byte compact preview and 336-slot scheduler. Native
+navigation retains Enter, Space release/cancellation and original pointer/touch
+styles; inactive terminal panels leave Tab order. All 1,344 scheduler geometry
+and model checkpoints match independent originals exactly. Chromium 140's
+captured missing-row failure remains archived; zero-height block rows retain
+ownership after activation without changing cell positions.
+
+The desktop initial matrix clears 200 targeted semantic findings, reducing
+270 rule findings to 70. Current desktop and mobile scans each cover 264 cases
+and retain 70 other findings plus 128 incomplete results, with no page errors.
+Keep their contrast, visible-label/name, redundant-alt and thumbnail scroll
+findings for triage; incomplete results need manual review. The actual catalog
+suspension/focus contract still matters. These focused repairs do not close
+complete accessibility, motion recipes, cold-route or performance acceptance.
+
+Incomplete semantic results include generic-container names in five components
+and the native Scheduler's initially inactive grid with hidden rows. Passing
+active grid ownership checks does not close that initial state. Keep both for
+the next accessibility pass, together with contrast and visible-name findings.
+
+Masonry's tag-based card lookup initially failed the fill audit after its
+markup change. Its controller and verifier now select the stable card class;
+all eight original records, four-card native limit and 188 photo-layout checks
+remain. Preserve the failed audit and old-selector diagnostic. Native navigation
+also retains the original Enter press/choose/release and Space press/release/
+choose order, confirmed with independent original key input.
+
+The unchanged price tape's creation snapshot shows two changed-digit animations
+and no animation on its unchanged prefix. A controlled 561.2ms read sees those
+animations ended. The Data verifier now samples in the click microtask and
+retains all 203 checks. Navigation waits for the actual native scroll threshold;
+all 394 keyboard, page-scroll and model checks remain. The original navigation
+failure's exact cause is unproven; the independent diagnostic recorded local
+scroll 192 with page scroll 0. Keep these diagnostics and all production models
+and timings unchanged.
+
+Raster field verification preserves the original captures and separately
+executes their unchanged source/observation programs in the tested browser.
+All 64 complete-engine cases match 82,624 original states and 480 full-view
+pixel checkpoints exactly. Keep the 64 historical pixel hash differences and
+four Globe projection/four paint hash differences as findings. All 704 captured
+Globe core-state checkpoints remain exact; the browser versions produce a
+different final bit for `Math.sin` at the captured angle. This does not justify
+changing the original motion/model or accepting a numeric/pixel tolerance.
+Hidden production engines use the same SHA-bound current-browser originals.
+Native artwork, real input, independent holds and complete exports have
+separate suites; model equivalence does not establish timing acceptance.
+
+The native projection verifier records its initial composition/readback/repaint
+differences. Repeated default Canvas reads can change subsequent painting; a
+controlled diagnostic retains a 3,518-pixel repaint difference at fixed source
+state. Both canvases are prepared for coherent readback and repainted before
+requiring exact independent RGBA comparisons. All source fields and native
+projections remain fixed during preparation. This does not prove initial
+default-surface pixels or frame-time acceptance; preserve the first failed
+71-channel comparison and every diagnostic rather than replacing captures.
+
+Fire, Fluid and Type retain their 48 historical startup pixel differences.
+Their 48 full/native engine cases match 34,608 independently executed original
+states and 336 full-view pixel checkpoints exactly. Every historical model,
+dataset, scheduler and draw digest still matches. Preserve these original
+programs/captures and the literal same-browser RGBA gate. Separate physical
+input and lifecycle suites pass; performance acceptance remains open.
+
+Portrait's sixteen full/native cases likewise match 11,536 complete original
+states and 112 full-view pixel checkpoints exactly, while retaining sixteen
+historical startup pixel differences. All captured model, dataset, scheduler
+and paint digests still match. Separate physical, photographic and lifecycle
+suites pass; timing acceptance remains open.
+
+The default Play Canvas produced a different first readback without intervening
+draws or resizing. Its retained diagnostic measures 141 pixels, at most one RGB
+step and no alpha change; subsequent reads are exact. Preserve that observation
+and require coherent exact buffers before and after Pause and frozen ticks.
+No production Fireworks code or pixel tolerance changes. The FUI geometry loop
+is restricted to its four mounted instruments; shared SVG integrity checks and
+all original instrument assertions remain.
+
+Instrument references now use each existing production Canvas pipeline.
+Engraving/Lissajous retain an unread paint plane and copy into a separate
+readback display. The direct-reading oracle had diverged at frame 35 after
+earlier checkpoints passed; its 19,694-channel failure remains archived.
+RGB retains direct display reads and uses the production photo sampler's
+existing `willReadFrequently` option. A controlled original-oracle failure
+records 10,758 different channels at frame 1; matching the sampler passes.
+Original equations, assets, production code and the existing one-channel
+compositing threshold stay unchanged. Preserve these diagnostics and separate
+functional/readback verification from final timing acceptance.
+
+The native touch audit exposed a real pre-existing full-viewport scroll trap.
+Engraving's viewport had equal 296px client/scroll heights and contained
+vertical overscroll, so a fresh physical swipe left page and viewport at zero
+despite native pointer cancellation and no prevented event. Changing only
+vertical containment to `auto` advances the page 49px. Engraving, Lissajous and
+RGB now keep horizontal containment and permit vertical chaining. All sixteen
+unmodified touch stories pass 93 checks. All 520 pre-fix JavaScript programs
+remain identical; only three component CSS/prompt definitions and their
+generated catalog entries change. Refresh affected evidence and explicitly
+revalidate unchanged dependencies before reusing earlier certificates.
+
 The [form palette pass](accessibility/forms-palettes-2026-11-24.json) repairs
 the confirmed full-calendar weekday and form light-stage text findings, adds
 zoom-correct full-view outlines, and fixes the native picker/color control

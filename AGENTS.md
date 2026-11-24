@@ -1647,3 +1647,52 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   final acceptance still need review. Historical pixel differences stay
   recorded; independent original renderings require exact channels and paint
   properties without numeric tolerances.
+
+- `node tools/verify-component-semantics.js http://127.0.0.1:4173` checks actual
+  browser accessibility-tree ownership, keyboard stories and 66 fresh offline
+  full/native exports for 33 repaired components. Keep component-local headers
+  out of document landmarks, interactive sparkline points exposed and the
+  Context Meter's percentage independent of its response button. Preserve all
+  42 heatmap cells in six rows, 24 compact hex bytes in four rows, six project
+  records and all 336 scheduler slots in 48 rows. Scheduler rows use zero-height
+  block boxes: Chromium 140 loses `display:contents` row ownership after native
+  activation. Keep the original physical cell positions and eight-row native
+  window. Native navigation retains its pointer/touch styles, Enter activation,
+  owned Space release/cancellation and press paint. Inactive terminal panels
+  are inert and leave Tab order. Both browser versions pass the focused checks;
+  remaining contrast/name findings, incomplete review and final acceptance stay
+  open. Earlier private phase helpers, original inputs and publication evidence
+  remain frozen.
+  Masonry controllers and verifiers select `.d-masonry-demo-card`, preserving
+  all eight records and the native four-card limit across valid markup changes.
+  The Data verifier samples real digit animations in the click microtask;
+  protocol reads can outlive short fades. Navigation waits for the actual native
+  journal scroll threshold before checking that the page stayed still. Keep
+  the original data, timing, keyboard and page-scroll assertions intact.
+  Raster field models execute the unchanged original source and byte-preserved
+  observation programs in a separate current-browser context. Complete states,
+  projections and full RGBA bytes require exact equality. Hidden-paint checks
+  use those source-bound original references; run models before hidden-models.
+  Preserve historical captures and their reported render differences, plus
+  exact captured core-state comparisons. Never add numeric/pixel tolerances
+  for browser-dependent derived projections. Play preserves its first Canvas
+  readback and requires coherent exact buffers before/after Pause and held
+  ticks. The FUI geometry loop covers its actual mounted instruments; keep all
+  shared SVG hash checks. Earlier private helpers and captures stay frozen.
+  Native projection pixel checks retain initial readback/repaint differences,
+  prepare both default canvases for coherent reading and repaint before exact
+  comparisons. Keep all source fields, clocks and projections fixed during
+  preparation. These prepared surfaces do not prove first-paint or performance
+  acceptance; retain the untouched-surface diagnostics.
+  Instrument projection references match their existing Canvas pipelines:
+  Engraving/Lissajous retain an unread paint plane and copy to a separate
+  readback display; RGB keeps direct display reads and its existing
+  `willReadFrequently` photo sampler. Keep original equations and the existing
+  one-channel compositing threshold. Do not change production context options
+  or supplied assets to accommodate an oracle sampling difference.
+  Full Engraving/Lissajous/RGB viewports contain horizontal overscroll and
+  permit vertical chaining. A fitted viewport with no vertical range must not
+  trap page swipes. Preserve deliberate pan/zoom and run the unmodified native
+  touch stories after scroll changes. Catalog/source-hash changes invalidate
+  broad cached inputs: refresh affected checks or explicitly prove unchanged
+  scoped dependencies while retaining original executed hashes and results.
