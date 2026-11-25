@@ -1868,3 +1868,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Cold collection uses external `PLAYWRIGHT_MODULE` and
   `INTRX_CHROME_EXECUTABLE`; Lighthouse uses `CHROME_PATH` and an external
   `--lighthouse` CLI path. Neither adds site dependencies.
+
+- `node tools/verify-page-visibility.js http://127.0.0.1:4173` uses Node 22+
+  and `INTRX_CHROME_EXECUTABLE` (or `CHROME_PATH`) to test native background tabs
+  through Chrome's CDP connection. Do not use Playwright focus emulation or
+  replace document visibility getters in this audit. Require trusted native
+  hide/show events, exact held clocks, callback counts, DOM, Canvas/WebGL calls,
+  controller inspection state and existing animation times. Returning to the
+  foreground must preserve a caller pause and exclude hidden wall time. The
+  default matrix covers all components in full/thumbnail and normal/reduced
+  modes. Every run gets a new output directory with source hashes and complete
+  compressed evidence. This checks mounted motion; input-specific hidden intent,
+  offscreen behavior, frame rate and other final audits remain separate.

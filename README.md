@@ -130,9 +130,10 @@ Regenerate the registry and run the checks above.
 
 ## Hosting and licence
 
-Pushes to `main` verify Node 18/22, build the public static directory and deploy to
-GitHub Pages through `.github/workflows/pages.yml`. The site works under a path
-prefix and requires no backend.
+GitHub Actions is disabled at the owner's request. Run verification locally and
+commit/push directly; keep workflows and branch publishing disabled. The stored
+Pages workflow describes the static publishing setup. The site works under a
+path prefix and requires no backend.
 
 MIT. Third-party font and image licences and source acknowledgements are in
 [credits](docs/license-credits.md), [asset notes](ASSET_ART_DIRECTION.md),

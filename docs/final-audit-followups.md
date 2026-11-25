@@ -2,6 +2,31 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [native visibility audit](motion/native-visibility-2026-11-25.json) covers
+all 520 unchanged components in full/thumbnail and normal/reduced modes. Direct
+Chrome CDP tab activation produces trusted native hide/show events without
+Playwright focus emulation or replacement document getters. The qualified
+2,080 cases retain exact held clocks, callbacks, DOM, paint calls, inspection
+state and existing animation times; queued runtime jobs resume, hidden wall
+time stays excluded and a caller pause survives foreground return. Keep the
+original Image Trail resource-readiness difference. Its off-DOM photo decode
+changed only the ready flag while held; the corrected preparation waits for
+that existing contract and retests all 100 Cursor cases. Twenty further cases
+cover all five compositions that can construct an OffscreenCanvas, with its
+2D paint calls counted explicitly. The other 1,960 cases retain the identical
+held/foreground assertions. This closes the mounted-motion
+visibility gap while input-specific hidden intent, offscreen behavior, motion
+recipes and frame timing remain separate. No production controller, CSS, HTML,
+metadata, source asset, runtime or Stage change ships in this audit.
+
+The [complete initial full-view accessibility scan](accessibility/catalog-initial-2026-11-25.json)
+covers all 520 components in both themes at reduced motion: 1,040 cases and no
+page errors. Retain its 50 rule findings (44 label/name, four contrast and two
+redundant-alt findings) and all 618 incomplete results. Known incidental Cipher
+glyphs and initial opacity fades need separate review from settled text. These
+results do not establish native thumbnail contrast, keyboard/touch behavior,
+screen-reader quality or a blanket accessibility pass.
+
 The [25 Nov shell investigation](performance/shell-cold-2026-11-25.json)
 retains 24 current-source cold/warm Elastic Tabs samples and their traces.
 One cold sample still exceeds 300ms at 328.2ms. Early JSON consumption, direct
