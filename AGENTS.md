@@ -2038,3 +2038,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   sequence and exact byte oracle. Keep old unsaved-pair failures as logs, and
   distinguish fresh diagnostic images from the missing original pair. Isolated
   rate-2 and still-image successes do not explain historical full-story failures.
+
+- `tools/verify-type-light.js` covers full light palettes for the six Text &
+  Type extensions. Match actual Stage metadata before checking contrast; native
+  v4 and full dark artwork remain exact. Light Reveal/Flip/Cipher use white
+  surfaces with neutral hairlines; Outline keeps its aperture and original SVG,
+  with dark orange fill and readable neutral stroke. Fog keeps its white SVG
+  mask definitions. Scope every comma-separated ink selector independently.
+  Retained reduced paint captures computed text-stroke color and width before
+  removing classes/data attributes. Preserve the 150ms inert snapshot, original
+  complete models and independent holds. The fixture bounds source changes to
+  these two retained properties, palette CSS and prompts. Checks cover 96 exact
+  initial layouts, 72 exact native/dark CSS PNG roundtrips with GPU disabled,
+  24 actual light contrast cases, six retained-paint holds and twelve fresh
+  offline light contexts. Keep priming reads and earlier failed captures.
+  Both Outline regressions compose the exact later delta; the painter applies
+  it to both comparison sides so its transform-only oracle stays independent.
+  These checks do not close frame-rate, all-state or whole-handoff audits.
