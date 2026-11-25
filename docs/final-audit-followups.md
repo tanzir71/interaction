@@ -2,6 +2,22 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [structure and symbolic-control review](accessibility/structure-symbols-2026-11-25.json)
+verifies that the five old generic-container findings and the inactive Scheduler
+finding are already resolved in the current source. Both browsers pass 4,139
+structure/input/export checks, including actual group names, the declared
+ninety-parcel image and the native launcher's transition into its 40-cell window.
+Three metadata repairs accompany that review: Snap mode is a native button whose
+name matches its caption; full OP-1 keys include their printed shortcuts and
+original note names; archive card toggle names now remain stable through face
+and pin changes. The full Mute toggle also keeps a stable name. All CSS, HTML,
+models, native artwork and original audio kernels remain unchanged. The expanded
+29-component matrix passes 414 browser-name observations and 58 offline exports;
+24 native comparisons retain exact demo geometry, DOM, styles and Stage PNG bytes. Preserve
+the historical failures and the initial map-summary fixture mistake. Raw
+incomplete results remain available for manual review. Broader toggle-label,
+photographic/data, native-ink, motion and performance acceptance remain open.
+
 The [visible-name review](accessibility/visible-names-2026-11-25.json) checks
 the 22 retained full-view label/name findings against explicit primary labels
 and actual browser accessibility names. It retains all 44 raw axe flags and
@@ -184,10 +200,12 @@ findings for triage; incomplete results need manual review. The actual catalog
 suspension/focus contract still matters. These focused repairs do not close
 complete accessibility, motion recipes, cold-route or performance acceptance.
 
-Incomplete semantic results include generic-container names in five components
-and the native Scheduler's initially inactive grid with hidden rows. Passing
-active grid ownership checks does not close that initial state. Keep both for
-the next accessibility pass, together with contrast and visible-name findings.
+The older incomplete semantic inventory included generic-container names in five
+components and the native Scheduler's initial inactive grid. The current
+structure review above verifies the supported group names and both initial and
+active Scheduler states in Chrome 158 and Chromium 140. Those six stale items
+are resolved; preserve their historical reports. Other contrast, visible-name,
+data and photographic review remains separate.
 
 Masonry's tag-based card lookup initially failed the fill audit after its
 markup change. Its controller and verifier now select the stable card class;

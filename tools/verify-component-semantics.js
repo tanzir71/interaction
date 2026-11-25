@@ -11,6 +11,18 @@ async function mount(page,id,mode,width,portable){const d=R.demos.find(d=>d.id==
 async function tree(page,id,mode,kind){await settle(page);const client=await page.context().newCDPSession(page);let nodes;try{({nodes}=await client.send('Accessibility.getFullAXTree'));}finally{await client.detach();}const byId=new Map(nodes.map(n=>[n.nodeId,n])),live=nodes.filter(n=>!n.ignored),roles=role=>live.filter(n=>n.role?.value===role),ancestor=(n,role)=>{for(let p=byId.get(n.parentId);p;p=byId.get(p.parentId))if(!p.ignored&&p.role?.value===role)return p;return null;};
  if(roles('gridcell').some(n=>!ancestor(n,'row')||!ancestor(n,'grid')))fs.writeFileSync(path.join(out,id+'-'+mode+'-'+kind+'-failed-tree.json'),JSON.stringify(nodes,null,2)+'\n');
  check(!roles('banner').length&&!roles('main').length,'Component-local content adds no document banner/main '+id);
+ if(mode==='full'){
+  const expected={'scroll-color-theme':['Current palette'],'map-city-tiles':['Current city seed'],'fui-trading-terminal':['Six bid and ask levels','Recent fictional trades'],'agent-token-meter':['Context by source'],'nav-pill-condense':['Example page']}[id]||[];
+  for(const name of expected)check(roles('group').some(n=>n.name?.value===name),'Actual supported named group '+id+' '+name);
+  if(id==='agent-token-meter')check(roles('group').some(n=>(n.name?.value||'').startsWith('Session cost ')),'Current session cost group is actually named');
+  if(id==='map-city-tiles'){check(roles('image').some(n=>n.name?.value==='Ninety deterministic city blocks divided by a river'),'SVG exposes its declared complete image alternative');check(await page.locator('.d-maps-map-city-tiles-blocks polygon[role="img"]').count()===90,'The image retains all ninety original parcels');check(await page.locator('.d-maps-map-city-tiles-blocks,.d-maps-map-city-tiles-labels').evaluateAll(nodes=>nodes.length===2&&nodes.every(n=>n.getAttribute('role')==='group')),'Nested SVG labels have supported roles within the image');}
+ }
+ if(id==='ui-availability-scheduler'&&mode==='thumb'){
+  const active=await page.evaluate(()=>document.querySelector('.stage')._root.__layoutExt.inspect().active);
+  if(active)check(roles('gridcell').length===40&&roles('row').length===8,'Native active scheduler exposes its complete five-day/eight-row window');
+  else{check(roles('grid').length===0&&roles('gridcell').length===0&&roles('row').length===0,'Inactive scheduler exposes no incomplete grid');check(roles('button').some(n=>(n.name?.value||'').startsWith('Weekly availability. Activate')),'Inactive native scheduler has its actual launcher name');check(await page.locator('[data-ui=week]').evaluate(n=>['aria-rowcount','aria-colcount','aria-activedescendant'].every(a=>!n.hasAttribute(a))),'Inactive launcher owns no grid-only metadata');}
+ }
+
  for(const n of roles('gridcell'))check(!!ancestor(n,'row')&&!!ancestor(n,'grid'),'Actual grid cell has row/grid ownership '+id+' '+n.name?.value);
  for(const n of roles('row'))check(!!ancestor(n,'grid')||!!ancestor(n,'table'),'Actual row has table/grid ownership '+id+' '+n.name?.value);
  for(const n of roles('columnheader'))check(!!ancestor(n,'row')&&!!ancestor(n,'table'),'Column header has row/table ownership '+id);
@@ -20,7 +32,7 @@ async function tree(page,id,mode,kind){await settle(page);const client=await pag
  if(id==='ui-data-table-expand'&&mode==='full')check(roles('table').length===1&&roles('columnheader').length===2&&roles('checkbox').length===6,'Complete project table and native checkboxes exposed');
  if(id==='masonry-filter')check(roles('listitem').length===(mode==='thumb'?4:8),'Complete initial/all masonry cards exposed');
  if(id==='agent-token-meter'&&mode==='thumb'){check(roles('meter').length===1&&roles('button').some(n=>/^Add response\./.test(n.name?.value)),'Usage meter and response action exposed independently');}
- rows.push({id,mode,kind,roles:Object.fromEntries([...new Set(live.map(n=>n.role?.value))].map(role=>[role,roles(role).length]))});
+ rows.push({id,mode,kind,groups:roles('group').map(n=>({name:n.name?.value})),roles:Object.fromEntries([...new Set(live.map(n=>n.role?.value))].map(role=>[role,roles(role).length]))});
 }
 async function navKeyPaintOrder(page,nav){
  await page.evaluate(()=>{const root=document.querySelector('.stage')._root,node=root.querySelector('[data-native-node="181:534"]'),data=node.dataset;root.__pressTrace=[];Object.defineProperty(node,'dataset',{configurable:true,get:()=>new Proxy(data,{set(target,key,value){if(key==='pressed')root.__pressTrace.push(['press',root.__dataNav.inspect().generation]);return Reflect.set(target,key,value,target);},deleteProperty(target,key){if(key==='pressed')root.__pressTrace.push(['release',root.__dataNav.inspect().generation]);return Reflect.deleteProperty(target,key);}})});});

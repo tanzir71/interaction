@@ -1,0 +1,383 @@
+{
+  "date": "2026-11-25",
+  "baseline": "a9a5e8d23f5f86f41702c1da3cd62932ffe8684c",
+  "scope": "Close six stale structure findings against current source and review seven additional symbolic/shortcut label cases. Three metadata repairs preserve the complete original models and artwork. This is not full-catalog WCAG, speech-recognition, audio-synthesis or performance acceptance.",
+  "changes": [
+    {
+      "id": "scrollsnap-carousel",
+      "change": "Native action button uses its exact current Firm snap/Gentle snap caption and next-mode instruction. Original model and both snapping behaviors are unchanged."
+    },
+    {
+      "id": "op1-panel",
+      "change": "Full key names include each printed shortcut and original note name. The full Mute toggle name remains stable; visible captions and pressed state remain unchanged."
+    },
+    {
+      "id": "css3d-card-flip-grid",
+      "change": "Full toggle identity includes object name, Return and object number without changing across painted faces or pin states. Existing descriptions still expose the painted note and accurate pin/Escape instructions."
+    }
+  ],
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 517,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": true,
+    "exactReversibleMetadataOnlyControllerEdits": true,
+    "originalAudioKernelsSHA256": [
+      "cc7c1cff30e87485ff21aa6906df1c11ebe78b29045dd43c61e0079621444157",
+      "cc7c1cff30e87485ff21aa6906df1c11ebe78b29045dd43c61e0079621444157"
+    ],
+    "originalAudioKernelsByteIdentical": true,
+    "allModelsMathTimingAssetsFontsRuntimeStageUnchanged": true
+  },
+  "staleStructureReview": {
+    "resolved": [
+      "scroll-color-theme",
+      "map-city-tiles",
+      "fui-trading-terminal",
+      "agent-token-meter",
+      "nav-pill-condense",
+      "ui-availability-scheduler"
+    ],
+    "productionChangesNeeded": false,
+    "initialAudit": {
+      "cases": 24,
+      "violations": 4,
+      "incomplete": 12,
+      "pageErrors": 0
+    },
+    "remainingARIARuleFindings": [],
+    "actualGroupAndGridChecks": "Supported named groups are exposed in both engines. The city remains one named image containing ninety original parcels; nested graphical groups have supported DOM roles. Native Scheduler exposes a launcher without grid-only attributes until activation, then an owned forty-cell/eight-row window. Complete full grid remains 336 cells in 48 rows."
+  },
+  "verification": {
+    "names": {
+      "browser": "158.0.8127.88",
+      "components": 29,
+      "stories": 182,
+      "observations": 414,
+      "controls": 1426,
+      "offlineExports": 58,
+      "normalStories": 8,
+      "scope": "Initial and deliberate reduced-motion full-view states of 29 retained label/name findings, plus focused normal-motion Flip Grid/Orbit states, in both Stage themes and desktop/compact widths. Compares explicitly reviewed primary labels with actual Chrome accessibility names, retaining original raw axe findings separately. Symbolic fields receive descriptive-name checks. This does not establish speech-recognition behavior, all intermediate motion frames, all catalog accessibility or native thumbnail acceptance. Audio output is disabled in these naming contexts; synthesis is covered separately."
+    },
+    "structureBrowsers": [
+      {
+        "browser": "158.0.8127.88",
+        "checks": 4139,
+        "scope": "Actual Chromium accessibility-tree ownership, component-local landmarks, complete structured records, keyboard control stories and 66 fresh network-blocked exports. Does not establish complete WCAG, manual contrast, screen-reader output or final motion/performance conformance."
+      },
+      {
+        "browser": "140.0.7339.16",
+        "checks": 4139,
+        "scope": "Actual Chromium accessibility-tree ownership, component-local landmarks, complete structured records, keyboard control stories and 66 fresh network-blocked exports. Does not establish complete WCAG, manual contrast, screen-reader output or final motion/performance conformance."
+      }
+    ],
+    "nativeComparisons": {
+      "cases": 24,
+      "exact": true,
+      "scope": "Independent original/current paused native definitions. Exact geometry, DOM, computed styles and PNG bytes after a priming readback. GPU disabled for CSS/pixel comparison only; not default-GPU or timing acceptance."
+    },
+    "symbolicAudit": {
+      "cases": 14,
+      "violations": 0,
+      "incomplete": 25,
+      "pageErrors": 0,
+      "incompleteRules": {
+        "color-contrast": 13,
+        "label-content-name-mismatch": 12
+      },
+      "scope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance."
+    },
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1670
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1534
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 12696
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 727
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 229866
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 164425
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 209
+      }
+    ],
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "proofSHA256": {
+      ".artifacts/final-structure-audit-v20/current-names/2026-11-25T04-09-26-282Z/report.json": "18057aed31cc19866b42ba3e25b47af2f3e2c0bf6f319a0fe8dc635d549a8216",
+      ".artifacts/final-structure-audit-v20/before-names/2026-11-25T03-55-27-623Z/report.json": "a71dde5a8229c07448e3902f9ebcb3227b6eea140fbe4265636e5ae25885adb9",
+      ".artifacts/final-structure-audit-v20/semantics-158-second/2026-11-25T04-13-47-107Z/report.json": "534911284558728f3c1cba8e86beed7324bbed41217330aa38ec7b0773e10be4",
+      ".artifacts/final-structure-audit-v20/semantics-140-second/2026-11-25T04-13-47-073Z/report.json": "9e193dc1516bac79a944f7dd53385809c1cac835cf3bad5eb5144919fae36b66",
+      ".artifacts/final-structure-audit-v20/axe/2026-11-25T03-30-24-845Z/report.json": "2d42d09faabd315c17391875180f5709683c6396bbc99a93651322eae24077ec",
+      ".artifacts/final-structure-audit-v20/symbolic-axe/2026-11-25T04-18-24-915Z/report.json": "51c3b4c630a65fc4d8c38db2f3ef49b1ab9f8707efb61a3afded801a6b02f38b",
+      ".artifacts/final-structure-audit-v20/native/report.json": "0a0f77c1f69febd61fe941ea0cd86c0b34ba56b6c1c134a8da1db5e6984229f4",
+      ".artifacts/final-structure-audit-v20/native/complete.json": "d4b7a67c39b94a9eb90501dc2b684d7cab8be3416f97b0a2a9d19ff68f04d4f1",
+      ".artifacts/final-structure-audit-v20/owner-checks/report.json": "d0e4f7d116c3dd4a9a01174008c934f153b72f8b2c34a1454535370da097b050",
+      ".artifacts/final-structure-audit-v20/package-ci.log": "87b7d7e648ef6f832794c233faee4c43ff117ed224b669b6c192d696dfa770a3",
+      ".artifacts/final-structure-audit-v20/package-test.log": "57fea6c6719396b654bce35960b5124a260f146dd20f5f8684e5cd9c781d8e95",
+      "tools/verify-visible-names.js": "132e32ead92b6f90b7b772017aec0f34805f05452df2dc8e7aea3a3705ee3d0b",
+      "tools/verify-component-semantics.js": "73b7a27dd8f49432a85a6d66c292efa4f5467c598fef5b6e017fc6847e765fe7",
+      "tools/verification/semantic-controller.js": "6c9ac6e64692ee4b11157e5d9ece3174c93645b07086e0001c73fa1afd7f56c4",
+      "tools/fixtures/symbolic-controls-before.json": "694807e3379bab55663413417ed93f63f263937f403a7e80aec6c1c42f15f78c",
+      "js/demos.gallery.scrollsnap-carousel.js": "85d09fcea73b357307f2952a1269cd118714c02b63ff0889f4f6143b41be3414",
+      "js/demos.skeuo.op1-panel.js": "d6ffab1e1b7047682129a9932ee58a17505c1f9fed62edfd2e9c903f8d3e074e",
+      "js/demos.three.card-flip-grid.js": "b3c478e3897273e37eab709868e57fc6ff871a95b53a8486bdfed1ffaffa23aa"
+    }
+  },
+  "standards": [
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/switch/",
+      "decision": "Inference: cycling two active snapping behaviors with a changing caption is represented as an ordinary button, preserving the original behaviors."
+    },
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "decision": "Use stable names for the retained full card/Mute toggle states; keep their actual pressed state and current descriptions."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "decision": "Check literal shortcut letters as complete tokens; review symbolic marks and supporting value text separately."
+    }
+  ],
+  "retainedFailures": {
+    "historicalCounterexamples": [
+      {
+        "id": "scrollsnap-carousel",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Actual exposed button scrollsnap-carousel 0\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:567)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "op1-panel",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"op1-panel\",\"phase\":\"initial\",\"label\":\"A\",\"name\":\"Play C\",\"text\":\"A\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "scrollsnap-carousel",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Actual exposed button scrollsnap-carousel 0\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:567)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "op1-panel",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"op1-panel\",\"phase\":\"initial\",\"label\":\"A\",\"name\":\"Play C\",\"text\":\"A\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "scrollsnap-carousel",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Actual exposed button scrollsnap-carousel 0\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:567)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "op1-panel",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"op1-panel\",\"phase\":\"initial\",\"label\":\"A\",\"name\":\"Play C\",\"text\":\"A\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "scrollsnap-carousel",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Actual exposed button scrollsnap-carousel 0\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:567)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "op1-panel",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"op1-panel\",\"phase\":\"initial\",\"label\":\"A\",\"name\":\"Play C\",\"text\":\"A\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:52:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:62:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:222"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:222"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:222"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable card toggle identities\n+ actual - expected\n\n  [\n+   'Return. Reveal object 01, Form',\n-   'Reveal object 01, Form',\n    'Reveal object 02, Light',\n    'Reveal object 03, Time',\n    'Reveal object 04, Depth',\n    'Reveal object 05, Tone',\n    'Reveal object 06, Space',\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:54:82)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:61:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:222"
+      }
+    ],
+    "structureOracle": "The first added map check omitted Ninety from its declared image summary. Both engines correctly failed that expectation. The final check uses the exact existing image alternative and verifies all ninety parcels; no map source change was made.",
+    "scope": "Original helpers, failed logs and historical-reference images remain archived. Earlier fixtures remain unchanged; new semantic migrations are explicit and reversible."
+  },
+  "remainingToggleNameEvidence": [
+    {
+      "id": "text-outline-fill-scroll",
+      "before": "Outlined phrase Solid Signal. Activate to keep the fill.",
+      "after": "Filled phrase Solid Signal. Activate to return to the outline.",
+      "pressed": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "id": "text-broken-grid",
+      "before": "Break the Grid. Broken. Activate to hold this state.",
+      "after": "Break the Grid. United. Activate to release this state.",
+      "pressed": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "id": "glass-refraction-card",
+      "before": "Coast club. A little further out. Day pass. Turn the coast pass over",
+      "after": "Saturday by the sea. Arrive slowly. Stay a while. North path · 10am—6pm. Admit one. Show the front of the coast pass",
+      "pressed": [
+        "false",
+        "true"
+      ]
+    },
+    {
+      "id": "vinyl-player-card",
+      "before": "Start record",
+      "after": "Stop record",
+      "pressed": [
+        "false",
+        "true"
+      ]
+    }
+  ],
+  "remaining": [
+    "Broader toggle-name stability, including the captured Outline, Broken Grid, Glass Pass and Turntable states.",
+    "Other incomplete photographic/data/contrast findings, native ink preference and broader accessibility review.",
+    "Final motion, CPU4, cold-route and mobile Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Direct main commit/push. Preserve disabled GitHub Actions and the account zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

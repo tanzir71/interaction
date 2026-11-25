@@ -1911,8 +1911,8 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Match reviewed primary labels; keep supporting data, symbolic icons, repeated
   paint layers and inactive slide text distinct. Preserve all raw axe findings.
   Authorization's result stamp replaces its hidden scanning label. Flip Grid's
-  full name follows the painted face and includes Return on the back; its complete
-  note is an accessible description. Orbit's full name includes Target link and
+  full name includes its object identity and Return in one stable label; its
+  current note is an accessible description. Orbit's full name includes Target link and
   its selected satellite, with the actual painted readout as its description.
   Cache note copy without frame-time layout reads and avoid repeated ARIA writes.
   Keep the original controllers except the fixture's exact full-only ARIA
@@ -1921,3 +1921,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   These checks do not certify speech recognition, every intermediate frame,
   native contrast or full-catalog accessibility. Earlier private evidence stays
   frozen; final motion and performance audits remain open.
+
+- The visible-name matrix now includes seven additional symbolic/shortcut cases,
+  for 29 components. Match complete word tokens so A does not match the letter
+  inside Play. Preserve the old fixture unchanged; `semantic-controller.js`
+  strictly applies/reverses the newer metadata-only edits. Full OP-1 keys retain
+  their note names and add their printed shortcuts; its full Mute name is stable.
+  Both original audio kernels remain byte-identical. Snap mode uses a native
+  action button with its current caption and next-mode instruction. Full archive
+  card names contain both face labels in one stable identity while their existing
+  pressed state and descriptions convey pinning and the current note. Audio is
+  disabled only in naming test contexts; those contexts do not prove synthesis.
+  `verify-component-semantics.js` also checks the already-repaired named groups,
+  the city's declared ninety-parcel image alternative, and the Scheduler's
+  inactive launcher/active 40-cell native window. Keep both browser proofs,
+  historical counterexamples, raw incomplete results and earlier fixtures.
