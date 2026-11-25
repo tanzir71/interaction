@@ -1,0 +1,311 @@
+{
+  "date": "2026-11-26",
+  "baseline": "5bb96f9656d64c635f10e94b29401923734959fa",
+  "scope": "Autocomplete layout and dynamic native hint readability. Whole-catalog accessibility, all transient/photographic states, cold startup and CPU4 performance acceptance remain open.",
+  "preservation": {
+    "at": "2026-11-25T22:41:06.669Z",
+    "baseline": "5bb96f9656d64c635f10e94b29401923734959fa",
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "controllersUnchanged": 519,
+    "htmlCompositionsUnchanged": 520,
+    "stageMetadataUnchanged": true,
+    "originalDatasetsAndDisplayedCopyUnchanged": true,
+    "originalModelParametersAndArrivalTimingsUnchanged": true,
+    "originalSvgPhotoAndFontAssetsUnchanged": true,
+    "newDependencies": 0,
+    "changedDefinitions": [
+      "ai-autocomplete"
+    ],
+    "permittedEdits": {
+      "file": "js/demos.agentext.ai-autocomplete.js",
+      "jsEdits": [
+        {
+          "needle": "text.match(/\\S+\\s*/g)",
+          "replacement": "text.match(/\\s*\\S+\\s*|\\s+/g)"
+        },
+        {
+          "needle": "const measure=document.createElement('canvas'),measuring=measure.getContext('2d');h.render=now=>{",
+          "replacement": "const measure=document.createElement('span');measure.setAttribute('aria-hidden','true');measure.style.cssText='position:absolute;visibility:hidden;pointer-events:none;white-space:pre;width:max-content;padding:0;border:0;margin:0';let measureStamp='',textWidth=0;function placeGhost(){const style=getComputedStyle(input),fontKeys=['font','letterSpacing','fontKerning','fontFeatureSettings','fontVariationSettings','fontOpticalSizing'];for(const key of fontKeys){ghost.style[key]=style[key];measure.style[key]=style[key];}const stamp=[value,ctx.scale,...fontKeys.map(key=>style[key])].join('\\0');if(stamp!==measureStamp){measure.textContent=value;input.parentElement.append(measure);try{textWidth=measure.getBoundingClientRect().width/ctx.scale;}finally{measure.remove();}measureStamp=stamp;}const width=parseFloat(style.width),height=parseFloat(style.height),left=parseFloat(style.borderLeftWidth)||0,right=parseFloat(style.borderRightWidth)||0,top=parseFloat(style.borderTopWidth)||0,bottom=parseFloat(style.borderBottomWidth)||0,padding=parseFloat(style.paddingLeft)||0,available=width-left-right-padding-(parseFloat(style.paddingRight)||0),scroll=input.scrollLeft;ghost.style.left=(input.offsetLeft+left+padding+textWidth-scroll)+'px';ghost.style.top=input.offsetTop+top+(height-top-bottom-parseFloat(style.lineHeight))/2+'px';ghost.style.maxWidth=Math.max(0,available-textWidth+scroll)+'px';ghost.style.opacity=suffix?1:0;}h.on(input,'scroll',placeGhost);h.render=now=>{"
+        },
+        {
+          "needle": "const style=getComputedStyle(input);measuring.font=style.font;const width=measuring.measureText(value).width,padding=parseFloat(style.paddingLeft)||0,scroll=input.scrollLeft,available=input.clientWidth-padding-(parseFloat(style.paddingRight)||0);ghost.style.left=(input.offsetLeft+padding+Math.min(width,available)-scroll)+'px';ghost.style.top=input.offsetTop+(input.clientHeight-parseFloat(style.lineHeight))/2+'px';ghost.style.maxWidth=Math.max(0,available-width+scroll)+'px';ghost.style.opacity=suffix?1:0;",
+          "replacement": "placeGhost();"
+        },
+        {
+          "needle": "h.onLayout=()=>{const b=aeBox(h,'144:1230');Object.assign(q('native-autocomplete-field').style,{left:b.x+'px',top:b.y+'px',width:b.w+'px',height:Math.max(b.h,44/ctx.scale)+'px'});input.style.fontSize=Math.max(13.5,11/ctx.scale)+'px';};",
+          "replacement": "h.onLayout=()=>{if(h.native){const b=aeBox(h,'144:1230');Object.assign(q('native-autocomplete-field').style,{left:b.x+'px',top:b.y+'px',width:b.w+'px',height:Math.max(b.h,44/ctx.scale)+'px'});input.style.fontSize=Math.max(13.5,11/ctx.scale)+'px';}measureStamp='';placeGhost();};"
+        },
+        {
+          "needle": "measure.width=measure.height=0;",
+          "replacement": "measure.remove();measure.textContent='';"
+        }
+      ],
+      "cssAppend": "\n/* Full text field and inline completion share the intended input typography. */\n.d-ext-agent-autocomplete:is(.stage[data-mode=\"full\"] *) .d-ext-agent-autocomplete-autocomplete-field>input{font-size:var(--ui-font);padding:13px 14px;line-height:20px;min-height:var(--hit)}\n.d-ext-agent-autocomplete-native-ui .d-ext-agent-autocomplete-ghost{color:#949494}",
+      "promptAppend": " Keep the complete inline suffix, including its leading space, in the actual input font and line height. Full uses its intended --ui-font field rule; native keeps the exact captured inactive artwork and original optical floor after editing. Align completion to the input content origin, borders and actual horizontal scroll. Recompute only layout after font readiness and Stage fitting while source time is held; preserve every word arrival, all five complete sentences, Tab/Escape, browser editing, selection, paste, IME and independent holds. Measure loaded variable-font text at the actual Stage zoom and cache unchanged metrics. Keep the dynamic native completion at #949494 on its dark input backing; the captured inactive Figma glyphs stay unchanged.",
+      "sha256": "a45358d8f1b75ce8919fb16979853b3df8e35fabdcd12170d4a1955aa9296bb8"
+    },
+    "frozenInputs": {
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+    },
+    "poster": {
+      "file": "assets/posters/ai-autocomplete.png",
+      "before": "5edd933ceb5f20d67acfa51576b6deb05f192fe750c6b7f3b50539fc5d3ad1ca",
+      "after": "7b85c1252888e0a339e4241c7c0e39aef09b29d122add9d82acf39562898dbc7",
+      "note": "Regenerated native poster. Historical PNG pixels differ; same-engine original/current native captures are checked separately."
+    }
+  },
+  "defects": [
+    {
+      "finding": "Held initial completion used stale pre-font metrics, discarded the leading space and could use a different font size from the input.",
+      "fix": "Keep the complete suffix, match actual input typography, honor the intended full field rule and refresh only layout after font readiness/fitting."
+    },
+    {
+      "finding": "Unscaled Canvas text metrics diverge from the variable font actually rendered under Stage zoom; client metrics plus padding do not independently establish input content edges.",
+      "fix": "Cache DOM text measurement in the actual Stage zoom. Use computed CSS borders, padding and dimensions, and subtract actual horizontal scroll. A temporary hidden measure is removed immediately and on cleanup."
+    },
+    {
+      "finding": "The dynamic native hint kept #6a6a6a after entering an editable state.",
+      "fix": "Use #949494 for that dynamic hint on its dark backing. Captured inactive native glyphs, source artwork, coordinates and original data stay unchanged."
+    }
+  ],
+  "verification": {
+    "browser": "158.0.8127.88",
+    "focused": {
+      "onlineCases": 16,
+      "heldFontCases": 8,
+      "originalFontCounterexamples": 4,
+      "freshFullOfflineContexts": 4,
+      "actualScrolledRecords": 20,
+      "maxCheckedPaintedEndpointErrorPx": 0.171875,
+      "endpointTolerancePx": 0.35,
+      "widths": [
+        1440,
+        390
+      ],
+      "stageThemes": [
+        "dark",
+        "light"
+      ],
+      "motion": [
+        "normal",
+        "reduced"
+      ],
+      "originalCompletions": 5,
+      "evidence": {
+        "file": ".artifacts/final-autocomplete-layout-v45/focused-complete/2026-11-25T22-40-02-083Z/report.json",
+        "sha256": "9749c12c7e6a185b0c17e88ce3ce6ff3478a4e046ead2309c90bd54702d9d8b8"
+      },
+      "limits": "Chrome user-agent editor text ranges independently verify the prefix endpoint. DOM mirrors are diagnostic as well as the component measurement; they do not replace actual editor evidence. The 240x160 cases verify scroll alignment after real Home/End intention, not universal arbitrary-size legibility. Font refresh and 286x196 fitting preserve caller-held source time, model state and word opacity."
+    },
+    "nativePixels": {
+      "pairs": 4,
+      "widths": [
+        360,
+        286
+      ],
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "gpuDisabled": true,
+      "evidence": {
+        "file": ".artifacts/final-autocomplete-layout-v45/native-pairs.json",
+        "sha256": "3582c83eef36f70b6bea44791af7351cfcbf5ba30816b19df554166320233e4e"
+      },
+      "limits": "Same-engine native initial captures, GPU disabled; not a universal GPU/host or historical-poster pixel claim."
+    },
+    "regressions": {
+      "native": {
+        "checks": 3117,
+        "rows": 70,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-native.json",
+          "sha256": "920f954d18e107b3b433d15f1974954798c4902595fee0654f94291efa07d51b"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-native.log",
+          "sha256": "c9aacbc32ded0f9881b17b49640c98d45eb9ffb0e72aea74d08531cca14ed532"
+        }
+      },
+      "models": {
+        "checks": 2569,
+        "rows": 2,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-models.json",
+          "sha256": "e916edd464b547bdef0da4db296ceaf5182a3f05c856fa28b4de9d1215be71ef"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-models.log",
+          "sha256": "455c4b814f3c688fd22a68bca34d64c2e533c23bdffd3c794a90268cd636fd18"
+        }
+      },
+      "input": {
+        "checks": 215,
+        "rows": 4,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-input.json",
+          "sha256": "8a8aa753dec8cb1280f309acf7a4e72b19921feb66e1b7e3ded68fa2512d026d"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-input.log",
+          "sha256": "21aae14abcfd2e09b70f87aa2a9e0ba85c88ab89eb7d1b1f452796dda021f4e3"
+        }
+      },
+      "clocks": {
+        "checks": 173,
+        "rows": 60,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-clocks.json",
+          "sha256": "a74379a010d55dd32dc3dfd939fa5f4a82cd50d03772816349723ba159c6d8d8"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-clocks.log",
+          "sha256": "6b3057dfc14b049aa41097ecc65a1d74dae8fa3f8829d15725652e6f864de770"
+        }
+      },
+      "exports": {
+        "checks": 402,
+        "rows": 20,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-exports.json",
+          "sha256": "b93e1108833a7bd422d4216209d77e5443da630c62f0578dcdadcea670675bf6"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-exports.log",
+          "sha256": "ba4362ad02f360a4467e62dcf9e86d2667bff9f417523411b066e9eb303fac22"
+        }
+      },
+      "holds": {
+        "checks": 362,
+        "rows": 44,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-holds.json",
+          "sha256": "6e331654ab825d64298db7d9fbb6bf86100324cd80699b3b1335b030f3323810"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-holds.log",
+          "sha256": "8277f6cd03c24ed0fd4f8611ab48019d438cb46997fbb945a41987f0759f07d6"
+        }
+      },
+      "touch": {
+        "checks": 150,
+        "rows": 4,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-touch.json",
+          "sha256": "2b2100d3e28d9538da48a81f1ca845f43eeaa0c03f1144b6ac27639d5ddb92ff"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-touch.log",
+          "sha256": "6b29641997db53466069f4a5e1dd322f652df44e777e1f861a5d2d8e3fccd951"
+        }
+      },
+      "async": {
+        "checks": 152,
+        "rows": 8,
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/accepted-agent-async.json",
+          "sha256": "064036ff7b9ff39c9c2a371258726c5a4f83ef35fa418ba7c735a45738f24f22"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-autocomplete-layout-v45/agent-async.log",
+          "sha256": "84216c4016ee29bc837120f7bf2e584e7c648a7771e655d6294474686743d5db"
+        }
+      }
+    },
+    "requiredChecks": {
+      "registry": {
+        "file": ".artifacts/final-autocomplete-layout-v45/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      },
+      "stage": {
+        "file": ".artifacts/final-autocomplete-layout-v45/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      },
+      "generated": {
+        "file": ".artifacts/final-autocomplete-layout-v45/generated.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      },
+      "titles": {
+        "file": ".artifacts/final-autocomplete-layout-v45/titles.log",
+        "sha256": "dd0528a47a625a7d9e2b9b27b9c079199a6769bea8a1860f62eea9b5798e98f0"
+      },
+      "motion": {
+        "file": ".artifacts/final-autocomplete-layout-v45/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      },
+      "package": {
+        "file": ".artifacts/final-autocomplete-layout-v45/package.log",
+        "sha256": "4009dfb1d96af5a01d2a658b8909174b4f36ddc76c1065eb3f05774259b35eb0"
+      },
+      "library": {
+        "file": ".artifacts/final-autocomplete-layout-v45/library.log",
+        "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+      },
+      "fit": {
+        "file": ".artifacts/final-autocomplete-layout-v45/fit.log",
+        "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+      }
+    },
+    "library": {
+      "file": ".artifacts/final-autocomplete-layout-v45/accepted-library.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+    },
+    "fit": {
+      "file": ".artifacts/final-autocomplete-layout-v45/accepted-fit.json",
+      "sha256": "c33a8e1ee94b1d3532d89b14b6d81ccfce7e12bef8f22f127a04d5c767217584"
+    }
+  },
+  "rawAccessibility": {
+    "after": [
+      {
+        "width": 1440,
+        "summary": {
+          "cases": 8,
+          "violations": 1,
+          "incomplete": 8,
+          "pageErrors": 0
+        },
+        "violationRules": {
+          "color-contrast": 1
+        },
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/axe-desktop/2026-11-25T22-52-42-623Z/report.json",
+          "sha256": "00fc081d4ac6da1ad496dfb91acd0e75b2eb2b850606bd9795991e4705cb7526"
+        }
+      },
+      {
+        "width": 390,
+        "summary": {
+          "cases": 8,
+          "violations": 2,
+          "incomplete": 8,
+          "pageErrors": 0
+        },
+        "violationRules": {
+          "color-contrast": 2
+        },
+        "evidence": {
+          "file": ".artifacts/final-autocomplete-layout-v45/axe-compact/2026-11-25T22-52-48-628Z/report.json",
+          "sha256": "745935400c4fa686c339a552bac5d5703e285220cf152074960fd750b72aad91"
+        }
+      }
+    ],
+    "policy": "All violations and incomplete results are retained without filtering. These scans and bounded layout/readability checks do not establish whole-catalog or all-state conformance.",
+    "interpretation": "The sixteen raw cases retain three normal-motion contrast violations sampled during the preserved word-entry fade (one desktop dark, one compact dark and one compact light), plus sixteen incomplete results. Do not filter these rows or infer an all-state accessibility pass from settled text color or this layout repair."
+  },
+  "diagnostics": {
+    "before": {
+      "file": ".artifacts/final-autocomplete-layout-v45/probe.json",
+      "sha256": "30a66c0083b181f7d99d5f1a0203e4443c7d651e99f99ed92266d18ba1ab6d21"
+    },
+    "firstCanvasTrial": "The first correction still used Canvas metrics and an input-client/padding assumption. Actual input user-agent text ranges exposed the mismatch; its source, generated files, helper, reports and images remain retained.",
+    "harness": "A line-position check first sampled the prior accepted-input animation. The settled check awaits that original finite animation. The initial small-scroll check pressed End while the caret was already at End after fitting; real Home then End now establishes a browser scroll intention. Those failed attempts remain retained.",
+    "provisionalInputs": "The provisional checker was reconstructed by removing the later small-scroll block and verified against its original report SHA before archiving. Final accepted inputs are copied directly.",
+    "historicalPoster": "The regenerated poster differs in 2305 historical RGB pixels. No cause or historical pixel-equivalence claim is inferred. Separate same-engine original/current native pairs establish the bounded source comparison."
+  }
+}

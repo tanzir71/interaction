@@ -2146,3 +2146,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   The original eight Agent extension suites respect INTRX_CHROME_EXECUTABLE and
   log their actual browser version. These focused checks leave whole-catalog
   accessibility, cold startup and CPU4 performance acceptance open.
+
+- `node tools/verify-autocomplete-layout.js` checks all five Autocomplete
+  completions against Chrome's actual input-editor text ranges. Keep the entire
+  suffix, including its leading whitespace, and match the input's font and line
+  height. Full field specificity must retain its intended `--ui-font` rule;
+  native optical sizing applies only to native input. Measure loaded variable
+  fonts in the actual Stage zoom and cache unchanged DOM metrics. CSS border,
+  padding and content dimensions supply the text origin; input client metrics
+  and unscaled Canvas widths are not interchangeable with actual editor bounds.
+  Font-ready and fit callbacks may refresh layout during a hold without
+  advancing source time, word opacity or queued intent. Preserve the five
+  sentences, 250ms delay, 90ms word arrivals and 455ms entry curve. The dynamic
+  native hint uses #949494; captured inactive native glyphs stay unchanged.
+  Tests include real Tab/Escape/Home/End, actual horizontal input scroll in a
+  240×160 embed, held 286×196 fitting, delayed font delivery and fresh portable
+  contexts. Settle the original accepted-input animation before comparing a
+  later input line. Home then End establishes an actual caret-scroll intention
+  after a resize; an already-at-End key need not scroll the browser editor.
+  Keep earlier failed oracle/scroll attempts and the regenerated poster's raw
+  pixel differences. Same-engine native comparisons have a separate scope.
+  Whole-catalog accessibility, startup and CPU4 performance remain open.

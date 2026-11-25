@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Autocomplete layout review](accessibility/autocomplete-layout-2026-11-26.json)
+fixes the held initial hint's stale font measurement, missing leading space,
+font mismatch and content-edge alignment. The full field now honors its intended
+type rule; native optical sizing stays local to native input. Cached DOM text
+metrics follow the actual Stage zoom, and font-ready/fit layout refreshes preserve
+held source time and word arrival. The five original completions, browser
+editing and arrival timings remain intact. Dynamic native hint ink is readable;
+captured inactive native artwork remains the original reference. The other 519
+complete definitions and controllers, all 520 HTML compositions, metadata and
+original SVG/photo/font assets stay unchanged. A regenerated native poster is
+recorded separately from source-asset preservation.
+
+Actual Chrome input-editor ranges verify alignment, rather than treating an
+unscaled Canvas or ancestor-only measurement as painted text. The focused
+matrix includes both Stage themes/motion settings, real completion keys,
+delayed fonts under a hold, responsive fitting and genuine horizontal scroll.
+Raw scans retain three contrast findings during the original normal word-entry
+fade and sixteen incomplete results. These rows and remaining whole-catalog/
+performance work stay open; the linked report records exact checks and limits.
+
 The [Agent extension light-palette review](accessibility/agent-ext-light-2026-11-26.json)
 adds readable full light palettes to Message Stream, Activity Feed, AI Sidebar,
 Web Search, Usage Limits and Multi-Agent Chat. Native geometry, dark palettes,
@@ -17,8 +37,8 @@ settled palette checks do not establish all-state accessibility.
 The broad initial text-style inventory is heuristic triage, not a count of
 confirmed contrast defects. Autocomplete's ghost and Creator's active step text
 sit on dark sibling surfaces, which the ancestor-only estimate missed. Their
-palettes stay unchanged. Autocomplete's initial ghost position is independently
-offset from the input text endpoint and remains open for layout investigation.
+palettes stayed unchanged in that review. Its separate Autocomplete placement
+finding is resolved by the subsequent layout review linked above.
 Whole-catalog accessibility, startup and throttled performance acceptance remain
 open. Keep all failed captures and frozen historical evidence read/copy only.
 
