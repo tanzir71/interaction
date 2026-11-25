@@ -1,0 +1,1113 @@
+{
+  "date": "2026-11-25",
+  "baseline": "3ff6ccd24cc3b7c19564985fce042a21c0506f1f",
+  "scope": "Qualified shell measurements for Home and Elastic Tabs only. Every one of the 520 complete component definitions and frozen runtime/Stage/exporter inputs is unchanged. This phase ships evidence and an in-memory candidate option for the profiler; no renderer experiment is shipped.",
+  "productionChanges": [],
+  "preservation": {
+    "completeDefinitionsUnchanged": 520,
+    "frozenInputsUnchanged": true
+  },
+  "cold": {
+    "evidence": {
+      "file": ".artifacts/final-shell-perf-v23/cold-before/2026-11-25T05-32-35-524Z/report.json",
+      "sha256": "9f400d9e10f58fc11cca6be4d371b1ca68d0879ef5c5bd3ab93ec4b9d0be5601"
+    },
+    "browser": "158.0.8127.88",
+    "cpu": 1,
+    "method": [
+      "One fresh browser process; one empty browser context per sample. No priming sample or outlier is removed.",
+      "Heading paint preserves the earlier document.fonts.ready plus two animation-frame method. Stage paint preserves two frames after the actual full boot. Assets-ready is separate.",
+      "Warm starts at trusted caption pointerdown; Back must restore the actual click-time library scroll.",
+      "CPU throttling is applied before navigation. Network is local without emulated latency; OS caches and other applications are not controlled.",
+      "The explicit 300ms result covers only the recorded local routes/settings. It does not establish all-component startup, native CPU4 frame rate or Lighthouse acceptance."
+    ],
+    "cases": [
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "cold",
+        "headingPaintMs": 245.79999999701977,
+        "stagePaintMs": 245.79999999701977,
+        "assetsReadyMs": 714.5,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-1-cold.trace.json.gz",
+          "sha256": "bdf21cabb7fc7dd125899f290d90ed4f6e37734257defc219e56483cc80be5d5",
+          "headingPaint": {
+            "afterMarkMs": 50.39,
+            "durationMs": 2.994
+          },
+          "bootPaint": {
+            "afterMarkMs": 14.243,
+            "durationMs": 0.036
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "warm",
+        "headingPaintMs": 64.89999999850988,
+        "stagePaintMs": 64.79999999701977,
+        "assetsReadyMs": 73.09999999403954,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-1-warm.trace.json.gz",
+          "sha256": "46d0069f367db1d6a8a7d8a935dc2b5289d564e97f2c4ed6dafcbd7a0fcc444d",
+          "headingPaint": {
+            "afterMarkMs": 29.087,
+            "durationMs": 1.288
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.639,
+            "durationMs": 1.288
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "cold",
+        "headingPaintMs": 160.79999999701977,
+        "stagePaintMs": 177.60000000149012,
+        "assetsReadyMs": 206.79999999701977,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-2-cold.trace.json.gz",
+          "sha256": "a0fac2c3ad52c2af810b03cc2232d23db048494e0ac1dfd8185140883cee4150",
+          "headingPaint": {
+            "afterMarkMs": 37.873,
+            "durationMs": 2.076
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.375,
+            "durationMs": 0.449
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "warm",
+        "headingPaintMs": 151.20000000298023,
+        "stagePaintMs": 151.10000000149012,
+        "assetsReadyMs": 174.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-2-warm.trace.json.gz",
+          "sha256": "6c4b08cb37fa279e0246a63b1230fe2fde5ed12da5a4afc10b9ed63cd830ad78",
+          "headingPaint": {
+            "afterMarkMs": 28.066,
+            "durationMs": 1.826
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.714,
+            "durationMs": 1.826
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "cold",
+        "headingPaintMs": 186.89999999850988,
+        "stagePaintMs": 196.5,
+        "assetsReadyMs": 218.39999999850988,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-3-cold.trace.json.gz",
+          "sha256": "4c75ea994bd1a23b894c2c3046c5fc1e270d6fd7699315aa7f04e9ca7e97c886",
+          "headingPaint": {
+            "afterMarkMs": 45.885,
+            "durationMs": 3.298
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.455,
+            "durationMs": 1.701
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "warm",
+        "headingPaintMs": 60.899999998509884,
+        "stagePaintMs": 60.80000000447035,
+        "assetsReadyMs": 75.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-3-warm.trace.json.gz",
+          "sha256": "8da3770117847705f4793e9b8f65a84d6f911e7b14ade2318300da2dc6fc2f06",
+          "headingPaint": {
+            "afterMarkMs": 24.794,
+            "durationMs": 1.125
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.384,
+            "durationMs": 1.125
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "cold",
+        "headingPaintMs": 189.20000000298023,
+        "stagePaintMs": 197.70000000298023,
+        "assetsReadyMs": 231.20000000298023,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-1-cold.trace.json.gz",
+          "sha256": "c09c005393f68d3201a68b0ed1de63ce0a3e72b7538634a83e830273b91ba9c2",
+          "headingPaint": {
+            "afterMarkMs": 48.887,
+            "durationMs": 2.816
+          },
+          "bootPaint": {
+            "afterMarkMs": 10.035,
+            "durationMs": 0.667
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "warm",
+        "headingPaintMs": 57.79999999701977,
+        "stagePaintMs": 57.70000000298023,
+        "assetsReadyMs": 71.5,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-1-warm.trace.json.gz",
+          "sha256": "936182437fb35d647b9081b88e0fe67fa52addb0c370ec4dd470927cd71fbce6",
+          "headingPaint": {
+            "afterMarkMs": 27.326,
+            "durationMs": 2.182
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.568,
+            "durationMs": 2.182
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "cold",
+        "headingPaintMs": 182.20000000298023,
+        "stagePaintMs": 210.30000000447035,
+        "assetsReadyMs": 240.20000000298023,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-2-cold.trace.json.gz",
+          "sha256": "2578fcea04093c285c68cb608369efc44eb7b1d747dadadc01024bd9bfb0ee37",
+          "headingPaint": {
+            "afterMarkMs": 46.979,
+            "durationMs": 2.562
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.351,
+            "durationMs": 0.875
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "warm",
+        "headingPaintMs": 55.30000000447035,
+        "stagePaintMs": 55.20000000298023,
+        "assetsReadyMs": 72.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-2-warm.trace.json.gz",
+          "sha256": "92ffb79ef7bd98f64adf4cbc04fb8c1d49c30997af6b693c54eed2955c952921",
+          "headingPaint": {
+            "afterMarkMs": 26.02,
+            "durationMs": 1.528
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.014,
+            "durationMs": 1.528
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "cold",
+        "headingPaintMs": 173.60000000149012,
+        "stagePaintMs": 178.60000000149012,
+        "assetsReadyMs": 208.40000000596046,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-3-cold.trace.json.gz",
+          "sha256": "ad93320b0dd80f97e7640dc8b1ba1326cb041aa8e742e24c35e145d8635dc4a3",
+          "headingPaint": {
+            "afterMarkMs": 46.582,
+            "durationMs": 4.363
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.219,
+            "durationMs": 0.546
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "warm",
+        "headingPaintMs": 58.79999999701977,
+        "stagePaintMs": 58.69999999552965,
+        "assetsReadyMs": 72.69999999552965,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-3-warm.trace.json.gz",
+          "sha256": "18a43b3f96ef8bad4dd8694b9b436325653feba9aa6563086fff72dcb83569d9",
+          "headingPaint": {
+            "afterMarkMs": 23.943,
+            "durationMs": 1.648
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.056,
+            "durationMs": 1.648
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "cold",
+        "headingPaintMs": 195.19999999552965,
+        "stagePaintMs": 195.19999999552965,
+        "assetsReadyMs": 222.69999999552965,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-1-cold.trace.json.gz",
+          "sha256": "025859b00592c167512557f4b25e8e5c95028ff43a443506f2a7f518b1a3e33a",
+          "headingPaint": {
+            "afterMarkMs": 42.276,
+            "durationMs": 1.993
+          },
+          "bootPaint": {
+            "afterMarkMs": 12.522,
+            "durationMs": 0.578
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 1,
+        "mode": "warm",
+        "headingPaintMs": 100.5,
+        "stagePaintMs": 132,
+        "assetsReadyMs": 159.5,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-1-warm.trace.json.gz",
+          "sha256": "9c7d2f8151f2d7cadc358e2fe4f79321952e82b4dd2dedeb3c29617c16adcdb3",
+          "headingPaint": {
+            "afterMarkMs": 74.515,
+            "durationMs": 1.896
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.158,
+            "durationMs": 0.363
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "cold",
+        "headingPaintMs": 152.20000000298023,
+        "stagePaintMs": 152.20000000298023,
+        "assetsReadyMs": 185.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-2-cold.trace.json.gz",
+          "sha256": "41f90e3f56aa2c431ec4d7d6fd22333bd6f17ae390f236dd05263387e8d98beb",
+          "headingPaint": {
+            "afterMarkMs": 30.467,
+            "durationMs": 1.128
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.825,
+            "durationMs": 0.496
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 2,
+        "mode": "warm",
+        "headingPaintMs": 36.79999999701977,
+        "stagePaintMs": 65.29999999701977,
+        "assetsReadyMs": 93.19999999552965,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-2-warm.trace.json.gz",
+          "sha256": "e5b45b7bc7c27ce8ada09a8bd60916e2fd4c100422543aa1032d71dd33ad5fd6",
+          "headingPaint": {
+            "afterMarkMs": 14.992,
+            "durationMs": 1.264
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.449,
+            "durationMs": 0.303
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "cold",
+        "headingPaintMs": 169.80000000447035,
+        "stagePaintMs": 169.80000000447035,
+        "assetsReadyMs": 200.89999999850988,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-3-cold.trace.json.gz",
+          "sha256": "495872ae6fd46426c7cda84693c15de1b61e89f300e7d69dcf9e8ad8f10f890c",
+          "headingPaint": {
+            "afterMarkMs": 36.685,
+            "durationMs": 1.381
+          },
+          "bootPaint": {
+            "afterMarkMs": 10.026,
+            "durationMs": 0.471
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "repeat": 3,
+        "mode": "warm",
+        "headingPaintMs": 43.20000000298023,
+        "stagePaintMs": 76.89999999850988,
+        "assetsReadyMs": 110.29999999701977,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-3-warm.trace.json.gz",
+          "sha256": "566a5c5baf2518c67dc5eef762934e9a35ef37e2599ed5adef4f1198d59596b9",
+          "headingPaint": {
+            "afterMarkMs": 15.018,
+            "durationMs": 1.33
+          },
+          "bootPaint": {
+            "afterMarkMs": 14.903,
+            "durationMs": 0.55
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "cold",
+        "headingPaintMs": 145.60000000149012,
+        "stagePaintMs": 145.70000000298023,
+        "assetsReadyMs": 175.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-1-cold.trace.json.gz",
+          "sha256": "7d798c5fe2da0aca7211e9fa90d785aa908b01c240fd980df7de23168c9bc4ab",
+          "headingPaint": {
+            "afterMarkMs": 29.627,
+            "durationMs": 3.034
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.636,
+            "durationMs": 0.675
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 1,
+        "mode": "warm",
+        "headingPaintMs": 38.600000001490116,
+        "stagePaintMs": 66.5,
+        "assetsReadyMs": 93.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-1-warm.trace.json.gz",
+          "sha256": "2953ccd51abc3d94c509e99f793510430735471700ea63ff91631dd64e28fe03",
+          "headingPaint": {
+            "afterMarkMs": 15.416,
+            "durationMs": 1.349
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.727,
+            "durationMs": 0.321
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "cold",
+        "headingPaintMs": 180.69999999552965,
+        "stagePaintMs": 180.79999999701977,
+        "assetsReadyMs": 214,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-2-cold.trace.json.gz",
+          "sha256": "fb2a2b1f42a01c202d16477b7901db33728c0f34db9f2cc87504d213fbabe2cd",
+          "headingPaint": {
+            "afterMarkMs": 45.208,
+            "durationMs": 2.348
+          },
+          "bootPaint": {
+            "afterMarkMs": 13.589,
+            "durationMs": 0.56
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 2,
+        "mode": "warm",
+        "headingPaintMs": 43.80000000447035,
+        "stagePaintMs": 81.60000000149012,
+        "assetsReadyMs": 109.70000000298023,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-2-warm.trace.json.gz",
+          "sha256": "7a3a324fdff6ee5ad41c47d4e4556c99d812cffb027bf6c84823eb8c0dba1975",
+          "headingPaint": {
+            "afterMarkMs": 18.522,
+            "durationMs": 2.006
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.377,
+            "durationMs": 0.575
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "cold",
+        "headingPaintMs": 163.20000000298023,
+        "stagePaintMs": 163.30000000447035,
+        "assetsReadyMs": 192.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-3-cold.trace.json.gz",
+          "sha256": "e15feed4eba5abb9ed582a53817376b98727de29248525afd768e8d96d4b51e4",
+          "headingPaint": {
+            "afterMarkMs": 39.78,
+            "durationMs": 3.282
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.369,
+            "durationMs": 0.399
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "repeat": 3,
+        "mode": "warm",
+        "headingPaintMs": 40.30000000447035,
+        "stagePaintMs": 77.40000000596046,
+        "assetsReadyMs": 108.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-3-warm.trace.json.gz",
+          "sha256": "71f6046b3a724b0cd2670ca0fb0eeac989a21facb6b0bec1619199f61f12058d",
+          "headingPaint": {
+            "afterMarkMs": 13.933,
+            "durationMs": 1.469
+          },
+          "bootPaint": {
+            "afterMarkMs": 19.764,
+            "durationMs": 1.479
+          }
+        }
+      }
+    ],
+    "maxHeadingOrStagePaintMs": 245.79999999701977,
+    "allRecordedPaintsUnder300": true,
+    "limits": "Elastic Tabs only, local server, CPU1. This does not certify all-component startup, all assets being ready within 300ms, or CPU4 motion."
+  },
+  "lighthouse": {
+    "evidence": {
+      "file": ".artifacts/final-shell-perf-v23/lighthouse-before/2026-11-25T05-30-15-277Z/report.json",
+      "sha256": "5d1ec4e6e99e872cb55e5a56f0aa09f01d0670dabc001201031b31c63d302ff4"
+    },
+    "cases": [
+      {
+        "id": "home",
+        "repeat": 1,
+        "score": 1,
+        "allTransferredBytes": 570116,
+        "metrics": {
+          "first-contentful-paint": 904.3516,
+          "largest-contentful-paint": 904.3516,
+          "speed-index": 2141.4136902835844,
+          "total-blocking-time": 69,
+          "cumulative-layout-shift": 0
+        },
+        "report": "home-1.json",
+        "sha256": "c49c59d1df74b73e26b098c96ea1a574da6033b752e9f34b35a5b88268c8089c",
+        "excludedDemoFontTransfers": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedDemoFontBytes": 230969,
+        "qualifiedShellTransferredBytes": 339147
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 1,
+        "score": 1,
+        "allTransferredBytes": 409134,
+        "metrics": {
+          "first-contentful-paint": 903.4713999999999,
+          "largest-contentful-paint": 903.4713999999999,
+          "speed-index": 1516.1585174684203,
+          "total-blocking-time": 13.5,
+          "cumulative-layout-shift": 0
+        },
+        "report": "elastic-tabs-1.json",
+        "sha256": "b689f4fa950798d5e0536a77aa15ac0def2419da6d9f9da3cc64b76b004285fa"
+      },
+      {
+        "id": "home",
+        "repeat": 2,
+        "score": 1,
+        "allTransferredBytes": 570116,
+        "metrics": {
+          "first-contentful-paint": 903.0360000000001,
+          "largest-contentful-paint": 903.0360000000001,
+          "speed-index": 2191.7820438534554,
+          "total-blocking-time": 55.5,
+          "cumulative-layout-shift": 0
+        },
+        "report": "home-2.json",
+        "sha256": "392dd7193492f1c6379a97b979ef5b6388a23109738bc256eda560d0793d1a32",
+        "excludedDemoFontTransfers": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedDemoFontBytes": 230969,
+        "qualifiedShellTransferredBytes": 339147
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 2,
+        "score": 1,
+        "allTransferredBytes": 409134,
+        "metrics": {
+          "first-contentful-paint": 983.1385,
+          "largest-contentful-paint": 983.1385,
+          "speed-index": 2147.5211026992047,
+          "total-blocking-time": 10.5,
+          "cumulative-layout-shift": 0
+        },
+        "report": "elastic-tabs-2.json",
+        "sha256": "99458f1880bb7e7d7b4e689a05b1ae50c5b70b9276ecf880420622262fb70c77"
+      },
+      {
+        "id": "home",
+        "repeat": 3,
+        "score": 1,
+        "allTransferredBytes": 570116,
+        "metrics": {
+          "first-contentful-paint": 903.4128000000001,
+          "largest-contentful-paint": 903.4128000000001,
+          "speed-index": 2292.7408422828103,
+          "total-blocking-time": 62,
+          "cumulative-layout-shift": 0
+        },
+        "report": "home-3.json",
+        "sha256": "b22af59869f514110b612ecbd542a73779cf7a4aa7e48816d2679af052775541",
+        "excludedDemoFontTransfers": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ],
+        "excludedDemoFontBytes": 230969,
+        "qualifiedShellTransferredBytes": 339147
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 3,
+        "score": 1,
+        "allTransferredBytes": 409134,
+        "metrics": {
+          "first-contentful-paint": 979.6632,
+          "largest-contentful-paint": 979.6632,
+          "speed-index": 1679.6763671408962,
+          "total-blocking-time": 23,
+          "cumulative-layout-shift": 0
+        },
+        "report": "elastic-tabs-3.json",
+        "sha256": "734f3c4e48184c13cd1b2d892a81e69e32cb8d31932b4dcec1e93ebe9d2444cb"
+      }
+    ],
+    "allSixScoresAtLeast90": true,
+    "rawHomeTransfersUnder400KB": false,
+    "qualifiedHomeShellTransfersUnder400KB": true,
+    "limits": "All three repeats per route retained using default mobile/simulated Lighthouse. No timing improvement is attributed to intervening accessibility metadata edits. Prior failures remain in shell-cold-2026-11-25.json."
+  },
+  "fontAccounting": {
+    "evidence": {
+      "file": ".artifacts/final-shell-perf-v23/fonts-provenance.json",
+      "sha256": "47c695eea5b20acc20e56cc3960d7074bb096cd3bcd142d8180beb5aa5d90da1"
+    },
+    "actualShellGlyphParents": 90,
+    "shellInterGlyphParents": 0,
+    "initialDemoInterGlyphParents": 0,
+    "demoInterDeclarations": 1,
+    "control": {
+      "blocked": [
+        "http://127.0.0.1:4173/js/demos.agent.agent-prompt-composer.js?v=b220f7a725"
+      ],
+      "fonts": [
+        {
+          "url": "http://127.0.0.1:4173/assets/fonts/geist-variable.woff2",
+          "transfer": 70060
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/fonts/geist-mono-variable.woff2",
+          "transfer": 71896
+        }
+      ],
+      "errors": [],
+      "scope": "Counterfactual for asset provenance only: the same Home with component-module requests blocked. It is not a performance or functionality acceptance run."
+    },
+    "assessment": "The empty Prompt Composer textarea declares Inter; initial artwork uses vectors and has no measurable Inter glyphs. Both Inter requests disappear when only demo modules are blocked. Exclude their 230969 transfer bytes under Handoff 3 section 4.6 demo-assets exception, retaining the full 570116 raw Home total. No shell resources, registry, CSS, script or Geist transfers are excluded.",
+    "failedInitialAssumptions": [
+      {
+        "file": ".artifacts/final-shell-perf-v23/fonts-direct-text-only.cjs",
+        "sha256": "8eedc3b4cd68e366384eea2a445eb33b3459ce1f49f342992f19cb015398add6"
+      },
+      {
+        "file": ".artifacts/final-shell-perf-v23/fonts-input-only.cjs",
+        "sha256": "8fe9dcb07044cc5e90627b68ccf549e90d82ffdfd4acbc9f59530b1f79410a74"
+      },
+      {
+        "file": ".artifacts/final-shell-perf-v23/fonts.cjs",
+        "sha256": "d4ded42d1d0fa021334ee2b11da67be2bf0ae277b00fc5318b14ca5b286b424d"
+      }
+    ]
+  },
+  "threads": {
+    "evidence": {
+      "file": ".artifacts/final-shell-perf-v23/threads/2026-11-25T05-42-46-619Z-0d583dfd3db1/report.json",
+      "sha256": "b5d07816caf232803951495290e9b0581b38d991184859af70028b0d10ea10a5"
+    },
+    "browser": "158.0.8127.88",
+    "cases": [
+      {
+        "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+        "mode": "thumb",
+        "compact": false,
+        "cpu": 4,
+        "fps": 20.43639173073808,
+        "p95Ms": 66.79999999999973,
+        "gapsOver25ms": 164,
+        "trace": ".artifacts/final-shell-perf-v23/threads/2026-11-25T05-42-46-619Z-0d583dfd3db1/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+        "traceSHA256": "ef65568033be5977d859f31d78f3f7811bb11ac55ee91bf2681bf28c7117e80b"
+      },
+      {
+        "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+        "mode": "thumb",
+        "compact": true,
+        "cpu": 4,
+        "fps": 19.27477118981297,
+        "p95Ms": 66.80000000000018,
+        "gapsOver25ms": 155,
+        "trace": ".artifacts/final-shell-perf-v23/threads/2026-11-25T05-42-46-619Z-0d583dfd3db1/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+        "traceSHA256": "248b61f4e4d48742719286bf9fc277a061606127c2fa8245da5230fe02129ce0"
+      },
+      {
+        "name": "showcase-threads-full-desktop-dpr1-cpu4",
+        "mode": "full",
+        "compact": false,
+        "cpu": 4,
+        "fps": 59.938562972952724,
+        "p95Ms": 16.800000000000182,
+        "gapsOver25ms": 0,
+        "trace": ".artifacts/final-shell-perf-v23/threads/2026-11-25T05-42-46-619Z-0d583dfd3db1/showcase-threads-full-desktop-dpr1-cpu4.trace.json.gz",
+        "traceSHA256": "06dec4676650f4bf442df302ed07e144316e9f189489e04b2de8eba433212c20"
+      },
+      {
+        "name": "showcase-threads-full-compact-dpr2-cpu4",
+        "mode": "full",
+        "compact": true,
+        "cpu": 4,
+        "fps": 59.93856297295272,
+        "p95Ms": 16.800000000000182,
+        "gapsOver25ms": 0,
+        "trace": ".artifacts/final-shell-perf-v23/threads/2026-11-25T05-42-46-619Z-0d583dfd3db1/showcase-threads-full-compact-dpr2-cpu4.trace.json.gz",
+        "traceSHA256": "c705712aaa5322d37fe8cb04181bab65f433b69382e851d34686af75d3055fb3"
+      }
+    ],
+    "accepted": false,
+    "assessment": "Native views remain about 19-20fps at CPU4; full views are about 60fps. Main-thread Canvas column API work is the remaining native bottleneck. Instrumented call totals are diagnostic only.",
+    "diagnostic": {
+      "file": ".artifacts/final-shell-perf-v23/threads-api-probe.json",
+      "sha256": "520dab58eee6346917d2b154447563d363a7d4e7b24f88082ae80cb1a311fd99"
+    },
+    "rejectedCandidates": [
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/threads-cache/2026-11-25T05-56-59-110Z-0d583dfd3db1/report.json",
+          "sha256": "9daf98151380930cc8bcbdb0939857889b24a44d0c7a2a5680f715d71ecf4871"
+        },
+        "shipped": false,
+        "cases": [
+          {
+            "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+            "fps": 18.031461791954236,
+            "p95Ms": 66.89999999999964,
+            "gapsOver25ms": 145
+          },
+          {
+            "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+            "fps": 14.271177185972052,
+            "p95Ms": 100,
+            "gapsOver25ms": 115
+          }
+        ],
+        "assessment": "Rejected: native CPU4 timing remains below 60fps."
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/threads-buffer-profile/2026-11-25T06-44-38-326Z-0d583dfd3db1/report.json",
+          "sha256": "398b2e84fedf6ef894e3fff36867a2fd28a880154ab2cb31aa2b09ca6191683a"
+        },
+        "shipped": false,
+        "cases": [
+          {
+            "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+            "fps": 6.217745445501461,
+            "p95Ms": 283.60000000000036,
+            "gapsOver25ms": 50
+          },
+          {
+            "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+            "fps": 6.897782006303146,
+            "p95Ms": 433.59999999999854,
+            "gapsOver25ms": 55
+          }
+        ],
+        "assessment": "Rejected: native CPU4 timing remains below 60fps."
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/pattern-check-1795586541258/report.json",
+          "sha256": "2eb640fae42f9cec81e1b95ff71ec4bbe62dbf9a4aeacd8847cc6af536b8999e"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\pattern-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/pattern-pad-check-1795587157043/report.json",
+          "sha256": "b470d29621e56968268400db4a27e2c414d88946fa1b7714c8438d569da44077"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\pattern-pad-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/pattern-clip-check-1795587375631/report.json",
+          "sha256": "83c8901ce563f626cc4eb437e963058d2e59d639efe5dc9a93196f9912852012"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\pattern-clip-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/software-check-1795588036454/report.json",
+          "sha256": "5d1c4b4bbd3f12525e69a6f848bbf459da6ce03cca0fd5ab97afc6ce0cb8ab60"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\software-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/cpu-textures-check-1795588233052/report.json",
+          "sha256": "e6374310fecf3eddca9896aa8b7d7945a6b1f54bdd5e196fcb17fe2725df59aa"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\cpu-textures-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/gpu-check-1795590140859/report.json",
+          "sha256": "2a330c5cafe5880d69da89b5ee1f527209724885983505c07cc9c78833912f4c"
+        },
+        "shipped": false,
+        "assessment": "Rejected: exact native RGBA comparison failed.",
+        "error": "AssertionError [ERR_ASSERTION]: Exact RGBA DPR1 frame0\n    at C:\\Users\\tanzir\\Desktop\\interaction\\.artifacts\\final-shell-perf-v23\\gpu-check.cjs:5:581"
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/software-target-check-1795588077065/report.json",
+          "sha256": "fe75b78a2826dd76337de01b42f355b4881d0af36ba4bffa6f5b211e45afb9bb"
+        },
+        "shipped": false,
+        "assessment": "Five RGBA poses at each DPR matched; diagnostic harness timing did not establish acceptance. Detached buffer also failed the current-foundations bare recorder above.",
+        "cases": [
+          {
+            "kind": "pixels",
+            "dpr": 1,
+            "frames": 5,
+            "exact": true
+          },
+          {
+            "kind": "pixels",
+            "dpr": 2,
+            "frames": 5,
+            "exact": true
+          },
+          {
+            "kind": "profile",
+            "name": "original",
+            "dpr": 1,
+            "fps": 9.723076923076922,
+            "p95Ms": 266.90000000000055
+          },
+          {
+            "kind": "profile",
+            "name": "candidate",
+            "dpr": 1,
+            "fps": 8.616276020529213,
+            "p95Ms": 266.89999999999964
+          },
+          {
+            "kind": "profile",
+            "name": "original",
+            "dpr": 2,
+            "fps": 9.490390979133627,
+            "p95Ms": 250.19999999999982
+          },
+          {
+            "kind": "profile",
+            "name": "candidate",
+            "dpr": 2,
+            "fps": 7.461201750895343,
+            "p95Ms": 250.30000000000018
+          }
+        ]
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-shell-perf-v23/buffer-check-1795588896637/report.json",
+          "sha256": "e7ce5e66903bedac726abd17d502ebbb13622f02c69bf9185a8f6f183c055ce7"
+        },
+        "shipped": false,
+        "assessment": "Five RGBA poses at each DPR matched; diagnostic harness timing did not establish acceptance. Detached buffer also failed the current-foundations bare recorder above.",
+        "cases": [
+          {
+            "kind": "pixels",
+            "dpr": 1,
+            "frames": 5,
+            "exact": true
+          },
+          {
+            "kind": "pixels",
+            "dpr": 2,
+            "frames": 5,
+            "exact": true
+          },
+          {
+            "kind": "profile",
+            "name": "original",
+            "dpr": 1,
+            "fps": 7.92589290137217,
+            "p95Ms": 233.60000000000036
+          },
+          {
+            "kind": "profile",
+            "name": "candidate",
+            "dpr": 1,
+            "fps": 9.615024412172373,
+            "p95Ms": 200.29999999999927
+          },
+          {
+            "kind": "profile",
+            "name": "original",
+            "dpr": 2,
+            "fps": 9.411881261687451,
+            "p95Ms": 283.60000000000036
+          },
+          {
+            "kind": "profile",
+            "name": "candidate",
+            "dpr": 2,
+            "fps": 10.364505937738041,
+            "p95Ms": 283.59999999999945
+          }
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "checks": [
+      {
+        "name": "registry",
+        "exit": 0
+      },
+      {
+        "name": "stage",
+        "exit": 0
+      },
+      {
+        "name": "generated",
+        "exit": 0
+      },
+      {
+        "name": "motion",
+        "exit": 0
+      },
+      {
+        "name": "package",
+        "exit": 0
+      },
+      {
+        "name": "library",
+        "exit": 0
+      },
+      {
+        "name": "fit",
+        "exit": 0
+      }
+    ],
+    "referenceSmoke": {
+      "evidence": {
+        "file": ".artifacts/final-shell-perf-v23/reference-smoke/2026-11-25T07-09-09-115Z-0d583dfd3db1/report.json",
+        "sha256": "1b2411bdb0e4ca8afa1aa14d18d2170e67cb55b2df6494a64ef5d4733d96c453"
+      },
+      "cases": [
+        {
+          "name": "showcase-threads-full-desktop-dpr1-cpu1",
+          "fps": 58.814714917209855,
+          "p95Ms": 16.800000000000182,
+          "gapsOver25ms": 1
+        },
+        {
+          "name": "showcase-threads-full-compact-dpr2-cpu1",
+          "fps": 59.938562972952724,
+          "p95Ms": 16.800000000000182,
+          "gapsOver25ms": 0
+        }
+      ],
+      "candidate": {
+        "file": ".artifacts/final-shell-perf-v23/threads-identical-reference.json",
+        "sha256": "34b9f89835e9e60f79d9db9af327a08036664eac9bbae94dad19daaac901a526",
+        "scope": "Compared renderer candidate; production modules are unchanged."
+      },
+      "scope": "Recorder smoke only, not CPU4 or frame-rate acceptance."
+    },
+    "invalidReferencesRejected": [
+      "non-JS field change",
+      "duplicate ID",
+      "non-string JS"
+    ],
+    "trialLimitations": "Several copied private trial checkers retain an outdated CanvasPattern scope description in their raw reports. Their actual candidate definitions and literal pixel failures are retained; no raw report is edited. Instrumented and older harness rates do not qualify performance."
+  },
+  "remaining": [
+    "Native Threads CPU4 60fps acceptance",
+    "Rolling Balance current-foundations CPU4 timing",
+    "Complete component motion/CPU4 audit",
+    "All-component route startup",
+    "Broader accessibility and manual checks"
+  ],
+  "priorEvidence": {
+    "file": "docs/performance/shell-cold-2026-11-25.json",
+    "sha256": "4ec34168e57e7f587182de3ab3e0645317ece8b88add2d6a69ee694ad94e4cc8"
+  },
+  "hostLoad": {
+    "file": ".artifacts/final-shell-perf-v23/load-before.json",
+    "sha256": "8d3e12ce484e7b95fd106f61e2acdc613a400a31769ba3ed720dc16522cb641f"
+  },
+  "privateEvidence": ".artifacts/final-shell-perf-v23; FROZEN.json records the post-publication inventory"
+}

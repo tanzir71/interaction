@@ -1951,6 +1951,19 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Native DOM/styles/geometry remain exact; do not claim every PNG pair is exact
   or infer a universal raster bound from the observed channel delta of four.
 
+- `docs/performance/final-shell-2026-11-25.json` records the later current-source
+  shell measurements: six Lighthouse scores of 100 and 24 Elastic cold/warm
+  heading/Stage paints below 300ms. Preserve the earlier failed runs. Home's
+  570116 raw bytes include two demo-only Inter fonts; actual shell font use and
+  a demo-module-blocked provenance control support excluding their 230969 bytes,
+  leaving 339147 shell bytes under §4.6. The control is not a performance run.
+  All 520 component definitions stay unchanged. Native Threads CPU4 remains
+  about 19–20fps; rejected pixel/timing trials remain private and are not shipped.
+  `profile-final-showcase.js --reference=FILE` accepts complete definitions with
+  only JS changed in memory and records the candidate hash. Keep the V23 raw
+  evidence frozen after publication; complete motion/performance/manual audits
+  remain open.
+
 - Shared Dock controls may declare `ariaLabel` alongside `action` and the
   initial visible `label`. Include all visible aliases in the fixed identity;
   Snake includes Play, Pause and Resume. `registry.js` associates an invisible

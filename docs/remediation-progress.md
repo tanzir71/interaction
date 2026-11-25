@@ -20,6 +20,38 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Current shell measurements, 25 Nov
+
+The [current shell report](performance/final-shell-2026-11-25.json) retains
+three default mobile Lighthouse runs for Home and three for Elastic Tabs;
+all six score 100. All 24 local Elastic Tabs cold/warm opening cases at
+1440px and 390px, in both themes, paint their ready heading and Stage below
+300ms. The maximum is 245.8ms. Asset completion remains a separate measurement;
+these cases do not establish all-component startup or CPU4 motion acceptance.
+Earlier failed runs remain in the historical shell report. No performance
+improvement is attributed to the intervening accessibility metadata changes.
+
+Home transfers 570,116 bytes in each Lighthouse run. Actual platform-font
+inspection finds 90 shell glyph parents and no shell Inter use. The empty
+Prompt Composer textarea declares Inter; its initial vector artwork has no
+measurable Inter glyphs. Blocking only demo modules removes both Inter font
+requests. Their 230,969 bytes qualify as demo assets under Handoff 3 §4.6,
+leaving 339,147 shell bytes. The report preserves every raw transfer and the
+counterfactual's limited provenance scope; no shell scripts, registry, styles
+or Geist fonts are excluded.
+
+Native Threads still measures 20.44fps on desktop and 19.27fps at compact DPR2
+under 4× CPU slowdown; full views measure about 60fps. Cached-math and detached
+buffer trials failed timing. Pattern, software-texture and GPU trials failed
+literal native pixel comparisons. No trial renderer is shipped. Every complete
+definition for all 520 components and the frozen shared inputs remains unchanged.
+`profile-final-showcase.js --reference=candidate.json` now supports labelled,
+hashed in-memory JS comparisons while rejecting changes to other demo fields.
+Private raw evidence is retained in `.artifacts/final-shell-perf-v23`.
+
+Final native Threads and Rolling Balance timing, the complete motion/CPU4 and
+route-startup audit, and broader accessibility/manual checks remain open.
+
 ## Component roles and ownership
 
 The [component semantics report](accessibility/component-semantics-2026-11-24.json)

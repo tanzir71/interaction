@@ -1,18 +1,35 @@
 /* Current Stage styles and real source clocks; measurements are findings, not acceptance. */
 const fs=require('node:fs'),path=require('node:path'),zlib=require('node:zlib'),crypto=require('node:crypto'),assert=require('node:assert/strict');
-if(process.argv.includes('--help')){console.log('Usage: node tools/profile-final-showcase.js [http://127.0.0.1:4173] [--ids=showcase-threads,...] [--cpu=1,4] [--modes=thumb,full] [--output=.artifacts/final-showcase-profiles]\nRequires external Playwright via PLAYWRIGHT_MODULE; optionally set INTRX_CHROME_EXECUTABLE. Run without other heavy checks. Each run preserves all reports and traces.');process.exit(0);}
+if(process.argv.includes('--help')){console.log('Usage: node tools/profile-final-showcase.js [http://127.0.0.1:4173] [--ids=showcase-threads,...] [--cpu=1,4] [--modes=thumb,full] [--reference=candidate.json] [--output=.artifacts/final-showcase-profiles]\nRequires external Playwright via PLAYWRIGHT_MODULE; optionally set INTRX_CHROME_EXECUTABLE. Run without other heavy checks. Each run preserves all reports and traces. An optional reference has {definitions:[demo,...]} and may change only JS in memory; it never edits production modules.');process.exit(0);}
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),registry=require('./load-registry')();
 const root=path.resolve(__dirname,'..'),hash=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const option=name=>process.argv.find(value=>value.startsWith('--'+name+'='))?.slice(name.length+3);
 const base=(process.argv.find(value=>/^https?:/.test(value))||'http://127.0.0.1:4173').replace(/\/$/,'');
 const all=[...require('./fixtures/showcase-fields/configs.json'),...require('./fixtures/showcase-spatial/native-configs.json')].map(value=>value.id);
 const ids=option('ids')?.split(',')||all,cpus=(option('cpu')||'1,4').split(',').map(Number),modes=(option('modes')||'thumb,full').split(',');
+const referenceFile=option('reference');
+const referencePath=referenceFile&&path.resolve(root,referenceFile);
+if(referencePath){
+  const {definitions}=JSON.parse(fs.readFileSync(referencePath,'utf8'));
+  assert(Array.isArray(definitions)&&definitions.length,'Reference definitions must be a nonempty array');
+  assert.equal(new Set(definitions.map(candidate=>candidate.id)).size,definitions.length,'Duplicate reference IDs');
+  for(const candidate of definitions){
+    assert(ids.includes(candidate.id),'Candidate ID is profiled');
+    const original=registry.demos.find(demo=>demo.id===candidate.id);
+    assert(original,'Unknown reference ID');
+    assert.equal(typeof candidate.js,'string','Reference JS must be a string');
+    const {js:originalJS,...originalFields}=JSON.parse(JSON.stringify(original)),{js:candidateJS,...candidateFields}=candidate;
+    assert.deepEqual(candidateFields,originalFields,'Only renderer JS may differ: '+candidate.id);
+  }
+  for(const candidate of definitions)registry.demos.find(demo=>demo.id===candidate.id).js=candidate.js;
+}
 assert(ids.length&&ids.every(id=>all.includes(id)),'Unknown or missing Showcase ID');
 assert.equal(new Set(ids).size,ids.length,'Duplicate Showcase IDs');
 assert(cpus.length&&cpus.every(cpu=>Number.isFinite(cpu)&&cpu>=1),'CPU rates must be at least 1');
 assert(modes.length&&modes.every(mode=>['thumb','full'].includes(mode)),'Modes must be thumb or full');
 const styles=['css/foundations.css','css/fonts.css'],scripts=['js/demo-runtime.js','js/shell/stage.js'];
 const files=[...new Set([path.relative(root,__filename),...styles,...scripts,'tools/load-registry.js','js/shell/registry.js','js/shell/access.js','js/meta.stage.js','js/registry-files.json',...ids.map(id=>registry.filesById[id]),'tools/fixtures/showcase-fields/rig.html','tools/fixtures/showcase-fields/configs.json','tools/fixtures/showcase-spatial/native-configs.json'])];
+if(referencePath)files.push(path.relative(root,referencePath));
 for(const match of fs.readFileSync(path.join(root,'css/fonts.css'),'utf8').matchAll(/url\(['"]?([^'"\)]+)['"]?\)/g))if(!/^(?:https?:|data:)/.test(match[1]))files.push(path.relative(root,path.resolve(root,'css',match[1])).replaceAll('\\','/'));
 const inputs=Object.fromEntries([...new Set(files)].map(file=>[file.replaceAll('\\','/'),hash(path.join(root,file))]));
 const runId=new Date().toISOString().replace(/[:.]/g,'-')+'-'+inputs['js/demos.showcase.js'].slice(0,12);
@@ -26,6 +43,7 @@ const report={at:new Date().toISOString(),runId,scope:'Ten Showcase scenes, curr
   'The sampler uses requestAnimationFrame without layout polling during the story. It records initialization and story long tasks and checks disposal.',
   'Run sequentially without other heavy agent checks. Other applications are not controlled. Measurements do not automatically pass a timing gate.'
 ],cases:[]};
+if(referencePath)report.reference={file:path.relative(root,referencePath).replaceAll('\\','/'),sha256:hash(referencePath),scope:'Compared renderer candidate; production modules are unchanged.'};
 const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');
 function guard(){for(const[file,expected]of Object.entries(inputs))assert.equal(hash(path.join(root,file)),expected,'Changed during measurement: '+file);}
 async function finishTrace(cdp){const complete=new Promise(resolve=>cdp.once('Tracing.tracingComplete',resolve));await cdp.send('Tracing.end');const{stream}=await complete;let data='';for(;;){const part=await cdp.send('IO.read',{handle:stream});data+=part.base64Encoded?Buffer.from(part.data,'base64').toString():part.data;if(part.eof)break;}await cdp.send('IO.close',{handle:stream});return data;}
