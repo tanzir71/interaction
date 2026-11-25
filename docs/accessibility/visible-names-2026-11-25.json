@@ -1,0 +1,404 @@
+{
+  "date": "2026-11-25",
+  "baseline": "7354a42b2fd789c1764264566c2039c024fcfdc1",
+  "scope": "Targeted primary-label review of 22 retained full-view label/name findings and two semantic repairs. Actual Chrome accessibility names are associated with the reviewed DOM nodes. Raw axe results remain preserved. This is not speech-recognition testing, a universal all-frame claim or full-catalog accessibility acceptance.",
+  "criterionSource": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+  "changes": [
+    {
+      "id": "css3d-card-flip-grid",
+      "change": "Full accessible names include Return whenever the back is painted. The complete note is an accessible description with accurate pin/Escape instructions. Note copy is cached once without frame-time layout reads; ARIA writes occur only when values change."
+    },
+    {
+      "id": "fui-orbital-tracker",
+      "change": "Full accessible name includes Target link and the selected satellite ID. The actual currently painted readout is exposed as the accessible description."
+    }
+  ],
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 518,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": true,
+    "exactOriginalControllersPlusDocumentedFullOnlyARIAInsertions": true,
+    "allModelsMathTimingControlsAssetsFontsRuntimeStageUnchanged": true,
+    "nativeDOMStylesGeometryPNGExact": true
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "components": 22,
+    "stories": 140,
+    "observations": 324,
+    "controlObservations": 988,
+    "primaryLabelAssertions": 1056,
+    "functionalNameAssertions": 84,
+    "focusedNormalStories": 8,
+    "normalObservations": 24,
+    "offlineExports": 44,
+    "offlineObservations": 100,
+    "nativeComparisons": 16,
+    "nativeScope": "Independent original/current paused native definitions. Exact geometry, DOM, computed styles and PNG bytes after a priming readback. GPU disabled for CSS/pixel comparison only; not default-GPU or timing acceptance.",
+    "nativeVisibility": {
+      "stories": 16,
+      "checks": 309,
+      "failures": 0,
+      "scope": "Native Chrome hidden tabs. Every selected component mounts in each selected mode/motion, then freezes its real runtime clock, probe callbacks, DOM, Canvas/WebGL calls, inspection state and existing animation times while the browser reports a trusted hidden event. Foreground and caller ownership are tested independently. This does not establish input-specific hidden intent, offscreen behavior, pixel fidelity, motion recipes, accessibility or frame rate."
+    },
+    "rawAxe": {
+      "cases": 44,
+      "violations": 44,
+      "incomplete": 40,
+      "pageErrors": 0
+    },
+    "rawAxeScope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance.",
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 2248
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1680
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 13462
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 584
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 335711
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 223614
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 232
+      }
+    ],
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "sourceBoundProofSHA256": {
+      ".artifacts/final-visible-name-actions-v19/native-visibility/2026-11-25T03-21-17-771Z/report.json": "738cdbfe2b37d0097198afc84cf3b10dd28452dce247be0f9ab337a796e7e03d",
+      ".artifacts/final-visible-name-actions-v19/current/2026-11-25T03-13-14-192Z/report.json": "322cb5e66229635c8fc525f7eaa676c1542624b43a9be89202e7988a47f1940b",
+      ".artifacts/final-visible-name-actions-v19/targeted/2026-11-25T03-11-40-821Z/report.json": "7c1785d814ac146935b0686d39d28790fa7328fde9bf3d779f26b5b787deff54",
+      ".artifacts/final-visible-name-actions-v19/baseline-site/2026-11-25T03-05-06-832Z/report.json": "0a274400eaadb63ba7895978d0fc7e8525875bdc68377cd7049d86e15c079a93",
+      ".artifacts/final-visible-name-actions-v19/axe/2026-11-25T03-13-14-422Z/report.json": "5a61be26a15917c67360a40da8573189adece32cca916f5d4cc4f1b3250b8108",
+      ".artifacts/final-visible-name-actions-v19/native/report.json": "001cb7e8fd1b269668bc1c091d0dcbcf56aacaa43c89c17d2bf6ec399db35d26",
+      ".artifacts/final-visible-name-actions-v19/native/complete.json": "23084db2f1781bcf22ad7606a9293745dfb4562b1d6fb4c88611c4cea65f231c",
+      ".artifacts/final-visible-name-actions-v19/owner-checks/report.json": "f7e017ca0bb65e44cf8265742c5fee11f87d3128c14a3e132f9a088b262a6208",
+      ".artifacts/final-visible-name-actions-v19/package-ci.log": "b77d2661934a71b69d440e3121ed960d1ebebdf0e373a532c2db1217f80c6c5a",
+      ".artifacts/final-visible-name-actions-v19/package-test.log": "6778e6c723681b23b046055cefe6ddb903e07133566f133c6ef36c9e68e1cf75",
+      "tools/verify-visible-names.js": "e98ae7545db35e4aa96e68474b04cc0701fb80c34a38eb3f62fe768373165b8e",
+      "tools/fixtures/visible-names-before.json": "83fe6a3e918ee7101546dfe4e5fd85f11a71b66b715f56d75329e4ae68c77373",
+      "js/demos.fui.fui-orbital-tracker.js": "104598edfc338269f5325f36b5f594c8beb43dd8cc321b80522af18a30deed6f",
+      "js/demos.three.card-flip-grid.js": "75421fa4dc8b6c28eb67046374c5434997596688f645a18858efcc12e58208a9"
+    }
+  },
+  "manualReview": [
+    {
+      "id": "cursor-particle-emitter",
+      "reason": "Unlabelled particle canvas; Velocity is supporting numerical data.",
+      "rule": {
+        "selector": ".d-emitter-field",
+        "kind": "diagram",
+        "name": "Particle emitter",
+        "reason": "Unlabelled particle canvas; Velocity is a numerical readout."
+      }
+    },
+    {
+      "id": "text-scramble",
+      "reason": "Main phrase is the visible label; studio caption and component status are supporting text.",
+      "rule": {
+        "selector": ".d-scramble",
+        "kind": "scramble"
+      }
+    },
+    {
+      "id": "text-outline-fill-scroll",
+      "reason": "The visible Solid Signal phrase is painted twice through a mask.",
+      "rule": {
+        "selector": ".d-outlinefill-trigger",
+        "label": "Solid Signal"
+      }
+    },
+    {
+      "id": "text-glitch-layers",
+      "reason": "Three visual channels paint the single SIGNAL LOST label.",
+      "rule": {
+        "selector": ".d-textglitch-trigger",
+        "label": "SIGNAL LOST"
+      }
+    },
+    {
+      "id": "text-broken-grid",
+      "reason": "Clipped fragments paint one Break the grid phrase.",
+      "rule": {
+        "selector": ".d-brokengrid-trigger",
+        "label": "Break the grid"
+      }
+    },
+    {
+      "id": "svg-blob-morph",
+      "reason": "Unlabelled radial shape; state and pointer-lobe captions describe the graphic.",
+      "rule": {
+        "selector": ".d-blobmorph-trigger",
+        "kind": "diagram",
+        "name": "Organic radial shape",
+        "reason": "Unlabelled radial shape; State A/B/C and Pointer lobe describe its current graphic."
+      }
+    },
+    {
+      "id": "svg-line-graph-live",
+      "reason": "Weekly activity identifies the chart; values and axes are data.",
+      "rule": {
+        "selector": ".d-linegraph-trigger",
+        "label": "Weekly activity"
+      }
+    },
+    {
+      "id": "css3d-card-flip-grid",
+      "reason": "Front object name and painted back Return are reviewed separately; notes are descriptions.",
+      "rule": {
+        "selector": ".d-flip-grid-card",
+        "kind": "flip"
+      }
+    },
+    {
+      "id": "css3d-isometric-hover",
+      "reason": "The scene is a diagram with five separately labelled legend controls.",
+      "rule": {
+        "selector": ".d-iso-field,.d-iso-legend-button",
+        "kind": "isometric",
+        "reason": "The scene is an unlabelled diagram; five adjacent legend buttons retain their literal labels."
+      }
+    },
+    {
+      "id": "magnet-snap-grid",
+      "reason": "Module titles identify the controls; Aa and other marks are icons.",
+      "rule": {
+        "selector": ".d-snap-tile",
+        "kind": "snap"
+      }
+    },
+    {
+      "id": "slider-progress-fraction",
+      "reason": "Only the active slide caption labels the control; inactive slides stay inert.",
+      "rule": {
+        "selector": ".d-fraction-slider-field",
+        "kind": "slider"
+      }
+    },
+    {
+      "id": "fui-target-lock",
+      "reason": "Node IDs and role titles identify chips; measurements remain descriptions.",
+      "rule": {
+        "selector": ".d-fui-lock-chip",
+        "kind": "lock"
+      }
+    },
+    {
+      "id": "fui-access-granted",
+      "reason": "The visible result stamp replaces the hidden scanning label.",
+      "rule": {
+        "selector": ".d-fui-auth-panel",
+        "kind": "auth"
+      }
+    },
+    {
+      "id": "fui-trading-terminal",
+      "reason": "Panel headings identify the handles; market values and level/time metadata are data.",
+      "rule": {
+        "selector": ".d-fui-trade-handle",
+        "kind": "trade"
+      }
+    },
+    {
+      "id": "fui-orbital-tracker",
+      "reason": "Target link and the selected satellite identify the control; its painted readout is a description.",
+      "rule": {
+        "selector": ".d-fui-orbit-scene",
+        "kind": "orbit"
+      }
+    },
+    {
+      "id": "table-image-idle",
+      "reason": "Row titles and years match after punctuation/whitespace normalization.",
+      "rule": {
+        "selector": ".d-layout-table-image-idle-head",
+        "kind": "table"
+      }
+    },
+    {
+      "id": "hero-spotlight-reveal",
+      "reason": "The mask repeats one Spotlight label.",
+      "rule": {
+        "selector": ".d-layout-hero-spotlight-reveal",
+        "label": "Spotlight"
+      }
+    },
+    {
+      "id": "glass-refraction-card",
+      "reason": "The currently painted face supplies Coast club or Saturday by the sea.",
+      "rule": {
+        "selector": ".d-glass-card-pass",
+        "kind": "glass"
+      }
+    },
+    {
+      "id": "punch-card-keyboard",
+      "reason": "Literal key labels are separate from symbolic B/I/Aa and arrow glyphs.",
+      "rule": {
+        "selector": ".d-punch-keys button",
+        "kind": "keys",
+        "reason": "B/I/Aa and arrow glyphs are symbolic icons; Bold/Italic/Case/Left/Right/Reset are the literal labels."
+      }
+    },
+    {
+      "id": "dynamic-notch",
+      "reason": "Album initials, waveform and transport glyphs are symbols; controls expose their functions.",
+      "rule": {
+        "selector": ".d-hardware-dynamic-notch-summary,[data-collapse],[data-play],[data-prev],[data-next]",
+        "kind": "icons",
+        "reason": "Album initials, waveform bars and transport glyphs are symbolic artwork; controls expose their actual functions."
+      }
+    },
+    {
+      "id": "vinyl-player-card",
+      "reason": "The Speed Dock includes the current numeric rate; retained artwork includes both rate tracks.",
+      "rule": {
+        "selector": ".d-hardware-vinyl-player-card-start,.stage-dock [data-action=\"speed\"]",
+        "kind": "vinyl",
+        "reason": "The record start is an icon; the shared Speed control must include its actual current numeric label."
+      }
+    },
+    {
+      "id": "foil-trading-card",
+      "reason": "COMMON GROUND identifies the card; membership fields are supporting data.",
+      "rule": {
+        "selector": ".d-hardware-foil-trading-card-card",
+        "label": "COMMON GROUND"
+      }
+    }
+  ],
+  "retainedFailures": {
+    "baselineStories": [
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"css3d-card-flip-grid\",\"phase\":\"focused-back\",\"label\":\"Return\",\"name\":\"Reveal object 01, Form\",\"text\":\"01\\nForm\\n◯\\n01 / Note\\nShape creates\\nexpectation.\\nReturn\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:43:75)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "fui-orbital-tracker",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"fui-orbital-tracker\",\"phase\":\"initial\",\"label\":\"Target link\",\"name\":\"SAT-02 selected. Activate to select the next satellite.\",\"text\":\"Target link\\nSAT-02 / ALT 412KM / VEL 7.6\\nFront vector\\nOccluded 25%\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:41:55)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"css3d-card-flip-grid\",\"phase\":\"focused-back\",\"label\":\"Return\",\"name\":\"Reveal object 01, Form\",\"text\":\"01\\nForm\\n◯\\n01 / Note\\nShape creates\\nexpectation.\\nReturn\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:43:75)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "fui-orbital-tracker",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"fui-orbital-tracker\",\"phase\":\"initial\",\"label\":\"Target link\",\"name\":\"SAT-02 selected. Activate to select the next satellite.\",\"text\":\"Target link\\nSAT-02 / ALT 412KM / VEL 7.6\\nFront vector\\nOccluded 25%\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:41:55)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"css3d-card-flip-grid\",\"phase\":\"focused-back\",\"label\":\"Return\",\"name\":\"Reveal object 01, Form\",\"text\":\"01\\nForm\\n◯\\n01 / Note\\nShape creates\\nexpectation.\\nReturn\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:43:75)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "fui-orbital-tracker",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"fui-orbital-tracker\",\"phase\":\"initial\",\"label\":\"Target link\",\"name\":\"SAT-02 selected. Activate to select the next satellite.\",\"text\":\"Target link\\nSAT-02 / ALT 412KM / VEL 7.6\\nFront vector\\nOccluded 25%\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:41:55)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"css3d-card-flip-grid\",\"phase\":\"focused-back\",\"label\":\"Return\",\"name\":\"Reveal object 01, Form\",\"text\":\"01\\nForm\\n◯\\n01 / Note\\nShape creates\\nexpectation.\\nReturn\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:43:75)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      },
+      {
+        "id": "fui-orbital-tracker",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "error": "AssertionError [ERR_ASSERTION]: Missing visible label {\"id\":\"fui-orbital-tracker\",\"phase\":\"initial\",\"label\":\"Target link\",\"name\":\"SAT-02 selected. Activate to select the next satellite.\",\"text\":\"Target link\\nSAT-02 / ALT 412KM / VEL 7.6\\nFront vector\\nOccluded 25%\"}\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:38:842)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:41:55)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:49:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:356"
+      }
+    ],
+    "authorizationFixture": "The first four-component probe incorrectly treated the hidden SCANNING CREDENTIAL span as the result label. Rendered inspection confirmed ACCESS GRANTED is painted and correctly named. The refined selector follows the existing result-stamp state. Original failures and the original helper remain archived.",
+    "proofAnnotations": "Remove old proof markers before each tree lookup, including markers copied into inert retained paint.",
+    "reviewSheetEncoding": "The first private contact-sheet helper used the Windows default text encoding. It failed before writing sheets; the corrected helper reads UTF-8 explicitly. The first helper remains archived."
+  },
+  "remaining": [
+    "Other incomplete accessibility results, photographic/dynamic data review and native ink preference.",
+    "Speech recognition and broader all-catalog acceptance.",
+    "Final motion, CPU4, cold-route and mobile Lighthouse gates."
+  ],
+  "publication": {
+    "policy": "Commit/push main directly. Keep GitHub Actions disabled and preserve the account zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

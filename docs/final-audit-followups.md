@@ -2,6 +2,27 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [visible-name review](accessibility/visible-names-2026-11-25.json) checks
+the 22 retained full-view label/name findings against explicit primary labels
+and actual browser accessibility names. It retains all 44 raw axe flags and
+40 incomplete results. The changed-state review finds and repairs two genuine
+mismatches: Flip Grid's painted back now includes Return in its name, and Orbit
+includes its visible Target link label. The complete note and current satellite
+readout become accessible descriptions. All CSS, HTML, metadata and the other
+518 complete definitions remain unchanged. Sixteen original/current native
+comparisons retain exact DOM, styles, geometry and PNG bytes with GPU disabled.
+The 324 name observations cover both themes and widths, deliberate input, 44
+fresh offline exports and focused normal-motion cases. Authorization's visible
+result stamp already has the right name; its hidden scanning text was an initial
+fixture error, retained with the original failures. Symbolic key glyphs,
+punctuation, repeated paint layers and supporting data keep separate review
+reasons. This closes the targeted primary-label review for those checked states;
+speech recognition, native contrast, other accessibility findings and final
+motion/performance acceptance remain open.
+Sixteen fresh native tab stories also cover Map, Draggable Cards, Flip Grid and
+Orbit in full/thumbnail and normal/reduced modes: 309 assertions retain trusted
+visibility events, exact held state and caller ownership with the current source.
+
 The [Map and Cards accessibility pass](accessibility/map-cards-2026-11-25.json)
 repairs Folding Map's transparent full-view labels and metrics in light mode.
 Its compass uses primary Stage ink through the original reduced-motion fade;

@@ -1904,3 +1904,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   initial layouts, native CSS roundtrips, actual map keys and offline exports.
   GPU-disabled native CSS comparisons do not certify default-GPU timing. Keep
   raw axe incomplete results and earlier private evidence; final audits stay open.
+
+- `node tools/verify-visible-names.js http://127.0.0.1:4173` covers the 22
+  retained full-view label/name findings with actual browser accessibility trees,
+  deliberate keys, both Stage themes, desktop/compact widths and offline exports.
+  Match reviewed primary labels; keep supporting data, symbolic icons, repeated
+  paint layers and inactive slide text distinct. Preserve all raw axe findings.
+  Authorization's result stamp replaces its hidden scanning label. Flip Grid's
+  full name follows the painted face and includes Return on the back; its complete
+  note is an accessible description. Orbit's full name includes Target link and
+  its selected satellite, with the actual painted readout as its description.
+  Cache note copy without frame-time layout reads and avoid repeated ARIA writes.
+  Keep the original controllers except the fixture's exact full-only ARIA
+  insertions; all CSS, HTML, models, timing and native names/artwork stay intact.
+  The matrix includes focused normal-motion cases for the two changed controls.
+  These checks do not certify speech recognition, every intermediate frame,
+  native contrast or full-catalog accessibility. Earlier private evidence stays
+  frozen; final motion and performance audits remain open.

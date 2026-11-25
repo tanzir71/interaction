@@ -990,7 +990,7 @@ Build Cube Navigation as an original zero-dependency component. Match v4 Figma 1
 
 ### Flip Grid (`css3d-card-flip-grid`)
 
-Build Flip Grid as an original zero-dependency component. Match v4 Figma 161:830 in the hero thumbnail and preserve every original full content state. Show the exact six-card 52x58px native grid, including the 16px edge-on fifth card; preserve all eight original fronts, notes, toggle states and diagonal wave order in full. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup.
+Build Flip Grid as an original zero-dependency component. Match v4 Figma 161:830 in the hero thumbnail and preserve every original full content state. Show the exact six-card 52x58px native grid, including the 16px edge-on fifth card; preserve all eight original fronts, notes, toggle states and diagonal wave order in full. Use the shared dock, motion tokens, >=11px physical full type, native keys/touch, deferred held intents, reduced-motion opacity and complete cleanup. In full view, include the visible Return label in the actual accessible name whenever a card back is painted, retaining its object identity and pin state. Expose the complete original note as the description, and accurately describe pin toggling and Escape. Cache note text without frame-time layout reads; assign ARIA only when it changes. Native names/artwork, all motion and interaction math remain unchanged.
 
 ### Page Turn (`css3d-book-page`)
 
@@ -1591,7 +1591,7 @@ Accessibility: Full view follows the selected Stage palette for transparent labe
 ### FUI Orbital Tracker (`fui-orbital-tracker`)
 
 Build the v4 FUI Orbital Tracker with a native 232×168 compact preview and a separate complete 440×380 full composition. Preserve the full original seeded three-satellite orbital configurations, 36 trails, front/back occlusion, station passes, 22ms telemetry typer and active-time geometry. Keep all data, samples and operational schedules. Use shared dock actions Next satellite, Reset, minimum 11px optical type, neutral grey and one accent, no outer demo panel or private replay controls, and explicit reduced-motion feedback. Drag geometry converts fitted physical pixels to logical CSS units; FLIP retargets from painted rectangles and collapse uses grid rows. Follow MOTION_SYSTEM.md; loops/animations pause on caller, document and viewport holds. Return cleanup that aborts listeners and cancels scheduling, observers and owned animations. Every native v4 SVG retains its original bytes, root dimensions and reference slot; no design screenshot is tile art.
-Accessibility: Native names track the actual SAT-07/08/09 badge, preserving the independent complete full satellite model. Preserve all v4 copy, geometry, assets, datasets, clocks and motion recipes above.
+Accessibility: Native names track the actual SAT-07/08/09 badge, preserving the independent complete full satellite model. Preserve all v4 copy, geometry, assets, datasets, clocks and motion recipes above. In full view, the actual accessible control name includes the visible Target link label and currently selected satellite ID. Expose its complete currently painted readout through the accessible description, preserving original typing and update times. Native names/artwork, every satellite model, source clock and interaction remain unchanged.
 
 ## Image & WebGL
 
