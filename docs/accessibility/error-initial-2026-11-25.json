@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-25",
+  "baseline": "66c28ea5e09745624a34f47bc6c98de6733a2f49",
+  "scope": "Shake Error initial native still and stale shared Dock controls in static search/related posters. Final whole-handoff timing, startup and broader manual accessibility acceptance remain open.",
+  "design": {
+    "figma": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=149-1834",
+    "field": {
+      "x": 86,
+      "y": 76,
+      "width": 200,
+      "height": 44,
+      "radius": 12,
+      "border": "#f26d6d"
+    },
+    "icon": {
+      "node": "149:1849",
+      "x": 169,
+      "y": 13,
+      "width": 16,
+      "height": 16
+    },
+    "copy": [
+      "ada@atlas",
+      "Add a domain"
+    ],
+    "asset": {
+      "local": "assets/components/form-error-icon.svg",
+      "sha256": "a926c494c4b4cd604956432df349d7594d376ebfcc8ca03289a890a237c07e32",
+      "downloadSha256": "aa4388ec4df62eff5bcb233fe06b68b03695e42bbd230f5ae7375b7a41049029",
+      "unchanged": true,
+      "comparison": [
+        {
+          "scale": 1,
+          "dimensions": [
+            [
+              16,
+              16
+            ],
+            [
+              16,
+              16
+            ]
+          ],
+          "equal": true
+        },
+        {
+          "scale": 2,
+          "dimensions": [
+            [
+              16,
+              16
+            ],
+            [
+              16,
+              16
+            ]
+          ],
+          "equal": true
+        },
+        {
+          "scale": 3,
+          "dimensions": [
+            [
+              16,
+              16
+            ],
+            [
+              16,
+              16
+            ]
+          ],
+          "equal": true
+        }
+      ],
+      "note": "Current Figma export and existing local SVG have different file hashes; both 16px roots and every rendered RGBA sample at 1x/2x/3x match exactly. Existing asset is retained."
+    }
+  },
+  "defect": {
+    "observation": "Native v4 starts in the complete invalid-error state, but CSS transitions entered it after mount and continued during a caller-held source clock.",
+    "baseline": {
+      "settings": 16,
+      "nativeFailures": 8,
+      "fullPasses": 8,
+      "report": ".artifacts/final-error-initial-v31/baseline/2026-11-25T14-00-53-067Z/report.json"
+    },
+    "fix": "Append transition:none only for the thumbnail initial source, on its field, icon and hint. Later deliberate input and full views retain original timing.",
+    "cssAppend": "\n.stage[data-mode=\"thumb\"] .d-error-demo[data-source=\"initial\"] .d-error-demo-field,.stage[data-mode=\"thumb\"] .d-error-demo[data-source=\"initial\"] .d-error-demo-icon,.stage[data-mode=\"thumb\"] .d-error-demo[data-source=\"initial\"] .d-error-demo-message{transition:none}",
+    "promptAppend": "\nThe native initial error is the complete static v4 checkpoint before source frames, including under caller holds: red border, visible supplied cross and Add a domain hint. Disable transitions only for this thumbnail initial source; preserve deliberate validation, shake, focus, 3s emphasis and 280ms return feedback."
+  },
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "htmlControllersMetadataAndModelsUnchanged": 520,
+    "originalErrorCssExactPrefix": true,
+    "permittedFields": [
+      "input-shake-error.css append",
+      "input-shake-error.prompt append"
+    ],
+    "frozenRuntimeStageExporterStylesAndFontsUnchanged": true,
+    "newRuntimeDependencies": 0,
+    "newProductionAssets": 0,
+    "staticPostersRefreshed": 91
+  },
+  "verification": {
+    "initialHeldStories": 16,
+    "deliberateValidationStories": 8,
+    "normalShake": "Actual five keyframes: 0/6/-6/4/0px at 0/28.6/57.1/78.6/100%, 280ms, ease-out on each segment.",
+    "emphasis": "150ms entry, original 3s deadline with independent caller hold, normal 280ms border return (150ms reduced).",
+    "pngRoundtrips": {
+      "count": 8,
+      "mode": "thumb",
+      "gpu": "Disabled only for exact current/old/current target PNG bytes; initial-paint assertions use default GPU."
+    },
+    "freshOfflineExports": 4,
+    "fullExportScope": true,
+    "formsChecks": 169,
+    "dockStories": 186,
+    "exactSettledDockPngPairs": 93,
+    "strictRegistryStageMotionAndGenerated": true,
+    "packageTests": 9,
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "fit": {
+      "components": 520,
+      "failed": 0,
+      "overflow": 0,
+      "horizontalScroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "validatedExceptions": 163
+    },
+    "reports": [
+      {
+        "file": ".artifacts/final-error-initial-v31/accepted-final/2026-11-25T14-08-42-312Z/report.json",
+        "sha256": "f4341ed7bba7fafee2158103c028045ae11dd2e1f8c21293be81ce2b0f63b42d"
+      },
+      {
+        "file": ".artifacts/final-error-initial-v31/final-docks/2026-11-25T14-13-39-194Z/report.json",
+        "sha256": "34e7a2326907414b8d69dd47c2a86b309af7dc1b931aec35de7415eb6bf26b7a"
+      }
+    ],
+    "sourceStable": true
+  },
+  "posters": {
+    "reason": "The prior shared Dock correction updated live thumbnails while static posters still painted three controls. Refresh all 91 affected native previews through the application.",
+    "method": "tools/build-posters.js with --initial, reduced motion and current Chrome; original native modules and local assets.",
+    "count": 91,
+    "dimensions": [
+      360,
+      264
+    ],
+    "comparison": {
+      "file": ".artifacts/final-error-initial-v31/poster-comparison.json",
+      "sha256": "422349e8ab7d43c7216cbbce64dcd2118e12060ef16e641ad4fcbd295ac9dc7e",
+      "changed": 91,
+      "topCropExact": 0,
+      "note": "Historical and new captures differ within the top crop for all 91 previews as well as shared chrome. Cross-capture RGB equality is not claimed, and this observation alone does not establish its cause. All old posters and numeric differences remain retained. Original source preservation and the separate same-instance native PNG checks establish their own narrower invariants."
+    },
+    "visualReview": [
+      "input-shake-error",
+      "particle-dissolve",
+      "hover-zoom-card",
+      "slider-elastic-edges"
+    ]
+  },
+  "retainedHarnessFindings": [
+    {
+      "finding": "The first new checker expected CSS easing on the whole effect and clicked a hidden thumbnail Reset.",
+      "correction": "Read actual per-keyframe easing; open More through the real UI. First candidate run retained six harness failures, eight successful PNG roundtrips and four exports."
+    },
+    {
+      "finding": "CSS computed percentage offsets differ by binary representation, for example 0.28600000000000003.",
+      "correction": "Require the same five offsets within 1e-12, exact transform strings, duration and segment curves. PNG and color equality bounds remain exact."
+    },
+    {
+      "finding": "The checker treated a multi-property duration list as one border duration.",
+      "correction": "Resolve the border-color duration by its actual transition-property index. Original 280/150ms values are unchanged."
+    },
+    {
+      "finding": "verify-dock-control-names --ids=input-shake-error was rejected before browser work.",
+      "correction": "The existing fixed-toggle-name fixture intentionally excludes this form. Do not infer an AX pass from that command; use form label association checks and the targeted native/full Dock suite."
+    }
+  ],
+  "remaining": [
+    "All-520 cold startup audit",
+    "CPU4 performance gaps including Threads Canvas and Rolling Balance",
+    "Final motion, Lighthouse, theme and manual accessibility acceptance"
+  ],
+  "sourceInputs": {
+    "tools/verify-error-initial.js": "4b89fe0302c9a7a7efc41b4cd6ac95b9a1f7dc1628d419bd3086d5762a940e70",
+    "tools/fixtures/error-initial-before.json": "629cc2360b17c7699351bfcb8ee41908212216f26db947bcf90feb3a3a8485af",
+    "js/demos.forms.input-shake-error.js": "edaac7ae2509302c69f346145d01a1f98a130db463dd2804d8c192fded2dcc8c",
+    "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+    "css/foundations.css": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/shell/registry.js": "29df1a20544607d8713c0fc228899aef301b8c80853f38808334f1ef2bbf67c3",
+    "tools/build-posters.js": "cdb7e32580dce51bd0be011948083309a410480f7fcc4481699e5baf9f6914dd",
+    "assets/components/form-error-icon.svg": "a926c494c4b4cd604956432df349d7594d376ebfcc8ca03289a890a237c07e32",
+    "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+    "registry/index.json": "7d4cb4440806148391cc41a084b51bbe3a4a5321aada0c5d19bd475c369eca97",
+    "r/input-shake-error.json": "dc8fe48f71517d7de839c7072dfcd29069b0b402426905b51214c17145712986"
+  }
+}

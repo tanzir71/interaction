@@ -20,6 +20,23 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Shake Error initial still and static previews
+
+The [initial-state review](accessibility/error-initial-2026-11-25.json) resolves
+Shake Error entering its v4 error state through CSS transitions while source
+time was held. The thumbnail now paints its complete border, supplied cross and
+hint immediately. Full views, controllers and deliberate validation timing are
+unchanged. Sixteen initial stories, eight deliberate validation stories, eight
+exact target-image roundtrips and four fresh offline exports pass, along with
+the existing 169 form checks.
+
+The 91 static previews affected by the shared Dock correction are refreshed
+from native application rendering; search and related results now show More.
+All original posters and cross-capture pixel differences remain retained. The
+186 current native/full Dock stories and 93 exact same-instance artwork pairs
+pass; this does not claim historical screenshot RGB equality or timing. The
+full library and fit checks remain green. Startup and CPU4 audits remain open.
+
 ## Thumbnail Dock controls
 
 The [Dock control review](accessibility/dock-overflow-2026-11-25.json) applies
@@ -34,8 +51,8 @@ The final runs pass 186 actual native/full stories, 93 exact settled native PNG
 pairs, 20 keyboard/touch/offline stories and 264 fixed-name stories (including
 66 offline cases). The library boots 520 previews and 100 offline exports; fit
 findings remain zero with all 163 documented exceptions. Error Shake has a
-separate pre-existing CSS initialization/hold issue; it remains open. These
-roundtrips explicitly cover settled artwork, not its first frame.
+separate pre-existing CSS initialization/hold issue, resolved in the initial-state
+review above. Those roundtrips covered settled artwork, not its first frame.
 
 A cold-route run was stopped for this correction after 66 components and 528
 cases. Its outliers and partial 67th attempt are retained in frozen V29 evidence.

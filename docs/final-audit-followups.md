@@ -2,6 +2,22 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Shake Error initial-state review](accessibility/error-initial-2026-11-25.json)
+closes its held initial-paint issue. Only its native initial-source transition
+rule and generator guidance change; 519 complete definitions and every
+controller, model and HTML composition remain exact. Deliberate validation,
+repeated shake, emphasis hold, correction and replay retain their original
+behavior. The retained checker failures concern browser timing representation,
+a hidden Reset and an inapplicable fixed-toggle fixture; their corrected oracles
+do not change production timing or pixel bounds.
+
+All 91 stale three-control static previews are refreshed from the current native
+application. Historical/new top-crop pixels differ for every preview; keep both
+sets and the numeric diagnostic. This is not proof of a universal raster cause
+or regression. Same-instance current Dock artwork roundtrips remain exact.
+The completed source and poster corrections leave all-catalog cold startup,
+CPU4 frame timing and final manual acceptance open.
+
 The [thumbnail Dock review](accessibility/dock-overflow-2026-11-25.json)
 resolves the shared two-pill v4 requirement without changing any of the 520
 complete component definitions. Full controls retain their original direct
@@ -10,12 +26,11 @@ artwork, default-GPU keyboard/touch, portable disclosure and fixed AX identities
 pass. Preserve the canceled-Space reopen and parent-key leakage counterexamples
 with their fixes and the independent baseline sound-delegation witness.
 
-Error Shake still has six CSS transitions running during a held initial source
-state. Its first-frame issue remains open; settled Dock PNG comparisons do not
-close it. The all-catalog cold-route audit was interrupted after 66 complete
+That Dock review found six Shake Error CSS transitions running during a held
+initial source state. The initial-state review above resolves it; the earlier
+settled Dock PNG comparisons did not close that first-frame issue. The all-catalog cold-route audit was interrupted after 66 complete
 components/528 cases plus one partial attempt. Its first-process cold misses
-and traces remain frozen in V29. Re-run final startup acceptance after the
-initialization correction on stable production source. No full-catalog cold
+and traces remain frozen in V29. Re-run final startup acceptance on the corrected, stable production source. No full-catalog cold
 startup or CPU4 performance pass is claimed here.
 
 The [Threads Canvas investigation](performance/threads-canvas-2026-11-25.json)
