@@ -1,0 +1,2652 @@
+{
+  "date": "2026-11-25",
+  "baseline": "6038c359762d69a5ef030e1c0452a35dbfbeaa88",
+  "change": "Rolling Balance remeasures fitted overlay geometry and typography each paint while assigning only changed inline values. A bounded twelve-entry currency text cache distinguishes native integer values from two-decimal accessible/full values. No source-model or timing changes.",
+  "preservation": {
+    "completeDefinitionsUnchanged": 519,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "unchangedAssets": true,
+    "originalAdapterExact": true,
+    "originalFactoryExact": true,
+    "testedCandidateJavaScriptExact": true,
+    "changedFields": [
+      "framer-rolling-balance.js",
+      "framer-rolling-balance.prompt"
+    ],
+    "sourceFile": "js/demos.framer-data.js",
+    "sourceSHA256": "ce4f82307ee6abf0df6d99862b827a93bfa75a6b51d114ba76e42b698eb48c7f",
+    "evidence": {
+      "file": ".artifacts/final-framer-perf-v24/promotion.json",
+      "sha256": "ede7534f48b55116cba5a8f8b86fb39ac68ca4454b983d0c1c25f29e08bc41bc"
+    }
+  },
+  "verification": {
+    "rendererEvidence": {
+      "file": ".artifacts/final-framer-perf-v24/promoted-rolling/2026-11-25T07-49-01-846Z/report.json",
+      "sha256": "28ec3305e251bae5aec2ff1deef0efbf6957f8995a168acab4800c969f733104"
+    },
+    "rendererStories": 22,
+    "modelHTMLGeometryExact": true,
+    "gpuPNGComparisons": 16,
+    "holdResizeDisposalStories": 4,
+    "formattingStories": [
+      {
+        "mode": "full",
+        "reduced": false,
+        "width": 390,
+        "height": 650,
+        "theme": "dark",
+        "checkpoints": 25,
+        "originalConstructors": 772,
+        "currentConstructors": 143,
+        "exact": true
+      },
+      {
+        "mode": "full",
+        "reduced": true,
+        "width": 390,
+        "height": 650,
+        "theme": "dark",
+        "checkpoints": 25,
+        "originalConstructors": 772,
+        "currentConstructors": 143,
+        "exact": true
+      },
+      {
+        "mode": "thumb",
+        "reduced": false,
+        "width": 390,
+        "height": 264,
+        "theme": "dark",
+        "checkpoints": 25,
+        "originalConstructors": 772,
+        "currentConstructors": 190,
+        "exact": true
+      },
+      {
+        "mode": "thumb",
+        "reduced": true,
+        "width": 390,
+        "height": 264,
+        "theme": "dark",
+        "checkpoints": 25,
+        "originalConstructors": 772,
+        "currentConstructors": 190,
+        "exact": true
+      }
+    ],
+    "clockWork": [
+      {
+        "mode": "full",
+        "hz": 60,
+        "checkpoints": 26,
+        "preCacheStyles": 284864,
+        "previousProductionStyles": 14342,
+        "currentStyles": 10902,
+        "fewerThanPreviousPercent": 23.985497141263423
+      },
+      {
+        "mode": "full",
+        "hz": 120,
+        "checkpoints": 27,
+        "preCacheStyles": 566756,
+        "previousProductionStyles": 26661,
+        "currentStyles": 19841,
+        "fewerThanPreviousPercent": 25.580435842616556
+      },
+      {
+        "mode": "full",
+        "hz": 240,
+        "checkpoints": 27,
+        "preCacheStyles": 1130540,
+        "previousProductionStyles": 51478,
+        "currentStyles": 37898,
+        "fewerThanPreviousPercent": 26.38020125101985
+      },
+      {
+        "mode": "thumb",
+        "hz": 60,
+        "checkpoints": 26,
+        "preCacheStyles": 162605,
+        "previousProductionStyles": 9919,
+        "currentStyles": 9919,
+        "fewerThanPreviousPercent": 0
+      },
+      {
+        "mode": "thumb",
+        "hz": 120,
+        "checkpoints": 27,
+        "preCacheStyles": 323493,
+        "previousProductionStyles": 18466,
+        "currentStyles": 18466,
+        "fewerThanPreviousPercent": 0
+      },
+      {
+        "mode": "thumb",
+        "hz": 240,
+        "checkpoints": 27,
+        "preCacheStyles": 645269,
+        "previousProductionStyles": 35571,
+        "currentStyles": 35571,
+        "fewerThanPreviousPercent": 0
+      }
+    ],
+    "extraCurrentProductionComparison": {
+      "file": ".artifacts/final-framer-perf-v24/extra-1795592754188/report.json",
+      "sha256": "0bf147c462afa15cce136dfca34a98c55757d0495691dc31c6a306dd50ebf0fe"
+    },
+    "framerEvidence": {
+      "file": ".artifacts/final-framer-perf-v24/framer-results.json",
+      "sha256": "3f94f60e0e9c4bb881e35938f18d3be66d0ee4d0d93800b949ce12ac42ee321b"
+    },
+    "framerReports": {
+      "models": "3990d26fb1e30dc1a98aa3c5bafc89c307d7772331549b810334645b9f8a9a46",
+      "geometry": "1ef415ac95bfaa5a4472f0886e569f2e4952bd223d210fda3190726bea7ac764",
+      "input": "1b769a900b739002efe6af5d1656cfcccc1b9b9db1d05b87862b152b0049e2ed",
+      "holds": "14d6e4257e21d0d5af1249b9ecf2b347be1c9d8218481b6c8e608eb04ac8074c",
+      "motion": "e251cbeb1918ec9e3f9ae5513c63e240e96dc34d17678879f159a2e22b218500",
+      "runtime": "b61570c9565eef02340ed6739ec683260625fdab72568b6d6820dc1dd34777e4",
+      "themes": "c0898f6f1b1dd4f257da90b01cd5c58eb0eb683e8d6f395d5e98ad309c3e2c21",
+      "exports": "a7b22287452532bb1e219464e490c753d88c55bb9973d37ac85be4beed355ac4"
+    },
+    "ownerChecks": [
+      {
+        "name": "registry",
+        "exit": 0
+      },
+      {
+        "name": "stage",
+        "exit": 0
+      },
+      {
+        "name": "generated",
+        "exit": 0
+      },
+      {
+        "name": "motion",
+        "exit": 0
+      },
+      {
+        "name": "package",
+        "exit": 0
+      },
+      {
+        "name": "runtime-shell",
+        "exit": 0
+      },
+      {
+        "name": "framer",
+        "exit": 0
+      },
+      {
+        "exit": 0,
+        "name": "library"
+      },
+      {
+        "exit": 0,
+        "name": "fit"
+      }
+    ],
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "total": 520,
+      "failed": 0,
+      "missingDesignSize": 0,
+      "overflow": 0,
+      "hscroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "lowFillExceptions": 163,
+      "invalidExceptions": 0
+    }
+  },
+  "timing": {
+    "baseline": {
+      "evidence": {
+        "file": ".artifacts/final-framer-perf-v24/balance/2026-11-25T07-25-31-989Z-b91f0b682849/report.json",
+        "sha256": "94db6410ee7db490d01910462c0e34d267b8170196c8ad305d8d2e82d3c9ac37"
+      },
+      "browser": "158.0.8127.88",
+      "inputs": {
+        "tools/profile-final-framer.js": "e3caee2370bce5763588bfbf33de468eb1955e570b95b04a043f26b18164e4fc",
+        "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "tools/load-registry.js": "80ea58e5d7c82e3d2303f4e8ea8572be01eb1145e2cfd2111f9fe7cdd0ba35ca",
+        "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+        "js/registry-files.json": "32c5e022763583020a8eca907744c569bb62b9e15f47b164238e294ff8df60ea",
+        "tools/fixtures/framer-data/rig.html": "6c6bff1358961a2ee31a41415734e19a8e985e95d433fecba8a29bafb8f186fc",
+        "tools/fixtures/framer-data/configs.json": "61065ad5f78a5887feb197ff56e521ddacf44633b84f16abf48b779cf0eefe84",
+        "tools/fixtures/framer-data/artwork.json": "afb83d01992c60acf459e5cbe12978fa75009dd7d2da88ecf8d432652743fd57",
+        "js/demos.framer-data.js": "b91f0b6828492d41922b95d8b53ea87b1ee995762f4c8b6a4cf47dbcbfb9c094",
+        "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+        "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+        "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+        "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+        "assets/components/framer-data/175-1503.svg": "3713b7dd4efe74aa617a585725bda8f2cbe45b6e803020a90db50e2c0b50d47c",
+        "assets/components/framer-data/175-1504.svg": "21cd5bb76c433bf73fc79a1222cc38ee0c10029a114487b133de4460599259bc"
+      },
+      "cases": [
+        {
+          "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 57.81573886766064,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 150.20000000000005,
+          "gapsOver25ms": 6,
+          "readyMs": 252.29999999701977,
+          "twoFrameReadyMs": 264.69999999552965,
+          "firstPaintMs": 261.661,
+          "longTasks": [
+            {
+              "start": 438.30000000447035,
+              "duration": 278
+            },
+            {
+              "start": 895,
+              "duration": 51
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/balance/2026-11-25T07-25-31-989Z-b91f0b682849/framer-rolling-balance-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "7580b5992188770eaefdee0ded3ad550990a2e21891c0bde979aac7ee2909e41"
+        },
+        {
+          "name": "framer-rolling-balance-thumb-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.81294407052682,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 33.39999999999998,
+          "gapsOver25ms": 1,
+          "readyMs": 216.60000000149012,
+          "twoFrameReadyMs": 232.80000000447035,
+          "firstPaintMs": 222.345,
+          "longTasks": [
+            {
+              "start": 135.79999999701977,
+              "duration": 228
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/balance/2026-11-25T07-25-31-989Z-b91f0b682849/framer-rolling-balance-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "f9b6e8a7db13e279f6bd7792873f643ed76b7c96f2f889d80d895b0371d5565f"
+        },
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 54.56906670662572,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 283.69999999999993,
+          "gapsOver25ms": 5,
+          "readyMs": 172.39999999850988,
+          "twoFrameReadyMs": 216.29999999701977,
+          "firstPaintMs": 188.613,
+          "longTasks": [
+            {
+              "start": 124,
+              "duration": 183
+            },
+            {
+              "start": 4450.9000000059605,
+              "duration": 57
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/balance/2026-11-25T07-25-31-989Z-b91f0b682849/framer-rolling-balance-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "06a27ef3e3fce6803a6153ea30e4de0c4484da6906e915d2535108dbc221433f"
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 56.442851612742096,
+          "p95Ms": 33.30000000000018,
+          "maxMs": 50.100000000000364,
+          "gapsOver25ms": 26,
+          "readyMs": 310.09999999403954,
+          "twoFrameReadyMs": 375.79999999701977,
+          "firstPaintMs": 334.591,
+          "longTasks": [
+            {
+              "start": 182.19999999552965,
+              "duration": 325
+            },
+            {
+              "start": 693.3999999985099,
+              "duration": 51
+            },
+            {
+              "start": 4684.29999999702,
+              "duration": 64
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/balance/2026-11-25T07-25-31-989Z-b91f0b682849/framer-rolling-balance-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "3fd8745c6eb371684aee87c54dee3dcc6dacbd96cfa43a872a74b5a854176d71"
+        }
+      ]
+    },
+    "candidate": {
+      "evidence": {
+        "file": ".artifacts/final-framer-perf-v24/fitcache/2026-11-25T07-41-00-984Z-b91f0b682849/report.json",
+        "sha256": "27b87797d0ff4ba9fda8c200c8d218798a12072df0f88dc55ad48d7d68122d93"
+      },
+      "browser": "158.0.8127.88",
+      "inputs": {
+        "tools/profile-final-framer.js": "5a11ec0a80003a3cef788f8433a79c7ec6fb7707919d328273abef3a3a420876",
+        "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "tools/load-registry.js": "80ea58e5d7c82e3d2303f4e8ea8572be01eb1145e2cfd2111f9fe7cdd0ba35ca",
+        "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+        "js/registry-files.json": "32c5e022763583020a8eca907744c569bb62b9e15f47b164238e294ff8df60ea",
+        "tools/fixtures/framer-data/rig.html": "6c6bff1358961a2ee31a41415734e19a8e985e95d433fecba8a29bafb8f186fc",
+        "tools/fixtures/framer-data/configs.json": "61065ad5f78a5887feb197ff56e521ddacf44633b84f16abf48b779cf0eefe84",
+        "tools/fixtures/framer-data/artwork.json": "afb83d01992c60acf459e5cbe12978fa75009dd7d2da88ecf8d432652743fd57",
+        "js/demos.framer-data.js": "b91f0b6828492d41922b95d8b53ea87b1ee995762f4c8b6a4cf47dbcbfb9c094",
+        ".artifacts/final-framer-perf-v24/fitcache-reference.json": "3be5b762c573c5822d6172950e52f910df9fddf029243a4487c3355c419198ad",
+        "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+        "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+        "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+        "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+        "assets/components/framer-data/175-1503.svg": "3713b7dd4efe74aa617a585725bda8f2cbe45b6e803020a90db50e2c0b50d47c",
+        "assets/components/framer-data/175-1504.svg": "21cd5bb76c433bf73fc79a1222cc38ee0c10029a114487b133de4460599259bc"
+      },
+      "cases": [
+        {
+          "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 57.1920930058316,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 150.10000000000002,
+          "gapsOver25ms": 10,
+          "readyMs": 259.3999999985099,
+          "twoFrameReadyMs": 272.5,
+          "firstPaintMs": 265.645,
+          "longTasks": [
+            {
+              "start": 419.1000000014901,
+              "duration": 279
+            },
+            {
+              "start": 870.7999999970198,
+              "duration": 78
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/fitcache/2026-11-25T07-41-00-984Z-b91f0b682849/framer-rolling-balance-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "ac0d0518ce58662d02e1d98e2de20ec744504ed52a66a5096eda76762d0af5d0"
+        },
+        {
+          "name": "framer-rolling-balance-thumb-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 58.56423960141353,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 33.400000000000546,
+          "gapsOver25ms": 11,
+          "readyMs": 201.69999999552965,
+          "twoFrameReadyMs": 229.29999999701977,
+          "firstPaintMs": 208.598,
+          "longTasks": [
+            {
+              "start": 286,
+              "duration": 206
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/fitcache/2026-11-25T07-41-00-984Z-b91f0b682849/framer-rolling-balance-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "42923e1ddfeb3cc020434c3724984d2412453d50c63d1c73834f2cb9d836301e"
+        },
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 51.69701056417173,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 350.39999999999986,
+          "gapsOver25ms": 15,
+          "readyMs": 84.60000000149012,
+          "twoFrameReadyMs": 111.89999999850988,
+          "firstPaintMs": 99.563,
+          "longTasks": [
+            {
+              "start": 334.69999999552965,
+              "duration": 88
+            },
+            {
+              "start": 4567.5999999940395,
+              "duration": 69
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/fitcache/2026-11-25T07-41-00-984Z-b91f0b682849/framer-rolling-balance-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "bb86181a791154dbb2cbe751a9f440940b97d751de5697adedc2a428ffda564d"
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.06445892959716,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 66.69999999999982,
+          "gapsOver25ms": 5,
+          "readyMs": 350.59999999403954,
+          "twoFrameReadyMs": 413.09999999403954,
+          "firstPaintMs": 375.042,
+          "longTasks": [
+            {
+              "start": 175.60000000149012,
+              "duration": 366
+            },
+            {
+              "start": 4704.89999999851,
+              "duration": 69
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/fitcache/2026-11-25T07-41-00-984Z-b91f0b682849/framer-rolling-balance-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "3a35a2d9d9499a096295c71d87dfe9575c80ebef627e90b60e454c9d6190ee83"
+        }
+      ]
+    },
+    "currentFourScenes": {
+      "evidence": {
+        "file": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/report.json",
+        "sha256": "ee5455ad192c01736e1e6d08f94137d3b031ebde196f68e47b2193389b4191b1"
+      },
+      "browser": "158.0.8127.88",
+      "inputs": {
+        "tools/profile-final-framer.js": "5a11ec0a80003a3cef788f8433a79c7ec6fb7707919d328273abef3a3a420876",
+        "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "tools/load-registry.js": "80ea58e5d7c82e3d2303f4e8ea8572be01eb1145e2cfd2111f9fe7cdd0ba35ca",
+        "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+        "js/registry-files.json": "32c5e022763583020a8eca907744c569bb62b9e15f47b164238e294ff8df60ea",
+        "tools/fixtures/framer-data/rig.html": "6c6bff1358961a2ee31a41415734e19a8e985e95d433fecba8a29bafb8f186fc",
+        "tools/fixtures/framer-data/configs.json": "61065ad5f78a5887feb197ff56e521ddacf44633b84f16abf48b779cf0eefe84",
+        "tools/fixtures/framer-data/artwork.json": "afb83d01992c60acf459e5cbe12978fa75009dd7d2da88ecf8d432652743fd57",
+        "js/demos.framer-data.js": "ce4f82307ee6abf0df6d99862b827a93bfa75a6b51d114ba76e42b698eb48c7f",
+        "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+        "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+        "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+        "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+        "assets/components/framer-data/175-1503.svg": "3713b7dd4efe74aa617a585725bda8f2cbe45b6e803020a90db50e2c0b50d47c",
+        "assets/components/framer-data/175-1504.svg": "21cd5bb76c433bf73fc79a1222cc38ee0c10029a114487b133de4460599259bc"
+      },
+      "cases": [
+        {
+          "name": "framer-formatted-metric-thumb-desktop-dpr1-cpu4",
+          "id": "framer-formatted-metric",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 34.71441772183512,
+          "p95Ms": 83.30000000000018,
+          "maxMs": 183.5,
+          "gapsOver25ms": 100,
+          "readyMs": 299.10000000009313,
+          "twoFrameReadyMs": 367.4000000001397,
+          "firstPaintMs": 305.812,
+          "longTasks": [
+            {
+              "start": 352.5,
+              "duration": 319
+            },
+            {
+              "start": 979,
+              "duration": 55
+            },
+            {
+              "start": 1598.3999999999069,
+              "duration": 50
+            },
+            {
+              "start": 1737.5,
+              "duration": 50
+            },
+            {
+              "start": 1788.1000000000931,
+              "duration": 52
+            },
+            {
+              "start": 1842.6000000000931,
+              "duration": 63
+            },
+            {
+              "start": 1906.6000000000931,
+              "duration": 72
+            },
+            {
+              "start": 2833.600000000093,
+              "duration": 50
+            },
+            {
+              "start": 3042.399999999907,
+              "duration": 58
+            },
+            {
+              "start": 3102.1999999999534,
+              "duration": 120
+            },
+            {
+              "start": 3225.3000000000466,
+              "duration": 84
+            },
+            {
+              "start": 3310.1999999999534,
+              "duration": 152
+            },
+            {
+              "start": 3462.8000000000466,
+              "duration": 183
+            },
+            {
+              "start": 3646.600000000093,
+              "duration": 130
+            },
+            {
+              "start": 3821.399999999907,
+              "duration": 72
+            },
+            {
+              "start": 3989.600000000093,
+              "duration": 90
+            },
+            {
+              "start": 4103.899999999907,
+              "duration": 106
+            },
+            {
+              "start": 4224.300000000047,
+              "duration": 71
+            },
+            {
+              "start": 4364,
+              "duration": 66
+            },
+            {
+              "start": 4434.899999999907,
+              "duration": 100
+            },
+            {
+              "start": 4540.5,
+              "duration": 81
+            },
+            {
+              "start": 4731.199999999953,
+              "duration": 107
+            },
+            {
+              "start": 5713.399999999907,
+              "duration": 50
+            },
+            {
+              "start": 5810.199999999953,
+              "duration": 55
+            },
+            {
+              "start": 5865.699999999953,
+              "duration": 52
+            },
+            {
+              "start": 5919.300000000047,
+              "duration": 56
+            },
+            {
+              "start": 6042.800000000047,
+              "duration": 94
+            },
+            {
+              "start": 6139.800000000047,
+              "duration": 61
+            },
+            {
+              "start": 6340.399999999907,
+              "duration": 63
+            },
+            {
+              "start": 6404.300000000047,
+              "duration": 57
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-formatted-metric-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "05facc81e0a9fa60438e8a55a91407281c2600df8b8555657ccb4be91b6a2918"
+        },
+        {
+          "name": "framer-formatted-metric-thumb-compact-dpr2-cpu4",
+          "id": "framer-formatted-metric",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 38.33570590145101,
+          "p95Ms": 50.100000000000364,
+          "maxMs": 83.39999999999998,
+          "gapsOver25ms": 115,
+          "readyMs": 304.0999999998603,
+          "twoFrameReadyMs": 355.69999999995343,
+          "firstPaintMs": 316.111,
+          "longTasks": [
+            {
+              "start": 206.9000000001397,
+              "duration": 311
+            },
+            {
+              "start": 847.2000000001863,
+              "duration": 64
+            },
+            {
+              "start": 920,
+              "duration": 55
+            },
+            {
+              "start": 1068.7000000001863,
+              "duration": 55
+            },
+            {
+              "start": 1124.5,
+              "duration": 55
+            },
+            {
+              "start": 1224,
+              "duration": 56
+            },
+            {
+              "start": 1280.9000000001397,
+              "duration": 51
+            },
+            {
+              "start": 1720.6000000000931,
+              "duration": 77
+            },
+            {
+              "start": 2374.600000000093,
+              "duration": 71
+            },
+            {
+              "start": 3054.100000000093,
+              "duration": 57
+            },
+            {
+              "start": 3273,
+              "duration": 52
+            },
+            {
+              "start": 4096.90000000014,
+              "duration": 59
+            },
+            {
+              "start": 4156.600000000093,
+              "duration": 58
+            },
+            {
+              "start": 4219.5,
+              "duration": 58
+            },
+            {
+              "start": 4407.100000000093,
+              "duration": 60
+            },
+            {
+              "start": 4706.300000000047,
+              "duration": 55
+            },
+            {
+              "start": 5311.800000000047,
+              "duration": 51
+            },
+            {
+              "start": 5424.5,
+              "duration": 61
+            },
+            {
+              "start": 5971.700000000186,
+              "duration": 54
+            },
+            {
+              "start": 6026,
+              "duration": 64
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-formatted-metric-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "ce6127419bcc17039be4f1457a7660b4dd81a5c0d5df770d91db3014fa544caa"
+        },
+        {
+          "name": "framer-formatted-metric-full-desktop-dpr1-cpu4",
+          "id": "framer-formatted-metric",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 26.972690151221887,
+          "p95Ms": 83.70000000000005,
+          "maxMs": 200.20000000000005,
+          "gapsOver25ms": 88,
+          "readyMs": 388.19999999995343,
+          "twoFrameReadyMs": 431.89999999990687,
+          "firstPaintMs": 398.17,
+          "longTasks": [
+            {
+              "start": 199.39999999990687,
+              "duration": 408
+            },
+            {
+              "start": 661.0999999998603,
+              "duration": 175
+            },
+            {
+              "start": 843.5999999998603,
+              "duration": 150
+            },
+            {
+              "start": 1041.3999999999069,
+              "duration": 93
+            },
+            {
+              "start": 1145.5,
+              "duration": 61
+            },
+            {
+              "start": 1207.5999999998603,
+              "duration": 72
+            },
+            {
+              "start": 1283.3000000000466,
+              "duration": 65
+            },
+            {
+              "start": 1350.5,
+              "duration": 89
+            },
+            {
+              "start": 1441.1999999999534,
+              "duration": 72
+            },
+            {
+              "start": 1515.3999999999069,
+              "duration": 55
+            },
+            {
+              "start": 1571.0999999998603,
+              "duration": 54
+            },
+            {
+              "start": 1626.8000000000466,
+              "duration": 61
+            },
+            {
+              "start": 1689.5,
+              "duration": 57
+            },
+            {
+              "start": 1748.6999999999534,
+              "duration": 62
+            },
+            {
+              "start": 1811.3000000000466,
+              "duration": 79
+            },
+            {
+              "start": 1894.1999999999534,
+              "duration": 72
+            },
+            {
+              "start": 1967.5999999998603,
+              "duration": 53
+            },
+            {
+              "start": 2021.3000000000466,
+              "duration": 69
+            },
+            {
+              "start": 2092.0999999998603,
+              "duration": 73
+            },
+            {
+              "start": 2302.0999999998603,
+              "duration": 61
+            },
+            {
+              "start": 2425.5,
+              "duration": 74
+            },
+            {
+              "start": 2501.5,
+              "duration": 84
+            },
+            {
+              "start": 2585.899999999907,
+              "duration": 54
+            },
+            {
+              "start": 2643.5,
+              "duration": 97
+            },
+            {
+              "start": 2896.1999999999534,
+              "duration": 89
+            },
+            {
+              "start": 2992,
+              "duration": 72
+            },
+            {
+              "start": 3065.0999999998603,
+              "duration": 60
+            },
+            {
+              "start": 3126.5,
+              "duration": 65
+            },
+            {
+              "start": 3193,
+              "duration": 52
+            },
+            {
+              "start": 3245.6999999999534,
+              "duration": 58
+            },
+            {
+              "start": 3305.0999999998603,
+              "duration": 61
+            },
+            {
+              "start": 3367.8000000000466,
+              "duration": 54
+            },
+            {
+              "start": 3424.6999999999534,
+              "duration": 65
+            },
+            {
+              "start": 3490.5999999998603,
+              "duration": 62
+            },
+            {
+              "start": 3776.6999999999534,
+              "duration": 56
+            },
+            {
+              "start": 3833.8000000000466,
+              "duration": 52
+            },
+            {
+              "start": 3886.6999999999534,
+              "duration": 57
+            },
+            {
+              "start": 3945.0999999998603,
+              "duration": 75
+            },
+            {
+              "start": 4022,
+              "duration": 90
+            },
+            {
+              "start": 4112.800000000047,
+              "duration": 87
+            },
+            {
+              "start": 4201.399999999907,
+              "duration": 70
+            },
+            {
+              "start": 4272.199999999953,
+              "duration": 64
+            },
+            {
+              "start": 4337.5,
+              "duration": 70
+            },
+            {
+              "start": 4410.09999999986,
+              "duration": 61
+            },
+            {
+              "start": 4472.300000000047,
+              "duration": 72
+            },
+            {
+              "start": 4546.300000000047,
+              "duration": 81
+            },
+            {
+              "start": 4630,
+              "duration": 68
+            },
+            {
+              "start": 4698.899999999907,
+              "duration": 51
+            },
+            {
+              "start": 4750.800000000047,
+              "duration": 79
+            },
+            {
+              "start": 4831.399999999907,
+              "duration": 98
+            },
+            {
+              "start": 4930.399999999907,
+              "duration": 91
+            },
+            {
+              "start": 5027.5,
+              "duration": 68
+            },
+            {
+              "start": 5293.399999999907,
+              "duration": 50
+            },
+            {
+              "start": 5345.300000000047,
+              "duration": 60
+            },
+            {
+              "start": 5409.59999999986,
+              "duration": 50
+            },
+            {
+              "start": 5461.300000000047,
+              "duration": 68
+            },
+            {
+              "start": 5530.800000000047,
+              "duration": 60
+            },
+            {
+              "start": 5591.699999999953,
+              "duration": 79
+            },
+            {
+              "start": 5672.399999999907,
+              "duration": 88
+            },
+            {
+              "start": 5761.800000000047,
+              "duration": 78
+            },
+            {
+              "start": 5840.300000000047,
+              "duration": 94
+            },
+            {
+              "start": 5935.300000000047,
+              "duration": 69
+            },
+            {
+              "start": 6006.09999999986,
+              "duration": 84
+            },
+            {
+              "start": 6096.199999999953,
+              "duration": 153
+            },
+            {
+              "start": 6250.800000000047,
+              "duration": 123
+            },
+            {
+              "start": 6375,
+              "duration": 81
+            },
+            {
+              "start": 6457.899999999907,
+              "duration": 71
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-formatted-metric-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "ff4d56fce4198fd9cfdde2d7dee9a804fb126c4eb2b672d14493a111c7732fef"
+        },
+        {
+          "name": "framer-formatted-metric-full-compact-dpr2-cpu4",
+          "id": "framer-formatted-metric",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 28.595689418346193,
+          "p95Ms": 83.5,
+          "maxMs": 150.19999999999982,
+          "gapsOver25ms": 95,
+          "readyMs": 430.69999999995343,
+          "twoFrameReadyMs": 530.5,
+          "firstPaintMs": 469.861,
+          "longTasks": [
+            {
+              "start": 182.9000000001397,
+              "duration": 448
+            },
+            {
+              "start": 631.1000000000931,
+              "duration": 92
+            },
+            {
+              "start": 765.5,
+              "duration": 103
+            },
+            {
+              "start": 869.9000000001397,
+              "duration": 80
+            },
+            {
+              "start": 1100.8000000000466,
+              "duration": 60
+            },
+            {
+              "start": 1207.9000000001397,
+              "duration": 63
+            },
+            {
+              "start": 1321,
+              "duration": 56
+            },
+            {
+              "start": 1378.4000000001397,
+              "duration": 54
+            },
+            {
+              "start": 1530.6000000000931,
+              "duration": 50
+            },
+            {
+              "start": 1581.8000000000466,
+              "duration": 53
+            },
+            {
+              "start": 1636.1999999999534,
+              "duration": 50
+            },
+            {
+              "start": 1687,
+              "duration": 61
+            },
+            {
+              "start": 1750.8000000000466,
+              "duration": 64
+            },
+            {
+              "start": 1816,
+              "duration": 88
+            },
+            {
+              "start": 1949.9000000001397,
+              "duration": 68
+            },
+            {
+              "start": 2064.3000000000466,
+              "duration": 63
+            },
+            {
+              "start": 2572.4000000001397,
+              "duration": 57
+            },
+            {
+              "start": 2730.3000000000466,
+              "duration": 52
+            },
+            {
+              "start": 2783.5,
+              "duration": 53
+            },
+            {
+              "start": 2886.8000000000466,
+              "duration": 62
+            },
+            {
+              "start": 2950.100000000093,
+              "duration": 69
+            },
+            {
+              "start": 3063.9000000001397,
+              "duration": 56
+            },
+            {
+              "start": 3121.1999999999534,
+              "duration": 55
+            },
+            {
+              "start": 3177.5,
+              "duration": 52
+            },
+            {
+              "start": 3230.3000000000466,
+              "duration": 57
+            },
+            {
+              "start": 3288.4000000001397,
+              "duration": 62
+            },
+            {
+              "start": 3350.9000000001397,
+              "duration": 80
+            },
+            {
+              "start": 3433.4000000001397,
+              "duration": 86
+            },
+            {
+              "start": 3521,
+              "duration": 108
+            },
+            {
+              "start": 3714.4000000001397,
+              "duration": 58
+            },
+            {
+              "start": 3969.4000000001397,
+              "duration": 64
+            },
+            {
+              "start": 4071.9000000001397,
+              "duration": 84
+            },
+            {
+              "start": 4157.300000000047,
+              "duration": 91
+            },
+            {
+              "start": 4249.5,
+              "duration": 148
+            },
+            {
+              "start": 4416.800000000047,
+              "duration": 58
+            },
+            {
+              "start": 4475.90000000014,
+              "duration": 81
+            },
+            {
+              "start": 4557.800000000047,
+              "duration": 91
+            },
+            {
+              "start": 4650.5,
+              "duration": 81
+            },
+            {
+              "start": 4733.40000000014,
+              "duration": 74
+            },
+            {
+              "start": 4859.199999999953,
+              "duration": 82
+            },
+            {
+              "start": 4942.199999999953,
+              "duration": 111
+            },
+            {
+              "start": 5055.5,
+              "duration": 87
+            },
+            {
+              "start": 5361.300000000047,
+              "duration": 64
+            },
+            {
+              "start": 5476,
+              "duration": 59
+            },
+            {
+              "start": 5603.40000000014,
+              "duration": 134
+            },
+            {
+              "start": 5741.90000000014,
+              "duration": 84
+            },
+            {
+              "start": 5828.800000000047,
+              "duration": 114
+            },
+            {
+              "start": 5943.699999999953,
+              "duration": 104
+            },
+            {
+              "start": 6048.90000000014,
+              "duration": 79
+            },
+            {
+              "start": 6131.199999999953,
+              "duration": 93
+            },
+            {
+              "start": 6383.699999999953,
+              "duration": 53
+            },
+            {
+              "start": 6437.699999999953,
+              "duration": 62
+            },
+            {
+              "start": 6507,
+              "duration": 86
+            },
+            {
+              "start": 6593.90000000014,
+              "duration": 59
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-formatted-metric-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "b5948a8a8301328f35dc0dca2d9beafae489e03fc3c7e1d040061d687681cd31"
+        },
+        {
+          "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 55.19342673759397,
+          "p95Ms": 16.900000000000546,
+          "maxMs": 116.69999999999982,
+          "gapsOver25ms": 21,
+          "readyMs": 247.5,
+          "twoFrameReadyMs": 271.89999999990687,
+          "firstPaintMs": 256.529,
+          "longTasks": [
+            {
+              "start": 200.20000000018626,
+              "duration": 265
+            },
+            {
+              "start": 577.1000000000931,
+              "duration": 68
+            },
+            {
+              "start": 6466.300000000047,
+              "duration": 139
+            },
+            {
+              "start": 6830.40000000014,
+              "duration": 52
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-rolling-balance-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "b940b267f8d6a7b07e3cf2ba08102ac32e42fb48a520249d6d86b5e3122790b5"
+        },
+        {
+          "name": "framer-rolling-balance-thumb-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 57.315535132300234,
+          "p95Ms": 16.80000000000109,
+          "maxMs": 66.70000000000073,
+          "gapsOver25ms": 17,
+          "readyMs": 368.19999999995343,
+          "twoFrameReadyMs": 388.19999999995343,
+          "firstPaintMs": 374.382,
+          "longTasks": [
+            {
+              "start": 227.10000000009313,
+              "duration": 375
+            },
+            {
+              "start": 5505.800000000047,
+              "duration": 68
+            },
+            {
+              "start": 5806.700000000186,
+              "duration": 68
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-rolling-balance-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "d38238afd985bdcb5a79fb5eddd1089d2e0c3460ed49e0328326a9c294b4833a"
+        },
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 47.701702026697966,
+          "p95Ms": 33.40000000000009,
+          "maxMs": 450.4000000000001,
+          "gapsOver25ms": 48,
+          "readyMs": 401.80000000004657,
+          "twoFrameReadyMs": 484.5,
+          "firstPaintMs": 425.891,
+          "longTasks": [
+            {
+              "start": 189,
+              "duration": 424
+            },
+            {
+              "start": 613,
+              "duration": 63
+            },
+            {
+              "start": 1152.2000000001863,
+              "duration": 74
+            },
+            {
+              "start": 2117.7000000001863,
+              "duration": 52
+            },
+            {
+              "start": 2207.5,
+              "duration": 66
+            },
+            {
+              "start": 2654.7000000001863,
+              "duration": 102
+            },
+            {
+              "start": 4799.600000000093,
+              "duration": 127
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-rolling-balance-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "0da16f564302c3e12f5167deb338fb0e5633cb40a1202fbb6b80997955e007da"
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 45.20310178190128,
+          "p95Ms": 49.90000000000009,
+          "maxMs": 300.39999999999986,
+          "gapsOver25ms": 73,
+          "readyMs": 375.10000000009313,
+          "twoFrameReadyMs": 535.9000000001397,
+          "firstPaintMs": 401.659,
+          "longTasks": [
+            {
+              "start": 212.60000000009313,
+              "duration": 400
+            },
+            {
+              "start": 612.7000000001863,
+              "duration": 110
+            },
+            {
+              "start": 748.9000000001397,
+              "duration": 64
+            },
+            {
+              "start": 857.7000000001863,
+              "duration": 54
+            },
+            {
+              "start": 913.5,
+              "duration": 293
+            },
+            {
+              "start": 1207.7000000001863,
+              "duration": 53
+            },
+            {
+              "start": 1348.1000000000931,
+              "duration": 77
+            },
+            {
+              "start": 1456.7000000001863,
+              "duration": 57
+            },
+            {
+              "start": 3034.9000000001397,
+              "duration": 64
+            },
+            {
+              "start": 5747.300000000047,
+              "duration": 62
+            },
+            {
+              "start": 6920,
+              "duration": 93
+            },
+            {
+              "start": 7222.5,
+              "duration": 50
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-rolling-balance-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "015fcf981c3144604184edbe3d29c729796383e8c4806cf0d26ba6070e18630c"
+        },
+        {
+          "name": "framer-focus-countdown-thumb-desktop-dpr1-cpu4",
+          "id": "framer-focus-countdown",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 58.813980495236194,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 50,
+          "gapsOver25ms": 8,
+          "readyMs": 189.4000000001397,
+          "twoFrameReadyMs": 209,
+          "firstPaintMs": 199.887,
+          "longTasks": [
+            {
+              "start": 166.20000000018626,
+              "duration": 205
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-focus-countdown-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "49fadac872d162d67ef7d770188ccd28136aa85b209b4424fba151832e4f42f1"
+        },
+        {
+          "name": "framer-focus-countdown-thumb-compact-dpr2-cpu4",
+          "id": "framer-focus-countdown",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.563946954371765,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 33.5,
+          "gapsOver25ms": 3,
+          "readyMs": 180.4000000001397,
+          "twoFrameReadyMs": 201.4000000001397,
+          "firstPaintMs": 187.822,
+          "longTasks": [
+            {
+              "start": 138.69999999995343,
+              "duration": 195
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-focus-countdown-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "8e976c1e78464b9e666007b279a73f405e8dbc4bb38ec8cc2b76ea30477f63ba"
+        },
+        {
+          "name": "framer-focus-countdown-full-desktop-dpr1-cpu4",
+          "id": "framer-focus-countdown",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 55.194115957592935,
+          "p95Ms": 33.30000000000018,
+          "maxMs": 50.100000000000364,
+          "gapsOver25ms": 34,
+          "readyMs": 170.10000000009313,
+          "twoFrameReadyMs": 190.9000000001397,
+          "firstPaintMs": 177.527,
+          "longTasks": [
+            {
+              "start": 170.39999999990687,
+              "duration": 185
+            },
+            {
+              "start": 1499.5,
+              "duration": 52
+            },
+            {
+              "start": 5677,
+              "duration": 54
+            },
+            {
+              "start": 6510.699999999953,
+              "duration": 56
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-focus-countdown-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "e94e33988df4955a9ad8c44049f637b603929bb9aff15d79a5ca6000569a704f"
+        },
+        {
+          "name": "framer-focus-countdown-full-compact-dpr2-cpu4",
+          "id": "framer-focus-countdown",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 55.56804275617492,
+          "p95Ms": 33.30000000000018,
+          "maxMs": 50.100000000000364,
+          "gapsOver25ms": 32,
+          "readyMs": 336.89999999990687,
+          "twoFrameReadyMs": 364.5999999998603,
+          "firstPaintMs": 348.861,
+          "longTasks": [
+            {
+              "start": 210.79999999981374,
+              "duration": 355
+            },
+            {
+              "start": 1708,
+              "duration": 55
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-focus-countdown-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "b0e75db6560d1803dbc8508f7a2756c30adbb089d1601f6d53db26b9b1e5fdf4"
+        },
+        {
+          "name": "framer-financial-trend-thumb-desktop-dpr1-cpu4",
+          "id": "framer-financial-trend",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 46.70213031642566,
+          "p95Ms": 50.099999999999454,
+          "maxMs": 200.20000000000005,
+          "gapsOver25ms": 63,
+          "readyMs": 288.60000000009313,
+          "twoFrameReadyMs": 302.4000000001397,
+          "firstPaintMs": 295.608,
+          "longTasks": [
+            {
+              "start": 204.30000000004657,
+              "duration": 309
+            },
+            {
+              "start": 757.0999999998603,
+              "duration": 51
+            },
+            {
+              "start": 856.5999999998603,
+              "duration": 54
+            },
+            {
+              "start": 1014.8999999999069,
+              "duration": 69
+            },
+            {
+              "start": 1086,
+              "duration": 64
+            },
+            {
+              "start": 1179.3999999999069,
+              "duration": 67
+            },
+            {
+              "start": 1246.5999999998603,
+              "duration": 66
+            },
+            {
+              "start": 1358.8999999999069,
+              "duration": 195
+            },
+            {
+              "start": 1558.6999999999534,
+              "duration": 84
+            },
+            {
+              "start": 1655.1999999999534,
+              "duration": 56
+            },
+            {
+              "start": 4773.5,
+              "duration": 50
+            },
+            {
+              "start": 4824.699999999953,
+              "duration": 62
+            },
+            {
+              "start": 4889.699999999953,
+              "duration": 67
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-financial-trend-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "f88d3f3e86a49874d2b87f47d44553eaf87dba75c9fe19d268b3a5e6a7020ae3"
+        },
+        {
+          "name": "framer-financial-trend-thumb-compact-dpr2-cpu4",
+          "id": "framer-financial-trend",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 47.825978372168535,
+          "p95Ms": 50,
+          "maxMs": 133.39999999999986,
+          "gapsOver25ms": 54,
+          "readyMs": 773.1000000000931,
+          "twoFrameReadyMs": 846.6000000000931,
+          "firstPaintMs": 786.177,
+          "longTasks": [
+            {
+              "start": 519.1999999999534,
+              "duration": 843
+            },
+            {
+              "start": 1546.1999999999534,
+              "duration": 95
+            },
+            {
+              "start": 1642.3999999999069,
+              "duration": 131
+            },
+            {
+              "start": 1779.3000000000466,
+              "duration": 75
+            },
+            {
+              "start": 1993.8000000000466,
+              "duration": 50
+            },
+            {
+              "start": 2094.899999999907,
+              "duration": 62
+            },
+            {
+              "start": 2159.1999999999534,
+              "duration": 102
+            },
+            {
+              "start": 3602.399999999907,
+              "duration": 55
+            },
+            {
+              "start": 3660.1999999999534,
+              "duration": 58
+            },
+            {
+              "start": 3881.899999999907,
+              "duration": 50
+            },
+            {
+              "start": 4082,
+              "duration": 61
+            },
+            {
+              "start": 4144.5,
+              "duration": 58
+            },
+            {
+              "start": 5633.300000000047,
+              "duration": 56
+            },
+            {
+              "start": 5722.899999999907,
+              "duration": 71
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-financial-trend-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "708f7501a9bf5ed42c8b68163175a1a3a5191afa4b4940f9c4d2d4189005aa28"
+        },
+        {
+          "name": "framer-financial-trend-full-desktop-dpr1-cpu4",
+          "id": "framer-financial-trend",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 38.96006593241927,
+          "p95Ms": 83.5,
+          "maxMs": 183.5999999999999,
+          "gapsOver25ms": 49,
+          "readyMs": 264,
+          "twoFrameReadyMs": 361.89999999990687,
+          "firstPaintMs": 311.646,
+          "longTasks": [
+            {
+              "start": 145.69999999995343,
+              "duration": 282
+            },
+            {
+              "start": 428.30000000004657,
+              "duration": 56
+            },
+            {
+              "start": 784,
+              "duration": 68
+            },
+            {
+              "start": 854.8999999999069,
+              "duration": 57
+            },
+            {
+              "start": 913.8000000000466,
+              "duration": 64
+            },
+            {
+              "start": 979.5,
+              "duration": 102
+            },
+            {
+              "start": 1084.6999999999534,
+              "duration": 99
+            },
+            {
+              "start": 1192.8000000000466,
+              "duration": 86
+            },
+            {
+              "start": 1280.8000000000466,
+              "duration": 80
+            },
+            {
+              "start": 1361.8000000000466,
+              "duration": 94
+            },
+            {
+              "start": 1462.8000000000466,
+              "duration": 83
+            },
+            {
+              "start": 1546.6000000000931,
+              "duration": 70
+            },
+            {
+              "start": 1618.1000000000931,
+              "duration": 84
+            },
+            {
+              "start": 1709,
+              "duration": 81
+            },
+            {
+              "start": 2808.8000000000466,
+              "duration": 70
+            },
+            {
+              "start": 2879.6999999999534,
+              "duration": 106
+            },
+            {
+              "start": 2987.600000000093,
+              "duration": 177
+            },
+            {
+              "start": 3166.600000000093,
+              "duration": 90
+            },
+            {
+              "start": 3257.6999999999534,
+              "duration": 73
+            },
+            {
+              "start": 3331.8000000000466,
+              "duration": 94
+            },
+            {
+              "start": 3428.1999999999534,
+              "duration": 97
+            },
+            {
+              "start": 3528.5,
+              "duration": 117
+            },
+            {
+              "start": 3646.600000000093,
+              "duration": 59
+            },
+            {
+              "start": 3708.100000000093,
+              "duration": 70
+            },
+            {
+              "start": 3779.5,
+              "duration": 62
+            },
+            {
+              "start": 4773.100000000093,
+              "duration": 66
+            },
+            {
+              "start": 4845.600000000093,
+              "duration": 89
+            },
+            {
+              "start": 4935.5,
+              "duration": 97
+            },
+            {
+              "start": 5033.300000000047,
+              "duration": 123
+            },
+            {
+              "start": 5157,
+              "duration": 88
+            },
+            {
+              "start": 5246.399999999907,
+              "duration": 104
+            },
+            {
+              "start": 5352.699999999953,
+              "duration": 104
+            },
+            {
+              "start": 5463.100000000093,
+              "duration": 91
+            },
+            {
+              "start": 5555.100000000093,
+              "duration": 73
+            },
+            {
+              "start": 5630,
+              "duration": 74
+            },
+            {
+              "start": 5705.5,
+              "duration": 80
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-financial-trend-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "84f23b646e0eef942ba448a7064080b94d6d9b2f1c51b7425d1e7eb9065bef40"
+        },
+        {
+          "name": "framer-financial-trend-full-compact-dpr2-cpu4",
+          "id": "framer-financial-trend",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 38.710321920031966,
+          "p95Ms": 100.09999999999945,
+          "maxMs": 133.5,
+          "gapsOver25ms": 47,
+          "readyMs": 577.1999999999534,
+          "twoFrameReadyMs": 653.1999999999534,
+          "firstPaintMs": 633.168,
+          "longTasks": [
+            {
+              "start": 252.5,
+              "duration": 615
+            },
+            {
+              "start": 867.5999999998603,
+              "duration": 56
+            },
+            {
+              "start": 1043.2999999998137,
+              "duration": 56
+            },
+            {
+              "start": 1099.8999999999069,
+              "duration": 111
+            },
+            {
+              "start": 1215.0999999998603,
+              "duration": 72
+            },
+            {
+              "start": 1288.8999999999069,
+              "duration": 119
+            },
+            {
+              "start": 1414,
+              "duration": 88
+            },
+            {
+              "start": 1503.5999999998603,
+              "duration": 82
+            },
+            {
+              "start": 1587.0999999998603,
+              "duration": 97
+            },
+            {
+              "start": 1684.2999999998137,
+              "duration": 71
+            },
+            {
+              "start": 1756.6999999999534,
+              "duration": 93
+            },
+            {
+              "start": 1850.8999999999069,
+              "duration": 109
+            },
+            {
+              "start": 1962.8999999999069,
+              "duration": 74
+            },
+            {
+              "start": 2038.6999999999534,
+              "duration": 56
+            },
+            {
+              "start": 2096.7999999998137,
+              "duration": 50
+            },
+            {
+              "start": 3063.7999999998137,
+              "duration": 54
+            },
+            {
+              "start": 3118.5999999998603,
+              "duration": 90
+            },
+            {
+              "start": 3209.899999999907,
+              "duration": 80
+            },
+            {
+              "start": 3291.5,
+              "duration": 114
+            },
+            {
+              "start": 3407,
+              "duration": 101
+            },
+            {
+              "start": 3509,
+              "duration": 108
+            },
+            {
+              "start": 3618.7999999998137,
+              "duration": 118
+            },
+            {
+              "start": 3738.1999999999534,
+              "duration": 116
+            },
+            {
+              "start": 3855.899999999907,
+              "duration": 81
+            },
+            {
+              "start": 3937.5,
+              "duration": 88
+            },
+            {
+              "start": 4027,
+              "duration": 68
+            },
+            {
+              "start": 5064.09999999986,
+              "duration": 66
+            },
+            {
+              "start": 5133.09999999986,
+              "duration": 70
+            },
+            {
+              "start": 5240.699999999953,
+              "duration": 134
+            },
+            {
+              "start": 5378.09999999986,
+              "duration": 128
+            },
+            {
+              "start": 5507.899999999907,
+              "duration": 134
+            },
+            {
+              "start": 5644.399999999907,
+              "duration": 101
+            },
+            {
+              "start": 5748.299999999814,
+              "duration": 114
+            },
+            {
+              "start": 5863.399999999907,
+              "duration": 98
+            },
+            {
+              "start": 5963.899999999907,
+              "duration": 118
+            },
+            {
+              "start": 6082.399999999907,
+              "duration": 59
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/final/2026-11-25T08-16-17-969Z-ce4f82307ee6/framer-financial-trend-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "691935b67f1765c5052489fddd31fa57ec1cfa61e3519d95d15afa08c57ca6fb"
+        }
+      ]
+    },
+    "hostFunctional": {
+      "file": ".artifacts/final-framer-perf-v24/host-functional.json",
+      "sha256": "156faab106ba80bcc74aaec7d9fa9330118a271039590dcfe0764abc1c37f136"
+    },
+    "hostFinalBefore": {
+      "file": ".artifacts/final-framer-perf-v24/host-final-before.json",
+      "sha256": "42189be4cc7cf9a6ac1c3a5703c0466b5f717c2d2941827d9a3b304da7120274"
+    },
+    "cpu4GatePassed": false,
+    "assessment": "Every observation and outlier is retained. The cache reduces measured work; recorded CPU4 cases contain dropped frames and do not establish a 60fps pass. The host reached 100% CPU with unrelated Java work; these observations do not isolate causation. Prior shell scores belong to their measured source revision."
+  },
+  "rejectedTrials": {
+    "sourceReadCache": {
+      "evidence": {
+        "file": ".artifacts/final-framer-perf-v24/readcache/2026-11-25T07-30-51-532Z-b91f0b682849/report.json",
+        "sha256": "3c2bd2902db96c012354ac3a8e95280dae1b2e86bff363ecc43831a0b918d2b2"
+      },
+      "browser": "158.0.8127.88",
+      "inputs": {
+        "tools/profile-final-framer.js": "5a11ec0a80003a3cef788f8433a79c7ec6fb7707919d328273abef3a3a420876",
+        "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "tools/load-registry.js": "80ea58e5d7c82e3d2303f4e8ea8572be01eb1145e2cfd2111f9fe7cdd0ba35ca",
+        "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+        "js/registry-files.json": "32c5e022763583020a8eca907744c569bb62b9e15f47b164238e294ff8df60ea",
+        "tools/fixtures/framer-data/rig.html": "6c6bff1358961a2ee31a41415734e19a8e985e95d433fecba8a29bafb8f186fc",
+        "tools/fixtures/framer-data/configs.json": "61065ad5f78a5887feb197ff56e521ddacf44633b84f16abf48b779cf0eefe84",
+        "tools/fixtures/framer-data/artwork.json": "afb83d01992c60acf459e5cbe12978fa75009dd7d2da88ecf8d432652743fd57",
+        "js/demos.framer-data.js": "b91f0b6828492d41922b95d8b53ea87b1ee995762f4c8b6a4cf47dbcbfb9c094",
+        ".artifacts/final-framer-perf-v24/readcache-definition.json": "ad309b3c57161800286516c98e4c37fb88c7d33fec1b6fa1edc1c33caa49a788",
+        "assets/fonts/manrope-variable.woff2": "a1c805c59463c3a415b1ec60fcf4bc3b2888bf8d6dbd81d5c44c5372364c7198",
+        "assets/fonts/newsreader-variable.woff2": "af29cad333ac04080dab3b2d269c69025363db211f455ece3c8ef9586e86229e",
+        "assets/fonts/newsreader-italic-variable.woff2": "8822c908ae7a32456b6027c86c52672c0d83e4f71e3f3a12b1f6f5a6901fddf2",
+        "assets/fonts/inter-variable.woff2": "0a21ac5776836258b1af3206b499d948d3b4646ef8cbab97ead1db4b3acf729d",
+        "assets/fonts/geist-variable.woff2": "2ffebe993e969069a9789d15164b7715d42491b5835516c5e3b935d5f81b05f1",
+        "assets/fonts/geist-mono-variable.woff2": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+        "assets/fonts/allura-regular.woff2": "365b6b4ac137cf45b046a88ee7b79c13d783f7dfe9428e580644d71c7f5c4ed0",
+        "assets/fonts/inter-latin-variable.woff2": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+        "assets/components/framer-data/175-1503.svg": "3713b7dd4efe74aa617a585725bda8f2cbe45b6e803020a90db50e2c0b50d47c",
+        "assets/components/framer-data/175-1504.svg": "21cd5bb76c433bf73fc79a1222cc38ee0c10029a114487b133de4460599259bc"
+      },
+      "cases": [
+        {
+          "name": "framer-rolling-balance-thumb-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": false,
+          "fps": 56.317274793336836,
+          "p95Ms": 16.80000000000109,
+          "maxMs": 150.19999999999993,
+          "gapsOver25ms": 14,
+          "readyMs": 250.39999999850988,
+          "twoFrameReadyMs": 286.79999999701977,
+          "firstPaintMs": 258.764,
+          "longTasks": [
+            {
+              "start": 313.1000000014901,
+              "duration": 274
+            },
+            {
+              "start": 769.3000000044703,
+              "duration": 67
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/readcache/2026-11-25T07-30-51-532Z-b91f0b682849/framer-rolling-balance-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "3012ad054016ab28bc27316778c44f84b0746d450e942a1604e2319fca516f9f"
+        },
+        {
+          "name": "framer-rolling-balance-thumb-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "thumb",
+          "cpu": 4,
+          "compact": true,
+          "fps": 58.564970904822566,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 66.69999999999982,
+          "gapsOver25ms": 8,
+          "readyMs": 212.69999999552965,
+          "twoFrameReadyMs": 237.19999999552965,
+          "firstPaintMs": 220.436,
+          "longTasks": [
+            {
+              "start": 144,
+              "duration": 226
+            },
+            {
+              "start": 492.59999999403954,
+              "duration": 56
+            },
+            {
+              "start": 4496.5999999940395,
+              "duration": 67
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/readcache/2026-11-25T07-30-51-532Z-b91f0b682849/framer-rolling-balance-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "f8b4bed18ef7a5406d24d51a71176b82c8fc3d6ec876aadbba9bcf105bf8eda4"
+        },
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": false,
+          "fps": 48.325466396943135,
+          "p95Ms": 33.40000000000009,
+          "maxMs": 400.5,
+          "gapsOver25ms": 35,
+          "readyMs": 237.69999999552965,
+          "twoFrameReadyMs": 290.3999999985099,
+          "firstPaintMs": 256.475,
+          "longTasks": [
+            {
+              "start": 148,
+              "duration": 252
+            },
+            {
+              "start": 569,
+              "duration": 66
+            },
+            {
+              "start": 4554.30000000447,
+              "duration": 73
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/readcache/2026-11-25T07-30-51-532Z-b91f0b682849/framer-rolling-balance-full-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "700335a842018bffe4da17ff299bb199b284b597bd6e3caab143323daeb01361"
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "id": "framer-rolling-balance",
+          "mode": "full",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.064458929597166,
+          "p95Ms": 16.800000000000182,
+          "maxMs": 50.09999999999991,
+          "gapsOver25ms": 5,
+          "readyMs": 350.29999999701977,
+          "twoFrameReadyMs": 405.1000000014901,
+          "firstPaintMs": 371.294,
+          "longTasks": [
+            {
+              "start": 190.39999999850988,
+              "duration": 365
+            },
+            {
+              "start": 4707.10000000149,
+              "duration": 65
+            }
+          ],
+          "trace": ".artifacts/final-framer-perf-v24/readcache/2026-11-25T07-30-51-532Z-b91f0b682849/framer-rolling-balance-full-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "ece1f6131bb8778b4bfd02d0638e44ae12644563d6d91d8f2f987ec1aeb6a639"
+        }
+      ],
+      "shipped": false,
+      "reason": "Did not establish the frame-rate gate and changed the protected source-model adapter."
+    },
+    "threadsGPU": {
+      "evidence": {
+        "file": ".artifacts/final-threads-gpu-v25/rounding-1795592028463/report.json",
+        "sha256": "dd3dc576c8e4bcb47adda398cd0848d99b598f59fd35f2b2a06bb22f35c67d3b"
+      },
+      "shipped": false,
+      "scope": "Precision diagnostic only. Collect all literal RGBA differences; no nonzero comparison is accepted. Original source states/clocks must remain exact.",
+      "browser": "158.0.8127.88",
+      "rows": [
+        {
+          "dpr": 1,
+          "name": "float",
+          "frames": [
+            {
+              "changed": 21,
+              "max": 1,
+              "sum": 21,
+              "exact": false
+            },
+            {
+              "changed": 61,
+              "max": 22,
+              "sum": 436,
+              "exact": false
+            },
+            {
+              "changed": 11,
+              "max": 1,
+              "sum": 11,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 1,
+          "name": "half-final",
+          "frames": [
+            {
+              "changed": 21,
+              "max": 1,
+              "sum": 21,
+              "exact": false
+            },
+            {
+              "changed": 61,
+              "max": 22,
+              "sum": 436,
+              "exact": false
+            },
+            {
+              "changed": 11,
+              "max": 1,
+              "sum": 11,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 1,
+          "name": "half-source",
+          "frames": [
+            {
+              "changed": 92,
+              "max": 1,
+              "sum": 92,
+              "exact": false
+            },
+            {
+              "changed": 118,
+              "max": 22,
+              "sum": 493,
+              "exact": false
+            },
+            {
+              "changed": 77,
+              "max": 1,
+              "sum": 77,
+              "exact": false
+            },
+            {
+              "changed": 71,
+              "max": 1,
+              "sum": 71,
+              "exact": false
+            },
+            {
+              "changed": 89,
+              "max": 1,
+              "sum": 89,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 1,
+          "name": "half-products",
+          "frames": [
+            {
+              "changed": 175,
+              "max": 1,
+              "sum": 175,
+              "exact": false
+            },
+            {
+              "changed": 199,
+              "max": 23,
+              "sum": 578,
+              "exact": false
+            },
+            {
+              "changed": 148,
+              "max": 1,
+              "sum": 148,
+              "exact": false
+            },
+            {
+              "changed": 151,
+              "max": 1,
+              "sum": 151,
+              "exact": false
+            },
+            {
+              "changed": 176,
+              "max": 1,
+              "sum": 176,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 1,
+          "name": "half-coverage",
+          "frames": [
+            {
+              "changed": 117,
+              "max": 1,
+              "sum": 117,
+              "exact": false
+            },
+            {
+              "changed": 150,
+              "max": 22,
+              "sum": 526,
+              "exact": false
+            },
+            {
+              "changed": 98,
+              "max": 1,
+              "sum": 98,
+              "exact": false
+            },
+            {
+              "changed": 99,
+              "max": 1,
+              "sum": 99,
+              "exact": false
+            },
+            {
+              "changed": 107,
+              "max": 1,
+              "sum": 107,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 1,
+          "name": "group-coverage",
+          "frames": [
+            {
+              "changed": 21,
+              "max": 1,
+              "sum": 21,
+              "exact": false
+            },
+            {
+              "changed": 61,
+              "max": 22,
+              "sum": 436,
+              "exact": false
+            },
+            {
+              "changed": 11,
+              "max": 1,
+              "sum": 11,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            },
+            {
+              "changed": 14,
+              "max": 1,
+              "sum": 14,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "float",
+          "frames": [
+            {
+              "changed": 1904,
+              "max": 255,
+              "sum": 19658,
+              "exact": false
+            },
+            {
+              "changed": 1943,
+              "max": 255,
+              "sum": 16691,
+              "exact": false
+            },
+            {
+              "changed": 1907,
+              "max": 255,
+              "sum": 25069,
+              "exact": false
+            },
+            {
+              "changed": 1851,
+              "max": 255,
+              "sum": 12383,
+              "exact": false
+            },
+            {
+              "changed": 1921,
+              "max": 255,
+              "sum": 16923,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "half-final",
+          "frames": [
+            {
+              "changed": 1904,
+              "max": 255,
+              "sum": 19658,
+              "exact": false
+            },
+            {
+              "changed": 1943,
+              "max": 255,
+              "sum": 16691,
+              "exact": false
+            },
+            {
+              "changed": 1907,
+              "max": 255,
+              "sum": 25069,
+              "exact": false
+            },
+            {
+              "changed": 1851,
+              "max": 255,
+              "sum": 12383,
+              "exact": false
+            },
+            {
+              "changed": 1921,
+              "max": 255,
+              "sum": 16923,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "half-source",
+          "frames": [
+            {
+              "changed": 2164,
+              "max": 255,
+              "sum": 19927,
+              "exact": false
+            },
+            {
+              "changed": 2167,
+              "max": 255,
+              "sum": 16945,
+              "exact": false
+            },
+            {
+              "changed": 2180,
+              "max": 255,
+              "sum": 25348,
+              "exact": false
+            },
+            {
+              "changed": 2129,
+              "max": 255,
+              "sum": 12666,
+              "exact": false
+            },
+            {
+              "changed": 2186,
+              "max": 255,
+              "sum": 17212,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "half-products",
+          "frames": [
+            {
+              "changed": 2185,
+              "max": 255,
+              "sum": 19963,
+              "exact": false
+            },
+            {
+              "changed": 2196,
+              "max": 255,
+              "sum": 16983,
+              "exact": false
+            },
+            {
+              "changed": 2225,
+              "max": 255,
+              "sum": 25415,
+              "exact": false
+            },
+            {
+              "changed": 2159,
+              "max": 255,
+              "sum": 12701,
+              "exact": false
+            },
+            {
+              "changed": 2219,
+              "max": 255,
+              "sum": 17256,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "half-coverage",
+          "frames": [
+            {
+              "changed": 2168,
+              "max": 255,
+              "sum": 19935,
+              "exact": false
+            },
+            {
+              "changed": 2156,
+              "max": 255,
+              "sum": 16937,
+              "exact": false
+            },
+            {
+              "changed": 2169,
+              "max": 255,
+              "sum": 25351,
+              "exact": false
+            },
+            {
+              "changed": 2118,
+              "max": 255,
+              "sum": 12655,
+              "exact": false
+            },
+            {
+              "changed": 2180,
+              "max": 255,
+              "sum": 17208,
+              "exact": false
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "name": "group-coverage",
+          "frames": [
+            {
+              "changed": 1904,
+              "max": 255,
+              "sum": 19658,
+              "exact": false
+            },
+            {
+              "changed": 1943,
+              "max": 255,
+              "sum": 16691,
+              "exact": false
+            },
+            {
+              "changed": 1907,
+              "max": 255,
+              "sum": 25069,
+              "exact": false
+            },
+            {
+              "changed": 1851,
+              "max": 255,
+              "sum": 12383,
+              "exact": false
+            },
+            {
+              "changed": 1921,
+              "max": 255,
+              "sum": 16923,
+              "exact": false
+            }
+          ]
+        }
+      ],
+      "assessment": "The first DPR1 pose has only 21 one-alpha differences, but later poses and DPR2 differ more. All six precision variants fail literal RGBA comparisons. No GPU renderer is shipped."
+    }
+  },
+  "interruptedVerification": {
+    "partialLog": {
+      "file": ".artifacts/final-framer-perf-v24/check-framer-partial.log",
+      "sha256": "43deec52235e05418b96497bc24bfd9a56e6753b406c2586e1d7278369752ca5"
+    },
+    "serverFailure": {
+      "file": ".artifacts/final-framer-perf-v24/check-framer-server-exited.log",
+      "sha256": "807464da4ceb7f4fa2453b869d75a1a40d91b0c084382473d39ab444b5032cfd"
+    },
+    "resolution": "The stopped verification handle was missing and no verifier process remained. Restarted the local server after ERR_CONNECTION_REFUSED; source-hash resume reused only the four completed groups."
+  },
+  "remaining": [
+    "Rolling Balance CPU4 timing",
+    "Native Threads exact-renderer CPU4 timing",
+    "Complete final motion, accessibility/manual and all-component startup audit",
+    "Refresh affected final acceptance evidence after remaining source changes"
+  ],
+  "privateEvidence": [
+    ".artifacts/final-framer-perf-v24",
+    ".artifacts/final-threads-gpu-v25"
+  ],
+  "publication": {
+    "policy": "Commit and push main directly. Actions stays disabled; account zero-dollar stop budget is unchanged.",
+    "goalComplete": false
+  }
+}

@@ -20,6 +20,32 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Rolling Balance fitted styles and currency text
+
+The [current Framer report](performance/framer-current-2026-11-25.json) records
+the next rendering optimization. Overlay geometry and target typography are
+still measured on every paint; only changed fitted values reach inline styles.
+A bounded twelve-entry cache reuses exact currency strings, keeping native
+integers separate from full and accessible two-decimal values. The original
+model adapter, complete source factory, arithmetic, timing and all ten faces
+per cylinder remain unchanged. All 520 CSS/HTML compositions and 519 other
+complete definitions stay intact; the generator prompt and exports are refreshed.
+
+The comparison suite covers 22 exact model/HTML/geometry stories, 16 GPU PNG
+pairs, four hold/input/resize/disposal stories and four additional formatting
+stories. The latter exercise 24 payment/currency steps, repeated cache eviction
+and changes to target font size, line height and letter spacing in both normal
+and reduced modes. Full-view style assignments fall another 24–26% in the
+60/120/240Hz clock stories. Constructor counters and lower work counts remain
+separate from frame-rate acceptance.
+
+`profile-final-framer.js` uses current foundations, registry/Dock bootstrap,
+prepared fonts and eight-second source-clock stories at desktop DPR1 and compact
+DPR2. It retains every trace and result. Recorded Rolling Balance CPU4 cases
+still contain dropped frames. The source-read-cache experiment and every
+Threads GPU precision variant remain unshipped; literal renderer equality and
+the final timing gates are preserved.
+
 ## Current shell measurements, 25 Nov
 
 The [current shell report](performance/final-shell-2026-11-25.json) retains

@@ -1485,6 +1485,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   counters do not establish frame rate. Retain the contended timing trials;
   CPU4, cold-route and Lighthouse acceptance remain open. Earlier private phase
   helpers, inputs and evidence stay frozen.
+- Rolling Balance also memoizes fitted inline assignments while remeasuring
+  overlay geometry and target typography on every paint. Its twelve-entry currency
+  text cache keys value, currency and fraction count; native integers and the
+  full/accessible two-decimal values remain distinct. `verify-rolling-cache.js`
+  includes 24-step currency/payment stories, repeated eviction, target font changes
+  and disposal in full/native normal/reduced modes. Keep its original model
+  adapter and factory exact. `profile-final-framer.js` records all four scenes
+  with current foundations and registry/Dock bootstrap; every run and outlier
+  remains separate. Lower work counts do not establish the open CPU4 timing gate.
 - `tools/stage-fit-ink.js` excludes empty transparent leaf targets from fill while
   retaining their geometry for overflow/text gates. Intrinsic media, visible text,
   surfaces, shadows and pseudo-elements still count. Run the 24 browser boundary
