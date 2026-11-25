@@ -2055,3 +2055,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Both Outline regressions compose the exact later delta; the painter applies
   it to both comparison sides so its transform-only oracle stays independent.
   These checks do not close frame-rate, all-state or whole-handoff audits.
+
+- Library Show more appends only the next batch of twelve. Preserve existing
+  tile, Stage, runtime, LiveTiles record, selection, preferred tile and manual
+  pause identities. Filtering and sorting still dispose the previous grid.
+  `tools/verify-library-append.js` covers 24 desktop/compact/touch stories,
+  both themes/motion settings/densities, Back state, all-520 creation counts
+  and pending-module completion/disposal. Keep the six-desktop/one-touch live
+  cap from Handoff 3 section 3.3; it is separate from the two-pill Dock limit.
+  The standard library verifier also rejects replacing prior tile nodes.
+  The interrupted V36 audit is 214 components/1,712 cases, not a full pass.
+  Its 2,664 frozen files, helpers and inputs remain read/copy only. Preserve
+  the original Archive-to-Drafts reset witness and the initial test's mistaken
+  two-live-preview bound; the written contract is six desktop/one touch.

@@ -2,6 +2,21 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Library append review](performance/library-append-2026-11-26.json) fixes
+Show more replacing every existing preview. Existing selections, runtime and
+pause ownership now survive adding the next batch; filters and sort still
+dispose the previous grid. Actual full-catalog construction drops from 11,872
+tile calls under the original view to 520. This is a work-count result, not a
+frame-rate or startup certificate. Keep the original Archive-to-Drafts reset
+witness, the 24 state/Back stories and both pending-module stories.
+
+The [interrupted route collection](performance/catalog-cold-interrupted-2026-11-25.json)
+retains 214 components/1,712 cases and every trace at a clean component boundary
+before this repair. It has no route boot/Back failures and 125 components with
+at least one measured paint miss. The complete 520-route target and startup
+investigation remain open on the corrected source; do not resume the frozen
+V36 helpers or use that partial matrix as full-catalog acceptance.
+
 The [Outline cursor painter review](motion/outline-painter-2026-11-25.json)
 closes the left/top motion-property finding. The cursor keeps its captured anchor
 and changes only a transform delta; the source model, complete Sweep trajectory,
@@ -11,9 +26,14 @@ corrected twenty Sweep stories and all eight Text & Type suites pass.
 The former Sweep image loop did not apply its light theme to the actual Stage.
 Preserve its four real exact pairs, but do not use those labels as light-Stage
 evidence. Both current checkers now set actual metadata and assert ctx.theme.
-The verified full light capture exposes low contrast in the pale word/outline
-and gray hint. That pre-existing palette needs a separate correction; model
-equivalence and image equality do not constitute contrast acceptance.
+The [Text & Type light-palette review](motion/type-light-2026-11-25.json)
+closes that full light ink finding across all six extensions. The original
+models, native v4 and full dark artwork remain exact. Actual Stage metadata,
+96 initial layouts, 72 native/dark PNG roundtrips, 24 light contrast cases,
+six inert reduced-paint holds and twelve fresh offline light contexts pass.
+Computed text-stroke color and width now survive the snapshot's removal of
+classes and data attributes. All eight existing Text & Type suites pass.
+This does not certify every animated state or close broader timing acceptance.
 
 The [Outline Fill Sweep review](motion/outline-sweep-2026-11-25.json) closes
 the displaced-start jump. Sweep now carries its visible vertical coordinate

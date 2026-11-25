@@ -1,0 +1,328 @@
+{
+  "date": "2026-11-26",
+  "baseline": "6a0c5a93b53cadb16c8b15a6475c4c64b87381ea",
+  "problem": "Each Show more call destroyed the current LiveTiles manager and replaced every existing grid child. A real Archive selection reverted to Drafts, and full expansion recreated earlier tiles repeatedly.",
+  "change": {
+    "files": [
+      "js/shell/views/library.js",
+      "index.html"
+    ],
+    "behavior": "Only Show more uses append mode. Keep the existing prefix and manager; render the items between the current child count and the new limit. Filter/sort/reset retain the original full disposal path. Bump the library-view script cache query.",
+    "frozenStageRuntimeExporterUnchanged": true,
+    "dependenciesAdded": 0
+  },
+  "baselineWitness": {
+    "at": "2026-11-25T17:53:51.585Z",
+    "browser": "158.0.8127.88",
+    "sourceSHA256": "72e687dac39e793e1c57a0dce5dad877745accab098c45e3188c8d26200efb20",
+    "row": {
+      "tiles": 24,
+      "sameManager": false,
+      "sameOldTileNodes": 0,
+      "sameRuntime": false,
+      "oldRuntimeDisposed": true,
+      "oldSelection": "3",
+      "newSelection": "1",
+      "sameRoot": false
+    },
+    "errors": []
+  },
+  "preservation": {
+    "baseline": "6a0c5a93b53cadb16c8b15a6475c4c64b87381ea",
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 520,
+    "frozenInputs": [
+      "css/style.css",
+      "css/fonts.css",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js"
+    ]
+  },
+  "verification": {
+    "append": {
+      "browser": "158.0.8127.88",
+      "stories": 24,
+      "scope": "Real mouse/keyboard/touch append across shell themes, both motion preferences and both densities. Existing tile/Stage/runtime/record identities, Archive selection and manual pause survive two appends. Filter disposal, sorted Back state, full-catalog creation counts and delayed-module ownership. No frame-rate or startup timing acceptance.",
+      "storyDimensions": [
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": false,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": false,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": false,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": false,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": true,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": true,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": true,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 1440,
+          "touch": false,
+          "reduced": true,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": false,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": false,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": false,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": false,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": true,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": true,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": true,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": false,
+          "reduced": true,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": false,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": false,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": false,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": false,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": true,
+          "theme": "dark",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": true,
+          "theme": "dark",
+          "density": "rows",
+          "paused": true
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": true,
+          "theme": "light",
+          "density": "grid",
+          "paused": false
+        },
+        {
+          "width": 390,
+          "touch": true,
+          "reduced": true,
+          "theme": "light",
+          "density": "rows",
+          "paused": true
+        }
+      ],
+      "pending": [
+        {
+          "dispose": false,
+          "passed": true
+        },
+        {
+          "dispose": true,
+          "passed": true
+        }
+      ],
+      "sourceStable": true,
+      "inputs": {
+        "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-library-append.js": "61cc4ded4745f243f1f2246e693b0ad95d522abf1f5db4820fefd3990f90e2ca",
+        "index.html": "c769032bc12967da0fd3a5c71817cf63ad2f84b146f240aecda2cd286d8fe59e",
+        "js/shell/views/library.js": "1c2dd1ee99cbb6dfccb67ad97e24a26815e634052a543a73f29fd8afbd01f08e",
+        "js/shell/ui.js": "7f40bc64433103beaca05feb788a53618f630b517ac53bcdae03f7d254d0eb09",
+        "js/shell/registry.js": "29df1a20544607d8713c0fc228899aef301b8c80853f38808334f1ef2bbf67c3",
+        "js/shell/router.js": "ab7892c03fe554aa57c9e612b36925a1f3e3f79be6fdda207c8daef452122ab0",
+        "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+        "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+        "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+        "css/foundations.css": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+        "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+        "registry/index.json": "145cec7da2986d0ded4421d5c1ff85e57f1a3f99b3c3ae8dc1a1b68b2ce89792",
+        "js/demos.layout.elastic-tabs.js": "9d81fe828d6656dd721b524dd3555d35db1203f40faba3cc9935984a345dc5d1"
+      }
+    },
+    "countedWork": {
+      "original": {
+        "browser": "158.0.8127.88",
+        "scope": "Actual original library body served from captured before.json through route interception; count of tile creation calls only. No timing/FPS claim. Current definitions, assets and other shell scripts unchanged.",
+        "librarySHA256": "72e687dac39e793e1c57a0dce5dad877745accab098c45e3188c8d26200efb20",
+        "count": 520,
+        "afterInitial": 11860,
+        "total": 11872,
+        "uniqueAfterInitial": 520
+      },
+      "current": {
+        "count": 520,
+        "expected": 520,
+        "created": 508,
+        "uniqueCreates": 508,
+        "uniqueTiles": 520,
+        "retained": 12,
+        "sameManager": true,
+        "records": 520,
+        "total": 520
+      },
+      "claim": "Actual tile construction calls for full expansion, not elapsed-time or FPS acceptance."
+    },
+    "runtimeShellUnits": 19,
+    "stageRuntime": "PASS: actions, cleanup, six desktop/one touch cap, touch opt-in, keyboard pause and independent offscreen full-preview holds.",
+    "registry": true,
+    "strictStage": true,
+    "strictMotion": true,
+    "generatedArtifacts": 1568,
+    "packageTests": 9,
+    "library": {
+      "checks": 667,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "fit": {
+      "total": 520,
+      "failed": [],
+      "overflow": [],
+      "hscroll": [],
+      "tinyText": [],
+      "lowFill": [],
+      "exceptions": 163
+    }
+  },
+  "retainedEvidence": {
+    "directory": ".artifacts/final-library-append-v37",
+    "baselineProofSHA256": "ab3dfd2494e13d194b0fd376b059e848e3d3c84a846782d45c20a97f0d828f9d",
+    "appendReportSHA256": "9a95b16a9a1d05d43df998614036b414adbcab9a806e4dd897c08980f44783cb",
+    "originalBulkSHA256": "a27836cee711667424fa01e0c885f20286183b9ed7bde4bf966e4915a5cf4f24",
+    "initialFailure": "The first append test assumed a desktop live limit of two. Handoff 3 section 3.3 and the frozen Stage specify six desktop/one touch. Corrected the test; no live cap changed.",
+    "pauseFixture": {
+      "retainedFailure": "Third run timed out during normal desktop rows pause setup before append assertions. No failure-state snapshot was captured.",
+      "correction": "Focus and center the tile, wait for complete visibility and actual playing state, then issue the pause key and require both manualPause and suspended. Future failures retain full state and a screenshot.",
+      "limit": "A passing rerun does not establish the exact cause of the earlier timeout."
+    },
+    "interruptedMatrix": "docs/performance/catalog-cold-interrupted-2026-11-25.json"
+  },
+  "remaining": "The 214-component source-stable baseline is partial. Full current-source cold startup, recorded paint misses, CPU4 timing, Lighthouse and broader accessibility/manual acceptance remain open."
+}
