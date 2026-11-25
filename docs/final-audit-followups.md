@@ -2,6 +2,21 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [four-component text-contrast review](accessibility/text-contrast-2026-11-26.json)
+raises Fraction Slider's compact counter and Letter Cascade's muted link ink.
+The menu keeps its glyph cascade and movement while operable unselected links
+remain opaque and unblurred. Actual light Stages also reveal pale text in
+Context Meter and Code Block; their new light palettes make the text readable.
+All 520 controllers, HTML compositions, metadata, original models and assets
+remain unchanged. The other 516 complete definitions are exact. Sixty-four
+geometry/palette/input stories and sixteen fresh offline full contexts pass.
+The native Fraction/menu ink and unselected menu styling deliberately change
+for readability; the captured dark Context Meter/Code Block previews stay intact.
+The before-paint review retains 203 deletion pairs and identifies clipped or
+transparent drum faces separately from visible text. Its default-GPU capture
+deltas are not a universal pixel-equivalence or contrast certificate. Raw axe
+and broader accessibility findings remain retained for their own review.
+
 The [Scrub Number review](accessibility/number-input-2026-11-26.json) fixes
 native Left/Right caret editing, raises the single X label to 5.33:1 in both
 views and corrects placement to the captured v4 coordinates. Its 160×40 field,

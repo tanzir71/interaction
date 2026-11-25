@@ -1,0 +1,331 @@
+{
+  "date": "2026-11-26",
+  "baseline": "2c224037112d4e09242850c5e528c4450a81bd4f",
+  "scope": "Four bounded text-palette/readability repairs. Full-catalog accessibility, all photographic/noninitial states, startup and CPU4 performance acceptance remain open.",
+  "preservation": {
+    "baseline": "2c224037112d4e09242850c5e528c4450a81bd4f",
+    "at": "2026-11-25T20:39:47.344Z",
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 516,
+    "controllersUnchanged": 520,
+    "htmlCompositionsUnchanged": 520,
+    "stageMetadataUnchanged": true,
+    "originalModelsDatasetsAndSourceCopyUnchanged": true,
+    "sourceAssetsUnchanged": true,
+    "newDependencies": 0,
+    "changedDefinitions": [
+      "slider-progress-fraction",
+      "menu-letter-cascade",
+      "agent-token-meter",
+      "ai-code-block"
+    ],
+    "permittedEdits": [
+      {
+        "id": "slider-progress-fraction",
+        "file": "js/demos.gallery.slider-progress-fraction.js",
+        "cssAppend": "\n/* Readable compact fraction on either Stage palette. */\n.d-fraction-slider:is(.stage[data-mode=\"thumb\"][data-stage-theme=\"dark\"] *) .d-fraction-slider-counter{color:#8c8c8c}.d-fraction-slider:is(.stage[data-mode=\"thumb\"][data-stage-theme=\"light\"] *) .d-fraction-slider-counter{color:#5c5c5c}",
+        "promptAppend": " Keep the native fraction and denominator readable: use #8c8c8c on a dark Stage and #5c5c5c on a light Stage. Preserve every captured position, font, original rotor face, photographic slot, counter value and interaction model.",
+        "sha256": "6aea4ecdea3cba23d0919ed533f1cfad1458d54d4a66a9a41a184f00e1feebf1"
+      },
+      {
+        "id": "menu-letter-cascade",
+        "file": "js/demos.nav.menu-letter-cascade.js",
+        "cssAppend": "\n/* Keep every operable link readable while the original glyph cascade moves. */\n.d-letter-menu-link{color:#8c8c8c!important}.d-letter-menu:is(.stage[data-stage-theme=\"light\"] *) .d-letter-menu-link{color:#5c5c5c!important}.d-letter-menu:is(.stage[data-stage-theme=\"light\"] *) .d-letter-menu-link[data-active=\"true\"]{color:#151515!important}.d-letter-menu[data-active]:not([data-active=\"-1\"]) .d-letter-menu-link[data-active=\"false\"]{opacity:1;filter:none}",
+        "promptAppend": " Keep all operable menu links readable during rest, hover and keyboard selection: neutral #8c8c8c inactive and #f1f1f1 active on dark; #5c5c5c inactive and #151515 active on light. Replace the low-opacity blurred unselected treatment with its readable neutral color. Retain the complete glyph cascade, original horizontal shifts, indicator, coordinates, fonts, easing, delays and controller. This deliberately raises the original native muted ink for contrast without resizing the captured composition.",
+        "sha256": "b925bb5549e1d291f0f314424f59e48848c1e0ef6d049faf860ba14fcb3d7d7a"
+      },
+      {
+        "id": "agent-token-meter",
+        "file": "js/demos.agent.agent-token-meter.js",
+        "cssAppend": "\n/* Readable light Context Meter without changing the source model or dark artwork. */\n.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *){color:#151515}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-context>span,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-stage-head,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-source-legend b,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-gauge-copy span,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-spark-head,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-cost-label{color:#5c5c5c}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-percent,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-spark-head b{color:#151515}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-meter,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-source-track,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-swatch{background:#d6d6d6}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-meter>i,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-source-track>i{background:#4a4a4a}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-meter>i:nth-child(2),.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-source-track>i:nth-child(2){background:#6b6b6b}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-hero-meter>i:nth-child(3),.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-source-track>i:nth-child(3){background:#b83f00}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-track,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-spark-base{stroke:#b4b4b4}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-spark-path{stroke:#4a4a4a}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-ring,.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-glow{stroke:#b83f00}.d-agent-agent-token-meter:is(.stage[data-stage-theme=\"light\"] *) .d-agent-agent-token-meter-chip{color:#b83f00}",
+        "promptAppend": " In both cameras, light Stage typography starts at #151515 primary and #5c5c5c secondary before the first paint. Use neutral dark track segments and #b83f00 for the orange segment, gauge stroke and compaction label; keep the original dark palette and exact dark native reference unchanged. Preserve all source dots and SVG bytes, every ring/spark sample, meter fractions, counters, complete billing model, number fades, timings and independent holds.",
+        "sha256": "c3894fd15cf7daf89d4e8d7d44e06c2e45a7bfd59fdf1ff6ed4853e3db8f8dab"
+      },
+      {
+        "id": "ai-code-block",
+        "file": "js/demos.agentext.ai-code-block.js",
+        "cssAppend": "\n/* Full code and line numbers follow the actual Stage palette. */\n.d-ext-agent-code:is(.stage[data-mode=\"full\"] *) .d-ext-agent-code-line-number{color:#9c9c9c}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-code-tabs>button{background:transparent}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-code-tab-indicator{background:#d6d6d6}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-code-code-body{border-color:#0000001f}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-code-copy-mark:after{background:#eaeaea}.d-ext-agent-code:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-code-line-number{color:#5c5c5c}",
+        "promptAppend": " Full views follow the actual Stage palette before their first paint. Light uses #151515 code and controls, #5c5c5c line numbers, neutral #eaeaea buttons and #d6d6d6 tab indicator with dark hairlines; dark retains its original code/control ink and raises line numbers to #9c9c9c. Preserve all three complete code tabs, their highlighted lines, live Copy feedback, expansion, exact supplied SVGs and native reference artwork. Keep fonts, layout and the complete controller unchanged.",
+        "sha256": "c6795701db900e31c93c0dead2573211af625450d956f9f640d0fb7dfd1c16b0"
+      }
+    ],
+    "frozenInputs": {
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+    },
+    "posterFiles": [
+      "assets/posters/menu-letter-cascade.png",
+      "assets/posters/slider-progress-fraction.png"
+    ]
+  },
+  "defects": [
+    {
+      "id": "slider-progress-fraction",
+      "finding": "Its visible native fraction and denominator used #6a6a6a on the dark Stage, about 3.37:1.",
+      "fix": "Use #8c8c8c for dark and #5c5c5c for light compact counters. Preserve all five slides, original text, photos, drum faces, font metrics, transforms and controller. The original native muted ink deliberately changes for readability."
+    },
+    {
+      "id": "menu-letter-cascade",
+      "finding": "Visible resting glyphs used about 3.37:1 dark ink; selecting a link left other operable links at 0.28 opacity with 3px blur. Active light labels retained pale dark-theme ink.",
+      "fix": "Use neutral readable inactive/active colors in each actual Stage palette. Keep unselected operable links opaque and unblurred. All original glyph rolls, five/nine-pixel shifts, indicator geometry, delays and controller remain exact.",
+      "designDeviation": "Native muted ink and the unselected dim/blur styling deliberately change for readability. No owner approval is inferred or claimed."
+    },
+    {
+      "id": "agent-token-meter",
+      "finding": "Light Stage primary labels retained #f1f1f1; the initial full gauge value was nearly indistinguishable from the pale Stage.",
+      "fix": "Initialize light primary/secondary ink and neutral/dark-orange meter marks before first paint. Preserve captured dark native artwork, all source SVG bytes and the complete usage, billing, compaction, spark and hold models."
+    },
+    {
+      "id": "ai-code-block",
+      "finding": "Visible dark line numbers used about 3.37:1. Light Stage code and inactive tabs retained #f1f1f1 and became almost invisible.",
+      "fix": "Raise full dark line numbers and initialize a complete neutral full light palette, including tabs, buttons and their indicator. All three complete code samples, highlighted lines, source SVGs, native artwork, expansion and clipboard controller remain exact."
+    }
+  ],
+  "manualReview": {
+    "historicalSelection": {
+      "evidence": {
+        "file": ".artifacts/final-contrast-review-v42/historical-triage.json",
+        "sha256": "39c9811ea34b7f1204da8cf08b6be16f4241467dda016c59d34a03661e43113c"
+      },
+      "note": "Measured nonzero foreground/background incomplete rows selected candidates; unmeasured zero ratios are not passes or confirmed defects. Later fresh actual Stage checks establish this phase scope."
+    },
+    "beforePaint": {
+      "cases": 16,
+      "deletionPairs": 203,
+      "invisibleFractionFaces": 20,
+      "invisibleTokenFaces": 8,
+      "evidence": {
+        "file": ".artifacts/final-contrast-review-v42/paint-before-corrected/report.json",
+        "sha256": "78b322143093fa53a49b9a18f25d7603cb21440843c6a2bb2fb76593f9d0a3b0"
+      },
+      "limits": "Exact zero deletion pairs apply only to the named clipped/transparent initial faces in these captures. Positive Stage-wide deltas can contain compositor differences outside a target; small default-GPU changes are retained, not treated as an exact glyph-mask oracle. This is not all-state drum contrast or universal raster equivalence."
+    },
+    "rawBefore": [
+      {
+        "evidence": {
+          "file": ".artifacts/final-contrast-review-v42/axe-before-desktop/2026-11-25T20-22-42-245Z/report.json",
+          "sha256": "88f5f1db0de5a9f42108a8814ff49bd634e8e1f95018a91d3c6975fda561d471"
+        },
+        "summary": {
+          "cases": 32,
+          "violations": 6,
+          "incomplete": 32,
+          "pageErrors": 0
+        }
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-contrast-review-v42/axe-before-compact/2026-11-25T20-23-57-741Z/report.json",
+          "sha256": "c75deb9a23b05907752144b1645a6fb9023f828800fffb72ad61b6cfad9ffcab"
+        },
+        "summary": {
+          "cases": 32,
+          "violations": 6,
+          "incomplete": 32,
+          "pageErrors": 0
+        }
+      }
+    ],
+    "rawAfter": [
+      {
+        "evidence": {
+          "file": ".artifacts/final-contrast-review-v42/axe-after-desktop/2026-11-25T20-54-27-758Z/report.json",
+          "sha256": "b3013abb7f9f7b53e65cc67702d5a305bdce2179fc0b4c3b23f01f686945d84d"
+        },
+        "summary": {
+          "cases": 32,
+          "violations": 4,
+          "incomplete": 29,
+          "pageErrors": 0
+        }
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-contrast-review-v42/axe-after-compact/2026-11-25T20-54-36-491Z/report.json",
+          "sha256": "a49c417b0214123053514aa111b8f253f3ea414f998bdfe31962946c0ab32f0a"
+        },
+        "summary": {
+          "cases": 32,
+          "violations": 4,
+          "incomplete": 29,
+          "pageErrors": 0
+        }
+      }
+    ],
+    "rawPolicy": "Keep every violation and incomplete result without filtering. The retained Fraction name-rule findings and other incomplete states are separate from this bounded ink repair; earlier primary-name evidence is retained and not upgraded into whole-catalog conformance.",
+    "surface": {
+      "lightStageGlow": {
+        "file": "assets/kit/stage-glow.svg",
+        "sha256": "2d32aabf332c67d76766ad24cbc40ef3ab3c9895d5506210f979459de28b7f51"
+      },
+      "note": "The supplied light Stage glow adds only white over #f4f4f4. The listed dark light-theme text is checked against the darker #f4f4f4 surface; dark Stage has a solid #151515 background. This bound is separate from photographic or other component backgrounds."
+    },
+    "criterion": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "rawAfterRules": [
+      {
+        "folder": "axe-after-desktop",
+        "rules": {
+          "label-content-name-mismatch": 4
+        },
+        "colorContrastViolations": 0,
+        "incomplete": 29
+      },
+      {
+        "folder": "axe-after-compact",
+        "rules": {
+          "label-content-name-mismatch": 4
+        },
+        "colorContrastViolations": 0,
+        "incomplete": 29
+      }
+    ]
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "focused": {
+      "stories": 64,
+      "fullAndNative": true,
+      "widths": [
+        1440,
+        390
+      ],
+      "stageThemes": [
+        "dark",
+        "light"
+      ],
+      "motion": [
+        "normal",
+        "reduced"
+      ],
+      "initialGeometry": "Exact DOM rectangles, transforms and font metrics against complete before definitions.",
+      "minimumListedTextContrast": 5.430537635745847,
+      "menuStates": "Actual Home/End/Escape navigation, operable sibling contrast and original source ownership.",
+      "codeStates": "All three original code tabs and their full contents.",
+      "offlineFreshFullContexts": 16,
+      "networkRequests": 0,
+      "pageErrors": 0,
+      "evidence": {
+        "file": ".artifacts/final-contrast-review-v42/text-contrast-corrected/2026-11-25T20-36-25-811Z/report.json",
+        "sha256": "0c2d93cdf95245083aab5032db44fbe67e901cf70bf88a805dc68ace969ffb77"
+      }
+    },
+    "earlierPaletteRegression": {
+      "layouts": 144,
+      "nativeComparisons": 72,
+      "offlineExports": 18,
+      "evidence": {
+        "file": ".artifacts/final-contrast-review-v42/palettes-corrected/2026-11-25T20-40-13-443Z/report.json",
+        "sha256": "4ddaca91a919d9074f948d051b4dcb256626bf774d5492e1a4b7273979633945"
+      },
+      "scope": "The later exact Fraction contrast CSS is applied to both native comparison sides. The original nine-component palette fixture is unchanged, while the focused checker independently validates the new delta."
+    },
+    "naming": {
+      "checks": 566,
+      "rows": 78,
+      "stories": 30,
+      "evidence": {
+        "file": ".artifacts/final-contrast-review-v42/remaining-names-corrected/2026-11-25T20-46-37-141Z/report.json",
+        "sha256": "1ee46995332cffba34f975effd1a91855a8630f635a3dc1aad666e25ba789a8b"
+      }
+    },
+    "required": {
+      "library": {
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "fit": {
+        "total": 520,
+        "failures": 0,
+        "sparseExceptions": 163,
+        "newExceptions": 0
+      },
+      "packageTests": 9,
+      "strictStage": true,
+      "strictStaticMotion": true,
+      "generatedArtifacts": 1568
+    },
+    "logs": [
+      {
+        "file": ".artifacts/final-contrast-review-v42/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/generated.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/titles.log",
+        "sha256": "dd0528a47a625a7d9e2b9b27b9c079199a6769bea8a1860f62eea9b5798e98f0"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/package.log",
+        "sha256": "154625ccc1818f74efdccd4f52384e0bb32407513f736ccaaac9caad55235d5e"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/posters.log",
+        "sha256": "5b39574f755a9249bd804978b3d6057ac74da56be426efe92f11bb52d0948be2"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/generated-after-posters.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/palettes-corrected.log",
+        "sha256": "1ec669177f7c41f11b1691345b87be97a0a88139364c3676a6399841718289ae"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/navigation.log",
+        "sha256": "32271b72225a0560be86d2bf8564ed622069c4866228d2c338a12651cb97ba7c"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/remaining-names-corrected.log",
+        "sha256": "fa5fbcfba4459541d7941464a200248d5505c392e6d6887f3a1d7b7eb95fec55"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/library.log",
+        "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/fit.log",
+        "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/text-contrast-corrected.log",
+        "sha256": "8d7d4ddb73fb8a3eea38e53dd90da593af6cf014cc0e777ab47f079863b58fab"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/axe-after-desktop.log",
+        "sha256": "c2941996fc784a0ba37d7060c3f5efc390f05c4bb4343935ac929757f6de4c54"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v42/axe-after-compact.log",
+        "sha256": "98e209cd28572dfde293c2ba9f37dbc3ea9a0d0a9c0118e89d59a19183119179"
+      }
+    ]
+  },
+  "retainedAttempts": [
+    "The first paint diagnostic used a nonexistent runtime pause method. The corrected helper uses the documented suspend API, with the original helper and failure retained.",
+    "The first four-component applier did not match whitespace before menu template fields. All replacement plans were guarded before any production write; the exact helper/failure is retained.",
+    "The first focused menu oracle required data-source=keyboard after End. Original focus selection can occur before the key handler and retain source=focus. The corrected oracle checks actual selected index and native focus; the accepted report retains its actual observed source.",
+    "The first composed palette guard compared cross-realm arrays directly. Matching serialized values are now compared in the same realm, preserving the exact original fixture and later source contract.",
+    "The older thirteen-component naming checker still expected Orbit without Target link and changing full Coast pass identities. Its expectations now retain the already shipped visible prefix, stable Coast pass name, complete front/back descriptions and unchanged native naming/pressed-state checks. The initial failure and exact old checker are retained; neither component implementation changes in this phase."
+  ],
+  "remainingAcceptance": [
+    "Complete remaining catalog accessibility and precise label applicability review.",
+    "Review unmeasured photographic, gradient, SVG/canvas and noninitial states.",
+    "Current-source complete startup/readiness and Chrome 4x CPU motion/frame-rate acceptance."
+  ]
+}

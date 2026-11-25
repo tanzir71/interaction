@@ -6,15 +6,16 @@ const assert = require('node:assert/strict');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const registry = require('./load-registry')();
 const fixture = require('./fixtures/component-palettes-before.json');
+const laterContrast = require('./fixtures/text-contrast-before.json');
 const assets = require('../assets/demo-assets.json');
 const catalog = require('../registry/index.json');
 const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:4173').replace(/\/$/, '');
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/component-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/component-palettes-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/component-palettes-before.json', 'tools/fixtures/text-contrast-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
-const report = {started:new Date().toISOString(), inputs, scope:'Nine full-view palettes; original controller hashes, exact initial layout and native pixels at two widths, themes and motion settings, plus fresh offline full exports. Contrast checks cover listed text and light chart marks on the Stage surface, not photographic captions or whole-catalog WCAG acceptance.', layouts:[], native:[], ink:[], graphs:[], exports:[]};
+const report = {started:new Date().toISOString(), inputs, scope:'Nine full-view palettes; original controller hashes, exact initial layout and native pixels at two widths, themes and motion settings, plus fresh offline full exports. Fraction native comparisons retain the separately verified later text-contrast CSS on both sides. Contrast checks cover listed text and light chart marks on the Stage surface, not photographic captions or whole-catalog WCAG acceptance.', layouts:[], native:[], ink:[], graphs:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
 const selectors = {
  'text-accordion-squeeze':['.d-typeaccordion-row', '.d-typeaccordion-index'],
@@ -28,7 +29,14 @@ const selectors = {
  'radar-sweep-blips':['.d-radar-demo-list>span', '.d-radar-demo-list li']
 };
 for (const item of fixture.items) {
- const demo = registry.demos.find(d => d.id === item.definition.id);
+ let demo = registry.demos.find(d => d.id === item.definition.id);
+ const later = laterContrast.items.find(i => i.definition.id === demo.id);
+ if (later) {
+  assert.equal(demo.css,later.definition.css+later.cssAppend,'Exact later contrast CSS');
+  assert.equal(demo.prompt,later.definition.prompt+later.promptAppend,'Exact later contrast guidance');
+  for(const [key,value] of Object.entries(later.definition))if(!['css','prompt'].includes(key))assert.deepEqual(JSON.parse(JSON.stringify(demo[key])),value,'Unchanged later contrast '+key);
+  demo={...demo,css:later.definition.css,prompt:later.definition.prompt};
+ }
  assert.equal(hash(demo.js), item.jsSHA256, 'Unchanged controller '+demo.id);
  for (const [key, value] of Object.entries(item.definition)) if (key !== 'css') assert.deepEqual(JSON.parse(JSON.stringify(demo[key])), value, 'Unchanged '+demo.id+'.'+key);
  assert(demo.css.startsWith(item.definition.css), 'Original CSS remains an exact prefix');
@@ -95,7 +103,7 @@ async function graphInk(page,id,theme){
 (async()=>{
  const browser=await chromium.launch(process.env.INTRX_CHROME_EXECUTABLE?{executablePath:process.env.INTRX_CHROME_EXECUTABLE}:{});report.browser=browser.version();
  try{
-  for(const item of fixture.items){const current=registry.demos.find(d=>d.id===item.definition.id),original={...item.definition,js:current.js};
+  for(const item of fixture.items){const current=registry.demos.find(d=>d.id===item.definition.id),later=laterContrast.items.find(i=>i.definition.id===current.id),original={...item.definition,js:current.js,css:item.definition.css+(later?.cssAppend||'')};
    for(const width of [1440,390])for(const theme of ['dark','light'])for(const reduced of [true,false])for(const mode of ['thumb','full']){
     const spec={id:current.id,width,theme,reduced,mode},before=await mount(browser,original,{width,theme,reduced,mode});let beforePNG;
     try{if(mode==='thumb')beforePNG=await before.page.locator('.stage').screenshot({animations:'allow'});}finally{await before.close();}

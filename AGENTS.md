@@ -2101,3 +2101,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   and is diagnostic only. Use actual DOM rectangles/text ranges for geometry.
   The frozen V40 title evidence remains read/copy only. These focused checks
   do not close the whole-catalog accessibility, startup or CPU4 audits.
+
+- `node tools/verify-text-contrast.js` covers Fraction Slider, Letter Cascade,
+  Context Meter and Code Block at both widths, Stage themes and motion settings.
+  Its 64 stories compare initial geometry to the exact before definitions;
+  sixteen fresh full exports check offline palettes and input states. Keep every
+  controller, HTML composition, dataset, font, source SVG and photo unchanged.
+  Fraction's compact counter uses readable ink for each actual Stage palette.
+  Letter Cascade retains its glyph roll, five/nine-pixel shifts, timing and
+  indicator; operable unselected links now stay opaque and unblurred, with
+  neutral readable ink. Its muted native ink deliberately differs from Figma.
+  Context Meter and Code Block follow actual light Stage metadata before first
+  paint. Their captured dark native artwork remains unchanged. Preserve the
+  clipped/transparent original drum faces: static axe findings alone do not
+  prove painted text. Retain the 203 before-paint deletion pairs and their
+  scopes; small default-GPU deltas outside the target are diagnostic, not an
+  exact glyph-pixel oracle. The older nine-palette verifier applies the exact
+  later Fraction contrast delta to both native comparison sides; the new
+  checker independently verifies that delta. Keep all raw axe findings and
+  failed harness attempts. This does not close catalog-wide accessibility,
+  photographic contrast, startup or CPU4 frame-rate acceptance.
+  The older thirteen-component naming regression now retains Orbit's shipped
+  `Target link` prefix and the full Coast pass's stable identity, testing its
+  complete front/back descriptions separately. Native names and pressed-state
+  checks remain intact; preserve the initial stale-expectation failure.
