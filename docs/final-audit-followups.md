@@ -2,6 +2,20 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Threads Canvas investigation](performance/threads-canvas-2026-11-25.json)
+leaves the existing renderer intact. The optional immutable bitmap cache passes
+literal pixel and resource checks but does not establish a performance benefit:
+both desktop samples in the sequential ABBA comparison are slower, and compact
+samples vary. Other host work remains uncontrolled. All 520 complete component
+definitions and generated artifacts are restored exactly; no cache, source
+sampling change, graphics hint or pixel tolerance ships. Keep the candidate,
+failed clipping/software/source-crop experiments, all timing traces and the
+guarded reversion error. The reusable comparison tool hashes JS-only references,
+settles bitmap jobs without advancing source time and optionally requires actual
+bitmap presentation. Restored production and the unshipped candidate each pass
+the final 31,202-check, sixteen-story renderer run. Their timing, all-component
+cold startup and broader manual accessibility gates remain open.
+
 The [Thinking Drawer completed-still review](accessibility/thinking-initial-2026-11-25.json)
 resolves the additional initial label warning. On a reduced-motion light Stage,
 the model and browser name could already say Thought for 6s while reasoning…

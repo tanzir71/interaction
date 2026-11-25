@@ -1791,6 +1791,14 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   early. Current-browser renderer stories complement the historical model
   suite; measured improvements do not close the remaining CPU4 timing gate.
 
+  The comparison accepts `--reference=FILE` for one hashed JS-only candidate;
+  use `--require-snapshots` when testing an optional bitmap fast path. Pending
+  texture jobs may settle between test frames without advancing source time;
+  every created bitmap must close on disposal. The 25 Nov Canvas investigation
+  leaves all 520 definitions unchanged: its cache passes pixel/resource checks
+  but does not establish a timing benefit and remains unshipped. Preserve the
+  retained ABBA traces and existing literal pixel and geometry bounds.
+
 - `node tools/verify-component-palettes.js http://127.0.0.1:4173` covers the
   full-view ink repairs for Accordion Type, Magic Underline, Number Slot,
   Highlighter Swipe, Fraction Slider, Bar Race, Sparkline, Price Tape and Radar.

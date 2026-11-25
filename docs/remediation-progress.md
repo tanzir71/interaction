@@ -20,6 +20,26 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Threads Canvas investigation
+
+The [Threads Canvas review](performance/threads-canvas-2026-11-25.json) retains
+the texture-cache experiments and their exact comparisons. No renderer change
+ships: all 520 complete component definitions, production inputs and generated
+artifacts are restored to the pushed baseline. The optional ImageBitmap cache
+passes 54 isolated painter cases, sixteen complete renderer stories and eleven
+resource-ownership stories, including late disposal, loss and DPR replacement.
+The six Showcase groups also pass against that archived candidate, including
+24 offline exports. Correct pixels and cleanup do not establish a timing gain.
+
+Sequential before/current/current/before CPU4 measurements record desktop
+baseline samples at 16.38/20.10fps and candidate samples at 13.21/12.21fps.
+Compact results vary. Other host work was uncontrolled; no intrinsic universal
+regression or reliable benefit is claimed. The candidate remains unshipped.
+The public comparison tool now accepts a hashed JS-only reference and can
+require actual bitmap drawing without advancing the test clock. Its original
+model, geometry and literal pixel bounds remain unchanged. Final CPU4 timing,
+all-component cold startup and manual accessibility audits remain open.
+
 ## Thinking Drawer completed still
 
 The [completed-still review](accessibility/thinking-initial-2026-11-25.json)
