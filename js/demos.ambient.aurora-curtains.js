@@ -1,7 +1,7 @@
 /* Exact v4 atmosphere artwork and approved photography with complete original interaction models. */
 INTRX.register({
   "id": "aurora-curtains",
-  "title": "Aurora Curtains",
+  "title": "Aurora",
   "cat": "Ambient",
   "tags": [
     "canvas",

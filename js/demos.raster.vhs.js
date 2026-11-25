@@ -1,7 +1,7 @@
 /* Exact v4 film artwork with complete original feedback, tube and tape models. */
 INTRX.register({
   "id": "vhs-tracking",
-  "title": "VHS Tracking Deck",
+  "title": "VHS Tracking",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

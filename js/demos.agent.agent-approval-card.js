@@ -1,7 +1,7 @@
 /* Tool Approval Card: original interaction with the exact v4 native composition. */
 INTRX.register({
   "id": "agent-approval-card",
-  "title": "Tool Approval Card",
+  "title": "Tool Approval",
   "cat": "Agent & AI UI",
   "rootClass": "d-new-agent-approval",
   "tags": [

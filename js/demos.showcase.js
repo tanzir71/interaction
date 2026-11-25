@@ -396,7 +396,7 @@ INTRX.register({
 
 INTRX.register({
   "id": "showcase-mesh-surface",
-  "title": "Contour Mesh Surface",
+  "title": "Contour Mesh",
   "cat": "Interactive Showcase",
   "rootClass": "d-showcase-mesh",
   "tags": [
@@ -733,7 +733,7 @@ INTRX.register({
 
 INTRX.register({
   "id": "showcase-card-swap",
-  "title": "Toss & Stack",
+  "title": "Toss and Stack",
   "cat": "Interactive Showcase",
   "rootClass": "d-show-card-swap",
   "tags": [

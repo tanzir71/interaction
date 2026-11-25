@@ -1,0 +1,433 @@
+{
+  "date": "2026-11-26",
+  "baseline": "f8ecee562acdcd16d6a7e8b3239d1a374ec4229a",
+  "scope": "Exact v4 catalog titles and cache-correct source previews. This does not complete full-catalog startup, CPU4 frame-rate or all-state accessibility acceptance.",
+  "changes": [
+    {
+      "id": "agent-context-compaction",
+      "before": "Agent Context Compaction",
+      "after": "Context Compaction",
+      "file": "js/demos.agent.agent-context-compaction.js"
+    },
+    {
+      "id": "particles-constellation",
+      "before": "Particles Constellation",
+      "after": "Constellation",
+      "file": "js/demos.ambient.particles-constellation.js"
+    },
+    {
+      "id": "gradient-mesh-drift",
+      "before": "Gradient Mesh Drift",
+      "after": "Mesh Drift",
+      "file": "js/demos.ambient.gradient-mesh-drift.js"
+    },
+    {
+      "id": "conway-life-fade",
+      "before": "Conway Life Fade",
+      "after": "Life",
+      "file": "js/demos.ambient.conway-life-fade.js"
+    },
+    {
+      "id": "audio-reactive-bars",
+      "before": "Audio Reactive Bars",
+      "after": "Reactive Bars",
+      "file": "js/demos.ambient.audio-reactive-bars.js"
+    },
+    {
+      "id": "matrix-rain",
+      "before": "Matrix Rain",
+      "after": "Glyph Rain",
+      "file": "js/demos.ambient.matrix-rain.js"
+    },
+    {
+      "id": "fireflies-night",
+      "before": "Fireflies Night",
+      "after": "Fireflies",
+      "file": "js/demos.ambient.fireflies-night.js"
+    },
+    {
+      "id": "aurora-curtains",
+      "before": "Aurora Curtains",
+      "after": "Aurora",
+      "file": "js/demos.ambient.aurora-curtains.js"
+    },
+    {
+      "id": "rain-window",
+      "before": "Rain Window",
+      "after": "Rain on Glass",
+      "file": "js/demos.ambient.rain-window.js"
+    },
+    {
+      "id": "typing-mechanical",
+      "before": "Typing Mechanical",
+      "after": "Mechanical Typing",
+      "file": "js/demos.sound.typing-mechanical.js"
+    },
+    {
+      "id": "notification-chime-stack",
+      "before": "Notification Chime Stack",
+      "after": "Chime Stack",
+      "file": "js/demos.sound.notification-chime-stack.js"
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "before": "Drum Grid Sequencer",
+      "after": "Drum Sequencer",
+      "file": "js/demos.sound.drum-grid-sequencer.js"
+    },
+    {
+      "id": "halftone-lines",
+      "before": "Engraving Line Screen",
+      "after": "Engraving Screen",
+      "file": "js/demos.raster.lines.js"
+    },
+    {
+      "id": "ascii-render",
+      "before": "ASCII Luminance Terminal",
+      "after": "ASCII Luminance",
+      "file": "js/demos.raster.ascii.js"
+    },
+    {
+      "id": "ascii-webcam-style-wave",
+      "before": "Synthetic ASCII Wave",
+      "after": "ASCII Wave",
+      "file": "js/demos.raster.ascii-wave.js"
+    },
+    {
+      "id": "ascii-donut-3d",
+      "before": "ASCII Donut 3D",
+      "after": "ASCII Donut",
+      "file": "js/demos.raster.ascii-donut-3d.js"
+    },
+    {
+      "id": "ascii-fluid-stir",
+      "before": "ASCII Fluid Stir",
+      "after": "ASCII Fluid",
+      "file": "js/demos.raster.ascii-fluid-stir.js"
+    },
+    {
+      "id": "ascii-portrait-reveal",
+      "before": "ASCII Portrait Reveal",
+      "after": "ASCII Portrait",
+      "file": "js/demos.raster.ascii-portrait-reveal.js"
+    },
+    {
+      "id": "dot-matrix-shapes",
+      "before": "Dot Matrix Shapes",
+      "after": "Dot Matrix",
+      "file": "js/demos.raster.dot-matrix-shapes.js"
+    },
+    {
+      "id": "halftone-globe-canvas",
+      "before": "Halftone Globe Canvas",
+      "after": "Halftone Globe",
+      "file": "js/demos.raster.halftone-globe-canvas.js"
+    },
+    {
+      "id": "engraving-lines-warp",
+      "before": "Engraving Lines Warp",
+      "after": "Engraved Relief",
+      "file": "js/demos.raster.engraving-lines-warp.js"
+    },
+    {
+      "id": "pixel-lissajous-lab",
+      "before": "Pixel Lissajous Lab",
+      "after": "Pixel Lissajous",
+      "file": "js/demos.raster.pixel-lissajous-lab.js"
+    },
+    {
+      "id": "glitch-rgb-slices",
+      "before": "RGB Slice Transmission",
+      "after": "RGB Slices",
+      "file": "js/demos.raster.rgb-glitch.js"
+    },
+    {
+      "id": "glitch-datamosh-blocks",
+      "before": "Macroblock Motion Smear",
+      "after": "Datamosh",
+      "file": "js/demos.raster.datamosh.js"
+    },
+    {
+      "id": "scanline-crt",
+      "before": "Scanline CRT Receiver",
+      "after": "CRT Receiver",
+      "file": "js/demos.raster.crt.js"
+    },
+    {
+      "id": "vhs-tracking",
+      "before": "VHS Tracking Deck",
+      "after": "VHS Tracking",
+      "file": "js/demos.raster.vhs.js"
+    },
+    {
+      "id": "pixel-sort",
+      "before": "Column Pixel Sort",
+      "after": "Pixel Sort",
+      "file": "js/demos.raster.pixel-sort.js"
+    },
+    {
+      "id": "noise-grain-overlay",
+      "before": "Reusable Film Grain",
+      "after": "Film Grain",
+      "file": "js/demos.raster.grain.js"
+    },
+    {
+      "id": "threshold-mosaic-transition",
+      "before": "Threshold Mosaic Switch",
+      "after": "Mosaic Switch",
+      "file": "js/demos.raster.mosaic.js"
+    },
+    {
+      "id": "bitmap-font-marquee",
+      "before": "Bitmap Type Marquee",
+      "after": "Bitmap Marquee",
+      "file": "js/demos.raster.bitmap-marquee.js"
+    },
+    {
+      "id": "interlace-flicker",
+      "before": "Alternating Field Monitor",
+      "after": "Interlace Monitor",
+      "file": "js/demos.raster.interlace.js"
+    },
+    {
+      "id": "posterize-hover",
+      "before": "Local Posterize Lens",
+      "after": "Posterize Lens",
+      "file": "js/demos.raster.posterize.js"
+    },
+    {
+      "id": "chromatic-type",
+      "before": "Chromatic Velocity Type",
+      "after": "Chromatic Type",
+      "file": "js/demos.raster.chromatic-type.js"
+    },
+    {
+      "id": "showcase-mesh-surface",
+      "before": "Contour Mesh Surface",
+      "after": "Contour Mesh",
+      "file": "js/demos.showcase.js"
+    },
+    {
+      "id": "showcase-card-swap",
+      "before": "Toss & Stack",
+      "after": "Toss and Stack",
+      "file": "js/demos.showcase.js"
+    },
+    {
+      "id": "agent-approval-card",
+      "before": "Tool Approval Card",
+      "after": "Tool Approval",
+      "file": "js/demos.agent.agent-approval-card.js"
+    },
+    {
+      "id": "agent-image-gen-reveal",
+      "before": "Image Generation Reveal",
+      "after": "Image Generation",
+      "file": "js/demos.agent.agent-image-gen-reveal.js"
+    },
+    {
+      "id": "agent-task-checklist",
+      "before": "Agent Task Checklist",
+      "after": "Agent Checklist",
+      "file": "js/demos.agent.agent-task-checklist.js"
+    },
+    {
+      "id": "agent-citation-chips",
+      "before": "Citation Hover Chips",
+      "after": "Citation Chips",
+      "file": "js/demos.agent.agent-citation-chips.js"
+    },
+    {
+      "id": "nav-pill-condense",
+      "before": "Condensing Pill Nav",
+      "after": "Condensing Nav",
+      "file": "js/demos.nav.nav-pill-condense.js"
+    },
+    {
+      "id": "fx-particle-text",
+      "before": "Particle Text Reveal",
+      "after": "Particle Text",
+      "file": "js/demos.fx.fx-particle-text.js"
+    },
+    {
+      "id": "ai-tool-result",
+      "before": "Tool Result Card",
+      "after": "Tool Result",
+      "file": "js/demos.agentext.ai-tool-result.js"
+    },
+    {
+      "id": "ai-web-search",
+      "before": "Web Search Results",
+      "after": "Web Search",
+      "file": "js/demos.agentext.ai-web-search.js"
+    },
+    {
+      "id": "ai-usage-limits",
+      "before": "Usage Limits Card",
+      "after": "Usage Limits",
+      "file": "js/demos.agentext.ai-usage-limits.js"
+    },
+    {
+      "id": "ai-multi-agent",
+      "before": "Multi-agent Chat",
+      "after": "Multi-Agent Chat",
+      "file": "js/demos.agentext.ai-multi-agent.js"
+    },
+    {
+      "id": "loader-multi-step",
+      "before": "Multi-step Loader",
+      "after": "Multi-Step Loader",
+      "file": "js/demos.loaderext.loader-multi-step.js"
+    }
+  ],
+  "counts": {
+    "titleChanges": 46,
+    "substantiveTitleChanges": 44,
+    "moduleFiles": 45,
+    "catalog": 520
+  },
+  "preservation": {
+    "evidence": {
+      "file": ".artifacts/final-catalog-titles-v40/preservation.json",
+      "sha256": "344ecdbd94831f4555e646622a378d47e612c9bc731d3828da4ed2f99b22dfb9"
+    },
+    "completeDefinitionsUnchanged": 474,
+    "titleOnlyDefinitions": 46,
+    "all520ControllersHtmlCssPromptsStageMetadataExact": true,
+    "fiveFrozenV1InputsExact": true,
+    "allOriginalAssetsAndCompositionCopyUnchanged": true
+  },
+  "portable": {
+    "evidence": {
+      "file": ".artifacts/final-catalog-titles-v40/portable-preservation.json",
+      "sha256": "b9f21b6cfb1d6fbc0d681f00e66c3321465d3d0822cd9b425bb616ad4e01450f"
+    },
+    "exactTitleOnlyDocuments": 46,
+    "exactTitleOnlySourcePreviews": 46,
+    "fullModelAndPortableBootstrapUnchangedApartFromTitle": true
+  },
+  "previewCaching": {
+    "change": "Each sourcePreview version hashes its actual emitted JSON. The complete index is serialized after those content hashes are assigned.",
+    "checkedGeneratedPreviews": 520,
+    "isolatedPro": {
+      "file": ".artifacts/final-catalog-titles-v40/pro-preview-proof.json",
+      "sha256": "40feda627ffb05804af6f6cf475e222950fd09285db356ee349837f2de4343a8"
+    },
+    "pro": {
+      "at": "2026-11-25T19:16:37.751Z",
+      "components": 520,
+      "locked": [
+        "fx-liquid-glass",
+        "fx-plasma-orb"
+      ],
+      "allPreviewHashesMatch": true,
+      "publishedCatalogFree": true,
+      "sourceRedactionIntact": true
+    }
+  },
+  "regressionContracts": {
+    "historicalFixturesUnchanged": true,
+    "titleFixture": "tools/fixtures/catalog-title-updates.json",
+    "referenceAdapter": "tools/verification/catalog-title-reference.js",
+    "method": "Only exact listed before/after titles compose over immutable old fixtures. The inverse requires the current canonical title before restoring the old value for the full original-definition hash. All other old assertions remain intact.",
+    "negativeTitleGate": {
+      "id": "agent-context-compaction",
+      "value": "Agent Context Compaction",
+      "errors": [
+        "ERROR: V4 TITLE agent-context-compaction: expected \"Context Compaction\", got \"Agent Context Compaction\""
+      ]
+    },
+    "retainedHarnessFailure": {
+      "input": {
+        "file": ".artifacts/final-catalog-titles-v40/input-first-verify-preservation.cjs",
+        "sha256": "cc0c9c5161d3fe413fee2610e81204ae61ab7579543752fe43b80d9f138e9fca"
+      },
+      "reproductionLog": {
+        "file": ".artifacts/final-catalog-titles-v40/preservation-failed-reproduction.log",
+        "sha256": "de5025d68e5987354d50ca726bd9ce0e6fa2021624e6d9c67e3d8c26f4ac5707"
+      },
+      "reason": "The first private negative-check logger captured only console.error’s first argument, losing the actual rejection text. The production validator already rejected the old title; the corrected logger preserves every argument. The first unsaved console failure and its separately recorded reproduction are distinct attempts."
+    }
+  },
+  "verification": {
+    "registry": {
+      "file": ".artifacts/final-catalog-titles-v40/registry.log",
+      "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+    },
+    "stageStrict": {
+      "file": ".artifacts/final-catalog-titles-v40/stage.log",
+      "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+    },
+    "motionStrict": {
+      "file": ".artifacts/final-catalog-titles-v40/motion.log",
+      "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+    },
+    "generated": {
+      "file": ".artifacts/final-catalog-titles-v40/generated.log",
+      "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+    },
+    "titles": {
+      "file": ".artifacts/final-catalog-titles-v40/titles.log",
+      "sha256": "dd0528a47a625a7d9e2b9b27b9c079199a6769bea8a1860f62eea9b5798e98f0"
+    },
+    "package": {
+      "file": ".artifacts/final-catalog-titles-v40/package.log",
+      "sha256": "a761607aa44a3d3ce9a27ae30338d47bab9e91562031edae0cf2a0afc181c40d"
+    },
+    "library": {
+      "evidence": {
+        "file": ".artifacts/final-catalog-titles-v40/accepted-library.json",
+        "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+      },
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "fit": {
+      "evidence": {
+        "file": ".artifacts/final-catalog-titles-v40/accepted-fit.json",
+        "sha256": "a15c5c3a01453e682e7ba0afc698a769a443a1d49e1c6fc100a480e06ba7eeb7"
+      },
+      "components": 520,
+      "overflow": 0,
+      "horizontalScroll": 0,
+      "textBelow11px": 0,
+      "lowFillMisses": 0,
+      "unchangedSparseExceptions": 163
+    },
+    "agentPalettes": {
+      "evidence": {
+        "file": ".artifacts/final-catalog-titles-v40/agent-palettes/2026-11-25T18-59-17-887Z/report.json",
+        "sha256": "347ca0cea50dc41d271f9504fa12a920229351a43e24cb0af33d288a12242627"
+      },
+      "layouts": 144,
+      "exactNativeCrops": 72,
+      "offline": 18
+    },
+    "interactivePalettes": {
+      "evidence": {
+        "file": ".artifacts/final-catalog-titles-v40/interactive-palettes/2026-11-25T19-03-17-151Z/report.json",
+        "sha256": "7f5083b5b0639e5f1a146562d551a5441dc54d04d3dabffe1e4972ce3b4c5dd2"
+      },
+      "layouts": 160,
+      "exactNativeCrops": 80,
+      "offline": 20
+    },
+    "dockNames": {
+      "evidence": {
+        "file": ".artifacts/final-catalog-titles-v40/dock-names/2026-11-25T19-07-29-729Z/report.json",
+        "sha256": "b09c225560bc303c1ea4aa959b20dcaa6f38c3234cd6d0fc23dbb2056db73b08"
+      },
+      "browser": "158.0.8127.88",
+      "stories": 264
+    }
+  },
+  "posters": "No native artwork or visible Dock label changes; existing posters remain unchanged.",
+  "remaining": [
+    "Complete current-source 520-route cold/warm startup acceptance and fix the retained first-process graphics initialization misses.",
+    "Resolve the recorded CPU4 frame-rate failures without simplifying the original models or replacing failed evidence.",
+    "Complete the remaining actual contrast, focus, transient-state and motion-recipe audits."
+  ],
+  "status": "V4 names and generated cache bindings corrected and locally verified. The full handoff remains open."
+}

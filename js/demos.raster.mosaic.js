@@ -1,7 +1,7 @@
 /* Exact v4 photographic raster artwork with complete original typed models. */
 INTRX.register({
   "id": "threshold-mosaic-transition",
-  "title": "Threshold Mosaic Switch",
+  "title": "Mosaic Switch",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

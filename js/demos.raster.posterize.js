@@ -1,7 +1,7 @@
 /* Exact v4 photographic raster artwork with complete original typed models. */
 INTRX.register({
   "id": "posterize-hover",
-  "title": "Local Posterize Lens",
+  "title": "Posterize Lens",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

@@ -1,7 +1,7 @@
 /* Exact v4 raster artwork with complete original field models. */
 INTRX.register({
   "id": "ascii-donut-3d",
-  "title": "ASCII Donut 3D",
+  "title": "ASCII Donut",
   "cat": "Raster & Glitch",
   "tags": [
     "ascii",

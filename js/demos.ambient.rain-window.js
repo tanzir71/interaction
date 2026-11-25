@@ -1,7 +1,7 @@
 /* Exact v4 atmosphere artwork and approved photography with complete original interaction models. */
 INTRX.register({
   "id": "rain-window",
-  "title": "Rain Window",
+  "title": "Rain on Glass",
   "cat": "Ambient",
   "tags": [
     "canvas",

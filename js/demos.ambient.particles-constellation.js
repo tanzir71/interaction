@@ -1,7 +1,7 @@
 /* Exact v4 Ambient artwork; complete original particle, tracer, flight and swarm models. */
 INTRX.register({
   "id": "particles-constellation",
-  "title": "Particles Constellation",
+  "title": "Constellation",
   "cat": "Ambient",
   "tags": [
     "canvas",

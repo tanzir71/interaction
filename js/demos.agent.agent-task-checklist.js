@@ -1,7 +1,7 @@
 /* Agent Task Checklist: original interaction with the exact v4 native composition. */
 INTRX.register({
   "id": "agent-task-checklist",
-  "title": "Agent Task Checklist",
+  "title": "Agent Checklist",
   "cat": "Agent & AI UI",
   "rootClass": "d-new-agent-tasks",
   "tags": [

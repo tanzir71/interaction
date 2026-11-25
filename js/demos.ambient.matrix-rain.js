@@ -1,7 +1,7 @@
 /* Exact v4 Ambient cell, band and glyph artwork with complete original full models. */
 INTRX.register({
   "id": "matrix-rain",
-  "title": "Matrix Rain",
+  "title": "Glyph Rain",
   "cat": "Ambient",
   "tags": [
     "canvas",

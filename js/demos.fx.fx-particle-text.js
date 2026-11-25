@@ -1,7 +1,7 @@
 /* Particle Text Reveal: original interaction and unchanged native artwork. */
 INTRX.register({
   "id": "fx-particle-text",
-  "title": "Particle Text Reveal",
+  "title": "Particle Text",
   "cat": "Raster & Glitch",
   "rootClass": "d-new-fx-particles",
   "tags": [

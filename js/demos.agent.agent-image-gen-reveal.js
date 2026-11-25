@@ -1,7 +1,7 @@
 /* Image Generation Reveal: original interaction with the exact v4 native composition. */
 INTRX.register({
   "id": "agent-image-gen-reveal",
-  "title": "Image Generation Reveal",
+  "title": "Image Generation",
   "cat": "Agent & AI UI",
   "rootClass": "d-new-agent-image",
   "tags": [

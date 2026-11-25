@@ -1,7 +1,7 @@
 /* Exact v4 raster artwork with complete original field models. */
 INTRX.register({
   "id": "halftone-globe-canvas",
-  "title": "Halftone Globe Canvas",
+  "title": "Halftone Globe",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

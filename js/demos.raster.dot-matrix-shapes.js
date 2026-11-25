@@ -1,7 +1,7 @@
 /* Exact v4 raster artwork with complete original field models. */
 INTRX.register({
   "id": "dot-matrix-shapes",
-  "title": "Dot Matrix Shapes",
+  "title": "Dot Matrix",
   "cat": "Raster & Glitch",
   "tags": [
     "dot-matrix",

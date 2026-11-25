@@ -1,7 +1,7 @@
 /* Tool Result Card: original interaction with unchanged native artwork. */
 INTRX.register({
   "id": "ai-tool-result",
-  "title": "Tool Result Card",
+  "title": "Tool Result",
   "cat": "Agent & AI UI",
   "rootClass": "d-ext-agent-tool",
   "tags": [

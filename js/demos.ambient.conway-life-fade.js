@@ -1,7 +1,7 @@
 /* Exact v4 Ambient cell, band and glyph artwork with complete original full models. */
 INTRX.register({
   "id": "conway-life-fade",
-  "title": "Conway Life Fade",
+  "title": "Life",
   "cat": "Ambient",
   "tags": [
     "cellular automaton",

@@ -1,7 +1,7 @@
 /* Exact v4 signal artwork with complete original grain, glyph and velocity models. */
 INTRX.register({
   "id": "bitmap-font-marquee",
-  "title": "Bitmap Type Marquee",
+  "title": "Bitmap Marquee",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

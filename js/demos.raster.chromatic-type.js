@@ -1,7 +1,7 @@
 /* Exact v4 signal artwork with complete original grain, glyph and velocity models. */
 INTRX.register({
   "id": "chromatic-type",
-  "title": "Chromatic Velocity Type",
+  "title": "Chromatic Type",
   "cat": "Raster & Glitch",
   "tags": [
     "typography",

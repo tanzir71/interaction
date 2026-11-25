@@ -1,7 +1,7 @@
 /* Exact v4 instrument artwork with complete original numerical models. */
 INTRX.register({
   "id": "glitch-rgb-slices",
-  "title": "RGB Slice Transmission",
+  "title": "RGB Slices",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

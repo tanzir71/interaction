@@ -1,7 +1,7 @@
 /* Exact v4 film artwork with complete original feedback, tube and tape models. */
 INTRX.register({
   "id": "scanline-crt",
-  "title": "Scanline CRT Receiver",
+  "title": "CRT Receiver",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

@@ -1,7 +1,7 @@
 /* Usage Limits Card: original interaction with unchanged native artwork. */
 INTRX.register({
   "id": "ai-usage-limits",
-  "title": "Usage Limits Card",
+  "title": "Usage Limits",
   "cat": "Agent & AI UI",
   "rootClass": "d-ext-agent-usage",
   "tags": [

@@ -1,7 +1,7 @@
 /* Exact v4 atmosphere artwork and approved photography with complete original interaction models. */
 INTRX.register({
   "id": "gradient-mesh-drift",
-  "title": "Gradient Mesh Drift",
+  "title": "Mesh Drift",
   "cat": "Ambient",
   "tags": [
     "gradient mesh",

@@ -2,7 +2,7 @@
 window.INTRX=window.INTRX||{demos:[],register(d){this.demos.push(d)}};
 INTRX.register({
   "id": "agent-context-compaction",
-  "title": "Agent Context Compaction",
+  "title": "Context Compaction",
   "cat": "Agent & AI UI",
   "rootClass": "d-agent-agent-context-compaction",
   "tags": [

@@ -1,7 +1,7 @@
 /* Exact native v4 Sound artwork with complete original synthesis and full interactions. */
 INTRX.register({
   "id": "typing-mechanical",
-  "title": "Typing Mechanical",
+  "title": "Mechanical Typing",
   "cat": "Sound & Haptics",
   "tags": [
     "webaudio",

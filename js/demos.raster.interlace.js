@@ -1,7 +1,7 @@
 /* Exact v4 photographic raster artwork with complete original typed models. */
 INTRX.register({
   "id": "interlace-flicker",
-  "title": "Alternating Field Monitor",
+  "title": "Interlace Monitor",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

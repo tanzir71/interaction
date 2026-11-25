@@ -46,6 +46,8 @@ const {demos}=require('./load-registry')();
   await library();await showAll();
   const all=await page.evaluate(async()=>{const out=[];for(const item of INTRX.catalog){const tile=document.getElementById('tile-'+item.id);tile.scrollIntoView({block:'center',behavior:'instant'});const stage=tile.querySelector('.demo-stage');for(let i=0;i<150&&!stage._root&&!stage.dataset.bootError;i++)await new Promise(r=>setTimeout(r,20));out.push({id:item.id,booted:!!stage._root,failed:stage.dataset.bootError==='true'});}return out;});
   check(all.length===demos.length&&all.every(d=>d.booted&&!d.failed),'Every preview boots: '+JSON.stringify(all.filter(d=>!d.booted||d.failed)));
+  const titles=await page.locator('#library-grid>.tile').evaluateAll(tiles=>tiles.map(tile=>({id:tile.dataset.id,title:tile.querySelector('.tile-details>span').textContent})));
+  check(titles.every(row=>row.title===demos.find(d=>d.id===row.id)?.title),'Every visible catalog caption uses its current title');
   console.log('PASS: all '+all.length+' lazy previews boot');
   await page.locator('#tile-elastic-tabs').scrollIntoViewIfNeeded();const scroll=await page.evaluate(()=>scrollY);await page.locator('#tile-elastic-tabs .tile-details').click();await page.waitForFunction(()=>location.hash==='#/c/elastic-tabs');await page.goBack();await page.waitForFunction(()=>location.hash==='#/library');
   check(Math.abs((await page.evaluate(()=>scrollY))-scroll)<4,'Back restores route scroll');

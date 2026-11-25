@@ -1,7 +1,7 @@
 /* Web Search Results: original interaction with unchanged native artwork. */
 INTRX.register({
   "id": "ai-web-search",
-  "title": "Web Search Results",
+  "title": "Web Search",
   "cat": "Agent & AI UI",
   "rootClass": "d-ext-agent-search",
   "tags": [

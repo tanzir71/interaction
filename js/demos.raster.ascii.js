@@ -1,7 +1,7 @@
 /* Native v4 artwork with complete original raster study models. */
 INTRX.register({
   "id": "ascii-render",
-  "title": "ASCII Luminance Terminal",
+  "title": "ASCII Luminance",
   "cat": "Raster & Glitch",
   "rootClass": "d-study-host-ascii-v4",
   "tags": [

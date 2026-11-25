@@ -1,7 +1,7 @@
 /* Exact v4 film artwork with complete original feedback, tube and tape models. */
 INTRX.register({
   "id": "glitch-datamosh-blocks",
-  "title": "Macroblock Motion Smear",
+  "title": "Datamosh",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

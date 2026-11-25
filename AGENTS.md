@@ -2068,3 +2068,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Its 2,664 frozen files, helpers and inputs remain read/copy only. Preserve
   the original Archive-to-Drafts reset witness and the initial test's mistaken
   two-live-preview bound; the written contract is six desktop/one touch.
+
+- Catalog titles must exactly match `INTRX-handover/manifest/components.json`.
+  `verify-registry.js` checks every manifest ID and title; run
+  `node tools/verify-catalog-titles.js` after generating the registry to check
+  catalog/full/portable names, document titles and source-preview URL hashes.
+  Preview URLs hash their actual emitted JSON, including title-only changes.
+  The 46-entry title migration changes no controller, HTML, CSS, prompt, model,
+  asset or Stage metadata. Keep the earlier palette/name fixtures unchanged;
+  `tools/verification/catalog-title-reference.js` composes only the exact listed
+  title delta over those fixtures. Its inverse validates the migrated value
+  before restoring a historical title for an original-definition hash check.
+  V38 (547 files) and interrupted V39 (700 files) are frozen, read/copy only.
+  The latter retains 22 components/176 cases, not full startup acceptance.

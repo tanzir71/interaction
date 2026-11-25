@@ -42,7 +42,7 @@ const photoAssets=new Map(Object.entries(photographs).map(([key,p])=>{
  return [p.asset,{key,asset:p.asset,photoId:p.photoId,imageId:p.imageId,photographer:p.photographer,url:p.page,license:p.license,licenseUrl:p.licenseUrl,verifiedAt:p.verifiedAt,full:p.files.full.path}];
 }));
 const photoMeta=d=>{const names=Object.keys(assetRefs(d)).filter(name=>name.startsWith('photo-'));if(!names.length)return{};for(const name of names)if(!photoAssets.has(name))throw Error('Photo asset needs verified attribution: '+name);return {photoCredits:names.map(name=>{const {full,...credit}=photoAssets.get(name);return credit;}),fullAssetRefs:Object.fromEntries(names.map(name=>[name,photoAssets.get(name).full]))};};
-const index=demos.map(d=>({id:d.id,title:d.title,category:d.cat,group:groupFor(d.cat),trigger:d.trigger,tags:d.tags,useCases:d.useCases,tier:d.tier,desc:d.desc,designSize:d.designSize,...(d.thumbDesignSize!==undefined?{thumbDesignSize:d.thumbDesignSize}:{}),stage:d.stage,libs:d.libs,addedAt:d.addedAt,url:HOST+'/#/c/'+d.id,thumb:d.thumb,module:filesById[d.id]+'?v='+moduleHashes[filesById[d.id]],...bundles,sourcePreview:'registry/p/'+d.id+'.json?v='+digest(d.html+d.css+d.js+bundles.assetBundle+bundles.exportBundle),assetRefs:assetRefs(d),rootClass:d.rootClass,controls:d.controls,a11y:d.a11y,hint:d.caption||designManifest.find(row=>row.id===d.id)?.description||d.hint,sourceName:d.source?.name||d.seen,isNew:designManifest.find(row=>row.id===d.id)?.isNew||false,...photoMeta(d)}));
+const index=demos.map(d=>({id:d.id,title:d.title,category:d.cat,group:groupFor(d.cat),trigger:d.trigger,tags:d.tags,useCases:d.useCases,tier:d.tier,desc:d.desc,designSize:d.designSize,...(d.thumbDesignSize!==undefined?{thumbDesignSize:d.thumbDesignSize}:{}),stage:d.stage,libs:d.libs,addedAt:d.addedAt,url:HOST+'/#/c/'+d.id,thumb:d.thumb,module:filesById[d.id]+'?v='+moduleHashes[filesById[d.id]],...bundles,sourcePreview:'registry/p/'+d.id+'.json',assetRefs:assetRefs(d),rootClass:d.rootClass,controls:d.controls,a11y:d.a11y,hint:d.caption||designManifest.find(row=>row.id===d.id)?.description||d.hint,sourceName:d.source?.name||d.seen,isNew:designManifest.find(row=>row.id===d.id)?.isNew||false,...photoMeta(d)}));
 if(index.some(d=>!d.group||!d.designSize))throw Error('Missing category group or stage metadata');
 if(new Set(index.map(d=>d.id)).size!==demos.length)throw Error('Duplicate registry ids');
 for(const d of demos){
@@ -60,16 +60,19 @@ for(const d of demos){
  new Function('root','stage','ctx','{\n'+d.js+'\n}');
 }
 const categories=Object.entries(groups).flatMap(([group,names])=>names.map(name=>({name,slug:slug(name),group,count:demos.filter(d=>d.cat===name).length})));
-put('registry/index.json',index);put('registry/categories.json',categories);
+put('registry/categories.json',categories);
 for(const d of demos){
  const entry=index.find(row=>row.id===d.id),locked=d.tier==='pro';
  const related=index.filter(row=>row.id!==d.id&&row.category===d.cat).sort((a,b)=>Number(b.trigger===d.trigger)-Number(a.trigger===d.trigger)||a.id.localeCompare(b.id)).slice(0,4).map(row=>row.id);
  const single=locked?'':R.buildCode({...d,photoCredits:entry.photoCredits});
- put('registry/p/'+d.id+'.json',locked?{locked:true}:{source:R.compactSource(single).split('\n').slice(0,18).join('\n'),lineCount:single.split('\n').length});
+ const preview=locked?{locked:true}:{source:R.compactSource(single).split('\n').slice(0,18).join('\n'),lineCount:single.split('\n').length};
+ entry.sourcePreview='registry/p/'+d.id+'.json?v='+digest(json(preview));
+ put('registry/p/'+d.id+'.json',preview);
  const item={$schema:HOST+'/registry/schema.json',...entry,stage:{...d.stage,designSize:d.designSize},a11y:d.a11y,controls:d.controls,files:locked?[]:[{path:d.id+'.html',type:'single-file',content:single}],parts:locked?null:{html:R.resolveAssets(d.html),css:R.portableCss(d),js:R.resolveAssets(d.js)},prompt:d.prompt,notes:[d.desc,d.seen,...(entry.photoCredits||[]).map(p=>'Photo: '+p.photographer+' / Unsplash · '+p.url+' · '+p.license)].filter(Boolean),related,source:{name:d.source?.name||'INTRX',url:d.source?.url||null,license:'MIT',credit:d.cat==='DRAMS'?'DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp)':null},version:VERSION,updatedAt:'2026-11-15',...(locked?{locked:true,upgradeUrl:HOST+'/#/pricing'}:{})};
  put('registry/c/'+d.id+'.json',item);
  put('r/'+d.id+'.json',{$schema:'https://ui.shadcn.com/schema/registry-item.json',name:d.id,type:'registry:block',title:d.title,description:d.desc,files:locked?[]:[{path:'intrx/'+d.id+'.html',type:'registry:file',target:'components/intrx/'+d.id+'.html',content:single}],...(locked?{locked:true,prompt:d.prompt,upgradeUrl:HOST+'/#/pricing'}:{})});
 }
+put('registry/index.json',index);
 const declarations=css=>Object.fromEntries([...css.matchAll(/(--[\w-]+)\s*:\s*([^;{}]+);/g)].map(m=>[m[1],m[2].trim()]));
 const light=style.match(/\[data-theme="light"\]\{([^}]+)\}/)[1];
 const darkBlocks=[...R.tokenCss.matchAll(/:root\s*\{([^}]+)\}/g)].map(m=>m[1]);

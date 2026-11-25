@@ -1,7 +1,7 @@
 /* Exact v4 instrument artwork with complete original numerical models. */
 INTRX.register({
   "id": "engraving-lines-warp",
-  "title": "Engraving Lines Warp",
+  "title": "Engraved Relief",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

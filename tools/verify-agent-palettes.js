@@ -6,6 +6,7 @@ const assert = require('node:assert/strict');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const registry = require('./load-registry')();
 const fixture = require('./fixtures/agent-palettes-before.json');
+const titleReference = require('./verification/catalog-title-reference');
 const thinkingInitial = require('./fixtures/thinking-initial-before.json');
 function beforeInitial(demo){
  if(demo.id!==thinkingInitial.definition.id)return demo;
@@ -19,7 +20,7 @@ const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:41
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/agent-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/agent-palettes-before.json', 'tools/fixtures/thinking-initial-before.json', 'tools/fixtures/diff-hold-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/catalog-title-updates.json', 'tools/verification/catalog-title-reference.js', 'INTRX-handover/manifest/components.json', 'tools/fixtures/agent-palettes-before.json', 'tools/fixtures/thinking-initial-before.json', 'tools/fixtures/diff-hold-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
 const report = {started:new Date().toISOString(), inputs, scope:'Nine full terminal and agent palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review.', capture:'Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.', browserArgs:['--disable-gpu'], layouts:[], native:[], ink:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
@@ -36,7 +37,7 @@ for (const item of fixture.items) {
   const contract=require('./fixtures/diff-hold-before.json');assert.equal(item.controllerUpdate.baselineSHA256,contract.jsSHA256);assert.equal(item.controllerUpdate.currentSHA256,item.jsSHA256);
   let expected=contract.definition.js;for(const edit of contract.edits){assert.equal(expected.split(edit.needle).length,2);expected=expected.replace(edit.needle,edit.replacement);}assert.equal(demo.js,expected,'Complete original controller plus exact optical insertions');
  }
- for (const [key, value] of Object.entries(item.definition)) if (key !== 'css') assert.deepEqual(JSON.parse(JSON.stringify(demo[key])), value, 'Unchanged '+demo.id+'.'+key);
+ for (const [key, value] of Object.entries(titleReference(item.definition))) if (key !== 'css') assert.deepEqual(JSON.parse(JSON.stringify(demo[key])), value, 'Unchanged '+demo.id+'.'+key);
  assert(demo.css.startsWith(item.definition.css), 'Original CSS remains an exact prefix');
  const suffix = demo.css.slice(item.definition.css.length).replace(/\/\*[\s\S]*?\*\//g, '').trim();
  const rules = [...suffix.matchAll(/([^{}]+)\{([^{}]*)\}/g)];

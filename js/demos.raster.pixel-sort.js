@@ -1,7 +1,7 @@
 /* Exact v4 photographic raster artwork with complete original typed models. */
 INTRX.register({
   "id": "pixel-sort",
-  "title": "Column Pixel Sort",
+  "title": "Pixel Sort",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

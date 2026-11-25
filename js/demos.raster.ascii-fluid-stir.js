@@ -1,7 +1,7 @@
 /* Native v4 artwork with complete original raster simulations. */
 INTRX.register({
   "id": "ascii-fluid-stir",
-  "title": "ASCII Fluid Stir",
+  "title": "ASCII Fluid",
   "cat": "Raster & Glitch",
   "tags": [
     "ascii",

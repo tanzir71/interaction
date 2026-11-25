@@ -1,7 +1,7 @@
 /* Exact native v4 Sound artwork with complete original synthesis and full interactions. */
 INTRX.register({
   "id": "notification-chime-stack",
-  "title": "Notification Chime Stack",
+  "title": "Chime Stack",
   "cat": "Sound & Haptics",
   "tags": [
     "webaudio",

@@ -1,0 +1,1676 @@
+{
+  "date": "2026-11-26",
+  "baseline": "f8ecee562acdcd16d6a7e8b3239d1a374ec4229a",
+  "scope": "Startup investigation on the pushed library-append source. No application or component renderer change ships; all full-catalog, CPU4 and broader accessibility acceptance remains open.",
+  "productionChanges": [],
+  "environment": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/environment.json",
+      "sha256": "8b61da1e42dcdef66dcd468e3cf3334e901a98a1b69811a1bd5b94b8ff064c0e"
+    },
+    "browser": "158.0.8127.88",
+    "defaultRenderer": "ANGLE (AMD, AMD Radeon(TM) Graphics (0x00001638) Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.12027.9001)",
+    "backend": "GraphiteDawnD3D11",
+    "qualification": "Browser-level SystemInfo from a separate launch; not per-sample or per-context GPU attestation."
+  },
+  "method": [
+    "Local CPU1, 1440×900 and 390×900; no mobile touch/DPR emulation or network latency. Both settings change the shell theme, while each Stage retains its default metadata theme.",
+    "One fresh browser process for all 48 cases; an empty context per sample. First-process graphics initialization is not repeated for each route. OS caches and other user work are uncontrolled.",
+    "Heading and Stage paint values preserve the existing fonts/two-animation-frame proxies; they do not prove each complete photographic or GPU composition was visible at that instant. Assets-ready covers current DOM images and fonts only.",
+    "Graphics wrappers are diagnostics with added overhead, not replacement acceptance samples. Their call stacks identify executed application operations, without attributing all elapsed time to JavaScript or one browser subsystem."
+  ],
+  "focusedRun": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/current/2026-11-25T18-28-56-728Z/report.json",
+      "sha256": "b5415f5dcdf5c10f520c7f2289fec7561162c85e5f6842996eb6d6a78372f80f"
+    },
+    "cases": 48,
+    "functionalErrors": 0,
+    "under300": 47,
+    "misses": [
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 483.30000000447035,
+        "stagePaintMs": 483.30000000447035,
+        "assetsReadyMs": 595.1000000014901,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-1-cold.trace.json.gz",
+          "sha256": "a7512e1a465277d65dfa66499564b5d6ad67f0d375da764d6e8a3b263759abea",
+          "headingPaint": {
+            "afterMarkMs": 40.584,
+            "durationMs": 2.33
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.478,
+            "durationMs": 0.035
+          }
+        }
+      }
+    ],
+    "allCases": [
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 483.30000000447035,
+        "stagePaintMs": 483.30000000447035,
+        "assetsReadyMs": 595.1000000014901,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-1-cold.trace.json.gz",
+          "sha256": "a7512e1a465277d65dfa66499564b5d6ad67f0d375da764d6e8a3b263759abea",
+          "headingPaint": {
+            "afterMarkMs": 40.584,
+            "durationMs": 2.33
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.478,
+            "durationMs": 0.035
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 85.90000000596046,
+        "stagePaintMs": 150.20000000298023,
+        "assetsReadyMs": 168.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-1-warm.trace.json.gz",
+          "sha256": "f6663b6eec8895a0d054ac38705ba1046c35d71edbb740cd7374be13b178c031",
+          "headingPaint": {
+            "afterMarkMs": 22.227,
+            "durationMs": 1.846
+          },
+          "bootPaint": {
+            "afterMarkMs": 14.494,
+            "durationMs": 0.396
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 163.89999999850988,
+        "stagePaintMs": 171.89999999850988,
+        "assetsReadyMs": 217.39999999850988,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-2-cold.trace.json.gz",
+          "sha256": "4a5dccece632c14ddfdbc79ebb69831ea0471b83a8dda6922a40339183cca811",
+          "headingPaint": {
+            "afterMarkMs": 40.758,
+            "durationMs": 2.96
+          },
+          "bootPaint": {
+            "afterMarkMs": 3.733,
+            "durationMs": 0.495
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 89.80000000447035,
+        "stagePaintMs": 150.10000000149012,
+        "assetsReadyMs": 167.80000000447035,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-2-warm.trace.json.gz",
+          "sha256": "0844fe759dcbff636b5659405e496097f40eac1f66490f234b5dd490ea1153fa",
+          "headingPaint": {
+            "afterMarkMs": 24.55,
+            "durationMs": 1.822
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.38,
+            "durationMs": 0.526
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 219.69999999552965,
+        "stagePaintMs": 219.69999999552965,
+        "assetsReadyMs": 281.59999999403954,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-1-cold.trace.json.gz",
+          "sha256": "641491446867289afad14186c25a18f4625d4e2916e7bbeaaef7fa90d328f985",
+          "headingPaint": {
+            "afterMarkMs": 49.45,
+            "durationMs": 4.634
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.453,
+            "durationMs": 0.6
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 74.20000000298023,
+        "stagePaintMs": 94.40000000596046,
+        "assetsReadyMs": 137.30000000447035,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-1-warm.trace.json.gz",
+          "sha256": "085f36f4badbf45f656a39758edb44b5f2c5adfa1f1f8c4ef4ab79a2c9285a1c",
+          "headingPaint": {
+            "afterMarkMs": 22.79,
+            "durationMs": 1.346
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.425,
+            "durationMs": 0.689
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 183,
+        "stagePaintMs": 183.10000000149012,
+        "assetsReadyMs": 242.69999999552965,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-2-cold.trace.json.gz",
+          "sha256": "f549903f9a6fab60b9878021196a8ebbf9ad1524ec49227b77511614bf4344c6",
+          "headingPaint": {
+            "afterMarkMs": 46.982,
+            "durationMs": 4.438
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.995,
+            "durationMs": 0.432
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 82.09999999403954,
+        "stagePaintMs": 101.89999999850988,
+        "assetsReadyMs": 143.19999999552965,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-2-warm.trace.json.gz",
+          "sha256": "befbdf3e537c03dce10b0f39316bd31dff0a725b6a4ecd632c8dca06f90449ed",
+          "headingPaint": {
+            "afterMarkMs": 23.888,
+            "durationMs": 1.866
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.123,
+            "durationMs": 0.408
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 160.79999999701977,
+        "stagePaintMs": 160.79999999701977,
+        "assetsReadyMs": 204.19999999552965,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-1-cold.trace.json.gz",
+          "sha256": "3f5acc8a3172ebf14521b766cc6bd4a50f8482111034b373b7f4cb044a6c3277",
+          "headingPaint": {
+            "afterMarkMs": 33.741,
+            "durationMs": 1.524
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.912,
+            "durationMs": 0.455
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 48.79999999701977,
+        "stagePaintMs": 100,
+        "assetsReadyMs": 118.5,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-1-warm.trace.json.gz",
+          "sha256": "d2aea8c7407d20e059463dad22afa567dfd6e2402f0da9dbb0807603bbc173ce",
+          "headingPaint": {
+            "afterMarkMs": 14.82,
+            "durationMs": 1.156
+          },
+          "bootPaint": {
+            "afterMarkMs": 42.53,
+            "durationMs": 0.524
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 141.09999999403954,
+        "stagePaintMs": 141.19999999552965,
+        "assetsReadyMs": 192.69999999552965,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-2-cold.trace.json.gz",
+          "sha256": "96a0acf88316f3b5c951e32e469f4094b63e2dad83977d2452d606f42f4eb285",
+          "headingPaint": {
+            "afterMarkMs": 37.473,
+            "durationMs": 1.658
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.7,
+            "durationMs": 0.291
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 62.399999998509884,
+        "stagePaintMs": 133.19999999552965,
+        "assetsReadyMs": 143.5,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-2-warm.trace.json.gz",
+          "sha256": "a3d056b07b5bb802b08f844b889ac7015a0a3b9b2b758996bee9cc637907ffea",
+          "headingPaint": {
+            "afterMarkMs": 17.641,
+            "durationMs": 1.239
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.946,
+            "durationMs": 0.435
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 161.5,
+        "stagePaintMs": 161.5,
+        "assetsReadyMs": 204.19999999552965,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-1-cold.trace.json.gz",
+          "sha256": "38d7ce32012a409b6485e755e43efb74e1eceef02db90e8c458f2e04305fb9db",
+          "headingPaint": {
+            "afterMarkMs": 40.925,
+            "durationMs": 1.441
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.116,
+            "durationMs": 0.414
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 45.29999999701977,
+        "stagePaintMs": 100,
+        "assetsReadyMs": 116.59999999403954,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-1-warm.trace.json.gz",
+          "sha256": "04e2b62477ac4bfbbec1e83c4f651ae6b0d992ee38f200f6238ea6c3ac750bf1",
+          "headingPaint": {
+            "afterMarkMs": 15.989,
+            "durationMs": 1.071
+          },
+          "bootPaint": {
+            "afterMarkMs": 17.119,
+            "durationMs": 0.501
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 137.39999999850988,
+        "stagePaintMs": 137.39999999850988,
+        "assetsReadyMs": 179.39999999850988,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-2-cold.trace.json.gz",
+          "sha256": "1daa49959fdfebaa69d973abe8ffa9fd8c36d0e54a0693925e0705af644fbcca",
+          "headingPaint": {
+            "afterMarkMs": 35.548,
+            "durationMs": 1.565
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.602,
+            "durationMs": 0.278
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 43.5,
+        "stagePaintMs": 94.80000000447035,
+        "assetsReadyMs": 104.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-2-warm.trace.json.gz",
+          "sha256": "2eacaf64aa2d9b08ee3de4b322ef1be6a03dff4c0c1961b8462f67a1dff5b888",
+          "headingPaint": {
+            "afterMarkMs": 12.487,
+            "durationMs": 1.221
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.014,
+            "durationMs": 0.322
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 172.19999999552965,
+        "stagePaintMs": 191,
+        "assetsReadyMs": 221.89999999850988,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-dark-1-cold.trace.json.gz",
+          "sha256": "d4feee51470195b1c798e3efad4158673ad1f45d1eea404495c0d35a2c95e102",
+          "headingPaint": {
+            "afterMarkMs": 38.623,
+            "durationMs": 2.741
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.992,
+            "durationMs": 0.821
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 163,
+        "stagePaintMs": 233.59999999403954,
+        "assetsReadyMs": 247,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-dark-1-warm.trace.json.gz",
+          "sha256": "98aa0c45fdabda49beca87fb4d5f725af4c3440f53b01fd1ea748f4bb7a59fb7",
+          "headingPaint": {
+            "afterMarkMs": 20.319,
+            "durationMs": 1.67
+          },
+          "bootPaint": {
+            "afterMarkMs": 27.947,
+            "durationMs": 0.727
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 219.40000000596046,
+        "stagePaintMs": 242.5,
+        "assetsReadyMs": 278.30000000447035,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-dark-2-cold.trace.json.gz",
+          "sha256": "d5268cb6936fc259f0bb57fdf2115ff21c753f6d60ca692f340b1ef25230239b",
+          "headingPaint": {
+            "afterMarkMs": 61.197,
+            "durationMs": 3.229
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.098,
+            "durationMs": 1.412
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 196.60000000149012,
+        "stagePaintMs": 281.70000000298023,
+        "assetsReadyMs": 304.3999999985099,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-dark-2-warm.trace.json.gz",
+          "sha256": "cb690cfb7bd9e1b0ba31297e7038f37ceffcb938720f2555a48ee8df35a82af3",
+          "headingPaint": {
+            "afterMarkMs": 28.851,
+            "durationMs": 1.861
+          },
+          "bootPaint": {
+            "afterMarkMs": 12.386,
+            "durationMs": 1.286
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 201.5,
+        "stagePaintMs": 224.79999999701977,
+        "assetsReadyMs": 257.5,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-light-1-cold.trace.json.gz",
+          "sha256": "006847e48f23617d1b16f576dfa461565729627dc6492e7bb808c1f0ffb6cc0d",
+          "headingPaint": {
+            "afterMarkMs": 49.583,
+            "durationMs": 2.972
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.392,
+            "durationMs": 1.191
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 162.20000000298023,
+        "stagePaintMs": 232.5,
+        "assetsReadyMs": 252.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-light-1-warm.trace.json.gz",
+          "sha256": "fbdde56e4f31c5a48588a4a18e0941badaf3571a5fb494b092f6fbe3bbf81230",
+          "headingPaint": {
+            "afterMarkMs": 22.335,
+            "durationMs": 2.129
+          },
+          "bootPaint": {
+            "afterMarkMs": 11.847,
+            "durationMs": 1.115
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 205.79999999701977,
+        "stagePaintMs": 205.89999999850988,
+        "assetsReadyMs": 235.39999999850988,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-light-2-cold.trace.json.gz",
+          "sha256": "16b468724e0fdfbc9883f4f24c820cada97963c7e12f3a19289143e18b85554a",
+          "headingPaint": {
+            "afterMarkMs": 51.713,
+            "durationMs": 2.505
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.087,
+            "durationMs": 0.68
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 148.70000000298023,
+        "stagePaintMs": 165.60000000149012,
+        "assetsReadyMs": 198.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-1440-light-2-warm.trace.json.gz",
+          "sha256": "709913e3dd58c21a114e13af3a89676164ebd05c39555799940e95f7a145b6ba",
+          "headingPaint": {
+            "afterMarkMs": 16.344,
+            "durationMs": 1.228
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.641,
+            "durationMs": 0.048
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 148.59999999403954,
+        "stagePaintMs": 148.59999999403954,
+        "assetsReadyMs": 169,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-dark-1-cold.trace.json.gz",
+          "sha256": "745391f67044ebdaa5f9d61f4d36863c52597477001a73bb2516c2e99da182fe",
+          "headingPaint": {
+            "afterMarkMs": 35.539,
+            "durationMs": 1.316
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.669,
+            "durationMs": 0.717
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 56.79999999701977,
+        "stagePaintMs": 107.89999999850988,
+        "assetsReadyMs": 127.09999999403954,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-dark-1-warm.trace.json.gz",
+          "sha256": "2c019818973c917bffeae1b98e14ea35943dc8b9f92f07dd00b2952d0e550a59",
+          "headingPaint": {
+            "afterMarkMs": 11.95,
+            "durationMs": 1.064
+          },
+          "bootPaint": {
+            "afterMarkMs": 17.912,
+            "durationMs": 0.726
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 141.59999999403954,
+        "stagePaintMs": 141.59999999403954,
+        "assetsReadyMs": 165,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-dark-2-cold.trace.json.gz",
+          "sha256": "1bb8c2888f490b6d70b2d92b6e2fac8dd087f49373b11a423209a9f5429b9b55",
+          "headingPaint": {
+            "afterMarkMs": 31.686,
+            "durationMs": 1.162
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.817,
+            "durationMs": 0.528
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 52.29999999701977,
+        "stagePaintMs": 93.79999999701977,
+        "assetsReadyMs": 111,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-dark-2-warm.trace.json.gz",
+          "sha256": "f86499d8ce508fd9e83737246518137a6e82750927aabe64be147779e5928e9b",
+          "headingPaint": {
+            "afterMarkMs": 11.056,
+            "durationMs": 0.666
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.651,
+            "durationMs": 0.57
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 155.70000000298023,
+        "stagePaintMs": 155.70000000298023,
+        "assetsReadyMs": 182,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-light-1-cold.trace.json.gz",
+          "sha256": "4e952cc4051e5d64dd53558dc2d7d745c32f19b9689b53c315733abe359ec8b7",
+          "headingPaint": {
+            "afterMarkMs": 30.831,
+            "durationMs": 1.336
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.916,
+            "durationMs": 1.067
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 99,
+        "stagePaintMs": 175.89999999850988,
+        "assetsReadyMs": 194.10000000149012,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-light-1-warm.trace.json.gz",
+          "sha256": "33656c414a5dbc3e48b7b8a34ea73fd2fbfb745cf34e41d63f60caa1cbd3d881",
+          "headingPaint": {
+            "afterMarkMs": 21.081,
+            "durationMs": 1.52
+          },
+          "bootPaint": {
+            "afterMarkMs": 14.09,
+            "durationMs": 1.145
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 188.10000000149012,
+        "stagePaintMs": 188.20000000298023,
+        "assetsReadyMs": 216.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-light-2-cold.trace.json.gz",
+          "sha256": "e606265cb229a79b32885699f3aa87470ebec2aacb1a7c481ad869e6914c54dd",
+          "headingPaint": {
+            "afterMarkMs": 38.711,
+            "durationMs": 1.489
+          },
+          "bootPaint": {
+            "afterMarkMs": 10.883,
+            "durationMs": 0.656
+          }
+        }
+      },
+      {
+        "id": "map-city-tiles",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 54.5,
+        "stagePaintMs": 95.5,
+        "assetsReadyMs": 111.70000000298023,
+        "errors": [],
+        "trace": {
+          "file": "map-city-tiles-390-light-2-warm.trace.json.gz",
+          "sha256": "34412e10e19ba37b3e7ca32872794d86815c5a9e37ea93803b7c83991bc67a8c",
+          "headingPaint": {
+            "afterMarkMs": 13.848,
+            "durationMs": 0.971
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.958,
+            "durationMs": 0.594
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 142.39999999850988,
+        "stagePaintMs": 152.89999999850988,
+        "assetsReadyMs": 186.29999999701977,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-dark-1-cold.trace.json.gz",
+          "sha256": "2421dca3517a28dc40983a974d5f814546369d3c78f475187f0a305f9fd9ef83",
+          "headingPaint": {
+            "afterMarkMs": 40.809,
+            "durationMs": 1.96
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.613,
+            "durationMs": 0.477
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 75.19999999552965,
+        "stagePaintMs": 75,
+        "assetsReadyMs": 96.29999999701977,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-dark-1-warm.trace.json.gz",
+          "sha256": "aa42776cec1f1ed8ff758bfb081c6ec3b6ab8170a147fa03d434f8a60c8c6389",
+          "headingPaint": {
+            "afterMarkMs": 27.279,
+            "durationMs": 1.428
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.979,
+            "durationMs": 1.428
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 136.40000000596046,
+        "stagePaintMs": 144.90000000596046,
+        "assetsReadyMs": 178.5,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-dark-2-cold.trace.json.gz",
+          "sha256": "1c537368fb5c167c64c0d4c91a05e47f339f086885a5f1a9944e4cafaca8de41",
+          "headingPaint": {
+            "afterMarkMs": 32.771,
+            "durationMs": 2.389
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.285,
+            "durationMs": 0.34
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 67,
+        "stagePaintMs": 66.80000000447035,
+        "assetsReadyMs": 89.80000000447035,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-dark-2-warm.trace.json.gz",
+          "sha256": "2c99cdf1dc0be3f184cbfe92dcce9de5b9f5c52fda93372588ede31027b2ff11",
+          "headingPaint": {
+            "afterMarkMs": 26.772,
+            "durationMs": 1.346
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.483,
+            "durationMs": 1.346
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 138.89999999850988,
+        "stagePaintMs": 147.89999999850988,
+        "assetsReadyMs": 181.39999999850988,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-light-1-cold.trace.json.gz",
+          "sha256": "e933255451851b5856db6506398babf03ad5c50e16cb82f07e73211a3f6b85ea",
+          "headingPaint": {
+            "afterMarkMs": 37.197,
+            "durationMs": 2.77
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.216,
+            "durationMs": 0.421
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 68.30000000447035,
+        "stagePaintMs": 55,
+        "assetsReadyMs": 78.20000000298023,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-light-1-warm.trace.json.gz",
+          "sha256": "9db8728a0ab900ca702c51880f24e44f785ebbee05ce62b5b75799e992d11c98",
+          "headingPaint": {
+            "afterMarkMs": 21.268,
+            "durationMs": 0.997
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.437,
+            "durationMs": 0.997
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 171.20000000298023,
+        "stagePaintMs": 179.20000000298023,
+        "assetsReadyMs": 209.5,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-light-2-cold.trace.json.gz",
+          "sha256": "fb6aa93db696e2fa9f20497f5ccaedf149a640d30ecc6cce2f547591e7e3c473",
+          "headingPaint": {
+            "afterMarkMs": 53.928,
+            "durationMs": 2.989
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.577,
+            "durationMs": 0.646
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 1440,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 86,
+        "stagePaintMs": 85.89999999850988,
+        "assetsReadyMs": 113,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-1440-light-2-warm.trace.json.gz",
+          "sha256": "f6e9a3b3c4c9f18a0595ed249017206409937a749ff2b6140baff22cdd3fcd40",
+          "headingPaint": {
+            "afterMarkMs": 33.077,
+            "durationMs": 1.404
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.052,
+            "durationMs": 1.404
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 152.40000000596046,
+        "stagePaintMs": 152.40000000596046,
+        "assetsReadyMs": 182.30000000447035,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-dark-1-cold.trace.json.gz",
+          "sha256": "da3f0a0f1bbf9ea6699246e94faaa22b9db439e3dcb60d2aedfa97c2cf0db235",
+          "headingPaint": {
+            "afterMarkMs": 32.789,
+            "durationMs": 1.209
+          },
+          "bootPaint": {
+            "afterMarkMs": 3.28,
+            "durationMs": 0.432
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 60.399999998509884,
+        "stagePaintMs": 60.30000000447035,
+        "assetsReadyMs": 75.70000000298023,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-dark-1-warm.trace.json.gz",
+          "sha256": "b1c73f9827639f525f29d35c0c4ca9d68738e937c82120885cc0eecff867a0f8",
+          "headingPaint": {
+            "afterMarkMs": 24.003,
+            "durationMs": 1.188
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.86,
+            "durationMs": 1.188
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 169.10000000149012,
+        "stagePaintMs": 169.10000000149012,
+        "assetsReadyMs": 202.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-dark-2-cold.trace.json.gz",
+          "sha256": "891af615b27aaeb09f7b319f43983a175ea71bca6ea515e7b65da651ea692180",
+          "headingPaint": {
+            "afterMarkMs": 41.536,
+            "durationMs": 2.018
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.161,
+            "durationMs": 0.492
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "dark",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 37.29999999701977,
+        "stagePaintMs": 37.19999999552965,
+        "assetsReadyMs": 61.600000001490116,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-dark-2-warm.trace.json.gz",
+          "sha256": "a19e6883ed2df0d177ac4a1bb740858fbfecd049744159912a60f17598683380",
+          "headingPaint": {
+            "afterMarkMs": 14.283,
+            "durationMs": 0.841
+          },
+          "bootPaint": {
+            "afterMarkMs": 3.607,
+            "durationMs": 0.841
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 1,
+        "headingPaintMs": 129.79999999701977,
+        "stagePaintMs": 129.79999999701977,
+        "assetsReadyMs": 161.89999999850988,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-light-1-cold.trace.json.gz",
+          "sha256": "f4ca3fc5f43a8f7e2d77489fcccd41d1007a6bafd47c75e5d7d9aa6d1bc00a54",
+          "headingPaint": {
+            "afterMarkMs": 31.02,
+            "durationMs": 1.546
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.714,
+            "durationMs": 0.304
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 1,
+        "headingPaintMs": 35.099999994039536,
+        "stagePaintMs": 67,
+        "assetsReadyMs": 95.89999999850988,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-light-1-warm.trace.json.gz",
+          "sha256": "b3179e846dff9223084ae7a110aa9bbf560d0848a1dff2bdba000d9aad287cb0",
+          "headingPaint": {
+            "afterMarkMs": 11.151,
+            "durationMs": 1.241
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.612,
+            "durationMs": 0.43
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "cold",
+        "repeat": 2,
+        "headingPaintMs": 132.10000000149012,
+        "stagePaintMs": 132.19999999552965,
+        "assetsReadyMs": 165.60000000149012,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-light-2-cold.trace.json.gz",
+          "sha256": "d97c446c096a5a0283df04cb7c9279d01143428a2a97e60d9cc42f1bd46ade27",
+          "headingPaint": {
+            "afterMarkMs": 30.054,
+            "durationMs": 1.555
+          },
+          "bootPaint": {
+            "afterMarkMs": 12.39,
+            "durationMs": 0.441
+          }
+        }
+      },
+      {
+        "id": "text-scramble",
+        "width": 390,
+        "shellTheme": "light",
+        "mode": "warm",
+        "repeat": 2,
+        "headingPaintMs": 35.399999998509884,
+        "stagePaintMs": 62.20000000298023,
+        "assetsReadyMs": 95.5,
+        "errors": [],
+        "trace": {
+          "file": "text-scramble-390-light-2-warm.trace.json.gz",
+          "sha256": "02ab019af89ee2a147efe7f632762dbece17b1491e8285fc5c73a9ce50c7820b",
+          "headingPaint": {
+            "afterMarkMs": 11.577,
+            "durationMs": 1.344
+          },
+          "bootPaint": {
+            "afterMarkMs": 10.586,
+            "durationMs": 0.483
+          }
+        }
+      }
+    ]
+  },
+  "traceFinding": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/current/2026-11-25T18-28-56-728Z/webgl-static-tv-1440-dark-1-cold.trace.json.gz",
+      "sha256": "a7512e1a465277d65dfa66499564b5d6ad67f0d375da764d6e8a3b263759abea"
+    },
+    "mainThreadTask": {
+      "name": "BlinkScheduler_PerformMicrotaskCheckpoint",
+      "startMs": 181.112,
+      "durationMs": 298.26
+    },
+    "paintEntries": [
+      {
+        "name": "first-paint",
+        "start": 420
+      },
+      {
+        "name": "first-contentful-paint",
+        "start": 420
+      }
+    ],
+    "longTasks": [
+      {
+        "start": 75.70000000298023,
+        "duration": 52,
+        "name": "self"
+      },
+      {
+        "start": 181.20000000298023,
+        "duration": 298,
+        "name": "self"
+      }
+    ],
+    "qualification": "The baseline long microtask itself has no sampled JavaScript stack. Separate wrapped-call runs below provide narrower operation-level evidence."
+  },
+  "graphicsDiagnostic": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/graphics-calls-corrected/report.json",
+      "sha256": "3f2cf619a6cd8a76195152f3c852a4ebc5f6aa66a1aaae44ab73775b8992ebb2"
+    },
+    "cases": [
+      {
+        "repeat": 1,
+        "browser": "158.0.8127.88",
+        "longTasks": [
+          {
+            "start": 153.89999999850988,
+            "duration": 342
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 154.20000000298023,
+            "duration": 90.5,
+            "stack": "Error\n    at proto.<computed> [as drawImage] (<anonymous>:5:347)\n    at makeBase (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:139:453)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:222)"
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 246.30000000447035,
+            "duration": 76.09999999403954,
+            "stack": "Error\n    at proto.<computed> [as getContext] (<anonymous>:5:347)\n    at prepare (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:77:35)\n    at makeImageFieldGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:92:19)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:183)",
+            "kind": "webgl"
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 324.8999999985099,
+            "duration": 20.100000001490116,
+            "stack": "Error\n    at proto.<computed> [as getProgramParameter] (<anonymous>:5:347)\n    at prepare (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:77:476)\n    at makeImageFieldGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:92:19)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:183)"
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 345.6000000014901,
+            "duration": 14.799999997019768
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "textureSize": [
+          512,
+          373
+        ]
+      },
+      {
+        "repeat": 2,
+        "browser": "158.0.8127.88",
+        "longTasks": [
+          {
+            "start": 178.5,
+            "duration": 444
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 186.10000000149012,
+            "duration": 75,
+            "stack": "Error\n    at proto.<computed> [as drawImage] (<anonymous>:5:347)\n    at makeBase (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:139:453)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:222)"
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 262,
+            "duration": 296.79999999701977,
+            "stack": "Error\n    at proto.<computed> [as getContext] (<anonymous>:5:347)\n    at prepare (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:77:35)\n    at makeImageFieldGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:92:19)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:183)",
+            "kind": "webgl"
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 561.6000000014901,
+            "duration": 18.600000001490116
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 580.3999999985099,
+            "duration": 13.800000004470348
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "textureSize": [
+          512,
+          373
+        ]
+      },
+      {
+        "repeat": 3,
+        "browser": "158.0.8127.88",
+        "longTasks": [
+          {
+            "start": 171.89999999850988,
+            "duration": 384
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 176.89999999850988,
+            "duration": 80.70000000298023,
+            "stack": "Error\n    at proto.<computed> [as drawImage] (<anonymous>:5:347)\n    at makeBase (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:139:453)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:222)"
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 258.5,
+            "duration": 230,
+            "stack": "Error\n    at proto.<computed> [as getContext] (<anonymous>:5:347)\n    at prepare (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:77:35)\n    at makeImageFieldGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:92:19)\n    at eval (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js?v=5:63:22), <anonymous>:141:183)",
+            "kind": "webgl"
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 491.29999999701977,
+            "duration": 19.200000002980232
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 510.69999999552965,
+            "duration": 15.400000005960464
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "textureSize": [
+          512,
+          373
+        ]
+      }
+    ],
+    "qualification": "Captured paint entries were still empty at the synchronous ready observation. The later Stage screenshots do not timestamp first complete graphics paint."
+  },
+  "rejectedCandidate": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/canvas-variant/report.json",
+      "sha256": "d7c3aa747e71d23e0b0da0a209e556ef53f89575a9e002a26bd53aa6f4a51078"
+    },
+    "definition": {
+      "file": ".artifacts/final-startup-review-v38/canvas-variant/candidate.json",
+      "sha256": "f7f27014589c0ae0868b409beb5a3aa3130c2e05e1e0d11af56c16fa6cb297f0"
+    },
+    "change": "Two base.getContext('2d') calls request willReadFrequently:true in memory only.",
+    "cases": [
+      {
+        "order": 1,
+        "variant": "original",
+        "browser": "158.0.8127.88",
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 584
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 584
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 199.70000000298023,
+            "duration": 61
+          },
+          {
+            "start": 320.6000000014901,
+            "duration": 343
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 331,
+            "duration": 238.20000000298023,
+            "kind": "webgl",
+            "options": {
+              "alpha": false,
+              "antialias": false
+            }
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 571.4000000059605,
+            "duration": 27.599999994039536
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 599.3000000044703,
+            "duration": 19.5
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "held": true,
+        "screenshot": {
+          "file": ".artifacts/final-startup-review-v38/canvas-variant/1-original.png",
+          "sha256": "6fcc21601717338d369b70f0de253c1b9e26b70500d1fb7cffec5d69cac719e3"
+        }
+      },
+      {
+        "order": 2,
+        "variant": "candidate",
+        "browser": "158.0.8127.88",
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 636
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 636
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 223.20000000298023,
+            "duration": 66
+          },
+          {
+            "start": 379.90000000596046,
+            "duration": 304
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 388.20000000298023,
+            "duration": 9.200000002980232
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 398.20000000298023,
+            "duration": 226.70000000298023,
+            "kind": "webgl",
+            "options": {
+              "alpha": false,
+              "antialias": false
+            }
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 628.4000000059605,
+            "duration": 29.099999994039536
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 657.8000000044703,
+            "duration": 22.69999999552965
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "held": true,
+        "screenshot": {
+          "file": ".artifacts/final-startup-review-v38/canvas-variant/2-candidate.png",
+          "sha256": "6fcc21601717338d369b70f0de253c1b9e26b70500d1fb7cffec5d69cac719e3"
+        }
+      },
+      {
+        "order": 3,
+        "variant": "candidate",
+        "browser": "158.0.8127.88",
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 860
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 860
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 236.19999999552965,
+            "duration": 86
+          },
+          {
+            "start": 411.69999999552965,
+            "duration": 511
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 419.59999999403954,
+            "duration": 27.100000001490116
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 447.69999999552965,
+            "duration": 403.8999999985099,
+            "kind": "webgl",
+            "options": {
+              "alpha": false,
+              "antialias": false
+            }
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 856.3999999985099,
+            "duration": 34.69999999552965
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 891.3999999985099,
+            "duration": 26.399999998509884
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "held": true,
+        "screenshot": {
+          "file": ".artifacts/final-startup-review-v38/canvas-variant/3-candidate.png",
+          "sha256": "6fcc21601717338d369b70f0de253c1b9e26b70500d1fb7cffec5d69cac719e3"
+        }
+      },
+      {
+        "order": 4,
+        "variant": "original",
+        "browser": "158.0.8127.88",
+        "paint": [
+          {
+            "name": "first-paint",
+            "start": 724
+          },
+          {
+            "name": "first-contentful-paint",
+            "start": 724
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 94.20000000298023,
+            "duration": 70
+          },
+          {
+            "start": 241.20000000298023,
+            "duration": 568
+          }
+        ],
+        "slowCalls": [
+          {
+            "owner": "CanvasRenderingContext2D",
+            "name": "drawImage",
+            "start": 251.39999999850988,
+            "duration": 119.20000000298023
+          },
+          {
+            "owner": "HTMLCanvasElement",
+            "name": "getContext",
+            "start": 371.3999999985099,
+            "duration": 337.20000000298023,
+            "kind": "webgl",
+            "options": {
+              "alpha": false,
+              "antialias": false
+            }
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "getProgramParameter",
+            "start": 712.2000000029802,
+            "duration": 29.399999998509884
+          },
+          {
+            "owner": "WebGLRenderingContext",
+            "name": "texImage2D",
+            "start": 741.8999999985099,
+            "duration": 20.5
+          }
+        ],
+        "state": {
+          "hovered": false,
+          "focused": false,
+          "latched": false,
+          "resolve": 0,
+          "time": 0,
+          "running": true
+        },
+        "held": true,
+        "screenshot": {
+          "file": ".artifacts/final-startup-review-v38/canvas-variant/4-original.png",
+          "sha256": "6fcc21601717338d369b70f0de253c1b9e26b70500d1fb7cffec5d69cac719e3"
+        }
+      }
+    ],
+    "decision": "Unshipped. The two candidate first-contentful paints were 636 and 860ms; original samples were 584 and 724ms. This sequence does not establish a stable improvement. Initial model time remained zero under caller holds; no cross-variant raster-equivalence claim is made."
+  },
+  "retainedFailure": {
+    "evidence": {
+      "file": ".artifacts/final-startup-review-v38/graphics-calls/report.json",
+      "sha256": "3ff4c6f60a8dc48dc2852407b45a2ebe4527da41addfedffe586ba0defb603ca"
+    },
+    "exactInput": {
+      "file": ".artifacts/final-startup-review-v38/input-first-graphics-calls.cjs",
+      "sha256": "79d5f4c79b815586b99808ce5bfd1b8e7bc7476d770c6975894e256a3b98e115"
+    },
+    "log": {
+      "file": ".artifacts/final-startup-review-v38/graphics-calls.log",
+      "sha256": "560dc85423af067fe1f446652b385468ddcfc4399c21078647b7859c71f0cfbc"
+    },
+    "reason": "Diagnostic initially queried a nonexistent .demo-root class and timed out. The corrected checker queries the actual Static TV root. This was a test setup failure, not a production boot failure."
+  },
+  "next": [
+    "Correct the stale catalog titles, then collect a fresh stable-source 520-route/4160-case matrix. V36 and interrupted V39 are not resumed after freezing.",
+    "Investigate moving first graphics preparation off the critical paint path while preserving complete visual models, exact native artwork, initial holds and GPU recovery. Yielding a placeholder or weakening timing metrics is not acceptance.",
+    "Keep final CPU4, transient/photo contrast, keyboard/focus and complete motion acceptance open."
+  ],
+  "interruptedRouteCollection": {
+    "evidence": {
+      "file": ".artifacts/final-catalog-routes-v39/status.json",
+      "sha256": "9907a60e3417b7a17599f825f8035c2ee991aea99f88ca58a720b143d13ca304"
+    },
+    "completeComponents": 22,
+    "targetComponents": 520,
+    "cases": 176,
+    "targetCases": 4160,
+    "latencyFailureComponents": 14,
+    "functionalFailureComponents": 0,
+    "reason": "Stopped at a complete component boundary after static review found 46 exact title differences (44 ignoring case) from the v4 manifest. No source input changed during collection. Preserve every attempt; this is not complete startup acceptance."
+  }
+}

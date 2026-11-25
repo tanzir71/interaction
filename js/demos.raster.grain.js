@@ -1,7 +1,7 @@
 /* Exact v4 signal artwork with complete original grain, glyph and velocity models. */
 INTRX.register({
   "id": "noise-grain-overlay",
-  "title": "Reusable Film Grain",
+  "title": "Film Grain",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

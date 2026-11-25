@@ -1,7 +1,7 @@
 /* Exact v4 Portrait Reveal and complete original reveal model. */
 INTRX.register({
   "id": "ascii-portrait-reveal",
-  "title": "ASCII Portrait Reveal",
+  "title": "ASCII Portrait",
   "cat": "Raster & Glitch",
   "tags": [
     "ascii",

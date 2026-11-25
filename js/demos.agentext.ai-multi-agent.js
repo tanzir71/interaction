@@ -1,7 +1,7 @@
 /* Multi-agent Chat: original interaction with unchanged native artwork. */
 INTRX.register({
   "id": "ai-multi-agent",
-  "title": "Multi-agent Chat",
+  "title": "Multi-Agent Chat",
   "cat": "Agent & AI UI",
   "rootClass": "d-ext-agent-multi",
   "tags": [

@@ -1,7 +1,7 @@
 /* Exact native v4 Sound artwork with complete original synthesis and full interactions. */
 INTRX.register({
   "id": "drum-grid-sequencer",
-  "title": "Drum Grid Sequencer",
+  "title": "Drum Sequencer",
   "cat": "Sound & Haptics",
   "tags": [
     "webaudio",

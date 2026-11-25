@@ -1,7 +1,7 @@
 /* Condensing Pill Nav: original interaction; supplied native artwork remains unchanged. */
 INTRX.register({
   "id": "nav-pill-condense",
-  "title": "Condensing Pill Nav",
+  "title": "Condensing Nav",
   "cat": "Navigation & Menus",
   "rootClass": "d-new-dn-nav",
   "tags": [

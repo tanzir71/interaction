@@ -1,7 +1,7 @@
 /* Exact v4 Ambient cell, band and glyph artwork with complete original full models. */
 INTRX.register({
   "id": "audio-reactive-bars",
-  "title": "Audio Reactive Bars",
+  "title": "Reactive Bars",
   "cat": "Ambient",
   "tags": [
     "visualizer",

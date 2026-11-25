@@ -1,7 +1,7 @@
 /* Exact v4 instrument artwork with complete original numerical models. */
 INTRX.register({
   "id": "pixel-lissajous-lab",
-  "title": "Pixel Lissajous Lab",
+  "title": "Pixel Lissajous",
   "cat": "Raster & Glitch",
   "tags": [
     "canvas",

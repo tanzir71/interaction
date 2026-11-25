@@ -1,7 +1,7 @@
 /* Citation Hover Chips: original interaction with the exact v4 native composition. */
 INTRX.register({
   "id": "agent-citation-chips",
-  "title": "Citation Hover Chips",
+  "title": "Citation Chips",
   "cat": "Agent & AI UI",
   "rootClass": "d-new-agent-citations",
   "tags": [

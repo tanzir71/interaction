@@ -1,7 +1,7 @@
 /* Multi-step Loader: original loader extension with exact native artwork. */
 INTRX.register({
   "id": "loader-multi-step",
-  "title": "Multi-step Loader",
+  "title": "Multi-Step Loader",
   "cat": "Loaders & Progress",
   "rootClass": "d-ext-loader-steps",
   "tags": [

@@ -1,7 +1,7 @@
 /* Native v4 artwork with complete original raster study models. */
 INTRX.register({
   "id": "halftone-lines",
-  "title": "Engraving Line Screen",
+  "title": "Engraving Screen",
   "cat": "Raster & Glitch",
   "rootClass": "d-study-host-lines-v4",
   "tags": [

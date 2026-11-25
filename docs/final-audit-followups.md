@@ -2,6 +2,34 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [v4 catalog-title review](catalog-titles-2026-11-26.json) corrects 46
+titles, including two capitalization differences, to the exact manifest names.
+All 520 controllers, HTML/CSS compositions, prompts, assets and Stage metadata
+remain unchanged. Earlier palette/name fixtures stay intact; their checkers
+compose only the recorded title delta. Source-preview URLs now hash the emitted
+JSON so a title change invalidates its cached preview. The title-only source
+correction does not close the startup, frame-rate or accessibility audits.
+
+The [startup investigation](performance/startup-review-2026-11-26.json)
+retains 48 current-source cold/warm cases across Static TV, City Tiles and
+Text Scramble. Forty-seven measured heading/Stage proxies stay below 300ms;
+the first-process cold Static TV case reaches 483.3ms. Separate instrumented
+fresh-browser runs locate substantial blocking work in the photo canvas draw
+and WebGL context creation before first paint. Browser-level metadata reports
+the AMD hardware adapter with D3D11/Graphite, rather than software rendering;
+this is not per-context GPU attestation. The baseline trace itself lacks a
+sampled JavaScript stack, so keep the separate scopes clear.
+
+Requesting a CPU-oriented base canvas did not establish a stable improvement
+in the retained ABBA diagnostic and is not shipped. Its held initial model
+remained at time zero, but no cross-variant raster-equivalence claim is made.
+The diagnostic's first nonexistent-root selector failure is retained alongside
+the corrected result. The next collection stopped at 22 components/176 cases
+after static review found stale v4 catalog titles; every sample is retained.
+It has no functional failures and fourteen components with timing misses.
+It is not a complete route audit. First complete GPU/photo readiness,
+CPU4 timing and broader accessibility acceptance remain open.
+
 The [Library append review](performance/library-append-2026-11-26.json) fixes
 Show more replacing every existing preview. Existing selections, runtime and
 pause ownership now survive adding the next batch; filters and sort still

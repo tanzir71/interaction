@@ -12,6 +12,8 @@ const errors = [];
 const warnings = [];
 const manifest=JSON.parse(fs.readFileSync('INTRX-handover/manifest/components.json','utf8')).components;
 for(const row of manifest.filter(row=>row.origin==='repo'))if(!demos.some(d=>d.id===row.id))errors.push('MISSING ORIGINAL '+row.id);
+for(const row of manifest){const demo=demos.find(d=>d.id===row.id);if(!demo)errors.push('MISSING V4 COMPONENT '+row.id);else if(demo.title!==row.title)errors.push('V4 TITLE '+row.id+': expected '+JSON.stringify(row.title)+', got '+JSON.stringify(demo.title));}
+for(const demo of demos)if(!manifest.some(row=>row.id===demo.id))errors.push('UNLISTED V4 COMPONENT '+demo.id);
 for(const file of fs.readdirSync('js').filter(name=>/^demos\..*\.js$/.test(name)))if(!files.includes('js/'+file))errors.push('UNLISTED REGISTRY FILE '+file);
 
 const required = ['id','title','cat','rootClass','desc','seen','hint','html','css','js','prompt'];

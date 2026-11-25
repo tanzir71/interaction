@@ -1,7 +1,7 @@
 /* Exact v4 Ambient artwork; complete original particle, tracer, flight and swarm models. */
 INTRX.register({
   "id": "fireflies-night",
-  "title": "Fireflies Night",
+  "title": "Fireflies",
   "cat": "Ambient",
   "tags": [
     "canvas",

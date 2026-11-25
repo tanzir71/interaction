@@ -1,7 +1,7 @@
 /* Native v4 artwork with complete original raster study models. */
 INTRX.register({
   "id": "ascii-webcam-style-wave",
-  "title": "Synthetic ASCII Wave",
+  "title": "ASCII Wave",
   "cat": "Raster & Glitch",
   "rootClass": "d-study-host-wave-v4",
   "tags": [
