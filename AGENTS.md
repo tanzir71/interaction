@@ -2125,3 +2125,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   `Target link` prefix and the full Coast pass's stable identity, testing its
   complete front/back descriptions separately. Native names and pressed-state
   checks remain intact; preserve the initial stale-expectation failure.
+
+- `node tools/verify-agent-ext-palettes.js` covers six full light Agent & AI
+  palettes at 1440/390px, both Stage themes and motion settings, plus native
+  comparisons and fresh offline full exports. Set the actual Stage theme before
+  mounting and wait for finite visible transitions before measuring settled ink.
+  Stream reactions use an actual wheel gesture to leave sticky auto-scroll,
+  followed by hover and click. Preserve every earlier failed capture and its
+  distinct scope. Autocomplete's ghost and Creator's step labels have dark
+  sibling backings; ancestor-only color estimates are insufficient. Their
+  palettes are unchanged. Autocomplete's initial ghost placement still needs
+  review. Keep all original SVGs, HTML, datasets and native artwork intact.
+  `node tools/verify-usage-clock.js` separately checks twelve fractional/integer
+  source origins, full/native and both motion settings. Usage consumption is
+  nonnegative, compares absolute step deadlines, and synchronizes skipped reset
+  periods before applying deliberate meter input. Preserve 1800ms increments,
+  24-hour periods, the 82%/95% initial values and warning/danger colors. Palette
+  comparisons apply this exact clock correction to both reference and current
+  definitions; they do not assert equivalence to the original faulty clock.
+  The original eight Agent extension suites respect INTRX_CHROME_EXECUTABLE and
+  log their actual browser version. These focused checks leave whole-catalog
+  accessibility, cold startup and CPU4 performance acceptance open.

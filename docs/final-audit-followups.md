@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Agent extension light-palette review](accessibility/agent-ext-light-2026-11-26.json)
+adds readable full light palettes to Message Stream, Activity Feed, AI Sidebar,
+Web Search, Usage Limits and Multi-Agent Chat. Native geometry, dark palettes,
+original SVGs and complete datasets stay intact. Usage Limits also fixes
+fractional source-clock boundaries and preserves deliberate input when a reset
+is due. The other 519 controllers and 514 complete definitions are unchanged.
+The original eight Agent extension regressions and focused palette/clock checks
+cover this bounded change. Fresh scans retain four normal-dark entry contrast
+findings and 72 incomplete results across both widths, with no light-case
+violation. These transient findings remain open in the linked raw reports;
+settled palette checks do not establish all-state accessibility.
+
+The broad initial text-style inventory is heuristic triage, not a count of
+confirmed contrast defects. Autocomplete's ghost and Creator's active step text
+sit on dark sibling surfaces, which the ancestor-only estimate missed. Their
+palettes stay unchanged. Autocomplete's initial ghost position is independently
+offset from the input text endpoint and remains open for layout investigation.
+Whole-catalog accessibility, startup and throttled performance acceptance remain
+open. Keep all failed captures and frozen historical evidence read/copy only.
+
 The [four-component text-contrast review](accessibility/text-contrast-2026-11-26.json)
 raises Fraction Slider's compact counter and Letter Cascade's muted link ink.
 The menu keeps its glyph cascade and movement while operable unselected links

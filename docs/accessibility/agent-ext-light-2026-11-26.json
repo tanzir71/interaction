@@ -1,0 +1,366 @@
+{
+  "date": "2026-11-26",
+  "baseline": "bdc4c2bf27b53decd3219c055ff0a662942d0adb",
+  "scope": "Six full light Agent extension palettes and a bounded Usage Limits source-clock correction. Whole-catalog accessibility, all photographic/transient states, cold startup and CPU4 performance acceptance remain open.",
+  "preservation": {
+    "at": "2026-11-25T22:10:18.058Z",
+    "baseline": "bdc4c2bf27b53decd3219c055ff0a662942d0adb",
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 514,
+    "controllersUnchanged": 519,
+    "htmlCompositionsUnchanged": 520,
+    "stageMetadataUnchanged": true,
+    "originalDatasetsAndDisplayedCopyUnchanged": true,
+    "originalModelParametersUnchanged": true,
+    "sourceAssetsUnchanged": true,
+    "newDependencies": 0,
+    "changedDefinitions": [
+      "ai-message-stream",
+      "ai-activity-feed",
+      "ai-sidebar",
+      "ai-web-search",
+      "ai-usage-limits",
+      "ai-multi-agent"
+    ],
+    "permittedEdits": [
+      {
+        "id": "ai-message-stream",
+        "file": "js/demos.agentext.ai-message-stream.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-heading>span,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-help,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-message>strong,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-activity-row p,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-activity-row output,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-tool-duration,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-tool-inner>h4,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-context-label,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-sidebar-messages>p:first-child,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-source-popover p,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-meter>p,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-meter>span{color:#5c5c5c}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-message[data-role=\"You\"],.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-context-chip{background:#eaeaea}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-complete{color:#147a4e}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-sidebar-panel,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-multi-turn{border-color:#0000001f}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-citation{color:#b83f00!important}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-source-popover a{color:#151515}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-search-loading>span{background:#d6d6d6}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-agents>button,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-agents>button>span:last-child,.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-stream-multi-ring{border-color:#1765aa}.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-stream:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds.",
+        "jsEdits": [],
+        "sha256": "7b2ec8e632c1fcadcb9084c24a419052bd16e4bc2c32f00c3863ad5f693b7e9a"
+      },
+      {
+        "id": "ai-activity-feed",
+        "file": "js/demos.agentext.ai-activity-feed.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-heading>span,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-help,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-message>strong,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-activity-row p,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-activity-row output,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-tool-duration,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-tool-inner>h4,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-context-label,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-sidebar-messages>p:first-child,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-source-popover p,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-meter>p,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-meter>span{color:#5c5c5c}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-message[data-role=\"You\"],.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-context-chip{background:#eaeaea}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-complete{color:#147a4e}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-sidebar-panel,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-multi-turn{border-color:#0000001f}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-citation{color:#b83f00!important}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-source-popover a{color:#151515}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-search-loading>span{background:#d6d6d6}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-agents>button,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-agents>button>span:last-child,.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-activity-multi-ring{border-color:#1765aa}.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-activity:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds.",
+        "jsEdits": [],
+        "sha256": "b65c26049f09eddafebf464b36c8d5e8fb907d292df331ced0381eacd9c9d2f4"
+      },
+      {
+        "id": "ai-sidebar",
+        "file": "js/demos.agentext.ai-sidebar.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-heading>span,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-help,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-message>strong,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-activity-row p,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-activity-row output,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-tool-duration,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-tool-inner>h4,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-context-label,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-sidebar-messages>p:first-child,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-source-popover p,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-meter>p,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-meter>span{color:#5c5c5c}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-message[data-role=\"You\"],.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-context-chip{background:#eaeaea}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-complete{color:#147a4e}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-sidebar-panel,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-multi-turn{border-color:#0000001f}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-citation{color:#b83f00!important}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-source-popover a{color:#151515}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-search-loading>span{background:#d6d6d6}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-agents>button,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-agents>button>span:last-child,.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-sidebar-multi-ring{border-color:#1765aa}.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-sidebar:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds.",
+        "jsEdits": [],
+        "sha256": "a1ee926e2eef05919ca7e3bafe63de591de6b5df43bdb87e7146c28d9367935d"
+      },
+      {
+        "id": "ai-web-search",
+        "file": "js/demos.agentext.ai-web-search.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-heading>span,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-help,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-message>strong,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-activity-row p,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-activity-row output,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-tool-duration,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-tool-inner>h4,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-context-label,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-sidebar-messages>p:first-child,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-source-popover p,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-meter>p,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-meter>span{color:#5c5c5c}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-message[data-role=\"You\"],.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-context-chip{background:#eaeaea}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-complete{color:#147a4e}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-sidebar-panel,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-multi-turn{border-color:#0000001f}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-citation{color:#b83f00!important}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-source-popover a{color:#151515}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-search-loading>span{background:#d6d6d6}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-agents>button,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-agents>button>span:last-child,.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-search-multi-ring{border-color:#1765aa}.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-search:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds.",
+        "jsEdits": [],
+        "sha256": "7397b6c87fa291b3d8401ea7ac8126b3812c658228be0bad3d5d5c09892ecd09"
+      },
+      {
+        "id": "ai-usage-limits",
+        "file": "js/demos.agentext.ai-usage-limits.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-heading>span,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-help,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-message>strong,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-activity-row p,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-activity-row output,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-tool-duration,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-tool-inner>h4,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-context-label,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-sidebar-messages>p:first-child,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-source-popover p,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-meter>p,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-meter>span{color:#5c5c5c}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-message[data-role=\"You\"],.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-context-chip{background:#eaeaea}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-complete{color:#147a4e}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-sidebar-panel,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-multi-turn{border-color:#0000001f}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-citation{color:#b83f00!important}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-source-popover a{color:#151515}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-search-loading>span{background:#d6d6d6}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-agents>button,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-agents>button>span:last-child,.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-usage-multi-ring{border-color:#1765aa}.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-usage:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds. Track consumption from the stored current-period source anchor and compare absolute step deadlines. Fractional clock origins must not produce a negative initial step or miss an exact step boundary. Advance skipped reset periods before applying ordered meter-key intent, preserving the original increments, thresholds, limits, palette and 24-hour reset period.",
+        "jsEdits": [
+          {
+            "needle": "let lastStep=0,resetAt=birth+DATA.resetPeriod,resetCount=0,queued=0;",
+            "replacement": "let lastStep=0,periodStart=birth,resetAt=birth+DATA.resetPeriod,resetCount=0,queued=0;\nfunction syncPeriod(now){if(now<resetAt)return;const periods=Math.floor((now-resetAt)/DATA.resetPeriod)+1;periodStart=resetAt+(periods-1)*DATA.resetPeriod;resetAt+=periods*DATA.resetPeriod;resetCount+=periods;offsets.fill(0);lastStep=0;}\nfunction consumptionStep(now){if(h.reduced)return 0;let step=Math.max(0,Math.floor((now-periodStart)/DATA.step));if(now<periodStart+step*DATA.step)step=Math.max(0,step-1);if(now>=periodStart+(step+1)*DATA.step)step++;return step;}"
+          },
+          {
+            "needle": "function change(amount,edge){h.retain();const step=h.reduced?0:Math.floor((h.now()-(resetAt-DATA.resetPeriod))/DATA.step);",
+            "replacement": "function change(amount,edge){h.retain();const now=h.now();syncPeriod(now);const step=consumptionStep(now);"
+          },
+          {
+            "needle": "h.render=now=>{if(now>=resetAt){const periods=Math.floor((now-resetAt)/DATA.resetPeriod)+1;resetAt+=periods*DATA.resetPeriod;resetCount+=periods;offsets.fill(0);lastStep=0;}const step=h.reduced?0:Math.floor((now-(resetAt-DATA.resetPeriod))/DATA.step);",
+            "replacement": "h.render=now=>{syncPeriod(now);const step=consumptionStep(now);"
+          }
+        ],
+        "sha256": "7ee8b8af2ddc3dfe08bbd109a453c3ea6c8cf423b6f76fd17fe0224889c5ad0d"
+      },
+      {
+        "id": "ai-multi-agent",
+        "file": "js/demos.agentext.ai-multi-agent.js",
+        "cssAppend": "\n/* Full light Stage palette; original dark and native artwork stays exact. */\n.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *){color:#151515}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button{background:#eaeaea;border-color:#0000001f}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a{color:#151515}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input[type=\"text\"]{background:#fff;border-color:#00000026;caret-color:var(--focus-ring)}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea::placeholder,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input::placeholder{color:#666}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button:focus-visible,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) a:focus-visible,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) input:focus-visible,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) textarea:focus-visible,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) [tabindex]:focus-visible{outline-color:var(--focus-ring)}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-heading>span,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-help,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-message>strong,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-activity-row p,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-activity-row output,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-tool-duration,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-tool-inner>h4,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-context-label,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-sidebar-messages>p:first-child,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-source-popover p,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-meter>p,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-meter>span{color:#5c5c5c}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-message[data-role=\"You\"],.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-context-chip{background:#eaeaea}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-complete{color:#147a4e}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-sidebar-article p>button{color:#151515;background:#fa731910}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-sidebar-panel,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-multi-turn{border-color:#0000001f}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-citation{color:#b83f00!important}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-source-popover{background:#fff;border-color:#00000026}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-source-popover a{color:#151515}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-search-loading>span{background:#d6d6d6}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-agents>button,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-agents>button[aria-pressed=\"true\"]{background:transparent}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-agents>button>span:last-child,.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-multi-turn>strong{color:#4a4a4a!important}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) .d-ext-agent-multi-multi-ring{border-color:#1765aa}.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-pressed=\"true\"],.d-ext-agent-multi:is(.stage[data-mode=\"full\"][data-stage-theme=\"light\"] *) button[aria-checked=\"true\"]{border-color:#b83f00;background:#fa731918}",
+        "promptAppend": " Full views initialize a readable light Stage palette before first paint: #151515 primary, #5c5c5c secondary, neutral light buttons and message/context surfaces, dark orange citations and dark green completion. Keep dark avatar wells, the complete source-colored usage fills on their dark tracks, all supplied SVGs and every native/dark reference unchanged. Agent role names use readable neutral light-theme ink while original colored avatars, data and routes remain intact. Preserve geometry, fonts, all original content, models, interaction timing, caret behavior and independent holds.",
+        "jsEdits": [],
+        "sha256": "0915badf905142bc08c03312d19d8743b981a575c6a0aab98f5af11c0b78d1ac"
+      }
+    ],
+    "frozenInputs": {
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+    },
+    "usagePoster": {
+      "file": "assets/posters/ai-usage-limits.png",
+      "sha256": "68cfa186c1e2cd15887327fade7e2999b814a40dfa1040ba7c08874cf349575f",
+      "byteIdentical": true
+    },
+    "fixtureHash": "805046d5341e501139451c9cf83919799958823307563480d0f438ecd9a09546"
+  },
+  "changes": [
+    {
+      "ids": [
+        "ai-message-stream",
+        "ai-activity-feed",
+        "ai-sidebar",
+        "ai-web-search",
+        "ai-usage-limits",
+        "ai-multi-agent"
+      ],
+      "change": "Initialize readable neutral full light ink, surfaces and hairlines before first paint. Preserve original dark/native artwork, typography, geometry, complete datasets, SVG bytes, avatar wells, usage warning/danger colors and keyboard focus widths."
+    },
+    {
+      "id": "ai-usage-limits",
+      "change": "Track the absolute period start, clamp consumption steps nonnegative, compare absolute step deadlines, and synchronize reset periods before applying meter input. Fractional source origins could previously start at step -1; input exactly at reset could be cleared before painting. Original increments, 1800ms step, 24-hour resets, 82%/95% initial fractions and models remain intact."
+    }
+  ],
+  "verification": {
+    "browser": "158.0.8127.88",
+    "palettes": {
+      "online": 96,
+      "exactNativeAndDarkAppearances": 72,
+      "freshFullOfflineContexts": 24,
+      "widths": [
+        1440,
+        390
+      ],
+      "stageThemes": [
+        "dark",
+        "light"
+      ],
+      "motion": [
+        "normal",
+        "reduced"
+      ],
+      "evidence": {
+        "file": ".artifacts/final-agent-light-v44/palettes-final-default/2026-11-25T22-00-37-050Z/report.json",
+        "sha256": "3f65ef150fa1e62f8797479b0a3930080e261a4b294de01b5a66fa3a1f04bc4c"
+      },
+      "limits": "Initial geometry and listed settled text/input states only. The exact Usage clock correction is applied to both comparison sides; comparisons do not claim equivalence to the faulty original clock. Explicit actual wheel input leaves stream sticky scrolling before hover/click. Normal offline timelines complete before initial settled contrast measurement. Not a universal raster, transient-glyph, photographic contrast or frame-rate certificate."
+    },
+    "clock": {
+      "configurations": 96,
+      "origins": 12,
+      "originalInitialCounterexamples": 4,
+      "originalResetEndTargets": [
+        0,
+        0
+      ],
+      "fixedResetEndTargets": [
+        1,
+        1
+      ],
+      "evidence": {
+        "file": ".artifacts/final-agent-light-v44/usage-clock-corrected/2026-11-25T21-32-59-230Z/report.json",
+        "sha256": "672bb61d0ded1e503983b4ca1fc1f7dbb2fc658f34c5240a42694e05e2205018"
+      },
+      "limits": "Twelve explicit integer/fractional absolute source origins, both motion settings and full/native views. Real component DOM, model inspection and trusted meter keys verify start values, exact step boundaries, skipped periods and reset-boundary intent. This virtual-clock precision test makes no frame-rate or real-time performance claim."
+    },
+    "regressions": {
+      "native": {
+        "checks": 3117,
+        "rows": 70,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-native.json",
+          "sha256": "a7629939f89c315ade6773680c97a70eaae20fe77eff90652566aea6bef9e825"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-native.log",
+          "sha256": "c9aacbc32ded0f9881b17b49640c98d45eb9ffb0e72aea74d08531cca14ed532"
+        }
+      },
+      "models": {
+        "checks": 2569,
+        "rows": 2,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-models.json",
+          "sha256": "47eb8b8028df2fc37112379d10e944a3355013a81b216969d85859e22a4d6724"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-models.log",
+          "sha256": "455c4b814f3c688fd22a68bca34d64c2e533c23bdffd3c794a90268cd636fd18"
+        }
+      },
+      "input": {
+        "checks": 215,
+        "rows": 4,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-input.json",
+          "sha256": "3a7fe01804a8394d9b3e42ccf481989da84df0971b181a2bd226be0dc43a517f"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-input.log",
+          "sha256": "21aae14abcfd2e09b70f87aa2a9e0ba85c88ab89eb7d1b1f452796dda021f4e3"
+        }
+      },
+      "clocks": {
+        "checks": 173,
+        "rows": 60,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-clocks.json",
+          "sha256": "931ae328879938f79bfabdeb008b3330772638a850586fbf53e1e211b275b6ae"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-clocks.log",
+          "sha256": "6b3057dfc14b049aa41097ecc65a1d74dae8fa3f8829d15725652e6f864de770"
+        }
+      },
+      "exports": {
+        "checks": 402,
+        "rows": 20,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-exports.json",
+          "sha256": "3d599ce314f2b5e163b0653948d4f885f9bca921dda9e6b80dabfd094dbb1d2a"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-exports-chrome158.log",
+          "sha256": "ba4362ad02f360a4467e62dcf9e86d2667bff9f417523411b066e9eb303fac22"
+        }
+      },
+      "holds": {
+        "checks": 362,
+        "rows": 44,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-holds.json",
+          "sha256": "26dc5d5259d99e9afe661d09cbac5ee46132c9a673d112a7cd8d2dcb83cc5545"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-holds.log",
+          "sha256": "8277f6cd03c24ed0fd4f8611ab48019d438cb46997fbb945a41987f0759f07d6"
+        }
+      },
+      "touch": {
+        "checks": 150,
+        "rows": 4,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-touch.json",
+          "sha256": "39fe9e7a878eb289fae5b5dffb04d6f0ac6b16efe6c272d8754a5fbeb19e6e1e"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-touch.log",
+          "sha256": "6b29641997db53466069f4a5e1dd322f652df44e777e1f861a5d2d8e3fccd951"
+        }
+      },
+      "async": {
+        "checks": 152,
+        "rows": 8,
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/accepted-agent-async.json",
+          "sha256": "816abce27b8b2adb9314cfbeece73fb63141d0bce24fe3abc3da38f678136931"
+        },
+        "browserLog": {
+          "file": ".artifacts/final-agent-light-v44/agent-async.log",
+          "sha256": "84216c4016ee29bc837120f7bf2e584e7c648a7771e655d6294474686743d5db"
+        }
+      }
+    },
+    "requiredChecks": {
+      "registry": {
+        "file": ".artifacts/final-agent-light-v44/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      },
+      "stage": {
+        "file": ".artifacts/final-agent-light-v44/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      },
+      "generated": {
+        "file": ".artifacts/final-agent-light-v44/generated.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      },
+      "titles": {
+        "file": ".artifacts/final-agent-light-v44/titles.log",
+        "sha256": "dd0528a47a625a7d9e2b9b27b9c079199a6769bea8a1860f62eea9b5798e98f0"
+      },
+      "motion": {
+        "file": ".artifacts/final-agent-light-v44/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      },
+      "package": {
+        "file": ".artifacts/final-agent-light-v44/package.log",
+        "sha256": "3f8bff75a5a2519d4b405b5e8205c625b2c126b96222715ee27f48f4dc6c790b"
+      },
+      "library": {
+        "file": ".artifacts/final-agent-light-v44/library.log",
+        "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+      },
+      "fit": {
+        "file": ".artifacts/final-agent-light-v44/fit.log",
+        "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+      }
+    },
+    "library": {
+      "file": ".artifacts/final-agent-light-v44/accepted-library.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+    },
+    "fit": {
+      "file": ".artifacts/final-agent-light-v44/accepted-fit.json",
+      "sha256": "93e4922efd383af5285d1f0def430432c4dca4f06f3ba60a8424dedecdcf208f"
+    }
+  },
+  "manualReview": {
+    "siblingSurfaces": {
+      "evidence": {
+        "file": ".artifacts/final-agent-light-v44/sibling-surfaces/report.json",
+        "sha256": "7c693a143e1bb9ea645aae8cd42ab7f066974517424438d9afd7dfecf313b93b"
+      },
+      "unchanged": [
+        "ai-autocomplete",
+        "ai-agent-creator"
+      ],
+      "finding": "Autocomplete ghost #949494 on actual sibling #181818 measures 5.85345:1. Creator active label on sibling #292929 measures 12.8803:1; its 01 index measures 4.79589:1. Back is genuinely disabled. Ancestor-only inventory backgrounds were incorrect for these labels."
+    },
+    "autocompleteLayout": {
+      "status": "open",
+      "finding": "With fonts ready and source time held, the initial ghost is approximately 8.5–8.8 logical pixels before an independently measured input-text endpoint. Cause and correction remain under investigation; this palette review does not close its layout finding."
+    },
+    "rawAxe": [
+      {
+        "width": 1440,
+        "summary": {
+          "cases": 48,
+          "violations": 2,
+          "incomplete": 36,
+          "pageErrors": 0
+        },
+        "violationRules": {
+          "color-contrast": 2
+        },
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/axe-desktop/2026-11-25T22-14-16-637Z/report.json",
+          "sha256": "14c456949f6cea1b3097e6b7b565c1f5b88fa2e9b1deeb3d747a0f127d2a9994"
+        }
+      },
+      {
+        "width": 390,
+        "summary": {
+          "cases": 48,
+          "violations": 2,
+          "incomplete": 36,
+          "pageErrors": 0
+        },
+        "violationRules": {
+          "color-contrast": 2
+        },
+        "evidence": {
+          "file": ".artifacts/final-agent-light-v44/axe-compact/2026-11-25T22-14-29-907Z/report.json",
+          "sha256": "d486b6f8b62536dbf90fbeb1f0351af78de687a40a1693d3fb303ca448487949"
+        }
+      }
+    ],
+    "rawPolicy": "All violations and incompletes are retained without filtering. Listed settled text checks supplement these scans and do not establish whole-catalog WCAG conformance.",
+    "inventory": {
+      "evidence": {
+        "file": ".artifacts/final-style-inventory-v43/full-initial/report.json",
+        "sha256": "44f70aa11bbdb9d9125d23275e5a8ee0cc87271b36d5982971227f8eeb3429eb"
+      },
+      "scope": "1040 initial full/reduced desktop cases: 284 candidate cases and 1502 candidate nodes from approximate ancestor backgrounds, not confirmed contrast defects. Sibling surfaces, photography, gradients, clipped/disabled text and other paint require manual review."
+    },
+    "rawAxeInterpretation": "Each width retains two color-contrast violations in normal dark motion: a native Search summary word during entry and the first full Multi-Agent turn. No light case reports a violation. There are 72 incomplete results across both widths. Keep these raw transient findings open; settled palette checks and unchanged dark sources do not establish all-state accessibility."
+  },
+  "diagnosticHistory": {
+    "retained": "Every failed palette/clock attempt, verifier revision, source reference and available report remains in the phase archive. Early fixed-delay checks sampled visible entry/fade transitions. Later palette comparison exposed the actual Usage fractional-clock bug. Another verifier assumed two meter keyboard targets, while the shipped UI has one shared target. Offline checks were updated to establish completed timeline states. The full-matrix stream reaction timeout remains retained; an independent offline probe succeeded, so its cause is not claimed proven.",
+    "historicalInputLimits": "The first export regression ignored the selected executable and recorded no engine; its original passing report is retained separately, and accepted exports are rerun in the recorded Chrome 158. Old generated catalog/Usage export bytes before the clock rebuild and the palette helper before its optional virtual-clock hook were not snapshotted. Their historical report hashes are retained but do not imply those missing bytes are archived. Fresh accepted reports bind the current final source and inputs."
+  }
+}
