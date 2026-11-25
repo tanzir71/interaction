@@ -2005,3 +2005,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   pause/speed failures and mixed-source baseline diagnostic. The revised
   precondition and a passing Chromium 140 suite do not establish those failures'
   cause or complete broader browser/timing acceptance.
+
+- `tools/verify-thinking-initial.js` checks the reduced full completed label
+  synchronously before source frames, including caller-held Stages. Scope the
+  rule to the model-owned finished class; switching preference in unfinished
+  views must preserve their current label and model. Keep every
+  controller, HTML, model, metadata and native preview unchanged. The new fixture
+  records the exact permitted CSS/prompt append. Sixteen name/layout/model
+  stories, eight exact GPU-disabled reduced target CSS roundtrips and four fresh
+  offline exports cover the correction. `verify-agent-palettes.js` retains its
+  old fixture, validates the later append separately and applies the completed
+  still to both sides of the earlier palette comparison; native comparisons
+  add/remove only the original palette delta. This does not preserve the retired
+  incorrect first label or certify all normal phase-boundary text.
+  Exemplar reduced still checks retain both PNGs with their unchanged 80/150ms
+  sequence and exact byte oracle. Keep old unsaved-pair failures as logs, and
+  distinguish fresh diagnostic images from the missing original pair. Isolated
+  rate-2 and still-image successes do not explain historical full-story failures.

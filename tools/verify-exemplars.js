@@ -199,7 +199,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   await offline.close();
 
   await page.emulateMedia({reducedMotion:'reduce'});
-  for(const id of ids){await open(id);await page.waitForTimeout(80);const before=await page.locator('.detail-stage').screenshot();await page.waitForTimeout(150);check(before.equals(await page.locator('.detail-stage').screenshot()),id+' reduced-motion still frame');}
+  for(const id of ids){await open(id);await page.waitForTimeout(80);const before=await page.locator('.detail-stage').screenshot();await page.waitForTimeout(150);const after=await page.locator('.detail-stage').screenshot();fs.writeFileSync('.artifacts/exemplars/'+id+'-reduced-before.png',before);fs.writeFileSync('.artifacts/exemplars/'+id+'-reduced-after.png',after);fs.writeFileSync('.artifacts/exemplars/reduced-comparison.json',JSON.stringify({browser:browser.version(),id,exact:before.equals(after),checksBeforeComparison:checks},null,2)+'\n');check(before.equals(after),id+' reduced-motion still frame');}
   await open('toast-stack');check(await root('.d-toast-demo').getAttribute('data-count')==='3','Reduced motion keeps notifications available');
   await page.locator('.detail-stage [data-action="add"]').click();check(await root('.d-toast-demo').getAttribute('data-count')==='4','Reduced-motion input still works');
   await open('btn-ripple-material');await root('.d-ripple-demo-button').press('Space');check(await root('.d-ripple-demo-wave').evaluate(el=>getComputedStyle(el).animationName)==='d-ripple-demo-fade','Reduced-motion ripple fades without radial growth');await page.waitForFunction(()=>document.querySelector('.detail-stage .d-ripple-demo').dataset.active==='0');
@@ -218,7 +218,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   for(const fit of fits){check(fit.minFont>=11,fit.id+' readable at '+fit.width+'px');check(fit.assets.every(asset=>asset.valid),fit.id+' preserves original SVG dimensions at '+fit.width+'px: '+JSON.stringify(fit.assets.filter(asset=>!asset.valid)));}
   await page.locator('#exemplar-grid').screenshot({path:'.artifacts/exemplars/v4-components.png'});
   check(!errors.length,'No runtime errors: '+errors.join(';'));
-  fs.writeFileSync('.artifacts/exemplars/results.json',JSON.stringify({checks,ids,fits,errors},null,2));
+  fs.writeFileSync('.artifacts/exemplars/results.json',JSON.stringify({browser:browser.version(),checks,ids,fits,errors},null,2));
   console.log('PASS: '+checks+' exemplar interaction, reduced-motion, native-size and offline-export checks');
  }finally{await context.close();await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

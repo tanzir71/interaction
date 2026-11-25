@@ -6,21 +6,30 @@ const assert = require('node:assert/strict');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const registry = require('./load-registry')();
 const fixture = require('./fixtures/agent-palettes-before.json');
+const thinkingInitial = require('./fixtures/thinking-initial-before.json');
+function beforeInitial(demo){
+ if(demo.id!==thinkingInitial.definition.id)return demo;
+ assert.equal(demo.css,thinkingInitial.definition.css+thinkingInitial.cssAppend,'Exact later completed-still CSS');
+ assert.equal(demo.prompt,thinkingInitial.definition.prompt+thinkingInitial.promptAppend,'Exact later completed-still prompt');
+ return {...demo,css:thinkingInitial.definition.css,prompt:thinkingInitial.definition.prompt};
+}
 const assets = require('../assets/demo-assets.json');
 const catalog = require('../registry/index.json');
 const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:4173').replace(/\/$/, '');
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/agent-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/agent-palettes-before.json', 'tools/fixtures/diff-hold-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/agent-palettes-before.json', 'tools/fixtures/thinking-initial-before.json', 'tools/fixtures/diff-hold-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
 const report = {started:new Date().toISOString(), inputs, scope:'Nine full terminal and agent palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review.', capture:'Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.', browserArgs:['--disable-gpu'], layouts:[], native:[], ink:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
 const checks = fixture.checks;
 report.scope+=' Dynamic Boot lines and Streaming markup may be absent before the held initial clock advances; absent fields are recorded, and every named field must render and pass in each theme elsewhere in this run.';
 report.scope+=' Full geometry uses the actual runtime-held pose without changing DOM animation time. The recorded Diff optical revision is checked against its original factory and exact insertions.';
+report.scope+=' Thinking Drawer applies its separately verified later reduced completed-still CSS to both original/current palette references. Only the original palette delta is added/removed in native comparisons. The old palette fixture is unchanged; this does not assert preservation of its retired incorrect initial label.';
+report.referenceOverlay={id:thinkingInitial.definition.id,fixture:'tools/fixtures/thinking-initial-before.json',cssSHA256:hash(thinkingInitial.cssAppend),application:'Both sides of the earlier palette comparison'};
 for (const item of fixture.items) {
- const demo = registry.demos.find(d => d.id === item.definition.id);
+ const demo = beforeInitial(registry.demos.find(d => d.id === item.definition.id));
  assert.equal(hash(demo.js), item.jsSHA256, 'Unchanged controller '+demo.id);
  if(item.controllerUpdate){
   assert.equal(demo.id,'agent-diff-review','Only the recorded optical controller revision');
@@ -105,11 +114,11 @@ save();
  // This is a CSS regression oracle, separate from the default-GPU timing audit.
  const browser=await chromium.launch({...(process.env.INTRX_CHROME_EXECUTABLE?{executablePath:process.env.INTRX_CHROME_EXECUTABLE}:{}),args:report.browserArgs});report.browser=browser.version();
  try{
-  for(const item of fixture.items){const current=registry.demos.find(d=>d.id===item.definition.id),original={...item.definition,js:current.js};
+  for(const item of fixture.items){const current=registry.demos.find(d=>d.id===item.definition.id),paletteCurrent=beforeInitial(current),initialCss=current.id===thinkingInitial.definition.id?thinkingInitial.cssAppend:'',original={...item.definition,js:current.js,css:item.definition.css+initialCss};
    for(const width of [1440,390])for(const theme of ['dark','light'])for(const reduced of [true,false])for(const mode of ['thumb','full']){
     const spec={id:current.id,width,theme,reduced,mode},before=await mount(browser,original,{width,theme,reduced,mode});let nativeProof;
     const prefix=[current.id,width,theme,reduced?'reduced':'normal',mode].join('-');
-    try{if(mode==='thumb')nativeProof=await nativeDelta(before,current.css.slice(original.css.length),prefix);}finally{await before.close();}
+    try{if(mode==='thumb')nativeProof=await nativeDelta(before,paletteCurrent.css.slice(item.definition.css.length),prefix);}finally{await before.close();}
     const after=await mount(browser,current,{width,theme,reduced,mode});try{
      assert.deepEqual(after.geometry,before.geometry,'Exact layout '+JSON.stringify(spec));report.layouts.push({...spec,elements:after.geometry.length,exact:true,...(mode==='full'?{pose:'Actual runtime-held pose; no animation seek',originalAnimations:before.animationObservation,currentAnimations:after.animationObservation}:{})});
      const png=await capture(after);fs.writeFileSync(path.join(output,prefix+'.png'),png);

@@ -1,0 +1,5241 @@
+{
+  "date": "2026-11-25",
+  "baseline": "84aabee7cff2237a8de43999a1282fefb525c653",
+  "scope": "Initial Thinking Drawer full reduced completed label, original native rendering and models, portable disclosure behavior, earlier palette comparison maintenance and retained Chrome 158 diagnostics. Full handoff acceptance remains open.",
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "controllersUnchanged": 520,
+    "htmlCompositionsUnchanged": 520,
+    "metadataAndOriginalModelsUnchanged": true,
+    "originalCssExactPrefix": true,
+    "permittedCssAppend": "\n@media(prefers-reduced-motion:reduce){.d-agent-agent-thinking-drawer-full .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-label{opacity:0!important;transition:none!important}.d-agent-agent-thinking-drawer-full .d-agent-agent-thinking-drawer-finished .d-agent-agent-thinking-drawer-complete-label{opacity:1!important;transform:none!important;transition:none!important}}",
+    "permittedPromptAppend": "\nCompleted reduced-motion full views paint the completed Thought for 6s label immediately, including before the first source frame or while caller-held. Keep earlier phase labels unpainted in that completed still; opening, closing and native preview feedback retain their original behavior. Preserve the current reasoning label when motion preference changes before completion.",
+    "newAssets": 0,
+    "newDependencies": 0,
+    "frozenStageRuntimeExporterUnchanged": true
+  },
+  "defect": {
+    "id": "agent-thinking-drawer",
+    "reference": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=166-372",
+    "observation": [
+      {
+        "theme": "dark",
+        "model": {
+          "elapsed": 6000,
+          "opened": false,
+          "finished": true,
+          "hovered": false,
+          "phaseIndex": 2,
+          "visibleLines": 8,
+          "autoCloseDone": true,
+          "autoClosePending": false
+        },
+        "actualName": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+        "paint": [
+          {
+            "text": "Thought for 6s",
+            "opacity": "1"
+          }
+        ]
+      },
+      {
+        "theme": "light",
+        "model": {
+          "elapsed": 6000,
+          "opened": false,
+          "finished": true,
+          "hovered": false,
+          "phaseIndex": 2,
+          "visibleLines": 8,
+          "autoCloseDone": true,
+          "autoClosePending": false
+        },
+        "actualName": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+        "paint": [
+          {
+            "text": "reasoning…",
+            "opacity": "1"
+          }
+        ]
+      }
+    ],
+    "fix": "Completed full reduced-motion CSS paints only the completed Thought for 6s label immediately, including before source frames. Earlier phase labels stay unpainted in that completed still. The model-owned finished class prevents a live preference change from replacing unfinished reasoning with a completed label. Normal phases and native preview selectors are unchanged.",
+    "evidence": {
+      "file": ".artifacts/final-browser-label-v27/thinking-probe/report.json",
+      "sha256": "b6fab5fc965d052339a5d7db5cfbbcd6de71180eb0d720f87907ead3cfc3784e"
+    },
+    "unshippedCandidate": {
+      "evidence": {
+        "file": ".artifacts/final-browser-label-v27/preference-counterexample.json",
+        "sha256": "6ee257b625fa140e80fc7bbbb6e091ce8afffcafd726399b366cfb1aea1c3c01"
+      },
+      "observation": {
+        "state": {
+          "elapsed": 0,
+          "opened": false,
+          "finished": false,
+          "hovered": false,
+          "phaseIndex": 0,
+          "visibleLines": 0,
+          "autoCloseDone": false,
+          "autoClosePending": false
+        },
+        "name": "reasoning…. Open reasoning details, reasoning…",
+        "labels": [
+          {
+            "text": "reasoning…",
+            "opacity": "0"
+          },
+          {
+            "text": "searching files…",
+            "opacity": "0"
+          },
+          {
+            "text": "synthesizing…",
+            "opacity": "0"
+          },
+          {
+            "text": "Thought for 6s",
+            "opacity": "1"
+          }
+        ]
+      },
+      "status": "The first unshipped rule was too broad during a live preference change. The final rule is restricted to the model-owned completed state; eight held full stories switch preferences both ways without changing their model or current label."
+    }
+  },
+  "initialVerification": {
+    "scope": "Synchronous post-mount label opacity before source frames in caller-held full/native stages, both themes, two widths and motion preferences. Actual AX names, original layout metrics/HTML/model and deliberate reduced disclosure input. Full views switch motion preference both ways while held, preserving unfinished and completed model labels. Eight exact GPU-disabled reduced target CSS roundtrips and four fresh full offline exports. This does not establish all phase-boundary labels, all-catalog accessibility, GPU raster equality or performance.",
+    "browser": "158.0.8127.88",
+    "stories": 16,
+    "heldPreferenceChanges": 16,
+    "exactReducedTargetCssRoundtrips": 8,
+    "freshOfflineExports": 4,
+    "sourceStable": true,
+    "inputs": {
+      "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-thinking-initial.js": "4320b85267a7717a0e4cabbf0aae3c795e9b34d45e01ee4d7eb22d3524e31671",
+      "tools/fixtures/thinking-initial-before.json": "5cda2d1e5df15dad982713bbf520c4d26696723a4955c4a0ac65394b6cfd3275",
+      "js/demos.agent.agent-thinking-drawer.js": "123495bc3ef945eb70ad232b99fdb63a968b9929c8840007ea426681f33dadfb",
+      "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "r/agent-thinking-drawer.json": "6951826cc4a91f37086258752f55964e01bb0ed69f143d17f8cf4aad972f2158"
+    },
+    "rows": [
+      {
+        "mode": "full",
+        "width": 1440,
+        "theme": "dark",
+        "reduced": false,
+        "originalInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "reduce",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          },
+          {
+            "preference": "no-preference",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 1440,
+        "theme": "dark",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "no-preference",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          },
+          {
+            "preference": "reduce",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 1440,
+        "theme": "light",
+        "reduced": false,
+        "originalInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "reduce",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          },
+          {
+            "preference": "no-preference",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 1440,
+        "theme": "light",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "no-preference",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          },
+          {
+            "preference": "reduce",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 390,
+        "theme": "dark",
+        "reduced": false,
+        "originalInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "reduce",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          },
+          {
+            "preference": "no-preference",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 390,
+        "theme": "dark",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "no-preference",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          },
+          {
+            "preference": "reduce",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 390,
+        "theme": "light",
+        "reduced": false,
+        "originalInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "reasoning…. Open reasoning details, reasoning…",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3.31288)"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "reduce",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          },
+          {
+            "preference": "no-preference",
+            "finished": false,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              }
+            ],
+            "name": "reasoning…. Open reasoning details, reasoning…"
+          }
+        ]
+      },
+      {
+        "mode": "full",
+        "width": 390,
+        "theme": "light",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds",
+          "labels": [
+            {
+              "text": "reasoning…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "searching files…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "synthesizing…",
+              "opacity": 0,
+              "display": "flex",
+              "transform": "matrix(1, 0, 0, 1, 0, 3)"
+            },
+            {
+              "text": "Thought for 6s",
+              "opacity": 1,
+              "display": "flex",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": [
+          {
+            "preference": "no-preference",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          },
+          {
+            "preference": "reduce",
+            "finished": true,
+            "labels": [
+              {
+                "text": "reasoning…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "searching files…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "synthesizing…",
+                "opacity": 0,
+                "display": "flex",
+                "transform": "matrix(1, 0, 0, 1, 0, 3)"
+              },
+              {
+                "text": "Thought for 6s",
+                "opacity": 1,
+                "display": "flex",
+                "transform": "none"
+              }
+            ],
+            "name": "Thought for 6s. Open completed reasoning details, Thought for 6 seconds"
+          }
+        ]
+      },
+      {
+        "mode": "thumb",
+        "width": 1440,
+        "theme": "dark",
+        "reduced": false,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 1440,
+        "theme": "dark",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 1440,
+        "theme": "light",
+        "reduced": false,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 1440,
+        "theme": "light",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 390,
+        "theme": "dark",
+        "reduced": false,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 390,
+        "theme": "dark",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 390,
+        "theme": "light",
+        "reduced": false,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      },
+      {
+        "mode": "thumb",
+        "width": 390,
+        "theme": "light",
+        "reduced": true,
+        "originalInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "currentInitial": {
+          "name": "Thinking · 4s. Collapse reasoning preview",
+          "labels": [
+            {
+              "text": "Thinking · 4s",
+              "opacity": 1,
+              "display": "inline",
+              "transform": "none"
+            },
+            {
+              "text": "Think",
+              "opacity": 1,
+              "display": "none",
+              "transform": "none"
+            }
+          ]
+        },
+        "layoutExact": true,
+        "htmlExact": true,
+        "modelExact": true,
+        "preferenceChanges": []
+      }
+    ],
+    "evidence": {
+      "file": ".artifacts/final-browser-label-v27/verification-completed/2026-11-25T10-09-19-305Z/report.json",
+      "sha256": "4cb15054178d9f9fb4cd3a373fd69b48b3c6901c407523840501042b010df98a"
+    },
+    "retainedRejectedRun": {
+      "log": {
+        "file": ".artifacts/final-browser-label-v27/verification-build-overlap-failure.log",
+        "sha256": "a2f993ee396571dc673d97e7553ad0d4ba53b1f11f508ef8245e67def0a53003"
+      },
+      "reason": "An earlier final-case run overlapped export regeneration. Its source guard rejected the changed r/agent-thinking-drawer.json. The accepted run began after the build was terminal and all recorded input hashes still match current files."
+    }
+  },
+  "targetedAxe": {
+    "scope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance.",
+    "summary": {
+      "cases": 4,
+      "violations": 0,
+      "incomplete": 2,
+      "pageErrors": 0
+    },
+    "browser": "158.0.8127.88",
+    "axe": {
+      "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+      "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+      "version": "4.14.1"
+    },
+    "cases": [
+      {
+        "theme": "dark",
+        "motion": "reduced",
+        "violations": [],
+        "incomplete": []
+      },
+      {
+        "theme": "light",
+        "motion": "reduced",
+        "violations": [],
+        "incomplete": []
+      },
+      {
+        "theme": "dark",
+        "motion": "normal",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".d-agent-agent-thinking-drawer-label-active"
+                ],
+                "html": "<span class=\"d-agent-agent-thinking-drawer-label d-agent-agent-thinking-drawer-label-active\">reasoning…</span>",
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+                "checks": [
+                  {
+                    "id": "color-contrast",
+                    "message": "Element's background color could not be determined due to a background gradient",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "bgGradient",
+                      "expectedContrastRatio": "4.5:1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "theme": "light",
+        "motion": "normal",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "help": "Elements must meet minimum color contrast ratio thresholds",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+            "nodes": [
+              {
+                "target": [
+                  ".d-agent-agent-thinking-drawer-label-active"
+                ],
+                "html": "<span class=\"d-agent-agent-thinking-drawer-label d-agent-agent-thinking-drawer-label-active\">reasoning…</span>",
+                "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+                "checks": [
+                  {
+                    "id": "color-contrast",
+                    "message": "Element's background color could not be determined due to a background gradient",
+                    "data": {
+                      "contrastRatio": 0,
+                      "fontSize": "12.0pt (16px)",
+                      "fontWeight": "normal",
+                      "messageKey": "bgGradient",
+                      "expectedContrastRatio": "4.5:1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "inputs": {
+      "tools/audit-component-accessibility.js": "4e037fc7d1edcde2108a3cc285c817260daa9746245ccc0bb62eb0c61cde1d58",
+      "tools/load-registry.js": "80ea58e5d7c82e3d2303f4e8ea8572be01eb1145e2cfd2111f9fe7cdd0ba35ca",
+      "tools/fixtures/showcase-fields/rig.html": "61e157b8b15b24a072ba8c01df26433bc9197d11b56ffbe1b61a485ab4a005c8",
+      "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+      "registry/index.json": "08e256c5618710ad25e54db9fed20db53a7fe3f6c4e36b572c3f7419acae96d7",
+      "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+      "js/shell/access.js": "42a2a6cc34140299a237f368de7d0c9cee155060a5dce94974abe5be178188e7",
+      "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+      "js/registry-files.json": "32c5e022763583020a8eca907744c569bb62b9e15f47b164238e294ff8df60ea",
+      "js/demos.agent.agent-thinking-drawer.js": "123495bc3ef945eb70ad232b99fdb63a968b9929c8840007ea426681f33dadfb"
+    },
+    "evidence": {
+      "file": ".artifacts/final-browser-label-v27/thinking-axe-completed/2026-11-25T10-11-24-217Z/report.json",
+      "sha256": "c141948fd93e6035b8d9ad08db3952991f0d2f3ab388d455bcfc5ec8edc9822d"
+    },
+    "limit": "Four focused full cases. Do not replace or subtract from the historical 1040-case inventory, or claim normal phase-boundary accessibility from this initial-state sample."
+  },
+  "paletteVerification": {
+    "scope": "Nine full terminal and agent palettes: original controller hashes, fresh original/current layouts, exact same-instance native CSS-delta roundtrips at two widths, themes and motion settings, plus fresh offline full exports. Listed text is measured against its Stage or documented opaque control surface. Photographic, filled-progress and other untested states need separate review. Dynamic Boot lines and Streaming markup may be absent before the held initial clock advances; absent fields are recorded, and every named field must render and pass in each theme elsewhere in this run. Full geometry uses the actual runtime-held pose without changing DOM animation time. The recorded Diff optical revision is checked against its original factory and exact insertions. Thinking Drawer applies its separately verified later reduced completed-still CSS to both original/current palette references. Only the original palette delta is added/removed in native comparisons. The old palette fixture is unchanged; this does not assert preservation of its retired incorrect initial label.",
+    "capture": "Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.",
+    "layouts": 144,
+    "exactNativeCrops": 72,
+    "freshOfflinePalettes": 18,
+    "referenceOverlay": {
+      "id": "agent-thinking-drawer",
+      "fixture": "tools/fixtures/thinking-initial-before.json",
+      "cssSHA256": "6536928b09cadf7f1c2837821ab74ccdf556c96aaf6ddce78f2fffce3d20081e",
+      "application": "Both sides of the earlier palette comparison"
+    },
+    "sourceStable": true,
+    "inputs": {
+      "C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-agent-palettes.js": "819f66b3fe3e378ee8057970a23329e35bb37a598ebe89798deaf88d641c3bfd",
+      "tools/fixtures/agent-palettes-before.json": "c83a11cc0550b0b08c6241dd81e0e29bcc2663262f8425af7dc21c42746091f3",
+      "tools/fixtures/thinking-initial-before.json": "5cda2d1e5df15dad982713bbf520c4d26696723a4955c4a0ac65394b6cfd3275",
+      "tools/fixtures/diff-hold-before.json": "975965b8a613ef25618fe451b1dc5d37862ad4f87559188eb6e36d9ae91acac7",
+      "css/foundations.css": "b841ea6ec8b360011c02c2d738c400834df9ec998758cd3461fd782d26653542",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+      "registry/index.json": "08e256c5618710ad25e54db9fed20db53a7fe3f6c4e36b572c3f7419acae96d7",
+      "js/demos.fui.fui-terminal-boot.js": "92bbdc6a25fca8c915807b46617ebdae12a9e1536165571942c0ceeda73fca5b",
+      "r/fui-terminal-boot.json": "9c057aea4d6259fbb609e795301631d23eddc574517be614e8ca3014c251f753",
+      "js/demos.fui.fui-signal-scanner.js": "f1e6eb7c827e863f0f04bbfd8251817d7899de722a488d305369d2a087a99cec",
+      "r/fui-signal-scanner.json": "d7c1da582f24535aab5f96c1ab4e6e2285be8bd4700f97860ff4d18de232ec35",
+      "js/demos.fui.fui-access-granted.js": "967dbacb93815d7196a111561c74a923cf34c9c5bbc9c8880db66dc57ff8d8f6",
+      "r/fui-access-granted.json": "b46046d96ddd1bb5e39937c3be4ea10b56f5692dad71e049fc3f48f3e02ef254",
+      "js/demos.fui.fui-hex-dump.js": "4dbce99a9b6fb8d7fecb797844f79d131e01d56eaa7a2f2fac6f72f8af76d216",
+      "r/fui-hex-dump.json": "52462fc77b41727c17421a4a1e838d46c278a1b4f791e5332316f0f5e55d7ee4",
+      "js/demos.fui.fui-trading-terminal.js": "3a01cec829bb58c2d9524a3d07a1fef7402a97cba7ba8c390e54025cfccc0002",
+      "r/fui-trading-terminal.json": "69bc530824c3bd352005526dae4863235e9b2db7ab1fd97938cb2a1470c1c332",
+      "js/demos.agent.agent-deploy-pipeline.js": "67246607f0b57f4de9b6b29d31cc3d60cf9d508b398bd62792b15b514a0c412a",
+      "r/agent-deploy-pipeline.json": "819899816764a71ba4423a54923137b59220170a73730a41be5b1d015410a8b2",
+      "js/demos.agent.agent-context-compaction.js": "4c7ace4166532cda867f098df4140b589d9762cfab08a55955cea9a11c525ae1",
+      "r/agent-context-compaction.json": "125f20c951f780f792d7f8b09808a9fbdc7151ab659b8f91c357d87cc1a813b2",
+      "js/demos.agent.agent-streaming-text.js": "a364550c67eb1a13131a5f49b1cce6c318ebd6b49b779967df1aec55b202a6ea",
+      "r/agent-streaming-text.json": "fc2907c48fc82fac554afdbae4c3481c552ee383c2e82530fd0d39053c12e378",
+      "js/demos.agent.agent-diff-review.js": "459ba849ef9e1b9939c9e3012f97c81c97acc4988c82dc27399d7062004ef2ef",
+      "r/agent-diff-review.json": "8f188c21dfeceb1f88c1df7ede88e48c8f5ec8aa33f22bbc2467fa1bb23723b8"
+    },
+    "evidence": {
+      "file": ".artifacts/final-browser-label-v27/palettes-completed/2026-11-25T10-12-33-436Z/report.json",
+      "sha256": "adf3a87e589a85f00927abfadeafcc2b2a36a09565bbc10dde92f3739cfa9bda"
+    },
+    "fixturePreservation": "The prior agent-palettes-before.json remains unchanged. The later CSS/prompt append is checked exactly; its completed-still CSS is present on both palette reference sides. Native comparisons add/remove only the original palette delta. The separate initial suite checks the later fix."
+  },
+  "verification": {
+    "checks": {
+      "static": [
+        {
+          "exit": 0,
+          "name": "registry"
+        },
+        {
+          "exit": 0,
+          "name": "stage"
+        },
+        {
+          "exit": 0,
+          "name": "generated"
+        },
+        {
+          "exit": 0,
+          "name": "motion"
+        },
+        {
+          "exit": 0,
+          "name": "package"
+        }
+      ],
+      "browser": [
+        {
+          "name": "thinking-axe",
+          "exit": 0
+        },
+        {
+          "name": "agents",
+          "exit": 0
+        },
+        {
+          "name": "library",
+          "exit": 0
+        },
+        {
+          "name": "stage-fit",
+          "exit": 0
+        }
+      ],
+      "additional": [
+        {
+          "name": "initial-contract",
+          "exit": 0
+        },
+        {
+          "name": "palettes",
+          "exit": 0
+        }
+      ]
+    },
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "total": 520,
+      "failed": [],
+      "missingDesignSize": 0,
+      "overflow": [],
+      "hscroll": [],
+      "tinyText": [],
+      "lowFill": [],
+      "lowFillExceptions": [
+        "btn-border-beam",
+        "input-float-label",
+        "password-strength-bar",
+        "elastic-tabs",
+        "velocity-skew",
+        "scroll-letter-scatter",
+        "scroll-table-of-contents",
+        "cursor-gooey-blob",
+        "cursor-particle-emitter",
+        "cursor-elastic-line",
+        "cursor-text-repel",
+        "cursor-grid-ripple",
+        "cursor-hover-preview",
+        "cursor-liquid-metaball",
+        "cursor-velocity-stretch",
+        "cursor-snap-targets",
+        "cursor-emoji-rain",
+        "cursor-crosshair-hud",
+        "custom-cursor",
+        "magnetic-button",
+        "image-trail",
+        "text-scramble",
+        "letter-roll",
+        "proximity-type",
+        "stat-counter",
+        "text-wave-hover",
+        "text-typewriter-caret",
+        "text-blur-focus",
+        "text-strike-reveal",
+        "text-ransom-note",
+        "text-glitch-layers",
+        "text-circular-spin",
+        "text-underline-magic",
+        "text-broken-grid",
+        "svg-path-draw-hover",
+        "svg-squiggle-underline",
+        "svg-gooey-menu",
+        "css3d-cube-nav",
+        "voxel-assemble",
+        "spring-cursor-follower",
+        "pendulum-tags",
+        "chain-links",
+        "liquid-blob-buttons",
+        "nav-active-pill",
+        "breadcrumb-collapse",
+        "sidebar-rail-expand",
+        "burger-morph-x",
+        "btn-shimmer-sweep",
+        "btn-text-slide-swap",
+        "btn-icon-hop",
+        "btn-success-morph",
+        "btn-confetti-burst",
+        "btn-ripple-material",
+        "btn-jelly-press",
+        "like-heart-particles",
+        "checkbox-draw-check",
+        "toggle-day-night",
+        "copy-inline-feedback",
+        "badge-notification-pop",
+        "input-underline-grow",
+        "input-shake-error",
+        "input-char-counter-arc",
+        "otp-code-boxes",
+        "range-elastic-thumb",
+        "form-multistep-progress",
+        "preloader-percentage",
+        "preloader-word-cycle",
+        "loader-dots-wave",
+        "loader-morph-shapes",
+        "loader-typing-code",
+        "loader-orbit-dots",
+        "upload-progress-morph",
+        "page-load-counter-slide",
+        "chart-donut-sweep",
+        "fui-target-lock",
+        "fui-access-granted",
+        "agent-token-meter",
+        "agent-deploy-pipeline",
+        "agent-node-graph",
+        "agent-streaming-text",
+        "typing-mechanical",
+        "konami-unlock",
+        "number-input-drag",
+        "dither-bayer",
+        "ascii-donut-3d",
+        "ascii-type-explode",
+        "dot-matrix-shapes",
+        "halftone-globe-canvas",
+        "pixel-lissajous-lab",
+        "chromatic-type",
+        "neumorphic-buttons",
+        "mechanical-switch",
+        "rotary-knob",
+        "flip-clock",
+        "embossed-press",
+        "analog-gauge",
+        "punch-card-keyboard",
+        "zippo-flame",
+        "dynamic-notch",
+        "hover-fill-button",
+        "showcase-pixel-trail",
+        "showcase-tracing-story",
+        "showcase-elastic-slider",
+        "framer-rolling-balance",
+        "drams-003",
+        "drams-005",
+        "drams-009",
+        "drams-020",
+        "drams-021",
+        "drams-022",
+        "drams-002",
+        "drams-012",
+        "drams-034",
+        "drams-040",
+        "drams-010",
+        "drams-044",
+        "drams-008",
+        "drams-011",
+        "drams-016",
+        "drams-017",
+        "drams-019",
+        "drams-025",
+        "drams-032",
+        "drams-014",
+        "drams-018",
+        "drams-023",
+        "drams-024",
+        "drams-026",
+        "drams-028",
+        "drams-030",
+        "drams-035",
+        "drams-037",
+        "drams-039",
+        "drams-042",
+        "micro-smoke-delete",
+        "micro-inline-confirm",
+        "micro-star-rating",
+        "micro-reaction-bar",
+        "micro-shimmer-status",
+        "ui-avatar-stack",
+        "ui-inverse-tabs",
+        "form-slide-to-confirm",
+        "form-precision-scrubber",
+        "data-candlestick-crosshair",
+        "ai-agent-creator",
+        "micro-stateful-button",
+        "micro-hold-to-pay",
+        "micro-share-pill",
+        "micro-icon-swap",
+        "micro-award-badge",
+        "micro-action-swap",
+        "form-vanish-input",
+        "form-magnetic-select",
+        "form-multi-select",
+        "form-inline-edit",
+        "form-liquid-toggle",
+        "ui-feedback-widget",
+        "nav-pagination-morph",
+        "loader-multi-step",
+        "loader-matrix-dots",
+        "play-plinko",
+        "play-slingshot",
+        "play-coin-flip"
+      ],
+      "invalidExceptions": []
+    },
+    "agents": {
+      "checks": 260,
+      "ids": [
+        "agent-deploy-pipeline",
+        "agent-node-graph",
+        "agent-streaming-text",
+        "agent-thinking-drawer"
+      ],
+      "fits": [
+        {
+          "id": "agent-deploy-pipeline",
+          "w": 372,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:313",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                106,
+                96,
+                12,
+                12
+              ],
+              "local": [
+                32,
+                72,
+                12,
+                12
+              ]
+            },
+            {
+              "node": "166:316",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                155.296875,
+                96,
+                12,
+                12
+              ],
+              "local": [
+                81.296875,
+                72,
+                12,
+                12
+              ]
+            },
+            {
+              "node": "166:318",
+              "key": "agent-deploy-pipeline-ellipse",
+              "box": [
+                201.59375,
+                93,
+                18,
+                18
+              ],
+              "local": [
+                127.59375,
+                69,
+                18,
+                18
+              ]
+            },
+            {
+              "node": "166:319",
+              "key": "agent-deploy-pipeline-ellipse1",
+              "box": [
+                202.03125,
+                93,
+                17.546875,
+                18
+              ],
+              "local": [
+                128.03125,
+                69,
+                17.546875,
+                18
+              ]
+            },
+            {
+              "node": "166:320",
+              "key": "agent-deploy-pipeline-ellipse2",
+              "box": [
+                251.890625,
+                94,
+                16,
+                16
+              ],
+              "local": [
+                177.890625,
+                70,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-node-graph",
+          "w": 372,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:337",
+              "key": "agent-node-graph-vector",
+              "box": [
+                119.296875,
+                75.296875,
+                67.390625,
+                27.390625
+              ],
+              "local": [
+                45.296875,
+                51.296875,
+                67.390625,
+                27.390625
+              ]
+            },
+            {
+              "node": "166:338",
+              "key": "agent-node-graph-vector",
+              "box": [
+                185.296875,
+                75.296875,
+                67.390625,
+                27.390625
+              ],
+              "local": [
+                111.296875,
+                51.296875,
+                67.390625,
+                27.390625
+              ]
+            },
+            {
+              "node": "166:339",
+              "key": "maps-dot-globe-arcs-ellipse33",
+              "box": [
+                150,
+                78.984375,
+                6,
+                6
+              ],
+              "local": [
+                76,
+                54.984375,
+                6,
+                6
+              ]
+            },
+            {
+              "node": "166:341",
+              "key": "layout-command-search",
+              "box": [
+                112,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                38,
+                69.984375,
+                16,
+                16
+              ]
+            },
+            {
+              "node": "166:345",
+              "key": "agent-node-graph-frame1",
+              "box": [
+                178,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                104,
+                69.984375,
+                16,
+                16
+              ]
+            },
+            {
+              "node": "166:349",
+              "key": "agent-node-graph-frame2",
+              "box": [
+                244,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                170,
+                69.984375,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-streaming-text",
+          "w": 372,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 14,
+          "namespace": true,
+          "images": []
+        },
+        {
+          "id": "agent-thinking-drawer",
+          "w": 372,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 12.5,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:386",
+              "key": "agent-thinking-drawer-ellipse",
+              "box": [
+                106.1875,
+                55.1875,
+                11.59375,
+                11.59375
+              ],
+              "local": [
+                32.1875,
+                31.1875,
+                11.59375,
+                11.59375
+              ]
+            },
+            {
+              "node": "166:387",
+              "key": "agent-thinking-drawer-ellipse1",
+              "box": [
+                106.46875,
+                55.1875,
+                11.3125,
+                11.59375
+              ],
+              "local": [
+                32.46875,
+                31.1875,
+                11.3125,
+                11.59375
+              ]
+            },
+            {
+              "node": "166:389",
+              "key": "form-select-chevron",
+              "box": [
+                196,
+                53,
+                16,
+                16
+              ],
+              "local": [
+                122,
+                29,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-deploy-pipeline",
+          "w": 286,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:313",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                63,
+                96,
+                12,
+                12
+              ],
+              "local": [
+                32,
+                72,
+                12,
+                12
+              ]
+            },
+            {
+              "node": "166:316",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                112.296875,
+                96,
+                12,
+                12
+              ],
+              "local": [
+                81.296875,
+                72,
+                12,
+                12
+              ]
+            },
+            {
+              "node": "166:318",
+              "key": "agent-deploy-pipeline-ellipse",
+              "box": [
+                158.59375,
+                93,
+                18,
+                18
+              ],
+              "local": [
+                127.59375,
+                69,
+                18,
+                18
+              ]
+            },
+            {
+              "node": "166:319",
+              "key": "agent-deploy-pipeline-ellipse1",
+              "box": [
+                159.03125,
+                93,
+                17.546875,
+                18
+              ],
+              "local": [
+                128.03125,
+                69,
+                17.546875,
+                18
+              ]
+            },
+            {
+              "node": "166:320",
+              "key": "agent-deploy-pipeline-ellipse2",
+              "box": [
+                208.890625,
+                94,
+                16,
+                16
+              ],
+              "local": [
+                177.890625,
+                70,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-node-graph",
+          "w": 286,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:337",
+              "key": "agent-node-graph-vector",
+              "box": [
+                76.296875,
+                75.296875,
+                67.390625,
+                27.390625
+              ],
+              "local": [
+                45.296875,
+                51.296875,
+                67.390625,
+                27.390625
+              ]
+            },
+            {
+              "node": "166:338",
+              "key": "agent-node-graph-vector",
+              "box": [
+                142.296875,
+                75.296875,
+                67.390625,
+                27.390625
+              ],
+              "local": [
+                111.296875,
+                51.296875,
+                67.390625,
+                27.390625
+              ]
+            },
+            {
+              "node": "166:339",
+              "key": "maps-dot-globe-arcs-ellipse33",
+              "box": [
+                107,
+                78.984375,
+                6,
+                6
+              ],
+              "local": [
+                76,
+                54.984375,
+                6,
+                6
+              ]
+            },
+            {
+              "node": "166:341",
+              "key": "layout-command-search",
+              "box": [
+                69,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                38,
+                69.984375,
+                16,
+                16
+              ]
+            },
+            {
+              "node": "166:345",
+              "key": "agent-node-graph-frame1",
+              "box": [
+                135,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                104,
+                69.984375,
+                16,
+                16
+              ]
+            },
+            {
+              "node": "166:349",
+              "key": "agent-node-graph-frame2",
+              "box": [
+                201,
+                93.984375,
+                16,
+                16
+              ],
+              "local": [
+                170,
+                69.984375,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-streaming-text",
+          "w": 286,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 12.815384615384614,
+          "namespace": true,
+          "images": []
+        },
+        {
+          "id": "agent-thinking-drawer",
+          "w": 286,
+          "h": 264,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 12.5,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:386",
+              "key": "agent-thinking-drawer-ellipse",
+              "box": [
+                63.1875,
+                55.1875,
+                11.59375,
+                11.59375
+              ],
+              "local": [
+                32.1875,
+                31.1875,
+                11.59375,
+                11.59375
+              ]
+            },
+            {
+              "node": "166:387",
+              "key": "agent-thinking-drawer-ellipse1",
+              "box": [
+                63.46875,
+                55.1875,
+                11.3125,
+                11.59375
+              ],
+              "local": [
+                32.46875,
+                31.1875,
+                11.3125,
+                11.59375
+              ]
+            },
+            {
+              "node": "166:389",
+              "key": "form-select-chevron",
+              "box": [
+                153,
+                53,
+                16,
+                16
+              ],
+              "local": [
+                122,
+                29,
+                16,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-deploy-pipeline",
+          "w": 286,
+          "h": 196,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:313",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                95.359375,
+                65.21875,
+                7.140625,
+                7.140625
+              ],
+              "local": [
+                31.9725,
+                71.9775,
+                11.99625,
+                11.99625
+              ]
+            },
+            {
+              "node": "166:316",
+              "key": "agent-deploy-pipeline-frame",
+              "box": [
+                124.703125,
+                65.21875,
+                7.140625,
+                7.140625
+              ],
+              "local": [
+                81.27,
+                71.9775,
+                11.99625,
+                11.99625
+              ]
+            },
+            {
+              "node": "166:318",
+              "key": "agent-deploy-pipeline-ellipse",
+              "box": [
+                152.265625,
+                63.4375,
+                10.703125,
+                10.703125
+              ],
+              "local": [
+                127.575,
+                68.985,
+                17.98125,
+                17.98125
+              ]
+            },
+            {
+              "node": "166:319",
+              "key": "agent-deploy-pipeline-ellipse1",
+              "box": [
+                152.515625,
+                63.4375,
+                10.4375,
+                10.703125
+              ],
+              "local": [
+                127.995,
+                68.985,
+                17.535,
+                17.98125
+              ]
+            },
+            {
+              "node": "166:320",
+              "key": "agent-deploy-pipeline-ellipse2",
+              "box": [
+                182.203125,
+                64.03125,
+                9.515625,
+                9.515625
+              ],
+              "local": [
+                177.87,
+                69.9825,
+                15.98625,
+                15.98625
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-node-graph",
+          "w": 286,
+          "h": 196,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 99,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:337",
+              "key": "agent-node-graph-vector",
+              "box": [
+                103.28125,
+                52.90625,
+                40.109375,
+                16.296875
+              ],
+              "local": [
+                45.28125,
+                51.292500000000004,
+                67.38375,
+                27.37875
+              ]
+            },
+            {
+              "node": "166:338",
+              "key": "agent-node-graph-vector",
+              "box": [
+                142.5625,
+                52.90625,
+                40.109375,
+                16.296875
+              ],
+              "local": [
+                111.27375,
+                51.292500000000004,
+                67.38375,
+                27.37875
+              ]
+            },
+            {
+              "node": "166:339",
+              "key": "maps-dot-globe-arcs-ellipse33",
+              "box": [
+                121.546875,
+                55.09375,
+                3.5625,
+                3.5625
+              ],
+              "local": [
+                75.9675,
+                54.9675,
+                5.985,
+                5.985
+              ]
+            },
+            {
+              "node": "166:341",
+              "key": "layout-command-search",
+              "box": [
+                98.9375,
+                64.03125,
+                9.515625,
+                9.515625
+              ],
+              "local": [
+                37.98375,
+                69.9825,
+                15.98625,
+                15.98625
+              ]
+            },
+            {
+              "node": "166:345",
+              "key": "agent-node-graph-frame1",
+              "box": [
+                138.21875,
+                64.03125,
+                9.515625,
+                9.515625
+              ],
+              "local": [
+                103.97625000000001,
+                69.9825,
+                15.98625,
+                15.98625
+              ]
+            },
+            {
+              "node": "166:349",
+              "key": "agent-node-graph-frame2",
+              "box": [
+                177.5,
+                64.03125,
+                9.515625,
+                9.515625
+              ],
+              "local": [
+                169.96875,
+                69.9825,
+                15.98625,
+                15.98625
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agent-streaming-text",
+          "w": 286,
+          "h": 196,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 11,
+          "namespace": true,
+          "images": []
+        },
+        {
+          "id": "agent-thinking-drawer",
+          "w": 286,
+          "h": 196,
+          "overflow": [],
+          "scroll": false,
+          "minFont": 11,
+          "namespace": true,
+          "images": [
+            {
+              "node": "166:386",
+              "key": "agent-thinking-drawer-ellipse",
+              "box": [
+                95.484375,
+                40.9375,
+                6.890625,
+                6.890625
+              ],
+              "local": [
+                32.1825,
+                31.185,
+                11.57625,
+                11.57625
+              ]
+            },
+            {
+              "node": "166:387",
+              "key": "agent-thinking-drawer-ellipse1",
+              "box": [
+                95.65625,
+                40.9375,
+                6.734375,
+                6.890625
+              ],
+              "local": [
+                32.47125,
+                31.185,
+                11.31375,
+                11.57625
+              ]
+            },
+            {
+              "node": "166:389",
+              "key": "form-select-chevron",
+              "box": [
+                148.9375,
+                39.625,
+                9.515625,
+                9.515625
+              ],
+              "local": [
+                121.98375,
+                28.98,
+                15.98625,
+                15.98625
+              ]
+            }
+          ]
+        }
+      ],
+      "errors": []
+    }
+  },
+  "chrome158": {
+    "isolatedSpeed": {
+      "scope": "Diagnostic actual animation states/events after the existing 50ms speed assertion and two browser frames; CPU slowdown is not a frame-rate acceptance measurement.",
+      "rows": [
+        {
+          "cpu": 1,
+          "shellTheme": "dark",
+          "at50": {
+            "wall": 2316.699999999255,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 200.50199999947438,
+                "start": 2209.415000000263,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          },
+          "afterFrames": {
+            "wall": 2483.899999999441,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 533.9699999994742,
+                "start": 2209.415000000263,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          }
+        },
+        {
+          "cpu": 1,
+          "shellTheme": "light",
+          "at50": {
+            "wall": 2182.9000000003725,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84199999951056,
+                "start": 2092.077000000245,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          },
+          "afterFrames": {
+            "wall": 2235.100000000559,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 266.84599999950984,
+                "start": 2092.077000000245,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          }
+        },
+        {
+          "cpu": 4,
+          "shellTheme": "dark",
+          "at50": {
+            "wall": 3944.9000000003725,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.84200000047244,
+                "start": 3850.6429999997636,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          },
+          "afterFrames": {
+            "wall": 4033.5,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 333.6460000004724,
+                "start": 3850.6429999997636,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          }
+        },
+        {
+          "cpu": 4,
+          "shellTheme": "light",
+          "at50": {
+            "wall": 3291.600000000559,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 166.75400000010754,
+                "start": 3207.288999999946,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          },
+          "afterFrames": {
+            "wall": 3334,
+            "speed": 2,
+            "suspended": false,
+            "data": {
+              "initializing": "false",
+              "theme": "dark",
+              "spins": "0",
+              "check": "hidden",
+              "settled": "false",
+              "state": "loading",
+              "source": "dock",
+              "runs": "1",
+              "width": "40"
+            },
+            "animations": [
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-bottom-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-left-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "border-top-right-radius",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSTransition",
+                "property": "width",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 350,
+                "delay": 0
+              },
+              {
+                "kind": "CSSAnimation",
+                "name": "d-success-demo-spin",
+                "rate": 2,
+                "pending": false,
+                "state": "running",
+                "time": 234.02200000010788,
+                "start": 3207.288999999946,
+                "duration": 1000,
+                "delay": 0
+              }
+            ]
+          }
+        }
+      ],
+      "evidence": {
+        "file": ".artifacts/final-browser-label-v27/speed-probe/report.json",
+        "sha256": "03abf1c63b1de36ff2a8e1ccd58fa871d5853c9e0bd51164942e80e9253eeb2d"
+      },
+      "assessment": "All four samples show rate 2 at the original 50ms observation and after two frames. These samples do not reproduce or explain the earlier transition-speed failure."
+    },
+    "instrumentedStory": {
+      "speed": {
+        "browser": "158.0.8127.88",
+        "pass": true,
+        "wall": 9834,
+        "speed": 2,
+        "suspended": false,
+        "selected": "2",
+        "root": {
+          "initializing": "false",
+          "theme": "dark",
+          "spins": "0",
+          "check": "hidden",
+          "settled": "false",
+          "state": "loading",
+          "source": "dock",
+          "runs": "1",
+          "width": "40"
+        },
+        "animations": [
+          {
+            "kind": "CSSTransition",
+            "property": "border-bottom-left-radius",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "border-bottom-right-radius",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "border-top-left-radius",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "border-top-right-radius",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "width",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "filter",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSTransition",
+            "property": "opacity",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          },
+          {
+            "kind": "CSSAnimation",
+            "name": "d-success-demo-spin",
+            "rate": 2,
+            "pending": false,
+            "playState": "running",
+            "time": 133.43600000117206
+          }
+        ]
+      },
+      "exit": 1,
+      "log": {
+        "file": ".artifacts/final-browser-label-v27/check-exemplars-observed.log",
+        "sha256": "777f86986b26da0a0702be445ad1c3c83dd295edef3e6968ecdd293f007864cb"
+      },
+      "pause": {
+        "browser": "158.0.8127.88",
+        "before": {
+          "background": "78.3112% 0px",
+          "animations": [
+            {
+              "currentTime": 433.7760000001847,
+              "playState": "paused",
+              "pending": false
+            }
+          ]
+        },
+        "after": {
+          "background": "78.3112% 0px",
+          "animations": [
+            {
+              "currentTime": 433.7760000001847,
+              "playState": "paused",
+              "pending": false
+            }
+          ]
+        }
+      },
+      "stop": "The speed and committed-pause checks passed; the run stopped at Border Beam reduced-motion still-image equality. The original failed PNG buffers were not saved."
+    },
+    "freshBeam": {
+      "scope": "Fresh reduced route following the exact 80ms/150ms image sequence; complete post-capture CSS/animation observations. Does not recreate prior full-suite history or identify the cause of its unsaved failed image pair.",
+      "exact": true,
+      "beforeAnimations": [],
+      "afterAnimations": [],
+      "evidence": {
+        "file": ".artifacts/final-browser-label-v27/beam-still/report.json",
+        "sha256": "f31f2f89ce265c4fe5a37e89e98b810292f0d28d8ab5b778822ee1e8fc9bede6"
+      },
+      "limit": "Fresh images match with no active animations. They do not recreate the earlier full-story history or recover its missing failed PNG pair."
+    },
+    "retainedStory": {
+      "exit": 0,
+      "result": {
+        "browser": "158.0.8127.88",
+        "checks": 282,
+        "ids": [
+          "btn-border-beam",
+          "elastic-tabs",
+          "toast-stack",
+          "btn-success-morph",
+          "checkbox-draw-check",
+          "copy-inline-feedback",
+          "btn-shimmer-sweep",
+          "btn-icon-hop",
+          "btn-ripple-material",
+          "btn-jelly-press",
+          "btn-text-slide-swap",
+          "like-heart-particles",
+          "badge-notification-pop",
+          "toggle-day-night",
+          "hover-tooltip-spring",
+          "btn-polish-stages",
+          "btn-confetti-burst"
+        ],
+        "fits": [
+          {
+            "id": "btn-border-beam",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "beam-glow",
+                "actual": [
+                  76,
+                  32
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  76,
+                  32
+                ],
+                "valid": true
+              },
+              {
+                "name": "beam-deploy",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "beam-highlight",
+                "actual": [
+                  121,
+                  1
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  121,
+                  1
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-border-beam",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "beam-glow",
+                "actual": [
+                  75.95850840336135,
+                  31.987920168067227
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  75.9585,
+                  31.9879
+                ],
+                "valid": true
+              },
+              {
+                "name": "beam-deploy",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              },
+              {
+                "name": "beam-highlight",
+                "actual": [
+                  120.98740329261588,
+                  0.9900210084033614
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  120.987,
+                  0.990021
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "elastic-tabs",
+            "width": 372,
+            "minFont": 13,
+            "assets": []
+          },
+          {
+            "id": "elastic-tabs",
+            "width": 286,
+            "minFont": 11.9,
+            "assets": []
+          },
+          {
+            "id": "toast-stack",
+            "width": 372,
+            "minFont": 13,
+            "assets": [
+              {
+                "name": "toast-status",
+                "actual": [
+                  8,
+                  8
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8,
+                  8
+                ],
+                "valid": true
+              },
+              {
+                "name": "toast-status",
+                "actual": [
+                  7.60003662109375,
+                  7.600006103515625
+                ],
+                "scale": [
+                  0.95,
+                  0.95
+                ],
+                "declared": [
+                  8,
+                  8
+                ],
+                "valid": true
+              },
+              {
+                "name": "toast-status",
+                "actual": [
+                  7.20001220703125,
+                  7.1999969482421875
+                ],
+                "scale": [
+                  0.9,
+                  0.9
+                ],
+                "declared": [
+                  8,
+                  8
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "toast-stack",
+            "width": 286,
+            "minFont": 11.9,
+            "assets": [
+              {
+                "name": "toast-status",
+                "actual": [
+                  8.005514705882353,
+                  8.005514705882353
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8.00552,
+                  8.00552
+                ],
+                "valid": true
+              },
+              {
+                "name": "toast-status",
+                "actual": [
+                  7.6052523060005255,
+                  7.6052523060005255
+                ],
+                "scale": [
+                  0.95,
+                  0.95
+                ],
+                "declared": [
+                  8.00552,
+                  8.00552
+                ],
+                "valid": true
+              },
+              {
+                "name": "toast-status",
+                "actual": [
+                  7.204923229057248,
+                  7.204956567587973
+                ],
+                "scale": [
+                  0.9,
+                  0.9
+                ],
+                "declared": [
+                  8.00552,
+                  8.00552
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-success-morph",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "success-check",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-success-morph",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "success-check",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "checkbox-draw-check",
+            "width": 372,
+            "minFont": null,
+            "assets": [
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  14,
+                  14
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  14,
+                  14
+                ],
+                "valid": true
+              },
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  14,
+                  14
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  14,
+                  14
+                ],
+                "valid": true
+              },
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  14,
+                  14
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  14,
+                  14
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "checkbox-draw-check",
+            "width": 286,
+            "minFont": null,
+            "assets": [
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  13.9968487394958,
+                  13.9968487394958
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  13.9968,
+                  13.9968
+                ],
+                "valid": true
+              },
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  13.9968487394958,
+                  13.9968487394958
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  13.9968,
+                  13.9968
+                ],
+                "valid": true
+              },
+              {
+                "name": "checkbox-check",
+                "actual": [
+                  13.9968487394958,
+                  13.9968487394958
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  13.9968,
+                  13.9968
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "copy-inline-feedback",
+            "width": 372,
+            "minFont": 12,
+            "assets": [
+              {
+                "name": "copy-check",
+                "actual": [
+                  14,
+                  14
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  14,
+                  14
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "copy-inline-feedback",
+            "width": 286,
+            "minFont": 12,
+            "assets": [
+              {
+                "name": "copy-check",
+                "actual": [
+                  14,
+                  14
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  14,
+                  14
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-shimmer-sweep",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": []
+          },
+          {
+            "id": "btn-shimmer-sweep",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": []
+          },
+          {
+            "id": "btn-icon-hop",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "hop-arrow",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-icon-hop",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "hop-arrow",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-ripple-material",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "ripple-wave",
+                "actual": [
+                  80,
+                  80
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  80,
+                  80
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-ripple-material",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "ripple-wave",
+                "actual": [
+                  80.00393907563026,
+                  80.00393907563026
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  80.0039,
+                  80.0039
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-jelly-press",
+            "width": 372,
+            "minFont": 13,
+            "assets": []
+          },
+          {
+            "id": "btn-jelly-press",
+            "width": 286,
+            "minFont": 11.9,
+            "assets": []
+          },
+          {
+            "id": "btn-text-slide-swap",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "hop-arrow",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "swap-pointer",
+                "actual": [
+                  28.5,
+                  29.25
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  28.5,
+                  29.25
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-text-slide-swap",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "hop-arrow",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              },
+              {
+                "name": "swap-pointer",
+                "actual": [
+                  28.48870798319328,
+                  29.239758403361346
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  28.4887,
+                  29.2398
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "like-heart-particles",
+            "width": 372,
+            "minFont": 14,
+            "assets": [
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3,
+                  3
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3,
+                  3
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-heart",
+                "actual": [
+                  24,
+                  24
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  24,
+                  24
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "like-heart-particles",
+            "width": 286,
+            "minFont": 12.815384615384614,
+            "assets": [
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-dot",
+                "actual": [
+                  3.004201680672269,
+                  3.004201680672269
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  3.0042,
+                  3.0042
+                ],
+                "valid": true
+              },
+              {
+                "name": "like-heart",
+                "actual": [
+                  23.99947478991597,
+                  23.99947478991597
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  23.9995,
+                  23.9995
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "badge-notification-pop",
+            "width": 372,
+            "minFont": 11,
+            "assets": [
+              {
+                "name": "badge-bell",
+                "actual": [
+                  20,
+                  20
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  20,
+                  20
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "badge-notification-pop",
+            "width": 286,
+            "minFont": 11,
+            "assets": [
+              {
+                "name": "badge-bell",
+                "actual": [
+                  20,
+                  20
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  20,
+                  20
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "toggle-day-night",
+            "width": 372,
+            "minFont": 12.5,
+            "assets": [
+              {
+                "name": "theme-sun",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "theme-moon",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "theme-auto",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "toggle-day-night",
+            "width": 286,
+            "minFont": 11.442307692307692,
+            "assets": [
+              {
+                "name": "theme-sun",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              },
+              {
+                "name": "theme-moon",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              },
+              {
+                "name": "theme-auto",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "hover-tooltip-spring",
+            "width": 372,
+            "minFont": 11,
+            "assets": [
+              {
+                "name": "tooltip-save",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-copy",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-star",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-delete",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "hover-tooltip-spring",
+            "width": 286,
+            "minFont": 11,
+            "assets": [
+              {
+                "name": "tooltip-save",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-copy",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-star",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              },
+              {
+                "name": "tooltip-delete",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-polish-stages",
+            "width": 372,
+            "minFont": 12.5,
+            "assets": [
+              {
+                "name": "polish-arrow",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-polish-stages",
+            "width": 286,
+            "minFont": 11.018518518518519,
+            "assets": [
+              {
+                "name": "polish-arrow",
+                "actual": [
+                  16.00643382352941,
+                  16.00643382352941
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16.0064,
+                  16.0064
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-confetti-burst",
+            "width": 372,
+            "minFont": 13.5,
+            "assets": [
+              {
+                "name": "confetti-dot-accent",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-muted",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-light",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-light",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-muted",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-accent",
+                "actual": [
+                  5,
+                  5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5,
+                  5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-1",
+                "actual": [
+                  8.921875,
+                  8.1875
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8.92188,
+                  8.1875
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-2",
+                "actual": [
+                  5.546875,
+                  10.625
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.54688,
+                  10.625
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-3",
+                "actual": [
+                  1.5,
+                  11.5
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  1.5,
+                  11.5
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-4",
+                "actual": [
+                  5.546875,
+                  10.625
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.54688,
+                  10.625
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-5",
+                "actual": [
+                  8.921875,
+                  8.1875
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8.92188,
+                  8.1875
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-check",
+                "actual": [
+                  16,
+                  16
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  16,
+                  16
+                ],
+                "valid": true
+              }
+            ]
+          },
+          {
+            "id": "btn-confetti-burst",
+            "width": 286,
+            "minFont": 12.357692307692307,
+            "assets": [
+              {
+                "name": "confetti-dot-accent",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-muted",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-light",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-light",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-muted",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-dot-accent",
+                "actual": [
+                  5.001313025210084,
+                  5.001313025210084
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.00131,
+                  5.00131
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-1",
+                "actual": [
+                  8.910189075630253,
+                  8.176207983193278
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8.91019,
+                  8.17621
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-2",
+                "actual": [
+                  5.547531512605042,
+                  10.617121848739496
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.54753,
+                  10.6171
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-3",
+                "actual": [
+                  1.485031512605042,
+                  11.504726890756302
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  1.48503,
+                  11.5047
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-4",
+                "actual": [
+                  5.547531512605042,
+                  10.617121848739496
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  5.54753,
+                  10.6171
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-ray-5",
+                "actual": [
+                  8.910189075630253,
+                  8.176207983193278
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  8.91019,
+                  8.17621
+                ],
+                "valid": true
+              },
+              {
+                "name": "confetti-check",
+                "actual": [
+                  15.993960084033613,
+                  15.993960084033613
+                ],
+                "scale": [
+                  1,
+                  1
+                ],
+                "declared": [
+                  15.994,
+                  15.994
+                ],
+                "valid": true
+              }
+            ]
+          }
+        ],
+        "errors": []
+      },
+      "log": {
+        "file": ".artifacts/final-browser-label-v27/check-exemplars-retained.log",
+        "sha256": "77c7d49400ca94f22866b62992e55a3061cf5246f8b6b49cc9a6599b7c2281f5"
+      },
+      "method": "Keep the original 80ms/150ms sequence and exact PNG byte comparison. Save both buffers after capture, before the assertion, and record the browser in final results. No tolerance or extra waiting is added."
+    }
+  },
+  "remaining": [
+    "Final CPU4 rendering/frame-rate acceptance and all-component cold-route measurements.",
+    "Final per-component motion recipes and applicable manual/transient-state accessibility review.",
+    "Retained earlier Chrome 158 fixed-time/full-story failures; bounded passing observations do not establish their historical cause."
+  ],
+  "status": "Initial Thinking Drawer warning repaired and verified. All 520 components and Pro scaffolding remain implemented; the complete handoff is still open."
+}

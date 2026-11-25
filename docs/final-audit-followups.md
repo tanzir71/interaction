@@ -2,13 +2,32 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Thinking Drawer completed-still review](accessibility/thinking-initial-2026-11-25.json)
+resolves the additional initial label warning. On a reduced-motion light Stage,
+the model and browser name could already say Thought for 6s while reasoning…
+was still the painted label. Full reduced views now paint the completed label
+immediately once the model is completed. Preference changes in unfinished held
+views preserve their current label; a broader unshipped rule was caught and
+corrected before publication. Normal-motion phases, native artwork, every controller and all
+HTML remain unchanged. Sixteen initial/name/layout/model stories, eight exact
+reduced target CSS roundtrips, four fresh offline exports and the affected
+260 agent checks pass. Four focused axe cases have zero violations; their two
+normal-motion contrast incomplete results remain retained. This is a targeted
+repair, not a new full-catalog scan or a phase-boundary accessibility pass.
+
+The earlier agent-palette verifier keeps its original fixture intact. It checks
+the exact later CSS/prompt append separately and applies that completed-still
+CSS to both sides of the historical palette comparison. Its native comparison
+still adds/removes only the original palette delta. The new initial-state suite
+independently checks the later correction and its intended target pixels.
+
 The [current catalog review](accessibility/catalog-review-2026-11-25.json)
 updates the bulk scanner to the current registry/Dock naming bootstrap and
 checks 68 available fixed-name bindings. The new 1,040-case scan retains 45
 label/name flags, two incidental Cipher contrast flags and 616 incomplete
 results. Forty-four label/name flags belong to the existing primary-label
-review; the additional light Thinking Drawer warning remains a separate
-follow-up. Keep all raw findings rather than treating a count as acceptance.
+review; the additional light Thinking Drawer warning led to the completed-still
+repair above. Keep all raw findings rather than treating a count as acceptance.
 
 That scan exposed a real Elastic Tabs initial-palette defect. Light labels
 started at their dark-theme colors while a CSS transition ran, even during a

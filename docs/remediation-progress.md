@@ -20,6 +20,27 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Thinking Drawer completed still
+
+The [completed-still review](accessibility/thinking-initial-2026-11-25.json)
+records and repairs a reduced-motion initial label mismatch. The completed model
+and browser name could precede the painted Thought for 6s label, leaving
+reasoning… visible briefly. Full reduced views now show the completed label
+before source frames. The rule requires the model-owned completed state;
+changing motion preference in an unfinished held view preserves its current
+label. Normal phases and native previews retain their behavior.
+All 520 controllers and HTML compositions, original models and metadata remain
+unchanged; only this demo's CSS append, generator prompt and exports change.
+
+Sixteen caller-held stories preserve original layout metrics, HTML and complete
+model state while checking initial labels and actual browser names. Eight exact
+GPU-disabled reduced target CSS roundtrips and four fresh offline exports pass.
+The affected agent-flow suite passes 260 checks. Four focused axe cases have
+zero violations, with two normal-motion contrast incomplete results retained.
+The earlier full-catalog raw reports remain historical; this targeted scan does
+not replace them. Final motion, manual accessibility and performance acceptance
+remain open.
+
 ## Elastic Tabs initial theme
 
 The [current catalog review](accessibility/catalog-review-2026-11-25.json)
