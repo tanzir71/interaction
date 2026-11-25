@@ -1,0 +1,405 @@
+{
+  "date": "2026-11-25",
+  "timezone": "Asia/Dhaka",
+  "baseline": "681bbba3836a5aa1bd6c28b455de962675ea1da8",
+  "change": "Retain Rolling Balance cylinders and ten digit faces, measure shared font metrics once per paint and assign only changed inline styles. Reuse an unchanged same-time settlement pose while still reading the original model and updating status, announcements, ARIA, cached controls and retained feedback.",
+  "scope": "Verified rendering-work reduction with exact source-model, DOM, geometry and sampled GPU pixels. This report does not certify frame rate or close the full handoff.",
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 519,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": true,
+    "changedFields": [
+      "framer-rolling-balance.js",
+      "framer-rolling-balance.prompt"
+    ],
+    "completeOriginalFactoryExact": true,
+    "sourceModelAdapterExact": true,
+    "currentJavaScriptEqualsTestedCandidate": true
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "rendererStories": 22,
+    "gpuPNGComparisons": 16,
+    "holdInputResizeDisposalStories": 4,
+    "completeModelDOMGeometryExact": true,
+    "normalClockWork": [
+      {
+        "mode": "full",
+        "hz": 60,
+        "checkpoints": 26,
+        "original": {
+          "elements": 60033,
+          "styles": 284864,
+          "cssText": 57372,
+          "customProperties": 684,
+          "motion": 684
+        },
+        "current": {
+          "elements": 873,
+          "styles": 14342,
+          "cssText": 252,
+          "customProperties": 684,
+          "motion": 345
+        },
+        "fewerStyleAssignmentsPercent": 94.96531678274545
+      },
+      {
+        "mode": "full",
+        "hz": 120,
+        "checkpoints": 27,
+        "original": {
+          "elements": 118845,
+          "styles": 566756,
+          "cssText": 114156,
+          "customProperties": 1360,
+          "motion": 1360
+        },
+        "current": {
+          "elements": 873,
+          "styles": 26661,
+          "cssText": 252,
+          "customProperties": 1360,
+          "motion": 683
+        },
+        "fewerStyleAssignmentsPercent": 95.29585924101377
+      },
+      {
+        "mode": "full",
+        "hz": 240,
+        "checkpoints": 27,
+        "original": {
+          "elements": 236469,
+          "styles": 1130540,
+          "cssText": 227724,
+          "customProperties": 2712,
+          "motion": 2712
+        },
+        "current": {
+          "elements": 873,
+          "styles": 51478,
+          "cssText": 252,
+          "customProperties": 2712,
+          "motion": 1359
+        },
+        "fewerStyleAssignmentsPercent": 95.44660073946963
+      },
+      {
+        "mode": "thumb",
+        "hz": 60,
+        "checkpoints": 26,
+        "original": {
+          "elements": 34672,
+          "styles": 162605,
+          "cssText": 32784,
+          "customProperties": 684,
+          "motion": 684
+        },
+        "current": {
+          "elements": 722,
+          "styles": 9919,
+          "cssText": 192,
+          "customProperties": 684,
+          "motion": 345
+        },
+        "fewerStyleAssignmentsPercent": 93.8999415762123
+      },
+      {
+        "mode": "thumb",
+        "hz": 120,
+        "checkpoints": 27,
+        "original": {
+          "elements": 68472,
+          "styles": 323493,
+          "cssText": 65232,
+          "customProperties": 1360,
+          "motion": 1360
+        },
+        "current": {
+          "elements": 722,
+          "styles": 18466,
+          "cssText": 192,
+          "customProperties": 1360,
+          "motion": 683
+        },
+        "fewerStyleAssignmentsPercent": 94.29168482780153
+      },
+      {
+        "mode": "thumb",
+        "hz": 240,
+        "checkpoints": 27,
+        "original": {
+          "elements": 136072,
+          "styles": 645269,
+          "cssText": 130128,
+          "customProperties": 2712,
+          "motion": 2712
+        },
+        "current": {
+          "elements": 722,
+          "styles": 35571,
+          "cssText": 192,
+          "customProperties": 2712,
+          "motion": 1359
+        },
+        "fewerStyleAssignmentsPercent": 94.48741532601133
+      }
+    ],
+    "nativeVisibility": {
+      "cases": 4,
+      "checks": 90,
+      "failures": 0
+    },
+    "initialFullAccessibility": {
+      "cases": 4,
+      "themes": [
+        "dark",
+        "light"
+      ],
+      "motion": [
+        "normal",
+        "reduced"
+      ],
+      "violations": 0,
+      "incomplete": 4,
+      "pageErrors": 0,
+      "scope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance."
+    },
+    "framerSuite": {
+      "sourceStates": 105888,
+      "offlineExports": 16,
+      "passed": true
+    },
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 2924
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1468
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 19694
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1029
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 514257
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 385041
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 982
+      }
+    ],
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "evidenceSHA256": {
+      ".artifacts/final-rolling-cache-v14/production-compare/2026-11-25T02-26-47-193Z/report.json": "c016ebbf3ca84092e53fd17220bb5cc1a9d0eaf1fe77a80fcc6b891a23519d6a",
+      ".artifacts/final-rolling-cache-v14/native-visibility/2026-11-25T02-26-45-539Z/report.json": "b66a9048b58a38561c93f2c3fc4649834d11c6b5fc3cf1ae3ebf20a88ad6d289",
+      ".artifacts/final-rolling-cache-v14/accessibility/2026-11-25T02-28-20-626Z/report.json": "3b94e37e67a8bd90b107e4686bed003208cf4ba24368e6daed3947a95c9d9a53",
+      ".artifacts/final-rolling-cache-v14/owner-checks/report.json": "43692fc018055fa0b8cb1aa65ee57099b778b7e1ed2f4e14289390ddec932974",
+      ".artifacts/final-rolling-cache-v14/framer-suite.log": "58c5d6e8bf5e205c3beaed2884060eec4f341ebe8e5dab4beb709f6a0f65397c",
+      ".artifacts/final-rolling-cache-v14/package-ci.log": "f33e43e63a4bd493ea37a8af95d6e2118540c3a786bc434b7cb7ce61e98c6f7b",
+      ".artifacts/final-rolling-cache-v14/package-test.log": "4b19377e520da0e87ef9d89b85888fd48f61eb947e1f198bddb8b303c8ff7f2f",
+      "tools/verify-rolling-cache.js": "88915c0bf0695a087b78737061679cd649af5a4cfcb604f08e56c0c005b2a18b",
+      "tools/fixtures/rolling-cache-before.json": "d9d25eaf1c2c7628948fff1213f57cc92c33ed6a59532b2e29fe7d15bf891e02",
+      "js/demos.framer-data.js": "b91f0b6828492d41922b95d8b53ea87b1ee995762f4c8b6a4cf47dbcbfb9c094"
+    }
+  },
+  "timing": {
+    "cpu4GatePassed": false,
+    "currentCandidateTimingCollected": false,
+    "scope": "Earlier C/D prototypes were timed under heavy host contention. These are retained diagnostics, not production E performance acceptance. No 60fps claim is made from work counters.",
+    "candidateDObservedFPSRange": [
+      11.74,
+      29.17
+    ],
+    "hostSnapshot": {
+      "at": "2026-11-25T01:39:49.8606730Z",
+      "logicalProcessors": 12,
+      "memory": {
+        "FreePhysicalMemory": 29508836,
+        "TotalVisibleMemorySize": 62805112
+      },
+      "processes": [
+        {
+          "Name": "_Total",
+          "IDProcess": 0,
+          "PercentProcessorTime": 1188,
+          "WorkingSetPrivate": 21208465408
+        },
+        {
+          "Name": "java#3",
+          "IDProcess": 15140,
+          "PercentProcessorTime": 256,
+          "WorkingSetPrivate": 388427776
+        },
+        {
+          "Name": "WmiPrvSE",
+          "IDProcess": 6268,
+          "PercentProcessorTime": 110,
+          "WorkingSetPrivate": 35192832
+        },
+        {
+          "Name": "intercept-core",
+          "IDProcess": 22576,
+          "PercentProcessorTime": 110,
+          "WorkingSetPrivate": 360251392
+        },
+        {
+          "Name": "svchost#61",
+          "IDProcess": 7528,
+          "PercentProcessorTime": 82,
+          "WorkingSetPrivate": 11284480
+        },
+        {
+          "Name": "node#18",
+          "IDProcess": 35024,
+          "PercentProcessorTime": 68,
+          "WorkingSetPrivate": 119021568
+        },
+        {
+          "Name": "explorer",
+          "IDProcess": 7232,
+          "PercentProcessorTime": 64,
+          "WorkingSetPrivate": 177287168
+        },
+        {
+          "Name": "dwm",
+          "IDProcess": 1992,
+          "PercentProcessorTime": 59,
+          "WorkingSetPrivate": 279760896
+        },
+        {
+          "Name": "svchost#28",
+          "IDProcess": 4032,
+          "PercentProcessorTime": 55,
+          "WorkingSetPrivate": 33570816
+        },
+        {
+          "Name": "chrome-headless-shell#3",
+          "IDProcess": 44296,
+          "PercentProcessorTime": 36,
+          "WorkingSetPrivate": 54628352
+        },
+        {
+          "Name": "chrome-headless-shell",
+          "IDProcess": 28912,
+          "PercentProcessorTime": 36,
+          "WorkingSetPrivate": 35954688
+        },
+        {
+          "Name": "node#13",
+          "IDProcess": 13336,
+          "PercentProcessorTime": 32,
+          "WorkingSetPrivate": 304373760
+        }
+      ]
+    },
+    "retainedDiagnostics": [
+      {
+        "path": ".artifacts/final-rolling-cache-v14/profile-C.log",
+        "sha256": "1b76c2c036c04519ddba0df2d4b7b5b88458b1f2150c5b3be2cddcb886914010"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/profile-D.log",
+        "sha256": "99047efb0fe77fc1274361f29d228297ff7c1480d90244eabef99502fcd10379"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/host-load-D.json",
+        "sha256": "29108c9f04632a39dabec9e5eb4ad3b509ce8b8fa3f1b5f8e6ca493cf09b1095"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/expanded-E.log",
+        "sha256": "8c46a4cce68ab1158505cb61584746eb3e2f94a6bab5a1443cb1c082f78742a8"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/expanded-E-first-helper.cjs",
+        "sha256": "7a431634b8e322c476ded856268c9d364296998c3ff8fbb27026fe45228e81e7"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/expanded-E-currency-error-helper.cjs",
+        "sha256": "7a431634b8e322c476ded856268c9d364296998c3ff8fbb27026fe45228e81e7"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/promotion.log",
+        "sha256": "379a91ec1c3ba97dd5d9df409fd055f5952e472bcfaf7cb8d11548c355c169ef"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/promote-first.cjs",
+        "sha256": "4ff26ee64b44d6032689a25457034792ca9ba917247082c871f9f525abd47073"
+      },
+      {
+        "path": ".artifacts/final-rolling-cache-v14/promote-second.cjs",
+        "sha256": "c0b7df89dda6a9677d4dffde20b4f06cad2ef96a27ebbf9ab00074b7c3e06de1"
+      }
+    ]
+  },
+  "fixtureCorrections": {
+    "currency": "The first expanded fixture incorrectly requested unsupported JPY. The unchanged source offers USD/EUR/GBP; the corrected test exercises all three. The original error and helper remain archived.",
+    "promotion": "The first two promotion preparations expanded dollar replacement sequences. Guards rejected both before production writes. Callback replacements installed the validated candidate; both failed helpers and their log remain archived."
+  },
+  "remaining": [
+    "Final CPU4 timing on a suitable host, including Rolling Balance and other retained slow cases.",
+    "Manual accessibility findings, incomplete results and native ink preference.",
+    "Final per-recipe motion, offscreen/input-specific ownership, cold routes and mobile Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Commit and push main directly; keep GitHub Actions disabled and preserve the owner zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

@@ -1473,6 +1473,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   duration Focus Reset live in the shared Dock. Record observations with
   `node tools/profile-framer-data.js http://127.0.0.1:4173 --cpu=1,4`; preserve
   every trace and leave final cold-route/Lighthouse gates open.
+- `node tools/verify-rolling-cache.js http://127.0.0.1:4173` compares Rolling
+  Balance with its complete pre-cache definition. Preserve all ten faces per
+  cylinder, original model/factory, arithmetic, timing, current-pose reversals,
+  announcements and independent holds. Reuse nodes while the drum structure
+  matches; invalidate detached trees and remeasure shared font metrics on paint.
+  The same-time settlement pass still updates model-derived status and ARIA;
+  only an unchanged Balance pose may skip its second motion paint. Require exact
+  models, DOM, geometry and GPU PNGs across full/native themes, compact widths,
+  reduced motion, 60/120/240Hz clocks, queued input, resize and disposal. Work
+  counters do not establish frame rate. Retain the contended timing trials;
+  CPU4, cold-route and Lighthouse acceptance remain open. Earlier private phase
+  helpers, inputs and evidence stay frozen.
 - `tools/stage-fit-ink.js` excludes empty transparent leaf targets from fill while
   retaining their geometry for overflow/text gates. Intrinsic media, visible text,
   surfaces, shadows and pseudo-elements still count. Run the 24 browser boundary

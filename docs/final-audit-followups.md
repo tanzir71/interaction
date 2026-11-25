@@ -2,6 +2,20 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Rolling Balance rendering pass](performance/rolling-render-2026-11-25.json)
+retains each cylinder and its ten faces, measures shared font metrics once per
+paint and assigns only changed inline styles. An unchanged same-time settlement
+pass reuses the painted pose while still refreshing status, announcements and
+ARIA. Original models, arithmetic, timings, copy, all HTML/CSS and the other 519
+complete definitions remain unchanged. The public comparison covers 22 renderer
+stories, sixteen exact GPU PNG pairs and four held-input/resize/disposal stories;
+normal six-second clocks reduce inline style assignments by about 93–95%.
+Native tab visibility is checked separately. Preserve the failed unsupported-
+currency fixture, the guarded pre-write replacement failures and every timing
+trial. Earlier candidates ran under severe host contention and missed 60fps;
+these work reductions do not close CPU4, cold-route, Lighthouse or final motion
+acceptance.
+
 The [native visibility audit](motion/native-visibility-2026-11-25.json) covers
 all 520 unchanged components in full/thumbnail and normal/reduced modes. Direct
 Chrome CDP tab activation produces trusted native hide/show events without
