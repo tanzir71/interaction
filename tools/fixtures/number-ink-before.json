@@ -1,0 +1,94 @@
+{
+  "definition": {
+    "id": "number-input-drag",
+    "title": "Scrub Number",
+    "cat": "Layout & UI",
+    "rootClass": "d-numdrag-demo",
+    "tags": [
+      "number",
+      "scrub",
+      "drag"
+    ],
+    "libs": [],
+    "desc": "Scrub X or its move handle to change the number with distance-based acceleration. Shift multiplies movement by ten; Alt gives fine control. The same value stays directly editable.",
+    "seen": "Pattern family: inspector number scrubbers",
+    "hint": "Drag · Scrub the label; Shift moves ten times faster",
+    "html": "<div class=\"d-numdrag-demo\"><div class=\"d-numdrag-demo-field\"><button class=\"d-numdrag-demo-label\" type=\"button\" aria-label=\"Drag X position\">X</button><i class=\"d-numdrag-demo-divider\" aria-hidden=\"true\"></i><input class=\"d-numdrag-demo-input\" type=\"number\" name=\"x-position\" aria-label=\"X position\" min=\"-999\" max=\"999\" step=\"0.1\" value=\"240\"><span class=\"d-numdrag-demo-number\" aria-hidden=\"true\"></span><button class=\"d-numdrag-demo-grip\" type=\"button\" aria-label=\"Drag X position\"><img src=\"{{asset:layout-scrub-move}}\" alt=\"\"></button></div><span class=\"d-numdrag-demo-status\" role=\"status\"></span></div>",
+    "css": ".d-numdrag-demo{position:relative;font-family:Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}.d-numdrag-demo-field{position:absolute;left:20px;top:24px;width:160px;height:40px;border:1px solid #ffffff1c;border-radius:11px;background:#171717}.d-numdrag-demo-label{position:absolute;left:0;top:0;width:33px;height:38px;padding:0;border:0;border-radius:10px 0 0 10px;background:transparent;color:#6a6a6a;font:500 13px/18px Inter,system-ui,sans-serif;letter-spacing:-.0416px;cursor:ew-resize;touch-action:none}.d-numdrag-demo-divider{position:absolute;left:33px;top:9px;width:1px;height:20px;background:#ffffff1c}.d-numdrag-demo-input{position:absolute;left:45px;top:8px;width:78px;height:22px;padding:0;border:0;outline:none;background:transparent;color:transparent;caret-color:#f1f1f1;font:500 13.5px/22px Inter,system-ui,sans-serif;letter-spacing:-.0648px;font-variant-numeric:tabular-nums;appearance:textfield}.d-numdrag-demo-input::-webkit-inner-spin-button,.d-numdrag-demo-input::-webkit-outer-spin-button{appearance:none;margin:0}.d-numdrag-demo-input:focus{color:#f1f1f1}.d-numdrag-demo-number{position:absolute;left:45px;top:8px;display:flex;align-items:center;height:22px;overflow:visible;pointer-events:none;color:#f1f1f1;font:500 13.5px/22px Inter,system-ui,sans-serif;letter-spacing:-.0648px;font-variant-numeric:tabular-nums}.d-numdrag-demo-input:focus+.d-numdrag-demo-number{visibility:hidden}.d-numdrag-demo-digit{position:relative;display:inline-grid}.d-numdrag-demo-digit>span{grid-area:1/1}.d-numdrag-demo-grip{position:absolute;left:115px;top:0;width:43px;height:38px;padding:0;border:0;border-radius:0 10px 10px 0;background:transparent;cursor:ew-resize;touch-action:none}.d-numdrag-demo-grip img{position:absolute;left:14px;top:11px;display:block}.d-numdrag-demo button:focus-visible{outline:2px solid var(--focus-ring);outline-offset:-3px}.d-numdrag-demo-field:has(.d-numdrag-demo-input:focus-visible){outline:2px solid var(--focus-ring);outline-offset:3px}.d-numdrag-demo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-numdrag-demo-number{transform:none}}",
+    "js": "const input=root.querySelector('input'),number=root.querySelector('.d-numdrag-demo-number'),handles=[...root.querySelectorAll('button')],status=root.querySelector('[role=\"status\"]');let value=240,dragging=false,pointerId=null,handle=null,startX=0,startValue=240,lastX=0,total=0,velocity=0,changes=0,drags=0,releases=0,previous='',version=0,elasticFrame=0,elasticX=0,elasticV=0,lastElastic=0,elasticCarry=0,physicalSpeed=0,lastMoveTime=0;const clamp=v=>Math.max(-999,Math.min(999,v)),format=v=>String(Number(v.toFixed(1))),ease=getComputedStyle(root).getPropertyValue('--ease-out').trim()||'cubic-bezier(.22,1,.36,1)';\nfunction digits(text){if(text===previous)return;const old=previous;previous=text;const token=++version;for(let i=0;i<text.length;i++){let cell=number.children[i];if(!cell){cell=document.createElement('span');cell.className='d-numdrag-demo-digit';number.appendChild(cell);}if(old[i]===text[i])continue;cell.getAnimations().forEach(animation=>animation.cancel());const before=cell.querySelector('.d-numdrag-demo-digit-next')?.textContent||cell.textContent;cell.replaceChildren();const next=document.createElement('span');next.className='d-numdrag-demo-digit-next';next.textContent=text[i];cell.appendChild(next);if(before&&!ctx.reducedMotion&&document.activeElement!==input){const out=document.createElement('span');out.className='d-numdrag-demo-digit-old';out.textContent=before;cell.appendChild(out);out.animate([{transform:'none',opacity:1,filter:'none'},{transform:'translateY(-4px)',opacity:0,filter:'blur(2px)'}],{duration:250,easing:ease,fill:'forwards'});next.animate([{transform:'translateY(4px)',opacity:0,filter:'blur(2px)'},{transform:'none',opacity:1,filter:'none'}],{duration:250,easing:ease});setTimeout(()=>{out.remove();},250);}}while(number.children.length>text.length)number.lastElementChild.remove();}\nfunction paint(source,editing=false){if(!editing)input.value=format(value);digits(format(value));Object.assign(root.dataset,{value:value.toFixed(1),dragging:String(dragging),total:total.toFixed(1),velocity:velocity.toFixed(2),changes:String(changes),drags:String(drags),releases:String(releases),source});}\nfunction elasticPaint(){handles.forEach(node=>node.style.transform='translateX('+elasticX.toFixed(3)+'px)');root.dataset.elastic=elasticX.toFixed(3);}\nfunction stopElastic(){cancelAnimationFrame(elasticFrame);elasticFrame=0;lastElastic=elasticCarry=0;elasticX=elasticV=0;root.dataset.elasticSettling='false';elasticPaint();}\nfunction elasticTick(time){if(!lastElastic)lastElastic=time;elasticCarry+=Math.min(64,time-lastElastic)/1000;lastElastic=time;const dt=1/120;while(elasticCarry>=dt){elasticV+=(-elasticX*380-elasticV*32)*dt;elasticX+=elasticV*dt;elasticCarry-=dt;}elasticPaint();if(Math.abs(elasticX)<.002&&Math.abs(elasticV)<.01){stopElastic();return;}elasticFrame=requestAnimationFrame(elasticTick);}\nfunction detach(){stopElastic();dragging=false;const id=pointerId;pointerId=null;if(id!==null&&handle&&handle.hasPointerCapture(id))handle.releasePointerCapture(id);handle=null;}\nfunction release(source='release'){if(!dragging)return;const x=elasticX;detach();if(!ctx.reducedMotion){elasticX=x;elasticV=source==='release'?Math.max(-80,Math.min(80,physicalSpeed*40)):0;root.dataset.elasticSettling='true';elasticFrame=requestAnimationFrame(elasticTick);}velocity=0;releases++;paint(source);status.textContent='X position '+format(value);}\nhandles.forEach(button=>{button.addEventListener('pointerdown',event=>{if(event.button!==0||!event.isPrimary||pointerId!==null)return;event.preventDefault();handle=button;pointerId=event.pointerId;button.setPointerCapture(pointerId);button.focus({preventScroll:true});dragging=true;drags++;startX=lastX=event.clientX;startValue=value;total=velocity=physicalSpeed=0;lastMoveTime=performance.now();stopElastic();paint('press');});button.addEventListener('pointermove',event=>{if(!dragging||event.pointerId!==pointerId)return;const dx=(event.clientX-startX)/ctx.scale,frame=(event.clientX-lastX)/ctx.scale,precision=event.shiftKey?10:event.altKey?.25:1,acceleration=1+Math.abs(dx)/120;total=dx;velocity=frame*acceleration*precision;value=clamp(startValue+dx*acceleration*precision);const now=performance.now();physicalSpeed=(event.clientX-lastX)/ctx.scale/Math.max(8,now-lastMoveTime);lastMoveTime=now;elasticX=ctx.reducedMotion?0:Math.max(-2,Math.min(2,physicalSpeed*2));elasticPaint();lastX=event.clientX;changes++;paint('drag');});button.addEventListener('pointerup',event=>{if(event.pointerId===pointerId)release();});button.addEventListener('pointercancel',event=>{if(event.pointerId===pointerId)release('cancel');});button.addEventListener('lostpointercapture',()=>{if(pointerId!==null)release('capture lost');});button.addEventListener('click',event=>{if(event.detail===0)input.focus({preventScroll:true});});});\ninput.addEventListener('input',()=>{const parsed=Number.parseFloat(input.value);if(!Number.isFinite(parsed))return;detach();value=clamp(parsed);total=velocity=0;changes++;paint('input',parsed===value);});input.addEventListener('blur',()=>{if(!input.value||!Number.isFinite(Number(input.value)))input.value=format(value);else{value=clamp(Number(input.value));paint('commit');}});root.addEventListener('keydown',event=>{if(!['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();detach();const step=event.shiftKey?10:event.altKey?.1:1;value=event.key==='Home'?-999:event.key==='End'?999:clamp(value+(['ArrowRight','ArrowUp'].includes(event.key)?step:-step));changes++;total=velocity=0;paint('keyboard');status.textContent='X position '+format(value);});const blur=()=>release('window blur');window.addEventListener('blur',blur);ctx.onAction('add',()=>{detach();value=clamp(value+25);total=25;velocity=0;changes++;paint('example');});ctx.onAction('replay',()=>{detach();value=startValue=240;total=velocity=changes=drags=releases=0;paint('replay');status.textContent='X position reset to 240';});stopElastic();paint('initial');return ()=>{detach();version++;window.removeEventListener('blur',blur);};",
+    "prompt": "Build an original v4 number scrubber as a single 160 by 40px #171717 field with 11px corners, a muted X label, 20px divider, directly editable 13.5px Inter tabular number and the original 16px move icon. Start at 240 to match the reference; omit decorative position diagrams and telemetry. Both label and move icon capture the primary pointer. Convert delta through ctx.scale, retain acceleration 1+abs(dx)/120 and clamp -999..999. The v4 Shift-for-times-ten hint governs modifiers: Shift multiplies drag and arrow steps by ten; Alt uses .25 drag sensitivity or .1 arrow steps. Input remains native type=number with step .1 and accepts signed decimals, temporary empty edits and native accessibility tools. Arrow keys nudge, Home/End reach bounds. Decorative unfocused digits use Number fade only where the character changes; focused native editing remains stable. Keep the value bounded while the label and move handle carry a tiny velocity offset into a 380/32 virtual release spring. Handle outside release, lost capture, window blur, reset and cleanup. Shared +25 and Reset actions replace driver buttons. Reduced motion changes values immediately without digit animation. All classes start with d-numdrag-demo and the asset keeps its original dimensions.",
+    "designSize": [
+      200,
+      100
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "drag",
+    "controls": [
+      {
+        "label": "+25",
+        "action": "add"
+      },
+      {
+        "label": "Reset",
+        "action": "replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "spinbutton"
+    },
+    "useCases": [
+      "number input",
+      "scrub",
+      "pointer"
+    ],
+    "tier": "free",
+    "thumb": "hero",
+    "addedAt": "2026-11"
+  },
+  "cssAppend": "\n/* Readable axis ink in both cameras; native geometry and SVG remain exact. */\n.d-numdrag-demo .d-numdrag-demo-label{color:#8c8c8c}\n/* Match the captured frame coordinates without moving the hit regions. */\n.d-numdrag-demo-label{padding-left:12px;padding-bottom:4px;text-align:left}.d-numdrag-demo-input,.d-numdrag-demo-number{left:44px;top:6px}.d-numdrag-demo-grip img{left:13px;top:10px}.d-numdrag-demo:is(.stage[data-mode=\"thumb\"] *){transform:translateY(4px)}",
+  "promptAppend": " Use neutral #8c8c8c for the X label in both cameras on the original #171717 field to meet text contrast. Keep its exact font and geometry and the unchanged supplied SVG; the original #6a6a6a reference ink is deliberately raised for readability. Resting values remain painted by the original aria-hidden digit layer while the native number input is transparent. Focus reveals the actual input text and caret and hides the presentation layer; preserve native editing, stepping, blur commit, drag laws and geometry. While the actual number input is focused, Left/Right and their selection modifiers keep native caret editing; label/grip Left/Right still nudge the value. Preserve original Up/Down modifiers, Home/End limits, distance acceleration and release spring. Native compensates the shared Stage upward offset by four pixels. Inside the unchanged 160 by 40px frame, keep X text at (13,10), the value text at (45,10), and the unchanged 16 by 16px move SVG at (129,11). Preserve label/grip hit regions and native text editing.",
+  "asset": {
+    "file": "assets/components/layout-scrub-move.svg",
+    "sha256": "6807bf34e87c751fa319f97d9cce1e7edfee5c34a899442a7293e9632ef5323c",
+    "referenceSHA256": "6807bf34e87c751fa319f97d9cce1e7edfee5c34a899442a7293e9632ef5323c",
+    "width": 16,
+    "height": 16
+  },
+  "jsEdits": [
+    {
+      "needle": "root.addEventListener('keydown',event=>{if(!['ArrowUp'",
+      "replacement": "root.addEventListener('keydown',event=>{if(event.target===input&&(event.key==='ArrowLeft'||event.key==='ArrowRight'))return;if(!['ArrowUp'"
+    }
+  ],
+  "geometry": {
+    "field": {
+      "width": 160,
+      "height": 40
+    },
+    "label": {
+      "x": 13,
+      "y": 10
+    },
+    "value": {
+      "x": 45,
+      "y": 10
+    },
+    "grip": {
+      "x": 129,
+      "y": 11,
+      "width": 16,
+      "height": 16
+    },
+    "nativeStage": {
+      "width": 372,
+      "height": 264,
+      "x": 106,
+      "y": 82
+    }
+  }
+}

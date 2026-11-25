@@ -2081,3 +2081,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   before restoring a historical title for an original-definition hash check.
   V38 (547 files) and interrupted V39 (700 files) are frozen, read/copy only.
   The latter retains 22 components/176 cases, not full startup acceptance.
+
+- `node tools/verify-number-ink.js` checks Scrub Number's native caret editing,
+  visible value paint, actual accessible names, neutral label contrast and v4
+  placement in sixteen desktop/compact, full/native, normal/reduced stories,
+  plus eight fresh offline contexts. Use the production `demo-stage stage`
+  host classes and assert actual computed Stage backgrounds. Left/Right and
+  selection modifiers in the input keep browser editing; grip/label nudges,
+  Up/Down modifiers, Home/End, acceleration and release springs stay intact.
+  The 160×40 native field is at (106,82) in a 372×264 Stage. Its X/value text
+  starts at (13,10)/(45,10); the supplied 16×16 grip starts at (129,11).
+  Preserve the exact SVG bytes. The X ink is deliberately raised from #6a6a6a
+  to #8c8c8c on #171717 in both views for 5.33:1 contrast. This was an
+  implementation assumption after an unanswered optional preference question,
+  not owner approval. Keep raw axe transparent-input/name incompletes; actual
+  resting/focused value paint and browser AX snapshots supply manual evidence.
+  Earlier captures without `demo-stage` do not prove light Stage backgrounds;
+  the first reference-pixel comparison assumed the wrong native field origin
+  and is diagnostic only. Use actual DOM rectangles/text ranges for geometry.
+  The frozen V40 title evidence remains read/copy only. These focused checks
+  do not close the whole-catalog accessibility, startup or CPU4 audits.

@@ -2,6 +2,19 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Scrub Number review](accessibility/number-input-2026-11-26.json) fixes
+native Left/Right caret editing, raises the single X label to 5.33:1 in both
+views and corrects placement to the captured v4 coordinates. Its 160×40 field,
+original fonts, supplied 16×16 grip and complete drag/acceleration/spring model
+remain intact. The label ink deliberately differs from the original 3.31:1
+Figma color. The other 519 complete component definitions remain unchanged.
+Sixteen actual Stage/input/pixel stories and eight fresh offline contexts pass.
+Fresh axe scans retain both transparent-input and single-character-name manual
+flags; actual painted values reach 15.87:1 and the button name includes X.
+All 520 previews, 100 catalog offline exports, stage-fit and 190 original layout
+checks pass. This closes these specific findings, not broader accessibility
+or timing acceptance.
+
 The [v4 catalog-title review](catalog-titles-2026-11-26.json) corrects 46
 titles, including two capitalization differences, to the exact manifest names.
 All 520 controllers, HTML/CSS compositions, prompts, assets and Stage metadata

@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-26",
+  "baseline": "8a44eac8ccef736631fc29eae3c6befcf075cdd2",
+  "scope": "Scrub Number text contrast, native number caret editing and captured v4 placement. This review does not close the full-catalog accessibility, startup or CPU4 motion audits.",
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "htmlCompositionsUnchanged": 520,
+    "stageMetadataUnchanged": true,
+    "originalMathAndDatasetsUnchanged": true,
+    "controllerChange": [
+      {
+        "needle": "root.addEventListener('keydown',event=>{if(!['ArrowUp'",
+        "replacement": "root.addEventListener('keydown',event=>{if(event.target===input&&(event.key==='ArrowLeft'||event.key==='ArrowRight'))return;if(!['ArrowUp'"
+      }
+    ],
+    "originalCssExactPrefix": true,
+    "cssAppend": "\n/* Readable axis ink in both cameras; native geometry and SVG remain exact. */\n.d-numdrag-demo .d-numdrag-demo-label{color:#8c8c8c}\n/* Match the captured frame coordinates without moving the hit regions. */\n.d-numdrag-demo-label{padding-left:12px;padding-bottom:4px;text-align:left}.d-numdrag-demo-input,.d-numdrag-demo-number{left:44px;top:6px}.d-numdrag-demo-grip img{left:13px;top:10px}.d-numdrag-demo:is(.stage[data-mode=\"thumb\"] *){transform:translateY(4px)}",
+    "promptAppend": " Use neutral #8c8c8c for the X label in both cameras on the original #171717 field to meet text contrast. Keep its exact font and geometry and the unchanged supplied SVG; the original #6a6a6a reference ink is deliberately raised for readability. Resting values remain painted by the original aria-hidden digit layer while the native number input is transparent. Focus reveals the actual input text and caret and hides the presentation layer; preserve native editing, stepping, blur commit, drag laws and geometry. While the actual number input is focused, Left/Right and their selection modifiers keep native caret editing; label/grip Left/Right still nudge the value. Preserve original Up/Down modifiers, Home/End limits, distance acceleration and release spring. Native compensates the shared Stage upward offset by four pixels. Inside the unchanged 160 by 40px frame, keep X text at (13,10), the value text at (45,10), and the unchanged 16 by 16px move SVG at (129,11). Preserve label/grip hit regions and native text editing.",
+    "asset": {
+      "file": "assets/components/layout-scrub-move.svg",
+      "sha256": "6807bf34e87c751fa319f97d9cce1e7edfee5c34a899442a7293e9632ef5323c",
+      "referenceSHA256": "6807bf34e87c751fa319f97d9cce1e7edfee5c34a899442a7293e9632ef5323c",
+      "width": 16,
+      "height": 16
+    },
+    "frozenInputs": [
+      {
+        "file": "css/style.css",
+        "sha256": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210"
+      },
+      {
+        "file": "css/fonts.css",
+        "sha256": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208"
+      },
+      {
+        "file": "js/demo-runtime.js",
+        "sha256": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc"
+      },
+      {
+        "file": "js/shell/stage.js",
+        "sha256": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c"
+      },
+      {
+        "file": "js/shell/export.js",
+        "sha256": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+      }
+    ],
+    "newSiteDependencies": 0,
+    "newSuppliedAssets": 0,
+    "poster": {
+      "before": {
+        "file": ".artifacts/final-number-ink-v41/poster-before.png",
+        "sha256": "49096e0737f013b4be00551ac09fa5668b1afabf06c4794acd5fd132a8436e3f"
+      },
+      "after": {
+        "file": "assets/posters/number-input-drag.png",
+        "sha256": "9db49df81b0fba27588cbe17e8991bc025a8e705b0675a6daaca138237b56753"
+      }
+    }
+  },
+  "findings": [
+    {
+      "finding": "The single X label was actual text at 3.3145754420074134:1 (#6a6a6a on #171717).",
+      "fix": "Use neutral #8c8c8c in both native and full views: 5.331409435328784:1. Original font sizes and supplied SVG bytes remain exact.",
+      "designDeviation": "The original v4 label ink is deliberately raised for contrast. The optional owner preference question had no reply; the recommended readable ink was selected as an implementation assumption, not represented as owner approval."
+    },
+    {
+      "finding": "The root Left/Right key handler changed the value while a user was moving the native number caret.",
+      "before": "Typing 12.3, Left, Backspace yielded 12.3 -> 11.3 -> 11.",
+      "after": "The identical browser sequence now yields 12.3 -> 12.3 -> 123, matching an ordinary native number field.",
+      "fix": "Return before root key handling only for Left/Right events targeted at the actual input. Keep grip/label nudges, Up/Down modifiers, Home/End bounds, acceleration and spring equations unchanged.",
+      "evidence": [
+        {
+          "file": ".artifacts/final-number-ink-v41/caret-before.json",
+          "sha256": "7d416e83ad916373c18473c8b83d9260d23677d90d230c85d6587fa1446cb747"
+        },
+        {
+          "file": ".artifacts/final-number-ink-v41/caret-after.json",
+          "sha256": "5014536eb1b46ae998d111f16af0b5635df8b7a2cf5791c6bbe1f7d776c99ac3"
+        }
+      ]
+    },
+    {
+      "finding": "Shared Stage translation and border-relative child positions displaced the original native composition.",
+      "fix": "Cancel the shared -4px native Stage offset locally. Place X text at (13,10), value text at (45,10), and the unchanged 16x16 grip at (129,11) inside the unchanged 160x40 field. Native field is (106,82) in its 372x264 Stage.",
+      "reference": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=157-1774",
+      "evidence": [
+        {
+          "file": ".artifacts/final-number-ink-v41/figma-context.json",
+          "sha256": "cca7fa2a64647d01395617e5db53eb5ab7c45887385a6ca6e3d39a261bee2291"
+        },
+        {
+          "file": ".artifacts/final-number-ink-v41/asset-geometry-before.json",
+          "sha256": "dbe0ba96574b3eed0ef2114fdd51cea85fddee4f7bd47de881341dce27400039"
+        },
+        {
+          "file": ".artifacts/final-number-ink-v41/text-geometry-before.json",
+          "sha256": "e6f847ad876bafad058bdca25898eff76057e4eb048f54e78f740475d90fd95d"
+        }
+      ]
+    }
+  ],
+  "manualAccessibilityReview": {
+    "restingValue": "The actual native input is transparent at rest because its separate aria-hidden digit presentation paints the value. Focusing reveals actual input text/caret and hides the presentation. Pixel-deletion pairs confirm both actual paints.",
+    "valueContrast": {
+      "foreground": "#f1f1f1",
+      "background": "#171717",
+      "minimum": 15.872496978134924
+    },
+    "axisContrast": {
+      "foreground": "#8c8c8c",
+      "background": "#171717",
+      "minimum": 5.331409435328784
+    },
+    "remainingRawFlags": [
+      "The transparent resting input retains axe equalRatio incomplete results; they are retained without filtering. Actual resting and focused glyphs meet authored-color contrast.",
+      "Single-character X retains label-content-name-mismatch incomplete results. Actual browser accessibility snapshots expose button \"Drag X position\", containing visible X."
+    ],
+    "rawAfterSummary": {
+      "cases": 16,
+      "violations": 0,
+      "incomplete": 32,
+      "pageErrors": 0
+    },
+    "rawBefore": [
+      {
+        "evidence": {
+          "file": ".artifacts/final-number-ink-v41/axe-desktop/2026-11-25T19-23-57-953Z/report.json",
+          "sha256": "d571a1cbb7188903c2597364aaa29daff8f3bbbe6e933d909e00a47dbdcd1833"
+        },
+        "summary": {
+          "cases": 8,
+          "violations": 0,
+          "incomplete": 16,
+          "pageErrors": 0
+        }
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-number-ink-v41/axe-compact/2026-11-25T19-24-12-529Z/report.json",
+          "sha256": "3f237e51c4e1201db0bc458c93e396f1607c0f1b1ab957ab3f66776df392f9b0"
+        },
+        "summary": {
+          "cases": 8,
+          "violations": 0,
+          "incomplete": 16,
+          "pageErrors": 0
+        }
+      }
+    ],
+    "rawAfter": [
+      {
+        "evidence": {
+          "file": ".artifacts/final-number-ink-v41/axe-after-desktop/2026-11-25T20-16-48-730Z/report.json",
+          "sha256": "6cbb1e32dcffb18351521ab7c10793e4f6b813b70f4a734dd01d7e5d413d3e9a"
+        },
+        "summary": {
+          "cases": 8,
+          "violations": 0,
+          "incomplete": 16,
+          "pageErrors": 0
+        }
+      },
+      {
+        "evidence": {
+          "file": ".artifacts/final-number-ink-v41/axe-after-compact/2026-11-25T20-17-06-469Z/report.json",
+          "sha256": "575822faa819151408845f0fa041137b7fb59a2daa6d76290da587d3a3a154cf"
+        },
+        "summary": {
+          "cases": 8,
+          "violations": 0,
+          "incomplete": 16,
+          "pageErrors": 0
+        }
+      }
+    ],
+    "references": [
+      "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum",
+      "https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/"
+    ]
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "focused": {
+      "cases": 16,
+      "widths": [
+        1440,
+        390
+      ],
+      "deviceScaleFactors": [
+        1,
+        2
+      ],
+      "modes": [
+        "full",
+        "thumb"
+      ],
+      "actualStageThemes": [
+        "dark",
+        "light"
+      ],
+      "motion": [
+        "normal",
+        "reduced"
+      ],
+      "productionHostClasses": "demo-stage stage",
+      "geometry": "Actual DOM rectangles and text ranges in every case; computed Stage backgrounds asserted.",
+      "nativeInput": "Typing, Up, Left/Backspace, Shift+Left selection deletion, blur commit, real accessibility values and grip Left/Right nudges.",
+      "offlineContexts": 8,
+      "requests": 0,
+      "pageErrors": 0,
+      "evidence": {
+        "file": ".artifacts/final-number-ink-v41/accepted-number/2026-11-25T20-17-49-758Z/report.json",
+        "sha256": "c5860570b4d1d2d405af9dccd32790a817ee62dc3e0155a3a2f852e7d139ca36"
+      }
+    },
+    "required": {
+      "library": {
+        "checks": 668,
+        "lazyPreviews": 520,
+        "offlineExports": 100
+      },
+      "fit": {
+        "components": 520,
+        "failed": 0,
+        "sparseExceptions": 163,
+        "newExceptions": 0
+      },
+      "layoutChecks": 190,
+      "packageTests": 9,
+      "strictStage": true,
+      "strictMotionStatic": true,
+      "generatedFiles": 1568
+    },
+    "logs": [
+      {
+        "file": ".artifacts/final-number-ink-v41/final-registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-generated.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-titles.log",
+        "sha256": "dd0528a47a625a7d9e2b9b27b9c079199a6769bea8a1860f62eea9b5798e98f0"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-library.log",
+        "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-fit.log",
+        "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-layout.log",
+        "sha256": "5682b02fc733b2010e432dd972ce977b21a3b5d7b66f3807567e1e18cf50d7e3"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/final-package.log",
+        "sha256": "c2ded079638e0905f67771169181d24466129ce2778e9214933174f81d74e8f0"
+      },
+      {
+        "file": ".artifacts/final-number-ink-v41/accepted-number.log",
+        "sha256": "8f50e6aa2c6e111eec6f1f39b56826d1a3472d7888d0434e88c1e2886b250f54"
+      }
+    ]
+  },
+  "retainedDiagnostics": {
+    "initialApplier": "The first preparer assumed JSON-quoted fields; a unique-match assertion stopped it before editing production source. The source uses backtick template fields. Its exact helper remains retained.",
+    "caretApplier": "A whole-template match failed against normalized CRLF before production writes. The corrected applier inserts only the unique key-handler guard; the first helper remains retained.",
+    "earlierHosts": "Early review/full-only captures used class stage without demo-stage. Their opaque field and caret evidence is retained, but their theme labels do not establish actual light Stage backgrounds. The accepted checker uses both production classes and asserts computed backgrounds.",
+    "invalidPixelComparison": "reference-pixels.json assumed native field origin (106,82), before actual placement was corrected from y78. It is diagnostic only and is not accepted as geometry or Figma pixel equivalence. Final checks use real DOM ranges/rectangles.",
+    "earlierChecker": "The previous final-check report used the same assertions with an inaccurate unchanged-geometry scope sentence. before-scope-check.js preserves its exact hashed checker; the accepted run clarifies placement corrections.",
+    "pixelLimits": "Authored-color contrast ignores anti-aliasing. Pixel-deletion pairs prove glyph painting, not exact Figma raster equivalence. The regenerated poster includes intentional ink and placement changes; no only-X-pixel claim is made."
+  },
+  "remainingAcceptance": [
+    "Complete remaining catalog accessibility review, including interaction and noninitial states.",
+    "Current-source complete startup/route acceptance with complete asset/GPU readiness.",
+    "Chrome 4x CPU motion/frame-rate acceptance."
+  ]
+}
