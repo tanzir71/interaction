@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-25",
+  "baseline": "09eb62536a94c68377705a0ae81accd9137cb54f",
+  "scope": "Outline Fill cursor painter: static initial anchor plus transform-only motion, retaining complete source state and artwork. Also correct the Sweep checker actual-Stage-theme coverage. No whole-handoff timing or contrast acceptance.",
+  "requirement": "MOTION_SYSTEM.md section 7: do not animate left/top/width/height; use transforms.",
+  "change": {
+    "edits": [
+      {
+        "needle": "function freezeSweep(){",
+        "replacement": "const cursorOrigin={x:initial.x-3.75*k,y:initial.y-2.25*k};Object.assign(cursor.style,{left:cursorOrigin.x+'px',top:cursorOrigin.y+'px'});\nfunction freezeSweep(){"
+      },
+      {
+        "needle": "Object.assign(cursor.style,{left:(paint.x-3.75*k)+'px',top:(paint.y-2.25*k)+'px'});",
+        "replacement": "const cursorX=paint.x-initial.x,cursorY=paint.y-initial.y;cursor.style.transform=cursorX||cursorY?'translate('+cursorX+'px,'+cursorY+'px)':'none';"
+      }
+    ],
+    "promptAppend": "\nKeep the cursor at its captured initial left/top anchor and move it with a two-axis transform delta only. Per-frame cursor painting must not write left, top, width or height. Preserve the exact SVG, aperture, coupled offsets, complete source model, Sweep trajectory, reduced feedback and independent holds.",
+    "description": "Set the captured left/top anchor once after creating the cursor. Each paint changes only its two-axis transform delta, using none at the initial pose. The aperture and complete motion controller are unchanged."
+  },
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "allHtmlCssAndMetadataUnchanged": true,
+    "sharedHostInputClockAndLagHelpersUnchanged": true,
+    "completeMotionStateExact": true,
+    "sourceAssetsAndCursorRootUnchanged": true,
+    "initialNativeReferenceUnchanged": true,
+    "newRuntimeDependencies": 0,
+    "newProductionAssets": 0,
+    "frozenInputsUnchanged": [
+      "css/style.css",
+      "css/fonts.css",
+      "css/foundations.css",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js",
+      "js/shell/registry.js",
+      "js/meta.stage.js",
+      "assets/demo-assets.json",
+      "assets/components/nav-ext/nav-ext-3.svg"
+    ]
+  },
+  "verification": {
+    "painterStories": 16,
+    "modes": [
+      "thumb",
+      "full"
+    ],
+    "widths": {
+      "thumb": [
+        372,
+        286
+      ],
+      "full": [
+        640,
+        360
+      ]
+    },
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "actualCtxThemeAsserted": true,
+    "motionPreferences": [
+      "normal",
+      "reduced"
+    ],
+    "exactInitialGpuPngPairs": 16,
+    "completeOriginalModelsExact": true,
+    "styleWrites": {
+      "originalLeftAndTop": 400,
+      "currentLeft": 0,
+      "currentTop": 0,
+      "currentWidth": 0,
+      "currentHeight": 0,
+      "transformAssignedInAllStories": true,
+      "scope": "Observed primary-cursor writes after initialization through keys, Sweep, interruption and holds; structural two-edit contract fixes the complete painter."
+    },
+    "geometry": {
+      "physicalErrorBound": 0.031251,
+      "reason": "Two physical 1/64px layout quanta account for the old layout anchor and independently measured parent origin. Source models and initial PNG equality are exact."
+    },
+    "sweepStories": 20,
+    "exactSweepNativePngPairs": 4,
+    "freshOfflineSweepExports": 2,
+    "types": [
+      {
+        "name": "verification",
+        "checks": 2185,
+        "stories": 42,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/verification.json",
+        "sha256": "90c93641fb5bd722e6cd0e00f409bb39a07bdc0a566e1d2a63bb1e9cf25269e7"
+      },
+      {
+        "name": "models",
+        "checks": 68,
+        "stories": 12,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/models.json",
+        "sha256": "b2a42faba65749e6e7e0aa99d39851a967b596bdd3e5ff51586c2efd08b72d4b"
+      },
+      {
+        "name": "input",
+        "checks": 148,
+        "stories": 24,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/input.json",
+        "sha256": "05689d9f29fb5b25922cf741cd03f7ea885ace4095f869393d9a5451d4e10a4d"
+      },
+      {
+        "name": "clocks",
+        "checks": 455228,
+        "stories": 36,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/clocks.json",
+        "sha256": "2fc40e45e3c4fb23e82bff6594601a52bb04c1f21de3dc9ea8dd6e48f113b462"
+      },
+      {
+        "name": "holds",
+        "checks": 238,
+        "stories": 24,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/holds.json",
+        "sha256": "a2c1f65631a5da0ba6fdc497b9743fa31dba68d6e358825f51005a8fb46e5f49"
+      },
+      {
+        "name": "touch",
+        "checks": 96,
+        "stories": 24,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/touch.json",
+        "sha256": "63f2c341ebe214de69b1b41fc61c66c07b2b867a72faa4825be3eece820829d2"
+      },
+      {
+        "name": "pixels",
+        "checks": 48,
+        "stories": 12,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/pixels.json",
+        "sha256": "ec245f04322534de693244a96f20f24df561be6accad64e1fd639d6552b4d18f"
+      },
+      {
+        "name": "exports",
+        "checks": 174,
+        "stories": 12,
+        "file": ".artifacts/final-outline-painter-v34/accepted-type-ext/exports.json",
+        "sha256": "10e5c0ae8beac48bc54ba8ece93aabac2dcd3441bd9a53ce4776ad77e3433864"
+      }
+    ],
+    "totalTypeChecks": 458185,
+    "packageTests": 9,
+    "strictRegistryStageMotionAndGenerated": true,
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "fit": {
+      "components": 520,
+      "failed": 0,
+      "overflow": 0,
+      "horizontalScroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "validatedExceptions": 163
+    },
+    "reports": [
+      {
+        "file": ".artifacts/final-outline-painter-v34/final-painter/2026-11-25T15-19-25-282Z/report.json",
+        "sha256": "95dd100e311ae10e3e0d1892d5d9db906ef4253ed9840c6ec09d7cdedf9c0cc2"
+      },
+      {
+        "file": ".artifacts/final-outline-painter-v34/final-sweep/2026-11-25T15-20-15-757Z/report.json",
+        "sha256": "2603e6a1136bc1dabd6137997de3581b22089588bb439162019b2df4a1813d7a"
+      }
+    ],
+    "browser": "158.0.8127.88",
+    "sourceStable": true
+  },
+  "retainedCheckerCorrections": {
+    "geometry": "The first compact full reference failed an unscaled 0.032 source-unit bound before candidate comparison. The corrected check measures the actual projected error in physical pixels, bounded by two 1/64px layout quanta. Model state and initial PNG comparisons remain exact.",
+    "theme": "The shared fixture ignores a theme value in mount settings and open options. An explicit assertion exposed dark being used in a case labeled light. The corrected caller clones the demo Stage metadata with the requested theme and asserts the actual ctx.theme. Earlier completed rows are not accepted as light-Stage coverage.",
+    "historicalFollowup": "The previous Sweep checker used the same mount-setting theme method for its image loop. Its four PNG pairs were real exact comparisons, but its two light labels do not establish light-Stage coverage. Correct the public checker and documentation when promoting the painter."
+  },
+  "historicalThemeCorrection": {
+    "report": "docs/motion/outline-sweep-2026-11-25.json",
+    "finding": "The previous image loop passed theme through ignored fixture settings. Its four exact pairs do not establish light-Stage coverage.",
+    "correction": "Clone the actual Stage metadata with the requested theme before mount and assert ctx.theme. Both public checkers now verify actual Stage themes; old captures remain retained."
+  },
+  "manualObservation": {
+    "lightStage": "The verified full light-Stage capture retains the pre-existing low-contrast pale word/outline and gray help text. This renderer-only repair intentionally preserves colors; the full light palette needs a separate correction.",
+    "capture": ".artifacts/final-outline-painter-v34/final-painter/2026-11-25T15-19-25-282Z/full-360-light-false-candidate-initial.png"
+  },
+  "remaining": [
+    "Correct full light-Stage Text & Type palettes and verify contrast",
+    "All-520 cold startup",
+    "CPU4 timing and retained frame gaps",
+    "Final motion, Lighthouse, design-asset and manual accessibility acceptance"
+  ],
+  "sourceInputs": {
+    "js/demos.typeext.text-gradient-outline.js": "7d78d7ad1f1439b99c43536ce5cd881ff57873ae9219a3568bf724eeace03855",
+    "tools/verify-outline-painter.js": "aeb6c0b11e539c9a6cb7800c34f034808bfd04e3884d079f8859fff5bfa2bb3c",
+    "tools/verify-outline-sweep.js": "e06754ad1511f3afa24b6bf9668a691c8b02fe2fc787749a98b4c7752c6ced0f",
+    "tools/fixtures/outline-painter-before.json": "7bf855820df6c8e76c3653aea64ae58951ef459e6a8134e41f03650665033d65",
+    "tools/fixtures/outline-sweep-before.json": "a0f111831e0a6c55e3b05b323dad96cd76f2ba243bf75625c09f593d734929ce",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "css/foundations.css": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/shell/registry.js": "29df1a20544607d8713c0fc228899aef301b8c80853f38808334f1ef2bbf67c3",
+    "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+    "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+    "assets/components/nav-ext/nav-ext-3.svg": "6201d202767d2f65935347607c857003fada9ee9802225f55fb732dfd8a3f39e"
+  }
+}

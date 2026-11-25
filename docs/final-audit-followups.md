@@ -2,6 +2,19 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Outline cursor painter review](motion/outline-painter-2026-11-25.json)
+closes the left/top motion-property finding. The cursor keeps its captured anchor
+and changes only a transform delta; the source model, complete Sweep trajectory,
+SVG and all HTML/CSS remain unchanged. Sixteen source/image/style stories, the
+corrected twenty Sweep stories and all eight Text & Type suites pass.
+
+The former Sweep image loop did not apply its light theme to the actual Stage.
+Preserve its four real exact pairs, but do not use those labels as light-Stage
+evidence. Both current checkers now set actual metadata and assert ctx.theme.
+The verified full light capture exposes low contrast in the pale word/outline
+and gray hint. That pre-existing palette needs a separate correction; model
+equivalence and image equality do not constitute contrast acceptance.
+
 The [Outline Fill Sweep review](motion/outline-sweep-2026-11-25.json) closes
 the displaced-start jump. Sweep now carries its visible vertical coordinate
 through the original 1000ms route and freezes both coordinates on interruption.
@@ -19,9 +32,8 @@ failed visibility-mutation capture. Direct original/candidate PNG pairs pass,
 but these observations do not establish a stable speed gain or close CPU4
 acceptance. The frozen V32 helpers/evidence remain read/copy only.
 
-The existing Outline cursor painter still updates left/top during motion.
-Its cheap-property review remains open separately from the resolved trajectory
-jump; this phase preserves that painter and its native geometry.
+The earlier Outline cursor left/top painter finding is resolved in the review
+above. Its captured anchor, asset and source geometry remain preserved.
 
 The [Shake Error initial-state review](accessibility/error-initial-2026-11-25.json)
 closes its held initial-paint issue. Only its native initial-source transition

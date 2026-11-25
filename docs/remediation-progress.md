@@ -20,6 +20,23 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Outline Fill cursor painter
+
+The [cursor painter review](motion/outline-painter-2026-11-25.json) replaces
+per-frame left/top writes with a transform delta from the fixed captured anchor.
+All sixteen native/full, normal/reduced and verified dark/light stories retain
+exact source models and initial GPU images. Observed primary-cursor position
+writes drop to zero; aperture geometry, complete trajectories and supplied SVG
+bytes remain unchanged. This establishes the motion-property correction, not
+a new frame-rate certificate.
+
+The Sweep image checker now sets and asserts the actual Stage theme. Its earlier
+light labels used ignored fixture settings; that limitation is recorded in the
+earlier report. The corrected current checks cover both Stage themes. All eight
+Text & Type suites and the full library/fit gates pass. Actual light-Stage images
+also expose a pre-existing pale-on-light palette issue; its contrast correction
+and the remaining startup, performance and manual audits remain open.
+
 ## Outline Fill Sweep continuity
 
 The [Sweep review](motion/outline-sweep-2026-11-25.json) resolves the vertical

@@ -255,5 +255,16 @@
     "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
     "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
     "assets/components/nav-ext/nav-ext-3.svg": "6201d202767d2f65935347607c857003fada9ee9802225f55fb732dfd8a3f39e"
+  },
+  "laterReview": {
+    "cursorPainter": {
+      "status": "Resolved by transform-only painting",
+      "report": "outline-painter-2026-11-25.json"
+    },
+    "themeCoverageCorrection": {
+      "report": "docs/motion/outline-sweep-2026-11-25.json",
+      "finding": "The previous image loop passed theme through ignored fixture settings. Its four exact pairs do not establish light-Stage coverage.",
+      "correction": "Clone the actual Stage metadata with the requested theme before mount and assert ctx.theme. Both public checkers now verify actual Stage themes; old captures remain retained."
+    }
   }
 }
