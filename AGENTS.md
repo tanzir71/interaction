@@ -1892,3 +1892,15 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   modes. Every run gets a new output directory with source hashes and complete
   compressed evidence. This checks mounted motion; input-specific hidden intent,
   offscreen behavior, frame rate and other final audits remain separate.
+
+- `node tools/verify-final-accessibility-fixes.js http://127.0.0.1:4173`
+  covers Folding Map's full-view Stage ink and Draggable Cards' decorative image
+  alternatives. Keep the original Map CSS as a prefix and its complete controller
+  unchanged. Full headings and metrics follow Stage ink; dark map panels keep
+  their local palette. The compass remains readable at the original .6 reduced
+  opacity floor. Cards change only the full image alternative to empty, keeping
+  each visible caption and complete named keyboard control. Preserve all HTML,
+  native artwork, photographs, models, timing and geometry. Tests cover exact
+  initial layouts, native CSS roundtrips, actual map keys and offline exports.
+  GPU-disabled native CSS comparisons do not certify default-GPU timing. Keep
+  raw axe incomplete results and earlier private evidence; final audits stay open.

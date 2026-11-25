@@ -2,6 +2,19 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Map and Cards accessibility pass](accessibility/map-cards-2026-11-25.json)
+repairs Folding Map's transparent full-view labels and metrics in light mode.
+Its compass uses primary Stage ink through the original reduced-motion fade;
+dark panels retain their original palette. Draggable Cards' full photographs
+use empty alternatives inside the existing named controls, retaining all three
+visible captions and keyboard instructions. All HTML, native artwork, models,
+geometry and the other 518 definitions remain unchanged. Checks cover 32 exact
+initial layouts, sixteen native CSS roundtrips, deliberate map keys and four
+fresh offline exports. Eight initial axe cases have zero violations and retain
+eight incomplete results; the original findings and all other catalog review
+items remain archived. Native comparisons disable GPU for CSS readback only;
+default-GPU timing and final accessibility acceptance remain open.
+
 The [Rolling Balance rendering pass](performance/rolling-render-2026-11-25.json)
 retains each cylinder and its ten faces, measures shared font metrics once per
 paint and assigns only changed inline styles. An unchanged same-time settlement

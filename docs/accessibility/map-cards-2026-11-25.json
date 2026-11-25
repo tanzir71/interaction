@@ -1,0 +1,193 @@
+{
+  "date": "2026-11-25",
+  "baseline": "2928e50b691b7fb8a6c907e0637c69331e167c34",
+  "scope": "Two full-view accessibility repairs with original native composition and interaction preservation. This report does not close all catalog accessibility, native contrast, motion or performance acceptance.",
+  "changes": [
+    {
+      "id": "css3d-folding-map",
+      "change": "Transparent headings and metric captions follow secondary Stage ink; metric values inherit primary ink. The compass uses primary ink to remain readable through its original .6 reduced-opacity feedback. Dark map panel palettes remain unchanged."
+    },
+    {
+      "id": "ui-draggable-cards",
+      "change": "Only full-view photographs receive empty alternatives inside the existing named controls. All three original visible captions, complete accessible names and keyboard instructions remain unchanged."
+    }
+  ],
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 518,
+    "unchangedHTML": 520,
+    "unchangedCSS": 519,
+    "unchangedMetadata": true,
+    "mapControllerExact": true,
+    "cardsControllerExactExceptOneFullAlternativeAssignment": true,
+    "assetsFontsRuntimeStageUnchanged": true,
+    "nativeSourceGeometryInkExact": true
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "initialLayouts": 32,
+    "nativeCSSRoundtrips": 16,
+    "offlineExports": 4,
+    "mapContrastObservations": 200,
+    "mapContrastMinimum": 5.096737158400966,
+    "mapContrastScope": "Headings, metrics, compass and fully unfolded panel labels in both themes, at desktop/compact widths and normal/reduced motion. Compass also checked at the original analytical .6 opacity floor. Preserve the original transient reduced panel fade; no claim covers all intermediate composited panel pixels.",
+    "mapPhysicalKeys": [
+      "Escape folds",
+      "Enter unfolds"
+    ],
+    "namedCardControlStories": 10,
+    "originalCardNames": [
+      "Northern lights. Drag or use Arrow keys; Home restacks.",
+      "Blue forest. Drag or use Arrow keys; Home restacks.",
+      "City after dark. Drag or use Arrow keys; Home restacks."
+    ],
+    "nativeCaptureScope": "Two full-view fixes. Exact complete controller edit contracts and initial geometry, same-instance native CSS roundtrips, ancestor-opacity-aware full ink, original named card controls and empty decorative alternatives, deliberate map keys, and fresh offline exports. GPU is disabled only for the native CSS pixel oracle; default-GPU timing, all-catalog accessibility and other final audits remain separate.",
+    "axe": {
+      "cases": 8,
+      "violations": 0,
+      "incomplete": 8,
+      "pageErrors": 0,
+      "scope": "Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance."
+    },
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 3516
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1809
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 47437
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 3468
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 326415
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 205901
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 196
+      }
+    ],
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "evidenceSHA256": {
+      ".artifacts/final-accessibility-fixes-v17/verification/2026-11-25T02-39-40-904Z/report.json": "755d60c77ff68d2d89043c71239df3823f08c585679de2f1c4ca4bdf41b9be92",
+      ".artifacts/final-accessibility-fixes-v17/axe/2026-11-25T02-40-14-801Z/report.json": "f57473e3a968e09491d98b03d5d6e35aa7968ed72ad805886a0496439b31b67d",
+      ".artifacts/final-accessibility-fixes-v17/owner-checks/report.json": "0cac4aeae7447b6d4f2dbe60ef55a7cd38debbb9c6d08a2289b742d00cc0930d",
+      ".artifacts/final-accessibility-fixes-v17/package-ci.log": "ca6396a29c14eaf6144f311d2c52e095991ab35dfd12381776f12aa6dfbf1937",
+      ".artifacts/final-accessibility-fixes-v17/package-test.log": "0b4c29d1e42825a5fd627412f020a7f2f886e46c15f018fed3f1e80037b0df59",
+      ".artifacts/final-catalog-accessibility-v15/2026-11-25T00-39-14-259Z/report.json": "701708c1a3ab1d1e7a976c0fd9d455e6e2a22ab784406ceef0659e6ab6f48482",
+      "tools/verify-final-accessibility-fixes.js": "ffaeb8d3e15629aee06cb353d4d89ba861a739720702861d67e4e9a5591d458b",
+      "tools/fixtures/final-accessibility-before.json": "94a23c53024998e686a84e0d30b4f2d5dbefa23611f810105cd74a09cf68f017",
+      "js/demos.layoutext.ui-draggable-cards.js": "dae941d9861127e3146067a8c5dea32ebcb77ee9c69117d477e549923d98e9c7",
+      "js/demos.three.folding-map.js": "3afb1d89f96c3db6c60508069ab4f766663acd3d5b37183f71fecc9b29eb0931"
+    }
+  },
+  "originalFindings": [
+    {
+      "id": "css3d-folding-map",
+      "theme": "dark",
+      "rule": "color-contrast",
+      "targets": [
+        [
+          ".d-fold-map-compass"
+        ]
+      ]
+    },
+    {
+      "id": "ui-draggable-cards",
+      "theme": "dark",
+      "rule": "image-redundant-alt",
+      "targets": [
+        [
+          "img[alt=\"Northern lights\"]"
+        ],
+        [
+          "img[alt=\"Blue forest\"]"
+        ],
+        [
+          "img[alt=\"City after dark\"]"
+        ]
+      ]
+    },
+    {
+      "id": "ui-draggable-cards",
+      "theme": "light",
+      "rule": "image-redundant-alt",
+      "targets": [
+        [
+          "img[alt=\"Northern lights\"]"
+        ],
+        [
+          "img[alt=\"Blue forest\"]"
+        ],
+        [
+          "img[alt=\"City after dark\"]"
+        ]
+      ]
+    }
+  ],
+  "retainedReview": {
+    "incompleteResults": 8,
+    "scope": "All raw incomplete results and the original initial full-catalog scan remain preserved. Other label/name, incidental artwork, transient fade and manual findings require separate review. Eight focused cases do not establish a new full-catalog result."
+  },
+  "publication": {
+    "policy": "Commit and push main directly. Keep GitHub Actions disabled and preserve the account zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}
