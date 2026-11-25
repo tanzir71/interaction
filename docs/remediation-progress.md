@@ -20,6 +20,24 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Outline Fill Sweep continuity
+
+The [Sweep review](motion/outline-sweep-2026-11-25.json) resolves the vertical
+jump when Sweep follows input above or below the captured row. Both coordinates
+now start at the painted pose and follow the original one-second route. Repeated
+Sweep and interrupted keys/mouse retain that two-axis pose. Original horizontal
+and reduced behavior, all artwork/CSS and shared host/input/clock helpers remain
+unchanged. Twenty targeted stories, four exact native image pairs, two fresh
+offline exports and all eight Text & Type suites pass.
+
+The [Rolling Balance occlusion investigation](performance/rolling-occlusion-2026-11-25.json)
+retains four timing runs and an unshipped candidate. Direct source/candidate
+comparisons pass sixteen stories and twenty exact GPU pairs, while synthetic
+visibility-toggle captures remain a failed diagnostic. The final baseline
+compact sample matches the candidates at about 60fps; no stable gain is proven.
+All production renderer definitions remain unchanged by that investigation.
+Final startup, frame timing and broader manual acceptance remain open.
+
 ## Shake Error initial still and static previews
 
 The [initial-state review](accessibility/error-initial-2026-11-25.json) resolves

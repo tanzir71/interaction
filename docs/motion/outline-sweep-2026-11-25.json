@@ -1,0 +1,259 @@
+{
+  "date": "2026-11-25",
+  "baseline": "359daead339927b67c553fc29a94fdbcf5410dfd",
+  "scope": "Outline Fill normal Dock Sweep continuity after vertical input, with original artwork, horizontal route, reduced feedback and shared helpers preserved. Whole-handoff acceptance remains open.",
+  "design": {
+    "figma": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=141-6254",
+    "native": {
+      "word": "MOTION",
+      "font": "Geist 600 68px",
+      "box": [
+        56.5,
+        70,
+        259,
+        88
+      ],
+      "aperture": {
+        "center": [
+          211,
+          111
+        ],
+        "radius": 55
+      },
+      "cursorFrame": [
+        218,
+        118,
+        18,
+        18
+      ],
+      "tip": [
+        221.75,
+        120.25
+      ]
+    },
+    "fullScale": 1.5294117647058822,
+    "asset": {
+      "key": "svg-nav-ext-3",
+      "path": "assets/components/nav-ext/nav-ext-3.svg",
+      "file": "nav-ext-3.svg",
+      "reused": true,
+      "sha256": "6201d202767d2f65935347607c857003fada9ee9802225f55fb732dfd8a3f39e",
+      "width": 13,
+      "height": 14,
+      "id": "141:6273",
+      "offsetX": -0.625,
+      "offsetY": -0.625,
+      "bakedOpacity": 1,
+      "unchanged": true
+    },
+    "policy": "Owner instructions preserve the captured seven layers and unchanged supplied cursor reused from nav-ext. No asset, geometry, copy, CSS or shared helper changes."
+  },
+  "defect": {
+    "observation": "After moving above or below the reference row, Sweep kept the current x but immediately reset y to the reference row.",
+    "sourceCoordinateJumps": {
+      "native": 50.4,
+      "full": 96,
+      "units": "Unscaled design coordinates, not viewport pixels."
+    },
+    "baselineSettings": 12,
+    "baselineFailures": 12,
+    "baselineReport": {
+      "file": ".artifacts/final-outline-sweep-v33/baseline-continuity/2026-11-25T14-50-03-449Z/report.json",
+      "sha256": "1d11ca814b6b39cf303c8f7b8322d81ae0875ec5668e9aa3da1bfc305e0c7ed3"
+    },
+    "fix": "Capture the visible y coordinate with x, interpolate both over the original 1000ms ease-out route, and freeze both analytic coordinates before repeated Sweep or interrupted pointer/key input.",
+    "edits": [
+      {
+        "needle": "sweepAt=-Infinity,sweepFrom=initial.x;",
+        "replacement": "sweepAt=-Infinity,sweepFrom=initial.x,sweepFromY=initial.y;"
+      },
+      {
+        "needle": "y.target(initial.y,now,true);sweepAt=-Infinity;",
+        "replacement": "y.target(txMix(sweepFromY,initial.y,txEase(p)),now,true);sweepAt=-Infinity;"
+      },
+      {
+        "needle": "sweepFrom=x.sample(h.now());sweepAt=h.now();",
+        "replacement": "sweepFrom=x.sample(h.now());sweepFromY=y.sample(h.now());sweepAt=h.now();"
+      },
+      {
+        "needle": "y:initial.y};paint={...intent};",
+        "replacement": "y:txMix(sweepFromY,initial.y,txEase(t))};paint={...intent};"
+      }
+    ],
+    "promptAppend": "\nA normal Dock Sweep begins at the actual painted aperture and cursor in both axes, including vertically displaced or interrupted input. Preserve the original 1000ms ease-out horizontal route and return to the captured reference row continuously over that same interval. Freeze both analytic coordinates before a new pointer/key intent or repeated Sweep. Preserve original reduced-motion targets and 150ms feedback, all artwork, geometry and source-clock holds."
+  },
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 519,
+    "htmlAndCssUnchanged": 520,
+    "metadataAndAssetsUnchanged": true,
+    "allSharedHostInputClockAndLagHelpersExact": true,
+    "originalHorizontalAndReducedStateStoriesExact": true,
+    "newRuntimeDependencies": 0,
+    "newProductionAssets": 0,
+    "initialNativeArtExact": true
+  },
+  "verification": {
+    "targetedStories": 20,
+    "verticalSettings": 12,
+    "refreshRates": [
+      60,
+      120,
+      240
+    ],
+    "verticalDirections": [
+      "above",
+      "below"
+    ],
+    "modes": [
+      "thumb",
+      "full"
+    ],
+    "actualMouseStories": 2,
+    "combinedRepeatInterruptionAndCallerHoldStories": 2,
+    "originalCompatibilityStories": 4,
+    "exactNativeGpuPngPairs": 4,
+    "freshOfflineFullExports": 2,
+    "browser": "158.0.8127.88",
+    "oracle": {
+      "continuity": 1e-8,
+      "trajectory": 0.005,
+      "note": "Trajectory tolerance accounts for the existing 18-step bisection versus an independent Newton curve solver. Native PNG bytes and original compatibility states are exact."
+    },
+    "types": [
+      {
+        "name": "verification",
+        "checks": 2185,
+        "stories": 42,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/verification.json",
+        "sha256": "818747f5aaf56eb4da1f34bf26583c2f4d09d798cafeb7f4aca8bb92e97ad94d"
+      },
+      {
+        "name": "models",
+        "checks": 68,
+        "stories": 12,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/models.json",
+        "sha256": "c3889815a49ba00fc8b5b2013a217a27a2611575818178a142af19c5e45c6e90"
+      },
+      {
+        "name": "input",
+        "checks": 148,
+        "stories": 24,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/input.json",
+        "sha256": "d722dafd87dd1fb215c33813d00e0ac522662838b3af882c7865cb9f71863e05"
+      },
+      {
+        "name": "clocks",
+        "checks": 455228,
+        "stories": 36,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/clocks.json",
+        "sha256": "4d129406db004e3af9b6cb904af9306bb3a096cd4356a96d55d972ce2e2eb957"
+      },
+      {
+        "name": "holds",
+        "checks": 238,
+        "stories": 24,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/holds.json",
+        "sha256": "e3aa1b662e650046774bcd4702d2aa89b6569127441265f121b371ee0b57adae"
+      },
+      {
+        "name": "touch",
+        "checks": 96,
+        "stories": 24,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/touch.json",
+        "sha256": "b067f5580b3c3a9d38262a55520e9965491bab6abedef137fd4202a807035682"
+      },
+      {
+        "name": "pixels",
+        "checks": 48,
+        "stories": 12,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/pixels.json",
+        "sha256": "46c102c665087a2db7488073f23be083f65d245d68e884684793bbf6b83325c5"
+      },
+      {
+        "name": "exports",
+        "checks": 174,
+        "stories": 12,
+        "file": ".artifacts/final-outline-sweep-v33/accepted-type-ext/exports.json",
+        "sha256": "5d6fde44e11b420b4cd1308a8b475d7567697dcf3fd6ea709efb7559e996e42a"
+      }
+    ],
+    "totalTypeChecks": 458185,
+    "packageTests": 9,
+    "strictRegistryStageMotionAndGenerated": true,
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "fit": {
+      "components": 520,
+      "failed": 0,
+      "overflow": 0,
+      "horizontalScroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "validatedExceptions": 163
+    },
+    "report": {
+      "file": ".artifacts/final-outline-sweep-v33/current/2026-11-25T14-50-38-978Z/report.json",
+      "sha256": "532eabadb3cfb1ccfa1d7eafe22aeafd777606c90469c7dbf526c4addec95987"
+    }
+  },
+  "referenceExportDiagnostics": {
+    "currentExport": {
+      "cursorRoot": [
+        12.5,
+        13.25
+      ],
+      "capturedCursorRoot": [
+        13,
+        14
+      ]
+    },
+    "forcedEqualSizeComparison": "The first optional comparison incorrectly stretched both exports to 13x14 and differs at all three scales. It is retained as an invalid equivalence test.",
+    "nativeSizeComparison": [
+      {
+        "scale": 1,
+        "exact": false
+      },
+      {
+        "scale": 2,
+        "exact": false
+      },
+      {
+        "scale": 3,
+        "exact": false
+      }
+    ],
+    "captureFailure": {
+      "error": "page.screenshot: Timeout 30000ms exceeded after fonts loaded",
+      "scope": "Initial native-asset comparison used a 24x24 page viewport; no complete comparison result was produced.",
+      "followup": "Retain that helper. Repeat the same native-size image comparison in a 200x200 viewport with a 24x24 capture region. Root image sizes and capture scale remain unchanged."
+    },
+    "assessment": "The fresh export is not established as identical to the owner-preserved supplied asset. This motion fix keeps that required original file, its root dimensions and its captured slot. Existing native asset geometry/hash gates pass. Current-export differences remain a separate final design-asset review item; no equivalence or cause is claimed."
+  },
+  "remaining": [
+    "All-520 cold startup",
+    "CPU4 frame timing and retained renderer gaps",
+    "Final motion, theme, Lighthouse and manual accessibility acceptance",
+    "Current-export/captured cursor differences during the final design-asset review",
+    "Audit the existing cursor left/top updates against the cheap-property motion criterion; this two-axis continuity fix does not change that painter."
+  ],
+  "sourceInputs": {
+    "tools/verify-outline-sweep.js": "6a21c0839feb1341c8817ccb397b6a3f4a8981e70c40f86434148e8168b67c3c",
+    "tools/fixtures/outline-sweep-before.json": "a0f111831e0a6c55e3b05b323dad96cd76f2ba243bf75625c09f593d734929ce",
+    "js/demos.typeext.text-gradient-outline.js": "3aa6212694b7f003f8a9ec7cdb634a8975e80830bb0f07c2fb42eae9881471a1",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "css/foundations.css": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/shell/registry.js": "29df1a20544607d8713c0fc228899aef301b8c80853f38808334f1ef2bbf67c3",
+    "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+    "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+    "assets/components/nav-ext/nav-ext-3.svg": "6201d202767d2f65935347607c857003fada9ee9802225f55fb732dfd8a3f39e"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-25",
+  "baseline": "359daead339927b67c553fc29a94fdbcf5410dfd",
+  "scope": "Read-only Rolling Balance CPU1/CPU4 investigation and unshipped full-overlay occlusion candidate. These are retained observations, not timing acceptance.",
+  "status": "Unshipped. No source or generated artifact change.",
+  "decision": "The repeated baseline compact sample matches the two candidate samples at about 59.81fps. Desktop samples vary and the candidate does not establish a stable benefit. Keep the complete renderer unchanged; raw frame gaps and all traces remain evidence.",
+  "productionDefinitionsUnchangedAtMeasurement": 520,
+  "runs": [
+    {
+      "name": "baseline",
+      "file": ".artifacts/final-rolling-profile-v32/baseline/2026-11-25T14-17-39-858Z-ce4f82307ee6/report.json",
+      "sha256": "b65898133573c263a12f3c2ed08608b6c210ffd7b1c1d30376c2657caf3381db",
+      "cases": [
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu1",
+          "cpu": 1,
+          "compact": false,
+          "fps": 51.44855144855144,
+          "p95": 16.800000000000182,
+          "max": 450.39999999999986,
+          "gaps": 6,
+          "longTasks": 1
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu1",
+          "cpu": 1,
+          "compact": true,
+          "fps": 59.938562972952724,
+          "p95": 16.800000000000182,
+          "max": 16.900000000000546,
+          "gaps": 0,
+          "longTasks": 0
+        },
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 58.93958692340351,
+          "p95": 16.800000000000182,
+          "max": 50.099999999999454,
+          "gaps": 7,
+          "longTasks": 1
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 43.705202167778026,
+          "p95": 50.09999999999991,
+          "max": 116.90000000000055,
+          "gaps": 85,
+          "longTasks": 21
+        }
+      ]
+    },
+    {
+      "name": "candidate-1",
+      "file": ".artifacts/final-rolling-profile-v32/candidate-1/2026-11-25T14-23-42-620Z-ce4f82307ee6/report.json",
+      "sha256": "45c2e6f58ae6a953c9a08579054bb21d1ab17ce08fe009c898bb9706a733e337",
+      "cases": [
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 55.6936102196526,
+          "p95": 16.800000000000182,
+          "max": 233.5999999999999,
+          "gaps": 4,
+          "longTasks": 1
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.814437881644835,
+          "p95": 16.800000000000182,
+          "max": 33.400000000000546,
+          "gaps": 1,
+          "longTasks": 1
+        }
+      ]
+    },
+    {
+      "name": "candidate-2",
+      "file": ".artifacts/final-rolling-profile-v32/candidate-2/2026-11-25T14-34-03-303Z-ce4f82307ee6/report.json",
+      "sha256": "cb9b47953b62363bcf3c8bbfd2649b5decbc954dba1bf4cd352296bc2c56992a",
+      "cases": [
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 54.943682725206656,
+          "p95": 16.800000000000182,
+          "max": 283.5999999999999,
+          "gaps": 5,
+          "longTasks": 1
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.812944070526825,
+          "p95": 16.800000000000182,
+          "max": 33.399999999999636,
+          "gaps": 1,
+          "longTasks": 1
+        }
+      ]
+    },
+    {
+      "name": "baseline-after",
+      "file": ".artifacts/final-rolling-profile-v32/baseline-after/2026-11-25T14-34-23-586Z-ce4f82307ee6/report.json",
+      "sha256": "79c1460c9c452abcb9e3b54caaff5dca2dd8ec1184473d41326d87f2ce4c6172",
+      "cases": [
+        {
+          "name": "framer-rolling-balance-full-desktop-dpr1-cpu4",
+          "cpu": 4,
+          "compact": false,
+          "fps": 55.94265877475587,
+          "p95": 16.800000000000182,
+          "max": 400.6,
+          "gaps": 7,
+          "longTasks": 2
+        },
+        {
+          "name": "framer-rolling-balance-full-compact-dpr2-cpu4",
+          "cpu": 4,
+          "compact": true,
+          "fps": 59.81294407052682,
+          "p95": 16.800000000000182,
+          "max": 33.29999999999927,
+          "gaps": 1,
+          "longTasks": 1
+        }
+      ]
+    }
+  ],
+  "methodNotes": [
+    "Prepared-font eight-second full desktop DPR1 and compact DPR2 stories. Local assets and current shared shell styles.",
+    "The first baseline includes CPU1 cases before CPU4 in the same process; later runs are CPU4-only. Startup preparation is therefore not balanced across all runs.",
+    "Own heavy jobs ran sequentially; OS and other applications were uncontrolled. No outlier is removed.",
+    "The final baseline compact sample matches the candidate samples. Neither stable benefit nor a universal cause for frame gaps is established."
+  ],
+  "candidate": "Keep all ten original faces. An in-memory JS-only candidate hides full-overlay faces at least two digit steps away, with independent backface/clip-margin checks. Original native and reduced branches remain unchanged. No renderer change ships.",
+  "correctness": {
+    "directStories": 16,
+    "exactActualOriginalCandidateGpuPngPairs": 20,
+    "originalModelAndNormalizedHtmlGeometryExact": true,
+    "nativeAndReducedBranchesUnchanged": true,
+    "actualHiddenFaceClipMarginsChecked": true,
+    "scope": "Sampled renderer equivalence supports these bounds only, not a universal timing claim.",
+    "report": {
+      "file": ".artifacts/final-rolling-profile-v32/comparison-2026-11-25T14-32-35-814Z/report.json",
+      "sha256": "ac308b10de42dca0e4ec137d679b48b0c3e1aaa72680fef1662797fb6890bbf9"
+    }
+  },
+  "retainedMutationDiagnostic": {
+    "failure": "Candidate/uncull/candidate property mutations differ by 243 channels, maximum delta 9, within [163,215,168,240]. First and third candidate captures differ; second and third match.",
+    "control": "Fresh unmodified original and candidate each produce three identical captures, with identical hashes across both renderers at 180ms. Repeating the property-mutation diagnostic still fails. The direct actual-renderer comparison passes twenty PNG pairs.",
+    "assessment": "Do not replace an actual source renderer with a synthetic style-mutation reference or infer a universal cause from this observation. Every failed and control capture remains retained."
+  },
+  "evidence": {
+    "folder": ".artifacts/final-rolling-profile-v32",
+    "manifestSha256": "41f6f693bbd0be28921ffad92ce6aec862f3d956c5cddd58a97ae6021bd9d5e1",
+    "policy": "Read or copy only; never execute or edit frozen helpers/evidence."
+  },
+  "remaining": [
+    "Current source full CPU4 performance and frame gaps",
+    "All-520 cold startup",
+    "Earlier named recipe/visual follow-ups including Outline Sweep and Mask Reveal",
+    "Final Lighthouse, themes and manual accessibility acceptance"
+  ]
+}

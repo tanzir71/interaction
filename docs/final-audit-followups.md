@@ -2,6 +2,27 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Outline Fill Sweep review](motion/outline-sweep-2026-11-25.json) closes
+the displaced-start jump. Sweep now carries its visible vertical coordinate
+through the original 1000ms route and freezes both coordinates on interruption.
+The old horizontal/reduced stories and the initial native pixels remain exact;
+all eight Text & Type suites pass. Preserve the original supplied cursor as
+required by the owner. Fresh cursor export viewport/pixel differences and the
+failed first asset-capture diagnostic are retained separately for final asset
+review, without claiming source equivalence or changing the provided file.
+
+The [Rolling Balance occlusion investigation](performance/rolling-occlusion-2026-11-25.json)
+ships no renderer change. Two candidate compact measurements and the later
+baseline all reach about 59.81fps. First-baseline and desktop results vary, and
+startup preparation differs between runs. Keep every frame gap, trace and
+failed visibility-mutation capture. Direct original/candidate PNG pairs pass,
+but these observations do not establish a stable speed gain or close CPU4
+acceptance. The frozen V32 helpers/evidence remain read/copy only.
+
+The existing Outline cursor painter still updates left/top during motion.
+Its cheap-property review remains open separately from the resolved trajectory
+jump; this phase preserves that painter and its native geometry.
+
 The [Shake Error initial-state review](accessibility/error-initial-2026-11-25.json)
 closes its held initial-paint issue. Only its native initial-source transition
 rule and generator guidance change; 519 complete definitions and every
@@ -626,9 +647,9 @@ all 156 drum faces and bounded continuous fog paths. Thirty-six equal-time
 renderer stories, twelve offline contexts, twenty-four hold stories and actual
 mask/filter pixels verify behavior. They do not close the final performance,
 contrast, cold-route or Lighthouse gates. No new fit exceptions are added.
-Include vertically displaced pointer states when auditing Outline Fill's Dock
-sweep; it currently starts on the reference horizontal row. Preserve the tested
-horizontal sweep reversal and all three drum pose channels during that review.
+The earlier vertically displaced Outline Fill Sweep finding is resolved in the
+review above. Preserve its original horizontal route and all three drum pose
+channels during the remaining motion audit.
 The five Navigation extensions retain 56 exact native layers and twelve original
 SVG slots using eleven unchanged files. Preserve complete page/destination/pane/
 article models, elastic-edge reversal, the real page reel, source-fixed distance
@@ -847,9 +868,9 @@ The current-source [Showcase field timing report](performance/showcase-fields-20
 
 The [Showcase surface timing report](performance/showcase-spatial-2026-11-22.json) retains all 32 native/full desktop DPR 1 and compact DPR 2 stories. Mesh runs for twelve seconds to include its complete original breathing phase; the other scenes run for eight seconds, including a complete six-second Paths replay. CPU 1 records 59.13–60.00fps, 19 intervals above 25ms and 5 long tasks; first trace Paint spans 8.38–61.07ms and maximum readiness is 48.10ms. CPU 4 records 30.38–59.88fps, 347 intervals above 25ms and 21 long tasks; first trace Paint spans 36.08–208.46ms and maximum readiness is 179.30ms. Fonts were prepared before mounting and own heavy checks had stopped; other applications were not controlled. Every trace and outlier is retained. The slowest sample is showcase-mesh-surface-full-compact-dpr2-cpu4 at 30.38fps; investigate its retained trace during the final performance pass. These are component observations; cold-route, Lighthouse and site-wide performance gates remain open. Preserve exact fractional native paint offsets, complete SVG texture fallbacks, independent scroll ownership, queued Home, compact End precision and full optical type checks during the final audits. The prior full Mesh solver and native texture transport remain represented in all retained traces.
 
-The six Data & Numbers extensions preserve 112 exact layers, 31 original text copies and 56 unchanged SVG slots using thirty files. Their complete datasets, timezone dates, quarter-hour input, current-pose reversals, physical spring releases, exact tooltip deadlines, independent holds and offline exports pass focused checks. No fit exceptions are added. Equal-source renderer equivalence and functional SVG checks are not final frame-rate, contrast, cold-route or Lighthouse acceptance. Keep the earlier Outline vertically displaced Sweep review open.
+The six Data & Numbers extensions preserve 112 exact layers, 31 original text copies and 56 unchanged SVG slots using thirty files. Their complete datasets, timezone dates, quarter-hour input, current-pose reversals, physical spring releases, exact tooltip deadlines, independent holds and offline exports pass focused checks. No fit exceptions are added. Equal-source renderer equivalence and functional SVG checks are not final frame-rate, contrast, cold-route or Lighthouse acceptance. The earlier Outline displaced-Sweep finding is resolved above.
 
-The four loader extensions preserve 61 exact native layers, five original labels, thirteen unchanged SVG slots and the approved archGrid photo/crop/credits. Complete build timelines, 24 equal-source renderer stories, eight offline contexts, sixteen independent hold stories, actual touch/scroll and actual photographic/continuous-ray pixels pass focused checks. Preserve the paused-before-first-frame Trace glow regression, analytic SVG pathLength calibration, early-wake deadlines and finite completion holds. Matrix’s new 82×82 Figma exception changes only low fill. These functional checks do not close final frame-rate, contrast, cold-route or Lighthouse gates; earlier performance findings and Outline Sweep review remain open.
+The four loader extensions preserve 61 exact native layers, five original labels, thirteen unchanged SVG slots and the approved archGrid photo/crop/credits. Complete build timelines, 24 equal-source renderer stories, eight offline contexts, sixteen independent hold stories, actual touch/scroll and actual photographic/continuous-ray pixels pass focused checks. Preserve the paused-before-first-frame Trace glow regression, analytic SVG pathLength calibration, early-wake deadlines and finite completion holds. Matrix’s new 82×82 Figma exception changes only low fill. These functional checks do not close final frame-rate, contrast, cold-route or Lighthouse gates; earlier performance findings remain open; the Outline Sweep finding is resolved above.
 
 Piano Keys retains all fourteen exact primitive layers, twelve playable notes,
 actual four-partial PCM and silent first paint. Preserve fresh-gesture audio
