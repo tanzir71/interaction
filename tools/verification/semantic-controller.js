@@ -1,7 +1,7 @@
 /* Strict, reversible metadata-only migrations over the preserved controllers. */
-const assert=require('node:assert/strict'),fixture=require('../fixtures/symbolic-controls-before.json');
-const itemFor=id=>fixture.items.find(item=>item.definition.id===id);
+const assert=require('node:assert/strict'),fixture=require('../fixtures/symbolic-controls-before.json'),toggleFixture=require('../fixtures/toggle-names-before.json');
+const items=[...fixture.items,...toggleFixture.items],itemFor=id=>items.find(item=>item.definition.id===id);
 function expectedAfter(id,before){const item=itemFor(id);if(!item)return before;assert.equal(before,item.definition.js,'Exact semantic migration baseline '+id);for(const edit of item.edits){assert.equal(before.split(edit.needle).length,edit.count+1,'Exact semantic insertion '+id);before=before.split(edit.needle).join(edit.replacement);}return before;}
 function originalController(id,current){const item=itemFor(id);if(!item)return current;for(const edit of [...item.edits].reverse()){assert.equal(current.split(edit.replacement).length,edit.count+1,'Exact semantic projection '+id);current=current.split(edit.replacement).join(edit.needle);}assert.equal(current,item.definition.js,'Complete preserved controller '+id);return current;}
-function validate(registry){for(const item of fixture.items){const d=registry.demos.find(d=>d.id===item.definition.id);assert.equal(d.js,expectedAfter(d.id,item.definition.js));for(const key of Object.keys(item.definition))if(!['js','prompt'].includes(key))assert.deepEqual(JSON.parse(JSON.stringify(d[key])),item.definition[key],'Unchanged '+d.id+'.'+key);}}
-module.exports={fixture,expectedAfter,originalController,validate};
+function validate(registry){for(const item of items){const d=registry.demos.find(d=>d.id===item.definition.id);assert.equal(d.js,expectedAfter(d.id,item.definition.js));for(const key of Object.keys(item.definition))if(!['js','prompt'].includes(key))assert.deepEqual(JSON.parse(JSON.stringify(d[key])),item.definition[key],'Unchanged '+d.id+'.'+key);}}
+module.exports={fixture,toggleFixture,expectedAfter,originalController,validate};

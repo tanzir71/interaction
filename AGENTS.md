@@ -1936,3 +1936,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   the city's declared ninety-parcel image alternative, and the Scheduler's
   inactive launcher/active 40-cell native window. Keep both browser proofs,
   historical counterexamples, raw incomplete results and earlier fixtures.
+
+- The naming matrix also checks full Solid Signal, Broken Grid, Coast Pass and
+  Turntable identities through deliberate toggles, held Enter input and queued
+  return. Descriptions retain current state, complete pass-face copy and next
+  instructions; native names, all CSS/HTML and both original Skeuomorph kernels
+  remain unchanged. `toggle-names-before.json` adds exact reversible migrations
+  without changing earlier fixtures. Normal-motion stories include these four.
+  `tools/audit-dock-toggle-names.js` records actual AX names before/after trusted
+  Enter on initial visible shared-Dock toggles; retain all drifts for review.
+  Its reduced dark desktop sample is an inventory, not catalog acceptance.
+  Glass Pass cross-context blur pixels have two observed outcomes even with
+  identical source; retain the failed oracle and same-source repeatability.
+  Native DOM/styles/geometry remain exact; do not claim every PNG pair is exact
+  or infer a universal raster bound from the observed channel delta of four.

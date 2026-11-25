@@ -2,6 +2,25 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [toggle-name pass](accessibility/toggle-names-2026-11-25.json) gives full
+Solid Signal, Broken Grid, Coast Pass and Turntable controls stable identities.
+Their original pressed states remain intact; descriptions retain current state,
+complete pass-face copy and next-action instructions. The full Turntable Dock
+includes both Play/Pause aliases. All CSS, HTML, metadata, original kernels and
+native names/artwork remain unchanged. The naming matrix also checks queued
+Enter input while held and actual return to the original pressed state. The
+29-component matrix passes 530 browser-name observations and 58 fresh offline
+exports, including 24 normal-motion stories. Native
+geometry, DOM and computed styles remain exact in 32 original/current cases;
+29 PNG pairs match byte-for-byte. Glass Pass has three differing cross-context
+captures, with channel deltas at most four in these samples. A controlled
+same-source experiment produces both complete raster outcomes on both sources,
+with six identical captures within each mount. Preserve the original failed
+byte-equality oracle; this does not certify a universal raster bound or GPU
+timing. A broader shared-Dock scan covers 166 candidate components and 59 initial
+visible toggles, retaining 34 name changes for the next repair pass. Later-state
+controls and the wider accessibility/motion/performance audits remain open.
+
 The [structure and symbolic-control review](accessibility/structure-symbols-2026-11-25.json)
 verifies that the five old generic-container findings and the inactive Scheduler
 finding are already resolved in the current source. Both browsers pass 4,139

@@ -1,0 +1,1007 @@
+{
+  "date": "2026-11-25",
+  "baseline": "9ddb064b4782556a8a9ec44c1eccfba3ad20944b",
+  "scope": "Stable full-view names for four retained toggle findings and the full Turntable Play/Pause Dock. A separate shared-Dock inventory identifies further work. This does not establish complete catalog accessibility or final performance/motion acceptance.",
+  "changes": [
+    {
+      "id": "text-outline-fill-scroll",
+      "controllerEdits": 1
+    },
+    {
+      "id": "text-broken-grid",
+      "controllerEdits": 1
+    },
+    {
+      "id": "glass-refraction-card",
+      "controllerEdits": 1
+    },
+    {
+      "id": "vinyl-player-card",
+      "controllerEdits": 2
+    }
+  ],
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 516,
+    "unchangedCSS": 520,
+    "unchangedHTML": 520,
+    "unchangedMetadata": true,
+    "exactReversibleMetadataOnlyControllerEdits": true,
+    "originalKernels": [
+      {
+        "id": "glass-refraction-card",
+        "sha256": [
+          "eb93d6584865a4c674f6b17746aedd162950f27ed3f2fb38f099294671961743",
+          "eb93d6584865a4c674f6b17746aedd162950f27ed3f2fb38f099294671961743"
+        ],
+        "byteIdentical": true
+      },
+      {
+        "id": "vinyl-player-card",
+        "sha256": [
+          "a9466a122315a0f7f5eb05de50ac7ed6bebdc09a58cb5c35a8375a303df42489",
+          "a9466a122315a0f7f5eb05de50ac7ed6bebdc09a58cb5c35a8375a303df42489"
+        ],
+        "byteIdentical": true
+      }
+    ],
+    "assetsFontsRuntimeStageUnchanged": true
+  },
+  "verification": {
+    "names": {
+      "browser": "158.0.8127.88",
+      "components": 29,
+      "stories": 198,
+      "observations": 530,
+      "offlineExports": 58,
+      "normalStories": 24,
+      "scope": "Initial and deliberate reduced-motion full-view states of 29 retained label/name findings, plus focused normal-motion Flip Grid/Orbit and four stable-toggle stories, in both Stage themes and desktop/compact widths. Compares explicitly reviewed primary labels with actual Chrome accessibility names, retaining original raw axe findings separately. Symbolic fields receive descriptive-name checks. This does not establish speech-recognition behavior, all intermediate motion frames, all catalog accessibility or native thumbnail acceptance. Audio output is disabled in these naming contexts; synthesis is covered separately.",
+      "behaviors": "The four toggles retain their actual browser names across Enter, state changes, queued held Enter and return. Original pressed states change and return; current descriptions retain the complete visible pass face. Turntable Dock retains both visible Play/Pause aliases."
+    },
+    "native": {
+      "cases": 32,
+      "geometryDOMStylesExact": 32,
+      "pngPairsExact": 29,
+      "nonGlassPNGPairsExact": 24,
+      "glassObservedPixelDeltas": [
+        {
+          "case": "glass-refraction-card-1440-dark-false",
+          "changedPixels": 471,
+          "maxChannelDelta": 4,
+          "meanChannelDelta": 0.0017284742587161941,
+          "bounds": [
+            86,
+            58,
+            285,
+            165
+          ]
+        },
+        {
+          "case": "glass-refraction-card-1440-dark-true",
+          "changedPixels": 0,
+          "maxChannelDelta": 0,
+          "meanChannelDelta": 0,
+          "bounds": null
+        },
+        {
+          "case": "glass-refraction-card-1440-light-false",
+          "changedPixels": 0,
+          "maxChannelDelta": 0,
+          "meanChannelDelta": 0,
+          "bounds": null
+        },
+        {
+          "case": "glass-refraction-card-1440-light-true",
+          "changedPixels": 0,
+          "maxChannelDelta": 0,
+          "meanChannelDelta": 0,
+          "bounds": null
+        },
+        {
+          "case": "glass-refraction-card-390-dark-false",
+          "changedPixels": 471,
+          "maxChannelDelta": 4,
+          "meanChannelDelta": 0.0017284742587161941,
+          "bounds": [
+            86,
+            58,
+            285,
+            165
+          ]
+        },
+        {
+          "case": "glass-refraction-card-390-dark-true",
+          "changedPixels": 0,
+          "maxChannelDelta": 0,
+          "meanChannelDelta": 0,
+          "bounds": null
+        },
+        {
+          "case": "glass-refraction-card-390-light-false",
+          "changedPixels": 0,
+          "maxChannelDelta": 0,
+          "meanChannelDelta": 0,
+          "bounds": null
+        },
+        {
+          "case": "glass-refraction-card-390-light-true",
+          "changedPixels": 471,
+          "maxChannelDelta": 4,
+          "meanChannelDelta": 0.0017310198761811666,
+          "bounds": [
+            86,
+            58,
+            285,
+            165
+          ]
+        }
+      ],
+      "repeatability": {
+        "scope": "1440px dark normal-motion native Glass Pass, two independent mounts per source and six captures per mount. Each mount remains exact. Both sources produce the same two complete PNG outcomes. This diagnoses cross-context raster variation; it does not certify a universal pixel bound or default-GPU timing.",
+        "mountHashes": {
+          "before": "d340ee47ca0ef4e6647b3d563810eebc1059bab62d878456d753a0c7967161fa",
+          "before-repeat": "1907f35e37f8a085f1b4281b164c950009bcfb69ec5eebbe8c217a299c1c3637",
+          "current": "1907f35e37f8a085f1b4281b164c950009bcfb69ec5eebbe8c217a299c1c3637",
+          "current-repeat": "d340ee47ca0ef4e6647b3d563810eebc1059bab62d878456d753a0c7967161fa"
+        }
+      },
+      "scope": "Independent original/current paused native definitions. Exact geometry, DOM and computed styles. Non-Glass PNG bytes are required exact after priming; Glass pixels are reported without a cross-context equality claim because same-source mounts exhibit two raster outcomes. The separate repeatability experiment retains both outcomes for both sources. GPU disabled for CSS/pixel comparison only; not default-GPU or timing acceptance."
+    },
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 1073
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 466
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 10056
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 600
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 304900
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 206817
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 289
+      }
+    ],
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "proofSHA256": {
+      ".artifacts/final-toggle-names-v21/current-names/2026-11-25T04-38-32-001Z/report.json": "c51d91b7986e87b52a66291c5300716e8fcd5781b0b8c5a43765cb3520f3cce5",
+      ".artifacts/final-toggle-names-v21/before-names/2026-11-25T04-38-55-920Z/report.json": "b0ffa45de4578fc275b725ea17e0eed1caaf0428c5d66dbe5f263dfe0db1f915",
+      ".artifacts/final-toggle-names-v21/native-state/report.json": "7840afe101a9870e61b6a4fb73233712b2223e1f10e72f71b616116e2c30b306",
+      ".artifacts/final-toggle-names-v21/glass-repeatability/report.json": "a748efcefd70c3816f5fedcde85a6b31226f7b650e14fce4927ee327cd8e7749",
+      ".artifacts/final-toggle-names-v21/native-pixel-deltas.json": "f5fc7c0df88b4a47cb0796b84b5c6427f86d3bd784dac2c4dfc990304f850d51",
+      ".artifacts/final-toggle-names-v21/dock-audit/2026-11-25T04-36-02-528Z/report.json": "15b3dd2d56792b4989eacfe9e6b7f5ea0f36e3c84f9580895614aaf303481764",
+      ".artifacts/final-toggle-names-v21/owner-checks/report.json": "a7ae56a2a36f8b6aae909fe626bbac1d22a949bc9c28031ff0477c60926d11ed",
+      ".artifacts/final-toggle-names-v21/package-test.log": "200e7ec7228e29aeb0084b4ebdc932d0206fa50f3cd0b4338b1356ad80644aeb",
+      ".artifacts/final-toggle-names-v21/prepare-report.cjs": "5336a4357c86905322893c33ee6328f0825828b34b65a14b311aa1c5f3967492",
+      ".artifacts/final-toggle-names-v21/repair.cjs": "0666e2eb98ee2163efe0a049fef19f679a15e9bbe7baac7644a8894084b81d76",
+      ".artifacts/final-toggle-names-v21/update-verifier.cjs": "a1e8d27d2f5a93aece047f3d154c042b7df911b6c47a51a0838afe4ed76e22a1",
+      ".artifacts/final-toggle-names-v21/baseline.json": "c69201bd4bc62c7affe8848eb7c593ce84753a8e5bfed57d0e440dedc170cf41",
+      "tools/fixtures/toggle-names-before.json": "a98dd48a1cae8b585a80c6c15d66cdc14a4aa253c4659fc476abe94be07369e9",
+      "tools/verification/semantic-controller.js": "f3fc77427c54b9f40e4ad587850e34f0407df2282bedc08b59196741a59cd509",
+      "tools/verify-visible-names.js": "a3047762dc093fc0cb08b71747a48b7096ca84da5bcc5aa44b011044d544ff2f",
+      "tools/audit-dock-toggle-names.js": "341afb17fd71010fff9f891899e456d2649163bb3de1535b1a06e56298d9ec76"
+    }
+  },
+  "sharedDockInventory": {
+    "browser": "158.0.8127.88",
+    "scope": "Full-view shared Dock controls in components declaring aria-pressed, at 1440px dark/reduced motion. Samples initial visible enabled toggles, then actual Enter input and a settled 350ms observation. Captures actual Chrome AX names before/after, retaining every drift for review. Does not cover controls appearing only in later states, all timing endpoints, thumbnail semantics, speech recognition, audio output or complete accessibility. Audio is disabled in these contexts.",
+    "candidateComponents": 166,
+    "completedComponents": 166,
+    "initialVisibleToggles": 59,
+    "nameChangesRequiringReview": [
+      {
+        "id": "image-infinite-zoom",
+        "action": "toggle",
+        "before": {
+          "name": "Pause zoom",
+          "pressed": "false",
+          "text": "Pause zoom"
+        },
+        "after": {
+          "name": "Resume zoom",
+          "pressed": "true",
+          "text": "Resume zoom"
+        }
+      },
+      {
+        "id": "kenburns-crossfade",
+        "action": "toggle",
+        "before": {
+          "name": "Resume slideshow",
+          "pressed": "true",
+          "text": "Resume slideshow"
+        },
+        "after": {
+          "name": "Pause slideshow",
+          "pressed": "false",
+          "text": "Pause slideshow"
+        }
+      },
+      {
+        "id": "collision-bubbles",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "ferrofluid-dots",
+        "action": "polarity",
+        "before": {
+          "name": "North",
+          "pressed": "false",
+          "text": "North"
+        },
+        "after": {
+          "name": "South",
+          "pressed": "true",
+          "text": "South"
+        }
+      },
+      {
+        "id": "ferrofluid-dots",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "water-ripple-2d",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "lava-lamp",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "melt-drip-text",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "smoke-wisps",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "bubble-float-pop",
+        "action": "pause",
+        "before": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        },
+        "after": {
+          "name": "Resume",
+          "pressed": "true",
+          "text": "Resume"
+        }
+      },
+      {
+        "id": "starfield-warp",
+        "action": "warp",
+        "before": {
+          "name": "Engage warp",
+          "pressed": "false",
+          "text": "Engage warp"
+        },
+        "after": {
+          "name": "Cruise",
+          "pressed": "true",
+          "text": "Cruise"
+        }
+      },
+      {
+        "id": "ui-sound-kit",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "typing-mechanical",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "theremin-pad",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "notification-chime-stack",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "drum-grid-sequencer",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "scroll-pitch-drone",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "snake-in-grid",
+        "action": "toggle",
+        "before": {
+          "name": "Play",
+          "pressed": "true",
+          "text": "Play"
+        },
+        "after": {
+          "name": "Pause",
+          "pressed": "false",
+          "text": "Pause"
+        }
+      },
+      {
+        "id": "dither-bayer",
+        "action": "invert",
+        "before": {
+          "name": "Invert field",
+          "pressed": "false",
+          "text": "Invert field"
+        },
+        "after": {
+          "name": "Restore field",
+          "pressed": "true",
+          "text": "Restore field"
+        }
+      },
+      {
+        "id": "dither-floyd-steinberg",
+        "action": "lock",
+        "before": {
+          "name": "Lock full color",
+          "pressed": "false",
+          "text": "Lock full color"
+        },
+        "after": {
+          "name": "Return to dither",
+          "pressed": "true",
+          "text": "Return to dither"
+        }
+      },
+      {
+        "id": "dither-blue-noise",
+        "action": "toggle",
+        "before": {
+          "name": "Dissolve to B",
+          "pressed": "false",
+          "text": "Dissolve to B"
+        },
+        "after": {
+          "name": "Return to A",
+          "pressed": "true",
+          "text": "Return to A"
+        }
+      },
+      {
+        "id": "halftone-dots",
+        "action": "pin",
+        "before": {
+          "name": "Pin pressure",
+          "pressed": "false",
+          "text": "Pin pressure"
+        },
+        "after": {
+          "name": "Release pressure",
+          "pressed": "true",
+          "text": "Release pressure"
+        }
+      },
+      {
+        "id": "halftone-lines",
+        "action": "lock",
+        "before": {
+          "name": "Lock 32°",
+          "pressed": "false",
+          "text": "Lock 32°"
+        },
+        "after": {
+          "name": "Release angle",
+          "pressed": "true",
+          "text": "Release angle"
+        }
+      },
+      {
+        "id": "ascii-render",
+        "action": "color",
+        "before": {
+          "name": "Color glyphs",
+          "pressed": "false",
+          "text": "Color glyphs"
+        },
+        "after": {
+          "name": "Mono glyphs",
+          "pressed": "true",
+          "text": "Mono glyphs"
+        }
+      },
+      {
+        "id": "ascii-donut-3d",
+        "action": "pan",
+        "before": {
+          "name": "Pan field",
+          "pressed": "false",
+          "text": "Pan field"
+        },
+        "after": {
+          "name": "Spin torus",
+          "pressed": "true",
+          "text": "Spin torus"
+        }
+      },
+      {
+        "id": "ascii-fluid-stir",
+        "action": "pan",
+        "before": {
+          "name": "Pan field",
+          "pressed": "false",
+          "text": "Pan field"
+        },
+        "after": {
+          "name": "Stir field",
+          "pressed": "true",
+          "text": "Stir field"
+        }
+      },
+      {
+        "id": "pixel-sort",
+        "action": "toggle",
+        "before": {
+          "name": "Lock sorted",
+          "pressed": "false",
+          "text": "Lock sorted"
+        },
+        "after": {
+          "name": "Release sorted",
+          "pressed": "true",
+          "text": "Release sorted"
+        }
+      },
+      {
+        "id": "threshold-mosaic-transition",
+        "action": "toggle",
+        "before": {
+          "name": "Switch to B",
+          "pressed": "false",
+          "text": "Switch to B"
+        },
+        "after": {
+          "name": "Return to A",
+          "pressed": "true",
+          "text": "Return to A"
+        }
+      },
+      {
+        "id": "interlace-flicker",
+        "action": "toggle",
+        "before": {
+          "name": "Lock high field",
+          "pressed": "false",
+          "text": "Lock high field"
+        },
+        "after": {
+          "name": "Release high field",
+          "pressed": "true",
+          "text": "Release high field"
+        }
+      },
+      {
+        "id": "posterize-hover",
+        "action": "toggle",
+        "before": {
+          "name": "Pin lens",
+          "pressed": "false",
+          "text": "Pin lens"
+        },
+        "after": {
+          "name": "Release lens",
+          "pressed": "true",
+          "text": "Release lens"
+        }
+      },
+      {
+        "id": "chromatic-type",
+        "action": "polarity",
+        "before": {
+          "name": "Polarity: normal",
+          "pressed": "false",
+          "text": "Polarity: normal"
+        },
+        "after": {
+          "name": "Polarity: reverse",
+          "pressed": "true",
+          "text": "Polarity: reverse"
+        }
+      },
+      {
+        "id": "rotary-knob",
+        "action": "mute",
+        "before": {
+          "name": "Mute",
+          "pressed": "false",
+          "text": "Mute"
+        },
+        "after": {
+          "name": "Unmute",
+          "pressed": "true",
+          "text": "Unmute"
+        }
+      },
+      {
+        "id": "led-segment-display",
+        "action": "power",
+        "before": {
+          "name": "Power off",
+          "pressed": "true",
+          "text": "Power off"
+        },
+        "after": {
+          "name": "Power on",
+          "pressed": "false",
+          "text": "Power on"
+        }
+      },
+      {
+        "id": "cassette-reels",
+        "action": "play",
+        "before": {
+          "name": "Play",
+          "pressed": "false",
+          "text": "Play"
+        },
+        "after": {
+          "name": "Pause",
+          "pressed": "true",
+          "text": "Pause"
+        }
+      }
+    ],
+    "errors": []
+  },
+  "retainedFailures": {
+    "historicalReferenceCases": 32,
+    "referenceFailures": [
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "reduced",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:64:356"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 1440,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 1440,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 390,
+        "theme": "dark",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Filled phrase Solid Signal. Activate to return to the outline.'\n-   'Outlined phrase Solid Signal. Activate to keep the fill.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "text-broken-grid",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Stable complete toggle/Dock names\n+ actual - expected\n\n  [\n+   'Break the Grid. United. Activate to release this state.'\n-   'Break the Grid. Broken. Activate to hold this state.'\n  ]\n\n    at story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:57:42)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "glass-refraction-card",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Complete current pass face description\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:1598)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      },
+      {
+        "id": "vinyl-player-card",
+        "width": 390,
+        "theme": "light",
+        "portable": false,
+        "motion": "normal",
+        "error": "AssertionError [ERR_ASSERTION]: Functional icon/diagram name vinyl-player-card\n    at observe (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:50:978)\n    at async story (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:53:69)\n    at async runCase (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:63:168)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-visible-names.js:65:241"
+      }
+    ],
+    "initialNativePixelOracle": "The original cross-context byte-equality check failed for native Glass Pass while DOM/styles/geometry were exact. Same-source repeatability produced both raster outcomes independently on both sources. Keep the original helper, failing PNGs and log; the revised state proof reports all actual pixel differences.",
+    "scope": "Earlier private inputs/helpers/reports and prior public fixtures remain unchanged."
+  },
+  "standard": {
+    "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+    "decision": "Retained toggle semantics use stable names and pressed states. Current face/state and next-action instructions are accessible descriptions; all primary visible labels remain contained in the name."
+  },
+  "remaining": [
+    "Review and repair the 34 captured shared-Dock name changes, including later-state and native controls.",
+    "Other incomplete photographic/data/contrast findings, native ink preference and broader accessibility review.",
+    "Final motion, CPU4, cold-route and mobile Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Direct main commit/push; Actions remain disabled and account zero-dollar stop budget unchanged.",
+    "fullGoalComplete": false
+  }
+}
