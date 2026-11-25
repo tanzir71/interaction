@@ -23,6 +23,11 @@
     "desktop": 6,
     "touch": 1
   },
+  "controlLayout": {
+    "fullMax": 3,
+    "thumbnailMax": 2,
+    "overflow": "A thumbnail with three visible actions keeps the first and a More disclosure. Original action buttons, state and names remain intact. Respect component-owned hidden actions; full views keep their direct controls."
+  },
   "controlNaming": {
     "field": "controls[].ariaLabel",
     "description": "Optional fixed toggle identity containing all visible caption aliases. Preserved in portable exports."

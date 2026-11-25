@@ -28,6 +28,18 @@ and `cleanup`. A returned cleanup function is also supported. `ctx` includes mod
 theme, reduced-motion preference, scale and stage size. Custom changes can be
 announced with `ctx.emit(name, detail)`.
 
+Declare at most three actions. Full compositions keep their direct controls;
+v4 thumbnails show at most two Dock pills. When three actions are visible, the
+shell keeps the first action and a **More** disclosure containing the other
+original buttons. Component-owned hidden actions remain hidden. Visibility
+changes update this grouping, and disposal closes it and releases its observer.
+Do not add a More action or an overflow panel to the component itself.
+
+More uses the existing 28px Kit pill with a 44px physical hit area; its action
+rows have 44px targets. Enter or Space toggles the disclosure, Arrow keys and
+Home/End navigate its enabled actions, Escape closes it, and Tab leaves normally.
+These shell interactions do not advance the component's source clock.
+
 A control may declare a fixed accessible name independently of its changing
 visible caption:
 

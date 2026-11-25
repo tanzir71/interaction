@@ -2,6 +2,22 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [thumbnail Dock review](accessibility/dock-overflow-2026-11-25.json)
+resolves the shared two-pill v4 requirement without changing any of the 520
+complete component definitions. Full controls retain their original direct
+buttons and component-owned visibility. Actual native/full input, exact settled
+artwork, default-GPU keyboard/touch, portable disclosure and fixed AX identities
+pass. Preserve the canceled-Space reopen and parent-key leakage counterexamples
+with their fixes and the independent baseline sound-delegation witness.
+
+Error Shake still has six CSS transitions running during a held initial source
+state. Its first-frame issue remains open; settled Dock PNG comparisons do not
+close it. The all-catalog cold-route audit was interrupted after 66 complete
+components/528 cases plus one partial attempt. Its first-process cold misses
+and traces remain frozen in V29. Re-run final startup acceptance after the
+initialization correction on stable production source. No full-catalog cold
+startup or CPU4 performance pass is claimed here.
+
 The [Threads Canvas investigation](performance/threads-canvas-2026-11-25.json)
 leaves the existing renderer intact. The optional immutable bitmap cache passes
 literal pixel and resource checks but does not establish a performance benefit:

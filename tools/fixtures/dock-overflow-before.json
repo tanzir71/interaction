@@ -1,0 +1,15 @@
+{
+  "baseline": "f8115f781da323041381c30b6a3f70a7722e0a68",
+  "scope": "Original shared naming function. Compare current component art on one held Stage before and after the shared enhancement; component implementations remain dynamic.",
+  "namingFunction": "function(stage,controls){\n    const R=window.INTRX,dock=stage.querySelector(':scope > .stage-dock');\n    if(!dock)return;\n    const names=new Map((controls||[]).filter(c=>typeof c.ariaLabel==='string'&&c.ariaLabel.trim()).map(c=>[c.action,c.ariaLabel]));\n    for(const button of dock.querySelectorAll('button[data-action]')){\n      const name=names.get(button.dataset.action);if(!name)continue;\n      let label=[...dock.querySelectorAll('[data-control-name]')].find(n=>n.dataset.controlName===button.dataset.action);\n      if(!label){\n        label=document.createElement('span');label.hidden=true;label.style.display='none';label.dataset.controlName=button.dataset.action;\n        do{label.id='intrx-dock-name-'+(R.dockNameSerial=(R.dockNameSerial||0)+1);}while(document.getElementById(label.id));\n        dock.appendChild(label);\n      }\n      label.textContent=name;button.setAttribute('aria-labelledby',label.id);\n    }\n  }",
+  "figma": {
+    "file": "OpP74UYjFHRU5q9OBPhoSY",
+    "dock": "10:30",
+    "button": "8:45",
+    "height": 28,
+    "fontSize": 12,
+    "gap": 6,
+    "thumbnailMainControls": 2,
+    "fullControls": 3
+  }
+}

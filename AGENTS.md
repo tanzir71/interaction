@@ -22,6 +22,14 @@ Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. 
   "Stop usage when budget limit is reached" enabled; preserve this limit.
 - No bundler, no framework, no runtime dependencies in the site. Only `packages/intrx` may have npm dependencies.
 - Demos never draw their own outer panel or replay/reset buttons; expose actions and list them in `controls`.
+- Keep at most three declared actions. Full views retain their direct controls;
+  v4 thumbnails show at most two visible Dock pills. The shared registry helper
+  groups three visible actions into the first plus More, preserving original
+  button objects, names, state and component-owned hidden actions. Its observer
+  belongs to the Stage runtime and must disconnect on disposal. Keep the frozen
+  base Stage unchanged. Verify with `tools/verify-dock-overflow.js` and
+  `tools/verify-dock-overflow-input.js`; native fixed-name checks open More
+  through the real UI before inspecting its actions.
 - Rendered thumbnail text ≥ 11px; neutral greys + one accent per demo (no decorative hues); reduced-motion branch required.
 - Build what the v4 tile in Figma shows; the tile wins over older art and older demos.
 - Full compositions also use approved v2 photography. Migrate the retired

@@ -276,3 +276,18 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
 @supports (width:calc-size(max-content,round(up,size,1px))) {
   .dock-btn { width:calc-size(max-content,round(up,size,1px)); }
 }
+/* A v4 thumbnail keeps two Kit pills while retaining every original action. */
+.stage-dock .dock-more { position:relative; }
+.stage-dock .dock-more[hidden] { display:none; }
+.stage-dock .dock-more::after { content:"";position:absolute;inset:-8px 0; }
+.stage-dock .dock-overflow {
+  position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;gap:4px;padding:6px;width:max-content;min-width:160px;
+  border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-md);
+  background:var(--p-gray-700);color:var(--p-gray-25);box-shadow:var(--elev-popover);
+}
+.stage-dock .dock-overflow[hidden] { display:none; }
+.stage-dock .dock-overflow .dock-btn {
+  width:100%;min-height:44px;height:auto;justify-content:flex-start;padding:6px 12px;
+  white-space:normal;overflow-wrap:anywhere;text-align:left;line-height:16px;
+}

@@ -1,0 +1,211 @@
+{
+  "date": "2026-11-25",
+  "baseline": "f8115f781da323041381c30b6a3f70a7722e0a68",
+  "scope": "Shared v4 thumbnail Dock disclosure. Full component controls and original models remain intact. This review does not close final startup, CPU4 motion or broader manual accessibility acceptance.",
+  "design": {
+    "handoff": "CODEX_HANDOFF_3.md section 3.9: at most two visible thumbnail pills",
+    "stageKit": "Up to three declared/direct actions in full views",
+    "figma": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction?node-id=10-30",
+    "buttonNode": "8:45",
+    "pill": {
+      "height": 28,
+      "gap": 6,
+      "fontSize": 12,
+      "lineHeight": 16,
+      "horizontalPadding": 12
+    },
+    "assets": "Existing Kit geometry and tokens; no new artwork"
+  },
+  "change": {
+    "thumbnail": "When three actions are actually visible, retain the first and a More disclosure containing the other two original buttons.",
+    "full": "Preserve original direct buttons and component-owned hidden actions.",
+    "ownership": "One delegated document UI owner; per-Stage visibility observer disconnects on runtime disposal. No global Stage reference.",
+    "keyboard": "Enter/Space toggle, Arrow keys/Home/End navigate, Escape closes, Tab exits normally. Canceled Space cannot reopen. UI-owned keys retain their releases without stealing keys begun in the component.",
+    "targets": "28px visual More pill with a physical 44px hit area; overflow rows at least 44px.",
+    "portable": "The generator includes the same helper; normal portable full exports keep direct actions."
+  },
+  "preservation": {
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 520,
+    "htmlCssJsPromptsModelsAndMetadataUnchanged": true,
+    "frozenInputsUnchanged": [
+      "css/style.css",
+      "css/fonts.css",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js",
+      "js/meta.stage.js"
+    ],
+    "foundationOriginalPrefixExact": true,
+    "newAssets": 0,
+    "newRuntimeDependencies": 0
+  },
+  "verification": {
+    "actualComponents": {
+      "declaringThreeActions": 93,
+      "stories": 186,
+      "groupedNative": 91,
+      "alreadyAtMostTwoVisible": [
+        {
+          "id": "cassette-reels",
+          "initialVisible": 1
+        },
+        {
+          "id": "zippo-flame",
+          "initialVisible": 1
+        }
+      ],
+      "fullDirectPreserved": 93,
+      "exactSettledNativePngPairs": 93,
+      "preparation": "Runtime held, fonts/images ready, existing finite CSS transitions observed until finished or paused. Dock hidden on both image sides. Exact PNG bytes, root DOM, geometry, original button objects/names/state and source time are compared.",
+      "browser": "158.0.8127.88",
+      "gpu": "Disabled only for deterministic artwork roundtrips; no timing claim."
+    },
+    "input": {
+      "stories": 20,
+      "keyboard": 2,
+      "touch": 6,
+      "freshBlockedNetworkExports": 12,
+      "browser": "158.0.8127.88",
+      "gpu": "Default",
+      "nativeExportMethod": "For test-only native contexts, replace the single exact full bootstrap with thumb; component source remains unchanged."
+    },
+    "fixedNames": {
+      "stories": 264,
+      "components": 33,
+      "offlineSubset": 66,
+      "oracle": "Actual Chromium accessibility tree and complete visible-caption aliases; original hidden-action behavior preserved."
+    },
+    "unitTests": 19,
+    "packageTests": 9,
+    "strictRegistryStageMotionAndGenerated": true,
+    "shellChecks": [
+      {
+        "finished": "2026-11-25T19:42:51.6488787+06:00",
+        "name": "unit",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:42:53.0976687+06:00",
+        "name": "registry",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:42:53.6391901+06:00",
+        "name": "stage",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:43:02.6021172+06:00",
+        "name": "generated",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:43:03.1743145+06:00",
+        "name": "motion",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:43:08.0061531+06:00",
+        "name": "stage-runtime",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:48:14.3490138+06:00",
+        "name": "library",
+        "exitCode": 0
+      },
+      {
+        "finished": "2026-11-25T19:51:37.9264625+06:00",
+        "name": "fit",
+        "exitCode": 0
+      }
+    ],
+    "library": {
+      "checks": 666,
+      "previews": 520,
+      "offlineExports": 100
+    },
+    "fit": {
+      "components": 520,
+      "failed": 0,
+      "overflow": 0,
+      "horizontalScroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "validatedExceptions": 163
+    },
+    "sourceStable": true,
+    "reports": [
+      {
+        "file": ".artifacts/final-dock-overflow-v30/accepted-actual/2026-11-25T13-42-52-330Z/report.json",
+        "sha256": "de6525530939a4b00adeb96b8d9ea9c79644bc999491d22391a5074442e1f0da"
+      },
+      {
+        "file": ".artifacts/final-dock-overflow-v30/accepted-input/2026-11-25T13-44-12-514Z/report.json",
+        "sha256": "80c30660165e5f5c4a3719b2a4b98e4c2f945a24ac016b7443286210d5013ca7"
+      },
+      {
+        "file": ".artifacts/final-dock-overflow-v30/accepted-names/2026-11-25T13-44-31-577Z/report.json",
+        "sha256": "96e15b61304c2ef48c84e48d3192d2f8b182a0b80b4cf8349d269a3ea479d17f"
+      }
+    ]
+  },
+  "retainedFindings": [
+    {
+      "finding": "More Space then Escape then release reopened the disclosure.",
+      "status": "Fixed and covered in normal/reduced keyboard tests.",
+      "evidence": "probe.log; probe-cancel-fix.log. The probe image/result were overwritten by the second run; the first log remains."
+    },
+    {
+      "finding": "Menu keydowns leaked to a parent Stage handler (14 observed).",
+      "status": "Fixed with capture-phase UI ownership and release tracking; tests also preserve a key begun outside the UI.",
+      "evidence": "key-isolation-before.log; before-key-capture.js; accepted-input report."
+    },
+    {
+      "finding": "Source sound models can handle trusted clicks in Stage capture before the button listener.",
+      "status": "The baseline independently demonstrates document=1, Stage=1 and target callbacks=0. Verification observes actual original delegated paths rather than forcing target delivery.",
+      "evidence": "baseline-delegation witness retained in the private phase."
+    },
+    {
+      "finding": "Error Shake initialization runs six CSS transitions while the source clock is held.",
+      "status": "OPEN: pre-existing initialization/hold issue. Dock artwork comparisons explicitly cover settled held states and do not claim first-frame equivalence.",
+      "evidence": "shake-probe states; initial comparison differed at 197 pixels, maximum channel delta 94, bounds [86,76,286,120]. Later settled A/A and old/new pairs are exact."
+    },
+    {
+      "finding": "Initial verifier assumptions failed for missing base URL, hidden Cassette controls and hidden full Zippo Press.",
+      "status": "Harness corrected; all failures retained. Declaring three actions does not establish three visible actions."
+    }
+  ],
+  "interruptedColdRoutes": {
+    "baseline": "f8115f781da323041381c30b6a3f70a7722e0a68",
+    "completedComponents": 66,
+    "completedCases": 528,
+    "rawAttempts": 67,
+    "status": "Interrupted before completion to fix the thumbnail Dock requirement; V29 evidence frozen and read/copy only.",
+    "method": "Fresh browser process per component; eight fresh contexts covering desktop/mobile, dark/light, cold/warm. Process-first cold outliers and partial attempt retained.",
+    "acceptance": "No all-catalog startup pass. Prior misses remain evidence; restart final measurements on the corrected stable source."
+  },
+  "remaining": [
+    "Error Shake first-frame CSS initialization and holds",
+    "All-520 cold detail startup acceptance",
+    "CPU4 frame timing, including Threads Canvas and Rolling Balance",
+    "Final motion, theme, Lighthouse and manual accessibility acceptance"
+  ],
+  "sourceInputs": {
+    "index.html": "35b70d1ab7ad6799645ab2f5caeed13ac855fc166b1be249919669fb98537ef3",
+    "js/shell/registry.js": "29df1a20544607d8713c0fc228899aef301b8c80853f38808334f1ef2bbf67c3",
+    "css/foundations.css": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+    "tools/build-registry.js": "031305a7d331c7a57443c0e4e1e75d0f51fb8136f80854f951a47bd3f0562dd3",
+    "tools/verify-dock-overflow.js": "4545b45c951214489cd9a9ad28212c72dc54689287941374f086b48b2ad6fed7",
+    "tools/verify-dock-overflow-input.js": "29d9e8f0558f520bf1282d4ef808e46bb495ea98b7d77590dd766eb968ba50bf",
+    "tools/verify-dock-control-names.js": "cdfc6cc34cec22232e193f787c08175d513cd87fb6e2c77d554f543fb09445fc",
+    "tools/fixtures/dock-overflow-before.json": "7c88682057a17b5136160487eb67b5902da24cde3ffb0b0d646cd04a9f337d16",
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+    "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595"
+  }
+}

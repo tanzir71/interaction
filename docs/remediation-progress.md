@@ -20,6 +20,27 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Thumbnail Dock controls
+
+The [Dock control review](accessibility/dock-overflow-2026-11-25.json) applies
+the v4 two-pill thumbnail limit while retaining full-view controls. Of 93
+components declaring three actions, 91 initially need More; the others
+already hide full-only actions. The helper moves the original buttons and their
+fixed names, preserves visibility/state, releases its observer on disposal and
+keeps menu key ownership separate from component input. All 520 complete demo
+definitions, artwork, prompts and metadata remain exact.
+
+The final runs pass 186 actual native/full stories, 93 exact settled native PNG
+pairs, 20 keyboard/touch/offline stories and 264 fixed-name stories (including
+66 offline cases). The library boots 520 previews and 100 offline exports; fit
+findings remain zero with all 163 documented exceptions. Error Shake has a
+separate pre-existing CSS initialization/hold issue; it remains open. These
+roundtrips explicitly cover settled artwork, not its first frame.
+
+A cold-route run was stopped for this correction after 66 components and 528
+cases. Its outliers and partial 67th attempt are retained in frozen V29 evidence.
+Final all-component startup, CPU4 timing and broader manual audits remain open.
+
 ## Threads Canvas investigation
 
 The [Threads Canvas review](performance/threads-canvas-2026-11-25.json) retains
