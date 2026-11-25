@@ -20,6 +20,30 @@ documented Figma fill exceptions validate. Stage and motion baselines are now
 empty; their strict static checks pass. Final recipe, accessibility, theme and
 performance acceptance remains open.
 
+## Elastic Tabs initial theme
+
+The [current catalog review](accessibility/catalog-review-2026-11-25.json)
+records a real initial-paint contrast defect in Elastic Tabs: light Stages began
+with dark-theme label colors, then faded to their intended ink. Stage-scoped
+palette rules now apply before fitting or controller execution. Native reset
+also paints the initial Drafts selection immediately; deliberate tab changes
+retain their existing color feedback. All 520 controllers and HTML compositions,
+the original spring and every other complete demo definition remain unchanged.
+
+Sixteen initially held full/native stories cover both themes, two widths and
+normal/reduced motion, including synchronous pre-frame colors and exact original
+geometry. Four fresh offline exports pass. Eight GPU-disabled dark CSS
+roundtrips require exact PNG bytes. Default-GPU comparisons remain diagnostic:
+earlier mismatches and the separate repeatability experiment are retained;
+neither establishes a general GPU raster bound or performance acceptance.
+
+The bulk accessibility scanner now loads the current registry/Dock bootstrap
+and verifies the available fixed-name bindings. Its fresh 1,040-case scan has
+no Elastic Tabs contrast finding. It retains 47 raw flags and 616 incomplete
+results, including one additional Thinking Drawer label warning for review.
+This is not a blanket accessibility pass. Final timing, motion and manual
+acceptance remain open.
+
 ## Rolling Balance fitted styles and currency text
 
 The [current Framer report](performance/framer-current-2026-11-25.json) records

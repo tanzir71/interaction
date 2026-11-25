@@ -107,10 +107,15 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
   check(await textContrast('.d-success-demo-confirm','.d-success-demo-button')>=4.5,'Light-stage confirmation text retains accessible contrast');
 
   await open('btn-shimmer-sweep');check(await root('.d-shimmer-demo').getAttribute('data-running')==='true','Shimmer starts its ambient pass');
-  await page.locator('.detail-stage [data-action="toggle"]').click();await page.waitForTimeout(40);
-  const sheen=await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition);
+  await page.locator('.detail-stage [data-action="toggle"]').click();
+  // A paused playState may still have a pending browser pause task. Observe
+  // its committed hold time before checking that speed changes preserve it.
+  await page.waitForFunction(()=>{const root=document.querySelector('.detail-stage .d-shimmer-demo'),animations=root.querySelector('.d-shimmer-demo-sheen').getAnimations();return root.dataset.running==='false'&&animations.length===1&&animations.every(a=>a.playState==='paused'&&!a.pending);});
+  const pausedSheen=await root('.d-shimmer-demo-sheen').evaluate(el=>({background:getComputedStyle(el).backgroundPosition,animations:el.getAnimations().map(a=>({currentTime:a.currentTime,playState:a.playState,pending:a.pending}))})),sheen=pausedSheen.background;
   await page.locator('.detail-stage').evaluate(stage=>{stage._runtime.setSpeed(2);stage._runtime.suspend();stage._runtime.resume();});await page.waitForTimeout(100);
-  check(await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition)===sheen,'Shimmer author pause survives speed and suspension');
+  const retimedSheen=await root('.d-shimmer-demo-sheen').evaluate(el=>({background:getComputedStyle(el).backgroundPosition,animations:el.getAnimations().map(a=>({currentTime:a.currentTime,playState:a.playState,pending:a.pending}))}));
+  fs.writeFileSync('.artifacts/exemplars/shimmer-pause.json',JSON.stringify({browser:browser.version(),before:pausedSheen,after:retimedSheen},null,2)+'\n');
+  check(JSON.stringify(retimedSheen)===JSON.stringify(pausedSheen),'Shimmer author pause survives speed and suspension with exact background and committed hold time');
   await page.locator('.detail-stage [data-action="toggle"]').click();await page.waitForTimeout(100);
   check(await root('.d-shimmer-demo-sheen').evaluate(el=>getComputedStyle(el).backgroundPosition)!==sheen,'Shimmer resumes from the paused pass');
   await root('.d-shimmer-demo-button').press('Space');check(await root('.d-shimmer-demo').getAttribute('data-activations')==='1','Shimmer native Space activates once');

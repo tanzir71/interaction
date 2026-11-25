@@ -1,0 +1,56 @@
+{
+  "baseline": "b740f9e778b69461c0b04f8eab46583f54814002",
+  "definition": {
+    "id": "elastic-tabs",
+    "title": "Elastic Tabs",
+    "cat": "Layout & UI",
+    "rootClass": "d-etabs-demo",
+    "tags": [
+      "tabs",
+      "spring",
+      "segmented",
+      "keyboard"
+    ],
+    "libs": [],
+    "desc": "A measured indicator stretches between Inbox, Drafts, Sent and Archive, then settles. Arrow keys, Home and End move selection; rapid input retargets the indicator from its current position.",
+    "seen": "Pattern family: inbox tabs, segmented navigation and compact settings controls",
+    "hint": "Press · The indicator stretches between tabs, then settles",
+    "html": "<div class=\"d-etabs-demo\"><div class=\"d-etabs-demo-tabs\" role=\"tablist\" aria-label=\"Mailbox\"><i class=\"d-etabs-demo-indicator\" aria-hidden=\"true\"></i><button type=\"button\" role=\"tab\" aria-selected=\"true\">Inbox</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Drafts</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Sent</button><button type=\"button\" role=\"tab\" aria-selected=\"false\">Archive</button></div><div class=\"d-etabs-demo-status\" role=\"status\"></div></div>",
+    "css": ".d-etabs-demo{display:grid;place-items:center;position:relative;color:#f1f1f1;font-family:Inter,system-ui,sans-serif}\n.d-etabs-demo-tabs{position:relative;display:grid;grid-template-columns:62px 68px 53px 69px;width:260px;height:40px;padding:3px;border:1px solid #ffffff0f;border-radius:12px;background:#171717;transform:translateY(2px);isolation:isolate}\n.d-etabs-demo-tabs>button{position:relative;z-index:1;min-width:0;padding:0;border:0;border-radius:9px;background:transparent;color:#949494;font:500 13px/18px Inter,system-ui,sans-serif;cursor:pointer;transition:color var(--dur-fast) var(--ease-out)}\n.d-etabs-demo-tabs>button[aria-selected=\"true\"]{color:#f1f1f1}\n.d-etabs-demo-tabs>button:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}\n.d-etabs-demo-indicator{position:absolute;left:3px;top:3px;height:32px;width:var(--width,62px);border-radius:9px;background:#272727;box-shadow:0 8px 20px #0003,0 1px 2px #0002,inset 0 1px #ffffff0f;transform:translateX(calc(var(--x,0)*1px)) scaleX(var(--sx,1)) scaleY(var(--sy,1));transform-origin:center}\n.d-etabs-demo-status{position:absolute;left:50%;top:50%;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;font-size:13px}\n.d-etabs-demo[data-theme=\"light\"] .d-etabs-demo-tabs{background:#eaeaea;border-color:#00000010}.d-etabs-demo[data-theme=\"light\"] .d-etabs-demo-indicator{background:#fff;box-shadow:0 2px 8px #0002}.d-etabs-demo[data-theme=\"light\"] button{color:#666}.d-etabs-demo[data-theme=\"light\"] button[aria-selected=\"true\"]{color:#151515}\n@media(prefers-reduced-motion:reduce){.d-etabs-demo-tabs>button{transition-duration:var(--dur-quick)}}",
+    "js": "const rail=root.querySelector('.d-etabs-demo-tabs'),indicator=root.querySelector('.d-etabs-demo-indicator'),tabs=[...rail.querySelectorAll('button')],status=root.querySelector('.d-etabs-demo-status');\nlet active=ctx.mode==='thumb'?1:0,x=0,target=0,v=0,running=false,frames=0,moves=0,settles=0,raf=0,auto=0,width=62,targetWidth=62,poster=ctx.mode==='thumb',last=0,accumulator=0;\nfunction geometry(index){return tabs[index].offsetLeft-3;}\nfunction paint(source){const stretch=ctx.reducedMotion?0:Math.min(.42,Math.abs(v)*.018);indicator.style.setProperty('--x',x.toFixed(2));indicator.style.setProperty('--width',width+'px');indicator.style.setProperty('--sx',(1+stretch).toFixed(3));indicator.style.setProperty('--sy',(1-stretch*.46).toFixed(3));Object.assign(root.dataset,{active:String(active),x:x.toFixed(2),target:target.toFixed(2),velocity:v.toFixed(3),stretch:stretch.toFixed(3),running:String(running),frames:String(frames),moves:String(moves),settles:String(settles),source});}\nfunction loop(now){if(!running)return;const step=1000/60;accumulator+=last?Math.min(64,now-last):step;last=now;while(accumulator>=step&&running){accumulator-=step;v=(v+(target-x)*.14)*.72;x+=v;width+=(targetWidth-width)*.18;frames++;if(Math.abs(target-x)<.08&&Math.abs(v)<.04&&Math.abs(targetWidth-width)<.08){x=target;width=targetWidth;v=0;running=false;settles++;}}paint(running?'frame':'settle');if(running)raf=requestAnimationFrame(loop);}\nfunction select(index,source,focus=false){active=(index+tabs.length)%tabs.length;target=geometry(active);targetWidth=tabs[active].offsetWidth;poster=false;moves++;tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===active));tab.tabIndex=i===active?0:-1;});cancelAnimationFrame(raf);last=0;if(ctx.reducedMotion){x=target;width=targetWidth;v=0;running=false;settles++;}else{running=true;raf=requestAnimationFrame(loop);}paint(source);if(focus)tabs[active].focus();status.textContent=tabs[active].textContent+' selected';ctx.emit('change',{index:active,title:tabs[active].textContent});}\nfunction stopAuto(){clearInterval(auto);auto=0;}\ntabs.forEach((tab,i)=>{tab.addEventListener('click',()=>{stopAuto();select(i,'click');});tab.addEventListener('keydown',event=>{const key=event.key;if(!['ArrowRight','ArrowLeft','Home','End'].includes(key))return;event.preventDefault();stopAuto();select(key==='Home'?0:key==='End'?3:active+(key==='ArrowRight'?1:-1),'keyboard',true);});});\nfunction reset(){stopAuto();cancelAnimationFrame(raf);active=ctx.mode==='thumb'?1:0;poster=ctx.mode==='thumb';x=target=geometry(active);width=targetWidth=poster?112:tabs[active].offsetWidth;v=0;running=false;frames=moves=settles=0;last=accumulator=0;tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===active));tab.tabIndex=i===active?0:-1;});paint('reset');status.textContent=tabs[active].textContent+' selected';}\nconst observer=new ResizeObserver(()=>{x=target=geometry(active);width=targetWidth=poster?112:tabs[active].offsetWidth;paint('resize');});observer.observe(rail);root.dataset.theme=ctx.theme;reset();\nctx.onAction('next',()=>{stopAuto();select(active+1,'dock');});ctx.onAction('replay',reset);\nif(ctx.mode==='thumb'&&!ctx.reducedMotion)auto=setInterval(()=>select(active+1,'ambient'),2600);\nreturn ()=>{stopAuto();cancelAnimationFrame(raf);observer.disconnect();};",
+    "prompt": "Build a single original 260 by 40px mailbox tab rail matching the v4 INTRX tile. Its four native accessible tabs are Inbox, Drafts, Sent and Archive. Use 13px medium Inter, a #171717 rail, 12px corners and a 1px 6% white border. The selected indicator is #272727 with 9px corners, a thin inset top highlight and restrained layered shadows. It moves through the actual unscaled offsetLeft geometry. Keep the original interruptible spring equations v=(v+(target-x)*.14)*.72 and x+=v; settle below .08 position error and .04 velocity. Accumulate virtual requestAnimationFrame time in 60Hz steps so runtime speed changes preserve the same spring trajectory. Map absolute velocity to at most .42 horizontal stretch and paired vertical squash, preserving velocity when retargeted. Render no surrounding panel, heading, body copy, telemetry labels or in-demo reset controls. Expose next and replay actions through ctx. Full mode starts at Inbox; a thumbnail starts on Drafts and cycles gently until directly interacted with. Reduced motion freezes the Drafts thumbnail and directly selects requested tabs without autoplay. Support ArrowLeft/Right, Home/End, roving tab focus, live selection announcements, a light stage variant, runtime suspension, observer cleanup and complete portable export. Center the rail on a transparent 260 by 100 design plane.",
+    "designSize": [
+      260,
+      100
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "label": "Next tab",
+        "action": "next"
+      },
+      {
+        "label": "Replay",
+        "action": "replay"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true,
+      "aria": "tablist"
+    },
+    "useCases": [
+      "tabs",
+      "spring",
+      "indicator"
+    ],
+    "tier": "free",
+    "thumb": "hero",
+    "addedAt": "2026-11",
+    "caption": "Watch the active pill stretch"
+  }
+}

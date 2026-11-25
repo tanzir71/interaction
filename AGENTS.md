@@ -1985,3 +1985,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   `tools/audit-dock-toggle-names.js --require-stable` rejects drift in its initial
   visible Dock sample. Keep the first Snake alias failures and the fixture's
   asset-resolver/footer-selector mistakes; earlier evidence remains frozen.
+
+- `tools/audit-component-accessibility.js` loads the current registry before
+  Stage creation and installs the local asset resolver afterwards. Register each
+  case so shared Dock `ariaLabel` bindings are exercised; retain every raw flag
+  and incomplete result. `tools/verify-elastic-theme.js` checks synchronous
+  initial ink before fonts/source frames, caller-held native/full geometry,
+  deliberate tab input and four fresh offline exports. Elastic's light palette
+  applies from Stage metadata before fitting; native reset paints Drafts at its
+  final ink. Keep the original controller, HTML, metadata and spring unchanged.
+  Eight GPU-disabled dark CSS roundtrips require exact PNG bytes. Default-GPU
+  comparisons are diagnostic, with all failed captures retained; do not infer
+  a universal raster bound or CPU4 acceptance. The current bulk review retains
+  47 raw flags and 616 incomplete results, including a separate Thinking Drawer
+  label follow-up. Earlier private evidence and helpers remain frozen.
+  The exemplar Shimmer pause assertion waits for `paused` with no pending
+  browser task, then requires identical background, hold time and pause state
+  across speed/suspension changes. Preserve the earlier Chrome 158 fixed-time
+  pause/speed failures and mixed-source baseline diagnostic. The revised
+  precondition and a passing Chromium 140 suite do not establish those failures'
+  cause or complete broader browser/timing acceptance.

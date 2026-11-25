@@ -2,6 +2,35 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [current catalog review](accessibility/catalog-review-2026-11-25.json)
+updates the bulk scanner to the current registry/Dock naming bootstrap and
+checks 68 available fixed-name bindings. The new 1,040-case scan retains 45
+label/name flags, two incidental Cipher contrast flags and 616 incomplete
+results. Forty-four label/name flags belong to the existing primary-label
+review; the additional light Thinking Drawer warning remains a separate
+follow-up. Keep all raw findings rather than treating a count as acceptance.
+
+That scan exposed a real Elastic Tabs initial-palette defect. Light labels
+started at their dark-theme colors while a CSS transition ran, even during a
+caller hold. Stage-scoped palette rules now apply before measurement. The
+native Drafts reset paints its correct initial selection immediately. The
+original controller, spring, HTML, metadata and deliberate input feedback remain
+unchanged. Sixteen first-frame/input/geometry stories and four fresh offline
+exports pass. Eight GPU-disabled dark CSS roundtrips match exact PNG bytes;
+default-GPU captures remain diagnostic. Preserve the failed cross-context and
+same-instance GPU captures and the separate same-source experiment, which did
+not establish the cause of the mismatches. The 604 contrast incomplete cases
+and twelve symbolic-label incomplete cases remain available for manual review;
+their raw counts are not newly confirmed defects or a universal pass.
+
+Keep the two Chrome 158 exemplar pause failures and the later transition-speed
+assertion failure. A baseline-module diagnostic preserved Shimmer's exact paused
+time, but later reached an expected old-preview/current-export mismatch; it is
+not a complete baseline-suite pass. The exemplar pause check now waits for the
+browser's pause task to finish and compares the exact background and hold time.
+This does not establish the cause of the earlier failures or close broader
+browser/timing acceptance. Shimmer and runtime source remain unchanged.
+
 The [shared Dock naming pass](accessibility/dock-control-names-2026-11-25.json)
 resolves the 34 captured name changes across 33 components. Optional
 `controls[].ariaLabel` supplies a fixed identity containing each visible alias;

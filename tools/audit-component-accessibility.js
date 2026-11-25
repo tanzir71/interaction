@@ -29,13 +29,14 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
     page.on('pageerror',error=>errors.push(error.message));
     try{
       await page.goto(base+'/tools/fixtures/showcase-fields/rig.html');
-      await page.evaluate(({theme,assets,base})=>{
+      await page.evaluate(({theme,base})=>{
         const origin=document.createElement('base');origin.href=base+'/';document.head.prepend(origin);
-        window.INTRX={resolveAssets:value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!assets[name])throw Error('Unknown demo asset '+name);return base+'/'+assets[name];})};
         document.documentElement.dataset.theme=theme;
-      },{theme,assets,base});
+      },{theme,base});
       for(const file of['css/foundations.css','css/fonts.css'])await page.addStyleTag({url:base+'/'+file});
-      for(const file of['js/demo-runtime.js','js/shell/stage.js'])await page.addScriptTag({url:base+'/'+file});
+      for(const file of['js/shell/registry.js','js/demo-runtime.js','js/shell/stage.js'])await page.addScriptTag({url:base+'/'+file});
+      // Registry initialization installs the default resolver; map local assets afterwards.
+      await page.evaluate(({assets,base})=>{INTRX.resolveAssets=value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!assets[name])throw Error('Unknown demo asset '+name);return base+'/'+assets[name];});},{assets,base});
       await page.addScriptTag({path:axeSource});report.axe.version=await page.evaluate(()=>axe.version);
       for(const id of ids)for(const mode of modes){
         if(report.cases.length%20===0)guard();const errorStart=errors.length,definition=registry.demos.find(d=>d.id===id),entry=catalog.find(d=>d.id===id),demo={...definition,fullAssetRefs:entry.fullAssetRefs,photoCredits:entry.photoCredits},started=Date.now();let result,error;
@@ -46,14 +47,21 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
             const stage=document.createElement('div');stage.className='demo-stage stage';
             Object.assign(stage.style,{position:'relative',width:(mode==='thumb'?Math.min(372,width):Math.min(width,1000))+'px',height:(mode==='thumb'?264:width<600?600:720)+'px'});document.body.append(stage);
             // The detail toolbar permits either stage palette, including demos whose default is light.
-            const data={...demo,stage:{...demo.stage,theme}};INTRX.mountStage(data,stage,mode);
+            const data={...demo,stage:{...demo.stage,theme}};INTRX.demos.length=0;INTRX.register(data);INTRX.mountStage(data,stage,mode);
             await document.fonts.ready;await Promise.all([...stage.querySelectorAll('img')].map(image=>image.decode()));
             if(stage.dataset.bootError)throw Error('Component failed to boot');
             if(stage.innerHTML.includes('{{asset:'))throw Error('Unresolved demo asset');
             await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+            const dockNameBindings=(data.controls||[]).filter(control=>control.ariaLabel).map(control=>{
+              const button=[...stage.querySelectorAll('.stage-dock button[data-action]')].find(node=>node.dataset.action===control.action);
+              if(!button)return{action:control.action,available:false};
+              const reference=button.getAttribute('aria-labelledby'),label=reference&&document.getElementById(reference);
+              if(label?.textContent!==control.ariaLabel)throw Error('Current Dock naming bootstrap missing: '+data.id+'/'+control.action);
+              return{action:control.action,available:true,reference,name:label.textContent};
+            });
             const scan=await axe.run(stage,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21a','wcag21aa','best-practice']}});
             const trim=rule=>({id:rule.id,impact:rule.impact,help:rule.help,helpUrl:rule.helpUrl,nodes:rule.nodes.map(node=>({target:node.target,html:node.html,summary:node.failureSummary||node.summary,checks:[...node.any,...node.all,...node.none].map(check=>({id:check.id,message:check.message,data:check.data}))}))});
-            return{violations:scan.violations.map(trim),incomplete:scan.incomplete.map(trim),passes:scan.passes.map(rule=>rule.id),inapplicable:scan.inapplicable.map(rule=>rule.id),root:stage._root.className};
+            return{violations:scan.violations.map(trim),incomplete:scan.incomplete.map(trim),passes:scan.passes.map(rule=>rule.id),inapplicable:scan.inapplicable.map(rule=>rule.id),dockNameBindings,root:stage._root.className};
           },{demo,mode,width,theme});
         }catch(caught){error=caught.stack||String(caught);}
         const row={id,mode,theme,motion,width,ms:Date.now()-started,...result,errors:errors.slice(errorStart),...(error?{error}:{})};
