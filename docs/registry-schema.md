@@ -21,6 +21,12 @@ the separate full composition's geometry.
 Standalone HTML always mounts the full composition, including criteria or
 workflow panels omitted from the hero.
 
+Each `controls` entry declares `action` and its initial visible `label`.
+Optional `ariaLabel` supplies a fixed accessible identity for a toggle whose
+caption changes. Include both visible aliases, such as `Mute or unmute sound`;
+the original `aria-pressed` state still communicates its current state. The
+catalog, complete item and portable HTML retain this field.
+
 Each item has its ID, title, category/group, trigger, tags, use cases, tier, stage
 geometry, accessibility, libraries, portable files, HTML/CSS/JS parts, prompt,
 notes, related IDs, source credits and version. Pro items expose `locked: true`,

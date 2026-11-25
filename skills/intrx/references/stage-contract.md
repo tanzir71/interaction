@@ -18,6 +18,11 @@ return { cleanup: () => releaseResources(), actions: { replay: reset } };
 
 Support thumb/full compositions, light/dark themes and designed reduced-motion
 states. Expose state changes as actions; declare their labels in `controls`.
+For a toggle with changing captions, add a fixed `ariaLabel` containing both
+visible aliases, for example `{ action: 'mute', label: 'Mute', ariaLabel:
+'Mute or unmute sound' }`. Keep its original `aria-pressed` state. The shared
+registry/export extension supplies the stable name without changing the frozen
+base Stage or the component's controller.
 
 Do not draw an outer panel or replay/reset buttons. Do not hard-code widths beyond
 the declared design size, render tiny text, use emoji as artwork, add decorative

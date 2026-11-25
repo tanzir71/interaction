@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "toggle",
-      "label": "Lock sorted"
+      "label": "Lock sorted",
+      "ariaLabel": "Lock sorted or release sorted"
     },
     {
       "action": "restore",

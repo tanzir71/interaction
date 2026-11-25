@@ -37,7 +37,8 @@ INTRX.register({
     },
     {
       "action": "mute",
-      "label": "Mute"
+      "label": "Mute",
+      "ariaLabel": "Mute or unmute sound"
     },
     {
       "action": "reset",

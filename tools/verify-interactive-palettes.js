@@ -5,6 +5,8 @@ const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const registry = require('./load-registry')();
+const dockNames = require('./verification/dock-control-names');
+dockNames.validate(registry);
 const fixture = require('./fixtures/interactive-palettes-before.json');
 const assets = require('../assets/demo-assets.json');
 const catalog = require('../registry/index.json');
@@ -12,7 +14,7 @@ const base = (process.argv.find(v => /^https?:/.test(v)) || 'http://127.0.0.1:41
 const output = path.resolve(process.argv.find(v => v.startsWith('--output='))?.slice(9) || '.artifacts/interactive-palettes', new Date().toISOString().replace(/[:.]/g, '-'));
 if(require.main===module)fs.mkdirSync(output, {recursive:true});
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const files = [__filename, 'tools/fixtures/interactive-palettes-before.json', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
+const files = [__filename, 'tools/fixtures/interactive-palettes-before.json', 'tools/fixtures/dock-names-before.json', 'tools/verification/dock-control-names.js', 'js/shell/registry.js', 'js/meta.stage.js', 'css/foundations.css', 'css/fonts.css', 'js/demo-runtime.js', 'js/shell/stage.js', 'assets/demo-assets.json', 'registry/index.json', ...fixture.items.flatMap(item => [registry.filesById[item.definition.id], 'r/'+item.definition.id+'.json'])];
 const inputs = Object.fromEntries(files.map(file => [file, hash(fs.readFileSync(file))]));
 const report = {started:new Date().toISOString(), inputs, scope:'Ten full preview repairs, exact original geometry and native CSS roundtrips, complete controller edit contracts, ancestor-opacity-aware contrast and fresh offline exports. Random Cipher strings are decorative incidental glyphs and retain their original low ink. Liquid percentage is tested against its dark physical halo; dynamic values require separate rendered coverage.', capture:'Chrome is launched with --disable-gpu for this CSS pixel comparison. Direct CDP capture follows two global frames while source runtime remains held. One priming readback is retained separately before the native baseline. Native checks apply and remove the exact CSS suffix on one initialized instance, preserving its clock, DOM, computed styles and pixels. Priming and separate-startup images remain recorded. Default GPU readback variance is retained separately and is not certified by this comparison.', browserArgs:['--disable-gpu'], layouts:[], native:[], ink:[], exports:[]};
 const save = () => fs.writeFileSync(path.join(output, 'report.json'), JSON.stringify(report, null, 2)+'\n');
@@ -23,7 +25,7 @@ for(const item of fixture.items){
  assert.equal(hash(expected),item.originalJS,'Original controller hash');
  for(const edit of item.edits){assert.equal(expected.split(edit.needle).length,2);expected=expected.replace(edit.needle,edit.replacement);}
  assert.equal(demo.js,expected,'Complete original controller plus exact full renderer insertions '+demo.id);assert.equal(hash(demo.js),item.jsSHA256);
- for(const[key,value]of Object.entries(item.definition))if(!['css','prompt','js'].includes(key))assert.deepEqual(JSON.parse(JSON.stringify(demo[key])),value,'Unchanged '+demo.id+'.'+key);
+ for(const[key,value]of Object.entries(item.definition))if(!['css','prompt','js'].includes(key))assert.deepEqual(JSON.parse(JSON.stringify(demo[key])),key==='controls'?dockNames.expectedControls(demo.id,value):value,'Unchanged '+demo.id+'.'+key);
  assert(demo.css.startsWith(item.definition.css),'Exact original CSS prefix');assert.notEqual(demo.prompt,item.definition.prompt);
  const suffix=demo.css.slice(item.definition.css.length).replace(/\/\*[\s\S]*?\*\//g,'').trim(),rules=[...suffix.matchAll(/([^{}]+)\{([^{}]*)\}/g)];assert.equal(rules.map(r=>r[0]).join(''),suffix);
  for(const[,selector,declarations]of rules){assert(selector.startsWith('.'+demo.rootClass+':is(.stage[data-mode="full"]'),'Component-first full-only selector');for(const declaration of declarations.split(';').filter(Boolean))assert(['color','background','box-shadow','border-radius','text-shadow','opacity'].includes(declaration.split(':')[0]),'Optical properties only');}
@@ -36,15 +38,16 @@ async function mount(browser, demo, {width, theme, reduced, mode}) {
  await page.evaluate(({base,assets,theme})=>{
   const link=document.createElement('base');link.href=base+'/';document.head.prepend(link);
   document.documentElement.dataset.theme=theme;
-  window.INTRX={resolveAssets:value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!assets[name])throw Error('Unknown asset '+name);return base+'/'+assets[name];})};
+  window.INTRX={demos:[],register(d){this.demos.push(d);}};
  }, {base,assets,theme});
  for(const file of ['css/foundations.css','css/fonts.css']) await page.addStyleTag({url:base+'/'+file});
- for(const file of ['js/demo-runtime.js','js/shell/stage.js']) await page.addScriptTag({url:base+'/'+file});
+ for(const file of ['js/shell/registry.js','js/demo-runtime.js','js/shell/stage.js']) await page.addScriptTag({url:base+'/'+file});
+ await page.evaluate(({base,assets})=>{INTRX.resolveAssets=value=>value.replace(/\{\{asset:([\w-]+)\}\}/g,(_,name)=>{if(!assets[name])throw Error('Unknown asset '+name);return base+'/'+assets[name];});},{base,assets});
  const entry=catalog.find(d=>d.id===demo.id), data={...demo,fullAssetRefs:entry.fullAssetRefs,photoCredits:entry.photoCredits,stage:{...demo.stage,theme}};
  await page.evaluate(({data,width,mode})=>{
   const create=INTRX.createRuntime;INTRX.createRuntime=stage=>{const runtime=create(stage);runtime.suspend();return runtime;};
   document.body.replaceChildren();document.body.style.margin='0';
-  const stage=document.createElement('div');stage.className='demo-stage stage';Object.assign(stage.style,{position:'relative',width:(mode==='thumb'?Math.min(372,width):width)+'px',height:(mode==='thumb'?264:720)+'px'});document.body.append(stage);INTRX.mountStage(data,stage,mode);
+  const stage=document.createElement('div');stage.className='demo-stage stage';Object.assign(stage.style,{position:'relative',width:(mode==='thumb'?Math.min(372,width):width)+'px',height:(mode==='thumb'?264:720)+'px'});document.body.append(stage);INTRX.register(data);INTRX.mountStage(data,stage,mode);
   if(stage.dataset.bootError)throw Error('Failed to mount '+data.id);
  }, {data,width,mode});
  await page.evaluate(()=>document.fonts.ready);

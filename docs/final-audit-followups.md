@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [shared Dock naming pass](accessibility/dock-control-names-2026-11-25.json)
+resolves the 34 captured name changes across 33 components. Optional
+`controls[].ariaLabel` supplies a fixed identity containing each visible alias;
+Snake's extended story also retains Resume. The registry and portable bootstrap
+associate hidden siblings through `aria-labelledby`, preserving the original
+captions, pressed states and legacy controller attributes. All 520 complete
+controllers, styles, HTML and prompts remain unchanged. The frozen base Stage,
+runtime and exporter files remain byte-identical. The broader initial sample
+now retains zero name changes across its 59 visible toggles in 166 candidate
+components. Full/native, normal/reduced, compact and offline stories also check
+actual browser names, original pressed-state changes, independent IDs and replay.
+Chrome 158 passes 264 stories and 66 offline exports across all 33 components;
+Chromium 140 passes 48 further stories and twelve offline exports across six
+representatives. These retain 1,312 actual browser-name observations in total.
+Eight routed-shell checks, runtime checks, all required phase commands and nine
+package tests also pass. The creator footer retains its existing tanziro.com link.
+Keep the first Snake alias failures, the harness asset-resolver error and the
+incorrect footer URL selector. Later-state and broader accessibility review,
+final motion and all outstanding performance gates remain open.
+
 The [toggle-name pass](accessibility/toggle-names-2026-11-25.json) gives full
 Solid Signal, Broken Grid, Coast Pass and Turntable controls stable identities.
 Their original pressed states remain intact; descriptions retain current state,

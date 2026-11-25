@@ -28,6 +28,21 @@ and `cleanup`. A returned cleanup function is also supported. `ctx` includes mod
 theme, reduced-motion preference, scale and stage size. Custom changes can be
 announced with `ctx.emit(name, detail)`.
 
+A control may declare a fixed accessible name independently of its changing
+visible caption:
+
+```js
+controls: [{ action: 'mute', label: 'Mute', ariaLabel: 'Mute or unmute sound' }]
+```
+
+Use `ariaLabel` for toggle controls that retain `aria-pressed` while their
+captions change. Include every visible caption alias in this fixed name. Keep
+the actual pressed state and action behavior in the component. The registry
+associates a hidden Dock sibling through `aria-labelledby`, so updating button
+text or `aria-label` does not replace the identity. Labels have unique IDs and
+no layout footprint. Portable exports install the same naming helper around
+the frozen base Stage; components without this option retain their own names.
+
 `ctx.now()` reads the same virtual time passed to wrapped animation frames.
 Use it to anchor a run when it starts between frames. It follows playback speed,
 excludes caller pauses, hidden documents and offscreen holds, and stays frozen

@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "toggle",
-      "label": "Lock high field"
+      "label": "Lock high field",
+      "ariaLabel": "Lock high field or release high field"
     },
     {
       "action": "restore",

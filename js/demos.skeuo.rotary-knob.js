@@ -32,7 +32,8 @@ INTRX.register({
   "controls": [
     {
       "action": "mute",
-      "label": "Mute"
+      "label": "Mute",
+      "ariaLabel": "Mute or unmute"
     }
   ],
   "a11y": {

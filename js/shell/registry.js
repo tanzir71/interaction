@@ -22,6 +22,27 @@
   R.register = function(demo) { R.applyMeta(demo); return register.call(R,demo); };
   R.groups={Interface:['Buttons & Micro','Forms & Inputs','Navigation & Menus','Layout & UI','Loaders & Progress','Galleries & Sliders'],Motion:['Scroll','Text & Type','SVG & Line','3D & Perspective'],'Pointer & Physics':['Cursor','Physics','Liquid & Organic','Play & Easter Eggs'],'Data & AI':['Agent & AI UI','Data & Numbers','Maps & Geo','FUI & Terminal'],'Visual FX':['Image & WebGL','Raster & Glitch','Ambient','Skeuomorph','Sound & Haptics'],Collections:['Interactive Showcase','DRAMS','Framer Collection']};
   R.triggers=['hover','press','drag','scroll','type','ambient'];
+  // Fixed toggle identities survive demo-authored caption/aria-label updates.
+  // Referenced hidden siblings do not participate in the Dock's visual layout.
+  R.nameDockControls=function(stage,controls){
+    const R=window.INTRX,dock=stage.querySelector(':scope > .stage-dock');
+    if(!dock)return;
+    const names=new Map((controls||[]).filter(c=>typeof c.ariaLabel==='string'&&c.ariaLabel.trim()).map(c=>[c.action,c.ariaLabel]));
+    for(const button of dock.querySelectorAll('button[data-action]')){
+      const name=names.get(button.dataset.action);if(!name)continue;
+      let label=[...dock.querySelectorAll('[data-control-name]')].find(n=>n.dataset.controlName===button.dataset.action);
+      if(!label){
+        label=document.createElement('span');label.hidden=true;label.style.display='none';label.dataset.controlName=button.dataset.action;
+        do{label.id='intrx-dock-name-'+(R.dockNameSerial=(R.dockNameSerial||0)+1);}while(document.getElementById(label.id));
+        dock.appendChild(label);
+      }
+      label.textContent=name;button.setAttribute('aria-labelledby',label.id);
+    }
+  };
+  if(typeof document!=='undefined')document.addEventListener('intrx:boot',event=>{
+    const demo=R.demos.find(d=>d.id===event.detail.id)||R.byId?.get(event.detail.id);
+    if(demo)R.nameDockControls(event.target,demo.controls);
+  });
   R.slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   R.picks=['elastic-tabs','toast-stack','command-palette','masonry-filter','password-strength-bar','scrollsnap-carousel','css3d-isometric-hover','showcase-dot-field','showcase-circular-gallery','input-float-label','btn-border-beam','drams-001'];
   R.views={};R.fontFaces={};R.resolveAssets=value=>value;

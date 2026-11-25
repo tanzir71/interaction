@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "lock",
-      "label": "Lock 32°"
+      "label": "Lock 32°",
+      "ariaLabel": "Lock 32° or release angle"
     }
   ],
   "a11y": {

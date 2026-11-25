@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "play",
-      "label": "Play"
+      "label": "Play",
+      "ariaLabel": "Play or pause"
     },
     {
       "action": "rewind",

@@ -1,0 +1,532 @@
+{
+  "date": "2026-11-25",
+  "baseline": "3fa2dcd80b3faeaa76891fc62e8397eecfe9e9ad",
+  "scope": "Resolve 34 captured shared-Dock toggle-name changes across 33 components. Extend the keyboard story to Snake’s third Resume caption. This is targeted naming/API verification, not complete catalog accessibility, audio output, screen-reader/speech behavior or final motion/performance acceptance.",
+  "implementation": {
+    "field": "controls[].ariaLabel",
+    "mechanism": "The registry boot hook attaches a hidden sibling with a unique ID and aria-labelledby. It preserves changing captions and legacy aria-label assignments while supplying a fixed actual browser name. Portable bootstrap installs the same helper around the unchanged base Stage.",
+    "controls": [
+      {
+        "id": "image-infinite-zoom",
+        "action": "toggle",
+        "ariaLabel": "Pause zoom or resume zoom"
+      },
+      {
+        "id": "kenburns-crossfade",
+        "action": "toggle",
+        "ariaLabel": "Pause slideshow or resume slideshow"
+      },
+      {
+        "id": "collision-bubbles",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "ferrofluid-dots",
+        "action": "polarity",
+        "ariaLabel": "North or South polarity"
+      },
+      {
+        "id": "ferrofluid-dots",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "water-ripple-2d",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "lava-lamp",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "melt-drip-text",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "smoke-wisps",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "bubble-float-pop",
+        "action": "pause",
+        "ariaLabel": "Pause or resume"
+      },
+      {
+        "id": "starfield-warp",
+        "action": "warp",
+        "ariaLabel": "Engage warp or cruise"
+      },
+      {
+        "id": "ui-sound-kit",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "typing-mechanical",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "theremin-pad",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "notification-chime-stack",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "drum-grid-sequencer",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "scroll-pitch-drone",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute sound"
+      },
+      {
+        "id": "snake-in-grid",
+        "action": "toggle",
+        "ariaLabel": "Play, pause or resume"
+      },
+      {
+        "id": "dither-bayer",
+        "action": "invert",
+        "ariaLabel": "Invert field or restore field"
+      },
+      {
+        "id": "dither-floyd-steinberg",
+        "action": "lock",
+        "ariaLabel": "Lock full color or return to dither"
+      },
+      {
+        "id": "dither-blue-noise",
+        "action": "toggle",
+        "ariaLabel": "Dissolve to B or return to A"
+      },
+      {
+        "id": "halftone-dots",
+        "action": "pin",
+        "ariaLabel": "Pin pressure or release pressure"
+      },
+      {
+        "id": "halftone-lines",
+        "action": "lock",
+        "ariaLabel": "Lock 32° or release angle"
+      },
+      {
+        "id": "ascii-render",
+        "action": "color",
+        "ariaLabel": "Color glyphs or mono glyphs"
+      },
+      {
+        "id": "ascii-donut-3d",
+        "action": "pan",
+        "ariaLabel": "Pan field or spin torus"
+      },
+      {
+        "id": "ascii-fluid-stir",
+        "action": "pan",
+        "ariaLabel": "Pan field or stir field"
+      },
+      {
+        "id": "pixel-sort",
+        "action": "toggle",
+        "ariaLabel": "Lock sorted or release sorted"
+      },
+      {
+        "id": "threshold-mosaic-transition",
+        "action": "toggle",
+        "ariaLabel": "Switch to B or return to A"
+      },
+      {
+        "id": "interlace-flicker",
+        "action": "toggle",
+        "ariaLabel": "Lock high field or release high field"
+      },
+      {
+        "id": "posterize-hover",
+        "action": "toggle",
+        "ariaLabel": "Pin lens or release lens"
+      },
+      {
+        "id": "chromatic-type",
+        "action": "polarity",
+        "ariaLabel": "Polarity: normal or polarity: reverse"
+      },
+      {
+        "id": "rotary-knob",
+        "action": "mute",
+        "ariaLabel": "Mute or unmute"
+      },
+      {
+        "id": "led-segment-display",
+        "action": "power",
+        "ariaLabel": "Power off or power on"
+      },
+      {
+        "id": "cassette-reels",
+        "action": "play",
+        "ariaLabel": "Play or pause"
+      }
+    ],
+    "unchangedDefaultBehavior": "Components without the optional metadata retain their own naming behavior.",
+    "delivery": "Catalog/schema/stage-contract/CLI-MCP exports preserve the field; shell registry cache version advances to 8."
+  },
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 487,
+    "metadataOnlyDefinitions": 33,
+    "fixedControlNames": 34,
+    "unchangedCompleteControllers": 520,
+    "unchangedHTML": 520,
+    "unchangedCSS": 520,
+    "unchangedPrompts": 520,
+    "unchangedModelsDataCopyArtworkAssetsFonts": true,
+    "frozenV1Inputs": {
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+    },
+    "exactOriginalDefinitionsAfterRemovingOnlyNewNameMetadata": true,
+    "frozenInputComparison": "Raw worktree bytes match the phase-start fixture exactly. Authoritative HEAD comparisons normalize only Git checkout CRLF/LF differences."
+  },
+  "verification": {
+    "primary": {
+      "browser": "158.0.8127.88",
+      "components": 33,
+      "stories": 264,
+      "siteStories": 198,
+      "offlineExports": 66,
+      "normalStories": 66,
+      "controlStories": 272,
+      "actualNameObservations": 1088,
+      "unavailable": [],
+      "infrastructure": [
+        {
+          "before": {
+            "root": "<div class=\"dock-naming-proof\" style=\"width: 100px; height: 100px; min-width: 0px; min-height: 0px; max-width: none; max-height: none; flex: 0 0 auto; zoom: 1;\">Original content</div>",
+            "rect": {
+              "x": 174.5,
+              "y": 1002.390625,
+              "width": 51,
+              "height": 28,
+              "top": 1002.390625,
+              "right": 225.5,
+              "bottom": 1030.390625,
+              "left": 174.5
+            }
+          },
+          "after": {
+            "root": "<div class=\"dock-naming-proof\" style=\"width: 100px; height: 100px; min-width: 0px; min-height: 0px; max-width: none; max-height: none; flex: 0 0 auto; zoom: 1;\">Original content</div>",
+            "rect": {
+              "x": 174.5,
+              "y": 1002.390625,
+              "width": 51,
+              "height": 28,
+              "top": 1002.390625,
+              "right": 225.5,
+              "bottom": 1030.390625,
+              "left": 174.5
+            }
+          },
+          "ids": [
+            "intrx-dock-name-3",
+            "intrx-dock-name-4"
+          ],
+          "collision": "intrx-dock-name-2",
+          "collisionText": "Existing ID",
+          "idempotent": true,
+          "changed": "Pause",
+          "replay": "intrx-dock-name-5",
+          "oldGone": true,
+          "allIdsUnique": true
+        }
+      ],
+      "scope": "All repaired shared Dock controls: full/native stages in dark desktop normal/reduced motion and light compact reduced motion, plus fresh network-blocked full exports in both themes. Actual AX identities and visible caption aliases are checked across trusted Enter and held Space input. Synthetic cases check independent labels, ID collisions, idempotence, layout and replay. Does not establish audio output, speech recognition, all later control states or final motion/performance acceptance."
+    },
+    "compatibility": {
+      "browser": "140.0.7339.16",
+      "components": 6,
+      "stories": 48,
+      "siteStories": 36,
+      "offlineExports": 12,
+      "normalStories": 12,
+      "controlStories": 56,
+      "actualNameObservations": 224,
+      "unavailable": [],
+      "infrastructure": [
+        {
+          "before": {
+            "root": "<div class=\"dock-naming-proof\" style=\"width: 100px; height: 100px; min-width: 0px; min-height: 0px; max-width: none; max-height: none; flex: 0 0 auto; zoom: 1;\">Original content</div>",
+            "rect": {
+              "x": 174.5,
+              "y": 1002.390625,
+              "width": 51,
+              "height": 28,
+              "top": 1002.390625,
+              "right": 225.5,
+              "bottom": 1030.390625,
+              "left": 174.5
+            }
+          },
+          "after": {
+            "root": "<div class=\"dock-naming-proof\" style=\"width: 100px; height: 100px; min-width: 0px; min-height: 0px; max-width: none; max-height: none; flex: 0 0 auto; zoom: 1;\">Original content</div>",
+            "rect": {
+              "x": 174.5,
+              "y": 1002.390625,
+              "width": 51,
+              "height": 28,
+              "top": 1002.390625,
+              "right": 225.5,
+              "bottom": 1030.390625,
+              "left": 174.5
+            }
+          },
+          "ids": [
+            "intrx-dock-name-3",
+            "intrx-dock-name-4"
+          ],
+          "collision": "intrx-dock-name-2",
+          "collisionText": "Existing ID",
+          "idempotent": true,
+          "changed": "Pause",
+          "replay": "intrx-dock-name-5",
+          "oldGone": true,
+          "allIdsUnique": true
+        }
+      ],
+      "scope": "All repaired shared Dock controls: full/native stages in dark desktop normal/reduced motion and light compact reduced motion, plus fresh network-blocked full exports in both themes. Actual AX identities and visible caption aliases are checked across trusted Enter and held Space input. Synthetic cases check independent labels, ID collisions, idempotence, layout and replay. Does not establish audio output, speech recognition, all later control states or final motion/performance acceptance."
+    },
+    "broadDockInventory": {
+      "browser": "158.0.8127.88",
+      "components": 166,
+      "initialVisibleToggles": 59,
+      "nameChanges": 0,
+      "errors": 0,
+      "scope": "Full-view shared Dock controls in components declaring aria-pressed, at 1440px dark/reduced motion. Samples initial visible enabled toggles, then actual Enter input and a settled 350ms observation. Captures actual Chrome AX names before/after, retaining every drift for review. Does not cover controls appearing only in later states, all timing endpoints, thumbnail semantics, speech recognition, audio output or complete accessibility. Audio is disabled in these contexts."
+    },
+    "routedShell": {
+      "cases": 8,
+      "rows": [
+        {
+          "id": "ferrofluid-dots",
+          "width": 1440,
+          "action": "polarity",
+          "name": "North or South polarity",
+          "oldLabel": "intrx-dock-name-1",
+          "newLabel": "intrx-dock-name-3",
+          "creatorFooter": true
+        },
+        {
+          "id": "ui-sound-kit",
+          "width": 1440,
+          "action": "mute",
+          "name": "Mute or unmute sound",
+          "oldLabel": "intrx-dock-name-5",
+          "newLabel": "intrx-dock-name-6",
+          "creatorFooter": true
+        },
+        {
+          "id": "dither-bayer",
+          "width": 1440,
+          "action": "invert",
+          "name": "Invert field or restore field",
+          "oldLabel": "intrx-dock-name-7",
+          "newLabel": "intrx-dock-name-8",
+          "creatorFooter": true
+        },
+        {
+          "id": "cassette-reels",
+          "width": 1440,
+          "action": "play",
+          "name": "Play or pause",
+          "oldLabel": "intrx-dock-name-9",
+          "newLabel": "intrx-dock-name-10",
+          "creatorFooter": true
+        },
+        {
+          "id": "ferrofluid-dots",
+          "width": 390,
+          "action": "polarity",
+          "name": "North or South polarity",
+          "oldLabel": "intrx-dock-name-1",
+          "newLabel": "intrx-dock-name-3",
+          "creatorFooter": true
+        },
+        {
+          "id": "ui-sound-kit",
+          "width": 390,
+          "action": "mute",
+          "name": "Mute or unmute sound",
+          "oldLabel": "intrx-dock-name-5",
+          "newLabel": "intrx-dock-name-6",
+          "creatorFooter": true
+        },
+        {
+          "id": "dither-bayer",
+          "width": 390,
+          "action": "invert",
+          "name": "Invert field or restore field",
+          "oldLabel": "intrx-dock-name-7",
+          "newLabel": "intrx-dock-name-8",
+          "creatorFooter": true
+        },
+        {
+          "id": "cassette-reels",
+          "width": 390,
+          "action": "play",
+          "name": "Play or pause",
+          "oldLabel": "intrx-dock-name-9",
+          "newLabel": "intrx-dock-name-10",
+          "creatorFooter": true
+        }
+      ],
+      "scope": "Actual routed shell at desktop/compact widths with reduced motion: metadata and inline controls, legacy aria-label rewrites, source-kernel mirror, native Enter/Space, replay label replacement and creator footer. Audio disabled; not performance or audio-output acceptance."
+    },
+    "ownerCommands": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 973
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 675
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 10438
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 795
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 355334
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 251204
+      },
+      {
+        "name": "unit",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "exitCode": 0,
+        "signal": null,
+        "ms": 284
+      }
+    ],
+    "stageRuntime": "Actions, cleanup, desktop/touch live caps, touch opt-in, keyboard pause and independent offscreen full-preview holds pass. Registry helper source is unchanged after the final Snake metadata alias.",
+    "packageTests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "originalCaptionAliasChecks": 34,
+    "proofSHA256": {
+      ".artifacts/final-dock-names-v22/prepare-report.cjs": "54c5fa895e2b9634578f2d06c2164a738523015be5aa5b2396a8a78424e0ebef",
+      ".artifacts/final-dock-names-v22/names-final/2026-11-25T05-12-13-005Z/report.json": "7aa1eb36d57dcde0fff6f177ad7198d72a0af75dcf317f38414f4a169520e7f2",
+      ".artifacts/final-dock-names-v22/compatibility/2026-11-25T05-14-05-743Z/report.json": "845bac9493f2cb4ea398e8b6206b9f41109c612a2b94b197dc22547a99dfe4fe",
+      ".artifacts/final-dock-names-v22/dock-final/2026-11-25T05-12-23-048Z/report.json": "ec217a4cb4e98e6d43a33d6398ce26d02f1f9cf40b920324b26f1d949faba968",
+      ".artifacts/final-dock-names-v22/names-all/2026-11-25T04-58-57-254Z/report.json": "186f7660fdac5857867ee13e0b77141c4409edb84373c768714ef64e211686e1",
+      ".artifacts/final-dock-names-v22/targeted/2026-11-25T04-55-19-604Z/report.json": "5d49f2f3aa779ef439292b45a14e6caaeecadce223e9ecd111370f9f4e8b21b3",
+      ".artifacts/final-dock-names-v22/owner-checks-final/report.json": "35214ea4cf3b97514a03a5e95a1cbf625eb9a5cab0efd88298c77db9095f4d2a",
+      ".artifacts/final-dock-names-v22/routes-final.json": "19f5af5a3fc122f557da88b18031b9bcf81c36a260419d8b9cb7738d1522c91a",
+      ".artifacts/final-dock-names-v22/routes-final-complete.json": "45b488e19912cf3e156091931eead690418f2a94d7c23f0051dfb77cea3af1de",
+      ".artifacts/final-dock-names-v22/package-final.log": "ab6ad1eb95980e20e5909fd71812cdd37b38d545214d809d6014a38a532cf14a",
+      ".artifacts/final-dock-names-v22/stage-runtime.log": "84926b1fe3033fd1b8a83510e11d8d109bd22a217afa1ac0bf71c7f358b269fe",
+      ".artifacts/final-dock-names-v22/metadata.cjs": "b83c6b780ebeea09d0a7c9b160eecd08ade687ef24f16bb842b866c658a2d8b4",
+      ".artifacts/final-dock-names-v22/finalize-alias.cjs": "659facf7c8dfac49cc6f740559c1e9a97d46ca3074f59f5ec675bd8f919c1a2f",
+      "tools/fixtures/dock-names-before.json": "348fa76328c7d48ef682c87c8ad34782f8b3da74ce7870a60714a4ed67eb0d7d",
+      "tools/verification/dock-control-names.js": "3b8d9029985e069167312130080d8143f6e6a52314719db704d509afe1222483",
+      "tools/verify-dock-control-names.js": "9b074d180edfaf5efdab0048cc8706d866c4a68e32bf107ca2386dbde149b5b3",
+      "tools/audit-dock-toggle-names.js": "9d8f0d0f40ee0a422ea38d29e7e70992ee1cc60e1480862e974f5f245a4db462",
+      "tools/verify-interactive-palettes.js": "0aad63f32d0a8b447e7ed68e61dbae6fec32aba6539043f2b61487424a9326a0",
+      "tools/build-registry.js": "6e9a5dc47155e856425cc2f6cabcb2e7ad5279b5a4fbb33052625f3f27ef342d",
+      "tools/verify-stage.js": "20543d990b3a1a322cc9295ccba0b9cd330ed45d0291d9630248ed4a92855215",
+      "js/shell/registry.js": "fcf703bc1ea0bc9713c4756b9146c994efe1b7c5d6dc789a5c1b543bae29beaa",
+      "js/meta.stage.js": "295d80ee67f3361b90660fdd1e7ca3a746ee44580a4760c4380b146d6ef17595",
+      "index.html": "57e1df6bb484126b1fd166492b0b3814d0644ab3b231ccfb5e3e23817d04bf48"
+    }
+  },
+  "retainedFailures": {
+    "initialMatrix": {
+      "completed": 256,
+      "failures": 8,
+      "reason": "The two-state inventory missed Snake’s Resume caption. All eight expanded Snake stories detected the missing alias. Metadata now includes Play, pause and resume; the complete final matrix is rerun."
+    },
+    "initialHarness": {
+      "failures": 6,
+      "reason": "The revised browser fixture loaded registry.js after installing its asset resolver. Registry initialization replaced the resolver, leaving native photo tokens unresolved. The harness now installs the resolver after shared scripts; production asset paths never changed."
+    },
+    "routedFooterFixture": "The first route check expected a URL without a trailing slash. The existing creator footer correctly links https://tanziro.com/. The selector was corrected; no footer production edit was needed.",
+    "scope": "Keep original helpers, logs, inputs, raw AX observations and earlier phase evidence. No graphics/pixel oracle or timing gate is relaxed."
+  },
+  "standards": [
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "decision": "Keep the retained toggle identities fixed while their pressed states communicate current state. All visible caption aliases are included."
+    },
+    {
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/",
+      "decision": "Referenced hidden names have precedence over legacy aria-label and child captions. Both actual browser engines and network-blocked exports are checked."
+    }
+  ],
+  "remaining": [
+    "Broader catalog accessibility review, later interactive states and photographic/data/contrast decisions.",
+    "Final motion recipe, offscreen/input ownership and CPU4 timing acceptance.",
+    "Cold detail readiness and mobile Lighthouse acceptance."
+  ],
+  "publication": {
+    "policy": "Direct main commit/push; preserve disabled Actions and the account zero-dollar stop budget.",
+    "fullGoalComplete": false
+  }
+}

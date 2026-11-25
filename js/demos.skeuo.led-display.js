@@ -36,7 +36,8 @@ INTRX.register({
     },
     {
       "action": "power",
-      "label": "Power"
+      "label": "Power",
+      "ariaLabel": "Power off or power on"
     }
   ],
   "a11y": {

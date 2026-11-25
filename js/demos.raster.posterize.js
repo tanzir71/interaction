@@ -37,7 +37,8 @@ INTRX.register({
     },
     {
       "action": "toggle",
-      "label": "Pin lens"
+      "label": "Pin lens",
+      "ariaLabel": "Pin lens or release lens"
     },
     {
       "action": "restore",

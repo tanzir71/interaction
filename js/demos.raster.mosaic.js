@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "toggle",
-      "label": "Switch to B"
+      "label": "Switch to B",
+      "ariaLabel": "Switch to B or return to A"
     },
     {
       "action": "restore",

@@ -25,6 +25,7 @@ for(const d of demos){
  if(!d.stage||!['dark','light'].includes(d.stage.theme)||!['clip','scroll','intentional'].includes(d.stage.overflow))errors.push(d.id+': invalid stage');
  if(!['hover','press','drag','scroll','type','ambient'].includes(d.trigger))errors.push(d.id+': invalid trigger');
  if(!Array.isArray(d.controls)||d.controls.length>3||d.controls.some(c=>!c.label||!c.action||typeof c.label!=='string'||typeof c.action!=='string'))errors.push(d.id+': invalid controls');
+ if(d.controls?.some(c=>c.ariaLabel!==undefined&&(typeof c.ariaLabel!=='string'||!c.ariaLabel.trim())))errors.push(d.id+': invalid control ariaLabel');
  if(!d.a11y||typeof d.a11y.keyboard!=='boolean'||typeof d.a11y.reducedMotion!=='boolean')errors.push(d.id+': invalid a11y');
  if(!['free','pro'].includes(d.tier))errors.push(d.id+': invalid tier');
  if(!['full','hero'].includes(d.thumb))errors.push(d.id+': invalid thumb');

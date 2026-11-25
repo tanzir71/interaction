@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "polarity",
-      "label": "Polarity: normal"
+      "label": "Polarity: normal",
+      "ariaLabel": "Polarity: normal or polarity: reverse"
     },
     {
       "action": "burst",

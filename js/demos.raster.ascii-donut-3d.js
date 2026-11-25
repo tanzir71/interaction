@@ -38,7 +38,8 @@ INTRX.register({
     },
     {
       "action": "pan",
-      "label": "Pan field"
+      "label": "Pan field",
+      "ariaLabel": "Pan field or spin torus"
     },
     {
       "action": "reset",

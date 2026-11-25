@@ -3113,7 +3113,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Pause zoom"
+        "label": "Pause zoom",
+        "ariaLabel": "Pause zoom or resume zoom"
       },
       {
         "action": "center",
@@ -3185,7 +3186,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Pause slideshow"
+        "label": "Pause slideshow",
+        "ariaLabel": "Pause slideshow or resume slideshow"
       },
       {
         "action": "next",
@@ -4494,7 +4496,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       },
       {
         "action": "reset",
@@ -4764,11 +4767,13 @@ INTRX.meta({
       },
       {
         "action": "polarity",
-        "label": "North"
+        "label": "North",
+        "ariaLabel": "North or South polarity"
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -4810,7 +4815,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -4852,7 +4858,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -4932,7 +4939,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -4974,7 +4982,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -5016,7 +5025,8 @@ INTRX.meta({
       },
       {
         "action": "pause",
-        "label": "Pause"
+        "label": "Pause",
+        "ariaLabel": "Pause or resume"
       }
     ],
     "a11y": {
@@ -8754,7 +8764,8 @@ INTRX.meta({
       },
       {
         "action": "warp",
-        "label": "Engage warp"
+        "label": "Engage warp",
+        "ariaLabel": "Engage warp or cruise"
       },
       {
         "action": "reset",
@@ -9048,7 +9059,8 @@ INTRX.meta({
       },
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "reset",
@@ -9090,7 +9102,8 @@ INTRX.meta({
       },
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "reset",
@@ -9128,7 +9141,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "wave",
@@ -9174,7 +9188,8 @@ INTRX.meta({
       },
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "clear",
@@ -9216,7 +9231,8 @@ INTRX.meta({
       },
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "reset",
@@ -9258,7 +9274,8 @@ INTRX.meta({
       },
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute sound"
       },
       {
         "action": "reset",
@@ -9590,7 +9607,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Play"
+        "label": "Play",
+        "ariaLabel": "Play, pause or resume"
       },
       {
         "action": "step",
@@ -10323,7 +10341,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "invert",
-        "label": "Invert field"
+        "label": "Invert field",
+        "ariaLabel": "Invert field or restore field"
       }
     ],
     "a11y": {
@@ -10357,7 +10376,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "lock",
-        "label": "Lock full color"
+        "label": "Lock full color",
+        "ariaLabel": "Lock full color or return to dither"
       }
     ],
     "a11y": {
@@ -10391,7 +10411,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Dissolve to B"
+        "label": "Dissolve to B",
+        "ariaLabel": "Dissolve to B or return to A"
       }
     ],
     "a11y": {
@@ -10425,7 +10446,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "pin",
-        "label": "Pin pressure"
+        "label": "Pin pressure",
+        "ariaLabel": "Pin pressure or release pressure"
       }
     ],
     "a11y": {
@@ -10459,7 +10481,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "lock",
-        "label": "Lock 32°"
+        "label": "Lock 32°",
+        "ariaLabel": "Lock 32° or release angle"
       }
     ],
     "a11y": {
@@ -10493,7 +10516,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "color",
-        "label": "Color glyphs"
+        "label": "Color glyphs",
+        "ariaLabel": "Color glyphs or mono glyphs"
       },
       {
         "action": "density",
@@ -10573,7 +10597,8 @@ INTRX.meta({
       },
       {
         "action": "pan",
-        "label": "Pan field"
+        "label": "Pan field",
+        "ariaLabel": "Pan field or spin torus"
       },
       {
         "action": "reset",
@@ -10659,7 +10684,8 @@ INTRX.meta({
       },
       {
         "action": "pan",
-        "label": "Pan field"
+        "label": "Pan field",
+        "ariaLabel": "Pan field or stir field"
       },
       {
         "action": "reset",
@@ -11164,7 +11190,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Lock sorted"
+        "label": "Lock sorted",
+        "ariaLabel": "Lock sorted or release sorted"
       },
       {
         "action": "restore",
@@ -11240,7 +11267,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Switch to B"
+        "label": "Switch to B",
+        "ariaLabel": "Switch to B or return to A"
       },
       {
         "action": "restore",
@@ -11316,7 +11344,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "toggle",
-        "label": "Lock high field"
+        "label": "Lock high field",
+        "ariaLabel": "Lock high field or release high field"
       },
       {
         "action": "restore",
@@ -11358,7 +11387,8 @@ INTRX.meta({
       },
       {
         "action": "toggle",
-        "label": "Pin lens"
+        "label": "Pin lens",
+        "ariaLabel": "Pin lens or release lens"
       },
       {
         "action": "restore",
@@ -11396,7 +11426,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "polarity",
-        "label": "Polarity: normal"
+        "label": "Polarity: normal",
+        "ariaLabel": "Polarity: normal or polarity: reverse"
       },
       {
         "action": "burst",
@@ -11506,7 +11537,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "mute",
-        "label": "Mute"
+        "label": "Mute",
+        "ariaLabel": "Mute or unmute"
       }
     ],
     "a11y": {
@@ -11646,7 +11678,8 @@ INTRX.meta({
       },
       {
         "action": "power",
-        "label": "Power"
+        "label": "Power",
+        "ariaLabel": "Power off or power on"
       }
     ],
     "a11y": {
@@ -11809,7 +11842,8 @@ INTRX.meta({
     "controls": [
       {
         "action": "play",
-        "label": "Play"
+        "label": "Play",
+        "ariaLabel": "Play or pause"
       },
       {
         "action": "rewind",

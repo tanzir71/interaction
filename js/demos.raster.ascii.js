@@ -33,7 +33,8 @@ INTRX.register({
   "controls": [
     {
       "action": "color",
-      "label": "Color glyphs"
+      "label": "Color glyphs",
+      "ariaLabel": "Color glyphs or mono glyphs"
     },
     {
       "action": "density",

@@ -1,0 +1,2993 @@
+{
+  "baseline": "3fa2dcd80b3faeaa76891fc62e8397eecfe9e9ad",
+  "scope": "Only controls[].ariaLabel is added to 33 definitions; all 520 complete controllers, styles, HTML, prompts and other definition fields retain their exact baseline hashes.",
+  "frozenInputs": {
+    "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+    "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+    "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+    "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+    "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+  },
+  "definitions": [
+    {
+      "id": "lenis-smooth-scroll",
+      "sha256": "486952a482d8bacf4968be85251cb7e1825c6eac75faec0c1a0d64bee831097b"
+    },
+    {
+      "id": "scroll-reveal-stagger",
+      "sha256": "d6df297a42534956dfcc9ef30d066e07e369a89a21ae665e4afc6ee047eba6fb"
+    },
+    {
+      "id": "parallax-layers",
+      "sha256": "1de6c5696164f69dba82b33dcc6e27e63290bd77172e58771975992b652bca4b"
+    },
+    {
+      "id": "horizontal-scroll",
+      "sha256": "bff478f44d2c0a93bf88181c97b177a5f497b42e347d738281c156e630c73bdc"
+    },
+    {
+      "id": "sticky-stack",
+      "sha256": "c533ace750dd70c75103a2409f704d119e5d844b972166fee580b0a8056e0f85"
+    },
+    {
+      "id": "scroll-progress",
+      "sha256": "8ad0486fb9b2f05df0429699ff0ef2d3176b0d982bcedcdc078f9a166cfa67f9"
+    },
+    {
+      "id": "velocity-skew",
+      "sha256": "d809007c08b81edd7694a4c2b5bbd4a13b6b62beb4df7de10c64733009b83973"
+    },
+    {
+      "id": "scroll-zoom",
+      "sha256": "6f05ef6850d9925d26efdb66b88b131f8d91624c2eee09af3cdf484ca253a7c7"
+    },
+    {
+      "id": "scroll-text-highlight",
+      "sha256": "34aee365a0dc2947e12b610efc0a2052256c28da6f835fded4e053994720af71"
+    },
+    {
+      "id": "scroll-image-sequence",
+      "sha256": "a4c6305925ca7e8b28bcfc98ecd416782b56544b04823ab33df6a2bcefa6202c"
+    },
+    {
+      "id": "scroll-svg-draw",
+      "sha256": "42d64d12f06c5b6265780d4c9988c15204c7af0aeff4673a9205bccdd3fef6dc"
+    },
+    {
+      "id": "scroll-rotate-gallery",
+      "sha256": "d524d19ae098a507b1bbdbcae34efe9d42759f7767c4985548faf1e988726127"
+    },
+    {
+      "id": "scroll-split-screen",
+      "sha256": "7183b6090886088ca4ed9dc5b38a8fbb5f99d3bfa02872475e9e86eed76eea2e"
+    },
+    {
+      "id": "scroll-marquee-direction",
+      "sha256": "7a170a71284fb86bcf18b2c65b87672405324860499d842d166bfced94f35863"
+    },
+    {
+      "id": "scroll-counter-rotate",
+      "sha256": "7287307d6fd91149f98649dcdfb45888218acdf097162263cf0c740f1d572ef1"
+    },
+    {
+      "id": "scroll-depth-tunnel",
+      "sha256": "c08044c710fc6839f0f86f2ee0ea0c986a19c175a8eb47e7105fb4001e3b4f03"
+    },
+    {
+      "id": "scroll-letter-scatter",
+      "sha256": "c07aa35d0581c12df99f89d25c46f0e475e7d38c28287ea29265d88ca46377fa"
+    },
+    {
+      "id": "scroll-color-theme",
+      "sha256": "7209009fefb87408fb9cd40cf22d1f59392fb295e4d7cf0020a94d3072e9f429"
+    },
+    {
+      "id": "scroll-clip-morph",
+      "sha256": "f86291a397dfb5e0c880e58a04f93dedc4821c3d74b2cc945716ff0f0af7143e"
+    },
+    {
+      "id": "scroll-table-of-contents",
+      "sha256": "5a7b75d84aedfeeba6259bcb753baaa245203efb301afef74f58ab7a72913e81"
+    },
+    {
+      "id": "scroll-inertia-grid",
+      "sha256": "b34b00869031a9cd9c50a4c58b5a9342010cf9b08673cddff72526f83dea9d37"
+    },
+    {
+      "id": "scroll-video-scrubber",
+      "sha256": "b9aa55ad3f8d8357f34cc7050b9f6cebd0dd3a7a2f205f72b53d80ab5c681540"
+    },
+    {
+      "id": "cursor-gooey-blob",
+      "sha256": "de2597b8aa2d6c5e33dba2b2675f9b8adcffc096ff06988b9bd27ce4adb5e81e"
+    },
+    {
+      "id": "cursor-particle-emitter",
+      "sha256": "7738291cf6c4253d4df012360f4bc3d4ca8cc1eb1cc91ae40d6163d68f53b020"
+    },
+    {
+      "id": "cursor-elastic-line",
+      "sha256": "0161fc4629021fbf818540b51d529d5e37b635d9687a70163613c8cb01dc7506"
+    },
+    {
+      "id": "cursor-inverted-lens",
+      "sha256": "51d07e9e512337360c5bd868609527a4b21cd21418b806394f3831ef84af8f2d"
+    },
+    {
+      "id": "cursor-text-repel",
+      "sha256": "82e589350425c302c8e207d6d3baea065b7f2c9f4d6c03fc1356b141229e1450"
+    },
+    {
+      "id": "cursor-grid-ripple",
+      "sha256": "b4c42e1cf4d809936ce790299d6e4639c5d657f32235e64eecc525aae2af90c2"
+    },
+    {
+      "id": "cursor-hover-preview",
+      "sha256": "22937af335a8ec99df42a2019f7c4ee7332e83735eba88d95677ad6861f9c1dd"
+    },
+    {
+      "id": "cursor-drag-ghost",
+      "sha256": "52f7cde09affe40c08f18842a6bbdd19635268d6b8b38c2e28121a7de62ef351"
+    },
+    {
+      "id": "cursor-eyes-follow",
+      "sha256": "a800ee15da5439a8ee683f4ac9dc9e1c68e69675d88d94b03003bcf4e0ca7f03"
+    },
+    {
+      "id": "cursor-liquid-metaball",
+      "sha256": "f6f8dca36f596825107289e857b3be023928f1b4dbbaed22454d561eb1c21307"
+    },
+    {
+      "id": "cursor-rope-trail",
+      "sha256": "c11c97044f17c9c505600b8b31f1fea8f232b7f513c5ae33281fefef386efd07"
+    },
+    {
+      "id": "cursor-velocity-stretch",
+      "sha256": "cfa017c8a179e90709e9e63e1a23cfce94fbd499d09c60b802599708ff6b4243"
+    },
+    {
+      "id": "cursor-snap-targets",
+      "sha256": "49e1a52a3e3b61e3b54cb439c4af7a0afc684471d8910394d32d1e5263bd5751"
+    },
+    {
+      "id": "cursor-flashlight-noise",
+      "sha256": "a29c728746835d500cb27786de37d2ddd2623c93f8ffc9a88c29279e592fad47"
+    },
+    {
+      "id": "cursor-emoji-rain",
+      "sha256": "d09cb3f6d62218f122b1a8431094a73942332b687b3e609a1bf8cc0eb62e9581"
+    },
+    {
+      "id": "cursor-magnetic-grid-lines",
+      "sha256": "887e0332ec21a2db8cbcd77bd10708351e99a000972f0511ef24d1eb982e02d7"
+    },
+    {
+      "id": "cursor-heat-shimmer",
+      "sha256": "ca0d5fbc54aab46cdfbdb67b7817b700c89971231b6299aca1a1f06923953f91"
+    },
+    {
+      "id": "cursor-crosshair-hud",
+      "sha256": "dbbb1520946adaeb68348937e1f2c29f5681980df8fe8e6a3c6cec4586927d4c"
+    },
+    {
+      "id": "cursor-pull-distort",
+      "sha256": "8eea8b714390b75136b33fd4ab30f732cb1f444210241da9049334644fef8b23"
+    },
+    {
+      "id": "cursor-shadow-parallax",
+      "sha256": "60165a24b475cd0ce76d06d1e80b862220941ca027c893dbcb172d0b9573491f"
+    },
+    {
+      "id": "custom-cursor",
+      "sha256": "54f0ad63bfdf51ab45a6f0beaeaa3f603084a799f900654451bf0c233c91c30a"
+    },
+    {
+      "id": "magnetic-button",
+      "sha256": "65d07db9b2ac76a8b51d24af0600349a7ab2b6e9cc0149a107b59a8f6ca472bd"
+    },
+    {
+      "id": "image-trail",
+      "sha256": "16f35f044bd136b275cb489f77eb9c8623afe869a34d86ea966820a2feaceefc"
+    },
+    {
+      "id": "spotlight-mask",
+      "sha256": "125e21b1f388b97324527e397071a4b8af747cbf8e20d9408b6e0ba2cfd60ab1"
+    },
+    {
+      "id": "tilt-card",
+      "sha256": "7729a792e8e000f769f064119cbe3e717035e87b58551a1f7e3c2b011cdcb74d"
+    },
+    {
+      "id": "split-text-reveal",
+      "sha256": "ce4697a9e3f0f6c587912403f3ce552ddc4bd97503b7ccf1d29762d2b8ba6aba"
+    },
+    {
+      "id": "text-scramble",
+      "sha256": "c1d3f628be2d268bf10cbad0d623b4da1589bba7ebcaa774f577318e79c39432"
+    },
+    {
+      "id": "kinetic-marquee",
+      "sha256": "81a773452785c656bb0b2353e29ee1cba762310ec28c4b57b48d096133dcb91f"
+    },
+    {
+      "id": "line-mask-reveal",
+      "sha256": "8f31fa4a8148673eaa3e77d6579cead7ae9f7c2f88ce7b7fda40c9e53f45b5f0"
+    },
+    {
+      "id": "letter-roll",
+      "sha256": "3a676277d52c6eae3f05024b8cbe12b18e7d5d0786e5a335fa88bcf7942263e5"
+    },
+    {
+      "id": "proximity-type",
+      "sha256": "62d04f6454efdcc6e9c5ff6bd4b9e9f37dc2ba711ef9190a402a620d4622fbaf"
+    },
+    {
+      "id": "stat-counter",
+      "sha256": "bf92cab93c8d7516a31787e02447df93ab01abe7d2291367aa44951bb0f5daab"
+    },
+    {
+      "id": "text-wave-hover",
+      "sha256": "8314a29f014a07f48f5a5418293aeee1d8ac1dc7b64691599ddd7e89554c6138"
+    },
+    {
+      "id": "text-clip-image",
+      "sha256": "84aa8f8e5f00878734247acddfed62f28cdc0de35d073bbbc69d724741a4f157"
+    },
+    {
+      "id": "text-typewriter-caret",
+      "sha256": "c1f7577e83e04f52baffd214b83f62b62c83e3ce6479e7614deeaecc55ac06a6"
+    },
+    {
+      "id": "text-falling-letters",
+      "sha256": "0622c3bae78037926c991689c27c18ad782e3682cf05f0c030cbae2db3ddef8a"
+    },
+    {
+      "id": "text-blur-focus",
+      "sha256": "d41163d8228b59086ad4b84c78822dd4f032ecbd8da0b20a5f63273360cc0850"
+    },
+    {
+      "id": "text-strike-reveal",
+      "sha256": "b7240ee61105d5bfa19b546a569a0860d9f85285cad84d9f674111d6ec05dc9f"
+    },
+    {
+      "id": "text-anagram-shuffle",
+      "sha256": "41c4215f99d6d1a02163137f960ba8af1cff493d04e5825640f3abc902642dbb"
+    },
+    {
+      "id": "text-outline-fill-scroll",
+      "sha256": "9dcf4a23ef07b79ab269e6fcc7442ed68a30bc992fc20defc08964a5900f1bfb"
+    },
+    {
+      "id": "text-ransom-note",
+      "sha256": "ae894ed82ac0c25a9728af5bfb2a28606c6cd6b57a05010be958c428955ee3d0"
+    },
+    {
+      "id": "text-glitch-layers",
+      "sha256": "9122c257469653224a0e4c592450ba64e1814240e31bb601893f1f11d4610d2e"
+    },
+    {
+      "id": "text-circular-spin",
+      "sha256": "b4e1f5237a989b2fae1cdc4f0fce42901ac9f2b380081ca1f433fb922bda95b4"
+    },
+    {
+      "id": "text-accordion-squeeze",
+      "sha256": "cd30632d5252c85197e051ca32962e24cf5ffd46eb3fd77ae2d615d15c93f56b"
+    },
+    {
+      "id": "text-underline-magic",
+      "sha256": "b86e29134f4831db69a0741ce2786c617285c46c1efee66f14a8f08459502366"
+    },
+    {
+      "id": "text-numbers-slot",
+      "sha256": "6577b9f177b873ea8a384cf8bcc146a101ed9bdf06044759700abcf5ec5e7011"
+    },
+    {
+      "id": "text-highlighter-swipe",
+      "sha256": "0b84b313ba7da6d26df191584b8f34b842ea2bd24b9f089f574bd49a42c93dc4"
+    },
+    {
+      "id": "text-broken-grid",
+      "sha256": "5ffd06f63847871b4f1321ad8d685c0e73d9770d5b2f85a45a1e8c0fcff45f2a"
+    },
+    {
+      "id": "webgl-distortion",
+      "sha256": "2e20a09ab11d0327300e57519f386fce89803ed411343f4b5994f750fcef4156"
+    },
+    {
+      "id": "particle-dissolve",
+      "sha256": "f37b43e5153a09e44f678b660de6c93b5a8f84f8c2ca44cb417bc97e7efad76f"
+    },
+    {
+      "id": "clip-reveal",
+      "sha256": "23fd7809f7e6e83622ef89fa2dd245549a4781dd0c1978acf22cb0b181f0c139"
+    },
+    {
+      "id": "hover-zoom-card",
+      "sha256": "525da88e98e2a83bde33a18330e8fdd4faa1d0bb2e00e9b2adb4cc7a697e9ae9"
+    },
+    {
+      "id": "pixelate-reveal",
+      "sha256": "880d85d7cfa172fe81b8aece9538fcbae1729da1fe4c102f93e88db030f280a7"
+    },
+    {
+      "id": "grayscale-grid",
+      "sha256": "becfc05e01488233352994346da0a300ab2a61031d5c911d1ce96175888ae810"
+    },
+    {
+      "id": "webgl-ripple-click",
+      "sha256": "7ca3ec39baebb567a61e61a2050741f337afeb68509102150f27319b1096c5ab"
+    },
+    {
+      "id": "webgl-pixel-river",
+      "sha256": "536425a6389f67a13e8c72b4fc0a03fcefb123977824886c6c2c0e44a85485ab"
+    },
+    {
+      "id": "webgl-fisheye-hover",
+      "sha256": "3cb678564fac21c2b7ac8eb3aed9fe336aa6fbe93a569f296141d1d140443aa6"
+    },
+    {
+      "id": "webgl-static-tv",
+      "sha256": "66adfd7225f612a6d2246d312117b355ca7ba449014af41b5db2c66fbc065ea0"
+    },
+    {
+      "id": "webgl-kaleidoscope",
+      "sha256": "5899d3b19074cd2d4f83a0af424db6f60b6e350db94fdd0fdbe18f4edb5dd9e4"
+    },
+    {
+      "id": "webgl-vertex-wave",
+      "sha256": "d6f85fa90b299c9414cd63449c4681a63777239196942f22edb6a1d0e07e3034"
+    },
+    {
+      "id": "image-slice-hover",
+      "sha256": "9b0a640f0dfc2cd448946ae45e35aca934941c0cd8487b1c1dc2d7487bd519a0"
+    },
+    {
+      "id": "image-infinite-zoom",
+      "sha256": "393181ef7f1107b28ad05b214143bf940a3158185b940b0ed9969f34be53a5a8"
+    },
+    {
+      "id": "comparison-slider",
+      "sha256": "460a4651648e049ee66697f95156857b6dcde85b6f077587761f0cb384854588"
+    },
+    {
+      "id": "kenburns-crossfade",
+      "sha256": "c6d5480f4d6a5ae23949f2a2f2ddca62bf5f1738f97508f3742099ebb2506cc9"
+    },
+    {
+      "id": "image-duotone-swap",
+      "sha256": "e871d47a8d5d0fe276fad89e4484b20b86e61e110e689973a63f4affbec0feac"
+    },
+    {
+      "id": "image-shatter-click",
+      "sha256": "ebcdea92381a5ae7b03404918ba1868b21c51e0f32e858610746567bfc3dca22"
+    },
+    {
+      "id": "image-blinds-reveal",
+      "sha256": "ded4d9cd7629545a074bb3e19a5453f2f00ea4a64e5abb16c6cb54ac28911b86"
+    },
+    {
+      "id": "image-magnetic-tiles",
+      "sha256": "6ec107ac44f7c015c4de13abf08128cfb716d711622b4a116969679faadea8b7"
+    },
+    {
+      "id": "webgl-hologram-particles",
+      "sha256": "5f041e14f4be5cf5b356a1e459145e0b51e58c5952d52f745a692fe2e3e28c4e"
+    },
+    {
+      "id": "webgl-neural-signals",
+      "sha256": "2de57ad6b174198e748c13ecc6f15fc79a65bbe23f4baa56398799cd36a81270"
+    },
+    {
+      "id": "painterly-smear",
+      "sha256": "09f59fc4db36b8f6c066b954a8ab8b1c14e5137b09bfea7224d39a1b4072b883"
+    },
+    {
+      "id": "svg-path-draw-hover",
+      "sha256": "f27df77de4e19f08d2942656437ab526ea9638ff452fd24739ed8107dee43f12"
+    },
+    {
+      "id": "svg-blob-morph",
+      "sha256": "7d9c192cc86d1e90a86f427a90699c8a3fb226c8a4d4e74f205d38e3abaf9f42"
+    },
+    {
+      "id": "svg-squiggle-underline",
+      "sha256": "027fee6b103e9ab3130a7602654c9d430989f96c0a8e4b327fb36ef8fb1a3d64"
+    },
+    {
+      "id": "svg-line-graph-live",
+      "sha256": "b9f04f73b87a201c52553b5c819569a6e5b69488614bfc543bd6dff497d6924c"
+    },
+    {
+      "id": "svg-marching-ants",
+      "sha256": "b58461e95aa0bd9985d957255469992577e797eb8d7934a280e0b5035f79672c"
+    },
+    {
+      "id": "svg-signature-write",
+      "sha256": "f37168737873708842a8dc400a733e810e73aab7e32b25212f01d266921e472c"
+    },
+    {
+      "id": "svg-gooey-menu",
+      "sha256": "831d11700892c158b9c34aa32f74b79a4f4c249f910fcdb3600a75fddbe174be"
+    },
+    {
+      "id": "svg-topographic-drift",
+      "sha256": "31f167832faa17161677c5eda9b4b96591bdcee5af4794c3e541e9c9b1f3974b"
+    },
+    {
+      "id": "svg-circuit-pulse",
+      "sha256": "b14e551ed666e064307b7bfc056c602eaa98bb925ddf95c86c4d2e62507fb5ac"
+    },
+    {
+      "id": "svg-lissajous-loader",
+      "sha256": "23e674db4bcc205454fe63f9ba93f54cb7397af8e3743f2b5a3cddea72e677ce"
+    },
+    {
+      "id": "css3d-cube-nav",
+      "sha256": "77f401aba4ffd59149c486fbfc1bf9654771695b3242e38c5946280b2458a70e"
+    },
+    {
+      "id": "css3d-card-flip-grid",
+      "sha256": "cc597b3c91b633f0e10cfdff4af0faa847991a98ea34fd92acdd24023aa4254a"
+    },
+    {
+      "id": "css3d-book-page",
+      "sha256": "23b942eff0f68ad34a2f7aeb3c380a0b034248b46043d06a36d4864911ee96de"
+    },
+    {
+      "id": "css3d-carousel-cylinder",
+      "sha256": "86f03e24d7aa20f5e598d65f829e60deb43f61410099846fa9c2426ae133d2b6"
+    },
+    {
+      "id": "css3d-parallax-room",
+      "sha256": "b30bbbbcc53a36742b2b0d7d3b0cf41fe581fa6b4e90bc09012a5f4dc21f765a"
+    },
+    {
+      "id": "css3d-isometric-hover",
+      "sha256": "c95a8b63fa4b8f9ede1ccc3269d6c6ed17e5bdeee28019450072859e3dde26a8"
+    },
+    {
+      "id": "css3d-folding-map",
+      "sha256": "7f07834c70ccc54b5044160adb7cddb716b6affffee215c30710fab9bb2c4af8"
+    },
+    {
+      "id": "webgl-point-globe",
+      "sha256": "8dbdc0724e45e472063100a1e1d4f40dfe6fa57f3fa4f650a190386a2a525500"
+    },
+    {
+      "id": "webgl-wobbly-sphere",
+      "sha256": "05882496d887f7f60a0d5994f29ce7c44faff27a733c9eb232f9b67476ff9e79"
+    },
+    {
+      "id": "css3d-depth-hero",
+      "sha256": "2ae4e1afb87a21b3e1e12d5bf8af3d75cc39782abce17dc0a9b759e385368cd4"
+    },
+    {
+      "id": "voxel-assemble",
+      "sha256": "5be4d3e408b247ca18e9b325cf99bffd8f3fbb7e38dadde969135bfb24257499"
+    },
+    {
+      "id": "css3d-exploded-device",
+      "sha256": "c18e81e4b6f8c93ad090abd2beb25baaef7e17fb41dced3fb205c2a474961849"
+    },
+    {
+      "id": "spring-cursor-follower",
+      "sha256": "9fa254fd8c8a041c8c424f652f6c5d036faa3363b251e0ee8d0bfa4400ad4bca"
+    },
+    {
+      "id": "pendulum-tags",
+      "sha256": "6fa66687573f5d17f2ab3ca12751de1d874a4d76ef5c60e8207e2a07f69078ca"
+    },
+    {
+      "id": "chain-links",
+      "sha256": "ce76e2fd663d3330bf45b1da51ee7004e19b21e4b0df2d009e45f92c63dea4c1"
+    },
+    {
+      "id": "gravity-drop-icons",
+      "sha256": "d06cf216438d5da9485a081bcc238e95619ca12efc835350560b4413b66d555b"
+    },
+    {
+      "id": "collision-bubbles",
+      "sha256": "a42255ad6466571fd4a50093180b298b5687ea53efb13a6c7094b60c4ccf7098"
+    },
+    {
+      "id": "soft-body-blob",
+      "sha256": "0327e06ed32eca4b6fc0c1bb94d87f527fe8cfa592228b1bc29de3b0acda31cc"
+    },
+    {
+      "id": "cloth-flag",
+      "sha256": "cadc66914d6111a262fa2fceb31f06adb391f4aa300305a54fa52b22ac27aa3c"
+    },
+    {
+      "id": "wrecking-ball-text",
+      "sha256": "cf15a0560193ba05a87461bd5c6a21ee68781ad88534099a3d9f66e4091421ad"
+    },
+    {
+      "id": "inertia-window-drag",
+      "sha256": "aa09269f0f695f8dcaf8591393cdf11043d75e3cc1822361804c8ea96f8a81e7"
+    },
+    {
+      "id": "magnet-snap-grid",
+      "sha256": "d00dd4cf1c3a4e3341276bfbf6470bc54530ee9252859b001ab111be7078851c"
+    },
+    {
+      "id": "liquid-blob-buttons",
+      "sha256": "4e3407e61ba5b65d5419efc7d955f10cbba6922cfa7b9a66ab310c8f50a02fd2"
+    },
+    {
+      "id": "ferrofluid-dots",
+      "sha256": "207ea6b070923827a224e4c396fc67fcd65e79e276ee454b632bc2d868cb3257"
+    },
+    {
+      "id": "water-ripple-2d",
+      "sha256": "09e0e8dce86ee67fa34a3b63b09a4d05211b8d6dae05e4fbec33a5e870993558"
+    },
+    {
+      "id": "lava-lamp",
+      "sha256": "0855ca81accd8c53f37d5a8e31ad743cfb1577182092f9e9fa3813babe903f0a"
+    },
+    {
+      "id": "ink-bleed-reveal",
+      "sha256": "871cd41bda5bcd24595066b094ebacd434f65966065983636c68e74a7dcf7e10"
+    },
+    {
+      "id": "melt-drip-text",
+      "sha256": "f133f75714ec2d62a709bf55624b5f97b7b62c3e4498d9d81590e895cfc364c3"
+    },
+    {
+      "id": "smoke-wisps",
+      "sha256": "2ad419f615c918a14aba9b96f87d2503be1dfb26f31c51ab948f59079d838ad8"
+    },
+    {
+      "id": "bubble-float-pop",
+      "sha256": "1d1a6b842c2c77808da9193edfe13e8c2417e25e7356e20b7c3eb17fba15f0ee"
+    },
+    {
+      "id": "liquid-image-ripple",
+      "sha256": "6a5be3010c0b4453ad598a6719cdc3d8392b3d0e0f44e061d2b73dfb32586311"
+    },
+    {
+      "id": "liquid-mask-reveal",
+      "sha256": "ad87440eda15fc95ed2b3737ed3baef4dbf514da06cf755e3e5ad1eb4ac15e7a"
+    },
+    {
+      "id": "slider-elastic-edges",
+      "sha256": "6d7e67cb5750e4446f7c3bb86d55172ec68a5bf14f64568edb27afcb39d13729"
+    },
+    {
+      "id": "slider-progress-fraction",
+      "sha256": "a7dbe13c72099c306396e5b1cd17e3facf1c841d0da56a4f705135ca47f94ae5"
+    },
+    {
+      "id": "slider-clip-transition",
+      "sha256": "49a9f22ba47d2178486d8b924dae8848d177c9e045aa44e51f45da3ce9fd8324"
+    },
+    {
+      "id": "slider-stack-deck",
+      "sha256": "06724ef9a36a0d674c7806d0b34a9303b0bbc71a823964eae643ba5d57a8e546"
+    },
+    {
+      "id": "slider-fullbleed-parallax",
+      "sha256": "965926294a4696e320ab431310fd4c308b9b2681aac6c51d7cc016592004888a"
+    },
+    {
+      "id": "gallery-filmstrip-scrub",
+      "sha256": "728083e9e5a0b930f00e3425e7562ef27e53df5231a7ff08463deb86ada2f2c2"
+    },
+    {
+      "id": "gallery-expanding-columns",
+      "sha256": "f39542b9b3deb3c0cb08749977811f9ee4a8a4f66bd1cee9dcdf8bec5a0c74cd"
+    },
+    {
+      "id": "gallery-honeycomb",
+      "sha256": "d3907fc500b698e3b8944c206ad03a66df0e64d67ba7bddbddf78170eae1dca4"
+    },
+    {
+      "id": "gallery-random-stack",
+      "sha256": "615237cc25958ac59e64a112356a74cf31a52418565258bd7482f34a121f4e04"
+    },
+    {
+      "id": "gallery-dual-row-drift",
+      "sha256": "4d8c4e6d7e662024ca74f8f69438041ea487baadcdc21eb9efdba766d2d4fce9"
+    },
+    {
+      "id": "lightbox-flip-zoom",
+      "sha256": "e7fea06d36b05acd973192a3ab3a5ce41fe1f109f5fdcc35ce9498bffdc9d965"
+    },
+    {
+      "id": "slider-wheel-3d",
+      "sha256": "e2132d0330d71988990eff2e6000a6c2b9ac097cbcc0112dca1d2b128929b2eb"
+    },
+    {
+      "id": "scrollsnap-carousel",
+      "sha256": "a60e3e8855c85ae806930a5b056f423d86cf69dc67a890f801e1ca9504fbbe38"
+    },
+    {
+      "id": "menu-fullscreen-overlay",
+      "sha256": "2a3572b6c6e3c1b3d957353b32581a7d150ce85b655ffee49a5489be3781bed8"
+    },
+    {
+      "id": "menu-split-reveal",
+      "sha256": "b69d829a5ff91fe0c9f332baf658ed8181ea3fdd6afdb6b6837bd1f94b8624ca"
+    },
+    {
+      "id": "menu-circular-expand",
+      "sha256": "0541a5eea91933892a5f10f7b83f700d8d32c3cb323d72044ae88306a5609c37"
+    },
+    {
+      "id": "nav-blur-elevate",
+      "sha256": "6c8f1ca2a5dfbef06edbfb6a760e95165b328b22f221c68444998d62aef1164c"
+    },
+    {
+      "id": "nav-hide-reveal",
+      "sha256": "cba6775da164f0181e85b06d953742b6925899a12556c6b3933fe49754ac355d"
+    },
+    {
+      "id": "nav-active-pill",
+      "sha256": "77faa2ae54581e16f9e357b6e54d187f9b7dd2b06f33eb6deb9028b6bef16047"
+    },
+    {
+      "id": "menu-letter-cascade",
+      "sha256": "c5300f546b2a9f0ffeec2d314d3e8bce87f4c87614fb1c2cb6366fd741042207"
+    },
+    {
+      "id": "menu-image-peek",
+      "sha256": "4cd955d4ed4a14a5920f46cf87d397e33ecd1851d78deb499a76bcc0993d8792"
+    },
+    {
+      "id": "breadcrumb-collapse",
+      "sha256": "6af248dc8c018adf1a5c5a1ecf10a0395beac61e2c8771efa1d4011d5b73af7d"
+    },
+    {
+      "id": "tab-morph-content",
+      "sha256": "4313ca9b54be1402589df97dbcbffc3210447ab32c9034ca262876ed6b88d046"
+    },
+    {
+      "id": "sidebar-rail-expand",
+      "sha256": "8f9b7546c289c9e8892acb6c67adcae4e2253bb87bb30b11edb14802dbbef4ca"
+    },
+    {
+      "id": "burger-morph-x",
+      "sha256": "f79c687f71571af07b9d407d1b9c764d087c46f079ec314e78d474f847ada794"
+    },
+    {
+      "id": "mega-menu-preview",
+      "sha256": "96450e65c36f76f21aa6d92976cd4196a1d2f9f8a9ada085216c5ef60572ae4f"
+    },
+    {
+      "id": "btn-border-beam",
+      "sha256": "60ab896d14fc2f9d050190374982558e961a56e9b983cc03270eafa7732fd3ed"
+    },
+    {
+      "id": "btn-shimmer-sweep",
+      "sha256": "02049bb580e4ca3cb6531c0f677c08f00a67be0601511fa5a7a84ca31616963d"
+    },
+    {
+      "id": "btn-text-slide-swap",
+      "sha256": "0f6dc79fa93e9598792e48ed3e1b1e0a49c8104fd5fc4f71be8c4e8dcce85072"
+    },
+    {
+      "id": "btn-icon-hop",
+      "sha256": "baf27289f7b199c319e95d52d777e2235b0d4fab457d65295465ea2e9e5fa7fe"
+    },
+    {
+      "id": "btn-success-morph",
+      "sha256": "e251c0d2fc3532714fa96d69687fb90ae6f3c982f6a540b79b7ead457ad4ab06"
+    },
+    {
+      "id": "btn-confetti-burst",
+      "sha256": "6343f1b11d7e93ebcd69cd16b8cba8276e9667a20c67cf4bde54435c100a5ad2"
+    },
+    {
+      "id": "btn-ripple-material",
+      "sha256": "ccc0b76a90a33bb542d78e477ea569abbced975e18fcd4b5c28d7816e39b5d00"
+    },
+    {
+      "id": "btn-jelly-press",
+      "sha256": "b7ef3b6c017c7d12898eab27f013b8814c8223dc5c37ff1ac1706092ffffa85a"
+    },
+    {
+      "id": "like-heart-particles",
+      "sha256": "402d6cf8a482c6319fe71b9751c1597eeaefee435589473e13c0bc000f247cfe"
+    },
+    {
+      "id": "checkbox-draw-check",
+      "sha256": "92fcb8aa4b4131c3ac8af9725f4f21773b660803056e87cf4d9baf670988b3eb"
+    },
+    {
+      "id": "toggle-day-night",
+      "sha256": "0025ec2e6dc08ebbebc08f9428b4386d3ec34cf809661e57c2950f9e41f89ac3"
+    },
+    {
+      "id": "copy-inline-feedback",
+      "sha256": "107a53675044939f0d6cc2d6f151932a5851d44d2b3483b877c77e6f3228f823"
+    },
+    {
+      "id": "hover-tooltip-spring",
+      "sha256": "319dbbd3fceb55b33e0fd86629cccc4fb7822194979a1183d9b5c7ad10de2d0f"
+    },
+    {
+      "id": "badge-notification-pop",
+      "sha256": "7200f013936125e57929daff80c27baa24d5161160f2c8b042d02734f490be83"
+    },
+    {
+      "id": "btn-polish-stages",
+      "sha256": "a56e7f8a93a65f05aabf1ca7b5b49b3bf5206ba8f14db5fad7f6db114f97da42"
+    },
+    {
+      "id": "input-float-label",
+      "sha256": "14b7478a78a5226ed5346cabde30fc23dd6c8803de8c1540dfc082f2b30253c8"
+    },
+    {
+      "id": "input-underline-grow",
+      "sha256": "721114577296005957a9c74ec8a0db0c10583afbd4bdb2946fb392da99857af3"
+    },
+    {
+      "id": "input-shake-error",
+      "sha256": "9747e73e5dbf488fd0e084b9f54143252865f2ab1453c99ee638283badedb9ef"
+    },
+    {
+      "id": "input-char-counter-arc",
+      "sha256": "7183921ce85f28035a710d6cd24c4550148d81464ce0b076445dd1b37f7f04dc"
+    },
+    {
+      "id": "otp-code-boxes",
+      "sha256": "60485ca5516b3ff5c5ca878192ab54282743bf76ecc957d5b7401b37e375f23e"
+    },
+    {
+      "id": "password-strength-bar",
+      "sha256": "fe7af36c2aa18de2e5f72ab68b9f30b27a4d86e58a612d13457a4d09f3737700"
+    },
+    {
+      "id": "select-morph-dropdown",
+      "sha256": "1c111acc44359fe664584e5509cd707cab93524f950ecdeee35bafb8383af0ca"
+    },
+    {
+      "id": "range-elastic-thumb",
+      "sha256": "df378a02494d5fa43ce947198f7048c385a7bcc6c01f3236b14b2cb89698e455"
+    },
+    {
+      "id": "textarea-auto-grow",
+      "sha256": "890daaae3bb3dfa1de0cefcdd9347fcfc5f61625012e3428993cf43f21a95b3e"
+    },
+    {
+      "id": "form-multistep-progress",
+      "sha256": "606c19fa8da547ba45c656f539d3e870e451ddca0de4bc71cc47249d0a3abe45"
+    },
+    {
+      "id": "preloader-percentage",
+      "sha256": "69f9311d86ddd8288fb2cbdd55cc23209ec5f7a5694b71599ae4f076c93a725e"
+    },
+    {
+      "id": "preloader-word-cycle",
+      "sha256": "965b546c5df2813b3d5cb8b6edee17c44d8323e7ba14c580c9420b2db0e571f6"
+    },
+    {
+      "id": "loader-dots-wave",
+      "sha256": "b38a15ff7802732dec15df9899d150a5a678bdb01f944463d19f80aa5b6031a6"
+    },
+    {
+      "id": "loader-morph-shapes",
+      "sha256": "b7877175dab64c3eaf009f8f063372143a9b6868694c08535f268789e2914c71"
+    },
+    {
+      "id": "loader-typing-code",
+      "sha256": "3f31eb9477781810fc4ddd9072f0bf2498c7d7c90794c9a8867176098523648b"
+    },
+    {
+      "id": "skeleton-shimmer",
+      "sha256": "bedcdf776936e761f853be75adc10c540a25af718d0b59800a709c15fce63d81"
+    },
+    {
+      "id": "progress-blob-fill",
+      "sha256": "05d6ce5fb0d1737582e3a3a9410575a0b359061db9dc7e9371c0a4bdbd21dcad"
+    },
+    {
+      "id": "loader-orbit-dots",
+      "sha256": "4f337fdea24935820637a536e17ce3c9d0bf9a9464c8e7004e50fff23fc43220"
+    },
+    {
+      "id": "upload-progress-morph",
+      "sha256": "0842b780353ce06787932e51d8be541ed346dc6e44d105bbfae930a8218ee532"
+    },
+    {
+      "id": "page-load-counter-slide",
+      "sha256": "2018ecbf150a9513f7bfcca472181dc7e031625d127336809397ae5ca1176608"
+    },
+    {
+      "id": "chart-bars-race",
+      "sha256": "797795f29a71ff9764f537cb1f80a26e3dba96bc4a2725f64144eb87df2952e2"
+    },
+    {
+      "id": "chart-donut-sweep",
+      "sha256": "4297e9b03fb72b6e21cc9a482f12bf862e12d88cb12120fde861f2e5b8a974ca"
+    },
+    {
+      "id": "sparkline-hover-scrub",
+      "sha256": "b66b9d72af036197a513a00070957427c7e3994ad3e10c42dcfe7f87703964f0"
+    },
+    {
+      "id": "heatmap-fade-in",
+      "sha256": "c183d97ea2b14bf336dee3921a695b6d38477fb336aaa964cc31514432af6d4b"
+    },
+    {
+      "id": "ticker-tape-prices",
+      "sha256": "94501e75134817f4376ed67c32f19f83b560a546db29bb377c1f91eba1e59e8a"
+    },
+    {
+      "id": "radar-sweep-blips",
+      "sha256": "a34c15a05a04ce04ee5fdf43996990d505b4e42b54bf7dca316120da8ba97b04"
+    },
+    {
+      "id": "map-topo-extrude",
+      "sha256": "7ed4c947cd26d1b9928a7b0ca35f5034f208bcb0136f2fd4f9026cb91be8d157"
+    },
+    {
+      "id": "map-city-tiles",
+      "sha256": "bcbebe68affe050dd58f63e94ef525fcec4ae4d092930d59cc74ad51e30de31e"
+    },
+    {
+      "id": "map-dot-globe-arcs",
+      "sha256": "663ca7fe239399f188f4fa852471269cead4e3ee6ed5d79a827985d210bdfc33"
+    },
+    {
+      "id": "map-route-draw",
+      "sha256": "a909e6b9c60fe985ef03e827113fb376abb3f9ff6e0e349dbd37447385887181"
+    },
+    {
+      "id": "map-radar-pings",
+      "sha256": "1f611541d12fe76ea1441dba18ecbdbab0991efc50c5d5cafb7aa36980ed2817"
+    },
+    {
+      "id": "map-isoline-field",
+      "sha256": "003295fb99d765bd94d97a73d17e952777982da97372f912f26848467c85af46"
+    },
+    {
+      "id": "fui-status-dashboard",
+      "sha256": "a89810a51340115f8011a4c99c02a362a47c5d5db81e260cf1196fbd196d9a94"
+    },
+    {
+      "id": "fui-target-lock",
+      "sha256": "567455f5d2b2447cbcb78646c7e903b9530149b41fc60c19c9f84b6d4e74a249"
+    },
+    {
+      "id": "fui-terminal-boot",
+      "sha256": "100d60e370d0d2f59ec0d2df03a783e9bf846698e8a143bc6ca01fd98cde087e"
+    },
+    {
+      "id": "fui-waveform-scope",
+      "sha256": "c7eb23cb027120dc69bdb08a37f52b25d2952c6244f45cfcfcaed631ecbf6efd"
+    },
+    {
+      "id": "fui-signal-scanner",
+      "sha256": "57bb6bec0e1d8d1fa8bae09fa38169aec0fb03a6e49c64c1f5d271791b98c1df"
+    },
+    {
+      "id": "fui-data-stream",
+      "sha256": "9b4354083af61987031265714fcbe308e0e1dc55a438c3a3fd6b12c1e35536bf"
+    },
+    {
+      "id": "fui-access-granted",
+      "sha256": "1fe48d9cb3672358a44615f064fd5f53b7f5b815b279d98ce5605e1925adc9bb"
+    },
+    {
+      "id": "fui-hex-dump",
+      "sha256": "2ad259b26a5c819067a01e487308db277fd9882453fc00ce355b206c3e0a7bf2"
+    },
+    {
+      "id": "fui-trading-terminal",
+      "sha256": "4e4ebaf43ddc7a13892938a9f75946d4bd75b7f59132ab980614d53436b96ca1"
+    },
+    {
+      "id": "fui-orbital-tracker",
+      "sha256": "44a37ea1c7a105742ff7376948ff429c5117938cac4e5979d5e05af350266a3c"
+    },
+    {
+      "id": "agent-token-meter",
+      "sha256": "38d0dfd5ba988d08238ddbb803f84eeec2e73f9bd5ab9c144e976004e5b26574"
+    },
+    {
+      "id": "agent-deploy-pipeline",
+      "sha256": "532305255dd4b03bd9398fe571690dbc1cf3376cfd90c326d7ccd65d93e32a2d"
+    },
+    {
+      "id": "agent-context-compaction",
+      "sha256": "6ed12ef6d8215ec8bab46b6bbe0d62c0139b6245d2b62f710aa6216311fab269"
+    },
+    {
+      "id": "agent-node-graph",
+      "sha256": "ac204b177f6d3f719a915dd556cac3e79920b28baeccbc3119907f996a9f8b3e"
+    },
+    {
+      "id": "agent-streaming-text",
+      "sha256": "ad16eb19f624c5c30093e8c0f56de55d9384be58627ed7660fb9d1772eeec066"
+    },
+    {
+      "id": "agent-thinking-drawer",
+      "sha256": "bb422b625ecab211cc13404fc62f01c3f5400684581b6bb7413b719f7491f7da"
+    },
+    {
+      "id": "agent-diff-review",
+      "sha256": "4a6054e48fbea526295cc17612ec7e497116c1c13f846f4b90601000e12bafc7"
+    },
+    {
+      "id": "agent-knowledge-orbit",
+      "sha256": "605f384be22a84b42c136cbe2d0903addc33084f74d0e3cddadd0417df22aa8c"
+    },
+    {
+      "id": "particles-constellation",
+      "sha256": "3a13107e29026e3335ddc4ee3ed112125013d12fa8aab52768aaec3a46a9856e"
+    },
+    {
+      "id": "gradient-mesh-drift",
+      "sha256": "6b68cadef7ad46983067da1585072622fc4dc2b3b2efdefab5fcf9fa6a7edab1"
+    },
+    {
+      "id": "flow-field",
+      "sha256": "934fe44d5583f0adfd6e6ac23bc554e334472fe1e4fa360f37a01872c8232853"
+    },
+    {
+      "id": "starfield-warp",
+      "sha256": "3cbf1fde67e22f4ec04826851694cbcb5e87024313f26f290f9a1030cef126ef"
+    },
+    {
+      "id": "conway-life-fade",
+      "sha256": "4b672697069ffe767389c485f12ac7d184078e497ffcec1b6283e4d97a1a4a5a"
+    },
+    {
+      "id": "audio-reactive-bars",
+      "sha256": "9f4d6d92a7aebc0a0ac7bf3c7cc450da66f48cb33ac322d8689aead6f69ba7dc"
+    },
+    {
+      "id": "matrix-rain",
+      "sha256": "f583467ac66494c3c7c34f29de2ecd5be90053b53372a149740b8e3d1f8cedc1"
+    },
+    {
+      "id": "fireflies-night",
+      "sha256": "30ad030425dffe3000afd959ee0b449521740fc4bfbd735fe1a9142e26cbf3f3"
+    },
+    {
+      "id": "aurora-curtains",
+      "sha256": "dcc3f99c643a4ed8470e8fc7ca31b3d664090fbcac157cb865648136d9f43209"
+    },
+    {
+      "id": "rain-window",
+      "sha256": "8a576357b0f056caae0707a3a81404e8f747eef3da9cff8ef6afb4fea4f98715"
+    },
+    {
+      "id": "ui-sound-kit",
+      "sha256": "72af8e0a95100d8b8dc11d7d988d3c821c6cfe553b10ecbd1d8902383de53d39"
+    },
+    {
+      "id": "typing-mechanical",
+      "sha256": "19747e5b2ef1427cd496684bebaad70d1205b472bd8855b3fa0bbfdc25a7adef"
+    },
+    {
+      "id": "theremin-pad",
+      "sha256": "fe315b91799ec05453f16a94a3a1afd1d1cf462390f4eed3b80178102ce47f52"
+    },
+    {
+      "id": "notification-chime-stack",
+      "sha256": "9aeca37fc5ddd6f734620c7e2cbdea635bdc58b1ec1894e5d8210724441485c9"
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "sha256": "0768c93b3c565e5ca147f3c7bf689b53c8f1ee4241afeb69fb21d051552541c1"
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "sha256": "3d8bffd3b318a5a1f34484c3c66c2828bcabd293866f78535005007ee3784028"
+    },
+    {
+      "id": "dvd-screensaver",
+      "sha256": "6810026dbddefef1a0be5691eb7d6b93118512ee5399a74d5c925e3ecc5d824d"
+    },
+    {
+      "id": "konami-unlock",
+      "sha256": "0523d9dafc962ccfa0b969fe6cdda66ee091aa61674209736dbdffcf83390e50"
+    },
+    {
+      "id": "click-fireworks",
+      "sha256": "c5e0aa78365e172483a498da41218cededd7fe18596dcef4f0b5ae639987631d"
+    },
+    {
+      "id": "drag-to-break",
+      "sha256": "309a3623af3891dd16f60ca8419fe2b6dda3b5b00f373aa4c8cf74b7aebed31a"
+    },
+    {
+      "id": "pet-the-blob",
+      "sha256": "643217beceafeb327349adc4974a258987901fa594c90f35c25cfdf6df677d59"
+    },
+    {
+      "id": "gravity-flip-page",
+      "sha256": "cbbb350130d50ea63516676009c48e0933ff05f23d00d076a72a2ba227de0977"
+    },
+    {
+      "id": "wobbly-window-drag",
+      "sha256": "29503837d4ab36bb5fb8b82063d09171c13e2df8c2a064225d3e4a3bf63ab20d"
+    },
+    {
+      "id": "snake-in-grid",
+      "sha256": "49340c53fb6f85852e774afa5bffe6c08df6b02bf90f9e0cae04a8339e63cfca"
+    },
+    {
+      "id": "bottom-sheet",
+      "sha256": "e1a6b8afee21ccb2779a4ccadf7337e20d5fe0dcde86e7cac975d93c3bdf4460"
+    },
+    {
+      "id": "radial-menu",
+      "sha256": "00cb3e95783d4f3d1ec753bd8fc79afe60e086638e72e69c8e2334d064c41051"
+    },
+    {
+      "id": "elastic-tabs",
+      "sha256": "5012b797c809e9159a22d0e1fc4603582a1252f859e5553ae0fa845b4debe571"
+    },
+    {
+      "id": "masonry-filter",
+      "sha256": "6373a235aeb7c87173f3f9038c0aad3c07a1d3f4714fd725433853d8a6eebf81"
+    },
+    {
+      "id": "command-palette",
+      "sha256": "e0b264e6cbe5b767bf6413c30aea25f6c14ca501db01e68a6e0f0889176d4b56"
+    },
+    {
+      "id": "toast-stack",
+      "sha256": "88338b28ed039e66282daab6fe96ade3eb4f73a91f2eb832ded6d5d3e201ec25"
+    },
+    {
+      "id": "number-input-drag",
+      "sha256": "cb2c0c67ab4d897c13dad4f663dfc583ea3b01f78f4744145f2d4e438fb9fbd9"
+    },
+    {
+      "id": "context-menu-custom",
+      "sha256": "96f6166148436a6285616929ca698c18bdac59e1f52d1f39d8cd5dbabdab96a0"
+    },
+    {
+      "id": "resizable-split-pane",
+      "sha256": "1e19a7422d3e41c4805aa3f807641fc7e59bb80245764db24edf973963de851b"
+    },
+    {
+      "id": "card-hover-border-gradient",
+      "sha256": "99bf7ceccd9deb356091c332f97a85c45f56cade68479747baaae68c215d3c59"
+    },
+    {
+      "id": "list-reorder-drag",
+      "sha256": "9fdc32de23a6a33fcf9ea8a67484e19cc1fc794aca257d89c5d7f744022c66c6"
+    },
+    {
+      "id": "zoom-ui-inception",
+      "sha256": "b53a6873ec5617e113fc580bcfb5b6b4c6ed9c9cf9f29227c02969ee4180bf8b"
+    },
+    {
+      "id": "bento-spotlight",
+      "sha256": "6e36f02fde016f41fe1a61f5fe955f318e107a37ef59ac80a17c06e7c76c9d08"
+    },
+    {
+      "id": "swap-widget",
+      "sha256": "96f6ccc0fdeae8d6d645ee21c88c35cec3713036252cf48979416fa1f3ad8357"
+    },
+    {
+      "id": "drag-collapse-panel",
+      "sha256": "ad164458d4c23235e88fa99a5dc74218fa0f90f5c38d2e3a187faac445a79a7c"
+    },
+    {
+      "id": "popover-anchor-morph",
+      "sha256": "14521d73fb9bd67ef80db531016b3a10d4dc56d9fb209797b9384c66e92a56f3"
+    },
+    {
+      "id": "table-image-idle",
+      "sha256": "e108c763128a80b862c780735aaf28281da68ee2fe77c62afa9498e6291a9520"
+    },
+    {
+      "id": "caption-pull-hover",
+      "sha256": "9004051202ee2a4e3445b6c8e56c317460770d139e8bf28dab7d7d31a8069ddc"
+    },
+    {
+      "id": "hero-spotlight-reveal",
+      "sha256": "f2078de6c26d04be7ca61a56eebf4fb09525e49f6341d3ec090166c2b24a0816"
+    },
+    {
+      "id": "dither-bayer",
+      "sha256": "1b848c3d1ced8e1ef2257a39493e82ff323c8447fce31f8a6daa8655363f9d8e"
+    },
+    {
+      "id": "dither-floyd-steinberg",
+      "sha256": "4968843090f7d6a279affa47f575c63feed1e767a7f1a5d0bc61ec3db85e7df8"
+    },
+    {
+      "id": "dither-blue-noise",
+      "sha256": "dd53641c2648be532cc9f4e855bd68f2b13611c48643c787df39495be459004e"
+    },
+    {
+      "id": "halftone-dots",
+      "sha256": "4491e7344ee08998d4064cfda3cebcf5402509ba5ac720b90dd356c06d0fdcd0"
+    },
+    {
+      "id": "halftone-lines",
+      "sha256": "6b5a6faa40f5af10a7b554632b5e6a0841981a35e03aad0403a42d657317ae1b"
+    },
+    {
+      "id": "ascii-render",
+      "sha256": "e2423bd2f5f91d1cdd992420d68c1c92b057702f74f7b4b00d33da7f9e9e5783"
+    },
+    {
+      "id": "ascii-webcam-style-wave",
+      "sha256": "a93bec37c65d8a0bd0d91804a6fabca89a22ebde64758419bbc4c77989ea5b9c"
+    },
+    {
+      "id": "ascii-donut-3d",
+      "sha256": "e728cc041ccc33f262f63c993fa196a963a850cc959d644307e5df11e59aba18"
+    },
+    {
+      "id": "ascii-fire",
+      "sha256": "c51b70b323a0a7e5185d7bccc07a2ff6e2a07349a1efdb0de21bf7abbf9f6203"
+    },
+    {
+      "id": "ascii-fluid-stir",
+      "sha256": "228673b9d9a2d745a5a1399e559708b5b893e2d83c867c736c65e08f53e3b364"
+    },
+    {
+      "id": "ascii-portrait-reveal",
+      "sha256": "169feb0622561457fa8e549ccb1289a2a42b62c93610505c40a9149033ac13c8"
+    },
+    {
+      "id": "ascii-morph",
+      "sha256": "62c12537e6d597cad79a69cba5baf0ffd6665cb2f0c8c122e8d32de1cd7c2477"
+    },
+    {
+      "id": "ascii-type-explode",
+      "sha256": "c10260fa4acad257548313d742e87ce3edbe5ee30a0ce1f82d5bff54ee04fafc"
+    },
+    {
+      "id": "terminal-window",
+      "sha256": "29589798bb8e9891ff328f96538df39e5ba753f8071bf9a147d14da6d23b18e4"
+    },
+    {
+      "id": "dot-matrix-shapes",
+      "sha256": "ff6551e0788a54c7c0cf300f0e0e8cad753472ed3b7fff7abe11fc1ee671c6b3"
+    },
+    {
+      "id": "halftone-globe-canvas",
+      "sha256": "7c82a0bcefec81af10990b092020c1297fa381101364c29798268a101ac83479"
+    },
+    {
+      "id": "engraving-lines-warp",
+      "sha256": "4f9638f9ee0fe5664b5dca2bcb8a6ba6e37bb9d98485eb0e02138f3ac96eaa3d"
+    },
+    {
+      "id": "pixel-lissajous-lab",
+      "sha256": "ce0bde2f2acc81817900ee2162ac8db4735e1ab385f19bfb3cc039d7bf8a6492"
+    },
+    {
+      "id": "glitch-rgb-slices",
+      "sha256": "43f81f9bc982f5594b8b465f9904d29d9705cf4ec0f13c4a8a1dc58ee0145a5d"
+    },
+    {
+      "id": "glitch-datamosh-blocks",
+      "sha256": "d16053983ac80b26a054f489aa72faea751d5de7fffa87c6bcee3ba22348a01c"
+    },
+    {
+      "id": "scanline-crt",
+      "sha256": "412b7557cd32ea123b7f274d9d1a8c26b7d4f00dcd7db275ec425ea343cc0d51"
+    },
+    {
+      "id": "vhs-tracking",
+      "sha256": "8be7940118143943fce30dd7da001fab0f96a8b36d3fbbe2c30a001b6d703f80"
+    },
+    {
+      "id": "pixel-sort",
+      "sha256": "20a428d213e97bc0c80f2064c46bf83062187ba6fbedb460236942d7385c3d18"
+    },
+    {
+      "id": "noise-grain-overlay",
+      "sha256": "9dc52fe5db5ab5e5240d47c2d56dc43de4f324ac2dfd07d45dfa741040e04d02"
+    },
+    {
+      "id": "threshold-mosaic-transition",
+      "sha256": "8fa059780712e60cf2bd6feca60141c40c678841f5da8442eb779bc46e063fa7"
+    },
+    {
+      "id": "bitmap-font-marquee",
+      "sha256": "8f0533f93441f7caa6764bcdd0c7003fe1aebcea38194a7bedd313e09af32dfd"
+    },
+    {
+      "id": "interlace-flicker",
+      "sha256": "43651c101c1e2f33c1bf26b77f5902afb9c7df48ea5697e820dc48b4dd3a2fb7"
+    },
+    {
+      "id": "posterize-hover",
+      "sha256": "fa616b3f425d97bb34d6a114d006e78a76d066d048e6ac0e667101f8efa2c2f8"
+    },
+    {
+      "id": "chromatic-type",
+      "sha256": "ef9c3c1f9072eeb40a855d470cd8414ffdf1804509b336f58a1166e729842fa5"
+    },
+    {
+      "id": "neumorphic-buttons",
+      "sha256": "1159acc6897286986e0cad0849d27608c59c21dfaf845f40b269f0644db45e05"
+    },
+    {
+      "id": "mechanical-switch",
+      "sha256": "76a1904c0d0ae82ed009a6e2661cad8f51360068262d1c1cecba4957591dfdcc"
+    },
+    {
+      "id": "rotary-knob",
+      "sha256": "9a2f41522d4548d329a8b502431f09fd2c655982cfc93e00c575a4bfdf4573c6"
+    },
+    {
+      "id": "brushed-metal-slider",
+      "sha256": "028c6d0924bdf3e41e27be5fbc835972ac713763a7d06dbddd84026efa319ff9"
+    },
+    {
+      "id": "paper-stack-cards",
+      "sha256": "6a669132afc74b38ef74e0c9f138019187c2d1129c7987a10bd2318eb8207de1"
+    },
+    {
+      "id": "glass-refraction-card",
+      "sha256": "89085db07c041b9f88a8ec42a7299bf51724895c48d05b02c1b47bd25d9dd2e8"
+    },
+    {
+      "id": "led-segment-display",
+      "sha256": "6ded484c218a5f48beca5ca8368951ac4798b2be5f653caebac69bc2366d7092"
+    },
+    {
+      "id": "flip-clock",
+      "sha256": "82deda686ee72064712ea17d2f496e2411b5101d1c2b95c1501b6ea132883b0b"
+    },
+    {
+      "id": "embossed-press",
+      "sha256": "15d2bab68c01ab93ba402264518391f322a137cee6a82060acb54d30c1734844"
+    },
+    {
+      "id": "analog-gauge",
+      "sha256": "c97f348b8f9a2290cdfe971397e2433047a7f440fdb2a9ea13365c63bf549aff"
+    },
+    {
+      "id": "punch-card-keyboard",
+      "sha256": "d2f0959a3a9610e19b4cb2f7057278627e392ed4560d9915df02f3b6ff700096"
+    },
+    {
+      "id": "cassette-reels",
+      "sha256": "3998129a97b2e8d45e66194d90116efd6cbac719bf707c8bb9b196ccf18a9a7d"
+    },
+    {
+      "id": "slot-machine-reel",
+      "sha256": "0d02ec2af1fd4e7f4a5cc5f526d14a34e739241cf267d54aade48013fb4ee451"
+    },
+    {
+      "id": "zippo-flame",
+      "sha256": "266cdf6f57f50241e1e48b3d18cc1b909333a00e1e2674446d907780ec6beb84"
+    },
+    {
+      "id": "torn-paper-edge",
+      "sha256": "580ff4b61fb976ec84fa54323976264166f0fc8d657a4d586f02b5461865b37a"
+    },
+    {
+      "id": "wax-seal-stamp",
+      "sha256": "a730042e772df3c8214c1aeccf23a0f081d61aaa3b10778c82041ee97b00b2b8"
+    },
+    {
+      "id": "op1-panel",
+      "sha256": "32d9d886341728d2535ff57e688ec392cab2cf684832e4898f6ecdd8b51d1039"
+    },
+    {
+      "id": "dynamic-notch",
+      "sha256": "68dab9b04fed21fb7334099320e389773f686aab395bc72b89b9e9673f2f630d"
+    },
+    {
+      "id": "vinyl-player-card",
+      "sha256": "df9d8391810a09cb73e1b090b84b237229adbbd69c12bcdc47395ce3fa173b72"
+    },
+    {
+      "id": "foil-trading-card",
+      "sha256": "74ed531bf7706dd7c5031c84957d30e9c367a392a4b3738dbf2c825f0484a846"
+    },
+    {
+      "id": "mac-window",
+      "sha256": "fab867331866dfb4087084ea4722cd6a3cf0fc30dba58d791a9d1d2647cefaab"
+    },
+    {
+      "id": "dock-magnify",
+      "sha256": "f03d06fa82864654ec99af1a2fc2d337c63c069e3daf28d8e9b83c461087f756"
+    },
+    {
+      "id": "flip-expand",
+      "sha256": "9aee1d5d3989285b1047dbf72fb9bd30a1e5ebd87ac01d0ee15d5e69780560e9"
+    },
+    {
+      "id": "smooth-accordion",
+      "sha256": "5556a2eac963cf7c0f04bb77164766ad5ba6d4bd830845e79fbb281249ed4c55"
+    },
+    {
+      "id": "spring-modal",
+      "sha256": "2cc6b4486f5d8570162ffc8354ee5381836410e119cd612a56360d092177b1bf"
+    },
+    {
+      "id": "drag-carousel",
+      "sha256": "3336816dce22cdbe9394d19730af239caa76eecbf60b7944a9a931a68e86fe62"
+    },
+    {
+      "id": "hover-fill-button",
+      "sha256": "bc1b6f3a78f707a6d86b61f3ef9a4bb18f74fd4c50fb92f67c9bda50f7a2e46a"
+    },
+    {
+      "id": "page-transition",
+      "sha256": "ac07e2145f1fcfbfd4b01a48a6460a4bb75818433a0c89a6421ef7fec6306341"
+    },
+    {
+      "id": "logo-marquee",
+      "sha256": "322521c88912d53d63af4182884f6baec7ffb07c3b7dd5fc4f6922684f05ba2f"
+    },
+    {
+      "id": "showcase-dot-field",
+      "sha256": "e9cc5e4fec9e575d73aae1eb768c5777ae4c7f2e8a11808758c0c8d7ff68c4e7"
+    },
+    {
+      "id": "showcase-threads",
+      "sha256": "9addb80485a6151439bd63f3ea8582392ddfadfeea5263759235b749d3993481"
+    },
+    {
+      "id": "showcase-ballpit",
+      "sha256": "3b2ef4bec3b0447588e6ee00bba330c51e70631abd8fa999991c80b506ab3a2e"
+    },
+    {
+      "id": "showcase-ripple-grid",
+      "sha256": "8f1f43a2b020a5395a46f76d9d388506a278cc1569b8f819cd5242958513cb0d"
+    },
+    {
+      "id": "showcase-magnet-lines",
+      "sha256": "409513d7143665c67e33ff241cf5e1163ca93aff67e472cf55c26af1d94ff245"
+    },
+    {
+      "id": "showcase-pixel-trail",
+      "sha256": "7115962feec16adad24a2ccc1b2848564c67e40c5bf0e76f74eb5d6ae129b560"
+    },
+    {
+      "id": "showcase-ribbons",
+      "sha256": "3f634a86190db4d1c73463cc6ea7cdf346238dc08bbde5eeea0281cc40ea6ce9"
+    },
+    {
+      "id": "showcase-mesh-surface",
+      "sha256": "8083dd5b4416bc90366e852ca1539aad2b9839bfc48f586532679161824d6788"
+    },
+    {
+      "id": "showcase-warp-tunnel",
+      "sha256": "2133101d693071d49f5f78580b1aab3bba4495c77afb9f624d8cdec03da5322f"
+    },
+    {
+      "id": "showcase-converging-paths",
+      "sha256": "b6667bc9aa44879f98405bae804df09f4f71e16fca17480868921bd55605dbbd"
+    },
+    {
+      "id": "showcase-orbital-path",
+      "sha256": "3935195d984467526d899a3c79b3261c86f43d0f4381f2baf41b5ac2bde8fabe"
+    },
+    {
+      "id": "showcase-mask-reveal",
+      "sha256": "ad3fbb6478ce1f2104491e9525fd79d743c9754dca3201a37fe85d769951cea6"
+    },
+    {
+      "id": "showcase-circular-gallery",
+      "sha256": "5ff8740f5a5e823b046f4cf6b7c00695c974e74e0943f978e32deebddcfa10e1"
+    },
+    {
+      "id": "showcase-card-swap",
+      "sha256": "dd75279f74c0219024bff3ff3e41fe04a7c2d2367c23a266513859d6b078221e"
+    },
+    {
+      "id": "showcase-tracing-story",
+      "sha256": "37044536adc9f9053d90c86f3cffc645d6ceeb5752be2510c31ae21cf6e73b20"
+    },
+    {
+      "id": "showcase-elastic-slider",
+      "sha256": "b1f7513a9232a952462767ec75d3d9ea370597e201d75248843b393346d7ce50"
+    },
+    {
+      "id": "framer-formatted-metric",
+      "sha256": "b0af2c4ae7a794812a7623bd4ce6d1e6c0e4bee680e5aa81b0c4b4676c2a5188"
+    },
+    {
+      "id": "framer-rolling-balance",
+      "sha256": "5a09ecfafa3e5ec06ed430bc4d4f7e51b46f14c6ef1f8a8cb113b799d50a50b4"
+    },
+    {
+      "id": "framer-focus-countdown",
+      "sha256": "2344ec4a046cd3379c05381cbd702c7b1371463e5336a8561006f135d0efdc98"
+    },
+    {
+      "id": "framer-financial-trend",
+      "sha256": "649a5e7b2c8ee03b000fc3ba12023b0ebd9984442f805fb1079b1c2bf56156f2"
+    },
+    {
+      "id": "drams-003",
+      "sha256": "1f46ebabab707b61afbc3bb9a5007bb6cc783f0db95628f8ab2b197c94a91a8d"
+    },
+    {
+      "id": "drams-004",
+      "sha256": "00726ebe2a5d75d123afd103ebba5e1f814cd194e4ffe3e45accf42f08cac6be"
+    },
+    {
+      "id": "drams-005",
+      "sha256": "97771078b65512939850102d9a216f5d6e8db0bb047fdd9197bf5e212f50c68c"
+    },
+    {
+      "id": "drams-009",
+      "sha256": "59087281f583025a2f32f33739f86990bdbd1a064d87cc0ceb5042bd36a650fc"
+    },
+    {
+      "id": "drams-020",
+      "sha256": "06a2502c8bdf51faaa805c527f90fbd68e0993287b8c4f3fd973ee89cb21eb73"
+    },
+    {
+      "id": "drams-021",
+      "sha256": "d2e2c9f76a0b3374e2fa12a950f4cdeeb0cf0445efd0660fe3e9bac14d3a0cb8"
+    },
+    {
+      "id": "drams-022",
+      "sha256": "3e758ca87136b881a929be87368c34b9e6661c7dcf1094f9273f575109943ae5"
+    },
+    {
+      "id": "drams-045",
+      "sha256": "6cac0eeb43140d9cf6c0da4c697b4901141b52818a40fdd84b6852956e510042"
+    },
+    {
+      "id": "drams-002",
+      "sha256": "6f23583b5e33780c079def991188b381b5c6cda93b9199c45ea551d3edee9a81"
+    },
+    {
+      "id": "drams-012",
+      "sha256": "da8cff16c2cc8a2010c62bdbb61117f2ce0775b824b991feee491b3985116882"
+    },
+    {
+      "id": "drams-034",
+      "sha256": "5a9770fc52e8354698c19259a3a8ec538070c44436d7512321067fcefb08ea29"
+    },
+    {
+      "id": "drams-040",
+      "sha256": "1d77c29df2cb211c4e9e9fad61548837813fef424eb650fd52e54b31f0c89a19"
+    },
+    {
+      "id": "drams-010",
+      "sha256": "128f5292dedddd7b8653d567cc8c34250bc78604dac71b86475d171b7e3bc518"
+    },
+    {
+      "id": "drams-043",
+      "sha256": "b1d7a8895332e27cc876d16fb325f9fb82f6681a122dc90d7b55a881507f3e91"
+    },
+    {
+      "id": "drams-044",
+      "sha256": "5bba1f6437ed665f21fb4bb0787d30cab4f77c2a14844656df3a56ff13d2c822"
+    },
+    {
+      "id": "drams-036",
+      "sha256": "62d09144c270c50e8ebfdf016c862744a014bd4b7ba413fc96d3e9830c7fd120"
+    },
+    {
+      "id": "drams-048",
+      "sha256": "ca9dfdaf388ed9d3559a111dd8a5293fa1b416b49be45a4dd65541fa7d3bf6e8"
+    },
+    {
+      "id": "drams-050",
+      "sha256": "d691c2ef45ac4ff3cc2f460eebc5a68426b8ddfabca17edb4a1c6e1aa577a3ce"
+    },
+    {
+      "id": "drams-051",
+      "sha256": "a65bc515ceca1e1061b6892d6fb9b1f2eab44363c77c8e246fb3a8d8c050825d"
+    },
+    {
+      "id": "drams-052",
+      "sha256": "0a871f9bc33b5aabce9536334b7705753f634bb516726d86adc4d2fcf7dcef01"
+    },
+    {
+      "id": "drams-053",
+      "sha256": "e43134c0e07f7712cffe9f27425ad9dd69186c891dc394b9f82ae3db9f1f4018"
+    },
+    {
+      "id": "drams-008",
+      "sha256": "7e29fd0f96befe87aa7175cb0d5fbf9aab0125f013fcf6fb87d0fe7c6cb9dd2c"
+    },
+    {
+      "id": "drams-011",
+      "sha256": "8f536189b27ae7c2884ef706dc71038ecc9ec9ebc589008243e4c800311a8104"
+    },
+    {
+      "id": "drams-013",
+      "sha256": "2fb5f3c8f29f35cad659b07bb9c6cba8d2a0bde229d71aba4a7611a2f1e96020"
+    },
+    {
+      "id": "drams-015",
+      "sha256": "0fd112f4bb2cae68d87fa6c9486d2980009e1d5feb3a75c73bef6d9427f2d56b"
+    },
+    {
+      "id": "drams-016",
+      "sha256": "50e6b2cffc748ab54486fced4e493365462d2932e813b33bd12727b864099418"
+    },
+    {
+      "id": "drams-017",
+      "sha256": "312ae0e4384147da175e4e793957aad44fb6ac017596cd01232db7399b6d7780"
+    },
+    {
+      "id": "drams-019",
+      "sha256": "664aaf16e7951ebff69acccde6f434b34f4cae54ec7bd35814c1998d9fb67890"
+    },
+    {
+      "id": "drams-025",
+      "sha256": "4f853d23315eb3325f5bf8e83406370a56510dd60d415f24b4c529171c3d1183"
+    },
+    {
+      "id": "drams-032",
+      "sha256": "721c8c2ccf592ce3e061ddf5d3ad2ac02e55c214bf58dbe0a0735aa8f17a9912"
+    },
+    {
+      "id": "drams-038",
+      "sha256": "14609bbfe64e80f9432b6063fe1241a6c683ddc398f44395f1d7c1f7b179fa18"
+    },
+    {
+      "id": "drams-046",
+      "sha256": "62b4fa0eda6425cf7508884c91625ee114e4bd7933ac4af04b26bf83d40b72a2"
+    },
+    {
+      "id": "drams-047",
+      "sha256": "b86e60ff802b165d23ba44d7c953a1df574177794506298d9d18d75f13c488a8"
+    },
+    {
+      "id": "drams-001",
+      "sha256": "1dcbfbfd749e8f34c6d8cc613bf23329bfcc59ef1e0d4f7facd5ad4e03c2c6de"
+    },
+    {
+      "id": "drams-006",
+      "sha256": "d09bb1af6f2af8363b5b2c98479292b73f1dd631acd66511bc14dd4627e3f2c0"
+    },
+    {
+      "id": "drams-007",
+      "sha256": "ae30255b57dc32235bd6f81142f9f023cddff78c3b78e3664c9dd0225d72e623"
+    },
+    {
+      "id": "drams-014",
+      "sha256": "6a9a7daa076e69f500abcb6ef7073dc6b0685e3dc5d068ebf1623689e255ea50"
+    },
+    {
+      "id": "drams-018",
+      "sha256": "d2195c7a3455034abf5cfc733af7eef2da0ec0b1d8d52d0e6b056070e6b7ff58"
+    },
+    {
+      "id": "drams-023",
+      "sha256": "5f601eede9f0b5541bc3f49f09a3036ac51c69716a930c9a50931492630753ff"
+    },
+    {
+      "id": "drams-024",
+      "sha256": "2950ead726812a2155d9d2ab7366a1ad80847892f723526eb15f98d19761212c"
+    },
+    {
+      "id": "drams-026",
+      "sha256": "6f1fd5d8b66e9f8ab0a03f3dc33ffc996a18b41d3e52c116b496695c12bb35ab"
+    },
+    {
+      "id": "drams-028",
+      "sha256": "740a6328776f23958cdd6a968323f7f6f008714e8452f96569c005e7f8a75979"
+    },
+    {
+      "id": "drams-030",
+      "sha256": "356144e06145e4437ca2aabb25ffbfc65c9a026b10269117d765b6c204e65210"
+    },
+    {
+      "id": "drams-027",
+      "sha256": "9f513143c82cadfdef130fd1ce922f95f0c856362b3033309b080db69bd95de8"
+    },
+    {
+      "id": "drams-029",
+      "sha256": "4329d65f456eb794c2de762eb3c097748e5d94d35f88995e891fb25397a47b9e"
+    },
+    {
+      "id": "drams-031",
+      "sha256": "840c9ed101661fac47ed5b828de2aca32838a1b604975ba863eb693aa3f853ea"
+    },
+    {
+      "id": "drams-033",
+      "sha256": "da4b959a412f0f66d5b408d01251cc642c3d1bd3fd99198fb20d4a5ac71aed9e"
+    },
+    {
+      "id": "drams-035",
+      "sha256": "1241a130118d80193da1603aa95711c7a1e9cc7db04c380dc827458dafb6e047"
+    },
+    {
+      "id": "drams-037",
+      "sha256": "959bd13365436829e0cfd9dc365e73abf31e60ceeb66f91a88c34c9bd2f2da69"
+    },
+    {
+      "id": "drams-039",
+      "sha256": "2ba2a4c2970739a35646500e39f50e188509d71754b982ab79095e4278ed2c0e"
+    },
+    {
+      "id": "drams-041",
+      "sha256": "3de3026bd039b109b00e8980af900fda860973b0fcb7b42777afa3a33e472f85"
+    },
+    {
+      "id": "drams-042",
+      "sha256": "3a733d45b865caef9f7847b80f7bb050a88737fffd27da2f24f66dd55e8bed15"
+    },
+    {
+      "id": "agent-prompt-composer",
+      "sha256": "8f72bf7c99669f395233724e8f716df634780ac5948d35fc72af5999ae05bd18"
+    },
+    {
+      "id": "agent-voice-orb",
+      "sha256": "83ffc0109971e67c08b5e9ba1773b1bfac0560dbef7ccc4e70fec61a191e15a3"
+    },
+    {
+      "id": "agent-approval-card",
+      "sha256": "23f993a5b489577f059e9bf29561b6ef4056fd4b4f0f6d09e81d81a86031abec"
+    },
+    {
+      "id": "agent-image-gen-reveal",
+      "sha256": "66bbdce21eeac007e8f450d854ff3a79234980c095b46b463c63b64777695ebf"
+    },
+    {
+      "id": "agent-task-checklist",
+      "sha256": "31850a55dd1c6f27604120723033f2ebe36e54a00f88b7c1190af9b10840f50b"
+    },
+    {
+      "id": "agent-citation-chips",
+      "sha256": "5391f3d5b8377f28867bfe0dc2c840b9dfb8960b12fac53c3067b3c4a26774dd"
+    },
+    {
+      "id": "micro-smoke-delete",
+      "sha256": "81cb389796c0b90db1489e6b231b1fed02fa287497ccbaa0433ea00afc7629d1"
+    },
+    {
+      "id": "micro-inline-confirm",
+      "sha256": "c0af22699267d1fdb48522caafa90f6e3715ebe8e4fece464f956ce3c3bee627"
+    },
+    {
+      "id": "micro-star-rating",
+      "sha256": "4bf27cae22f48131219796d624ee1f45b144eed5143558622fcbadac047ad51d"
+    },
+    {
+      "id": "micro-reaction-bar",
+      "sha256": "5c74545aa0237a4d59dac057feb0dbf57e352fcf7486940fe12bc17d6644a1f7"
+    },
+    {
+      "id": "micro-shimmer-status",
+      "sha256": "b95b06617c0cf6020c18c2274600a42fed7f7a059e9eea88ddbccd408d622ea5"
+    },
+    {
+      "id": "ui-folder-peek",
+      "sha256": "7c396676f52e12810ad352347058c793d5d7ec4abb562ba9fed4553389cb67e9"
+    },
+    {
+      "id": "ui-avatar-stack",
+      "sha256": "bff0a26da03e0f801fa41d6a0d5b9db9fc3bc77a87608c57f81836accb03f072"
+    },
+    {
+      "id": "ui-link-preview",
+      "sha256": "6b57f008f9c9fc281fa69d486eae6475fb8921f9e5d0103c122f1583aa13a957"
+    },
+    {
+      "id": "ui-card-fan",
+      "sha256": "d11dec4cd8037721a411828f8895a7a384593b0b89ce97ac3ab07bb663786f22"
+    },
+    {
+      "id": "ui-onboarding-checklist",
+      "sha256": "4979ef0b4d22705b0c0b6f299589467c3899ae7c008f499eb8eeaf74ce39f257"
+    },
+    {
+      "id": "ui-inverse-tabs",
+      "sha256": "3452d62cafb093578a644f0df82b975d77edf9adaa8ca12f7f3578b5356084a7"
+    },
+    {
+      "id": "ui-selection-bar",
+      "sha256": "1182ae6f919f4a8851b9b75d7b899970905ad2d5b15207cf2cef91f8f9f29733"
+    },
+    {
+      "id": "form-slide-to-confirm",
+      "sha256": "1e6f6ba64bee2e4fee8df9f86377bfb3e2238b85bf3a6dc57fc703a4f1c5cda2"
+    },
+    {
+      "id": "form-picker-wheel",
+      "sha256": "40cbb7117f05714ae1abecd21a6ac5e200a6a29872712641e550a5e259f6114a"
+    },
+    {
+      "id": "form-precision-scrubber",
+      "sha256": "91bd95c0c194f3bd22e11d6f90b744ee317fe21a9227b318023b4d4486d6e29c"
+    },
+    {
+      "id": "form-dropzone-morph",
+      "sha256": "38922f00badb300d76fdf959dd5fb13d544ec348c939083d226093dd63425cd0"
+    },
+    {
+      "id": "data-activity-rings",
+      "sha256": "f2b98a9694de60bc1ec8d81296fc4076cde4b7c489499dd72ad0fc5a07adc36c"
+    },
+    {
+      "id": "data-candlestick-crosshair",
+      "sha256": "bfb204596113d3b8d6879284a0c7a1616eef3967afb5fa7c618bdf8eee4fd05f"
+    },
+    {
+      "id": "data-sankey-flow",
+      "sha256": "af3414ddbaeaefbe89c850cdfeaf4cad35843c1d280f3c8ff3cd837231abf1a3"
+    },
+    {
+      "id": "nav-pill-condense",
+      "sha256": "361123e8c3d9a2560c835b6520203e75731b35aec57f4bc5a1e2ec30c0acb7c8"
+    },
+    {
+      "id": "fx-liquid-glass",
+      "sha256": "a4f305c6e0fcadbb713289c3876fa4dae4d26935a7f614983742e0cc879e5129"
+    },
+    {
+      "id": "fx-plasma-orb",
+      "sha256": "4d0dd14bfe4cd69a20f791cb19dff887283b3c6a096fde3fb7ce5ccdf7bd2708"
+    },
+    {
+      "id": "fx-beam-grid",
+      "sha256": "b33fbd8e5ce0b2557ec8396139c36e1611144d4a05708073fc2b416c978abeab"
+    },
+    {
+      "id": "fx-particle-text",
+      "sha256": "e32b3fad9da2cb533cef1c4375871b2cfeb5c3c614c904ecfebe858d026ddfeb"
+    },
+    {
+      "id": "ai-message-stream",
+      "sha256": "c9c2c7af228302293a1e2bb92b8145c276f24a1dbab18aebbe29a039e5ff0aab"
+    },
+    {
+      "id": "ai-code-block",
+      "sha256": "e8f6a613e8c49f12293e0da3a3838b4dea98f193c13c365df5fd3d54dd94d1ab"
+    },
+    {
+      "id": "ai-tool-result",
+      "sha256": "f38b26c9c945e1573f36a378dfe812bcd214e4ad7338e7a864c465c5cc8d1969"
+    },
+    {
+      "id": "ai-activity-feed",
+      "sha256": "6fb3d19cba1ab3c7f4cb7ed27e91b44c957aeb1ccfb903d5830edbf61ce381a9"
+    },
+    {
+      "id": "ai-sidebar",
+      "sha256": "76f2ffaa129e2cc68c0041d407f4b7d556d590b29986e59a4d579a8171df5d5d"
+    },
+    {
+      "id": "ai-web-search",
+      "sha256": "d94aeb283bfd19c6f9bdc1c8d75b983372b94581ee648409e8a8eb203c519d84"
+    },
+    {
+      "id": "ai-usage-limits",
+      "sha256": "5ea6b7b3a176d2bf9b8807889c00dd09a6c830f2fc70eac4090224c825ae7830"
+    },
+    {
+      "id": "ai-autocomplete",
+      "sha256": "b0f5ef3469e7f51a1635934337e5112f80846a40ec28937285913c2040434425"
+    },
+    {
+      "id": "ai-multi-agent",
+      "sha256": "f1ef7f1ef0bd745145aba9fb7216fa6f7f7da3350e97d35301b5991ef89e4aee"
+    },
+    {
+      "id": "ai-agent-creator",
+      "sha256": "d513046e2beb3b74abf9ccf641926260bf83d1b391cf1e29d867ba7fc3ddc9d3"
+    },
+    {
+      "id": "micro-stateful-button",
+      "sha256": "7e70eb3a9f372697d16b74d2a012b37da3ddbe77a9257639b8e6770864e7f366"
+    },
+    {
+      "id": "micro-escape-button",
+      "sha256": "4290b5e3ed48963c30967e0b90124e8a565c5a995fa3f8d355f9fd62e8b4132e"
+    },
+    {
+      "id": "micro-hold-to-pay",
+      "sha256": "83613e94ad3ab517d4c5731714292830f8083e68fae39d0005f3bcf6c92746a9"
+    },
+    {
+      "id": "micro-share-pill",
+      "sha256": "a3329c96405cdb3d9f4018250e1222b8b02f7dce2e2aa3de3df6a26260c823eb"
+    },
+    {
+      "id": "micro-icon-swap",
+      "sha256": "cc90528de1a5f14ad95b86dbc05de18badd28c6e3f5962d94b54944142ff355b"
+    },
+    {
+      "id": "micro-rainbow-shine",
+      "sha256": "a380d34a6aa766738d9e8b056a7f7521fa1b8e072e84124a2558fda5817908f1"
+    },
+    {
+      "id": "micro-award-badge",
+      "sha256": "914f958118c33e58547c891d8645ca6c5c9d3eb6f9a04bbe57ff46d798b4dfa0"
+    },
+    {
+      "id": "micro-holo-badge",
+      "sha256": "ddf2ef469cfab6467ae7bec3345fd43f55b2b2b62a34537c08521aa7f2748d37"
+    },
+    {
+      "id": "micro-peel-sticker",
+      "sha256": "d70bc406ec64f80a653e1d836ba42c0b236ebb0d57ecbe344dfbdc5f3144604f"
+    },
+    {
+      "id": "micro-action-swap",
+      "sha256": "67e979f72cef052093151bfccd9e7c912c8b81b49e7c34dbfa4ebfcaf82795d3"
+    },
+    {
+      "id": "form-vanish-input",
+      "sha256": "39e230dd8a645f2f342e5696a4e85449a08c2dc5d99367e0e4e8a48ca9238d46"
+    },
+    {
+      "id": "form-gooey-search",
+      "sha256": "ef94be92dc9d5284473e0f8e3f9d1cefaf8368b44e0871e66bc088ea87d30d2d"
+    },
+    {
+      "id": "form-magnetic-select",
+      "sha256": "becab9d8aea8f0a7e279d4a5514e0f233d00ed5298b8ba87b395c07a75772139"
+    },
+    {
+      "id": "form-assignee-picker",
+      "sha256": "c877cd4549782fe4f339bbaab012e368d8c6acc4ea574669ae79b78056b0de1c"
+    },
+    {
+      "id": "form-color-picker",
+      "sha256": "6521684d5de8d0d8d96730ac60daf0f8ff27ca1609970181887d7c7ee5ecca02"
+    },
+    {
+      "id": "form-date-range",
+      "sha256": "4846f7a1b21b500a356c70b0b7d9b99a4ca10341d469170f24c011505a5c038d"
+    },
+    {
+      "id": "form-multi-select",
+      "sha256": "f22288107572ad9ef188260e72ef1ca7e48a51458d1623fb072fb728e1eaa209"
+    },
+    {
+      "id": "form-inline-edit",
+      "sha256": "9790bc9dee65580ce723df8a080876b29340db329577702878d51947b9903d96"
+    },
+    {
+      "id": "form-signature-pad",
+      "sha256": "f7d38acc84c8f855d5bab386b994c12aea19cbcb8b0287dbe96ae122b487c551"
+    },
+    {
+      "id": "form-liquid-toggle",
+      "sha256": "ff060e9227c5c3fbff09b5ae758573359adf95b2ecedc4ea4e1448eed457da39"
+    },
+    {
+      "id": "fx-black-hole",
+      "sha256": "489339d99f69e9e1c6c6919de8a83d50839a812af7cdad774eec9064180d5e46"
+    },
+    {
+      "id": "fx-vortex",
+      "sha256": "0ff4a3a23b5b29ae2e217f49d8aa884bf1c4cb6a3e76cf0c6e7ac53575592d4b"
+    },
+    {
+      "id": "fx-lamp",
+      "sha256": "a478bd76833abde6a3469b5a2ff3a997a267e75db7c9352c0e001983c2d5281e"
+    },
+    {
+      "id": "fx-canvas-reveal",
+      "sha256": "0e0704c5e6544fc58fdc359b9f833fc892d20b6f671a264fb0d54b4e3dbafb33"
+    },
+    {
+      "id": "fx-light-tunnel",
+      "sha256": "7c86f16e7a62b7fae2d44d6bc39016667c26149d299251d8477d28040480f351"
+    },
+    {
+      "id": "fx-dithered-logo",
+      "sha256": "c7f1ea348fae1a7adda7466af3ba2e099f6927f994fdb54ff2a8d34508ef3c7e"
+    },
+    {
+      "id": "fx-meteors",
+      "sha256": "b957199882748a78a97214e0d4400b100777bfd2803bc3ed53e8198e3d9a4ff5"
+    },
+    {
+      "id": "fx-background-boxes",
+      "sha256": "d0eea8d6707e70ff25b378e098085e36a08e2f864a859b3cd5b5f998eda9ad07"
+    },
+    {
+      "id": "ui-bloom-menu",
+      "sha256": "ae14be24ea83f6ec6440c0f3e3386b0320e833a8d6d83dd475594f8db7101775"
+    },
+    {
+      "id": "ui-file-tree",
+      "sha256": "7de6e003ae30ec1a9d87f157e508c4ef824b1ba994a942d44bf6803dd4086f4a"
+    },
+    {
+      "id": "ui-evervault-card",
+      "sha256": "d6c0c3c39701223ede0b8035c59f1fdfa3b194475434f92fa9db28a6d3601d42"
+    },
+    {
+      "id": "ui-wobble-card",
+      "sha256": "73987948bc59fb84c2cc6d6d9cb7707780bf87af18edc9d8a437672129ed559f"
+    },
+    {
+      "id": "ui-draggable-cards",
+      "sha256": "360950516567738497947e69e91bd9a0fda513e02b3b1f4ce6d0ad98ebf367da"
+    },
+    {
+      "id": "ui-timeline-progress",
+      "sha256": "d244ac0a1220b49bcbbc3a748181e855d07c652018d22d3c3e227f5ec71da30b"
+    },
+    {
+      "id": "ui-kanban-board",
+      "sha256": "cb8af0590eb19585ea1bfcd4a8cb4037219b9aaab01babce9ad70c88e0e7fa67"
+    },
+    {
+      "id": "ui-morphing-modal",
+      "sha256": "379a3b98ec4da33c5d38cebd14f70f8f866ca0048c19b1f5b05f8a2feec2655d"
+    },
+    {
+      "id": "ui-feedback-widget",
+      "sha256": "614f1eb330adb789310cb7f6ec3410bf554e13795f9896bc630521e028437c8d"
+    },
+    {
+      "id": "ui-realtime-cursors",
+      "sha256": "a8df7d940600f7a21cacaf7b5a9dec97db1809d071409f40d64ea57cdc9d55b1"
+    },
+    {
+      "id": "ui-data-table-expand",
+      "sha256": "a6d8962df1fca226da834c9a94c7bc6742b006c8bccd606bb5d907270a92f12a"
+    },
+    {
+      "id": "ui-availability-scheduler",
+      "sha256": "37293f8eb0eb39a6d46658a94ef68bea044b583e2b558254dd828ab5d64c1d68"
+    },
+    {
+      "id": "gallery-coverflow",
+      "sha256": "f75469aaf20c2e3158cf711290fd8690373bd12892ba5d8177ef841b460af1b0"
+    },
+    {
+      "id": "gallery-bookshelf",
+      "sha256": "f6cfc5e5d8dfee65c3d2d15698f7de373af39f07bd001d21c0167b9a2eee8a65"
+    },
+    {
+      "id": "gallery-apple-cards",
+      "sha256": "7e606b63a80e37787632018e5484e19d03cb60822dc01d1ca12d5c7e56ae28e4"
+    },
+    {
+      "id": "gallery-testimonials",
+      "sha256": "853b412169171e90bf1cbba57fcc5cb407a5a09b006c94823cb08d454382ab7c"
+    },
+    {
+      "id": "gallery-photo-stack",
+      "sha256": "d67bcbe74d3d90ab4420ce2c0f66834617c11000a61e72bb1e1da3d1216b714d"
+    },
+    {
+      "id": "nav-pagination-morph",
+      "sha256": "d78d5024f3db2d182d8267b558cf34d9ff96ead7f051b17cbd29d45022468394"
+    },
+    {
+      "id": "nav-scribble-underline",
+      "sha256": "3a10e4d681bb2947833d104878f1d384002ab45822bf5973e874f66eb9513b5b"
+    },
+    {
+      "id": "nav-proximity-links",
+      "sha256": "0fc77daefaf6fa4104f592baee388f902c760db4c5ce7291701ece05ba4521be"
+    },
+    {
+      "id": "nav-mobile-tabbar",
+      "sha256": "d979d374b6d2d2c8484713f6ca7d555e0230eda2893a52de06d1f379711f4033"
+    },
+    {
+      "id": "nav-line-sidebar",
+      "sha256": "563d15a7c32a2acf4aec0532a7ba7f60bd3f0171d5881cdebf5343f01fb0782c"
+    },
+    {
+      "id": "text-reveal-card",
+      "sha256": "847d1f24f25f82306e7293c961d8f8e69444e0c09f690987f4d4a90abfb12614"
+    },
+    {
+      "id": "text-squiggle-wave",
+      "sha256": "09014cbed9535dd5757c066da51771d02e314ca47c2c877b10e2e86d6a493398"
+    },
+    {
+      "id": "text-gradient-outline",
+      "sha256": "39bc2c64baf73aafa86f609ce92d128df4a21cea8608014dff96cc328a818cba"
+    },
+    {
+      "id": "text-container-flip",
+      "sha256": "29aed1c9aa1869e8416b440befb2c9e7c79f91cbb5165494f85a6a8208e45c5c"
+    },
+    {
+      "id": "text-caesar-cipher",
+      "sha256": "94bca55ac618bc5a6f32222a12e4f14dff91d76163da8a7c7c059f413244ff5d"
+    },
+    {
+      "id": "text-fog-wipe",
+      "sha256": "ab0732dd2cbdd5e54e5c17fb045f4a597ae4a93d0644755fd4f900feb6433c26"
+    },
+    {
+      "id": "data-funnel",
+      "sha256": "2539c81f5c44eab3130834ce3881605d571a92622178a9637621cafce61bcd89"
+    },
+    {
+      "id": "data-treemap",
+      "sha256": "c051c7f3137dda97a96b06a5399ad8c880ce20e8dd4bb307cbe5232d2dc407ad"
+    },
+    {
+      "id": "data-radar-compare",
+      "sha256": "cdda67456e29ef0a2cc9a11fc01b9031fe41894ba02470cffe4cc097d805ee29"
+    },
+    {
+      "id": "data-line-tooltip",
+      "sha256": "50840546bf01af0d78d7a9ba856e832793108b8fca1e78f018438b6ccd1ccdee"
+    },
+    {
+      "id": "data-prediction-market",
+      "sha256": "6d70a9afc22cd15c427a5735bcf6303c979bb90a021ceb4dd201e3b526dc9b89"
+    },
+    {
+      "id": "data-world-clock",
+      "sha256": "939fc978e94d7c75eee645689c2ad1634debbb8ea7bbfb47b62f844cc685fb6b"
+    },
+    {
+      "id": "loader-multi-step",
+      "sha256": "3d61f2cada25c2b2297da399c2a05911476a1fde8c599c52ca09139fb6fd6263"
+    },
+    {
+      "id": "loader-matrix-dots",
+      "sha256": "57436b5e6359e37c4ef3b256d5594170ddaf6a8a4f6d42dec30528a8c1b888bf"
+    },
+    {
+      "id": "loader-blueprint",
+      "sha256": "c5963a9d8f984b922775bbc85132bbe0cf8e13bc486601d9ce2ffd673ce3e551"
+    },
+    {
+      "id": "loader-trace",
+      "sha256": "8d11b7648b0b5c48385be92957df7c0e2ed10349ef870a6105738991ad7235aa"
+    },
+    {
+      "id": "3d-pin",
+      "sha256": "d225d2563cf4622cd2cccc4cfbf80195bde70c9c2f1a05ac8682c41fbfb35971"
+    },
+    {
+      "id": "3d-marquee-grid",
+      "sha256": "d976978011f03d52fc2d8e256f4559bc0d17bf10adc0c45a5804b5adf218f371"
+    },
+    {
+      "id": "3d-container-scroll",
+      "sha256": "34c971678fb8f6a0f9197093f13de27c09690f5b26cd6e1cb7cb6b5d1942f9b8"
+    },
+    {
+      "id": "scroll-sticky-reveal",
+      "sha256": "93b285509a64be41a8cb8ba38d50442cbb9702e6753e4ec51debb79c0da1edf4"
+    },
+    {
+      "id": "scroll-hero-parallax",
+      "sha256": "fac974d1bdc9f7a6aaac3456e63c2b3b0a3139f4482a50364ef5c2776a5aec95"
+    },
+    {
+      "id": "scroll-parallax-columns",
+      "sha256": "eed3759a80f3787e0e1fd1624b25a3bab4cb61e47b9a525e4c2686658d4ba181"
+    },
+    {
+      "id": "cursor-following-label",
+      "sha256": "48581a18c324493f21a1078b1a8b32a5a30ffc48e6213685395562166a739daa"
+    },
+    {
+      "id": "cursor-zoom-lens",
+      "sha256": "ace6f77524b5fe773631126500df58330ce2d560f892986f2d8eb89d7332d090"
+    },
+    {
+      "id": "play-plinko",
+      "sha256": "30c363cbd60b9c7e9cc4fb9b3ac51801d3815d59c34854007924f78f6069146a"
+    },
+    {
+      "id": "play-slingshot",
+      "sha256": "25402c9deef81d08a578ffd00109d5b7a978c28744219f6219e7380b10178b62"
+    },
+    {
+      "id": "play-coin-flip",
+      "sha256": "cb6473bc7689c0a0a1cec1bbe89669bfce0e439f1709430ddee70b87a12ae270"
+    },
+    {
+      "id": "sound-piano-keys",
+      "sha256": "a0a0d102c5497394dabb29748df25c008eb0ee57584409a1b340f9ac77f70706"
+    },
+    {
+      "id": "skeuo-tear-ticket",
+      "sha256": "5cb1f23fcc7e0aa62ee3645ca070def49f67f537e7f4ee2a8fef7b0102c79a81"
+    },
+    {
+      "id": "skeuo-lanyard-badge",
+      "sha256": "e77a949ca1979aee115abd9d0739b03a8fa57260019952b91dffc66dc22a2386"
+    },
+    {
+      "id": "skeuo-wallet-cards",
+      "sha256": "1baa0264bfaa4f180a9a4ff5135186554531a9c6763b8beaf0a1d39038ef2ee3"
+    }
+  ],
+  "items": [
+    {
+      "id": "image-infinite-zoom",
+      "action": "toggle",
+      "before": {
+        "name": "Pause zoom",
+        "pressed": "false",
+        "text": "Pause zoom"
+      },
+      "after": {
+        "name": "Resume zoom",
+        "pressed": "true",
+        "text": "Resume zoom"
+      },
+      "ariaLabel": "Pause zoom or resume zoom"
+    },
+    {
+      "id": "kenburns-crossfade",
+      "action": "toggle",
+      "before": {
+        "name": "Resume slideshow",
+        "pressed": "true",
+        "text": "Resume slideshow"
+      },
+      "after": {
+        "name": "Pause slideshow",
+        "pressed": "false",
+        "text": "Pause slideshow"
+      },
+      "ariaLabel": "Pause slideshow or resume slideshow"
+    },
+    {
+      "id": "collision-bubbles",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "ferrofluid-dots",
+      "action": "polarity",
+      "before": {
+        "name": "North",
+        "pressed": "false",
+        "text": "North"
+      },
+      "after": {
+        "name": "South",
+        "pressed": "true",
+        "text": "South"
+      },
+      "ariaLabel": "North or South polarity"
+    },
+    {
+      "id": "ferrofluid-dots",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "water-ripple-2d",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "lava-lamp",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "melt-drip-text",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "smoke-wisps",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "bubble-float-pop",
+      "action": "pause",
+      "before": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "after": {
+        "name": "Resume",
+        "pressed": "true",
+        "text": "Resume"
+      },
+      "ariaLabel": "Pause or resume"
+    },
+    {
+      "id": "starfield-warp",
+      "action": "warp",
+      "before": {
+        "name": "Engage warp",
+        "pressed": "false",
+        "text": "Engage warp"
+      },
+      "after": {
+        "name": "Cruise",
+        "pressed": "true",
+        "text": "Cruise"
+      },
+      "ariaLabel": "Engage warp or cruise"
+    },
+    {
+      "id": "ui-sound-kit",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "typing-mechanical",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "theremin-pad",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "notification-chime-stack",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "drum-grid-sequencer",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "scroll-pitch-drone",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute sound"
+    },
+    {
+      "id": "snake-in-grid",
+      "action": "toggle",
+      "before": {
+        "name": "Play",
+        "pressed": "true",
+        "text": "Play"
+      },
+      "after": {
+        "name": "Pause",
+        "pressed": "false",
+        "text": "Pause"
+      },
+      "ariaLabel": "Play, pause or resume"
+    },
+    {
+      "id": "dither-bayer",
+      "action": "invert",
+      "before": {
+        "name": "Invert field",
+        "pressed": "false",
+        "text": "Invert field"
+      },
+      "after": {
+        "name": "Restore field",
+        "pressed": "true",
+        "text": "Restore field"
+      },
+      "ariaLabel": "Invert field or restore field"
+    },
+    {
+      "id": "dither-floyd-steinberg",
+      "action": "lock",
+      "before": {
+        "name": "Lock full color",
+        "pressed": "false",
+        "text": "Lock full color"
+      },
+      "after": {
+        "name": "Return to dither",
+        "pressed": "true",
+        "text": "Return to dither"
+      },
+      "ariaLabel": "Lock full color or return to dither"
+    },
+    {
+      "id": "dither-blue-noise",
+      "action": "toggle",
+      "before": {
+        "name": "Dissolve to B",
+        "pressed": "false",
+        "text": "Dissolve to B"
+      },
+      "after": {
+        "name": "Return to A",
+        "pressed": "true",
+        "text": "Return to A"
+      },
+      "ariaLabel": "Dissolve to B or return to A"
+    },
+    {
+      "id": "halftone-dots",
+      "action": "pin",
+      "before": {
+        "name": "Pin pressure",
+        "pressed": "false",
+        "text": "Pin pressure"
+      },
+      "after": {
+        "name": "Release pressure",
+        "pressed": "true",
+        "text": "Release pressure"
+      },
+      "ariaLabel": "Pin pressure or release pressure"
+    },
+    {
+      "id": "halftone-lines",
+      "action": "lock",
+      "before": {
+        "name": "Lock 32°",
+        "pressed": "false",
+        "text": "Lock 32°"
+      },
+      "after": {
+        "name": "Release angle",
+        "pressed": "true",
+        "text": "Release angle"
+      },
+      "ariaLabel": "Lock 32° or release angle"
+    },
+    {
+      "id": "ascii-render",
+      "action": "color",
+      "before": {
+        "name": "Color glyphs",
+        "pressed": "false",
+        "text": "Color glyphs"
+      },
+      "after": {
+        "name": "Mono glyphs",
+        "pressed": "true",
+        "text": "Mono glyphs"
+      },
+      "ariaLabel": "Color glyphs or mono glyphs"
+    },
+    {
+      "id": "ascii-donut-3d",
+      "action": "pan",
+      "before": {
+        "name": "Pan field",
+        "pressed": "false",
+        "text": "Pan field"
+      },
+      "after": {
+        "name": "Spin torus",
+        "pressed": "true",
+        "text": "Spin torus"
+      },
+      "ariaLabel": "Pan field or spin torus"
+    },
+    {
+      "id": "ascii-fluid-stir",
+      "action": "pan",
+      "before": {
+        "name": "Pan field",
+        "pressed": "false",
+        "text": "Pan field"
+      },
+      "after": {
+        "name": "Stir field",
+        "pressed": "true",
+        "text": "Stir field"
+      },
+      "ariaLabel": "Pan field or stir field"
+    },
+    {
+      "id": "pixel-sort",
+      "action": "toggle",
+      "before": {
+        "name": "Lock sorted",
+        "pressed": "false",
+        "text": "Lock sorted"
+      },
+      "after": {
+        "name": "Release sorted",
+        "pressed": "true",
+        "text": "Release sorted"
+      },
+      "ariaLabel": "Lock sorted or release sorted"
+    },
+    {
+      "id": "threshold-mosaic-transition",
+      "action": "toggle",
+      "before": {
+        "name": "Switch to B",
+        "pressed": "false",
+        "text": "Switch to B"
+      },
+      "after": {
+        "name": "Return to A",
+        "pressed": "true",
+        "text": "Return to A"
+      },
+      "ariaLabel": "Switch to B or return to A"
+    },
+    {
+      "id": "interlace-flicker",
+      "action": "toggle",
+      "before": {
+        "name": "Lock high field",
+        "pressed": "false",
+        "text": "Lock high field"
+      },
+      "after": {
+        "name": "Release high field",
+        "pressed": "true",
+        "text": "Release high field"
+      },
+      "ariaLabel": "Lock high field or release high field"
+    },
+    {
+      "id": "posterize-hover",
+      "action": "toggle",
+      "before": {
+        "name": "Pin lens",
+        "pressed": "false",
+        "text": "Pin lens"
+      },
+      "after": {
+        "name": "Release lens",
+        "pressed": "true",
+        "text": "Release lens"
+      },
+      "ariaLabel": "Pin lens or release lens"
+    },
+    {
+      "id": "chromatic-type",
+      "action": "polarity",
+      "before": {
+        "name": "Polarity: normal",
+        "pressed": "false",
+        "text": "Polarity: normal"
+      },
+      "after": {
+        "name": "Polarity: reverse",
+        "pressed": "true",
+        "text": "Polarity: reverse"
+      },
+      "ariaLabel": "Polarity: normal or polarity: reverse"
+    },
+    {
+      "id": "rotary-knob",
+      "action": "mute",
+      "before": {
+        "name": "Mute",
+        "pressed": "false",
+        "text": "Mute"
+      },
+      "after": {
+        "name": "Unmute",
+        "pressed": "true",
+        "text": "Unmute"
+      },
+      "ariaLabel": "Mute or unmute"
+    },
+    {
+      "id": "led-segment-display",
+      "action": "power",
+      "before": {
+        "name": "Power off",
+        "pressed": "true",
+        "text": "Power off"
+      },
+      "after": {
+        "name": "Power on",
+        "pressed": "false",
+        "text": "Power on"
+      },
+      "ariaLabel": "Power off or power on"
+    },
+    {
+      "id": "cassette-reels",
+      "action": "play",
+      "before": {
+        "name": "Play",
+        "pressed": "false",
+        "text": "Play"
+      },
+      "after": {
+        "name": "Pause",
+        "pressed": "true",
+        "text": "Pause"
+      },
+      "ariaLabel": "Play or pause"
+    }
+  ],
+  "controls": {
+    "image-infinite-zoom": [
+      {
+        "action": "toggle",
+        "label": "Pause zoom"
+      },
+      {
+        "action": "center",
+        "label": "Center point"
+      }
+    ],
+    "kenburns-crossfade": [
+      {
+        "action": "toggle",
+        "label": "Pause slideshow"
+      },
+      {
+        "action": "next",
+        "label": "Next scene"
+      }
+    ],
+    "collision-bubbles": [
+      {
+        "action": "activate",
+        "label": "Burst"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "ferrofluid-dots": [
+      {
+        "action": "activate",
+        "label": "Pulse"
+      },
+      {
+        "action": "polarity",
+        "label": "North"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "water-ripple-2d": [
+      {
+        "action": "activate",
+        "label": "Drop"
+      },
+      {
+        "action": "reset",
+        "label": "Still"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "lava-lamp": [
+      {
+        "action": "activate",
+        "label": "Merge"
+      },
+      {
+        "action": "palette",
+        "label": "Palette"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "melt-drip-text": [
+      {
+        "action": "activate",
+        "label": "Melt sweep"
+      },
+      {
+        "action": "reset",
+        "label": "Cool"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "smoke-wisps": [
+      {
+        "action": "activate",
+        "label": "Breeze"
+      },
+      {
+        "action": "reset",
+        "label": "Clear"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "bubble-float-pop": [
+      {
+        "action": "activate",
+        "label": "Pop cluster"
+      },
+      {
+        "action": "reset",
+        "label": "Refill"
+      },
+      {
+        "action": "pause",
+        "label": "Pause"
+      }
+    ],
+    "starfield-warp": [
+      {
+        "action": "toggle",
+        "label": "Pause flight"
+      },
+      {
+        "action": "warp",
+        "label": "Engage warp"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
+    "ui-sound-kit": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "typing-mechanical": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "theremin-pad": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "wave",
+        "label": "Wave sine"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "notification-chime-stack": [
+      {
+        "action": "add",
+        "label": "Add notification"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "clear",
+        "label": "Clear"
+      }
+    ],
+    "drum-grid-sequencer": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "scroll-pitch-drone": [
+      {
+        "action": "enable",
+        "label": "Enable sound"
+      },
+      {
+        "action": "mute",
+        "label": "Mute"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "snake-in-grid": [
+      {
+        "action": "toggle",
+        "label": "Play"
+      },
+      {
+        "action": "step",
+        "label": "Step once"
+      },
+      {
+        "action": "reset",
+        "label": "Restart"
+      }
+    ],
+    "dither-bayer": [
+      {
+        "action": "invert",
+        "label": "Invert field"
+      }
+    ],
+    "dither-floyd-steinberg": [
+      {
+        "action": "lock",
+        "label": "Lock full color"
+      }
+    ],
+    "dither-blue-noise": [
+      {
+        "action": "toggle",
+        "label": "Dissolve to B"
+      }
+    ],
+    "halftone-dots": [
+      {
+        "action": "pin",
+        "label": "Pin pressure"
+      }
+    ],
+    "halftone-lines": [
+      {
+        "action": "lock",
+        "label": "Lock 32°"
+      }
+    ],
+    "ascii-render": [
+      {
+        "action": "color",
+        "label": "Color glyphs"
+      },
+      {
+        "action": "density",
+        "label": "Density 08"
+      }
+    ],
+    "ascii-donut-3d": [
+      {
+        "action": "pause",
+        "label": "Pause torus"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset"
+      }
+    ],
+    "ascii-fluid-stir": [
+      {
+        "action": "pause",
+        "label": "Pause solver"
+      },
+      {
+        "action": "pan",
+        "label": "Pan field"
+      },
+      {
+        "action": "reset",
+        "label": "Reset field"
+      }
+    ],
+    "pixel-sort": [
+      {
+        "action": "toggle",
+        "label": "Lock sorted"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
+    "threshold-mosaic-transition": [
+      {
+        "action": "toggle",
+        "label": "Switch to B"
+      },
+      {
+        "action": "restore",
+        "label": "Restore A"
+      }
+    ],
+    "interlace-flicker": [
+      {
+        "action": "toggle",
+        "label": "Lock high field"
+      },
+      {
+        "action": "restore",
+        "label": "Restore field"
+      }
+    ],
+    "posterize-hover": [
+      {
+        "action": "levels",
+        "label": "Use 2 levels"
+      },
+      {
+        "action": "toggle",
+        "label": "Pin lens"
+      },
+      {
+        "action": "restore",
+        "label": "Restore source"
+      }
+    ],
+    "chromatic-type": [
+      {
+        "action": "polarity",
+        "label": "Polarity: normal"
+      },
+      {
+        "action": "burst",
+        "label": "Inject burst"
+      },
+      {
+        "action": "settle",
+        "label": "Register layers"
+      }
+    ],
+    "rotary-knob": [
+      {
+        "action": "mute",
+        "label": "Mute"
+      }
+    ],
+    "led-segment-display": [
+      {
+        "action": "format",
+        "label": "24-hour"
+      },
+      {
+        "action": "power",
+        "label": "Power"
+      }
+    ],
+    "cassette-reels": [
+      {
+        "action": "play",
+        "label": "Play"
+      },
+      {
+        "action": "rewind",
+        "label": "Rewind"
+      },
+      {
+        "action": "forward",
+        "label": "Advance 30s"
+      }
+    ]
+  }
+}

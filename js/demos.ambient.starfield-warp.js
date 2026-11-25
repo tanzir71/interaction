@@ -37,7 +37,8 @@ INTRX.register({
     },
     {
       "action": "warp",
-      "label": "Engage warp"
+      "label": "Engage warp",
+      "ariaLabel": "Engage warp or cruise"
     },
     {
       "action": "reset",

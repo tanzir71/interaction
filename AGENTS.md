@@ -1950,3 +1950,16 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   identical source; retain the failed oracle and same-source repeatability.
   Native DOM/styles/geometry remain exact; do not claim every PNG pair is exact
   or infer a universal raster bound from the observed channel delta of four.
+
+- Shared Dock controls may declare `ariaLabel` alongside `action` and the
+  initial visible `label`. Include all visible aliases in the fixed identity;
+  Snake includes Play, Pause and Resume. `registry.js` associates an invisible
+  sibling through `aria-labelledby` on boot; generated portable bootstrap uses
+  the same helper. Keep the base Stage, runtime and exporter files frozen.
+  All 520 demo controllers, styles, HTML, prompts, artwork and models remain
+  unchanged in this metadata pass. `tools/verify-dock-control-names.js` checks
+  actual browser names, full/native views, normal/reduced motion, held Space,
+  compact layout, offline exports, ID collisions, independent Stages and replay.
+  `tools/audit-dock-toggle-names.js --require-stable` rejects drift in its initial
+  visible Dock sample. Keep the first Snake alias failures and the fixture's
+  asset-resolver/footer-selector mistakes; earlier evidence remains frozen.
