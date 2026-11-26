@@ -1,0 +1,906 @@
+{
+  "date": "2026-11-26",
+  "baseline": "1809b5fa4ed38e33e24e2f30ae85de8d5fc10d73",
+  "outcome": "Complete 520-component initial full-view automated scan recorded across eight width/Stage-theme/shell-theme combinations per component. All 4,160 cases booted without page errors. Raw violations and incomplete results remain unresolved review evidence; this is not accessibility acceptance.",
+  "productChanges": 0,
+  "toolChange": "Add --shell-theme=stage|opposite|dark|light while preserving the prior coupled default. Record shell and Stage themes independently. Keep the original unfiltered axe tags, result payloads, source guards, rules and failure exit behavior.",
+  "scope": {
+    "components": 520,
+    "cases": 4160,
+    "widths": [
+      1440,
+      390
+    ],
+    "stageThemes": [
+      "dark",
+      "light"
+    ],
+    "shellThemes": [
+      "dark",
+      "light"
+    ],
+    "modes": [
+      "full"
+    ],
+    "motion": [
+      "reduced"
+    ],
+    "browser": "158.0.8127.88",
+    "axeVersion": "4.14.1",
+    "axeSHA256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+    "viewportHeight": 1000,
+    "stageHeight": {
+      "desktop": 720,
+      "compact": 600
+    },
+    "compactDPR": 2,
+    "input": "Desktop pointer at both widths; not native moving-touch emulation.",
+    "readiness": "Fonts and every img decode, then two renderer frames. No claim that every intentional transition is settled.",
+    "included": "Mounted component and shared Dock; all selected WCAG 2 A/AA, WCAG 2.1 A/AA and best-practice rules.",
+    "excluded": [
+      "Native thumbnails",
+      "Normal-motion and every-transition coverage",
+      "All application states, keyboard paths and touch gestures",
+      "Whole-shell route accessibility",
+      "Focus clipping and screen-reader usability",
+      "Photographic and complete non-text contrast",
+      "Speech-recognition software",
+      "Cold-route startup and CPU4 performance"
+    ]
+  },
+  "runs": [
+    {
+      "group": "width-1440",
+      "file": ".artifacts/final-catalog-accessibility-v54/width-1440/2026-11-26T05-34-46-059Z/report.json",
+      "sha256": "f6a458219c57969b1925017ea06786a4948781f4881a35dbc47cf00cb2787a5d",
+      "started": "2026-11-26T05:34:46.061Z",
+      "finished": "2026-11-26T05:36:38.886Z",
+      "width": 1440,
+      "shellMode": "stage",
+      "sourceStable": true,
+      "cases": 1040,
+      "violations": 46,
+      "incomplete": 614,
+      "pageErrors": 0,
+      "incompleteNodes": 3890
+    },
+    {
+      "group": "width-390",
+      "file": ".artifacts/final-catalog-accessibility-v54/width-390/2026-11-26T05-34-46-075Z/report.json",
+      "sha256": "4e4114dbb2af520ff9d1e3e868d1f89a891b65b3cd48b6d4c0942f5b1dc5c477",
+      "started": "2026-11-26T05:34:46.077Z",
+      "finished": "2026-11-26T05:36:40.966Z",
+      "width": 390,
+      "shellMode": "stage",
+      "sourceStable": true,
+      "cases": 1040,
+      "violations": 46,
+      "incomplete": 617,
+      "pageErrors": 0,
+      "incompleteNodes": 3747
+    },
+    {
+      "group": "opposite-1440",
+      "file": ".artifacts/final-catalog-accessibility-v54/opposite-1440/2026-11-26T05-40-08-579Z/report.json",
+      "sha256": "310f422a6aa17ae42ece36f97acbe0076d2008a8bb5a250dd5502283b27a705d",
+      "started": "2026-11-26T05:40:08.589Z",
+      "finished": "2026-11-26T05:41:59.585Z",
+      "width": 1440,
+      "shellMode": "opposite",
+      "sourceStable": true,
+      "cases": 1040,
+      "violations": 46,
+      "incomplete": 614,
+      "pageErrors": 0,
+      "incompleteNodes": 3885
+    },
+    {
+      "group": "opposite-390",
+      "file": ".artifacts/final-catalog-accessibility-v54/opposite-390/2026-11-26T05-40-08-600Z/report.json",
+      "sha256": "dee4b702ba87ad82fee96d551940c2a8e4e65db97ad9bb9ba2bd77128d4ae359",
+      "started": "2026-11-26T05:40:08.602Z",
+      "finished": "2026-11-26T05:42:03.390Z",
+      "width": 390,
+      "shellMode": "opposite",
+      "sourceStable": true,
+      "cases": 1040,
+      "violations": 46,
+      "incomplete": 617,
+      "pageErrors": 0,
+      "incompleteNodes": 3747
+    }
+  ],
+  "summary": {
+    "bootErrors": 0,
+    "pageErrors": 0,
+    "sourceStable": true,
+    "violations": {
+      "label-content-name-mismatch": {
+        "results": 176,
+        "nodes": 320,
+        "components": [
+          "cursor-particle-emitter",
+          "text-scramble",
+          "text-outline-fill-scroll",
+          "text-glitch-layers",
+          "text-broken-grid",
+          "svg-blob-morph",
+          "svg-line-graph-live",
+          "css3d-card-flip-grid",
+          "css3d-isometric-hover",
+          "magnet-snap-grid",
+          "slider-progress-fraction",
+          "fui-target-lock",
+          "fui-access-granted",
+          "fui-trading-terminal",
+          "fui-orbital-tracker",
+          "table-image-idle",
+          "hero-spotlight-reveal",
+          "glass-refraction-card",
+          "punch-card-keyboard",
+          "dynamic-notch",
+          "vinyl-player-card",
+          "foil-trading-card"
+        ]
+      },
+      "color-contrast": {
+        "results": 8,
+        "nodes": 96,
+        "components": [
+          "ui-evervault-card"
+        ]
+      }
+    },
+    "incomplete": {
+      "color-contrast": {
+        "results": 2414,
+        "nodes": 15045,
+        "components": [
+          "parallax-layers",
+          "horizontal-scroll",
+          "scroll-text-highlight",
+          "scroll-image-sequence",
+          "scroll-svg-draw",
+          "scroll-rotate-gallery",
+          "scroll-split-screen",
+          "scroll-counter-rotate",
+          "scroll-color-theme",
+          "scroll-clip-morph",
+          "scroll-inertia-grid",
+          "scroll-video-scrubber",
+          "cursor-elastic-line",
+          "cursor-inverted-lens",
+          "cursor-grid-ripple",
+          "cursor-drag-ghost",
+          "cursor-rope-trail",
+          "cursor-flashlight-noise",
+          "cursor-emoji-rain",
+          "cursor-magnetic-grid-lines",
+          "cursor-heat-shimmer",
+          "cursor-crosshair-hud",
+          "cursor-pull-distort",
+          "cursor-shadow-parallax",
+          "image-trail",
+          "spotlight-mask",
+          "tilt-card",
+          "kinetic-marquee",
+          "text-clip-image",
+          "text-outline-fill-scroll",
+          "text-ransom-note",
+          "text-glitch-layers",
+          "text-circular-spin",
+          "text-highlighter-swipe",
+          "text-broken-grid",
+          "clip-reveal",
+          "hover-zoom-card",
+          "grayscale-grid",
+          "comparison-slider",
+          "kenburns-crossfade",
+          "svg-blob-morph",
+          "svg-line-graph-live",
+          "svg-marching-ants",
+          "svg-gooey-menu",
+          "svg-topographic-drift",
+          "svg-circuit-pulse",
+          "svg-lissajous-loader",
+          "css3d-cube-nav",
+          "css3d-card-flip-grid",
+          "css3d-book-page",
+          "css3d-carousel-cylinder",
+          "css3d-isometric-hover",
+          "css3d-folding-map",
+          "css3d-depth-hero",
+          "css3d-exploded-device",
+          "spring-cursor-follower",
+          "gravity-drop-icons",
+          "collision-bubbles",
+          "wrecking-ball-text",
+          "magnet-snap-grid",
+          "liquid-blob-buttons",
+          "ink-bleed-reveal",
+          "slider-elastic-edges",
+          "slider-progress-fraction",
+          "slider-stack-deck",
+          "slider-fullbleed-parallax",
+          "gallery-filmstrip-scrub",
+          "gallery-expanding-columns",
+          "gallery-honeycomb",
+          "gallery-dual-row-drift",
+          "lightbox-flip-zoom",
+          "slider-wheel-3d",
+          "scrollsnap-carousel",
+          "nav-blur-elevate",
+          "nav-hide-reveal",
+          "sidebar-rail-expand",
+          "btn-border-beam",
+          "btn-shimmer-sweep",
+          "otp-code-boxes",
+          "preloader-percentage",
+          "preloader-word-cycle",
+          "loader-typing-code",
+          "progress-blob-fill",
+          "page-load-counter-slide",
+          "chart-donut-sweep",
+          "map-city-tiles",
+          "fui-target-lock",
+          "fui-terminal-boot",
+          "fui-data-stream",
+          "fui-trading-terminal",
+          "fui-orbital-tracker",
+          "agent-token-meter",
+          "agent-streaming-text",
+          "agent-diff-review",
+          "agent-knowledge-orbit",
+          "gradient-mesh-drift",
+          "aurora-curtains",
+          "rain-window",
+          "theremin-pad",
+          "scroll-pitch-drone",
+          "drag-to-break",
+          "snake-in-grid",
+          "command-palette",
+          "toast-stack",
+          "number-input-drag",
+          "hero-spotlight-reveal",
+          "dither-bayer",
+          "dither-floyd-steinberg",
+          "dither-blue-noise",
+          "brushed-metal-slider",
+          "glass-refraction-card",
+          "flip-clock",
+          "embossed-press",
+          "analog-gauge",
+          "punch-card-keyboard",
+          "slot-machine-reel",
+          "zippo-flame",
+          "wax-seal-stamp",
+          "op1-panel",
+          "dynamic-notch",
+          "vinyl-player-card",
+          "foil-trading-card",
+          "drag-carousel",
+          "showcase-orbital-path",
+          "showcase-card-swap",
+          "showcase-tracing-story",
+          "framer-rolling-balance",
+          "drams-006",
+          "drams-007",
+          "drams-018",
+          "drams-024",
+          "drams-026",
+          "drams-028",
+          "micro-star-rating",
+          "micro-reaction-bar",
+          "micro-shimmer-status",
+          "ui-folder-peek",
+          "ui-card-fan",
+          "ui-inverse-tabs",
+          "form-slide-to-confirm",
+          "form-picker-wheel",
+          "form-precision-scrubber",
+          "data-sankey-flow",
+          "ai-code-block",
+          "ai-tool-result",
+          "ai-autocomplete",
+          "micro-rainbow-shine",
+          "micro-holo-badge",
+          "micro-peel-sticker",
+          "form-signature-pad",
+          "fx-lamp",
+          "ui-bloom-menu",
+          "ui-wobble-card",
+          "ui-draggable-cards",
+          "ui-realtime-cursors",
+          "ui-data-table-expand",
+          "ui-availability-scheduler",
+          "gallery-coverflow",
+          "gallery-apple-cards",
+          "text-reveal-card",
+          "text-squiggle-wave",
+          "text-gradient-outline",
+          "text-container-flip",
+          "text-caesar-cipher",
+          "text-fog-wipe",
+          "data-treemap",
+          "data-radar-compare",
+          "data-line-tooltip",
+          "data-prediction-market",
+          "data-world-clock",
+          "3d-pin",
+          "cursor-following-label",
+          "cursor-zoom-lens",
+          "play-plinko",
+          "lenis-smooth-scroll",
+          "scroll-reveal-stagger",
+          "scroll-progress",
+          "velocity-skew",
+          "scroll-marquee-direction",
+          "scroll-depth-tunnel",
+          "scroll-letter-scatter",
+          "scroll-table-of-contents",
+          "cursor-text-repel",
+          "cursor-hover-preview",
+          "cursor-eyes-follow",
+          "cursor-liquid-metaball",
+          "cursor-velocity-stretch",
+          "cursor-snap-targets",
+          "custom-cursor",
+          "magnetic-button",
+          "split-text-reveal",
+          "text-scramble",
+          "line-mask-reveal",
+          "letter-roll",
+          "proximity-type",
+          "stat-counter",
+          "text-wave-hover",
+          "text-typewriter-caret",
+          "text-falling-letters",
+          "text-blur-focus",
+          "text-strike-reveal",
+          "text-anagram-shuffle",
+          "text-accordion-squeeze",
+          "text-underline-magic",
+          "text-numbers-slot",
+          "pixelate-reveal",
+          "svg-path-draw-hover",
+          "svg-squiggle-underline",
+          "svg-signature-write",
+          "css3d-parallax-room",
+          "webgl-point-globe",
+          "webgl-wobbly-sphere",
+          "voxel-assemble",
+          "cloth-flag",
+          "inertia-window-drag",
+          "ferrofluid-dots",
+          "water-ripple-2d",
+          "lava-lamp",
+          "melt-drip-text",
+          "smoke-wisps",
+          "bubble-float-pop",
+          "liquid-image-ripple",
+          "liquid-mask-reveal",
+          "slider-clip-transition",
+          "gallery-random-stack",
+          "nav-active-pill",
+          "menu-letter-cascade",
+          "menu-image-peek",
+          "breadcrumb-collapse",
+          "burger-morph-x",
+          "like-heart-particles",
+          "input-underline-grow",
+          "password-strength-bar",
+          "form-multistep-progress",
+          "loader-morph-shapes",
+          "upload-progress-morph",
+          "chart-bars-race",
+          "sparkline-hover-scrub",
+          "heatmap-fade-in",
+          "ticker-tape-prices",
+          "radar-sweep-blips",
+          "map-dot-globe-arcs",
+          "map-route-draw",
+          "map-isoline-field",
+          "fui-status-dashboard",
+          "fui-waveform-scope",
+          "fui-signal-scanner",
+          "fui-access-granted",
+          "fui-hex-dump",
+          "agent-deploy-pipeline",
+          "agent-context-compaction",
+          "agent-node-graph",
+          "particles-constellation",
+          "flow-field",
+          "starfield-warp",
+          "conway-life-fade",
+          "audio-reactive-bars",
+          "matrix-rain",
+          "fireflies-night",
+          "ui-sound-kit",
+          "typing-mechanical",
+          "notification-chime-stack",
+          "drum-grid-sequencer",
+          "dvd-screensaver",
+          "konami-unlock",
+          "click-fireworks",
+          "pet-the-blob",
+          "gravity-flip-page",
+          "wobbly-window-drag",
+          "zoom-ui-inception",
+          "swap-widget",
+          "halftone-dots",
+          "halftone-lines",
+          "ascii-render",
+          "ascii-webcam-style-wave",
+          "ascii-donut-3d",
+          "ascii-fire",
+          "ascii-fluid-stir",
+          "ascii-portrait-reveal",
+          "ascii-morph",
+          "ascii-type-explode",
+          "terminal-window",
+          "dot-matrix-shapes",
+          "halftone-globe-canvas",
+          "engraving-lines-warp",
+          "pixel-lissajous-lab",
+          "glitch-rgb-slices",
+          "glitch-datamosh-blocks",
+          "scanline-crt",
+          "vhs-tracking",
+          "pixel-sort",
+          "noise-grain-overlay",
+          "threshold-mosaic-transition",
+          "bitmap-font-marquee",
+          "interlace-flicker",
+          "posterize-hover",
+          "chromatic-type",
+          "neumorphic-buttons",
+          "mechanical-switch",
+          "rotary-knob",
+          "paper-stack-cards",
+          "led-segment-display",
+          "cassette-reels",
+          "torn-paper-edge",
+          "showcase-converging-paths",
+          "showcase-circular-gallery",
+          "showcase-elastic-slider",
+          "framer-formatted-metric",
+          "framer-focus-countdown",
+          "framer-financial-trend",
+          "drams-003",
+          "drams-004",
+          "drams-005",
+          "drams-009",
+          "drams-020",
+          "drams-021",
+          "drams-022",
+          "drams-045",
+          "drams-002",
+          "drams-012",
+          "drams-034",
+          "drams-040",
+          "drams-010",
+          "drams-043",
+          "drams-044",
+          "drams-036",
+          "drams-048",
+          "drams-050",
+          "drams-051",
+          "drams-052",
+          "drams-053",
+          "drams-008",
+          "drams-011",
+          "drams-013",
+          "drams-015",
+          "drams-016",
+          "drams-017",
+          "drams-019",
+          "drams-025",
+          "drams-032",
+          "drams-038",
+          "drams-046",
+          "drams-047",
+          "drams-001",
+          "drams-014",
+          "drams-023",
+          "drams-030",
+          "drams-027",
+          "drams-029",
+          "drams-031",
+          "drams-033",
+          "drams-035",
+          "drams-037",
+          "drams-039",
+          "drams-041",
+          "drams-042",
+          "agent-voice-orb",
+          "agent-image-gen-reveal",
+          "agent-citation-chips",
+          "micro-smoke-delete",
+          "micro-inline-confirm",
+          "ui-avatar-stack",
+          "ui-link-preview",
+          "ui-selection-bar",
+          "form-dropzone-morph",
+          "data-activity-rings",
+          "data-candlestick-crosshair",
+          "fx-liquid-glass",
+          "fx-plasma-orb",
+          "fx-beam-grid",
+          "fx-particle-text",
+          "ai-message-stream",
+          "ai-activity-feed",
+          "ai-sidebar",
+          "ai-web-search",
+          "ai-usage-limits",
+          "ai-multi-agent",
+          "ai-agent-creator",
+          "micro-stateful-button",
+          "micro-escape-button",
+          "micro-hold-to-pay",
+          "micro-icon-swap",
+          "micro-award-badge",
+          "form-vanish-input",
+          "form-gooey-search",
+          "form-magnetic-select",
+          "form-color-picker",
+          "form-date-range",
+          "form-multi-select",
+          "form-inline-edit",
+          "form-liquid-toggle",
+          "fx-black-hole",
+          "fx-vortex",
+          "fx-canvas-reveal",
+          "fx-light-tunnel",
+          "fx-dithered-logo",
+          "fx-meteors",
+          "fx-background-boxes",
+          "ui-file-tree",
+          "ui-evervault-card",
+          "ui-timeline-progress",
+          "ui-kanban-board",
+          "ui-morphing-modal",
+          "ui-feedback-widget",
+          "gallery-bookshelf",
+          "gallery-testimonials",
+          "gallery-photo-stack",
+          "nav-pagination-morph",
+          "nav-scribble-underline",
+          "nav-proximity-links",
+          "nav-mobile-tabbar",
+          "nav-line-sidebar",
+          "data-funnel",
+          "loader-multi-step",
+          "loader-matrix-dots",
+          "loader-blueprint",
+          "loader-trace",
+          "3d-marquee-grid",
+          "3d-container-scroll",
+          "scroll-sticky-reveal",
+          "scroll-hero-parallax",
+          "scroll-parallax-columns",
+          "play-slingshot",
+          "play-coin-flip",
+          "sound-piano-keys",
+          "skeuo-tear-ticket",
+          "skeuo-lanyard-badge",
+          "skeuo-wallet-cards"
+        ]
+      },
+      "label-content-name-mismatch": {
+        "results": 48,
+        "nodes": 224,
+        "components": [
+          "gravity-drop-icons",
+          "konami-unlock",
+          "snake-in-grid",
+          "number-input-drag",
+          "wax-seal-stamp",
+          "op1-panel"
+        ]
+      }
+    },
+    "incompleteRuleResults": 2462,
+    "incompleteNodes": 15269
+  },
+  "inspection": {
+    "file": ".artifacts/final-catalog-accessibility-v54/inspection.json",
+    "sha256": "9b9f594f40d193c3c817ad323d9602443177ab5530ebae2ffd12e4029607d095",
+    "components": 23,
+    "scope": "Current settled reduced full compact scenes: raw flagged controls, actual Chrome AX names, visible text/layer metadata and Stage screenshots. Primary-label classifications are made separately after inspecting the evidence. No naming verdict or speech-software acceptance follows from this capture.",
+    "actualChromeAX": true,
+    "captures": [
+      {
+        "id": "cursor-particle-emitter",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/cursor-particle-emitter-review.png",
+          "sha256": "de951a867c33a8ba9c74e48684963807a90edf0f2506c890e867463df6954227"
+        }
+      },
+      {
+        "id": "text-scramble",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/text-scramble-review.png",
+          "sha256": "dd3728f037d3e78829daab20381caca39dcc8e7ba9d52c4ac102282f2e27dd56"
+        }
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/text-outline-fill-scroll-review.png",
+          "sha256": "513acdf1b8c59ef0de5b65bf3e39299e5707bdd0546ed6b5ec44978ca5ea3ff9"
+        }
+      },
+      {
+        "id": "text-glitch-layers",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/text-glitch-layers-review.png",
+          "sha256": "5567a8aaffe601cbff516ced22dd9276c9f7f6eaa93e3faf64d5d3139dd91a5c"
+        }
+      },
+      {
+        "id": "text-broken-grid",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/text-broken-grid-review.png",
+          "sha256": "b1892306c60a39730163c7459876c359f37013cc561234f53f3ce9f31033810e"
+        }
+      },
+      {
+        "id": "svg-blob-morph",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/svg-blob-morph-review.png",
+          "sha256": "98bfab8e0b43e1451620c339dea8575d59acd5c2ba6405d1d911f0b1f993be48"
+        }
+      },
+      {
+        "id": "svg-line-graph-live",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/svg-line-graph-live-review.png",
+          "sha256": "1bca96a4f43f3caa6e98c181523c1e361dac64c9c70ca7070651c34b34dcf922"
+        }
+      },
+      {
+        "id": "css3d-card-flip-grid",
+        "controls": 8,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/css3d-card-flip-grid-review.png",
+          "sha256": "abe139d78e1df85cb58858bf08d40a992bf6693e4f4f631a161583d864f9d222"
+        }
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/css3d-isometric-hover-review.png",
+          "sha256": "c60b5abdac405e56561e746f5b37f78efdf63b24efc053de94dc67a164c4eaaa"
+        }
+      },
+      {
+        "id": "magnet-snap-grid",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/magnet-snap-grid-review.png",
+          "sha256": "f6d2cf4373289467977996a4c5e7df586fecb15edffbc0ca772fcb7076b8ac2e"
+        }
+      },
+      {
+        "id": "slider-progress-fraction",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/slider-progress-fraction-review.png",
+          "sha256": "afdb9bf514dcf56bfdcace03f925fb98ef97f0aa95268eeb9f3c834a5474ba04"
+        }
+      },
+      {
+        "id": "fui-target-lock",
+        "controls": 4,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/fui-target-lock-review.png",
+          "sha256": "70ef08f9ed0c1193d25e3bc5cb7746cad0c61a94d15c196bf42b4edc38cfad80"
+        }
+      },
+      {
+        "id": "fui-access-granted",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/fui-access-granted-review.png",
+          "sha256": "605821253afac8cc95c515c169090111e961f370a3c574cfba6f3d8080ed2de0"
+        }
+      },
+      {
+        "id": "fui-trading-terminal",
+        "controls": 3,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/fui-trading-terminal-review.png",
+          "sha256": "341fafa5b6fa96f1c47104c139586891e1b1fd189a05f8938e299045ff733c95"
+        }
+      },
+      {
+        "id": "fui-orbital-tracker",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/fui-orbital-tracker-review.png",
+          "sha256": "0d384abf057862a9a54b6af944bc60f7e5bd57350cd2b6019b1d4a68fc12de04"
+        }
+      },
+      {
+        "id": "table-image-idle",
+        "controls": 5,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/table-image-idle-review.png",
+          "sha256": "238f6457fa83c234b9d33038e4934d6597261c55f81e992e6fa61fb71ecfce32"
+        }
+      },
+      {
+        "id": "hero-spotlight-reveal",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/hero-spotlight-reveal-review.png",
+          "sha256": "570ba5f87f1771ec3264f6caee05ff174fc6353e18870d1347e4e98eadf343a2"
+        }
+      },
+      {
+        "id": "glass-refraction-card",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/glass-refraction-card-review.png",
+          "sha256": "9225f2a70b7142e7b12064031dadeb274445d0c9db7b7256d4a100f58f7854fb"
+        }
+      },
+      {
+        "id": "punch-card-keyboard",
+        "controls": 3,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/punch-card-keyboard-review.png",
+          "sha256": "f2b3e0f11af17b4d2aaff786b1813e412112153bcd5a6b70a80912c50299422f"
+        }
+      },
+      {
+        "id": "dynamic-notch",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/dynamic-notch-review.png",
+          "sha256": "ef31f1c837a40d230d31ea998b826b0106a04d71994a401c5966e088ac193bc6"
+        }
+      },
+      {
+        "id": "vinyl-player-card",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/vinyl-player-card-review.png",
+          "sha256": "19cf26fbaa0ee68e60cf3a04247fd641156b511559f2746f79e027c051b47990"
+        }
+      },
+      {
+        "id": "foil-trading-card",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/foil-trading-card-review.png",
+          "sha256": "44f5fe32aaeb748b9bba57994008ef3aae2e49d955e150716c40dfd13e056fb3"
+        }
+      },
+      {
+        "id": "ui-evervault-card",
+        "controls": 1,
+        "screenshot": {
+          "file": ".artifacts/final-catalog-accessibility-v54/ui-evervault-card-review.png",
+          "sha256": "cefaeb81ee2460f50e6f85fc9a25743c3bf07c1e59a8025cb276dafeee387c44"
+        }
+      }
+    ],
+    "openFindings": [
+      {
+        "id": "svg-blob-morph",
+        "observation": "Visible State A and Pointer lobe captions do not occur in the current Organic radial shape accessible name. Review the identifying caption and keep the name synchronized with actual radial state."
+      },
+      {
+        "id": "css3d-isometric-hover",
+        "observation": "The visible Quarter report title does not occur in the Isometric stack accessible name. Review the primary label without treating every data readout or hidden layer as a label."
+      },
+      {
+        "id": "glass-refraction-card",
+        "observation": "The visible A little further out / Day pass front headline is currently in aria-description, while the name has Coast club and Saturday by the sea. Review both visible faces and preserve their actual identifying copy."
+      },
+      {
+        "id": "ui-evervault-card",
+        "observation": "Chrome exposes twenty-four duplicated random glyph strings, while axe reports twelve low-contrast base rows per theme. Review decorative texture semantics without changing the captured artwork, removing the focusable field or suppressing raw contrast findings."
+      }
+    ],
+    "classificationStatus": "The other raw name findings include clipped duplicate paint, front/back faces, symbolic letter icons and supporting metadata. They are retained as raw findings; this phase does not classify every node as either a confirmed defect or an exemption."
+  },
+  "preservation": {
+    "completeDefinitionsUnchanged": 520,
+    "controllersUnchanged": 520,
+    "HTMLUnchanged": 520,
+    "CSSUnchanged": 520,
+    "newRuntimeDependencies": 0,
+    "baseline": {
+      "file": ".artifacts/final-catalog-accessibility-v54/baseline.json",
+      "sha256": "384ffd540622756d267385aa2571d7a03e6084d6d999552f2c36b9bce90fe3f5"
+    },
+    "publicTool": {
+      "file": "tools/audit-component-accessibility.js",
+      "sha256": "04a94e2194fd9e2b218f91bcd685b6f33ac54dd33d787f3716871b27aead9a2c"
+    }
+  },
+  "acceptance": "Open. Retain all incomplete nodes and raw rules; review actual identifying labels, decorative semantics, remaining manual contrast, input/focus and performance gates separately.",
+  "verification": {
+    "at": "2026-11-26T06:02:46.203Z",
+    "commands": [
+      {
+        "command": "node tools/verify-registry.js",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/registry.log",
+          "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+        }
+      },
+      {
+        "command": "node tools/verify-stage.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/stage.log",
+          "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+        }
+      },
+      {
+        "command": "node tools/build-registry.js --check",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/generated.log",
+          "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+        }
+      },
+      {
+        "command": "node tools/verify-library.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/library.log",
+          "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+        }
+      },
+      {
+        "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/fit.log",
+          "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+        }
+      },
+      {
+        "command": "node tools/verify-motion.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/motion.log",
+          "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+        }
+      },
+      {
+        "command": "npm test --prefix packages/intrx",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-catalog-accessibility-v54/phase-checks/package.log",
+          "sha256": "65699919fc487fd4a45de9c4113f0c4c58a71b12d4d803f6ba130dd268536ea2"
+        }
+      }
+    ],
+    "library": {
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "scope": "Seven mandatory phase checks pass. The separate whole-catalog axe scans correctly exit 1 for their retained findings; these phase checks do not resolve those accessibility results.",
+    "stageFit": {
+      "total": 520,
+      "failures": 0,
+      "lowFillExceptions": 163
+    }
+  }
+}

@@ -2,15 +2,16 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const option=name=>process.argv.find(value=>value.startsWith('--'+name+'='))?.slice(name.length+3);
 if(process.argv.includes('--help')){
-  console.log('Usage: node tools/audit-component-accessibility.js [http://127.0.0.1:4173] --axe=/external/axe.min.js [--ids=id,...] [--themes=dark,light] [--modes=full,thumb] [--motion=reduced,normal] [--width=1440] [--output=.artifacts/component-accessibility]\nRequires external Playwright via PLAYWRIGHT_MODULE. Optional INTRX_CHROME_EXECUTABLE selects Chrome. Each run retains complete violations, incomplete results and source hashes.');
+  console.log('Usage: node tools/audit-component-accessibility.js [http://127.0.0.1:4173] --axe=/external/axe.min.js [--ids=id,...] [--themes=dark,light] [--shell-theme=stage|opposite|dark|light] [--modes=full,thumb] [--motion=reduced,normal] [--width=1440] [--output=.artifacts/component-accessibility]\nRequires external Playwright via PLAYWRIGHT_MODULE. Optional INTRX_CHROME_EXECUTABLE selects Chrome. Shell defaults to the Stage theme; opposite covers the independent toolbar setting. Each run retains complete violations, incomplete results and source hashes.');
   process.exit(0);
 }
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),registry=require('./load-registry')(),assets=require('../assets/demo-assets.json'),catalog=require('../registry/index.json'),root=path.resolve(__dirname,'..');
 const base=(process.argv.find(value=>/^https?:/.test(value))||'http://127.0.0.1:4173').replace(/\/$/,''),axeSource=option('axe');
 assert(axeSource&&fs.existsSync(axeSource),'Provide --axe=/external/axe.min.js; audit dependencies do not belong in the static site');
-const ids=option('ids')?.split(',')||registry.demos.map(d=>d.id),themes=(option('themes')||'dark,light').split(','),modes=(option('modes')||'full').split(','),motions=(option('motion')||'reduced').split(','),width=Number(option('width')||1440);
+const ids=option('ids')?.split(',')||registry.demos.map(d=>d.id),themes=(option('themes')||'dark,light').split(','),shellMode=option('shell-theme')||'stage',shellTheme=theme=>shellMode==='stage'?theme:shellMode==='opposite'?(theme==='dark'?'light':'dark'):shellMode,modes=(option('modes')||'full').split(','),motions=(option('motion')||'reduced').split(','),width=Number(option('width')||1440);
 assert(ids.length&&new Set(ids).size===ids.length&&ids.every(id=>registry.demos.some(d=>d.id===id)),'Unknown or duplicate IDs');
 assert(themes.length&&themes.every(theme=>['dark','light'].includes(theme)),'Invalid themes');
+assert(['stage','opposite','dark','light'].includes(shellMode),'Invalid shell theme');
 assert(modes.length&&modes.every(mode=>['full','thumb'].includes(mode)),'Invalid modes');
 assert(motions.length&&motions.every(motion=>['normal','reduced'].includes(motion)),'Invalid motion modes');
 assert(Number.isInteger(width)&&width>=320,'Invalid viewport width');
@@ -19,7 +20,7 @@ const files=[__filename,'tools/load-registry.js','tools/fixtures/showcase-fields
 const inputs=Object.fromEntries(files.map(file=>[path.relative(root,path.resolve(root,file)).replaceAll('\\','/'),hash(file)]));
 const runId=new Date().toISOString().replace(/[:.]/g,'-'),out=path.resolve(root,option('output')||'.artifacts/component-accessibility',runId);
 assert(!fs.existsSync(out),'Run directory exists');fs.mkdirSync(out,{recursive:true});
-const report={started:new Date().toISOString(),scope:'Initial rendered component and shared Dock only; current Stage styles. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance.',inputs,axe:{file:path.resolve(axeSource),sha256:hash(axeSource)},ids,themes,modes,motions,width,cases:[]};
+const report={started:new Date().toISOString(),scope:'Initial rendered component and shared Dock only; current Stage styles. Shell and Stage themes are recorded independently. Does not establish keyboard/touch behavior, screen-reader quality, focus clipping, photographic contrast, hidden states or motion/performance acceptance.',inputs,axe:{file:path.resolve(axeSource),sha256:hash(axeSource)},ids,themes,shellMode,modes,motions,width,cases:[]};
 const guard=()=>{for(const[file,expected]of Object.entries(inputs))assert.equal(hash(path.join(root,file)),expected,'Changed during accessibility scan: '+file);};
 const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');save();
 (async()=>{
@@ -29,10 +30,10 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
     page.on('pageerror',error=>errors.push(error.message));
     try{
       await page.goto(base+'/tools/fixtures/showcase-fields/rig.html');
-      await page.evaluate(({theme,base})=>{
+      await page.evaluate(({outerTheme,base})=>{
         const origin=document.createElement('base');origin.href=base+'/';document.head.prepend(origin);
-        document.documentElement.dataset.theme=theme;
-      },{theme,base});
+        document.documentElement.dataset.theme=outerTheme;
+      },{outerTheme:shellTheme(theme),base});
       for(const file of['css/foundations.css','css/fonts.css'])await page.addStyleTag({url:base+'/'+file});
       for(const file of['js/shell/registry.js','js/demo-runtime.js','js/shell/stage.js'])await page.addScriptTag({url:base+'/'+file});
       // Registry initialization installs the default resolver; map local assets afterwards.
@@ -64,7 +65,7 @@ const save=()=>fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(repo
             return{violations:scan.violations.map(trim),incomplete:scan.incomplete.map(trim),passes:scan.passes.map(rule=>rule.id),inapplicable:scan.inapplicable.map(rule=>rule.id),dockNameBindings,root:stage._root.className};
           },{demo,mode,width,theme});
         }catch(caught){error=caught.stack||String(caught);}
-        const row={id,mode,theme,motion,width,ms:Date.now()-started,...result,errors:errors.slice(errorStart),...(error?{error}:{})};
+        const row={id,mode,theme,shellTheme:shellTheme(theme),motion,width,ms:Date.now()-started,...result,errors:errors.slice(errorStart),...(error?{error}:{})};
         report.cases.push(row);fs.appendFileSync(path.join(out,'cases.jsonl'),JSON.stringify(row)+'\n');if(report.cases.length%20===0||error)save();
         console.log(JSON.stringify({case:report.cases.length,id,mode,theme,motion,violations:row.violations?.map(rule=>rule.id),incomplete:row.incomplete?.length,error}));
         if(error)throw Error(error);

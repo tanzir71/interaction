@@ -2324,3 +2324,18 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Keep the initial renderer-only candidate and failure as evidence. Catalog,
   cold-route, compositor and CPU4 acceptance remain separate. V53 private helpers,
   inputs and evidence become read/copy only when FROZEN.json is written.
+- The whole-catalog initial accessibility scan is recorded in
+  docs/accessibility/catalog-initial-2026-11-26.json. All 520 complete product
+  definitions remain unchanged. The public audit tool now accepts independent
+  shell/Stage themes; its default, raw axe rules and failure behavior stay intact.
+  Four completed reduced full-view runs cover 4,160 cases at 1440px and 390px
+  with both Stage and shell themes, with no boot/page errors. Raw findings remain:
+  176 name-rule results / 320 nodes, eight contrast results / 96 glyph nodes,
+  and 2,462 incomplete rule results / 15,269 nodes. Do not call this a WCAG pass.
+  Actual Chrome accessibility trees and captured scenes identify further review
+  work for Blob state captions, the Isometric report title, both Glass pass faces
+  and Evervault's duplicated random glyph texture. Other flagged nodes include
+  clipped paint, symbolic icons and supporting metadata; retain each raw result
+  until it has an explicit review. Native/normal motion, complete input/focus,
+  manual contrast, cold routes and CPU4 acceptance remain open. V54 private
+  helpers, inputs and evidence become read/copy only when FROZEN.json is written.
