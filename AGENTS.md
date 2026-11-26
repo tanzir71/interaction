@@ -2528,3 +2528,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   original eight textures, 1,776 columns, padded clipping and every pixel bound.
   V68/V69 private helpers, candidates, inputs and evidence become read/copy only
   when their `FROZEN.json` files are written; preserve every earlier collection.
+
+- The mobile shell Mono face and evidence are recorded in
+  `docs/performance/mobile-mono-2026-11-26.json`. Keep the original font and
+  frozen `css/fonts.css` unchanged. The derived 55,976-byte face retains every
+  original letter and mark, glyph IDs, advances, hinting, layout features,
+  weight axis and copyright/licence names. Other symbols and failed downloads
+  fall back to the original face; desktop and portable demos retain that font.
+  Reproduce with `python tools/build-shell-mono-subset.py --check` using
+  external fontTools 4.63.0 and Brotli 1.1.0; neither is a site dependency.
+  `node tools/verify-shell-mono.js http://127.0.0.1:4173` checks 256 literal
+  raster stories, all 889 original characters, complete uncut strings, real
+  delivery/fallback and exact shell/text geometry through the 600px boundary.
+  Preserve zero pixel/metric tolerance. The earlier 247-character face failed
+  a complete mixed-script string despite passing every isolated glyph.
+  All 520 authored definitions and 1,651 generated artifacts stay unchanged.
+  Keep every Lighthouse observation: Home 70/77/100, Elastic Tabs 90/100/100.
+  The smaller font saves payload bytes; stable latency, Home Lighthouse,
+  complete current-source startup, CPU4 and broader accessibility acceptance
+  remain open. V70 private helpers, candidates, inputs and evidence become
+  read/copy only when its `FROZEN.json` is written; preserve earlier collections.

@@ -1,0 +1,383 @@
+{
+  "date": "2026-11-26",
+  "baseline": "c376ce5a21a1660f80fe95bb317f026a182bc595",
+  "outcome": "The mobile shell uses a smaller Geist Mono text/UI face with every original letter and mark. The 256 complete raster stories and actual delivery/fallback/media checks pass. Original demo definitions, assets, exports and the five frozen v1 files stay unchanged. Home Lighthouse still fails across the retained collection; this is a byte saving, not a stable latency or completion claim.",
+  "font": {
+    "source": "assets/fonts/geist-mono-variable.woff2",
+    "sourceSHA256": "afaacc4c5fbba89d2ebf7a02dc4070208540874592a5504d57175782fe893101",
+    "sourceBytes": 71596,
+    "output": "assets/fonts/geist-mono-ui.woff2",
+    "outputSHA256": "d71a68f9f7f3e5b40bcd798d020eb94a6bf34cd0a9c896a2f5a38a9280f66478",
+    "outputBytes": 55976,
+    "fontTools": "4.63.0",
+    "recipe": "tools/build-shell-mono-subset.py",
+    "retainedCharacters": 623,
+    "retainedOriginalGlyphIDs": true,
+    "retainedOriginalAdvances": true,
+    "retainedLineMetrics": true,
+    "hinting": true,
+    "layoutFeatures": "*",
+    "originalTextCharacters": true,
+    "glyphNames": false,
+    "axes": [
+      {
+        "tag": "wght",
+        "minimum": 100,
+        "default": 400,
+        "maximum": 900
+      }
+    ],
+    "unicodeRange": "U+0000-0113,U+0116-012B,U+012E-0131,U+0134-0137,U+0139-013E,U+0141-0148,U+014A-014D,U+0150-017E,U+018F,U+0192,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01E4-01E9,U+0218-021B,U+0237,U+0259,U+02B9,U+02BB-02BC,U+02C6-02C8,U+02DA-02DC,U+0300-036F,U+039B,U+03A9,U+03BB-03BC,U+03C0,U+0400-045F,U+0462-0463,U+046A-046B,U+0472-0475,U+0490-0493,U+0496-0497,U+049A-049B,U+04A2-04A3,U+04AE-04B3,U+04B6-04B7,U+04BA-04BB,U+04C0,U+04CF,U+04D8-04D9,U+04E2-04E3,U+04E8-04E9,U+04EE-04EF,U+1E20-1E21,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2000-206F,U+20AC,U+2107,U+2122,U+2190-2193,U+2212,U+A78B-A78C,U+FEFF,U+FFFD",
+    "copyright": [
+      "Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git)"
+    ],
+    "license": [
+      "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+    ],
+    "licenseURL": [
+      "https://openfontlicense.org"
+    ],
+    "licenseFile": "assets/fonts/Geist-OFL.txt",
+    "scope": "Mobile shell text/UI face, including every original letter and mark. The original face covers additional symbols; desktop and portable exports keep the original font.",
+    "savedFontPayloadBytes": 15620,
+    "originalCharacterCount": 889,
+    "otherOriginalCharacters": 266,
+    "externalAuthoringTools": {
+      "fontTools": "4.63.0",
+      "Brotli": "1.1.0"
+    },
+    "runtimeDependenciesAdded": 0
+  },
+  "productionChanges": [
+    "Conditional Mono preloads and a later <=600px face preserve the original desktop and portable fonts.",
+    "Keep every original Unicode letter and mark together; preserve glyph IDs, advances, line metrics, hinting, all layout features, weight axis and licence names. Drop unused symbol outlines and non-rendering PostScript glyph names.",
+    "The original face remains the fallback for other symbols and failed subset delivery.",
+    "Profile tools now pin the newly used font inputs."
+  ],
+  "verification": {
+    "font": {
+      "file": ".artifacts/final-font-fallback-v70/verification/2026-11-26T14-05-02-002Z/report.json",
+      "sha256": "d3ebf2e172720e0254bec8c5d8fcf283c1980b16b6108df2aea9c4105d1b8503",
+      "checks": 386,
+      "rasterStories": 256,
+      "deliveryPairs": 8,
+      "metricChecks": 1612800,
+      "comparedRGBABytes": 5942320320,
+      "scope": "Literal Canvas RGBA and metrics for all 889 original characters, retained-glyph and composite-fallback strings without clipping, eight weights, eight sizes, two fractional origins and DPR 1/2. Real Home/detail request selection, exact settled initial shell geometry/styles, media-boundary text geometry and mixed-script fallback. Explicit full-font reversion and failed-subset controls. No whole-page PNG, timing, screen-reader or whole-catalog performance claim."
+    },
+    "browser": {
+      "file": ".artifacts/final-font-fallback-v70/checks-1795702105238/report.json",
+      "sha256": "9df6609ac2e3b51e986115bf61628769865e1a8e9bcf4516e093433a4d32aa9a",
+      "cases": [
+        {
+          "name": "verify-stage-runtime",
+          "command": [
+            "C:\\Program Files\\nodejs\\node.exe",
+            "tools/verify-stage-runtime.js",
+            "http://127.0.0.1:4173"
+          ],
+          "started": "2026-11-26T14:08:25.249Z",
+          "finished": "2026-11-26T14:08:29.590Z",
+          "exitCode": 0,
+          "log": "verify-stage-runtime.log",
+          "logSHA256": "aabbceded27b614d721c990fd14663dd6319e6ca3453181a06742605aff6115b",
+          "artifacts": {}
+        },
+        {
+          "name": "verify-library",
+          "command": [
+            "C:\\Program Files\\nodejs\\node.exe",
+            "tools/verify-library.js",
+            "http://127.0.0.1:4173"
+          ],
+          "started": "2026-11-26T14:08:29.599Z",
+          "finished": "2026-11-26T14:12:23.053Z",
+          "exitCode": 0,
+          "log": "verify-library.log",
+          "logSHA256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa",
+          "artifacts": {
+            "verification.json": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82",
+            "library-home-desktop.png": "c01ff8db3b80c35a51b883d4a6fcedef6260a84fdfbe4109a1d24b57856bbf82",
+            "library-detail-mobile.png": "a38ed098f697bf4b6b795f415bdee4a3aaf703f9415b026c1b3c94711037c5ae"
+          }
+        },
+        {
+          "name": "audit-stage-fit",
+          "command": [
+            "C:\\Program Files\\nodejs\\node.exe",
+            "tools/audit-stage-fit.js",
+            "http://127.0.0.1:4173"
+          ],
+          "started": "2026-11-26T14:12:23.059Z",
+          "finished": "2026-11-26T14:14:55.248Z",
+          "exitCode": 0,
+          "log": "audit-stage-fit.log",
+          "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe",
+          "artifacts": {
+            "stage-fit.json": "271c7c5aeaa55e5340c99e565c47ba5dcbb295c5f50387ac61fd1b00c70e52b6"
+          }
+        }
+      ],
+      "library": {
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "stageFitSummary": {
+        "total": 520,
+        "failed": 0,
+        "missingDesignSize": 0,
+        "overflow": 0,
+        "hscroll": 0,
+        "tinyText": 0,
+        "lowFill": 0,
+        "lowFillExceptions": 163,
+        "invalidExceptions": 0
+      }
+    },
+    "repositoryCommands": [
+      {
+        "command": "node tools/verify-registry.js",
+        "exitCode": 0,
+        "demos": 520,
+        "sourceFiles": 447
+      },
+      {
+        "command": "node tools/verify-stage.js --strict",
+        "exitCode": 0,
+        "debts": 0
+      },
+      {
+        "command": "node tools/build-registry.js --check",
+        "exitCode": 0,
+        "artifacts": 1651
+      },
+      {
+        "command": "node tools/verify-motion.js --strict",
+        "exitCode": 0,
+        "violations": 0
+      },
+      {
+        "command": "npm test --prefix packages/intrx",
+        "exitCode": 0,
+        "tests": 9
+      },
+      {
+        "command": "node --test tools/runtime.test.js tools/shell.test.js",
+        "exitCode": 0,
+        "tests": 19
+      },
+      {
+        "command": "python tools/build-shell-mono-subset.py --check",
+        "exitCode": 0
+      }
+    ],
+    "repositoryCommandScope": "Executed directly in this phase; terminal outputs are retained in the Codex transcript. Browser commands have separate raw logs and copied results in the collection.",
+    "router": {
+      "file": ".artifacts/final-font-fallback-v70/router/2026-11-26T14-15-21-251Z/report.json",
+      "sha256": "8629e6b3f0f900bd1733c8ccaff4530b4b353e8e6128dd5e3fb9cafc1bfc39ef",
+      "checks": 104,
+      "stories": 17
+    }
+  },
+  "lighthouse": {
+    "file": ".artifacts/final-font-fallback-v70/lighthouse/2026-11-26T14-06-45-861Z/report.json",
+    "sha256": "e44ea67c946ec5cf4b595cfbba04f7d333d6603ea87ee62e5a07947a2840b80b",
+    "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+    "allScoresPass": false,
+    "cases": [
+      {
+        "id": "home",
+        "repeat": 1,
+        "score": 0.7,
+        "metrics": {
+          "first-contentful-paint": 908.3838000000001,
+          "largest-contentful-paint": 3560.5757,
+          "speed-index": 1909.7285796707033,
+          "total-blocking-time": 917.8081,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400513,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "note": "Only the actual preview UI font and two composer SVG files may be excluded; its module and all other requests stay counted. Verify the actual list below.",
+          "excludedBytes": 74104,
+          "includedBytes": 326409,
+          "under400000": true
+        },
+        "file": "home-1.json",
+        "sha256": "c4b19903ee2e645c0fd4a74d9ec5f9c13571b9e9a32ef1e9b25cacf20fa89c32"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 1,
+        "score": 0.9,
+        "metrics": {
+          "first-contentful-paint": 903.1916000000001,
+          "largest-contentful-paint": 3604.787400000001,
+          "speed-index": 1527.20930588043,
+          "total-blocking-time": 18,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397565,
+        "file": "elastic-tabs-1.json",
+        "sha256": "304fe5c2c1031835e50c0cf378ae5e328efb09f8f15d2e067a874f4ff48d0042"
+      },
+      {
+        "id": "home",
+        "repeat": 2,
+        "score": 0.77,
+        "metrics": {
+          "first-contentful-paint": 908.7815,
+          "largest-contentful-paint": 908.7815,
+          "speed-index": 1699.6517909414342,
+          "total-blocking-time": 1158.5,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400513,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "note": "Only the actual preview UI font and two composer SVG files may be excluded; its module and all other requests stay counted. Verify the actual list below.",
+          "excludedBytes": 74104,
+          "includedBytes": 326409,
+          "under400000": true
+        },
+        "file": "home-2.json",
+        "sha256": "e8f20f0af47447112cb69c386010b2e88c03d02b65e17f37c599985f2d3c365b"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 2,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 902.0542,
+          "largest-contentful-paint": 902.0542,
+          "speed-index": 1404.9114791231023,
+          "total-blocking-time": 14.5,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397565,
+        "file": "elastic-tabs-2.json",
+        "sha256": "5dcd1e8c9eb38603df1cbf01c1b145de091c50de838f88e3af70e2671bfa3808"
+      },
+      {
+        "id": "home",
+        "repeat": 3,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 964.6373000000001,
+          "largest-contentful-paint": 964.6373000000001,
+          "speed-index": 1609.3043417814224,
+          "total-blocking-time": 15,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400513,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "note": "Only the actual preview UI font and two composer SVG files may be excluded; its module and all other requests stay counted. Verify the actual list below.",
+          "excludedBytes": 74104,
+          "includedBytes": 326409,
+          "under400000": true
+        },
+        "file": "home-3.json",
+        "sha256": "bfbbe2c9fb6505db81bb4ee48986b1598aed0dd56e9c6bb8fa7f5f0103d01469"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 3,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 988.7343000000001,
+          "largest-contentful-paint": 988.7343000000001,
+          "speed-index": 1547.1099920116694,
+          "total-blocking-time": 22.5,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397565,
+        "file": "elastic-tabs-3.json",
+        "sha256": "dc73f544e24d62963387b3df8ec122308fb56e0dcd1d9de781c5ce57336077ba"
+      }
+    ]
+  },
+  "rejected": {
+    "latinFace": {
+      "file": ".artifacts/final-font-fallback-v70/verification/2026-11-26T13-57-16-705Z/report.json",
+      "characters": 247,
+      "reason": "All isolated glyphs passed; the first fully uncut mixed-script comparison failed at DPR2, weight550, size32, origin0: 1247 RGBA channels, maximum alpha difference40. The earlier private comparison clipped long strings and is not whole-string evidence. Expanded textual coverage passes the final uncut comparisons; the exact native-engine cause is not established."
+    },
+    "glyphHypothesis": {
+      "file": ".artifacts/final-font-fallback-v70/font-visibility.json",
+      "result": "The prompt-copy command glyph has a zero box and no platform font on mobile; its parent is display:none. Desktop uses Cambria Math for that one glyph. Eight ASCII diagnostic timing loads do not test an actually painted mobile glyph; no production icon changes."
+    },
+    "fixtureAttempts": "Retain every aborted/failed report. Earlier fixtures incorrectly awaited offscreen lazy mounts, reused same-document resource entries for a fresh-detail assertion, compared responsive Stage playback state after resize, and inspected a sans hero badge as if it were Mono. These fixture errors do not relax any font pixel/metric predicate."
+  },
+  "preservation": {
+    "file": ".artifacts/final-font-fallback-v70/preservation.json",
+    "sha256": "c9e910bed6cabab817580a6c15417bfa8f39c200f7df555cc895407a060458b1"
+  },
+  "remaining": [
+    "Home mobile Lighthouse >=90 across the retained collection.",
+    "Complete current-source catalog cold/warm readiness under 300ms.",
+    "CPU4/compositor acceptance, including native Reactive Threads.",
+    "Broader catalog accessibility review."
+  ],
+  "references": [
+    "https://fonttools.readthedocs.io/en/latest/subset/index.html",
+    "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face/unicode-range",
+    "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/preload"
+  ],
+  "transferComparison": {
+    "previousSource": "c376ce5a21a1660f80fe95bb317f026a182bc595",
+    "previousAllHomeBytes": 415617,
+    "currentAllHomeBytes": 400513,
+    "netObservedSavingBytes": 15104,
+    "fontPayloadSavingBytes": 15620,
+    "note": "The additional conditional declarations add document bytes. All current Home transfers total 400,513 bytes; the 400,000-byte all-transfer diagnostic remains false. Handoff excludes only actual demo assets as itemized below. This does not prove stable overall latency."
+  },
+  "evidenceCollection": {
+    "manifest": ".artifacts/final-font-fallback-v70/FROZEN.json",
+    "sha256": "91b869b3315591152f8ef0228022d9b2b7da1545246576ec14580011b93778e3",
+    "files": 140,
+    "rule": "Read/copy only. Never execute or edit these private helpers, candidates, inputs or evidence, and never copy frozen candidate code elsewhere to execute it."
+  }
+}

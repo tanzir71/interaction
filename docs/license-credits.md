@@ -11,6 +11,11 @@ Font licences are included in `assets/fonts`: Geist and Geist Mono (Vercel and
 Basement Studio), Inter, Manrope, Newsreader and Allura use SIL OFL 1.1. Allura is
 by Robert Leuschke and The Allura Project Authors; its original font and licence
 are from [Google Fonts](https://github.com/google/fonts/tree/main/ofl/allura).
+The mobile shell uses a text/UI subset of the bundled Geist Mono, under the
+same SIL OFL 1.1 licence. Its original copyright and licence names are retained.
+Source/output hashes and the reproducible fontTools recipe are recorded in
+`assets/fonts/geist-mono-ui.json`; the full font remains available for other
+characters, desktop layouts and portable demos.
 Photography
 provenance and generated-image prompts are documented in `ASSET_ART_DIRECTION.md`.
 The local v4 photographs have verified free Unsplash sources, recorded
