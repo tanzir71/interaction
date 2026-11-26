@@ -2234,3 +2234,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   frame, native names or whole-catalog accessibility. Preserve all product
   definitions and the earlier raw flags. Private V49 helpers/evidence become
   read/copy only when its FROZEN.json is written.
+
+- `node tools/verify-data-palettes.js` checks all fifteen Data & Numbers demos
+  across both widths, themes and motion settings. Eleven full light palettes
+  change paint only; four already themed controls stay unchanged. Preserve all
+  original HTML, datasets, geometry, supplied SVGs, clock faces and dark-panel
+  text. Only Candlestick's Canvas/SVG colors and World Clock's day/night text
+  endpoints change in controllers; all mathematical models remain exact.
+  Normal full Funnel completes its original four-count entrance before contrast
+  checks; retain raw pre-entry measurements. Treemap text uses its actual sibling
+  surface opacity and the final tint over both foreground and background.
+  Native/full-dark comparisons use exact software PNGs with no pixel tolerance;
+  both changed controllers also mount separately from their original source.
+  `node tools/verify-data-palette-endpoints.js` checks default-GPU Canvas colors,
+  the SVG fallback/restoration branch and all 97 quarter-hour intentions in all
+  three timezone disclosures. Context events test the fallback branch, not a
+  claim of hardware context loss. Existing Data checkers honor the audit-browser
+  override. Native touch verification awaits actual pointermove and pointerup
+  events before virtual ticks and release samples, retaining the exact pose
+  assertion; an acknowledged protocol request is not an event-delivery barrier.
+  Compact Heatmap inspection opens the real More menu. Whole-catalog, complete
+  non-text/transition contrast, startup, Lighthouse and CPU4 acceptance remain
+  open. V50 private helpers/evidence become read/copy only when FROZEN.json is
+  written; keep earlier frozen helpers and inputs unchanged.

@@ -2,6 +2,26 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Data & Numbers palette review](accessibility/data-palettes-2026-11-26.json)
+repairs eleven full light compositions and checks four already themed controls.
+All original datasets, HTML, artwork, geometry and interaction models remain.
+Candlestick resolves only its Canvas/SVG paint endpoints; World Clock resolves
+only its day/night text colors. Native artwork and full dark paint retain exact
+software comparisons, including separate mounts of both original controllers.
+Keep dark chart bars, clock faces and tooltip surfaces with their appropriate
+light text. Treemap's foreground and backing both receive its actual final tint.
+Normal Funnel retains its original entrance; settled contrast checks preserve
+the raw pre-entry results rather than changing the fade.
+
+The original Data checkers use the selected audit browser and report its version.
+The touch checker awaits actual native move and release events before sampling
+the virtual clock; protocol acknowledgement can precede those browser events.
+Both original and current code reproduce the earlier unsynchronized failure and
+pass with event synchronization and the original exact pose assertion. Compact
+Heatmap inspection opens the real More menu before selecting Week 4. These
+bounded checks leave complete chart/non-text contrast, every transition frame,
+whole-catalog accessibility, cold startup, Lighthouse and CPU4 acceptance open.
+
 The [Text & Type palette review](accessibility/type-palettes-2026-11-26.json)
 adds readable full light ink to eighteen original demos. Wave and Proximity
 resolve their full-only active colors through palette variables; their original
