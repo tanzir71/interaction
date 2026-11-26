@@ -2548,3 +2548,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   complete current-source startup, CPU4 and broader accessibility acceptance
   remain open. V70 private helpers, candidates, inputs and evidence become
   read/copy only when its `FROZEN.json` is written; preserve earlier collections.
+
+- The mobile Home header's identity backdrop and native startup investigation
+  are recorded in `docs/performance/header-backdrop-2026-11-26.json`.
+  At <=600px and zero scroll it uses `blur(0px)` over the uniform canvas;
+  actual page scroll restores the original 16px filter. Desktop and other
+  routes keep their original filter. Preserve the one passive scroll owner,
+  early catalog intent, Back scroll and viewport-boundary behavior.
+  Run `node tools/verify-header-backdrop.js http://127.0.0.1:4173 --software --background-plane`
+  for 1,442 checks, 24 fresh source pairs and 192 exact background-plane PNG
+  pairs, with unchanged complete foreground source/assets/styles/geometry.
+  These flags are explicit measurement scopes, not component pixel exceptions.
+  Default whole-header equality remains strict; retain all raw whole-header
+  images. An unchanged-original-source control reproduces the exact same
+  20-pixel signed RGBA corner delta and complete image pair as one candidate
+  comparison. A separate two-byte SVG-icon difference remains unproven.
+  Native tracing identifies delayed WidgetBase shutdown and compositor joining
+  during a busy GPU raster queue; do not attribute every outlier to that one
+  trace. Keep all normal-renderer Lighthouse runs: Home 100/73/87 and Elastic
+  Tabs 100/89/89. No stable latency or final performance acceptance is claimed.
+  All 520 authored definitions, assets, frozen v1 inputs and 1,651 generated
+  artifacts stay unchanged. Current-source startup, CPU4 and broader
+  accessibility acceptance remain open. V71 private helpers, candidates, inputs
+  and evidence become read/copy only when its `FROZEN.json` is written.

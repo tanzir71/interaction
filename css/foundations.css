@@ -173,6 +173,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[t
 .promo-strip{height:36px;display:flex;align-items:center;justify-content:center;gap:18px;background:var(--bg-raised);font-size:12px}.promo-strip .btn{height:24px;font-size:11px}
 html[data-route]:not([data-route="home"]) .promo-strip{display:none}
 .site-header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:20px;height:64px;padding:0 24px;border-bottom:1px solid var(--border-subtle);background:color-mix(in srgb,var(--bg-canvas) 88%,transparent);backdrop-filter:blur(16px)}
+/* At mobile Home's top, the header has only the uniform canvas behind it. */
+@media(max-width:600px){html[data-route="home"] .site-header:not([data-overlap]){backdrop-filter:blur(0px)}}
 .hero-loading{visibility:hidden}
 .brand{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;letter-spacing:.06em}.brand-mark{position:relative;width:18px;height:18px;flex:none;border:2.5px solid var(--accent-default);border-radius:5px}.brand-mark:after{content:'';position:absolute;width:7px;height:7px;right:-3px;bottom:-3px;border-radius:2px;background:var(--accent-default)}
 .topnav{display:flex;align-items:center;gap:4px;white-space:nowrap}.topnav a{padding:6px 12px;border-radius:999px;color:var(--text-secondary);font-size:13px;display:flex;align-items:center;gap:5px}.topnav a:hover,.topnav a[aria-current="page"]{background:var(--bg-raised);color:var(--text-primary)}.topnav .badge--soon{font-size:9px;height:18px;padding:0 5px}.header-spacer{flex:1}

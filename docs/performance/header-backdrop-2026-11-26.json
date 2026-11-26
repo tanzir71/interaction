@@ -1,0 +1,613 @@
+{
+  "date": "2026-11-26",
+  "baseline": "9a21fbb5613251687dd4c3e35fea10bc567b6621",
+  "outcome": "Mobile Home uses an identity backdrop at zero scroll, where only the uniform canvas is behind the header, and restores its original 16px blur on actual scroll. Desktop and other routes retain the original filter. Exact background-plane, foreground source/style/geometry and native input/route checks pass. Whole-header renderer variation and every Lighthouse observation remain recorded. Current default mobile Lighthouse still fails; no stable overall latency improvement or final acceptance claim is made.",
+  "productionChanges": [
+    "Use blur(0px) only for the <=600px Home header at zero scroll.",
+    "One passive page-scroll owner updates the existing header attribute, including initial and restored scroll state.",
+    "Bump only the foundations and Main cache queries.",
+    "Add an explicit scoped header verifier; default whole-header pixel equality remains strict. Software and background-plane modes are opt-in, not a retry or tolerance."
+  ],
+  "preservation": {
+    "file": ".artifacts/final-home-native-v71/preservation.json",
+    "sha256": "82d290db7bb77bef5c87ac582b2259db79c3404a34833b5ea39a6bc3b2408dad"
+  },
+  "completeAuthoredDefinitionsUnchanged": 520,
+  "generatedArtifactsUnchanged": 1651,
+  "assetsChanged": 0,
+  "frozenV1InputsUnchanged": true,
+  "header": {
+    "file": ".artifacts/final-home-native-v71/verification/2026-11-26T14-56-02-440Z/report.json",
+    "sha256": "33b92bdad0a64765dd3bba6faffe1bf72ff3db0145b39fc88324d35177e62503",
+    "checks": 1442,
+    "freshSourcePairs": 24,
+    "exactBackgroundPairs": 192,
+    "raster": "Explicit --disable-gpu literal pixel comparison",
+    "pixelScope": "Explicit background plane: foreground visibility is temporarily hidden without layout changes. Complete original foreground source, asset hashes, computed paint styles and geometry are retained/compared; whole-header PNGs remain unmodified diagnostics. No whole-header pixel identity claim.",
+    "wholeHeaderDiagnostics": {
+      "total": 192,
+      "exact": 167,
+      "different": 25,
+      "scope": "Retained raw full foreground/header images, not a pixel-identity pass."
+    },
+    "method": "Fresh original/current source flows at six widths, both themes and DPR1/2. Literal header PNG and geometry equality at initial top, 1px/700px trusted wheel, native Control+Home, Library/Back and responsive boundaries. No mid-page filter mutation is used as a reference. Separate sharp-backdrop/no-blur controls prove pixel sensitivity after all captures. Pending-catalog scroll ownership is checked. Native same-source corner rounding is recorded separately; --software is an explicit renderer choice, never a silent retry or tolerance. No whole-page raster, timing or screen-reader claim."
+  },
+  "nativeCalibration": {
+    "comparison": {
+      "file": ".artifacts/final-home-native-v71/same-source-difference.json",
+      "sha256": "838e4bb54dcd00e1eb235e04d4f103f01ad8adfa62f7fe29ff6796ecf3ffa0fb"
+    },
+    "result": {
+      "scope": "Decode all four original PNGs. The source-change delta exactly equals a same-original-source delta, including sign, position and every channel; no tolerance or skipped pixels.",
+      "files": [
+        {
+          "file": ".artifacts\\final-home-native-v71\\verification\\2026-11-26T14-45-49-097Z\\360-2-dark-original-boundary-return.png",
+          "sha256": "e116bfbc98b8039c8ef9a3135761062c5a83682059ada72687a5b66ab4c3173c"
+        },
+        {
+          "file": ".artifacts\\final-home-native-v71\\verification\\2026-11-26T14-45-49-097Z\\360-2-dark-current-boundary-return.png",
+          "sha256": "7ea6bfd6a7ec12d43303bf48f5c65f32da0285943a5c609d36f62ff62c40c7fc"
+        },
+        {
+          "file": ".artifacts\\final-home-native-v71\\same-source\\2026-11-26T14-49-16-745Z\\360-2-dark-control-a-back.png",
+          "sha256": "e116bfbc98b8039c8ef9a3135761062c5a83682059ada72687a5b66ab4c3173c"
+        },
+        {
+          "file": ".artifacts\\final-home-native-v71\\same-source\\2026-11-26T14-49-16-745Z\\360-2-dark-control-b-back.png",
+          "sha256": "7ea6bfd6a7ec12d43303bf48f5c65f32da0285943a5c609d36f62ff62c40c7fc"
+        }
+      ],
+      "sameSignedDifference": true,
+      "differingPixels": 20,
+      "maximumChannels": [
+        12,
+        5,
+        1,
+        0
+      ],
+      "identicalCompleteDecodedImagePairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "scope": "The current/original 20-pixel corner delta is byte-for-byte the same complete image pair and signed RGBA delta produced by two unchanged original-source stories. This establishes native renderer variation, not universal equality. A separate software whole-header run also retained a 20-pixel, two-byte SVG-icon difference at the desktop boundary; its cause is not established. All failed reports and raw images are preserved."
+  },
+  "nativeStartup": {
+    "diagnostic": {
+      "file": ".artifacts/final-home-native-v71/diagnostic-1795702861604/report.json",
+      "sha256": "03b365d27ab831a48b604b08a8651833c6baae7d4d43d8c0b067be5e54e20b00"
+    },
+    "trace": {
+      "file": ".artifacts/final-home-native-v71/diagnostic-1795702861604/home-3-0.trace.json",
+      "sha256": "013d0b4f6bd1bd644ac33663748c3dd40498c0b092c438d81591b2b40bad07b7"
+    },
+    "scope": "Diagnostic default mobile/simulated Lighthouse with extra GPU/IPC/scheduler categories and verbose command logging. Every run retained. Trace overhead differs from acceptance runs; these are not a replacement Lighthouse or actual CPU4 certificate.",
+    "cases": [
+      {
+        "i": 1,
+        "score": 1,
+        "tbt": 20,
+        "tasks": []
+      },
+      {
+        "i": 2,
+        "score": 1,
+        "tbt": 13.5,
+        "tasks": []
+      },
+      {
+        "i": 3,
+        "score": 0.73,
+        "tbt": 1689.2769999999998,
+        "tasks": [
+          {
+            "pid": 22940,
+            "tid": 19532,
+            "ts": 109705731347,
+            "duration": 435.482,
+            "cpu": 0.877
+          }
+        ]
+      }
+    ],
+    "shutdown": {
+      "name": "ThreadControllerImpl::RunTask",
+      "args": {
+        "chrome_task_annotator": {
+          "delay_policy": "FLEXIBLE_NO_SOONER",
+          "task_delay_us": 1000000
+        },
+        "src_file": "third_party/blink/renderer/platform/widget/widget_base.cc",
+        "src_func": "Shutdown",
+        "src_line": 364
+      },
+      "wallMilliseconds": 435.369,
+      "cpuMilliseconds": 0.771,
+      "children": [
+        {
+          "name": "LayerTreeHost::~LayerTreeHost",
+          "wallMilliseconds": 435.305,
+          "cpuMilliseconds": 0.707
+        },
+        {
+          "name": "ProxyMain::Stop",
+          "wallMilliseconds": 435.235,
+          "cpuMilliseconds": 0.69
+        }
+      ]
+    },
+    "overlappingGPU": {
+      "wallMilliseconds": 372.362,
+      "cpuMilliseconds": 61.219
+    },
+    "interpretation": "The richer trace identifies delayed native WidgetBase shutdown, LayerTreeHost destruction and ProxyMain::Stop, with almost no renderer-thread CPU time, overlapping a busy GPU raster queue. This one trace establishes the native wait owner; it is not proof that every earlier outlier has the same cause or that the header alone caused it."
+  },
+  "earlierNoBlurProbe": {
+    "file": ".artifacts/final-home-native-v71/blur-1795703003828/report.json",
+    "sha256": "b377e60cbd6c605d27977938f920c123cefb9b3b76e9f411f202a2aeccc0a9cb",
+    "scope": "Eight diagnostic fresh Lighthouse launches, original/no-header-blur/no-header-blur/original order twice, same localhost proxy origin and complete original site. Only one CSS backdrop declaration changes in candidate responses. Default mobile/simulated scoring plus GPU/cc/toplevel categories; not acceptance. No own heavy verification overlaps; OS caches and other apps remain uncontrolled.",
+    "cases": [
+      {
+        "i": 0,
+        "mode": "original",
+        "score": 0.62,
+        "tbt": 1991.0000000000005,
+        "css": null,
+        "tasks": [
+          {
+            "ts": 109821485450,
+            "pid": 30808,
+            "tid": 42660,
+            "duration": 55.495,
+            "cpu": 5.096,
+            "children": [
+              {
+                "name": "ThreadControllerImpl::RunTask",
+                "duration": 55.441,
+                "cpu": 5.045,
+                "args": {
+                  "src_file": "v8/src/heap/incremental-marking-job.cc",
+                  "src_func": "void v8::internal::IncrementalMarkingJob::ScheduleTask()",
+                  "src_line": 67
+                }
+              },
+              {
+                "name": "MajorGC",
+                "duration": 55.14,
+                "cpu": 4.752,
+                "args": {
+                  "type": "finalize incremental marking via task",
+                  "usedHeapSizeAfter": 2364008,
+                  "usedHeapSizeBefore": 17696816
+                }
+              },
+              {
+                "name": "V8.GCFinalizeMC",
+                "duration": 55.064,
+                "cpu": 4.678,
+                "args": {}
+              },
+              {
+                "name": "V8.GC_MARK_COMPACTOR",
+                "duration": 54.975,
+                "cpu": 4.591,
+                "args": {
+                  "epoch": 212
+                }
+              },
+              {
+                "name": "V8.GC_MC_MARK",
+                "duration": 51.41,
+                "cpu": 1.401,
+                "args": {
+                  "UseBackgroundThreads": true
+                }
+              },
+              {
+                "name": "V8.GC_MC_MARK_FULL_CLOSURE_PARALLEL",
+                "duration": 51.168,
+                "cpu": 1.25,
+                "args": {}
+              }
+            ]
+          },
+          {
+            "ts": 109821568034,
+            "pid": 30808,
+            "tid": 42660,
+            "duration": 454.105,
+            "cpu": 0.245,
+            "children": [
+              {
+                "name": "ThreadControllerImpl::RunTask",
+                "duration": 453.929,
+                "cpu": 0.167,
+                "args": {
+                  "chrome_task_annotator": {
+                    "delay_policy": "FLEXIBLE_NO_SOONER",
+                    "task_delay_us": 1000000
+                  },
+                  "src_file": "third_party/blink/renderer/platform/widget/widget_base.cc",
+                  "src_func": "Shutdown",
+                  "src_line": 364
+                }
+              },
+              {
+                "name": "LayerTreeHost::~LayerTreeHost",
+                "duration": 453.871,
+                "cpu": 0.11,
+                "args": {}
+              },
+              {
+                "name": "ProxyMain::Stop",
+                "duration": 453.826,
+                "cpu": 0.096,
+                "args": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "i": 1,
+        "mode": "no-blur",
+        "score": 1,
+        "tbt": 11.5,
+        "css": "2026-11-26T14:23:46.090Z",
+        "tasks": []
+      },
+      {
+        "i": 2,
+        "mode": "no-blur",
+        "score": 0.91,
+        "tbt": 11,
+        "css": "2026-11-26T14:23:58.953Z",
+        "tasks": []
+      },
+      {
+        "i": 3,
+        "mode": "original",
+        "score": 1,
+        "tbt": 4,
+        "css": "2026-11-26T14:23:58.953Z",
+        "tasks": []
+      },
+      {
+        "i": 4,
+        "mode": "original",
+        "score": 1,
+        "tbt": 7,
+        "css": "2026-11-26T14:23:58.953Z",
+        "tasks": []
+      },
+      {
+        "i": 5,
+        "mode": "no-blur",
+        "score": 1,
+        "tbt": 6,
+        "css": "2026-11-26T14:24:38.109Z",
+        "tasks": []
+      },
+      {
+        "i": 6,
+        "mode": "no-blur",
+        "score": 1,
+        "tbt": 1.5,
+        "css": "2026-11-26T14:24:51.003Z",
+        "tasks": []
+      },
+      {
+        "i": 7,
+        "mode": "original",
+        "score": 1,
+        "tbt": 31.419849999999997,
+        "css": "2026-11-26T14:24:51.003Z",
+        "tasks": [
+          {
+            "ts": 109914660681,
+            "pid": 30272,
+            "tid": 46892,
+            "duration": 64.177,
+            "cpu": 0.317,
+            "children": [
+              {
+                "name": "ThreadControllerImpl::RunTask",
+                "duration": 63.843,
+                "cpu": 0.206,
+                "args": {
+                  "chrome_task_annotator": {
+                    "delay_policy": "FLEXIBLE_NO_SOONER",
+                    "task_delay_us": 1000000
+                  },
+                  "src_file": "third_party/blink/renderer/platform/widget/widget_base.cc",
+                  "src_func": "Shutdown",
+                  "src_line": 364
+                }
+              },
+              {
+                "name": "LayerTreeHost::~LayerTreeHost",
+                "duration": 63.742,
+                "cpu": 0.132,
+                "args": {}
+              },
+              {
+                "name": "ProxyMain::Stop",
+                "duration": 63.7,
+                "cpu": 0.107,
+                "args": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "note": "An earlier all-header CSS-only no-blur diagnostic, not the final conditional identity-filter source and not an acceptance collection."
+  },
+  "repositoryChecks": {
+    "file": ".artifacts/final-home-native-v71/static-zero-checks.json",
+    "sha256": "7ea26ac621057d9e7bd6edca3de84497affe58cb8719494365346ad4779e074b"
+  },
+  "browser": {
+    "file": ".artifacts/final-home-native-v71/browser-checks-1795705792051/report.json",
+    "sha256": "fa808990bfaac9cddb0e0793388696dd966ee25c74b79cedc6dd5f401c26f157",
+    "commands": [
+      {
+        "name": "verify-router-startup",
+        "args": [
+          "tools/verify-router-startup.js",
+          "http://127.0.0.1:4173",
+          "--output=.artifacts/final-home-native-v71/router"
+        ],
+        "started": "2026-11-26T15:09:52.088Z",
+        "finished": "2026-11-26T15:10:24.242Z",
+        "exitCode": 0,
+        "log": "verify-router-startup.log",
+        "logSHA256": "c5e5b2dd8ecd4154ec1ac3956abfd88a2b00493fb987e2c414755419f1213515",
+        "artifacts": {}
+      },
+      {
+        "name": "verify-stage-runtime",
+        "args": [
+          "tools/verify-stage-runtime.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T15:10:24.329Z",
+        "finished": "2026-11-26T15:10:34.615Z",
+        "exitCode": 0,
+        "log": "verify-stage-runtime.log",
+        "logSHA256": "aabbceded27b614d721c990fd14663dd6319e6ca3453181a06742605aff6115b",
+        "artifacts": {}
+      },
+      {
+        "name": "verify-library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T15:10:34.672Z",
+        "finished": "2026-11-26T15:16:13.542Z",
+        "exitCode": 0,
+        "log": "verify-library.log",
+        "logSHA256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa",
+        "artifacts": {
+          "verification.json": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82",
+          "library-home-desktop.png": "345b29c147708a192495f460176de1354d456dc82f4099dbdda86ff7d7e5d511",
+          "library-detail-mobile.png": "a38ed098f697bf4b6b795f415bdee4a3aaf703f9415b026c1b3c94711037c5ae"
+        }
+      },
+      {
+        "name": "audit-stage-fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T15:16:13.570Z",
+        "finished": "2026-11-26T15:20:19.554Z",
+        "exitCode": 0,
+        "log": "audit-stage-fit.log",
+        "logSHA256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe",
+        "artifacts": {
+          "stage-fit.json": "dfd621f1f9fd814d30047a8e27c8f5942f137c82fb0817b764d6c42b5adf6d2b"
+        }
+      }
+    ],
+    "library": {
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "total": 520,
+      "failed": 0,
+      "missingDesignSize": 0,
+      "overflow": 0,
+      "hscroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "lowFillExceptions": 163,
+      "invalidExceptions": 0
+    },
+    "router": {
+      "file": ".artifacts/final-home-native-v71/router/2026-11-26T15-09-53-392Z/report.json",
+      "sha256": "e420fc57b5650bb815cbf652dd9a81203cbd85343f8eba81eb0067821bf57358",
+      "checks": 104,
+      "stories": 17
+    }
+  },
+  "lighthouse": {
+    "file": ".artifacts/final-home-native-v71/lighthouse/2026-11-26T15-02-19-571Z/report.json",
+    "sha256": "ce2e50f756ccec3bd9daeb8374362e5cc6e5b274c4f74b962c908ad024906c28",
+    "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+    "allScoresPass": false,
+    "cases": [
+      {
+        "id": "home",
+        "repeat": 1,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 984.2746,
+          "largest-contentful-paint": 984.2746,
+          "speed-index": 1565.9114189890179,
+          "total-blocking-time": 4,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400646,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "includedBytes": 326542,
+          "scope": "Only the actual preview font and two composer SVGs are excluded. Its module and all other requests remain counted."
+        },
+        "file": "home-1.json",
+        "sha256": "423ca1632ddab10c534bbcceacd03a885c405c11ef4f2d45ac488733cb746cfa"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 1,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 905.577,
+          "largest-contentful-paint": 905.577,
+          "speed-index": 1736.9707921107545,
+          "total-blocking-time": 19,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397698,
+        "file": "elastic-tabs-1.json",
+        "sha256": "d7c8661f5595524f6002b461238dc959ba03de1e1e83c53fadf74de4d4a0b121"
+      },
+      {
+        "id": "home",
+        "repeat": 2,
+        "score": 0.73,
+        "metrics": {
+          "first-contentful-paint": 975.2057,
+          "largest-contentful-paint": 3037.80855,
+          "speed-index": 1252.7498781599388,
+          "total-blocking-time": 950.8971500000002,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400646,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "includedBytes": 326542,
+          "scope": "Only the actual preview font and two composer SVGs are excluded. Its module and all other requests remain counted."
+        },
+        "file": "home-2.json",
+        "sha256": "de47955c720198a44cc5f4c6683620fc672be79e08379c80ecc4e164cb6cdf79"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 2,
+        "score": 0.89,
+        "metrics": {
+          "first-contentful-paint": 904.5498,
+          "largest-contentful-paint": 3606.824699999999,
+          "speed-index": 1326.9407316905558,
+          "total-blocking-time": 135.7251,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397698,
+        "file": "elastic-tabs-2.json",
+        "sha256": "a4508ab38ebd69d642e4706df09d95ba14106842a5114c2f8147de327692b414"
+      },
+      {
+        "id": "home",
+        "repeat": 3,
+        "score": 0.87,
+        "metrics": {
+          "first-contentful-paint": 905.4584,
+          "largest-contentful-paint": 905.4584,
+          "speed-index": 1486.6703199307144,
+          "total-blocking-time": 498.2707999999998,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 400646,
+        "handoffBudget": {
+          "excluded": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-attach.svg",
+              "bytes": 490
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/components/agents-new/composer-send.svg",
+              "bytes": 494
+            }
+          ],
+          "includedBytes": 326542,
+          "scope": "Only the actual preview font and two composer SVGs are excluded. Its module and all other requests remain counted."
+        },
+        "file": "home-3.json",
+        "sha256": "fc2bb63d548a896a098a01e6334e7dd23d48d613d08dede34117de5a05211e08"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 3,
+        "score": 0.89,
+        "metrics": {
+          "first-contentful-paint": 1013.1410000000001,
+          "largest-contentful-paint": 1013.1410000000001,
+          "speed-index": 1802.4870609796558,
+          "total-blocking-time": 450.4295000000002,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 397698,
+        "file": "elastic-tabs-3.json",
+        "sha256": "24e47e1a7fdea014d59b360b58fa7896449723b5eb42959e7b91ea80e6cf5f7c"
+      }
+    ]
+  },
+  "remaining": [
+    "Default mobile Lighthouse >=90 for both required routes.",
+    "Complete current-source catalog cold/warm readiness under 300ms.",
+    "CPU4/compositor acceptance, including native Reactive Threads.",
+    "Broader catalog accessibility review."
+  ],
+  "references": [
+    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/platform/widget/widget_base.cc",
+    "https://chromium.googlesource.com/playground/chromium-org-site/+/show/refs/heads/main/developers/how-tos/trace-event-profiling-tool/trace-event-reading/index.md",
+    "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring"
+  ],
+  "evidenceCollection": {
+    "manifest": ".artifacts/final-home-native-v71/FROZEN.json",
+    "sha256": "a38e6eac17a6d386facfc52466d6423fa90586307e116a51f1a5644191cabb1f",
+    "files": 1369,
+    "rule": "Read/copy only. Never execute or edit these private helpers, candidates, inputs or evidence, and never copy frozen candidate code elsewhere to execute it."
+  }
+}

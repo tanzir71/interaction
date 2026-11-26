@@ -1,4 +1,6 @@
 (function(){const R=INTRX;
+ const header=document.getElementById('site-header'),updateHeaderOverlap=()=>header.toggleAttribute('data-overlap',scrollY>0);
+ updateHeaderOverlap();addEventListener('scroll',updateHeaderOverlap,{passive:true});
  R.toggleTheme=()=>{const theme=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=theme;try{localStorage.setItem('intrx-theme',theme);}catch{}document.querySelector('#theme-toggle').setAttribute('aria-label','Switch to '+(theme==='dark'?'light':'dark')+' theme');};
  try{document.documentElement.dataset.theme=localStorage.getItem('intrx-theme')||'dark';}catch{}
  R.openBrowse=()=>{
