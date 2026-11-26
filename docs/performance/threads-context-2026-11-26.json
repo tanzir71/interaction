@@ -1,0 +1,297 @@
+{
+  "date": "2026-11-26",
+  "baseline": "5eb73c570107e33c521c9afbe2660f7290037540",
+  "outcome": "No renderer candidate ships. The readback-hint candidate preserves exact model/pixel results but measures slower. Cached Path2D clips and desynchronized Canvas remain far below the frame-rate target in the recorded observations.",
+  "scope": "Native Reactive Threads investigation only. All 520 complete definitions and the production tree remain unchanged. No CPU4 acceptance, compositor-presentation, complete startup or accessibility claim.",
+  "preservation": {
+    "at": "2026-11-26T08:13:04.207Z",
+    "baseline": "5eb73c570107e33c521c9afbe2660f7290037540",
+    "catalog": 520,
+    "unchangedCompleteDefinitions": 520,
+    "productionTreeUnchanged": true,
+    "unchangedAreas": [
+      "index.html",
+      "css/",
+      "js/",
+      "assets/",
+      "registry/",
+      "r/",
+      "llms.txt",
+      "llms-full.txt"
+    ],
+    "baselineHashes": {
+      "file": ".artifacts/final-catalog-label-review-v59/baseline.json",
+      "sha256": "16b86ba50a50320550a8006aa96f85e4fb11524c708b87b8ece037b1421ef1f2"
+    },
+    "assetsChanged": 0,
+    "runtimeDependenciesAdded": 0,
+    "evidence": {
+      "file": ".artifacts/final-catalog-label-review-v59/preservation.json",
+      "sha256": "9d7d02e52b35d75e85c08c560eca4c7e8c1671cbb0284841aa45b18358ba9e0d"
+    }
+  },
+  "method": "Four sequential variants, each with one eight-second desktop DPR1 and compact DPR2 story, CPU slowdown 4, current foundations, prepared fonts and six original Dock actions. No other heavy agent check overlaps these timing samples. This is not an ABBA timing comparison; host applications and OS caches are uncontrolled. RAF cadence is not compositor presentation.",
+  "profiles": [
+    {
+      "name": "profile-before",
+      "file": ".artifacts/final-threads-native-v58/profile-before/2026-11-26T07-42-26-223Z-75dc76f41201/report.json",
+      "sha256": "cfab732102dac7642c52aaa1d8f496c4e4e45cfbf7cd939bebc3887309a66448",
+      "browser": "158.0.8127.88",
+      "sourceStable": true,
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "fps": 18.356184910466773,
+          "firstPaintMs": 181.326,
+          "p95": 83.39999999999964,
+          "frames": 147,
+          "elapsed": 8008.2,
+          "gapsOver25ms": 147,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-before/2026-11-26T07-42-26-223Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "13fb25380298002189e769052f072424f8e63e9d6b0fb5f09fd31ebbd4b271f6"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "fps": 18.77735773975328,
+          "firstPaintMs": 147.788,
+          "p95": 66.80000000000018,
+          "frames": 151,
+          "elapsed": 8041.600000000001,
+          "gapsOver25ms": 151,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-before/2026-11-26T07-42-26-223Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "2afa891a9cc02e3528dcf82cdf6cfb7b7142e88340b5fe72c57efffbdd8850b8"
+        }
+      ]
+    },
+    {
+      "name": "profile-readback",
+      "file": ".artifacts/final-threads-native-v58/profile-readback/2026-11-26T07-50-31-995Z-75dc76f41201/report.json",
+      "sha256": "c86f951ead691e63a2554f0b81bd9cb20029affe6cabdc89ea73142286892e9d",
+      "browser": "158.0.8127.88",
+      "sourceStable": true,
+      "reference": {
+        "file": ".artifacts/final-threads-native-v58/candidate-readback.json",
+        "sha256": "21a562874e5855d798a49116ec64e1a7ada1792d6aa517510fa2ae0d3dee8e52",
+        "scope": "Compared renderer candidate; production modules are unchanged."
+      },
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "fps": 11.487363899710319,
+          "firstPaintMs": 280.572,
+          "p95": 150.20000000000073,
+          "frames": 92,
+          "elapsed": 8008.799999999999,
+          "gapsOver25ms": 90,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-readback/2026-11-26T07-50-31-995Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "4841f0b42db34186086fad5d56624771ede04b79080cb5309e5f5cc347cb8844"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "fps": 11.764851577109313,
+          "firstPaintMs": 498.636,
+          "p95": 166.79999999999995,
+          "frames": 95,
+          "elapsed": 8074.900000000001,
+          "gapsOver25ms": 95,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-readback/2026-11-26T07-50-31-995Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "8fd5903d7eb82e4bc8527b480f46dcdd63468341d881277f9590b1e580ad5ee2"
+        }
+      ]
+    },
+    {
+      "name": "profile-paths",
+      "file": ".artifacts/final-threads-native-v58/profile-paths/2026-11-26T07-54-15-997Z-75dc76f41201/report.json",
+      "sha256": "b42e6354d656893523d1bc70ccdccf7015f1409b6dd6d2cbe06981f8edbf94a2",
+      "browser": "158.0.8127.88",
+      "sourceStable": true,
+      "reference": {
+        "file": ".artifacts/final-threads-native-v58/candidate-paths.json",
+        "sha256": "592db6a0b340fe924b261f2ebfde4f4bce6951f23f9e05f402118cf7a2a6a23e",
+        "scope": "Compared renderer candidate; production modules are unchanged."
+      },
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "fps": 21.977473090082665,
+          "firstPaintMs": 191.857,
+          "p95": 66.70000000000027,
+          "frames": 176,
+          "elapsed": 8008.2,
+          "gapsOver25ms": 176,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-paths/2026-11-26T07-54-15-997Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "ea41b4c6d5e420076b153e76113faca1851a8d3bacfcf0a92f318df0820daa6d"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "fps": 17.606733014497458,
+          "firstPaintMs": 82.865,
+          "p95": 83.39999999999964,
+          "frames": 141,
+          "elapsed": 8008.300000000001,
+          "gapsOver25ms": 141,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-paths/2026-11-26T07-54-15-997Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "c6aac21765114bbf2d201e273fe2ae954b1e8528fd7af9ec5ade99eb8e474be6"
+        }
+      ]
+    },
+    {
+      "name": "profile-desync",
+      "file": ".artifacts/final-threads-native-v58/profile-desync/2026-11-26T07-54-35-946Z-75dc76f41201/report.json",
+      "sha256": "1fa4942c73273197dd49e0f79db225b8d4dd0a98b073977ce022c519c150be42",
+      "browser": "158.0.8127.88",
+      "sourceStable": true,
+      "reference": {
+        "file": ".artifacts/final-threads-native-v58/candidate-desync.json",
+        "sha256": "c54a4848e87365c0e1a8914bb2a95b40fcde4ccf56e41b280cebe269c43a6d81",
+        "scope": "Compared renderer candidate; production modules are unchanged."
+      },
+      "cases": [
+        {
+          "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+          "fps": 19.648075607784616,
+          "firstPaintMs": 270.069,
+          "p95": 66.80000000000018,
+          "frames": 158,
+          "elapsed": 8041.500000000001,
+          "gapsOver25ms": 158,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-desync/2026-11-26T07-54-35-946Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+          "traceSHA256": "d6b8377e59cf339172b0170c0a67fb986ce059d94a996e14fc52ddb70d3e3567"
+        },
+        {
+          "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+          "fps": 22.35208910866362,
+          "firstPaintMs": 111.569,
+          "p95": 66.80000000000001,
+          "frames": 179,
+          "elapsed": 8008.2,
+          "gapsOver25ms": 178,
+          "errors": [],
+          "trace": ".artifacts/final-threads-native-v58/profile-desync/2026-11-26T07-54-35-946Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+          "traceSHA256": "c9b0bf8e764caf90b9338c176f43807a92acc616ebf5507ece809395d384ac46"
+        }
+      ]
+    }
+  ],
+  "exactReadbackHintComparison": {
+    "file": ".artifacts/final-threads-native-v58/readback-pixels/2026-11-26T07-48-53-754Z/report.json",
+    "sha256": "a3bdb9d5d85e6a41ec4ee6f3cc722b8fbbc0271d3055e0335226a50701d63f08",
+    "checks": 31202,
+    "stories": 16,
+    "checkpoints": 164,
+    "bytes": 112810240,
+    "sourceStable": true
+  },
+  "candidates": [
+    {
+      "file": {
+        "file": ".artifacts/final-threads-native-v58/candidate-readback.json",
+        "sha256": "21a562874e5855d798a49116ec64e1a7ada1792d6aa517510fa2ae0d3dee8e52"
+      },
+      "change": "Only native destination getContext calls request willReadFrequently:true. This is a hint, not independent proof of a particular raster backend.",
+      "result": "All 16 exact renderer stories, 164 checkpoints, 112810240 RGBA bytes and 31202 source-model/command checks pass. Both timing observations are slower than the separate original sample; reject."
+    },
+    {
+      "file": {
+        "file": ".artifacts/final-threads-native-v58/candidate-paths.json",
+        "sha256": "592db6a0b340fe924b261f2ebfde4f4bce6951f23f9e05f402118cf7a2a6a23e"
+      },
+      "change": "Cache each full column clip in Path2D and translate its y origin through the Canvas transform.",
+      "result": "Recorded native cadence remains 17.6–22.0fps; reject without claiming pixel equivalence."
+    },
+    {
+      "file": {
+        "file": ".artifacts/final-threads-native-v58/candidate-desync.json",
+        "sha256": "c54a4848e87365c0e1a8914bb2a95b40fcde4ccf56e41b280cebe269c43a6d81"
+      },
+      "change": "Only native destination getContext calls request desynchronized:true.",
+      "result": "Recorded native cadence remains 19.6–22.4fps; reject without claiming pixel equivalence."
+    }
+  ],
+  "cpuSampling": {
+    "evidence": {
+      "file": ".artifacts/final-threads-native-v58/cpu-profile.json",
+      "sha256": "a2844cffa5b8273d8ebc218d04c421c3b6331e350574048029b818a04398f8a1"
+    },
+    "seconds": 6,
+    "cpu": 4,
+    "finding": "Most attributed callback samples occur in the column-drawing loop. The shape and threadDelta functions account for a much smaller share. This points toward drawing-call overhead; native Canvas methods were not independently timed and unattributed program samples remain."
+  },
+  "requiredChecks": [
+    {
+      "name": "registry",
+      "command": "node tools/verify-registry.js",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      }
+    },
+    {
+      "name": "stage",
+      "command": "node tools/verify-stage.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      }
+    },
+    {
+      "name": "build",
+      "command": "node tools/build-registry.js --check",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/build.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      }
+    },
+    {
+      "name": "library",
+      "command": "node tools/verify-library.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      }
+    },
+    {
+      "name": "fit",
+      "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    },
+    {
+      "name": "motion",
+      "command": "node tools/verify-motion.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      }
+    },
+    {
+      "name": "npm",
+      "command": "npm test --prefix packages/intrx",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/npm.log",
+        "sha256": "a4a7d4ac0ceced13e9e0d28f64b227a1432574f7cd869c3511ac66dbfca070be"
+      }
+    }
+  ],
+  "remaining": [
+    "A renderer that preserves the reference and meets the actual CPU4 frame budget",
+    "Complete cold-route startup",
+    "Remaining catalog accessibility review"
+  ]
+}

@@ -2399,3 +2399,33 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Manual catalog accessibility, complete cold-route startup and CPU4 acceptance
   remain open. V57 private helpers, inputs and evidence become read/copy only
   when FROZEN.json is written; preserve every earlier frozen collection.
+
+- `node tools/verify-catalog-label-review.js --axe=<external axe.min.js>`
+  records the initial full-view naming review for the 22 catalog name-violation
+  components and six name-review incomplete components. Per-component decisions
+  live in `tools/fixtures/catalog-label-review.json`. Identify actual labels
+  separately from data readouts, supporting metadata, symbolic characters and
+  duplicate/offscreen paint. The original axe rule and every raw result remain
+  unchanged. Test real Chrome AX names at 1440/390px, both Stage themes and
+  motion settings; retain all 224 deliberately incorrect-name probes and exact
+  restoration checks. Select visible, non-inert controls so Pocket Synth's
+  hidden source model is not mistaken for its displayed keyboard. Preserve the
+  first failed selector/count capture. This reviews initial name findings only;
+  earlier dynamic-key/held-intention regressions remain required. It does not
+  certify speech software, every transition, native names, contrast or all WCAG
+  criteria. All 520 complete definitions and production files remain unchanged.
+  V59 private helpers, inputs and evidence become read/copy only when its
+  FROZEN.json is written; preserve every earlier frozen collection.
+
+- The additional native Threads context investigation is recorded in
+  `docs/performance/threads-context-2026-11-26.json`. No candidate ships.
+  The readback hint passes 31,202 model/command checks and 16 exact renderer
+  stories, but measures slower. Cached Path2D clips and desynchronized Canvas
+  also remain far below the recorded CPU4 frame budget. Their timing samples
+  do not establish pixel equivalence or a stable relative speed improvement.
+  Preserve all eight timing traces and the separate CPU-sampling diagnostic;
+  RAF cadence is not compositor presentation. All 520 definitions, original
+  assets, fixtures and literal pixel/geometry bounds stay unchanged. V58 private
+  helpers and candidates become read/copy only when FROZEN.json is written.
+  Remaining acceptance includes catalog contrast/incomplete review, complete
+  cold-route startup and CPU4 performance.

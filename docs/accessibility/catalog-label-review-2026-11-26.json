@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-26",
+  "baseline": "5eb73c570107e33c521c9afbe2660f7290037540",
+  "outcome": "Completed the initial full-view label-in-name review for all 22 components with retained name violations and all six with name-review incomplete results. Reviewed identifying words are present in actual Chrome accessibility names; symbolic artwork and separate data fields are classified explicitly. No component or source asset changes.",
+  "scope": "This closes review of the recorded initial naming findings, not whole-catalog accessibility. It does not certify every transition state, native thumbnails, speech-recognition software, photographic/non-text contrast, startup or CPU4 performance.",
+  "criterion": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+  "preservation": {
+    "at": "2026-11-26T08:13:04.207Z",
+    "baseline": "5eb73c570107e33c521c9afbe2660f7290037540",
+    "catalog": 520,
+    "unchangedCompleteDefinitions": 520,
+    "productionTreeUnchanged": true,
+    "unchangedAreas": [
+      "index.html",
+      "css/",
+      "js/",
+      "assets/",
+      "registry/",
+      "r/",
+      "llms.txt",
+      "llms-full.txt"
+    ],
+    "baselineHashes": {
+      "file": ".artifacts/final-catalog-label-review-v59/baseline.json",
+      "sha256": "16b86ba50a50320550a8006aa96f85e4fb11524c708b87b8ece037b1421ef1f2"
+    },
+    "assetsChanged": 0,
+    "runtimeDependenciesAdded": 0,
+    "evidence": {
+      "file": ".artifacts/final-catalog-label-review-v59/preservation.json",
+      "sha256": "9d7d02e52b35d75e85c08c560eca4c7e8c1671cbb0284841aa45b18358ba9e0d"
+    }
+  },
+  "manualReview": {
+    "distinctComponents": 28,
+    "width": 390,
+    "stageTheme": "dark",
+    "motion": "reduced",
+    "method": "Inspected all 28 rendered Stage screenshots and actual Chrome accessibility trees. Identifying text was distinguished from chart values, metadata, symbolic icons, album artwork, ornamental monograms and duplicate/offscreen paint. Per-component decisions are versioned in the fixture.",
+    "evidence": [
+      {
+        "file": ".artifacts/final-catalog-label-review-v59/review.json",
+        "sha256": "d12b1d19356e068853fa3c1b926f47b869c88828b64a620ed9dcbd622301c7e8"
+      },
+      {
+        "file": ".artifacts/final-catalog-label-review-v59/extra-review.json",
+        "sha256": "d804e40c5c023a430f13aa273c4410206ab8eb3e32b8e1f6e7ec2a1497281651"
+      }
+    ],
+    "decisions": {
+      "file": "tools/fixtures/catalog-label-review.json",
+      "sha256": "22275b0e91f7bc4d394928ed36e7314744c8b310e1224aa0af06331fef795b0e"
+    }
+  },
+  "regression": {
+    "command": "node tools/verify-catalog-label-review.js --axe=<external axe.min.js>",
+    "browser": "158.0.8127.88",
+    "axe": {
+      "file": "C:/Users/tanzir/AppData/Local/npm-cache/_npx/c6ed34f1783ab9ca/node_modules/axe-core/axe.min.js",
+      "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c"
+    },
+    "widths": [
+      1440,
+      390
+    ],
+    "stageThemes": [
+      "dark",
+      "light"
+    ],
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "checks": 3103,
+    "cases": 224,
+    "observations": 584,
+    "negativeControls": 224,
+    "rawViolations": 176,
+    "rawIncompleteNodes": 184,
+    "evidence": {
+      "file": ".artifacts/final-catalog-label-review-v59/matrix-visible/2026-11-26T08-04-12-176Z/report.json",
+      "sha256": "c0feca28228107683791338a65564472857ba3c3935b0c4e48e06b628a7c4d4b"
+    },
+    "sourceStable": true,
+    "negativeControl": "Every case temporarily replaced the first reviewed control name with Unrelated control. Chrome AX rejected the reviewed name predicate, and the exact original AX name was restored before disposal.",
+    "rawRules": "The original axe label-content-name-mismatch rule is unmodified. Its complete violations, incomplete, passes and inapplicable arrays remain in every case. No scanner result is deleted or converted into a passing axe result."
+  },
+  "retainedFailure": {
+    "evidence": {
+      "file": ".artifacts/final-catalog-label-review-v59/matrix.log",
+      "sha256": "23065ed73e8656bd1c41c78547b16518a5afc1f0f382a5ad83937fa9ee78d303"
+    },
+    "reason": "The first selector also matched hidden Pocket Synth model controls. The final selector requires actual visible, non-inert controls and keeps the same strict expected control counts. The original failed report, tool and fixture are preserved."
+  },
+  "requiredChecks": [
+    {
+      "name": "registry",
+      "command": "node tools/verify-registry.js",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      }
+    },
+    {
+      "name": "stage",
+      "command": "node tools/verify-stage.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      }
+    },
+    {
+      "name": "build",
+      "command": "node tools/build-registry.js --check",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/build.log",
+        "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+      }
+    },
+    {
+      "name": "library",
+      "command": "node tools/verify-library.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      }
+    },
+    {
+      "name": "fit",
+      "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    },
+    {
+      "name": "motion",
+      "command": "node tools/verify-motion.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      }
+    },
+    {
+      "name": "npm",
+      "command": "npm test --prefix packages/intrx",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-catalog-label-review-v59/npm.log",
+        "sha256": "a4a7d4ac0ceced13e9e0d28f64b227a1432574f7cd869c3511ac66dbfca070be"
+      }
+    }
+  ],
+  "remaining": [
+    "Catalog contrast/incomplete review and other accessibility criteria",
+    "Complete cold-route startup acceptance",
+    "CPU4 60fps/compositor acceptance; native Threads still fails its measured frame budget"
+  ]
+}
