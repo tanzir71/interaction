@@ -2199,3 +2199,24 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   synchronously, retaining the original .35 bound and requiring a real mid-entry
   reversal. These checks do not close whole-catalog, photographic, startup or
   CPU4 acceptance; sealed V47 helpers and inputs remain read/copy only.
+
+- `node tools/verify-type-palettes.js` covers eighteen original Text & Type
+  full light palettes at both widths, themes and motion settings, with native
+  and full-dark software PNG equality and fresh offline exports. Preserve every
+  original HTML composition, dataset, asset and model. Only Wave and Proximity
+  resolve their full-only active colors through palette variables; keep their
+  original thresholds, interpolation percentages and dark/native fallbacks.
+  `node tools/verify-type-palette-endpoints.js` compares those original/current
+  browser color expressions, including both sides of the original thresholds.
+  Normal full Blur Focus resolves its original seven-word entrance before
+  contrast checks; retain its raw pre-entry measurements and original opacity,
+  blur and transform fields. Empty photographic swatches have no text ink;
+  preserve their actual background/filter paint and the image-filled glyphs.
+  Original Text checkers honor the audit-browser override and log its version.
+  Interactive and Focus support `--software-raster` for exact software PNG
+  checks; `--native-diagnostics=<directory>` retains both PNGs on a failure.
+  Keep the initial default-GPU failures and all fixed original/current controls;
+  software success does not certify default-GPU repeatability.
+  These bounded checks leave photographic glyph contrast, whole-catalog
+  accessibility, cold startup and CPU4 acceptance open. Never execute or edit
+  private V48 helpers, inputs or evidence after its FROZEN.json is written.

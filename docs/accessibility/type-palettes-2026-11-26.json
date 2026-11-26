@@ -1,0 +1,725 @@
+{
+  "date": "2026-11-26",
+  "baseline": "c947e03468392ee64bb985298af26f8099b4f693",
+  "outcome": "Eighteen original full Text & Type views gain a readable light palette. Wave and Proximity resolve full-only active colors through palette endpoints while retaining the original interpolation percentages, thresholds and native/dark fallbacks.",
+  "scope": "Selected settled full-light text, source preservation, native/full-dark geometry and software paint, input and portable export checks. Final photographic/manual accessibility, startup, Lighthouse and CPU4 acceptance remain open.",
+  "preservation": {
+    "catalog": 520,
+    "unchangedOtherCompleteDefinitions": 502,
+    "unchangedControllers": 518,
+    "unchangedHTML": 520,
+    "originalCSSAndPromptsPreservedAsPrefixes": true,
+    "sourceAssetsChanged": false,
+    "metadataChanged": false,
+    "newRuntimeDependencies": 0,
+    "frozenV1Changed": false,
+    "exactBeforeFingerprints": {
+      "file": "tools/fixtures/type-palettes-before.json",
+      "sha256": "03983dc28d94b4505ac63805b3b1508973b8c22fd790bfb15b7f0357ce4ec595"
+    },
+    "baselineDefinitions": {
+      "file": ".artifacts/final-contrast-review-v48/baseline.json",
+      "sha256": "349c17dacbe7599ed6c47a76b579565ae4bdd429782bca421389afff9b308a61"
+    },
+    "exactColorEndpointEdits": {
+      "file": ".artifacts/final-contrast-review-v48/refined.json",
+      "sha256": "bc0c054c0e72c76d85b278244366dfe579a51bc9cd939f0e83ddfbbf8ebd7d51"
+    }
+  },
+  "palette": {
+    "primary": "#171717",
+    "secondary": "#626262",
+    "orangeAndFocus": "#b04a0b",
+    "edgeFades": "Full light Marquee fades use the actual #f4f4f4 Stage surface.",
+    "photographs": "Image-filled type retains its image, crop, brightness and texture model. The empty image swatch has no text foreground; its actual background and filter paint stay exact. Photographic glyph contrast is not certified here."
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "onlineCases": 288,
+    "freshOfflineContexts": 72,
+    "literalSoftwarePNGPairs": 216,
+    "pixelPolicy": "Every native/unaffected full-dark pair must match byte-for-byte in recorded same-engine software rasterization, with no tolerance or favorable-capture selection. This is separate from default-GPU presentation.",
+    "matrix": [
+      {
+        "file": ".artifacts/final-contrast-review-v48/verified-1/2026-11-26T01-40-41-253Z/report.json",
+        "sha256": "a5d46285e40dd3125b8caffab1378d5f0dfed45500e823a3b1477681eb47c2c5",
+        "online": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/verified-2/2026-11-26T01-40-41-388Z/report.json",
+        "sha256": "eaf6e50890d5f24684c237765efe9d4ee59a61e426497de97c9d40ba9e406440",
+        "online": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/verified-3/2026-11-26T01-40-41-225Z/report.json",
+        "sha256": "f55d357e1d997d93bcf8904f58c8b9c893457c1e4e3c385c23d7b06218079d9a",
+        "online": 64,
+        "offline": 16,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/verified-4/2026-11-26T01-40-41-328Z/report.json",
+        "sha256": "3a275585b40d07d7394df3f4a0358fad610393b6685704cbd2a670ce87af910d",
+        "online": 64,
+        "offline": 16,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      }
+    ],
+    "components": [
+      {
+        "id": "split-text-reveal",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-scramble",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "kinetic-marquee",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "line-mask-reveal",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "letter-roll",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 6.33912302744653,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "proximity-type",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": true
+      },
+      {
+        "id": "stat-counter",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-wave-hover",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 4.984700281404666,
+        "colorEndpointEdit": true
+      },
+      {
+        "id": "text-clip-image",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-typewriter-caret",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-falling-letters",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-blur-focus",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-strike-reveal",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-anagram-shuffle",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 4.984700281404666,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-glitch-layers",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-circular-spin",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 5.545881163354674,
+        "colorEndpointEdit": false
+      },
+      {
+        "id": "text-broken-grid",
+        "online": 16,
+        "offline": 4,
+        "minimumSettledLightContrast": 16.30001240976405,
+        "colorEndpointEdit": false
+      }
+    ],
+    "originalColorExpressions": {
+      "file": ".artifacts/final-contrast-review-v48/endpoints/2026-11-26T01-33-45-910Z/report.json",
+      "sha256": "edaccd5751d25ca3a354e4dc57144c9b608ee973e3d4b0f5491bc9e6d6c7960c",
+      "comparisons": 64320,
+      "scope": "Original and updated color expressions evaluated by the actual browser over 1001 energy/proximity samples plus exact threshold boundaries. Full dark and both native palettes must resolve exactly as before. Full light resolves against independently substituted readable endpoints, preserving every original branch and interpolation percentage. No animation, dataset, native artwork, refresh-rate or catalog-wide acceptance claim."
+    },
+    "functional": {
+      "initialDefaultGPU": {
+        "file": ".artifacts/final-contrast-review-v48/functional.json",
+        "sha256": "03987f3afaacbf50ae49ca27854a893f3085d0e4b80ecf22f80f4f4353688283"
+      },
+      "canonicalSoftware": {
+        "file": ".artifacts/final-contrast-review-v48/canonical.json",
+        "sha256": "05a17aa8c8264b9dc812f457f5dd68721bc162620697d06f903bededdb5d30e9"
+      },
+      "checkerDelta": {
+        "file": ".artifacts/final-contrast-review-v48/raster-checker-delta.json",
+        "sha256": "74de7fdf1f9c2bf79a931bc4754642308a85e7d4b108e643a0d6e7b70759b27f"
+      },
+      "policy": "Core, Expressive and Final complete in the default GPU mode. Interactive and Focus retain their initial GPU screenshot failures and complete all original assertions in explicitly selected software mode. Their numeric and pixel-equality bounds remain unchanged; optional diagnostics now retain both PNGs on a future failure."
+    },
+    "required": {
+      "commands": {
+        "file": ".artifacts/final-contrast-review-v48/required-short.json",
+        "sha256": "55640fc4fe9e4eba501c69562b1f730962724a48c2b2f9d3032f73515b8ec87d"
+      },
+      "global": {
+        "file": ".artifacts/final-contrast-review-v48/global.json",
+        "sha256": "f21f2281b2ad9d5a782a4f81585c3967b4d59fd517c9003dae27c5c8bbf4d2cb"
+      },
+      "library": {
+        "file": ".artifacts/final-contrast-review-v48/library-verification.json",
+        "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82",
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "stageFit": {
+        "file": ".artifacts/final-contrast-review-v48/stage-fit.json",
+        "sha256": "859c4eb8946536e295973ec53e11a34265961d5871419db1f78e4fff758ad609",
+        "summary": {
+          "total": 520,
+          "failed": [],
+          "missingDesignSize": 0,
+          "overflow": [],
+          "hscroll": [],
+          "tinyText": [],
+          "lowFill": [],
+          "lowFillExceptions": [
+            "btn-border-beam",
+            "input-float-label",
+            "password-strength-bar",
+            "elastic-tabs",
+            "velocity-skew",
+            "scroll-letter-scatter",
+            "scroll-table-of-contents",
+            "cursor-gooey-blob",
+            "cursor-particle-emitter",
+            "cursor-elastic-line",
+            "cursor-text-repel",
+            "cursor-grid-ripple",
+            "cursor-hover-preview",
+            "cursor-liquid-metaball",
+            "cursor-velocity-stretch",
+            "cursor-snap-targets",
+            "cursor-emoji-rain",
+            "cursor-crosshair-hud",
+            "custom-cursor",
+            "magnetic-button",
+            "image-trail",
+            "text-scramble",
+            "letter-roll",
+            "proximity-type",
+            "stat-counter",
+            "text-wave-hover",
+            "text-typewriter-caret",
+            "text-blur-focus",
+            "text-strike-reveal",
+            "text-ransom-note",
+            "text-glitch-layers",
+            "text-circular-spin",
+            "text-underline-magic",
+            "text-broken-grid",
+            "svg-path-draw-hover",
+            "svg-squiggle-underline",
+            "svg-gooey-menu",
+            "css3d-cube-nav",
+            "voxel-assemble",
+            "spring-cursor-follower",
+            "pendulum-tags",
+            "chain-links",
+            "liquid-blob-buttons",
+            "nav-active-pill",
+            "breadcrumb-collapse",
+            "sidebar-rail-expand",
+            "burger-morph-x",
+            "btn-shimmer-sweep",
+            "btn-text-slide-swap",
+            "btn-icon-hop",
+            "btn-success-morph",
+            "btn-confetti-burst",
+            "btn-ripple-material",
+            "btn-jelly-press",
+            "like-heart-particles",
+            "checkbox-draw-check",
+            "toggle-day-night",
+            "copy-inline-feedback",
+            "badge-notification-pop",
+            "input-underline-grow",
+            "input-shake-error",
+            "input-char-counter-arc",
+            "otp-code-boxes",
+            "range-elastic-thumb",
+            "form-multistep-progress",
+            "preloader-percentage",
+            "preloader-word-cycle",
+            "loader-dots-wave",
+            "loader-morph-shapes",
+            "loader-typing-code",
+            "loader-orbit-dots",
+            "upload-progress-morph",
+            "page-load-counter-slide",
+            "chart-donut-sweep",
+            "fui-target-lock",
+            "fui-access-granted",
+            "agent-token-meter",
+            "agent-deploy-pipeline",
+            "agent-node-graph",
+            "agent-streaming-text",
+            "typing-mechanical",
+            "konami-unlock",
+            "number-input-drag",
+            "dither-bayer",
+            "ascii-donut-3d",
+            "ascii-type-explode",
+            "dot-matrix-shapes",
+            "halftone-globe-canvas",
+            "pixel-lissajous-lab",
+            "chromatic-type",
+            "neumorphic-buttons",
+            "mechanical-switch",
+            "rotary-knob",
+            "flip-clock",
+            "embossed-press",
+            "analog-gauge",
+            "punch-card-keyboard",
+            "zippo-flame",
+            "dynamic-notch",
+            "hover-fill-button",
+            "showcase-pixel-trail",
+            "showcase-tracing-story",
+            "showcase-elastic-slider",
+            "framer-rolling-balance",
+            "drams-003",
+            "drams-005",
+            "drams-009",
+            "drams-020",
+            "drams-021",
+            "drams-022",
+            "drams-002",
+            "drams-012",
+            "drams-034",
+            "drams-040",
+            "drams-010",
+            "drams-044",
+            "drams-008",
+            "drams-011",
+            "drams-016",
+            "drams-017",
+            "drams-019",
+            "drams-025",
+            "drams-032",
+            "drams-014",
+            "drams-018",
+            "drams-023",
+            "drams-024",
+            "drams-026",
+            "drams-028",
+            "drams-030",
+            "drams-035",
+            "drams-037",
+            "drams-039",
+            "drams-042",
+            "micro-smoke-delete",
+            "micro-inline-confirm",
+            "micro-star-rating",
+            "micro-reaction-bar",
+            "micro-shimmer-status",
+            "ui-avatar-stack",
+            "ui-inverse-tabs",
+            "form-slide-to-confirm",
+            "form-precision-scrubber",
+            "data-candlestick-crosshair",
+            "ai-agent-creator",
+            "micro-stateful-button",
+            "micro-hold-to-pay",
+            "micro-share-pill",
+            "micro-icon-swap",
+            "micro-award-badge",
+            "micro-action-swap",
+            "form-vanish-input",
+            "form-magnetic-select",
+            "form-multi-select",
+            "form-inline-edit",
+            "form-liquid-toggle",
+            "ui-feedback-widget",
+            "nav-pagination-morph",
+            "loader-multi-step",
+            "loader-matrix-dots",
+            "play-plinko",
+            "play-slingshot",
+            "play-coin-flip"
+          ],
+          "invalidExceptions": []
+        }
+      }
+    },
+    "visualStills": {
+      "file": ".artifacts/final-contrast-review-v48/captures.json",
+      "sha256": "172e517c137a5025497fc75d4c54c02d6644ef45f3571884466c05f69c8d3c89"
+    }
+  },
+  "accessibility": {
+    "rawAxe": [
+      {
+        "file": ".artifacts/final-contrast-review-v48/axe-1440/2026-11-26T01-53-47-186Z/report.json",
+        "sha256": "d07904b038b3363c983f4817cae63569e6fb46eb193dfc3151234a9115e13b0e",
+        "width": 1440,
+        "summary": {
+          "cases": 36,
+          "violations": 8,
+          "incomplete": 24,
+          "pageErrors": 0
+        },
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/axe-390/2026-11-26T01-53-52-912Z/report.json",
+        "sha256": "918e706bb4a645cf101c2d1acc12087e97c49fe16593b561c0637d60269d7252",
+        "width": 390,
+        "summary": {
+          "cases": 36,
+          "violations": 8,
+          "incomplete": 24,
+          "pageErrors": 0
+        },
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      }
+    ],
+    "policy": "Complete violations and incomplete results are retained without filtering. Automated scans and selected solid/SVG/stroke measurements do not certify all photographic pixels, all transition frames, hidden states, focus clipping or catalog-wide WCAG conformance.",
+    "nameReview": {
+      "status": "Open. Review dynamic/layered visible text and actual accessible names without filtering the raw flags.",
+      "instances": 16,
+      "components": [
+        "text-scramble",
+        "text-outline-fill-scroll",
+        "text-glitch-layers",
+        "text-broken-grid"
+      ],
+      "findings": [
+        {
+          "id": "text-scramble",
+          "theme": "dark",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-scramble"
+            ]
+          ]
+        },
+        {
+          "id": "text-outline-fill-scroll",
+          "theme": "dark",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-outlinefill-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-glitch-layers",
+          "theme": "dark",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-textglitch-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-broken-grid",
+          "theme": "dark",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-brokengrid-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-scramble",
+          "theme": "light",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-scramble"
+            ]
+          ]
+        },
+        {
+          "id": "text-outline-fill-scroll",
+          "theme": "light",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-outlinefill-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-glitch-layers",
+          "theme": "light",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-textglitch-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-broken-grid",
+          "theme": "light",
+          "width": 1440,
+          "targets": [
+            [
+              ".d-brokengrid-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-scramble",
+          "theme": "dark",
+          "width": 390,
+          "targets": [
+            [
+              ".d-scramble"
+            ]
+          ]
+        },
+        {
+          "id": "text-outline-fill-scroll",
+          "theme": "dark",
+          "width": 390,
+          "targets": [
+            [
+              ".d-outlinefill-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-glitch-layers",
+          "theme": "dark",
+          "width": 390,
+          "targets": [
+            [
+              ".d-textglitch-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-broken-grid",
+          "theme": "dark",
+          "width": 390,
+          "targets": [
+            [
+              ".d-brokengrid-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-scramble",
+          "theme": "light",
+          "width": 390,
+          "targets": [
+            [
+              ".d-scramble"
+            ]
+          ]
+        },
+        {
+          "id": "text-outline-fill-scroll",
+          "theme": "light",
+          "width": 390,
+          "targets": [
+            [
+              ".d-outlinefill-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-glitch-layers",
+          "theme": "light",
+          "width": 390,
+          "targets": [
+            [
+              ".d-textglitch-trigger"
+            ]
+          ]
+        },
+        {
+          "id": "text-broken-grid",
+          "theme": "light",
+          "width": 390,
+          "targets": [
+            [
+              ".d-brokengrid-trigger"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "retainedDiagnostics": {
+    "runs": [
+      {
+        "file": ".artifacts/final-contrast-review-v48/smoke/2026-11-26T01-29-29-560Z/report.json",
+        "sha256": "20491c07123c682169064ccdf0e1b435496d868d923934451357dd5f32345f1a",
+        "finished": false,
+        "completedCases": 7,
+        "error": "AssertionError [ERR_ASSERTION]: Readable input {\"selector\":\".d-textwave-letter\",\"property\":\"color\",\"text\":\"w\",\"color\":\"rgb(250, 115, 25)\",\"background\":[244,244,244],\"opacity\":1,\"ratio\":2.5352403156913805,\"font\":\"39px\",\"filter\":\"none\",\"box\":{\"x\":192.84375,\"y\":307.953125,\"width\":21.296875,\"height\":31.78125,\"top\":307.953125,\"right\":214.140625,\"bottom\":339.734375,\"left\":192.84375}}"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/corrected-smoke/2026-11-26T01-32-38-014Z/report.json",
+        "sha256": "e3d0395f258ca9719ed27c03f4e0de32c2b39ce49592db1e643c79d8af8c5526",
+        "finished": false,
+        "completedCases": 8,
+        "error": "AssertionError [ERR_ASSERTION]: Original photographic glyph treatment initial"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/smoke-tail/2026-11-26T01-34-35-671Z/report.json",
+        "sha256": "8c86203567a24f9ee9daf93772fa3a75b2089f37704b0a3a7ba8ff9fd91eecd8",
+        "finished": true,
+        "completedCases": 10,
+        "error": null
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/entry-smoke/2026-11-26T01-39-36-532Z/report.json",
+        "sha256": "3d82b366ac1fae2c26bd21cbbe51523c6351512bf5a762155f33d2e45001001f",
+        "finished": true,
+        "completedCases": 4,
+        "error": null
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/complete-1/2026-11-26T01-35-55-766Z/report.json",
+        "sha256": "49f0d419def16f148fd5aa0a65fa99e8d0edc6929511c18bcd2c0d556ae7055e",
+        "finished": false,
+        "completedCases": 40,
+        "error": null
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/complete-2/2026-11-26T01-35-55-545Z/report.json",
+        "sha256": "a21ad5647fccdfd08eca44a08f81b34c182fad5d55df5bd34edd24438cf2a271",
+        "finished": false,
+        "completedCases": 40,
+        "error": null
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/complete-3/2026-11-26T01-35-55-720Z/report.json",
+        "sha256": "2b93ee75fe2212730b5b76bf893b7296de93ccb0f27b5e4bebe62f701690a9be",
+        "finished": false,
+        "completedCases": 20,
+        "error": "AssertionError [ERR_ASSERTION]: Readable initial {\"selector\":\".d-blurfocus-glyph\",\"property\":\"color\",\"text\":\"C\",\"color\":\"rgb(23, 23, 23)\",\"background\":[244,244,244],\"opacity\":0.28,\"ratio\":1.8412997328722975,\"font\":\"36px\",\"filter\":\"none\",\"box\":{\"x\":329.06671142578125,\"y\":266.6812438964844,\"width\":28.75250244140625,\"height\":58.45001220703125,\"top\":266.6812438964844,\"right\":357.8192138671875,\"bottom\":325.1312561035156,\"left\":329.06671142578125}}"
+      },
+      {
+        "file": ".artifacts/final-contrast-review-v48/complete-4/2026-11-26T01-35-55-513Z/report.json",
+        "sha256": "e8019b113fcbd3c7e571015f76a9ce7ae8fe810d4637b23294cc5ae51707524f",
+        "finished": false,
+        "completedCases": 42,
+        "error": null
+      }
+    ],
+    "cancelledEarlyMatrixProcesses": {
+      "file": ".artifacts/final-contrast-review-v48/cancelled-matrix-processes.json",
+      "sha256": "bf17dac62021b59c108c1e31e5b6ef16685b68b32efb23e7dafeb49f3745c34e"
+    },
+    "defaultGPUControls": {
+      "file": ".artifacts/final-contrast-review-v48/native-paint.json",
+      "sha256": "b01b8ffc25d74addf3c67894b748d57a47b37f9fb89e7b40c32257ab0490418a"
+    },
+    "notes": [
+      "The first smoke checker left the mounted stylesheet active while adding a second style. The accepted checker replaces the unique actual stylesheet, and every light comparison proves an original low-contrast target is present. The first smoke also exposed the real active Wave color problem; two explicit palette-endpoint edits correct it.",
+      "An empty photograph swatch inherited text-fill color despite having no text. Foreground comparison now applies only to actual text; its background/filter properties and the image-filled glyph treatment remain exact.",
+      "The first normal Blur Focus case held its original entrance at 0.28 opacity. Accepted runs execute the unchanged entrance until all seven words resolve, retain raw pre-entry ink and require settled contrast >=4.5. No opacity field, motion equation or numeric tolerance changes. Three early matrix processes were explicitly cancelled before this checker correction; their partial results are not counted.",
+      "The initial default-GPU Interactive and Focus suites failed repeated native PNG equality. Their old checkers did not retain the failing PNGs, so the cause is unproven. Sixteen fixed pairs in eight original/current default-GPU control contexts all match, with identical computed paint and source state, before/after CSS image decode. Software acceptance has a separate explicit scope."
+    ]
+  },
+  "remaining": [
+    "Review raw name-mismatch flags for Text Scramble, Outline Fill, Glitch Layers and Broken Grid.",
+    "Whole-catalog accessibility, photographic glyph contrast and manual review.",
+    "Complete cold-route startup and final Lighthouse acceptance.",
+    "CPU4 frame-rate and final motion/performance acceptance, including the separate Threads finding.",
+    "Cause of the two earlier default-GPU repeated-native screenshot failures; fixed controls did not reproduce them."
+  ]
+}

@@ -2,6 +2,21 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Text & Type palette review](accessibility/type-palettes-2026-11-26.json)
+adds readable full light ink to eighteen original demos. Wave and Proximity
+resolve their full-only active colors through palette variables; their original
+energy interpolation, thresholds, native colors and dark fallbacks remain.
+All HTML, original copy/datasets, geometry and assets stay intact. Normal Blur
+Focus keeps its original faint entrance and is checked after all seven words
+resolve. Raw pre-entry results remain available. Image-filled type retains its
+photograph and treatment; its photographic contrast still needs manual review.
+Native and full-dark literal comparisons use recorded software rasterization.
+Default-GPU repeated-thumbnail failures remain separate evidence and do not
+establish a change in the original artwork or close GPU acceptance.
+The unfiltered scan also retains name-mismatch flags for Scramble, Outline Fill,
+Glitch Layers and Broken Grid. Review their dynamic/layered visible text and
+actual accessible names before closing those findings.
+
 The [Scroll palette and destination review](accessibility/scroll-palettes-2026-11-26.json)
 adds readable full light palettes to twenty Scroll demos. Full dark Text Highlight
 also raises its unread-word gray. Native artwork, all original copy, HTML,
