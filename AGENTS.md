@@ -2505,3 +2505,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   broader catalog accessibility remain open. V66/V67 private helpers, inputs
   and evidence become read/copy only when their `FROZEN.json` files are written;
   preserve every earlier frozen collection.
+
+- The retained Home heading and route focus checks are recorded in
+  `docs/performance/router-startup-2026-11-26.json`. Catalog completion keeps
+  the existing Home hero's browser focus and zero scroll position. New headings,
+  including direct and asynchronous entries, retain normal router focus and
+  scroll restoration. Documentation leaves focus to that single router owner.
+  Run `node tools/verify-router-startup.js http://127.0.0.1:4173` for 104 checks
+  in seventeen initial-entry, native Tab/skip-link, trusted navigation, exact
+  Back-scroll, delayed-module and early-catalog intent stories. Mobile Home
+  interruption uses its visible footer link. All 520 complete definitions,
+  generated outputs, assets and frozen v1 inputs remain unchanged. Nine required
+  repository/lifecycle commands pass. Retain every diagnostic and Lighthouse
+  observation: current Home scores are 72/72/89 and Elastic Tabs 62/100/100.
+  Removing the synchronous scroll call does not establish a stable overall
+  latency improvement. Lighthouse, complete current-source cold routes, CPU4
+  timing/compositor and broader accessibility acceptance remain open.
+- `docs/performance/threads-strips-2026-11-26.json` records two rejected native
+  strip experiments. Pattern fills and direct image crops each retain 31,202
+  source/model/command checks but fail the first literal native RGBA comparison.
+  Neither renderer ships and neither has a frame-rate acceptance claim. Keep the
+  original eight textures, 1,776 columns, padded clipping and every pixel bound.
+  V68/V69 private helpers, candidates, inputs and evidence become read/copy only
+  when their `FROZEN.json` files are written; preserve every earlier collection.

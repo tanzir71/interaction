@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-26",
+  "baseline": "39f42203d4f1686ccdb69f6d0d6b056cc7479856",
+  "outcome": "Both native renderer candidates are rejected; no renderer, geometry, model, asset or pixel-bound change ships.",
+  "source": {
+    "file": "js/demos.showcase.js",
+    "sha256": "75dc76f4120179b5103e24491ee70662e9a2d76f3303254cb180ca40f20bbb1f"
+  },
+  "preservation": {
+    "file": ".artifacts/final-home-trace-v69/preservation.json",
+    "sha256": "428df48d29b22ff1e392bfc128cc5396eb4d862a3a5da06581cac1e2a739236d"
+  },
+  "originalFactoryPreserved": true,
+  "primaryDocumentation": [
+    "https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-createpattern",
+    "https://html.spec.whatwg.org/multipage/canvas.html#drawing-images-to-the-canvas",
+    "https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern/setTransform"
+  ],
+  "candidates": [
+    {
+      "kind": "pattern",
+      "file": ".artifacts/final-threads-pattern-v68/strict-pattern/2026-11-26T12-17-48-300Z/report.json",
+      "sha256": "069bf9eed9f501c55ce234e1613471681388a3fee5c567a871c08416c9043cce",
+      "models": 31202,
+      "completedComparisonStories": 0,
+      "firstFailedSample": "1-60-thumb-normal-regular-1",
+      "changedChannels": 2736,
+      "maxStraightRGBAChannelDelta": 255,
+      "changedPixels": 1884,
+      "maxAlphaDelta": 72
+    },
+    {
+      "kind": "crop",
+      "file": ".artifacts/final-threads-pattern-v68/strict-crop/2026-11-26T12-22-46-054Z/report.json",
+      "sha256": "273928ff710008b3308182eec5d634c713d847ebc91da48f497a757b64a9b7ff",
+      "models": 31202,
+      "completedComparisonStories": 0,
+      "firstFailedSample": "1-60-thumb-normal-regular-1",
+      "changedChannels": 4985,
+      "maxStraightRGBAChannelDelta": 255,
+      "changedPixels": 4361,
+      "maxAlphaDelta": 60
+    }
+  ],
+  "scope": "Each candidate passes 31,202 independent source/model/command checks, then fails the first DPR1 60Hz normal native RGBA comparison. No subsequent sample, DPR2, reduced-mode, refresh-rate equivalence or frame-rate benefit is certified. The 255 straight-channel delta includes transparent-to-nontransparent white pixels; alpha deltas are reported separately. Pixel tolerances remain unchanged.",
+  "differenceDetails": {
+    "file": ".artifacts/final-threads-pattern-v68/first-frame-differences.json",
+    "sha256": "954f3bac276641baa96c9f5f30433e0a66a3eca55be948c4b03c6fa256c0ffdf"
+  },
+  "sourcePreparation": [
+    {
+      "file": ".artifacts/final-threads-pattern-v68/preparation.json",
+      "sha256": "80a1c0b687cab1445c52df40c50bb58bc0bb25bee12641886a81dfad1d9e0f32"
+    },
+    {
+      "file": ".artifacts/final-threads-pattern-v68/crop-preparation.json",
+      "sha256": "23a174f64e30b12f4639a3a5f71e63d21efe65e77d835938e2f9c297796a7b0c"
+    }
+  ],
+  "archives": [
+    {
+      "root": ".artifacts/final-threads-pattern-v68",
+      "file": ".artifacts/final-threads-pattern-v68/FROZEN.json",
+      "files": 14,
+      "sha256": "4ec2b83d49d6408a5c71d89041ef7fe5247364d971bbfa6732d159c4e29293ef"
+    },
+    {
+      "root": ".artifacts/final-home-trace-v69",
+      "file": ".artifacts/final-home-trace-v69/FROZEN.json",
+      "files": 170,
+      "sha256": "85dfc825423cbb803e81e3354f94db04f011620004e69ff00dead7eb710990e1"
+    }
+  ]
+}

@@ -1,0 +1,593 @@
+{
+  "date": "2026-11-26",
+  "baseline": "39f42203d4f1686ccdb69f6d0d6b056cc7479856",
+  "outcome": "Initial Home retains its already-painted hero heading, so catalog completion does not force a redundant scroll/focus pass. New or asynchronously loaded headings retain router focus. Documentation delegates focus to that one owner. Final Lighthouse observations still fail the >=90 gate; no stable overall latency improvement is established.",
+  "productionChanges": [
+    "Capture the initial Home heading and preserve focus/top only while that same node is retained.",
+    "Continue restoring scroll and focusing every new route heading; documentation no longer focuses it a second time.",
+    "Bump router and documentation script queries to v6."
+  ],
+  "preservation": {
+    "file": ".artifacts/final-home-trace-v69/preservation.json",
+    "sha256": "428df48d29b22ff1e392bfc128cc5396eb4d862a3a5da06581cac1e2a739236d"
+  },
+  "completeDefinitionsUnchanged": 520,
+  "frozenV1InputsUnchanged": true,
+  "assetsChanged": 0,
+  "generatedArtifactsChanged": 0,
+  "router": {
+    "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-57-27-701Z/report.json",
+    "sha256": "7a82d882ac102cca6cb5654d556ce775c3cf16af388c6548398a88d78b3ad4b7",
+    "checks": 104,
+    "stories": 17,
+    "browser": "158.0.8127.88",
+    "scope": "Initial Home preserves the browser focus/top position for its retained hero. Direct/asynchronously loaded entries keep heading focus. Actual trusted caption/link navigation focuses its heading, Back restores click-time scroll, early navigation receives normal focus, and superseded async detail loads cannot restore stale focus. API witnesses have deliberately incorrect forced-scroll/focus controls. No performance, screen-reader or whole-catalog acceptance claim.",
+    "earlierAttempts": [
+      {
+        "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-45-27-542Z/report.json",
+        "sha256": "12a9d20e2c883345f2d2218ca3a2129a35494593aea53e1e488329b95d7b8311",
+        "checks": 17,
+        "stories": 2,
+        "error": "AssertionError [ERR_ASSERTION]: Initial browser focus #/docs",
+        "sourceStable": false
+      },
+      {
+        "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-47-16-877Z/report.json",
+        "sha256": "c50ac6cc3a1336e355bddae14e044cb06fa3936063e97730608c1fffd83ab537",
+        "checks": 81,
+        "stories": 10,
+        "error": "locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.",
+        "sourceStable": false
+      },
+      {
+        "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-50-06-912Z/report.json",
+        "sha256": "41739ca97447848a5e2031fa3f1c28d6e75f51b5d4d25fb9fd7500434feb8b52",
+        "checks": 96,
+        "stories": 12,
+        "error": "locator.click: Timeout 30000ms exceeded.",
+        "sourceStable": false
+      },
+      {
+        "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-52-52-369Z/report.json",
+        "sha256": "5355b0eb0612a33f3d3037088815c290408d4c75173e3860a653add4a9878785",
+        "checks": 112,
+        "stories": 17,
+        "error": null,
+        "sourceStable": true
+      },
+      {
+        "file": ".artifacts/final-home-trace-v69/router-verification/2026-11-26T12-57-27-701Z/report.json",
+        "sha256": "7a82d882ac102cca6cb5654d556ce775c3cf16af388c6548398a88d78b3ad4b7",
+        "checks": 104,
+        "stories": 17,
+        "error": null,
+        "sourceStable": true
+      }
+    ]
+  },
+  "diagnostics": {
+    "file": ".artifacts/final-home-trace-v69/profile-analysis.json",
+    "sha256": "122086267a7cef4e103c425876873237a46c8c771d96d3d4b8f8fc1f17ad8273"
+  },
+  "lighthouse": [
+    {
+      "kind": "previous-pushed-source",
+      "file": ".artifacts/final-home-startup-v67/lighthouse-after/2026-11-26T11-42-48-913Z/report.json",
+      "sha256": "1c07d651c39ecbfa1a02034408ef9fa37da3a6231e55bce99146e6c58a6bddb6",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+      "version": "13.6.0",
+      "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+      "cases": [
+        {
+          "id": "home",
+          "repeat": 1,
+          "score": 0.91,
+          "metrics": {
+            "first-contentful-paint": 904.3436999999999,
+            "largest-contentful-paint": 904.3436999999999,
+            "speed-index": 1913.778770045453,
+            "total-blocking-time": 381.3281499999998,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415470,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 1,
+          "score": 1,
+          "metrics": {
+            "first-contentful-paint": 989.4244000000001,
+            "largest-contentful-paint": 989.4244000000001,
+            "speed-index": 1581.2995317291993,
+            "total-blocking-time": 28,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412522,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 2,
+          "score": 0.89,
+          "metrics": {
+            "first-contentful-paint": 974.6053999999999,
+            "largest-contentful-paint": 974.6053999999999,
+            "speed-index": 2001.1781747557793,
+            "total-blocking-time": 439.69730000000004,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415470,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 2,
+          "score": 1,
+          "metrics": {
+            "first-contentful-paint": 1040.1034,
+            "largest-contentful-paint": 1040.1034,
+            "speed-index": 1530.087839692445,
+            "total-blocking-time": 36,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412522,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 3,
+          "score": 0.75,
+          "metrics": {
+            "first-contentful-paint": 990.3495,
+            "largest-contentful-paint": 990.3495,
+            "speed-index": 2527.654379183625,
+            "total-blocking-time": 1336.32525,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415470,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 3,
+          "score": 0.9,
+          "metrics": {
+            "first-contentful-paint": 992.8443,
+            "largest-contentful-paint": 3680.7664499999987,
+            "speed-index": 1498.7671522317023,
+            "total-blocking-time": 52,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412522,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "kind": "global-focus-prototype",
+      "file": ".artifacts/final-home-trace-v69/lighthouse-after/2026-11-26T12-39-24-131Z/report.json",
+      "sha256": "b7e4476b44070f1aa5f322f11537cdd817b5b250fb98f7ac9911dd73d945e656",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+      "version": "13.6.0",
+      "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+      "cases": [
+        {
+          "id": "home",
+          "repeat": 1,
+          "score": 0.74,
+          "metrics": {
+            "first-contentful-paint": 912.8761,
+            "largest-contentful-paint": 3469.31415,
+            "speed-index": 2599.483213857816,
+            "total-blocking-time": 702,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415628,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 1,
+          "score": 0.65,
+          "metrics": {
+            "first-contentful-paint": 918.2883999999999,
+            "largest-contentful-paint": 3552.4326000000005,
+            "speed-index": 1790.8933456658356,
+            "total-blocking-time": 1392.8557999999998,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412680,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 2,
+          "score": 0.6,
+          "metrics": {
+            "first-contentful-paint": 928.7170000000001,
+            "largest-contentful-paint": 3568.075500000001,
+            "speed-index": 3746.0126256115464,
+            "total-blocking-time": 3228.641499999999,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415628,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 2,
+          "score": 0.9,
+          "metrics": {
+            "first-contentful-paint": 1065.6832,
+            "largest-contentful-paint": 3691.0247999999992,
+            "speed-index": 1763.5962059555586,
+            "total-blocking-time": 34,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412680,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 3,
+          "score": 0.99,
+          "metrics": {
+            "first-contentful-paint": 1086.3117,
+            "largest-contentful-paint": 1086.3117,
+            "speed-index": 2391.0902429381654,
+            "total-blocking-time": 74.5,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415628,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 3,
+          "score": 1,
+          "metrics": {
+            "first-contentful-paint": 1013.1726000000001,
+            "largest-contentful-paint": 1013.1726000000001,
+            "speed-index": 1362.3658241449878,
+            "total-blocking-time": 7,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412680,
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "kind": "final-retained-home",
+      "file": ".artifacts/final-home-trace-v69/lighthouse-final/2026-11-26T13-07-52-222Z/report.json",
+      "sha256": "5953b1753d6513c4e93391fc2d62fee81f8f446eb6dea873f6dc2228824d4d29",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+      "version": "13.6.0",
+      "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+      "cases": [
+        {
+          "id": "home",
+          "repeat": 1,
+          "score": 0.72,
+          "metrics": {
+            "first-contentful-paint": 911.0889,
+            "largest-contentful-paint": 911.0889,
+            "speed-index": 2727.499188858158,
+            "total-blocking-time": 2123.4555499999997,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415617,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 1,
+          "score": 0.62,
+          "metrics": {
+            "first-contentful-paint": 908.2675999999999,
+            "largest-contentful-paint": 3687.4014000000006,
+            "speed-index": 2171.3427471735495,
+            "total-blocking-time": 1847.8661999999997,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412669,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 2,
+          "score": 0.72,
+          "metrics": {
+            "first-contentful-paint": 904.5141000000001,
+            "largest-contentful-paint": 3006.7711500000005,
+            "speed-index": 1615.19774448351,
+            "total-blocking-time": 1021.7429499999998,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415617,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 2,
+          "score": 1,
+          "metrics": {
+            "first-contentful-paint": 903.2656999999999,
+            "largest-contentful-paint": 903.2656999999999,
+            "speed-index": 1698.5295114853225,
+            "total-blocking-time": 21.5,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412669,
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 3,
+          "score": 0.89,
+          "metrics": {
+            "first-contentful-paint": 903.2779,
+            "largest-contentful-paint": 903.2779,
+            "speed-index": 1963.5510079040725,
+            "total-blocking-time": 452,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 415617,
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 3,
+          "score": 1,
+          "metrics": {
+            "first-contentful-paint": 993.6034999999999,
+            "largest-contentful-paint": 993.6034999999999,
+            "speed-index": 2377.2479593050375,
+            "total-blocking-time": 28.5,
+            "cumulative-layout-shift": 0
+          },
+          "allTransferredBytes": 412669,
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "finalAllScoresAtLeast90": false,
+  "homeBudget": {
+    "method": "Retain all transfers except the composer SVG assets and its preview-only Inter font. Keep the registration module and all other requests. Font-use attribution is preserved by the unchanged CSS/definitions and the preceding home-pane report.",
+    "attribution": {
+      "file": "docs/performance/home-pane-startup-2026-11-26.json",
+      "sha256": "3c7456105e8cf8ccb4d389982162678f79f84f7f8e2f8f044729091ff5762a14"
+    },
+    "cases": [
+      {
+        "repeat": 1,
+        "allTransferredBytes": 415617,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341513,
+        "under400000": true
+      },
+      {
+        "repeat": 2,
+        "allTransferredBytes": 415617,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341513,
+        "under400000": true
+      },
+      {
+        "repeat": 3,
+        "allTransferredBytes": 415617,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341513,
+        "under400000": true
+      }
+    ]
+  },
+  "repositoryChecks": {
+    "file": ".artifacts/final-home-trace-v69/checks-1795698428345/report.json",
+    "sha256": "34dc9f3c61cd2a7ec1fa27f321b068edadc34482c5e58844a1b9b653f2f86715",
+    "rows": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "started": "2026-11-26T13:09:32.980Z",
+        "finished": "2026-11-26T13:09:34.875Z",
+        "code": 0,
+        "signal": null,
+        "file": "registry.log",
+        "sha256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "started": "2026-11-26T13:09:34.884Z",
+        "finished": "2026-11-26T13:09:35.498Z",
+        "code": 0,
+        "signal": null,
+        "file": "stage.log",
+        "sha256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "started": "2026-11-26T13:09:35.507Z",
+        "finished": "2026-11-26T13:09:52.355Z",
+        "code": 0,
+        "signal": null,
+        "file": "generated.log",
+        "sha256": "b64abba34ff2e5856d466af21625508e238c50a277159b554ccfc277c3af873d"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "started": "2026-11-26T13:09:52.365Z",
+        "finished": "2026-11-26T13:09:53.111Z",
+        "code": 0,
+        "signal": null,
+        "file": "motion.log",
+        "sha256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "package",
+        "args": [
+          "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+          "test",
+          "--prefix",
+          "packages/intrx"
+        ],
+        "started": "2026-11-26T13:09:53.120Z",
+        "finished": "2026-11-26T13:09:57.929Z",
+        "code": 0,
+        "signal": null,
+        "file": "package.log",
+        "sha256": "e5af3d3fedada3223df28ce66f5e3a12ff30dcf29552a69162a7ab34de2b914d"
+      },
+      {
+        "name": "runtime-shell",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "started": "2026-11-26T13:09:57.938Z",
+        "finished": "2026-11-26T13:09:58.543Z",
+        "code": 0,
+        "signal": null,
+        "file": "runtime-shell.log",
+        "sha256": "c9133ee2f444b52761e2ee91878b8fda97d271d80cbd667c00a9f9be9fd29818"
+      },
+      {
+        "name": "stage-runtime",
+        "args": [
+          "tools/verify-stage-runtime.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T13:09:58.550Z",
+        "finished": "2026-11-26T13:10:08.541Z",
+        "code": 0,
+        "signal": null,
+        "file": "stage-runtime.log",
+        "sha256": "aabbceded27b614d721c990fd14663dd6319e6ca3453181a06742605aff6115b"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T13:10:08.550Z",
+        "finished": "2026-11-26T13:17:43.024Z",
+        "code": 0,
+        "signal": null,
+        "file": "library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T13:17:43.031Z",
+        "finished": "2026-11-26T13:22:09.035Z",
+        "code": 0,
+        "signal": null,
+        "file": "fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ]
+  },
+  "rawResults": [
+    {
+      "file": ".artifacts/final-home-trace-v69/raw-results/stage-fit.json",
+      "sha256": "bf27d7572499af3e91600371a7065fabac21a8c972f1aff3a8a9c816b3f6e854"
+    },
+    {
+      "file": ".artifacts/final-home-trace-v69/raw-results/verification.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+    }
+  ],
+  "remaining": [
+    "Final mobile Home scores are 72/72/89; Elastic Tabs scores are 62/100/100. All runs and outliers remain retained.",
+    "Complete current-source catalog cold/warm <300ms startup verification and fixes remain open.",
+    "Native CPU4/compositor acceptance, including Reactive Threads, remains open.",
+    "Broader catalog accessibility/contrast incomplete review remains open."
+  ],
+  "inputSnapshots": {
+    "file": ".artifacts/final-home-trace-v69/input-index.json",
+    "sha256": "f9da2e59ac3a687bdd40279370e526197217c890d18bb385649a3cff901a6870"
+  },
+  "unmeasuredFallbackHypothesis": {
+    "file": ".artifacts/final-home-trace-v69/font-membership.json",
+    "sha256": "3eda8b2eea7d8791aa18ac35eae49ec9a781e501261112facf4c3883ac5dcf94"
+  },
+  "commandSources": {
+    "file": ".artifacts/final-home-trace-v69/command-sources.json",
+    "sha256": "a41e6c04d4dc38da2efac99c2b72511f092a261939a001c099ffe357acc87992"
+  },
+  "archives": [
+    {
+      "root": ".artifacts/final-threads-pattern-v68",
+      "file": ".artifacts/final-threads-pattern-v68/FROZEN.json",
+      "files": 14,
+      "sha256": "4ec2b83d49d6408a5c71d89041ef7fe5247364d971bbfa6732d159c4e29293ef"
+    },
+    {
+      "root": ".artifacts/final-home-trace-v69",
+      "file": ".artifacts/final-home-trace-v69/FROZEN.json",
+      "files": 170,
+      "sha256": "85dfc825423cbb803e81e3354f94db04f011620004e69ff00dead7eb710990e1"
+    }
+  ]
+}
