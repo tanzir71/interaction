@@ -2571,3 +2571,25 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   artifacts stay unchanged. Current-source startup, CPU4 and broader
   accessibility acceptance remain open. V71 private helpers, candidates, inputs
   and evidence become read/copy only when its `FROZEN.json` is written.
+- The a2d25186 startup baseline and unresolved Library preparation timeout are
+  recorded in docs/performance/catalog-startup-2026-11-26.json. It stopped at
+  1,066/4,160 attempts: 1,065 paint measurements, 135 cold and six warm timing
+  misses, no page JavaScript errors, and one Show more stability timeout.
+  Two hundred fresh first-click probes and sixteen diagnostic profiling cases
+  did not reproduce that timeout; they do not resolve it or certify timing.
+  V72/V73 are sealed by their FROZEN.json files: read/copy only; never execute
+  their private helpers/candidates/inputs or copy their code elsewhere to run.
+- Parallax Layers' full BACK/FRONT labels use opaque backings matching the
+  Stage, without padding or shadows. Light FRONT uses #b04a0b. Native artwork,
+  all other fields, the controller, HTML, photo slots and source-time formulas
+  remain intact. The generator prompt describes the full-view palette change.
+  Run node tools/verify-parallax-labels.js --raster=software for exact native
+  PNGs and held geometry, independent Stage/shell themes, real keyboard input,
+  foreground hierarchy/contrast probes and fresh offline exports. Its End
+  oracle compares with the exact browser-native clamp: transformed scroll
+  extents can differ from scrollHeight-clientHeight by a fractional physical
+  pixel. Keep the original rejected integer-range check and raw captures.
+  This scoped label repair does not close whole-catalog accessibility,
+  current-source startup, default Lighthouse or CPU4/compositor acceptance.
+  V74 is now sealed as well: read/copy only; use current public tools in fresh
+  mutable directories rather than executing any archived helper or input.

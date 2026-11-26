@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-26",
+  "sourceCommit": "a2d251869327ad53cce917594b1794a306911efe",
+  "status": "Incomplete baseline inventory; not acceptance. The original 300ms gate fails and a Library preparation timeout remains unresolved. The later Parallax label phase changes the source, so current-source timing still needs verification.",
+  "method": [
+    "One fresh browser process; one empty browser context per sample. No priming sample or outlier is removed.",
+    "Heading paint preserves the earlier document.fonts.ready plus two animation-frame method. Stage paint preserves two frames after the actual full boot. Assets-ready is separate.",
+    "Warm starts at trusted caption pointerdown; Back must restore the actual click-time library scroll.",
+    "CPU throttling is applied before navigation. Network is local without emulated latency; OS caches and other applications are not controlled.",
+    "The explicit 300ms result covers only the recorded local routes/settings. It does not establish all-component startup, native CPU4 frame rate or Lighthouse acceptance."
+  ],
+  "browser": "158.0.8127.88",
+  "cpu": 1,
+  "plannedSamples": 4160,
+  "attemptedSamples": 1066,
+  "paintMeasurements": 1065,
+  "fullyMeasuredComponents": 133,
+  "startedComponents": 134,
+  "unattemptedSettings": 3094,
+  "missingPaintMeasurements": 3095,
+  "recordedOver300": 141,
+  "completedMatrix": false,
+  "allNumericSamplesUnder300": false,
+  "pageErrors": 0,
+  "preparationFailures": [
+    {
+      "id": "liquid-image-ripple",
+      "width": 1440,
+      "theme": "dark",
+      "mode": "warm",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('#show-more')\n    - locator resolved to <button class=\"chip\" id=\"show-more\">Show 12 more</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not stable\n    - retrying click action\n      - waiting 100ms\n    55 × waiting for element to be visible, enabled and stable\n       - element is not stable\n     - retrying click action\n       - waiting 500ms\n\n    at main (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\profile-shell-cold.js:31:175)"
+    }
+  ],
+  "timings": {
+    "cold": {
+      "samples": 533,
+      "over300": 135,
+      "heading": {
+        "median": 231.1000000089407,
+        "p95": 438.1000000089407,
+        "max": 937.2000000029802
+      },
+      "stage": {
+        "median": 234.70000000298023,
+        "p95": 447.90000000596046,
+        "max": 1035.9000000059605
+      }
+    },
+    "warm": {
+      "samples": 532,
+      "over300": 6,
+      "heading": {
+        "median": 78.90000000596046,
+        "p95": 195.1000000089407,
+        "max": 301.29999999701977
+      },
+      "stage": {
+        "median": 108,
+        "p95": 227.59999999403954,
+        "max": 801.7999999970198
+      }
+    }
+  },
+  "source": {
+    "endCommit": "a2d251869327ad53cce917594b1794a306911efe",
+    "trackedWorktreeAtEnd": "",
+    "outerCommitStable": true,
+    "snapshot": {
+      "file": ".artifacts/final-catalog-startup-v72/source-snapshot.json",
+      "sha256": "b90d7e82c579f395fecda30d83b4ffdac44e47a0481862ede93e21df2da847b5"
+    }
+  },
+  "evidence": [
+    {
+      "file": ".artifacts/final-catalog-startup-v72/measurements/2026-11-26T15-27-47-816Z/report.json",
+      "sha256": "a2d15e0675fa2bb362c2d16ab8be4578c33738eb1a05206d7a3d1d8997b5df38"
+    },
+    {
+      "file": ".artifacts/final-catalog-startup-v72/progress.json",
+      "sha256": "bf1f808cd2a36afe6e5d145ca9b75a8ac708ad9bf42e4bbb4922d63e639ee6d8"
+    },
+    {
+      "file": ".artifacts/final-catalog-startup-v72/run.log",
+      "sha256": "fcb41c91e406dfc53883960473297b18a244836ae9917f880c7d71250bb95446"
+    }
+  ],
+  "followUp": {
+    "status": "Not reproduced, still open.",
+    "targetedProfile": {
+      "cases": 16,
+      "errors": 0,
+      "sourceStable": true,
+      "additionalTracing": "Layout invalidation and stack categories; not comparable performance acceptance.",
+      "evidence": {
+        "file": ".artifacts/final-library-stability-v73/profile/2026-11-26T16-30-02-306Z/report.json",
+        "sha256": "8b232dee8be6076d3a615be6d80a85f0ef2e96dbdf9985d94b8a53770d45adb3"
+      }
+    },
+    "firstClickProbe": {
+      "cases": 200,
+      "successfulClicks": 200,
+      "errors": 0,
+      "sourceStable": true,
+      "evidence": {
+        "file": ".artifacts/final-library-stability-v73/first-click-oKeYx8/report.json",
+        "sha256": "63f0ceaa1e4cc086e601a1df729ad9bcc5587967326e1861618acb0f7f49eef5"
+      },
+      "scope": "Fresh 1440px dark Library contexts, first Show more only. Original visibility wait, trusted click and 30s timeout; no pre-click geometry sampler. Does not recreate the original long preceding browser history or later warm detail navigation."
+    }
+  },
+  "preservation": "All original failed/slow observations and traces remain. Record-only does not turn a slow sample into a pass. No production behavior was changed during this investigation.",
+  "remaining": [
+    "Library timeout diagnosis.",
+    "Complete current-source startup and the 300ms target.",
+    "Default mobile Lighthouse acceptance.",
+    "CPU4/compositor frame-rate acceptance.",
+    "Broader accessibility review."
+  ],
+  "archives": [
+    {
+      "file": ".artifacts/final-catalog-startup-v72/FROZEN.json",
+      "sha256": "12e6578cd4cb1026b6fe1fe3cf06a8e899511210b20245767a15bb982457261f"
+    },
+    {
+      "file": ".artifacts/final-library-stability-v73/FROZEN.json",
+      "sha256": "709f7aacef310892879c805d86ff86e2a80ddf306475be800292ff12a59739c3"
+    }
+  ]
+}

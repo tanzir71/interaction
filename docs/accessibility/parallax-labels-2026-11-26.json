@@ -1,0 +1,253 @@
+{
+  "date": "2026-11-26",
+  "baseline": "a2d251869327ad53cce917594b1794a306911efe",
+  "outcome": "Full Parallax Layers plane labels have opaque neutral backings and no shadows. Their contrast is independent of the moving photograph. The light Stage uses dark gray BACK and dark orange FRONT. All labels keep their original boxes and copy; native artwork and the complete source model remain intact.",
+  "spec": "CODEX_HANDOFF_3.md §4.7",
+  "scope": "BACK/FRONT full-view identifiers, native preservation and original Scroll behavior. Does not close broader catalog accessibility, every transition, screen-reader, current-source startup, Lighthouse or CPU4/compositor acceptance.",
+  "preservation": {
+    "at": "2026-11-26T17:21:20.576Z",
+    "baseline": "a2d251869327ad53cce917594b1794a306911efe",
+    "catalog": 520,
+    "unchangedCompleteDefinitions": 519,
+    "changedDefinition": "parallax-layers",
+    "changedFields": [
+      "css",
+      "prompt"
+    ],
+    "allOtherFieldsRestoredToExactBaseline": true,
+    "originalHTMLSHA256": "baf5bc228f904e32122935631ce8d71a3b8edad9bdb82b1294ec03cbf4a19515",
+    "originalControllerSHA256": "e5e4eeed339d8da8d6ad7b80eff099e1f5baf383b6693e539c655c352ba07b1d",
+    "originalCSSPreservedAsPrefix": true,
+    "originalPromptPreservedAsPrefix": true,
+    "sourceAssetsChanged": false,
+    "newRuntimeDependencies": 0,
+    "fillOrOverflowExceptionsAdded": 0,
+    "frozenV1Unchanged": true,
+    "assets": {
+      "assets/demo-assets.json": "c87ae13f1654b5282df79503ab2a5d1dbd6afb8ccbf3e8763bcc8b23d6ef5ec8",
+      "assets/photo-credits.json": "72ca83f271f4ab8a269d885b8a42ddcf57ba095cb470300b96ba1c95e2ed139c"
+    },
+    "frozen": {
+      "css/style.css": "ef5fa5045378b6785bbcff49d9935bbd2af741281fe491a320a0eab49fcd5210",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92"
+    }
+  },
+  "verification": {
+    "command": "node tools/verify-parallax-labels.js --raster=software",
+    "browser": "158.0.8127.88",
+    "checks": 8172,
+    "onlineStories": 32,
+    "widths": [
+      1440,
+      390
+    ],
+    "stageThemes": [
+      "dark",
+      "light"
+    ],
+    "shellThemes": [
+      "dark",
+      "light"
+    ],
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "modes": [
+      "full",
+      "thumb"
+    ],
+    "poses": [
+      "initial",
+      "Home",
+      "PageDown",
+      "End"
+    ],
+    "exactNativePNGPairs": 64,
+    "heldGeometryComparisons": 128,
+    "foregroundReview": "Opaque backing and glyph fill; no stroke or shadow, ancestor opacity/filter/blend/mask reviewed. The original DOM paints these labels above their photo slots. Actual routed default-renderer captures confirm the backing paint.",
+    "minimumMeasuredRatio": 4.984700281404666,
+    "pairs": [
+      {
+        "text": "BACK",
+        "color": "rgb(160, 160, 160)",
+        "background": "rgb(21, 21, 21)",
+        "ratio": 6.983293200459066
+      },
+      {
+        "text": "FRONT",
+        "color": "rgb(250, 115, 25)",
+        "background": "rgb(21, 21, 21)",
+        "ratio": 6.548918627923152
+      },
+      {
+        "text": "BACK",
+        "color": "rgb(98, 98, 98)",
+        "background": "rgb(244, 244, 244)",
+        "ratio": 5.545881163354674
+      },
+      {
+        "text": "FRONT",
+        "color": "rgb(176, 74, 11)",
+        "background": "rgb(244, 244, 244)",
+        "ratio": 4.984700281404666
+      }
+    ],
+    "negativeControls": 64,
+    "offlineContexts": 8,
+    "offline": "Fresh network-blocked exports at both widths, both Stage themes and both motion settings; actual native End input, complete photo resolution and zero attempted network requests.",
+    "nativeRasterScope": "Zero-tolerance PNG equality with --disable-gpu and the established current/before priming sequence. Does not claim default-GPU byte identity.",
+    "evidence": {
+      "file": ".artifacts/final-parallax-contrast-v74/verification/2026-11-26T17-02-32-263Z/report.json",
+      "sha256": "e826f4fdda56c7ef0bd230e4503e4ba845128903aabb502f7ecc18c8faaa3234"
+    },
+    "actualDetail": {
+      "cases": 8,
+      "renderer": "Default Chrome; actual route, toolbar theme control and native Home/End keys.",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/capture-YWzHQM/report.json",
+        "sha256": "996b4da575d32bc05ae3312529335016b04803b9432950344778e916e49dce24"
+      }
+    }
+  },
+  "retainedFailures": [
+    {
+      "kind": "Diagnostic capture selector",
+      "reason": "The first capture tried the hidden light button on compact screens. The corrected capture uses the visible mobile theme toggle; eight baseline and eight current routed states succeed.",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/capture-VnBrhQ/report.json",
+        "sha256": "aa65905517df32caf446dc9b38712a0929b59d8d40e17500d806a57e2555844c"
+      }
+    },
+    {
+      "kind": "New verifier endpoint assumption",
+      "reason": "An integer scrollHeight-clientHeight extent is not always attainable after Stage scaling. The final oracle requires exact equality with the browser-native clamp; production controllers are unchanged.",
+      "actualEnd": 538.8956909179688,
+      "nativeMaximum": 538.8956909179688,
+      "integerRange": 540,
+      "scale": 0.6791666666666667,
+      "physicalGap": 0.7500099182128906,
+      "evidence": [
+        {
+          "file": ".artifacts/final-parallax-contrast-v74/verification/2026-11-26T16-58-51-652Z/report.json",
+          "sha256": "e0e7de474f273de951f125de1c7a2cbe7fb00f7ee00902db89e88f98054617f7"
+        },
+        {
+          "file": ".artifacts/final-parallax-contrast-v74/failed-endpoint-check.js",
+          "sha256": "7c416041ad9113910e1c4cf91d2089e24ad70b19b9cc667228dc8e7cea6940ea"
+        },
+        {
+          "file": ".artifacts/final-parallax-contrast-v74/endpoint.json",
+          "sha256": "5f46d4f493fdd9cb659a62646eda35db144052e4f59b9c9d75af2eac731ad147"
+        }
+      ]
+    }
+  ],
+  "requiredChecks": [
+    {
+      "name": "registry",
+      "command": "node tools/verify-registry.js",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/registry.log",
+        "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+      }
+    },
+    {
+      "name": "stage",
+      "command": "node tools/verify-stage.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/stage.log",
+        "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+      }
+    },
+    {
+      "name": "generated",
+      "command": "node tools/build-registry.js --check",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/generated.log",
+        "sha256": "7a2a14dc22c043a8a79ea55923c5ca985d25a9ff4fb76b0bd7cd476f60814ed0"
+      }
+    },
+    {
+      "name": "motion",
+      "command": "node tools/verify-motion.js --strict",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/motion.log",
+        "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+      }
+    },
+    {
+      "name": "cli",
+      "command": "npm test --prefix packages/intrx",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/cli.log",
+        "sha256": "9af524657dc4fabb78dc0aee7e4f68e7481286264448e9a7fe8657071f3dfcc2"
+      }
+    },
+    {
+      "name": "scroll-core",
+      "command": "node tools/verify-scroll-core.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/scroll-core.log",
+        "sha256": "3f3cb52af776af109a464fe074cb61c337d10488a377f1ae5ed5ca73bee4feeb"
+      }
+    },
+    {
+      "name": "library",
+      "command": "node tools/verify-library.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/library.log",
+        "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+      }
+    },
+    {
+      "name": "stage-fit",
+      "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+      "status": "passed",
+      "evidence": {
+        "file": ".artifacts/final-parallax-contrast-v74/stage-fit.log",
+        "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+      }
+    }
+  ],
+  "library": {
+    "checks": 668,
+    "previews": 520,
+    "offlineExports": 100,
+    "errors": []
+  },
+  "stageFit": {
+    "components": 520,
+    "offenders": 0,
+    "unchangedLowFillExceptions": 163
+  },
+  "actions": {
+    "enabled": false,
+    "inProgress": 0,
+    "queued": 0,
+    "budget": "Existing owner account-wide $0 stop limit is unchanged."
+  },
+  "remaining": [
+    "Unresolved Library Show more timeout in the archived baseline.",
+    "Complete current-source startup, default mobile Lighthouse and CPU4/compositor performance.",
+    "Broader catalog accessibility review."
+  ],
+  "archive": {
+    "status": "sealed",
+    "file": ".artifacts/final-parallax-contrast-v74/FROZEN.json",
+    "sha256": "a830230ed76064fc0207a9d41aca0b6d614ab80a2fc0579ef40a5a9d22d5ebe4",
+    "fileCount": 357,
+    "treeSHA256": "8bf7e27d87680852f82d3672c0339532fcbd05c5f700f1b76accc3c497ff845c",
+    "rule": "Read/copy only. Never execute or edit private helpers, candidates, inputs or evidence, or copy their code elsewhere to execute. Public current tools may run in fresh mutable directories."
+  }
+}
