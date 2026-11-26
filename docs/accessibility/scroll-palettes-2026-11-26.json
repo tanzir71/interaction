@@ -1,0 +1,684 @@
+{
+  "date": "2026-11-26",
+  "timezone": "Asia/Dhaka",
+  "baseline": "1e251ae976501da946255767bf4bdcf59cb5760e",
+  "outcome": "Twenty full Scroll views gain readable light palettes. Full dark Text Highlight also gains readable unread-word gray. Smooth Scroll cancels a stale native idle timer when a new destination begins and retains its actual intended destination through a hold. Native artwork, all original copy/datasets, HTML, metadata, SVG/photo/font assets and original smoothing math/options remain intact.",
+  "scope": "Bounded Scroll text palettes and two demonstrated Smooth Scroll bookkeeping bugs. Whole-catalog accessibility, photographic contrast, cold startup, final Lighthouse and CPU4 frame-rate acceptance remain open.",
+  "preservation": {
+    "components": 520,
+    "unchangedOtherCompleteDefinitions": 500,
+    "unchangedControllers": 519,
+    "unchangedHTML": 520,
+    "metadataChanged": false,
+    "sourceAssetsChanged": false,
+    "newRuntimeDependencies": 0,
+    "nativeArtworkChanged": false,
+    "frozenV1Changed": false,
+    "sourceBefore": {
+      "file": ".artifacts/final-scroll-palettes-v47/baseline.json",
+      "sha256": "9ea249ea286078d758603d55d066e4e804d8dc39bb0cbb1938555ddbb7f5740e"
+    },
+    "exactDeltas": {
+      "file": "tools/fixtures/scroll-palettes-before.json",
+      "sha256": "76eb419d3ef686f07ffee5c891e5b0b9614af85c934739a26725b3cf6ecf1789"
+    },
+    "controllerCorrection": {
+      "file": ".artifacts/final-scroll-palettes-v47/applied-controller.json",
+      "sha256": "075450903f269b7167e1254af5a10b99827f15fabbe89d3c575b4124d04d0456"
+    }
+  },
+  "changes": {
+    "primaryLightInk": "#171717",
+    "secondaryLightInk": "#626262",
+    "lightOrange": "#b04a0b",
+    "stickyBody": "#494949 to retain contrast through its original 0.8 inactive opacity",
+    "fullDarkUnreadWord": "#8c8c8c",
+    "photoText": "Original white photographic captions and dark backings are retained. The inertia meters gain a light translucent backing; their lower contrast bound over a black photograph is checked separately. Clip Morph’s radius readout gains an opaque light backing without changing its box.",
+    "prompts": "Each affected generator prompt receives the matching full-palette instruction; Smooth also describes the timer/destination correction."
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "onlineCases": 320,
+    "offlineContexts": 80,
+    "geometryAndNonColorStyle": "Exact held comparisons before/after the palette delta at 1440/390px, both actual Stage themes, both motion settings and full/native modes. Finite visible CSS transitions settle before comparisons. Wheel and End stories use the real browser field; original photographic text paint remains exact.",
+    "literalPixels": "Canonical same-engine software raster uses --disable-gpu and a fixed before/current priming sequence. Native and unaffected full-dark PNG bytes must be identical, with no pixel tolerance. Default-GPU functional/model/asset/input checks remain separate; default-GPU byte identity is not claimed.",
+    "currentMatrix": [
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/complete-1/2026-11-26T01-09-20-979Z/report.json",
+        "sha256": "f626f4dd96dc9494ae4a4307fd50ec9d06fa08022650beda2bd7a8c7d37b0fc9",
+        "cases": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/complete-2/2026-11-26T01-09-21-051Z/report.json",
+        "sha256": "cfee48af5f9b888abb8e820e0d13ac52a42dd9b8585ce21a29f852435d8fadbd",
+        "cases": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/complete-3/2026-11-26T01-09-20-979Z/report.json",
+        "sha256": "bb66aa5e4bf5e7e2b0a3685de3869b54bf697eb52642b5f50b20b9b53206771b",
+        "cases": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/complete-4/2026-11-26T01-09-21-061Z/report.json",
+        "sha256": "dbd7c70b685698e42d2c77ca7323cfd9455db69065dce000d832d57fa1a092aa",
+        "cases": 80,
+        "offline": 20,
+        "raster": "software",
+        "launchArgs": [
+          "--disable-gpu"
+        ]
+      }
+    ],
+    "components": [
+      {
+        "id": "lenis-smooth-scroll",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": true,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-reveal-stagger",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-progress",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "velocity-skew",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-text-highlight",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": true
+      },
+      {
+        "id": "scroll-image-sequence",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-svg-draw",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-rotate-gallery",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-split-screen",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-marquee-direction",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-counter-rotate",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 4.984700281404666,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-depth-tunnel",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-letter-scatter",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-clip-morph",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-table-of-contents",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-inertia-grid",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": 4.535630586437709,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-video-scrubber",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-sticky-reveal",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 4.831010617908167,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-hero-parallax",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      },
+      {
+        "id": "scroll-parallax-columns",
+        "onlineCases": 16,
+        "offlineContexts": 4,
+        "minimumMeasuredLightRatio": 5.545881163354674,
+        "minimumMeterOverBlackRatio": null,
+        "controllerChanged": false,
+        "darkFullGradientChanged": false
+      }
+    ],
+    "smoothDestinations": {
+      "file": ".artifacts/final-scroll-palettes-v47/smooth-destinations/2026-11-26T01-01-08-176Z/report.json",
+      "sha256": "9541b14a0471fe54c1d525bc3c89d9a84c72eba6878f6db08f9a8d1cc8cec9d1",
+      "contexts": 16,
+      "claims": "Actual calibrated browser endpoints, a preceding native-scroll idle timer, Home/End, exact held pose, original destination on resume, newer held Home priority, blocked HTTP and cleanup. Full/native at 390/640px, DPR1/2 and both motion settings."
+    },
+    "functional": {
+      "initial": {
+        "file": ".artifacts/final-scroll-palettes-v47/functional.json",
+        "sha256": "e8862f3a25a730b19d924159c9488dc23d26f411c8c4c440f96fb857aef4afac"
+      },
+      "browser": "Chrome 158 selected explicitly in fourteen old checkers; each logs the actual version.",
+      "correctedSmoothRegression": {
+        "file": ".artifacts/final-scroll-palettes-v47/verify-scroll-mask.js-corrected.log",
+        "sha256": "14a9a148ccd7f0571114ed046a7200276fc5b11876afa4270073920eb686e3f2"
+      },
+      "atomicRetargetRegression": {
+        "file": ".artifacts/final-scroll-palettes-v47/verify-scroll-atomic.log",
+        "sha256": "40202cffc35e9a633477e78a40fb39a327ea33a2886db777576ea17c311338f7"
+      },
+      "sampling": "Reveal reversal is sampled synchronously around the actual observer class toggle. Its existing .35 bound remains; the prior cross-command samples did not represent the same time. The new check additionally requires a genuine mid-entry reversal."
+    },
+    "required": {
+      "shortCommands": {
+        "file": ".artifacts/final-scroll-palettes-v47/required-short.json",
+        "sha256": "8df792b788a8521ac20f24a121b2b4cfd53aecc87e46105e5ceba78e806b5e36"
+      },
+      "generatedCompletion": {
+        "file": ".artifacts/final-scroll-palettes-v47/generated-completed.json",
+        "sha256": "1e3a1ba5dece3c178dbb41a2d0197b808ca0491fd6ed3c13ac4e0aee74b579c4"
+      },
+      "library": {
+        "file": ".artifacts/final-scroll-palettes-v47/library-verification.json",
+        "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82",
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "stageFit": {
+        "file": ".artifacts/final-scroll-palettes-v47/stage-fit.json",
+        "sha256": "747bbc1cd0295446d3e4f56b28cca9d6cfec7f1a7a8834ee775af2622b0d9a90",
+        "summary": {
+          "total": 520,
+          "failed": [],
+          "missingDesignSize": 0,
+          "overflow": [],
+          "hscroll": [],
+          "tinyText": [],
+          "lowFill": [],
+          "lowFillExceptions": [
+            "btn-border-beam",
+            "input-float-label",
+            "password-strength-bar",
+            "elastic-tabs",
+            "velocity-skew",
+            "scroll-letter-scatter",
+            "scroll-table-of-contents",
+            "cursor-gooey-blob",
+            "cursor-particle-emitter",
+            "cursor-elastic-line",
+            "cursor-text-repel",
+            "cursor-grid-ripple",
+            "cursor-hover-preview",
+            "cursor-liquid-metaball",
+            "cursor-velocity-stretch",
+            "cursor-snap-targets",
+            "cursor-emoji-rain",
+            "cursor-crosshair-hud",
+            "custom-cursor",
+            "magnetic-button",
+            "image-trail",
+            "text-scramble",
+            "letter-roll",
+            "proximity-type",
+            "stat-counter",
+            "text-wave-hover",
+            "text-typewriter-caret",
+            "text-blur-focus",
+            "text-strike-reveal",
+            "text-ransom-note",
+            "text-glitch-layers",
+            "text-circular-spin",
+            "text-underline-magic",
+            "text-broken-grid",
+            "svg-path-draw-hover",
+            "svg-squiggle-underline",
+            "svg-gooey-menu",
+            "css3d-cube-nav",
+            "voxel-assemble",
+            "spring-cursor-follower",
+            "pendulum-tags",
+            "chain-links",
+            "liquid-blob-buttons",
+            "nav-active-pill",
+            "breadcrumb-collapse",
+            "sidebar-rail-expand",
+            "burger-morph-x",
+            "btn-shimmer-sweep",
+            "btn-text-slide-swap",
+            "btn-icon-hop",
+            "btn-success-morph",
+            "btn-confetti-burst",
+            "btn-ripple-material",
+            "btn-jelly-press",
+            "like-heart-particles",
+            "checkbox-draw-check",
+            "toggle-day-night",
+            "copy-inline-feedback",
+            "badge-notification-pop",
+            "input-underline-grow",
+            "input-shake-error",
+            "input-char-counter-arc",
+            "otp-code-boxes",
+            "range-elastic-thumb",
+            "form-multistep-progress",
+            "preloader-percentage",
+            "preloader-word-cycle",
+            "loader-dots-wave",
+            "loader-morph-shapes",
+            "loader-typing-code",
+            "loader-orbit-dots",
+            "upload-progress-morph",
+            "page-load-counter-slide",
+            "chart-donut-sweep",
+            "fui-target-lock",
+            "fui-access-granted",
+            "agent-token-meter",
+            "agent-deploy-pipeline",
+            "agent-node-graph",
+            "agent-streaming-text",
+            "typing-mechanical",
+            "konami-unlock",
+            "number-input-drag",
+            "dither-bayer",
+            "ascii-donut-3d",
+            "ascii-type-explode",
+            "dot-matrix-shapes",
+            "halftone-globe-canvas",
+            "pixel-lissajous-lab",
+            "chromatic-type",
+            "neumorphic-buttons",
+            "mechanical-switch",
+            "rotary-knob",
+            "flip-clock",
+            "embossed-press",
+            "analog-gauge",
+            "punch-card-keyboard",
+            "zippo-flame",
+            "dynamic-notch",
+            "hover-fill-button",
+            "showcase-pixel-trail",
+            "showcase-tracing-story",
+            "showcase-elastic-slider",
+            "framer-rolling-balance",
+            "drams-003",
+            "drams-005",
+            "drams-009",
+            "drams-020",
+            "drams-021",
+            "drams-022",
+            "drams-002",
+            "drams-012",
+            "drams-034",
+            "drams-040",
+            "drams-010",
+            "drams-044",
+            "drams-008",
+            "drams-011",
+            "drams-016",
+            "drams-017",
+            "drams-019",
+            "drams-025",
+            "drams-032",
+            "drams-014",
+            "drams-018",
+            "drams-023",
+            "drams-024",
+            "drams-026",
+            "drams-028",
+            "drams-030",
+            "drams-035",
+            "drams-037",
+            "drams-039",
+            "drams-042",
+            "micro-smoke-delete",
+            "micro-inline-confirm",
+            "micro-star-rating",
+            "micro-reaction-bar",
+            "micro-shimmer-status",
+            "ui-avatar-stack",
+            "ui-inverse-tabs",
+            "form-slide-to-confirm",
+            "form-precision-scrubber",
+            "data-candlestick-crosshair",
+            "ai-agent-creator",
+            "micro-stateful-button",
+            "micro-hold-to-pay",
+            "micro-share-pill",
+            "micro-icon-swap",
+            "micro-award-badge",
+            "micro-action-swap",
+            "form-vanish-input",
+            "form-magnetic-select",
+            "form-multi-select",
+            "form-inline-edit",
+            "form-liquid-toggle",
+            "ui-feedback-widget",
+            "nav-pagination-morph",
+            "loader-multi-step",
+            "loader-matrix-dots",
+            "play-plinko",
+            "play-slingshot",
+            "play-coin-flip"
+          ],
+          "invalidExceptions": []
+        }
+      },
+      "runtimeShell": {
+        "file": ".artifacts/final-scroll-palettes-v47/runtime-shell.log",
+        "sha256": "137c14618a307904252598430c15d6f90c8027fe2c5e66b6b6d4e3a585763c0c",
+        "tests": 19
+      },
+      "stageRuntime": {
+        "file": ".artifacts/final-scroll-palettes-v47/stage-runtime.log",
+        "sha256": "84926b1fe3033fd1b8a83510e11d8d109bd22a217afa1ac0bf71c7f358b269fe"
+      }
+    }
+  },
+  "rawAccessibility": {
+    "runs": [
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/axe-before-1440/2026-11-26T00-20-17-672Z/report.json",
+        "sha256": "9294631ce08b5d3e0e466e4ddf4658b240911acdb0b3a3cfef362ce38135e005",
+        "width": 1440,
+        "summary": {
+          "cases": 80,
+          "violations": 0,
+          "incomplete": 58,
+          "pageErrors": 0
+        },
+        "phase": "before",
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/axe-before-390/2026-11-26T00-20-17-686Z/report.json",
+        "sha256": "8adbca8353e14a20c8ba674a5210db775a1177fed23471d19e7f23e1fef91068",
+        "width": 390,
+        "summary": {
+          "cases": 80,
+          "violations": 0,
+          "incomplete": 58,
+          "pageErrors": 0
+        },
+        "phase": "before",
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/axe-current-1440/2026-11-26T01-03-43-247Z/report.json",
+        "sha256": "df2a905441b5a05a559dec15466ae4500850cf2931533b63c374fe6f87516646",
+        "width": 1440,
+        "summary": {
+          "cases": 80,
+          "violations": 0,
+          "incomplete": 58,
+          "pageErrors": 0
+        },
+        "phase": "current",
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/axe-current-390/2026-11-26T01-03-43-611Z/report.json",
+        "sha256": "ddea26674f019bf875d448965b09703f5aea18c0fac2706be63a1abb98df8e8b",
+        "width": 390,
+        "summary": {
+          "cases": 80,
+          "violations": 0,
+          "incomplete": 58,
+          "pageErrors": 0
+        },
+        "phase": "current",
+        "axe": {
+          "file": "C:\\Users\\tanzir\\AppData\\Local\\npm-cache\\_npx\\c6ed34f1783ab9ca\\node_modules\\axe-core\\axe.min.js",
+          "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+          "version": "4.14.1"
+        }
+      }
+    ],
+    "policy": "All violations and incomplete results remain recorded without filtering. These initial scans supplement explicit text/gradient/SVG contrast measurements; they do not certify hidden states, all photographic pixels, every animation frame or catalog-wide WCAG conformance."
+  },
+  "retainedDiagnostics": {
+    "runs": [
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online/2026-11-26T00-34-09-702Z/report.json",
+        "sha256": "88822a3ed29b1a1ad023c5d79b10a317c4e5d43333267a04999b3089985eb224",
+        "completedCases": 16,
+        "active": {
+          "id": "scroll-reveal-stagger",
+          "width": 1440,
+          "theme": "dark",
+          "reduced": false,
+          "mode": "full"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact held layout and non-color style initial"
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online-settled/2026-11-26T00-36-55-433Z/report.json",
+        "sha256": "c8c308f8bcece7fdae51a2a32b27b8b275438be61644eac01e376dc54512b5ee",
+        "completedCases": 285,
+        "active": {
+          "id": "scroll-sticky-reveal",
+          "width": 390,
+          "theme": "light",
+          "reduced": false,
+          "mode": "thumb"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact unchanged original native/dark PNG scroll-sticky-reveal-390-light-false-thumb"
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online-final-1/2026-11-26T01-01-08-139Z/report.json",
+        "sha256": "80825b06c6428b810a4220cf8973bbee8869f9c755c272cc6d53fc745fa8fa46",
+        "completedCases": 15,
+        "active": {
+          "id": "lenis-smooth-scroll",
+          "width": 390,
+          "theme": "light",
+          "reduced": true,
+          "mode": "thumb"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact unchanged original native/dark PNG lenis-smooth-scroll-390-light-true-thumb"
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online-final-2/2026-11-26T01-01-08-213Z/report.json",
+        "sha256": "ce40d6b6abd22d49aa3580f090261dfc89b3dfc9c681b7913231ee3b89415642",
+        "completedCases": 43,
+        "active": {
+          "id": "scroll-rotate-gallery",
+          "width": 390,
+          "theme": "dark",
+          "reduced": true,
+          "mode": "thumb"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact unchanged original native/dark PNG scroll-rotate-gallery-390-dark-true-thumb"
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online-final-3/2026-11-26T01-01-08-114Z/report.json",
+        "sha256": "dd4a62cc3768f4532245f3b21319b788fce9836bd5a5d3a2879527069ab80e29",
+        "completedCases": 13,
+        "active": {
+          "id": "scroll-counter-rotate",
+          "width": 390,
+          "theme": "light",
+          "reduced": false,
+          "mode": "thumb"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact unchanged original native/dark PNG scroll-counter-rotate-390-light-false-thumb"
+      },
+      {
+        "file": ".artifacts/final-scroll-palettes-v47/online-final-4/2026-11-26T01-01-08-117Z/report.json",
+        "sha256": "b457880323f954c534c8a08e2849c076e61e96e8e28cc4b33c886c94792eceab",
+        "completedCases": 45,
+        "active": {
+          "id": "scroll-sticky-reveal",
+          "width": 390,
+          "theme": "light",
+          "reduced": false,
+          "mode": "thumb"
+        },
+        "error": "AssertionError [ERR_ASSERTION]: Exact unchanged original native/dark PNG scroll-sticky-reveal-390-light-false-thumb"
+      }
+    ],
+    "firstNativeDifference": {
+      "file": ".artifacts/final-scroll-palettes-v47/native-png-diagnostic.json",
+      "sha256": "50fc8f9621f0851990059d39a074150ff0ac3d12e2da891815a8c8cbd5415d26"
+    },
+    "unchangedStyleControls": {
+      "file": ".artifacts/final-scroll-palettes-v47/native-raster-control.json",
+      "sha256": "7a80d862358306fff577bbd0433095190484a6f33172f2c1242ddad8de6500f6"
+    },
+    "controlPixels": {
+      "file": ".artifacts/final-scroll-palettes-v47/native-raster-control-pixels.json",
+      "sha256": "3aa71749946ea8f6f47b282ecb7fadfef98d7343d1af23381fbfa645fbfe44a5"
+    },
+    "smoothBeforeAndCandidate": {
+      "file": ".artifacts/final-scroll-palettes-v47/smooth-controller-probe.json",
+      "sha256": "dd41218395ac2e2eb87a31e30df1392586428d4ceef0d9d7781b71ecb9be91fd"
+    },
+    "notes": [
+      "The initial checker compared while the original Reveal CSS entry was running; it now waits for finite visible CSS animations without changing product timing or numeric bounds.",
+      "Five default-GPU comparisons differ across 3–1793 pixels by one or two channel levels despite exact computed paint. The cause is not established. Failed captures and fixed unchanged-style/source-state controls are retained. Canonical software screenshots provide a separate literal comparison; no favorable capture is selected and no pixel tolerance is introduced.",
+      "The older mask regression exposed a stale native idle timeout ending newer motion. A separate caller-hold story exposed the interpolated-target versus intended-goal error. Timer-only and combined candidates isolate the two bugs before the exact production correction.",
+      "The first corrected broad Scroll rerun sampled a Reveal opacity before a later command rather than at reversal. The checker now samples both sides of the actual mutation synchronously, with its original bound unchanged."
+    ],
+    "defaultGPUDifferences": {
+      "file": ".artifacts/final-scroll-palettes-v47/native-gpu-differences.json",
+      "sha256": "6db2b39d7b0b66367403e654fa6cf3ce826c3cb7b95755c572e62e2ae985bfc4"
+    }
+  },
+  "remaining": [
+    "Whole-catalog accessibility and photographic/manual review.",
+    "Complete cold-route startup and final Lighthouse acceptance.",
+    "CPU4 frame-rate and final motion/performance acceptance, including the separately documented Threads finding."
+  ]
+}

@@ -2,6 +2,29 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Scroll palette and destination review](accessibility/scroll-palettes-2026-11-26.json)
+adds readable full light palettes to twenty Scroll demos. Full dark Text Highlight
+also raises its unread-word gray. Native artwork, all original copy, HTML,
+metadata, photographic/SVG/font assets and 519 controllers remain unchanged.
+Original white photograph captions retain their backing; the light inertia
+meters and Clip Morph radius readout receive readable surfaces without changing
+their boxes. Parallax's dark sibling card was a false positive and stays intact.
+
+Smooth Scroll separately fixes a stale native-scroll idle timer stopping a newer
+destination, and Pause retaining an interpolated position instead of the actual
+goal. Its original smoothing equation, options, wheel behavior and public target
+semantics remain intact. Actual offline Home/End, calibrated browser limits,
+caller holds and newer held intentions cover both corrections.
+
+The palette comparisons retain exact geometry, non-color styles and original
+photograph text. Literal native/unaffected dark PNG checks use a recorded
+software raster mode with no pixel tolerance. Default-GPU functional checks and
+raw captures have a separate scope: GPU byte differences are retained,
+along with unchanged-style/source-state controls, rather than treated as a
+universal byte-equivalence certificate. Raw accessibility scans retain every
+incomplete result. These checks close the listed findings; complete catalog,
+photographic, startup and CPU4 acceptance remain open.
+
 The [Threads GPU investigation](performance/threads-gpu-2026-11-26.json) leaves
 all 520 definitions unchanged. Two sequential GPU observations reach
 59.57–59.94fps at CPU4, but the profiled candidate differs in thirteen alpha

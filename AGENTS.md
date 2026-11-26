@@ -2174,3 +2174,28 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Keep earlier failed oracle/scroll attempts and the regenerated poster's raw
   pixel differences. Same-engine native comparisons have a separate scope.
   Whole-catalog accessibility, startup and CPU4 performance remain open.
+
+- `node tools/verify-scroll-palettes.js --raster=software` checks twenty full
+  Scroll palettes at both widths, Stage themes and motion settings, plus exact
+  native/unaffected dark PNGs and fresh offline exports. Source clocks are held
+  and finite visible CSS transitions settle before style/geometry comparisons.
+  Preserve original photograph-overlay paint; the light inertia meter backing
+  has an explicit lower contrast bound over a black photograph. Full dark Text
+  Highlight uses #8c8c8c unread ink; captured native glyphs stay unchanged.
+  Literal PNG checks record same-engine software rasterization. Keep default-GPU
+  captures, byte differences and unchanged-style controls as separate
+  evidence; never introduce a pixel tolerance. Preserve the before CSS, original
+  controller fingerprints and every failed capture in this phase.
+
+  `node tools/verify-smooth-destinations.js` covers sixteen fresh blocked-network
+  full/native contexts, DPR1/2, both motion settings and actual 390/640px browser
+  limits. Smooth's new destination cancels the old native idle timer; a hold
+  retains the intended goal while `targetScroll` keeps its original interpolated
+  programmatic semantics. Preserve the .12×60 exponential, multiplier 1,
+  rounded/clamped targets and newer held input priority. The palette comparison
+  composes only these three exact bookkeeping edits into its reference.
+  Original Scroll checkers honor the audit-browser override and log its version.
+  Reveal's reversal check samples both sides of the actual observer mutation
+  synchronously, retaining the original .35 bound and requiring a real mid-entry
+  reversal. These checks do not close whole-catalog, photographic, startup or
+  CPU4 acceptance; sealed V47 helpers and inputs remain read/copy only.

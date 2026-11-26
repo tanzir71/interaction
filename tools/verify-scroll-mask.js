@@ -2,7 +2,7 @@
 const fs=require('node:fs'),assert=require('node:assert/strict'),crypto=require('node:crypto'),{open,chromium}=require('./verification/showcase-final-harness'),R=require('./load-registry')(),demo=R.demos.find(d=>d.id==='showcase-mask-reveal'),smooth=R.demos.find(d=>d.id==='lenis-smooth-scroll'),hash=b=>crypto.createHash('sha256').update(b).digest('hex');
 const inputs=Object.fromEntries(['js/demos.showcase.js','js/demos.scroll.smooth.js',__filename].map(f=>[f,hash(fs.readFileSync(f))]));let checks=0;
 const check=(v,s)=>{assert.ok(v,s);checks++;},near=(a,b,s,t=.015)=>check(Math.abs(a-b)<t,s+': '+a+' / '+b);
-(async()=>{const browser=await chromium.launch({headless:true}),rows=[];try{
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:process.env.INTRX_CHROME_EXECUTABLE||process.env.CHROME_PATH||undefined}).then(browser=>{console.log('Browser',browser.version());return browser;}),rows=[];try{
  for(const hz of[60,120,240]){const rig=await open(browser);try{await rig.page.addStyleTag({url:new URL('/css/foundations.css',rig.page.url()).href});await rig.mount(demo,{mode:'thumb',width:372,height:264,clock:true});const target=rig.page.locator('.d-show-mask-reveal-native-control'),initial=await rig.page.locator('[data-native-node="176:707"]').boundingBox();
  const radius=async()=>(await rig.inspect()).renderer.aperture.radius,photo=async()=>{const b=await rig.page.locator('[data-native-node="176:707"]').boundingBox();for(const k of['x','y','width','height'])near(b[k],initial[k],'Stationary photographic crop '+k,.035);};
  near(await radius(),38,'Exact native 76px diameter');
