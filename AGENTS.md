@@ -2451,3 +2451,33 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   remain intact. Final whole-catalog startup, contrast and CPU4 acceptance remain
   separate. V64 private helpers, inputs and evidence become read/copy only when
   its `FROZEN.json` is written; preserve all earlier frozen collections.
+
+- `node tools/verify-text-background-sampler.js` calibrates conditional
+  text/background measurements. Black/white glyph probes cover the viewport,
+  including italic overhang; transparent fill preserves CSS currentColor and
+  descendant text. Exact layout/style restoration, stable stills and conservative
+  channel intervals are required. Fill restoration must not start a new fade
+  under `transition: all`. Group opacity, filters, masks, strokes, shadows and
+  text-clipped backgrounds stay pending. A candidate bound is never a WCAG pass:
+  the translucent-scrim counterexample has a high CSS bound and unacceptable
+  actual foreground paint. Require a separate review of the final foreground.
+- `node tools/verify-tertiary-contrast.js` checks Handoff 3 §4.7 directly:
+  actual computed tertiary foregrounds on canvas, surface, raised, overlay and
+  Stage token backgrounds in both shell themes, with ten insufficient-color
+  controls and exact restoration. Keep the 4.5 threshold unrounded. These are
+  opaque token-pair checks, not proof about arbitrary component backdrops.
+- `node tools/verify-evervault-contrast-review.js --axe=<external axe.min.js>`
+  checks the narrow initial full-view review in
+  `tools/fixtures/evervault-contrast-review.json`. The twelve captured character
+  rows are decorative texture under SC 1.4.3; this decision comes from their
+  purpose and source, not ARIA hiding. Preserve every original raw axe result,
+  all twelve complete strings, their field identity and all original behavior.
+  The essential instruction must retain 4.5:1 after its foreground hierarchy is
+  checked. Both widths, both Stage/shell themes and motion preferences include
+  an actual low-contrast instruction probe and an exactly restored character
+  permutation with unchanged Chrome accessibility names. This is not a native,
+  every-state, non-text-contrast or whole-catalog WCAG pass. All production
+  definitions and assets remain unchanged. Broader contrast/incomplete review,
+  complete current-source startup and CPU4 acceptance remain open. V65 private
+  helpers, inputs and evidence become read/copy only when its `FROZEN.json` is
+  written; preserve every earlier frozen collection.

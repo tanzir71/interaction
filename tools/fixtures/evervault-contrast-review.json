@@ -1,0 +1,52 @@
+{
+  "id": "ui-evervault-card",
+  "scope": "Initial full Encrypted Card only. Captured random alphanumeric texture is reviewed under SC 1.4.3 pure decoration; the instruction remains essential text. This is not a whole-catalog, native, interaction-state, non-text-contrast or WCAG pass. All original axe results remain unchanged.",
+  "criteria": [
+    "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+  ],
+  "definitionHashes": {
+    "html": "142df02fdee99381dee2913f9b65b7296d328e7c55a70f91e7697fc54ec6ccc5",
+    "css": "d2e3a3f9f1b58f35133f728d010c9f52cc2742538ce9ad80c2b5d92a17a3d347",
+    "js": "7fba17a1ed6c73568bed317b2385c7a3ccb62baced66caf7d487f5637e8e3b45"
+  },
+  "foundationsSHA256": "b7ccbbda7ffb3570f401438bb2ef98ab510ac42c0ce34700d1fdb43fec46f77f",
+  "decorative": {
+    "selector": "[data-ui=glyph-row] > [data-ui=glyph-base]",
+    "rows": [
+      "p4TGPwMUyVm07gTcbjQzGxCUbhkpu",
+      "X0CDZ2Exn1XwxkqT3wzpdvSMfNXf3",
+      "ZLrt5CtLWzVDc0jCET8errdFjc9F1",
+      "wnE1mipcski5EXphSSYtQCF8401aW",
+      "T8DwAYn5uVJfSFJ4KEkyrxYZ4YpVL",
+      "0gLY20sygNusVEveQGErMgwZQ6Lqk",
+      "5MLCPF8PvGjj4t8vBXC7MQ40vTu7i",
+      "TUF6PUEFpHXffbTntc6pYynfrEQ8Z",
+      "AFCNcZRe3kk6nN7wuWakiBM997DuT",
+      "KqqvMaPwAAw1fpWHx6UmBdiAABVXb",
+      "a5MqHvdYdTGzgtMknA4Rr3Cn6XReq",
+      "A7VSwzeTgEB2aUR7kHGT3S064ntYE"
+    ],
+    "rationale": "The captured strings are painted and pointer-locally scrambled as texture. They do not identify records, messages, controls or instructions. Permuting them does not change the meaning of the illustrated field. ARIA hiding alone is not the basis for this decision."
+  },
+  "essential": {
+    "selector": ".d-ext-ui-cipher-help",
+    "text": "Move to reveal · Arrow keys explore",
+    "minimum": 4.5,
+    "fill": {
+      "dark": [
+        160,
+        160,
+        160,
+        1
+      ],
+      "light": [
+        92,
+        92,
+        92,
+        1
+      ]
+    },
+    "foregroundReview": "The guide is an opaque, unfiltered final text layer. Its field is clipped above it, all field descendants have non-positive stacking levels, and the positioned guide follows the field container. The guide and its ancestors have no generated paint above its glyphs."
+  },
+  "fieldName": "Encrypted glyph field. Move, tap or use Arrow keys to reveal."
+}
