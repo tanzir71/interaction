@@ -2,6 +2,28 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [current startup collection](performance/startup-current-2026-11-26.json)
+retains six fresh default mobile Lighthouse runs on the source at `f23c6dc8`.
+Home scores 100/100/100 and Elastic Tabs 91/100/100, all with zero layout shift.
+This meets the two-route score target in this collection; keep every earlier
+failure and the exact source/browser scope. Raw Home totals are 572,202 bytes.
+Four font observations inspect 458 shell text parents and their actual Chrome
+glyph fonts. Matched controls keep identical shell text/classes/families while
+removing only demo preview content; both Inter requests then disappear. Excluding
+only those two verified demo faces leaves 341,233 bytes in each Home run, below
+the allowed 400KB budget. Every other request, including the document and demo
+scripts/images, stays counted. Initial Home font ownership is the scope here;
+other routes, dialogs and later states remain separate.
+
+Sixteen fresh cold/warm observations across Elastic Tabs and Static TV have no
+boot or Back-scroll errors. The first cold Elastic Tabs sample still reaches
+337.5ms; the other fifteen heading/Stage proxies stay below 300ms. All traces
+remain. Separate sampled runs show router scroll/layout work and roughly 14ms
+Stage mounts, but instrumentation substantially changes their timing. Node-only
+gzip measurements likewise do not establish the browser delay's cause. No
+production optimization is shipped from these diagnostics. Complete route,
+CPU4 and broader accessibility acceptance remain open.
+
 The [Data & Numbers palette review](accessibility/data-palettes-2026-11-26.json)
 repairs eleven full light compositions and checks four already themed controls.
 All original datasets, HTML, artwork, geometry and interaction models remain.

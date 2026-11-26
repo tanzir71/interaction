@@ -1,0 +1,920 @@
+{
+  "date": "2026-11-26",
+  "baseline": "f23c6dc8587aae006ca6334fc1d5e10e244ccf9c",
+  "scope": "Fresh original-source local startup observations and all six default mobile Lighthouse runs on the two specified routes. No renderer or production-source change is shipped. This is not the complete 520-route collection or CPU4 acceptance.",
+  "productionChanges": [],
+  "preservation": {
+    "catalog": 520,
+    "unchangedCompleteDefinitions": 520,
+    "definitionHashes": {
+      "file": ".artifacts/final-startup-current-v51/definitions.json",
+      "sha256": "3fe3a1cb0fac11b569506d564fab79f30a59aa2db4f4443631fb079d9293d64e"
+    }
+  },
+  "collection": {
+    "browser": "158.0.8127.88",
+    "network": "Local gzip static server; no emulated latency in the route profiler. Lighthouse uses its unchanged default mobile/simulated settings. Own heavy verification was stopped during collection; other applications and OS caches were not controlled.",
+    "coldMethod": [
+      "One fresh browser process; one empty browser context per sample. No priming sample or outlier is removed.",
+      "Heading paint preserves the earlier document.fonts.ready plus two animation-frame method. Stage paint preserves two frames after the actual full boot. Assets-ready is separate.",
+      "Warm starts at trusted caption pointerdown; Back must restore the actual click-time library scroll.",
+      "CPU throttling is applied before navigation. Network is local without emulated latency; OS caches and other applications are not controlled.",
+      "The explicit 300ms result covers only the recorded local routes/settings. It does not establish all-component startup, native CPU4 frame rate or Lighthouse acceptance."
+    ],
+    "scopeNotes": [
+      "Shell theme changes through localStorage; each Stage keeps its actual default metadata theme.",
+      "390px is a viewport, not mobile/touch/DPR emulation in the cold-route profiler.",
+      "Font-ready heading/two-frame Stage proxies preserve the previous method. Assets-ready does not attest CSS backgrounds, later-inserted images, GPU texture readiness or compositor presentation."
+    ]
+  },
+  "lighthouse": {
+    "version": "13.6.0",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+    "cases": [
+      {
+        "id": "home",
+        "repeat": 1,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 904.7946,
+          "largest-contentful-paint": 904.7946,
+          "speed-index": 2310.4765639051666,
+          "total-blocking-time": 53,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 572202,
+        "warnings": [],
+        "file": "home-1.json",
+        "sha256": "fb893e9981921c464f02ddf68ec755073d22a6a4e67becae98c5787ca0733f47"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 1,
+        "score": 0.91,
+        "metrics": {
+          "first-contentful-paint": 903.4857999999999,
+          "largest-contentful-paint": 3530.2287000000006,
+          "speed-index": 1518.6555732733268,
+          "total-blocking-time": 25,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 411405,
+        "warnings": [],
+        "file": "elastic-tabs-1.json",
+        "sha256": "dec2c0cae26c292595a0b147d1121d56a0e64d93e609be33f3d20581e733311b"
+      },
+      {
+        "id": "home",
+        "repeat": 2,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 904.1034,
+          "largest-contentful-paint": 904.1034,
+          "speed-index": 2051.8538692977118,
+          "total-blocking-time": 56.5,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 572202,
+        "warnings": [],
+        "file": "home-2.json",
+        "sha256": "039847b11953de874618510e20f2e431abb6d19c28f918ef6c62186890573f56"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 2,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 902.3356000000001,
+          "largest-contentful-paint": 902.3356000000001,
+          "speed-index": 1706.031266871087,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 411405,
+        "warnings": [],
+        "file": "elastic-tabs-2.json",
+        "sha256": "42c22aac205df8903305f03c3da1c5622d2243bdc052c5f84e7b1d4363fbc83b"
+      },
+      {
+        "id": "home",
+        "repeat": 3,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 904.4092,
+          "largest-contentful-paint": 904.4092,
+          "speed-index": 2324.046442233475,
+          "total-blocking-time": 32.5,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 572202,
+        "warnings": [],
+        "file": "home-3.json",
+        "sha256": "fb9676b748717bd0a0a67e829ba5571763d40cab1a59f25ec7f350b708eca036"
+      },
+      {
+        "id": "elastic-tabs",
+        "repeat": 3,
+        "score": 1,
+        "metrics": {
+          "first-contentful-paint": 904.5744,
+          "largest-contentful-paint": 904.5744,
+          "speed-index": 1523.960323911032,
+          "total-blocking-time": 19,
+          "cumulative-layout-shift": 0
+        },
+        "allTransferredBytes": 411405,
+        "warnings": [],
+        "file": "elastic-tabs-3.json",
+        "sha256": "74b7490bfc71dec3b0ed70d90c5991bddc413cd365bb6df91202c8545f72035b"
+      }
+    ],
+    "allSixPerformanceScoresAtLeast90": true,
+    "allSixCLSZero": true,
+    "transfer": "All raw requests remain recorded. Matched font controls exclude only the two verified demo-only Inter faces for the allowed budget; every other request, including the document and demo scripts/images, stays counted.",
+    "rawReport": {
+      "file": ".artifacts/final-startup-current-v51/lighthouse/2026-11-26T03-17-10-386Z/report.json",
+      "sha256": "ba971f505f7b61b59f5174e40dc72b73dc6d377b87b490986c8d89291cd8a5ba"
+    }
+  },
+  "cold": {
+    "cases": [
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "mode": "cold",
+        "heading": 337.5,
+        "stage": 337.5,
+        "assetsReady": 398.5,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-1-cold.trace.json.gz",
+          "sha256": "be467389e1f9faf7ba7f55b74a8104856a5b86e23456dd6bb652eabf7e5bfc87",
+          "headingPaint": {
+            "afterMarkMs": 99.328,
+            "durationMs": 0.055
+          },
+          "bootPaint": {
+            "afterMarkMs": 13.961,
+            "durationMs": 0.055
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "mode": "warm",
+        "heading": 74.79999999701977,
+        "stage": 74.70000000298023,
+        "assetsReady": 95,
+        "backScroll": 120,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-dark-1-warm.trace.json.gz",
+          "sha256": "a99c644011dda791cc09e1257991340a72d05ee2f9d0470bc8edc53eabe73df1",
+          "headingPaint": {
+            "afterMarkMs": 29.921,
+            "durationMs": 1.451
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.228,
+            "durationMs": 1.451
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "mode": "cold",
+        "heading": 254.20000000298023,
+        "stage": 260.90000000596046,
+        "assetsReady": 286.79999999701977,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-1-cold.trace.json.gz",
+          "sha256": "75fc597c9ddd368e72be6f200c79f6cc70b4edbcfbf0214c81481809a1c1dc51",
+          "headingPaint": {
+            "afterMarkMs": 69.801,
+            "durationMs": 6.064
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.078,
+            "durationMs": 0.802
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "light",
+        "mode": "warm",
+        "heading": 52.79999999701977,
+        "stage": 52.599999994039536,
+        "assetsReady": 74.29999999701977,
+        "backScroll": 120,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-1440-light-1-warm.trace.json.gz",
+          "sha256": "172f44c03425b56359e6b850e490eeddf4d7080e2ca19fd3cb3840bcca5e6c43",
+          "headingPaint": {
+            "afterMarkMs": 24.312,
+            "durationMs": 1.309
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.432,
+            "durationMs": 1.309
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "mode": "cold",
+        "heading": 198.1000000089407,
+        "stage": 198.1000000089407,
+        "assetsReady": 222.20000000298023,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-1-cold.trace.json.gz",
+          "sha256": "6f99f9e53bb4d164ee256780629025acc5baeedd0a0881b66809777459663372",
+          "headingPaint": {
+            "afterMarkMs": 53.157,
+            "durationMs": 1.749
+          },
+          "bootPaint": {
+            "afterMarkMs": 9.915,
+            "durationMs": 0.399
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "dark",
+        "mode": "warm",
+        "heading": 39.70000000298023,
+        "stage": 64.90000000596046,
+        "assetsReady": 93.5,
+        "backScroll": 1791,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-dark-1-warm.trace.json.gz",
+          "sha256": "3fab4b5a0c7bdcf90d4c28c551989efc63ec5524655aaa19df5f4f202f53e54c",
+          "headingPaint": {
+            "afterMarkMs": 14.203,
+            "durationMs": 1.385
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.703,
+            "durationMs": 0.291
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "mode": "cold",
+        "heading": 182.1000000089407,
+        "stage": 182.1000000089407,
+        "assetsReady": 215.6000000089407,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-1-cold.trace.json.gz",
+          "sha256": "5c359316022c0b031e3778a7af30c9206d24d292a6aa3e5d82063095c86df9ae",
+          "headingPaint": {
+            "afterMarkMs": 35.633,
+            "durationMs": 2.503
+          },
+          "bootPaint": {
+            "afterMarkMs": 10.563,
+            "durationMs": 0.544
+          }
+        }
+      },
+      {
+        "id": "elastic-tabs",
+        "width": 390,
+        "theme": "light",
+        "mode": "warm",
+        "heading": 36.6000000089407,
+        "stage": 65.79999999701977,
+        "assetsReady": 93.70000000298023,
+        "backScroll": 1791,
+        "errors": [],
+        "trace": {
+          "file": "elastic-tabs-390-light-1-warm.trace.json.gz",
+          "sha256": "7b3e61e74b000a2d72500be8967234185e22051d709882b6d5aebde53ad79fb3",
+          "headingPaint": {
+            "afterMarkMs": 12.921,
+            "durationMs": 1.538
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.259,
+            "durationMs": 0.28
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "theme": "dark",
+        "mode": "cold",
+        "heading": 179.79999999701977,
+        "stage": 193.19999998807907,
+        "assetsReady": 306.19999998807907,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-1-cold.trace.json.gz",
+          "sha256": "17f04184d60009bfad55648d24ccc609c47893f486bd464799d288096cf28e3d",
+          "headingPaint": {
+            "afterMarkMs": 50.309,
+            "durationMs": 2.629
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.076,
+            "durationMs": 0.559
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "theme": "dark",
+        "mode": "warm",
+        "heading": 77.70000000298023,
+        "stage": 100.20000000298023,
+        "assetsReady": 141.8999999910593,
+        "backScroll": 10905,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-dark-1-warm.trace.json.gz",
+          "sha256": "4954f549fb7c5a7fb586de8f621f40e020a93addf04b1aef0c2f088a40c35186",
+          "headingPaint": {
+            "afterMarkMs": 24.947,
+            "durationMs": 1.702
+          },
+          "bootPaint": {
+            "afterMarkMs": 4.463,
+            "durationMs": 0.759
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "theme": "light",
+        "mode": "cold",
+        "heading": 216.59999999403954,
+        "stage": 222.79999999701977,
+        "assetsReady": 279.59999999403954,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-1-cold.trace.json.gz",
+          "sha256": "2f7b226fcd72532610cbe011e5890a93a0bbbc47c331aed3305ddc4458d7476b",
+          "headingPaint": {
+            "afterMarkMs": 57.444,
+            "durationMs": 4.244
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.171,
+            "durationMs": 1.112
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 1440,
+        "theme": "light",
+        "mode": "warm",
+        "heading": 88.29999999701977,
+        "stage": 164.5,
+        "assetsReady": 172.40000000596046,
+        "backScroll": 10905,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-1440-light-1-warm.trace.json.gz",
+          "sha256": "435766e3420a8a59833864e1e9169162a7bd791b5ad18ecbd1e796e7a15179ac",
+          "headingPaint": {
+            "afterMarkMs": 22.795,
+            "durationMs": 1.274
+          },
+          "bootPaint": {
+            "afterMarkMs": 8.538,
+            "durationMs": 0.582
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "theme": "dark",
+        "mode": "cold",
+        "heading": 184.19999998807907,
+        "stage": 184.19999998807907,
+        "assetsReady": 241.19999998807907,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-1-cold.trace.json.gz",
+          "sha256": "994e3817b97332600742d107254bd3eaf66cecd6c9376c33745a2c2a91dea2a6",
+          "headingPaint": {
+            "afterMarkMs": 46.914,
+            "durationMs": 2.352
+          },
+          "bootPaint": {
+            "afterMarkMs": 7.681,
+            "durationMs": 0.661
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "theme": "dark",
+        "mode": "warm",
+        "heading": 57,
+        "stage": 96,
+        "assetsReady": 155.5,
+        "backScroll": 30400,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-dark-1-warm.trace.json.gz",
+          "sha256": "cdc1be7b151944b1353b2616300fa1bb282f97a492a471c977a0bcf4b6daea12",
+          "headingPaint": {
+            "afterMarkMs": 20.151,
+            "durationMs": 1.466
+          },
+          "bootPaint": {
+            "afterMarkMs": 22.864,
+            "durationMs": 1.285
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "theme": "light",
+        "mode": "cold",
+        "heading": 234.29999999701977,
+        "stage": 234.3999999910593,
+        "assetsReady": 307.79999999701977,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-1-cold.trace.json.gz",
+          "sha256": "c7517b403c2772119c6133c1880c4112cc8e7f7789018ec899a35f9f7b33fc35",
+          "headingPaint": {
+            "afterMarkMs": 57.663,
+            "durationMs": 3.268
+          },
+          "bootPaint": {
+            "afterMarkMs": 5.86,
+            "durationMs": 0.627
+          }
+        }
+      },
+      {
+        "id": "webgl-static-tv",
+        "width": 390,
+        "theme": "light",
+        "mode": "warm",
+        "heading": 50.20000000298023,
+        "stage": 84.6000000089407,
+        "assetsReady": 141.5,
+        "backScroll": 30400,
+        "errors": [],
+        "trace": {
+          "file": "webgl-static-tv-390-light-1-warm.trace.json.gz",
+          "sha256": "cd616fffd30652a6cc922de3ca12e6ba43952d678ce6892fd993e322819fbb47",
+          "headingPaint": {
+            "afterMarkMs": 18.46,
+            "durationMs": 1.488
+          },
+          "bootPaint": {
+            "afterMarkMs": 6.042,
+            "durationMs": 1.273
+          }
+        }
+      }
+    ],
+    "functionalFailures": 0,
+    "paintMisses": [
+      {
+        "id": "elastic-tabs",
+        "width": 1440,
+        "theme": "dark",
+        "mode": "cold",
+        "heading": 337.5,
+        "stage": 337.5
+      }
+    ],
+    "allRecordedPaintsUnder300": false,
+    "rawReport": {
+      "file": ".artifacts/final-startup-current-v51/baseline-cold/2026-11-26T03-15-49-861Z/report.json",
+      "sha256": "d5fc5d181701fcd38a05e7fcac4b1f17bb0cadf48e3e864f908cd1213093fda3"
+    }
+  },
+  "diagnostics": {
+    "sourceTrace": {
+      "file": ".artifacts/final-startup-current-v51/baseline-trace-summary.json",
+      "sha256": "3bae93a7259fee40515d19eeaf1f2e167ba09323ea57d3be40607dc73fd27799"
+    },
+    "sampledRuns": {
+      "file": ".artifacts/final-startup-current-v51/diagnostic/report.json",
+      "sha256": "9ef41520c10249809c2e0318d1a9cf63d2a9f23cc74f93e9366e94da652c281c",
+      "scope": "Two fresh original-source Chrome processes with method marks and V8 sampling. Instrumentation can alter startup; these are separate diagnostics, not acceptance samples or causal proof for the earlier baseline.",
+      "rows": [
+        {
+          "run": 1,
+          "times": {
+            "heading": 148.20000000298023,
+            "boot": 236.70000000298023,
+            "headingPaint": 458.09999999403954,
+            "stagePaint": 458.09999999403954,
+            "ready": 499
+          },
+          "mountStage": [
+            {
+              "name": "mountStage",
+              "start": 226.29999999701977,
+              "end": 239.8999999910593,
+              "id": "elastic-tabs"
+            }
+          ],
+          "largestNamedSamples": [
+            {
+              "ms": 27.613,
+              "functionName": "scrollTo",
+              "scriptId": "0",
+              "url": "",
+              "lineNumber": -1,
+              "columnNumber": -1
+            },
+            {
+              "ms": 18.737,
+              "functionName": "start",
+              "scriptId": "12",
+              "url": "http://127.0.0.1:4173/js/shell/router.js?v=5",
+              "lineNumber": 20,
+              "columnNumber": 7
+            },
+            {
+              "ms": 12.297,
+              "functionName": "",
+              "scriptId": "5",
+              "url": "http://127.0.0.1:4173/",
+              "lineNumber": 18,
+              "columnNumber": 8
+            },
+            {
+              "ms": 7.205,
+              "functionName": "R.fitStage",
+              "scriptId": "10",
+              "url": "http://127.0.0.1:4173/js/shell/stage.js?v=5",
+              "lineNumber": 5,
+              "columnNumber": 23
+            },
+            {
+              "ms": 6.215,
+              "functionName": "R.initCatalog",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:4173/js/shell/registry.js?v=9",
+              "lineNumber": 119,
+              "columnNumber": 16
+            },
+            {
+              "ms": 3.257,
+              "functionName": "",
+              "scriptId": "29",
+              "url": "",
+              "lineNumber": 0,
+              "columnNumber": 1
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "times": {
+            "heading": 163.5,
+            "boot": 251.20000000298023,
+            "headingPaint": 445.30000001192093,
+            "stagePaint": 445.30000001192093,
+            "ready": 1063.9000000059605
+          },
+          "mountStage": [
+            {
+              "name": "mountStage",
+              "start": 241.20000000298023,
+              "end": 255.70000000298023,
+              "id": "elastic-tabs"
+            }
+          ],
+          "largestNamedSamples": [
+            {
+              "ms": 31.301,
+              "functionName": "scrollTo",
+              "scriptId": "0",
+              "url": "",
+              "lineNumber": -1,
+              "columnNumber": -1
+            },
+            {
+              "ms": 24.465,
+              "functionName": "start",
+              "scriptId": "12",
+              "url": "http://127.0.0.1:4173/js/shell/router.js?v=5",
+              "lineNumber": 20,
+              "columnNumber": 7
+            },
+            {
+              "ms": 9.758,
+              "functionName": "R.initCatalog",
+              "scriptId": "6",
+              "url": "http://127.0.0.1:4173/js/shell/registry.js?v=9",
+              "lineNumber": 119,
+              "columnNumber": 16
+            },
+            {
+              "ms": 7.859,
+              "functionName": "R.fitStage",
+              "scriptId": "10",
+              "url": "http://127.0.0.1:4173/js/shell/stage.js?v=5",
+              "lineNumber": 5,
+              "columnNumber": 23
+            },
+            {
+              "ms": 4.805,
+              "functionName": "(garbage collector)",
+              "scriptId": "0",
+              "url": "",
+              "lineNumber": -1,
+              "columnNumber": -1
+            },
+            {
+              "ms": 3.842,
+              "functionName": "tier",
+              "scriptId": "7",
+              "url": "http://127.0.0.1:4173/js/shell/access.js?v=1",
+              "lineNumber": 3,
+              "columnNumber": 76
+            }
+          ]
+        }
+      ]
+    },
+    "compression": {
+      "file": ".artifacts/final-startup-current-v51/server-cost.json",
+      "sha256": "f873def61251a758324f99a5884dba7ac3d438d16289194c84d1953ca3651bbf",
+      "scope": "Node-only microbenchmark; 14.02–17.71ms total gzip work and 10.81–13.42ms for the catalog. This is not a browser request trace or proof of the cold outlier cause."
+    },
+    "interpretation": "The uninstrumented first route miss contains startup response delays and layout work. Separate sampled runs locate router scroll/layout and Stage fitting work, while mountStage itself spans about 14ms in those instrumented runs. Instrumentation changes the observed timing substantially. These separate scopes do not establish a single root cause or a stable optimization, and none is shipped."
+  },
+  "open": [
+    "Complete current 520-component cold/warm route coverage and first-paint target",
+    "All-component/manual accessibility and complete transition/non-text contrast",
+    "CPU4 motion performance and retained Threads finding"
+  ],
+  "historicalEvidence": "Keep all earlier failing Lighthouse runs, partial route collections and rejected variants. These six current successes do not erase earlier failures or certify every route, device or GPU.",
+  "actions": "Actions remain disabled. Account-wide $0 stop budget untouched. Commit and push directly; no PR.",
+  "devToolChanges": [
+    "tools/verify-shell-font-scope.js"
+  ],
+  "homeBudget": {
+    "gateBytes": 400000,
+    "allThreePass": true,
+    "rows": [
+      {
+        "repeat": 1,
+        "rawBytes": 572202,
+        "excludedDemoFontBytes": 230969,
+        "conservativeCountedBytes": 341233,
+        "excluded": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ]
+      },
+      {
+        "repeat": 2,
+        "rawBytes": 572202,
+        "excludedDemoFontBytes": 230969,
+        "conservativeCountedBytes": 341233,
+        "excluded": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ]
+      },
+      {
+        "repeat": 3,
+        "rawBytes": 572202,
+        "excludedDemoFontBytes": 230969,
+        "conservativeCountedBytes": 341233,
+        "excluded": [
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 73120,
+            "resourceSize": 72920
+          },
+          {
+            "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+            "resourceType": "Font",
+            "transferSize": 157849,
+            "resourceSize": 157648
+          }
+        ]
+      }
+    ],
+    "proof": {
+      "normal": [
+        {
+          "width": 1440,
+          "theme": "dark",
+          "shellTextParents": 136,
+          "demoInter": [
+            {
+              "id": "agent-approval-card",
+              "text": "Approve",
+              "font": "Inter, sans-serif"
+            },
+            {
+              "id": "agent-approval-card",
+              "text": "Deny",
+              "font": "Inter, sans-serif"
+            }
+          ],
+          "interRequests": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "transfer": 73220,
+              "encoded": 72920
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+              "transfer": 157948,
+              "encoded": 157648
+            }
+          ]
+        },
+        {
+          "width": 1440,
+          "theme": "light",
+          "shellTextParents": 136,
+          "demoInter": [
+            {
+              "id": "agent-approval-card",
+              "text": "Approve",
+              "font": "Inter, sans-serif"
+            },
+            {
+              "id": "agent-approval-card",
+              "text": "Deny",
+              "font": "Inter, sans-serif"
+            }
+          ],
+          "interRequests": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "transfer": 73220,
+              "encoded": 72920
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+              "transfer": 157948,
+              "encoded": 157648
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "theme": "dark",
+          "shellTextParents": 93,
+          "demoInter": [],
+          "interRequests": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "transfer": 73220,
+              "encoded": 72920
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+              "transfer": 157948,
+              "encoded": 157648
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "theme": "light",
+          "shellTextParents": 93,
+          "demoInter": [],
+          "interRequests": [
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-latin-variable.woff2",
+              "transfer": 73220,
+              "encoded": 72920
+            },
+            {
+              "url": "http://127.0.0.1:4173/assets/fonts/inter-variable.woff2",
+              "transfer": 157948,
+              "encoded": 157648
+            }
+          ]
+        }
+      ],
+      "control": {
+        "file": ".artifacts/final-startup-current-v51/font-scope-control/2026-11-26T03-35-09-250Z/report.json",
+        "sha256": "8e823d17c7f8502f0dedf2d61fad63766976030c3eef49af975311e8f690f8d0"
+      },
+      "shellTextParents": 458,
+      "observedShellPlatformFamilies": [
+        "Geist",
+        "Geist Mono",
+        "Cambria Math",
+        "Segoe UI Symbol"
+      ],
+      "controlMethod": "Four fresh matched controls replace only demo preview html/css/js/controls with empty compositions through the original Stage function. All shell text, classes and computed families remain identical. Both Inter requests disappear in every control, while normal Home requests both. No production behavior is changed.",
+      "scope": "Initial Home in both widths/themes; not all routes, dialogs, future text states or embedded SVG fonts."
+    },
+    "retainedCollectorFailure": "The first collector required visible Inter demo text in the compact viewport. That scene has no such text parent despite requesting the faces. Final normal collection permits that state; the matched controls establish preview ownership without inventing a rendered demo text observation."
+  },
+  "verification": {
+    "requiredLocalChecks": [
+      {
+        "name": "registry",
+        "status": 0,
+        "summary": "  \"handoff2Published\": 56 } PASS — published registry and Handoff 2 constraints verified"
+      },
+      {
+        "name": "stage",
+        "status": 0,
+        "summary": "verify-stage: 520 metadata records; 0 existing chrome/control debts (strict) PASS: stage metadata and no new chrome/control violations"
+      },
+      {
+        "name": "generated",
+        "status": 0,
+        "summary": "Verified 1568 artifacts for 520 components"
+      },
+      {
+        "name": "motion",
+        "status": 0,
+        "summary": "verify-motion: 520 demos, 0 with violations (curve 0, duration 0, reduced-motion 0, linear 0)   4 immutable virtual models (7 function bodies); complete CSS and visible renderer code checked"
+      },
+      {
+        "name": "package",
+        "status": 0,
+        "summary": "ℹ skipped 0 ℹ todo 0 ℹ duration_ms 1732.2186"
+      },
+      {
+        "name": "library",
+        "status": 0,
+        "summary": "PASS: all 520 lazy previews boot PASS: 100 offline exports PASS: 668 checks; 520 previews; 100 offline exports; desktop/mobile shell"
+      },
+      {
+        "name": "fit",
+        "status": 0,
+        "summary": "  \"lowFillExceptions\": 163,   \"invalidExceptions\": [] }"
+      }
+    ],
+    "catalog": 520,
+    "stageFit": {
+      "failed": 0,
+      "overflow": 0,
+      "hscroll": 0,
+      "tinyText": 0,
+      "lowFill": 0,
+      "existingSparseExceptions": 163
+    },
+    "all520DefinitionsUnchanged": true,
+    "measuredProductionInputsStillExact": true,
+    "normalFontCollectorArchive": {
+      "file": ".artifacts/final-startup-current-v51/verify-shell-font-scope-normal.js",
+      "sha256": "bee596cbe97009f954f1f6fd9ce94ae84674192a6b490d38b9de4a37e586cf25"
+    },
+    "currentFontScopeChecker": {
+      "file": "tools/verify-shell-font-scope.js",
+      "sha256": "631b75152788a353167917caa388fbcfc64bfe914dc668abff56b03122650a5b"
+    }
+  }
+}

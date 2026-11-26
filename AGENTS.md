@@ -1912,6 +1912,25 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   Cold collection uses external `PLAYWRIGHT_MODULE` and
   `INTRX_CHROME_EXECUTABLE`; Lighthouse uses `CHROME_PATH` and an external
   `--lighthouse` CLI path. Neither adds site dependencies.
+  The 26 Nov source-bound collection at f23c6dc8 records six passing mobile
+  scores (Home 100/100/100; Elastic Tabs 91/100/100) and zero layout shift.
+  Its first cold Elastic Tabs observation still misses 300ms at 337.5ms; all
+  sixteen route samples and separate instrumented/Node diagnostics stay intact.
+  Do not infer a root cause from different instrumented runs or treat the
+  Node compression microbenchmark as a browser request trace. No renderer or
+  production-source change ships in V51. Earlier failures remain evidence;
+  complete route, CPU4 and broad accessibility acceptance remain open. Private
+  V51 helpers/evidence become read/copy only when FROZEN.json is written.
+  `node tools/verify-shell-font-scope.js` records actual Home shell/demo font
+  declarations, Chrome glyph fonts, loaded faces and requests at both widths
+  and themes. `--control --reference=<completed-normal-report.json>` removes
+  only demo preview content through the original Stage function and requires
+  identical shell text/classes/families. Both Inter requests must disappear.
+  A compact scene can request demo faces without retaining a visible Inter text
+  parent; preserve that first collector failure and use the matched control for
+  ownership. The V51 conservative budget is 341,233 bytes after excluding only
+  those two proven demo fonts; all other requests, including the document and
+  demo scripts/images, remain counted. Keep the raw 572,202-byte total as well.
 
 - `node tools/verify-page-visibility.js http://127.0.0.1:4173` uses Node 22+
   and `INTRX_CHROME_EXECUTABLE` (or `CHROME_PATH`) to test native background tabs
