@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-26",
+  "baseline": "28a8abb6aa3ea7d1f72ea302c3c24e57cfc03578",
+  "outcome": "Metaball reduced feedback uses a 150ms Stage source-clock deadline and a cancellable runtime wake, so a delayed or missing renderer frame cannot restart its fade. Early callbacks re-arm the exact remaining time; versioned callbacks, Reset and disposal preserve ownership. Original six-orb force/orbit functions, normal clocks, native artwork and assets remain.",
+  "scope": "One component. Controlled source-time feedback, sampled original normal renderer states/transforms, original initial software pixels and fresh standalone exports. Not full-catalog accessibility, every hardware/compositor frame, cold-route or CPU4 acceptance.",
+  "preservation": {
+    "at": "2026-11-26T05:19:09.336Z",
+    "baseline": "28a8abb6aa3ea7d1f72ea302c3c24e57cfc03578",
+    "catalog": 520,
+    "unchangedOtherDefinitions": 519,
+    "unchangedOtherControllers": 519,
+    "unchangedHTML": 520,
+    "changed": {
+      "definitions": [
+        "cursor-liquid-metaball"
+      ],
+      "controllers": [
+        "cursor-liquid-metaball"
+      ],
+      "HTML": []
+    },
+    "allOtherMetaballFieldsUnchanged": true,
+    "originalJSRestoredByExactEdits": true,
+    "normalModelFunctions": "Complete original advance/composition/specs are runtime-compared in all 24 six-second stories.",
+    "testHarness": "Only ctx.now shares the manual frame clock and that source clock freezes under actual runtime suspension; no assertion or wait changes.",
+    "unchangedPaths": [
+      "assets",
+      "css",
+      "js/meta.stage.js",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js",
+      "MOTION_SYSTEM.md",
+      "INTRX-handover"
+    ],
+    "fixture": {
+      "file": "tools/fixtures/cursor-feedback-before.json",
+      "sha256": "521abc600a27031a4c65bffd8bf39496792a5a85a15bbf8098909c7e66c1d5fc"
+    },
+    "evidence": {
+      "file": ".artifacts/final-cursor-feedback-v53/integrity.json",
+      "sha256": "d330fc064497dca33110341fb47a26562fcc0227786ff85806388fc3f2e1f1df"
+    },
+    "newRuntimeDependencies": 0,
+    "newAssets": 0
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "controlledCases": 8,
+    "scenarios": [
+      "Withheld renderer frames and finite completion",
+      "Exact 150ms boundary",
+      "Early timer re-arming and stale callback rejection",
+      "Current-source retargeting",
+      "Independent caller/document holds",
+      "Ordered queued input",
+      "Reset, Stage speed and active-task disposal"
+    ],
+    "normal": {
+      "pairedStories": 24,
+      "durationMs": 6000,
+      "rates": [
+        60,
+        120,
+        240
+      ],
+      "framesPerVariant": 20160,
+      "policy": "Every sampled numeric state, rendered transform checkpoint and original model function/specification matches the separately mounted original. Both widths, themes and modes."
+    },
+    "initialPixels": {
+      "literalPairs": 16,
+      "raster": "Explicit --disable-gpu software mode, same engine, exact PNG bytes with no tolerance. Initial normal/reduced native/full states at both widths and themes; not hardware presentation equivalence."
+    },
+    "offline": {
+      "freshContexts": 8,
+      "network": "Every HTTP request blocked; no requests or page errors",
+      "observationMs": 200,
+      "policy": "Original observation and expected settled state unchanged; both widths, themes and modes under reduced motion."
+    },
+    "originalMotionCommand": {
+      "status": "pass",
+      "checks": 55302,
+      "scope": "Complete original models, artwork, input/holds, graphics/fallback and sixteen fresh offline exports. No old assertion or wait duration changes.",
+      "evidence": {
+        "file": ".artifacts/final-cursor-feedback-v53/final-verify-cursor-motion.log",
+        "sha256": "51db15a2a84f6db34f93f7d6cfa80cf424d56c76cd389e6c09a3bfe8ca4b51d4"
+      }
+    },
+    "testClock": "The existing manual frame clock now supplies ctx.now as well and freezes under actual runtime suspension, matching the Stage source-clock contract.",
+    "mandatory": {
+      "registry": "520 pass",
+      "stageStrict": "520 metadata; zero chrome/control debt",
+      "generated": "1568 artifacts current",
+      "motionStrict": "520; zero violations",
+      "package": "9 CLI/MCP tests pass",
+      "library": {
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "stageFit": {
+        "total": 520,
+        "failed": 0,
+        "missingDesignSize": 0,
+        "overflow": 0,
+        "hscroll": 0,
+        "tinyText": 0,
+        "lowFill": 0,
+        "lowFillExceptions": 163,
+        "invalidExceptions": 0
+      },
+      "browserObservation": {
+        "file": ".artifacts/final-cursor-feedback-v53/browser-observation.json",
+        "sha256": "1e473e6c5474e11e7df9e93b39b06661bc562a22a80b29aebe85bae7f979bdd2"
+      },
+      "logs": [
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-required-registry.log",
+          "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-required-stage.log",
+          "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-required-generated.log",
+          "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-required-motion.log",
+          "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-required-package.log",
+          "sha256": "f47c29af852543a4dca62ba1d2eef50318c0f2a32abb124903b4f6c1c189a0e3"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-verify-library.log",
+          "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+        },
+        {
+          "file": ".artifacts/final-cursor-feedback-v53/final-audit-stage-fit.log",
+          "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+        }
+      ]
+    },
+    "focusedEvidence": {
+      "file": ".artifacts/final-cursor-feedback-v53/final-verification/2026-11-26T05-16-50-669Z/report.json",
+      "sha256": "d8e13cc2256edce601b42dfc17319fac3b3ceba363e4a9a8692fd87482806977"
+    }
+  },
+  "diagnosis": {
+    "original": {
+      "file": ".artifacts/final-cursor-feedback-v53/probe.json",
+      "sha256": "88409defb5a680ee80461efb7e5234cc142288eafd0f5d7ee921ed6edd9a64dd"
+    },
+    "originalResult": "At source time +200ms, the original first renderer frame advances zero time and starts a further 150ms fade.",
+    "rendererOnlyCandidate": {
+      "file": ".artifacts/final-cursor-feedback-v53/first-frame-candidate.json",
+      "sha256": "0be5d647ce6fa2b81699f4631bbe8cd946bd0869b9a1597a20348710c2cd3cc2"
+    },
+    "failedOriginalCommand": {
+      "file": ".artifacts/final-cursor-feedback-v53/required-verify-cursor-motion.log",
+      "sha256": "b4cef4cdc5a04a60769b1c759d62550f80d1092b24bcbf92e56528fba8e4ddfb"
+    },
+    "reason": "Reading the source deadline only during a renderer frame still requires another frame to complete. The final runtime wake supplies finite completion independently. All earlier results and the failed candidate remain."
+  },
+  "remaining": [
+    "Whole-catalog accessibility and photographic/non-text/transition review remain open.",
+    "Complete cold-route timing, compositor presentation and CPU4 acceptance remain open.",
+    "Keep the separate V52 Fields settling and default-GPU fixed-reference hash observations; this single-component change does not close them."
+  ],
+  "evidencePolicy": "After publication, V53 private helpers, inputs and evidence become read/copy only through FROZEN.json. Do not execute or edit earlier frozen collections."
+}

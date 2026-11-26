@@ -24,6 +24,22 @@ gzip measurements likewise do not establish the browser delay's cause. No
 production optimization is shipped from these diagnostics. Complete route,
 CPU4 and broader accessibility acceptance remain open.
 
+The [Metaball feedback correction](performance/cursor-feedback-2026-11-26.json)
+fixes the delayed first-frame clock loss recorded in the Cursor review. Reduced
+feedback now owns a 150ms Stage-clock deadline and a cancellable runtime wake.
+It completes with renderer frames withheld, re-arms early wakes, rejects stale
+intent callbacks and clears its task on Reset/disposal. Independent holds and
+speed changes retain their source-time meaning. The original Motion suite passes
+all 55,302 checks with its assertions and 200ms observation unchanged.
+
+All other 519 definitions/controllers, all HTML, CSS, metadata and original
+assets remain unchanged. Normal before/current six-second states and transforms match at
+60/120/240Hz; sixteen initial software PNG pairs stay exact. Eight fresh offline
+cases pass the original deadline observation. Keep the original failure and the
+first renderer-only candidate's failure. This closes the listed Metaball feedback
+finding in the tested scope; broader accessibility, cold startup, compositor
+presentation and CPU4 acceptance remain open.
+
 The [Cursor palette review](accessibility/cursor-palettes-2026-11-26.json)
 repairs eleven full light compositions and checks all twenty-seven Cursor demos.
 Every original HTML composition, mathematical model, supplied asset and native
@@ -46,10 +62,12 @@ complete naming, photographic, non-text or transition accessibility acceptance.
 
 The original Fields and Motion portable commands also retain settling-deadline
 failures. Fields passes all 1,666 unchanged portable assertions in a diagnostic
-that logs only after the existing sample. Motion's native Metaball remains at
-13.2ms of source time at its 200ms observation. Every affected complete definition
-and standalone HTML byte is identical to the pushed baseline. This is an open
-timing finding. Targets' fixed grain hash fails in default GPU mode; all five
+that logs only after the existing sample. In that collection, native Metaball
+advanced only 13.2ms of source time at its 200ms observation. Every affected
+complete definition and standalone HTML byte was identical to the pushed
+baseline. This was an open timing finding at that baseline; its subsequent
+correction is linked above.
+Targets' fixed grain hash fails in default GPU mode; all five
 unchanged subchecks pass in explicit software mode. Original/current default-GPU
 noise and Canvas readback match exactly across eighty seed pairs and all four
 native/full theme cases. Keep the backend scopes and every original failure;

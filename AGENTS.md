@@ -2300,11 +2300,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   when FROZEN.json is written; preserve every earlier frozen collection.
   The V52 raw scan retains four Emitter name flags and 299 incomplete nodes.
   Original Fields/Motion portable deadline failures remain separate evidence;
-  their complete definitions and standalone HTML bytes equal the pushed
-  baseline. Metaball advances only 13.2ms of source time at its 200ms diagnostic
-  observation, so its timing acceptance remains open. Targets' fixed grain hash
+  their complete definitions and standalone HTML bytes equaled the V52 pushed
+  baseline. V52 Metaball advanced only 13.2ms of source time at its 200ms diagnostic
+  observation; its subsequent source-clock correction is documented below. Targets' fixed grain hash
   differs in default GPU mode. Its five unchanged subchecks pass in explicit
   software mode; original/current default-GPU noise and Canvas readback match
   across eighty seed pairs. Never change a fixed fixture or relax an assertion
   to hide these observations, and do not report all fourteen original commands
   as passing. The seven mandatory phase commands pass for this palette change.
+- The Metaball feedback correction uses tools/verify-cursor-feedback.js.
+  Reduced feedback owns a 150ms ctx.now() deadline and a finite runtime timer.
+  A missing renderer frame must not restart the fade clock. Early wakes re-arm
+  the remaining source time; stale version callbacks cannot lose a newer task.
+  Reset/disposal cancel the task. Preserve the six-orb model, source assets,
+  original normal clocks, initial native artwork and every original assertion.
+  The Motion harness binds ctx.now to its manual renderer clock and freezes
+  that clock while the actual runtime is suspended. This changes no expected
+  state or wait duration. Eight controlled cases cover withheld frames, exact
+  boundaries, retargeting, independent holds, queued input, speed and cleanup;
+  twenty-four six-second normal pairs, sixteen literal initial software PNG pairs
+  and eight fresh offline cases retain the complete original models and art.
+  The original Motion command passes 55,302 checks, including its 200ms sample.
+  Keep the initial renderer-only candidate and failure as evidence. Catalog,
+  cold-route, compositor and CPU4 acceptance remain separate. V53 private helpers,
+  inputs and evidence become read/copy only when FROZEN.json is written.
