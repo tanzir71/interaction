@@ -2429,3 +2429,25 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   helpers and candidates become read/copy only when FROZEN.json is written.
   Remaining acceptance includes catalog contrast/incomplete review, complete
   cold-route startup and CPU4 performance.
+
+- Shared authoring files now produce one generated browser registration script
+  per component in `registry/m/`; the 437 individual authoring modules retain
+  their source paths. Keep all source modules in `js/registry-files.json`; delivery
+  scripts are builder-owned outputs. Run `node tools/verify-delivery.js` to
+  compare all 520 original/effective definitions, both metadata load orders,
+  actual catalog asset resolution, changed defaults, original inline overrides,
+  one-registration ownership and content hashes. Do not freeze sidecar defaults
+  into generated inline overrides. Portable exports remain complete.
+- Neumorphic Buttons, Mechanical Switch, Rotary Knob and Macro Keys bind the
+  browser's `stop` name outside their embedded source functions. Their original
+  teardown guards otherwise resolve to `window.stop()` and cancel unrelated
+  pending component scripts. Keep every literal original program and source-local
+  cleanup function intact. `node tools/verify-embedded-cleanup.js` checks 64
+  actual pending-download/disposal stories in full/native modes, both Stage
+  themes and motion settings. Each exact scope reversion must reproduce the
+  original cancellation; the current source must preserve the request. The
+  control model checksum removes only this exact optional host binding before
+  comparing the unchanged original factory hash; all model and pixel predicates
+  remain intact. Final whole-catalog startup, contrast and CPU4 acceptance remain
+  separate. V64 private helpers, inputs and evidence become read/copy only when
+  its `FROZEN.json` is written; preserve all earlier frozen collections.

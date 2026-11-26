@@ -8,6 +8,14 @@ Catalog items also declare a content-hashed source `module`, `assetBundle` and
 `exportBundle`, plus `assetRefs` mapping portable asset names to local preview
 paths. The browser uses local files for previews and the versioned bundles for
 embedded portable exports. These fields do not introduce runtime dependencies.
+`module` is a browser registration script, not an authoring-file contract.
+Components authored in a shared file use generated `registry/m/<id>.js` scripts
+so opening one detail does not download and register its siblings. Individual
+authoring files keep their existing module paths. Generated scripts preserve the
+complete definition and original inline metadata overrides; defaults remain in
+the shared sidecar. Keep authoring modules in `js/registry-files.json` and let
+the registry builder manage delivery scripts and their content hashes.
+Run `node tools/verify-delivery.js` after changing registration or generation.
 `sourcePreview` points to a small generated `registry/p/<id>.json` containing the
 actual first 18 displayed lines and the complete source's line count. Copy and
 Expand load the complete portable document; locked entries contain no preview
