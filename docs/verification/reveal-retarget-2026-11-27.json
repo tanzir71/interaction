@@ -1,0 +1,188 @@
+{
+  "date": "2026-11-27",
+  "timezone": "Asia/Dhaka",
+  "baselineCommit": "f2c995f1dd4078bab51c5f9efc2f98b5d4f3afea",
+  "scope": "Correct the Scroll checker's measurement placement while retaining and strengthening its real-input interruption gate. No demo, application source, asset, generated artifact or motion timing changes.",
+  "historicalFailure": {
+    "command": "node tools/verify-scroll.js http://127.0.0.1:4173",
+    "assertion": "Actual observer reversal interrupts the entrance",
+    "retainedLog": ".artifacts/final-photo-captions-v76/phase-checks/scroll.log",
+    "limitation": "The earlier failed log did not retain its actual retarget value, so its exact event cause cannot be proved from that log. The later instrumented original run passed; it does not erase or retroactively explain every prior failure."
+  },
+  "diagnostic": {
+    "source": "Current public checker copied and instrumented in a fresh mutable directory. Every original wait, trusted input and assertion remained. Extra recording overhead makes this diagnostic unsuitable for latency comparisons.",
+    "recordedStyleSample": {
+      "opacity": 0.901062,
+      "entranceTimeMs": 150.18799999859223,
+      "originalDurationMs": 400
+    },
+    "recordedReversal": {
+      "fromOpacity": 0.998333,
+      "toOpacity": 0.998333,
+      "gapFromStyleSampleMs": 158.5,
+      "derivedEntranceTimeMs": 316.988,
+      "derivation": "Observer document.timeline.currentTime minus the original entrance startTime."
+    },
+    "finding": "The old checker sampled the entrance, installed its observer instrumentation in a later browser call, then sent End in another call. The component kept animating during those calls. The sampled pose did not establish the pose at the later native reversal.",
+    "evidence": ".artifacts/final-reveal-retarget-v77/diagnostic-5FOFsR"
+  },
+  "change": "Install the observation hook before Home and sample the before/after poses inside the actual IntersectionObserver reversal callback. Keep native trusted Home/End, the 90ms wait, the nonzero interior pose, original 400ms entrance, unchanged opacity continuity gate, faster exit and original stagger checks.",
+  "strongerChecks": [
+    "The actual reversal still has opacity strictly between zero and one, positive translation and positive blur.",
+    "Both native keys are trusted and occur in Home/End order.",
+    "All three original transition channels exist with their original 400ms duration and an interior current time.",
+    "The actual observer reversal preserves opacity, translation and blur without a jump."
+  ],
+  "unchangedProduct": "All 520 complete definitions, original models, HTML, CSS, prompts, metadata, source assets, frozen v1 inputs and all 1,651 generated artifacts remain unchanged.",
+  "repeatability": {
+    "method": "Three fixed complete sequential current-checker runs, retaining every run. The initial instrumented original run and the earlier failed observation remain separate.",
+    "checksPerRun": 505,
+    "runs": 3,
+    "nativeInterruptionTimesMs": [
+      116.77200000099842,
+      133.48700000626758,
+      133.61800000115753
+    ],
+    "allObservedBeforeAfterPosesEqual": true,
+    "noAnimationHoldsOrStretchedDurationsAdded": true,
+    "firstLog": ".artifacts/final-reveal-retarget-v77/current.log",
+    "additionalLogs": [
+      ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-2.log",
+      ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-3.log"
+    ],
+    "evidence": [
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/current.log",
+        "sha256": "18d9ff13379d64c81e282253d0964684be4a94e230dec642c2d0b87f93bdc2dc"
+      },
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/first-verification.json",
+        "sha256": "fac90d576ff7c457dce79331fa1134b4f96a22fb3a16c47c425e1f9b5d45f16d"
+      },
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-2.log",
+        "sha256": "26e32f7dc6c8921840db1667899e0bffdf4067c7cea1bfe554a1e24275e6103f"
+      },
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-2-verification.json",
+        "sha256": "fac90d576ff7c457dce79331fa1134b4f96a22fb3a16c47c425e1f9b5d45f16d"
+      },
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-3.log",
+        "sha256": "4a6d418e2d077c62fddf03f23cdce1ba62d9a67be852c3ae4a71b08a0d0445c5"
+      },
+      {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/repeat-3-verification.json",
+        "sha256": "fac90d576ff7c457dce79331fa1134b4f96a22fb3a16c47c425e1f9b5d45f16d"
+      }
+    ]
+  },
+  "limits": "This verifies the current checker's actual interruption stories. It does not certify every host-load condition, explain the exact earlier failure, or close complete current-source startup, mobile Lighthouse, CPU4/compositor frame rate, the Library timeout or broader accessibility acceptance.",
+  "phaseChecks": [
+    {
+      "command": "node tools/verify-registry.js",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/registry.log",
+        "sha256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      }
+    },
+    {
+      "command": "node tools/verify-stage.js --strict",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/stage.log",
+        "sha256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      }
+    },
+    {
+      "command": "node tools/build-registry.js --check",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/generated.log",
+        "sha256": "b64abba34ff2e5856d466af21625508e238c50a277159b554ccfc277c3af873d"
+      }
+    },
+    {
+      "command": "node tools/verify-library.js http://127.0.0.1:4173",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      }
+    },
+    {
+      "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    },
+    {
+      "command": "node tools/verify-motion.js --strict",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/motion.log",
+        "sha256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      }
+    },
+    {
+      "command": "npm test --prefix packages/intrx",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-reveal-retarget-v77/phase-checks/package.log",
+        "sha256": "1ca6d61b0bf8afe6d05bdd816f2cef82dc55538b71072c9dc009e63ac07e4a2c"
+      }
+    }
+  ],
+  "library": {
+    "checks": 668,
+    "previews": 520,
+    "exports": 100,
+    "errors": [],
+    "evidence": {
+      "file": ".artifacts/final-reveal-retarget-v77/library-verification.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+    }
+  },
+  "stageFit": {
+    "total": 520,
+    "offenders": 0,
+    "existingLowFillExceptions": 163,
+    "evidence": {
+      "file": ".artifacts/final-reveal-retarget-v77/stage-fit.json",
+      "sha256": "e3bf9e43ffe6fa979287a40700ceaf191c6b5974e8f03b5806bb76d34e605e77"
+    }
+  },
+  "preservation": {
+    "baselineCommit": "f2c995f1dd4078bab51c5f9efc2f98b5d4f3afea",
+    "productAndGeneratedGitDiff": "",
+    "sourceStable": true,
+    "inputs": {
+      "tools/verify-scroll.js": "339baff1bcccbe134a7374b70307103e11822592e218aa0bf62982c8d32beec7",
+      "tools/fixtures/scroll-models.json": "94edc3314ddc0c24b318a67b1cb6b4c74fa78404592e97eb2723c2bce5f54439",
+      "tools/fixtures/scroll-geometry.json": "2fe4a0da178908dd954732a1e7310ba2fc907b1ae40c6c51337cc40e44a225c0",
+      "index.html": "b9ffc6307868877e0cf4f698e557e3a3f6117cfd59c42e3aaa64109e0af3f931",
+      "css/foundations.css": "2832d17e98560d6343664d595d06fab710fe08d4c32bfc92f149f6714c5b3bdc",
+      "css/fonts.css": "cea2e2221ac67b17d4375be9dad51df9380ca78025d0293bc5add8f554957208",
+      "js/demos.scroll.reveal-stagger.js": "6e2161d1eb51d79aba09119553bbf13e67957ea26da070e7262e73da7f89a9be",
+      "js/demos.scroll.smooth.js": "31680691a43838ac4bc8def21537278579fa1b33c76b5a0cb951e61e4ed9f3af",
+      "js/demo-runtime.js": "bd17fa9204f18fed94242e6e3c36a518921396e5303dda46218f2f2206e8fdbc",
+      "js/shell/stage.js": "6e702796ba0970d5ffedf65e0b4ad1d611ae82c9a810be047d065fbe716ddb6c",
+      "js/shell/export.js": "b68b9d5f9853bc5a4ff1a395577289b4bf0a5afc1e6f247b390352af97032b92",
+      "registry/index.json": "37a49c1247cedd20fb4cb0c5f21c045ba04bd6d3d4397f76b0d538a8f6ca7594"
+    },
+    "phaseReport": {
+      "file": ".artifacts/final-reveal-retarget-v77/phase-checks/report.json",
+      "sha256": "7fccacb8e20f1e3bf629e33a1646b048ad8cee30215fb3214ec2bbe8fb5e585a"
+    }
+  },
+  "sealedArchive": {
+    "file": ".artifacts/final-reveal-retarget-v77/FROZEN.json",
+    "sha256": "394beff31af16d43f305cc59f0da86f611f6914d3a1d1442845e6b29fadf7253",
+    "files": 54,
+    "treeSHA256": "49ed08428f21302e7b7a8f060c31cd836ca39d35253004eb906143b9e1ecaa12",
+    "rule": "Read/copy only. Never execute or edit private helpers, candidates, inputs or evidence, or copy their code elsewhere to execute. Public current tools may run in fresh mutable directories."
+  }
+}

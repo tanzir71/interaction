@@ -2607,3 +2607,12 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   not close dimmed/transient captions, all photographic/non-text contrast or
   the final performance/accessibility gates. V76 private helpers and evidence
   become read/copy only when its `FROZEN.json` is written.
+- `tools/verify-scroll.js` arms its Reveal observation before Home and samples
+  both poses in the actual observer reversal callback. Keep trusted native
+  Home/End, the original 90ms wait, strict interior pose, 400ms entrance,
+  opacity/transform/blur continuity, faster exit and complete stagger checks.
+  Cross-process inspection must not consume the transition under test. No
+  animation holds or stretched durations are added. Evidence is recorded in
+  `docs/verification/reveal-retarget-2026-11-27.json`; preserve the earlier
+  failed observation and its uncertainty. V77 private helpers/inputs become
+  read/copy only when its `FROZEN.json` is written.
