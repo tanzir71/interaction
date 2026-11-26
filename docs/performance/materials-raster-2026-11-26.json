@@ -1,0 +1,429 @@
+{
+  "date": "2026-11-26",
+  "baseline": "1ef7c640581ce019c21b1c185bcfe93eea4abc69",
+  "outcome": "The original material pixel predicates pass on an explicit software renderer. The other nine material groups retain Chrome default rendering. The harness accepts the selected audit browser and records version, arguments and raster mode in every proof. All 520 complete component definitions, original assets and fixed fixtures remain unchanged.",
+  "scope": "Verification-method correction for the native Paper, Glass and Clock material set. It establishes the original pixel thresholds on the recorded software backend and retains separate default-renderer behavior/input/geometry/model checks. It does not claim universal GPU/Canvas pixel equality, whole-catalog accessibility or CPU4 performance acceptance.",
+  "standardsContext": {
+    "source": "https://html.spec.whatwg.org/multipage/canvas.html#drawing-images",
+    "summary": "The HTML standard does not prescribe a precise downsampling algorithm. These local probes establish renderer-sensitive pixel sampling; they do not identify a specific Chromium internal filter or decoder path."
+  },
+  "diagnosis": {
+    "evidence": {
+      "file": ".artifacts/final-material-raster-v57/diagnosis.json",
+      "sha256": "b67feac8a3606913dc2b000e60a6983e5cffb7eaf539099fe550e4baa89f9903"
+    },
+    "sourceAndCrop": {
+      "source": "assets/images/fluidBlue-800.webp",
+      "natural": [
+        800,
+        533
+      ],
+      "field": [
+        86,
+        28,
+        200,
+        150
+      ],
+      "backgroundSize": "cover",
+      "backgroundPosition": "50% 50%"
+    },
+    "defaultRenderer": [
+      {
+        "dpr": 1,
+        "reduced": false,
+        "originalCanvasMSE": 27.33823529411765,
+        "photoOnlyCanvasMSE": 27.33823529411765
+      },
+      {
+        "dpr": 1,
+        "reduced": true,
+        "originalCanvasMSE": 27.33823529411765,
+        "photoOnlyCanvasMSE": 27.33823529411765
+      },
+      {
+        "dpr": 2,
+        "reduced": false,
+        "originalCanvasMSE": 0.20745798319327732,
+        "photoOnlyCanvasMSE": 0.20745798319327732
+      },
+      {
+        "dpr": 2,
+        "reduced": true,
+        "originalCanvasMSE": 0.20745798319327732,
+        "photoOnlyCanvasMSE": 0.20745798319327732
+      }
+    ],
+    "interpretation": "The same DPR1 discrepancy remains after removing pane/highlight paint in the diagnostic DOM. DPR2 agrees within the original error limit. Different Canvas smoothing preferences and HTML-image render paths also yield different pixels. No product crop or material change was needed.",
+    "retainedAlternativeReferences": {
+      "file": ".artifacts/final-material-raster-v57/references.json",
+      "sha256": "18bfc0c89b84f2b10fe4f3048bc574ef9bdeaf1433914ccd8ccac9c6517cb8a9"
+    }
+  },
+  "preservation": {
+    "at": "2026-11-26T07:30:05.059Z",
+    "baseline": "1ef7c640581ce019c21b1c185bcfe93eea4abc69",
+    "completeDefinitionsUnchanged": 520,
+    "controllersUnchanged": 520,
+    "HTMLUnchanged": 520,
+    "CSSUnchanged": 520,
+    "originalPixelSourceRestoredByOnlyLaunchReversion": true,
+    "allOriginalAssertionsCoordinatesCropFormulaAndTolerancesUnchanged": true,
+    "fixedReferenceFixtureUnchanged": true,
+    "productDiffEmpty": true,
+    "newRuntimeDependencies": 0,
+    "changedTools": [
+      "tools/verification/skeuo-materials-harness.js",
+      "tools/verification/skeuo-materials-models.js",
+      "tools/verification/skeuo-materials-geometry.js",
+      "tools/verification/skeuo-materials-native-motion.js",
+      "tools/verification/skeuo-materials-full-motion.js",
+      "tools/verification/skeuo-materials-interruption.js",
+      "tools/verification/skeuo-materials-touch.js",
+      "tools/verification/skeuo-materials-pixels.js",
+      "tools/verification/skeuo-materials-portable.js",
+      "tools/verification/skeuo-materials-lifecycle.js",
+      "tools/verification/skeuo-materials-routes.js"
+    ],
+    "evidence": {
+      "file": ".artifacts/final-material-raster-v57/preservation.json",
+      "sha256": "a98802a3efc98a49515bda0bdda6f5a55557763102af941be71d805f1da0208d"
+    },
+    "photoFileSHA256": "bbdb8b8eee327466eff0a811860fcc9a4aeae4b04077a14d26764ab5f29fc240",
+    "fixedPixelReferenceSHA256": "98571ee8ae4ac2a6865fccc062bfdf6e8d77d1e0bbe7ec105dedfa5380cd6b0e"
+  },
+  "originalPixelAcceptance": {
+    "command": "node tools/verification/skeuo-materials-pixels.js http://127.0.0.1:4173",
+    "browser": "158.0.8127.88",
+    "args": [
+      "--disable-gpu"
+    ],
+    "checks": 21879,
+    "cases": 12,
+    "photoErrorLimit": "MSE < 2 (unchanged)",
+    "sampling": "Same independently computed Canvas cover crop and original x15..31 / y18..129 photo-only rectangle. Every original material/color/SVG/clock assertion and tolerance remains literal.",
+    "glassResults": [
+      {
+        "dpr": 1,
+        "reduced": false,
+        "samples": 5712,
+        "mse": 0.19030112044817926,
+        "maxRGB": 7
+      },
+      {
+        "dpr": 1,
+        "reduced": true,
+        "samples": 5712,
+        "mse": 0.19030112044817926,
+        "maxRGB": 7
+      },
+      {
+        "dpr": 2,
+        "reduced": false,
+        "samples": 22848,
+        "mse": 0.25109418767507,
+        "maxRGB": 5
+      },
+      {
+        "dpr": 2,
+        "reduced": true,
+        "samples": 22848,
+        "mse": 0.25109418767507,
+        "maxRGB": 5
+      }
+    ],
+    "proof": {
+      "file": ".artifacts/final-material-raster-v57/final-proofs/pixels.json",
+      "sha256": "dbfe04c77817ac43267bc3d4a081275283a9a0124f98ca2a75c0e81323774f75"
+    }
+  },
+  "negativeControls": {
+    "evidence": {
+      "file": ".artifacts/final-material-raster-v57/negative-controls-final.json",
+      "sha256": "3672003a5ac73c3ad438fc3a942f53ae2b9011c5ffe8e5d267dfc3f92b031d9e"
+    },
+    "cases": 24,
+    "intactCases": 4,
+    "deliberateErrors": 20,
+    "allIntactPass": true,
+    "allDeliberateErrorsFail": true,
+    "maximumIntactMSE": 0.25284488795518206,
+    "minimumRejectedMSE": 212.4702380952381,
+    "changes": [
+      "left crop",
+      "right crop",
+      "stretch",
+      "one-pixel offset",
+      "wrong photograph"
+    ],
+    "method": "Only temporary diagnostic DOM styles change. The product sources, reference crop formula, sample rectangle and acceptance threshold stay unchanged."
+  },
+  "fullMaterials": {
+    "command": "node tools/verify-skeuo-materials.js http://127.0.0.1:4173",
+    "exitCode": 0,
+    "groups": 10,
+    "cases": 364,
+    "checks": 46710,
+    "freshOfflineContexts": 24,
+    "rows": [
+      {
+        "name": "models",
+        "cases": 40,
+        "checks": 4871,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/models.json",
+          "sha256": "4ede5c9f1f60ee9c2c73c31926204990da7abb1ada594b1850aeccaaf1203c24"
+        }
+      },
+      {
+        "name": "geometry",
+        "cases": 168,
+        "checks": 3936,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/geometry.json",
+          "sha256": "e1d50c7fff46ed404e9332a9677afcafe62ce403e3be9467c40e18f121c71b61"
+        }
+      },
+      {
+        "name": "native-motion",
+        "cases": 18,
+        "checks": 6276,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/native-motion.json",
+          "sha256": "445da329b7241f28868f8501d9a4df86415b6b539d9bc36b2c443bdf380aa708"
+        }
+      },
+      {
+        "name": "full-motion",
+        "cases": 18,
+        "checks": 8272,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/full-motion.json",
+          "sha256": "61c18cea3ff5f82f055868d92f6084d24120e42201b3cc51859800b0450d0d6d"
+        }
+      },
+      {
+        "name": "interruption",
+        "cases": 36,
+        "checks": 762,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/interruption.json",
+          "sha256": "d75613659722296bb91798750d952cdc11bbbecbe82a6c6a52ba2e4811c23687"
+        }
+      },
+      {
+        "name": "touch",
+        "cases": 12,
+        "checks": 126,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/touch.json",
+          "sha256": "ec6e632af70ccc881bd3cfbe2e1a025c0dbc5af84cd733460c41e3fb90d56357"
+        }
+      },
+      {
+        "name": "pixels",
+        "cases": 12,
+        "checks": 21879,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "software",
+            "args": [
+              "--disable-gpu"
+            ]
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/pixels.json",
+          "sha256": "dbfe04c77817ac43267bc3d4a081275283a9a0124f98ca2a75c0e81323774f75"
+        }
+      },
+      {
+        "name": "portable",
+        "cases": 24,
+        "checks": 388,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/portable.json",
+          "sha256": "a5e99cdce8fbb0b358dddd4871de21a946c83005a15188127b9fc223716e3831"
+        }
+      },
+      {
+        "name": "lifecycle",
+        "cases": 24,
+        "checks": 164,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/lifecycle.json",
+          "sha256": "831cd1f66db694cbcbbcee77adefdb695b2b5835b3cf33756c567d5436514818"
+        }
+      },
+      {
+        "name": "routes",
+        "cases": 12,
+        "checks": 36,
+        "browsers": [
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          },
+          {
+            "version": "158.0.8127.88",
+            "raster": "Chrome default",
+            "args": []
+          }
+        ],
+        "proof": {
+          "file": ".artifacts/final-material-raster-v57/final-proofs/routes.json",
+          "sha256": "7f965f930d39592468f4bc83121c62629eaff22394fbd8822fbaa645b95c0223"
+        }
+      }
+    ],
+    "proof": {
+      "file": ".artifacts/final-material-raster-v57/final-proofs/results.json",
+      "sha256": "b4df42dcf3585ea23945845f4d60c6fa52de19452f0da9acebcd6da39a688bb4"
+    },
+    "log": {
+      "file": ".artifacts/final-material-raster-v57/materials-final.log",
+      "sha256": "a63fb94b50d9b7a430e1096cfb425c4abbb687ae1749d40c593a28c52c038c6a"
+    },
+    "subsequentCurrentSourceCheck": {
+      "command": "node tools/verify-skeuo-materials.js http://127.0.0.1:4173 --check-evidence",
+      "exitCode": 0,
+      "proof": {
+        "file": ".artifacts/final-material-raster-v57/current-evidence-check.json",
+        "sha256": "6bf303757cf7e206c47b42dcbd19b793bbdb26ca138c930e2c181883a16a16a1"
+      }
+    }
+  },
+  "requiredChecks": {
+    "commands": [
+      {
+        "command": "node tools/verify-registry.js",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/registry.log",
+          "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+        }
+      },
+      {
+        "command": "node tools/verify-stage.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/stage.log",
+          "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+        }
+      },
+      {
+        "command": "node tools/build-registry.js --check",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/generated.log",
+          "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+        }
+      },
+      {
+        "command": "node tools/verify-library.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/library.log",
+          "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+        }
+      },
+      {
+        "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/fit.log",
+          "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+        }
+      },
+      {
+        "command": "node tools/verify-motion.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/motion.log",
+          "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+        }
+      },
+      {
+        "command": "npm test --prefix packages/intrx",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-material-raster-v57/phase-checks/package.log",
+          "sha256": "18aef1c86b193a257a1aa3626dc9b106b9bad9adc3586bb6a3aa3ff4529bde56"
+        }
+      }
+    ],
+    "library": {
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "total": 520,
+      "failures": 0,
+      "lowFillExceptions": 163
+    }
+  },
+  "remaining": [
+    "Complete manual catalog accessibility and incomplete-result review",
+    "Complete cold-route startup acceptance",
+    "CPU4 frame-rate acceptance"
+  ]
+}

@@ -2382,3 +2382,20 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   verifier pass. Manual catalog accessibility, the separate material raster
   observation, complete cold routes and CPU4 acceptance remain open. V56 private
   helpers, inputs and evidence become read/copy only when FROZEN.json is written.
+- The material raster investigation is recorded in
+  docs/performance/materials-raster-2026-11-26.json. All 520 complete component
+  definitions, controllers, HTML/CSS, approved photographs and fixed fixtures
+  remain unchanged. Only the original material pixel group selects explicit
+  software rendering; the other nine groups keep Chrome default rendering.
+  The harness honors INTRX_CHROME_EXECUTABLE and records actual browser/raster
+  metadata. Keep every original assertion, crop formula, sample rectangle and
+  tolerance, including the strict photo MSE<2 gate. Four intact and twenty
+  deliberately incorrect photo/crop probes validate that unchanged predicate.
+  All ten groups / 364 cases / 46,710 checks pass, including 24 fresh offline
+  contexts; --check-evidence verifies their current source hashes afterward.
+  The seven mandatory phase checks pass. This resolves the V55 material-command
+  failure on its explicit pixel backend. Retain the default-renderer discrepancy
+  and diagnostic references; do not claim universal GPU/Canvas byte equality.
+  Manual catalog accessibility, complete cold-route startup and CPU4 acceptance
+  remain open. V57 private helpers, inputs and evidence become read/copy only
+  when FROZEN.json is written; preserve every earlier frozen collection.
