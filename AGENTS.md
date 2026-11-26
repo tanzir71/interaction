@@ -2593,3 +2593,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   current-source startup, default Lighthouse or CPU4/compositor acceptance.
   V74 is now sealed as well: read/copy only; use current public tools in fresh
   mutable directories rather than executing any archived helper or input.
+- The V75 lazy-view candidate was rejected after its complete 96-sample
+  A/B/B/A comparison: fewer script bytes did not establish a startup gain and
+  warm navigation regressed. Production index/main stayed unchanged. Evidence
+  is in `docs/performance/catalog-startup-2026-11-26.json`; V75 is sealed and
+  read/copy only under the same archive rules.
+- Rotating Gallery's seven full project captions use an opaque #151515
+  backing with their original white type and no shadow. Preserve their exact
+  coordinates, dimensions, copy, typography, photographs and controller, and
+  the unchanged native v4 artwork. Run `node tools/verify-rotating-captions.js`
+  for selected-caption contrast, independent themes, native software PNGs,
+  original geometry, real scroll keys and fresh offline exports. This does
+  not close dimmed/transient captions, all photographic/non-text contrast or
+  the final performance/accessibility gates. V76 private helpers and evidence
+  become read/copy only when its `FROZEN.json` is written.

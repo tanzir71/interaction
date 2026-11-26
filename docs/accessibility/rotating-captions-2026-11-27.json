@@ -1,0 +1,199 @@
+{
+  "date": "2026-11-27",
+  "timezone": "Asia/Dhaka",
+  "baselineCommit": "29b974399b6f65edca3b991de1d42bb38c59b3fa",
+  "component": "scroll-rotate-gallery",
+  "problem": "Small white project metadata lies directly over bright photographs. A diagnostic fixed-shadow-preserving glyph-fill ablation measured 3.4431184703871995:1 over the initial ember photograph. The raw original captures remain retained; this diagnostic is not an automatic WCAG decision.",
+  "change": "Give all seven full-view project captions an opaque #151515 backing and remove their text shadow. Their original #f1f1f1 ink, positions, dimensions, type, copy and motion remain unchanged in both Stage themes. The generator prompt describes the full-view treatment.",
+  "preservation": {
+    "catalog": 520,
+    "otherCompleteDefinitionsUnchanged": 519,
+    "controllersUnchanged": 520,
+    "htmlUnchanged": 520,
+    "allOtherFieldsUnchanged": true,
+    "newAssets": 0,
+    "newRuntimeDependencies": 0,
+    "frozenV1Edited": false,
+    "nativeArtworkChanged": false,
+    "posters": "Native artwork is unchanged; sixteen literal software PNG pairs retain the original tile paint.",
+    "evidence": ".artifacts/final-photo-captions-v76/preservation.json"
+  },
+  "verification": {
+    "command": "node tools/verify-rotating-captions.js",
+    "browser": "158.0.8127.88",
+    "raster": "Explicit software raster (--disable-gpu), with unchanged before/current priming. No default-GPU byte identity claim.",
+    "checks": 9404,
+    "onlineStories": 32,
+    "freshOfflineContexts": 8,
+    "selectedProjectPoses": 168,
+    "exactNativePNGPairs": 16,
+    "originalFullGeometryComparisons": 112,
+    "negativeControls": 112,
+    "nativeKeyboardStories": 16,
+    "widths": [
+      1440,
+      390
+    ],
+    "stageThemes": [
+      "dark",
+      "light"
+    ],
+    "shellThemes": [
+      "dark",
+      "light"
+    ],
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "foregroundReview": "The selected card is the foremost original card. Its unchanged photograph and border precede the caption in paint order; the caption background precedes its three original text lines. Text uses the actual opaque CSS fill without stroke/shadow, masks, filtering or blending. The bound includes original card group opacity against every possible underlying RGB channel, including other photographs and the light Stage.",
+    "minimumConservativeFinalRatio": 16.167618199015376,
+    "offline": "Every project is selected in each fresh context, all seven embedded photographs decode, native scroll remains available, and no network request or page error occurs.",
+    "report": {
+      "file": ".artifacts/final-photo-captions-v76/verification/2026-11-26T18-05-57-752Z/report.json",
+      "sha256": "569a251bc9701fb86e7c90ef553575b7848518e029f4f1c37a9bbc546a9018f8"
+    }
+  },
+  "retainedObservations": [
+    "An initial private capture helper used an incorrect relative require path; its rejected source is retained.",
+    "An ad-hoc working-tree/Git-blob raw comparison rejected the CRLF checkout of css/style.css. The corrected source comparison retains exact Git-normalized content and additionally compares the four available frozen-v1 raw snapshots. No frozen file was edited.",
+    "The supplementary earlier tools/verify-scroll.js failed its Actual observer reversal interrupts the entrance assertion in the unchanged Reveal component. Its unmodified checker and failed log remain retained. It is not the Rotating Gallery suite, and this phase does not claim that observation is resolved.",
+    "Horizontal Scroll's initial Aurora caption diagnostic reached 4.783665273358955:1 with its fixed black shadow. No Horizontal Scroll source was changed; that one diagnostic does not close every caption or state."
+  ],
+  "scopeLimit": "This repair covers selected full photographic captions. Dimmed inactive and transient caption states, all other photographic and non-text contrast, the remaining catalog accessibility review, complete current-source startup, default mobile Lighthouse, CPU4/compositor frame rate and the Library timeout remain open.",
+  "phaseChecks": [
+    {
+      "command": "node tools/verify-registry.js",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/registry.log",
+        "sha256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      }
+    },
+    {
+      "command": "node tools/verify-stage.js --strict",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/stage.log",
+        "sha256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      }
+    },
+    {
+      "command": "node tools/build-registry.js --check",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/generated.log",
+        "sha256": "b64abba34ff2e5856d466af21625508e238c50a277159b554ccfc277c3af873d"
+      }
+    },
+    {
+      "command": "node tools/verify-library.js http://127.0.0.1:4173",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      }
+    },
+    {
+      "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    },
+    {
+      "command": "node tools/verify-motion.js --strict",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/motion.log",
+        "sha256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      }
+    },
+    {
+      "command": "npm test --prefix packages/intrx",
+      "exitCode": 0,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/package.log",
+        "sha256": "48e8250b17030d4332ad1d0fd1d448deb08b975abe509f39f6851a709ed5842d"
+      }
+    }
+  ],
+  "supportingOriginalModels": {
+    "core": {
+      "checks": 1998,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/phase-checks-final/scroll.log",
+        "sha256": "7f670be267f7259749745a220a32ba508eaee1a63a9b9e3025d8051e63e8c3b9"
+      }
+    },
+    "galleryNarratives": {
+      "checks": 2640,
+      "log": {
+        "file": ".artifacts/final-photo-captions-v76/narratives.log",
+        "sha256": "84bb497babbabde8b49b0a600ec49b8b226e29e86a028f84a8745f9fe26c1f1c"
+      }
+    }
+  },
+  "library": {
+    "checks": 668,
+    "previews": 520,
+    "exports": 100,
+    "errors": [],
+    "evidence": {
+      "file": ".artifacts/final-photo-captions-v76/library-verification.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+    }
+  },
+  "stageFit": {
+    "total": 520,
+    "failures": 0,
+    "missingDesignSize": 0,
+    "overflow": 0,
+    "horizontalScroll": 0,
+    "tinyText": 0,
+    "lowFill": 0,
+    "existingLowFillExceptions": 163,
+    "invalidExceptions": 0,
+    "evidence": {
+      "file": ".artifacts/final-photo-captions-v76/stage-fit.json",
+      "sha256": "659acb25964854d1c3786ecfaf35adc32df88bd0edea995d8c19ce45352b13ac"
+    }
+  },
+  "actualRoutedDetail": {
+    "cases": 4,
+    "widths": [
+      1440,
+      390
+    ],
+    "motion": "normal",
+    "renderer": "default GPU",
+    "independentStageAndShellThemes": true,
+    "allSevenOriginalPhotosAtLeast1600px": true,
+    "firstAndLastProjects": true,
+    "pageErrors": 0,
+    "review": "Actual desktop first and compact last captures visually inspected; original text layout remains intact.",
+    "evidence": {
+      "file": ".artifacts/final-photo-captions-v76/actual-detail.json",
+      "sha256": "3db1cbdb5a78bade0ae008866a923d3079136c95786634e09e6a20dd4b2bebab"
+    }
+  },
+  "unresolvedSupplementaryCheck": {
+    "command": "node tools/verify-scroll.js http://127.0.0.1:4173",
+    "exitCode": 1,
+    "message": "Actual observer reversal interrupts the entrance",
+    "component": "Unchanged Scroll Reveal; separate earlier suite.",
+    "log": {
+      "file": ".artifacts/final-photo-captions-v76/phase-checks/scroll.log",
+      "sha256": "b9c889ec11c5a45d4886bfe56db3d7e2d3cc78143c4dabd673d1a967cdd72560"
+    },
+    "status": "Retained unresolved observation; no checker or Reveal source was changed and no retry is called a resolution."
+  },
+  "sealedArchive": {
+    "file": ".artifacts/final-photo-captions-v76/FROZEN.json",
+    "sha256": "df68a3c9f1cae3c17c51073d0708008132bb60985853db86fd029b57831767b4",
+    "files": 157,
+    "treeSHA256": "a67d9b2cefad05d7b5cdbd36b65c90bb9f740e816d10628da0d4a75ff4dd5455",
+    "rule": "Read/copy only. Never execute or edit private helpers, candidates, inputs or evidence, or copy their code elsewhere to execute. Public current tools may run in fresh mutable directories."
+  }
+}

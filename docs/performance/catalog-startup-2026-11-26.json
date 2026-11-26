@@ -1,7 +1,7 @@
 {
   "date": "2026-11-26",
   "sourceCommit": "a2d251869327ad53cce917594b1794a306911efe",
-  "status": "Incomplete baseline inventory; not acceptance. The original 300ms gate fails and a Library preparation timeout remains unresolved. The later Parallax label phase changes the source, so current-source timing still needs verification.",
+  "status": "Incomplete historical baseline inventory; not acceptance. The original 300ms gate fails and a Library preparation timeout remains unresolved. Later source repairs require a complete current-source timing run.",
   "method": [
     "One fresh browser process; one empty browser context per sample. No priming sample or outlier is removed.",
     "Heading paint preserves the earlier document.fonts.ready plus two animation-frame method. Stage paint preserves two frames after the actual full boot. Assets-ready is separate.",
@@ -125,5 +125,38 @@
       "file": ".artifacts/final-library-stability-v73/FROZEN.json",
       "sha256": "709f7aacef310892879c805d86ff86e2a80ddf306475be800292ff12a59739c3"
     }
-  ]
+  ],
+  "rejectedLazyViewCandidate": {
+    "baselineCommit": "29b974399b6f65edca3b991de1d42bb38c59b3fa",
+    "status": "Rejected; no production index/main change.",
+    "method": "Sequential A/B/B/A; original public CPU1 profile tool; three IDs, both widths/themes and real cold/warm input; 96 samples. Same file/gzip server method, no omitted first launches or outliers. Separate served candidate hashes supplement original public disk source guards. Not whole-catalog, Lighthouse or CPU4 acceptance.",
+    "components": [
+      "elastic-tabs",
+      "lenis-smooth-scroll",
+      "liquid-image-ripple"
+    ],
+    "baseline": {
+      "samples": 48,
+      "over300": 23,
+      "coldStageMedian": 444.95,
+      "warmStageMedian": 84
+    },
+    "candidate": {
+      "samples": 48,
+      "over300": 25,
+      "coldStageMedian": 413.2,
+      "warmStageMedian": 117
+    },
+    "reason": "Fewer view bytes did not establish a startup gain; warm navigation regressed and added two timing failures. All 96 functional cases completed without page errors.",
+    "functionalScope": "The unshipped candidate separately passed 104 existing router and 103 lazy-route checks. Those results do not make the rejected performance candidate acceptable.",
+    "hostObservation": "A post-run host sample reported 100% CPU. This does not prove that every earlier sample had that load; uncontrolled host work limits timing inferences.",
+    "evidence": {
+      "file": ".artifacts/final-detail-startup-v75/analysis.json",
+      "sha256": "d70d71902e1660b11cc6b44ffbb470a4ed406f7e3d962fb6ce9682255b15906e"
+    },
+    "archive": {
+      "file": ".artifacts/final-detail-startup-v75/FROZEN.json",
+      "sha256": "71b33b62e0f7e8ec571ec16a400849fc5aacb3ece8043289e4e158765a4a3b2a"
+    }
+  }
 }
