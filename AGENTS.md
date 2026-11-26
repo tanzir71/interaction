@@ -2276,3 +2276,35 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   non-text/transition contrast, startup, Lighthouse and CPU4 acceptance remain
   open. V50 private helpers/evidence become read/copy only when FROZEN.json is
   written; keep earlier frozen helpers and inputs unchanged.
+- The Cursor palette follow-up uses `tools/verify-cursor-palettes.js` and
+  `tools/verify-cursor-palette-endpoints.js`. Eleven full light compositions
+  receive readable ink, including one Canvas color resolver. All original HTML,
+  mathematical models, native artwork and assets remain exact. Full Emitter,
+  Flashlight, Heat Shimmer and HUD readouts use stable local mattes over moving
+  artwork; Spotlight's full dark cue also receives readable ink. These five
+  intentional full dark changes are excluded from dark CSS pixel equivalence,
+  while all native and the other twenty-two full dark treatments remain covered.
+  Preserve the original photographic, material and deliberately masked display
+  text; ancestor-only background estimates are not photographic contrast proof.
+  Gooey labels retain their actual difference blend; their sampled backdrop
+  check uses the unchanged filtered sibling surface. Following Label uses its
+  actual capsule backing; HUD's large display type uses the physical large-type
+  criterion at the actual Stage scale. Native/unaffected dark PNG comparisons
+  use explicit software rasterization with no pixel tolerance. The sixteen
+  default-GPU Emitter cases check actual accepted Canvas setters and painted
+  particles. The six base Cursor harnesses honor the selected audit browser and
+  log its version; retain every original assertion. Run all six base Cursor and
+  eight Cursor extension commands after changes. Complete photographic/non-text
+  contrast, all transition frames, catalog accessibility, cold startup and CPU4
+  acceptance remain open. V52 private helpers/evidence become read/copy only
+  when FROZEN.json is written; preserve every earlier frozen collection.
+  The V52 raw scan retains four Emitter name flags and 299 incomplete nodes.
+  Original Fields/Motion portable deadline failures remain separate evidence;
+  their complete definitions and standalone HTML bytes equal the pushed
+  baseline. Metaball advances only 13.2ms of source time at its 200ms diagnostic
+  observation, so its timing acceptance remains open. Targets' fixed grain hash
+  differs in default GPU mode. Its five unchanged subchecks pass in explicit
+  software mode; original/current default-GPU noise and Canvas readback match
+  across eighty seed pairs. Never change a fixed fixture or relax an assertion
+  to hide these observations, and do not report all fourteen original commands
+  as passing. The seven mandatory phase commands pass for this palette change.

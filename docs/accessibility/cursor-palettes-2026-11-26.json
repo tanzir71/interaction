@@ -1,0 +1,527 @@
+{
+  "date": "2026-11-26",
+  "baseline": "509d5a8bc3c2af3f3dc88c287c589ca8a5f2cd30",
+  "outcome": "Eleven full light Cursor compositions gain readable ink while the complete original models, HTML, assets and native artwork remain. Five full dark UI treatments deliberately change for readable moving-art readouts or the Spotlight cue. Only Emitter Canvas color endpoints change in controllers.",
+  "scope": "Twenty-seven Cursor demos, settled selected full-view UI text, preserved photographic/material/graphic treatments, actual native input, literal native/unaffected dark software paint and fresh offline exports. Not photographic contrast, every motion frame, complete non-text contrast, speech-recognition behavior, whole-catalog accessibility, startup or CPU4 acceptance.",
+  "preservation": {
+    "baseline": "509d5a8bc3c2af3f3dc88c287c589ca8a5f2cd30",
+    "catalog": 520,
+    "completeDefinitionsUnchanged": 509,
+    "controllersUnchanged": 519,
+    "HTMLUnchanged": 520,
+    "changedDefinitions": [
+      "cursor-crosshair-hud",
+      "cursor-elastic-line",
+      "cursor-flashlight-noise",
+      "cursor-following-label",
+      "cursor-gooey-blob",
+      "cursor-heat-shimmer",
+      "cursor-particle-emitter",
+      "cursor-pull-distort",
+      "cursor-zoom-lens",
+      "image-trail",
+      "spotlight-mask"
+    ],
+    "changedControllers": [
+      "cursor-particle-emitter"
+    ],
+    "changedHTML": [],
+    "originalFieldsAndModelsRestoredByExactColorEdits": true,
+    "unchangedPaths": [
+      "assets",
+      "css",
+      "js/meta.stage.js",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js",
+      "MOTION_SYSTEM.md",
+      "INTRX-handover"
+    ],
+    "harnessChanges": "Only selected browser executable and version log; all assertions unchanged",
+    "at": "2026-11-26T04:51:30.452Z",
+    "beforeFixture": {
+      "file": "tools/fixtures/cursor-palettes-before.json",
+      "sha256": "c7b140bb7e70d888345533076f0ea5d442814d914896a76bba08d07a595ca242"
+    },
+    "integrity": {
+      "file": ".artifacts/final-cursor-palettes-v52/preservation.json",
+      "sha256": "52fcd4b6d14448e25b8ce4440fd9441964b2cacfc292ee2a98f7f97faeeb0482"
+    },
+    "newRuntimeDependencies": 0
+  },
+  "palette": {
+    "primary": "#171717",
+    "secondary": "#626262",
+    "lightFocus": "#9e420a",
+    "readoutSurfaces": "Stable local mattes preserve existing boxes and guarantee readout contrast over moving art. Flashlight stays light-on-dark because its actual scene has a dark sibling mask. Gooey keeps its original difference blend; Following Label keeps its actual light capsule and dark photographic disclosure.",
+    "protectedArt": "Keep original licensed photographs, thermal display paint/glow, masked Flashlight composition, orange Spotlight reveal and large HUD display paint. The measured original HUD display remains large at the actual Stage scale and uses the 3:1 large-type criterion; selected smaller UI text stays above 4.5:1.",
+    "intentionallyChangedFullDark": [
+      "cursor-particle-emitter",
+      "cursor-flashlight-noise",
+      "cursor-heat-shimmer",
+      "cursor-crosshair-hud",
+      "spotlight-mask"
+    ]
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "onlineCases": 432,
+    "freshOfflineContexts": 108,
+    "literalCSSSoftwarePNGPairs": 304,
+    "separateOriginalControllerSoftwarePNGPairs": 12,
+    "pixelPolicy": "Exact same-engine software PNG bytes with no tolerance or favorable repeated capture selection. Native paint is checked for all twenty-seven components; full dark is exact for twenty-two. Original/current Emitter controllers share the intentional current readout matte in their separate native/dark comparisons. Default-GPU behavior has a separate scope.",
+    "selectedTextObservations": 1972,
+    "minimumSmallTextRatio": 5.044586306071252,
+    "minimumOriginalLargeHUDRatio": 3.057355209253187,
+    "defaultGPUEndpoints": {
+      "cases": 16,
+      "scope": "Default GPU, actual Emitter Canvas stroke/fill assignments and painted pixels after the native Dock action. Both widths, themes, motion preferences and Stage modes. Instance accessors forward unchanged native setters and record accepted colors. Original numeric models and native artwork remain covered by the original Cursor suites and literal palette comparisons; this does not certify every particle frame or non-text contrast.",
+      "evidence": {
+        "file": ".artifacts/final-cursor-palettes-v52/endpoints/2026-11-26T04-16-43-109Z/report.json",
+        "sha256": "417a89a3c80f7a3a1bee5f99ee77ff6d6a518dcdac2cb92f795f106054459809"
+      }
+    },
+    "rawAxe": {
+      "version": "4.14.1",
+      "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+      "cases": 108,
+      "violations": 4,
+      "incompleteRuleResults": 84,
+      "incompleteNodes": 299,
+      "remainingFlags": [
+        {
+          "id": "cursor-particle-emitter",
+          "width": 1440,
+          "theme": "dark",
+          "violations": [
+            {
+              "id": "label-content-name-mismatch",
+              "nodes": 1
+            }
+          ]
+        },
+        {
+          "id": "cursor-particle-emitter",
+          "width": 1440,
+          "theme": "light",
+          "violations": [
+            {
+              "id": "label-content-name-mismatch",
+              "nodes": 1
+            }
+          ]
+        },
+        {
+          "id": "cursor-particle-emitter",
+          "width": 390,
+          "theme": "dark",
+          "violations": [
+            {
+              "id": "label-content-name-mismatch",
+              "nodes": 1
+            }
+          ]
+        },
+        {
+          "id": "cursor-particle-emitter",
+          "width": 390,
+          "theme": "light",
+          "violations": [
+            {
+              "id": "label-content-name-mismatch",
+              "nodes": 1
+            }
+          ]
+        }
+      ],
+      "policy": "Every raw rule result remains, including all incomplete nodes and the four Emitter label-content-name-mismatch flags. This palette review does not close those naming flags.",
+      "evidence": {
+        "file": ".artifacts/final-cursor-palettes-v52/raw-axe/report.json",
+        "sha256": "e3dfd6e56aa977f209209f1cba9fdb6dfef0cdd5a24fed5511bb14d283097c43"
+      }
+    },
+    "mandatory": {
+      "registry": "520 pass",
+      "stageStrict": "520 metadata; zero chrome/control debt",
+      "generated": "1568 artifacts current",
+      "motionStrict": "520; zero violations",
+      "library": {
+        "checks": 668,
+        "previews": 520,
+        "exports": 100,
+        "errors": []
+      },
+      "stageFit": {
+        "total": 520,
+        "failed": 0,
+        "missingDesignSize": 0,
+        "overflow": 0,
+        "hscroll": 0,
+        "tinyText": 0,
+        "lowFill": 0,
+        "lowFillExceptions": 163,
+        "invalidExceptions": 0
+      },
+      "package": "9 CLI/MCP tests pass",
+      "browserObservation": {
+        "file": ".artifacts/final-cursor-palettes-v52/mandatory-browser-observation.json",
+        "sha256": "0462ef69454107bc17a796aac0ac50f44173ea5a4391d0ad2828fd90d7645d21"
+      },
+      "logs": [
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-registry.log",
+          "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-stage.log",
+          "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-generated.log",
+          "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-motion.log",
+          "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-package.log",
+          "sha256": "64f6b4a4251ae3b7069a489ae336f89191b7576a54c3fb8b59e2b44a68242b63"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-verify-library.log",
+          "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+        },
+        {
+          "file": ".artifacts/final-cursor-palettes-v52/required-audit-stage-fit.log",
+          "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+        }
+      ]
+    },
+    "existingRegressionSuites": [
+      {
+        "file": "tools/verify-cursor-core.js",
+        "started": "2026-11-26T04:18:05.586Z",
+        "finished": "2026-11-26T04:24:19.390Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/regress-core.log",
+          "sha256": "6c38afabf7abae9b144b02732d474b7f44766a1f40db8a31f3832707dbbdd903"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-classic.js",
+        "started": "2026-11-26T04:31:37.853Z",
+        "finished": "2026-11-26T04:37:33.802Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/regress-rest-classic.log",
+          "sha256": "9af35ced315443dac302df6bce0684ea5c2e89af0f8879e5a82ff775bccc92db"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-fields.js",
+        "started": "2026-11-26T04:37:33.804Z",
+        "finished": "2026-11-26T04:41:46.891Z",
+        "status": 1,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/regress-rest-fields.log",
+          "sha256": "1dac9798897c53c2ccb0ec2241f002a23400cacc4f699008f32edaa901fce30e"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-motion.js",
+        "started": "2026-11-26T04:44:59.819Z",
+        "finished": "2026-11-26T04:46:14.592Z",
+        "status": 1,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-motion.log",
+          "sha256": "b4cef4cdc5a04a60769b1c759d62550f80d1092b24bcbf92e56528fba8e4ddfb"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-targets.js",
+        "started": "2026-11-26T04:46:14.592Z",
+        "finished": "2026-11-26T04:46:21.215Z",
+        "status": 1,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-targets.log",
+          "sha256": "726ef51a52d1c2e161a165904263eaff9660bf5c15efeb3467bc1a8d964c1056"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-final.js",
+        "started": "2026-11-26T04:46:21.216Z",
+        "finished": "2026-11-26T04:49:23.419Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-final.log",
+          "sha256": "c95b73eaf6af0546294caf262ecdb0d08a8b73c8851c5f6caf9a94e02717237a"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext.js",
+        "started": "2026-11-26T04:49:23.420Z",
+        "finished": "2026-11-26T04:49:28.788Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext.log",
+          "sha256": "0a25123666a972c5c36adfa6058434811e776471564f7f98073d2868e7863314"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-models.js",
+        "started": "2026-11-26T04:49:28.789Z",
+        "finished": "2026-11-26T04:49:33.211Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-models.log",
+          "sha256": "ce9163e7031df5770b05085afb72b8c9c11bd170256ef1170045b5b816c8f52b"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-input.js",
+        "started": "2026-11-26T04:49:33.212Z",
+        "finished": "2026-11-26T04:49:39.997Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-input.log",
+          "sha256": "0c53dc60e417e43069e3cb6d85d9ac98cb727c9d9ead3365a29356b19c7ce464"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-clocks.js",
+        "started": "2026-11-26T04:49:39.998Z",
+        "finished": "2026-11-26T04:50:03.978Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-clocks.log",
+          "sha256": "1d8d7730f178b01c9407d93a6d458ed1a0023427f2b1782cda20c805ba10a831"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-exports.js",
+        "started": "2026-11-26T04:50:03.979Z",
+        "finished": "2026-11-26T04:50:10.891Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-exports.log",
+          "sha256": "fafdbb041e94fa44ea299e4413de2edf0c4425baf1569605ad1eb3af74476efe"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-holds.js",
+        "started": "2026-11-26T04:50:10.892Z",
+        "finished": "2026-11-26T04:50:19.560Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-holds.log",
+          "sha256": "414bb7e35c125d5c78510602a1293953c6c3a8b55ff4895d195ae68ad5d1136c"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-touch.js",
+        "started": "2026-11-26T04:50:19.561Z",
+        "finished": "2026-11-26T04:50:33.459Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-touch.log",
+          "sha256": "e0f927b431df6c7ec7b629863a0456d24f93a7fc0b220309c7537cb1a1735406"
+        }
+      },
+      {
+        "file": "tools/verify-cursor-ext-pixels.js",
+        "started": "2026-11-26T04:50:33.460Z",
+        "finished": "2026-11-26T04:50:42.257Z",
+        "status": 0,
+        "signal": null,
+        "log": {
+          "file": ".artifacts/final-cursor-palettes-v52/finish-verify-cursor-ext-pixels.log",
+          "sha256": "eed3cc4529902f20933e57c5d26c6f0fae69df90580069584e13b9c6c54275fb"
+        }
+      }
+    ],
+    "portableFailure": {
+      "initial": {
+        "file": ".artifacts/final-cursor-palettes-v52/regress-classic.log",
+        "sha256": "a68ffbd0f2f04fd3b6199234ec6339394134188e32be9cfbf10eb024c4bd75dd"
+      },
+      "diagnostic": {
+        "file": ".artifacts/final-cursor-palettes-v52/spotlight-feedback.json",
+        "sha256": "592696547011e2938624dd8f349cb5805429ef1902b0236b6dc6b4b9cc0244cf"
+      },
+      "scope": "The initial parallel Classic portable run failed its unchanged 350ms reduced-feedback observation. Original/current Spotlight exports both later settle at that observation in the isolated diagnostic. The complete unchanged Classic command is repeated after the palette workers finish. Keep the failure; no assertion, timeout or product model is changed. These observations do not prove a global frame-time bound or establish the exact cause of the initial failure."
+    },
+    "matrices": [
+      {
+        "file": ".artifacts/final-cursor-palettes-v52/matrix-1/2026-11-26T04-17-06-338Z/report.json",
+        "sha256": "14f012b66ee1f9e6d786a7f536d59a38ccea816d2e8d25569e2d22ec332e6a3a"
+      },
+      {
+        "file": ".artifacts/final-cursor-palettes-v52/matrix-2/2026-11-26T04-17-06-545Z/report.json",
+        "sha256": "e238e8ac3c2a83ba5dd5d7780b6c1312d01d1099cf6ce98f44a56bb32f75283c"
+      },
+      {
+        "file": ".artifacts/final-cursor-palettes-v52/matrix-3/2026-11-26T04-17-06-344Z/report.json",
+        "sha256": "cae2dcb9f411871db30d5e6827aa597c0cdb032eb23a76ca3a90715a28e57d3a"
+      }
+    ],
+    "visual": {
+      "file": ".artifacts/final-cursor-palettes-v52/visual.json",
+      "sha256": "8cca00a5d4dd45e8251beddee9ff140c0c2ca437acc7b8d753eb28b7b19addbb"
+    },
+    "fieldsPortableDiagnostic": {
+      "file": ".artifacts/final-cursor-palettes-v52/fields-portable-diagnostic.cjs",
+      "started": "2026-11-26T04:44:27.629Z",
+      "finished": "2026-11-26T04:44:59.818Z",
+      "status": 0,
+      "signal": null,
+      "log": {
+        "file": ".artifacts/final-cursor-palettes-v52/finish-fields-portable-diagnostic.log",
+        "sha256": "0645697d3c48cc291d2c2de856ea8d181286475505e6302cb5f949ebc8e5c1d9"
+      },
+      "publishedExportIdentity": {
+        "file": ".artifacts/final-cursor-palettes-v52/fields-published-exports.json",
+        "sha256": "9e65678ff77bf722d7c83066531c981a260621667f91455c5a4af4b8bd82626c"
+      },
+      "scope": "The unchanged Fields command passes models, artwork, input, paint and theme checks, then fails its original 180ms reduced-feedback observation. The diagnostic compiles that same portable file with only a log after its existing sample; every assertion and wait duration stays unchanged. All 1,666 portable checks pass in that diagnostic. Every affected standalone HTML and complete definition is identical to the pushed baseline. Keep the failed command and diagnostic separate; this is not a global timing acceptance claim."
+    },
+    "motionPortableDiagnostic": {
+      "name": "motion-portable-diagnostic",
+      "args": [
+        ".artifacts/final-cursor-palettes-v52/motion-portable-diagnostic.cjs"
+      ],
+      "started": "2026-11-26T04:51:18.651Z",
+      "finished": "2026-11-26T04:51:41.722Z",
+      "status": 1,
+      "signal": null,
+      "log": {
+        "file": ".artifacts/final-cursor-palettes-v52/motion-portable-diagnostic.log",
+        "sha256": "6c46b98968636cbeaef70e802e0ac1825c82c34307de46e2627f5022de3df8ff"
+      },
+      "publishedExportIdentity": {
+        "file": ".artifacts/final-cursor-palettes-v52/motion-published-exports.json",
+        "sha256": "5d0cd7c1378a1d16895501bde1478c022b496f1c418c87fb756d1a185e6c6118"
+      },
+      "scope": "The unchanged Motion command passes models, artwork and input, then fails its original 200ms reduced-feedback observation. Diagnostic logging retains the same failure: native Metaball has advanced only 13.2ms of source time and still owns a feedback frame. All four complete definitions and standalone HTML bytes equal the pushed baseline. No assertion or wait changes; this timing gate remains open."
+    },
+    "targetsSoftware": {
+      "raster": "--disable-gpu",
+      "scope": "All five original Targets subchecks pass with every original assertion and fixed reference hash unchanged. Default-GPU reference failure remains retained separately; no cross-backend pixel or presentation certificate.",
+      "checks": 79116,
+      "cases": [
+        {
+          "name": "targets-software-models",
+          "args": [
+            ".artifacts/final-cursor-palettes-v52/software-check.cjs",
+            "tools/verification/cursor-targets-models.js"
+          ],
+          "started": "2026-11-26T04:51:41.727Z",
+          "finished": "2026-11-26T04:51:52.548Z",
+          "status": 0,
+          "signal": null,
+          "log": {
+            "file": ".artifacts/final-cursor-palettes-v52/targets-software-models.log",
+            "sha256": "a17f810d2d1baaf4b274ee652f30880f88214efd817a000bc09d85b40d75eda5"
+          }
+        },
+        {
+          "name": "targets-software-artwork",
+          "args": [
+            ".artifacts/final-cursor-palettes-v52/software-check.cjs",
+            "tools/verification/cursor-targets-artwork.js"
+          ],
+          "started": "2026-11-26T04:51:52.549Z",
+          "finished": "2026-11-26T04:52:04.405Z",
+          "status": 0,
+          "signal": null,
+          "log": {
+            "file": ".artifacts/final-cursor-palettes-v52/targets-software-artwork.log",
+            "sha256": "4735a36e2a5440724cc7a4a63a6bfe185163f3cfab56f9ce5ec7df240d3212d4"
+          }
+        },
+        {
+          "name": "targets-software-input",
+          "args": [
+            ".artifacts/final-cursor-palettes-v52/software-check.cjs",
+            "tools/verification/cursor-targets-input.js"
+          ],
+          "started": "2026-11-26T04:52:04.406Z",
+          "finished": "2026-11-26T04:52:17.462Z",
+          "status": 0,
+          "signal": null,
+          "log": {
+            "file": ".artifacts/final-cursor-palettes-v52/targets-software-input.log",
+            "sha256": "ec8c07afc8d465e4b47d9808d826b818baafe8b1457b51f049fc3b98223a5515"
+          }
+        },
+        {
+          "name": "targets-software-portable",
+          "args": [
+            ".artifacts/final-cursor-palettes-v52/software-check.cjs",
+            "tools/verification/cursor-targets-portable.js"
+          ],
+          "started": "2026-11-26T04:52:17.463Z",
+          "finished": "2026-11-26T04:52:46.096Z",
+          "status": 0,
+          "signal": null,
+          "log": {
+            "file": ".artifacts/final-cursor-palettes-v52/targets-software-portable.log",
+            "sha256": "0722a9c0a1eb4f785b66ec5d9de775f325439fd876f340cf0acd88fe8905eb7c"
+          }
+        },
+        {
+          "name": "targets-software-rendering",
+          "args": [
+            ".artifacts/final-cursor-palettes-v52/software-check.cjs",
+            "tools/verification/cursor-targets-rendering.js"
+          ],
+          "started": "2026-11-26T04:52:46.097Z",
+          "finished": "2026-11-26T04:52:52.886Z",
+          "status": 0,
+          "signal": null,
+          "log": {
+            "file": ".artifacts/final-cursor-palettes-v52/targets-software-rendering.log",
+            "sha256": "ff64883ad4ec1c910c27c4394e7d793b37c32a01fcf448a73a5aeca4c93555e3"
+          }
+        }
+      ]
+    },
+    "defaultGPUGrain": {
+      "scope": "Default-GPU original/current Flashlight: identical raw noise bytes and exact same-engine Canvas put/readback across twenty seeds, plus actual held initial grain pixels. The old engine-specific reference hash failure remains separate; no fixture or tolerance changes.",
+      "cases": 4,
+      "seedPairs": 80,
+      "bytesPerSeed": 32768,
+      "exactRawAndCanvasChannels": true,
+      "evidence": {
+        "file": ".artifacts/final-cursor-palettes-v52/grain-pair.json",
+        "sha256": "ce63cf08ab095807d5f70a8aea48ac5dcfb5bb781b3384b1f49d4526d8160261"
+      }
+    },
+    "visualReview": {
+      "file": ".artifacts/final-cursor-palettes-v52/visual-review.json",
+      "sha256": "f9726c9c099ca3c9f3198af7e614edf8af547beb3c8e47e9709b29661eb8e525"
+    }
+  },
+  "remaining": [
+    "Emitter accessible-name flags and every raw incomplete result need review.",
+    "Complete photographic/non-text contrast and transition-state accessibility remain open.",
+    "Catalog-wide final accessibility, complete cold routes and CPU4 frame-rate acceptance remain open.",
+    "Native Metaball reduced feedback misses the original 200ms wall-time observation with only 13.2ms source time advanced. The unchanged published export has the same program; timing acceptance remains open.",
+    "Retain the original Fields settling failure and default-GPU Flashlight fixed-hash failure alongside the diagnostic and explicit-software observations; do not describe all fourteen original commands as passing."
+  ],
+  "evidencePolicy": "After publication, V52 private helpers, inputs, captures and reports become read/copy only through FROZEN.json. Keep all earlier frozen collections unchanged."
+}

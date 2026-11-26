@@ -24,6 +24,37 @@ gzip measurements likewise do not establish the browser delay's cause. No
 production optimization is shipped from these diagnostics. Complete route,
 CPU4 and broader accessibility acceptance remain open.
 
+The [Cursor palette review](accessibility/cursor-palettes-2026-11-26.json)
+repairs eleven full light compositions and checks all twenty-seven Cursor demos.
+Every original HTML composition, mathematical model, supplied asset and native
+artwork remains. Only Particle Emitter's full light Canvas color endpoints change
+in controllers. Moving-art readouts receive local stable surfaces; retain the
+actual dark Flashlight mask, Gooey's difference blend, Following Label's sibling
+capsule and dark project disclosure, thermal display paint and large HUD graphic.
+Five full dark UI treatments deliberately change. The other twenty-two full dark
+treatments and every native composition retain exact software comparisons.
+
+The focused matrix covers 432 online cases, 108 fresh offline contexts, 304
+literal CSS PNG pairs and twelve separate original/current particle-controller
+pairs. Sixteen default-GPU cases observe actual Canvas setters and painted burst
+pixels. Raw axe retains four Emitter accessible-name flags and 299 incomplete
+nodes; these results remain open. The initial parallel Classic portable failure
+also remains evidence. Original/current isolated Spotlight exports settle at
+the unchanged 350ms observation; neither a product model nor an assertion is
+changed. These bounded checks do not establish a global frame-time bound or
+complete naming, photographic, non-text or transition accessibility acceptance.
+
+The original Fields and Motion portable commands also retain settling-deadline
+failures. Fields passes all 1,666 unchanged portable assertions in a diagnostic
+that logs only after the existing sample. Motion's native Metaball remains at
+13.2ms of source time at its 200ms observation. Every affected complete definition
+and standalone HTML byte is identical to the pushed baseline. This is an open
+timing finding. Targets' fixed grain hash fails in default GPU mode; all five
+unchanged subchecks pass in explicit software mode. Original/current default-GPU
+noise and Canvas readback match exactly across eighty seed pairs and all four
+native/full theme cases. Keep the backend scopes and every original failure;
+do not describe all fourteen original commands as passing.
+
 The [Data & Numbers palette review](accessibility/data-palettes-2026-11-26.json)
 repairs eleven full light compositions and checks four already themed controls.
 All original datasets, HTML, artwork, geometry and interaction models remain.
