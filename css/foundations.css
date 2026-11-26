@@ -151,6 +151,9 @@
 .tile .demo-stage.stage { height:264px;min-height:0; }
 .demo-stage.stage { display:block;position:relative;isolation:isolate;overflow:hidden;background:var(--bg-stage); }
 .stage-content { position:absolute;display:flex;align-items:center;justify-content:center;transform:translateY(-4px); }
+/* The Stage mode exists before the controller marks its root. Keep full-only
+   panes out of that first thumbnail layout and its font requests. */
+:where(.stage[data-mode="thumb"]) .stage-content > :not([data-mode]) > [data-pane="full"] { display:none; }
 .stage-content[data-bleed="true"] { transform:none; }
 .stage-dock { position:absolute;z-index:3;display:flex;justify-content:center;gap:6px;bottom:12px;left:12px;right:12px; }
 .tile .stage-dock { opacity:0;transition:opacity var(--dur-quick) var(--ease-out); }

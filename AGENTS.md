@@ -2481,3 +2481,27 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   complete current-source startup and CPU4 acceptance remain open. V65 private
   helpers, inputs and evidence become read/copy only when its `FROZEN.json` is
   written; preserve every earlier frozen collection.
+
+- The early thumbnail-pane correction is recorded in
+  `docs/performance/home-pane-startup-2026-11-26.json`. The shared CSS hides a
+  declared full pane only before its native controller sets the root mode.
+  Keep that temporary guard; settled native/full layouts and the frozen Stage
+  implementation retain their original ownership. All 520 complete definitions,
+  approved assets and generated outputs stay unchanged. Run
+  `node tools/verify-initial-stage-pane.js http://127.0.0.1:4173 --software`
+  for 96 literal component PNG/geometry/style pairs across both viewports,
+  matched Stage/shell themes and motion preferences, plus real font-request
+  reversions and exact settled Home shell geometry/styles. Its fixed zero clock
+  is an initial-still test, not performance evidence. Default-renderer Voice Orb
+  has a retained 256-pixel, one-byte halo difference; an earlier software Home
+  pair has a 65-pixel, two-byte header difference. Their causes remain unproven.
+  Whole-Home PNGs are diagnostic; do not claim universal raster identity.
+  Home no longer requests the unused full Inter face. Actual font-use checks
+  identify Inter as preview-only. The budget excludes only those demo fonts and
+  the actual composer SVG assets, retaining its module and every other request.
+  All three current Home observations leave 341,366 bytes under that accounting.
+  Keep every Lighthouse run: Home 91/89/75 and Elastic Tabs 100/100/90. Home's
+  >=90 gate, complete current-source startup, CPU4/compositor acceptance and
+  broader catalog accessibility remain open. V66/V67 private helpers, inputs
+  and evidence become read/copy only when their `FROZEN.json` files are written;
+  preserve every earlier frozen collection.

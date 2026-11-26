@@ -1,0 +1,765 @@
+{
+  "date": "2026-11-26",
+  "baseline": "540f0d1b80b1cdeefa661e3aa829ae2654557acb",
+  "outcome": "Prevent temporary full-pane layout in native thumbnails. Home no longer downloads the unused full Inter face; current mobile Lighthouse remains below 90 in two recorded Home runs. No all-catalog startup, frame-rate or accessibility acceptance claim.",
+  "productionChanges": [
+    "Three CSS lines hide declared full-only panes only until the native controller sets its own root mode.",
+    "Bump the shared stylesheet query to v5."
+  ],
+  "preservation": {
+    "file": ".artifacts/final-home-startup-v67/preservation.json",
+    "sha256": "004270491dec532c12108d7a4b47b5ce485102a91d856f4b93a066ff6d95a48d",
+    "completeDefinitionsUnchanged": 520,
+    "approvedAssetsChanged": 0,
+    "frozenInputsUnchanged": true,
+    "generatedArtifactsChanged": 0
+  },
+  "pane": {
+    "file": ".artifacts/final-home-startup-v67/pane-verification/2026-11-26T11-54-10-645Z/report.json",
+    "sha256": "3127f9079240fa8a42d3294a7f0347e1c2e103f6bef9030d1f74d0a0f493c65f",
+    "browser": "158.0.8127.88",
+    "raster": "Explicit --disable-gpu for literal pixel comparisons",
+    "checks": 987,
+    "componentComparisons": 96,
+    "dimensions": [
+      1440,
+      390
+    ],
+    "stageAndShellThemes": [
+      "dark",
+      "light"
+    ],
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "modes": [
+      "thumb",
+      "full"
+    ],
+    "literalComponentPNGPairs": 96,
+    "initialFullPaneNegativeControls": 48,
+    "settledGeometryAndStylesExact": true,
+    "homeGeometryAndStylesExact": true,
+    "homePixelDiagnostic": {
+      "exact": false
+    },
+    "actualShellFontFamilies": [
+      "Geist, system-ui, sans-serif",
+      "\"Geist Mono\", ui-monospace, monospace"
+    ],
+    "actualPreviewFontFamily": "Inter, system-ui, sans-serif",
+    "sourceStable": true,
+    "earlierAttempts": [
+      {
+        "file": ".artifacts/final-home-startup-v67/pane-verification/2026-11-26T11-44-42-842Z/report.json",
+        "sha256": "40b069ce4877ab03f950f585b514e2d9d667eaa95c2d7cb2db05fad574b1c5ea",
+        "checks": 110,
+        "completedComparisons": 6,
+        "error": "AssertionError [ERR_ASSERTION]: Settled complete geometry/style agent-image-gen-reveal{\"width\":1440,\"theme\":\"dark\",\"reduced\":false}"
+      },
+      {
+        "file": ".artifacts/final-home-startup-v67/pane-verification/2026-11-26T11-45-48-518Z/report.json",
+        "sha256": "460200c111d166064c483b7e81f32f2439eed0b56e0e96ce341d45f4375e798c",
+        "checks": 469,
+        "completedComparisons": 38,
+        "error": "AssertionError [ERR_ASSERTION]: Literal initial PNG agent-voice-orb thumb {\"width\":1440,\"theme\":\"light\",\"reduced\":true}"
+      },
+      {
+        "file": ".artifacts/final-home-startup-v67/pane-verification/2026-11-26T11-51-08-907Z/report.json",
+        "sha256": "de6f67dac15c4ba5efcba32f89b1123e006133dd6cb8142690ed5531e286e9e9",
+        "checks": 982,
+        "completedComparisons": 96,
+        "error": "AssertionError [ERR_ASSERTION]: Home literal initial PNG"
+      },
+      {
+        "file": ".artifacts/final-home-startup-v67/pane-verification/2026-11-26T11-54-10-645Z/report.json",
+        "sha256": "3127f9079240fa8a42d3294a7f0347e1c2e103f6bef9030d1f74d0a0f493c65f",
+        "checks": 987,
+        "completedComparisons": 96
+      }
+    ],
+    "themeCoupling": "Stage and shell use the same theme in these pairs; this does not cover opposite-theme combinations.",
+    "pixelDifferenceDetails": {
+      "file": ".artifacts/final-home-startup-v67/pixel-differences.json",
+      "sha256": "862eef034ad4500401fe61b8f28d279c87cf6447d567e6836419062b5bed4d4a"
+    },
+    "backendReproducibilityControl": {
+      "file": ".artifacts/final-home-startup-v67/raster-control-1795693770858/report.json",
+      "sha256": "2d5a91e687a498019a3edccace630fe98599ffea3bdac0c490793d5e643a71ba"
+    }
+  },
+  "lighthouse": {
+    "method": "Default Lighthouse mobile/simulated Performance, sequential fresh launches, all runs/outliers retained. No own heavy verification runs concurrently. Other applications and OS caches are not controlled. Home bytes include all recorded transfers with no exclusions; native CPU4 frame rate and actual local cold-route readiness are separate.",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/158.0.0.0 Safari/537.36",
+    "version": "13.6.0",
+    "repeatsPerRoute": 3,
+    "before": {
+      "file": ".artifacts/final-current-lighthouse-v66/2026-11-26T11-35-33-319Z/report.json",
+      "sha256": "71864fd7145c22599c2d274a109a4ad39baefa821fc3ab864830ebbefc07bb04",
+      "cases": [
+        {
+          "id": "home",
+          "repeat": 1,
+          "score": 0.62,
+          "allTransferredBytes": 573203,
+          "metrics": {
+            "first-contentful-paint": 908.4341999999999,
+            "largest-contentful-paint": 4587.651299999999,
+            "speed-index": 2492.9781329819807,
+            "total-blocking-time": 969.7828999999999,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "/assets/fonts/inter-variable.woff2",
+              "bytes": 157849
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 1,
+          "score": 1,
+          "allTransferredBytes": 412406,
+          "metrics": {
+            "first-contentful-paint": 904.5378000000001,
+            "largest-contentful-paint": 904.5378000000001,
+            "speed-index": 1686.7488520327158,
+            "total-blocking-time": 23.5,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 2,
+          "score": 0.91,
+          "allTransferredBytes": 573203,
+          "metrics": {
+            "first-contentful-paint": 978.5037,
+            "largest-contentful-paint": 978.5037,
+            "speed-index": 2376.1826542702174,
+            "total-blocking-time": 361.7481500000001,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "/assets/fonts/inter-variable.woff2",
+              "bytes": 157849
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 2,
+          "score": 1,
+          "allTransferredBytes": 412406,
+          "metrics": {
+            "first-contentful-paint": 1009.3708999999999,
+            "largest-contentful-paint": 1009.3708999999999,
+            "speed-index": 1720.9098256926259,
+            "total-blocking-time": 39.5,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 3,
+          "score": 0.87,
+          "allTransferredBytes": 573203,
+          "metrics": {
+            "first-contentful-paint": 905.8853999999999,
+            "largest-contentful-paint": 905.8853999999999,
+            "speed-index": 2445.3707261765876,
+            "total-blocking-time": 513,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            },
+            {
+              "url": "/assets/fonts/inter-variable.woff2",
+              "bytes": 157849
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 3,
+          "score": 1,
+          "allTransferredBytes": 412406,
+          "metrics": {
+            "first-contentful-paint": 903.4676999999999,
+            "largest-contentful-paint": 903.4676999999999,
+            "speed-index": 1461.6141196888295,
+            "total-blocking-time": 16.5,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "after": {
+      "file": ".artifacts/final-home-startup-v67/lighthouse-after/2026-11-26T11-42-48-913Z/report.json",
+      "sha256": "1c07d651c39ecbfa1a02034408ef9fa37da3a6231e55bce99146e6c58a6bddb6",
+      "cases": [
+        {
+          "id": "home",
+          "repeat": 1,
+          "score": 0.91,
+          "allTransferredBytes": 415470,
+          "metrics": {
+            "first-contentful-paint": 904.3436999999999,
+            "largest-contentful-paint": 904.3436999999999,
+            "speed-index": 1913.778770045453,
+            "total-blocking-time": 381.3281499999998,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 1,
+          "score": 1,
+          "allTransferredBytes": 412522,
+          "metrics": {
+            "first-contentful-paint": 989.4244000000001,
+            "largest-contentful-paint": 989.4244000000001,
+            "speed-index": 1581.2995317291993,
+            "total-blocking-time": 28,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 2,
+          "score": 0.89,
+          "allTransferredBytes": 415470,
+          "metrics": {
+            "first-contentful-paint": 974.6053999999999,
+            "largest-contentful-paint": 974.6053999999999,
+            "speed-index": 2001.1781747557793,
+            "total-blocking-time": 439.69730000000004,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 2,
+          "score": 1,
+          "allTransferredBytes": 412522,
+          "metrics": {
+            "first-contentful-paint": 1040.1034,
+            "largest-contentful-paint": 1040.1034,
+            "speed-index": 1530.087839692445,
+            "total-blocking-time": 36,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "home",
+          "repeat": 3,
+          "score": 0.75,
+          "allTransferredBytes": 415470,
+          "metrics": {
+            "first-contentful-paint": 990.3495,
+            "largest-contentful-paint": 990.3495,
+            "speed-index": 2527.654379183625,
+            "total-blocking-time": 1336.32525,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "id": "elastic-tabs",
+          "repeat": 3,
+          "score": 0.9,
+          "allTransferredBytes": 412522,
+          "metrics": {
+            "first-contentful-paint": 992.8443,
+            "largest-contentful-paint": 3680.7664499999987,
+            "speed-index": 1498.7671522317023,
+            "total-blocking-time": 52,
+            "cumulative-layout-shift": 0
+          },
+          "fonts": [
+            {
+              "url": "/assets/fonts/geist-variable.woff2",
+              "bytes": 69960
+            },
+            {
+              "url": "/assets/fonts/geist-mono-variable.woff2",
+              "bytes": 71796
+            },
+            {
+              "url": "/assets/fonts/inter-latin-variable.woff2",
+              "bytes": 73120
+            }
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    "allCurrentScoresAtLeast90": false,
+    "unusedFullInterRequestBytes": 157849,
+    "homeAllTransferReductionBytes": 157733,
+    "interpretation": "Sequential observations, not an ABBA experiment. Other applications and OS caches are uncontrolled. All runs and outliers are retained. Deterministic resource removal is verified separately; score variation does not establish a stable latency improvement."
+  },
+  "homeBudget": {
+    "method": "Apply Handoff 3 excluding demo assets conservatively: remove only the actual composer assetRefs and its Inter font requests. Keep the demo registration script and every other request in the count. The separate browser check confirms actual preview Inter use and no Inter family in the shell text. No photo or generic shared resource is silently excluded.",
+    "before": [
+      {
+        "repeat": 1,
+        "allTransferredBytes": 573203,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/fonts/inter-variable.woff2",
+            "bytes": 157849
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341250,
+        "under400000": true
+      },
+      {
+        "repeat": 2,
+        "allTransferredBytes": 573203,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/fonts/inter-variable.woff2",
+            "bytes": 157849
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341250,
+        "under400000": true
+      },
+      {
+        "repeat": 3,
+        "allTransferredBytes": 573203,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/fonts/inter-variable.woff2",
+            "bytes": 157849
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341250,
+        "under400000": true
+      }
+    ],
+    "after": [
+      {
+        "repeat": 1,
+        "allTransferredBytes": 415470,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341366,
+        "under400000": true
+      },
+      {
+        "repeat": 2,
+        "allTransferredBytes": 415470,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341366,
+        "under400000": true
+      },
+      {
+        "repeat": 3,
+        "allTransferredBytes": 415470,
+        "excludedDemoAssets": [
+          {
+            "url": "/assets/fonts/inter-latin-variable.woff2",
+            "bytes": 73120
+          },
+          {
+            "url": "/assets/components/agents-new/composer-attach.svg",
+            "bytes": 490
+          },
+          {
+            "url": "/assets/components/agents-new/composer-send.svg",
+            "bytes": 494
+          }
+        ],
+        "remainingBytesIncludingDemoModule": 341366,
+        "under400000": true
+      }
+    ]
+  },
+  "checks": {
+    "file": ".artifacts/final-home-startup-v67/checks-1795694183320/report.json",
+    "sha256": "87db66118bd6d27df2c1190dba478b2d04ef0a953d371711b1026735434a26e1",
+    "rows": [
+      {
+        "name": "registry",
+        "args": [
+          "tools/verify-registry.js"
+        ],
+        "started": "2026-11-26T11:56:23.340Z",
+        "finished": "2026-11-26T11:56:26.986Z",
+        "code": 0,
+        "file": "registry.log",
+        "sha256": "979537466addceb27936b09f2318d57e89d16cbbc0983a2aa62788d721ff9cc2"
+      },
+      {
+        "name": "stage",
+        "args": [
+          "tools/verify-stage.js",
+          "--strict"
+        ],
+        "started": "2026-11-26T11:56:26.991Z",
+        "finished": "2026-11-26T11:56:29.312Z",
+        "code": 0,
+        "file": "stage.log",
+        "sha256": "10f704ed6868a846517150697cbbf0205929b5b1a0a4785463ba40d3417049f5"
+      },
+      {
+        "name": "generated",
+        "args": [
+          "tools/build-registry.js",
+          "--check"
+        ],
+        "started": "2026-11-26T11:56:29.316Z",
+        "finished": "2026-11-26T11:56:56.306Z",
+        "code": 0,
+        "file": "generated.log",
+        "sha256": "b64abba34ff2e5856d466af21625508e238c50a277159b554ccfc277c3af873d"
+      },
+      {
+        "name": "motion",
+        "args": [
+          "tools/verify-motion.js",
+          "--strict"
+        ],
+        "started": "2026-11-26T11:56:56.311Z",
+        "finished": "2026-11-26T11:56:57.699Z",
+        "code": 0,
+        "file": "motion.log",
+        "sha256": "185bd7a270e192599efb49c57e68fa4cdfc0a784b64bda1d304879bbaf1f44c7"
+      },
+      {
+        "name": "package",
+        "args": [
+          "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+          "test",
+          "--prefix",
+          "packages/intrx"
+        ],
+        "started": "2026-11-26T11:56:57.703Z",
+        "finished": "2026-11-26T11:57:10.599Z",
+        "code": 0,
+        "file": "package.log",
+        "sha256": "7263e3b758adf230fe357f9915870d46673d44bb38314dabaad8eb1bdfbe39b5"
+      },
+      {
+        "name": "runtime-shell",
+        "args": [
+          "--test",
+          "tools/runtime.test.js",
+          "tools/shell.test.js"
+        ],
+        "started": "2026-11-26T11:57:10.603Z",
+        "finished": "2026-11-26T11:57:12.844Z",
+        "code": 0,
+        "file": "runtime-shell.log",
+        "sha256": "b0baa923df60a4acd4c2ca31904c13507ba8dfb3841e5084576b5c39ec43e1b0"
+      },
+      {
+        "name": "stage-runtime",
+        "args": [
+          "tools/verify-stage-runtime.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T11:57:12.851Z",
+        "finished": "2026-11-26T11:57:35.206Z",
+        "code": 0,
+        "file": "stage-runtime.log",
+        "sha256": "aabbceded27b614d721c990fd14663dd6319e6ca3453181a06742605aff6115b"
+      },
+      {
+        "name": "agents-new",
+        "args": [
+          "tools/verify-agents-new.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T11:57:35.210Z",
+        "finished": "2026-11-26T11:58:05.478Z",
+        "code": 0,
+        "file": "agents-new.log",
+        "sha256": "ceb92fe4ab08765082ae4175a2f697cd6abe10f7123dd8e3f9e04fde74f4c0df"
+      },
+      {
+        "name": "library",
+        "args": [
+          "tools/verify-library.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T11:58:05.482Z",
+        "finished": "2026-11-26T12:06:06.182Z",
+        "code": 0,
+        "file": "library.log",
+        "sha256": "d231059fba0ed1684df07f3ca76474d73a16c65ee2302c6b542f37dc04df01aa"
+      },
+      {
+        "name": "fit",
+        "args": [
+          "tools/audit-stage-fit.js",
+          "http://127.0.0.1:4173"
+        ],
+        "started": "2026-11-26T12:06:06.188Z",
+        "finished": "2026-11-26T12:12:23.813Z",
+        "code": 0,
+        "file": "fit.log",
+        "sha256": "ac33615aeb38de47b98fb1a487f38e079daa263de701cdc16dda32a90ebf2dbe"
+      }
+    ]
+  },
+  "remaining": [
+    "Home mobile Lighthouse is 91/89/75 in the current collection; the >=90 gate remains open.",
+    "Complete current-source catalog cold/warm startup and the <300ms gate remain open.",
+    "Native CPU4 frame-rate/compositor acceptance, including Reactive Threads, remains open.",
+    "Broader catalog accessibility/contrast incomplete review remains open.",
+    "Default-renderer Voice Orb native light reduced comparison differs at 256 halo pixels by at most one RGB byte. Four isolated unchanged-CSS captures were identical on each tested backend; that does not prove the cause. Preserve the failed pair.",
+    "The earlier software whole-Home comparison differs at 65 header pixels by at most two RGB bytes. Home component pixels, shell geometry/styles, asset files and font requests have separate explicit checks; do not claim whole-page pixel identity."
+  ],
+  "inputSnapshots": {
+    "file": ".artifacts/final-home-startup-v67/input-index.json",
+    "sha256": "4eff71137e40b216bb3b4d2c5fb92243730bfa8e6da294d87904b69025300982"
+  },
+  "archives": [
+    {
+      "root": ".artifacts/final-current-lighthouse-v66",
+      "file": ".artifacts/final-current-lighthouse-v66/FROZEN.json",
+      "files": 25,
+      "sha256": "86dcb0640ff1c1553aa6bd31007149eac04151531108e3f93a5849f89b87af62"
+    },
+    {
+      "root": ".artifacts/final-home-startup-v67",
+      "file": ".artifacts/final-home-startup-v67/FROZEN.json",
+      "files": 610,
+      "sha256": "96d3b7218dc6f5e50de4122708dd446de9ef29abb2f2ffbde27a3a693500c55f"
+    },
+    {
+      "root": ".artifacts/final-home-startup-results-v67",
+      "file": ".artifacts/final-home-startup-results-v67/FROZEN.json",
+      "files": 16,
+      "sha256": "5d1f1825f03f8785570fce1d0c2b3c5bf8f3e480d8cebdfc3ff8cea4e0cb0eda"
+    }
+  ],
+  "rawVerificationEvidence": {
+    "file": ".artifacts/final-home-startup-results-v67/index.json",
+    "sha256": "677a4e3292e9dbd52d9a843c4993b0134f56a5b60b79447bf10ba92a4ceeb9fc"
+  }
+}
