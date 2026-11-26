@@ -1,0 +1,455 @@
+{
+  "date": "2026-11-26",
+  "baseline": "9268731de838e656dfe8014b770e90c297f48966",
+  "outcome": "The four retained name flags are reconciled for the tested full-view states: actual Chrome names contain the explicitly reviewed primary phrases. All raw scanner flags remain recorded. No product definition changes are made.",
+  "scope": "Four reviewed full-view primary labels: actual Chrome AX names, retained unmodified axe label-rule results plus a separate trace check, source paint-layer metadata, real focus/Enter and held/resumed relative input. Desktop/compact, both Stage themes and motion preferences, including fresh blocked-network full exports. Main phrases are selected explicitly using the existing reviewed composition; supporting captions and overlapping paint copies are recorded separately. This does not test speech-recognition software, all transition frames, native thumbnails or catalog-wide WCAG conformance.",
+  "criteria": {
+    "wcag": {
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "application": "Identify the visible primary label before comparing it with the accessible name. Supporting context is assessed separately. This is the same primary-label interpretation documented in the earlier visible-name review."
+    },
+    "act": {
+      "url": "https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/proposed/",
+      "status": "Proposed ACT rule; used to explain automated assumptions, not as an additional conformance certificate.",
+      "application": "Its visible-inner-text assumptions need review for layered copies and CSS layout. Raw collection and actual Chrome names are preserved separately."
+    }
+  },
+  "preservation": {
+    "unchangedCompleteDefinitions": 520,
+    "unchangedGeneratedOutput": true,
+    "sourceAssetsChanged": false,
+    "frozenV1Changed": false,
+    "newSiteDependencies": 0,
+    "baselineDefinitions": {
+      "file": ".artifacts/final-name-review-v49/baseline.json",
+      "sha256": "ea6f764e05914dc05d77ada6f15b761d39845b0a5f4023dbaa922081bbdf7089"
+    }
+  },
+  "verification": {
+    "browser": "158.0.8127.88",
+    "axe": {
+      "file": "C:/Users/tanzir/AppData/Local/npm-cache/_npx/c6ed34f1783ab9ca/node_modules/axe-core/axe.min.js",
+      "sha256": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+      "version": "4.14.1"
+    },
+    "online": 32,
+    "offline": 16,
+    "observations": 252,
+    "rawNameFlags": 246,
+    "currentRun": {
+      "file": ".artifacts/final-name-review-v49/current/2026-11-26T02-11-02-448Z/report.json",
+      "sha256": "b56b2013106181402f87eda13d47ba6eac57fa34fab2c3fd49f0a1c93fefaefb"
+    },
+    "primaryLabelAssertions": 252,
+    "browserAxeNameAgreementAssertions": 252,
+    "components": [
+      {
+        "id": "text-scramble",
+        "reason": "The main phrase is the reviewed primary label. The smaller studio caption supplies context; the collector joins it to the phrase without a separating space.",
+        "online": 8,
+        "offline": 4,
+        "observations": 96,
+        "primaryLabels": [
+          "Ideas into form",
+          "Make it matter",
+          "Move with purpose",
+          "Keep exploring"
+        ],
+        "actualNames": [
+          "Decode text: Ideas into form",
+          "Decode text: Make it matter",
+          "Decode text: Move with purpose",
+          "Decode text: Keep exploring"
+        ],
+        "rawNameFlags": 96,
+        "collectorExample": {
+          "phase": "initial",
+          "visible": "A studio in motionIdeas into form",
+          "accessible": "Decode text: Ideas into form",
+          "primary": "Ideas into form",
+          "layers": [
+            {
+              "text": "Ideas into form",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": false
+            },
+            {
+              "text": "",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "text-outline-fill-scroll",
+        "reason": "Outline and masked fill copies paint one two-line phrase. The collector may report either one phrase or both copies, depending on the painted fill state.",
+        "online": 8,
+        "offline": 4,
+        "observations": 60,
+        "primaryLabels": [
+          "SOLID SIGNAL"
+        ],
+        "actualNames": [
+          "Solid Signal"
+        ],
+        "rawNameFlags": 54,
+        "collectorExample": {
+          "phase": "activated",
+          "visible": "SOLID SIGNALSOLID SIGNAL",
+          "accessible": "Solid Signal",
+          "primary": "SOLID\nSIGNAL",
+          "layers": [
+            {
+              "text": "SOLID\nSIGNAL",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "SOLID\nSIGNAL",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "text-glitch-layers",
+        "reason": "Three clipped/color channels paint one phrase. The collector concatenates their text even though they belong to one visual composition.",
+        "online": 8,
+        "offline": 4,
+        "observations": 36,
+        "primaryLabels": [
+          "SIGNAL LOST"
+        ],
+        "actualNames": [
+          "SIGNAL LOST. Activate to glitch the text."
+        ],
+        "rawNameFlags": 36,
+        "collectorExample": {
+          "phase": "activated",
+          "visible": "SIGNAL LOSTSIGNAL LOSTSIGNAL LOST",
+          "accessible": "SIGNAL LOST. Activate to glitch the text.",
+          "primary": "SIGNAL\nLOST",
+          "layers": [
+            {
+              "text": "SIGNAL\nLOST",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "SIGNAL\nLOST",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "SIGNAL\nLOST",
+              "clip": "none",
+              "parentClip": "none",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "text-broken-grid",
+        "reason": "Six clipped fragments paint one phrase. The collector concatenates the copied text from the fragments.",
+        "online": 8,
+        "offline": 4,
+        "observations": 60,
+        "primaryLabels": [
+          "Break the grid."
+        ],
+        "actualNames": [
+          "Break the grid"
+        ],
+        "rawNameFlags": 60,
+        "collectorExample": {
+          "phase": "activated",
+          "visible": "Break the grid.Break the grid.Break the grid.Break the grid.Break the grid.Break the grid.",
+          "accessible": "Break the grid",
+          "primary": "Break\nthe grid.",
+          "layers": [
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(0% 0%, 33.333% 0%, 33.333% 52%, 0% 52%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(33.333% 0%, 66.666% 0%, 66.666% 52%, 33.333% 52%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(66.666% 0%, 100% 0%, 100% 52%, 66.666% 52%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(0% 52%, 33.333% 52%, 33.333% 100%, 0% 100%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(33.333% 52%, 66.666% 52%, 66.666% 100%, 33.333% 100%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            },
+            {
+              "text": "Break\nthe grid.",
+              "clip": "none",
+              "parentClip": "polygon(66.666% 52%, 100% 52%, 100% 100%, 66.666% 100%)",
+              "parentOverflow": "visible",
+              "hiddenFromAX": true
+            }
+          ]
+        }
+      }
+    ],
+    "keyboard": "Every Scramble phrase is exercised, followed by two held Next keys. Painted text/name stay unchanged while held, and resume preserves both relative increments. Outline Fill and Broken Grid keep stable names through a real toggle, held return and resume. Glitch is observed after focus and Enter.",
+    "rawPolicy": "The original axe rule is never disabled, rewritten or filtered. A separate trace check records its collected visible text while the virtual tree exists. The 246 raw name-rule flags from these fixed observations remain in the report.",
+    "requiredCommands": {
+      "file": ".artifacts/final-name-review-v49/required.json",
+      "sha256": "2ec194f68a13be08f180d6e93089f830648bbb0a2fc62e0ab75f294c103d87eb"
+    },
+    "library": {
+      "file": ".artifacts/final-name-review-v49/library-verification.json",
+      "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82",
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "file": ".artifacts/final-name-review-v49/stage-fit.json",
+      "sha256": "7d657246fc1370389496e74fdb71065daecd7300d0811042a2426fbf766b8420",
+      "summary": {
+        "total": 520,
+        "failed": [],
+        "missingDesignSize": 0,
+        "overflow": [],
+        "hscroll": [],
+        "tinyText": [],
+        "lowFill": [],
+        "lowFillExceptions": [
+          "btn-border-beam",
+          "input-float-label",
+          "password-strength-bar",
+          "elastic-tabs",
+          "velocity-skew",
+          "scroll-letter-scatter",
+          "scroll-table-of-contents",
+          "cursor-gooey-blob",
+          "cursor-particle-emitter",
+          "cursor-elastic-line",
+          "cursor-text-repel",
+          "cursor-grid-ripple",
+          "cursor-hover-preview",
+          "cursor-liquid-metaball",
+          "cursor-velocity-stretch",
+          "cursor-snap-targets",
+          "cursor-emoji-rain",
+          "cursor-crosshair-hud",
+          "custom-cursor",
+          "magnetic-button",
+          "image-trail",
+          "text-scramble",
+          "letter-roll",
+          "proximity-type",
+          "stat-counter",
+          "text-wave-hover",
+          "text-typewriter-caret",
+          "text-blur-focus",
+          "text-strike-reveal",
+          "text-ransom-note",
+          "text-glitch-layers",
+          "text-circular-spin",
+          "text-underline-magic",
+          "text-broken-grid",
+          "svg-path-draw-hover",
+          "svg-squiggle-underline",
+          "svg-gooey-menu",
+          "css3d-cube-nav",
+          "voxel-assemble",
+          "spring-cursor-follower",
+          "pendulum-tags",
+          "chain-links",
+          "liquid-blob-buttons",
+          "nav-active-pill",
+          "breadcrumb-collapse",
+          "sidebar-rail-expand",
+          "burger-morph-x",
+          "btn-shimmer-sweep",
+          "btn-text-slide-swap",
+          "btn-icon-hop",
+          "btn-success-morph",
+          "btn-confetti-burst",
+          "btn-ripple-material",
+          "btn-jelly-press",
+          "like-heart-particles",
+          "checkbox-draw-check",
+          "toggle-day-night",
+          "copy-inline-feedback",
+          "badge-notification-pop",
+          "input-underline-grow",
+          "input-shake-error",
+          "input-char-counter-arc",
+          "otp-code-boxes",
+          "range-elastic-thumb",
+          "form-multistep-progress",
+          "preloader-percentage",
+          "preloader-word-cycle",
+          "loader-dots-wave",
+          "loader-morph-shapes",
+          "loader-typing-code",
+          "loader-orbit-dots",
+          "upload-progress-morph",
+          "page-load-counter-slide",
+          "chart-donut-sweep",
+          "fui-target-lock",
+          "fui-access-granted",
+          "agent-token-meter",
+          "agent-deploy-pipeline",
+          "agent-node-graph",
+          "agent-streaming-text",
+          "typing-mechanical",
+          "konami-unlock",
+          "number-input-drag",
+          "dither-bayer",
+          "ascii-donut-3d",
+          "ascii-type-explode",
+          "dot-matrix-shapes",
+          "halftone-globe-canvas",
+          "pixel-lissajous-lab",
+          "chromatic-type",
+          "neumorphic-buttons",
+          "mechanical-switch",
+          "rotary-knob",
+          "flip-clock",
+          "embossed-press",
+          "analog-gauge",
+          "punch-card-keyboard",
+          "zippo-flame",
+          "dynamic-notch",
+          "hover-fill-button",
+          "showcase-pixel-trail",
+          "showcase-tracing-story",
+          "showcase-elastic-slider",
+          "framer-rolling-balance",
+          "drams-003",
+          "drams-005",
+          "drams-009",
+          "drams-020",
+          "drams-021",
+          "drams-022",
+          "drams-002",
+          "drams-012",
+          "drams-034",
+          "drams-040",
+          "drams-010",
+          "drams-044",
+          "drams-008",
+          "drams-011",
+          "drams-016",
+          "drams-017",
+          "drams-019",
+          "drams-025",
+          "drams-032",
+          "drams-014",
+          "drams-018",
+          "drams-023",
+          "drams-024",
+          "drams-026",
+          "drams-028",
+          "drams-030",
+          "drams-035",
+          "drams-037",
+          "drams-039",
+          "drams-042",
+          "micro-smoke-delete",
+          "micro-inline-confirm",
+          "micro-star-rating",
+          "micro-reaction-bar",
+          "micro-shimmer-status",
+          "ui-avatar-stack",
+          "ui-inverse-tabs",
+          "form-slide-to-confirm",
+          "form-precision-scrubber",
+          "data-candlestick-crosshair",
+          "ai-agent-creator",
+          "micro-stateful-button",
+          "micro-hold-to-pay",
+          "micro-share-pill",
+          "micro-icon-swap",
+          "micro-award-badge",
+          "micro-action-swap",
+          "form-vanish-input",
+          "form-magnetic-select",
+          "form-multi-select",
+          "form-inline-edit",
+          "form-liquid-toggle",
+          "ui-feedback-widget",
+          "nav-pagination-morph",
+          "loader-multi-step",
+          "loader-matrix-dots",
+          "play-plinko",
+          "play-slingshot",
+          "play-coin-flip"
+        ],
+        "invalidExceptions": []
+      }
+    }
+  },
+  "earlierEvidence": {
+    "visibleNameReview": {
+      "file": "docs/accessibility/visible-names-2026-11-25.json",
+      "sha256": "1de95dd934218d85d6409aaeaa79c927c2264c691ab38d6e7e708ca215440919"
+    },
+    "paletteReview": {
+      "file": "docs/accessibility/type-palettes-2026-11-26.json",
+      "sha256": "a19358dd28e1589a874ccca81ba1ad23bd65ac5ea0db19b0c763c35817c4821d"
+    },
+    "initialAXProbe": {
+      "file": ".artifacts/final-name-review-v49/probe.json",
+      "sha256": "0d1584c1db73f9447c8e99bc6648eeb6c11126d5c768cf6896f4f396bfeb1c18"
+    },
+    "collectorTrace": {
+      "file": ".artifacts/final-name-review-v49/trace.json",
+      "sha256": "32ba8b0172ba30f66939d7032b5c17eb6cc512e5f2e9876d3ca5af19bccff981"
+    },
+    "relativeIntentProbe": {
+      "file": ".artifacts/final-name-review-v49/relative.json",
+      "sha256": "317118017ef5e13dd7d3e037124ba324910e8ab0595f9ce3aa17aa997bb5c010"
+    },
+    "probeLimit": "The first diagnostic called axe text helpers after its virtual tree had been discarded; that helper error is retained. The accepted run captures the collector inside a separate check during each audit."
+  },
+  "remaining": [
+    "No speech-recognition software or screen-reader product testing is claimed.",
+    "Every transition frame, native name behavior and whole-catalog accessibility still require their own evidence.",
+    "Photographic/manual contrast, complete cold-route startup, final Lighthouse and CPU4 acceptance remain open.",
+    "The two earlier default-GPU repeated-thumbnail failures remain separate from this name review."
+  ]
+}

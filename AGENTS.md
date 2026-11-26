@@ -2220,3 +2220,17 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   These bounded checks leave photographic glyph contrast, whole-catalog
   accessibility, cold startup and CPU4 acceptance open. Never execute or edit
   private V48 helpers, inputs or evidence after its FROZEN.json is written.
+
+- `node tools/verify-type-label-review.js --axe=<external axe.min.js>` is the
+  current full-view regression path for the four retained Scramble, Outline
+  Fill, Glitch Layers and Broken Grid name flags. It matches the explicitly
+  reviewed primary phrases against Chrome's actual AX nodes and retains the
+  unchanged axe rule results. A separate diagnostic check records the scanner's
+  collected text while its virtual tree exists; it never disables or changes
+  the original rule. Keep supporting captions and overlapping/clipped paint
+  copies separate from the reviewed primary phrase. Exercise every Scramble
+  phrase and two held next keys, plus stable toggle names through held return.
+  This review does not certify speech-recognition software, every transition
+  frame, native names or whole-catalog accessibility. Preserve all product
+  definitions and the earlier raw flags. Private V49 helpers/evidence become
+  read/copy only when its FROZEN.json is written.

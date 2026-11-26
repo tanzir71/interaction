@@ -13,9 +13,13 @@ photograph and treatment; its photographic contrast still needs manual review.
 Native and full-dark literal comparisons use recorded software rasterization.
 Default-GPU repeated-thumbnail failures remain separate evidence and do not
 establish a change in the original artwork or close GPU acceptance.
-The unfiltered scan also retains name-mismatch flags for Scramble, Outline Fill,
-Glitch Layers and Broken Grid. Review their dynamic/layered visible text and
-actual accessible names before closing those findings.
+The [current four-name review](accessibility/type-label-review-2026-11-26.json)
+reconciles those retained Scramble, Outline Fill, Glitch Layers and Broken Grid
+flags in the tested full-view states. Actual Chrome names contain their reviewed
+primary phrases. The scanner also collects Scramble's supporting studio caption
+and multiple visual copies in layered compositions. Raw flags remain intact.
+This is a bounded primary-label review, with no product changes or claim about
+speech-recognition software, every transition frame or catalog-wide conformance.
 
 The [Scroll palette and destination review](accessibility/scroll-palettes-2026-11-26.json)
 adds readable full light palettes to twenty Scroll demos. Full dark Text Highlight
