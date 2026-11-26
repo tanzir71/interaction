@@ -2362,3 +2362,23 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   remaining manual accessibility, complete cold routes and CPU4 acceptance.
   V55 private helpers, inputs and evidence become read/copy only when its
   FROZEN.json is written; preserve every earlier frozen collection.
+- The Cube source-clock correction is recorded in
+  docs/performance/cube-clock-2026-11-26.json. Normal 350ms turns and reduced
+  150ms feedback start at the actual Stage event time, including a delayed first
+  paint. Completion wakes re-arm early callbacks, reject stale tokens and cancel
+  on Reset/disposal. They never truncate the original drag spring. Keep its .42
+  drag gain, 24-degree release threshold, 380/32 integration, all four full faces
+  and exact native SVG projections. All 519 other complete definitions and all
+  520 HTML/CSS definitions stay unchanged; eight initial image pairs are literal.
+  Run tools/verify-cube-clock.js for eight controlled cases / 72 stories and eight
+  fresh offline contexts, including source speed and independent caller/viewport
+  holds. The original Perspective core now passes all six groups / 6,015 checks,
+  closing the V55 Cube timing and hidden Dock observations. Compact verifiers
+  open the actual More actions menu; reference geometry pauses before the first
+  frame; native touch measurements await actual delivered coordinates and up.
+  All original assertions, tolerances and wait durations remain unchanged.
+  Six public helpers honor INTRX_CHROME_EXECUTABLE and log the browser version.
+  The seven mandatory checks, nineteen runtime/shell tests and browser lifecycle
+  verifier pass. Manual catalog accessibility, the separate material raster
+  observation, complete cold routes and CPU4 acceptance remain open. V56 private
+  helpers, inputs and evidence become read/copy only when FROZEN.json is written.

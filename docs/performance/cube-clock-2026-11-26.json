@@ -1,0 +1,299 @@
+{
+  "date": "2026-11-26",
+  "baseline": "30e77caacd3adb0d52cd94ffaf0315ace6436fcb",
+  "outcome": "Cube transitions and drag releases consume Stage source time beginning at the actual event. A delayed first renderer frame no longer restarts the motion clock. Finite default 350ms normal and 150ms reduced transitions own cancellable completion wakes; early/stale callbacks, Reset and disposal preserve ownership. Drag springs keep their complete original tails.",
+  "scope": "One component clock correction, original Perspective core verification, initial native/full preservation and source-bound controlled/offline stories. This closes the previously observed Cube deadline and Perspective verifier setup failures. It does not establish whole-catalog accessibility, complete cold-route startup or CPU4 frame-rate acceptance.",
+  "diagnosis": {
+    "evidence": {
+      "file": ".artifacts/final-perspective-clock-v56/diagnosis.json",
+      "sha256": "fd0a6af282a95a7c64b4ed0dad27f6d2139e2f7aa84ec2b191ad6046642760d8"
+    },
+    "beforeNormal": [
+      {
+        "phase": "event",
+        "source": 0,
+        "elapsed": 0,
+        "angle": 0,
+        "moving": true
+      },
+      {
+        "phase": "withheld-at-200",
+        "source": 200,
+        "elapsed": 0,
+        "angle": 0,
+        "moving": true
+      },
+      {
+        "phase": "first-paint-at-200",
+        "source": 200,
+        "elapsed": 0,
+        "angle": 0,
+        "moving": true
+      },
+      {
+        "phase": "paint-at-380",
+        "source": 380,
+        "elapsed": 180,
+        "angle": -86.90418573556943,
+        "moving": true
+      }
+    ],
+    "beforeReduced": [
+      {
+        "phase": "event",
+        "source": 0,
+        "elapsed": 0,
+        "angle": -90,
+        "moving": true
+      },
+      {
+        "phase": "withheld-at-200",
+        "source": 200,
+        "elapsed": 0,
+        "angle": -90,
+        "moving": true
+      },
+      {
+        "phase": "first-paint-at-200",
+        "source": 200,
+        "elapsed": 0,
+        "angle": -90,
+        "moving": true
+      },
+      {
+        "phase": "paint-at-380",
+        "source": 380,
+        "elapsed": 180,
+        "angle": -90,
+        "moving": false
+      }
+    ],
+    "dock": "The compact portable Next control is inside the responsive closed dock-overflow menu. Native content keys already work; verifiers must open the real More actions menu before clicking its action."
+  },
+  "preservation": {
+    "unchangedOtherDefinitions": 519,
+    "unchangedOtherControllers": 519,
+    "unchangedHTML": 520,
+    "unchangedCSS": 520,
+    "allOtherCubeFieldsUnchanged": true,
+    "originalJSRestoredByExactClockReversions": true,
+    "originalStepForcesAndProjectionBodiesUnchanged": true,
+    "originalAssertionsTolerancesAndWaitsUnchanged": true,
+    "initialLiteralSoftwarePNGPairs": 8,
+    "evidence": {
+      "file": ".artifacts/final-perspective-clock-v56/preservation.json",
+      "sha256": "5a8f5f769729d5ccb6f745cd74aadfd9994eaa10ad2b33dee686d2b4dead4da4"
+    },
+    "protectedPaths": [
+      "assets",
+      "css",
+      "js/meta.stage.js",
+      "js/demo-runtime.js",
+      "js/shell/stage.js",
+      "js/shell/export.js",
+      "MOTION_SYSTEM.md",
+      "INTRX-handover"
+    ],
+    "newRuntimeDependencies": 0
+  },
+  "clockVerification": {
+    "command": "node tools/verify-cube-clock.js",
+    "exitCode": 0,
+    "browser": "158.0.8127.88",
+    "evidence": {
+      "file": ".artifacts/final-perspective-clock-v56/clock-spring/2026-11-26T07-01-47-860Z/report.json",
+      "sha256": "2dbdbb4e009ec31833f29c47747c44d366846c99996b1f12a11ae9de8740f03f"
+    },
+    "controlled": 8,
+    "stories": 72,
+    "freshNetworkBlockedExports": 8,
+    "widths": [
+      1000,
+      390
+    ],
+    "modes": [
+      "thumb",
+      "full"
+    ],
+    "motion": [
+      "normal",
+      "reduced"
+    ],
+    "speed": [
+      0.5,
+      2
+    ],
+    "coverage": [
+      "Withheld first/final paints and exact source deadlines",
+      "Early wakes and stale version callbacks",
+      "Retargeting from the actually painted pose between frames",
+      "Caller-held remaining time and ordered relative intentions on resume",
+      "Independent actual viewport and caller pause owners",
+      "Natural drag spring tails remain active after 350ms",
+      "Half/double source speed and full cleanup",
+      "Real offline native Dock keys/full field keys with actual runtime clocks"
+    ],
+    "independentCurve": "Newton-inverted cubic-bezier(0.22,1,0.36,1) checks the physically elapsed half-phase. No original curve, duration, projection or force assertion is relaxed."
+  },
+  "perspectiveCore": {
+    "command": "node tools/verify-perspective-core.js http://127.0.0.1:4173",
+    "exitCode": 0,
+    "checks": 6015,
+    "cases": [
+      {
+        "name": "exemplars",
+        "checks": 1748
+      },
+      {
+        "name": "lifecycle",
+        "checks": 73
+      },
+      {
+        "name": "offline-touch",
+        "checks": 32
+      },
+      {
+        "name": "book",
+        "checks": 517
+      },
+      {
+        "name": "cylinder",
+        "checks": 3093
+      },
+      {
+        "name": "complete",
+        "checks": 552
+      }
+    ],
+    "browser": "158.0.8127.88",
+    "evidence": {
+      "file": ".artifacts/final-perspective-clock-v56/core-final-proofs/results.json",
+      "sha256": "1097ed98b37de9917d01cca679713a168ba29269daf4585caac35177e31b9ef3"
+    },
+    "log": {
+      "file": ".artifacts/final-perspective-clock-v56/core-final.log",
+      "sha256": "c0b6aebffdf31d28e714b4aba8e2f03a48931ecd3d8258a4dc0580c31e0da0bc"
+    },
+    "harnessCorrections": [
+      {
+        "change": "Shared Dock actions use the actual More actions popup when a compact action is inside the closed overflow menu. No force click or CSS visibility override.",
+        "file": "tools/verification/perspective-dock.js"
+      },
+      {
+        "change": "Reference geometry mounts suspend in the same mount task before the first renderer frame. The old late capture sampled an already moving flip-grid card at x182.404 instead of its reference x182. Original tolerance .08 remains.",
+        "file": "tools/verification/perspective-exemplars.js"
+      },
+      {
+        "change": "The touch story waits for pointerdown, each requested native pointermove coordinate and pointerup to reach the DOM before its existing pose/capture observations. The initial run sampled five of six moves (-50 instead of -60). All coordinates, tolerances and original wait durations remain unchanged.",
+        "file": "tools/verification/perspective-complete.js"
+      },
+      {
+        "change": "All six public subchecks honor INTRX_CHROME_EXECUTABLE and log the actual selected browser version. No assertion changes."
+      }
+    ],
+    "retainedFailures": [
+      {
+        "file": ".artifacts/final-perspective-clock-v56/core.log",
+        "sha256": "d9043d2bbf97d870565844d3f7ede8c88760736a5c540bc63db60dfa934edb06"
+      },
+      {
+        "file": ".artifacts/final-perspective-clock-v56/core-before-first-frame-hold.log",
+        "sha256": "f134df0d39e1a255345c30c5f47e5bb601e47cc57c16d70394ab9a7f568f6ec7"
+      }
+    ]
+  },
+  "requiredChecks": {
+    "mandatoryCommands": 7,
+    "additionalLifecycleCommands": 2,
+    "commands": [
+      {
+        "command": "node tools/verify-registry.js",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/registry.log",
+          "sha256": "21d5ed55def9ed1336d6260826f5b7d613e56b83a16b2084448f10340954a501"
+        }
+      },
+      {
+        "command": "node tools/verify-stage.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/stage.log",
+          "sha256": "583891eeccb8976c846b4b0d0169af646b9765274d2503fb07da4a6d27c5ec39"
+        }
+      },
+      {
+        "command": "node tools/build-registry.js --check",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/generated.log",
+          "sha256": "9d2799eff134aab2110ec17126b85be35a41c29181367c0f791cd6424e6ee8ae"
+        }
+      },
+      {
+        "command": "node tools/verify-library.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/library.log",
+          "sha256": "085d9a3f61f3f3ca0a2ed86320b72c906fb3c49499c03f91f063bb6475125223"
+        }
+      },
+      {
+        "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/fit.log",
+          "sha256": "6eb62be630502b96ddd99ee7e3334e7d0d557900cd636a3ef21a14b087a73241"
+        }
+      },
+      {
+        "command": "node tools/verify-motion.js --strict",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/motion.log",
+          "sha256": "04bb17206cf7af7221d7260fa75f776494646aa1c3ef223650bfdceb6b268342"
+        }
+      },
+      {
+        "command": "npm test --prefix packages/intrx",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/package.log",
+          "sha256": "c1d8359c40df0939c588786cd0ad8d7642b132f9b5ed2390f309bac5aadd0c19"
+        }
+      },
+      {
+        "command": "node --test tools/runtime.test.js tools/shell.test.js",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/lifecycle.log",
+          "sha256": "59331681d99ef4f206805ba94c1a71cc6abd445c771a164b5096f0695f72fa1b"
+        }
+      },
+      {
+        "command": "node tools/verify-stage-runtime.js http://127.0.0.1:4173",
+        "exitCode": 0,
+        "log": {
+          "file": ".artifacts/final-perspective-clock-v56/phase-checks/stage-runtime.log",
+          "sha256": "84926b1fe3033fd1b8a83510e11d8d109bd22a217afa1ac0bf71c7f358b269fe"
+        }
+      }
+    ],
+    "library": {
+      "checks": 668,
+      "previews": 520,
+      "exports": 100,
+      "errors": []
+    },
+    "stageFit": {
+      "total": 520,
+      "failures": 0,
+      "lowFillExceptions": 163
+    }
+  },
+  "remaining": [
+    "Remaining manual catalog accessibility and incomplete-result review",
+    "The separate unchanged-source material raster observation recorded in V55",
+    "Complete cold-route startup and CPU4 frame-rate acceptance"
+  ]
+}
