@@ -2339,3 +2339,26 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   until it has an explicit review. Native/normal motion, complete input/focus,
   manual contrast, cold routes and CPU4 acceptance remain open. V54 private
   helpers, inputs and evidence become read/copy only when FROZEN.json is written.
+- The catalog semantics follow-up is recorded in
+  docs/accessibility/catalog-semantics-2026-11-26.json. Four controller edits
+  only name the full Blob's actual state/captions, the Isometric report title,
+  both Glass faces under one stable identity, and hide Evervault's duplicated
+  random paint rows from speech. Keep its actual named focusable region and all
+  twelve original strings. All 520 HTML/CSS definitions and mathematical models
+  stay unchanged; exact semantic reversions restore the four controllers.
+  Actual Chrome names pass 228 observations in 32 site and sixteen fresh offline
+  cases. All 64 initial comparisons retain exact computed geometry/paint styles;
+  all 32 full compositions and 25 native pairs have literal matching PNGs.
+  Native Glass has unchanged-code raster variation; do not claim every native
+  Glass capture is byte-identical. Keep the failed literal attempts and original
+  material pixel failure, which repeats against the original controller source.
+  The unfiltered 4,160-case scans still report 176 name results / 320 nodes and
+  eight contrast results / 96 glyph nodes, with zero boot/page errors. Separate
+  collector traces show joined captions, hidden faces and supporting data; do
+  not suppress raw results or call this a catalog WCAG pass. SVG core, all eight
+  Layout extension commands, remaining-name checks and the other completed
+  material groups pass. Broader Perspective checks retain the unchanged Cube
+  timing failure and a hidden Next Dock timeout. Resolve those observations,
+  remaining manual accessibility, complete cold routes and CPU4 acceptance.
+  V55 private helpers, inputs and evidence become read/copy only when its
+  FROZEN.json is written; preserve every earlier frozen collection.

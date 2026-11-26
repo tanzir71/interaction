@@ -15,7 +15,7 @@ const expectations=(id,mode)=>({
  'fui-orbital-tracker':[[mode==='full'?'.d-fui-orbit-scene':'.d-fui-orbit-hero',mode==='full'?/^Target link\. SAT-02 selected/:/^SAT-07 selected/]],
  'agent-thinking-drawer':[[mode==='full'?'.d-agent-agent-thinking-drawer-trigger':'.d-agent-agent-thinking-drawer-hero-trigger',mode==='full'?/^Thought for 6s\. Open completed reasoning/:/^Thinking · 4s\. Collapse reasoning preview/]],
  'table-image-idle':['Aurora Ridge','Night Orchard','Violet Dune','Salt Horizon','Quiet Current'].slice(0,mode==='thumb'?3:5).map((title,i)=>['.d-layout-table-image-idle-head >> nth='+i,new RegExp('^'+title+', 2026$')]),
- 'glass-refraction-card':[[mode==='full'?'.d-glass-card-pass':'.d-glass-card-native-pass',mode==='full'?/^Coast club\. Saturday by the sea\. Coast pass$/:/^Turn the coast pass over/]],
+ 'glass-refraction-card':[[mode==='full'?'.d-glass-card-pass':'.d-glass-card-native-pass',mode==='full'?/^Coast club\. A little further out\. Day pass\. Saturday by the sea\. Arrive slowly\. Stay a while\. Admit one\. Coast pass$/:/^Turn the coast pass over/]],
  'zippo-flame':[[mode==='full'?'.d-hardware-zippo-body':'.d-hardware-zippo-native-body',mode==='full'?/^FIELD\. Open lighter/:/^Close lighter cap/]],
  'torn-paper-edge':[[mode==='full'?'.d-hardware-torn-paper-tab':'.d-hardware-torn-paper-native-paper',mode==='full'?/^Take a moment\. Tear off the reminder/:/^Tear off the reminder/]],
  'foil-trading-card':[[mode==='full'?'.d-hardware-foil-trading-card-card':'.d-hardware-foil-trading-card-native-field',mode==='full'?/^COMMON GROUND\. Satin foil membership/:/^Satin foil card/]],
