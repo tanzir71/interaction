@@ -2,6 +2,17 @@
 
 The full 520-component handoff remains open. Per-component verification and prepared-font timing reports do not replace the final library, accessibility, cold-route or Lighthouse audits.
 
+The [Threads GPU investigation](performance/threads-gpu-2026-11-26.json) leaves
+all 520 definitions unchanged. Two sequential GPU observations reach
+59.57–59.94fps at CPU4, but the profiled candidate differs in thirteen alpha
+channels at its first native checkpoint. A hybrid retains original Canvas
+edge draws, still fails literal pixels and measures only 8.03–9.41fps. Neither
+candidate ships. The original renderer measures 18.24–18.90fps in the same
+bounded collection, so its timing gate remains open. Keep all six traces,
+failed candidates and exact original geometry/pixel comparisons. These are
+single observations per device and renderer, not a stable timing acceptance
+test or compositor presentation measurements.
+
 The [Autocomplete layout review](accessibility/autocomplete-layout-2026-11-26.json)
 fixes the held initial hint's stale font measurement, missing leading space,
 font mismatch and content-edge alignment. The full field now honors its intended

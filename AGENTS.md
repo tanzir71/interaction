@@ -1807,6 +1807,13 @@ node tools/verify-motion.js           # baseline mode until §5b is done, then -
   but does not establish a timing benefit and remains unshipped. Preserve the
   retained ABBA traces and existing literal pixel and geometry bounds.
 
+  The 26 Nov GPU investigation is documented in
+  `docs/performance/threads-gpu-2026-11-26.json`. Its two GPU CPU4 observations
+  reach about 60fps but fail exact alpha bytes. The original-edge hybrid also
+  fails pixels and measures only 8–9fps. Neither ships; all 520 definitions stay
+  unchanged. Preserve the original renderer, every failed comparison and all
+  six timing traces. The sealed V46 helpers and inputs are read/copy only.
+
 - `node tools/verify-component-palettes.js http://127.0.0.1:4173` covers the
   full-view ink repairs for Accordion Type, Magic Underline, Number Slot,
   Highlighter Swipe, Fraction Slider, Bar Race, Sparkline, Price Tape and Radar.

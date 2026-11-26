@@ -1,0 +1,3332 @@
+{
+  "date": "2026-11-26",
+  "timezone": "Asia/Dhaka",
+  "baseline": "08cbeaf104f206d926f52cd6c1ba388b580e2e38",
+  "outcome": "No renderer candidate ships. All 520 complete definitions, original source assets and generated catalog remain unchanged. The instanced GPU prototype is fast in two CPU4 observations but fails literal reference pixels; the hybrid retains additional original Canvas draws, still fails exact pixels and measures slower. Keep the original renderer and its unresolved timing gate.",
+  "scope": "Native Reactive Threads renderer research. No whole-handoff, accessibility, cold-route, compositor-presentation or final 60fps acceptance claim.",
+  "preservation": {
+    "components": 520,
+    "unchangedCompleteDefinitions": 520,
+    "definitionHashes": {
+      "file": ".artifacts/final-threads-performance-v46/baseline.json",
+      "sha256": "0f00604e9fbcbfd4d6a1a33a90b7c7364b5ff2b62cd3850b900083608c60bfbf"
+    },
+    "module": {
+      "file": "js/demos.showcase.js",
+      "sha256": "75dc76f4120179b5103e24491ee70662e9a2d76f3303254cb180ca40f20bbb1f"
+    },
+    "moduleBefore": {
+      "file": ".artifacts/final-threads-performance-v46/before-module.js",
+      "sha256": "75dc76f4120179b5103e24491ee70662e9a2d76f3303254cb180ca40f20bbb1f"
+    },
+    "newAssets": 0,
+    "newRuntimeDependencies": 0,
+    "productionRendererChanged": false,
+    "pixelOrGeometryToleranceChanged": false
+  },
+  "findings": [
+    "All valid comparison candidates preserve the immutable full source factory and pass the existing 31,202 model/command checks. Renderer checks stop at the first unequal checkpoint; they do not certify later checkpoints or later DPR/motion cases.",
+    "Atlas, pattern and initial GPU variants change native pixel bytes. The bounds-corrected GPU candidate used in the timing sample differs in thirteen alpha channels at its first DPR1 checkpoint, by one byte each. Interpolated texture coordinates reduce that first-checkpoint count to eleven, without establishing complete equivalence.",
+    "Isolated original Canvas primitives distinguish image edge coverage, path clipping, canvas-boundary clipping and overlap. These are empirical observations for the measured browser and adapter, not portable browser contracts.",
+    "The hybrid masks GPU edge pixels, renders selected original Canvas columns and applies a binary mask after painting. An outer clip mask itself changed two reference pixels and was rejected. Later float-filter and operation-order variants still leave literal alpha differences. Initial shader identifier collisions are retained as failed setup, not renderer results.",
+    "The measured hybrid still draws 1,330 original CPU columns on desktop and 1,198 on compact at the final sampled state, plus 1,854/4,503 binary-mask row runs. Its observed rate is worse than the original renderer; this hybrid is rejected.",
+    "A temporary shader-dump attempt produced no shader source. Browser-level SystemInfo reports GraphiteDawnD3D11 and the AMD adapter, but that metadata does not attest the backend of an individual Canvas2D surface."
+  ],
+  "measurements": {
+    "method": "Three sequential variants, each with one eight-second desktop DPR1 and one compact DPR2 native story, CPU slowdown 4. Fonts are prepared; six Dock actions are dispatched. Own heavy checks do not overlap these profiles; other host applications are uncontrolled. This is not ABBA or a stable timing acceptance test. RequestAnimationFrame callback cadence is not compositor presentation cadence.",
+    "profiles": [
+      {
+        "file": ".artifacts/final-threads-performance-v46/profile-gpu-b/2026-11-25T23-43-41-065Z-75dc76f41201/report.json",
+        "sha256": "07b9f69a63cf5289978acd3adab95ed182c3075b2e113c144e341de2a9aa1a1f",
+        "reference": {
+          "file": ".artifacts/final-threads-performance-v46/candidate-gpu-bounds-all.json",
+          "sha256": "d9694303ffaebd50061c0d43e95cfe1038641ef2f86f3043e7e4feb7aacbd89d",
+          "scope": "Compared renderer candidate; production modules are unchanged."
+        },
+        "browser": "158.0.8127.88",
+        "cpus": [
+          4
+        ],
+        "modes": [
+          "thumb"
+        ],
+        "cases": [
+          {
+            "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+            "duration": 8000,
+            "fps": 59.565434565434565,
+            "frames": 477,
+            "elapsed": 8008,
+            "median": 16.699999999999818,
+            "p95": 16.800000000000182,
+            "max": 49.89999999999998,
+            "gapsOver25ms": 2,
+            "longTasks": 3,
+            "firstPaintMs": 173.736,
+            "readyMs": 122.10000000149012,
+            "twoFrameReadyMs": 311.3999999985099,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "threadGPUPaints": 471,
+              "gpuBuffers": 8,
+              "paints": 471
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-gpu-b/2026-11-25T23-43-41-065Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+            "traceSHA256": "a0404c045c64ec44b5cc60849b87f9ca67f2e82344085be17fd5ab3903fa8dc9",
+            "errors": []
+          },
+          {
+            "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+            "duration": 8000,
+            "fps": 59.938562972952724,
+            "frames": 480,
+            "elapsed": 8008.2,
+            "median": 16.699999999999818,
+            "p95": 16.800000000000182,
+            "max": 17,
+            "gapsOver25ms": 0,
+            "longTasks": 2,
+            "firstPaintMs": 101.555,
+            "readyMs": 83.80000000447035,
+            "twoFrameReadyMs": 173.10000000149012,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "threadGPUPaints": 472,
+              "gpuBuffers": 8,
+              "paints": 472
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-gpu-b/2026-11-25T23-43-41-065Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+            "traceSHA256": "0ace9d6c56c14aeb6f76ab32f0e5a4db9670e33e13d988c2b49bcc6f15777ddf",
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": ".artifacts/final-threads-performance-v46/profile-hybrid-c/2026-11-26T00-02-54-634Z-75dc76f41201/report.json",
+        "sha256": "a6d99fb2291ada807991a1758cb58fc2eb0adcb913b0283106ac3811b2fbc93b",
+        "reference": {
+          "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-manual.json",
+          "sha256": "402d2b6be8670d1c8acfd4e1ebc68a924d67e21ea502d8b06d0665ff84e3b689",
+          "scope": "Compared renderer candidate; production modules are unchanged."
+        },
+        "browser": "158.0.8127.88",
+        "cpus": [
+          4
+        ],
+        "modes": [
+          "thumb"
+        ],
+        "cases": [
+          {
+            "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+            "duration": 8000,
+            "fps": 8.032922624417612,
+            "frames": 65,
+            "elapsed": 8091.700000000001,
+            "median": 116.80000000000109,
+            "p95": 216.89999999999964,
+            "max": 517.3000000000011,
+            "gapsOver25ms": 63,
+            "longTasks": 59,
+            "firstPaintMs": 314.451,
+            "readyMs": 270.6000000014901,
+            "twoFrameReadyMs": 1299.9000000059605,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "threadGPUPaints": 68,
+              "gpuBuffers": 8,
+              "hybridCPUDraws": 1330,
+              "hybridMaskPixels": 6917,
+              "hybridMaskRuns": 1854,
+              "paints": 68
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-hybrid-c/2026-11-26T00-02-54-634Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+            "traceSHA256": "2816442c9724c9830835a4ee38b7c06ee55eb1b3020db306aa2d0c684b882e0a",
+            "errors": []
+          },
+          {
+            "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+            "duration": 8000,
+            "fps": 9.411881261687451,
+            "frames": 76,
+            "elapsed": 8074.9,
+            "median": 100.09999999999945,
+            "p95": 250.30000000000018,
+            "max": 283.6999999999998,
+            "gapsOver25ms": 74,
+            "longTasks": 73,
+            "firstPaintMs": 295.723,
+            "readyMs": 227,
+            "twoFrameReadyMs": 880.5999999940395,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "threadGPUPaints": 79,
+              "gpuBuffers": 8,
+              "hybridCPUDraws": 1198,
+              "hybridMaskPixels": 17779,
+              "hybridMaskRuns": 4503,
+              "paints": 79
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-hybrid-c/2026-11-26T00-02-54-634Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+            "traceSHA256": "255a88d5f729a52cc77a5c0b7ba39b11165f7fe89f2dc2de812ca5eb7647b20b",
+            "errors": []
+          }
+        ]
+      },
+      {
+        "file": ".artifacts/final-threads-performance-v46/profile-original-a/2026-11-25T23-43-10-755Z-75dc76f41201/report.json",
+        "sha256": "77e78b41154bc8215ce85c5ece7f2143be4bb852110c5b05ad26c15601d06304",
+        "reference": null,
+        "browser": "158.0.8127.88",
+        "cpus": [
+          4
+        ],
+        "modes": [
+          "thumb"
+        ],
+        "cases": [
+          {
+            "name": "showcase-threads-thumb-desktop-dpr1-cpu4",
+            "duration": 8000,
+            "fps": 18.24206098060385,
+            "frames": 147,
+            "elapsed": 8058.3,
+            "median": 50.09999999999991,
+            "p95": 66.80000000000018,
+            "max": 150.20000000000027,
+            "gapsOver25ms": 147,
+            "longTasks": 80,
+            "firstPaintMs": 151.667,
+            "readyMs": 119.59999999403954,
+            "twoFrameReadyMs": 283.59999999403954,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "paints": 150
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-original-a/2026-11-25T23-43-10-755Z-75dc76f41201/showcase-threads-thumb-desktop-dpr1-cpu4.trace.json.gz",
+            "traceSHA256": "c0256a039a8e09aa88215c2dd1a98cd3b808daa504e3c48875f47ff0e5af8a57",
+            "errors": []
+          },
+          {
+            "name": "showcase-threads-thumb-compact-dpr2-cpu4",
+            "duration": 8000,
+            "fps": 18.901711102268205,
+            "frames": 152,
+            "elapsed": 8041.6,
+            "median": 50.09999999999991,
+            "p95": 66.80000000000018,
+            "max": 100.19999999999982,
+            "gapsOver25ms": 152,
+            "longTasks": 79,
+            "firstPaintMs": 118.831,
+            "readyMs": 102,
+            "twoFrameReadyMs": 252.5,
+            "painter": {
+              "dead": false,
+              "lost": false,
+              "warped": true,
+              "canvas": true,
+              "strips": 0,
+              "extraCells": 0,
+              "cachedTextures": 8,
+              "paints": 155
+            },
+            "disposed": {
+              "dead": true,
+              "frame": false,
+              "queue": 0,
+              "retained": 0,
+              "animations": 0,
+              "captures": [],
+              "painterDead": true
+            },
+            "trace": ".artifacts/final-threads-performance-v46/profile-original-a/2026-11-25T23-43-10-755Z-75dc76f41201/showcase-threads-thumb-compact-dpr2-cpu4.trace.json.gz",
+            "traceSHA256": "e1fe49434e89419b8fee5377392fd7002ea7bb440e9dd9c904ea186b9762534a",
+            "errors": []
+          }
+        ]
+      }
+    ]
+  },
+  "literalComparisons": [
+    {
+      "file": ".artifacts/final-threads-performance-v46/atlas-a8/2026-11-25T23-04-54-105Z/report.json",
+      "sha256": "c372901d3f4f77f14d42bd90355fef38ba37890d7d0463150ef0f1ac8cfb0107",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-a8.json",
+        "sha256": "5756152db32f09ac7adc7919c64277401785fd23b67fd99f879f3bb04653ad07"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 1504,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 5
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 10
+          },
+          {
+            "channel": 287,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 1595,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 1607,
+            "original": 36,
+            "current": 35
+          },
+          {
+            "channel": 1611,
+            "original": 22,
+            "current": 21
+          },
+          {
+            "channel": 1623,
+            "original": 5,
+            "current": 4
+          },
+          {
+            "channel": 2915,
+            "original": 35,
+            "current": 36
+          },
+          {
+            "channel": 2919,
+            "original": 24,
+            "current": 25
+          },
+          {
+            "channel": 2927,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 4211,
+            "original": 10,
+            "current": 11
+          },
+          {
+            "channel": 4227,
+            "original": 22,
+            "current": 21
+          },
+          {
+            "channel": 4231,
+            "original": 12,
+            "current": 11
+          },
+          {
+            "channel": 5535,
+            "original": 17,
+            "current": 18
+          },
+          {
+            "channel": 5539,
+            "original": 9,
+            "current": 10
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/atlas-clip-y/2026-11-25T23-01-35-452Z/report.json",
+      "sha256": "1bccf41d7707f3f43f08b803ab2c97b8385270a95258f3f8e52fcf9acf9e88a1",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-clip-y.json",
+        "sha256": "f6244c94fbe86eb086adae86adc8ebe81aaefe2956eb15f3fcf08e1396889df0"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 415,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 14463,
+            "original": 1,
+            "current": 2
+          },
+          {
+            "channel": 15759,
+            "original": 7,
+            "current": 11
+          },
+          {
+            "channel": 17055,
+            "original": 10,
+            "current": 17
+          },
+          {
+            "channel": 17059,
+            "original": 33,
+            "current": 36
+          },
+          {
+            "channel": 17063,
+            "original": 44,
+            "current": 45
+          },
+          {
+            "channel": 18379,
+            "original": 8,
+            "current": 16
+          },
+          {
+            "channel": 18383,
+            "original": 18,
+            "current": 28
+          },
+          {
+            "channel": 18387,
+            "original": 25,
+            "current": 35
+          },
+          {
+            "channel": 18391,
+            "original": 35,
+            "current": 40
+          },
+          {
+            "channel": 18395,
+            "original": 43,
+            "current": 45
+          },
+          {
+            "channel": 19707,
+            "original": 7,
+            "current": 12
+          },
+          {
+            "channel": 19711,
+            "original": 16,
+            "current": 23
+          },
+          {
+            "channel": 19715,
+            "original": 24,
+            "current": 27
+          },
+          {
+            "channel": 19719,
+            "original": 31,
+            "current": 32
+          },
+          {
+            "channel": 21027,
+            "original": 6,
+            "current": 11
+          },
+          {
+            "channel": 21031,
+            "original": 15,
+            "current": 22
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/atlas-direct/2026-11-25T23-00-36-942Z/report.json",
+      "sha256": "d5b084a08ffa92c1bf9d84f84ba3d43e42de29801038e0576c8bf480b3c1dba0",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-direct.json",
+        "sha256": "8f5bab45d3896d1249d8ac7dda8833a43ebabd6e4a87a27a9d96ee1e4bcab3c4"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 415,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 14463,
+            "original": 1,
+            "current": 2
+          },
+          {
+            "channel": 15759,
+            "original": 7,
+            "current": 11
+          },
+          {
+            "channel": 17055,
+            "original": 10,
+            "current": 17
+          },
+          {
+            "channel": 17059,
+            "original": 33,
+            "current": 36
+          },
+          {
+            "channel": 17063,
+            "original": 44,
+            "current": 45
+          },
+          {
+            "channel": 18379,
+            "original": 8,
+            "current": 16
+          },
+          {
+            "channel": 18383,
+            "original": 18,
+            "current": 28
+          },
+          {
+            "channel": 18387,
+            "original": 25,
+            "current": 35
+          },
+          {
+            "channel": 18391,
+            "original": 35,
+            "current": 40
+          },
+          {
+            "channel": 18395,
+            "original": 43,
+            "current": 45
+          },
+          {
+            "channel": 19707,
+            "original": 7,
+            "current": 12
+          },
+          {
+            "channel": 19711,
+            "original": 16,
+            "current": 23
+          },
+          {
+            "channel": 19715,
+            "original": 24,
+            "current": 27
+          },
+          {
+            "channel": 19719,
+            "original": 31,
+            "current": 32
+          },
+          {
+            "channel": 21027,
+            "original": 6,
+            "current": 11
+          },
+          {
+            "channel": 21031,
+            "original": 15,
+            "current": 22
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu/2026-11-25T23-19-43-015Z/report.json",
+      "sha256": "f9d59c7c2a17acc7b5b7b411f35a7b780d6f1329dfb09d40721b7fd8e84c9f21",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu.json",
+        "sha256": "e6c5716148fc40b9b0f11698d593c4286cd5a3370d607c2dc5be48f1272025ce"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 23,
+        "max": 13,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 17055,
+            "original": 10,
+            "current": 8
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85743,
+            "original": 39,
+            "current": 26
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-affine/2026-11-25T23-31-19-223Z/report.json",
+      "sha256": "71b5399580bfe24bc5dab6a47deba0b1289e05af269322a0a9dcd75bf925a015",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-affine.json",
+        "sha256": "10ff4d94432c076b41b2746a107f620f27531f7d55c1ae6b7fa77a5c039123d2"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 20,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-bounds-all/2026-11-25T23-42-17-726Z/report.json",
+      "sha256": "cbe6cba65a06cbb6dc1679531a23748b88e61674ab2192609abdf5a908a992f9",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-bounds-all.json",
+        "sha256": "d9694303ffaebd50061c0d43e95cfe1038641ef2f86f3043e7e4feb7aacbd89d"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 13,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          },
+          {
+            "channel": 108619,
+            "original": 96,
+            "current": 97
+          },
+          {
+            "channel": 109943,
+            "original": 37,
+            "current": 38
+          },
+          {
+            "channel": 128943,
+            "original": 44,
+            "current": 43
+          },
+          {
+            "channel": 157875,
+            "original": 18,
+            "current": 17
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-bounds-all-highp-sampler/2026-11-25T23-44-32-127Z/report.json",
+      "sha256": "e387b9537cc3f8cbe23e33f9b85865840d675e599990b362094dc1ec6e140b5a",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-bounds-all-highp-sampler.json",
+        "sha256": "56955c6605007d2917f38a6d170788294c9ccfec778e0521d7bb2358e9195f84"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 13,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          },
+          {
+            "channel": 108619,
+            "original": 96,
+            "current": 97
+          },
+          {
+            "channel": 109943,
+            "original": 37,
+            "current": 38
+          },
+          {
+            "channel": 128943,
+            "original": 44,
+            "current": 43
+          },
+          {
+            "channel": 157875,
+            "original": 18,
+            "current": 17
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-bounds-all-round8/2026-11-25T23-38-11-271Z/report.json",
+      "sha256": "ba2a71436e119bf6e86f5b1035a2a5b123462a1fe168ead13ecff0c302e7b987",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-bounds-all-round8.json",
+        "sha256": "03cfc38822be857801fb76ad519761c7096db96c03178a02d8d41bd2c070636b"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 1024,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 287,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 291,
+            "original": 27,
+            "current": 26
+          },
+          {
+            "channel": 299,
+            "original": 36,
+            "current": 37
+          },
+          {
+            "channel": 303,
+            "original": 23,
+            "current": 22
+          },
+          {
+            "channel": 1595,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 2907,
+            "original": 26,
+            "current": 25
+          },
+          {
+            "channel": 2915,
+            "original": 35,
+            "current": 36
+          },
+          {
+            "channel": 2927,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 4215,
+            "original": 27,
+            "current": 26
+          },
+          {
+            "channel": 5535,
+            "original": 17,
+            "current": 18
+          },
+          {
+            "channel": 6839,
+            "original": 21,
+            "current": 22
+          },
+          {
+            "channel": 6847,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 8143,
+            "original": 30,
+            "current": 29
+          },
+          {
+            "channel": 9443,
+            "original": 22,
+            "current": 23
+          },
+          {
+            "channel": 10767,
+            "original": 23,
+            "current": 22
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-bounds-y-round8/2026-11-25T23-37-35-223Z/report.json",
+      "sha256": "c4b0373fc4b1ebf8d8621677b3d8434b0b2980e3e9da9fe98f4e16db712378eb",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-bounds-y-round8.json",
+        "sha256": "3e5ee3ba04c6391b536b0d52deade7df6139d461b0338297fee46154389e71ce"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 1024,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 287,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 291,
+            "original": 27,
+            "current": 26
+          },
+          {
+            "channel": 299,
+            "original": 36,
+            "current": 37
+          },
+          {
+            "channel": 303,
+            "original": 23,
+            "current": 22
+          },
+          {
+            "channel": 1595,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 2907,
+            "original": 26,
+            "current": 25
+          },
+          {
+            "channel": 2915,
+            "original": 35,
+            "current": 36
+          },
+          {
+            "channel": 2927,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 4215,
+            "original": 27,
+            "current": 26
+          },
+          {
+            "channel": 5535,
+            "original": 17,
+            "current": 18
+          },
+          {
+            "channel": 6839,
+            "original": 21,
+            "current": 22
+          },
+          {
+            "channel": 6847,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 8143,
+            "original": 30,
+            "current": 29
+          },
+          {
+            "channel": 9443,
+            "original": 22,
+            "current": 23
+          },
+          {
+            "channel": 10767,
+            "original": 23,
+            "current": 22
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-half/2026-11-25T23-24-55-626Z/report.json",
+      "sha256": "38cc024dfcaf9a2c145e343b829e38441d6d12f027bbd6bbe2f804593e3bfb53",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-half.json",
+        "sha256": "d28c5d2499ba4bc629ea15ebf40d20b045abf410ec4dc2c098d5ab5b61731baf"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 69,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 17095,
+            "original": 35,
+            "current": 34
+          },
+          {
+            "channel": 27679,
+            "original": 28,
+            "current": 27
+          },
+          {
+            "channel": 29087,
+            "original": 41,
+            "current": 40
+          },
+          {
+            "channel": 29131,
+            "original": 74,
+            "current": 73
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31707,
+            "original": 120,
+            "current": 119
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 32975,
+            "original": 105,
+            "current": 104
+          },
+          {
+            "channel": 33055,
+            "original": 78,
+            "current": 77
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-inverse/2026-11-25T23-29-09-145Z/report.json",
+      "sha256": "18fe9ad1a8a45f3e567ed91bcc583eabe8997101a93361a8b5e5f154a0a2ccff",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-inverse.json",
+        "sha256": "dfdf1bf2c3dd69058bfe5ea2aa244d5e1a61cb50849cfbcc244672ff19a22c7c"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 20,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-manual-lerp/2026-11-25T23-26-38-529Z/report.json",
+      "sha256": "ccdcab22ecd2734f8ddaf91065f5b8f6b6663ddf4dff660c837d20f0ff25c18d",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-manual-lerp.json",
+        "sha256": "1587d512ad5369f748bf90d1c6a21bc598b4a80a79d6d297ee9b1ccea9b59578"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 272,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 5531,
+            "original": 30,
+            "current": 31
+          },
+          {
+            "channel": 12051,
+            "original": 6,
+            "current": 5
+          },
+          {
+            "channel": 17291,
+            "original": 15,
+            "current": 14
+          },
+          {
+            "channel": 17295,
+            "original": 29,
+            "current": 30
+          },
+          {
+            "channel": 17299,
+            "original": 32,
+            "current": 33
+          },
+          {
+            "channel": 18443,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 22571,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 27683,
+            "original": 33,
+            "current": 34
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-manual-mix/2026-11-25T23-26-57-372Z/report.json",
+      "sha256": "1d0b64556b34ffbcf755cd50183e9ad2a8334ac79a139ae459d6c4a2b47ba895",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-manual-mix.json",
+        "sha256": "8f6ba7ee2fd16a432ac728456e33cc361be00dd337f869db3f9f5a6b3c954b0b"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 272,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 5531,
+            "original": 30,
+            "current": 31
+          },
+          {
+            "channel": 12051,
+            "original": 6,
+            "current": 5
+          },
+          {
+            "channel": 17291,
+            "original": 15,
+            "current": 14
+          },
+          {
+            "channel": 17295,
+            "original": 29,
+            "current": 30
+          },
+          {
+            "channel": 17299,
+            "original": 32,
+            "current": 33
+          },
+          {
+            "channel": 18443,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 22571,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 27683,
+            "original": 33,
+            "current": 34
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-mediump/2026-11-25T23-25-14-518Z/report.json",
+      "sha256": "a007ab5bf58bc77bf3116c405ad9f51ec08c26cb769d870c2048e7af51830b05",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-mediump.json",
+        "sha256": "4bb956204781947e627867b2b615d0834fafa131376c9656e8b8260711ad0a4a"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 20,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-min/2026-11-25T23-21-42-865Z/report.json",
+      "sha256": "abc9a8efa9d52879ea40f787b9a73b53f02d3fc4e8721479f479a42968931265",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-min.json",
+        "sha256": "b016800d38da40d1dc5e264bac55c8c460288cda7cd568118a6e01549d513eb2"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 20,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 47095,
+            "original": 156,
+            "current": 155
+          },
+          {
+            "channel": 47099,
+            "original": 127,
+            "current": 126
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-min-clip8/2026-11-25T23-23-52-776Z/report.json",
+      "sha256": "5e79a228810f061a613d326f8cdbd21a8fc26c1f793cba8e57d298c8d718942b",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-min-clip8.json",
+        "sha256": "ec5e8187793ee460282487283bb029a2fd968eec7403386c6778133be44a2bf8"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 42,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 18383,
+            "original": 18,
+            "current": 17
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 32931,
+            "original": 41,
+            "current": 42
+          },
+          {
+            "channel": 33095,
+            "original": 106,
+            "current": 105
+          },
+          {
+            "channel": 35775,
+            "original": 11,
+            "current": 12
+          },
+          {
+            "channel": 36823,
+            "original": 87,
+            "current": 86
+          },
+          {
+            "channel": 36827,
+            "original": 120,
+            "current": 121
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-varying/2026-11-25T23-31-45-016Z/report.json",
+      "sha256": "bcb64017e498ebd246bf6e8e72b99cc4b849811437a96047b600097a50e8a079",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-varying.json",
+        "sha256": "b0ab0eb1cbff22c3fd28c67ab6c455fb388634688dc7b9f452db70277965eeb8"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 18,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 283,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 2
+          },
+          {
+            "channel": 1591,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 3
+          },
+          {
+            "channel": 2899,
+            "original": 9,
+            "current": 8
+          },
+          {
+            "channel": 4203,
+            "original": 2,
+            "current": 1
+          },
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          },
+          {
+            "channel": 108619,
+            "original": 96,
+            "current": 97
+          },
+          {
+            "channel": 109943,
+            "original": 37,
+            "current": 38
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-varying-bounds/2026-11-25T23-45-19-126Z/report.json",
+      "sha256": "c105b80c521aee857acef7c7ca0ca6d52394197bb086b5d370da120797b41480",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-varying-bounds.json",
+        "sha256": "124426136700efeed6982fcabde28600db7bc3b1b0b76d0e4f30c08be70ed3f7"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 11,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          },
+          {
+            "channel": 108619,
+            "original": 96,
+            "current": 97
+          },
+          {
+            "channel": 109943,
+            "original": 37,
+            "current": 38
+          },
+          {
+            "channel": 128943,
+            "original": 44,
+            "current": 43
+          },
+          {
+            "channel": 157875,
+            "original": 18,
+            "current": 17
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/gpu-varying-highp-sampler/2026-11-25T23-45-26-291Z/report.json",
+      "sha256": "6c26ab6043be354de054dfc08904b6f2162c6a783d47cc3fc910fc08b951db86",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-gpu-varying-highp-sampler.json",
+        "sha256": "c64c2bb876093620b532300151da20e1c38c2413d279766fb9e6448d2bb963e5"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 11,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 30455,
+            "original": 123,
+            "current": 122
+          },
+          {
+            "channel": 31751,
+            "original": 178,
+            "current": 179
+          },
+          {
+            "channel": 31787,
+            "original": 113,
+            "current": 112
+          },
+          {
+            "channel": 37791,
+            "original": 16,
+            "current": 15
+          },
+          {
+            "channel": 56767,
+            "original": 38,
+            "current": 37
+          },
+          {
+            "channel": 85763,
+            "original": 162,
+            "current": 161
+          },
+          {
+            "channel": 87039,
+            "original": 20,
+            "current": 19
+          },
+          {
+            "channel": 108619,
+            "original": 96,
+            "current": 97
+          },
+          {
+            "channel": 109943,
+            "original": 37,
+            "current": 38
+          },
+          {
+            "channel": 128943,
+            "original": 44,
+            "current": 43
+          },
+          {
+            "channel": 157875,
+            "original": 18,
+            "current": 17
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-all-edges/2026-11-25T23-51-41-286Z/report.json",
+      "sha256": "7f20f2a12dbb58bb2f35b01586ca602a5f861d4955d33ddc2548fcb0545528c1",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-all-edges.json",
+        "sha256": "5f18a7d9a2a3e3c53baedced913da8ee37c2a6faf9b7cfab7a886bbe5d7a39fa"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 2,
+        "max": 2,
+        "changed": [
+          {
+            "channel": 17055,
+            "original": 10,
+            "current": 11
+          },
+          {
+            "channel": 85743,
+            "original": 39,
+            "current": 41
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-bytes/2026-11-26T00-00-25-949Z/report.json",
+      "sha256": "e9a1c13ec3faef201803ac8ede3fe5fa2666d27b158e403e56603d42896b7a4c",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-bytes.json",
+        "sha256": "f6cb0e09f0c6bdb028208276454db863b51b8590f0bc944b7678e8311271d3c3"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-30",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 149683,
+            "original": 11,
+            "current": 12
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-30\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-culled-valid/2026-11-25T23-55-28-416Z/report.json",
+      "sha256": "d4101f4210d5187285c3dfbc739d46940b0627b01c30adfefdd4ea1c659a055c",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-culled.json",
+        "sha256": "ccb5a431faccb2649d9d74a5f2293abac9fca8a37094d8c021bb7108153fdb8f"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-330",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 74087,
+            "original": 122,
+            "current": 123
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-330\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-difference/2026-11-26T00-00-04-088Z/report.json",
+      "sha256": "6278c4975bcd2d46ff623ce38ac2eb37e2c75536c8184070a1599350b5c40009",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-difference.json",
+        "sha256": "e058ad5fd926ae511f392280b7894be386103132221e294820208f440740d924"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": null,
+      "error": "page.evaluate: Error: ERROR: 0:5: 'a' : redefinition\nERROR: 0:5: '-' : wrong operand types - no operation '-' exists that takes a left-hand operand of type 'highp 4-component vector of float' and a right operand of type 'mediump 2-component vector of int' (or there is no acceptable conversion)\nERROR: 0:5: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp 4-component vector of float' (or there is no acceptable conversion)\nERROR: 0:5: 'return' : function return is not matching type:\n\n    at shader (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:69:165)\n    at paintThreadGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:70:51)\n    at paintThreads (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:118:744)\n    at Object.paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:127:32)\n    at paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:142:141)\n    at tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:145:97)\n    at root.__Tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:4:353)\n    at eval (eval at evaluate (:291:30), <anonymous>:4:10)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at paintStory (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:15:25)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:107",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-difference-v2/2026-11-26T00-02-25-396Z/report.json",
+      "sha256": "6828802d2f3fe876a797b81adc7d568106d826d1ff96305d0be6dc15ff920ebb",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-difference-v2.json",
+        "sha256": "6e71f5a6063ae3acd7409d6418005b6acb894bc00984a6fc53e724ad73ddc400"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-30",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 149683,
+            "original": 11,
+            "current": 12
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-30\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-direct/2026-11-25T23-57-53-399Z/report.json",
+      "sha256": "a7f6fdb22e1c40af07ee6a93df89fe34fc7a962defd6c6b7b4424a7d176b220a",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-direct.json",
+        "sha256": "b4c6cbb94f7a7952ea68819a8f5efc69416eb2a208b07eb271f5097db0431294"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 134,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 5531,
+            "original": 30,
+            "current": 31
+          },
+          {
+            "channel": 17291,
+            "original": 15,
+            "current": 14
+          },
+          {
+            "channel": 17295,
+            "original": 29,
+            "current": 30
+          },
+          {
+            "channel": 17299,
+            "original": 32,
+            "current": 33
+          },
+          {
+            "channel": 18443,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 22571,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 27683,
+            "original": 33,
+            "current": 34
+          },
+          {
+            "channel": 32915,
+            "original": 64,
+            "current": 63
+          },
+          {
+            "channel": 32951,
+            "original": 27,
+            "current": 28
+          },
+          {
+            "channel": 34195,
+            "original": 62,
+            "current": 61
+          },
+          {
+            "channel": 35419,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 35439,
+            "original": 30,
+            "current": 29
+          },
+          {
+            "channel": 35495,
+            "original": 11,
+            "current": 12
+          },
+          {
+            "channel": 35535,
+            "original": 71,
+            "current": 72
+          },
+          {
+            "channel": 35559,
+            "original": 70,
+            "current": 71
+          },
+          {
+            "channel": 35695,
+            "original": 127,
+            "current": 128
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-four/2026-11-25T23-59-52-942Z/report.json",
+      "sha256": "5e52de41afa4e53e770c5856d19ba7c2482c4cca061a00adaf53f2445799d1d7",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-four.json",
+        "sha256": "37809e5b93ca7b9bd889bcdc3477694320a1e3a21efbcd35d06f98b41e49cfe5"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": null,
+      "error": "page.evaluate: Error: ERROR: 0:5: 'a' : redefinition\nERROR: 0:5: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp 4-component vector of float' (or there is no acceptable conversion)\nERROR: 0:5: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp 4-component vector of float' (or there is no acceptable conversion)\nERROR: 0:5: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp 4-component vector of float' (or there is no acceptable conversion)\nERROR: 0:5: 'return' : function return is not matching type:\n\n    at shader (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:69:165)\n    at paintThreadGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:70:51)\n    at paintThreads (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:118:744)\n    at Object.paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:127:32)\n    at paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:142:141)\n    at tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:145:97)\n    at root.__Tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:4:353)\n    at eval (eval at evaluate (:291:30), <anonymous>:4:10)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at paintStory (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:15:25)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:107",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-four-v2/2026-11-26T00-01-55-335Z/report.json",
+      "sha256": "3ebdfd91812e8bf3acb0eaf12ff87b8244ecc4c80e51ba0bd40652802e1852cd",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-four-v2.json",
+        "sha256": "72573f2b6e8872dbb91f38e7d55e62446cd2979ba1580b067662b84b763f0f64"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-30",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 149683,
+            "original": 11,
+            "current": 12
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-30\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-manual/2026-11-25T23-56-58-657Z/report.json",
+      "sha256": "510c2840a09c3c50a8b63e50c50d3c11233c5de74afedff71c9f856e532252bc",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-manual.json",
+        "sha256": "402d2b6be8670d1c8acfd4e1ebc68a924d67e21ea502d8b06d0665ff84e3b689"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-30",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 149683,
+            "original": 11,
+            "current": 12
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-30\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-manual-sample8/2026-11-25T23-57-14-762Z/report.json",
+      "sha256": "6b0367e5abea2393e7f0a4463c9d4d16707f2f765323b08991eca14e393a25bd",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-manual-sample8.json",
+        "sha256": "f964e925d9580ea956e7d3e1aee2fe4e1e70a93f3a5fac3c5015d90bf72f1cbe"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 564,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 1619,
+            "original": 5,
+            "current": 4
+          },
+          {
+            "channel": 2927,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 4235,
+            "original": 6,
+            "current": 7
+          },
+          {
+            "channel": 4239,
+            "original": 2,
+            "current": 3
+          },
+          {
+            "channel": 5531,
+            "original": 30,
+            "current": 31
+          },
+          {
+            "channel": 8143,
+            "original": 30,
+            "current": 29
+          },
+          {
+            "channel": 8151,
+            "original": 21,
+            "current": 20
+          },
+          {
+            "channel": 10767,
+            "original": 23,
+            "current": 22
+          },
+          {
+            "channel": 10771,
+            "original": 10,
+            "current": 11
+          },
+          {
+            "channel": 12059,
+            "original": 21,
+            "current": 20
+          },
+          {
+            "channel": 12075,
+            "original": 19,
+            "current": 20
+          },
+          {
+            "channel": 13359,
+            "original": 7,
+            "current": 8
+          },
+          {
+            "channel": 15779,
+            "original": 24,
+            "current": 23
+          },
+          {
+            "channel": 16003,
+            "original": 12,
+            "current": 11
+          },
+          {
+            "channel": 17103,
+            "original": 29,
+            "current": 28
+          },
+          {
+            "channel": 17307,
+            "original": 25,
+            "current": 26
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-mask-after/2026-11-25T23-52-37-003Z/report.json",
+      "sha256": "153810730aa53a6e2ec3b639dfde73a9ae0d080039a647f6b1076275a92ba72f",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-mask-after.json",
+        "sha256": "745dc1809f04ccde97e75ace808eb706af8988647393bcef38c94ce4c46e62cd"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-210",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 179611,
+            "original": 31,
+            "current": 32
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-210\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-weighted/2026-11-25T23-59-43-364Z/report.json",
+      "sha256": "888510a5d1067708bb6730f801f5eabacb1da15e371a3ad23877bb831d4d0186",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-weighted.json",
+        "sha256": "b25459baf2cb0d9e33705fda529d9802e6175e347054314101e9ff71275a4c82"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": null,
+      "error": "page.evaluate: Error: ERROR: 0:5: 'a' : redefinition\nERROR: 0:5: '*' : wrong operand types - no operation '*' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp float' (or there is no acceptable conversion)\nERROR: 0:5: '+' : wrong operand types - no operation '+' exists that takes a left-hand operand of type 'mediump 2-component vector of int' and a right operand of type 'highp 4-component vector of float' (or there is no acceptable conversion)\nERROR: 0:5: 'return' : function return is not matching type:\n\n    at shader (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:69:165)\n    at paintThreadGPU (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:70:51)\n    at paintThreads (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:118:744)\n    at Object.paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:127:32)\n    at paint (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:142:141)\n    at tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:145:97)\n    at root.__Tick (eval at R.mountStage (http://127.0.0.1:4173/js/shell/stage.js:63:22), <anonymous>:4:353)\n    at eval (eval at evaluate (:291:30), <anonymous>:4:10)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at paintStory (C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:15:25)\n    at async C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:107",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/hybrid-weighted-v2/2026-11-26T00-00-54-831Z/report.json",
+      "sha256": "e449196c052370c3fc3f9cb9d5e34f8cad81f4b16f1383ab54bb17bbc0802fec",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-hybrid-weighted-v2.json",
+        "sha256": "6af5c60fc65793551fa36c3498e213f780d211313a4e5e54c46c4b4d57f71c08"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-30",
+        "count": 1,
+        "max": 1,
+        "changed": [
+          {
+            "channel": 149683,
+            "original": 11,
+            "current": 12
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-30\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/padded-pattern/2026-11-25T23-09-38-622Z/report.json",
+      "sha256": "ddfb2e3bf82ce48eba86e383008585e000ce16df3004045f2740f0e21a5c785a",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-padded-pattern.json",
+        "sha256": "e4c6f2789c2368b5ef336f760fb09094fafe8a1695f970b6b9d95f005ced69f2"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 1535,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 272,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 273,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 274,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 275,
+            "original": 0,
+            "current": 2
+          },
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 5
+          },
+          {
+            "channel": 1580,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1581,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1582,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1583,
+            "original": 0,
+            "current": 2
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 5
+          },
+          {
+            "channel": 2888,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 2889,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 2890,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 2891,
+            "original": 0,
+            "current": 2
+          },
+          {
+            "channel": 2895,
+            "original": 4,
+            "current": 5
+          },
+          {
+            "channel": 4196,
+            "original": 0,
+            "current": 255
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/pattern/2026-11-25T23-06-50-161Z/report.json",
+      "sha256": "a2a85838bd72e48d5c54651d6d317abe062624b559350fd57efe88a48c36c795",
+      "reference": {
+        "file": ".artifacts/final-threads-performance-v46/candidate-pattern.json",
+        "sha256": "f5f4aa5aa7c7f5be35bcbd70cc3ae2ab79a9617ea3cd2b0e3584d7598ac02e4b"
+      },
+      "modelChecks": 31202,
+      "completedStories": 0,
+      "checkpoints": 0,
+      "active": {
+        "dpr": 1,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false
+      },
+      "mismatch": {
+        "prefix": "1-60-thumb-normal-regular-1",
+        "count": 2736,
+        "max": 255,
+        "changed": [
+          {
+            "channel": 272,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 273,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 274,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 275,
+            "original": 0,
+            "current": 2
+          },
+          {
+            "channel": 279,
+            "original": 4,
+            "current": 6
+          },
+          {
+            "channel": 287,
+            "original": 16,
+            "current": 17
+          },
+          {
+            "channel": 1580,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1581,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1582,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 1583,
+            "original": 0,
+            "current": 2
+          },
+          {
+            "channel": 1587,
+            "original": 4,
+            "current": 5
+          },
+          {
+            "channel": 1603,
+            "original": 38,
+            "current": 39
+          },
+          {
+            "channel": 1619,
+            "original": 5,
+            "current": 4
+          },
+          {
+            "channel": 2888,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 2889,
+            "original": 0,
+            "current": 255
+          },
+          {
+            "channel": 2890,
+            "original": 0,
+            "current": 255
+          }
+        ]
+      },
+      "error": "AssertionError [ERR_ASSERTION]: Every RGBA channel 1-60-thumb-normal-regular-1\n    at C:\\Users\\tanzir\\Desktop\\interaction\\tools\\verify-threads-render.js:29:1269",
+      "finished": null
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/production-restored/2026-11-26T00-04-22-326Z/report.json",
+      "sha256": "370c342dbd987d6260c8de5d6cfa327cfbf79f63c4a2d88c3860435484970bb6",
+      "reference": null,
+      "modelChecks": 31202,
+      "completedStories": 16,
+      "checkpoints": 164,
+      "active": {
+        "dpr": 2,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false,
+        "direct": true,
+        "timeline": [
+          17,
+          16.666666666666668,
+          83,
+          16.666666666666668,
+          400,
+          16.666666666666668,
+          700,
+          16.666666666666668,
+          1200,
+          16.666666666666668,
+          2500,
+          16.666666666666668
+        ]
+      },
+      "mismatch": null,
+      "error": null,
+      "finished": "2026-11-26T00:05:38.923Z"
+    }
+  ],
+  "probes": [
+    {
+      "file": ".artifacts/final-threads-performance-v46/capability.json",
+      "sha256": "a60d7539a858420059cdcce6f586646c62cef165067a9282af84fb9f4c3b7a4c"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/primitive-probe.json",
+      "sha256": "2a794ffb6b3027e036a20992209ca2f27734341af1b6a3af46804b3bd7acc604"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/primitive-gpu-probe.json",
+      "sha256": "0defde7894e34a124f8c5098c1f0c049046d771836c7a23cd57cc4808c68011d"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/primitive-coverage-probe.json",
+      "sha256": "57ac4b7d7bca820c3ec352526c054dbeb127dca88dd8be80119130ff3031897d"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/late-gpu-probe.json",
+      "sha256": "8ea3073a5170ce4cbf5eea09366aeb991f6626c55f5d475bdc45d919cf05f74a"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/later-gpu-probe.json",
+      "sha256": "3c612961ba00b11d68f17531fc72e17d606c8c779cfadd18525c51d1464a249e"
+    },
+    {
+      "file": ".artifacts/final-threads-performance-v46/shader-dump.json",
+      "sha256": "df1201485e054dede5634f235c70db1dac660a3012229dd971d9df2297ac6270"
+    }
+  ],
+  "verification": {
+    "productionRenderer": {
+      "file": ".artifacts/final-threads-performance-v46/production-restored/2026-11-26T00-04-22-326Z/report.json",
+      "sha256": "370c342dbd987d6260c8de5d6cfa327cfbf79f63c4a2d88c3860435484970bb6",
+      "reference": null,
+      "modelChecks": 31202,
+      "completedStories": 16,
+      "checkpoints": 164,
+      "active": {
+        "dpr": 2,
+        "hz": 60,
+        "mode": "thumb",
+        "reduced": false,
+        "direct": true,
+        "timeline": [
+          17,
+          16.666666666666668,
+          83,
+          16.666666666666668,
+          400,
+          16.666666666666668,
+          700,
+          16.666666666666668,
+          1200,
+          16.666666666666668,
+          2500,
+          16.666666666666668
+        ]
+      },
+      "mismatch": null,
+      "error": null,
+      "finished": "2026-11-26T00:05:38.923Z"
+    },
+    "requiredChecks": {
+      "recordedAt": "2026-11-26T00:13:47.979Z",
+      "commands": [
+        {
+          "command": "node tools/verify-registry.js",
+          "exitCode": 0,
+          "result": "520 demos; 447 source files; published constraints pass"
+        },
+        {
+          "command": "node tools/verify-stage.js --strict",
+          "exitCode": 0,
+          "result": "520 metadata records; zero chrome/control debt"
+        },
+        {
+          "command": "node tools/build-registry.js --check",
+          "exitCode": 0,
+          "result": "1568 artifacts verified for 520 components"
+        },
+        {
+          "command": "node tools/verify-motion.js --strict",
+          "exitCode": 0,
+          "result": "520 demos; zero motion violations"
+        },
+        {
+          "command": "npm test --prefix packages/intrx",
+          "exitCode": 0,
+          "result": "Nine tests pass"
+        },
+        {
+          "command": "node tools/verify-library.js http://127.0.0.1:4173",
+          "exitCode": 0,
+          "result": {
+            "checks": 668,
+            "previews": 520,
+            "exports": 100,
+            "errors": []
+          }
+        },
+        {
+          "command": "node tools/audit-stage-fit.js http://127.0.0.1:4173",
+          "exitCode": 0,
+          "result": {
+            "total": 520,
+            "failed": [],
+            "missingDesignSize": 0,
+            "overflow": [],
+            "hscroll": [],
+            "tinyText": [],
+            "lowFill": [],
+            "lowFillExceptions": [
+              "btn-border-beam",
+              "input-float-label",
+              "password-strength-bar",
+              "elastic-tabs",
+              "velocity-skew",
+              "scroll-letter-scatter",
+              "scroll-table-of-contents",
+              "cursor-gooey-blob",
+              "cursor-particle-emitter",
+              "cursor-elastic-line",
+              "cursor-text-repel",
+              "cursor-grid-ripple",
+              "cursor-hover-preview",
+              "cursor-liquid-metaball",
+              "cursor-velocity-stretch",
+              "cursor-snap-targets",
+              "cursor-emoji-rain",
+              "cursor-crosshair-hud",
+              "custom-cursor",
+              "magnetic-button",
+              "image-trail",
+              "text-scramble",
+              "letter-roll",
+              "proximity-type",
+              "stat-counter",
+              "text-wave-hover",
+              "text-typewriter-caret",
+              "text-blur-focus",
+              "text-strike-reveal",
+              "text-ransom-note",
+              "text-glitch-layers",
+              "text-circular-spin",
+              "text-underline-magic",
+              "text-broken-grid",
+              "svg-path-draw-hover",
+              "svg-squiggle-underline",
+              "svg-gooey-menu",
+              "css3d-cube-nav",
+              "voxel-assemble",
+              "spring-cursor-follower",
+              "pendulum-tags",
+              "chain-links",
+              "liquid-blob-buttons",
+              "nav-active-pill",
+              "breadcrumb-collapse",
+              "sidebar-rail-expand",
+              "burger-morph-x",
+              "btn-shimmer-sweep",
+              "btn-text-slide-swap",
+              "btn-icon-hop",
+              "btn-success-morph",
+              "btn-confetti-burst",
+              "btn-ripple-material",
+              "btn-jelly-press",
+              "like-heart-particles",
+              "checkbox-draw-check",
+              "toggle-day-night",
+              "copy-inline-feedback",
+              "badge-notification-pop",
+              "input-underline-grow",
+              "input-shake-error",
+              "input-char-counter-arc",
+              "otp-code-boxes",
+              "range-elastic-thumb",
+              "form-multistep-progress",
+              "preloader-percentage",
+              "preloader-word-cycle",
+              "loader-dots-wave",
+              "loader-morph-shapes",
+              "loader-typing-code",
+              "loader-orbit-dots",
+              "upload-progress-morph",
+              "page-load-counter-slide",
+              "chart-donut-sweep",
+              "fui-target-lock",
+              "fui-access-granted",
+              "agent-token-meter",
+              "agent-deploy-pipeline",
+              "agent-node-graph",
+              "agent-streaming-text",
+              "typing-mechanical",
+              "konami-unlock",
+              "number-input-drag",
+              "dither-bayer",
+              "ascii-donut-3d",
+              "ascii-type-explode",
+              "dot-matrix-shapes",
+              "halftone-globe-canvas",
+              "pixel-lissajous-lab",
+              "chromatic-type",
+              "neumorphic-buttons",
+              "mechanical-switch",
+              "rotary-knob",
+              "flip-clock",
+              "embossed-press",
+              "analog-gauge",
+              "punch-card-keyboard",
+              "zippo-flame",
+              "dynamic-notch",
+              "hover-fill-button",
+              "showcase-pixel-trail",
+              "showcase-tracing-story",
+              "showcase-elastic-slider",
+              "framer-rolling-balance",
+              "drams-003",
+              "drams-005",
+              "drams-009",
+              "drams-020",
+              "drams-021",
+              "drams-022",
+              "drams-002",
+              "drams-012",
+              "drams-034",
+              "drams-040",
+              "drams-010",
+              "drams-044",
+              "drams-008",
+              "drams-011",
+              "drams-016",
+              "drams-017",
+              "drams-019",
+              "drams-025",
+              "drams-032",
+              "drams-014",
+              "drams-018",
+              "drams-023",
+              "drams-024",
+              "drams-026",
+              "drams-028",
+              "drams-030",
+              "drams-035",
+              "drams-037",
+              "drams-039",
+              "drams-042",
+              "micro-smoke-delete",
+              "micro-inline-confirm",
+              "micro-star-rating",
+              "micro-reaction-bar",
+              "micro-shimmer-status",
+              "ui-avatar-stack",
+              "ui-inverse-tabs",
+              "form-slide-to-confirm",
+              "form-precision-scrubber",
+              "data-candlestick-crosshair",
+              "ai-agent-creator",
+              "micro-stateful-button",
+              "micro-hold-to-pay",
+              "micro-share-pill",
+              "micro-icon-swap",
+              "micro-award-badge",
+              "micro-action-swap",
+              "form-vanish-input",
+              "form-magnetic-select",
+              "form-multi-select",
+              "form-inline-edit",
+              "form-liquid-toggle",
+              "ui-feedback-widget",
+              "nav-pagination-morph",
+              "loader-multi-step",
+              "loader-matrix-dots",
+              "play-plinko",
+              "play-slingshot",
+              "play-coin-flip"
+            ],
+            "invalidExceptions": []
+          }
+        }
+      ],
+      "note": "The five short command receipts are transcribed from successful tool results in this chat. The browser stdout and copied machine reports are retained in this phase. Functional library and fit checks use separate concurrent browser contexts after all timing profiles finish; they are not timing observations.",
+      "libraryReport": {
+        "file": ".artifacts/final-threads-performance-v46/library-verification.json",
+        "sha256": "e67c853e17cb39b77f92c66822f3cae2008d1fbf87393a0cc028b064db6b4e82"
+      },
+      "fitReport": {
+        "file": ".artifacts/final-threads-performance-v46/stage-fit.json",
+        "sha256": "8683bc2b396990e371d23aee06a8376ce9a87f0c87c756bfb5959e4ce99bf7a6"
+      }
+    }
+  },
+  "retainedEvidence": {
+    "directory": ".artifacts/final-threads-performance-v46",
+    "policy": "FROZEN.json seals this phase after publication. All helpers, inputs, failed comparisons, raw pixel pairs, samples and compressed traces in that sealed directory become read/copy only; do not execute them."
+  },
+  "remaining": [
+    "Reactive Threads still misses the CPU4 frame target.",
+    "Whole-catalog accessibility, complete cold-route startup, final Lighthouse and motion/performance acceptance remain open."
+  ],
+  "diagnosticReference": "https://chromium.googlesource.com/experimental/external/gob/dawn/dawn/+/a95aa29948fe2530e01576afc2a20a31b3f9e5b8/docs/dawn/debugging.md"
+}
