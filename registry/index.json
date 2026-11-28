@@ -36318,5 +36318,323 @@
     "hint": "Glowing filaments drift like a network thinking",
     "sourceName": "Paper Shaders · Neuro Noise (Apache-2.0)",
     "isNew": true
+  },
+  {
+    "id": "shader-god-rays",
+    "title": "God Rays",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "light",
+      "rays",
+      "hero"
+    ],
+    "useCases": [
+      "Ambient",
+      "light",
+      "hero"
+    ],
+    "tier": "free",
+    "desc": "Soft light rays fan down from above the stage, with spotty density, a brighter middle and an accent bloom, behind a changelog headline. Palette and Density change the light. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-god-rays",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.god-rays.js?v=94ee7d76d0",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-god-rays.json?v=8eb0d03bdd",
+    "assetRefs": {},
+    "rootClass": "d-px-rays",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Density",
+        "action": "density"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Light rays fan down from above with an accent bloom",
+    "sourceName": "Paper Shaders · God Rays (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-grain-gradient",
+    "title": "Grain Gradient",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "grain",
+      "gradient",
+      "cover"
+    ],
+    "useCases": [
+      "Ambient",
+      "gradient",
+      "cover"
+    ],
+    "tier": "free",
+    "desc": "Accent colours flow through an animated shape (corners, wave, blob, sphere or ripple) and are broken up by heavy film grain, like a risograph cover. Shape and Grain switch the form and the texture. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-grain-gradient",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.grain-gradient.js?v=c03edbde9e",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-grain-gradient.json?v=552bb5fc85",
+    "assetRefs": {},
+    "rootClass": "d-px-grain",
+    "controls": [
+      {
+        "label": "Shape",
+        "action": "shape"
+      },
+      {
+        "label": "Grain",
+        "action": "grain"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Accent colours flow through a shape under heavy grain",
+    "sourceName": "Paper Shaders · Grain Gradient (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-metaballs",
+    "title": "Metaballs",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "metaballs",
+      "blobs",
+      "loading"
+    ],
+    "useCases": [
+      "Ambient",
+      "loading",
+      "blobs"
+    ],
+    "tier": "free",
+    "desc": "Glowing accent balls orbit a shared centre and melt into one another wherever their fields overlap, like a sync in progress. Count and Size change the swarm. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-metaballs",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.metaballs.js?v=d839cee7b6",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-metaballs.json?v=dc5e0b19cf",
+    "assetRefs": {},
+    "rootClass": "d-px-balls",
+    "controls": [
+      {
+        "label": "Count",
+        "action": "count"
+      },
+      {
+        "label": "Size",
+        "action": "size"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Glowing balls orbit and melt into one another",
+    "sourceName": "Paper Shaders · Metaballs (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-pulsing-border",
+    "title": "Pulsing Border",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "border",
+      "ai input",
+      "glow"
+    ],
+    "useCases": [
+      "Ambient",
+      "AI",
+      "input"
+    ],
+    "tier": "free",
+    "desc": "A rounded frame of light pulses around a prompt box while bright spots travel the edge and smoke drifts outward, the way an AI input signals it is ready. Pulse and Spots tune the energy. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-pulsing-border",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.pulsing-border.js?v=24f00940fb",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-pulsing-border.json?v=27ffd995b3",
+    "assetRefs": {},
+    "rootClass": "d-px-pulse",
+    "controls": [
+      {
+        "label": "Pulse",
+        "action": "pulse"
+      },
+      {
+        "label": "Spots",
+        "action": "spots"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A frame of light pulses around a prompt box",
+    "sourceName": "Paper Shaders · Pulsing Border (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-smoke-ring",
+    "title": "Smoke Ring",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "smoke",
+      "voice",
+      "ring"
+    ],
+    "useCases": [
+      "Ambient",
+      "AI",
+      "voice"
+    ],
+    "tier": "free",
+    "desc": "A ring of layered smoke churns around an empty centre like a voice assistant listening, with white wisps over an accent core. Palette and Ring change the colour and thickness. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-smoke-ring",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.smoke-ring.js?v=6c6b821187",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-smoke-ring.json?v=95d5630446",
+    "assetRefs": {},
+    "rootClass": "d-px-smoke",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Ring",
+        "action": "ring"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A ring of layered smoke churns around a listening state",
+    "sourceName": "Paper Shaders · Smoke Ring (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-voronoi",
+    "title": "Voronoi",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "voronoi",
+      "cells",
+      "pattern"
+    ],
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "Drifting Voronoi cells fill with stepped accent tones, separated by dark gaps, with an optional glow toward each cell centre. Glow and Gap change the look from stained glass to lit honeycomb. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-voronoi",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.voronoi.js?v=088f47b450",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-voronoi.json?v=03a5fe8f91",
+    "assetRefs": {},
+    "rootClass": "d-px-voronoi",
+    "controls": [
+      {
+        "label": "Glow",
+        "action": "glow"
+      },
+      {
+        "label": "Gap",
+        "action": "gap"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Drifting cells fill with stepped accent tones",
+    "sourceName": "Paper Shaders · Voronoi (Apache-2.0)",
+    "isNew": true
   }
 ]

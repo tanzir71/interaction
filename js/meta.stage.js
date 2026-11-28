@@ -18936,5 +18936,197 @@ INTRX.meta({
       "loading"
     ],
     "addedAt": "2026-11"
+  },
+  "shader-god-rays": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Density",
+        "action": "density"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "light",
+      "hero"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-grain-gradient": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Shape",
+        "action": "shape"
+      },
+      {
+        "label": "Grain",
+        "action": "grain"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "gradient",
+      "cover"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-metaballs": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Count",
+        "action": "count"
+      },
+      {
+        "label": "Size",
+        "action": "size"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "loading",
+      "blobs"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-pulsing-border": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Pulse",
+        "action": "pulse"
+      },
+      {
+        "label": "Spots",
+        "action": "spots"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "AI",
+      "input"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-smoke-ring": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Ring",
+        "action": "ring"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "AI",
+      "voice"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-voronoi": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Glow",
+        "action": "glow"
+      },
+      {
+        "label": "Gap",
+        "action": "gap"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "background"
+    ],
+    "addedAt": "2026-11"
   }
 });

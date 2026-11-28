@@ -50,9 +50,16 @@ SOFTWARE.
   - `shader-mesh-gradient` (Mesh Gradient) in `js/demos.backgrounds.mesh-gradient.js`
   - `shader-dithering` (Dithering) in `js/demos.backgrounds.dithering.js`
   - `shader-neuro-noise` (Neuro Noise) in `js/demos.backgrounds.neuro-noise.js`
+  - `shader-god-rays` (God Rays) in `js/demos.backgrounds.god-rays.js`
+  - `shader-grain-gradient` (Grain Gradient) in `js/demos.backgrounds.grain-gradient.js`
+  - `shader-metaballs` (Metaballs) in `js/demos.backgrounds.metaballs.js`
+  - `shader-pulsing-border` (Pulsing Border) in `js/demos.backgrounds.pulsing-border.js`
+  - `shader-smoke-ring` (Smoke Ring) in `js/demos.backgrounds.smoke-ring.js`
+  - `shader-voronoi` (Voronoi) in `js/demos.backgrounds.voronoi.js`
 - Changes: fragment shaders and the sizing vertex shader are used with their helper snippets
   inlined; INTRX adds its own WebGL2 mount, palettes, controls, CSS fallbacks and runtime
-  integration. Each modified module states that it was changed.
+  integration. Shaders that read Paper's bundled 128×128 noise PNG get a seeded RGBA noise
+  lookup texture of the same size instead. Each modified module states that it was changed.
 
 NOTICE file of the original work:
 
