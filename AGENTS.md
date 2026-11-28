@@ -2,6 +2,8 @@
 
 Current work order: **`CODEX_HANDOFF_3.md`**. Read it before changing anything. Design source: the Figma file linked at the top of that handoff. Motion: **`MOTION_SYSTEM.md`**. Per-component lookup (Figma node, trigger, recipes): **`INTRX-handover/manifest/components.json`**.
 
+Owner publication handoff, 28 Nov 2026: read **[`docs/LLM_HANDOFF_2026-11-28.md`](docs/LLM_HANDOFF_2026-11-28.md)** for detected issues, retained measurements, rejected optimizations and pending acceptance. The owner closed this publication task with further aesthetics/performance/accessibility work delegated; this is not a final quality sign-off. No further review was requested for this publication.
+
 ## Repo in one minute
 - Zero-build static site. `index.html` loads `css/`, `js/demo-runtime.js` and the plain scripts in `js/shell/`. The shell fetches `registry/index.json`, then lazily loads each demo's module and dependencies.
 - Active shared styles live in `css/foundations.css`. Keep `css/style.css`,
