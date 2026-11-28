@@ -19168,5 +19168,329 @@ INTRX.meta({
       "SaaS"
     ],
     "addedAt": "2026-11"
+  },
+  "section-hero-photo": {
+    "designSize": "bleed",
+    "thumbDesignSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "label": "Next headline",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Hero",
+      "landing page",
+      "SaaS"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-browser-frame": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "label": "Switch tab",
+        "action": "tab"
+      },
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Device frame",
+      "landing page",
+      "changelog",
+      "portfolio"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-phone-frame": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [
+      {
+        "label": "Notify",
+        "action": "notify"
+      },
+      {
+        "label": "Theme",
+        "action": "theme"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Device frame",
+      "mobile app",
+      "landing page",
+      "fintech"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-auth": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "type",
+    "controls": [
+      {
+        "label": "Fill example",
+        "action": "fill"
+      },
+      {
+        "label": "Next step",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Sign in",
+      "onboarding",
+      "SaaS"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-faq": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "label": "Next question",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "FAQ",
+      "landing page",
+      "support"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-footer-reveal": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "scroll",
+    "controls": [
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Footer",
+      "landing page",
+      "call to action"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-testimonial-wall": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Pause",
+        "action": "pause",
+        "ariaLabel": "Pause or resume the drift"
+      },
+      {
+        "label": "Speed",
+        "action": "speed",
+        "ariaLabel": "Cycle the drift speed"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Testimonials",
+      "landing page",
+      "SaaS"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-logo-cloud": {
+    "designSize": [
+      880,
+      370
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Shuffle",
+        "action": "shuffle"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Customer logos",
+      "landing page",
+      "SaaS"
+    ],
+    "addedAt": "2026-11"
+  },
+  "section-feature-bento": {
+    "designSize": [
+      880,
+      460
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "hover",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Features",
+      "landing page",
+      "Developer tools"
+    ],
+    "addedAt": "2026-11"
   }
 });

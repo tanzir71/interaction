@@ -37474,5 +37474,617 @@
     "hint": "Prices roll digit by digit when billing switches",
     "sourceName": "Seen on: SaaS pricing pages from Linear, Vercel and Raycast, and most developer-tool launches",
     "isNew": true
+  },
+  {
+    "id": "section-hero-photo",
+    "title": "Photo Hero",
+    "category": "Heroes",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "hover",
+    "tags": [
+      "hero",
+      "section",
+      "landing page",
+      "parallax",
+      "photo",
+      "headline reveal",
+      "blur in"
+    ],
+    "useCases": [
+      "Hero",
+      "landing page",
+      "SaaS"
+    ],
+    "tier": "free",
+    "desc": "A full-bleed landing hero over a dark photograph. The headline resolves word by word from a 2px blur, the subcopy and calls to action follow, and the photo drifts a few pixels against the pointer.",
+    "designSize": "bleed",
+    "thumbDesignSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-hero-photo",
+    "thumb": "hero",
+    "module": "js/demos.sections.hero-photo.js?v=2097ae7080",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-hero-photo.json?v=8827548f71",
+    "assetRefs": {
+      "photo-dusk": "assets/images/dusk-800.webp"
+    },
+    "rootClass": "d-sec-hero",
+    "controls": [
+      {
+        "label": "Next headline",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Headline resolves word by word over a photo that drifts against the pointer",
+    "sourceName": "Seen on: launch pages from Linear, Vercel and Raycast, and most developer-tool homepages with a photographic hero",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "dusk",
+        "asset": "photo-dusk",
+        "photoId": "MnRFsBP581U",
+        "imageId": "photo-1761845086689-e90380bac227",
+        "photographer": "Andrey Strizhkov",
+        "url": "https://unsplash.com/photos/abstract-swirls-of-dark-smoke-with-glowing-red-embers-MnRFsBP581U",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-28"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-dusk": "assets/images/dusk.webp"
+    }
+  },
+  {
+    "id": "section-browser-frame",
+    "title": "Browser Frame",
+    "category": "Device frames",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "hover",
+    "tags": [
+      "browser",
+      "device frame",
+      "mockup",
+      "scroll on hover",
+      "changelog",
+      "section",
+      "tabs"
+    ],
+    "useCases": [
+      "Device frame",
+      "landing page",
+      "changelog",
+      "portfolio"
+    ],
+    "tier": "free",
+    "desc": "A neutral browser window for showing a product in context. The address types in on load, the page inside scrolls slowly to the bottom while you hover and glides back when you leave, and a second tab cross-fades to the docs.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-browser-frame",
+    "thumb": "hero",
+    "module": "js/demos.sections.browser-frame.js?v=df4ab8d652",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-browser-frame.json?v=208f05c2d3",
+    "assetRefs": {
+      "photo-cityNight": "assets/images/cityNight-800.webp"
+    },
+    "rootClass": "d-sec-browser",
+    "controls": [
+      {
+        "label": "Switch tab",
+        "action": "tab"
+      },
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Browser window whose page scrolls to the bottom on hover",
+    "sourceName": "Seen on: product and template marketplaces, launch pages and portfolio sites that show a whole page inside a window",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "cityNight",
+        "asset": "photo-cityNight",
+        "photoId": "tvFeF_k_9NQ",
+        "imageId": "photo-1770069978071-7b0094a44bb7",
+        "photographer": "Liana S",
+        "url": "https://unsplash.com/photos/abstract-streaks-of-orange-light-on-dark-background-tvFeF_k_9NQ",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-28"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-cityNight": "assets/images/cityNight.webp"
+    }
+  },
+  {
+    "id": "section-phone-frame",
+    "title": "Phone Frame",
+    "category": "Device frames",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "hover",
+    "tags": [
+      "phone",
+      "device frame",
+      "mockup",
+      "tilt",
+      "3d",
+      "notification",
+      "app showcase",
+      "section"
+    ],
+    "useCases": [
+      "Device frame",
+      "mobile app",
+      "landing page",
+      "fintech"
+    ],
+    "tier": "free",
+    "desc": "A phone mockup drawn entirely in CSS, holding a real finance app screen. It tilts toward the pointer on a soft spring with a glare that slides across the glass, and notifications drop out of the camera island every few seconds.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-phone-frame",
+    "thumb": "hero",
+    "module": "js/demos.sections.phone-frame.js?v=9fd790549a",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-phone-frame.json?v=be56c8b48f",
+    "assetRefs": {},
+    "rootClass": "d-sec-phone",
+    "controls": [
+      {
+        "label": "Notify",
+        "action": "notify"
+      },
+      {
+        "label": "Theme",
+        "action": "theme"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "CSS phone that tilts toward the pointer while notifications drop from the island",
+    "sourceName": "Seen on: mobile app launch pages, fintech and fitness landing pages, and App Store style feature sections",
+    "isNew": true
+  },
+  {
+    "id": "section-auth",
+    "title": "Sign-in Flow",
+    "category": "Auth & Onboarding",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "type",
+    "tags": [
+      "sign in",
+      "auth",
+      "otp",
+      "one-time code",
+      "form validation",
+      "section",
+      "onboarding"
+    ],
+    "useCases": [
+      "Sign in",
+      "onboarding",
+      "SaaS"
+    ],
+    "tier": "free",
+    "desc": "A passwordless sign-in card that morphs from email to a six-digit code to a signed-in state. The code boxes auto-advance, accept paste and keep a resend countdown; a bad email shakes once and explains itself.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-auth",
+    "thumb": "hero",
+    "module": "js/demos.sections.auth.js?v=019586a69f",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-auth.json?v=6828c2aacd",
+    "assetRefs": {},
+    "rootClass": "d-sec-auth",
+    "controls": [
+      {
+        "label": "Fill example",
+        "action": "fill"
+      },
+      {
+        "label": "Next step",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A sign-in card morphs from email to a six-digit code to signed in",
+    "sourceName": "Seen on: passwordless sign-in screens of developer tools such as Linear, Vercel and Raycast",
+    "isNew": true
+  },
+  {
+    "id": "section-faq",
+    "title": "FAQ Section",
+    "category": "FAQ, CTA & Footer",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "press",
+    "tags": [
+      "faq",
+      "accordion",
+      "section",
+      "disclosure",
+      "landing page",
+      "support"
+    ],
+    "useCases": [
+      "FAQ",
+      "landing page",
+      "support"
+    ],
+    "tier": "free",
+    "desc": "A two-column FAQ: a heading and a talk-to-an-engineer card on the left, an accordion of six real questions on the right. One answer is open at a time; panels grow through grid rows and the plus turns into a minus.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-faq",
+    "thumb": "hero",
+    "module": "js/demos.sections.faq.js?v=5a77be91b2",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-faq.json?v=4a08d33331",
+    "assetRefs": {},
+    "rootClass": "d-sec-faq",
+    "controls": [
+      {
+        "label": "Next question",
+        "action": "next"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A one-open accordion of real questions beside a contact card",
+    "sourceName": "Seen on: the FAQ blocks near the end of pricing and landing pages for Linear, Vercel and Raycast",
+    "isNew": true
+  },
+  {
+    "id": "section-footer-reveal",
+    "title": "Footer Reveal",
+    "category": "FAQ, CTA & Footer",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "scroll",
+    "tags": [
+      "footer",
+      "sticky footer",
+      "reveal",
+      "scroll",
+      "cta",
+      "section",
+      "landing page"
+    ],
+    "useCases": [
+      "Footer",
+      "landing page",
+      "call to action"
+    ],
+    "tier": "free",
+    "desc": "The closing call to action of a page lifts away as you scroll, uncovering a sticky footer underneath: link columns, a live status pill and a huge wordmark clipped at the bottom edge.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-footer-reveal",
+    "thumb": "hero",
+    "module": "js/demos.sections.footer.js?v=67599de6fa",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-footer-reveal.json?v=8ae13f84cc",
+    "assetRefs": {
+      "photo-silk": "assets/images/silk-800.webp"
+    },
+    "rootClass": "d-sec-foot",
+    "controls": [
+      {
+        "label": "Scroll",
+        "action": "scroll"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "The closing call to action lifts away to reveal a sticky footer",
+    "sourceName": "Seen on: the curtain-style footers at the end of developer-tool and studio landing pages",
+    "isNew": true,
+    "photoCredits": [
+      {
+        "key": "silk",
+        "asset": "photo-silk",
+        "photoId": "v7xw4p7KdFQ",
+        "imageId": "photo-1637750586228-179a1a7aef84",
+        "photographer": "Ryunosuke Kikuno",
+        "url": "https://unsplash.com/photos/a-black-background-that-is-very-shiny-v7xw4p7KdFQ",
+        "license": "Unsplash License",
+        "licenseUrl": "https://unsplash.com/license",
+        "verifiedAt": "2026-11-28"
+      }
+    ],
+    "fullAssetRefs": {
+      "photo-silk": "assets/images/silk.webp"
+    }
+  },
+  {
+    "id": "section-testimonial-wall",
+    "title": "Testimonial Wall",
+    "category": "Social proof",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "testimonials",
+      "section",
+      "social proof",
+      "marquee",
+      "quotes",
+      "landing page",
+      "reviews"
+    ],
+    "useCases": [
+      "Testimonials",
+      "landing page",
+      "SaaS"
+    ],
+    "tier": "free",
+    "desc": "A testimonial section where three columns of quote cards drift vertically at different speeds as seamless loops under soft fade masks. Hovering a column eases it to a stop and lifts the card under the pointer.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-testimonial-wall",
+    "thumb": "hero",
+    "module": "js/demos.sections.testimonial-wall.js?v=65e5cfa461",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-testimonial-wall.json?v=fe6c9fa7ac",
+    "assetRefs": {},
+    "rootClass": "d-sec-wall",
+    "controls": [
+      {
+        "label": "Pause",
+        "action": "pause",
+        "ariaLabel": "Pause or resume the drift"
+      },
+      {
+        "label": "Speed",
+        "action": "speed",
+        "ariaLabel": "Cycle the drift speed"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Quote columns drift as seamless loops at different speeds",
+    "sourceName": "Seen on: Raycast, Linear and Supabase customer walls, and most developer-tool launch pages",
+    "isNew": true
+  },
+  {
+    "id": "section-logo-cloud",
+    "title": "Logo Cloud",
+    "category": "Social proof",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "logos",
+      "section",
+      "social proof",
+      "customers",
+      "wordmarks",
+      "spotlight",
+      "landing page"
+    ],
+    "useCases": [
+      "Customer logos",
+      "landing page",
+      "SaaS"
+    ],
+    "tier": "free",
+    "desc": "A customer logo section on a hairline grid. Every couple of seconds one or two wordmarks blur and slide out for another, and a soft spotlight follows the pointer along the grid lines.",
+    "designSize": [
+      880,
+      370
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-logo-cloud",
+    "thumb": "hero",
+    "module": "js/demos.sections.logo-cloud.js?v=e9d10e0e4b",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-logo-cloud.json?v=e1623f670b",
+    "assetRefs": {},
+    "rootClass": "d-sec-logos",
+    "controls": [
+      {
+        "label": "Shuffle",
+        "action": "shuffle"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Wordmarks swap in place on a hairline grid with a pointer spotlight",
+    "sourceName": "Seen on: Vercel, Linear and Resend home pages, directly under the hero",
+    "isNew": true
+  },
+  {
+    "id": "section-feature-bento",
+    "title": "Feature Bento",
+    "category": "Features & Bento",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "hover",
+    "tags": [
+      "bento",
+      "features",
+      "section",
+      "command menu",
+      "uptime",
+      "border glow",
+      "landing page"
+    ],
+    "useCases": [
+      "Features",
+      "landing page",
+      "Developer tools"
+    ],
+    "tier": "free",
+    "desc": "A five-cell bento for a fictional developer platform: a command menu that types and runs a deploy, uptime bars, a streaming build log, an edge map and preview switches. Each visual idles quietly and plays in full on hover while a border glow follows the pointer across cells.",
+    "designSize": [
+      880,
+      460
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-feature-bento",
+    "thumb": "hero",
+    "module": "js/demos.sections.feature-bento.js?v=59a23f891b",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-feature-bento.json?v=61fe70706e",
+    "assetRefs": {},
+    "rootClass": "d-sec-bento",
+    "controls": [],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Five feature cells with live visuals and a border glow that follows the pointer",
+    "sourceName": "Seen on: Vercel, Linear and Raycast feature sections",
+    "isNew": true
   }
 ]

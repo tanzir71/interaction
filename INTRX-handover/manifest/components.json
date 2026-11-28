@@ -1,7 +1,7 @@
 {
  "file": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction",
  "generated": "2026-11-15",
- "count": 532,
+ "count": 541,
  "boards": {
   "Interface": {
    "node": "110:973",
@@ -10279,6 +10279,186 @@
    "motionRecipes": [
     "toggle",
     "number-roll"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-hero-photo",
+   "title": "Photo Hero",
+   "trigger": "Hover",
+   "description": "Headline resolves word by word over a photo that drifts against the pointer",
+   "board": "Sections",
+   "section": "Heroes",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "text-swap",
+    "parallax",
+    "blur-in"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-browser-frame",
+   "title": "Browser Frame",
+   "trigger": "Hover",
+   "description": "Browser window whose page scrolls to the bottom on hover",
+   "board": "Sections",
+   "section": "Device frames",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "scroll-on-hover",
+    "cross-fade",
+    "typing"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-phone-frame",
+   "title": "Phone Frame",
+   "trigger": "Hover",
+   "description": "CSS phone that tilts toward the pointer while notifications drop from the island",
+   "board": "Sections",
+   "section": "Device frames",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "tilt",
+    "spring",
+    "pop-in"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-auth",
+   "title": "Sign-in Flow",
+   "trigger": "Type",
+   "description": "A sign-in card morphs from email to a six-digit code to signed in",
+   "board": "Sections",
+   "section": "Auth & Onboarding",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "panel",
+    "field",
+    "shake",
+    "check",
+    "press"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-faq",
+   "title": "FAQ Section",
+   "trigger": "Press",
+   "description": "A one-open accordion of real questions beside a contact card",
+   "board": "Sections",
+   "section": "FAQ, CTA & Footer",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "accord",
+    "lift"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-footer-reveal",
+   "title": "Footer Reveal",
+   "trigger": "Scroll",
+   "description": "The closing call to action lifts away to reveal a sticky footer",
+   "board": "Sections",
+   "section": "FAQ, CTA & Footer",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "scroll",
+    "loop"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-testimonial-wall",
+   "title": "Testimonial Wall",
+   "trigger": "Ambient",
+   "description": "Quote columns drift as seamless loops at different speeds",
+   "board": "Sections",
+   "section": "Social proof",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "loop",
+    "lift"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-logo-cloud",
+   "title": "Logo Cloud",
+   "trigger": "Ambient",
+   "description": "Wordmarks swap in place on a hairline grid with a pointer spotlight",
+   "board": "Sections",
+   "section": "Social proof",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "text",
+    "cursor"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-feature-bento",
+   "title": "Feature Bento",
+   "trigger": "Hover",
+   "description": "Five feature cells with live visuals and a border glow that follows the pointer",
+   "board": "Sections",
+   "section": "Features & Bento",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "stagger",
+    "stream",
+    "toggle",
+    "cursor",
+    "tooltip"
    ],
    "motionAuditFlags": []
   }
