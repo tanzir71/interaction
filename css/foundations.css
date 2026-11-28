@@ -222,6 +222,9 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
 [data-theme="light"] :is(.syntax-tag,.syntax-string){color:#27643b}
 [data-theme="light"] .a11y-chips span{color:#216e39}
 
+/* Keyboard pass: rings inside scrolling rows and code panes draw inset so their scrollers cannot clip them; the hero keeps room for its buttons' rings. */
+.trigger-scroll>:focus-visible,.group-tabs>:focus-visible,.source-toolbar [role="tab"]:focus-visible,.code-window:focus-visible{outline-offset:-2px}
+.home-hero{padding-bottom:8px;margin-bottom:-8px}
 /* Shared Stage Kit v4. Figma 8:62, 8:63, 8:45 and 187:4482. */
 /* Stage metadata owns its palette independently of the page theme. */
 .demo-stage.stage[data-stage-theme="dark"] {
@@ -332,6 +335,3 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
    Zero specificity, so a demo's own scrollbar styling still wins. */
 :where(.demo-stage.stage[data-stage-theme="dark"]) *{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
 :where(.demo-stage.stage[data-stage-theme="light"]) *{scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.22) transparent}
-/* Keyboard pass: rings inside scrolling rows and code panes draw inset so their scrollers cannot clip them; the hero keeps room for its buttons' rings. */
-.trigger-scroll>:focus-visible,.group-tabs>:focus-visible,.source-toolbar [role="tab"]:focus-visible,.code-window:focus-visible{outline-offset:-2px}
-.home-hero{padding-bottom:8px;margin-bottom:-8px}
