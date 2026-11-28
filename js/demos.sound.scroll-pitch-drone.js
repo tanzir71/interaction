@@ -54,10 +54,10 @@ INTRX.register({
     {
       "key": "sea",
       "asset": "photo-sea",
-      "photoId": "qINZ8zEYErY",
-      "imageId": "photo-1578664865136-74b450f31cd9",
-      "photographer": "Clayton Tonna",
-      "url": "https://unsplash.com/photos/shallow-focus-photo-of-body-of-water-qINZ8zEYErY",
+      "photoId": "APJtnTolIMs",
+      "imageId": "photo-1709377058964-929af7f2d02f",
+      "photographer": "Pawel Czerwinski",
+      "url": "https://unsplash.com/photos/a-black-and-white-photo-of-wavy-lines-APJtnTolIMs",
       "license": "Unsplash License",
       "licenseUrl": "https://unsplash.com/license",
       "verifiedAt": "2026-11-17"

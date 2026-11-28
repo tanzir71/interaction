@@ -1,5 +1,47 @@
 # Photographic assets and typography
 
+## Photo library v3: dark abstract set, verified 28 November 2026
+
+This set replaces every image below it. The owner asked for real, licensed dark
+abstract images by human creators (no procedural or AI-generated imagery) and
+approved this mapping from the contact sheet in `reports/photo-candidates.html`.
+Each canonical Unsplash page was opened on 28 November 2026 and is listed as a
+free photo under the [Unsplash License](https://unsplash.com/license); none is
+Unsplash+. Sources were 1600px JPEGs from images.unsplash.com. Each was
+centre-cropped (busts anchored toward the top) to the aspect ratio of the slot it
+replaces and written at that slot's exact 1600px and 800px sizes as WebP, so
+every component keeps its geometry. Hashes and profiles live in
+`assets/photo-credits.json`.
+
+| Key | Unsplash image ID | Creator and canonical page | Kind |
+| --- | --- | --- | --- |
+| forestDark | photo-1550684376-d9a6fc224981 | [Adrien Olichon](https://unsplash.com/photos/black-sand-uSM0tpDAF00) | photograph |
+| forestBlue | photo-1668455199701-284281127a87 | [Milad Fakurian](https://unsplash.com/photos/dark-metallic-curved-abstract-shapes-7W3X1dAuKqg) | 3D render |
+| ocean | photo-1545486332-9e0999c535b2 | [Adrien Olichon](https://unsplash.com/photos/a-black-and-white-photo-of-water-and-sand-_GH9LwhlSO4) | photograph |
+| cityTeal | photo-1688494930045-328d0f95efe9 | [Martin Martz](https://unsplash.com/photos/a-black-and-orange-abstract-background-with-curves-qqyUN78RmgI) | 3D render |
+| cityNight | photo-1770069978071-7b0094a44bb7 | [Liana S](https://unsplash.com/photos/abstract-streaks-of-orange-light-on-dark-background-tvFeF_k_9NQ) | photograph |
+| archGrid | photo-1749090445096-5e5ff72c644e | [Victoria Wang](https://unsplash.com/photos/abstract-architecture-showcased-in-stark-monochrome-Oskm8uY1Et0) | photograph |
+| portraitC1 | photo-1561910377-c2a014ffd1cd | [Ansh Minchekar](https://unsplash.com/photos/grey-ceramic-womans-face-bust-figurine-dzYzrbF0HFE) | photograph |
+| silk | photo-1637750586228-179a1a7aef84 | [Ryunosuke Kikuno](https://unsplash.com/photos/a-black-background-that-is-very-shiny-v7xw4p7KdFQ) | photograph |
+| aurora | photo-1624475817899-44311a611946 | [Marek Piwnicki](https://unsplash.com/photos/orange-and-black-light-streaks-pIeiJFp59BU) | photograph |
+| dusk | photo-1761845086689-e90380bac227 | [Andrey Strizhkov](https://unsplash.com/photos/abstract-swirls-of-dark-smoke-with-glowing-red-embers-MnRFsBP581U) | photograph |
+| embers | photo-1605478361938-2e562284e3d9 | [Pawel Czerwinski](https://unsplash.com/photos/brown-and-black-abstract-painting-EdULlCRj-x0) | photograph |
+| milkyway | photo-1594565295818-2e042ddaf6e5 | [Md Mahdi](https://unsplash.com/photos/orange-light-on-black-background-6adJJmewoUg) | photograph |
+| chrome | photo-1634648852208-fc7e55a15751 | [Milad Fakurian](https://unsplash.com/photos/a-black-and-white-photo-of-a-wavy-background-7Wjmy3m6Nlo) | 3D render |
+| interiorDark | photo-1618123069754-cd64c230a169 | [Klim Musalimov](https://unsplash.com/photos/black-fabric-with-wrinkled-texture-rDMacl1FDjw) | photograph |
+| fire | photo-1561211950-8b1eb6114d6a | [Pawel Czerwinski](https://unsplash.com/photos/orange-and-black-fluid-abstract-painting-kNx8H8ScHDk) | photograph |
+| sea | photo-1709377058964-929af7f2d02f | [Pawel Czerwinski](https://unsplash.com/photos/a-black-and-white-photo-of-wavy-lines-APJtnTolIMs) | 3D render |
+| roses | photo-1708457753320-02e52a276a80 | [Pawel Czerwinski](https://unsplash.com/photos/a-black-and-red-background-with-a-curved-design-DQ2lqx_6RD0) | 3D render |
+| smoke | photo-1505836684283-b127e3a2495e | [Daniele Levis Pelusi](https://unsplash.com/photos/gray-smoke-digital-wallpaper-l9H7FkGjpAE) | photograph |
+| magnolia | photo-1700469880511-3ef0cee47985 | [Trophim Laptev](https://unsplash.com/photos/a-glass-object-with-a-black-background-_BTOMrRpyRA) | 3D render |
+| portraitC2 | photo-1581344895000-b5deedbd1660 | [Birmingham Museums Trust](https://unsplash.com/photos/white-ceramic-man-head-bust-L2sbcLBJwOc) | photograph |
+| portraitC3 | photo-1633598439856-c3d881f46841 | [Prem Chandaka](https://unsplash.com/photos/a-black-and-white-photo-of-a-bust-of-a-man-iqqSqpt4BmA) | 3D render |
+| trails | photo-1641766378723-9392957449b6 | [Mariola Grobelska](https://unsplash.com/photos/a-group-of-orange-streaks-of-light-on-a-black-background-dqQMZ6Vozvk) | photograph |
+| rain | photo-1698067929252-5821e0c4b874 | [Heather Green](https://unsplash.com/photos/a-piece-of-black-paper-that-has-been-wrinkled-zgA8aaDng5w) | photograph |
+| fluidBlue | photo-1610312217105-4760d7407a0d | [Pawel Czerwinski](https://unsplash.com/photos/black-and-white-abstract-painting-CL3orMYdm-I) | photograph |
+
+The sections that follow are the history of the v1 and v2 libraries.
+
 ## Rain Window — approved v2 source, verified 20 November 2026
 
 The `rain` key is [Max van den Oetelaar's airport-window photograph](https://unsplash.com/photos/a-window-with-rain-drops-on-it-at-night-1e60bqR1Ar0),

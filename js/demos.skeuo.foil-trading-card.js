@@ -44,8 +44,8 @@ INTRX.register({
   },
   "photoCredits": [
     {
-      "photographer": "Carlos Garcia Hansen",
-      "url": "https://unsplash.com/photos/woman-with-brown-hair-and-black-eyes-TfjOwcrMj5I",
+      "photographer": "Ansh Minchekar",
+      "url": "https://unsplash.com/photos/grey-ceramic-womans-face-bust-figurine-dzYzrbF0HFE",
       "licenseUrl": "https://unsplash.com/license",
       "asset": "photo-portraitC1"
     }
