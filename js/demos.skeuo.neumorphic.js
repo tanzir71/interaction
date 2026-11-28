@@ -27,7 +27,7 @@ INTRX.register({
     168
   ],
   "stage": {
-    "theme": "dark",
+    "theme": "light",
     "overflow": "clip"
   },
   "controls": [

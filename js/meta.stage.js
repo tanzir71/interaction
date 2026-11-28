@@ -11462,7 +11462,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11496,7 +11496,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11530,7 +11530,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
@@ -11565,7 +11565,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
@@ -11599,7 +11599,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11706,7 +11706,7 @@ INTRX.meta({
       520
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11777,7 +11777,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
@@ -11806,7 +11806,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11835,7 +11835,7 @@ INTRX.meta({
       520
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11878,7 +11878,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -11958,7 +11958,7 @@ INTRX.meta({
       560
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "drag",
@@ -12034,7 +12034,7 @@ INTRX.meta({
       560
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",
@@ -12106,7 +12106,7 @@ INTRX.meta({
       480
     ],
     "stage": {
-      "theme": "dark",
+      "theme": "light",
       "overflow": "clip"
     },
     "trigger": "press",

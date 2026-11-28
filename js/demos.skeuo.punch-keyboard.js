@@ -27,7 +27,7 @@ INTRX.register({
   ],
   "thumb": "hero",
   "stage": {
-    "theme": "dark",
+    "theme": "light",
     "overflow": "clip"
   },
   "controls": [],
