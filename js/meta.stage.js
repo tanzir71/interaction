@@ -5821,7 +5821,7 @@ INTRX.meta({
   },
   "nav-active-pill": {
     "designSize": [
-      280,
+      400,
       238
     ],
     "stage": {
