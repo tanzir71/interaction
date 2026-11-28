@@ -2398,8 +2398,8 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      240,
-      136
+      300,
+      200
     ]
   },
   "text-accordion-squeeze": {
@@ -16568,7 +16568,7 @@ INTRX.meta({
   },
   "form-assignee-picker": {
     "designSize": [
-      480,
+      560,
       440
     ],
     "thumbDesignSize": [
