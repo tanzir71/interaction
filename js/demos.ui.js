@@ -10,17 +10,223 @@ INTRX.register({
  title:"Genie Minimize",
  cat:"Layout & UI",
  rootClass:"d-mac",
- tags:["FLIP","window","dock"],
+ tags:["window","genie","dock","drag","WAAPI"],
  libs:[],
- desc:"A small window resolves into its dock target with measured local translation and scale. Reverse the transition at any point through the native dock or window controls.",
+ desc:"A code editor window with real traffic lights, a file tree and highlighted TypeScript pours itself into its Dock icon with a perspective genie, then rises back out. Drag it by the title bar, click the desktop to see its inactive state.",
  seen:"Pattern family: desktop window-to-dock transitions",
- hint:"Press · The window pours itself into the dock",
- html:`<div class="d-mac"><div class="d-mac-window" role="group" aria-label="Demo window"><img class="d-mac-silhouette" src="{{asset:layout2-mac-silhouette}}" alt=""><div class="d-mac-header"></div><span class="d-mac-dot" aria-hidden="true" style="left:4px"><img src="{{asset:layout2-mac-dot}}" alt=""></span><button class="d-mac-dot" type="button" aria-label="Minimize window" style="left:14px"><img src="{{asset:layout2-mac-dot}}" alt=""></button><span class="d-mac-dot" aria-hidden="true" style="left:24px"><img src="{{asset:layout2-mac-dot}}" alt=""></span></div><button class="d-mac-target" type="button" aria-label="Restore window from dock"><i aria-hidden="true"></i></button><span class="d-mac-status" role="status"></span></div>`,
- css:`.d-mac{position:relative;top:4px;font-family:Geist,system-ui,sans-serif}.d-mac-window{position:absolute;left:24px;top:22px;width:152px;height:126px;transform-origin:50% 100%;transition:transform var(--dur-medium) var(--ease-settle),opacity var(--dur-fast) var(--ease-out)}.d-mac-silhouette{position:absolute;left:-.5px;top:-.5px;display:block}.d-mac-header{position:absolute;left:0;top:0;width:152px;height:20px;border-radius:6px;background:#ffffff0a}.d-mac-dot{position:absolute;top:2px;width:14px;height:16px;border:0;padding:0;border-radius:4px;background:none;cursor:pointer}.d-mac-dot img{position:absolute;left:4px;top:5px;display:block}.d-mac-target{position:absolute;left:40px;top:150px;width:120px;height:30px;padding:0;border:1px solid #ffffff1c;border-radius:10px;background:#1c1c1c;cursor:pointer}.d-mac-target i{position:absolute;left:47px;top:4px;width:20px;height:20px;border-radius:6px;background:#3a3a3a;transition:background var(--dur-quick) var(--ease-out)}.d-mac[data-minimized="true"] .d-mac-window{opacity:0;pointer-events:none;transition:transform var(--dur-fast) var(--ease-out),opacity var(--dur-quick) var(--ease-out)}.d-mac[data-minimized="true"] .d-mac-target i{background:#f1f1f1}.d-mac-dot:focus-visible,.d-mac-target:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}.d-mac-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-mac-window{transition:opacity var(--dur-quick) var(--ease-out)!important;transform:none!important}}.d-mac[data-mode="thumb"] .d-mac-window{top:-18px}.d-mac[data-mode="thumb"] .d-mac-target{top:110px}.d-mac[data-mode="thumb"][data-compact="true"] .d-mac-target{top:100px}`,
- js:`const win=root.querySelector('.d-mac-window'),target=root.querySelector('.d-mac-target'),dots=[...root.querySelectorAll('.d-mac-dot')],status=root.querySelector('[role="status"]');let minimized=false;
-function set(next){minimized=next;const tile=target.querySelector('i').getBoundingClientRect(),bounds=root.getBoundingClientRect(),width=tile.width/ctx.scale,height=tile.height/ctx.scale,dx=(tile.left-bounds.left+tile.width/2)/ctx.scale-win.offsetLeft-win.offsetWidth/2,dy=(tile.bottom-bounds.top)/ctx.scale-win.offsetTop-win.offsetHeight;win.style.transform=next?'translate('+dx+'px,'+dy+'px) scale('+(width/win.offsetWidth)+','+(height/win.offsetHeight)+')':'none';root.dataset.minimized=String(next);win.inert=next;target.setAttribute('aria-label',next?'Restore window from dock':'Window is open');if(next&&win.contains(document.activeElement))target.focus();status.textContent=next?'Window minimized to dock':'Window restored';ctx.emit('window',{minimized:next});}
-dots[1].addEventListener('click',()=>set(true));target.addEventListener('click',()=>{if(minimized){set(false);if(ctx.mode==='full')dots[1].focus();}});ctx.onAction('toggle',()=>set(!minimized));root.dataset.minimized='false';root.dataset.mode=ctx.mode;const observer=new ResizeObserver(()=>root.dataset.compact=String(ctx.size.h<230));observer.observe(stage);root.dataset.compact=String(ctx.size.h<230);return()=>observer.disconnect();`,
- prompt:`Recreate original Genie Minimize tile184:1806 in a200x180 plane. Place the unmodified153x127 silhouette at23.5,21.5 with the native152x20 header24,22 and three original6px dots at32/42/52,29. Only the center dot is a native Minimize button; the flanking dots are decorative. All own their artwork without resizing. The120x30 dock is40,150 with20px placeholder47,4. No outer frame or idle demo controls. Minimize measures the untransformed window and dock local boxes, resolves translation plus scale into the20px target with250ms ease-out and150ms opacity; restore reverses from the current CSS interpolated state with350ms ease-settle and250ms opacity. Rapid toggles retarget without timers or stale completion. Make window inert while folded, return native focus to dock then restore control, expose Toggle/Reset actions, status and events. Reduced motion uses150ms opacity and no transform. Keep the exact v4 held silhouette as the initial composition.`
+ hint:"Press · Minimize pours the window into its Dock icon; the icon brings it back",
+ html:`<div class="d-mac" data-active="true" data-minimized="false">
+  <div class="d-mac-pos">
+    <section class="d-mac-window" role="group" aria-label="Editor window: checkout.ts in storefront">
+      <header class="d-mac-bar">
+        <div class="d-mac-lights">
+          <span class="d-mac-light d-mac-light--close" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M3.8 3.8l4.4 4.4M8.2 3.8L3.8 8.2"/></svg></span>
+          <button class="d-mac-light d-mac-light--min" type="button" aria-label="Minimize window"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.3 6h5.4"/></svg></button>
+          <span class="d-mac-light d-mac-light--zoom" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4 8V4.9L7.1 8zM8 4v3.1L4.9 4z"/></svg></span>
+        </div>
+        <div class="d-mac-title" tabindex="0" role="button" aria-roledescription="window title bar" aria-label="checkout.ts, storefront. Arrow keys move the window, double-click minimizes.">
+          <svg class="d-mac-title-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.8h5.2L12.5 5v9.2H4z"/><path d="M9 1.8V5.3h3.4"/></svg>
+          <span class="d-mac-title-file">checkout.ts</span><span class="d-mac-title-repo">storefront</span>
+        </div>
+        <div class="d-mac-tools" aria-hidden="true">
+          <span class="d-mac-branch"><svg viewBox="0 0 16 16"><circle cx="4.5" cy="3.8" r="1.6"/><circle cx="4.5" cy="12.2" r="1.6"/><circle cx="11.5" cy="5.6" r="1.6"/><path d="M4.5 5.4v5.2M11.5 7.2c0 2.4-2.2 2.6-7 3.6"/></svg>main</span>
+          <svg class="d-mac-tool" viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.3"/><path d="M10.2 10.2L13.5 13.5"/></svg>
+          <svg class="d-mac-tool" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="10" rx="2"/><path d="M6.5 3v10"/></svg>
+        </div>
+      </header>
+      <div class="d-mac-body">
+        <nav class="d-mac-side" aria-label="Project files">
+          <p class="d-mac-side-head">Storefront</p>
+          <ul class="d-mac-tree">
+            <li class="d-mac-node d-mac-node--dir"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 6.5l3 3 3-3"/></svg>src</li>
+            <li class="d-mac-node d-mac-node--dir d-mac-in1"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 6.5l3 3 3-3"/></svg>checkout</li>
+            <li class="d-mac-node d-mac-in2">cart.ts</li>
+            <li class="d-mac-node d-mac-in2 d-mac-node--on" aria-current="page">checkout.ts</li>
+            <li class="d-mac-node d-mac-in2">shipping.ts</li>
+            <li class="d-mac-node d-mac-in1">money.ts</li>
+            <li class="d-mac-node d-mac-in1">types.ts</li>
+            <li class="d-mac-node d-mac-node--dir d-mac-node--shut"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 5l3 3-3 3"/></svg>tests</li>
+            <li class="d-mac-node">package.json</li>
+            <li class="d-mac-node">README.md</li>
+          </ul>
+        </nav>
+        <div class="d-mac-editor">
+          <div class="d-mac-tabs" aria-hidden="true"><span class="d-mac-tab d-mac-tab--on">checkout.ts<svg viewBox="0 0 12 12"><path d="M3.8 3.8l4.4 4.4M8.2 3.8L3.8 8.2"/></svg></span><span class="d-mac-tab">money.ts</span></div>
+          <pre class="d-mac-code" aria-label="checkout.ts source"><code><span class="d-mac-ln"><i>1</i><b class="d-mac-k">import</b> { formatMoney } <b class="d-mac-k">from</b> <b class="d-mac-s">'./money'</b></span><span class="d-mac-ln"><i>2</i><b class="d-mac-k">import type</b> { <b class="d-mac-t">Cart</b>, <b class="d-mac-t">Region</b> } <b class="d-mac-k">from</b> <b class="d-mac-s">'./types'</b></span><span class="d-mac-ln"><i>3</i></span><span class="d-mac-ln"><i>4</i><b class="d-mac-c">// Totals stay in minor units (cents)</b></span><span class="d-mac-ln"><i>5</i><b class="d-mac-k">export function</b> <b class="d-mac-f">total</b>(cart: <b class="d-mac-t">Cart</b>, r: <b class="d-mac-t">Region</b>) {</span><span class="d-mac-ln"><i>6</i>  <b class="d-mac-k">const</b> sub = <b class="d-mac-f">sumLines</b>(cart.items)</span><span class="d-mac-ln d-mac-ln--on"><i>7</i>  <b class="d-mac-k">const</b> tax = Math.<b class="d-mac-f">round</b>(sub * r.vatRate)<span class="d-mac-caret" aria-hidden="true"></span></span><span class="d-mac-ln"><i>8</i>  <b class="d-mac-k">const</b> ship = sub &gt;= <b class="d-mac-n">5000</b> ? <b class="d-mac-n">0</b> : r.shipping</span><span class="d-mac-ln"><i>9</i>  <b class="d-mac-k">return</b> <b class="d-mac-f">formatMoney</b>(sub + tax + ship)</span><span class="d-mac-ln"><i>10</i>}</span></code></pre>
+        </div>
+      </div>
+      <footer class="d-mac-status" aria-hidden="true"><span><svg viewBox="0 0 16 16"><path d="M3.5 8.5l3 3 6-7"/></svg>No problems</span><span>Ln 7, Col 41</span><span>TypeScript</span></footer>
+    </section>
+  </div>
+  <div class="d-mac-dock" aria-label="Dock">
+    <span class="d-mac-app d-mac-app--files" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 0 1 2-2h3.8l2 2h7.2a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M3.5 10.2h17"/></svg><i></i></span>
+    <button class="d-mac-app d-mac-app--editor" type="button" aria-label="Editor, window open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 7.6L4.2 12l4.4 4.4M15.4 7.6l4.4 4.4-4.4 4.4M13.4 5.8l-2.8 12.4"/></svg><i></i></button>
+    <span class="d-mac-app d-mac-app--term" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 8.5L10 12l-3.5 3.5M12.5 16h5"/></svg><i></i></span>
+    <span class="d-mac-app d-mac-app--mail" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.8" y="6.2" width="16.4" height="11.6" rx="2"/><path d="M4.6 7.4l7.4 5.6 7.4-5.6"/></svg></span>
+    <span class="d-mac-app d-mac-app--cal" aria-hidden="true"><em>Nov</em><strong>29</strong></span>
+    <span class="d-mac-sep" aria-hidden="true"></span>
+    <span class="d-mac-app d-mac-app--bin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5.5 7.5h13M10 7.5V5.8h4v1.7M7.2 7.5l.9 11h7.8l.9-11M10.6 10.8v4.6M13.4 10.8v4.6"/></svg></span>
+  </div>
+  <p class="d-mac-live" role="status" aria-live="polite"></p>
+</div>`,
+ css:`.d-mac{--ink:#f2f2f2;--ink-2:#a3a3a3;--ink-3:#8a8a8a;--edge:rgba(255,255,255,.09);--edge-hi:rgba(255,255,255,.16);--accent:#fa7319;--win:#161616;--bar:#1d1d1d;--side:#191919;--code:#c4c4c4;--k:#ff9a55;--s:#d9d9d9;--t:#ffc8a0;--n:#ffb27a;--c:#7a7a7a;--f:#f5f5f5;--fs:var(--fit-scale,1);position:relative;width:100%;height:100%;color:var(--ink);font:400 12px/1.4 Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;user-select:none}
+.d-mac *{box-sizing:border-box}
+.d-mac-pos{position:absolute;left:40px;top:12px;width:520px;height:304px;z-index:2}
+.d-mac-window{position:relative;display:grid;grid-template-rows:38px 1fr 24px;width:100%;height:100%;border-radius:12px;overflow:hidden;background:var(--win);box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.07),0 0 0 1px rgba(0,0,0,.55),0 2px 4px rgba(0,0,0,.3),0 28px 56px -18px rgba(0,0,0,.75);transform-origin:50% 100%;transition:box-shadow var(--dur-fast,250ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-mac[data-active="false"] .d-mac-window{box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.05),0 0 0 1px rgba(0,0,0,.45),0 14px 32px -16px rgba(0,0,0,.6)}
+.d-mac-bar{position:relative;display:flex;align-items:center;gap:12px;padding:0 12px 0 14px;background:linear-gradient(#222,#1c1c1c);box-shadow:inset 0 -1px 0 rgba(0,0,0,.5),inset 0 -2px 0 rgba(255,255,255,.03);cursor:grab;touch-action:none}
+.d-mac.is-dragging .d-mac-bar{cursor:grabbing}
+.d-mac-lights{display:flex;gap:8px;z-index:1}
+.d-mac-light{display:grid;place-items:center;width:12px;height:12px;padding:0;border:0;border-radius:50%;background:var(--lc);box-shadow:inset 0 0 0 .5px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.18);cursor:default;transition:background-color var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-mac-light svg{width:12px;height:12px;fill:none;stroke:rgba(0,0,0,.62);stroke-width:1.25;stroke-linecap:round;opacity:0;transition:opacity var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-mac-light--zoom svg{fill:rgba(0,0,0,.6);stroke:none}
+.d-mac-light--close{--lc:#ff5f57}.d-mac-light--min{--lc:#febc2e;cursor:pointer}.d-mac-light--zoom{--lc:#28c840}
+.d-mac[data-active="false"] .d-mac-light{--lc:#3a3a3a}
+.d-mac-lights:focus-within .d-mac-light svg{opacity:1}
+@media (hover:hover){.d-mac-lights:hover .d-mac-light svg{opacity:1}.d-mac[data-active="false"] .d-mac-lights:hover .d-mac-light--close{--lc:#ff5f57}.d-mac[data-active="false"] .d-mac-lights:hover .d-mac-light--min{--lc:#febc2e}.d-mac[data-active="false"] .d-mac-lights:hover .d-mac-light--zoom{--lc:#28c840}}
+.d-mac-title{position:absolute;left:50%;top:50%;display:flex;align-items:center;gap:6px;padding:3px 8px;border-radius:6px;transform:translate(-50%,-50%);white-space:nowrap;font-size:12.5px;font-weight:500;color:var(--ink);transition:color var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-mac-title-icon{width:14px;height:14px;fill:none;stroke:var(--ink-2);stroke-width:1.2;stroke-linejoin:round}
+.d-mac-title-repo{color:var(--ink-3);font-weight:400}.d-mac-title-repo::before{content:'\\2014';margin:0 6px 0 2px}
+.d-mac[data-active="false"] .d-mac-title{color:var(--ink-3)}
+.d-mac-tools{display:flex;align-items:center;gap:10px;margin-left:auto}
+.d-mac-branch{display:flex;align-items:center;gap:5px;height:22px;padding:0 8px;border-radius:6px;font:500 11px/1 'Geist Mono',ui-monospace,monospace;color:var(--ink-2);background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px var(--edge)}
+.d-mac-branch svg,.d-mac-tool{width:14px;height:14px;fill:none;stroke:var(--ink-3);stroke-width:1.3;stroke-linecap:round}
+.d-mac-body{display:grid;grid-template-columns:150px 1fr;min-height:0}
+.d-mac-side{padding:10px 8px;background:var(--side);box-shadow:inset -1px 0 0 rgba(0,0,0,.45),inset -2px 0 0 rgba(255,255,255,.025);overflow:hidden}
+.d-mac-side-head{margin:0 0 6px 6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.d-mac-tree{margin:0;padding:0;list-style:none}
+.d-mac-node{display:flex;align-items:center;gap:4px;height:22px;padding:0 6px 0 22px;border-radius:5px;font-size:12px;color:var(--ink-2);white-space:nowrap}
+.d-mac-node--dir{padding-left:6px;color:var(--ink)}
+.d-mac-node svg{width:12px;height:12px;flex:none;fill:none;stroke:var(--ink-3);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.d-mac-in1{padding-left:22px}.d-mac-node--dir.d-mac-in1{padding-left:14px}.d-mac-in2{padding-left:38px}
+.d-mac-node--on{color:var(--ink);background:rgba(255,255,255,.07);box-shadow:inset 2px 0 0 var(--accent)}
+.d-mac[data-active="false"] .d-mac-node--on{box-shadow:inset 2px 0 0 #5a5a5a}
+.d-mac-editor{display:grid;grid-template-rows:30px 1fr;min-width:0}
+.d-mac-tabs{display:flex;background:#141414;box-shadow:inset 0 -1px 0 rgba(255,255,255,.05)}
+.d-mac-tab{display:flex;align-items:center;gap:6px;padding:0 12px;font-size:12px;color:var(--ink-3);box-shadow:inset -1px 0 0 rgba(255,255,255,.05)}
+.d-mac-tab--on{color:var(--ink);background:var(--win);box-shadow:inset -1px 0 0 rgba(255,255,255,.05),inset 0 1px 0 var(--accent)}
+.d-mac[data-active="false"] .d-mac-tab--on{box-shadow:inset -1px 0 0 rgba(255,255,255,.05),inset 0 1px 0 #5a5a5a}
+.d-mac-tab svg{width:12px;height:12px;fill:none;stroke:var(--ink-3);stroke-width:1.2;stroke-linecap:round}
+.d-mac-code{margin:0;padding:10px 0;overflow:hidden;font:400 12px/19px 'Geist Mono',ui-monospace,monospace;color:var(--code);font-variant-ligatures:none}
+.d-mac-code code{font:inherit}
+.d-mac-ln{position:relative;display:block;min-height:19px;padding-left:44px;white-space:pre}
+.d-mac-ln i{position:absolute;left:0;width:30px;text-align:right;font-style:normal;font-size:11px;color:#545454}
+.d-mac-ln--on{background:rgba(255,255,255,.035)}.d-mac-ln--on i{color:var(--ink-2)}
+.d-mac-code b{font-weight:400}.d-mac-k{color:var(--k)}.d-mac-s{color:var(--s)}.d-mac-t{color:var(--t)}.d-mac-n{color:var(--n)}.d-mac-c{color:var(--c);font-style:italic}.d-mac-f{color:var(--f)}
+.d-mac-caret{display:inline-block;width:2px;height:15px;margin:0 0 -3px 1px;background:var(--accent);animation:d-mac-blink 1.1s steps(1) infinite}
+.d-mac[data-active="false"] .d-mac-caret{opacity:0;animation:none}
+@keyframes d-mac-blink{50%{opacity:0}}
+.d-mac-status{display:flex;align-items:center;gap:16px;padding:0 12px;font-size:11px;color:var(--ink-3);background:#141414;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.d-mac-status span{display:flex;align-items:center;gap:5px}.d-mac-status span:first-child{margin-right:auto}
+.d-mac-status svg{width:12px;height:12px;fill:none;stroke:var(--ink-2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.d-mac-dock{position:absolute;left:50%;bottom:6px;display:flex;align-items:flex-start;gap:7px;padding:7px 9px 9px;border-radius:18px;transform:translateX(-50%);background:linear-gradient(rgba(44,44,44,.82),rgba(30,30,30,.86));box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.08),0 1px 2px rgba(0,0,0,.4),0 16px 32px -12px rgba(0,0,0,.7);z-index:1}
+.d-mac-app{position:relative;display:grid;place-items:center;width:42px;height:42px;padding:0;border:0;border-radius:11px;background:linear-gradient(#323232,#1f1f1f);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),inset 0 1px 0 rgba(255,255,255,.14),0 1px 2px rgba(0,0,0,.5);color:#ededed}
+.d-mac-app svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.d-mac-app i{position:absolute;left:50%;bottom:-7px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#d4d4d4}
+.d-mac-app--editor{background:linear-gradient(#ff8f45,#e4570b);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),inset 0 1px 0 rgba(255,255,255,.35),0 1px 2px rgba(0,0,0,.5),0 6px 14px -6px rgba(250,115,25,.55);color:#fff;cursor:pointer;transition:transform var(--dur-fast,250ms) var(--ease-pop,cubic-bezier(.34,1.36,.64,1))}
+.d-mac-app--editor:active{transform:scale(.94);transition-duration:var(--dur-micro,80ms)}
+.d-mac-app--editor:focus-visible,.d-mac-light--min:focus-visible,.d-mac-title:focus-visible{outline:2px solid var(--focus-ring,#fa7319);outline-offset:2px}
+.d-mac-app--term{background:linear-gradient(#1a1a1a,#0b0b0b);color:#d9d9d9}
+.d-mac-app--mail{background:linear-gradient(#f5f5f5,#d6d6d6);color:#3a3a3a}
+.d-mac-app--cal{display:flex;flex-direction:column;justify-content:center;gap:0;background:linear-gradient(#fafafa,#e3e3e3);color:#262626}
+.d-mac-app--cal em{font:600 11px/11px Geist,system-ui,sans-serif;font-style:normal;letter-spacing:.04em;text-transform:uppercase;color:#e4570b}
+.d-mac-app--cal strong{font:600 19px/20px Geist,system-ui,sans-serif;letter-spacing:-.03em}
+.d-mac-app--bin{background:linear-gradient(rgba(255,255,255,.1),rgba(255,255,255,.04));color:#cfcfcf}
+.d-mac-sep{align-self:stretch;width:1px;margin:2px 2px 0;background:rgba(255,255,255,.12)}
+.d-mac[data-minimized="true"] .d-mac-pos{pointer-events:none}
+.d-mac-live{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+/* Thumbnail: the window above its Dock icon, sized for a library tile. */
+.d-mac[data-mode="thumb"] .d-mac-pos{left:8px;top:2px;width:284px;height:120px}
+.d-mac[data-mode="thumb"] .d-mac-window{grid-template-rows:28px 1fr;border-radius:10px}
+.d-mac[data-mode="thumb"] .d-mac-bar{padding:0 10px}.d-mac[data-mode="thumb"] .d-mac-lights{gap:7px}
+.d-mac[data-mode="thumb"] .d-mac-light{width:11px;height:11px}
+.d-mac[data-mode="thumb"] :is(.d-mac-side,.d-mac-tabs,.d-mac-status,.d-mac-tools,.d-mac-title-repo,.d-mac-app--cal,.d-mac-app--mail){display:none}
+.d-mac[data-mode="thumb"] .d-mac-body,.d-mac[data-mode="thumb"] .d-mac-editor{grid-template-columns:1fr;grid-template-rows:1fr}
+.d-mac[data-mode="thumb"] .d-mac-code{padding:6px 0;font-size:max(11px,calc(11px / var(--fs)));line-height:17px}
+.d-mac[data-mode="thumb"] .d-mac-ln:nth-child(-n+3){display:none}
+.d-mac[data-mode="thumb"] .d-mac-code{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.d-mac[data-mode="thumb"] .d-mac-ln{min-height:17px;padding-left:30px}.d-mac[data-mode="thumb"] .d-mac-ln i{width:20px;font-size:max(11px,calc(11px / var(--fs)))}
+.d-mac[data-mode="thumb"] .d-mac-title{font-size:max(12px,calc(11px / var(--fs)))}
+.d-mac[data-mode="thumb"] .d-mac-dock{bottom:0;gap:6px;padding:5px 7px 7px;border-radius:14px}
+.d-mac[data-mode="thumb"] .d-mac-app{width:32px;height:32px;border-radius:9px}
+.d-mac[data-mode="thumb"] .d-mac-app svg{width:19px;height:19px}
+.d-mac[data-mode="thumb"] .d-mac-app i{bottom:-6px;width:3px;height:3px;margin-left:-1.5px}
+[data-stage-theme="light"] .d-mac{--ink:#171717;--ink-2:#525252;--ink-3:#6b6b6b;--edge:rgba(0,0,0,.1);--edge-hi:rgba(0,0,0,.16);--win:#fff;--side:#f6f6f6;--code:#3a3a3a;--k:#c2500a;--s:#404040;--t:#9a4a12;--n:#c2500a;--c:#8a8a8a;--f:#111}
+[data-stage-theme="light"] .d-mac-window{box-shadow:inset 0 0 0 1px var(--edge),0 0 0 1px rgba(0,0,0,.04),0 2px 4px rgba(0,0,0,.06),0 28px 56px -18px rgba(0,0,0,.28)}
+[data-stage-theme="light"] .d-mac-bar{background:linear-gradient(#f7f7f7,#efefef);box-shadow:inset 0 -1px 0 rgba(0,0,0,.08)}
+[data-stage-theme="light"] :is(.d-mac-tabs,.d-mac-status){background:#f4f4f4;box-shadow:inset 0 -1px 0 rgba(0,0,0,.06)}
+[data-stage-theme="light"] .d-mac-side{box-shadow:inset -1px 0 0 rgba(0,0,0,.07)}
+[data-stage-theme="light"] .d-mac-node--on{background:rgba(0,0,0,.06)}
+[data-stage-theme="light"] .d-mac-ln i{color:#a3a3a3}[data-stage-theme="light"] .d-mac-ln--on{background:rgba(0,0,0,.035)}
+[data-stage-theme="light"] .d-mac-dock{background:linear-gradient(rgba(255,255,255,.8),rgba(240,240,240,.86));box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 16px 32px -12px rgba(0,0,0,.25)}
+[data-stage-theme="light"] .d-mac[data-active="false"] .d-mac-light{--lc:#d4d4d4}
+[data-stage-theme="light"] .d-mac-app--bin{background:linear-gradient(#e9e9e9,#d9d9d9);color:#404040}
+@media (prefers-reduced-motion:reduce){.d-mac *{transition-duration:var(--dur-quick,150ms)!important}.d-mac-caret{animation:none}}`,
+ js:`const C='d-mac',$=s=>root.querySelector(s);
+const reduced=ctx.reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
+root.dataset.mode=ctx.mode;
+const pos=$('.'+C+'-pos'),win=$('.'+C+'-window'),bar=$('.'+C+'-bar'),title=$('.'+C+'-title'),minBtn=$('.'+C+'-light--min'),app=$('.'+C+'-app--editor'),dock=$('.'+C+'-dock'),live=$('.'+C+'-live');
+const abort=new AbortController(),on=(n,e,f)=>n.addEventListener(e,f,{signal:abort.signal});
+let minimized=false,anim=null,drag=null,off={x:0,y:0},touched=false,timer=0,dead=false;
+const EASE_OUT='cubic-bezier(.22,1,.36,1)',EASE_CLOSE='cubic-bezier(.4,0,.2,1)';
+function place(){pos.style.transform='translate('+off.x+'px,'+off.y+'px)';}
+// The genie: the window tilts toward the viewer around its bottom edge, narrows into a funnel and drains into the Dock icon.
+function genie(){
+ const W=win.offsetWidth,H=win.offsetHeight;
+ const fromX=pos.offsetLeft+off.x+W/2,fromY=pos.offsetTop+off.y+H;
+ const toX=dock.offsetLeft-dock.offsetWidth/2+app.offsetLeft+app.offsetWidth/2,toY=dock.offsetTop+app.offsetTop+app.offsetHeight*.8;
+ const dx=toX-fromX,dy=toY-fromY,s=app.offsetWidth*.7/W;
+ // Bottom edge stays at z=0 while the tilted top is magnified by the perspective, so the window reads as a funnel.
+ const f=(x,y,rx,sx,sy,o,offset)=>({transform:'translate('+x.toFixed(2)+'px,'+y.toFixed(2)+'px) perspective(800px) rotateX('+rx+'deg) scale('+sx.toFixed(4)+','+sy.toFixed(4)+')',opacity:o,offset});
+ return[f(0,0,0,1,1,1,0),f(dx*.12,dy*.28,-45,.72,1.02,1,.2),f(dx*.3,dy*.6,-70,.42,1.45,1,.42),f(dx*.86,dy,-78,.15,1.1,1,.76),f(dx,dy,-80,s,.6,0,1)];
+}
+function say(text){live.textContent=text;}
+function set(next,user){
+ if(user){touched=true;clearTimeout(timer);}
+ if(next===minimized)return;
+ minimized=next;root.dataset.minimized=String(next);win.inert=next;
+ app.setAttribute('aria-label',next?'Editor, restore checkout.ts window':'Editor, window open');
+ if(next&&win.contains(document.activeElement))app.focus({preventScroll:true});
+ if(reduced){if(anim)anim.cancel();anim=win.animate([{opacity:next?1:0},{opacity:next?0:1}],{duration:150,easing:'ease-in-out',fill:'forwards'});}
+ else if(anim&&anim.playState==='running'){anim.reverse();}
+ else{
+  if(anim)anim.cancel();
+  const frames=genie();
+  anim=win.animate(next?frames:frames.slice().reverse().map(k=>Object.assign({},k,{offset:1-k.offset})),{duration:next?400:500,easing:next?EASE_CLOSE:EASE_OUT,fill:'forwards'});
+ }
+ const current=anim;anim.finished.then(()=>{if(dead||anim!==current)return;if(!minimized){current.cancel();anim=null;}}).catch(()=>{});
+ if(!next){root.dataset.active='true';}
+ say(next?'Window minimized to the Dock':'Window restored');
+ ctx.emit('window',{minimized:next});
+}
+on(minBtn,'click',e=>{e.stopPropagation();set(true,true);});
+on(app,'click',()=>{if(minimized){set(false,true);if(ctx.mode==='full')title.focus({preventScroll:true});}else{root.dataset.active='true';}});
+on(bar,'dblclick',e=>{if(!e.target.closest('.'+C+'-lights'))set(true,true);});
+// Focus: the desktop deactivates the window, anything inside it reactivates.
+on(root,'pointerdown',e=>{root.dataset.active=String(!!e.target.closest('.'+C+'-pos,.'+C+'-dock'));});
+on(win,'focusin',()=>{root.dataset.active='true';});
+function clamp(){const W=win.offsetWidth,H=win.offsetHeight,minX=-pos.offsetLeft,maxX=root.offsetWidth-pos.offsetLeft-W,minY=-pos.offsetTop,maxY=root.offsetHeight-pos.offsetTop-H*.4;off.x=Math.min(maxX,Math.max(minX,off.x));off.y=Math.min(maxY,Math.max(minY,off.y));}
+on(bar,'pointerdown',e=>{
+ if(e.button!==0||minimized||e.target.closest('button'))return;
+ touched=true;clearTimeout(timer);
+ drag={id:e.pointerId,x:e.clientX,y:e.clientY,ox:off.x,oy:off.y};bar.setPointerCapture(e.pointerId);root.classList.add('is-dragging');
+});
+on(bar,'pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;const k=ctx.scale||1;off.x=drag.ox+(e.clientX-drag.x)/k;off.y=drag.oy+(e.clientY-drag.y)/k;clamp();place();});
+const end=e=>{if(!drag||e.pointerId!==drag.id)return;drag=null;root.classList.remove('is-dragging');ctx.emit('window',{x:off.x,y:off.y});};
+on(bar,'pointerup',end);on(bar,'pointercancel',end);
+on(title,'keydown',e=>{
+ const step=e.shiftKey?40:10,moves={ArrowLeft:[-step,0],ArrowRight:[step,0],ArrowUp:[0,-step],ArrowDown:[0,step]};
+ if(moves[e.key]){e.preventDefault();e.stopPropagation();off.x+=moves[e.key][0];off.y+=moves[e.key][1];clamp();place();}
+ else if(e.key==='Enter'||e.key===' '){e.preventDefault();set(true,true);}
+});
+ctx.onAction('toggle',()=>set(!minimized,true));
+const fit=()=>root.style.setProperty('--fit-scale',String(ctx.scale||1));
+const ro=new ResizeObserver(fit);ro.observe(stage);fit();
+// Library tiles play the minimize and restore on their own until someone takes over.
+function loop(){timer=setTimeout(()=>{if(touched||dead)return;set(!minimized,false);loop();},minimized?1300:2600);}
+if(ctx.mode==='thumb'&&!reduced)loop();
+return()=>{dead=true;clearTimeout(timer);abort.abort();ro.disconnect();if(anim)anim.cancel();};`,
+ prompt:`Build a macOS-style window minimize in plain HTML, CSS and JavaScript with no libraries. Compose a 600×400 scene: a 520×304 code-editor window (radius 12px, surface built from an inset 1px rgba(255,255,255,.09) hairline, a 1px top highlight, a dark outer ring and a long soft drop shadow) above a translucent Dock. The window has a 38px title bar with three 12px traffic lights (#ff5f57, #febc2e, #28c840; only the yellow one is a real Minimize button, the others are decorative), a centred title "checkout.ts — storefront" with a file glyph, and a right-hand toolbar with a "main" branch chip and two stroke icons. Below it a 150px file tree (Storefront: src › checkout › cart.ts, checkout.ts (current, 2px orange inset edge), shipping.ts; money.ts, types.ts, tests, package.json, README.md), a tab strip and eleven lines of TypeScript in Geist Mono 12/19 with line numbers: keywords in orange #ff9a55, types and numbers in lighter tints of the same orange, comments in italic grey, functions near-white, a highlighted current line with a blinking 2px orange caret. A 24px status bar reads No problems · Ln 7, Col 41 · TypeScript. The Dock holds 42px squircle app icons drawn as inline SVG strokes: Files (graphite), the Editor (orange gradient, the only interactive icon), Terminal, Mail (light), a Calendar showing NOV 29, a hairline divider and a Bin; running apps carry 4px dots. Minimize plays a genie with the Web Animations API: transform-origin at the window's bottom centre, keyframes translate toward the Editor icon while perspective(760px) rotateX tilts the top toward the viewer (0 → -24deg → -46deg → -52deg) and scale narrows it into a funnel (1 → .9/.82 → ~.18/.12 → icon size) with opacity reaching 0 at the end; 400ms cubic-bezier(.4,0,.2,1) out and 500ms cubic-bezier(.22,1,.36,1) back in from the reversed keyframes. Toggling mid-flight calls reverse() so the window retraces its path. The window is inert while minimized, focus moves to the Editor icon, and a polite status announces the change. Drag the window by its title bar with pointer capture (divide pointer deltas by the stage scale, clamp to the scene); arrow keys on the focused title move it 10px (Shift 40px), Enter or a double-click minimizes. Pressing the empty desktop makes the window inactive: grey traffic lights, dimmer title, grey caret edge, smaller shadow; hovering the lights reveals their ×, − and expand glyphs. Thumbnail mode shows a 280×158 window with code only above a smaller Dock and loops minimize and restore until touched. Reduced motion swaps the genie for a 150ms opacity fade and stops the caret blinking. Include a light stage theme.`
 });
 
 /* v4 native layout control; shared stage owns framing and actions. */
@@ -29,21 +235,148 @@ INTRX.register({
  title:"Dock Magnify",
  cat:"Layout & UI",
  rootClass:"d-dock",
- tags:["proximity","smoothstep","cursor"],
+ tags:["dock","magnify","proximity","cosine","cursor"],
  libs:[],
- desc:"Seven neutral marks respond to distance from a pointer or keyboard selection. Influence uses fixed local centers, smoothstep falloff and time-based easing that stops at rest.",
+ desc:"A desktop Dock of six crafted app icons and a Bin. Icons swell around the pointer on a cosine falloff and push their neighbours aside, the rail widens with them, a label names the app under the pointer and a launch bounce lights its running dot.",
  seen:"Pattern family: desktop dock magnification",
- hint:"Hover · Icons swell around the pointer like a lens",
- html:`<div class="d-dock" role="group" aria-label="Magnifying dock"><div class="d-dock-bar"></div><button class="d-dock-icon" type="button" aria-label="Application 1" aria-pressed="false" style="left:23px;top:88px;width:28px;height:28px;border-radius:7.28px"></button><button class="d-dock-icon" type="button" aria-label="Application 2" aria-pressed="false" style="left:57px;top:84px;width:32px;height:32px;border-radius:8.32px"></button><button class="d-dock-icon" type="button" aria-label="Application 3" aria-pressed="false" style="left:95px;top:78px;width:38px;height:38px;border-radius:9.88px"></button><button class="d-dock-icon" type="button" aria-label="Application 4" aria-pressed="true" style="left:139px;top:70px;width:46px;height:46px;border-radius:11.96px"></button><button class="d-dock-icon" type="button" aria-label="Application 5" aria-pressed="false" style="left:191px;top:78px;width:38px;height:38px;border-radius:9.88px"></button><button class="d-dock-icon" type="button" aria-label="Application 6" aria-pressed="false" style="left:235px;top:84px;width:32px;height:32px;border-radius:8.32px"></button><button class="d-dock-icon" type="button" aria-label="Application 7" aria-pressed="false" style="left:273px;top:88px;width:28px;height:28px;border-radius:7.28px"></button><img class="d-dock-indicator" src="{{asset:layout2-dock-indicator}}" alt=""><span class="d-dock-status" role="status"></span></div>`,
- css:`.d-dock{position:relative;top:4px;font-family:Geist,system-ui,sans-serif}.d-dock-bar{position:absolute;left:11px;top:64px;width:302px;height:60px;border:1px solid #ffffff1c;border-radius:18px;background:#1c1c1c;box-shadow:0 1px 2px #0000001f,0 8px 20px #0000002e}.d-dock-icon{position:absolute;display:block;padding:0;border:1px solid #ffffff1c;background:#2a2a2a;transform-origin:50% 100%;cursor:pointer}.d-dock-icon:nth-of-type(4){background:#3a3a3a;box-shadow:0 1px 2px #0000001f,0 8px 20px #0000002e}.d-dock-icon:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}.d-dock-indicator{position:absolute;left:160px;top:128px;display:block;transition:transform var(--dur-fast) var(--ease-out)}.d-dock-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@media(prefers-reduced-motion:reduce){.d-dock-icon{transform:none!important}.d-dock-indicator{transition:none}}`,
- js:`const icons=[...root.querySelectorAll('button')],indicator=root.querySelector('img'),status=root.querySelector('[role="status"]'),abort=new AbortController(),options={signal:abort.signal},initial=[28,32,38,46,38,32,28],centers=icons.map(i=>i.offsetLeft+i.offsetWidth/2);let target=null,sizes=initial.slice(),frame=0,last=0,selected=3;
-function paint(){icons.forEach((icon,i)=>icon.style.transform='scale('+(sizes[i]/initial[i])+')');root.dataset.sizes=sizes.map(v=>v.toFixed(2)).join(',');root.dataset.following=String(!!frame);}
-function tick(t){frame=0;const dt=Math.min(40,last?t-last:1000/60),blend=1-Math.pow(.82,dt/(1000/60));last=t;let moving=false;sizes=sizes.map((size,i)=>{const fall=target===null?0:Math.max(0,1-Math.abs(target-centers[i])/110),wanted=24*(1+.9*fall*fall*(3-2*fall)),next=size+(wanted-size)*blend;if(Math.abs(next-wanted)>.015)moving=true;return Math.abs(next-wanted)<.015?wanted:next;});if(moving)frame=requestAnimationFrame(tick);else last=0;paint();}
-function aim(x){target=x;if(ctx.reducedMotion)return;if(!frame){last=0;frame=requestAnimationFrame(tick);}}
-root.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const b=root.getBoundingClientRect();aim((e.clientX-b.left)/ctx.scale);},options);root.addEventListener('pointerleave',()=>aim(null),options);
-function select(index){selected=(index+7)%7;icons.forEach((icon,i)=>icon.setAttribute('aria-pressed',String(i===selected)));indicator.style.transform='translateX('+(centers[selected]-162)+'px)';root.dataset.selected=String(selected);status.textContent='Application '+(selected+1)+' selected';aim(centers[selected]);ctx.emit('dock',{index:selected});}
-icons.forEach((icon,i)=>{icon.addEventListener('click',()=>select(i),options);icon.addEventListener('focus',()=>aim(centers[i]),options);icon.addEventListener('blur',()=>{if(!root.contains(document.activeElement))aim(null);},options);icon.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();e.stopPropagation();const next=e.key==='Home'?0:e.key==='End'?6:(i+(e.key==='ArrowRight'?1:6))%7;icons[next].focus();select(next);},options);});ctx.onAction('next',()=>select(selected+1));root.dataset.selected='3';paint();return()=>{abort.abort();cancelAnimationFrame(frame);};`,
- prompt:`Implement original v4 Dock Magnify186:1779 in324x136. The302x60 rounded18 rail is11,64; seven neutral native app buttons keep reference sizes28/32/38/46/38/32/28 and positions23/57/95/139/191/235/273, bottom116. Exact4px indicator160,128. Initial composition is the held center peak. Subsequent native hover follows stable untransformed centers with110px influence, smoothstep t²(3−2t), base24px and maxextra.9, easing via time-normalized .18 per-frame lerp. Animate transforms only, stop when settled, clear influence on leave, never measure transformed boxes for feedback. Pointer math divides stage scale. Click/touch chooses an app, moves native indicator250ms and updates pressed state/status; arrow/Home/End keys select and focus. Expose Next app and Reset through shell controls. Reduced motion keeps original icon sizes with instant indicator feedback and no follow loop. Runtime suspension freezes easing, disposal aborts listeners/frames. Keep one original4px SVG and no decorative hue.`
+ hint:"Hover · Icons swell around the pointer; click one to launch it",
+ html:`<div class="d-dock" role="toolbar" aria-label="Dock" aria-orientation="horizontal">
+  <div class="d-dock-bar" aria-hidden="true"></div>
+  <div class="d-dock-dots" aria-hidden="true"></div>
+  <div class="d-dock-row">
+    <button class="d-dock-app" type="button" data-name="Files" data-running="true" aria-label="Files, open" tabindex="0"><span class="d-dock-tile d-dock-tile--files"><svg viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 0 1 2-2h3.8l2 2h7.2a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/><path d="M3.5 10.2h17"/></svg></span></button>
+    <button class="d-dock-app" type="button" data-name="Mail" data-running="true" aria-label="Mail, open" tabindex="-1"><span class="d-dock-tile d-dock-tile--mail"><svg viewBox="0 0 24 24"><rect x="3.6" y="6" width="16.8" height="12" rx="2.2"/><path d="M4.4 7.3l7.6 5.7 7.6-5.7"/></svg></span></button>
+    <button class="d-dock-app" type="button" data-name="Calendar" data-running="false" aria-label="Calendar" tabindex="-1"><span class="d-dock-tile d-dock-tile--cal"><svg viewBox="0 0 24 24"><path class="d-dock-cal-head" d="M4 8.6V7.2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1.4z"/><rect x="4" y="5.2" width="16" height="14.6" rx="2"/><path d="M8.2 3.6v3.2M15.8 3.6v3.2"/><circle class="d-dock-cal-day" cx="8.4" cy="12.4" r=".95"/><circle class="d-dock-cal-day" cx="12" cy="12.4" r=".95"/><circle class="d-dock-cal-day" cx="15.6" cy="12.4" r=".95"/><circle class="d-dock-cal-day" cx="8.4" cy="16" r=".95"/><circle class="d-dock-cal-today" cx="12" cy="16" r="1.5"/></svg></span></button>
+    <button class="d-dock-app" type="button" data-name="Notes" data-running="false" aria-label="Notes" tabindex="-1"><span class="d-dock-tile d-dock-tile--notes"><svg viewBox="0 0 24 24"><path d="M6.5 4.5h11v15h-11z"/><path d="M9 9h6M9 12h6M9 15h3.6"/></svg></span></button>
+    <button class="d-dock-app" type="button" data-name="Music" data-running="true" aria-label="Music, open" tabindex="-1"><span class="d-dock-tile d-dock-tile--music"><svg viewBox="0 0 24 24"><path d="M9.5 17V6.6l9-1.8V15"/><circle cx="7.4" cy="17" r="2.2"/><circle cx="16.4" cy="15" r="2.2"/></svg></span></button>
+    <button class="d-dock-app" type="button" data-name="Terminal" data-running="true" aria-label="Terminal, open" tabindex="-1"><span class="d-dock-tile d-dock-tile--term"><svg viewBox="0 0 24 24"><path d="M6.5 8.5L10 12l-3.5 3.5M12.5 16h5"/></svg></span></button>
+    <span class="d-dock-sep" aria-hidden="true"></span>
+    <button class="d-dock-app" type="button" data-name="Bin" data-running="false" data-fixed="true" aria-label="Bin" tabindex="-1"><span class="d-dock-tile d-dock-tile--bin"><svg viewBox="0 0 24 24"><path d="M5.5 7.5h13M10 7.5V5.8h4v1.7M7.2 7.5l.9 11h7.8l.9-11M10.6 10.8v4.6M13.4 10.8v4.6"/></svg></span></button>
+  </div>
+  <div class="d-dock-tip" aria-hidden="true"><span class="d-dock-tip-label"></span></div>
+  <p class="d-dock-live" role="status" aria-live="polite"></p>
+</div>`,
+ css:`.d-dock{--ink:#f2f2f2;--edge:rgba(255,255,255,.09);--accent:#fa7319;--fs:var(--fit-scale,1);position:relative;width:100%;height:100%;font-family:Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased;user-select:none}
+.d-dock *{box-sizing:border-box}
+.d-dock-bar{position:absolute;bottom:10px;height:54px;border-radius:18px;background:linear-gradient(rgba(46,46,46,.88),rgba(30,30,30,.92));box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.09),0 1px 2px rgba(0,0,0,.45),0 18px 36px -14px rgba(0,0,0,.75);transform-origin:50% 50%}
+.d-dock-row{position:absolute;left:0;right:0;bottom:19px;display:flex;justify-content:center;align-items:flex-end;gap:6px;height:36px}
+.d-dock-app{position:relative;flex:none;width:36px;height:36px;padding:0;border:0;border-radius:10px;background:none;cursor:pointer;transform-origin:50% 100%;-webkit-tap-highlight-color:transparent}
+.d-dock-app:focus-visible{outline:none}
+.d-dock-app:focus-visible .d-dock-tile{outline:2px solid var(--focus-ring,#fa7319);outline-offset:2px}
+.d-dock-tile{display:grid;place-items:center;width:100%;height:100%;border-radius:10px;background:linear-gradient(#343434,#1e1e1e);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),inset 0 1px 0 rgba(255,255,255,.15),0 1px 2px rgba(0,0,0,.5),0 4px 10px -4px rgba(0,0,0,.6);color:#ededed}
+.d-dock-tile svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.d-dock-tile--mail{background:linear-gradient(#ff9248,#e3560b);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),inset 0 1px 0 rgba(255,255,255,.35),0 1px 2px rgba(0,0,0,.5),0 6px 14px -6px rgba(250,115,25,.6);color:#fff}
+.d-dock-tile--cal{background:linear-gradient(#fbfbfb,#e2e2e2);color:#2a2a2a}
+.d-dock-cal-head{fill:#fa7319;stroke:none}.d-dock-cal-day{fill:#3a3a3a;stroke:none}.d-dock-cal-today{fill:#fa7319;stroke:none}
+.d-dock-tile--notes{background:linear-gradient(#fff3e6,#ffd9b8);color:#9a4410}
+.d-dock-tile--music{background:linear-gradient(#262626,#121212);color:#ff9248}
+.d-dock-tile--term{background:linear-gradient(#171717,#050505);color:#d9d9d9}
+.d-dock-tile--bin{background:linear-gradient(rgba(255,255,255,.13),rgba(255,255,255,.05));color:#d4d4d4}
+.d-dock-sep{flex:none;align-self:center;width:1px;height:34px;margin:0 3px;background:rgba(255,255,255,.13)}
+.d-dock-dots{position:absolute;left:0;right:0;bottom:13px;height:4px}
+.d-dock-dot{position:absolute;top:0;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#d9d9d9;opacity:0;transition:opacity var(--dur-fast,250ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-dock-dot[data-on="true"]{opacity:1}
+.d-dock-tip{position:absolute;left:0;top:0;pointer-events:none;z-index:2}
+.d-dock-tip-label{display:block;padding:5px 10px;border-radius:8px;white-space:nowrap;font-size:12px;line-height:16px;font-weight:500;color:var(--ink);background:rgba(28,28,28,.94);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),inset 0 1px 0 rgba(255,255,255,.06),0 8px 18px -8px rgba(0,0,0,.7);opacity:0;transform:translateY(2px) scale(.98);transition:opacity var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1)),transform var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+.d-dock-tip[data-on="true"] .d-dock-tip-label{opacity:1;transform:none}
+.d-dock-live{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.d-dock[data-mode="thumb"] .d-dock-tip-label{font-size:max(12px,calc(11px / var(--fs)));line-height:1.35;padding:.32em .75em}
+[data-stage-theme="light"] .d-dock{--ink:#171717;--edge:rgba(0,0,0,.08)}
+[data-stage-theme="light"] .d-dock-bar{background:linear-gradient(rgba(255,255,255,.82),rgba(242,242,242,.9));box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),inset 0 1px 0 #fff,0 18px 36px -14px rgba(0,0,0,.25)}
+[data-stage-theme="light"] .d-dock-sep{background:rgba(0,0,0,.12)}
+[data-stage-theme="light"] .d-dock-dot{background:#404040}
+[data-stage-theme="light"] .d-dock-tip-label{background:rgba(255,255,255,.96);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08),0 8px 18px -8px rgba(0,0,0,.25)}
+[data-stage-theme="light"] .d-dock-tile--bin{background:linear-gradient(#ececec,#d6d6d6);color:#404040}
+@media (prefers-reduced-motion:reduce){.d-dock-tip-label{transform:none!important}}`,
+ js:`const C='d-dock',$=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)];
+const reduced=ctx.reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
+root.dataset.mode=ctx.mode;
+const row=$('.'+C+'-row'),bar=$('.'+C+'-bar'),tip=$('.'+C+'-tip'),label=$('.'+C+'-tip-label'),live=$('.'+C+'-live'),dotLayer=$('.'+C+'-dots');
+const items=[...row.children],apps=$$('.'+C+'-app');
+const PEAK=.8,RADIUS=112,BASE=36;
+const abort=new AbortController(),on=(n,e,f)=>n.addEventListener(e,f,{signal:abort.signal});
+let centers=[],widths=[],barLeft=0,barWidth=0,sizes=items.map(()=>1),target=null,frame=0,last=0,active=-1,selected=0,touched=false,sweep=0,tipX=null,dead=false;
+const dots=apps.map(app=>{const d=document.createElement('span');d.className=C+'-dot';d.dataset.on=app.dataset.running;dotLayer.appendChild(d);return d;});
+function measure(){
+ widths=items.map(n=>n.offsetWidth);centers=items.map(n=>n.offsetLeft+n.offsetWidth/2);
+ const first=items[0],lastItem=items[items.length-1];
+ barLeft=first.offsetLeft-9;barWidth=lastItem.offsetLeft+lastItem.offsetWidth+9-barLeft;
+ bar.style.left=barLeft+'px';bar.style.width=barWidth+'px';
+}
+// Cosine falloff: full size under the pointer, back to rest at RADIUS.
+function wanted(x){return items.map((n,i)=>{if(x==null||!n.classList.contains(C+'-app'))return 1;const d=Math.abs(x-centers[i]);return d>=RADIUS?1:1+PEAK*(Math.cos(Math.PI*d/RADIUS)+1)/2;});}
+const shifts=[];
+function paint(){
+ const grow=sizes.map((s,i)=>(s-1)*widths[i]),extra=grow.reduce((a,b)=>a+b,0);let acc=0;
+ items.forEach((n,i)=>{shifts[i]=acc+grow[i]/2-extra/2;acc+=grow[i];n.style.transform='translateX('+shifts[i].toFixed(2)+'px) scale('+sizes[i].toFixed(4)+')';});
+ apps.forEach((app,k)=>{const i=items.indexOf(app);dots[k].style.left=(centers[i]+shifts[i]).toFixed(2)+'px';});
+ bar.style.transform='scaleX('+((barWidth+extra)/barWidth).toFixed(4)+')';
+ placeTip();
+ root.dataset.sizes=sizes.filter((s,i)=>items[i].classList.contains(C+'-app')).map(s=>s.toFixed(2)).join(',');
+}
+function placeTip(){
+ if(active<0)return;const i=items.indexOf(apps[active]),x=centers[i]+shifts[i],top=row.offsetTop+row.offsetHeight-BASE*sizes[i];
+ tip.style.transform='translate('+(x-tip.offsetWidth/2).toFixed(2)+'px,'+(top-tip.offsetHeight-10).toFixed(2)+'px)';
+}
+function setActive(k){
+ if(k===active)return;active=k;tip.dataset.on=String(k>=0);
+ if(k>=0){label.textContent=apps[k].dataset.name;placeTip();}
+}
+function tick(t){
+ frame=0;const dt=Math.min(48,last?t-last:16.7);last=t;
+ const k=1-Math.pow(.82,dt/16.7),want=wanted(target);let moving=false;
+ sizes=sizes.map((s,i)=>{const n=s+(want[i]-s)*k;if(Math.abs(n-want[i])>.002){moving=true;return n;}return want[i];});
+ paint();
+ if(moving)frame=requestAnimationFrame(tick);else last=0;
+}
+function aim(x){target=x;if(reduced)return;if(!frame){last=0;frame=requestAnimationFrame(tick);}}
+function nearest(x){let best=-1,dist=1e9;apps.forEach((app,k)=>{const d=Math.abs(x-centers[items.indexOf(app)]);if(d<dist){dist=d;best=k;}});return best;}
+function point(e){const b=root.getBoundingClientRect(),k=ctx.scale||1;return{x:(e.clientX-b.left)/k,y:(e.clientY-b.top)/k};}
+function take(){if(!touched){touched=true;cancelAnimationFrame(sweep);}}
+on(root,'pointermove',e=>{
+ if(e.pointerType!=='mouse')return;take();
+ const p=point(e),top=row.offsetTop-BASE*PEAK-8,inside=p.y>=top&&p.y<=root.offsetHeight&&p.x>=barLeft-12&&p.x<=barLeft+barWidth+12;
+ if(inside){aim(p.x);setActive(nearest(p.x));}else if(!root.contains(document.activeElement)||document.activeElement===root){aim(null);setActive(-1);}
+});
+on(root,'pointerleave',()=>{if(!apps.includes(document.activeElement)){aim(null);setActive(-1);}});
+function launch(k){
+ const app=apps[k],tile=app.firstElementChild,name=app.dataset.name;
+ if(app.dataset.fixed==='true'){live.textContent='Bin is empty';return;}
+ const wasRunning=app.dataset.running==='true';
+ if(!reduced)tile.animate([{transform:'translateY(0)'},{transform:'translateY(-18px)',offset:.28},{transform:'translateY(0)',offset:.56},{transform:'translateY(-7px)',offset:.78},{transform:'translateY(0)'}],{duration:740,easing:'cubic-bezier(.22,1,.36,1)'});
+ app.dataset.running='true';dots[k].dataset.on='true';app.setAttribute('aria-label',name+', open');
+ live.textContent=wasRunning?name+' is active':name+' opened';
+ ctx.emit('dock',{app:name,index:k});
+}
+function select(k,focus){
+ selected=(k+apps.length)%apps.length;
+ apps.forEach((app,i)=>app.tabIndex=i===selected?0:-1);
+ if(focus)apps[selected].focus({preventScroll:true});
+ aim(centers[items.indexOf(apps[selected])]);setActive(selected);
+ root.dataset.selected=String(selected);
+}
+apps.forEach((app,k)=>{
+ on(app,'click',()=>{take();select(k,false);launch(k);});
+ on(app,'focus',()=>{take();select(k,false);});
+ on(app,'blur',()=>{requestAnimationFrame(()=>{if(!apps.includes(document.activeElement)){aim(null);setActive(-1);}});});
+ on(app,'keydown',e=>{
+  const keys={ArrowRight:k+1,ArrowLeft:k-1,Home:0,End:apps.length-1};
+  if(e.key in keys){e.preventDefault();e.stopPropagation();select(keys[e.key],true);}
+ });
+});
+ctx.onAction('next',()=>{take();select(selected+1,false);live.textContent=apps[selected].dataset.name;});
+const fit=()=>{root.style.setProperty('--fit-scale',String(ctx.scale||1));};
+const ro=new ResizeObserver(fit);ro.observe(stage);fit();
+measure();paint();
+// Tiles sweep a virtual pointer across the Dock; reduced motion holds one magnified still frame.
+if(ctx.mode==='thumb'){
+ const span=barWidth*.42,mid=barLeft+barWidth/2;
+ if(reduced){sizes=wanted(centers[2]);paint();setActive(2);}
+ else{const run=t=>{if(touched||dead)return;const x=mid+span*Math.sin(t/5200*Math.PI*2-.9);aim(x);setActive(nearest(x));sweep=requestAnimationFrame(run);};sweep=requestAnimationFrame(run);}
+}else if(!reduced){sizes=wanted(centers[items.indexOf(apps[2])]);target=centers[items.indexOf(apps[2])];selected=2;paint();setActive(2);}
+if(document.fonts)document.fonts.ready.then(()=>{if(!dead)placeTip();});
+return()=>{dead=true;abort.abort();ro.disconnect();cancelAnimationFrame(frame);cancelAnimationFrame(sweep);};`,
+ prompt:`Build a macOS-style magnifying Dock in plain HTML, CSS and JavaScript with no libraries, in a 400×170 scene. A flex row of seven 36px squircle buttons (radius 10px, 6px gaps) sits on a 54px rail with an 18px radius, a translucent graphite gradient, an inset 1px rgba(255,255,255,.09) hairline, a 1px top highlight and a two-layer drop shadow. Draw every icon as a 21px inline SVG stroke glyph (1.7 stroke, round caps) on a tinted squircle from one palette of neutrals plus the orange accent #fa7319: Files (graphite, folder), Mail (orange gradient, envelope), Calendar (light tile, orange header bar, grid of day dots with today in orange), Notes (pale orange, ruled sheet), Music (black, orange note), Terminal (black, prompt) and, after a 1px divider, a glassy Bin. Running apps (Files, Mail, Music, Terminal) show 4px dots under the rail. Magnification: measure each item's untransformed centre once; for a pointer x in stage units (divide client deltas by the stage scale) every app wants scale 1 + 0.8 × (cos(π·d/112) + 1) / 2 inside a 112px radius and 1 outside. Ease current scales toward those targets with a time-normalised lerp (1 − 0.82^(dt/16.7)) in a requestAnimationFrame loop that stops when settled. Apply transform: translateX(shift) scale(s) with transform-origin at the bottom centre, where each shift is the running sum of the growth of the items to its left plus half its own growth minus half the total growth, so neighbours are pushed apart symmetrically; the rail follows with scaleX((width + growth) / width) and the dots follow the shifts. Only magnify while the pointer is over the rail or the area the icons rise into. A floating label above the nearest icon names it (12px Geist on a dark pill, fades and lifts in 150ms with cubic-bezier(.22,1,.36,1)); it is positioned by transform every frame and only its inner pill transitions. Clicking an app plays a two-hop launch bounce on the tile with the Web Animations API (−18px, 0, −7px, 0 over 740ms) and lights its running dot; the Bin reports that it is empty. The Dock is a role="toolbar" with a roving tabindex: arrows, Home and End move focus and magnify around the focused app, Enter launches, a polite status line announces launches. A Next app control steps the selection. Thumbnail mode sweeps a virtual pointer across the rail on a 5.2s sine until touched, with the label following. Reduced motion keeps icons at rest size with labels only, and the thumbnail holds one magnified still frame around Calendar. Include a light stage theme.`
 });
 
 INTRX.register({
@@ -193,13 +526,92 @@ INTRX.register({
  title:"Logo Marquee",
  cat:"Layout & UI",
  rootClass:"d-logos",
- tags:["marquee","opposing rows","ambient"],
+ tags:["marquee","logos","social proof","mask fade","ambient"],
  libs:[],
- desc:"Two rows of original neutral marks travel in opposite directions behind soft edge masks. The complete original artwork is repeated and clipped by row without extracting any paths.",
+ desc:"Two rows of customer wordmarks drift in opposite directions behind soft edge fades. Twelve fictional companies each get their own type treatment and SVG mark; hovering a row pauses it and lights the logo under the pointer.",
  seen:"Pattern family: opposing logo marquees",
- hint:"Ambient · Two rows of marks drift in opposite directions",
- html:`<div class="d-logos" role="img" aria-label="Two rows of abstract marks moving in opposite directions"><div class="d-logos-row d-logos-top"><div class="d-logos-track"><img src="{{asset:layout2-marquee-rows}}" alt=""><img src="{{asset:layout2-marquee-rows}}" alt=""></div></div><div class="d-logos-row d-logos-bottom"><div class="d-logos-track"><img src="{{asset:layout2-marquee-rows}}" alt=""><img src="{{asset:layout2-marquee-rows}}" alt=""></div></div><span class="d-logos-status" role="status"></span></div>`,
- css:`.d-logos{position:relative;overflow:clip;font-family:Geist,system-ui,sans-serif}.d-logos-row{position:absolute;left:0;top:58px;width:100%;height:45px;overflow:clip;mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 40px),transparent)}.d-logos-bottom{top:103px}.d-logos-track{position:absolute;left:0;top:0;display:flex;width:744px;height:90px;animation:d-logos-left 24s linear infinite}.d-logos-track img{display:block;flex:none;max-width:none}.d-logos-bottom .d-logos-track{top:-45px;animation-name:d-logos-right;animation-duration:28s}.d-logos[data-paused="true"] .d-logos-track{animation-play-state:paused}.d-logos-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);font-size:13px}@keyframes d-logos-left{from{transform:translateX(0)}to{transform:translateX(-372px)}}@keyframes d-logos-right{from{transform:translateX(-372px)}to{transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.d-logos-track{animation:none!important;transform:none!important}}`,
- js:`let paused=ctx.reducedMotion;const status=root.querySelector('[role="status"]');root.dataset.paused=String(paused);ctx.onAction('pause',()=>{paused=!paused;root.dataset.paused=String(paused);status.textContent=ctx.reducedMotion?'Reduced motion keeps both rows still':paused?'Marquee paused':'Marquee resumed';ctx.emit('marquee',{paused});});`,
- prompt:`Implement v4 Logo Marquee185:2046 with the complete unmodified372x90 original SVG at0,58 of a bleed stage. Keep every original asset intrinsic dimension. Clip two45px row windows over repeated whole images instead of extracting/recreating logo paths; top uses image y0, bottom y-45. Repeat each complete image at372px intervals; scroll top0→-372 in24s and bottom-372→0 in28s, linear loops,40px edge masks and intentional clipped horizontal overflow. Native first frame matches the supplied composition; stage runtime pauses loops offscreen or hidden and applies speed. Expose Pause/resume and Reset in shared dock, live status and local events. Keep pause authored through animation-play-state so it survives runtime suspend/resume/speed. Reduced motion renders one still frame. No custom outer panel, no decorative colors, no text logos copied from brands.`
+ hint:"Ambient · Two rows of wordmarks drift in opposite directions; hover a row to pause it",
+ html:`<div class="d-logos" role="img" aria-label="Trusted by teams at Northwind, Halcyon, Lumen, Orbit, Quanta, Ferro and Co., Kestrel, Atlas Freight, Parallel, Mosaic, Tidewater and Vela Studio" data-paused="false">
+  <p class="d-logos-eyebrow" aria-hidden="true">Trusted by product teams at <b>2,400+</b> companies</p>
+  <div class="d-logos-row d-logos-row--a" aria-hidden="true"><div class="d-logos-track"><div class="d-logos-set">
+    <span class="d-logos-logo d-logos-northwind"><svg viewBox="0 0 24 24"><path d="M12 2.5l4.3 9.5L12 21.5 7.7 12z" opacity=".38"/><path d="M12 2.5l4.3 9.5H7.7z"/></svg>Northwind</span>
+    <span class="d-logos-logo d-logos-halcyon"><svg viewBox="0 0 24 24"><path d="M6.2 16a5.8 5.8 0 0 1 11.6 0z"/><path class="d-logos-stroke" d="M3 18.6h18M12 4.4v2.6M5.2 7.6l1.8 1.8M18.8 7.6L17 9.4"/></svg>Halcyon</span>
+    <span class="d-logos-logo d-logos-lumen"><svg viewBox="0 0 24 24"><path d="M12 2.5c.9 5.2 4.3 8.6 9.5 9.5-5.2.9-8.6 4.3-9.5 9.5-.9-5.2-4.3-8.6-9.5-9.5 5.2-.9 8.6-4.3 9.5-9.5z"/></svg>Lumen</span>
+    <span class="d-logos-logo d-logos-orbit"><svg viewBox="0 0 24 24"><circle class="d-logos-stroke" cx="11" cy="13" r="7.2"/><circle cx="18.6" cy="5.6" r="2.7"/></svg>orbit</span>
+    <span class="d-logos-logo d-logos-quanta"><i>[</i>quanta<i>]</i></span>
+    <span class="d-logos-logo d-logos-ferro">Ferro <em>&amp;</em> Co.</span>
+  </div></div></div>
+  <div class="d-logos-row d-logos-row--b" aria-hidden="true"><div class="d-logos-track"><div class="d-logos-set">
+    <span class="d-logos-logo d-logos-kestrel"><svg viewBox="0 0 24 24"><path class="d-logos-stroke" d="M2.5 8.2L12 15l9.5-6.8"/><path class="d-logos-stroke" d="M7 6l5 3.6L17 6" opacity=".55"/></svg>Kestrel</span>
+    <span class="d-logos-logo d-logos-atlas"><svg viewBox="0 0 24 24"><circle class="d-logos-stroke" cx="12" cy="12" r="8.6"/><path class="d-logos-stroke" d="M3.6 12h16.8M12 3.4c2.4 2.4 3.6 5.3 3.6 8.6s-1.2 6.2-3.6 8.6c-2.4-2.4-3.6-5.3-3.6-8.6s1.2-6.2 3.6-8.6z"/></svg>Atlas Freight</span>
+    <span class="d-logos-logo d-logos-parallel"><svg viewBox="0 0 24 24"><path d="M8.4 3.5h4.2L8 20.5H3.8zM16.4 3.5h4.2L16 20.5h-4.2z"/></svg>Parallel</span>
+    <span class="d-logos-logo d-logos-mosaic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.6"/><rect x="13" y="3" width="8" height="8" rx="4" opacity=".5"/><rect x="3" y="13" width="8" height="8" rx="4" opacity=".5"/><rect x="13" y="13" width="8" height="8" rx="1.6"/></svg>Mosaic</span>
+    <span class="d-logos-logo d-logos-tide"><svg viewBox="0 0 24 24"><path class="d-logos-stroke" d="M2.5 9.5c2.4-2 4.8-2 7.2 0s4.8 2 7.2 0c1.6-1.3 3.2-1.6 4.6-1M2.5 15.5c2.4-2 4.8-2 7.2 0s4.8 2 7.2 0c1.6-1.3 3.2-1.6 4.6-1"/></svg>Tidewater</span>
+    <span class="d-logos-logo d-logos-vela"><svg viewBox="0 0 24 24"><path class="d-logos-stroke" d="M12.5 3v15.5M12.5 3.2c4 3.2 6.4 7.6 6.8 12.8h-6.8M10.4 6.4C8 9 6.6 12.2 6.2 16h4.2M4 19.5c2.6 1.3 5.4 1.6 8.5 1.6s5.9-.3 8.5-1.6"/></svg>Vela<small>studio</small></span>
+  </div></div></div>
+  <p class="d-logos-live" role="status" aria-live="polite"></p>
+</div>`,
+ css:`.d-logos{--ink:#f2f2f2;--logo-ink:#a6a6a6;--logo-hi:#fafafa;--ink-3:#8a8a8a;--accent:#fa7319;--logo:23px;--gap:56px;position:relative;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:22px;width:100%;height:100%;padding:0 0 56px;overflow:clip;font-family:Geist,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.d-logos *{box-sizing:border-box}
+.d-logos-eyebrow{margin:0 0 6px;text-align:center;font-size:13px;line-height:18px;font-weight:500;color:var(--ink-3)}
+.d-logos-eyebrow b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.d-logos-row{position:relative;overflow:clip;padding:6px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.d-logos-track{display:flex;width:max-content;animation:d-logos-left var(--d-logos-dur,48s) linear infinite;will-change:transform}
+.d-logos-row--b .d-logos-track{animation-name:d-logos-right}
+.d-logos[data-paused="true"] .d-logos-track,.d-logos-row:focus-within .d-logos-track{animation-play-state:paused}
+@media (hover:hover){.d-logos-row:hover .d-logos-track{animation-play-state:paused}}
+.d-logos-set{display:flex;align-items:center;flex:none}
+.d-logos-logo{display:flex;align-items:center;gap:.36em;flex:none;height:44px;margin-right:var(--gap);font-size:var(--logo);line-height:1;white-space:nowrap;color:var(--logo-ink);transition:color var(--dur-quick,150ms) var(--ease-out,cubic-bezier(.22,1,.36,1))}
+@media (hover:hover){.d-logos-logo:hover{color:var(--logo-hi)}}
+.d-logos-logo svg{width:1.08em;height:1.08em;flex:none;fill:currentColor}
+.d-logos-stroke{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.d-logos-northwind{font-weight:650;letter-spacing:-.035em}
+.d-logos-halcyon{font-family:Newsreader,Georgia,serif;font-style:italic;font-weight:500;font-size:calc(var(--logo) * 1.12);letter-spacing:-.01em}
+.d-logos-lumen{font-family:Manrope,Geist,sans-serif;font-weight:800;font-size:calc(var(--logo) * .74);letter-spacing:.26em;text-transform:uppercase}
+.d-logos-lumen svg{width:1.3em;height:1.3em;margin-right:.1em}
+.d-logos-orbit{font-family:Manrope,Geist,sans-serif;font-weight:700;font-size:calc(var(--logo) * 1.04);letter-spacing:-.045em}
+.d-logos-quanta{font-family:'Geist Mono',ui-monospace,monospace;font-weight:500;font-size:calc(var(--logo) * .86);letter-spacing:-.02em;gap:.12em}
+.d-logos-quanta i{font-style:normal;font-weight:300;opacity:.55}
+.d-logos-ferro{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:calc(var(--logo) * 1.06);letter-spacing:-.015em;gap:.22em}
+.d-logos-ferro em{font-weight:400;font-style:italic;opacity:.7}
+.d-logos-kestrel{font-family:Inter,Geist,sans-serif;font-weight:800;letter-spacing:-.05em;font-style:italic}
+.d-logos-atlas{font-weight:500;font-size:calc(var(--logo) * .64);letter-spacing:.24em;text-transform:uppercase;gap:.7em}
+.d-logos-atlas svg{width:1.7em;height:1.7em}
+.d-logos-parallel{font-weight:600;letter-spacing:-.02em}
+.d-logos-mosaic{font-family:Manrope,Geist,sans-serif;font-weight:600;letter-spacing:-.01em}
+.d-logos-mosaic svg{width:.96em;height:.96em}
+.d-logos-tide{font-family:Newsreader,Georgia,serif;font-weight:400;font-size:calc(var(--logo) * 1.08);letter-spacing:.01em}
+.d-logos-vela{font-family:Allura,Newsreader,serif;font-size:calc(var(--logo) * 1.5);gap:.16em}
+.d-logos-vela svg{width:.76em;height:.76em}
+.d-logos-vela small{align-self:flex-end;margin:0 0 .5em .2em;font-family:Geist,system-ui,sans-serif;font-size:max(11px,calc(var(--logo) * .48));letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+@keyframes d-logos-left{to{transform:translateX(-50%)}}
+@keyframes d-logos-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.d-logos-live{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.d-logos[data-mode="thumb"]{--logo:19px;--gap:36px;gap:10px;padding:0 0 30px}
+.d-logos[data-mode="thumb"] .d-logos-eyebrow{margin:0 0 4px;font-size:12px}
+.d-logos[data-mode="thumb"] .d-logos-logo{height:36px}
+.d-logos[data-mode="thumb"] .d-logos-row{-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+[data-stage-theme="light"] .d-logos{--ink:#171717;--logo-ink:#5c5c5c;--logo-hi:#0a0a0a;--ink-3:#6b6b6b}
+@media (prefers-reduced-motion:reduce){.d-logos-track{animation:none!important;transform:translateX(var(--d-logos-still,0px))}.d-logos-logo{transition-duration:var(--dur-quick,150ms)}}`,
+ js:`const C='d-logos',$$=s=>[...root.querySelectorAll(s)];
+const reduced=ctx.reducedMotion||matchMedia('(prefers-reduced-motion:reduce)').matches;
+root.dataset.mode=ctx.mode;
+const live=root.querySelector('.'+C+'-live'),SPEED=ctx.mode==='thumb'?30:38;
+let paused=false,dead=false;
+// Two copies of each set make the loop seamless: the track travels exactly one set width.
+const tracks=$$('.'+C+'-track');
+tracks.forEach(track=>{const copy=track.firstElementChild.cloneNode(true);track.appendChild(copy);});
+function size(){tracks.forEach((track,i)=>{const set=track.firstElementChild.offsetWidth;track.style.setProperty('--d-logos-dur',(set/SPEED).toFixed(2)+'s');
+ // Reduced motion: a still frame with the row centred on its second logo.
+ if(reduced)track.style.setProperty('--d-logos-still',(-(i?set*.42:set*.08)).toFixed(1)+'px');});}
+size();
+if(document.fonts)document.fonts.ready.then(()=>{if(!dead)size();});
+const ro=new ResizeObserver(size);ro.observe(root);
+ctx.onAction('pause',()=>{
+ paused=!paused;root.dataset.paused=String(paused);
+ live.textContent=reduced?'Reduced motion keeps both rows still':paused?'Logo marquee paused':'Logo marquee playing';
+ ctx.emit('marquee',{paused});
+});
+return()=>{dead=true;ro.disconnect();};`,
+ prompt:`Build a customer-logo marquee section in plain HTML, CSS and JavaScript with no libraries, filling its container edge to edge. Centre a 13px eyebrow, "Trusted by product teams at 2,400+ companies" (the count in near-white tabular figures), above two rows of wordmarks for twelve fictional companies, each with its own type treatment and a small inline SVG mark drawn in currentColor: Northwind (Geist 650, tight tracking, half-filled compass diamond), Halcyon (Newsreader italic, rising half-sun), LUMEN (Manrope 800 uppercase, 0.26em tracking, four-point star), orbit (Manrope 700 lowercase, ring with a satellite dot), [quanta] (Geist Mono with faint brackets), Ferro & Co. (Newsreader 600 with an italic ampersand), Kestrel (Inter 800 italic, double chevron wings), ATLAS FREIGHT (small spaced caps beside an outlined globe), Parallel (two slanted bars), Mosaic (2×2 tiles mixing squares and circles), Tidewater (Newsreader with two wave strokes) and Vela STUDIO (Allura script with a sail mark). All marks sit in one neutral grey (#a6a6a6) and brighten to near-white on hover. Each row clips a flex track that holds the set twice; JavaScript clones the set, measures one set width and sets the animation duration to width ÷ speed (38px/s, 30px/s in thumbnails) so both rows move at the same pace. The first row animates translateX(0 → −50%) and the second translateX(−50% → 0), both linear and infinite. Rows fade at their edges with mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent). Hovering a row (inside @media (hover: hover)) or focusing inside it sets animation-play-state: paused; a Pause / resume control toggles a data attribute that pauses both rows and announces the state in a polite live region. The whole block is one role="img" with an aria-label listing every company; the moving rows are aria-hidden. Reduced motion removes the animation and holds a still frame offset so each row starts mid-logo. Thumbnail mode uses 19px wordmarks and tighter gaps. Include a light stage theme.`
 });

@@ -15151,7 +15151,7 @@
       "flash"
     ],
     "tier": "free",
-    "desc": "A seamless duplicated tape and complete five-instrument table keep the original deterministic price updates. The compact market reference uses signed colour feedback.",
+    "desc": "A market tape for a fictional exchange: indices and equities scroll past with tabular prices, signed day changes and sparklines, ticks flash the instrument that moved, and the tape eases to a stop on hover or focus. The detail view adds a watchlist with day ranges and volume.",
     "designSize": "bleed",
     "stage": {
       "theme": "dark",
@@ -15161,10 +15161,10 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ticker-tape-prices",
     "thumb": "hero",
-    "module": "js/demos.data.ticker-tape-prices.js?v=ab3ff27076",
+    "module": "js/demos.data.ticker-tape-prices.js?v=70ae99a1b6",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ticker-tape-prices.json?v=7c98290ee5",
+    "sourcePreview": "registry/p/ticker-tape-prices.json?v=dee0e9ba93",
     "assetRefs": {},
     "rootClass": "d-ticker-demo",
     "controls": [
@@ -15187,7 +15187,7 @@
       "aria": "status"
     },
     "hint": "Prices tick past and flash on change",
-    "sourceName": "Seen on: market dashboards, crypto products, live auction displays, news headers, and event scoreboards",
+    "sourceName": "Seen on: brokerage dashboards, finance news headers and exchange status pages",
     "isNew": false
   },
   {
@@ -15272,23 +15272,23 @@
     "trigger": "hover",
     "tags": [
       "terrain",
-      "noise",
+      "elevation",
       "3d"
     ],
     "useCases": [
       "terrain",
-      "noise",
+      "elevation",
       "3d"
     ],
     "tier": "free",
-    "desc": "Four original terrain layers preview a deterministic 216-cell elevation field. Inspect the complete three-octave terrain with pointer, touch or arrow keys.",
+    "desc": "Mount Fuji and the Fuji Five Lakes as a shaded elevation model: the contour map extrudes into 2.4x relief, the summit is called out at 3,776 m, and a probe reads elevation, slope and distance to the summit while the panel draws the west–east profile under it.",
     "designSize": [
-      280,
-      238
+      600,
+      340
     ],
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ],
     "stage": {
       "theme": "dark",
@@ -15298,20 +15298,15 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/map-topo-extrude",
     "thumb": "hero",
-    "module": "js/demos.maps.map-topo-extrude.js?v=16566067e9",
+    "module": "js/demos.maps.map-topo-extrude.js?v=6d6464a5e2",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/map-topo-extrude.json?v=36ad9dd7dc",
-    "assetRefs": {
-      "maps-topo-extrude-layer-0": "assets/components/maps-topo-extrude-layer-0.svg",
-      "maps-topo-extrude-layer-1": "assets/components/maps-topo-extrude-layer-1.svg",
-      "maps-topo-extrude-layer-2": "assets/components/maps-topo-extrude-layer-2.svg",
-      "maps-topo-extrude-layer-3": "assets/components/maps-topo-extrude-layer-3.svg"
-    },
+    "sourcePreview": "registry/p/map-topo-extrude.json?v=b284cecf0b",
+    "assetRefs": {},
     "rootClass": "d-maps-map-topo-extrude",
     "controls": [
       {
-        "label": "Hold / release",
+        "label": "Flatten / raise",
         "action": "raise"
       },
       {
@@ -15325,7 +15320,7 @@
       "aria": "region"
     },
     "hint": "Terrain rises in layers under the pointer",
-    "sourceName": "Seen on: Topographical Explorer by SHAHNAB AHMED",
+    "sourceName": "Seen on: Mapbox terrain, hiking apps and GIS elevation profiles",
     "isNew": false
   },
   {
@@ -15336,24 +15331,24 @@
     "collections": [],
     "trigger": "hover",
     "tags": [
-      "city",
-      "polygons",
-      "stagger"
+      "map",
+      "choropleth",
+      "city"
     ],
     "useCases": [
-      "city",
-      "polygons",
-      "stagger"
+      "map",
+      "choropleth",
+      "city"
     ],
     "tier": "free",
-    "desc": "Nine original isometric blocks preview a seeded 90-parcel city. Full mode preserves every jittered polygon, river, place label, historic district and record.",
+    "desc": "A choropleth of Amsterdam's canal ring: blocks between the Singel, Herengracht, Keizersgracht and Prinsengracht are shaded by year built, Saturday footfall or asking price. Blocks rise in from the Dam outward, and hovering one shows its address range and all three figures.",
     "designSize": [
-      280,
-      238
+      600,
+      340
     ],
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ],
     "stage": {
       "theme": "dark",
@@ -15363,20 +15358,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/map-city-tiles",
     "thumb": "hero",
-    "module": "js/demos.maps.map-city-tiles.js?v=a10745bf7c",
+    "module": "js/demos.maps.map-city-tiles.js?v=a967124406",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/map-city-tiles.json?v=7972d37b8e",
-    "assetRefs": {
-      "maps-city-tiles-layer-0": "assets/components/maps-city-tiles-layer-0.svg",
-      "maps-city-tiles-layer-1": "assets/components/maps-city-tiles-layer-1.svg",
-      "maps-city-tiles-layer-2": "assets/components/maps-city-tiles-layer-2.svg",
-      "maps-city-tiles-layer-3": "assets/components/maps-city-tiles-layer-3.svg",
-      "maps-city-tiles-layer-4": "assets/components/maps-city-tiles-layer-4.svg",
-      "maps-city-tiles-layer-5": "assets/components/maps-city-tiles-layer-5.svg",
-      "maps-city-tiles-layer-6": "assets/components/maps-city-tiles-layer-6.svg",
-      "maps-city-tiles-layer-7": "assets/components/maps-city-tiles-layer-7.svg"
-    },
+    "sourcePreview": "registry/p/map-city-tiles.json?v=6789b82c85",
+    "assetRefs": {},
     "rootClass": "d-maps-map-city-tiles",
     "controls": [
       {
@@ -15384,7 +15370,7 @@
         "action": "replay"
       },
       {
-        "label": "New seed",
+        "label": "Next layer",
         "action": "seed"
       },
       {
@@ -15398,7 +15384,7 @@
       "aria": "region"
     },
     "hint": "Blocks lift and reveal their records",
-    "sourceName": "Seen on: MapTheClouds polygon city tiles",
+    "sourceName": "Seen on: Mapbox Studio choropleths, city open-data portals and real-estate analytics",
     "isNew": false
   },
   {
@@ -15419,14 +15405,14 @@
       "routes"
     ],
     "tier": "free",
-    "desc": "A compact dotted globe previews flight arcs. Full mode rotates all 2,048 seeded points and draws lifted routes between eight real city coordinates.",
+    "desc": "A dotted globe drawn from real coastlines rotates slowly while great-circle arcs replicate data between ten named edge regions. Each route shows its true distance and an estimated round trip; hover a region for its coordinates and load.",
     "designSize": [
-      360,
-      280
+      600,
+      340
     ],
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ],
     "stage": {
       "theme": "dark",
@@ -15436,47 +15422,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/map-dot-globe-arcs",
     "thumb": "hero",
-    "module": "js/demos.maps.map-dot-globe-arcs.js?v=c64698e041",
+    "module": "js/demos.maps.map-dot-globe-arcs.js?v=441a8f7652",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/map-dot-globe-arcs.json?v=27ea591f0a",
-    "assetRefs": {
-      "maps-dot-globe-arcs-ellipse": "assets/components/maps-dot-globe-arcs-ellipse.svg",
-      "maps-dot-globe-arcs-ellipse1": "assets/components/maps-dot-globe-arcs-ellipse1.svg",
-      "maps-dot-globe-arcs-ellipse2": "assets/components/maps-dot-globe-arcs-ellipse2.svg",
-      "maps-dot-globe-arcs-ellipse3": "assets/components/maps-dot-globe-arcs-ellipse3.svg",
-      "maps-dot-globe-arcs-ellipse4": "assets/components/maps-dot-globe-arcs-ellipse4.svg",
-      "maps-dot-globe-arcs-ellipse5": "assets/components/maps-dot-globe-arcs-ellipse5.svg",
-      "maps-dot-globe-arcs-ellipse6": "assets/components/maps-dot-globe-arcs-ellipse6.svg",
-      "maps-dot-globe-arcs-ellipse7": "assets/components/maps-dot-globe-arcs-ellipse7.svg",
-      "maps-dot-globe-arcs-ellipse8": "assets/components/maps-dot-globe-arcs-ellipse8.svg",
-      "maps-dot-globe-arcs-ellipse9": "assets/components/maps-dot-globe-arcs-ellipse9.svg",
-      "maps-dot-globe-arcs-ellipse10": "assets/components/maps-dot-globe-arcs-ellipse10.svg",
-      "maps-dot-globe-arcs-ellipse11": "assets/components/maps-dot-globe-arcs-ellipse11.svg",
-      "maps-dot-globe-arcs-ellipse12": "assets/components/maps-dot-globe-arcs-ellipse12.svg",
-      "maps-dot-globe-arcs-ellipse13": "assets/components/maps-dot-globe-arcs-ellipse13.svg",
-      "maps-dot-globe-arcs-ellipse14": "assets/components/maps-dot-globe-arcs-ellipse14.svg",
-      "maps-dot-globe-arcs-ellipse15": "assets/components/maps-dot-globe-arcs-ellipse15.svg",
-      "maps-dot-globe-arcs-ellipse16": "assets/components/maps-dot-globe-arcs-ellipse16.svg",
-      "maps-dot-globe-arcs-ellipse17": "assets/components/maps-dot-globe-arcs-ellipse17.svg",
-      "maps-dot-globe-arcs-ellipse18": "assets/components/maps-dot-globe-arcs-ellipse18.svg",
-      "maps-dot-globe-arcs-ellipse19": "assets/components/maps-dot-globe-arcs-ellipse19.svg",
-      "maps-dot-globe-arcs-ellipse20": "assets/components/maps-dot-globe-arcs-ellipse20.svg",
-      "maps-dot-globe-arcs-ellipse21": "assets/components/maps-dot-globe-arcs-ellipse21.svg",
-      "maps-dot-globe-arcs-ellipse22": "assets/components/maps-dot-globe-arcs-ellipse22.svg",
-      "maps-dot-globe-arcs-ellipse23": "assets/components/maps-dot-globe-arcs-ellipse23.svg",
-      "maps-dot-globe-arcs-ellipse24": "assets/components/maps-dot-globe-arcs-ellipse24.svg",
-      "maps-dot-globe-arcs-ellipse25": "assets/components/maps-dot-globe-arcs-ellipse25.svg",
-      "maps-dot-globe-arcs-ellipse26": "assets/components/maps-dot-globe-arcs-ellipse26.svg",
-      "maps-dot-globe-arcs-ellipse27": "assets/components/maps-dot-globe-arcs-ellipse27.svg",
-      "maps-dot-globe-arcs-ellipse28": "assets/components/maps-dot-globe-arcs-ellipse28.svg",
-      "maps-dot-globe-arcs-ellipse29": "assets/components/maps-dot-globe-arcs-ellipse29.svg",
-      "maps-dot-globe-arcs-ellipse30": "assets/components/maps-dot-globe-arcs-ellipse30.svg",
-      "maps-dot-globe-arcs-ellipse31": "assets/components/maps-dot-globe-arcs-ellipse31.svg",
-      "maps-dot-globe-arcs-ellipse32": "assets/components/maps-dot-globe-arcs-ellipse32.svg",
-      "maps-dot-globe-arcs-vector": "assets/components/maps-dot-globe-arcs-vector.svg",
-      "maps-dot-globe-arcs-ellipse33": "assets/components/maps-dot-globe-arcs-ellipse33.svg"
-    },
+    "sourcePreview": "registry/p/map-dot-globe-arcs.json?v=6f1f7f4e90",
+    "assetRefs": {},
     "rootClass": "d-maps-map-dot-globe-arcs",
     "controls": [
       {
@@ -15498,7 +15448,7 @@
       "aria": "region"
     },
     "hint": "Flight arcs rise between cities",
-    "sourceName": "Seen on: GitHub-globe interfaces, point-globe agency heroes, and global network telemetry maps",
+    "sourceName": "Seen on: GitHub's globe, Vercel's edge network map and global network telemetry dashboards",
     "isNew": false
   },
   {
@@ -15580,23 +15530,23 @@
     "trigger": "hover",
     "tags": [
       "map",
-      "radar",
-      "parallax"
+      "monitoring",
+      "heartbeat"
     ],
     "useCases": [
       "map",
-      "radar",
-      "parallax"
+      "monitoring",
+      "heartbeat"
     ],
     "tier": "free",
-    "desc": "Three illustrated sites preview six seeded radar sites, deterministic schedules, bounded pulse queues, directional inspection and one anomaly across two abstract landmasses.",
+    "desc": "A monitoring view of nine European edge sites on a real coastline map. Each site sends a heartbeat ring on its own schedule, the log lists every ping with a UTC timestamp, and one site in Milan is losing packets. Hover a site for RTT, loss and uptime.",
     "designSize": [
-      360,
-      280
+      600,
+      340
     ],
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ],
     "stage": {
       "theme": "dark",
@@ -15606,15 +15556,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/map-radar-pings",
     "thumb": "hero",
-    "module": "js/demos.maps.map-radar-pings.js?v=6896c292df",
+    "module": "js/demos.maps.map-radar-pings.js?v=7268b99d53",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/map-radar-pings.json?v=b4dbb2420e",
-    "assetRefs": {
-      "maps-radar-pings-ellipse": "assets/components/maps-radar-pings-ellipse.svg",
-      "maps-radar-pings-ellipse1": "assets/components/maps-radar-pings-ellipse1.svg",
-      "maps-dot-globe-arcs-ellipse33": "assets/components/maps-dot-globe-arcs-ellipse33.svg"
-    },
+    "sourcePreview": "registry/p/map-radar-pings.json?v=8c7ace0386",
+    "assetRefs": {},
     "rootClass": "d-maps-map-radar-pings",
     "controls": [
       {
@@ -15636,7 +15582,7 @@
       "aria": "region"
     },
     "hint": "Sites ping across the map; hover to list them",
-    "sourceName": "Seen on: store-locator and fleet-tracking interfaces",
+    "sourceName": "Seen on: status pages, uptime monitors and edge network dashboards",
     "isNew": false
   },
   {
@@ -16046,14 +15992,14 @@
       "data"
     ],
     "tier": "free",
-    "desc": "Four independently clocked telemetry lanes recycle seeded packets at distinct rates. Hover or focus isolates one stream for inspection without perturbing the other generators, while a separate active-time channel surfaces transient packet flashes.",
+    "desc": "A live tail of production requests across four service lanes. Each line carries a timestamp, service, status, latency and route; errors and slow calls stand out, lane cards track requests per second, p95 and error rate, and hovering the tail pauses it to inspect a request.",
     "designSize": [
-      420,
-      350
+      600,
+      340
     ],
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ],
     "stage": {
       "theme": "dark",
@@ -16063,10 +16009,10 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/fui-data-stream",
     "thumb": "hero",
-    "module": "js/demos.fui.fui-data-stream.js?v=5d12c4df8d",
+    "module": "js/demos.fui.fui-data-stream.js?v=4097b7db4e",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/fui-data-stream.json?v=5d4dcf48fd",
+    "sourcePreview": "registry/p/fui-data-stream.json?v=e86e202050",
     "assetRefs": {},
     "rootClass": "d-fui-stream",
     "controls": [
@@ -16088,7 +16034,7 @@
       "reducedMotion": true
     },
     "hint": "Lanes stream telemetry; hover one to inspect",
-    "sourceName": "Seen in Steve Lauda’s FUI explorations and dense professional trading terminals",
+    "sourceName": "Seen on: Vercel runtime logs, Datadog Live Tail and terminal log viewers",
     "isNew": false
   },
   {
@@ -19315,8 +19261,10 @@
     "trigger": "press",
     "tags": [
       "zoom",
-      "FLIP",
-      "nested UI"
+      "container transform",
+      "nested UI",
+      "breadcrumb",
+      "WAAPI"
     ],
     "useCases": [
       "zoom transition",
@@ -19324,13 +19272,13 @@
       "FLIP"
     ],
     "tier": "free",
-    "desc": "A miniature interface expands from its measured rectangle into the active view. Each zoom adds to the back history; a fresh action can interrupt the current transition.",
+    "desc": "A Halden workspace you can dive into: a project card grows into its sprint board, a board card grows into the task, and the breadcrumb keeps the trail. Each level is a real, working screen, with subtasks you can tick that update the board behind it.",
     "designSize": [
-      240,
-      200
+      560,
+      360
     ],
     "thumbDesignSize": [
-      240,
+      300,
       168
     ],
     "stage": {
@@ -19341,10 +19289,10 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/zoom-ui-inception",
     "thumb": "hero",
-    "module": "js/demos.layout.zoom-ui-inception.js?v=bc1ce4f111",
+    "module": "js/demos.layout.zoom-ui-inception.js?v=38cdcbf54e",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/zoom-ui-inception.json?v=9b62a8eb5c",
+    "sourcePreview": "registry/p/zoom-ui-inception.json?v=94a00e1f3d",
     "assetRefs": {},
     "rootClass": "d-inception-demo",
     "controls": [
@@ -23679,23 +23627,25 @@
     ],
     "trigger": "press",
     "tags": [
-      "FLIP",
       "window",
-      "dock"
+      "genie",
+      "dock",
+      "drag",
+      "WAAPI"
     ],
     "useCases": [
       "flip",
       "window"
     ],
     "tier": "free",
-    "desc": "A small window resolves into its dock target with measured local translation and scale. Reverse the transition at any point through the native dock or window controls.",
+    "desc": "A code editor window with real traffic lights, a file tree and highlighted TypeScript pours itself into its Dock icon with a perspective genie, then rises back out. Drag it by the title bar, click the desktop to see its inactive state.",
     "designSize": [
-      200,
-      180
+      600,
+      400
     ],
     "thumbDesignSize": [
-      200,
-      100
+      300,
+      168
     ],
     "stage": {
       "theme": "dark",
@@ -23705,14 +23655,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/mac-window",
     "thumb": "hero",
-    "module": "registry/m/mac-window.js?v=2a19d8783b",
+    "module": "registry/m/mac-window.js?v=d559b716c2",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/mac-window.json?v=1cd07e02a6",
-    "assetRefs": {
-      "layout2-mac-silhouette": "assets/components/layout2-mac-silhouette.svg",
-      "layout2-mac-dot": "assets/components/layout2-mac-dot.svg"
-    },
+    "sourcePreview": "registry/p/mac-window.json?v=5638582378",
+    "assetRefs": {},
     "rootClass": "d-mac",
     "controls": [
       {
@@ -23741,8 +23688,10 @@
     "collections": [],
     "trigger": "hover",
     "tags": [
+      "dock",
+      "magnify",
       "proximity",
-      "smoothstep",
+      "cosine",
       "cursor"
     ],
     "useCases": [
@@ -23750,10 +23699,10 @@
       "gaussian"
     ],
     "tier": "free",
-    "desc": "Seven neutral marks respond to distance from a pointer or keyboard selection. Influence uses fixed local centers, smoothstep falloff and time-based easing that stops at rest.",
+    "desc": "A desktop Dock of six crafted app icons and a Bin. Icons swell around the pointer on a cosine falloff and push their neighbours aside, the rail widens with them, a label names the app under the pointer and a launch bounce lights its running dot.",
     "designSize": [
-      324,
-      136
+      400,
+      170
     ],
     "stage": {
       "theme": "dark",
@@ -23763,13 +23712,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/dock-magnify",
     "thumb": "full",
-    "module": "registry/m/dock-magnify.js?v=5757fd38d8",
+    "module": "registry/m/dock-magnify.js?v=6053976f03",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/dock-magnify.json?v=d3230e2fb8",
-    "assetRefs": {
-      "layout2-dock-indicator": "assets/components/layout2-dock-indicator.svg"
-    },
+    "sourcePreview": "registry/p/dock-magnify.json?v=1de100b82a",
+    "assetRefs": {},
     "rootClass": "d-dock",
     "controls": [
       {
@@ -24265,7 +24212,9 @@
     "trigger": "ambient",
     "tags": [
       "marquee",
-      "opposing rows",
+      "logos",
+      "social proof",
+      "mask fade",
       "ambient"
     ],
     "useCases": [
@@ -24273,7 +24222,7 @@
       "mask fade"
     ],
     "tier": "free",
-    "desc": "Two rows of original neutral marks travel in opposite directions behind soft edge masks. The complete original artwork is repeated and clipped by row without extracting any paths.",
+    "desc": "Two rows of customer wordmarks drift in opposite directions behind soft edge fades. Twelve fictional companies each get their own type treatment and SVG mark; hovering a row pauses it and lights the logo under the pointer.",
     "designSize": "bleed",
     "stage": {
       "theme": "dark",
@@ -24283,13 +24232,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/logo-marquee",
     "thumb": "full",
-    "module": "registry/m/logo-marquee.js?v=16488c1bb8",
+    "module": "registry/m/logo-marquee.js?v=b8a0c93dfd",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/logo-marquee.json?v=23073e4390",
-    "assetRefs": {
-      "layout2-marquee-rows": "assets/components/layout2-marquee-rows.svg"
-    },
+    "sourcePreview": "registry/p/logo-marquee.json?v=c72ed9dff2",
+    "assetRefs": {},
     "rootClass": "d-logos",
     "controls": [
       {
@@ -29724,10 +29671,11 @@
     "collections": [],
     "trigger": "press",
     "tags": [
-      "layout",
+      "cards",
       "fan",
-      "native",
-      "accessible"
+      "wallet",
+      "drag",
+      "spring"
     ],
     "useCases": [
       "Layout & UI",
@@ -29735,7 +29683,7 @@
       "accessible interactions"
     ],
     "tier": "free",
-    "desc": "Five cards spread into a 48-degree hand. Deal the top card or drag it, carrying release velocity into the same snappy spring.",
+    "desc": "A wallet of five Halden payment cards held as a fanned hand. Deal the top card and it lifts off and tucks in behind while the rest step forward, or drag it upward and release; the balance under the hand follows the card on top.",
     "designSize": [
       400,
       400
@@ -29752,17 +29700,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-card-fan",
     "thumb": "hero",
-    "module": "js/demos.layout.ui-card-fan.js?v=7ed9d4e74c",
+    "module": "js/demos.layout.ui-card-fan.js?v=4e803d94a6",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ui-card-fan.json?v=bb2bf147f3",
-    "assetRefs": {
-      "new-layout-fan-left-24": "assets/components/layout-new/fan-left-24.svg",
-      "new-layout-fan-left-12": "assets/components/layout-new/fan-left-12.svg",
-      "new-layout-fan-right-12": "assets/components/layout-new/fan-right-12.svg",
-      "new-layout-fan-right-24": "assets/components/layout-new/fan-right-24.svg",
-      "new-layout-fan-front": "assets/components/layout-new/fan-front.svg"
-    },
+    "sourcePreview": "registry/p/ui-card-fan.json?v=c0a2f98bc9",
+    "assetRefs": {},
     "rootClass": "d-new-layout-fan",
     "controls": [
       {
@@ -29788,10 +29730,11 @@
     ],
     "trigger": "press",
     "tags": [
-      "layout",
       "onboarding",
-      "native",
-      "accessible"
+      "checklist",
+      "progress ring",
+      "accordion",
+      "setup"
     ],
     "useCases": [
       "Layout & UI",
@@ -29799,7 +29742,7 @@
       "accessible interactions"
     ],
     "tier": "free",
-    "desc": "Five local setup steps share a measured progress ring, drawn checks and a changing CTA. Complete the list to reveal its success state.",
+    "desc": "A real setup checklist for a new Halden workspace: connect the repository, invite the team, add a domain, set secrets and deploy. Each step opens with its own action, the ring and count advance as checks draw in, and finishing the last step turns the card into its live state.",
     "designSize": [
       400,
       440
@@ -29816,19 +29759,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-onboarding-checklist",
     "thumb": "hero",
-    "module": "js/demos.layout.ui-onboarding-checklist.js?v=eb56349e49",
+    "module": "js/demos.layout.ui-onboarding-checklist.js?v=bfeebf29fc",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ui-onboarding-checklist.json?v=11bc663487",
-    "assetRefs": {
-      "new-layout-onboarding-track": "assets/components/layout-new/onboarding-track.svg",
-      "new-layout-onboarding-progress": "assets/components/layout-new/onboarding-progress.svg",
-      "new-layout-onboarding-check": "assets/components/layout-new/onboarding-check.svg",
-      "new-layout-onboarding-check-182-380": "assets/components/layout-new/onboarding-check-182-380.svg",
-      "new-layout-onboarding-active-track": "assets/components/layout-new/onboarding-active-track.svg",
-      "new-layout-onboarding-spinner": "assets/components/layout-new/onboarding-spinner.svg",
-      "new-layout-onboarding-empty": "assets/components/layout-new/onboarding-empty.svg"
-    },
+    "sourcePreview": "registry/p/ui-onboarding-checklist.json?v=5896341c54",
+    "assetRefs": {},
     "rootClass": "d-new-layout-onboarding",
     "controls": [
       {
@@ -29908,10 +29843,11 @@
     "collections": [],
     "trigger": "press",
     "tags": [
-      "layout",
       "selection",
-      "native",
-      "accessible"
+      "bulk actions",
+      "table",
+      "checkbox",
+      "toolbar"
     ],
     "useCases": [
       "Layout & UI",
@@ -29919,10 +29855,10 @@
       "accessible interactions"
     ],
     "tier": "free",
-    "desc": "Select six local example items to reveal a floating action bar with a live count. Copy their names or remove the selected local rows.",
+    "desc": "A shared-drive file table with real checkboxes. Selecting files raises a floating action bar that counts them and totals their size; Share, Download and Move confirm in place, and Delete clears the rows with an Undo.",
     "designSize": [
-      400,
-      440
+      600,
+      420
     ],
     "thumbDesignSize": [
       324,
@@ -29936,16 +29872,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-selection-bar",
     "thumb": "hero",
-    "module": "js/demos.layout.ui-selection-bar.js?v=17d53fd384",
+    "module": "js/demos.layout.ui-selection-bar.js?v=f178327eb8",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ui-selection-bar.json?v=7e7a11a231",
-    "assetRefs": {
-      "new-layout-selection-empty": "assets/components/layout-new/selection-empty.svg",
-      "new-layout-selection-check": "assets/components/layout-new/selection-check.svg",
-      "new-layout-selection-copy": "assets/components/layout-new/selection-copy.svg",
-      "new-layout-selection-delete": "assets/components/layout-new/selection-delete.svg"
-    },
+    "sourcePreview": "registry/p/ui-selection-bar.json?v=8f5b785d78",
+    "assetRefs": {},
     "rootClass": "d-new-layout-selection",
     "controls": [
       {
@@ -33382,9 +33313,10 @@
     "trigger": "ambient",
     "tags": [
       "cursors",
-      "extension",
-      "accessible",
-      "ambient"
+      "multiplayer",
+      "presence",
+      "collaboration",
+      "comments"
     ],
     "useCases": [
       "Layout & UI",
@@ -33392,14 +33324,14 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "Maya and Omar follow complete local collaboration paths, make selections and leave comments. The shared Dock advances the story without any network service.",
+    "desc": "A shared launch-plan document with four collaborators in it at once: named cursors glide in, Maya drags a selection, Omar types, Jun ticks a checklist item and Ana leaves a comment, while presence avatars track who is active. Follow anyone from their avatar.",
     "designSize": [
       640,
-      520
+      440
     ],
     "thumbDesignSize": [
       324,
-      216
+      168
     ],
     "stage": {
       "theme": "dark",
@@ -33409,14 +33341,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-realtime-cursors",
     "thumb": "hero",
-    "module": "js/demos.layoutext.ui-realtime-cursors.js?v=8f07443ca3",
+    "module": "js/demos.layoutext.ui-realtime-cursors.js?v=98cddda830",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ui-realtime-cursors.json?v=ae542570c2",
-    "assetRefs": {
-      "svg-layout-ext-36": "assets/components/layout-ext/layout-ext-36.svg",
-      "svg-layout-ext-37": "assets/components/layout-ext/layout-ext-37.svg"
-    },
+    "sourcePreview": "registry/p/ui-realtime-cursors.json?v=129a9248db",
+    "assetRefs": {},
     "rootClass": "d-ext-ui-cursors",
     "controls": [
       {
@@ -33441,9 +33370,10 @@
     "trigger": "press",
     "tags": [
       "table",
-      "extension",
-      "accessible",
-      "press"
+      "accordion",
+      "sort",
+      "deployments",
+      "FLIP"
     ],
     "useCases": [
       "Layout & UI",
@@ -33451,14 +33381,14 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "Expand project details in place, sort complete local rows and select records. Rows reflow with their current geometry while the sort arrow and selection bar resolve.",
+    "desc": "A dense deployments table for a storefront project, with status, commit, branch, build time and age in tabular figures. Rows expand in place into build-step timelines, sources and checks, a live build ticks up, and Duration or Age re-sort with rows sliding to their new places.",
     "designSize": [
-      640,
-      520
+      720,
+      440
     ],
     "thumbDesignSize": [
       324,
-      216
+      168
     ],
     "stage": {
       "theme": "dark",
@@ -33468,14 +33398,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ui-data-table-expand",
     "thumb": "hero",
-    "module": "js/demos.layoutext.ui-data-table-expand.js?v=8e44870a5b",
+    "module": "js/demos.layoutext.ui-data-table-expand.js?v=dd202487c5",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ui-data-table-expand.json?v=9b98ea99c8",
-    "assetRefs": {
-      "svg-layout-ext-20": "assets/components/layout-ext/layout-ext-20.svg",
-      "svg-layout-ext-12": "assets/components/layout-ext/layout-ext-12.svg"
-    },
+    "sourcePreview": "registry/p/ui-data-table-expand.json?v=c8a08882a7",
+    "assetRefs": {},
     "rootClass": "d-ext-ui-table",
     "controls": [
       {

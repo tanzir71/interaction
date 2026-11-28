@@ -7669,8 +7669,8 @@ INTRX.meta({
   },
   "map-topo-extrude": {
     "designSize": [
-      280,
-      238
+      600,
+      340
     ],
     "stage": {
       "theme": "dark",
@@ -7679,7 +7679,7 @@ INTRX.meta({
     "trigger": "hover",
     "controls": [
       {
-        "label": "Hold / release",
+        "label": "Flatten / raise",
         "action": "raise"
       },
       {
@@ -7694,21 +7694,21 @@ INTRX.meta({
     },
     "useCases": [
       "terrain",
-      "noise",
+      "elevation",
       "3d"
     ],
     "tier": "free",
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ]
   },
   "map-city-tiles": {
     "designSize": [
-      280,
-      238
+      600,
+      340
     ],
     "stage": {
       "theme": "dark",
@@ -7721,7 +7721,7 @@ INTRX.meta({
         "action": "replay"
       },
       {
-        "label": "New seed",
+        "label": "Next layer",
         "action": "seed"
       },
       {
@@ -7735,22 +7735,22 @@ INTRX.meta({
       "aria": "region"
     },
     "useCases": [
-      "city",
-      "polygons",
-      "stagger"
+      "map",
+      "choropleth",
+      "city"
     ],
     "tier": "free",
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ]
   },
   "map-dot-globe-arcs": {
     "designSize": [
-      360,
-      280
+      600,
+      340
     ],
     "stage": {
       "theme": "dark",
@@ -7785,8 +7785,8 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ]
   },
   "map-route-draw": {
@@ -7833,8 +7833,8 @@ INTRX.meta({
   },
   "map-radar-pings": {
     "designSize": [
-      360,
-      280
+      600,
+      340
     ],
     "stage": {
       "theme": "dark",
@@ -7862,15 +7862,15 @@ INTRX.meta({
     },
     "useCases": [
       "map",
-      "radar",
-      "parallax"
+      "monitoring",
+      "heartbeat"
     ],
     "tier": "free",
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ]
   },
   "map-isoline-field": {
@@ -8111,8 +8111,8 @@ INTRX.meta({
   },
   "fui-data-stream": {
     "designSize": [
-      420,
-      350
+      600,
+      340
     ],
     "stage": {
       "theme": "dark",
@@ -8147,8 +8147,8 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      224,
-      168
+      300,
+      216
     ]
   },
   "fui-access-granted": {
@@ -10036,8 +10036,8 @@ INTRX.meta({
   },
   "zoom-ui-inception": {
     "designSize": [
-      240,
-      200
+      560,
+      360
     ],
     "stage": {
       "theme": "dark",
@@ -10068,7 +10068,7 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      240,
+      300,
       168
     ]
   },
@@ -12174,8 +12174,8 @@ INTRX.meta({
   },
   "mac-window": {
     "designSize": [
-      200,
-      180
+      600,
+      400
     ],
     "stage": {
       "theme": "dark",
@@ -12205,14 +12205,14 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      200,
-      100
+      300,
+      168
     ]
   },
   "dock-magnify": {
     "designSize": [
-      324,
-      136
+      400,
+      170
     ],
     "stage": {
       "theme": "dark",
@@ -15524,8 +15524,8 @@ INTRX.meta({
   },
   "ui-selection-bar": {
     "designSize": [
-      400,
-      440
+      600,
+      420
     ],
     "thumbDesignSize": [
       324,
@@ -17237,7 +17237,7 @@ INTRX.meta({
   "ui-realtime-cursors": {
     "designSize": [
       640,
-      520
+      440
     ],
     "stage": {
       "theme": "dark",
@@ -17258,7 +17258,7 @@ INTRX.meta({
     "thumb": "hero",
     "thumbDesignSize": [
       324,
-      216
+      168
     ],
     "origin": "extension",
     "isNew": true,
@@ -17271,8 +17271,8 @@ INTRX.meta({
   },
   "ui-data-table-expand": {
     "designSize": [
-      640,
-      520
+      720,
+      440
     ],
     "stage": {
       "theme": "dark",
@@ -17293,7 +17293,7 @@ INTRX.meta({
     "thumb": "hero",
     "thumbDesignSize": [
       324,
-      216
+      168
     ],
     "origin": "extension",
     "isNew": true,
