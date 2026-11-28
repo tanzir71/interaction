@@ -234,7 +234,7 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
   --border-strong:rgba(255,255,255,.14);
   --border-highlight:rgba(255,255,255,.06);
   --text-primary:#F1F1F1;
-  --text-secondary:#A0A0A0;
+  --text-secondary:#B4B4B4;
   --text-tertiary:#949494;
   --text-inverse:var(--p-gray-950);
   --accent-default:var(--p-orange-500);
@@ -327,3 +327,7 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
 .stage-play:hover{background:rgba(36,36,36,.9)}
 @media(max-width:600px){.stage-play,.tile--landing .stage-play,.tile-grid[data-density="rows"] .stage-play{top:16px;left:16px}}
 @media(prefers-reduced-motion:reduce){.stage-play{transition:none}}
+/* Scrollable demo panes use quiet scrollbars instead of the OS default.
+   Zero specificity, so a demo's own scrollbar styling still wins. */
+:where(.demo-stage.stage[data-stage-theme="dark"]) *{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.18) transparent}
+:where(.demo-stage.stage[data-stage-theme="light"]) *{scrollbar-width:thin;scrollbar-color:rgba(0,0,0,.22) transparent}
