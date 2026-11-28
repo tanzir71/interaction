@@ -9785,8 +9785,8 @@ INTRX.meta({
   },
   "command-palette": {
     "designSize": [
-      236,
-      176
+      600,
+      392
     ],
     "stage": {
       "theme": "dark",
@@ -9817,8 +9817,8 @@ INTRX.meta({
     "thumb": "hero",
     "addedAt": "2026-11",
     "thumbDesignSize": [
-      236,
-      100
+      300,
+      176
     ]
   },
   "toast-stack": {
@@ -14985,8 +14985,8 @@ INTRX.meta({
   },
   "agent-prompt-composer": {
     "designSize": [
-      400,
-      400
+      560,
+      320
     ],
     "thumbDesignSize": [
       324,

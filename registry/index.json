@@ -18901,14 +18901,14 @@
       "keyboard"
     ],
     "tier": "free",
-    "desc": "Type a few letters to rank seven local commands, then move with arrows and execute with Enter. Its shortcut stays scoped to the component so the library search remains available elsewhere.",
+    "desc": "A command menu for a fictional Nimbus issue tracker. Suggestions, issues, navigation and actions sit in labelled groups with stroke icons and shortcut keys. Typing ranks them with a subsequence matcher and lights the matched letters; arrows slide the selection, Enter runs the command and Escape clears, then closes.",
     "designSize": [
-      236,
-      176
+      600,
+      392
     ],
     "thumbDesignSize": [
-      236,
-      100
+      300,
+      176
     ],
     "stage": {
       "theme": "dark",
@@ -18918,13 +18918,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/command-palette",
     "thumb": "hero",
-    "module": "js/demos.layout.command-palette.js?v=c232093e0e",
+    "module": "js/demos.layout.command-palette.js?v=dcfdf915fe",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/command-palette.json?v=453768e257",
-    "assetRefs": {
-      "layout-command-search": "assets/components/layout-command-search.svg"
-    },
+    "sourcePreview": "registry/p/command-palette.json?v=7234b563ad",
+    "assetRefs": {},
     "rootClass": "d-command-demo",
     "controls": [
       {
@@ -28746,10 +28744,10 @@
       "composer"
     ],
     "tier": "free",
-    "desc": "An auto-growing prompt, attachment chips, a keyboard model menu and an interruptible local generation state.",
+    "desc": "An agent prompt composer for a fictional codebase: attached files as removable chips, an auto-growing prompt, a web-search toggle, a keyboard model menu with context sizes, a live token estimate and a send button that turns into an interruptible progress ring.",
     "designSize": [
-      400,
-      400
+      560,
+      320
     ],
     "thumbDesignSize": [
       324,
@@ -28763,14 +28761,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/agent-prompt-composer",
     "thumb": "hero",
-    "module": "js/demos.agent.agent-prompt-composer.js?v=454b10caf7",
+    "module": "js/demos.agent.agent-prompt-composer.js?v=4add2d8e5e",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/agent-prompt-composer.json?v=d88545b249",
-    "assetRefs": {
-      "new-agent-composer-attach": "assets/components/agents-new/composer-attach.svg",
-      "new-agent-composer-send": "assets/components/agents-new/composer-send.svg"
-    },
+    "sourcePreview": "registry/p/agent-prompt-composer.json?v=4c3cbcc687",
+    "assetRefs": {},
     "rootClass": "d-new-agent-composer",
     "controls": [
       {
@@ -28811,7 +28806,7 @@
       "voice"
     ],
     "tier": "free",
-    "desc": "Hold Space or the orb to listen, then follow a simulated thinking and speaking envelope with five live level bars.",
+    "desc": "A calm voice-mode orb: layered radial light in the accent ramp, a 72-tick level ring driven by a simulated voice envelope, and a transcript that streams your question while you hold, then Atlas's spoken reply. Listening, thinking and speaking each have their own ring and status chip.",
     "designSize": [
       400,
       400
@@ -28828,15 +28823,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/agent-voice-orb",
     "thumb": "hero",
-    "module": "js/demos.agent.agent-voice-orb.js?v=0cf479e862",
+    "module": "js/demos.agent.agent-voice-orb.js?v=80579c05fa",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/agent-voice-orb.json?v=7e5f672e07",
-    "assetRefs": {
-      "new-agent-voice-outer": "assets/components/agents-new/voice-outer.svg",
-      "new-agent-voice-inner": "assets/components/agents-new/voice-inner.svg",
-      "new-agent-voice-core": "assets/components/agents-new/voice-core.svg"
-    },
+    "sourcePreview": "registry/p/agent-voice-orb.json?v=a5ef5a54bf",
+    "assetRefs": {},
     "rootClass": "d-new-agent-voice",
     "controls": [
       {
@@ -30725,7 +30716,7 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "A five-message conversation streams words while keeping its reader’s place. Scroll up to pause following, jump to latest when ready, and mark a response helpful or in need of work.",
+    "desc": "An agent conversation about a failing export job. Tool steps resolve from spinners to checks, answers stream word by word with inline code and a caret, a pull-request card lands, and the thread follows new text until you scroll up, when a Jump to latest pill appears. Responses can be copied or marked helpful.",
     "designSize": [
       600,
       480
@@ -30742,13 +30733,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ai-message-stream",
     "thumb": "hero",
-    "module": "js/demos.agentext.ai-message-stream.js?v=2ea4d6ab4c",
+    "module": "js/demos.agentext.ai-message-stream.js?v=70b3f8d94a",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ai-message-stream.json?v=97497f2020",
-    "assetRefs": {
-      "agent-ext-agent-ext-0": "assets/components/agent-ext/agent-ext-0.svg"
-    },
+    "sourcePreview": "registry/p/ai-message-stream.json?v=9ae6eb0d0c",
+    "assetRefs": {},
     "rootClass": "d-ext-agent-stream",
     "controls": [],
     "a11y": {
@@ -30954,7 +30943,7 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "Open an assistant beside a project note. Select a passage to update its context, ask a question in the bottom composer, and keep the original note in view while the local response streams.",
+    "desc": "A launch-plan document with an Ask Atlas sidebar. Pick a paragraph or select text to set the context, run Summarize, Find risks or Shorten (or ask your own question), and watch the answer stream in; shorter rewrites can replace the paragraph and any answer can be inserted below it.",
     "designSize": [
       640,
       480
@@ -30971,13 +30960,11 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ai-sidebar",
     "thumb": "hero",
-    "module": "js/demos.agentext.ai-sidebar.js?v=db41f36296",
+    "module": "js/demos.agentext.ai-sidebar.js?v=47456d9188",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ai-sidebar.json?v=0b003d2163",
-    "assetRefs": {
-      "agent-ext-agent-ext-8": "assets/components/agent-ext/agent-ext-8.svg"
-    },
+    "sourcePreview": "registry/p/ai-sidebar.json?v=905a110269",
+    "assetRefs": {},
     "rootClass": "d-ext-agent-sidebar",
     "controls": [],
     "a11y": {
@@ -31010,7 +30997,7 @@
       "accessible"
     ],
     "tier": "free",
-    "desc": "A search shimmer resolves into three source chips and a streamed summary with inline citations. Open a citation to inspect its title, description and verified source link.",
+    "desc": "An answer-engine result for a fictional framework migration. Search queries appear as chips, four source cards land in a stagger, and the answer streams with inline citation pills. Hover a source or a citation to link them, and open a citation for the source's title, summary and path.",
     "designSize": [
       640,
       480
@@ -31027,10 +31014,10 @@
     "addedAt": "2026-11",
     "url": "https://intrx.vercel.app/#/c/ai-web-search",
     "thumb": "hero",
-    "module": "js/demos.agentext.ai-web-search.js?v=f9a41426b6",
+    "module": "js/demos.agentext.ai-web-search.js?v=ba0c19837c",
     "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
     "exportBundle": "js/export-data.js?v=3333424991",
-    "sourcePreview": "registry/p/ai-web-search.json?v=a91f0c2e02",
+    "sourcePreview": "registry/p/ai-web-search.json?v=ec15d8387d",
     "assetRefs": {},
     "rootClass": "d-ext-agent-search",
     "controls": [],
