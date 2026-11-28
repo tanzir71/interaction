@@ -17,7 +17,7 @@
   --bg-stage:var(--p-gray-850);--bg-overlay:var(--p-gray-700);
   --border-subtle:rgba(255,255,255,.06);--border-default:rgba(255,255,255,.09);--border-strong:rgba(255,255,255,.14);
   --border-highlight:rgba(255,255,255,.06);
-  --text-primary:#F1F1F1;--text-secondary:#A0A0A0;--text-tertiary:#949494;--text-inverse:var(--p-gray-950);
+  --text-primary:#F1F1F1;--text-secondary:#B4B4B4;--text-tertiary:#949494;--text-inverse:var(--p-gray-950);
   --accent-default:var(--p-orange-500);--accent-hover:var(--p-orange-400);--accent-subtle:rgba(250,115,25,.14);
   --pro-default:var(--text-primary);--status-success:var(--p-green-500);--status-danger:var(--p-red-500);--focus-ring:var(--p-orange-400);
   /* tints: 13% chip fills with the full hue on the icon; never decorative */
@@ -296,3 +296,25 @@ html[data-theme="light"] .source-lock-crown img{filter:invert(1)}
   width:100%;min-height:44px;height:auto;justify-content:flex-start;padding:6px 12px;
   white-space:normal;overflow-wrap:anywhere;text-align:left;line-height:16px;
 }
+
+/* ============================================================
+   Polish pass, 28 Nov 2026 (docs/DECISIONS-2026-11-28.md)
+   ============================================================ */
+/* Tile card: a lifted surface with the Stage inset as a framed screen. */
+.tile{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0) 40%),var(--bg-surface);border-color:var(--border-subtle);box-shadow:inset 0 1px 0 var(--border-highlight);transition:border-color var(--dur-quick) var(--ease-out),transform var(--dur-fast) var(--ease-out),box-shadow var(--dur-fast) var(--ease-out)}
+.tile .demo-stage.stage{margin:6px 6px 0;border-radius:13px}
+[data-theme="light"] .tile{background:var(--bg-surface);box-shadow:0 1px 2px rgba(0,0,0,.04)}
+@media(hover:hover){
+  .tile:hover,.tile:focus-within{border-color:var(--border-strong);transform:translateY(-2px);box-shadow:inset 0 1px 0 var(--border-highlight),0 18px 40px -18px rgba(0,0,0,.6)}
+  [data-theme="light"] .tile:hover,[data-theme="light"] .tile:focus-within{box-shadow:0 14px 34px -16px rgba(0,0,0,.22)}
+}
+@media(prefers-reduced-motion:reduce){.tile:hover,.tile:focus-within{transform:none}}
+.tile-grid[data-density="rows"] .demo-stage.stage{margin:6px 0 6px 6px}
+
+/* Shell text floor: nothing below 11px. */
+.badge--new,.badge--pro,.badge--lib,.badge--soon,.topnav .badge--soon,.source-toolbar .badge--soon,.search-trigger .kbd,
+.install-note,.eyebrow,.center-heading .type-meta,.group-tabs span,.section-more .type-meta,.library-nav span,.nav-group>p,
+.stage-readout,.a11y-chips>p,.a11y-chips span,.agent-ask .type-meta,.agent-command,.palette-footer,.palette-footer .kbd{font-size:11px}
+.source-toolbar .badge--soon,.topnav .badge--soon{height:18px;padding:0 6px}
+@media(max-width:1250px){.stage-readout{font-size:11px}}
+@media(max-width:600px){.stage-readout,.palette-footer,.palette-footer .kbd,.source-toolbar [role="tab"]{font-size:11px}}

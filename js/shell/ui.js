@@ -1,6 +1,9 @@
 (function(){
  const R=INTRX;
  R.escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ // Platform-aware shortcut glyph: ⌘ on Apple devices, Ctrl elsewhere.
+ const nav=typeof navigator==='undefined'?{}:navigator;
+ R.mod=/Mac|iPhone|iPad|iPod/i.test(nav.userAgentData?.platform||nav.platform||nav.userAgent||'')?'⌘':'Ctrl ';
  const icons={search:'home-imgIconSearch',moon:'home-imgIconMoon',github:'home-imgIconGithub',back:'detail-imgFrame',next:'detail-imgFrame1',share:'detail-imgFrame3',replay:'detail-imgFrame4',sun:'detail-imgFrame7',desktop:'detail-imgFrame8',tablet:'detail-imgFrame9',mobile:'detail-imgFrame10',expand:'detail-imgFrame11',copy:'detail-imgFrame12',check:'detail-imgFrame13',close:'browse-imgFrame',menu:'mobile-home-imgFrame1'};
  R.icon=name=>{const mobile={search:'mobile-home-imgFrame',back:'mobile-detail-imgFrame',share:'mobile-detail-imgFrame1',replay:'mobile-detail-imgFrame2',moon:'mobile-detail-imgFrame3',expand:'mobile-detail-imgFrame4'};return icons[name]?'<span class="shell-icon" aria-hidden="true"><picture>'+(mobile[name]?'<source media="(max-width:600px)" srcset="assets/shell/'+mobile[name]+'.svg">':'')+'<img src="assets/shell/'+icons[name]+'.svg" alt=""></picture></span>':'<svg width="16" height="16" aria-hidden="true"><use href="assets/icons.svg#'+name+'"></use></svg>';};
 
