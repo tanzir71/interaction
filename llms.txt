@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 520 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 525 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -472,6 +472,11 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Tear-Off Ticket](https://intrx.vercel.app/#/c/skeuo-tear-ticket): drag · Pull the ticket stub along its perforation. Paper fibers reveal as the tear advances; a complete tear separates the stub and a partial pull springs back. · registry: /registry/c/skeuo-tear-ticket.json
 - [Swinging Lanyard](https://intrx.vercel.app/#/c/skeuo-lanyard-badge): drag · Grab and fling a badge suspended on two flexible straps. A fixed-step Verlet rope carries the release momentum and settles naturally. · registry: /registry/c/skeuo-lanyard-badge.json
 - [Wallet Cards](https://intrx.vercel.app/#/c/skeuo-wallet-cards): press · Select a card in the wallet pocket. It lifts into view with a moving sheen while the other cards tuck back; dragging can change or return the selection. · registry: /registry/c/skeuo-wallet-cards.json
+- [Flickering Grid](https://intrx.vercel.app/#/c/bg-flickering-grid): ambient · A canvas of 3px squares flickers at random while a word glows through the same grid in the accent. Moving the pointer warms the squares near it. Adapted from Magic UI’s Flickering Grid (MIT). · registry: /registry/c/bg-flickering-grid.json
+- [Retro Grid](https://intrx.vercel.app/#/c/bg-retro-grid): ambient · A ray-cast perspective floor scrolls toward the viewer with level-of-detail line thinning, so distant cells never shimmer. An accent glow sits on the horizon behind a launch headline. Adapted from Magic UI’s Retro Grid (MIT). · registry: /registry/c/bg-retro-grid.json
+- [Mesh Gradient](https://intrx.vercel.app/#/c/shader-mesh-gradient): ambient · Four colour points orbit on their own sine paths while the field distorts and swirls between them, finished with a fine grain overlay. Palette and Swirl change the mood behind a hero line. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-mesh-gradient.json
+- [Dithering](https://intrx.vercel.app/#/c/shader-dithering): ambient · A lit sphere, swirl or ripple is quantised to 3px cells through an ordered Bayer matrix, turning smooth light into a two-tone accent pattern. Shape and Matrix switch the source and the threshold map. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-dithering.json
+- [Neuro Noise](https://intrx.vercel.app/#/c/shader-neuro-noise): ambient · Fifteen rotated sine layers fold into glowing filaments that drift like a network thinking, behind an agent status line. Palette and Contrast tune the glow. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-neuro-noise.json
 
 ## Collections
 

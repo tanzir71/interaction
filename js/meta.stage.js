@@ -18776,5 +18776,165 @@ INTRX.meta({
       "accessible"
     ],
     "addedAt": "2026-11"
+  },
+  "bg-flickering-grid": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Next word",
+        "action": "word"
+      },
+      {
+        "label": "Density",
+        "action": "density"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "grid",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "bg-retro-grid": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Angle",
+        "action": "angle"
+      },
+      {
+        "label": "Cells",
+        "action": "cells"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "grid",
+      "hero"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-mesh-gradient": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Swirl",
+        "action": "swirl"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "gradient",
+      "hero"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-dithering": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Shape",
+        "action": "shape"
+      },
+      {
+        "label": "Matrix",
+        "action": "matrix"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "dither",
+      "loading"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-neuro-noise": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Contrast",
+        "action": "contrast"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "AI",
+      "loading"
+    ],
+    "addedAt": "2026-11"
   }
 });

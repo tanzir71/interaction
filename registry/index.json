@@ -36053,5 +36053,270 @@
     "hint": "Cards slide up out of the wallet pocket",
     "sourceName": "Seen on: beUI Wallet Card and Originkit Holo Card Dispenser pattern families",
     "isNew": true
+  },
+  {
+    "id": "bg-flickering-grid",
+    "title": "Flickering Grid",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "grid",
+      "canvas",
+      "text mask",
+      "background",
+      "pointer"
+    ],
+    "useCases": [
+      "Ambient",
+      "grid",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "A canvas of 3px squares flickers at random while a word glows through the same grid in the accent. Moving the pointer warms the squares near it. Adapted from Magic UI’s Flickering Grid (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-flickering-grid",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.flickering-grid.js?v=389aa618dd",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-flickering-grid.json?v=5d703b18b2",
+    "assetRefs": {},
+    "rootClass": "d-mx-flick",
+    "controls": [
+      {
+        "label": "Next word",
+        "action": "word"
+      },
+      {
+        "label": "Density",
+        "action": "density"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Squares flicker at random while a word glows through the grid",
+    "sourceName": "Magic UI · Flickering Grid (MIT)",
+    "isNew": true
+  },
+  {
+    "id": "bg-retro-grid",
+    "title": "Retro Grid",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "grid",
+      "webgl",
+      "perspective",
+      "background",
+      "synthwave"
+    ],
+    "useCases": [
+      "Ambient",
+      "grid",
+      "hero"
+    ],
+    "tier": "free",
+    "desc": "A ray-cast perspective floor scrolls toward the viewer with level-of-detail line thinning, so distant cells never shimmer. An accent glow sits on the horizon behind a launch headline. Adapted from Magic UI’s Retro Grid (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-retro-grid",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.retro-grid.js?v=b0db62b74d",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-retro-grid.json?v=0e51de681b",
+    "assetRefs": {},
+    "rootClass": "d-mx-retro",
+    "controls": [
+      {
+        "label": "Angle",
+        "action": "angle"
+      },
+      {
+        "label": "Cells",
+        "action": "cells"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A perspective floor scrolls toward you under an accent horizon",
+    "sourceName": "Magic UI · Retro Grid (MIT)",
+    "isNew": true
+  },
+  {
+    "id": "shader-mesh-gradient",
+    "title": "Mesh Gradient",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "gradient",
+      "grain",
+      "hero"
+    ],
+    "useCases": [
+      "Ambient",
+      "gradient",
+      "hero"
+    ],
+    "tier": "free",
+    "desc": "Four colour points orbit on their own sine paths while the field distorts and swirls between them, finished with a fine grain overlay. Palette and Swirl change the mood behind a hero line. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-mesh-gradient",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.mesh-gradient.js?v=3599edee74",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-mesh-gradient.json?v=c4b55a2b11",
+    "assetRefs": {},
+    "rootClass": "d-px-mesh",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Swirl",
+        "action": "swirl"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Four colour points drift, distort and swirl under fine grain",
+    "sourceName": "Paper Shaders · Mesh Gradient (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-dithering",
+    "title": "Dithering",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "dither",
+      "bayer",
+      "orb"
+    ],
+    "useCases": [
+      "Ambient",
+      "dither",
+      "loading"
+    ],
+    "tier": "free",
+    "desc": "A lit sphere, swirl or ripple is quantised to 3px cells through an ordered Bayer matrix, turning smooth light into a two-tone accent pattern. Shape and Matrix switch the source and the threshold map. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-dithering",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.dithering.js?v=6d0b4bfa12",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-dithering.json?v=a3ec0a1c69",
+    "assetRefs": {},
+    "rootClass": "d-px-dither",
+    "controls": [
+      {
+        "label": "Shape",
+        "action": "shape"
+      },
+      {
+        "label": "Matrix",
+        "action": "matrix"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A lit sphere is quantised through an ordered Bayer matrix",
+    "sourceName": "Paper Shaders · Dithering (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-neuro-noise",
+    "title": "Neuro Noise",
+    "category": "Ambient",
+    "group": "Visual FX",
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "noise",
+      "ai",
+      "thinking"
+    ],
+    "useCases": [
+      "Ambient",
+      "AI",
+      "loading"
+    ],
+    "tier": "free",
+    "desc": "Fifteen rotated sine layers fold into glowing filaments that drift like a network thinking, behind an agent status line. Palette and Contrast tune the glow. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-neuro-noise",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.neuro-noise.js?v=265552a657",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-neuro-noise.json?v=79b9fbb35b",
+    "assetRefs": {},
+    "rootClass": "d-px-neuro",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Contrast",
+        "action": "contrast"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Glowing filaments drift like a network thinking",
+    "sourceName": "Paper Shaders · Neuro Noise (Apache-2.0)",
+    "isNew": true
   }
 ]
