@@ -110,7 +110,13 @@
     if(demo)R.nameDockControls(event.target,demo.controls);
   });
   R.slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-  R.picks=['elastic-tabs','toast-stack','command-palette','masonry-filter','password-strength-bar','scrollsnap-carousel','css3d-isometric-hover','showcase-dot-field','showcase-circular-gallery','input-float-label','btn-border-beam','drams-001'];
+  // Staff picks: the audit's strongest components, most striking first. They lead
+  // every default-sorted grid and each Home group.
+  R.picks=['gallery-coverflow','agent-diff-review','fx-liquid-glass','form-date-range','text-ransom-note','data-world-clock','elastic-tabs','image-shatter-click','svg-signature-write','glass-refraction-card','data-line-tooltip','css3d-depth-hero','scroll-color-theme','form-signature-pad','gallery-apple-cards','fui-waveform-scope','btn-polish-stages','webgl-distortion','data-candlestick-crosshair','select-morph-dropdown','input-float-label','tilt-card','cursor-inverted-lens','led-segment-display','swap-widget','ui-file-tree','slider-progress-fraction','menu-letter-cascade','kinetic-marquee','micro-award-badge','nav-mobile-tabbar','masonry-filter','showcase-circular-gallery','css3d-isometric-hover','drams-001','copy-inline-feedback'];
+  // Cut-or-merge candidates (duplicates and variants). They keep their URL and
+  // registry entry but sort last and stay off Home.
+  R.archived=new Set(['cursor-elastic-line','cursor-velocity-stretch','spring-cursor-follower','gravity-flip-page','wobbly-window-drag','ascii-webcam-style-wave','ascii-morph','ascii-fluid-stir','embossed-press','showcase-ripple-grid','showcase-orbital-path','showcase-elastic-slider','drams-028','drams-030','drams-020','drams-040','drams-035','drams-024']);
+  R.feature=items=>{const pick=new Map(R.picks.map((id,i)=>[id,i])),score=d=>pick.has(d.id)?pick.get(d.id):R.archived.has(d.id)?1e6:1e3;return items.map((d,i)=>[d,i]).sort((a,b)=>score(a[0])-score(b[0])||a[1]-b[1]).map(([d])=>d);};
   R.views={};R.fontFaces={};R.resolveAssets=value=>value;
   const scripts=new Map();
   R.loadScript=url=>{

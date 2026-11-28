@@ -47,7 +47,7 @@
    const start=append?grid.children.length:0;
    if(!append){if(R.liveTiles){R.liveTiles.destroy();R.liveTiles=null;}grid.replaceChildren();}
    let items=base.filter(d=>(gesture==='all'||d.trigger===gesture)&&(stack==='all'||(stack==='vanilla'?!d.libs.length&& !/webgl|canvas/i.test(d.tags.join(' ')):stack==='gsap'?d.libs.includes('gsap'):new RegExp(stack,'i').test(d.tags.join(' ')+' '+d.desc))));
-   if(sort==='az')items.sort((a,b)=>a.title.localeCompare(b.title));else if(sort==='newest')items.sort((a,b)=>b.addedAt.localeCompare(a.addedAt)||a.title.localeCompare(b.title));else items.sort((a,b)=>(R.picks.includes(b.id)?1:0)-(R.picks.includes(a.id)?1:0));
+   if(sort==='az')items.sort((a,b)=>a.title.localeCompare(b.title));else if(sort==='newest')items.sort((a,b)=>b.addedAt.localeCompare(a.addedAt)||a.title.localeCompare(b.title));else items=R.feature(items);
    R.renderTiles(grid,items.slice(start,limit));const more=app.querySelector('#show-more');more.hidden=limit>=items.length;more.textContent='Show '+Math.min(12,Math.max(0,items.length-limit))+' more';app.querySelector('#batch-count').textContent='Showing '+Math.min(limit,items.length)+' of '+items.length;app.querySelector('.library-empty').hidden=items.length!==0;app.querySelector('#library-count').textContent=items.length;
   }
   app.querySelectorAll('[data-trigger]').forEach(button=>button.addEventListener('click',()=>{gesture=button.dataset.trigger;limit=12;app.querySelectorAll('[data-trigger]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));render();}));

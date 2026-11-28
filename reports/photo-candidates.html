@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Photo candidates</title>
+<style>
+  @font-face{font-family:Geist;src:url(../assets/fonts/geist-variable.woff2) format('woff2');font-weight:100 900}
+  :root{--bg:#0f0f0f;--surface:#181818;--line:rgba(255,255,255,.09);--text:#f1f1f1;--muted:#b4b4b4;--dim:#8f8f8f;--accent:#fa7319}
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--bg);color:var(--text);font:14px/1.5 Geist,system-ui,sans-serif;padding:40px 24px 80px}
+  main{max-width:1240px;margin:auto}
+  h1{font-size:32px;line-height:38px;font-weight:600;letter-spacing:-.02em}
+  h2{font-size:20px;font-weight:600;margin:48px 0 6px}
+  p.lead{color:var(--muted);max-width:760px;margin-top:10px}
+  p.sub{color:var(--dim);font-size:13px;margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+  figure{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  figure img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#000}
+  figcaption{padding:10px 12px 12px;font-size:12px;line-height:17px;color:var(--muted)}
+  figcaption b{color:var(--text);font-weight:600;font-size:13px;margin-right:6px}
+  .tag{display:inline-block;font-size:11px;line-height:16px;padding:0 6px;border-radius:999px;border:1px solid var(--line);color:var(--dim);margin-left:4px}
+  .tag.render{color:var(--accent);border-color:rgba(250,115,25,.35)}
+  a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,.25)}
+  .filters{display:flex;gap:6px;margin:16px 0 18px}
+  .filters button{font:inherit;font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+  .filters button[aria-pressed=true]{color:#0a0a0a;background:var(--text)}
+  .pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .pair{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .pair div{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#000}
+  .pair img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+  .pair p{padding:9px 12px 11px;font-size:12px;line-height:17px;color:var(--muted)}
+  .pair p b{color:var(--text);font-weight:600;font-size:13px}
+  @media(max-width:600px){body{padding:24px 16px 60px}h1{font-size:26px;line-height:32px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Dark abstract photo candidates</h1>
+  <p class="lead">Replacements for the 24 photo slots. Every candidate is a free Unsplash Licence image by a named creator (none is Unsplash+, procedural or AI-generated). Pick photographs, 3D renders or a mix, then name the ones you want; nothing is downloaded until you approve.</p>
+  <div class="filters" role="group" aria-label="Filter candidates">
+    <button type="button" aria-pressed="true" data-kind="all">All</button>
+    <button type="button" aria-pressed="false" data-kind="photo">Photographs</button>
+    <button type="button" aria-pressed="false" data-kind="render">3D renders</button>
+  </div>
+  <div class="grid" id="candidates"></div>
+  <h2>Suggested mapping</h2>
+  <p class="sub">One candidate per slot, matched on tone: dark keys get the darkest frames, warm keys get the orange ones, and the three portrait keys get busts. Left is today's image, right is the proposal. Swap any code you prefer.</p>
+  <div class="pairs" id="mapping"></div>
+  <h2>Current slots being replaced</h2>
+  <p class="sub">The 24 images shipping today, by slot key. Same-key replacement re-skins all 119 photo components.</p>
+  <div class="grid" id="current"></div>
+</main>
+<script src="photo-candidates.data.js"></script>
+<script>
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const grid = document.getElementById('candidates');
+  const render = kind => {
+    grid.innerHTML = PHOTO_CANDIDATES.filter(c => kind === 'all' || c.kind === kind).map(c =>
+      '<figure><a href="https://unsplash.com/photos/' + esc(c.slug) + '" target="_blank" rel="noopener"><img loading="lazy" alt="' + esc(c.note) + '" src="https://images.unsplash.com/' + esc(c.imageId) + '?w=520&h=347&fit=crop&auto=format&q=70"></a>' +
+      '<figcaption><b>' + esc(c.code) + '</b>' + esc(c.note) + '<span class="tag ' + c.kind + '">' + (c.kind === 'render' ? '3D render' : 'photo') + '</span><br>' + esc(c.by) + '</figcaption></figure>').join('');
+  };
+  document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    render(b.dataset.kind);
+  }));
+  render('all');
+  const keys = ['forestDark','forestBlue','ocean','cityTeal','cityNight','archGrid','portraitC1','silk','aurora','dusk','embers','milkyway','chrome','interiorDark','fire','sea','roses','smoke','magnolia','portraitC2','portraitC3','trails','rain','fluidBlue'];
+  const MAPPING = { forestDark: 'E1', forestBlue: 'A4', ocean: 'H5', cityTeal: 'A9', cityNight: 'C3', archGrid: 'G1', portraitC1: 'F1', silk: 'H7', aurora: 'C1', dusk: 'D2', embers: 'B3', milkyway: 'C4', chrome: 'A1', interiorDark: 'E3', fire: 'B5', sea: 'H2', roses: 'H1', smoke: 'D1', magnolia: 'A11', portraitC2: 'F2', portraitC3: 'F3', trails: 'C2', rain: 'E4', fluidBlue: 'B7' };
+  const byCode = new Map(PHOTO_CANDIDATES.map(c => [c.code, c]));
+  document.getElementById('mapping').innerHTML = keys.map(k => { const c = byCode.get(MAPPING[k]); return '<figure class="pair"><div><img loading="lazy" alt="" src="../assets/images/' + k + '-800.webp"><img loading="lazy" alt="' + esc(c.note) + '" src="https://images.unsplash.com/' + esc(c.imageId) + '?w=400&h=267&fit=crop&auto=format&q=70"></div><p><b>' + k + '</b> → ' + esc(c.code) + ' ' + esc(c.note) + ' (' + (c.kind === 'render' ? '3D render' : 'photo') + ', ' + esc(c.by) + ')</p></figure>'; }).join('');
+  document.getElementById('current').innerHTML =keys.map(k => '<figure><img loading="lazy" alt="" src="../assets/images/' + k + '-800.webp"><figcaption><b>' + k + '</b></figcaption></figure>').join('');
+</script>
+</body>
+</html>
