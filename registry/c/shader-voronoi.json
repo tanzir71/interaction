@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "shader-voronoi",
   "title": "Voronoi",
-  "category": "Ambient",
-  "group": "Visual FX",
+  "category": "Shaders",
+  "group": "Backgrounds",
+  "collections": [
+    "open-source-ports"
+  ],
   "trigger": "ambient",
   "tags": [
     "shader",
@@ -70,10 +73,10 @@
     "Seen on: Paper Shaders, data-platform heroes, conference branding and pattern backgrounds"
   ],
   "related": [
-    "bg-flickering-grid",
-    "bg-retro-grid",
-    "conway-life-fade",
-    "fx-beam-grid"
+    "fx-plasma-orb",
+    "gradient-mesh-drift",
+    "shader-dithering",
+    "shader-god-rays"
   ],
   "source": {
     "name": "Paper Shaders · Voronoi (Apache-2.0)",

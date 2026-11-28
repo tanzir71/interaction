@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "hero-spotlight-reveal",
   "title": "Spotlight Reveal",
-  "category": "Layout & UI",
-  "group": "Interface",
+  "category": "Heroes",
+  "group": "Sections",
+  "collections": [
+    "landing-page-kit"
+  ],
   "trigger": "hover",
   "tags": [
     "spotlight",
@@ -77,10 +80,8 @@
     "Pattern family: masked headline spotlights"
   ],
   "related": [
-    "bento-spotlight",
-    "caption-pull-hover",
-    "card-hover-border-gradient",
-    "dock-magnify"
+    "css3d-depth-hero",
+    "scroll-hero-parallax"
   ],
   "source": {
     "name": "INTRX",

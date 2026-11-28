@@ -5,7 +5,7 @@ const vm = require('vm');
 const {demos,files,metadata,context}=require('./load-registry')();
 const h2 = fs.readFileSync('CODEX_HANDOFF_2.md', 'utf8');
 const h2Ids = new Set([...h2.matchAll(/^- \[[ xX]\] `([^`]+)`/gm)].map(match => match[1]));
-const categories=Object.values(context.INTRX.groups).flat();
+const R=context.INTRX,families=Object.keys(R.families);
 const dramsCatalog=JSON.parse(fs.readFileSync('DRAMS_CATALOG.json','utf8'));
 const expectedCount=Object.keys(metadata).length;
 const errors = [];
@@ -23,7 +23,8 @@ demos.forEach(demo => {
   required.forEach(key => { if (!demo[key]) errors.push('MISSING ' + demo.id + ' ' + key); });
   if (!Array.isArray(demo.tags) || !Array.isArray(demo.libs)) errors.push('INVALID ARRAYS ' + demo.id);
   if (!demo.html.includes(demo.rootClass)) errors.push('ROOT NOT IN HTML ' + demo.id);
-  if (!categories.includes(demo.cat)) errors.push('UNKNOWN CATEGORY ' + demo.id + ' ' + demo.cat);
+  if (!families.includes(demo.cat)) errors.push('UNKNOWN FAMILY ' + demo.id + ' ' + demo.cat);
+  if (!R.groupOf(R.categoryOf(demo))) errors.push('UNGROUPED CATEGORY ' + demo.id + ' ' + R.categoryOf(demo));
   if (demo.prompt.trim().length < 300) errors.push('PROMPT TOO THIN ' + demo.id);
   try { new Function('root', 'stage', 'ctx', '{\n' + demo.js + '\n}'); } catch (error) { errors.push('JS COMPILE ' + demo.id + ' ' + error.message); }
 
@@ -59,6 +60,7 @@ demos.forEach(demo => {
 });
 
 const ids = demos.map(demo => demo.id);
+for (const id of Object.keys(R.categoryMoves)) if (!ids.includes(id)) errors.push('STALE CATEGORY MOVE ' + id);
 const handoff2Published = ids.filter(id => h2Ids.has(id)).length;
 if (new Set(ids).size !== ids.length) errors.push('DUPLICATE DEMO IDS');
 if (demos.length !== expectedCount) errors.push('DEMO COUNT ' + demos.length + ', expected '+expectedCount);

@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-elastic-slider",
   "title": "Elastic Range",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Inputs & Forms",
+  "group": "Components",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "drag",
   "tags": [
     "drag",
@@ -75,10 +78,10 @@
     "Original vanilla study inspired by React Bits / Elastic Slider."
   ],
   "related": [
-    "showcase-card-swap",
-    "showcase-circular-gallery",
-    "showcase-orbital-path",
-    "showcase-pixel-trail"
+    "form-color-picker",
+    "form-dropzone-morph",
+    "form-picker-wheel",
+    "form-precision-scrubber"
   ],
   "source": {
     "name": "React Bits / Elastic Slider",

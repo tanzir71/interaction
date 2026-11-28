@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "mac-window",
   "title": "Genie Minimize",
-  "category": "Layout & UI",
-  "group": "Interface",
+  "category": "Device frames",
+  "group": "Sections",
+  "collections": [
+    "landing-page-kit"
+  ],
   "trigger": "press",
   "tags": [
     "FLIP",
@@ -80,12 +83,7 @@
     "A small window resolves into its dock target with measured local translation and scale. Reverse the transition at any point through the native dock or window controls.",
     "Pattern family: desktop window-to-dock transitions"
   ],
-  "related": [
-    "command-palette",
-    "context-menu-custom",
-    "elastic-tabs",
-    "flip-expand"
-  ],
+  "related": [],
   "source": {
     "name": "INTRX",
     "url": null,

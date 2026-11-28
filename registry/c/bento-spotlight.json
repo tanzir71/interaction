@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "bento-spotlight",
   "title": "Bento Spotlight",
-  "category": "Layout & UI",
-  "group": "Interface",
+  "category": "Features & Bento",
+  "group": "Sections",
+  "collections": [
+    "landing-page-kit"
+  ],
   "trigger": "hover",
   "tags": [
     "bento",
@@ -76,12 +79,7 @@
     "One pointer position is projected into all four cards, so the light stays continuous across gaps. Focus and touch provide the same local preview and Escape restores the grid.",
     "Pattern family: shared-coordinate card spotlights"
   ],
-  "related": [
-    "caption-pull-hover",
-    "card-hover-border-gradient",
-    "dock-magnify",
-    "hero-spotlight-reveal"
-  ],
+  "related": [],
   "source": {
     "name": "INTRX",
     "url": null,

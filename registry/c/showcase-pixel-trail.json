@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-pixel-trail",
   "title": "Fading Pixel Trail",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Cursor & Hover",
+  "group": "Effects",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "drag",
   "tags": [
     "canvas",
@@ -75,10 +78,10 @@
     "An original vanilla implementation inspired by React Bits / Pixel Trail."
   ],
   "related": [
-    "showcase-card-swap",
-    "showcase-circular-gallery",
-    "showcase-elastic-slider",
-    "showcase-orbital-path"
+    "cursor-drag-ghost",
+    "cursor-elastic-line",
+    "cursor-pull-distort",
+    "cursor-rope-trail"
   ],
   "source": {
     "name": "React Bits / Pixel Trail",

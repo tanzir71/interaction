@@ -23,6 +23,9 @@ pre-upgrade state is git tag `v3-verified`.
 - A demo is one `INTRX.register({ id, title, cat, rootClass, tags, libs, desc, html, css, js, prompt })`
   object; every class is prefixed with `rootClass`. Stage metadata (`designSize`, `stage`, `trigger`,
   `controls`, `a11y`) lives in `js/meta.stage.js`. Source modules are listed in `js/registry-files.json`.
+- Taxonomy: `js/shell/registry.js` defines the seven groups, their categories and collections. A demo's
+  `cat` names its source family; `R.families` maps it to a public category and `R.categoryMoves`
+  places single ids elsewhere (a new Sections demo is listed there). Old category URLs redirect.
 - `js/shell/stage.js` owns fit, `ctx`, the Dock and LiveTiles. `css/style.css` and `css/fonts.css`
   are legacy inputs; active shared styles are in `css/foundations.css`.
 - `tools/build-registry.js` generates `registry/`, `r/`, `llms*.txt` and `js/export-data.js`. Never
@@ -49,7 +52,9 @@ node --test tools/runtime.test.js tools/shell.test.js
 node tools/serve.js 4173   # then, with PLAYWRIGHT_MODULE pointing at an external Playwright:
 node tools/verify-library.js http://127.0.0.1:4173
 ```
-`tools/audit-stage-fit.js` is advisory after the Stage unfreeze. The ~330 per-family suites
+`tools/audit-stage-fit.js` is advisory after the Stage unfreeze. `tools/audit-keyboard.js` walks the
+shell routes, palette and dialogs with Tab and reports invisible, clipped, unnamed or covered focus;
+run it after shell changes. The ~330 per-family suites
 (`tools/verify-*-ext*.js`, `verify-*-new*.js`, profilers and their fixtures) certify `v3-verified`;
 they pin pixels and hashes and are expected to fail after visual changes. Do not treat them as
 gates and do not create new frozen evidence archives.

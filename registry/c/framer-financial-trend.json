@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "framer-financial-trend",
   "title": "Revenue Summary",
-  "category": "Framer Collection",
-  "group": "Collections",
+  "category": "Charts & Numbers",
+  "group": "AI & Data",
+  "collections": [
+    "framer-collection"
+  ],
   "trigger": "press",
   "tags": [
     "metrics",
@@ -77,9 +80,10 @@
     "Reference: Framer AnimatedStats — responsive statistic hierarchy, labels, affixes and synchronized reveals"
   ],
   "related": [
-    "framer-focus-countdown",
-    "framer-formatted-metric",
-    "framer-rolling-balance"
+    "chart-bars-race",
+    "chart-donut-sweep",
+    "data-prediction-market",
+    "data-radar-compare"
   ],
   "source": {
     "name": "Framer · AnimatedStats",

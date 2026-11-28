@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "ui-onboarding-checklist",
   "title": "Onboarding Checklist",
-  "category": "Layout & UI",
-  "group": "Interface",
+  "category": "Auth & Onboarding",
+  "group": "Sections",
+  "collections": [
+    "landing-page-kit"
+  ],
   "trigger": "press",
   "tags": [
     "layout",
@@ -82,12 +85,7 @@
     "Five local setup steps share a measured progress ring, drawn checks and a changing CTA. Complete the list to reveal its success state.",
     "Seen on: ReverseUI Onboarding Tasks"
   ],
-  "related": [
-    "command-palette",
-    "context-menu-custom",
-    "elastic-tabs",
-    "flip-expand"
-  ],
+  "related": [],
   "source": {
     "name": "INTRX",
     "url": null,

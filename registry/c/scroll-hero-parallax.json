@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "scroll-hero-parallax",
   "title": "Hero Parallax",
-  "category": "Scroll",
-  "group": "Motion",
+  "category": "Heroes",
+  "group": "Sections",
+  "collections": [
+    "landing-page-kit"
+  ],
   "trigger": "scroll",
   "tags": [
     "scroll",
@@ -192,10 +195,8 @@
     "Photo: Md Mahdi / Unsplash · https://unsplash.com/photos/orange-light-on-black-background-6adJJmewoUg · Unsplash License"
   ],
   "related": [
-    "horizontal-scroll",
-    "lenis-smooth-scroll",
-    "parallax-layers",
-    "scroll-clip-morph"
+    "css3d-depth-hero",
+    "hero-spotlight-reveal"
   ],
   "source": {
     "name": "INTRX",

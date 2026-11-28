@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-magnet-lines",
   "title": "Magnetic Line Field",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Patterns",
+  "group": "Backgrounds",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "hover",
   "tags": [
     "canvas",
@@ -75,10 +78,10 @@
     "An original vanilla implementation inspired by React Bits / Magnet Lines."
   ],
   "related": [
-    "showcase-ballpit",
+    "fx-background-boxes",
     "showcase-dot-field",
-    "showcase-mask-reveal",
-    "showcase-mesh-surface"
+    "showcase-ripple-grid",
+    "bg-flickering-grid"
   ],
   "source": {
     "name": "React Bits / Magnet Lines",

@@ -26,5 +26,5 @@ export async function run(args,write=console.log){
  if(command==='add'){if(rest.length!==1)throw Error('Usage: intrx add <id>');const result=await addComponent(registry,rest[0],options);write(result.locked?'Locked. '+result.upgradeUrl:result.files.join('\n'));return;}
  if(command==='search'||command==='list'){const result=await registry.search({...options,query:rest.join(' '),limit:command==='list'?Infinity:12});write(options.json?JSON.stringify(result,null,2):result.map(item=>item.id+' — '+item.title+' · '+item.trigger+' · '+item.category).join('\n'));return;}
  if(command&&command!=='help')throw Error('Unknown command: '+command);
- write('intrx mcp [--registry URL|PATH]\nintrx add <id> [--dir PATH] [--format html|parts] [--registry URL|PATH]\nintrx search <query> [--trigger press] [--category "Layout & UI"] [--json]\nintrx list [--category CATEGORY]');
+ write('intrx mcp [--registry URL|PATH]\nintrx add <id> [--dir PATH] [--format html|parts] [--registry URL|PATH]\nintrx search <query> [--trigger press] [--category "Cards, Lists & Layout"] [--json]\nintrx list [--category CATEGORY]');
 }

@@ -2,8 +2,9 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "gallery-apple-cards",
   "title": "Story Cards",
-  "category": "Galleries & Sliders",
-  "group": "Interface",
+  "category": "Galleries & Carousels",
+  "group": "Components",
+  "collections": [],
   "trigger": "drag",
   "tags": [
     "gallery",
@@ -164,10 +165,10 @@
     "Photo: Trophim Laptev / Unsplash · https://unsplash.com/photos/a-glass-object-with-a-black-background-_BTOMrRpyRA · Unsplash License"
   ],
   "related": [
+    "drag-carousel",
     "gallery-coverflow",
-    "slider-elastic-edges",
-    "slider-stack-deck",
-    "slider-wheel-3d"
+    "showcase-card-swap",
+    "showcase-circular-gallery"
   ],
   "source": {
     "name": "INTRX",

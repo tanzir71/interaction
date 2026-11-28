@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-circular-gallery",
   "title": "Curved Gallery",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Galleries & Carousels",
+  "group": "Components",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "drag",
   "tags": [
     "drag",
@@ -150,10 +153,10 @@
     "Photo: Milad Fakurian / Unsplash · https://unsplash.com/photos/dark-metallic-curved-abstract-shapes-7W3X1dAuKqg · Unsplash License"
   ],
   "related": [
-    "showcase-card-swap",
-    "showcase-elastic-slider",
-    "showcase-orbital-path",
-    "showcase-pixel-trail"
+    "drag-carousel",
+    "gallery-apple-cards",
+    "gallery-coverflow",
+    "showcase-card-swap"
   ],
   "source": {
     "name": "React Bits / Circular Gallery",

@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "shader-dithering",
   "title": "Dithering",
-  "category": "Ambient",
-  "group": "Visual FX",
+  "category": "Shaders",
+  "group": "Backgrounds",
+  "collections": [
+    "open-source-ports"
+  ],
   "trigger": "ambient",
   "tags": [
     "shader",
@@ -70,10 +73,10 @@
     "Seen on: Paper Shaders, retro-styled product pages, AI loading states and print-inspired editorials"
   ],
   "related": [
-    "bg-flickering-grid",
-    "bg-retro-grid",
-    "conway-life-fade",
-    "fx-beam-grid"
+    "fx-plasma-orb",
+    "gradient-mesh-drift",
+    "shader-god-rays",
+    "shader-grain-gradient"
   ],
   "source": {
     "name": "Paper Shaders · Dithering (Apache-2.0)",

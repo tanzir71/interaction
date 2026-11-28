@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-ribbons",
   "title": "Elastic Ribbons",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Cursor & Hover",
+  "group": "Effects",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "hover",
   "tags": [
     "canvas",
@@ -75,10 +78,10 @@
     "An original vanilla implementation inspired by React Bits / Ribbons."
   ],
   "related": [
-    "showcase-ballpit",
-    "showcase-dot-field",
-    "showcase-magnet-lines",
-    "showcase-mask-reveal"
+    "cursor-crosshair-hud",
+    "cursor-eyes-follow",
+    "cursor-flashlight-noise",
+    "cursor-following-label"
   ],
   "source": {
     "name": "React Bits / Ribbons",

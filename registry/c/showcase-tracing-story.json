@@ -2,8 +2,11 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "showcase-tracing-story",
   "title": "Tracing Story",
-  "category": "Interactive Showcase",
-  "group": "Collections",
+  "category": "Scroll",
+  "group": "Effects",
+  "collections": [
+    "interactive-showcase"
+  ],
   "trigger": "scroll",
   "tags": [
     "scroll",
@@ -75,10 +78,10 @@
     "Original vanilla study inspired by Aceternity / Tracing Beam & Sticky Scroll."
   ],
   "related": [
-    "showcase-converging-paths",
-    "showcase-ballpit",
-    "showcase-card-swap",
-    "showcase-circular-gallery"
+    "horizontal-scroll",
+    "lenis-smooth-scroll",
+    "parallax-layers",
+    "scroll-clip-morph"
   ],
   "source": {
     "name": "Aceternity / Tracing Beam & Sticky Scroll",

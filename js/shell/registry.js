@@ -20,7 +20,37 @@
   };
   const register = R.register;
   R.register = function(demo) { R.applyMeta(demo); return register.call(R,demo); };
-  R.groups={Interface:['Buttons & Micro','Forms & Inputs','Navigation & Menus','Layout & UI','Loaders & Progress','Galleries & Sliders'],Motion:['Scroll','Text & Type','SVG & Line','3D & Perspective'],'Pointer & Physics':['Cursor','Physics','Liquid & Organic','Play & Easter Eggs'],'Data & AI':['Agent & AI UI','Data & Numbers','Maps & Geo','FUI & Terminal'],'Visual FX':['Image & WebGL','Raster & Glitch','Ambient','Skeuomorph','Sound & Haptics'],Collections:['Interactive Showcase','DRAMS','Framer Collection']};
+  R.slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  // Seven intent-first groups. A demo's own `cat` names its source family; the
+  // public category derives from it, with per-id moves where a family splits.
+  R.groups={Components:['Buttons & Micro-interactions','Inputs & Forms','Navigation & Menus','Overlays & Feedback','Cards, Lists & Layout','Galleries & Carousels'],Sections:['Heroes','Features & Bento','Pricing','Social proof','FAQ, CTA & Footer','Auth & Onboarding','Device frames'],Text:['Text effects'],Backgrounds:['Animated backgrounds','Patterns','Shaders'],Effects:['Scroll','Cursor & Hover','Image & Media','Retro & Glitch','3D & Depth','Physics & Liquid','SVG & Line','Page transitions'],'AI & Data':['AI Chat & Agents','Voice & Audio','Charts & Numbers','Maps & Globes','HUD & Terminal'],Lab:['Tactile & Skeuomorphic','Play & Easter eggs']};
+  R.families={'Buttons & Micro':'Buttons & Micro-interactions','Forms & Inputs':'Inputs & Forms','Navigation & Menus':'Navigation & Menus','Layout & UI':'Cards, Lists & Layout','Loaders & Progress':'Overlays & Feedback','Galleries & Sliders':'Galleries & Carousels',Scroll:'Scroll','Text & Type':'Text effects','SVG & Line':'SVG & Line','3D & Perspective':'3D & Depth',Cursor:'Cursor & Hover',Physics:'Physics & Liquid','Liquid & Organic':'Physics & Liquid','Play & Easter Eggs':'Play & Easter eggs','Agent & AI UI':'AI Chat & Agents','Data & Numbers':'Charts & Numbers','Maps & Geo':'Maps & Globes','FUI & Terminal':'HUD & Terminal','Image & WebGL':'Image & Media','Raster & Glitch':'Retro & Glitch',Ambient:'Animated backgrounds',Skeuomorph:'Tactile & Skeuomorphic','Sound & Haptics':'Voice & Audio','Interactive Showcase':'Animated backgrounds',DRAMS:'Tactile & Skeuomorphic','Framer Collection':'Charts & Numbers'};
+  R.categoryMoves=Object.fromEntries(Object.entries({
+    'Buttons & Micro-interactions':'hover-fill-button liquid-blob-buttons magnetic-button',
+    'Inputs & Forms':'number-input-drag ui-availability-scheduler swap-widget showcase-elastic-slider',
+    'Navigation & Menus':'radial-menu elastic-tabs dock-magnify ui-bloom-menu ui-inverse-tabs svg-gooey-menu',
+    'Overlays & Feedback':'bottom-sheet command-palette toast-stack context-menu-custom popover-anchor-morph spring-modal ui-morphing-modal ui-link-preview ui-feedback-widget ui-selection-bar hover-tooltip-spring',
+    'Galleries & Carousels':'drag-carousel masonry-filter ui-card-fan ui-draggable-cards showcase-circular-gallery showcase-card-swap',
+    Heroes:'hero-spotlight-reveal css3d-depth-hero scroll-hero-parallax','Features & Bento':'bento-spotlight','Social proof':'logo-marquee gallery-testimonials','Auth & Onboarding':'ui-onboarding-checklist','Device frames':'mac-window',
+    Shaders:'shader-mesh-gradient shader-dithering shader-neuro-noise shader-god-rays shader-grain-gradient shader-metaballs shader-pulsing-border shader-smoke-ring shader-voronoi gradient-mesh-drift fx-plasma-orb',
+    Patterns:'bg-flickering-grid bg-retro-grid fx-beam-grid fx-background-boxes conway-life-fade showcase-dot-field showcase-ripple-grid showcase-magnet-lines',
+    Scroll:'showcase-tracing-story','Cursor & Hover':'showcase-pixel-trail showcase-ribbons','Image & Media':'showcase-mask-reveal','Page transitions':'page-transition flip-expand zoom-ui-inception',
+    'Voice & Audio':'agent-voice-orb audio-reactive-bars','Charts & Numbers':'stat-counter','Maps & Globes':'webgl-point-globe','HUD & Terminal':'terminal-window radar-sweep-blips'
+  }).flatMap(([category,ids])=>ids.split(' ').map(id=>[id,category])));
+  R.categoryOf=demo=>R.categoryMoves[demo.id]||R.families[demo.cat]||demo.cat;
+  R.groupOf=category=>Object.keys(R.groups).find(group=>R.groups[group].includes(category));
+  // Collections are curated lists that cut across groups; provenance lives here.
+  R.collections=[
+    {slug:'landing-page-kit',title:'Landing-page kit',desc:'Heroes, feature grids, social proof, pricing and the sections that close a page, ready to assemble.',has:d=>d.group==='Sections'},
+    {slug:'ai-app-kit',title:'AI app kit',desc:'Chat, agent, tool and voice surfaces for products built around a model.',has:d=>['AI Chat & Agents','Voice & Audio'].includes(d.category)},
+    {slug:'open-source-ports',title:'Open-source ports',desc:'Components adapted from permissively licensed libraries (Paper Shaders, Magic UI), with their notices kept.',has:d=>/^(shader-|bg-(flickering|retro)-grid$)/.test(d.id)},
+    {slug:'drams',title:'DRAMS by 1042 Studio',desc:'A family of physical sliders, switches, knobs and devices with mechanical motion.',has:d=>d.family==='DRAMS'},
+    {slug:'interactive-showcase',title:'Interactive Showcase',desc:'Showpiece fields, ribbons and galleries for a single striking moment.',has:d=>d.family==='Interactive Showcase'},
+    {slug:'framer-collection',title:'Framer Collection',desc:'Numeric and financial components in a clean product style.',has:d=>d.family==='Framer Collection'}
+  ];
+  R.collectionsOf=row=>R.collections.filter(c=>c.has(row)).map(c=>c.slug);
+  // Old category and group URLs keep working.
+  R.legacyRoutes=Object.assign({interface:'#/library/components',motion:'#/library/effects','pointer-physics':'#/library/effects','data-ai':'#/library/ai-data','visual-fx':'#/library/effects',collections:'#/collections'},...Object.entries(R.families).map(([family,category])=>{const old=R.slug(family),c=R.collections.find(c=>c.title===family||c.slug===old);return old===R.slug(category)?{}:{[old]:c?'#/collections/'+c.slug:'#/library/'+R.slug(category)};}),{ambient:'#/library/backgrounds'});
   R.triggers=['hover','press','drag','scroll','type','ambient'];
   // One delegated disclosure owner; it never retains an individual Stage.
   R.installDockOverflow=function(){
@@ -109,7 +139,6 @@
     const demo=R.demos.find(d=>d.id===event.detail.id)||R.byId?.get(event.detail.id);
     if(demo)R.nameDockControls(event.target,demo.controls);
   });
-  R.slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   // Staff picks: the audit's strongest components, most striking first. They lead
   // every default-sorted grid and each Home group.
   R.picks=['gallery-coverflow','agent-diff-review','fx-liquid-glass','form-date-range','text-ransom-note','data-world-clock','elastic-tabs','image-shatter-click','svg-signature-write','glass-refraction-card','data-line-tooltip','css3d-depth-hero','scroll-color-theme','form-signature-pad','gallery-apple-cards','fui-waveform-scope','btn-polish-stages','webgl-distortion','data-candlestick-crosshair','select-morph-dropdown','input-float-label','tilt-card','cursor-inverted-lens','led-segment-display','swap-widget','ui-file-tree','slider-progress-fraction','menu-letter-cascade','kinetic-marquee','micro-award-badge','nav-mobile-tabbar','masonry-filter','showcase-circular-gallery','css3d-isometric-hover','drams-001','copy-inline-feedback'];

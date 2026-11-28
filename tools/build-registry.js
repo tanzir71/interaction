@@ -11,13 +11,11 @@ const outputRoot=outputPath?path.resolve(ROOT,outputPath):ROOT;
 if(outputPath&&(!outputRoot.startsWith(path.join(ROOT,'.artifacts')+path.sep)))throw Error('Alternate builds must stay inside the workspace .artifacts directory');
 if(previewPro&&!outputPath)throw Error('--pro-preview requires an isolated --output directory; the published flag stays off');
 if(previewPro){const policy=context.INTRX.access.create({enabled:true});for(const d of demos)d.tier=policy.tier(d);}
-const groups={Interface:['Buttons & Micro','Forms & Inputs','Navigation & Menus','Layout & UI','Loaders & Progress','Galleries & Sliders'],Motion:['Scroll','Text & Type','SVG & Line','3D & Perspective'],'Pointer & Physics':['Cursor','Physics','Liquid & Organic','Play & Easter Eggs'],'Data & AI':['Agent & AI UI','Data & Numbers','Maps & Geo','FUI & Terminal'],'Visual FX':['Image & WebGL','Raster & Glitch','Ambient','Skeuomorph','Sound & Haptics'],Collections:['Interactive Showcase','DRAMS','Framer Collection']};
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const json=value=>JSON.stringify(value,null,2)+'\n';
 const put=(name,value)=>outputs.set(name,typeof value==='string'?value:json(value));
-const groupFor=category=>Object.keys(groups).find(group=>groups[group].includes(category));
 for(const file of ['js/demo-assets.js','js/demo-runtime.js','js/shell/stage.js','js/shell/export.js'])vm.runInContext(fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n'),context,{filename:file});
-const R=context.INTRX,style=fs.readFileSync('css/foundations.css','utf8').replace(/\r\n/g,'\n');
+const R=context.INTRX,groups=R.groups,style=fs.readFileSync('css/foundations.css','utf8').replace(/\r\n/g,'\n');
 R.tokenCss=style.slice(style.indexOf(':root'),style.indexOf('* { margin:'));
 R.kitCss=style.slice(style.indexOf('/* Foundation kit.'),style.indexOf('/* Stage typography.'));
 const stageKitStart=style.indexOf('/* Shared Stage Kit v4.');
@@ -46,7 +44,9 @@ const photoAssets=new Map(Object.entries(photographs).map(([key,p])=>{
  return [p.asset,{key,asset:p.asset,photoId:p.photoId,imageId:p.imageId,photographer:p.photographer,url:p.page,license:p.license,licenseUrl:p.licenseUrl,verifiedAt:p.verifiedAt,full:p.files.full.path}];
 }));
 const photoMeta=d=>{const names=Object.keys(assetRefs(d)).filter(name=>name.startsWith('photo-'));if(!names.length)return{};for(const name of names)if(!photoAssets.has(name))throw Error('Photo asset needs verified attribution: '+name);return {photoCredits:names.map(name=>{const {full,...credit}=photoAssets.get(name);return credit;}),fullAssetRefs:Object.fromEntries(names.map(name=>[name,photoAssets.get(name).full]))};};
-const index=demos.map(d=>({id:d.id,title:d.title,category:d.cat,group:groupFor(d.cat),trigger:d.trigger,tags:d.tags,useCases:d.useCases,tier:d.tier,desc:d.desc,designSize:d.designSize,...(d.thumbDesignSize!==undefined?{thumbDesignSize:d.thumbDesignSize}:{}),stage:d.stage,libs:d.libs,addedAt:d.addedAt,url:HOST+'/#/c/'+d.id,thumb:d.thumb,module:moduleSources.has(d.id)?'registry/m/'+d.id+'.js?v='+digest(moduleSources.get(d.id)):filesById[d.id]+'?v='+sourceHashes.get(filesById[d.id]),...bundles,sourcePreview:'registry/p/'+d.id+'.json',assetRefs:assetRefs(d),rootClass:d.rootClass,controls:d.controls,a11y:d.a11y,hint:d.caption||designManifest.find(row=>row.id===d.id)?.description||d.hint,sourceName:d.source?.name||d.seen,isNew:designManifest.find(row=>row.id===d.id)?.isNew||false,...photoMeta(d)}));
+// Public category, group and collections derive from the shared taxonomy in js/shell/registry.js.
+const taxonomy=d=>{const category=R.categoryOf(d),group=R.groupOf(category);return {category,group,collections:R.collectionsOf({id:d.id,category,group,family:d.cat})};};
+const index=demos.map(d=>({id:d.id,title:d.title,...taxonomy(d),trigger:d.trigger,tags:d.tags,useCases:d.useCases,tier:d.tier,desc:d.desc,designSize:d.designSize,...(d.thumbDesignSize!==undefined?{thumbDesignSize:d.thumbDesignSize}:{}),stage:d.stage,libs:d.libs,addedAt:d.addedAt,url:HOST+'/#/c/'+d.id,thumb:d.thumb,module:moduleSources.has(d.id)?'registry/m/'+d.id+'.js?v='+digest(moduleSources.get(d.id)):filesById[d.id]+'?v='+sourceHashes.get(filesById[d.id]),...bundles,sourcePreview:'registry/p/'+d.id+'.json',assetRefs:assetRefs(d),rootClass:d.rootClass,controls:d.controls,a11y:d.a11y,hint:d.caption||designManifest.find(row=>row.id===d.id)?.description||d.hint,sourceName:d.source?.name||d.seen,isNew:designManifest.find(row=>row.id===d.id)?.isNew||false,...photoMeta(d)}));
 if(index.some(d=>!d.group||!d.designSize))throw Error('Missing category group or stage metadata');
 if(new Set(index.map(d=>d.id)).size!==demos.length)throw Error('Duplicate registry ids');
 for(const d of demos){
@@ -63,11 +63,12 @@ for(const d of demos){
  if(typeof d.a11y?.keyboard!=='boolean'||typeof d.a11y.reducedMotion!=='boolean')throw Error(d.id+': invalid a11y');
  new Function('root','stage','ctx','{\n'+d.js+'\n}');
 }
-const categories=Object.entries(groups).flatMap(([group,names])=>names.map(name=>({name,slug:slug(name),group,count:demos.filter(d=>d.cat===name).length})));
+const categories=Object.entries(groups).flatMap(([group,names])=>names.map(name=>({name,slug:slug(name),group,count:index.filter(row=>row.category===name).length})));
 put('registry/categories.json',categories);
+put('registry/collections.json',R.collections.map(({slug,title,desc})=>({slug,title,desc,ids:index.filter(row=>row.collections.includes(slug)).map(row=>row.id)})));
 for(const d of demos){
  const entry=index.find(row=>row.id===d.id),locked=d.tier==='pro';
- const related=index.filter(row=>row.id!==d.id&&row.category===d.cat).sort((a,b)=>Number(b.trigger===d.trigger)-Number(a.trigger===d.trigger)||a.id.localeCompare(b.id)).slice(0,4).map(row=>row.id);
+ const related=index.filter(row=>row.id!==d.id&&row.category===R.categoryOf(d)).sort((a,b)=>Number(b.trigger===d.trigger)-Number(a.trigger===d.trigger)||a.id.localeCompare(b.id)).slice(0,4).map(row=>row.id);
  const single=locked?'':R.buildCode({...d,photoCredits:entry.photoCredits});
  const preview=locked?{locked:true}:{source:R.compactSource(single).split('\n').slice(0,18).join('\n'),lineCount:single.split('\n').length};
  entry.sourcePreview='registry/p/'+d.id+'.json?v='+digest(json(preview));
@@ -90,7 +91,7 @@ schema.properties.controls={type:'array',maxItems:3,items:{type:'object',require
 put('registry/schema.json',schema);
 const header='# INTRX — The Interaction Library\n\n> A curated, copy-paste library of the web interactions used by award-winning\n> design agencies. '+demos.length+' native patterns are implemented, including the full 52-entry DRAMS collection.\n> Each pattern ships three things: a live demo, a single-file HTML+CSS+JS\n> snippet, and an LLM prompt that specifies the interaction precisely enough\n> to rebuild it in any framework.\n\nSite: '+HOST+'\nRegistry: '+HOST+'/registry/index.json\nLicense: MIT; photographs under the Unsplash License with per-component attribution. DRAMS by 1042 Studio (@mrblackstudio and @karimeshrimp).\n';
 put('llms.txt',header+Object.keys(groups).map(group=>'\n## '+group+'\n\n'+index.filter(d=>d.group===group).map(d=>'- ['+d.title+']('+d.url+'): '+d.trigger+' · '+d.desc.replace(/\s+/g,' ')+' · registry: /registry/c/'+d.id+'.json').join('\n')).join('\n')+'\n');
-put('llms-full.txt',header+categories.map(cat=>'\n## '+cat.name+'\n'+demos.filter(d=>d.cat===cat.name).map(d=>'\n### '+d.title+' (`'+d.id+'`)\n\n'+d.prompt.trim()+'\n').join('')).join(''));
+put('llms-full.txt',header+categories.filter(cat=>cat.count).map(cat=>'\n## '+cat.name+'\n'+demos.filter(d=>R.categoryOf(d)===cat.name).map(d=>'\n### '+d.title+' (`'+d.id+'`)\n\n'+d.prompt.trim()+'\n').join('')).join(''));
 const stale=[];
 for(const [name,content]of outputs){
  const target=path.join(outputRoot,name),current=fs.existsSync(target)?fs.readFileSync(target,'utf8').replace(/\r\n/g,'\n'):null;

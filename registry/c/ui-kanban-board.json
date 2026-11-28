@@ -2,8 +2,9 @@
   "$schema": "https://intrx.vercel.app/registry/schema.json",
   "id": "ui-kanban-board",
   "title": "Kanban Board",
-  "category": "Layout & UI",
-  "group": "Interface",
+  "category": "Cards, Lists & Layout",
+  "group": "Components",
+  "collections": [],
   "trigger": "drag",
   "tags": [
     "kanban",
@@ -72,10 +73,10 @@
     "Seen on: BoardUI Project Board pattern"
   ],
   "related": [
-    "bottom-sheet",
-    "drag-carousel",
     "drag-collapse-panel",
-    "list-reorder-drag"
+    "list-reorder-drag",
+    "resizable-split-pane",
+    "caption-pull-hover"
   ],
   "source": {
     "name": "INTRX",

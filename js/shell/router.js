@@ -1,8 +1,10 @@
 (function(){
  const R=INTRX,positions=new Map();let current='',render,serial=0;
  R.normalizeRoute=hash=>{
-  if(!hash||hash==='#top')return '#/';if(hash.startsWith('#/'))return hash;
-  if(hash.startsWith('#cat-')){const category=Object.values(R.groups).flat().find(name=>('#cat-'+name.toLowerCase().replace(/[^a-z]+/g,'-')).replace(/-$/,'')===hash.replace(/-$/,''));return '#/library/'+(category?R.slug(category):hash.slice(5).replace(/-$/,''));}
+  if(!hash||hash==='#top')return '#/';
+  const legacy=hash.match(/^#\/library\/([^/?]+)$/);if(legacy&&R.legacyRoutes[legacy[1]])return R.legacyRoutes[legacy[1]];
+  if(hash.startsWith('#/'))return hash;
+  if(hash.startsWith('#cat-')){const category=[...Object.keys(R.families),...Object.values(R.groups).flat()].find(name=>('#cat-'+name.toLowerCase().replace(/[^a-z]+/g,'-')).replace(/-$/,'')===hash.replace(/-$/,''));return R.normalizeRoute('#/library/'+(category?R.slug(category):hash.slice(5).replace(/-$/,'')));}
   return R.byId?.has(hash.slice(1))?'#/c/'+hash.slice(1):'#/';
  };
  R.router={

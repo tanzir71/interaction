@@ -5,7 +5,7 @@ Node 18 or newer is required. Only `packages/intrx` has npm dependencies.
 ```bash
 npm ci --prefix packages/intrx
 node packages/intrx/bin/intrx.js search "elastic tabs" --registry ./registry
-node packages/intrx/bin/intrx.js list --category "Layout & UI" --registry ./registry
+node packages/intrx/bin/intrx.js list --category "Cards, Lists & Layout" --registry ./registry
 node packages/intrx/bin/intrx.js add elastic-tabs --dir src/components/intrx --registry ./registry
 node packages/intrx/bin/intrx.js add elastic-tabs --format parts --dir src/components/intrx --registry ./registry
 ```
