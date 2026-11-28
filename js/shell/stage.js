@@ -2,6 +2,7 @@
 (function () {
   const R = window.INTRX;
   const PRESETS = R.sizePresets = { sm:[320,240], md:[480,360], lg:[720,480] };
+  R.canHover = () => typeof matchMedia === 'function' && matchMedia('(hover:hover) and (pointer:fine)').matches;
   R.resolveSize = size => Array.isArray(size) ? size : PRESETS[size];
   R.fitStage = function(stage,root,meta,mode) {
     const content = root.parentElement;
@@ -9,18 +10,29 @@
     const bleed = size === 'bleed';
     content.dataset.bleed = String(bleed);
     const pad = mode === 'thumb' ? 24 : 32;
-    const dock = (meta.controls || []).length ? 48 : 0;
+    // Thumbnail Docks overlay on hover; only touch devices show them at rest.
+    const dockShown = mode !== 'thumb' || !R.canHover();
+    const dock = (meta.controls || []).length && dockShown ? 48 : 0;
     content.style.inset = bleed ? '0' : pad+'px '+pad+'px '+(pad+dock)+'px';
     let width = stage.clientWidth, height = stage.clientHeight, scale = 1;
     if (!bleed) {
       [width,height] = R.resolveSize(size);
-      scale = Math.max(.01,Math.min(1,(stage.clientWidth-pad*2)/width,(stage.clientHeight-pad*2-dock)/height));
+      const fit = Math.min((stage.clientWidth-pad*2)/width,(stage.clientHeight-pad*2-dock)/height);
+      scale = Math.min(1,fit);
+      // Detail views grow small compositions toward the stage instead of
+      // leaving them at 1:1 in an empty room. Canvas demos grow less so their
+      // backing stores stay sharp.
+      if (mode === 'full') scale = Math.max(scale,Math.min(fit*.8,stage._fitCap||1.4));
+      scale = Math.max(.01,scale);
     }
     Object.assign(root.style,{width:width+'px',height:height+'px',minWidth:'0',minHeight:'0',maxWidth:'none',maxHeight:'none',flex:'none',zoom:String(scale)});
     stage.dataset.scale = scale.toFixed(4);
     return scale;
   };
   const TIMER_NAMES = ['requestAnimationFrame','cancelAnimationFrame','setTimeout','clearTimeout','setInterval','clearInterval','ResizeObserver','IntersectionObserver'];
+  // Portable exports serialize fitStage/mountStage; tools/build-registry.js
+  // re-declares this pattern and R.canHover beside them.
+  const CANVAS_RE = R.canvasPattern = /<canvas|getContext\(|createElement\(\s*['"]canvas|WebGLRenderer|WebGL/;
   R.mountStage = function(demo,stage,mode='thumb') {
     if (stage._runtime) stage._runtime.dispose();
     if (!demo._styled) {
@@ -49,6 +61,9 @@
       emit(name,detail) { stage.dispatchEvent(new CustomEvent('intrx:'+name,{detail,bubbles:true})); }
     };
     stage._ctx = ctx; stage._root = root;
+    // Canvas and WebGL demos size their backing stores from devicePixelRatio,
+    // so they get a smaller detail upscale than DOM and SVG compositions.
+    if (mode === 'full') stage._fitCap = CANVAS_RE.test(demo.html+'\n'+demo.js) ? 1.2 : 1.4;
     const fit = () => {
       ctx.scale = R.fitStage(stage,root,demo,mode);
       ctx.size = { w:stage.clientWidth, h:stage.clientHeight };
@@ -60,12 +75,16 @@
       // Older canvas demos use a local `const ctx` for their drawing context.
       // A block lets that binding coexist with the new shell context parameter.
       const code='{\n'+R.resolveAssets(demo.js)+'\n}';
-      const result = new Function('root','stage','ctx',...TIMER_NAMES,code)(root,stage,ctx,...TIMER_NAMES.map(name=>runtime[name]));
+      // A bare `devicePixelRatio` read includes the Stage upscale, so canvases
+      // allocate enough pixels for the zoomed detail view.
+      const dpr = Math.min(4,(window.devicePixelRatio||1)*Math.max(1,ctx.scale));
+      const result = new Function('root','stage','ctx','devicePixelRatio',...TIMER_NAMES,code)(root,stage,ctx,dpr,...TIMER_NAMES.map(name=>runtime[name]));
       if (typeof result === 'function') runtime.cleanup = result;
       else if (result) {
         runtime.cleanup = result.cleanup;
         Object.entries(result.actions || {}).forEach(([name,fn])=>ctx.onAction(name,fn));
       }
+      if (mode === 'full' && stage._fitCap > 1.2 && content.querySelector('canvas')) { stage._fitCap = 1.2; fit(); }
       const dock = document.createElement('div'); dock.className = 'stage-dock'; dock.setAttribute('role','group'); dock.setAttribute('aria-label',demo.title+' controls');
       (demo.controls || []).forEach(control=>{
         const button=document.createElement('button'); button.type='button'; button.className='dock-btn'; button.textContent=control.label;

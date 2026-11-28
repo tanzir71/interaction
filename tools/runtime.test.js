@@ -100,8 +100,15 @@ test('fit uses declared geometry, mode padding and reserved dock space',()=>{
  const R=context.window.INTRX,content={dataset:{},style:{}},root={style:{},parentElement:content},stage={clientWidth:348,clientHeight:264,dataset:{}};
  const meta={designSize:'md',controls:[{label:'Next',action:'next'}]};
  assert.equal(R.fitStage(stage,root,meta,'thumb'),168/360);assert.equal(root.style.width,'480px');assert.equal(content.style.inset,'24px 24px 72px');
- stage.clientWidth=1200;stage.clientHeight=800;assert.equal(R.fitStage(stage,root,meta,'full'),1);
+ // Detail views grow small compositions toward the stage, capped at 1.4 (1.2 for canvas).
+ stage.clientWidth=1200;stage.clientHeight=800;assert.equal(R.fitStage(stage,root,meta,'full'),1.4);
+ stage._fitCap=1.2;assert.equal(R.fitStage(stage,root,meta,'full'),1.2);delete stage._fitCap;
  assert.equal(R.fitStage(stage,root,{designSize:'bleed',controls:[]},'full'),1);assert.equal(content.style.inset,'0');assert.equal(root.style.width,'1200px');
+});
+test('hover-capable thumbnails centre the composition instead of reserving Dock space',()=>{
+ const context={window:{INTRX:{}},matchMedia:()=>({matches:true})};vm.runInNewContext(fs.readFileSync(require.resolve('../js/shell/stage.js'),'utf8'),context);
+ const R=context.window.INTRX,content={dataset:{},style:{}},root={style:{},parentElement:content},stage={clientWidth:348,clientHeight:264,dataset:{}};
+ assert.equal(R.fitStage(stage,root,{designSize:'md',controls:[{label:'Next',action:'next'}]},'thumb'),216/360);assert.equal(content.style.inset,'24px 24px 24px');
 });
 
 test('hero thumbnails fit their declared plane while full exports retain full geometry',()=>{
@@ -120,6 +127,6 @@ test('full-width hero thumbnails preserve their separate full composition',()=>{
  const meta={designSize:[400,320],thumbDesignSize:'bleed',thumb:'hero',controls:[{label:'Clear banner',action:'reset'}]};
  assert.equal(R.fitStage(stage,root,meta,'thumb'),1);assert.equal(content.dataset.bleed,'true');assert.equal(content.style.inset,'0');
  assert.equal(root.style.width,'328px');assert.equal(root.style.height,'264px');
- stage.clientWidth=650;stage.clientHeight=520;assert.equal(R.fitStage(stage,root,meta,'full'),1);
+ stage.clientWidth=650;stage.clientHeight=520;assert.ok(Math.abs(R.fitStage(stage,root,meta,'full')-1.02)<1e-9);
  assert.equal(content.dataset.bleed,'false');assert.equal(root.style.width,'400px');assert.equal(root.style.height,'320px');
 });
