@@ -1,7 +1,7 @@
 {
  "file": "https://www.figma.com/design/OpP74UYjFHRU5q9OBPhoSY/Interaction",
  "generated": "2026-11-15",
- "count": 531,
+ "count": 532,
  "boards": {
   "Interface": {
    "node": "110:973",
@@ -10260,6 +10260,25 @@
    "origin": "extension",
    "motionRecipes": [
     "loop"
+   ],
+   "motionAuditFlags": []
+  },
+  {
+   "id": "section-pricing",
+   "title": "Pricing Toggle",
+   "trigger": "Press",
+   "description": "Prices roll digit by digit when billing switches",
+   "board": "Sections",
+   "section": "Pricing",
+   "figmaNode": null,
+   "figmaUrl": null,
+   "isNew": true,
+   "isPro": false,
+   "stage": "dark",
+   "origin": "extension",
+   "motionRecipes": [
+    "toggle",
+    "number-roll"
    ],
    "motionAuditFlags": []
   }

@@ -19128,5 +19128,44 @@ INTRX.meta({
       "background"
     ],
     "addedAt": "2026-11"
+  },
+  "section-pricing": {
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "press",
+    "controls": [
+      {
+        "label": "Billing",
+        "action": "billing"
+      },
+      {
+        "label": "Currency",
+        "action": "currency"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "hero",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Pricing",
+      "landing page",
+      "SaaS"
+    ],
+    "addedAt": "2026-11"
   }
 });

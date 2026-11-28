@@ -23,7 +23,7 @@ demos.forEach(demo => {
   required.forEach(key => { if (!demo[key]) errors.push('MISSING ' + demo.id + ' ' + key); });
   if (!Array.isArray(demo.tags) || !Array.isArray(demo.libs)) errors.push('INVALID ARRAYS ' + demo.id);
   if (!demo.html.includes(demo.rootClass)) errors.push('ROOT NOT IN HTML ' + demo.id);
-  if (!families.includes(demo.cat)) errors.push('UNKNOWN FAMILY ' + demo.id + ' ' + demo.cat);
+  if (!families.includes(demo.cat) && !R.groupOf(demo.cat)) errors.push('UNKNOWN FAMILY OR CATEGORY ' + demo.id + ' ' + demo.cat);
   if (!R.groupOf(R.categoryOf(demo))) errors.push('UNGROUPED CATEGORY ' + demo.id + ' ' + R.categoryOf(demo));
   if (demo.prompt.trim().length < 300) errors.push('PROMPT TOO THIN ' + demo.id);
   try { new Function('root', 'stage', 'ctx', '{\n' + demo.js + '\n}'); } catch (error) { errors.push('JS COMPILE ' + demo.id + ' ' + error.message); }

@@ -37409,5 +37409,69 @@
     "hint": "Drifting cells fill with stepped accent tones",
     "sourceName": "Paper Shaders · Voronoi (Apache-2.0)",
     "isNew": true
+  },
+  {
+    "id": "section-pricing",
+    "title": "Pricing Toggle",
+    "category": "Pricing",
+    "group": "Sections",
+    "collections": [
+      "landing-page-kit"
+    ],
+    "trigger": "press",
+    "tags": [
+      "pricing",
+      "section",
+      "toggle",
+      "number roll",
+      "landing page",
+      "plans"
+    ],
+    "useCases": [
+      "Pricing",
+      "landing page",
+      "SaaS"
+    ],
+    "tier": "free",
+    "desc": "A three-plan pricing section with a monthly and yearly toggle. Prices roll digit by digit to the new amount, the billing note follows, and the featured plan carries an accent edge.",
+    "designSize": [
+      880,
+      440
+    ],
+    "thumbDesignSize": [
+      300,
+      200
+    ],
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/section-pricing",
+    "thumb": "hero",
+    "module": "js/demos.sections.pricing.js?v=92a7f97d9b",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/section-pricing.json?v=da30946c8f",
+    "assetRefs": {},
+    "rootClass": "d-sec-price",
+    "controls": [
+      {
+        "label": "Billing",
+        "action": "billing"
+      },
+      {
+        "label": "Currency",
+        "action": "currency"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Prices roll digit by digit when billing switches",
+    "sourceName": "Seen on: SaaS pricing pages from Linear, Vercel and Raycast, and most developer-tool launches",
+    "isNew": true
   }
 ]
