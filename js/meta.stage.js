@@ -12527,7 +12527,8 @@ INTRX.meta({
     ],
     "stage": {
       "theme": "dark",
-      "overflow": "clip"
+      "overflow": "clip",
+      "live": "hover"
     },
     "trigger": "hover",
     "controls": [

@@ -120,8 +120,19 @@
       poster.setAttribute('aria-label','Play '+demo.title); poster.hidden=true;
       const icon=document.createElement('img');icon.src='assets/kit/play.svg';icon.alt='';poster.appendChild(icon);
       tile.appendChild(poster);
-      const record={demo,tile,stage,poster,ratio:0,unlocked:!this.touch||!['hover','drag'].includes(demo.trigger),manualPause:false};
+      // Heavy previews (stage.live 'hover') rest as their poster and boot only
+      // while the tile is hovered or focused, then release their runtime.
+      const lazy=demo.stage?.live==='hover';
+      const record={demo,tile,stage,poster,ratio:0,lazy,unlocked:!lazy&&(!this.touch||!['hover','drag'].includes(demo.trigger)),manualPause:false};
       this.records.set(tile,record); poster.addEventListener('click',()=>this.toggle(tile));
+      if(lazy){
+        record.still=document.createElement('img');record.still.className='stage-still';record.still.src='assets/posters/'+demo.id+'.png';record.still.alt='';record.still.decoding='async';stage.appendChild(record.still);
+        if(!this.touch){
+          const wake=()=>{clearTimeout(record.sleep);if(!record.unlocked){record.unlocked=true;this.preferred=tile;this.update();}};
+          const rest=()=>{clearTimeout(record.sleep);record.sleep=setTimeout(()=>{if(!this.records.has(tile)||tile.matches(':hover')||tile.contains(document.activeElement))return;this.sleep(record);this.update();},1500);};
+          tile.addEventListener('pointerenter',wake);tile.addEventListener('focusin',wake);tile.addEventListener('pointerleave',rest);tile.addEventListener('focusout',rest);
+        }
+      }
       tile.querySelector('.tile-details').addEventListener('keydown',event=>{if(event.code==='Space'){event.preventDefault();this.toggle(tile);}});
       this.observer.observe(tile);
     }
@@ -130,6 +141,11 @@
       if (!record.unlocked) record.unlocked=true;
       else record.manualPause=record.stage._runtime&&!record.stage._runtime.suspended;
       this.preferred=tile;this.update();
+    }
+    sleep(record) {
+      record.unlocked=false;record.manualPause=false;
+      if(record.stage._runtime){record.stage._runtime.dispose();record.stage._runtime=null;}
+      record.stage.replaceChildren(record.still);
     }
     schedule() { if(!this.frame)this.frame=requestAnimationFrame(()=>{this.frame=0;this.update();}); }
     update() {
@@ -143,13 +159,13 @@
       const live=new Set(this.holding?[]:visible.filter(record=>record.unlocked&&!record.manualPause&&(!reduced||record.tile===this.preferred)).slice(0,this.cap));
       // Don't boot newly intersecting previews behind an open detail view.
       if(!this.holding)visible.forEach(record=>{
-        if(record.stage._runtime||record.pending)return;
+        if(record.stage._runtime||record.pending||(record.lazy&&!record.unlocked))return;
         if(!R.loadDemo){R.mountStage(record.demo,record.stage,'thumb');return;}
         record.pending=true;
         R.loadDemo(record.demo.id).then(demo=>{
           record.pending=false;if(!this.records.has(record.tile)||!record.tile.isConnected)return;
           record.ready=demo;
-          if(!this.holding){R.mountStage(demo,record.stage,'thumb');this.schedule();}
+          if(!this.holding&&(!record.lazy||record.unlocked)){R.mountStage(demo,record.stage,'thumb');this.schedule();}
         }).catch(error=>{record.pending=false;if(!this.records.has(record.tile)||!record.tile.isConnected)return;record.stage.dataset.bootError='true';record.stage.textContent='Preview unavailable';console.error('[INTRX]',error);});
       });
       this.records.forEach(record=>{
@@ -168,7 +184,7 @@
     resumeAll() { this.holding=false;this.preferred=null;this.update(); }
     destroy() {
       this.observer.disconnect();cancelAnimationFrame(this.frame);removeEventListener('scroll',this.onScroll);removeEventListener('resize',this.onScroll);
-      this.records.forEach(record=>{if(record.stage._runtime)record.stage._runtime.dispose();});this.records.clear();
+      this.records.forEach(record=>{clearTimeout(record.sleep);if(record.stage._runtime)record.stage._runtime.dispose();});this.records.clear();
     }
   };
 })();
