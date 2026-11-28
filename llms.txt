@@ -1,7 +1,7 @@
 # INTRX — The Interaction Library
 
 > A curated, copy-paste library of the web interactions used by award-winning
-> design agencies. 541 native patterns are implemented, including the full 52-entry DRAMS collection.
+> design agencies. 549 native patterns are implemented, including the full 52-entry DRAMS collection.
 > Each pattern ships three things: a live demo, a single-file HTML+CSS+JS
 > snippet, and an LLM prompt that specifies the interaction precisely enough
 > to rebuild it in any framework.
@@ -253,6 +253,14 @@ License: MIT; photographs under the Unsplash License with per-component attribut
 - [Pulsing Border](https://intrx.vercel.app/#/c/shader-pulsing-border): ambient · A rounded frame of light pulses around a prompt box while bright spots travel the edge and smoke drifts outward, the way an AI input signals it is ready. Pulse and Spots tune the energy. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-pulsing-border.json
 - [Smoke Ring](https://intrx.vercel.app/#/c/shader-smoke-ring): ambient · A ring of layered smoke churns around an empty centre like a voice assistant listening, with white wisps over an accent core. Palette and Ring change the colour and thickness. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-smoke-ring.json
 - [Voronoi](https://intrx.vercel.app/#/c/shader-voronoi): ambient · Drifting Voronoi cells fill with stepped accent tones, separated by dark gaps, with an optional glow toward each cell centre. Glow and Gap change the look from stained glass to lit honeycomb. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-voronoi.json
+- [Color Panels](https://intrx.vercel.app/#/c/shader-color-panels): ambient · Translucent accent panels fan around a hidden axis and turn like pages of a book, fading as they swing toward you. Palette and Style switch between glass panels with lit edges and flat solid panels. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-color-panels.json
+- [Dot Orbit](https://intrx.vercel.app/#/c/shader-dot-orbit): ambient · One dot per cell circles its own centre on a jittered grid, coloured from a stepped accent ramp, so the field shimmers like a crowd of tiny planets. Palette and Size switch between orbiting dots, soft bubbles and a fine glitter. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-dot-orbit.json
+- [Spiral](https://intrx.vercel.app/#/c/shader-spiral): ambient · An accent stroke winds out from the centre and turns slowly, with simplex noise tearing it into droplets or ink. Style switches between a clean spiral, a wobbling droplet line and noisy ink; Tone changes the stroke colour. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-spiral.json
+- [Warp](https://intrx.vercel.app/#/c/shader-warp): ambient · Checks, stripes or a single edge are pushed through value noise and ten swirl passes until they flow like marbled ink in accent and charcoal, behind a launch headline. Palette and Shape change the colours and the pattern being warped. GLSL from Paper Shaders (Apache-2.0). · registry: /registry/c/shader-warp.json
+- [Ripple](https://intrx.vercel.app/#/c/bg-ripple): ambient · Concentric rings breathe outward from a device-search icon, each one a little fainter and 60ms later than the last, fading toward the bottom of the stage. Rings and Tone change the count and switch the accent hairlines to neutral. Adapted from Magic UI’s Ripple (MIT). · registry: /registry/c/bg-ripple.json
+- [Animated Grid Pattern](https://intrx.vercel.app/#/c/bg-animated-grid-pattern): ambient · A 40px hairline grid where fifty squares fade in over four seconds, hold, fade out and reappear somewhere else, about a quarter of them in the accent, behind a status headline. Density and Skew change the count and tilt the plane. Adapted from Magic UI’s Animated Grid Pattern (MIT). · registry: /registry/c/bg-animated-grid-pattern.json
+- [Dot Pattern](https://intrx.vercel.app/#/c/bg-dot-pattern): ambient · A 16px dot grid where every dot breathes on its own two-to-five-second cycle and one in eleven glows in the accent, fading out toward the edges behind a headline. The pointer warms nearby dots; Glow and Spacing switch the pulse off and change the grid. Adapted from Magic UI’s Dot Pattern (MIT). · registry: /registry/c/bg-dot-pattern.json
+- [Warp Background](https://intrx.vercel.app/#/c/bg-warp-background): ambient · Four gridded walls recede into a tight 100px perspective while short accent beams race along them toward you, framing a deploy-preview card. Beams and Speed change how many run on each wall and how fast. Adapted from Magic UI’s Warp Background (MIT). · registry: /registry/c/bg-warp-background.json
 
 ## Effects
 

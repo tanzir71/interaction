@@ -14,9 +14,16 @@ Photographs and renders are credited separately in `assets/photo-credits.json`.
 - Adapted components:
   - `bg-flickering-grid` (Flickering Grid) in `js/demos.backgrounds.flickering-grid.js`
   - `bg-retro-grid` (Retro Grid) in `js/demos.backgrounds.retro-grid.js`
+  - `bg-ripple` (Ripple) in `js/demos.backgrounds.ripple.js`
+  - `bg-animated-grid-pattern` (Animated Grid Pattern) in `js/demos.backgrounds.animated-grid-pattern.js`
+  - `bg-dot-pattern` (Dot Pattern) in `js/demos.backgrounds.dot-pattern.js`
+  - `bg-warp-background` (Warp Background) in `js/demos.backgrounds.warp-background.js`
+- Revision: Ripple, Animated Grid Pattern, Dot Pattern and Warp Background were adapted from commit
+  `1278d872938a718a27fd026da314f3c0f48d85e6` (27 November 2026).
 - Changes: rewritten from React and Tailwind to plain HTML, CSS and JavaScript on the INTRX
-  runtime; seeded randomness, accent colours, extra controls and reduced-motion stills added.
-  The Retro Grid fragment shader is kept close to the original.
+  runtime; `motion/react` animations are replaced by CSS keyframes or seeded canvas renderers;
+  seeded randomness, accent colours, extra controls and reduced-motion stills added. The Retro
+  Grid fragment shader is kept close to the original.
 
 ```text
 MIT License
@@ -56,6 +63,11 @@ SOFTWARE.
   - `shader-pulsing-border` (Pulsing Border) in `js/demos.backgrounds.pulsing-border.js`
   - `shader-smoke-ring` (Smoke Ring) in `js/demos.backgrounds.smoke-ring.js`
   - `shader-voronoi` (Voronoi) in `js/demos.backgrounds.voronoi.js`
+  - `shader-color-panels` (Color Panels) in `js/demos.backgrounds.color-panels.js`
+  - `shader-dot-orbit` (Dot Orbit) in `js/demos.backgrounds.dot-orbit.js`
+  - `shader-spiral` (Spiral) in `js/demos.backgrounds.spiral.js`
+  - `shader-warp` (Warp) in `js/demos.backgrounds.warp.js`
+- Revision: version 0.0.82 is commit `71be01576e8402c62ac76386bb4a7c59092e24c7` ("Publish 0.0.82").
 - Changes: fragment shaders and the sizing vertex shader are used with their helper snippets
   inlined; INTRX adds its own WebGL2 mount, palettes, controls, CSS fallbacks and runtime
   integration. Shaders that read Paper's bundled 128×128 noise PNG get a seeded RGBA noise

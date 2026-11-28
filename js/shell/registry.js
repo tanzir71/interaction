@@ -43,7 +43,7 @@
   R.collections=[
     {slug:'landing-page-kit',title:'Landing-page kit',desc:'Heroes, feature grids, social proof, pricing and the sections that close a page, ready to assemble.',has:d=>d.group==='Sections'},
     {slug:'ai-app-kit',title:'AI app kit',desc:'Chat, agent, tool and voice surfaces for products built around a model.',has:d=>['AI Chat & Agents','Voice & Audio'].includes(d.category)},
-    {slug:'open-source-ports',title:'Open-source ports',desc:'Components adapted from permissively licensed libraries (Paper Shaders, Magic UI), with their notices kept.',has:d=>/^(shader-|bg-(flickering|retro)-grid$)/.test(d.id)},
+    {slug:'open-source-ports',title:'Open-source ports',desc:'Components adapted from permissively licensed libraries (Paper Shaders, Magic UI), with their notices kept.',has:d=>/^(shader-|bg-)/.test(d.id)},
     {slug:'drams',title:'DRAMS by 1042 Studio',desc:'A family of physical sliders, switches, knobs and devices with mechanical motion.',has:d=>d.family==='DRAMS'},
     {slug:'interactive-showcase',title:'Interactive Showcase',desc:'Showpiece fields, ribbons and galleries for a single striking moment.',has:d=>d.family==='Interactive Showcase'},
     {slug:'framer-collection',title:'Framer Collection',desc:'Numeric and financial components in a clean product style.',has:d=>d.family==='Framer Collection'}

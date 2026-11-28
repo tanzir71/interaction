@@ -38000,5 +38000,453 @@
     "hint": "Five feature cells with live visuals and a border glow that follows the pointer",
     "sourceName": "Seen on: Vercel, Linear and Raycast feature sections",
     "isNew": true
+  },
+  {
+    "id": "shader-color-panels",
+    "title": "Color Panels",
+    "category": "Shaders",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "panels",
+      "3d",
+      "glass"
+    ],
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "Translucent accent panels fan around a hidden axis and turn like pages of a book, fading as they swing toward you. Palette and Style switch between glass panels with lit edges and flat solid panels. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-color-panels",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.color-panels.js?v=a36946d541",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-color-panels.json?v=d9e71e975b",
+    "assetRefs": {},
+    "rootClass": "d-px-color-panels",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Style",
+        "action": "style"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Pseudo-3D translucent panels turn around a hidden axis in accent tones; Palette and Style controls. Paper Shaders port (Apache-2.0).",
+    "sourceName": "Paper Shaders · Color Panels (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-dot-orbit",
+    "title": "Dot Orbit",
+    "category": "Shaders",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "dots",
+      "pattern",
+      "orbit"
+    ],
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "One dot per cell circles its own centre on a jittered grid, coloured from a stepped accent ramp, so the field shimmers like a crowd of tiny planets. Palette and Size switch between orbiting dots, soft bubbles and a fine glitter. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-dot-orbit",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.dot-orbit.js?v=532ef44444",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-dot-orbit.json?v=0ac0c92066",
+    "assetRefs": {},
+    "rootClass": "d-px-dot-orbit",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Size",
+        "action": "size"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A jittered grid of dots orbits its cells in stepped accent tones; Palette and Size controls. Paper Shaders port (Apache-2.0).",
+    "sourceName": "Paper Shaders · Dot Orbit (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-spiral",
+    "title": "Spiral",
+    "category": "Shaders",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "spiral",
+      "lines",
+      "hypnotic"
+    ],
+    "useCases": [
+      "Ambient",
+      "loading",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "An accent stroke winds out from the centre and turns slowly, with simplex noise tearing it into droplets or ink. Style switches between a clean spiral, a wobbling droplet line and noisy ink; Tone changes the stroke colour. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-spiral",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.spiral.js?v=da80d9330e",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-spiral.json?v=59e298965a",
+    "assetRefs": {},
+    "rootClass": "d-px-spiral",
+    "controls": [
+      {
+        "label": "Style",
+        "action": "style"
+      },
+      {
+        "label": "Tone",
+        "action": "tone"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "An accent spiral turns slowly and breaks into droplets or ink; Style and Tone controls. Paper Shaders port (Apache-2.0).",
+    "sourceName": "Paper Shaders · Spiral (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "shader-warp",
+    "title": "Warp",
+    "category": "Shaders",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "shader",
+      "webgl2",
+      "warp",
+      "liquid",
+      "stripes"
+    ],
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "Checks, stripes or a single edge are pushed through value noise and ten swirl passes until they flow like marbled ink in accent and charcoal, behind a launch headline. Palette and Shape change the colours and the pattern being warped. GLSL from Paper Shaders (Apache-2.0).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/shader-warp",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.warp.js?v=24f903c1a0",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/shader-warp.json?v=f8c4dc4a5e",
+    "assetRefs": {},
+    "rootClass": "d-px-warp",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Shape",
+        "action": "shape"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Accent stripes and checks flow like marbled ink behind a launch headline; Palette and Shape controls. Paper Shaders port (Apache-2.0).",
+    "sourceName": "Paper Shaders · Warp (Apache-2.0)",
+    "isNew": true
+  },
+  {
+    "id": "bg-ripple",
+    "title": "Ripple",
+    "category": "Animated backgrounds",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "ripple",
+      "rings",
+      "css",
+      "background",
+      "pulse"
+    ],
+    "useCases": [
+      "Ambient",
+      "empty state",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "Concentric rings breathe outward from a device-search icon, each one a little fainter and 60ms later than the last, fading toward the bottom of the stage. Rings and Tone change the count and switch the accent hairlines to neutral. Adapted from Magic UI’s Ripple (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-ripple",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.ripple.js?v=9f85c85856",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-ripple.json?v=b5ce6c7c46",
+    "assetRefs": {},
+    "rootClass": "d-mx-ripple",
+    "controls": [
+      {
+        "label": "Rings",
+        "action": "rings"
+      },
+      {
+        "label": "Tone",
+        "action": "tone"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Concentric rings breathe outward from a device-search icon; Rings and Tone controls. Magic UI port (MIT).",
+    "sourceName": "Magic UI · Ripple (MIT)",
+    "isNew": true
+  },
+  {
+    "id": "bg-animated-grid-pattern",
+    "title": "Animated Grid Pattern",
+    "category": "Patterns",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "grid",
+      "canvas",
+      "pattern",
+      "background",
+      "squares"
+    ],
+    "useCases": [
+      "Ambient",
+      "grid",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "A 40px hairline grid where fifty squares fade in over four seconds, hold, fade out and reappear somewhere else, about a quarter of them in the accent, behind a status headline. Density and Skew change the count and tilt the plane. Adapted from Magic UI’s Animated Grid Pattern (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-animated-grid-pattern",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.animated-grid-pattern.js?v=fca2055633",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-animated-grid-pattern.json?v=154e99bef9",
+    "assetRefs": {},
+    "rootClass": "d-mx-agrid",
+    "controls": [
+      {
+        "label": "Density",
+        "action": "density"
+      },
+      {
+        "label": "Skew",
+        "action": "skew"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Squares fade in and out across a hairline grid behind a status headline; Density and Skew controls. Magic UI port (MIT).",
+    "sourceName": "Magic UI · Animated Grid Pattern (MIT)",
+    "isNew": true
+  },
+  {
+    "id": "bg-dot-pattern",
+    "title": "Dot Pattern",
+    "category": "Patterns",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "dots",
+      "canvas",
+      "pattern",
+      "background",
+      "glow"
+    ],
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "hero"
+    ],
+    "tier": "free",
+    "desc": "A 16px dot grid where every dot breathes on its own two-to-five-second cycle and one in eleven glows in the accent, fading out toward the edges behind a headline. The pointer warms nearby dots; Glow and Spacing switch the pulse off and change the grid. Adapted from Magic UI’s Dot Pattern (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-dot-pattern",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.dot-pattern.js?v=e419d39aba",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-dot-pattern.json?v=618e244d4f",
+    "assetRefs": {},
+    "rootClass": "d-mx-dots",
+    "controls": [
+      {
+        "label": "Glow",
+        "action": "glow"
+      },
+      {
+        "label": "Spacing",
+        "action": "spacing"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "A dot grid breathes with accent glows and pointer warmth behind a headline; Glow and Spacing controls. Magic UI port (MIT).",
+    "sourceName": "Magic UI · Dot Pattern (MIT)",
+    "isNew": true
+  },
+  {
+    "id": "bg-warp-background",
+    "title": "Warp Background",
+    "category": "Animated backgrounds",
+    "group": "Backgrounds",
+    "collections": [
+      "open-source-ports"
+    ],
+    "trigger": "ambient",
+    "tags": [
+      "warp",
+      "css 3d",
+      "perspective",
+      "beams",
+      "background"
+    ],
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "tier": "free",
+    "desc": "Four gridded walls recede into a tight 100px perspective while short accent beams race along them toward you, framing a deploy-preview card. Beams and Speed change how many run on each wall and how fast. Adapted from Magic UI’s Warp Background (MIT).",
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "libs": [],
+    "addedAt": "2026-11",
+    "url": "https://intrx.vercel.app/#/c/bg-warp-background",
+    "thumb": "full",
+    "module": "js/demos.backgrounds.warp-background.js?v=9c69a34172",
+    "assetBundle": "js/demo-assets.js?v=0edbfb46b7",
+    "exportBundle": "js/export-data.js?v=3333424991",
+    "sourcePreview": "registry/p/bg-warp-background.json?v=94063c0eec",
+    "assetRefs": {},
+    "rootClass": "d-mx-warpbg",
+    "controls": [
+      {
+        "label": "Beams",
+        "action": "beams"
+      },
+      {
+        "label": "Speed",
+        "action": "speed"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "hint": "Accent beams race along four gridded walls toward a deploy card; Beams and Speed controls. Magic UI port (MIT).",
+    "sourceName": "Magic UI · Warp Background (MIT)",
+    "isNew": true
   }
 ]

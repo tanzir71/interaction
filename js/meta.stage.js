@@ -19492,5 +19492,261 @@ INTRX.meta({
       "Developer tools"
     ],
     "addedAt": "2026-11"
+  },
+  "shader-color-panels": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Style",
+        "action": "style"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-dot-orbit": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Size",
+        "action": "size"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-spiral": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Style",
+        "action": "style"
+      },
+      {
+        "label": "Tone",
+        "action": "tone"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "loading",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "shader-warp": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Palette",
+        "action": "palette"
+      },
+      {
+        "label": "Shape",
+        "action": "shape"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "bg-ripple": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Rings",
+        "action": "rings"
+      },
+      {
+        "label": "Tone",
+        "action": "tone"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "empty state",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "bg-animated-grid-pattern": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Density",
+        "action": "density"
+      },
+      {
+        "label": "Skew",
+        "action": "skew"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "grid",
+      "background"
+    ],
+    "addedAt": "2026-11"
+  },
+  "bg-dot-pattern": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Glow",
+        "action": "glow"
+      },
+      {
+        "label": "Spacing",
+        "action": "spacing"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "pattern",
+      "hero"
+    ],
+    "addedAt": "2026-11"
+  },
+  "bg-warp-background": {
+    "designSize": "bleed",
+    "stage": {
+      "theme": "dark",
+      "overflow": "clip"
+    },
+    "trigger": "ambient",
+    "controls": [
+      {
+        "label": "Beams",
+        "action": "beams"
+      },
+      {
+        "label": "Speed",
+        "action": "speed"
+      }
+    ],
+    "a11y": {
+      "keyboard": true,
+      "reducedMotion": true
+    },
+    "tier": "free",
+    "thumb": "full",
+    "origin": "extension",
+    "isNew": true,
+    "useCases": [
+      "Ambient",
+      "hero",
+      "background"
+    ],
+    "addedAt": "2026-11"
   }
 });
